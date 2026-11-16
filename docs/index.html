@@ -294,16 +294,16 @@ svg { display: block; vertical-align: middle; }
   .md\:col-span-2 {grid-column:span 2 / span 2}
 }
 @media (min-width: 1024px) {
-  .lg\:sticky {position:sticky}
-  .lg\:top-4 {top:1rem}
+  .lg\:absolute {position:absolute}
+  .lg\:relative {position:relative}
+  .lg\:inset-0 {inset:0px}
   .lg\:grid-cols-12 {grid-template-columns:repeat(12,minmax(0,1fr))}
   .lg\:grid-cols-6 {grid-template-columns:repeat(6,minmax(0,1fr))}
   .lg\:col-span-4 {grid-column:span 4 / span 4}
-  .lg\:col-span-5 {grid-column:span 5 / span 5}
   .lg\:col-span-6 {grid-column:span 6 / span 6}
-  .lg\:col-span-7 {grid-column:span 7 / span 7}
   .lg\:col-span-8 {grid-column:span 8 / span 8}
-  .lg\:max-h-\[74vh\] {max-height:74vh}
+  .lg\:min-h-\[520px\] {min-height:520px}
+  .lg\:max-h-none {max-height:none}
 }
 @media (min-width: 1280px) {
   .xl\:table-cell {display:table-cell}
@@ -434,25 +434,27 @@ svg { display: block; vertical-align: middle; }
           <div id="p-lens-bar" class="flex flex-wrap gap-1.5"></div>
         </div>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 items-start">
-        <div class="lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-lg max-h-[420px] lg:max-h-[74vh] overflow-y-auto overflow-x-auto">
-          <table class="w-full text-left border-collapse text-xs">
-            <thead class="sticky top-0 z-10 bg-[var(--card)] shadow-sm">
-              <tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
-                <th class="py-2 px-2.5 font-medium">Rk</th>
-                <th class="py-2 px-2 font-medium">ID</th>
-                <th class="py-2 px-2 font-medium">Program / Gene / Drug</th>
-                <th class="py-2 px-2 font-medium">Decision</th>
-                <th class="hidden xl:table-cell py-2 px-2 font-medium">Scientific Tier</th>
-                <th class="hidden xl:table-cell py-2 px-2 font-medium">TRL</th>
-                <th class="hidden xl:table-cell py-2 px-2 font-medium text-right">Hurdles</th>
-                <th class="py-2 px-2.5 font-medium text-right">Dossier</th>
-              </tr>
-            </thead>
-            <tbody id="p-tbody" class="divide-y divide-[var(--card-border)]"></tbody>
-          </table>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
+        <div class="lg:col-span-6 bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-hidden lg:relative lg:min-h-[520px]">
+          <div class="max-h-[420px] lg:max-h-none lg:absolute lg:inset-0 overflow-y-auto overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead class="sticky top-0 z-10 bg-[var(--card)] shadow-sm">
+                <tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
+                  <th class="py-2 px-2 font-medium">Rk</th>
+                  <th class="py-2 px-1.5 font-medium">ID</th>
+                  <th class="py-2 px-2 font-medium">Program / Gene / Drug</th>
+                  <th class="py-2 px-1.5 font-medium">Decision</th>
+                  <th class="hidden xl:table-cell py-2 px-1.5 font-medium">Tier</th>
+                  <th class="hidden xl:table-cell py-2 px-1.5 font-medium">TRL</th>
+                  <th class="hidden xl:table-cell py-2 px-1.5 font-medium text-right" title="Active Unsolved Hurdles">Hurd.</th>
+                  <th class="py-2 px-2 font-medium text-right">Dossier</th>
+                </tr>
+              </thead>
+              <tbody id="p-tbody" class="divide-y divide-[var(--card-border)]"></tbody>
+            </table>
+          </div>
         </div>
-        <div id="p-detail" class="lg:col-span-5 bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-3 lg:sticky lg:top-4"></div>
+        <div id="p-detail" class="lg:col-span-6 bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-3"></div>
       </div>
     </div>
     <div id="view-intervals" role="tabpanel" aria-labelledby="tab-btn-intervals" class="hidden space-y-3">
@@ -746,14 +748,14 @@ function renderPortfolio(){
       ? `<button type="button" data-open-dossier="${esc(r.id)}" class="px-2 py-0.5 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-semibold text-xs cursor-pointer">Monograph &rarr;</button>`
       : `<button type="button" data-open-dossier="${esc(r.id)}" class="px-2 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs cursor-pointer">Summary &rarr;</button>`;
     return `<tr tabindex="0" data-select-cand="${esc(r.id)}" class="cursor-pointer focus:outline-none focus:bg-[var(--content)] ${active}">
-      <td class="py-2 px-2.5 font-mono tabular-nums text-[var(--muted-foreground)]">#${r.rk}</td>
-      <td class="py-2 px-2 font-mono font-semibold whitespace-nowrap">${esc(r.id)}</td>
+      <td class="py-2 px-2 font-mono tabular-nums text-[var(--muted-foreground)]">#${r.rk}</td>
+      <td class="py-2 px-1.5 font-mono font-semibold whitespace-nowrap">${esc(r.id)}</td>
       <td class="py-2 px-2"><div class="font-medium">${esc(r.name)}</div><div class="text-[var(--muted-foreground)] text-xs">${esc(humanizeEnum(r.sub))} &middot; Track ${esc(r.trk)}</div></td>
-      <td class="py-2 px-2">${decBadge(r.dec)}</td>
-      <td class="hidden xl:table-cell py-2 px-2 text-xs">${esc(shortTier(r.tier))}</td>
-      <td class="hidden xl:table-cell py-2 px-2 font-mono text-xs">${esc(shortTrl(r.trl))}</td>
-      <td class="hidden xl:table-cell py-2 px-2 font-mono tabular-nums text-right">${r.hcnt}</td>
-      <td class="py-2 px-2.5 text-right whitespace-nowrap">${dosBtn}</td>
+      <td class="py-2 px-1.5">${decBadge(r.dec)}</td>
+      <td class="hidden xl:table-cell py-2 px-1.5 text-xs whitespace-nowrap">${esc(shortTier(r.tier))}</td>
+      <td class="hidden xl:table-cell py-2 px-1.5 font-mono text-xs whitespace-nowrap">${esc(shortTrl(r.trl))}</td>
+      <td class="hidden xl:table-cell py-2 px-1.5 font-mono tabular-nums text-right">${r.hcnt}</td>
+      <td class="py-2 px-2 text-right whitespace-nowrap">${dosBtn}</td>
     </tr>`;
   }).join('') : `<tr><td colspan="8" class="py-6 px-4 text-center text-[var(--muted-foreground)]">No candidates match active filters. <button type="button" data-reset-filters="1" class="text-[var(--link)] underline font-mono ml-1 cursor-pointer">Reset filters</button></td></tr>`;
   renderDetail(selHidden);
