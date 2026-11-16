@@ -1,0 +1,375 @@
+{
+  "target": {
+    "id": "ENSG00000173369",
+    "approvedSymbol": "C1QB",
+    "associatedDiseases": {
+      "count": 325,
+      "rows": [
+        {
+          "disease": {
+            "id": "MONDO_0015699",
+            "name": "immunodeficiency due to a classical component pathway complement deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "genomics_england",
+              "score": 0.865457038266544
+            },
+            {
+              "id": "orphanet",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "clingen",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "europepmc",
+              "score": 0.08950092298171086
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0013343",
+            "name": "C1Q deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "genomics_england",
+              "score": 0.7599134970145264
+            },
+            {
+              "id": "eva",
+              "score": 0.6192872826503382
+            },
+            {
+              "id": "clingen",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "europepmc",
+              "score": 0.08950092298171086
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0958182",
+            "name": "C1Q deficiency 1"
+          },
+          "datasourceScores": [
+            {
+              "id": "genomics_england",
+              "score": 0.7599134970145264
+            },
+            {
+              "id": "eva",
+              "score": 0.5592963338026914
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0958187",
+            "name": "C1Q deficiency 2"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.7791757842148876
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0007915",
+            "name": "systemic lupus erythematosus"
+          },
+          "datasourceScores": [
+            {
+              "id": "genomics_england",
+              "score": 0.7599134970145264
+            },
+            {
+              "id": "europepmc",
+              "score": 0.10391893462690815
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.037765325449139374
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0003832",
+            "name": "complement deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "genomics_england",
+              "score": 0.7599134970145264
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0009518",
+            "name": "complication"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.5916812778615892
+            },
+            {
+              "id": "europepmc",
+              "score": 0.01823792392834863
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0002571",
+            "name": "medical procedure"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.5916812778615892
+            },
+            {
+              "id": "europepmc",
+              "score": 0.012158615952232422
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0009888",
+            "name": "trauma complication"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.5916812778615892
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0003847",
+            "name": "hereditary disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.3142057941216479
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0009061",
+            "name": "cystic fibrosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.19453785523571876
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005101",
+            "name": "ulcerative colitis"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.13073731418456605
+            },
+            {
+              "id": "europepmc",
+              "score": 0.15203673769602633
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.015593672272207287
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005105",
+            "name": "melanoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.683747886811263
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0004229",
+            "name": "Dupuytren Contracture"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.12332498240329136
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005131",
+            "name": "cervical carcinoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.6153610629157631
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0002974",
+            "name": "cervical cancer"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.6153610629157631
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005265",
+            "name": "inflammatory bowel disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.11442536280721816
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005298",
+            "name": "osteoporosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.1132671718802625
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005381",
+            "name": "bone disorder"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.11261025842565266
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0005670",
+            "name": "smoking initiation"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.09991940274167622
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005011",
+            "name": "Crohn disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.08936785636439472
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.08104514378368852
+            },
+            {
+              "id": "europepmc",
+              "score": 0.012158615952232422
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005083",
+            "name": "psoriasis"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.08936785636439472
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.07223196646670028
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0018646",
+            "name": "sclerosing cholangitis"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.08936785636439472
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005306",
+            "name": "ankylosing spondylitis"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.08936785636439472
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005070",
+            "name": "neoplasm"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.4376677642462474
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

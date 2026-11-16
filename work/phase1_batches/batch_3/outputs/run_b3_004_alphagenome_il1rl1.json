@@ -1,0 +1,1220 @@
+{
+  "skill": "alphagenome-single-variant-analysis",
+  "variants": [
+    {
+      "rsid": "rs1420101",
+      "variant_str": "chr2:102341256:C>T",
+      "context": "Canonical IL1RL1 intronic enhancer / plasma soluble ST2 (sST2) pQTL & asthma GWAS variant",
+      "total_track_scores": 14698,
+      "n_global_gt_0p99_quantile": 1292,
+      "n_global_gt_0p995_quantile": 281,
+      "il1rl1_max_abs_quantile": 0.9970632195472717,
+      "top_il1rl1_gene_tracks": [
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "omental fat pad",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.184326171875,
+          "quantile_score": 0.9970632195472717
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "mammary epithelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.009743928909301758,
+          "quantile_score": 0.9970129728317261
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "omental fat pad",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1815185546875,
+          "quantile_score": 0.9969623684883118
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "subcutaneous adipose tissue",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.17041015625,
+          "quantile_score": 0.9967500567436218
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "upper lobe of left lung",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.17822265625,
+          "quantile_score": 0.9966384768486023
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "coronary artery",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.153564453125,
+          "quantile_score": 0.9966384768486023
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "subcutaneous adipose tissue",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1676025390625,
+          "quantile_score": 0.9966384768486023
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "breast epithelium",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.16455078125,
+          "quantile_score": 0.9965230226516724
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "coronary artery",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1517333984375,
+          "quantile_score": 0.9965230226516724
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "upper lobe of left lung",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.17431640625,
+          "quantile_score": 0.9965230226516724
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "ascending aorta",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.14111328125,
+          "quantile_score": 0.9965230226516724
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "fallopian tube",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.12054443359375,
+          "quantile_score": 0.9964036345481873
+        }
+      ],
+      "top_global_tracks": [
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "omental fat pad",
+          "gene_name": "IL18R1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1845703125,
+          "quantile_score": 0.9961524605751038
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "omental fat pad",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1845703125,
+          "quantile_score": 0.9961524605751038
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "omental fat pad",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.184326171875,
+          "quantile_score": 0.9970632195472717
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "omental fat pad",
+          "gene_name": "IL18R1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.184326171875,
+          "quantile_score": 0.9970632195472717
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "omental fat pad",
+          "gene_name": "IL18R1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1815185546875,
+          "quantile_score": 0.9969623684883118
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "omental fat pad",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1815185546875,
+          "quantile_score": 0.9969623684883118
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "placental basal plate",
+          "gene_name": "IL18R1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1806640625,
+          "quantile_score": 0.9955964684486389
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "placental basal plate",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1806640625,
+          "quantile_score": 0.9955964684486389
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "upper lobe of left lung",
+          "gene_name": "IL18R1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.17822265625,
+          "quantile_score": 0.9966384768486023
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "upper lobe of left lung",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.17822265625,
+          "quantile_score": 0.9966384768486023
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "adipose tissue",
+          "gene_name": "IL18R1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1778564453125,
+          "quantile_score": 0.9958838224411011
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "adipose tissue",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1778564453125,
+          "quantile_score": 0.9958838224411011
+        }
+      ],
+      "top_disease_relevant_tracks": [
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "coronary artery",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.153564453125,
+          "quantile_score": 0.9966384768486023
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "upper lobe of left lung",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.17822265625,
+          "quantile_score": 0.9966384768486023
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "upper lobe of left lung",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.17431640625,
+          "quantile_score": 0.9965230226516724
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "ascending aorta",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.14111328125,
+          "quantile_score": 0.9965230226516724
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "coronary artery",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1517333984375,
+          "quantile_score": 0.9965230226516724
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "ascending aorta",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1380615234375,
+          "quantile_score": 0.9964036345481873
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "ascending aorta",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.09320068359375,
+          "quantile_score": 0.9962801337242126
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "ascending aorta",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.0906982421875,
+          "quantile_score": 0.9961524605751038
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "dermis blood vessel endothelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1719970703125,
+          "quantile_score": 0.9961524605751038
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "mammary microvascular endothelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1494140625,
+          "quantile_score": 0.9960203766822815
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "vein endothelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1640625,
+          "quantile_score": 0.9960203766822815
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "bladder microvascular endothelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.166015625,
+          "quantile_score": 0.9958838224411011
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "dermis lymphatic vessel endothelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.170166015625,
+          "quantile_score": 0.9958838224411011
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "dermis microvascular lymphatic vessel endothelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1715087890625,
+          "quantile_score": 0.9958838224411011
+        },
+        {
+          "rsid": "rs1420101",
+          "variant_str": "chr2:102341256:C>T",
+          "biosample_name": "lung microvascular endothelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.1722412109375,
+          "quantile_score": 0.9958838224411011
+        }
+      ]
+    },
+    {
+      "rsid": "rs1041973",
+      "variant_str": "chr2:102339008:C>A",
+      "context": "IL1RL1 exon missense (p.Ala78Glu) / strong circulating sST2 pQTL variant",
+      "total_track_scores": 13230,
+      "n_global_gt_0p99_quantile": 2319,
+      "n_global_gt_0p995_quantile": 1525,
+      "il1rl1_max_abs_quantile": 0.9996693134307861,
+      "top_il1rl1_gene_tracks": [
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "umbilical cord",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.019137144088745117,
+          "quantile_score": 0.9996693134307861
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "cardiac ventricle fibroblast",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.024956941604614258,
+          "quantile_score": 0.9996213316917419
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "ascending aorta",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.02370584011077881,
+          "quantile_score": 0.9996082782745361
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "cardiac atrium fibroblast",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.023275673389434814,
+          "quantile_score": 0.9995808601379395
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "regular cardiac myocyte",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.0243985652923584,
+          "quantile_score": 0.9995808601379395
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "epithelial cell of alveolus of lung",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.02267169952392578,
+          "quantile_score": 0.9995514750480652
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "pericardium fibroblast",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.022193193435668945,
+          "quantile_score": 0.9995514750480652
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "smooth muscle cell of the umbilical artery",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.02297210693359375,
+          "quantile_score": 0.9995360374450684
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "psoas muscle",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.025240421295166016,
+          "quantile_score": 0.9995360374450684
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "fibroblast of the aortic adventitia",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.022258520126342773,
+          "quantile_score": 0.9995200037956238
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "aortic smooth muscle cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.021588683128356934,
+          "quantile_score": 0.999503493309021
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "smooth muscle cell of bladder",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.02179098129272461,
+          "quantile_score": 0.999503493309021
+        }
+      ],
+      "top_global_tracks": [
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "HepG2",
+          "gene_name": null,
+          "output_type": "CHIP_TF",
+          "variant_scorer": "CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.8565673828125,
+          "quantile_score": 0.9974778294563293
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "HepG2",
+          "gene_name": null,
+          "output_type": "CHIP_TF",
+          "variant_scorer": "CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.853179931640625,
+          "quantile_score": 0.9975617527961731
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "K562",
+          "gene_name": null,
+          "output_type": "CHIP_TF",
+          "variant_scorer": "CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.7910928726196289,
+          "quantile_score": 0.9984297156333923
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "IMR-90",
+          "gene_name": null,
+          "output_type": "CHIP_TF",
+          "variant_scorer": "CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.6447219848632812,
+          "quantile_score": 0.9963408708572388
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "K562",
+          "gene_name": null,
+          "output_type": "CHIP_TF",
+          "variant_scorer": "CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.6016082763671875,
+          "quantile_score": 0.9980098605155945
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "A549",
+          "gene_name": null,
+          "output_type": "CHIP_TF",
+          "variant_scorer": "CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.5942926406860352,
+          "quantile_score": 0.998375654220581
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "K562",
+          "gene_name": null,
+          "output_type": "CHIP_TF",
+          "variant_scorer": "CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.4122600555419922,
+          "quantile_score": 0.9972084164619446
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "HeLa-S3",
+          "gene_name": null,
+          "output_type": "CHIP_TF",
+          "variant_scorer": "CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.32674598693847656,
+          "quantile_score": 0.9902552962303162
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "omental fat pad",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.286865234375,
+          "quantile_score": 0.9982900619506836
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "omental fat pad",
+          "gene_name": "IL18R1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.286865234375,
+          "quantile_score": 0.9982900619506836
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "subcutaneous adipose tissue",
+          "gene_name": "IL1RL1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.26953125,
+          "quantile_score": 0.9981074929237366
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "subcutaneous adipose tissue",
+          "gene_name": "IL18R1",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.26953125,
+          "quantile_score": 0.9981074929237366
+        }
+      ],
+      "top_disease_relevant_tracks": [
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "umbilical cord",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.019137144088745117,
+          "quantile_score": 0.9996693134307861
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "ascending aorta",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.02370584011077881,
+          "quantile_score": 0.9996082782745361
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "epithelial cell of alveolus of lung",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.02267169952392578,
+          "quantile_score": 0.9995514750480652
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "smooth muscle cell of the umbilical artery",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.02297210693359375,
+          "quantile_score": 0.9995360374450684
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "smooth muscle cell of the coronary artery",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.021469473838806152,
+          "quantile_score": 0.999503493309021
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "fibroblast of lung",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.01992487907409668,
+          "quantile_score": 0.9994686841964722
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "fibroblast of lung",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.020880699157714844,
+          "quantile_score": 0.9994118809700012
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "bronchus fibroblast of lung",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.016535282135009766,
+          "quantile_score": 0.9993265271186829
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "astrocyte",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.01659107208251953,
+          "quantile_score": 0.9993265271186829
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "spinal cord",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.01771235466003418,
+          "quantile_score": 0.9992793202400208
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "aorta",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.01894402503967285,
+          "quantile_score": 0.9992793202400208
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "spinal cord",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.01581406593322754,
+          "quantile_score": 0.999228835105896
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "thoracic aorta",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.01657867431640625,
+          "quantile_score": 0.9992022514343262
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "aorta",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.01678025722503662,
+          "quantile_score": 0.9991747736930847
+        },
+        {
+          "rsid": "rs1041973",
+          "variant_str": "chr2:102339008:C>A",
+          "biosample_name": "lung",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.01575601100921631,
+          "quantile_score": 0.9991463422775269
+        }
+      ]
+    },
+    {
+      "rsid": "rs953934",
+      "variant_str": "chr2:102315833:C>T",
+      "context": "Lead proximal GTEx v10 cis-eQTL (Lung, p=1.131e-78, NES=-0.476)",
+      "total_track_scores": 34153,
+      "n_global_gt_0p99_quantile": 41,
+      "n_global_gt_0p995_quantile": 3,
+      "il1rl1_max_abs_quantile": 0.995810866355896,
+      "top_il1rl1_gene_tracks": [
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "endothelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.007825374603271484,
+          "quantile_score": -0.995810866355896
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "mesodermal cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.008383989334106445,
+          "quantile_score": -0.9945102334022522
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "CD4-positive, alpha-beta memory T cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.006997585296630859,
+          "quantile_score": 0.9905784130096436
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "ascending aorta",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.005687713623046875,
+          "quantile_score": -0.9902552962303162
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "trophoblast cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.006575584411621094,
+          "quantile_score": -0.9880717396736145
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "smooth muscle cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.006094694137573242,
+          "quantile_score": -0.9868040084838867
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "umbilical cord",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.004071950912475586,
+          "quantile_score": -0.98330157995224
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "mesendoderm",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.005921363830566406,
+          "quantile_score": -0.98273104429245
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "heart left ventricle",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.005859851837158203,
+          "quantile_score": -0.98273104429245
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "smooth muscle cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.005135059356689453,
+          "quantile_score": -0.9821412563323975
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "endothelial cell of umbilical vein",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.004991352558135986,
+          "quantile_score": -0.9815315008163452
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "endothelial cell of umbilical vein",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.005251104012131691,
+          "quantile_score": -0.9795758128166199
+        }
+      ],
+      "top_global_tracks": [
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "hematopoietic multipotent progenitor cell",
+          "gene_name": "ENSG00000236525",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.009392023086547852,
+          "quantile_score": -0.996803879737854
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "common myeloid progenitor, CD34-positive",
+          "gene_name": "ENSG00000236525",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.008902907371520996,
+          "quantile_score": -0.9939246773719788
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "mesodermal cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.008383989334106445,
+          "quantile_score": -0.9945102334022522
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "endothelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.007825374603271484,
+          "quantile_score": -0.995810866355896
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "astrocyte",
+          "gene_name": "TMEM182",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.007409334182739258,
+          "quantile_score": -0.9955178499221802
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "hair follicular keratinocyte",
+          "gene_name": "TMEM182",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.007226705551147461,
+          "quantile_score": -0.9930460453033447
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "kidney epithelial cell",
+          "gene_name": "TMEM182",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.0071294307708740234,
+          "quantile_score": -0.9945102334022522
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "GM23248",
+          "gene_name": "TMEM182",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.007121086120605469,
+          "quantile_score": -0.9914851188659668
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "mammary epithelial cell",
+          "gene_name": "TMEM182",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.0070078372955322266,
+          "quantile_score": -0.9914851188659668
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "CD4-positive, alpha-beta memory T cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.006997585296630859,
+          "quantile_score": 0.9905784130096436
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "hematopoietic multipotent progenitor cell",
+          "gene_name": "IL18RAP",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.006952404975891113,
+          "quantile_score": -0.992040753364563
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "tracheal epithelial cell",
+          "gene_name": "TMEM182",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.00684809684753418,
+          "quantile_score": -0.9937160015106201
+        }
+      ],
+      "top_disease_relevant_tracks": [
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "endothelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.007825374603271484,
+          "quantile_score": -0.995810866355896
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "ascending aorta",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.005687713623046875,
+          "quantile_score": -0.9902552962303162
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "umbilical cord",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.004071950912475586,
+          "quantile_score": -0.98330157995224
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "endothelial cell of umbilical vein",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.004991352558135986,
+          "quantile_score": -0.9815315008163452
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "endothelial cell of umbilical vein",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.005251104012131691,
+          "quantile_score": -0.9795758128166199
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "glomerular endothelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.004575222730636597,
+          "quantile_score": -0.978159487247467
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "right renal cortex interstitium",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.005362987518310547,
+          "quantile_score": -0.9758510589599609
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "left renal cortex interstitium",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.005178928375244141,
+          "quantile_score": -0.9758510589599609
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "epithelial cell of umbilical artery",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.004317820072174072,
+          "quantile_score": -0.9741798043251038
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "renal cortex interstitium",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.0051555633544921875,
+          "quantile_score": -0.9741798043251038
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "dermis blood vessel endothelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.004301711916923523,
+          "quantile_score": -0.973301887512207
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "T-cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": 0.0047149658203125,
+          "quantile_score": 0.9723945260047913
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "vein endothelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.004178464412689209,
+          "quantile_score": -0.9723945260047913
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "bladder microvascular endothelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.004051327705383301,
+          "quantile_score": -0.97145676612854
+        },
+        {
+          "rsid": "rs953934",
+          "variant_str": "chr2:102315833:C>T",
+          "biosample_name": "lung microvascular endothelial cell",
+          "gene_name": "IL1RL1",
+          "output_type": "RNA_SEQ",
+          "variant_scorer": "GeneMaskLFCScorer(requested_output=RNA_SEQ)",
+          "raw_score": -0.0039511919021606445,
+          "quantile_score": -0.97145676612854
+        }
+      ]
+    }
+  ]
+}

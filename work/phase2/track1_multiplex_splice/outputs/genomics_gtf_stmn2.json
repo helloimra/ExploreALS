@@ -1,0 +1,183 @@
+[
+  {
+    "gene_name": "STMN2",
+    "gene_id": "ENSG00000104435.14",
+    "transcript_id": "ENST00000220876.12",
+    "transcript_type": "protein_coding",
+    "chromosome": "chr8",
+    "start": 79611116,
+    "end": 79666158,
+    "strand": "+",
+    "is_mane_select": true,
+    "num_exons": 5,
+    "exons": [
+      {
+        "exon_number": 1,
+        "chromosome": "chr8",
+        "start": 79611116,
+        "end": 79611214,
+        "width": 99,
+        "strand": "+",
+        "acceptor": 79611116,
+        "donor": 79611214,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 2,
+        "chromosome": "chr8",
+        "start": 79636801,
+        "end": 79636897,
+        "width": 97,
+        "strand": "+",
+        "acceptor": 79636801,
+        "donor": 79636897,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 3,
+        "chromosome": "chr8",
+        "start": 79641377,
+        "end": 79641550,
+        "width": 174,
+        "strand": "+",
+        "acceptor": 79641377,
+        "donor": 79641550,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 4,
+        "chromosome": "chr8",
+        "start": 79654870,
+        "end": 79655062,
+        "width": 193,
+        "strand": "+",
+        "acceptor": 79654870,
+        "donor": 79655062,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 5,
+        "chromosome": "chr8",
+        "start": 79664814,
+        "end": 79666158,
+        "width": 1345,
+        "strand": "+",
+        "acceptor": 79664814,
+        "donor": 79666158,
+        "overlaps_variant": false
+      }
+    ],
+    "junctions": [
+      {
+        "type": "Canonical Intron 1",
+        "upstream_exon": 1,
+        "downstream_exon": 2,
+        "junction_start": 79611214,
+        "junction_end": 79636801,
+        "junction_str": "79611214:79636801",
+        "intron_length": 25586,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 2",
+        "upstream_exon": 2,
+        "downstream_exon": 3,
+        "junction_start": 79636897,
+        "junction_end": 79641377,
+        "junction_str": "79636897:79641377",
+        "intron_length": 4479,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 3",
+        "upstream_exon": 3,
+        "downstream_exon": 4,
+        "junction_start": 79641550,
+        "junction_end": 79654870,
+        "junction_str": "79641550:79654870",
+        "intron_length": 13319,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 4",
+        "upstream_exon": 4,
+        "downstream_exon": 5,
+        "junction_start": 79655062,
+        "junction_end": 79664814,
+        "junction_str": "79655062:79664814",
+        "intron_length": 9751,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Exon 2 Skipping",
+        "upstream_exon": 1,
+        "downstream_exon": 3,
+        "junction_start": 79611214,
+        "junction_end": 79641377,
+        "junction_str": "79611214:79641377",
+        "intron_length": 30162
+      },
+      {
+        "type": "Exon 3 Skipping",
+        "upstream_exon": 2,
+        "downstream_exon": 4,
+        "junction_start": 79636897,
+        "junction_end": 79654870,
+        "junction_str": "79636897:79654870",
+        "intron_length": 17972
+      },
+      {
+        "type": "Exon 4 Skipping",
+        "upstream_exon": 3,
+        "downstream_exon": 5,
+        "junction_start": 79641550,
+        "junction_end": 79664814,
+        "junction_str": "79641550:79664814",
+        "intron_length": 23263
+      }
+    ],
+    "cds": [
+      {
+        "start": 79611195,
+        "end": 79611214,
+        "width": 20
+      },
+      {
+        "start": 79636801,
+        "end": 79636897,
+        "width": 97
+      },
+      {
+        "start": 79641377,
+        "end": 79641550,
+        "width": 174
+      },
+      {
+        "start": 79654870,
+        "end": 79655062,
+        "width": 193
+      },
+      {
+        "start": 79664814,
+        "end": 79664871,
+        "width": 58
+      }
+    ],
+    "utr": [
+      {
+        "start": 79611116,
+        "end": 79611195,
+        "width": 80
+      },
+      {
+        "start": 79664871,
+        "end": 79666158,
+        "width": 1288
+      }
+    ]
+  }
+]

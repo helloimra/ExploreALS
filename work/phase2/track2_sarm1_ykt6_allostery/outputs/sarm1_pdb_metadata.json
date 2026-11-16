@@ -1,0 +1,779 @@
+[
+  {
+    "pdb_id": "10RA",
+    "resolution_A": 1.79,
+    "year": 2026,
+    "pmid": 41948869,
+    "citation_title": "Structure-Based Discovery of Imidazo[4,5- c ]pyridine SARM1 Modulators Showing Paradoxical Activation.",
+    "title": "Human SARM1 TIR domain bound to compound 6",
+    "ligands": [
+      {
+        "id": "A1C9A",
+        "name": "1-[(2R,3R,4S,5R)-5-({[(S)-{[(R)-{[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl]oxy}(hydroxy)phosphoryl]oxy}methyl)-3,4-dihydroxyoxolan-2-yl]-4-[(4S,6P)-6-(5-fluoro-1H-indol-2-yl)imidazo[1,2-a]pyrazin-2-yl]pyridin-1-ium (non-preferred name)",
+        "mw": 871.639
+      }
+    ]
+  },
+  {
+    "pdb_id": "10RC",
+    "resolution_A": 1.9,
+    "year": 2026,
+    "pmid": 41948869,
+    "citation_title": "Structure-Based Discovery of Imidazo[4,5- c ]pyridine SARM1 Modulators Showing Paradoxical Activation.",
+    "title": "Human SARM1 TIR domain bound to compound 22",
+    "ligands": [
+      {
+        "id": "A1C9I",
+        "name": "1-[(2R,3R,4S,5R)-5-({[(S)-{[(S)-{[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl]oxy}(hydroxy)phosphoryl]oxy}methyl)-3,4-dihydroxyoxolan-2-yl]-4-{(6P)-7-{[2-(dimethylamino)ethyl]amino}-6-[6-fluoro-4-(pyrimidin-2-yl)-1H-indol-2-yl]-1-methyl-1H-imidazo[4,5-c]pyridin-2-yl}pyridin-1-ium (non-preferred name)",
+        "mw": 1049.873
+      }
+    ]
+  },
+  {
+    "pdb_id": "10RB",
+    "resolution_A": 2.05,
+    "year": 2026,
+    "pmid": 41948869,
+    "citation_title": "Structure-Based Discovery of Imidazo[4,5- c ]pyridine SARM1 Modulators Showing Paradoxical Activation.",
+    "title": "Human SARM1 TIR domain bound to compound 14",
+    "ligands": [
+      {
+        "id": "A1C9H",
+        "name": "1-[(2R,3R,4S,5R)-5-({[(S)-{[(S)-{[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxyoxolan-2-yl]methoxy}(hydroxy)phosphoryl]oxy}(hydroxy)phosphoryl]oxy}methyl)-3,4-dihydroxyoxolan-2-yl]-4-[(6P)-7-{[2-(dimethylamino)ethyl]amino}-6-(5-fluoro-1H-indol-2-yl)-1-methyl-1H-imidazo[4,5-c]pyridin-2-yl]pyridin-1-ium (non-preferred name)",
+        "mw": 971.801
+      }
+    ]
+  },
+  {
+    "pdb_id": "9TZY",
+    "resolution_A": 2.94,
+    "year": 2026,
+    "pmid": 42156967,
+    "citation_title": "The rise and fall of SARM1 base-exchange inhibitors.",
+    "title": "SARM1 TIR with BEXi adduct 17",
+    "ligands": [
+      {
+        "id": "A1JZ0",
+        "name": "[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-[3-[(1~{S})-1-[4-[[2,2-bis(fluoranyl)-2-[(3~{R})-oxolan-3-yl]ethanoyl]amino]phenyl]ethyl]-2-methyl-imidazol-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 891.683
+      }
+    ]
+  },
+  {
+    "pdb_id": "9TZW",
+    "resolution_A": 3.3,
+    "year": 2026,
+    "pmid": 42156967,
+    "citation_title": "The rise and fall of SARM1 base-exchange inhibitors.",
+    "title": "SARM1 TIR with BEXi adduct 6",
+    "ligands": [
+      {
+        "id": "A1JZX",
+        "name": "[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-3,4-bis(oxidanyl)-5-[4-[[4-(pyridin-2-ylcarbamoylamino)phenyl]methyl]pyridin-1-yl]oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 846.654
+      }
+    ]
+  },
+  {
+    "pdb_id": "9UGJ",
+    "resolution_A": 3.85,
+    "year": 2026,
+    "pmid": 40846996,
+    "citation_title": "SARM1 activation promotes axonal degeneration via a two-step phase transition.",
+    "title": "Structure of SARM1 bound to SIR3-ADPR",
+    "ligands": [
+      {
+        "id": "A1EO4",
+        "name": "[[(2~{S},3~{R},4~{S},5~{S})-5-(4-azanylimidazo[4,5-d]pyridazin-1-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-[4-methyl-3-(2-oxidanylidene-3~{H}-1,3-benzoxazol-6-yl)pyridin-1-ium-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 768.539
+      }
+    ]
+  },
+  {
+    "pdb_id": "9MW2",
+    "resolution_A": 1.75,
+    "year": 2025,
+    "pmid": 40529094,
+    "citation_title": "Optimization of Brain Penetrant SARM1 Orthosteric Inhibitors and Discovery of Their Paradoxical Subinhibitory Activation.",
+    "title": "Structure of SARM1 TIR domain bound to G6831",
+    "ligands": [
+      {
+        "id": "A1BU7",
+        "name": "[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-[4-[3-[(4~{S})-4-(4-chloranyl-3-fluoranyl-phenyl)-2-oxidanylidene-piperidin-1-yl]-1-bicyclo[1.1.1]pentanyl]pyridin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 913.156
+      }
+    ]
+  },
+  {
+    "pdb_id": "9MW3",
+    "resolution_A": 1.93,
+    "year": 2025,
+    "pmid": 40529094,
+    "citation_title": "Optimization of Brain Penetrant SARM1 Orthosteric Inhibitors and Discovery of Their Paradoxical Subinhibitory Activation.",
+    "title": "Structure of SARM1 TIR domain bound to G2756",
+    "ligands": [
+      {
+        "id": "A1BTR",
+        "name": "[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-[4-[5-[(4~{S})-4-(4-fluorophenyl)-2-oxidanylidene-piperidin-1-yl]pyridin-2-yl]pyridin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 889.694
+      }
+    ]
+  },
+  {
+    "pdb_id": "9MW1",
+    "resolution_A": 2.1,
+    "year": 2025,
+    "pmid": 40529094,
+    "citation_title": "Optimization of Brain Penetrant SARM1 Orthosteric Inhibitors and Discovery of Their Paradoxical Subinhibitory Activation.",
+    "title": "Structure of SARM1 TIR domain bound to G8758",
+    "ligands": [
+      {
+        "id": "A1BTS",
+        "name": "[(2~{R},3~{S},4~{R},5~{R})-5-[4-[5-[(6~{R})-6-(4-chloranyl-3-fluoranyl-phenyl)-2-oxidanylidene-1,3-oxazinan-3-yl]-1~{H}-pyrazol-3-yl]pyridin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl phosphono hydrogen phosphate",
+        "mw": 665.863
+      }
+    ]
+  },
+  {
+    "pdb_id": "9L2E",
+    "resolution_A": 2.46,
+    "year": 2025,
+    "pmid": 39964720,
+    "citation_title": "Stepwise activation of SARM1 for cell death and axon degeneration revealed by a biosynthetic NMN mimic.",
+    "title": "Structure of SARM1 bound to M1 in the intermediate state 2",
+    "ligands": []
+  },
+  {
+    "pdb_id": "9L2D",
+    "resolution_A": 2.83,
+    "year": 2025,
+    "pmid": 39964720,
+    "citation_title": "Stepwise activation of SARM1 for cell death and axon degeneration revealed by a biosynthetic NMN mimic.",
+    "title": "Structure of SARM1 bound to M1 in the intermediate state 1",
+    "ligands": [
+      {
+        "id": "A1EIV",
+        "name": "[(2~{R},3~{S},4~{R},5~{R})-3,4-bis(oxidanyl)-5-(3-sulfanylpyridin-1-yl)oxolan-2-yl]methyl dihydrogen phosphate",
+        "mw": 324.267
+      }
+    ]
+  },
+  {
+    "pdb_id": "9UGA",
+    "resolution_A": 3.06,
+    "year": 2025,
+    "pmid": 41138726,
+    "citation_title": "SARM1 senses dsDNA to promote NAD + degradation and cell death.",
+    "title": "SARM1 senses DNA to promote NAD degradation",
+    "ligands": []
+  },
+  {
+    "pdb_id": "9L2G",
+    "resolution_A": 3.27,
+    "year": 2025,
+    "pmid": 39964720,
+    "citation_title": "Stepwise activation of SARM1 for cell death and axon degeneration revealed by a biosynthetic NMN mimic.",
+    "title": "Structure of SARM1 2C-mutant bound to M1",
+    "ligands": [
+      {
+        "id": "A1EIV",
+        "name": "[(2~{R},3~{S},4~{R},5~{R})-3,4-bis(oxidanyl)-5-(3-sulfanylpyridin-1-yl)oxolan-2-yl]methyl dihydrogen phosphate",
+        "mw": 324.267
+      }
+    ]
+  },
+  {
+    "pdb_id": "9L2F",
+    "resolution_A": 3.55,
+    "year": 2025,
+    "pmid": 39964720,
+    "citation_title": "Stepwise activation of SARM1 for cell death and axon degeneration revealed by a biosynthetic NMN mimic.",
+    "title": "Structure of SARM1 bound to M1 and 1AD in the active state",
+    "ligands": [
+      {
+        "id": "A1EIV",
+        "name": "[(2~{R},3~{S},4~{R},5~{R})-3,4-bis(oxidanyl)-5-(3-sulfanylpyridin-1-yl)oxolan-2-yl]methyl dihydrogen phosphate",
+        "mw": 324.267
+      }
+    ]
+  },
+  {
+    "pdb_id": "8P2L",
+    "resolution_A": 2.68,
+    "year": 2023,
+    "pmid": 37635352,
+    "citation_title": "Structure-function analysis of ceTIR-1/hSARM1 explains the lack of Wallerian axonal degeneration in C. elegans.",
+    "title": "A CHIMERA construct containing human SARM1 ARM and SAM domains and C. elegans TIR domain.",
+    "ligands": [
+      {
+        "id": "NAD",
+        "name": "NICOTINAMIDE-ADENINE-DINUCLEOTIDE",
+        "mw": 663.425
+      }
+    ]
+  },
+  {
+    "pdb_id": "7NAJ",
+    "resolution_A": 1.6,
+    "year": 2022,
+    "pmid": 35334231,
+    "citation_title": "Structural basis of SARM1 activation, substrate recognition, and inhibition by small molecules.",
+    "title": "Crystal structure of the TIR domain from human SARM1 in complex with ara-2'F-ADPR",
+    "ligands": [
+      {
+        "id": "1LK",
+        "name": "1,4-anhydro-2-deoxy-2-fluoro-5-O-[(S)-hydroxy(phosphonooxy)phosphoryl]-D-arabinitol",
+        "mw": 296.081
+      }
+    ]
+  },
+  {
+    "pdb_id": "7NAG",
+    "resolution_A": 1.72,
+    "year": 2022,
+    "pmid": 35334231,
+    "citation_title": "Structural basis of SARM1 activation, substrate recognition, and inhibition by small molecules.",
+    "title": "Crystal structure of the TIR domain from human SARM1 in complex with 1AD",
+    "ligands": [
+      {
+        "id": "1QD",
+        "name": "[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-(5-iodanylisoquinolin-2-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 797.364
+      }
+    ]
+  },
+  {
+    "pdb_id": "7NAI",
+    "resolution_A": 1.74,
+    "year": 2022,
+    "pmid": 35334231,
+    "citation_title": "Structural basis of SARM1 activation, substrate recognition, and inhibition by small molecules.",
+    "title": "Crystal structure of the TIR domain from human SARM1 in complex with 3AD",
+    "ligands": [
+      {
+        "id": "1O4",
+        "name": "[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-(8-azanylisoquinolin-2-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 686.482
+      }
+    ]
+  },
+  {
+    "pdb_id": "8D0F",
+    "resolution_A": 1.74,
+    "year": 2022,
+    "pmid": 36087583,
+    "citation_title": "Uncompetitive, adduct-forming SARM1 inhibitors are neuroprotective in preclinical models of nerve injury and disease.",
+    "title": "Human SARM1 TIR domain bound to NB-2-ADPR",
+    "ligands": [
+      {
+        "id": "Q0U",
+        "name": "[[(3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-[4-[[methyl-[2,2,2-tris(fluoranyl)ethylcarbamoyl]amino]methyl]pyridin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 789.525
+      }
+    ]
+  },
+  {
+    "pdb_id": "7NAH",
+    "resolution_A": 1.79,
+    "year": 2022,
+    "pmid": 35334231,
+    "citation_title": "Structural basis of SARM1 activation, substrate recognition, and inhibition by small molecules.",
+    "title": "Crystal structure of the TIR domain from human SARM1 in complex with 2AD",
+    "ligands": [
+      {
+        "id": "1OF",
+        "name": "[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-3,4-bis(oxidanyl)-5-(8-oxidanylidene-7~{H}-2,7-naphthyridin-2-yl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 688.454
+      }
+    ]
+  },
+  {
+    "pdb_id": "8D0E",
+    "resolution_A": 1.88,
+    "year": 2022,
+    "pmid": 36087583,
+    "citation_title": "Uncompetitive, adduct-forming SARM1 inhibitors are neuroprotective in preclinical models of nerve injury and disease.",
+    "title": "Human SARM1 TIR domain bound to NB-7",
+    "ligands": [
+      {
+        "id": "Q0C",
+        "name": "3-(4-chlorophenyl)-N-[4-methyl-3-(pyridin-4-yl)-1H-pyrazol-5-yl]propanamide",
+        "mw": 340.807
+      }
+    ]
+  },
+  {
+    "pdb_id": "8D0J",
+    "resolution_A": 1.94,
+    "year": 2022,
+    "pmid": 36087583,
+    "citation_title": "Uncompetitive, adduct-forming SARM1 inhibitors are neuroprotective in preclinical models of nerve injury and disease.",
+    "title": "Apo Human SARM1 TIR domain",
+    "ligands": []
+  },
+  {
+    "pdb_id": "8D0D",
+    "resolution_A": 1.96,
+    "year": 2022,
+    "pmid": 36087583,
+    "citation_title": "Uncompetitive, adduct-forming SARM1 inhibitors are neuroprotective in preclinical models of nerve injury and disease.",
+    "title": "Human SARM1 TIR domain bound to an NB-7-ADPR adduct",
+    "ligands": [
+      {
+        "id": "Q0L",
+        "name": "[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R})-5-[4-[3-[3-(4-chlorophenyl)propanoylamino]-4-methyl-1~{H}-pyrazol-5-yl]pyridin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 883.115
+      }
+    ]
+  },
+  {
+    "pdb_id": "8D0G",
+    "resolution_A": 1.99,
+    "year": 2022,
+    "pmid": 36087583,
+    "citation_title": "Uncompetitive, adduct-forming SARM1 inhibitors are neuroprotective in preclinical models of nerve injury and disease.",
+    "title": "Human SARM1 TIR domain bound to NB-3-ADPRP",
+    "ligands": [
+      {
+        "id": "Q1X",
+        "name": "[[(2~{R},3~{R},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3-oxidanyl-4-phosphonooxy-oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-[4-[(1~{S})-1-[methyl-[2,2,2-tris(fluoranyl)ethylcarbamoyl]amino]ethyl]pyridin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 883.532
+      }
+    ]
+  },
+  {
+    "pdb_id": "8D0I",
+    "resolution_A": 2.0,
+    "year": 2022,
+    "pmid": 36087583,
+    "citation_title": "Uncompetitive, adduct-forming SARM1 inhibitors are neuroprotective in preclinical models of nerve injury and disease.",
+    "title": "Human SARM1 bound to an NB-3 eADPR adduct",
+    "ligands": [
+      {
+        "id": "PZ7",
+        "name": "[[(2~{R},3~{S},4~{R},5~{R})-5-imidazo[2,1-f]purin-3-yl-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-[4-[(1~{S})-1-[methyl-[2,2,2-tris(fluoranyl)ethylcarbamoyl]amino]ethyl]pyridin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 827.573
+      }
+    ]
+  },
+  {
+    "pdb_id": "8D0C",
+    "resolution_A": 2.09,
+    "year": 2022,
+    "pmid": 36087583,
+    "citation_title": "Uncompetitive, adduct-forming SARM1 inhibitors are neuroprotective in preclinical models of nerve injury and disease.",
+    "title": "Human SARM1 TIR domain bound to NB-3-ADPR",
+    "ligands": [
+      {
+        "id": "Q1F",
+        "name": "[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-[4-[(1~{S})-1-[methyl-[2,2,2-tris(fluoranyl)ethylcarbamoyl]amino]ethyl]pyridin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 803.552
+      }
+    ]
+  },
+  {
+    "pdb_id": "8D0H",
+    "resolution_A": 2.37,
+    "year": 2022,
+    "pmid": 36087583,
+    "citation_title": "Uncompetitive, adduct-forming SARM1 inhibitors are neuroprotective in preclinical models of nerve injury and disease.",
+    "title": "Human SARM1 TIR domain bound to NB-3-GDPR",
+    "ligands": [
+      {
+        "id": "Q1O",
+        "name": "[[(2~{R},3~{S},4~{R},5~{R})-5-(2-azanyl-6-oxidanylidene-3~{H}-purin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-[4-[(1~{S})-1-[methyl-[2,2,2-tris(fluoranyl)ethylcarbamoyl]amino]ethyl]pyridin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 819.551
+      }
+    ]
+  },
+  {
+    "pdb_id": "8GQ5",
+    "resolution_A": 2.7,
+    "year": 2022,
+    "pmid": 36550129,
+    "citation_title": "A conformation-specific nanobody targeting the nicotinamide mononucleotide-activated state of SARM1.",
+    "title": "Human SARM1 bounded with NMN and Nanobody-C6, double-layer structure",
+    "ligands": []
+  },
+  {
+    "pdb_id": "7NAK",
+    "resolution_A": 2.9,
+    "year": 2022,
+    "pmid": 35334231,
+    "citation_title": "Structural basis of SARM1 activation, substrate recognition, and inhibition by small molecules.",
+    "title": "Cryo-EM structure of activated human SARM1 in complex with NMN and 1AD (TIR:1AD)",
+    "ligands": [
+      {
+        "id": "1QD",
+        "name": "[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-(5-iodanylisoquinolin-2-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 797.364
+      }
+    ]
+  },
+  {
+    "pdb_id": "7NAL",
+    "resolution_A": 3.0,
+    "year": 2022,
+    "pmid": 35334231,
+    "citation_title": "Structural basis of SARM1 activation, substrate recognition, and inhibition by small molecules.",
+    "title": "Cryo-EM structure of activated human SARM1 in complex with NMN and 1AD (ARM and SAM domains)",
+    "ligands": [
+      {
+        "id": "NMN",
+        "name": "BETA-NICOTINAMIDE RIBOSE MONOPHOSPHATE",
+        "mw": 335.227
+      }
+    ]
+  },
+  {
+    "pdb_id": "8GNI",
+    "resolution_A": 3.74,
+    "year": 2022,
+    "pmid": 36550129,
+    "citation_title": "A conformation-specific nanobody targeting the nicotinamide mononucleotide-activated state of SARM1.",
+    "title": "Human SARM1 bounded with NMN and Nanobody-C6, Conformation 1",
+    "ligands": [
+      {
+        "id": "NMN",
+        "name": "BETA-NICOTINAMIDE RIBOSE MONOPHOSPHATE",
+        "mw": 335.227
+      }
+    ]
+  },
+  {
+    "pdb_id": "8GNJ",
+    "resolution_A": 3.78,
+    "year": 2022,
+    "pmid": 36550129,
+    "citation_title": "A conformation-specific nanobody targeting the nicotinamide mononucleotide-activated state of SARM1.",
+    "title": "Human SARM1 bounded with NMN and Nanobody-C6, Conformation 2",
+    "ligands": [
+      {
+        "id": "NMN",
+        "name": "BETA-NICOTINAMIDE RIBOSE MONOPHOSPHATE",
+        "mw": 335.227
+      }
+    ]
+  },
+  {
+    "pdb_id": "7QG0",
+    "resolution_A": 4.02,
+    "year": 2022,
+    "pmid": 36564647,
+    "citation_title": "A duplex structure of SARM1 octamers stabilized by a new inhibitor.",
+    "title": "Inhibitor-induced hSARM1 duplex",
+    "ligands": []
+  },
+  {
+    "pdb_id": "7DJT",
+    "resolution_A": 2.8,
+    "year": 2021,
+    "pmid": 33944777,
+    "citation_title": "Permeant fluorescent probes visualize the activation of SARM1 and uncover an anti-neurodegenerative drug candidate.",
+    "title": "Human SARM1 inhibitory state bounded with inhibitor dHNN",
+    "ligands": [
+      {
+        "id": "H8L",
+        "name": "O3-methyl O5-(2-methylpropyl) 2,6-dimethyl-4-[2-(oxidanylamino)phenyl]pyridine-3,5-dicarboxylate",
+        "mw": 372.415
+      }
+    ]
+  },
+  {
+    "pdb_id": "7LD0",
+    "resolution_A": 3.1,
+    "year": 2021,
+    "pmid": 33657413,
+    "citation_title": "SARM1 is a metabolic sensor activated by an increased NMN/NAD + ratio to trigger axon degeneration.",
+    "title": "Cryo-EM structure of ligand-free Human SARM1",
+    "ligands": []
+  },
+  {
+    "pdb_id": "7KNQ",
+    "resolution_A": 3.4,
+    "year": 2021,
+    "pmid": 33468661,
+    "citation_title": "Multiple domain interfaces mediate SARM1 autoinhibition.",
+    "title": "SARM1 Octamer",
+    "ligands": []
+  },
+  {
+    "pdb_id": "7CM7",
+    "resolution_A": 2.6,
+    "year": 2020,
+    "pmid": 33053563,
+    "citation_title": "The NAD + -mediated self-inhibition mechanism of pro-neurodegenerative SARM1.",
+    "title": "NAD+-bound Sarm1 E642A in the self-inhibited state",
+    "ligands": [
+      {
+        "id": "NAD",
+        "name": "NICOTINAMIDE-ADENINE-DINUCLEOTIDE",
+        "mw": 663.425
+      }
+    ]
+  },
+  {
+    "pdb_id": "7CM5",
+    "resolution_A": 2.6,
+    "year": 2020,
+    "pmid": 33053563,
+    "citation_title": "The NAD + -mediated self-inhibition mechanism of pro-neurodegenerative SARM1.",
+    "title": "Full-length Sarm1 in a self-inhibited state",
+    "ligands": []
+  },
+  {
+    "pdb_id": "7ANW",
+    "resolution_A": 2.68,
+    "year": 2020,
+    "pmid": 33185189,
+    "citation_title": "Structural basis for SARM1 inhibition and activation under energetic stress.",
+    "title": "hSARM1 NAD+ complex",
+    "ligands": [
+      {
+        "id": "NAD",
+        "name": "NICOTINAMIDE-ADENINE-DINUCLEOTIDE",
+        "mw": 663.425
+      }
+    ]
+  },
+  {
+    "pdb_id": "6ZFX",
+    "resolution_A": 2.88,
+    "year": 2020,
+    "pmid": 33185189,
+    "citation_title": "Structural basis for SARM1 inhibition and activation under energetic stress.",
+    "title": "hSARM1 GraFix-ed",
+    "ligands": [
+      {
+        "id": "S1N",
+        "name": "(~{E})-4-methylnon-4-enedial",
+        "mw": 168.233
+      }
+    ]
+  },
+  {
+    "pdb_id": "7CM6",
+    "resolution_A": 3.0,
+    "year": 2020,
+    "pmid": 33053563,
+    "citation_title": "The NAD + -mediated self-inhibition mechanism of pro-neurodegenerative SARM1.",
+    "title": "NAD+-bound Sarm1 in the self-inhibited state",
+    "ligands": [
+      {
+        "id": "NAD",
+        "name": "NICOTINAMIDE-ADENINE-DINUCLEOTIDE",
+        "mw": 663.425
+      }
+    ]
+  },
+  {
+    "pdb_id": "6WPK",
+    "resolution_A": 3.3,
+    "year": 2020,
+    "pmid": null,
+    "citation_title": "Structural and Mechanistic Regulation of the Prodegenerative NAD Hydrolase SARM1",
+    "title": "SARM1 Autoinhibited Conformation",
+    "ligands": []
+  },
+  {
+    "pdb_id": "6ZG1",
+    "resolution_A": 3.77,
+    "year": 2020,
+    "pmid": 33185189,
+    "citation_title": "Structural basis for SARM1 inhibition and activation under energetic stress.",
+    "title": "SARM1 SAM1-2 domains",
+    "ligands": [
+      {
+        "id": "PGE",
+        "name": "TRIETHYLENE GLYCOL",
+        "mw": 150.173
+      },
+      {
+        "id": "PEG",
+        "name": "DI(HYDROXYETHYL)ETHER",
+        "mw": 106.12
+      },
+      {
+        "id": "BME",
+        "name": "BETA-MERCAPTOETHANOL",
+        "mw": 78.133
+      }
+    ]
+  },
+  {
+    "pdb_id": "6ZG0",
+    "resolution_A": 7.7,
+    "year": 2020,
+    "pmid": 33185189,
+    "citation_title": "Structural basis for SARM1 inhibition and activation under energetic stress.",
+    "title": "SARM1 SAM1-2 domains",
+    "ligands": [
+      {
+        "id": "PGE",
+        "name": "TRIETHYLENE GLYCOL",
+        "mw": 150.173
+      },
+      {
+        "id": "PEG",
+        "name": "DI(HYDROXYETHYL)ETHER",
+        "mw": 106.12
+      },
+      {
+        "id": "BME",
+        "name": "BETA-MERCAPTOETHANOL",
+        "mw": 78.133
+      }
+    ]
+  },
+  {
+    "pdb_id": "6O1B",
+    "resolution_A": 1.67,
+    "year": 2019,
+    "pmid": 31439792,
+    "citation_title": "NAD+cleavage activity by animal and plant TIR domains in cell death pathways.",
+    "title": "Crystal structure of the TIR domain G601P mutant from human SARM1, crystal form 1",
+    "ligands": [
+      {
+        "id": "MES",
+        "name": "2-(N-MORPHOLINO)-ETHANESULFONIC ACID",
+        "mw": 195.237
+      }
+    ]
+  },
+  {
+    "pdb_id": "6O0R",
+    "resolution_A": 1.8,
+    "year": 2019,
+    "pmid": 31439792,
+    "citation_title": "NAD+cleavage activity by animal and plant TIR domains in cell death pathways.",
+    "title": "Crystal structure of the TIR domain from human SARM1 in complex with glycerol",
+    "ligands": []
+  },
+  {
+    "pdb_id": "6O0Q",
+    "resolution_A": 1.8,
+    "year": 2019,
+    "pmid": 31439792,
+    "citation_title": "NAD+cleavage activity by animal and plant TIR domains in cell death pathways.",
+    "title": "Crystal structure of the TIR domain from human SARM1 in complex with ribose",
+    "ligands": [
+      {
+        "id": "BDR",
+        "name": "beta-D-ribofuranose",
+        "mw": 150.13
+      }
+    ]
+  },
+  {
+    "pdb_id": "6O0V",
+    "resolution_A": 2.07,
+    "year": 2019,
+    "pmid": 31439792,
+    "citation_title": "NAD+cleavage activity by animal and plant TIR domains in cell death pathways.",
+    "title": "Crystal structure of the TIR domain G601P mutant from human SARM1, crystal form 2",
+    "ligands": [
+      {
+        "id": "MES",
+        "name": "2-(N-MORPHOLINO)-ETHANESULFONIC ACID",
+        "mw": 195.237
+      }
+    ]
+  },
+  {
+    "pdb_id": "6QWV",
+    "resolution_A": 2.47,
+    "year": 2019,
+    "pmid": 31278906,
+    "citation_title": "Structural Evidence for an Octameric Ring Arrangement of SARM1.",
+    "title": "SARM1 SAM1-2 domains",
+    "ligands": [
+      {
+        "id": "PGE",
+        "name": "TRIETHYLENE GLYCOL",
+        "mw": 150.173
+      },
+      {
+        "id": "PEG",
+        "name": "DI(HYDROXYETHYL)ETHER",
+        "mw": 106.12
+      },
+      {
+        "id": "BME",
+        "name": "BETA-MERCAPTOETHANOL",
+        "mw": 78.133
+      }
+    ]
+  },
+  {
+    "pdb_id": "6O0S",
+    "resolution_A": 2.7,
+    "year": 2019,
+    "pmid": 31439792,
+    "citation_title": "NAD+cleavage activity by animal and plant TIR domains in cell death pathways.",
+    "title": "Crystal structure of the tandem SAM domains from human SARM1",
+    "ligands": []
+  },
+  {
+    "pdb_id": "6O0T",
+    "resolution_A": 2.8,
+    "year": 2019,
+    "pmid": 31439792,
+    "citation_title": "NAD+cleavage activity by animal and plant TIR domains in cell death pathways.",
+    "title": "Crystal structure of selenomethionine labelled tandem SAM domains (L446M:L505M:L523M mutant) from human SARM1",
+    "ligands": []
+  },
+  {
+    "pdb_id": "6O0U",
+    "resolution_A": 3.03,
+    "year": 2019,
+    "pmid": 31439792,
+    "citation_title": "NAD+cleavage activity by animal and plant TIR domains in cell death pathways.",
+    "title": "Crystal structure of the TIR domain H685A mutant from human SARM1",
+    "ligands": []
+  },
+  {
+    "pdb_id": "9HQF",
+    "resolution_A": 1.73,
+    "year": null,
+    "pmid": null,
+    "citation_title": "SARM1 TIR domain in complex with compound 7-ADPR",
+    "title": "SARM1 TIR domain in complex with compound 7-ADPR",
+    "ligands": [
+      {
+        "id": "A1IWL",
+        "name": "[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-[(5~{S})-5-[[(3~{R})-4,4-bis(fluoranyl)oxolan-3-yl]carbamoyl-methyl-amino]-2,3,4,5-tetrahydrooxepino[2,3-c]pyridin-8-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 869.635
+      }
+    ]
+  },
+  {
+    "pdb_id": "9HQH",
+    "resolution_A": 1.988,
+    "year": null,
+    "pmid": null,
+    "citation_title": "SARM1 TIR domain in complex with compounds",
+    "title": "SARM1 TIR domain in complex with compound 28-ADPR",
+    "ligands": [
+      {
+        "id": "A1IWN",
+        "name": "[[(2~{S},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-[4-[(1~{R})-1-[[(3~{R})-4,4-bis(fluoranyl)oxolan-3-yl]carbamoyl-methyl-amino]-2-phenoxy-ethyl]pyridin-1-ium-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 919.694
+      }
+    ]
+  },
+  {
+    "pdb_id": "9HQ0",
+    "resolution_A": 2.13,
+    "year": null,
+    "pmid": null,
+    "citation_title": "SARM1 TIR domain in complex with compound 7-ADPR",
+    "title": "SARM1 TIR domain in complex with compound 7-ADPR",
+    "ligands": [
+      {
+        "id": "A1IW3",
+        "name": "[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-[4-[(1~{S})-1-[[(3~{R})-4,4-bis(fluoranyl)oxolan-3-yl]carbamoyl-methyl-amino]ethyl]pyridin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate",
+        "mw": 827.598
+      }
+    ]
+  }
+]

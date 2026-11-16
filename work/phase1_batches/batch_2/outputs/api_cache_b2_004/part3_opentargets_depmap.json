@@ -1,0 +1,442 @@
+{
+  "SCFD1": {
+    "symbol": "SCFD1",
+    "ensembl_id": "ENSG00000092108",
+    "summary": {
+      "available": true,
+      "isEssential_flag": true,
+      "n_screens_total": 1258,
+      "mean_chronos": -1.2618954425206814,
+      "median_chronos": -1.2358999252319336,
+      "min_chronos": -2.6707258224487305,
+      "frac_chronos_lt_neg0_5": 0.9936406995230525,
+      "frac_chronos_lt_neg1_0": 0.7988871224165341,
+      "n_cns_screens": 0,
+      "cns_mean_chronos": null,
+      "n_neural_all_screens": 48,
+      "neural_all_mean_chronos": -1.2500544662276905,
+      "neural_tissue_labels": [
+        "Peripheral Nervous System"
+      ],
+      "ot_genetic_constraint": [
+        {
+          "constraintType": "syn",
+          "score": -0.7251799702644348,
+          "oe": 1.0777000188827515,
+          "oeLower": 0.9747999906539917,
+          "oeUpper": 1.1933000087738037
+        },
+        {
+          "constraintType": "mis",
+          "score": 1.8884999752044678,
+          "oe": 0.8395000100135803,
+          "oeLower": 0.7869099974632263,
+          "oeUpper": 0.8962200284004211
+        },
+        {
+          "constraintType": "lof",
+          "score": 0.9957600235939026,
+          "oe": 0.35844001173973083,
+          "oeLower": 0.27570998668670654,
+          "oeUpper": 0.47154998779296875
+        }
+      ]
+    }
+  },
+  "G2E3": {
+    "symbol": "G2E3",
+    "ensembl_id": "ENSG00000092140",
+    "summary": {
+      "available": true,
+      "isEssential_flag": false,
+      "n_screens_total": 1258,
+      "mean_chronos": -0.018368115670351046,
+      "median_chronos": -0.014213533606380224,
+      "min_chronos": -0.6628371477127075,
+      "frac_chronos_lt_neg0_5": 0.0023847376788553257,
+      "frac_chronos_lt_neg1_0": 0.0,
+      "n_cns_screens": 0,
+      "cns_mean_chronos": null,
+      "n_neural_all_screens": 48,
+      "neural_all_mean_chronos": -0.002481470777032276,
+      "neural_tissue_labels": [
+        "Peripheral Nervous System"
+      ],
+      "ot_genetic_constraint": [
+        {
+          "constraintType": "syn",
+          "score": 1.0999000072479248,
+          "oe": 0.8883200287818909,
+          "oeLower": 0.800000011920929,
+          "oeUpper": 0.9881500005722046
+        },
+        {
+          "constraintType": "mis",
+          "score": 4.009099960327148,
+          "oe": 0.6724900007247925,
+          "oeLower": 0.6273699998855591,
+          "oeUpper": 0.7214199900627136
+        },
+        {
+          "constraintType": "lof",
+          "score": 0.9387500286102295,
+          "oe": 0.3770099878311157,
+          "oeLower": 0.28793999552726746,
+          "oeUpper": 0.49985000491142273
+        }
+      ]
+    }
+  },
+  "YKT6": {
+    "symbol": "YKT6",
+    "ensembl_id": "ENSG00000106636",
+    "summary": {
+      "available": true,
+      "isEssential_flag": true,
+      "n_screens_total": 1258,
+      "mean_chronos": -1.542500709241259,
+      "median_chronos": -1.546904981136322,
+      "min_chronos": -3.376847743988037,
+      "frac_chronos_lt_neg0_5": 0.9952305246422893,
+      "frac_chronos_lt_neg1_0": 0.9379968203497615,
+      "n_cns_screens": 0,
+      "cns_mean_chronos": null,
+      "n_neural_all_screens": 48,
+      "neural_all_mean_chronos": -1.508275071779887,
+      "neural_tissue_labels": [
+        "Peripheral Nervous System"
+      ],
+      "ot_genetic_constraint": [
+        {
+          "constraintType": "syn",
+          "score": 0.508899986743927,
+          "oe": 0.9121599793434143,
+          "oeLower": 0.766290009021759,
+          "oeUpper": 1.0913000106811523
+        },
+        {
+          "constraintType": "mis",
+          "score": 1.5235999822616577,
+          "oe": 0.7712000012397766,
+          "oeLower": 0.6849300265312195,
+          "oeUpper": 0.8703399896621704
+        },
+        {
+          "constraintType": "lof",
+          "score": 0.32368001341819763,
+          "oe": 0.4089300036430359,
+          "oeLower": 0.26203998923301697,
+          "oeUpper": 0.662559986114502
+        }
+      ]
+    }
+  },
+  "SEC22B": {
+    "symbol": "SEC22B",
+    "ensembl_id": "ENSG00000265808",
+    "summary": {
+      "available": true,
+      "isEssential_flag": true,
+      "n_screens_total": 77,
+      "mean_chronos": -1.1443970253715268,
+      "median_chronos": -1.1452274322509766,
+      "min_chronos": -1.9604274034500122,
+      "frac_chronos_lt_neg0_5": 0.974025974025974,
+      "frac_chronos_lt_neg1_0": 0.6753246753246753,
+      "n_cns_screens": 0,
+      "cns_mean_chronos": null,
+      "n_neural_all_screens": 4,
+      "neural_all_mean_chronos": -1.3929283916950226,
+      "neural_tissue_labels": [
+        "Peripheral Nervous System"
+      ],
+      "ot_genetic_constraint": [
+        {
+          "constraintType": "syn",
+          "score": 2.1863999366760254,
+          "oe": 0.6257799863815308,
+          "oeLower": 0.5084099769592285,
+          "oeUpper": 0.7758600115776062
+        },
+        {
+          "constraintType": "mis",
+          "score": 3.504499912261963,
+          "oe": 0.49364998936653137,
+          "oeLower": 0.4281800091266632,
+          "oeUpper": 0.5710300207138062
+        },
+        {
+          "constraintType": "lof",
+          "score": 0.9387199878692627,
+          "oe": 0.3187899887561798,
+          "oeLower": 0.19665999710559845,
+          "oeUpper": 0.5407400131225586
+        }
+      ]
+    }
+  },
+  "STX5": {
+    "symbol": "STX5",
+    "ensembl_id": "ENSG00000162236",
+    "summary": {
+      "available": true,
+      "isEssential_flag": true,
+      "n_screens_total": 1258,
+      "mean_chronos": -1.133179938681246,
+      "median_chronos": -1.1253650784492493,
+      "min_chronos": -2.5581021308898926,
+      "frac_chronos_lt_neg0_5": 0.9761526232114467,
+      "frac_chronos_lt_neg1_0": 0.705087440381558,
+      "n_cns_screens": 0,
+      "cns_mean_chronos": null,
+      "n_neural_all_screens": 48,
+      "neural_all_mean_chronos": -0.9930082572003206,
+      "neural_tissue_labels": [
+        "Peripheral Nervous System"
+      ],
+      "ot_genetic_constraint": [
+        {
+          "constraintType": "syn",
+          "score": -0.48993998765945435,
+          "oe": 1.062399983406067,
+          "oeLower": 0.942359983921051,
+          "oeUpper": 1.2005000114440918
+        },
+        {
+          "constraintType": "mis",
+          "score": 0.49963000416755676,
+          "oe": 0.9450799822807312,
+          "oeLower": 0.8734899759292603,
+          "oeUpper": 1.0235999822616577
+        },
+        {
+          "constraintType": "lof",
+          "score": 0.9128699898719788,
+          "oe": 0.3496600091457367,
+          "oeLower": 0.2339400053024292,
+          "oeUpper": 0.5383999943733215
+        }
+      ]
+    }
+  },
+  "GOSR1": {
+    "symbol": "GOSR1",
+    "ensembl_id": "ENSG00000108587",
+    "summary": {
+      "available": true,
+      "isEssential_flag": false,
+      "n_screens_total": 1258,
+      "mean_chronos": -0.1430059922229685,
+      "median_chronos": -0.1357816606760025,
+      "min_chronos": -1.040710687637329,
+      "frac_chronos_lt_neg0_5": 0.0246422893481717,
+      "frac_chronos_lt_neg1_0": 0.000794912559618442,
+      "n_cns_screens": 0,
+      "cns_mean_chronos": null,
+      "n_neural_all_screens": 48,
+      "neural_all_mean_chronos": -0.06353160888344671,
+      "neural_tissue_labels": [
+        "Peripheral Nervous System"
+      ],
+      "ot_genetic_constraint": [
+        {
+          "constraintType": "syn",
+          "score": 0.7280499935150146,
+          "oe": 0.881820023059845,
+          "oeLower": 0.7463200092315674,
+          "oeUpper": 1.0467000007629395
+        },
+        {
+          "constraintType": "mis",
+          "score": 0.5950700044631958,
+          "oe": 0.9207000136375427,
+          "oeLower": 0.8359400033950806,
+          "oeUpper": 1.0155999660491943
+        },
+        {
+          "constraintType": "lof",
+          "score": 0.00016728999617043883,
+          "oe": 0.5908700227737427,
+          "oeLower": 0.41905999183654785,
+          "oeUpper": 0.8508700132369995
+        }
+      ]
+    }
+  },
+  "NSF": {
+    "symbol": "NSF",
+    "ensembl_id": "ENSG00000073969",
+    "summary": {
+      "available": true,
+      "isEssential_flag": true,
+      "n_screens_total": 1258,
+      "mean_chronos": -2.4403806442960456,
+      "median_chronos": -2.479136824607849,
+      "min_chronos": -4.258396625518799,
+      "frac_chronos_lt_neg0_5": 1.0,
+      "frac_chronos_lt_neg1_0": 0.9968203497615262,
+      "n_cns_screens": 0,
+      "cns_mean_chronos": null,
+      "n_neural_all_screens": 48,
+      "neural_all_mean_chronos": -2.321955107152462,
+      "neural_tissue_labels": [
+        "Peripheral Nervous System"
+      ],
+      "ot_genetic_constraint": [
+        {
+          "constraintType": "syn",
+          "score": 3.00219988822937,
+          "oe": 0.620389997959137,
+          "oeLower": 0.5312399864196777,
+          "oeUpper": 0.727400004863739
+        },
+        {
+          "constraintType": "mis",
+          "score": 5.4375,
+          "oe": 0.43226999044418335,
+          "oeLower": 0.3871400058269501,
+          "oeUpper": 0.4836199879646301
+        },
+        {
+          "constraintType": "lof",
+          "score": 0.9993000030517578,
+          "oe": 0.2784300148487091,
+          "oeLower": 0.18388999998569489,
+          "oeUpper": 0.4352799952030182
+        }
+      ]
+    }
+  },
+  "GDI2": {
+    "symbol": "GDI2",
+    "ensembl_id": "ENSG00000057608",
+    "summary": {
+      "available": true,
+      "isEssential_flag": false,
+      "n_screens_total": 1258,
+      "mean_chronos": -0.09468460147367071,
+      "median_chronos": -0.06971757486462593,
+      "min_chronos": -1.1942675113677979,
+      "frac_chronos_lt_neg0_5": 0.05643879173290938,
+      "frac_chronos_lt_neg1_0": 0.005564387917329093,
+      "n_cns_screens": 0,
+      "cns_mean_chronos": null,
+      "n_neural_all_screens": 48,
+      "neural_all_mean_chronos": -0.019563825204386376,
+      "neural_tissue_labels": [
+        "Peripheral Nervous System"
+      ],
+      "ot_genetic_constraint": [
+        {
+          "constraintType": "syn",
+          "score": 0.2268500030040741,
+          "oe": 0.9718300104141235,
+          "oeLower": 0.8600299954414368,
+          "oeUpper": 1.1008000373840332
+        },
+        {
+          "constraintType": "mis",
+          "score": 2.2637999057769775,
+          "oe": 0.7728400230407715,
+          "oeLower": 0.7137799859046936,
+          "oeUpper": 0.837660014629364
+        },
+        {
+          "constraintType": "lof",
+          "score": 0.34973999857902527,
+          "oe": 0.4062100052833557,
+          "oeLower": 0.29023998975753784,
+          "oeUpper": 0.5800399780273438
+        }
+      ]
+    }
+  },
+  "FBXL5": {
+    "symbol": "FBXL5",
+    "ensembl_id": "ENSG00000118564",
+    "summary": {
+      "available": true,
+      "isEssential_flag": false,
+      "n_screens_total": 1258,
+      "mean_chronos": 0.012727587818343837,
+      "median_chronos": 0.02990004513412714,
+      "min_chronos": -1.2079663276672363,
+      "frac_chronos_lt_neg0_5": 0.016693163751987282,
+      "frac_chronos_lt_neg1_0": 0.000794912559618442,
+      "n_cns_screens": 0,
+      "cns_mean_chronos": null,
+      "n_neural_all_screens": 48,
+      "neural_all_mean_chronos": -0.01386266231808501,
+      "neural_tissue_labels": [
+        "Peripheral Nervous System"
+      ],
+      "ot_genetic_constraint": [
+        {
+          "constraintType": "syn",
+          "score": -0.4453200101852417,
+          "oe": 1.0443999767303467,
+          "oeLower": 0.9498100280761719,
+          "oeUpper": 1.1500999927520752
+        },
+        {
+          "constraintType": "mis",
+          "score": 1.7653000354766846,
+          "oe": 0.8562600016593933,
+          "oeLower": 0.8052700161933899,
+          "oeUpper": 0.9110400080680847
+        },
+        {
+          "constraintType": "lof",
+          "score": 0.998520016670227,
+          "oe": 0.33208000659942627,
+          "oeLower": 0.24341000616550446,
+          "oeUpper": 0.46077999472618103
+        }
+      ]
+    }
+  },
+  "IREB2": {
+    "symbol": "IREB2",
+    "ensembl_id": "ENSG00000136381",
+    "summary": {
+      "available": true,
+      "isEssential_flag": false,
+      "n_screens_total": 1258,
+      "mean_chronos": -0.21475059441574315,
+      "median_chronos": -0.1503957211971283,
+      "min_chronos": -1.8114013671875,
+      "frac_chronos_lt_neg0_5": 0.14308426073131955,
+      "frac_chronos_lt_neg1_0": 0.01987281399046105,
+      "n_cns_screens": 0,
+      "cns_mean_chronos": null,
+      "n_neural_all_screens": 48,
+      "neural_all_mean_chronos": -0.21297109501513964,
+      "neural_tissue_labels": [
+        "Peripheral Nervous System"
+      ],
+      "ot_genetic_constraint": [
+        {
+          "constraintType": "syn",
+          "score": 0.6082199811935425,
+          "oe": 0.9485300183296204,
+          "oeLower": 0.8715500235557556,
+          "oeUpper": 1.0334999561309814
+        },
+        {
+          "constraintType": "mis",
+          "score": 3.114000082015991,
+          "oe": 0.7844399809837341,
+          "oeLower": 0.7427800297737122,
+          "oeUpper": 0.8288400173187256
+        },
+        {
+          "constraintType": "lof",
+          "score": 0.9999799728393555,
+          "oe": 0.328249990940094,
+          "oeLower": 0.25415000319480896,
+          "oeUpper": 0.428739994764328
+        }
+      ]
+    }
+  }
+}

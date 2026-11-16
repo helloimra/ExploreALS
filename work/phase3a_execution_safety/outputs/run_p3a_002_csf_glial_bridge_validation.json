@@ -1,0 +1,278 @@
+{
+  "analysis_run_id": "RUN-P3A-002",
+  "evidence_basis": "MEASURED_HUMAN",
+  "composite_definition": "4-component (5-protein) rs3831317-neutral calibrated Bridge: mean([z_chit_calibrated, z_GPNMB, z_CHI3L1, z_SERPINA3])",
+  "pooled_ds045_center_audit": {
+    "bank_by_status_counts": {
+      "Emory__C9orf72": 10,
+      "Emory__C9orf72-Asymptomatic": 6,
+      "Emory__Control": 54,
+      "Emory__SOD1": 6,
+      "Emory__sALS": 42,
+      "MGH__C9orf72-Asymptomatic": 50,
+      "MGH__Control": 16,
+      "MGH__SOD1-Asymptomatic": 12,
+      "UMilan__C9orf72": 18,
+      "UMilan__SOD1": 13,
+      "WashU__C9orf72": 15,
+      "WashU__C9orf72-Asymptomatic": 3,
+      "WashU__Control": 2,
+      "WashU__SOD1": 3,
+      "WashU__SOD1-Asymptomatic": 1,
+      "WashU__sALS": 8
+    },
+    "mgh_vs_emory_healthy_control_drift": {
+      "CHIT1": {
+        "n_emory_ctrl": 50,
+        "n_mgh_ctrl": 16,
+        "mgh_minus_emory_log2": -0.4585,
+        "welch_p": 0.04873350763220576
+      },
+      "CHI3L2": {
+        "n_emory_ctrl": 54,
+        "n_mgh_ctrl": 16,
+        "mgh_minus_emory_log2": -0.2157,
+        "welch_p": 0.10409350230605835
+      },
+      "GPNMB": {
+        "n_emory_ctrl": 54,
+        "n_mgh_ctrl": 15,
+        "mgh_minus_emory_log2": -0.3214,
+        "welch_p": 0.00689901934075021
+      },
+      "CHI3L1": {
+        "n_emory_ctrl": 54,
+        "n_mgh_ctrl": 16,
+        "mgh_minus_emory_log2": -0.1408,
+        "welch_p": 0.43726454717275326
+      },
+      "SERPINA3": {
+        "n_emory_ctrl": 54,
+        "n_mgh_ctrl": 16,
+        "mgh_minus_emory_log2": -0.1805,
+        "welch_p": 0.1739885551233592
+      }
+    },
+    "bridge_ctrl_drift_pure_mgh_n16_minus_emory_n54_z": -0.5034,
+    "bridge_ctrl_drift_pure_mgh_n16_minus_emory_n54_welch_p": 0.006540158690711587,
+    "bridge_ctrl_drift_pooled_ext_n18_minus_emory_n54_z": -0.5052,
+    "bridge_ctrl_drift_pooled_ext_n18_minus_emory_n54_welch_p": 0.002841899798506372,
+    "legacy_pooled_ext_n18_minus_emory_n54_z": -0.4803
+  },
+  "within_emory_unconfounded_dia": {
+    "sals_vs_ctrl_leak_free_5fold_oof": {
+      "n_sals": 42,
+      "n_ctrl": 54,
+      "oof_roc_auc": 0.8188,
+      "oof_roc_auc_legacy_max_z": 0.8095,
+      "oof_welch_p": 6.400398625215388e-08,
+      "oof_sensitivity_at_fold_z95": 0.5476,
+      "oof_ctrl_fpr_at_fold_z95": 0.0741
+    },
+    "all_symp_als_vs_ctrl": {
+      "n_cases": 58,
+      "n_controls": 54,
+      "n_total": 112,
+      "mean_diff_vs_ctrl_z": 1.3545,
+      "case_mean_z": 1.3457,
+      "ctrl_mean_z": -0.0088,
+      "roc_auc": 0.8464,
+      "welch_p": 2.0875312031306322e-11,
+      "mwu_p": 2.7024465284923233e-10,
+      "sensitivity_at_train_z95": 0.6207,
+      "ctrl_fpr_at_train_z95": 0.0556
+    },
+    "c9_asymptomatic_vs_ctrl": {
+      "n_cases": 6,
+      "n_controls": 54,
+      "n_total": 60,
+      "mean_diff_vs_ctrl_z": 0.0724,
+      "case_mean_z": 0.0636,
+      "ctrl_mean_z": -0.0088,
+      "roc_auc": 0.5123,
+      "welch_p": 0.890767844504368,
+      "mwu_p": 0.9330155924852774,
+      "sensitivity_at_train_z95": 0.3333,
+      "ctrl_fpr_at_train_z95": 0.0556
+    }
+  },
+  "deconfounded_and_stratified_external_validation": {
+    "confounding_disclosure": "In DS045 non-Emory samples (n=141), 57/57 symptomatic ALS come from UMilan (31, 0 Ctrl) + WashU (26, 2 Ctrl) with 86.0% (49/57) familial C9orf72/SOD1, while 16/18 Controls come from downward-shifted MGH (0 ALS). Therefore, Emory leak-free sALS OOF, within-WashU, C9 phenoconversion, and MGH-offset-adjusted AUCs are primary over raw pooled external AUC.",
+    "within_washu_same_center_als_vs_non_als": {
+      "n_cases": 26,
+      "n_controls": 6,
+      "n_total": 32,
+      "mean_diff_vs_ctrl_z": 2.1649,
+      "case_mean_z": 1.5755,
+      "ctrl_mean_z": -0.5894,
+      "roc_auc": 1.0,
+      "welch_p": 2.054102283952507e-08,
+      "mwu_p": 2.207037802143475e-06,
+      "sensitivity_at_train_z95": 0.6923,
+      "ctrl_fpr_at_train_z95": 0.0
+    },
+    "within_washu_same_center_c9_symp_vs_c9_asym": {
+      "n_cases": 15,
+      "n_controls": 3,
+      "n_total": 18,
+      "mean_diff_vs_ctrl_z": 2.3984,
+      "case_mean_z": 1.8557,
+      "ctrl_mean_z": -0.5427,
+      "roc_auc": 1.0,
+      "welch_p": 7.715312113517104e-06,
+      "mwu_p": 0.0024509803921568627,
+      "sensitivity_at_train_z95": 0.8,
+      "ctrl_fpr_at_train_z95": 0.0
+    },
+    "within_mgh_same_center_asym_vs_ctrl_specificity": {
+      "n_cases": 62,
+      "n_controls": 16,
+      "n_total": 78,
+      "mean_diff_vs_ctrl_z": -0.2056,
+      "case_mean_z": -0.7178,
+      "ctrl_mean_z": -0.5122,
+      "roc_auc": 0.4133,
+      "welch_p": 0.23303800760886217,
+      "mwu_p": 0.29005356727067444,
+      "sensitivity_at_train_z95": 0.0161,
+      "ctrl_fpr_at_train_z95": 0.0
+    },
+    "genotype_matched_ext_c9_symp_vs_c9_asym_center_adj": {
+      "n_cases": 33,
+      "n_controls": 53,
+      "n_total": 86,
+      "mean_diff_vs_ctrl_z": 2.3193,
+      "case_mean_z": 2.0591,
+      "ctrl_mean_z": -0.2603,
+      "roc_auc": 0.9748,
+      "welch_p": 3.052220016462254e-14,
+      "mwu_p": 1.696166944813091e-13,
+      "sensitivity_at_train_z95": 0.9091,
+      "ctrl_fpr_at_train_z95": 0.0377
+    },
+    "ext_washu_sals_vs_center_adj_ext_ctrl": {
+      "n_cases": 8,
+      "n_controls": 18,
+      "n_total": 26,
+      "mean_diff_vs_ctrl_z": 1.3397,
+      "case_mean_z": 1.2732,
+      "ctrl_mean_z": -0.0665,
+      "roc_auc": 0.8542,
+      "welch_p": 0.03913234907103346,
+      "mwu_p": 0.003350242434910627,
+      "sensitivity_at_train_z95": 0.625,
+      "ctrl_fpr_at_train_z95": 0.0556
+    },
+    "ext_all_symp_als_vs_center_adj_ext_ctrl": {
+      "n_cases": 57,
+      "n_controls": 18,
+      "n_total": 75,
+      "mean_diff_vs_ctrl_z": 1.7391,
+      "case_mean_z": 1.6727,
+      "ctrl_mean_z": -0.0665,
+      "roc_auc": 0.885,
+      "welch_p": 4.878068988463587e-11,
+      "mwu_p": 9.88454005211523e-07,
+      "sensitivity_at_train_z95": 0.7544,
+      "ctrl_fpr_at_train_z95": 0.0556
+    },
+    "raw_unadjusted_ext_all_symp_als_vs_ext_ctrl_confounded": {
+      "n_cases": 57,
+      "n_controls": 18,
+      "n_total": 75,
+      "mean_diff_vs_ctrl_z": 2.1866,
+      "case_mean_z": 1.6727,
+      "ctrl_mean_z": -0.514,
+      "roc_auc": 0.9405,
+      "welch_p": 5.337717425751435e-15,
+      "mwu_p": 2.130818148447975e-08,
+      "sensitivity_at_train_z95": 0.7544,
+      "ctrl_fpr_at_train_z95": 0.0
+    },
+    "matched_genotype_p80_pass_rates": {
+      "frozen_emory_z95_ctrl_cutoff": 0.9394,
+      "frozen_emory_sals_p80_cutoff": 2.3214,
+      "emory_sals_pass_at_sals_p80": 0.2143,
+      "ext_washu_sals_pass_at_sals_p80": 0.125,
+      "frozen_emory_all_als_p80_cutoff": 2.3319,
+      "emory_all_als_pass_at_all_als_p80": 0.2069,
+      "ext_all_als_pass_at_all_als_p80_86pct_familial": 0.2807
+    }
+  },
+  "cross_platform_emory_tmtpro_technical_overlap": {
+    "cohort_overlap_warning": "101/101 SC TMTpro samples belong to Emory inside Expanded DIA (Trautwig Par8); technical cross-platform check only.",
+    "sporadic_vs_ctrl": {
+      "n_cases": 35,
+      "n_controls": 44,
+      "n_total": 79,
+      "mean_diff_vs_ctrl_z": 2.3608,
+      "case_mean_z": 2.3608,
+      "ctrl_mean_z": -0.0,
+      "roc_auc": 0.7974,
+      "welch_p": 0.0028285512454265535,
+      "mwu_p": 6.325897605860656e-06,
+      "sensitivity_at_train_z95": 0.4857,
+      "ctrl_fpr_at_train_z95": 0.0682
+    },
+    "all_symp_als_vs_ctrl": {
+      "n_cases": 51,
+      "n_controls": 44,
+      "n_total": 95,
+      "mean_diff_vs_ctrl_z": 2.5087,
+      "case_mean_z": 2.5087,
+      "ctrl_mean_z": -0.0,
+      "roc_auc": 0.8155,
+      "welch_p": 7.639631863074915e-05,
+      "mwu_p": 1.2887477395054711e-07,
+      "sensitivity_at_train_z95": 0.549,
+      "ctrl_fpr_at_train_z95": 0.0682
+    }
+  },
+  "independent_external_study_oh2023_pmc10215566": {
+    "scope": "UNIVARIATE_5_OF_5_INDIVIDUAL_PROTEIN_REPLICATION_NO_DONOR_MATRIX",
+    "n_als_discovery": 20,
+    "n_hc_discovery": 20,
+    "n_total_discovery": 40,
+    "n_als_total_table1": 30,
+    "n_hc_total_table1": 31,
+    "n_total_table1": 61,
+    "n_bridge_proteins_fdr_lt_0_05": 5,
+    "proteins": {
+      "CHI3L2": {
+        "log2_als_vs_hc": 2.527697,
+        "discovery_p_raw_text": "2.01 \u00d7 10\u22128",
+        "discovery_q": 0.0,
+        "prm_detectability": "Validated_PRM_Table2",
+        "prm_validation_q": "<0.05"
+      },
+      "CHIT1": {
+        "log2_als_vs_hc": 3.99428,
+        "discovery_p_raw_text": "1.88 \u00d7 10\u22125",
+        "discovery_q": 0.0,
+        "prm_detectability": "Detectable",
+        "prm_validation_q": "<0.05"
+      },
+      "SERPINA3": {
+        "log2_als_vs_hc": 1.077944,
+        "discovery_p_raw_text": "6.94 \u00d7 10\u22126",
+        "discovery_q": 0.008571,
+        "prm_detectability": "Detectable",
+        "prm_validation_q": "<0.05"
+      },
+      "GPNMB": {
+        "log2_als_vs_hc": 1.069444,
+        "discovery_p_raw_text": "8.06 \u00d7 10\u22125",
+        "discovery_q": 0.0244,
+        "prm_detectability": "Detectable",
+        "prm_validation_q": "<0.05"
+      },
+      "CHI3L1": {
+        "log2_als_vs_hc": 1.137858,
+        "discovery_p_raw_text": "0.000583",
+        "discovery_q": 0.044,
+        "prm_detectability": "Detectable",
+        "prm_validation_q": "<0.05"
+      }
+    }
+  }
+}

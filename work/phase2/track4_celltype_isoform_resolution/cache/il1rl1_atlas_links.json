@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "rs1420101": "chr2:102341256:C>A",
+    "rs953934": "chr2:102315833:C>G"
+  },
+  "links": {
+    "rs1420101": "https://deepmind.google.com/science/alphagenome/atlas?q=chr2:102341256:C%3EA&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF",
+    "rs953934": "https://deepmind.google.com/science/alphagenome/atlas?q=chr2:102315833:C%3EG&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF"
+  }
+}

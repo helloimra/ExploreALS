@@ -1,0 +1,3848 @@
+{
+  "hitCount": 121,
+  "nextCursorMark": "AoIIQQkjnCg1Mzk0MTkyNg==",
+  "results": [
+    {
+      "id": "42760853",
+      "source": "MED",
+      "pmid": "42760853",
+      "pmcid": "PMC13589252",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13589252"
+        ]
+      },
+      "doi": "10.1111/ene.70757",
+      "title": "Chitinases in Tear Fluid of Patients With Amyotrophic Lateral Sclerosis.",
+      "authorString": "Wenz L, Scholl LS, Reinhardt N, Heynitz RV, Gmeiner V, Rau P, M\u00fcller PJ, Wolff AW, Feneberg E, Demleitner AF, Lingor P.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Wenz L",
+            "lastName": "Wenz",
+            "firstName": "Lara",
+            "initials": "L",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0006-1719-0447"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Klinikum Rechts der Isar, TUM Universit\u00e4tsklinikum, School of Medicine and Health, Technical University of Munich, Munich, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Scholl LS",
+            "lastName": "Scholl",
+            "firstName": "Lena-Sophie",
+            "initials": "LS",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Klinikum Rechts der Isar, TUM Universit\u00e4tsklinikum, School of Medicine and Health, Technical University of Munich, Munich, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Reinhardt N",
+            "lastName": "Reinhardt",
+            "firstName": "Nya",
+            "initials": "N",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Klinikum Rechts der Isar, TUM Universit\u00e4tsklinikum, School of Medicine and Health, Technical University of Munich, Munich, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Heynitz RV",
+            "lastName": "Heynitz",
+            "firstName": "Ricarda von",
+            "initials": "RV",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Klinikum Rechts der Isar, TUM Universit\u00e4tsklinikum, School of Medicine and Health, Technical University of Munich, Munich, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Gmeiner V",
+            "lastName": "Gmeiner",
+            "firstName": "Vincent",
+            "initials": "V",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Klinikum Rechts der Isar, TUM Universit\u00e4tsklinikum, School of Medicine and Health, Technical University of Munich, Munich, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Rau P",
+            "lastName": "Rau",
+            "firstName": "Petra",
+            "initials": "P",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Klinikum Rechts der Isar, TUM Universit\u00e4tsklinikum, School of Medicine and Health, Technical University of Munich, Munich, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "M\u00fcller PJ",
+            "lastName": "M\u00fcller",
+            "firstName": "Philipp Jie",
+            "initials": "PJ",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0005-7200-9033"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Klinikum Rechts der Isar, TUM Universit\u00e4tsklinikum, School of Medicine and Health, Technical University of Munich, Munich, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wolff AW",
+            "lastName": "Wolff",
+            "firstName": "Andreas W",
+            "initials": "AW",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-3261-179X"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Klinikum Rechts der Isar, TUM Universit\u00e4tsklinikum, School of Medicine and Health, Technical University of Munich, Munich, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Feneberg E",
+            "lastName": "Feneberg",
+            "firstName": "Emily",
+            "initials": "E",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-5905-3826"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Klinikum Rechts der Isar, TUM Universit\u00e4tsklinikum, School of Medicine and Health, Technical University of Munich, Munich, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Demleitner AF",
+            "lastName": "Demleitner",
+            "firstName": "Antonia F",
+            "initials": "AF",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-9557-9243"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Klinikum Rechts der Isar, TUM Universit\u00e4tsklinikum, School of Medicine and Health, Technical University of Munich, Munich, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Lingor P",
+            "lastName": "Lingor",
+            "firstName": "Paul",
+            "initials": "P",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-9362-7096"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Klinikum Rechts der Isar, TUM Universit\u00e4tsklinikum, School of Medicine and Health, Technical University of Munich, Munich, Germany."
+                },
+                {
+                  "affiliation": "DZNE, German Center for Neurodegenerative Diseases, Munich, Germany."
+                },
+                {
+                  "affiliation": "Munich Cluster for Systems Neurology (SyNergy), Munich, Germany."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-5905-3826"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-9362-7096"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-9557-9243"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-3261-179X"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0005-7200-9033"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0006-1719-0447"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "9",
+        "volume": "33",
+        "journalIssueId": 4250128,
+        "dateOfPublication": "2026 Sep",
+        "monthOfPublication": 9,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Eur J Neurol",
+          "title": "European journal of neurology",
+          "essn": "1468-1331",
+          "issn": "1351-5101",
+          "nlmid": "9506311",
+          "isoabbreviation": "Eur J Neurol"
+        },
+        "printPublicationDate": "2026-09-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "e70757",
+      "abstractText": "<h4>Background</h4>Chitinases, including chitotriosidase (CHIT1) and chitinase-3-like protein 1 (CHI3L1), are markers of neuroinflammation, a key process in amyotrophic lateral sclerosis (ALS). Tear fluid (TF) can be collected non-invasively and may represent a promising alternative to CSF or blood to study chitinases.<h4>Methods</h4>TF was collected from 50 ALS patients and 50 control subjects using Schirmer strips. CHIT1 and CHI3L1 levels in TF, serum, and CSF were quantified using ELISA. Serum NfL was measured using SIMOA. The frequency of a 24\u2009bp-duplication polymorphism in the CHIT1 gene influencing CHIT1 expression was assessed by PCR.<h4>Results</h4>No group differences in the distribution of the CHIT1 polymorphism were detected. Carriers of the polymorphism in both ALS and controls showed lower CHIT1 levels in serum and TF. CHI3L1 levels in TF were higher in ALS patients compared to controls (p\u2009=\u20090.007), consistent with changes in CSF but not serum. In ALS, males showed higher TF CHIT1 values compared to females (p\u2009=\u20090.009). Combining TF chitinase values with serum NfL values improved discrimination between ALS and controls.<h4>Conclusions</h4>Chitinases are detectable in TF, and CHI3L1 levels recapitulate changes observed in CSF, highlighting its potential for non-invasive longitudinal assessment. Furthermore, chitinase values in TF, together with serum NfL, may act complementarily by capturing distinct aspects of the disease, neuroinflammation and axonal damage. These results suggest TF chitinases and serum NfL could complementarily contribute to the diagnosis and monitoring of the disease, and call for further evaluation of TF as a biomarker source in ALS.",
+      "affiliation": "Department of Neurology, Klinikum Rechts der Isar, TUM Universit\u00e4tsklinikum, School of Medicine and Health, Technical University of Munich, Munich, Germany.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print",
+      "pubTypeList": {
+        "pubType": [
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "Technische Universit\u00e4t M\u00fcnchen",
+            "grantId": "project H-13",
+            "orderIn": 0
+          },
+          {
+            "agency": "Deutsche Forschungsgemeinschaft",
+            "grantId": "EXC 2145 SyNergy - ID 390857198",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Tears",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "EN",
+                  "qualifierName": "enzymology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Hexosaminidases",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Adult"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Middle Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Female"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Male"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Biomarkers",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "BL",
+                  "qualifierName": "blood"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Chitinases",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Chitinase-3-Like Protein 1",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Chitinase",
+          "Biomarker",
+          "Amyotrophic Lateral Sclerosis",
+          "neuroinflammation",
+          "Tear Fluid"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "CHI3L1 protein, human",
+            "registryNumber": "0"
+          },
+          {
+            "name": "chitotriosidase",
+            "registryNumber": "EC 3.2.1.-"
+          },
+          {
+            "name": "Hexosaminidases",
+            "registryNumber": "EC 3.2.1.-"
+          },
+          {
+            "name": "Biomarkers",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Chitinases",
+            "registryNumber": "EC 3.2.1.14"
+          },
+          {
+            "name": "Chitinase-3-Like Protein 1",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1111/ene.70757"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13589252"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13589252?pdf=render"
+          }
+        ]
+      },
+      "commentCorrectionList": {
+        "commentCorrection": [
+          {
+            "source": "PPR",
+            "id": "PPR1269079",
+            "type": "Preprint in",
+            "note": "Link created based on a title-first author match",
+            "orderIn": 10002
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-09-19",
+      "dateOfCreation": "2026-09-19",
+      "dateOfRevision": "2026-09-21",
+      "firstPublicationDate": "2026-09-01",
+      "firstIndexDate": "2026-09-19",
+      "fullTextReceivedDate": "2026-09-21",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42669892",
+      "source": "MED",
+      "pmid": "42669892",
+      "pmcid": "PMC13527181",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13527181"
+        ]
+      },
+      "doi": "10.1002/acn3.70521",
+      "title": "Metabolic and Fluid Biomarkers Support Microglia Activation in Amyotrophic Lateral Sclerosis.",
+      "authorString": "Zanovello M, Serani F, Bebeti A, Paredi F, Quadrio G, Fortuna A, Minicuci GM, Pegoraro E, Cagnin A, Cecchin D, Sorar\u00f9 G.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Zanovello M",
+            "lastName": "Zanovello",
+            "firstName": "Matteo",
+            "initials": "M",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-3343-1547"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Neuromuscular Unit, Department of Neurosciences, University Hospital of Padova, Padova, Italy."
+                },
+                {
+                  "affiliation": "Department of Neuromuscular Diseases, UCL Queen Square Institute of Neurology, UCL, London, UK."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Serani F",
+            "lastName": "Serani",
+            "firstName": "Francesca",
+            "initials": "F",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-7470-0614"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Nuclear Medicine Unit, Department of Medicine, University Hospital of Padova, Padova, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Bebeti A",
+            "lastName": "Bebeti",
+            "firstName": "Alen",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Neuromuscular Unit, Department of Neurosciences, University Hospital of Padova, Padova, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Paredi F",
+            "lastName": "Paredi",
+            "firstName": "Federica",
+            "initials": "F",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Neuromuscular Unit, Department of Neurosciences, University Hospital of Padova, Padova, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Quadrio G",
+            "lastName": "Quadrio",
+            "firstName": "Giulia",
+            "initials": "G",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Neuromuscular Unit, Department of Neurosciences, University Hospital of Padova, Padova, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Fortuna A",
+            "lastName": "Fortuna",
+            "firstName": "Andrea",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Neuromuscular Unit, Department of Neurosciences, University Hospital of Padova, Padova, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Minicuci GM",
+            "lastName": "Minicuci",
+            "firstName": "Giacomo Maria",
+            "initials": "GM",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Neuromuscular Unit, Department of Neurosciences, University Hospital of Padova, Padova, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Pegoraro E",
+            "lastName": "Pegoraro",
+            "firstName": "Elena",
+            "initials": "E",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-7740-4156"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Neuromuscular Unit, Department of Neurosciences, University Hospital of Padova, Padova, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Cagnin A",
+            "lastName": "Cagnin",
+            "firstName": "Annachiara",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Neuromuscular Unit, Department of Neurosciences, University Hospital of Padova, Padova, Italy."
+                },
+                {
+                  "affiliation": "Padova Neuroscience Center, University of Padova, Padova, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Cecchin D",
+            "lastName": "Cecchin",
+            "firstName": "Diego",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Nuclear Medicine Unit, Department of Medicine, University Hospital of Padova, Padova, Italy."
+                },
+                {
+                  "affiliation": "Padova Neuroscience Center, University of Padova, Padova, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Sorar\u00f9 G",
+            "lastName": "Sorar\u00f9",
+            "firstName": "Gianni",
+            "initials": "G",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Neuromuscular Unit, Department of Neurosciences, University Hospital of Padova, Padova, Italy."
+                },
+                {
+                  "affiliation": "Padova Neuroscience Center, University of Padova, Padova, Italy."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-7470-0614"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-7740-4156"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-3343-1547"
+          }
+        ]
+      },
+      "journalInfo": {
+        "journalIssueId": 4238759,
+        "dateOfPublication": "2026 Aug",
+        "monthOfPublication": 8,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Ann Clin Transl Neurol",
+          "title": "Annals of clinical and translational neurology",
+          "essn": "2328-9503",
+          "issn": "2328-9503",
+          "nlmid": "101623278",
+          "isoabbreviation": "Ann Clin Transl Neurol"
+        },
+        "printPublicationDate": "2026-08-01"
+      },
+      "pubYear": "2026",
+      "abstractText": "Amyotrophic lateral sclerosis is an incurable neurodegenerative disease involving motor neuron degeneration and metabolic and immune dysfunction. We combined clinical data, cerebrospinal fluid biomarkers and fluorodeoxyglucose positron emission tomography with magnetic resonance imaging to investigate the role of reactive microglia in disease pathogenesis. Patients showed increased cerebrospinal fluid levels of neurofilament light chain and chitinases, along with hypermetabolism in the medulla oblongata. Chitinase levels correlated with brainstem metabolism and clinical severity. These findings suggest a link between microglial activation, brainstem hypermetabolism and disease progression in amyotrophic lateral sclerosis, supporting a central role for neuroinflammation in disease pathogenesis.",
+      "affiliation": "Neuromuscular Unit, Department of Neurosciences, University Hospital of Padova, Padova, Italy.",
+      "publicationStatus": "aheadofprint",
+      "language": "eng",
+      "pubModel": "Print-Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "brief-report",
+          "Journal Article"
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Chitinase",
+          "Microglia",
+          "Csf",
+          "ALS",
+          "Pet\u2010Mr"
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1002/acn3.70521"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13527181"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13527181?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "N",
+      "hasData": "N",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "N",
+      "dateOfCreation": "2026-08-31",
+      "dateOfRevision": "2026-09-02",
+      "electronicPublicationDate": "2026-08-30",
+      "firstPublicationDate": "2026-08-30",
+      "firstIndexDate": "2026-09-01",
+      "fullTextReceivedDate": "2026-09-11",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "41762671",
+      "source": "MED",
+      "pmid": "41762671",
+      "pmcid": "PMC13634644",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13634644"
+        ]
+      },
+      "doi": "10.1093/brain/awag083",
+      "title": "Constitutive neuronal expression and disease-associated upregulation of chitinases in amyotrophic lateral sclerosis.",
+      "authorString": "Gaur N, Angerer C, Gunes ZI, Ancau M, Wang M, Riemenschneider H, Hurler CA, Mungwa S, L\u00fcningschr\u00f6r P, Zhiti A, Steinbach R, Briese M, Srivastava M, Plaas M, Hermann A, Sendtner M, J\u00e4kel S, Edbauer D, Herms J, Liebscher S, Grosskreutz J, Brill MS.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Gaur N",
+            "lastName": "Gaur",
+            "firstName": "Nayana",
+            "initials": "N",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Jena University Hospital, Jena 07740, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Angerer C",
+            "lastName": "Angerer",
+            "firstName": "Christin",
+            "initials": "C",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Neuronal Cell Biology, School of Medicine and Health, Technical University of Munich, Munich 80802, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Gunes ZI",
+            "lastName": "Gunes",
+            "firstName": "Zeynep I",
+            "initials": "ZI",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Clinical Neuroimmunology, Klinikum der Universit\u00e4t M\u00fcnchen, Ludwig-Maximilians University Munich, Martinsried 82152, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ancau M",
+            "lastName": "Ancau",
+            "firstName": "Mihai",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Neuronal Cell Biology, School of Medicine and Health, Technical University of Munich, Munich 80802, Germany."
+                },
+                {
+                  "affiliation": "Department of Neurology, Klinikum Rechts der Isar, School of Medicine and Health, Technical University of Munich, Munich 81675, Germany."
+                },
+                {
+                  "affiliation": "Munich Cluster for Systems Neurology (SyNergy), Munich 81377, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wang M",
+            "lastName": "Wang",
+            "firstName": "Mengzhe",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Neuronal Cell Biology, School of Medicine and Health, Technical University of Munich, Munich 80802, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Riemenschneider H",
+            "lastName": "Riemenschneider",
+            "firstName": "Henrick",
+            "initials": "H",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0003-9633-7360"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Munich Cluster for Systems Neurology (SyNergy), Munich 81377, Germany."
+                },
+                {
+                  "affiliation": "German Centre for Neurodegenerative Diseases (DZNE), Munich 81377, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Hurler CA",
+            "lastName": "Hurler",
+            "firstName": "Charlene-Annett",
+            "initials": "CA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute for Stroke and Dementia Research (ISD), LMU University Hospital, LMU Medizin, LMU Munich, Munich 81377, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Mungwa S",
+            "lastName": "Mungwa",
+            "firstName": "Simon",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Clinical Neurobiology, University Hospital Wuerzburg, Wuerzburg 97078, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "L\u00fcningschr\u00f6r P",
+            "lastName": "L\u00fcningschr\u00f6r",
+            "firstName": "Patrick",
+            "initials": "P",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Clinical Neurobiology, University Hospital Wuerzburg, Wuerzburg 97078, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zhiti A",
+            "lastName": "Zhiti",
+            "firstName": "Anxhela",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Neuronal Cell Biology, School of Medicine and Health, Technical University of Munich, Munich 80802, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Steinbach R",
+            "lastName": "Steinbach",
+            "firstName": "Robert",
+            "initials": "R",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-3936-6010"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Jena University Hospital, Jena 07740, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Briese M",
+            "lastName": "Briese",
+            "firstName": "Michael",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Clinical Neurobiology, University Hospital Wuerzburg, Wuerzburg 97078, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Srivastava M",
+            "lastName": "Srivastava",
+            "firstName": "Mugdha",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Core Unit Systems Medicine, University of Wuerzburg, Wuerzburg 97078, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Plaas M",
+            "lastName": "Plaas",
+            "firstName": "Mario",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Biomedicine and Translational Medicine, Laboratory Animal Centre, University of Tartu, Tartu 50411, Estonia."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Hermann A",
+            "lastName": "Hermann",
+            "firstName": "Andreas",
+            "initials": "A",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-7364-7791"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Translational Neurodegeneration Section 'Albrecht Kossel', Department of Neurology, University Medical Center Rostock, Rostock 18147, Germany."
+                },
+                {
+                  "affiliation": "German Center for Neurodegenerative Diseases (DZNE), Greifswald 17489 and Rostock 18147, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Sendtner M",
+            "lastName": "Sendtner",
+            "firstName": "Michael",
+            "initials": "M",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-4737-2974"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Clinical Neurobiology, University Hospital Wuerzburg, Wuerzburg 97078, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "J\u00e4kel S",
+            "lastName": "J\u00e4kel",
+            "firstName": "Sarah",
+            "initials": "S",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-9634-2472"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Munich Cluster for Systems Neurology (SyNergy), Munich 81377, Germany."
+                },
+                {
+                  "affiliation": "Institute for Stroke and Dementia Research (ISD), LMU University Hospital, LMU Medizin, LMU Munich, Munich 81377, Germany."
+                },
+                {
+                  "affiliation": "Department of Psychiatry and Psychotherapy, Klinikum Rechts der Isar, TUM School of Medicine and Health, Technical University of Munich, Munich 81675, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Edbauer D",
+            "lastName": "Edbauer",
+            "firstName": "Dieter",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Munich Cluster for Systems Neurology (SyNergy), Munich 81377, Germany."
+                },
+                {
+                  "affiliation": "German Centre for Neurodegenerative Diseases (DZNE), Munich 81377, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Herms J",
+            "lastName": "Herms",
+            "firstName": "Jochen",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Munich Cluster for Systems Neurology (SyNergy), Munich 81377, Germany."
+                },
+                {
+                  "affiliation": "German Centre for Neurodegenerative Diseases (DZNE), Munich 81377, Germany."
+                },
+                {
+                  "affiliation": "Centre for Neuropathology and Prion Research, Ludwig-Maximilians-University Munich, Munich 81377, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Liebscher S",
+            "lastName": "Liebscher",
+            "firstName": "Sabine",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Clinical Neuroimmunology, Klinikum der Universit\u00e4t M\u00fcnchen, Ludwig-Maximilians University Munich, Martinsried 82152, Germany."
+                },
+                {
+                  "affiliation": "Munich Cluster for Systems Neurology (SyNergy), Munich 81377, Germany."
+                },
+                {
+                  "affiliation": "Biomedical Center, Ludwig-Maximilians University Munich, Martinsried 82152, Germany."
+                },
+                {
+                  "affiliation": "Institute of Systems Neuroscience, Medical University of Innsbruck, Innsbruck 6020, Austria."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Grosskreutz J",
+            "lastName": "Grosskreutz",
+            "firstName": "Julian",
+            "initials": "J",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-9525-1424"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Cluster for Precision Medicine in Inflammation, Universities of Kiel and L\u00fcbeck, Kiel 24118, Germany."
+                },
+                {
+                  "affiliation": "Precision Neurology of Neuromuscular and Motor Neuron Diseases, University of L\u00fcbeck, L\u00fcbeck 23538, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Brill MS",
+            "lastName": "Brill",
+            "firstName": "Monika S",
+            "initials": "MS",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-5422-9175"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Neuronal Cell Biology, School of Medicine and Health, Technical University of Munich, Munich 80802, Germany."
+                },
+                {
+                  "affiliation": "Munich Cluster for Systems Neurology (SyNergy), Munich 81377, Germany."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-5422-9175"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-9525-1424"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-4737-2974"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-7364-7791"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-9634-2472"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-3936-6010"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0003-9633-7360"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "related_data",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "10",
+        "volume": "149",
+        "journalIssueId": 4277675,
+        "dateOfPublication": "2026 Oct",
+        "monthOfPublication": 10,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Brain",
+          "title": "Brain : a journal of neurology",
+          "essn": "1460-2156",
+          "issn": "0006-8950",
+          "nlmid": "0372537",
+          "isoabbreviation": "Brain"
+        },
+        "printPublicationDate": "2026-10-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "3457-3474",
+      "abstractText": "Chitinases are hydrolytic enzymes responsible for degrading chitin and have been evolutionarily conserved across various species. Although their signalling pathways are not fully understood, the chitinases are considered active immunomodulators across several cell types. Specific isoforms, including chitotriosidase-1 (CHIT1), chitinase-3-like protein 1 (CHI3L1), and human-specific chitinase-3-like protein 2 (CHI3L2), have emerged as markers of inflammation across the neurodegenerative spectrum, including amyotrophic lateral sclerosis (ALS). ALS is a fatal neuromuscular condition, and therapeutic development has been severely hindered by phenotypic heterogeneity and an incomplete understanding of aetiology. Although several overlapping disease mechanisms can contribute to neuronal death, inflammation can exacerbate pathology. Prior studies have reported that CHIT1, CHI3L1 and CHI3L2 levels are elevated in the CSF of ALS patients and associated with disease aggressiveness. Nevertheless, several open questions critical to our understanding of the role of chitinases in ALS disease burden remain: namely, (i) which cell types in the CNS are chitinase sources under physiological conditions; (ii) which of these display chitinase upregulation in ALS; and (iii) what is the diagnostic utility of the chitinases relative to established biomarkers. Here, we utilize preclinical models and post-mortem human tissue to demonstrate at both the transcriptomic and protein level that neurons are a primary source of chitinases; furthermore, neuronal chitinase expression is conserved across species. Under physiological conditions, CHI3L1 is more abundant and widely expressed across various cell types, whereas CHIT1 is predominantly expressed in neurons. Additionally, utilizing symptomatic mice from three familial ALS models, we demonstrate isoform-specific expression profiles, with astroglial and microglial upregulation of CHI3L1, and neuronal and microglial upregulation of CHIT1. Differing expression dynamics and diagnostic utility were also noted in our clinical cohort: CSF CHIT1 and CHI3L2 levels had more discriminatory power when distinguishing between ALS versus non-ALS controls, while CHI3L1 was more closely associated with inflammation and ageing across the neurodegenerative spectrum. Although the chitinases did not diagnostically outperform the neurofilament proteins, we posit that their expression profiles can inform the optimization of biomarker-guided trial design. Taken together, we demonstrate that chitinase upregulation in ALS is evident in various CNS cell types and that its neuronal expression may provide new insights into its role in disease activity.",
+      "affiliation": "Department of Neurology, Jena University Hospital, Jena 07740, Germany.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print",
+      "pubTypeList": {
+        "pubType": [
+          "research-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "E-RARE",
+            "orderIn": 0
+          },
+          {
+            "agency": "Boris Canessa foundation",
+            "orderIn": 0
+          },
+          {
+            "agency": "JPND",
+            "orderIn": 0
+          },
+          {
+            "agency": "The Graduate School of Systemic Neurosciences",
+            "orderIn": 0
+          },
+          {
+            "agency": "SOPHIA",
+            "grantId": "01ED1202B",
+            "orderIn": 0
+          },
+          {
+            "agency": "Deutsche Gesellschaft f\u00fcr Muskelkranke",
+            "orderIn": 0
+          },
+          {
+            "agency": "German Ministry for Education and Research",
+            "orderIn": 0
+          },
+          {
+            "agency": "Excellence Cluster SyNergy",
+            "grantId": "390857198",
+            "orderIn": 0
+          },
+          {
+            "agency": "Deutsche Forschungsgemeinschaft",
+            "grantId": "413668513",
+            "orderIn": 0
+          },
+          {
+            "agency": "Estonian Research Council",
+            "grantId": "PSG471",
+            "orderIn": 0
+          },
+          {
+            "agency": "PYRAMID",
+            "grantId": "01GM1304",
+            "orderIn": 0
+          },
+          {
+            "agency": "Deutsche Forschungsgemeinschaft",
+            "grantId": "450131873",
+            "orderIn": 0
+          },
+          {
+            "agency": "Agence Nationale de la Recherche",
+            "orderIn": 0
+          },
+          {
+            "agency": "Transregional Collaborative Research Centre",
+            "orderIn": 0
+          },
+          {
+            "agency": "SOPHIA",
+            "grantId": "01ED15511A",
+            "orderIn": 0
+          },
+          {
+            "agency": "Deutsche Forschungsgemeinschaft",
+            "grantId": "ANR-21-CE37-0033-01",
+            "orderIn": 0
+          },
+          {
+            "agency": "Hermann and Lilly Schilling Stiftung f\u00fcr medizinische Forschung im Stifterverband",
+            "orderIn": 0
+          },
+          {
+            "agency": "Friedrich Schiller University",
+            "orderIn": 0
+          },
+          {
+            "agency": "German Research Foundation",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Neurons",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "EN",
+                  "qualifierName": "enzymology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Mice, Transgenic"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Mice"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "EN",
+                  "qualifierName": "enzymology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Hexosaminidases",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Up-Regulation"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Female"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Male"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Chitinases",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "BI",
+                  "qualifierName": "biosynthesis"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Chitinase-3-Like Protein 1",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Chitinase",
+          "Neuron",
+          "Amyotrophic Lateral Sclerosis",
+          "Chi3l1",
+          "Chit1",
+          "Chi3l2"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "CHI3L1 protein, human",
+            "registryNumber": "0"
+          },
+          {
+            "name": "chitotriosidase",
+            "registryNumber": "EC 3.2.1.-"
+          },
+          {
+            "name": "Hexosaminidases",
+            "registryNumber": "EC 3.2.1.-"
+          },
+          {
+            "name": "CHI3L2 protein, human",
+            "registryNumber": "EC 3.2.1.14"
+          },
+          {
+            "name": "Chitinases",
+            "registryNumber": "EC 3.2.1.14"
+          },
+          {
+            "name": "Chitinase-3-Like Protein 1",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1093/brain/awag083"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13634644"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13634644?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 1,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by-nc",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-10-04",
+      "dateOfCreation": "2026-02-28",
+      "dateOfRevision": "2026-10-06",
+      "firstPublicationDate": "2026-10-01",
+      "firstIndexDate": "2026-03-01",
+      "fullTextReceivedDate": "2026-10-06",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42462180",
+      "source": "MED",
+      "pmid": "42462180",
+      "pmcid": "PMC13377495",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13377495"
+        ]
+      },
+      "doi": "10.1212/nxi.0000000000200618",
+      "title": "Multiplex Panel Detects Glial and Inflammatory Biomarker Signatures in Sporadic and C9orf72-ALS.",
+      "authorString": "Baskar K, Steffke C, Bernsen S, Elmas Z, Hesebeck-Brinckmann J, Schuster J, Meyer T, Weydt P, Weishaupt J, Brenner D, Catanese A.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Baskar K",
+            "lastName": "Baskar",
+            "firstName": "Karthik",
+            "initials": "K",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-0562-2891"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Anatomy and Cell Biology, Ulm, Germany."
+                },
+                {
+                  "affiliation": "International Graduate School, Ulm University, Germany."
+                },
+                {
+                  "affiliation": "Institute of Neuroanatomy, University Clinic RWTH Aachen."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Steffke C",
+            "lastName": "Steffke",
+            "firstName": "Christina",
+            "initials": "C",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-7539-6204"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Anatomy and Cell Biology, Ulm, Germany."
+                },
+                {
+                  "affiliation": "International Graduate School, Ulm University, Germany."
+                },
+                {
+                  "affiliation": "Institute of Neuroanatomy, University Clinic RWTH Aachen."
+                },
+                {
+                  "affiliation": "Department of Neurology, Ulm University, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Bernsen S",
+            "lastName": "Bernsen",
+            "firstName": "Sarah",
+            "initials": "S",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-7485-2626"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department for Neuromuscular Diseases, Bonn University, Germany."
+                },
+                {
+                  "affiliation": "Department of Neurology, Center for ALS and Other Motor Neuron Disorders, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, Corporate Member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Elmas Z",
+            "lastName": "Elmas",
+            "firstName": "Zeynep",
+            "initials": "Z",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0002-8384-5705"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Ulm University, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Hesebeck-Brinckmann J",
+            "lastName": "Hesebeck-Brinckmann",
+            "firstName": "Jasper",
+            "initials": "J",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-9760-1077"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Ulm University, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Schuster J",
+            "lastName": "Schuster",
+            "firstName": "Joachim",
+            "initials": "J",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-9577-9541"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Ulm University, Germany."
+                },
+                {
+                  "affiliation": "German Center for Neurodegenerative Diseases (DZNE) Site Ulm, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Meyer T",
+            "lastName": "Meyer",
+            "firstName": "Thomas",
+            "initials": "T",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-2736-7350"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Center for ALS and Other Motor Neuron Disorders, Charit\u00e9 - Universit\u00e4tsmedizin Berlin, Corporate Member of Freie Universit\u00e4t Berlin, Humboldt-Universit\u00e4t zu Berlin, and Berlin Institute of Health."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Weydt P",
+            "lastName": "Weydt",
+            "firstName": "Patrick",
+            "initials": "P",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-2344-5662"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department for Neuromuscular Diseases, Bonn University, Germany."
+                },
+                {
+                  "affiliation": "German Centre for Neurodegenerative Diseases (DZNE) Site Bonn, Germany; and."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Weishaupt J",
+            "lastName": "Weishaupt",
+            "firstName": "Jochen",
+            "initials": "J",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-3399-9784"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Ulm University, Germany."
+                },
+                {
+                  "affiliation": "German Center for Neurodegenerative Diseases (DZNE) Site Ulm, Germany."
+                },
+                {
+                  "affiliation": "Center for Rare Diseases (ZSE) Ulm, Ulm University Hospital Center for Rare Diseases, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Brenner D",
+            "lastName": "Brenner",
+            "firstName": "David",
+            "initials": "D",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-1535-3146"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Ulm University, Germany."
+                },
+                {
+                  "affiliation": "German Center for Neurodegenerative Diseases (DZNE) Site Ulm, Germany."
+                },
+                {
+                  "affiliation": "Center for Rare Diseases (ZSE) Ulm, Ulm University Hospital Center for Rare Diseases, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Catanese A",
+            "lastName": "Catanese",
+            "firstName": "Alberto",
+            "initials": "A",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-8266-4913"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Anatomy and Cell Biology, Ulm, Germany."
+                },
+                {
+                  "affiliation": "Institute of Neuroanatomy, University Clinic RWTH Aachen."
+                },
+                {
+                  "affiliation": "German Center for Neurodegenerative Diseases (DZNE) Site Ulm, Germany."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-7485-2626"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-7539-6204"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-0562-2891"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-1535-3146"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-2736-7350"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-3399-9784"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-8266-4913"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-9577-9541"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-9760-1077"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-2344-5662"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0002-8384-5705"
+          }
+        ]
+      },
+      "journalInfo": {
+        "issue": "5",
+        "volume": "13",
+        "journalIssueId": 4219636,
+        "dateOfPublication": "2026 Sep",
+        "monthOfPublication": 9,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Neurol Neuroimmunol Neuroinflamm",
+          "title": "Neurology(R) neuroimmunology & neuroinflammation",
+          "essn": "2332-7812",
+          "issn": "2332-7812",
+          "nlmid": "101636388",
+          "isoabbreviation": "Neurol Neuroimmunol Neuroinflamm"
+        },
+        "printPublicationDate": "2026-09-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "e200618",
+      "abstractText": "<h4>Background and objectives</h4>CSF proteomics has emerged as a valuable strategy for identifying diagnostic and prognostic biomarkers in amyotrophic lateral sclerosis (ALS). However, the limited availability and volumes of CSF samples restrict the broader clinical application of CSF-based biomarker panels. To address this challenge, we investigated whether the novel nucleic acid-linked immuno-sandwich assay (NULISA) multiplex platform-capable of quantifying multiple neural, glial, and inflammatory markers from minimal biofluid volumes-could validate previously proposed biomarkers and identify additional candidates relevant to ALS.<h4>Methods</h4>Using this platform, we measured a targeted panel of 131 biomarkers in cohorts of patients with C9orf72-associated ALS, sporadic ALS (sALS), and matched healthy controls.<h4>Results</h4>The 6 markers neurofilament heavy chain (NEFH) and neurofilament light chain (NEFL), chitinases-particularly chitotriosidase-1 (CHIT1) and chitinase-3-like protein-1 (CHI3L1), and chemokines CCL2 and CCL3 were significantly elevated in both ALS groups compared with controls. These biomarkers correlated with disease progression and demonstrated strong diagnostic performance when combined into aggregate scores, as reflected by a high area under the receiver operating characteristic curve for ALS. Notably, C9orf72-ALS patients exhibited higher levels of the oxidative stress-related markers PRDX6 and ENO2, compared with sALS patients, suggesting a genotype-specific molecular signature.<h4>Discussion</h4>Overall, our findings support the use of a multiplexed panel of diverse, inflammatory, glial, and neurodegeneration-associated biomarkers as a complementary diagnostic and prognostic tool alongside established measurements of neurofilaments. This approach may enhance biomarker robustness while minimizing CSF volume requirements, thereby improving clinical feasibility in ALS research and care.",
+      "affiliation": "Institute of Anatomy and Cell Biology, Ulm, Germany.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print-Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Neuroglia"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "CF",
+                  "qualifierName": "cerebrospinal fluid"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DI",
+                  "qualifierName": "diagnosis"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Inflammation",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "CF",
+                  "qualifierName": "cerebrospinal fluid"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Neurofilament Proteins",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "CF",
+                  "qualifierName": "cerebrospinal fluid"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Adult"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Middle Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Female"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Male"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Biomarkers",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "CF",
+                  "qualifierName": "cerebrospinal fluid"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Chitinase-3-Like Protein 1",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "CF",
+                  "qualifierName": "cerebrospinal fluid"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "C9orf72 Protein",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Neuroinflammatory Diseases",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "CF",
+                  "qualifierName": "cerebrospinal fluid"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "Neurofilament Proteins",
+            "registryNumber": "0"
+          },
+          {
+            "name": "C9orf72 protein, human",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Biomarkers",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Chitinase-3-Like Protein 1",
+            "registryNumber": "0"
+          },
+          {
+            "name": "C9orf72 Protein",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1212/NXI.0000000000200618"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13377495"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13377495?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "N",
+      "hasData": "N",
+      "license": "cc by-nc-nd",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "N",
+      "dateOfCompletion": "2026-07-17",
+      "dateOfCreation": "2026-07-16",
+      "dateOfRevision": "2026-08-13",
+      "electronicPublicationDate": "2026-07-14",
+      "firstPublicationDate": "2026-07-14",
+      "firstIndexDate": "2026-07-17",
+      "fullTextReceivedDate": "2026-09-09",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42158589",
+      "source": "MED",
+      "pmid": "42158589",
+      "pmcid": "PMC13182393",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13182393"
+        ]
+      },
+      "doi": "10.1136/bmjno-2025-001225",
+      "title": "CHI3L1 (YKL-40) and Chit-1 expressing glia in the white matter of ALS, FTLD and AD: correlations to pathology and disease duration.",
+      "authorString": "Tran CM, Reddy N, Thomas JK, Venugopal V, Bowser R.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Tran CM",
+            "lastName": "Tran",
+            "firstName": "Chelsea Mauri",
+            "initials": "CM",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Translational Neuroscience, Barrow Neurological Institute, Phoenix, Arizona, USA."
+                },
+                {
+                  "affiliation": "School of Life Sciences, Arizona State University, Tempe, Arizona, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Reddy N",
+            "lastName": "Reddy",
+            "firstName": "Nisha",
+            "initials": "N",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "School of Life Sciences, Arizona State University, Tempe, Arizona, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Thomas JK",
+            "lastName": "Thomas",
+            "firstName": "J K",
+            "initials": "JK",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Translational Neuroscience, Barrow Neurological Institute, Phoenix, Arizona, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Venugopal V",
+            "lastName": "Venugopal",
+            "firstName": "Vinisha",
+            "initials": "V",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0008-8732-3721"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Translational Neuroscience, Barrow Neurological Institute, Phoenix, Arizona, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Bowser R",
+            "lastName": "Bowser",
+            "firstName": "Robert",
+            "initials": "R",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-5404-7259"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Translational Neuroscience, Barrow Neurological Institute, Phoenix, Arizona, USA."
+                },
+                {
+                  "affiliation": "School of Life Sciences, Arizona State University, Tempe, Arizona, USA."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-5404-7259"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0008-8732-3721"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "1",
+        "volume": "8",
+        "journalIssueId": 4089116,
+        "dateOfPublication": "2026 ",
+        "monthOfPublication": 0,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "BMJ Neurol Open",
+          "title": "BMJ neurology open",
+          "essn": "2632-6140",
+          "issn": "2632-6140",
+          "nlmid": "101775450",
+          "isoabbreviation": "BMJ Neurol Open"
+        },
+        "printPublicationDate": "2026-01-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "e001225",
+      "abstractText": "<h4>Background</h4>Chitotriosidase (Chit-1) and chitinase-3-like protein 1 (CHI3L1) protein levels are increased in the cerebrospinal fluid (CSF) of neurodegenerative diseases, including amyotrophic lateral sclerosis (ALS), frontotemporal dementia (FTD) and Alzheimer's disease (AD). Few studies have examined the spatial expression of chitinase-expressing cells with respect to neuropathologic hallmarks of disease.<h4>Methods</h4>RNA sequencing was used to examine Chit-1 and CHI3L1 gene expression in the spinal cord and motor cortex. Immunohistochemistry was used to characterise the distribution of Chit-1 and CHI3L1 expressing cells in ALS, C9-ALS, FTLD, AD and non-neurologic disease controls. Immunofluorescence confocal microscopy was used to correlate distribution of Chit-1 and CHI3L1 expressing cells to TDP-43 pathology.<h4>Results</h4>Chit-1 gene expression was increased in the spinal cord, and CHI3L1 expression was increased in both the spinal cord and motor cortex of patients with sALS and C9-ALS when compared with controls. Highest levels of Chit-1<sup>+</sup> glia were in cortical regions that contain hallmark neuropathology for each neurodegenerative disease. CHI3L1<sup>+</sup> glia were only significantly increased in sALS. Neither Chit-1<sup>+</sup> nor CHI3L1<sup>+</sup> glia was in close proximity to phosphorylated TDP-43 (pTDP) containing neurons in the motor cortex grey matter; however, there was a significant co-localisation of glial pTDP with Chit-1 and CHI3L1 in the motor cortex white matter.<h4>Conclusions</h4>Chit-1 and CHI3L1 expressing cells were most abundant in the white matter of cortical regions affected by each neurodegenerative disease and the spinal cord. Chit-1 or CHI3L1 expressing cells in the white matter often contained pTDP. We also observed correlations between levels of Chit-1 or CHI3L1 expressing cells in the white matter to disease duration.",
+      "affiliation": "Department of Translational Neuroscience, Barrow Neurological Institute, Phoenix, Arizona, USA.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic-eCollection",
+      "pubTypeList": {
+        "pubType": [
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Neuropathology",
+          "ALS",
+          "motor neuron disease"
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1136/bmjno-2025-001225"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13182393"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13182393?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by-nc",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-05-20",
+      "dateOfCreation": "2026-05-20",
+      "dateOfRevision": "2026-08-13",
+      "electronicPublicationDate": "2026-05-12",
+      "firstPublicationDate": "2026-05-12",
+      "firstIndexDate": "2026-05-21",
+      "fullTextReceivedDate": "2026-05-20",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42638120",
+      "source": "MED",
+      "pmid": "42638120",
+      "pmcid": "PMC13501664",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13501664"
+        ]
+      },
+      "doi": "10.1186/s40035-026-00572-2",
+      "title": "Bridging the gap: neuroinflammation and the dawn of precision medicine in amyotrophic lateral sclerosis.",
+      "authorString": "Tang L, Fan D.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Tang L",
+            "lastName": "Tang",
+            "firstName": "Lu",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Peking University Third Hospital, Beijing, China. tanglu@bjmu.edu.cn."
+                },
+                {
+                  "affiliation": "Beijing Key Laboratory of Innovative Diagnostics, Therapeutics and Translational Research for Neurological Rare Disorders, Peking University Third Hospital, Beijing, China. tanglu@bjmu.edu.cn."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Fan D",
+            "lastName": "Fan",
+            "firstName": "Dongsheng",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Peking University Third Hospital, Beijing, China. dsfan2010@aliyun.com."
+                },
+                {
+                  "affiliation": "Beijing Key Laboratory of Innovative Diagnostics, Therapeutics and Translational Research for Neurological Rare Disorders, Peking University Third Hospital, Beijing, China. dsfan2010@aliyun.com."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "journalInfo": {
+        "issue": "1",
+        "volume": "15",
+        "journalIssueId": 4238133,
+        "dateOfPublication": "2026 Aug",
+        "monthOfPublication": 8,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Transl Neurodegener",
+          "title": "Translational neurodegeneration",
+          "essn": "2047-9158",
+          "issn": "2047-9158",
+          "nlmid": "101591861",
+          "isoabbreviation": "Transl Neurodegener"
+        },
+        "printPublicationDate": "2026-08-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "40",
+      "abstractText": "Neuroinflammation is no longer a secondary feature of amyotrophic lateral sclerosis (ALS), but rather a disease-modifying process that actively shapes the motor neuron vulnerability from the earliest stages of pathology. Central and peripheral immune cells, including microglia, astrocytes, and infiltrating T lymphocytes, adopt context-dependent states that can be neuroprotective or neurotoxic depending on disease stage and genetic background. These states are driven by discrete molecular programs, such as cGAS-STING-mediated innate immune sensing, NLRP3 inflammasome activation, and RIPK1-dependent necroptotic signaling, which represent tractable therapeutic targets. The repeated failure of broad-spectrum immunosuppressive trials reflects a fundamental mismatch between the non-selective interventions and the mechanistically distinct immune states of diseases. Converging transcriptomic, genetic, and immunophenotypic evidence supports the existence of putative neuroimmune endotypes in ALS, though this framework remains a working hypothesis pending prospective validation in biomarker-stratified cohorts. Advances in the following three domains are needed for realizing precision immunotherapy: standardized biomarker panels (including cerebrospinal fluid chitinases and TSPO-PET) to stratify patients by inflammatory subtype; pharmacodynamic readouts to confirm target engagement before interpreting clinical outcomes; and adaptive platform trial designs capable of evaluating mechanism-matching interventions in defined subgroups. This review integrates ALS-associated neuroinflammation with emerging precision medicine strategies, arguing that the central translational question is no longer whether or not to target neuroinflammation, but how, when, and in whom neuroinflammation should be targeted.",
+      "affiliation": "Department of Neurology, Peking University Third Hospital, Beijing, China. tanglu@bjmu.edu.cn.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "National Key Research and Development Program of China",
+            "grantId": "2022YFA1303003",
+            "orderIn": 0
+          },
+          {
+            "agency": "the Chinese Institutes for Medical Research, Beijing",
+            "grantId": "CX25YZ13",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "TH",
+                  "qualifierName": "therapy"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Immunotherapy",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "MT",
+                  "qualifierName": "methods"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Precision Medicine",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "MT",
+                  "qualifierName": "methods"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "TD",
+                  "qualifierName": "trends"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Neuroinflammatory Diseases",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "TH",
+                  "qualifierName": "therapy"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Immunotherapy",
+          "Biomarker",
+          "Neurodegeneration",
+          "Microglia",
+          "Amyotrophic Lateral Sclerosis",
+          "neuroinflammation",
+          "Precision Medicine",
+          "Neuroimmune Endotype"
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1186/s40035-026-00572-2"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13501664"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13501664?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "N",
+      "hasData": "N",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "N",
+      "dateOfCompletion": "2026-08-25",
+      "dateOfCreation": "2026-08-25",
+      "dateOfRevision": "2026-08-27",
+      "electronicPublicationDate": "2026-08-24",
+      "firstPublicationDate": "2026-08-24",
+      "firstIndexDate": "2026-08-25",
+      "fullTextReceivedDate": "2026-09-10",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "41919222",
+      "source": "MED",
+      "pmid": "41919222",
+      "pmcid": "PMC13034920",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13034920"
+        ]
+      },
+      "doi": "10.1093/braincomms/fcag086",
+      "title": "Increased CSF levels of soluble AXL at diagnosis correlate with poor prognosis in patients affected by amyotrophic lateral sclerosis.",
+      "authorString": "Spatafora MG, Dubin J, Domi T, Lombardi R, Cabras P, Dalla Bella E, Consonni M, Quattrini A, Verri M, Lauria G, Van Damme P, Poesen K, Riva N, Peviani M.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Spatafora MG",
+            "lastName": "Spatafora",
+            "firstName": "Mauro G",
+            "initials": "MG",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-3848-9529"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Cellular and Molecular Neuropharmacology Laboratory, Department of Biology and Biotechnology 'L. Spallanzani', University of Pavia, Pavia, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Dubin J",
+            "lastName": "Dubin",
+            "firstName": "Jonas",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Laboratory for Molecular Neurobiomarker Research, Department of Neurosciences, Leuven Brain Institute, KU Leuven (University of Leuven), Leuven, Belgium."
+                },
+                {
+                  "affiliation": "Laboratory Medicine, UZ Leuven (University Hospitals Leuven), Leuven, Belgium."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Domi T",
+            "lastName": "Domi",
+            "firstName": "Teuta",
+            "initials": "T",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Experimental Neuropathology Unit, Institute of Experimental Neurology (INSPE), Division of Neuroscience, IRCCS San Raffaele Scientific Institute, Milan, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Lombardi R",
+            "lastName": "Lombardi",
+            "firstName": "Raffaella",
+            "initials": "R",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-0080-6699"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "3rd Neurology Unit-Motor Neuron Disease Centre, Fondazione IRCCS Istituto Neurologico C. Besta, Milano, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Cabras P",
+            "lastName": "Cabras",
+            "firstName": "Paolo",
+            "initials": "P",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Cellular and Molecular Neuropharmacology Laboratory, Department of Biology and Biotechnology 'L. Spallanzani', University of Pavia, Pavia, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Dalla Bella E",
+            "lastName": "Dalla Bella",
+            "firstName": "Eleonora",
+            "initials": "E",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "3rd Neurology Unit-Motor Neuron Disease Centre, Fondazione IRCCS Istituto Neurologico C. Besta, Milano, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Consonni M",
+            "lastName": "Consonni",
+            "firstName": "Monica",
+            "initials": "M",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-0479-2290"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "3rd Neurology Unit-Motor Neuron Disease Centre, Fondazione IRCCS Istituto Neurologico C. Besta, Milano, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Quattrini A",
+            "lastName": "Quattrini",
+            "firstName": "Angelo",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Experimental Neuropathology Unit, Institute of Experimental Neurology (INSPE), Division of Neuroscience, IRCCS San Raffaele Scientific Institute, Milan, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Verri M",
+            "lastName": "Verri",
+            "firstName": "Manuela",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Cellular and Molecular Neuropharmacology Laboratory, Department of Biology and Biotechnology 'L. Spallanzani', University of Pavia, Pavia, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Lauria G",
+            "lastName": "Lauria",
+            "firstName": "Giuseppe",
+            "initials": "G",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-9773-020X"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "3rd Neurology Unit-Motor Neuron Disease Centre, Fondazione IRCCS Istituto Neurologico C. Besta, Milano, Italy."
+                },
+                {
+                  "affiliation": "Department of Medical Biotechnology and Translational Medicine, University of Milan, Milan, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Van Damme P",
+            "lastName": "Van Damme",
+            "firstName": "Philip",
+            "initials": "P",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-4010-2357"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, UZ Leuven (University Hospitals Leuven), Leuven, Belgium."
+                },
+                {
+                  "affiliation": "Laboratory of Neurobiology, Department of Neurosciences, Leuven Brain Institute, KU Leuven (University of Leuven), Leuven, Belgium."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Poesen K",
+            "lastName": "Poesen",
+            "firstName": "Koen",
+            "initials": "K",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-5290-9476"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Laboratory for Molecular Neurobiomarker Research, Department of Neurosciences, Leuven Brain Institute, KU Leuven (University of Leuven), Leuven, Belgium."
+                },
+                {
+                  "affiliation": "Laboratory Medicine, UZ Leuven (University Hospitals Leuven), Leuven, Belgium."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Riva N",
+            "lastName": "Riva",
+            "firstName": "Nilo",
+            "initials": "N",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-0513-9517"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "3rd Neurology Unit-Motor Neuron Disease Centre, Fondazione IRCCS Istituto Neurologico C. Besta, Milano, Italy."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Peviani M",
+            "lastName": "Peviani",
+            "firstName": "Marco",
+            "initials": "M",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-0576-6166"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Cellular and Molecular Neuropharmacology Laboratory, Department of Biology and Biotechnology 'L. Spallanzani', University of Pavia, Pavia, Italy."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-5290-9476"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-9773-020X"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-0479-2290"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-0513-9517"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-0576-6166"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-4010-2357"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-0080-6699"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-3848-9529"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics"
+        ]
+      },
+      "journalInfo": {
+        "issue": "2",
+        "volume": "8",
+        "journalIssueId": 4139975,
+        "dateOfPublication": "2026 ",
+        "monthOfPublication": 0,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Brain Commun",
+          "title": "Brain communications",
+          "essn": "2632-1297",
+          "issn": "2632-1297",
+          "nlmid": "101755125",
+          "isoabbreviation": "Brain Commun"
+        },
+        "printPublicationDate": "2026-01-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "fcag086",
+      "abstractText": "AXL, a receptor tyrosine kinase expressed in neurons and glial cells, involved in neuronal survival, myelination, and regulation of immune responses, can undergo shedding due to the activation of metalloproteases in neuroinflammatory conditions. Indeed, CSF and serum levels of soluble AXL (sAXL) have been correlated with neurodegeneration and cognitive decline in Alzheimer's disease (AD). Based on these observations, we explored whether sAXL is implicated in amyotrophic lateral sclerosis (ALS). sAXL levels were measured in biofluids (CSF and serum) from two biorepositories, totalling 107 ALS patients, 76 healthy controls, 25 AD patients, 22 patients with multiple sclerosis and 51 patients with ALS disease mimicking disorders (i.e. patients that displayed symptoms resembling ALS, in whom eventually ALS was excluded after a thorough clinical examination). Gender and age were considered as covariate in the statistical analyses. Our results provide the first evidence of sAXL alterations in the CSF and serum of ALS patients at diagnosis and demonstrate a significant association between CSF sAXL levels and disease progression, as well as its prognostic value in ALS. While these observations require validation through multicentre studies, they suggest the involvement of the AXL pathway in ALS pathology and pave the way for leveraging CSF sAXL levels as a biomarker to aid ALS disease stratification.",
+      "affiliation": "Cellular and Molecular Neuropharmacology Laboratory, Department of Biology and Biotechnology 'L. Spallanzani', University of Pavia, Pavia, Italy.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic-eCollection",
+      "pubTypeList": {
+        "pubType": [
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "Office of the Assistant Secretary of Defense for Health Affairs",
+            "orderIn": 0
+          },
+          {
+            "agency": "Amyotrophic Lateral Sclerosis Research Program",
+            "grantId": "HT9425-24-1-0247",
+            "orderIn": 0
+          },
+          {
+            "agency": "Amyotrophic Lateral Sclerosis Association",
+            "grantId": "23-SGP-630",
+            "orderIn": 0
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Biomarker",
+          "Neurodegeneration",
+          "neuroinflammation",
+          "Disease Progression"
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1093/braincomms/fcag086"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13034920"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13034920?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "N",
+      "dateOfCompletion": "2026-04-01",
+      "dateOfCreation": "2026-04-01",
+      "dateOfRevision": "2026-08-13",
+      "electronicPublicationDate": "2026-03-30",
+      "firstPublicationDate": "2026-03-30",
+      "firstIndexDate": "2026-04-02",
+      "fullTextReceivedDate": "2026-03-31",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42598675",
+      "source": "MED",
+      "pmid": "42598675",
+      "pmcid": "PMC13472171",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13472171"
+        ]
+      },
+      "doi": "10.1093/braincomms/fcag289",
+      "title": "Tracing neuroinflammation in neurodegeneration: insights from a scoping review on biofluid biomarkers.",
+      "authorString": "van de Zande NA, Ruiter CCC, Polman MA, Brama SCM, Roos RAC, Kremer PHC, de Bot ST.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "van de Zande NA",
+            "lastName": "van de Zande",
+            "firstName": "Nadine A",
+            "initials": "NA",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-2542-0549"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Leiden University Medical Center, Albinusdreef 2, 2300 RC Leiden, The Netherlands."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ruiter CCC",
+            "lastName": "Ruiter",
+            "firstName": "Charlotte C C",
+            "initials": "CCC",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Leiden University Medical Center, Albinusdreef 2, 2300 RC Leiden, The Netherlands."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Polman MA",
+            "lastName": "Polman",
+            "firstName": "Myrthe A",
+            "initials": "MA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Medisch Spectrum Twente, Koningsplein 1, 7512 KZ Enschede, The Netherlands."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Brama SCM",
+            "lastName": "Brama",
+            "firstName": "Steffanie C M",
+            "initials": "SCM",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Leiden University Medical Center, Albinusdreef 2, 2300 RC Leiden, The Netherlands."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Roos RAC",
+            "lastName": "Roos",
+            "firstName": "Raymund A C",
+            "initials": "RAC",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Leiden University Medical Center, Albinusdreef 2, 2300 RC Leiden, The Netherlands."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kremer PHC",
+            "lastName": "Kremer",
+            "firstName": "Philip H C",
+            "initials": "PHC",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Leiden University Medical Center, Albinusdreef 2, 2300 RC Leiden, The Netherlands."
+                },
+                {
+                  "affiliation": "Centre for Human Drug Research (CHDR), Zernikedreef 8, 2333 CL Leiden, The Netherlands."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "de Bot ST",
+            "lastName": "de Bot",
+            "firstName": "Susanne T",
+            "initials": "ST",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Leiden University Medical Center, Albinusdreef 2, 2300 RC Leiden, The Netherlands."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0003-2542-0549"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "4",
+        "volume": "8",
+        "journalIssueId": 4225098,
+        "dateOfPublication": "2026 ",
+        "monthOfPublication": 0,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Brain Commun",
+          "title": "Brain communications",
+          "essn": "2632-1297",
+          "issn": "2632-1297",
+          "nlmid": "101755125",
+          "isoabbreviation": "Brain Commun"
+        },
+        "printPublicationDate": "2026-01-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "fcag289",
+      "abstractText": "Neuroinflammation is increasingly recognized as a key pathological process in neurodegenerative disease and can be monitored using biofluid biomarkers. Objective biomarkers may aid diagnosis, prognosis and progression. We conducted a scoping review of neuroinflammation biomarkers across major neurodegenerative diseases covering the past 23 years, including Alzheimer's disease, Parkinson's disease, amyotrophic lateral sclerosis, frontotemporal dementia, Huntington's disease, Lewy body dementia, multiple system atrophy and progressive supranuclear palsy. PubMed and Web of Science were systematically searched for observational studies from 2003 to 2025 reporting neuroinflammation biomarkers in adult human subjects. Included markers encompassed blood, cerebrospinal fluid, saliva and urine, providing possible complementary information. Original studies on non-neuroinflammatory mechanisms, cellular or post-mortem biomarkers, animal models, genetics and comparisons between diseases were excluded. Two reviewers independently screened articles; biomarkers reported in \u22653 independent cohorts per disease were analysed. A total of 388 studies were included, predominantly in Alzheimer's disease/mild cognitive impairment (<i>n</i> = 214) and Parkinson's disease (<i>n</i> = 92). Eight biomarkers were most frequently reported: IL-6, TNF-\u03b1, IL-1\u03b2, CRP/hs-CRP, IL-10, MCP-1, YKL-40 and neutrophil-to-lymphocyte ratio (NLR), measured in blood or cerebrospinal fluid (CSF) as indicators of inflammatory processes associated with neurodegeneration. Across biomarkers, the strength and scope of evidence varied. Most studies demonstrated higher biomarker levels in disease, with more advanced stages, greater clinical severity and faster progression. NLR showed the most consistent pattern across staging, severity and progression, but is currently under-represented across diseases. CSF YKL-40 generally increased with disease presence and advancement; IL-6 showed consistent increases in advanced stages and with severity, although significant results were limited; MCP-1, CRP and TNF-\u03b1 were mostly linked to severity and progression; IL-1\u03b2 and IL-10 remained largely inconsistent. Other markers, including GFAP, showed associations in Alzheimer's disease but remain underexplored in other neurodegenerative diseases. Variability across studies, including differences in biofluid source, assay sensitivity, population characteristics and statistical approaches, limits interpretability and comparability. Although neuroinflammation is elevated in neurodegenerative diseases and generally intensifies as these diseases progress, potentially contributing to downstream pathology, the precise timing, role and predictive value of these biomarkers remain uncertain. A subset of markers, including NLR, YKL-40 and GFAP, shows relatively consistent associations and may warrant further investigation across diseases. In clinical practice, neuroinflammation biomarkers could serve as complementary tools to capture inflammatory processes related to disease heterogeneity and progression. Future longitudinal studies tracking pre-symptomatic and early-stage individuals, with standardized approaches, are needed to define temporal dynamics and explore their utility for monitoring disease progression and therapeutic response.",
+      "affiliation": "Department of Neurology, Leiden University Medical Center, Albinusdreef 2, 2300 RC Leiden, The Netherlands.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic-eCollection",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Neurodegenerative diseases",
+          "Inflammation Markers",
+          "Prognostic Indicators",
+          "Clinical Stratification"
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1093/braincomms/fcag289"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13472171"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13472171?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-08-14",
+      "dateOfCreation": "2026-08-14",
+      "dateOfRevision": "2026-08-15",
+      "electronicPublicationDate": "2026-08-06",
+      "firstPublicationDate": "2026-08-06",
+      "firstIndexDate": "2026-08-16",
+      "fullTextReceivedDate": "2026-09-09",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "PMC13647265",
+      "source": "PMC",
+      "pmcid": "PMC13647265",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13647265"
+        ]
+      },
+      "title": "Minding the gates: dual cell-autonomous and non-cell-autonomous mechanisms of TBK1 in ALS/FTD",
+      "authorString": "Smeyers J, Mordes D.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Smeyers J",
+            "lastName": "Smeyers",
+            "firstName": "Julie",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute for Neurodegenerative Diseases, Weill Institute for Neurosciences, and Department of Pathology, University of California, San Francisco , , ,"
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Mordes D",
+            "lastName": "Mordes",
+            "firstName": "Daniel A.",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute for Neurodegenerative Diseases, Weill Institute for Neurosciences, and Department of Pathology, University of California, San Francisco , , ,"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "journalInfo": {
+        "volume": "20",
+        "journalIssueId": 4283407,
+        "dateOfPublication": " ",
+        "monthOfPublication": 0,
+        "yearOfPublication": 0,
+        "journal": {
+          "medlineAbbreviation": "Front Neurosci",
+          "title": "Frontiers in neuroscience",
+          "essn": "1662-453X",
+          "issn": "1662-4548",
+          "nlmid": "101478481",
+          "isoabbreviation": "Front Neurosci"
+        }
+      },
+      "language": "eng",
+      "pubModel": "Undetermined",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "ALS",
+          "In Vivo Models",
+          "Tbk1",
+          "Ftd",
+          "Cell Autonomous",
+          "Non-cell-autonomous"
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Free",
+            "availabilityCode": "F",
+            "documentStyle": "html",
+            "site": "PubMedCentral",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13647265/?tool=EBI"
+          },
+          {
+            "availability": "Free",
+            "availabilityCode": "F",
+            "documentStyle": "pdf",
+            "site": "PubMedCentral",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13647265/pdf/?tool=EBI"
+          },
+          {
+            "availability": "Free",
+            "availabilityCode": "F",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13647265"
+          },
+          {
+            "availability": "Free",
+            "availabilityCode": "F",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13647265?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "N",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "N",
+      "dateOfCreation": "2026-10-09",
+      "dateOfRevision": "2026-10-10",
+      "firstPublicationDate": "2026-10-09",
+      "firstIndexDate": "2026-10-09",
+      "fullTextReceivedDate": "2026-10-09",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "41020397",
+      "source": "MED",
+      "pmid": "41020397",
+      "pmcid": "PMC12894501",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC12894501"
+        ]
+      },
+      "doi": "10.1002/ana.78046",
+      "title": "Skeletal Muscle Biomarkers of Amyotrophic Lateral Sclerosis: A Large-Scale, Multi-Cohort Proteomic Study.",
+      "authorString": "Dergai O, Wuu J, Koziczak-Holbro M, Malaspina A, Granit V, Hernandez JP, Cooley A, Sachdev R, Yu L, Bidinosti M, Flotte L, Nash M, Jennings LL, Berry JD, Bruijn LI, Brachat S, Benatar M.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Dergai O",
+            "lastName": "Dergai",
+            "firstName": "Oleksandr",
+            "initials": "O",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Diseases of Aging and Regenerative Medicine, Novartis Biomedical Research, Basel, Switzerland."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wuu J",
+            "lastName": "Wuu",
+            "firstName": "Joanne",
+            "initials": "J",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0005-9643-9855"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology and ALS Center, University of Miami Miller School of Medicine, Miami, FL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Koziczak-Holbro M",
+            "lastName": "Koziczak-Holbro",
+            "firstName": "Magdalena",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Diseases of Aging and Regenerative Medicine, Novartis Biomedical Research, Basel, Switzerland."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Malaspina A",
+            "lastName": "Malaspina",
+            "firstName": "Andrea",
+            "initials": "A",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-8020-7567"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "UCL Queen Square Motor Neuron Disease Center, UCL Queen Square Institute of Neurology, University College London, Queen Square, London, UK."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Granit V",
+            "lastName": "Granit",
+            "firstName": "Volkan",
+            "initials": "V",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-6519-7225"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology and ALS Center, University of Miami Miller School of Medicine, Miami, FL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Hernandez JP",
+            "lastName": "Hernandez",
+            "firstName": "Jessica P",
+            "initials": "JP",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology and ALS Center, University of Miami Miller School of Medicine, Miami, FL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Cooley A",
+            "lastName": "Cooley",
+            "firstName": "Anne",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology and ALS Center, University of Miami Miller School of Medicine, Miami, FL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Sachdev R",
+            "lastName": "Sachdev",
+            "firstName": "Ruchika",
+            "initials": "R",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Biomarker Development, Novartis Biomedical Research, Basel, Switzerland."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Yu L",
+            "lastName": "Yu",
+            "firstName": "Lili",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Biomarker Development, Novartis Biomedical Research, Cambridge, MA, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Bidinosti M",
+            "lastName": "Bidinosti",
+            "firstName": "Michael",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Diseases of Aging and Regenerative Medicine, Novartis Biomedical Research, Basel, Switzerland."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Flotte L",
+            "lastName": "Flotte",
+            "firstName": "Ludivine",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Diseases of Aging and Regenerative Medicine, Novartis Biomedical Research, Basel, Switzerland."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Nash M",
+            "lastName": "Nash",
+            "firstName": "Mark",
+            "initials": "M",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-3985-3989"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Diseases of Aging and Regenerative Medicine, Novartis Biomedical Research, Basel, Switzerland."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Jennings LL",
+            "lastName": "Jennings",
+            "firstName": "Lori L",
+            "initials": "LL",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Disease Area X, Novartis Biomedical Research, Cambridge, MA, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Berry JD",
+            "lastName": "Berry",
+            "firstName": "James D",
+            "initials": "JD",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-0898-6081"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS, Massachusetts General Hospital, Boston, MA, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Bruijn LI",
+            "lastName": "Bruijn",
+            "firstName": "Lucie I",
+            "initials": "LI",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Biomarker Development, Novartis Pharmaceuticals, London, UK."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Brachat S",
+            "lastName": "Brachat",
+            "firstName": "Sophie",
+            "initials": "S",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-3398-8225"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Diseases of Aging and Regenerative Medicine, Novartis Biomedical Research, Basel, Switzerland."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Benatar M",
+            "lastName": "Benatar",
+            "firstName": "Michael",
+            "initials": "M",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-4241-5135"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology and ALS Center, University of Miami Miller School of Medicine, Miami, FL, USA."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0002-3398-8225"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-3985-3989"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-6519-7225"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-8020-7567"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-0898-6081"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-4241-5135"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0005-9643-9855"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "2",
+        "volume": "99",
+        "journalIssueId": 4120027,
+        "dateOfPublication": "2026 Feb",
+        "monthOfPublication": 2,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Ann Neurol",
+          "title": "Annals of neurology",
+          "essn": "1531-8249",
+          "issn": "0364-5134",
+          "nlmid": "7707449",
+          "isoabbreviation": "Ann Neurol"
+        },
+        "printPublicationDate": "2026-02-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "393-407",
+      "abstractText": "<h4>Objective</h4>Biomarkers with clear contexts of use are important tools for amyotrophic lateral sclerosis (ALS) therapy development. Understanding their longitudinal trajectory in the untreated state is key to their use as potential markers of pharmacodynamic response. To this end, we undertook a large-scale proteomic study in well-phenotyped cohorts to identify biomarker candidates of ALS disease state and disease progression.<h4>Methods</h4>Clinical phenotypic data and biofluid samples, collected from patients with ALS and healthy controls through multiple longitudinal natural history studies, were used to identify biomarker candidates. Slow off-rate modified aptamer (SOMAmer)-based relatively quantitative measurement of ~7,000 proteins was performed in plasma and cerebrospinal fluid (CSF), with immunoassay validation of candidates of interest.<h4>Results</h4>We identified 329 plasma proteins significantly differentially regulated between ALS and controls (adjusted p-value <0.05), with 25 showing >40% relative abundance. PDLIM3, TNNT2, and MYL11 had the greatest log-fold elevation, whereas ANTXR2 and ART3 had the greatest log-fold reduction. A similar set of plasma proteins was found to increase (eg, PDLIM3, TNNT2, and MYL11) or decrease (eg, ANTXR2, ART3, and MSTN) with disease progression. CSF proteins with the greatest log-fold elevation included NEFL, NEFH, CHIT1, CA3, MYL11, and GPNMB. These results were confirmed in an independent replication cohort. Moreover, tissue-specific signature enrichment suggests a significant contribution of muscle as a source of these biomarkers. Plasma KCNIP3 was elevated by ~60% in those on riluzole. Immunoassays provided orthogonal validation of plasma TNNT2 and CSF GPNMB.<h4>Interpretation</h4>We identified an array of novel biomarkers with the potential to serve as response biomarkers to aid therapy development, as well as to shed light on the underlying biology of disease. ANN NEUROL 2026;99:393-407.",
+      "affiliation": "Diseases of Aging and Regenerative Medicine, Novartis Biomedical Research, Basel, Switzerland.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print-Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "research-article",
+          "Journal Article",
+          "Research Support, N.I.H., Extramural"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "NINDS NIH HHS",
+            "acronym": "NS",
+            "grantId": "U01 NS107027",
+            "orderIn": 0
+          },
+          {
+            "agency": "NINDS NIH HHS",
+            "acronym": "NS",
+            "grantId": "U54 NS092091",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Muscle, Skeletal",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "BL",
+                  "qualifierName": "blood"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "CF",
+                  "qualifierName": "cerebrospinal fluid"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Disease Progression"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Cohort Studies"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Proteomics",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "MT",
+                  "qualifierName": "methods"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Adult"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Middle Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Female"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Male"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Biomarkers",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "BL",
+                  "qualifierName": "blood"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "CF",
+                  "qualifierName": "cerebrospinal fluid"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "Biomarkers",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1002/ana.78046"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12894501"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12894501?pdf=render"
+          }
+        ]
+      },
+      "commentCorrectionList": {
+        "commentCorrection": [
+          {
+            "source": "MED",
+            "id": "40313273",
+            "reference": "medRxiv. 2025 Apr 25:2025.04.23.25326161. doi: 10.1101/2025.04.23.25326161.",
+            "type": "Update of",
+            "orderIn": 1
+          },
+          {
+            "source": "PPR",
+            "id": "PPR1009463",
+            "type": "Preprint in",
+            "note": "Link created based on a title-first author match",
+            "orderIn": 10002
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 17,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by-nc",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "nct",
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-02-12",
+      "dateOfCreation": "2025-09-29",
+      "dateOfRevision": "2026-05-28",
+      "electronicPublicationDate": "2025-09-29",
+      "firstPublicationDate": "2025-09-29",
+      "firstIndexDate": "2025-09-30",
+      "fullTextReceivedDate": "2026-02-14",
+      "hasEvaluations": "N"
+    }
+  ]
+}

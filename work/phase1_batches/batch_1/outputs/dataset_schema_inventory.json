@@ -1,0 +1,971 @@
+{
+  "DS_ZENG_APA": {
+    "List_of_supplementary_tables": [
+      "r1: Content of tabs",
+      "r2: Table_S1_APA_changes_detected_in_Liu_et_al_2019",
+      "r3: Table_S2_TDP-43_knockdown_induced_APA_changes_detected_by_RN",
+      "r4: Table_S3_TDP-43_knockdown_induced_APA_changes_detected_by_3e"
+    ],
+    "S1": [
+      "r1: Gene_Name | log2FC | APA_direction | APA_program_used | common_in_both_programs",
+      "r2: BNIP3 | 0.39040511139893 | distal | Apalyzer | no",
+      "r3: CACNA2D2 | 0.960934514215437 | distal | Apalyzer | no",
+      "r4: CMTM6 | 0.223226045490468 | distal | Apalyzer | no"
+    ],
+    "S2": [
+      "r1: gene_name | delta_PUI | padj | APA_direction",
+      "r2: A4GALT | 1.467043439 | 1.41120528519538e-42 | distal",
+      "r3: AAK1 | 0.306631232 | 3.89716412443642e-12 | distal",
+      "r4: ABCB7 | 0.854343791 | 0.029939418 | distal"
+    ],
+    "S3": [
+      "r1: gene_id | gene_name | PAS_ID | PAS_location | Control_PAS_usage | TDP43KD_PAS_usage | Delta_PAS_usage | padj | cryptic",
+      "r2: ENSG00000000457.14 | SCYL3 | chr1:169849631:- | three_prime_utr | 0.320834848193218 | 0.513517873273971 | 0.192683025080753 | 5.55863126304511e-05 | no",
+      "r3: ENSG00000000457.14 | SCYL3 | chr1:169853090:- | three_prime_utr | 0.679165151806782 | 0.486482126726029 | -0.192683025080753 | 5.55863126304511e-05 | no",
+      "r4: ENSG00000001036.14 | FUCA2 | chr6:143493954:- | three_prime_utr_extension | 0.516700136084446 | 0.755789581355619 | 0.239089445271173 | 5.30303015674825e-21 | no"
+    ],
+    "S4": [
+      "r1: gene_id | gene_name | APA_direction | PAS_ID_down | PAS_ID_up | Delta_distal_PAS_usage | padj",
+      "r2: ENSG00000000457.14 | SCYL3 | longer | chr1:169853090:- | chr1:169849631:- | 0.192683025080753 | 5.55863126304511e-05",
+      "r3: ENSG00000001036.14 | FUCA2 | longer | chr6:143495487:- | chr6:143493954:- | 0.239089445271173 | 4.82715363244207e-28",
+      "r4: ENSG00000001084.13 | GCLC | longer | chr6:53497523:- | chr6:53497343:- | 0.170392580540838 | 9.55202698932505e-06"
+    ],
+    "S5": [
+      "r1: gene | disease | APA_change",
+      "r2: ABCC12 | ALS | no",
+      "r3: ABCG1 | ALS | yes",
+      "r4: ACSL5 | ALS | no"
+    ],
+    "S6": [
+      "r1: gene_name | PAS_ID | intron_coordinate",
+      "r2: HNRNPA1 | chr12:54287086:+ | chr12:54286282-54286662",
+      "r3: STMN2 | chr8:79617048:+ | chr8:79611214-79616822",
+      "r4: PSMB5 | chr14:23016542:- | chr14:23016635-23017084"
+    ],
+    "S7": [
+      "r1: Table S3. List of qPCR primers",
+      "r2: Primer name | Primer sequence",
+      "r3: TMEM106B_total_forward | GCCTCCATCATGACACACTTAC",
+      "r4: TMEM106B_total_reverse | GGGGCATTTCTATTTGTTTGCT"
+    ],
+    "S8-1": [
+      "r1: Variables | Control (N=53) | FTLD-TDP (N=221)",
+      "r2:  Age at death (yrs) | 80 (50,99) | 73 (44,100)",
+      "r3:  Sex (Females) | 20 (37.7%) | 105 (47.5%)",
+      "r4: Survival after onset(yrs) | NA | 8 (1,25)"
+    ],
+    "S8-2": [
+      "r1: Random ID | Study group | SFPQ long to total | SFPQ Alt exon to canonical exon | TMEM106B long to total | RIN agilent | Age at death (yrs) | Age at onset of symptoms | Survival (yrs) | MND? | Sex | Race",
+      "r2: 1 | Control | 0.19704672801060025 | 0.014475616479721641 | 0.017017953551433092 | 8.7 | 55 | NA | NA | No | M | White",
+      "r3: 2 | Control | 0.46513746882192897 | 0.027058842894494797 | 0.0110361053116726 | 9.1 | 69 | NA | NA | No | M | White",
+      "r4: 3 | Control | 1.3653082013577453 | 0.03656062915837934 | 0.021162970697487585 | 9.1 | 84 | NA | NA | No | M | White"
+    ],
+    "S9": [
+      "r1: Plasmid | Associated figures | Sequence",
+      "r2: pmirGLO-no-insert | Figure 3e,f | ttgaaatcctttttttctgcgcgtaatctgctgcttgcaaacaaaaaaaccaccgctacc",
+      "r3: pmirGLO-TMEM106B-short-3UTR | Figure 3e,f | ttgaaatcctttttttctgcgcgtaatctgctgcttgcaaacaaaaaaaccaccgctacc",
+      "r4: pmirGLO-TMEM106B-long-3UTR-w-mutated-proximal-PAS | Figure 3e,f | ttgaaatcctttttttctgcgcgtaatctgctgcttgcaaacaaaaaaaccaccgctacc"
+    ]
+  },
+  "DS_BRYCE_APA": {
+    "Supplementary_Table_1": [
+      "r1: experiment_name | cell_type | paper_doi | number_of_control_samples | number_of_knockdown_samples | mean_aligned_read_length | mean_library_size | tdp43_log2fold_change_knockdown_vs_control | deseq2_padj",
+      "r2: Zanovello SH-SY-5Y CHX | SH-SY5Y | this-study | 4.0 | 4.0 | 100.0 | 111065369.0 | -3.59 | 7.62e-242",
+      "r3: Zanovello SH-SY-5Y Curve | SH-SY5Y | this-study | 3.0 | 3.0 | 100.0 | 118948195.0 | -3.94 | 0.0",
+      "r4: Zanovello SK-N-BE(2) Curve | SK-N-BE(2) | this-study | 3.0 | 3.0 | 150.0 | 147239547.0 | -3.9874941 | 0.0"
+    ],
+    "Supplementary_Table_2": [
+      "r1: le_id | gene_name | event_type | n_exper_cryptic | experiment_name | annot_status | chromosome | start_rep | end_rep | start_all | end_all | strand",
+      "r2: ENSG00000104435.14_1 | STMN2 | ALE | 10.0 | brown_i3_cortical;brown_shsy5y;brown_sknbe2;humphrey_i3_cort | novel | chr8 | 79616821 | 79617071 | 79616822;79616822;79616822;79616822 | 79617049;79617071;79617073;79623859 | +",
+      "r3: ENSG00000107807.13_2 | TLX1 | 3'Ext | 9.0 | brown_i3_cortical;brown_shsy5y;brown_sknbe2;humphrey_i3_cort | novel | chr10 | 101136690 | 101138531 | 101136691;101136691;101136691 | 101138522;101138528;101138531 | +",
+      "r4: ENSG00000134909.19_1 | ARHGAP32 | ALE | 9.0 | brown_i3_cortical;brown_shsy5y;humphrey_i3_cortical;klim_i3_ | novel | chr11 | 128991449 | 128992046 | 128988275;128988713;128988722;128991449;128991450 | 128992046;128992046;128992046;128992046;128992046 | -"
+    ],
+    "Supplementary_Table_3": [
+      "r1: le_id | gene_name | event_type | experiment_name | exonBaseMean | pvalue | padj | mean_PPAU_base | mean_PPAU_treatment | delta_PPAU_treatment_control | n_exper_sig | annot_status",
+      "r2: ENSG00000101439.9_1 | CST3 | IPA | brown_i3_cortical | 282.8312015934614 | 0.0004102607293507922 | 0.00916450780605562 | 0.997456546434183 | 0.994560918644643 | -0.00289562778953956 | 10.0 | annotated",
+      "r3: ENSG00000101439.9_1 | CST3 | IPA | brown_shsy5y | 277.6443764114016 | 0.0009072909114763192 | 0.04719114449493385 | 0.991930578157442 | 0.983299787292085 | -0.00863079086535756 | 10.0 | annotated",
+      "r4: ENSG00000101439.9_1 | CST3 | IPA | brown_skndz | 122.803921168608 | 3.88662153969976e-06 | 0.0001065140829313517 | 0.997189721934516 | 0.988667022759326 | -0.00852269917519 | 10.0 | annotated"
+    ],
+    "Supplementary_Table_4": [
+      "r1: subtype | n_individuals | n_male | n_female | n_samples | rin | pmi | age | age_of_onset",
+      "r2: Control | 96.0 | 48.0 | 48.0 | 227.0 | 5.9 (5.1, 6.55, missing = 0) | 19 (10, 27, missing = 78) | 68 (54, 74, missing = 0) | NA (NA, NA, missing = 227)",
+      "r3: ALS-non-TDP | 8.0 | 4.0 | 4.0 | 33.0 | 6.5 (5.6, 7.2, missing = 0) | 5.25 (5.16, 7, missing = 7) | 45 (40, 48, missing = 0) | 42 (38, 46, missing = 0)",
+      "r4: ALS-TDP | 203.0 | 109.0 | 94.0 | 864.0 | 6.5 (5.7, 7.175, missing = 3) | 9.5 (5.5, 18.8, missing = 202) | 67 (60, 71, missing = 0) | 64 (57, 68, missing = 115)"
+    ],
+    "Supplementary_Table_5": [
+      "r1: paste_into_igv_junction | le_id | gene_name | count_not_path | count_path | fraction_not_path | fraction_path | selective | fold_enrichment",
+      "r2: chr8:79611214-79616822 | ENSG00000104435.14_1 | STMN2 | 0.0 | 383.0 | 0.0 | 0.4136069114470842 | True | 414.6069114470842",
+      "r3: chr6:158017290-158019984 | ENSG00000078269.15_1 | SYNJ2 | 2.0 | 144.0 | 0.00266666666666666 | 0.1555075593952484 | True | 42.68387983506781",
+      "r4: chr9:93660560-93661348 | ENSG00000197724.11_1 | PHF2 | 1.0 | 77.0 | 0.00133333333333333 | 0.08315334773218143 | True | 36.06572045664924"
+    ],
+    "Supplementary_Table_6": [
+      "r1: gene_id | gene_name | le_id | event_type | baseMean | log2FoldChange | lfcSE | log2FoldChangeShrink | lfcSEShrink | pvalue | padj",
+      "r2: ENSG00000104435.14 | STMN2 | ENSG00000104435.14_1 | ALE | 4815.923139541751 | -2.901901408751286 | 0.09642247458290168 | -2.895410449107532 | 0.09652495066934338 | 5.516387314137531e-199 | 6.167321017205758e-195",
+      "r3: ENSG00000171853.16 | TRAPPC12 | ENSG00000171853.16_4 | ALE | 183.5193288306988 | -1.487270699952704 | 0.1630435069445685 | -1.451621286267669 | 0.1649741284990907 | 7.380135444272947e-20 | 3.300396570678861e-17",
+      "r4: ENSG00000151692.15 | RNF144A | ENSG00000151692.15_6;ENSG00000151692.15_7 | ALE | 169.1143600311035 | -1.278807788095285 | 0.1578696884694143 | -1.240224854236022 | 0.1601198178185505 | 5.477830883256075e-16 | 1.717911643724108e-13"
+    ],
+    "Supplementary_Table_7": [
+      "r1: ELK1_all | ELK1_unique | ELK4_unique | ELK4_all | majiq_differentially_spliced",
+      "r2: MAP3K14 | NR4A1 | NUDT2 | MAP3K14 | RSF1",
+      "r3: EGR1 | SND1 | KIF24 | EGR1 | AHRR",
+      "r4: FAM32A | FHL2 | TRAPPC2 | EGR2 | ST6GAL1"
+    ],
+    "Supplementary_Table_8": [
+      "r1: Oligonucleotide name | sequence (5'-3')",
+      "r2: Oligo dT-anchor RT primer | GACCACGCGTATCGATGTCGACTTTTTTTTTTTTTTTTV",
+      "r3: PCR universal anchor primer | GACCACGCGTATCGATGTCGAC",
+      "r4: GAPDH | TCCTCACAGTTGCCATGTAGAC"
+    ],
+    "Supplementary_Table_9": [
+      "r1: cell_type | kd_method | experiments",
+      "r2: SH-SY5Y | DOX-induced shRNA | RNA-seq (Fig. 1), iCLIP (Fig. 1), Subcellular fractionation ",
+      "r3: SK-N-BE(2) | DOX-induced shRNA | RNA-seq (Fig. 1), ELK1 3\u2019-UTR APA reporter library (Fig 1F-H",
+      "r4: i3Neuron | dCas9 | RNA-seq (Fig. 1), 3'RACE (Extended Data Fig. 1), Ribo-seq (F"
+    ],
+    "Legends": [
+      "r1: Supplementary Table 1 -\u00a0 Summary statistics for\u00a0 in vitro TD",
+      "r2: ",
+      "r3: experiment_name: Unique identifier for dataset",
+      "r4: cell_type: cell type identifier for dataset"
+    ]
+  },
+  "DS001_META": {
+    "GSE153960 Metadata": [
+      "r1: GEO | ExternalSampleId | ExternalSubjectId | Sex | Subject Group | Subject Group Subcategory | Site of Motor Onset | Site of Motor Onset Detail | Age at Symptom Onset | Age at Death | Sample Source | RIN",
+      "r2: GSM4660589 | CGND-HRA-02220 | NEUXD817GGZ | Male | ALS Spectrum MND, Other Neurological Disorders | Classical/Typical ALS, Frontotemporal Dementia (FTD) | Limb | Limb - Lower Limb, Left Ankle/Foot/Toes | 68 | 70 | Cerebellum | 7.5",
+      "r3: GSM4660680 | CGND-HRA-02181 | NEUWT414AYT | Male | Non-Neurological Control | 0 | Not Applicable | Not Applicable | Not Applicable | 52 | Cerebellum | 7",
+      "r4: GSM4660768 | CGND-HRA-02179 | NEUWT414AYT | Male | Non-Neurological Control | 0 | Not Applicable | Not Applicable | Not Applicable | 52 | Spinal_Cord_Lumbar | 6.8"
+    ]
+  },
+  "DS001_ONEILL": {
+    "TableS1": [
+      "r1: Table S1: Metadata for frontal/motor cortex samples and pati",
+      "r2: Tables containing summary of metadata features for motor cor",
+      "r3: ",
+      "r4: "
+    ],
+    "TableS1A": [
+      "r1: Summary of metadata features for frontal/motor cortex",
+      "r2: Samples | Patients | Gender | ALS +/- FTD | Age at Symptom Onset | Age at Death | Disease Duration in Months | Genetic alteration | ALS | ALS+FTD | FTD",
+      "r3: ALS | 524 | 279 | Male | 244 | Min | 29 | 18 | 6 | Unknown | 235 | 16",
+      "r4: ALS+FTD | 63 | 27 | Female | 187 | Median | 63 | 67 | 34 | C9orf72 | 26 | 10"
+    ],
+    "TableS1B": [
+      "r1: Metadata and ALS subtype for frontal/motor cortex samples in",
+      "r2: Sample | Tissue | Patient ID | Group | RIN | pH | Sequencing platform | Collection site | ALS Subtype | Cohort",
+      "r3: CGND-HRA-00013 | FCX | NEUEL133AK6 | ALS | 6.5 | 7.05 | HiSeq 2500 | University of California San Diego | ALS-Ox | Tam et al. 2019",
+      "r4: CGND-HRA-00015 | FCX | NEUZU200WEQ | ALS | 6.6 | 6.44 | HiSeq 2500 | University of California San Diego | ALS-Ox | Tam et al. 2019"
+    ],
+    "TableS1C": [
+      "r1: Clinical metadata and ALS subtype for patients with frontal/",
+      "r2: PatientID | Sex | Group | Detailed description | Site of Motor Onset Detail | Age at Symptom Onset | Age at Death | Disease Duration in Months | Post Mortem Interval in Hours | Cause of Death | Revised El Escorial Criteria | Comorbidities",
+      "r3: 3785 | Male | ALS | Classical/Typical ALS | Unknown | 37 | 60 | 300 | Unknown | unknown | Unknown | Neurofibrillary Tangles",
+      "r4: 3859 | Male | ALS | Classical/Typical ALS | Unknown | 44 | 49 | 35 | Unknown | pneumonia | Unknown | Unknown"
+    ],
+    "TableS1D": [
+      "r1: Association of subtypes with pH & RIN in frontal/motor corte",
+      "r2: pH | Subtype median | Control median | Wilcoxon/MWU statistic | pval | padj",
+      "r3: ALS-TE vs control | 6.56 | 6.56 | 100 | 0.89988381580808 | 0.89988381580808",
+      "r4: ALS-Ox vs control | 6.8 | 6.56 | 488.5 | 0.224921396152975 | 0.40274321684432"
+    ],
+    "TableS1E": [
+      "r1: Assocation of ALS subtype with various clinical features.",
+      "r2: ALS subtype | Clinical features | odds_ratio | lower_conf | upper_conf | pval | adjp",
+      "r3: ALS-Glia | ALS | 2.53022009963042 | 0.988354793507133 | 7.69391967246651 | 0.0533439964341109 | 0.128025591441866",
+      "r4: ALS-Glia | ALS+FTD | 1.00266054239914 | 0.109930293903596 | 4.35995094551167 | 1 | 1 | 0.62943013572025"
+    ],
+    "TableS1F": [
+      "r1: Summary of metadata features for spinal cord",
+      "r2: Samples | Patients | Gender | ALS +/- FTD | Age at Symptom Onset | Age at Death | Disease Duration in Months | Genetic alteration | ALS | ALS+FTD | FTD",
+      "r3: ALS | 567 | 302 | Male | 219 | Min | 29 | 16 | 6 | Unknown | 262 | 16",
+      "r4: ALS+FTD | 58 | 29 | Female | 188 | Median | 63 | 66 | 31 | C9ORF72 | 25 | 12"
+    ],
+    "TableS1G": [
+      "r1: Metadata and molecular subtype for spinal cord samples in th",
+      "r2: Sample | Tissue | Patient ID | Group | RIN | pH | Sequencing platform | Collection site | ALS Subtype",
+      "r3: CGND-HRA-00032 | lmbCord | NEUKM699KKH | ALS+FTD | 8 | Unknown | HiSeq 2500 | University of California San Diego | ALS-Ox-cord",
+      "r4: CGND-HRA-00035 | lmbCord | NEUHC282LVJ | CTL | 6.7 | Unknown | HiSeq 2500 | University of California San Diego | ALS-Ox-cord"
+    ],
+    "TableS1H": [
+      "r1: Clinical metadata and molecular subtypes for patients with s",
+      "r2: PatientID | Sex | Group | Detailed description | Site of Motor Onset Detail | Age at Symptom Onset | Age at Death | Disease Duration in Months | Post Mortem Interval in Hours | Cause of Death | Revised El Escorial Criteria | Comorbidities",
+      "r3: 3787 | Male | ALS | Classical/Typical ALS | Unknown | 52 | 54 | 29 | Unknown | pneumonia | Unknown | Neurofibrillary Tangles",
+      "r4: 3831 | Male | ALS | Classical/Typical ALS | Unknown | 46 | 51 | 60 | Unknown | respiratory | Unknown | contusion"
+    ],
+    "TableS1I": [
+      "r1: Association of subtype with sample RIN and pH in spinal cord",
+      "r2: pH | Subtype median | Control median | Wilcoxon/MWU statistic | pval | padj",
+      "r3: ALS-Ox-cord vs control | 6.9 | 6.6 | 155.5 | 0.030810784310945 | 0.030810784310945",
+      "r4: ALS-Glia-cord vs control | 6.8 | 6.6 | 313 | 0.0241238063998317 | 0.030810784310945"
+    ],
+    "Table S1J": [
+      "r1: Clinical metadata and molecular subtypes of patients with fr",
+      "r2: PatientID | Sex | Group | Detailed description | Site of Motor Onset Detail | Age at Symptom Onset | Age at Death | Disease Duration in Months | Post Mortem Interval in Hours | Cause of Death | Revised El Escorial Criteria | Comorbidities",
+      "r3: 00-138-43 | Female | ALS | Classical/Typical ALS, Alzheimers Disease (AD) | Limb - Lower Limb, Leg | 86 | 87 | 6 | Unknown | Respiratory | Unknown | Alzheimer",
+      "r4: 02-148-00 | Female | ALS | Classical/Typical ALS | Limb - Lower Limb, Leg | 58 | 60 | 20 | Unknown | Respiratory | Unknown | Unknown"
+    ]
+  },
+  "DS003_SUPP": {
+    "Human_BA4_BA9.ENSEMBL": [
+      "r1: Ex.L2_L3.CUX2_RASGRF2"
+    ],
+    "Human_BA4_BA9.GENESYM": [
+      "r1: Ex.L2_L3.CUX2_RASGRF2"
+    ],
+    "Mouse_M1.ENSEMBL": [
+      "r1: Ex.L2_L3.Cux2_Rasgrf2"
+    ],
+    "Mouse_M1.GENESYM": [
+      "r1: Ex.L2_L3.Cux2_Rasgrf2"
+    ]
+  },
+  "DS045_TRAUT": {
+    "Table of Contents": [
+      "r1: TABLE OF CONTENTS",
+      "r2: Page 1:  | Single Center Emory Cohort Characteristics",
+      "r3: Page 2: | Expanded Multicenter Center Cohort Characteristics",
+      "r4: Page 3: | Single Center Emory Raw Protein Data"
+    ],
+    "1-Cohort-SC Characteristics": [
+      "r1: Supplemental Table 1-Characteristics of the single center co",
+      "r2: Channel | Batch | Disease | C9orf72 | C9_Basic | SOD1 | SiteofOnset | Race | Sex | ATX_Rep_A1 | ATX_Rep_A2 | AgeOnset",
+      "r3: b01.127N | b01 | Control | Control | Control | Control | Control | Caucasian | Female | NA | NA | NA",
+      "r4: b01.127C | b01 | Sporadic | NA | Negative | NA | Bulbar | Caucasian | Male | 22 | 22 | 60"
+    ],
+    "2-Cohort-Exp Characteristics": [
+      "r1: Supplemental Table 2-Characteristics of the expanded, multic",
+      "r2: Batch | ID | TissueBank | Age | Sex | Race_Ethnicity | SymptomStatus",
+      "r3: b01.701.019 | b01 | MGH001 | MGH | 53.3853525 | F | Asian | Control",
+      "r4: b01.701.020 | b01 | MGH002 | MGH | 49.93292266 | F | Asian | Control"
+    ],
+    "3-TMT-MS Raw Data": [
+      "r1: Supplemental Table 3-TMT-MS column normalized raw protein da",
+      "r2: Protein|Uniprot | b01.126 | b01.127N | b01.127C | b01.128N | b01.128C | b01.129N | b01.129C | b01.130N | b01.130C | b01.131N | b01.131C",
+      "r3: |A8MTW9 | 56416.30601 | 42172.36058 | 68629.06207 | 41492.6724 | 49258.44274 | 77868.13941 | 72703.10376 | 35059.57108 | 68474.76307 | 43694.46264 | 64754.75869",
+      "r4: |P00761 | 150153129.1 | 209465791.7 | 149359631.8 | 72059890.51 | 101970755.8 | 196909426.9 | 184247759.3 | 137883934.1 | 174877020.6 | 154766081.8 | 242314369.9"
+    ],
+    "4-Peptide Raw Data": [
+      "r1: Supplemental Table 4-TMT-MS column normalized raw peptide da",
+      "r2: Protein|Uniprot|Peptide | emory_b01.126 | emory_b01.127N | emory_b01.127C | emory_b01.128N | emory_b01.128C | emory_b01.129N | emory_b01.129C | emory_b01.130N | emory_b01.130C | emory_b01.131N | emory_b01.131C",
+      "r3: |AAKIITHPNFNGNTLDNDIMLIKLSSPATLNSR | 65989.01188 | 74213.29708 | 72008.73954 | 50052.66507 | 73393.02655 | 70905.22308 | 76861.07057 | 47468.82881 | 62097.00567 | 51930.98454 | 72739.68133",
+      "r4: |AANPAYNLFWAGWDR | 28752.78264 | 27439.61813 | 22184.20638 | 29773.27232 | 27776.30565 | 29026.52332 | 40002.50086 | 25895.43077 | 30422.74615 | 27531.91645 | 20045.11029"
+    ],
+    "5-DIA Raw Data": [
+      "r1: Supplemental Table 5-DIA-MS Raw data for expanded, multicent",
+      "r2: Protein|Uniprot | b07.100-012 | b07.100-013 | b07.100-014 | b07.100-015 | b07.100-016 | b07.100-017 | b08.100-018 | b08.100-019 | b08.100-020 | b08.100-021 | b01.701-054",
+      "r3: IGLV4-69|A0A075B6H9 | NaN | NaN | NaN | 3.945199833 | NaN | NaN | NaN | NaN | NaN | NaN | NaN",
+      "r4: IGLV8-61|A0A075B6I0 | 7.897343713 | 8.585172992 | 11.00110285 | 13.28424518 | 10.782313 | 8.471842509 | 8.719407623 | 8.887931111 | 8.819378744 | 9.09814038 | 8.737251986"
+    ],
+    "6-TMT-MS ANOVA": [
+      "r1: Supplemental Table 6-TMT-MS ANOVA for all comparisons ",
+      "r2: Protein|Uniprot | F-Value | Pr(>F) | Sporadic-Control | Control-ALS.C9 | Control-ALS.C9.Asymptomatic | Control-ALS.SOD | ALS.C9.Asymptomatic-ALS.C9 | Sporadic-ALS.C9 | Sporadic-ALS.SOD | diff Sporadic-Control | diff Control-ALS.C9_inv",
+      "r3: |A8MTW9 | 1.130680329 | 0.349539495 | 0.316255794 | 0.138353823 | 0.688466304 | 0.377233983 | 0.221465893 | 0.055272135 | 0.758773227 | -0.124490395 | 0.270668811",
+      "r4: |P00761 | 2.808423117 | 0.020727216 | 0.027849666 | 0.253086028 | 0.008388161 | 0.012959173 | 0.140847948 | 0.786307147 | 0.185268634 | -0.139200547 | -0.111941509"
+    ],
+    "7-Peptide ANOVA": [
+      "r1: Supplemental Table 7-Peptide-level ANOVA for all comparrisio",
+      "r2: Protein|Uniprot|Peptide | F-Value | Pr(>F) | C9orf72-C9Asym | Control-C9Asym | SOD1-C9Asym | Sporadic-C9Asym | Control-C9orf72 | SOD1-C9orf72 | Sporadic-C9orf72 | SOD1-Control | Sporadic-Control",
+      "r3: |A6NNZ2|LHFFMPGFAPLTSR | 1.443736743 | 0.22755089 | 0.987292459 | 0.8583055 | 0.737951204 | 0.966772687 | 0.984572106 | 0.405963935 | 0.99998552 | 0.164762592 | 0.964480622",
+      "r4: |A8MTW9|GSPGDTGERPAGPAR | 1.025406963 | 0.398226524 | 0.719713485 | 0.971550019 | 0.999861152 | 0.999999461 | 0.817293275 | 0.610294828 | 0.404155409 | 0.921215459 | 0.798173122"
+    ],
+    "8-DIA ANOVA": [
+      "r1: Supplemental Table 8-ANOVA for all expanded, multicenter coh",
+      "r2: Protein|Uniprot | F-Value | Pr(>F) | ALS-Control | Symptomatic-Asymptomatic | C9orf72-Control | C9orf72.Asymptomatic-Control | C9orf72-C9orf72.Asymptomatic | SOD1-Control | SOD1.Asymptomatic-Control | SOD1-SOD1.Asymptomatic | C9orf72-SOD1",
+      "r3: A1BG|P04217 | 5.82844627755045 | 4.08383252343745e-05 | 0.00065323375344617 | 5.77316115798212e-05 | 1.44401605590698e-05 | 0.406785466401591 | 7.04629572083001e-06 | 0.181576175761204 | 0.955615815288455 | 0.425861285094898 | 0.0709266037612069",
+      "r4: A2M|P01023 | 4.09916489787113 | 0.00134857168160448 | 0.00481949667170747 | 0.00131937389219623 | 0.000514649758987654 | 0.617636932035366 | 0.000180571894008414 | 0.0738889696889561 | 0.762092015828526 | 0.286612180176975 | 0.298992990666296"
+    ],
+    "9-WGCNA kME": [
+      "r1: Supplemental Table 9-WGCNA kME Table",
+      "r2: Orig Order | UniqueID | net$colors | kMEturquoise | kMEmagenta | kMEgreenyellow | kMEtan | kMEyellow | kMEblue | kMEbrown | kMEblack | kMEpurple",
+      "r3: 551 | DNASE2|O00115 | magenta | -0.194462888546307 | 0.891954941569546 | 0.765015687296517 | 0.597153863718268 | 0.331258725541266 | -0.116191111725443 | 0.0323255416402985 | -0.154969118000802 | -0.216580703691213",
+      "r4: 875 | HEXA|P06865 | magenta | -0.220779651267399 | 0.875729064316833 | 0.559655646994203 | 0.504959621332755 | 0.261887670638165 | -0.0933323197682382 | -0.0755153562443682 | 0.0135525527507981 | -0.11027945405243"
+    ],
+    "10-Module Gene Ontology": [
+      "r1: Supplemental Table 10-Gene Ontology for each module by Z-sco",
+      "r2: ontology | ontologyType | turquoise | blue | brown | yellow | green | red | black | pink | magenta | purple",
+      "r3: Hallmark_p53_pathway | MSIGDBHALLMARK | -0.941773199252325 | -0.922999411268831 | -1.29793447031086 | 1.03987108319155 | 0.426186525682388 | 0.508287253910268 | 0.621989652584059 | 0.734151199439011 | -0.601714440790423 | -0.601714440790423",
+      "r4: Hallmark_mitotic_spindle | MSIGDBHALLMARK | 0.968532749306056 | 0.733567114516594 | -0.736999598672372 | 0.818385891131253 | -0.535570520660292 | -0.467841229326255 | 2.86909959854372 | -0.324550436426076 | -0.315751695165052 | -0.315751695165052"
+    ],
+    "11-Synthetic MEs SC_Exp": [
+      "r1: Supplemental Table 11-Synthetic eigenprotein matches for DIA",
+      "r2: Order | blue | black | pink | green | turquoise | greenyellow | red | magenta | brown | yellow | tan",
+      "r3: 1 | A1BG | AAMDC | ABCA2 | ABI3BP | ACE | ACHE | ACO2 | ACP2 | ACTR2 | ADAM11 | ADGRB3",
+      "r4: 2 | A2M | ACAN | ADM | ADA2 | ACYP2 | AGA | ADAMDEC1 | ARSA | ADAMTS16 | ADAM22 | ADGRL3"
+    ],
+    "12-Interaction Gene Ontology": [
+      "r1: Supplemental Table 12-Gene Ontology for each comparison by Z",
+      "r2: ontology | ontologyType | UpinC9AsymVC | DowninC9AsymVC | UpinC9VC9Asym | DowninC9VC9Asym | UpinSOD1AsymVC | DowninSOD1AsymVC | UpinSOD1VSOD1Asym | DowninSOD1VSOD1Asym",
+      "r3: Hallmark_p53_pathway | MSIGDBHALLMARK | 0.709668467148707 | -1.00598079160581 | -0.823969360842679 | 0.614602012148459 | -0.53464543719077 | -0.572965150684015 | 0.811639571295339 | -0.496434494987055",
+      "r4: Hallmark_mitotic_spindle | MSIGDBHALLMARK | -0.744115939935311 | 1.67360785706885 | 1.42424686206489 | -1.49099187237752 | 0.684469560850091 | 1.45043132858981 | 0.673388741359428 | 0.715137280983076"
+    ]
+  },
+  "DS_CRYPTIC_manifest": [
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": "Brown2022_41586_2022_4436_MOESM10_ESM.xls",
+      "supplement_label": "Supplementary Table 7",
+      "publisher_caption": "Primers for targeted RNA-seq in temporal cortex of 10 FTLD-TDP brains",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04436-3/MediaObjects/41586_2022_4436_MOESM10_ESM.xls",
+      "md5": "ccd08dc7751388e356089bff883e2423",
+      "bytes": 31744.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": "Brown2022_41586_2022_4436_MOESM11_ESM.csv",
+      "supplement_label": "Supplementary Data 1",
+      "publisher_caption": "Differentially spliced junctions, control vs TDP-43-knockdown i3Neurons (Fig. 1a)",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04436-3/MediaObjects/41586_2022_4436_MOESM11_ESM.csv",
+      "md5": "1baeb59337820381874644cc96e2c8b0",
+      "bytes": 2574566.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": "Brown2022_41586_2022_4436_MOESM12_ESM.csv",
+      "supplement_label": "Supplementary Data 2",
+      "publisher_caption": "Differentially expressed genes, control vs TDP-43-knockdown i3Neurons (Fig. 1b)",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04436-3/MediaObjects/41586_2022_4436_MOESM12_ESM.csv",
+      "md5": "fc324767db008e2d9774b9f7fbddf71c",
+      "bytes": 2436080.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": "Brown2022_41586_2022_4436_MOESM13_ESM.csv",
+      "supplement_label": "Supplementary Data 3",
+      "publisher_caption": "Differential ribosome profiling genes, control vs TDP-43-knockdown i3Neurons (Fig. 2c)",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04436-3/MediaObjects/41586_2022_4436_MOESM13_ESM.csv",
+      "md5": "e9fb8e853db70fbcdb93f5d0e77aa7b7",
+      "bytes": 2997475.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": "Brown2022_41586_2022_4436_MOESM14_ESM.xlsx",
+      "supplement_label": "Supplementary Data 4",
+      "publisher_caption": "Average thermodynamic parameters from ITC experiments",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04436-3/MediaObjects/41586_2022_4436_MOESM14_ESM.xlsx",
+      "md5": "3e16dd1f492e84bacce6e48c46f99480",
+      "bytes": 9919.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": "Brown2022_41586_2022_4436_MOESM4_ESM.xls",
+      "supplement_label": "Supplementary Table 1",
+      "publisher_caption": "Gene expression and cryptic splicing status of ALS and FTLD associated genes in i3Neurons",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04436-3/MediaObjects/41586_2022_4436_MOESM4_ESM.xls",
+      "md5": "a27e26df23de84bbc2d9019326af5601",
+      "bytes": 30720.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": "Brown2022_41586_2022_4436_MOESM5_ESM.xls",
+      "supplement_label": "Supplementary Table 2",
+      "publisher_caption": "Cell lines used",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04436-3/MediaObjects/41586_2022_4436_MOESM5_ESM.xls",
+      "md5": "faa76a10bb8abf2ba1c1307d10734edc",
+      "bytes": 27648.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": "Brown2022_41586_2022_4436_MOESM6_ESM.xls",
+      "supplement_label": "Supplementary Table 3",
+      "publisher_caption": "Effect of read length on UNC13A CE detection in ALS/FTLD-TDP",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04436-3/MediaObjects/41586_2022_4436_MOESM6_ESM.xls",
+      "md5": "581aaa3dbadd6f15be675d46611fdbcf",
+      "bytes": 27648.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": "Brown2022_41586_2022_4436_MOESM7_ESM.xls",
+      "supplement_label": "Supplementary Table 4",
+      "publisher_caption": "Relationship between UNC13A CE PSI in patients and UNC13A risk SNPs and covariates",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04436-3/MediaObjects/41586_2022_4436_MOESM7_ESM.xls",
+      "md5": "48ca5793ee8bf9b2625759e9a4ec4ed3",
+      "bytes": 29184.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": "Brown2022_41586_2022_4436_MOESM8_ESM.xls",
+      "supplement_label": "Supplementary Table 5",
+      "publisher_caption": "Metadata targeted RNA-seq",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04436-3/MediaObjects/41586_2022_4436_MOESM8_ESM.xls",
+      "md5": "c2f45b8435d51bac2a61b9220ce487b1",
+      "bytes": 27648.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": "Brown2022_41586_2022_4436_MOESM9_ESM.xls",
+      "supplement_label": "Supplementary Table 6",
+      "publisher_caption": "Hg38 coordinates for splice junctions used to calculate PSI",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04436-3/MediaObjects/41586_2022_4436_MOESM9_ESM.xls",
+      "md5": "44df761bd824b34d0eb443abf20f0ccd",
+      "bytes": 29184.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Klim et al. 2019 Nat Neurosci (STMN2)",
+      "doi": "10.1038/s41593-018-0300-4",
+      "pmcid": "PMC7153761",
+      "file": "Klim2019_41593_2018_300_MOESM3_ESM.xlsx",
+      "supplement_label": "Supplementary Table 1",
+      "publisher_caption": "Sholl analysis statistical data",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41593-018-0300-4/MediaObjects/41593_2018_300_MOESM3_ESM.xlsx",
+      "md5": "77750ac8b663099083e685292ab2ebec",
+      "bytes": 45738.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": "Ma2022_41586_2022_4424_MOESM1_ESM.pdf",
+      "supplement_label": "Supplementary Information (PDF)",
+      "publisher_caption": "Contains Supplementary Tables 3-5 and Supplementary Notes 1-3",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04424-7/MediaObjects/41586_2022_4424_MOESM1_ESM.pdf",
+      "md5": "57bc3fda4250acdf3aad33f9249822ac",
+      "bytes": 896786.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": "Ma2022_41586_2022_4424_MOESM5_ESM.xlsx",
+      "supplement_label": "Supplementary Table 1",
+      "publisher_caption": "List of genes alternatively spliced in the absence of TDP-43 identified by both MAJIQ and LeafCutter",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04424-7/MediaObjects/41586_2022_4424_MOESM5_ESM.xlsx",
+      "md5": "cefb4752f042895091011bbf7ceaa202",
+      "bytes": 13771.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": "Ma2022_41586_2022_4424_MOESM6_ESM.xlsx",
+      "supplement_label": "Supplementary Table 2",
+      "publisher_caption": "Detection of STMN2 and UNC13A splice variants in bulk RNA-seq of patient tissues, NYGC ALS Consortium cohort",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04424-7/MediaObjects/41586_2022_4424_MOESM6_ESM.xlsx",
+      "md5": "30af836336f8d36c420cf80c84feff99",
+      "bytes": 13147.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": "Ma2022_41586_2022_4424_MOESM7_ESM.xlsx",
+      "supplement_label": "Supplementary Table 6",
+      "publisher_caption": "List of all primers used",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04424-7/MediaObjects/41586_2022_4424_MOESM7_ESM.xlsx",
+      "md5": "0d7fc61206c7ad8913e7ae22db5a7484",
+      "bytes": 11071.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Melamed et al. 2019 Nat Neurosci (STMN2)",
+      "doi": "10.1038/s41593-018-0293-z",
+      "pmcid": "PMC6348009",
+      "file": "Melamed2019_41593_2018_293_MOESM3_ESM.xlsx",
+      "supplement_label": "Supplementary Table 1",
+      "publisher_caption": "Differentially expressed genes in SH-SY5Y cells after TDP-43 knockdown by siRNA",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41593-018-0293-z/MediaObjects/41593_2018_293_MOESM3_ESM.xlsx",
+      "md5": "2ce02a553f562e801677ec739620bf18",
+      "bytes": 57100.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Melamed et al. 2019 Nat Neurosci (STMN2)",
+      "doi": "10.1038/s41593-018-0293-z",
+      "pmcid": "PMC6348009",
+      "file": "Melamed2019_41593_2018_293_MOESM4_ESM.xlsx",
+      "supplement_label": "Supplementary Table 2",
+      "publisher_caption": "Differentially expressed genes in isogenic SH-SY5Y cells homozygous for TDP-43 N352S",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41593-018-0293-z/MediaObjects/41593_2018_293_MOESM4_ESM.xlsx",
+      "md5": "f4c32da9af0868261c9132eb39a6121c",
+      "bytes": 94256.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Melamed et al. 2019 Nat Neurosci (STMN2)",
+      "doi": "10.1038/s41593-018-0293-z",
+      "pmcid": "PMC6348009",
+      "file": "Melamed2019_41593_2018_293_MOESM5_ESM.xlsx",
+      "supplement_label": "Supplementary Table 3",
+      "publisher_caption": "Information on fibroblast lines",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41593-018-0293-z/MediaObjects/41593_2018_293_MOESM5_ESM.xlsx",
+      "md5": "f75f594a4f87be4b17b909420a9c00b2",
+      "bytes": 10270.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Melamed et al. 2019 Nat Neurosci (STMN2)",
+      "doi": "10.1038/s41593-018-0293-z",
+      "pmcid": "PMC6348009",
+      "file": "Melamed2019_41593_2018_293_MOESM6_ESM.xlsx",
+      "supplement_label": "Supplementary Table 4",
+      "publisher_caption": "List of primers",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41593-018-0293-z/MediaObjects/41593_2018_293_MOESM6_ESM.xlsx",
+      "md5": "9cecce6e1de91fa2e4475868d2eaeaf0",
+      "bytes": 18618.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Melamed et al. 2019 Nat Neurosci (STMN2)",
+      "doi": "10.1038/s41593-018-0293-z",
+      "pmcid": "PMC6348009",
+      "file": "Melamed2019_41593_2018_293_MOESM7_ESM.xlsx",
+      "supplement_label": "Supplementary Table 5",
+      "publisher_caption": "Summary of human samples",
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41593-018-0293-z/MediaObjects/41593_2018_293_MOESM7_ESM.xlsx",
+      "md5": "63d0d83707c6bb95dc77b5d079da86a6",
+      "bytes": 12575.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; filename = <paper>_ + original publisher filename"
+    },
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": "source_data/Brown2022_41586_2022_4436_MOESM15_ESM.xlsx",
+      "supplement_label": "Source Data Fig. 1",
+      "publisher_caption": NaN,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04436-3/MediaObjects/41586_2022_4436_MOESM15_ESM.xlsx",
+      "md5": "6363a280e8be3d1938435cf1e1660cf4",
+      "bytes": 1526861.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; fetched 23 Oct 2026 ~23:56Z; path relative to sources/"
+    },
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": "source_data/Brown2022_41586_2022_4436_MOESM16_ESM.xlsx",
+      "supplement_label": "Source Data Fig. 2",
+      "publisher_caption": NaN,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04436-3/MediaObjects/41586_2022_4436_MOESM16_ESM.xlsx",
+      "md5": "8facd3d51e975dc25175b24ab15103e1",
+      "bytes": 2349663.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; fetched 23 Oct 2026 ~23:56Z; path relative to sources/"
+    },
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": "source_data/Brown2022_41586_2022_4436_MOESM17_ESM.xlsx",
+      "supplement_label": "Source Data Fig. 3",
+      "publisher_caption": NaN,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04436-3/MediaObjects/41586_2022_4436_MOESM17_ESM.xlsx",
+      "md5": "ebfe8426c1d6782bb701f02614a270f4",
+      "bytes": 202267.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; fetched 23 Oct 2026 ~23:56Z; path relative to sources/"
+    },
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": "source_data/Brown2022_41586_2022_4436_MOESM18_ESM.xlsx",
+      "supplement_label": "Source Data Fig. 4",
+      "publisher_caption": NaN,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04436-3/MediaObjects/41586_2022_4436_MOESM18_ESM.xlsx",
+      "md5": "07777bf59311366e1789d117c482c80d",
+      "bytes": 125082.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; fetched 23 Oct 2026 ~23:56Z; path relative to sources/"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": "source_data/Ma2022_41586_2022_4424_MOESM10_ESM.xlsx",
+      "supplement_label": "Source Data Fig. 4",
+      "publisher_caption": NaN,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04424-7/MediaObjects/41586_2022_4424_MOESM10_ESM.xlsx",
+      "md5": "06f9aa739bf78e90a714b62bff27eac2",
+      "bytes": 22871.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; fetched 23 Oct 2026 ~23:56Z; path relative to sources/"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": "source_data/Ma2022_41586_2022_4424_MOESM11_ESM.xlsx",
+      "supplement_label": "Source Data Extended Data Fig. 3",
+      "publisher_caption": NaN,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04424-7/MediaObjects/41586_2022_4424_MOESM11_ESM.xlsx",
+      "md5": "90b47ace6246f0df6af90bf055555da2",
+      "bytes": 9388.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; fetched 23 Oct 2026 ~23:56Z; path relative to sources/"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": "source_data/Ma2022_41586_2022_4424_MOESM12_ESM.xlsx",
+      "supplement_label": "Source Data Extended Data Fig. 4",
+      "publisher_caption": NaN,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04424-7/MediaObjects/41586_2022_4424_MOESM12_ESM.xlsx",
+      "md5": "fcacecb854a192d70a2d699f5fb380f5",
+      "bytes": 10230.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; fetched 23 Oct 2026 ~23:56Z; path relative to sources/"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": "source_data/Ma2022_41586_2022_4424_MOESM13_ESM.xlsx",
+      "supplement_label": "Source Data Extended Data Fig. 5",
+      "publisher_caption": NaN,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04424-7/MediaObjects/41586_2022_4424_MOESM13_ESM.xlsx",
+      "md5": "160920180deb381536199e66dc2d47b3",
+      "bytes": 23730.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; fetched 23 Oct 2026 ~23:56Z; path relative to sources/"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": "source_data/Ma2022_41586_2022_4424_MOESM14_ESM.xlsx",
+      "supplement_label": "Source Data Extended Data Fig. 6",
+      "publisher_caption": NaN,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04424-7/MediaObjects/41586_2022_4424_MOESM14_ESM.xlsx",
+      "md5": "19fe83a4679d75d6bc80f6af4a1993a5",
+      "bytes": 11194.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; fetched 23 Oct 2026 ~23:56Z; path relative to sources/"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": "source_data/Ma2022_41586_2022_4424_MOESM15_ESM.xlsx",
+      "supplement_label": "Source Data Extended Data Fig. 7",
+      "publisher_caption": NaN,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04424-7/MediaObjects/41586_2022_4424_MOESM15_ESM.xlsx",
+      "md5": "ecf58030e05453a974527ccdc260d0e7",
+      "bytes": 18345.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; fetched 23 Oct 2026 ~23:56Z; path relative to sources/"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": "source_data/Ma2022_41586_2022_4424_MOESM16_ESM.xlsx",
+      "supplement_label": "Source Data Extended Data Fig. 8",
+      "publisher_caption": NaN,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04424-7/MediaObjects/41586_2022_4424_MOESM16_ESM.xlsx",
+      "md5": "a5e1cf288476519495475ecdb4359149",
+      "bytes": 10763.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; fetched 23 Oct 2026 ~23:56Z; path relative to sources/"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": "source_data/Ma2022_41586_2022_4424_MOESM17_ESM.xlsx",
+      "supplement_label": "Source Data Extended Data Fig. 9",
+      "publisher_caption": NaN,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04424-7/MediaObjects/41586_2022_4424_MOESM17_ESM.xlsx",
+      "md5": "4e4c1227c487539d92955882320d4e34",
+      "bytes": 11766.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; fetched 23 Oct 2026 ~23:56Z; path relative to sources/"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": "source_data/Ma2022_41586_2022_4424_MOESM18_ESM.xlsx",
+      "supplement_label": "Source Data Extended Data Fig. 10",
+      "publisher_caption": NaN,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04424-7/MediaObjects/41586_2022_4424_MOESM18_ESM.xlsx",
+      "md5": "6be0adadf43002db1e60ab760dfaa55f",
+      "bytes": 27223.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; fetched 23 Oct 2026 ~23:56Z; path relative to sources/"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": "source_data/Ma2022_41586_2022_4424_MOESM8_ESM.xlsx",
+      "supplement_label": "Source Data Fig. 1",
+      "publisher_caption": NaN,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04424-7/MediaObjects/41586_2022_4424_MOESM8_ESM.xlsx",
+      "md5": "64d1733264154473a1f46f45b37f39b4",
+      "bytes": 12573.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; fetched 23 Oct 2026 ~23:56Z; path relative to sources/"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": "source_data/Ma2022_41586_2022_4424_MOESM9_ESM.xlsx",
+      "supplement_label": "Source Data Fig. 2",
+      "publisher_caption": NaN,
+      "source_url": "https://media.springernature.com/original/springer-static/esm/art%3A10.1038%2Fs41586-022-04424-7/MediaObjects/41586_2022_4424_MOESM9_ESM.xlsx",
+      "md5": "e3ce574a842cfa8f06c5098a9b2e10f5",
+      "bytes": 179347.0,
+      "status": "downloaded",
+      "notes": "Open access (CC BY) via Springer Nature ESM; fetched 23 Oct 2026 ~23:56Z; path relative to sources/"
+    },
+    {
+      "paper": "Ma et al. 2022 Nature (UNC13A cryptic exon)",
+      "doi": "10.1038/s41586-022-04424-7",
+      "pmcid": "PMC8891019",
+      "file": NaN,
+      "supplement_label": NaN,
+      "publisher_caption": NaN,
+      "source_url": NaN,
+      "md5": NaN,
+      "bytes": NaN,
+      "status": "not_downloaded",
+      "notes": "Listed on article page, not downloaded (reporting summary / uncropped blots / peer review file): MOESM2-4. Source Data MOESM8-18 now downloaded to source_data/."
+    },
+    {
+      "paper": "Brown et al. 2022 Nature (UNC13A)",
+      "doi": "10.1038/s41586-022-04436-3",
+      "pmcid": "PMC8891020",
+      "file": NaN,
+      "supplement_label": NaN,
+      "publisher_caption": NaN,
+      "source_url": NaN,
+      "md5": NaN,
+      "bytes": NaN,
+      "status": "not_downloaded",
+      "notes": "Listed on article page, not downloaded (uncropped blots / reporting summary / peer review file): MOESM1-3. Source Data MOESM15-18 now downloaded to source_data/."
+    },
+    {
+      "paper": "Klim et al. 2019 Nat Neurosci (STMN2)",
+      "doi": "10.1038/s41593-018-0300-4",
+      "pmcid": "PMC7153761",
+      "file": NaN,
+      "supplement_label": NaN,
+      "publisher_caption": NaN,
+      "source_url": NaN,
+      "md5": NaN,
+      "bytes": NaN,
+      "status": "not_downloaded",
+      "notes": "Listed on article page, not downloaded (not a supplementary table: source data / reporting summary / peer review / uncropped blots / figure PDF): MOESM1-2. The only supplementary table is Sholl statistics; the paper has no gene-list table in its supplement. RNA-seq is in GEO GSE121569 (and dbGaP phs000747 cited); not fetched."
+    },
+    {
+      "paper": "Melamed et al. 2019 Nat Neurosci (STMN2)",
+      "doi": "10.1038/s41593-018-0293-z",
+      "pmcid": "PMC6348009",
+      "file": NaN,
+      "supplement_label": NaN,
+      "publisher_caption": NaN,
+      "source_url": NaN,
+      "md5": NaN,
+      "bytes": NaN,
+      "status": "not_downloaded",
+      "notes": "Listed on article page, not downloaded (not a supplementary table: source data / reporting summary / peer review / uncropped blots / figure PDF): MOESM1-2. Paper cites GEO GSE122069; not fetched."
+    },
+    {
+      "paper": "Seddighi et al. 2024 Sci Transl Med (cryptic exons/peptides, i3Neurons)",
+      "doi": "10.1126/scitranslmed.adg7162",
+      "pmcid": "PMC11325748",
+      "file": NaN,
+      "supplement_label": "Data files S1-S5 (xlsx)",
+      "publisher_caption": NaN,
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11325748/bin/NIHMS2010639-supplement-Data_files_S1-S5.xlsx",
+      "md5": NaN,
+      "bytes": NaN,
+      "status": "not_openly_reachable_from_this_environment",
+      "notes": "NOT DOWNLOADED. Publisher (science.org) returns 403; journal is not open access. PMC copy is an NIH author manuscript (not CC-licensed); its file link served a reCAPTCHA browser check instead of the file. Europe PMC supplementaryFiles API: \"not open access\". Not worked around. A person can download it from the PMC link in a browser. bioRxiv preprint 10.1101/2023.01.23.525149 (v1, CC BY-ND) exists but is a different version; not fetched (bioRxiv returned 429)."
+    },
+    {
+      "paper": "Seddighi et al. 2024 Sci Transl Med (cryptic exons/peptides, i3Neurons)",
+      "doi": "10.1126/scitranslmed.adg7162",
+      "pmcid": "PMC11325748",
+      "file": NaN,
+      "supplement_label": "Supplementary Materials (PDF)",
+      "publisher_caption": NaN,
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/instance/11325748/bin/NIHMS2010639-supplement-Supplementary_Materials.pdf",
+      "md5": NaN,
+      "bytes": NaN,
+      "status": "not_openly_reachable_from_this_environment",
+      "notes": "NOT DOWNLOADED. Publisher (science.org) returns 403; journal is not open access. PMC copy is an NIH author manuscript (not CC-licensed); its file link served a reCAPTCHA browser check instead of the file. Europe PMC supplementaryFiles API: \"not open access\". Not worked around. A person can download it from the PMC link in a browser. bioRxiv preprint 10.1101/2023.01.23.525149 (v1, CC BY-ND) exists but is a different version; not fetched (bioRxiv returned 429)."
+    },
+    {
+      "paper": "Liu et al. 2019 Cell Rep (GEO GSE126543)",
+      "doi": "10.1016/j.celrep.2019.04.003",
+      "pmcid": "PMC6508629",
+      "file": NaN,
+      "supplement_label": NaN,
+      "publisher_caption": NaN,
+      "source_url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE126nnn/GSE126542/suppl/GSE126542_NeuronalNuclei_RNAseq_counts.txt.gz",
+      "md5": NaN,
+      "bytes": NaN,
+      "status": "not_downloaded (note only)",
+      "notes": "GSE126543 is a SuperSeries with no files of its own; SubSeries GSE126542 (RNA-seq, TDP-43-negative vs -positive neuronal nuclei) and GSE126541 (ATAC-seq). GEO holds NO processed differential-expression file: GSE126542 supplementary file is raw counts per sample only (921K); DESeq2 results are described in data processing but not deposited. GSE126541 has ATAC 1kb-window counts + bed. Any DE table would be in the Cell Rep supplement (not checked)."
+    }
+  ],
+  "DS029_SPILL": {
+    "401_2026_3084_MOESM1_ESM.xlsx": {
+      "Sheet1": [
+        "r1: Accession | Gene | Description | MW..kDa. | IsKinase | Norm_S10_Synapt_FRCTX_Control | Norm_S11_Synapt_FRCTX_C9FTD | Norm_S12_Synapt_FRCTX_C9FTD | Norm_S13_Synapt_FRCTX_C9FTD | Norm_S14_Synapt_FRCTX_C9FTD | Norm_S15_Synapt_FRCTX_C9FTD | Norm_S16_Synapt_FRCTX_C9FTD",
+        "r2: Q14289 | PTK2B | Protein-tyrosine kinase 2-beta | 115874.6 | TRUE | 9.0347273742604 | 8.55789564411247 | 8.43456931335776 | 8.85728258822166 | 8.4135406085191 | 8.82423382360592 | 8.20623341461745",
+        "r3: Q8NFP4;Q8NFP4-2 | MDGA1 | MAM domain-containing glycosylphosphatidylinositol anchor pr | 105790.35;105790.35-2 | 6.23439350271425 | 7.54366459036059 | 6.75989298958728 | 6.87453697510677 | 7.06130269426835 | 7.12806572060846 | 7.3326421529169 | 7.63811821120534",
+        "r4: Q9UBI6 | GNG12 | Guanine nucleotide-binding protein G(I)/G(S)/G(O) subunit ga | 8006.22 | 12.3662564148093 | 13.596487071179 | 12.866752952387 | 12.7047409709385 | 13.3031526647577 | 12.5909678332165 | 13.4160176104719 | 13.3980452359238"
+      ]
+    },
+    "401_2026_3084_MOESM2_ESM.xlsx": {
+      "Homogenate": [
+        "r1: ctl_vs_ftd_H0_F_annotated",
+        "r2: gene_name | baseMean | log2FoldChange | lfcSE | stat | pvalue | padj | gene_id | gene_type | biotype_class",
+        "r3: 10859 | HSALNG0002102 | 39.8631568146353 | -2.19243401228167 | 0.341704317967094 | -6.41617298056153 | 1.39742657784407e-10 | 8.75278137032636e-06 | HSALNG0002102 | LncBook_lncRNA | long_noncoding",
+        "r4: 23062 | HSALNG0150792 | 103.277803550548 | -0.953164404452541 | 0.152444892849482 | -6.25251778945234 | 4.03887721380855e-10 | 1.26487537143449e-05 | HSALNG0150792 | LncBook_lncRNA | long_noncoding"
+      ],
+      "Synaptosome": [
+        "r1: ctl_vs_ftd_P2_F_annotated",
+        "r2: gene_name | baseMean | log2FoldChange | lfcSE | stat | pvalue | padj | gene_id | gene_type | biotype_class",
+        "r3: 258 | ADAMTS2 | 277.74714757923 | 1.27128135330415 | 0.219480467276949 | 5.79223002883442 | 6.94579206832737e-09 | 0.000323507211374416 | ENSG00000087116.17 | protein_coding | protein_coding",
+        "r4: 10876 | HSALNG0049767 | 72.9755212201367 | -0.831591468356194 | 0.146721755799459 | -5.66781295537947 | 1.44631724907832e-08 | 0.00033681836096536 | HSALNG0049767 | LncBook_lncRNA | long_noncoding"
+      ]
+    },
+    "401_2026_3084_MOESM3_ESM.xlsx": {
+      "Sheet1": [
+        "r1: Accession | Gene | Description | MW_[kDa] | Norm_S1_CS1FERxHOxCTRL | Norm_S2_CS2PFYxHOxCTRL | Norm_S3_CS6EFYxHOxCTRL | Norm_S4_Y326xHOxC9FTD | Norm_S5_Y457xHOxC9FTD | Norm_S6_R227xHOxC9FTD | Norm_S7_CS1FERxPxCTRL | Norm_S8_CS2PFYxPxCTRL",
+        "r2: A0A0B4J2F0 | PIGBOS1 | Protein PIGBOS1 | 6313.38 | 7.87241606441709 | 9.13122563593737 | 8.74746866518672 | 8.45076049283528 | 7.91216872054033 | 9.03249176628588 | 9.01276344987027 | -0.124010285754293",
+        "r3: A0A1W2PQ72 | MSANTD7 | Myb/SANT-like DNA-binding domain-containing protein 7 | 39760.46 | 8.6562510432614 | 7.84714974631973 | 7.99573494002459 | 7.56652636792881 | 7.43701682213884 | 6.53778197739336 | 6.77428281793754 | 6.665708499071",
+        "r4: A0A3B3IRV3 | MCTS2 | Malignant T-cell-amplified sequence 2 | 20343.03 | 7.41083742094932 | 7.46885430984057 | 6.91583194670975 | 7.11593950644917 | 7.18384393757523 | 7.46233812591414 | 7.61203955295192 | 7.6604914861761"
+      ]
+    },
+    "401_2026_3084_MOESM5_ESM.xlsx": {
+      "Supplemental Table Descriptions": [
+        "r1: Supplemental Tables",
+        "r2: Table | Description",
+        "r3: 1 | Postmortem Tissue Demographics",
+        "r4: 2 | Antibodies used in this study"
+      ],
+      " 1 - PM Tissue Demographics": [
+        "r1: Study ID Number | QSBB number | PM delay | AAO | AAD | Duration (y) | Sex | Clinical\nDiagnosis | Pathological\nDiagnosis | Mutation | Brain Weight\n(g) | TDP-43",
+        "r2: CTRL 1 | P10/20 | 3 days, 8:00:00 | 64 | M | Control | Control | 1695 | 0 | 33 | 0 | 1",
+        "r3: CTRL 2 | P15/10 | 7 days, 3:00:00 | 69 | M | Control | Control/ path ageing | 1435 | 0 | 33 | 1 | 3",
+        "r4: CTRL 3 | P17/16 | 2 days, 5:35:00 | 83 | F | Control | Control | 1283 | 0 | 33 | 2 | 3"
+      ],
+      "2 - Antibodies (ICC, WB)": [
+        "r1: Application | Primary Antibody | Species | Dilution | 1\u00b0 Catalog # | Secondary Antibody | Dilution | 2\u00b0 Catalog #",
+        "r2: Immunocytochemistry | VGLUT1 | Rb | 1:1000 | Synaptic Systems #135303 | Goat anti-Rabbit Secondary Antibody, Alexa Fluor\u2122 488 | 1:1000 | Invitrogen, #A-11034",
+        "r3: VGAT | Rb | 1:1000 | Synaptic Systems #131002",
+        "r4: Homer1 | Ch | 1:500 | Synaptic Systems #160006 | Goat anti-Chicken Secondary Antibody, Alexa Fluor\u2122 555 | 1:1000 | Invitrogen, #A-21437"
+      ],
+      "3 - CE Abundance in FCx H0": [
+        "r1: CRYPTIC EXON ABUNDANCE IN HOMOGENATE FRACTION",
+        "r2: STMN2 JUNCTIONS | KALRN JUNCTIONS | UNC13A JUNCTIONS",
+        "r3: Study ID | Case ID | Canonical | CE | Canonical | CE | Canonical | CE",
+        "r4: CTRL 1 | P10/20 | 235 | 0 | 63 | 0 | 154 | 0"
+      ]
+    },
+    "172_0005_02A_FRCTXonly_Report_IMSSR_ProteinQuant_Pivot.tsv": [
+      "PG.ProteinGroups",
+      "PG.Genes",
+      "PG.ProteinDescriptions",
+      "PG.MolecularWeight",
+      "[1] S10_Synapt_FRCTX_Control.PG.Quantity",
+      "[2] S11_Synapt_FRCTX_C9FTD.PG.Quantity",
+      "[3] S12_Synapt_FRCTX_C9FTD.PG.Quantity",
+      "[4] S13_Synapt_FRCTX_C9FTD.PG.Quantity",
+      "[5] S14_Synapt_FRCTX_C9FTD.PG.Quantity",
+      "[6] S15_Synapt_FRCTX_C9FTD.PG.Quantity",
+      "[7] S16_Synapt_FRCTX_C9FTD.PG.Quantity",
+      "[8] S17_Synapt_FRCTX_C9FTD.PG.Quantity",
+      "[9] S18_Synapt_FRCTX_C9FTD.PG.Quantity",
+      "[10] S19_Synapt_FRCTX_C9FTD.PG.Quantity",
+      "[11] S1_Synapt_FRCTX_Control.PG.Quantity",
+      "[12] S20_Synapt_FRCTX_C9FTD.PG.Quantity",
+      "[13] S2_Synapt_FRCTX_Control.PG.Quantity",
+      "[14] S3_Synapt_FRCTX_Control.PG.Quantity",
+      "[15] S4_Synapt_FRCTX_Control.PG.Quantity",
+      "[16] S5_Synapt_FRCTX_Control.PG.Quantity",
+      "[17] S6_Synapt_FRCTX_Control.PG.Quantity",
+      "[18] S7_Synapt_FRCTX_Control.PG.Quantity",
+      "[19] S8_Synapt_FRCTX_Control.PG.Quantity",
+      "[20] S9_Synapt_FRCTX_Control.PG.Quantity",
+      "[21] H10_Homogenate_FRCTX_Control.PG.Quantity",
+      "[22] H11_Homogenate_FRCTX_C9FTD.PG.Quantity",
+      "[23] H12_Homogenate_FRCTX_C9FTD.PG.Quantity",
+      "[24] H13_Homogenate_FRCTX_C9FTD.PG.Quantity",
+      "[25] H14_Homogenate_FRCTX_C9FTD.PG.Quantity",
+      "[26] H15_Homogenate_FRCTX_C9FTD.PG.Quantity"
+    ],
+    "172_0005_12Synap_Report_IMSSRProteinQuant_Pivot.tsv": [
+      "PG.ProteinGroups",
+      "PG.Genes",
+      "PG.ProteinDescriptions",
+      "PG.MolecularWeight",
+      "[1] S1.PG.Quantity",
+      "[2] S2.PG.Quantity",
+      "[3] S3.PG.Quantity",
+      "[4] S4.PG.Quantity",
+      "[5] S5.PG.Quantity",
+      "[6] S6.PG.Quantity",
+      "[7] S7.PG.Quantity",
+      "[8] S8.PG.Quantity",
+      "[9] S9.PG.Quantity",
+      "[10] S10.PG.Quantity",
+      "[11] S11.PG.Quantity",
+      "[12] S12.PG.Quantity"
+    ]
+  }
+}

@@ -1,0 +1,1988 @@
+{
+  "credibleSets": {
+    "count": 64,
+    "rows": [
+      {
+        "studyLocusId": "01ad59b09dbc6d7e7f0a120db0c2cd24",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "schmiedel_2018_ge_th1_memory_ensg00000115604",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000115604"
+        },
+        "variant": {
+          "id": "2_102368211_T_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "02cb842a56e4c52eff703cfcdc67a989",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "schmiedel_2018_ge_th1-17_memory_ensg00000115604",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000115604"
+        },
+        "variant": {
+          "id": "2_102358005_TA_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "03c1ced72edcb85f4ae2b083aa1b24bc",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST90662882",
+          "studyType": "gwas",
+          "traitFromSource": "Eosinophil count"
+        },
+        "variant": {
+          "id": "2_102356207_C_CT"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.9123363494873047,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.2271357923746109,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.058313220739364624,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "058253e9bc69ca11bc29fedaab55537e",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST009842",
+          "studyType": "gwas",
+          "traitFromSource": "Asthma (adult onset)"
+        },
+        "variant": {
+          "id": "2_102332701_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.9355608224868774,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.36676129698753357,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "0e737b9686449e0806ced40f0b66f8e1",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST009731_11",
+          "studyType": "gwas",
+          "traitFromSource": "Blood protein levels in cardiovascular risk"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8054203987121582,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.33687424659729004,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.13253022730350494,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "16f687db9d05600fdcb376eff47c2d75",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST005975",
+          "studyType": "gwas",
+          "traitFromSource": "Eosinophil count"
+        },
+        "variant": {
+          "id": "2_102346612_A_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8090064525604248,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.3975779414176941,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.05923573300242424,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "18992cd9aefbda81de5a6b9ee06503ba",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST90244094",
+          "studyType": "gwas",
+          "traitFromSource": "Lung function (FEV1/FVC)"
+        },
+        "variant": {
+          "id": "2_102309902_G_A"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8575037717819214,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.22823858261108398,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.223418727517128,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "1d84522a48e8ff256a4aae183e394b2a",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST90308603",
+          "studyType": "gwas",
+          "traitFromSource": "FEV1/FVC ratio in never smokers"
+        },
+        "variant": {
+          "id": "2_102332701_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.9505239725112915,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.35402312874794006,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "1fc9e75c10b9277d2085fb5f8b89e8d5",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST007942",
+          "studyType": "gwas",
+          "traitFromSource": "Medication use (glucocorticoids)"
+        },
+        "variant": {
+          "id": "2_102362568_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8058805465698242,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.12424903362989426,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.11019635200500488,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "22b313a9ebc45e79de2d7d47e417f0d9",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST90281235",
+          "studyType": "gwas",
+          "traitFromSource": "Eosinophil forward scatter distribution width"
+        },
+        "variant": {
+          "id": "2_102358876_T_G"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8270325064659119,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.2954312860965729,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.0746951624751091,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "3703f76c11fd5fee25c0ce0d7f14e580",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "FINNGEN_R12_ASTHMA_OBESITY",
+          "studyType": "gwas",
+          "traitFromSource": "Obesity related asthma"
+        },
+        "variant": {
+          "id": "2_102334362_A_C"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.46549180150032043,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.3908262848854065,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.09874281287193298,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "388dc4145120f92f6137de46e637385e",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90480268",
+          "studyType": "gwas",
+          "traitFromSource": "Wheezing (PheCode 512.1)"
+        },
+        "variant": {
+          "id": "2_102348282_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8050517439842224,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.38837453722953796,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.05975564941763878,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "38f061b0b171c7dd9fc73d42cab3aef2",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90018883",
+          "studyType": "gwas",
+          "traitFromSource": "Nasal polyps"
+        },
+        "variant": {
+          "id": "2_102332701_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8835129141807556,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.27018293738365173,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.08137664198875427,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "3c6262219957a9af50f66b4f549d5b66",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_adipose_subcutaneous_ensg00000115602_grp_1_contained_enst00000427077",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000115602.grp_1.contained.ENST00000427077"
+        },
+        "variant": {
+          "id": "2_102366787_C_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "3ce2016e062e81d1e31316ae00249afa",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90479584",
+          "studyType": "gwas",
+          "traitFromSource": "Takes medication for asthma?"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8601577877998352,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.23030750453472137,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.07035504281520844,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "41107a62d58083493ad96df83556b3d5",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90475538",
+          "studyType": "gwas",
+          "traitFromSource": "neutrophil (fraction, mean, inv-norm transformed)"
+        },
+        "variant": {
+          "id": "2_102334362_A_C"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8621848225593567,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.19501404464244843,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.07189126312732697,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "419745f84c1fb14144e5cc5fef8de91b",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST90475294",
+          "studyType": "gwas",
+          "traitFromSource": "eosinophil (absolute count, minimum, inv-norm transformed)"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.9002062678337097,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.2686956524848938,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.08380915969610214,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "48d5908c66652e87044698d4db724b4b",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST90475291",
+          "studyType": "gwas",
+          "traitFromSource": "eosinophil (absolute count, mean, inv-norm transformed)"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.7782884836196899,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.34025293588638306,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.12676475942134857,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "51012728926ad834b65b60e3e34c9878",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST90308600",
+          "studyType": "gwas",
+          "traitFromSource": "FEV1/FVC ratio"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.930038332939148,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.31108129024505615,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "517596984e4a1b47bd7a7a3c930b94f8",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST90692632",
+          "studyType": "gwas",
+          "traitFromSource": "ICD10 J45: Asthma"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.7020959258079529,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.24576568603515625,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.05803067982196808,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "52f35d3e0e3aa3f542cccc26fe522ed1",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90475303",
+          "studyType": "gwas",
+          "traitFromSource": "eosinophil (fraction, minimum, inv-norm transformed)"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8921291828155518,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.27670517563819885,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.08545131236314774,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "5525fd4bd130f47c2b337480c7833afe",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "cedar_microarray_t-cell_cd8_ilmn_1781700",
+          "studyType": "eqtl",
+          "traitFromSource": "ILMN_1781700"
+        },
+        "variant": {
+          "id": "2_102324878_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "56c481d7a7dcae45f44012f09f5781c7",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "FINNGEN_R12_ASTHMA_NAS",
+          "studyType": "gwas",
+          "traitFromSource": "Asthma, unspecified (mode)"
+        },
+        "variant": {
+          "id": "2_102334593_G_GA"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.5387091040611267,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.12637832760810852,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.09849411249160767,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "56cfb9b070dbf33f6d30a52551e8bcc9",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "blueprint_ge_monocyte_ensg00000115604",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000115604"
+        },
+        "variant": {
+          "id": "2_102356207_C_CT"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "642ff3450c459faa6ebb45b8e0fb8cf5",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "rosmap_tx_brain_naive_enst00000311734",
+          "studyType": "eqtl",
+          "traitFromSource": "ENST00000311734"
+        },
+        "variant": {
+          "id": "2_102307397_T_TCTTTC"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "666fc5a83ad81097dbd996bf412d5ec6",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90475299",
+          "studyType": "gwas",
+          "traitFromSource": "eosinophil (fraction, mean, inv-norm transformed)"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8169645071029663,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.3367275893688202,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.09942682832479477,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "68010b5eba56698bfceed7f81df85801",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST90476024",
+          "studyType": "gwas",
+          "traitFromSource": "Asthma"
+        },
+        "variant": {
+          "id": "2_102322576_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.9491660594940186,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.3734155595302582,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.1103290244936943,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "690393058834d0b14c963bac897cc53e",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST90668055",
+          "studyType": "gwas",
+          "traitFromSource": "Asthma (Phecode: 495)"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.9398922920227051,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.3255195617675781,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.0841202661395073,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "6a1c1a370fa68215b22eaefedfa084d2",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST90475260",
+          "studyType": "gwas",
+          "traitFromSource": "Takes medication for asthma?"
+        },
+        "variant": {
+          "id": "2_102332010_G_A"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.9504637718200684,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.4413992762565613,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "72d61c05d7d80cd0a21f5957cf371e96",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST90454181",
+          "studyType": "gwas",
+          "traitFromSource": "FEV1/FVC or inflammatory bowel disease (pleiotropy)"
+        },
+        "variant": {
+          "id": "2_102315366_C_G"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8744657039642334,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.21854223310947418,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            },
+            {
+              "score": 0.16214413940906525,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "737791b59d81c3dd4ebfd25551b2c926",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "FINNGEN_R12_K11_IBD_STRICT",
+          "studyType": "gwas",
+          "traitFromSource": "Inflammatory bowel disease, strict (require KELA)"
+        },
+        "variant": {
+          "id": "2_102349607_G_A"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.6391343474388123,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.2545503079891205,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.09965293854475021,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "76e1ffa358b7f8562a70561d69eaac85",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90475292",
+          "studyType": "gwas",
+          "traitFromSource": "eosinophil (absolute count, minimum, inv-norm transformed)"
+        },
+        "variant": {
+          "id": "2_102334362_A_C"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8356195092201233,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.3392632007598877,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.06642024964094162,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "7c0cd4598bbddb309fecea7bcea7c034",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_lung_ensg00000115602_grp_1_contained_enst00000427077",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000115602.grp_1.contained.ENST00000427077"
+        },
+        "variant": {
+          "id": "2_102315833_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "80b186fce383a23b55267a35f9abc722",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90479715",
+          "studyType": "gwas",
+          "traitFromSource": "neutrophil (fraction, minimum, inv-norm transformed)"
+        },
+        "variant": {
+          "id": "2_102322576_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.859285831451416,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.15850967168807983,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.10721004754304886,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "8a27ba9d781e02d37ca22e70d45b8b07",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST006911",
+          "studyType": "gwas",
+          "traitFromSource": "Asthma (moderate or severe)"
+        },
+        "variant": {
+          "id": "2_102332701_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.9363006949424744,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.35396385192871094,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "8ff8e52ded4080548ab222088bcb747a",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST90002381",
+          "studyType": "gwas",
+          "traitFromSource": "Eosinophil count"
+        },
+        "variant": {
+          "id": "2_102322576_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.9511756300926208,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.1403944492340088,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.05183444917201996,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "90e20ef7e219b24f104434fadff2e27c",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_lung_ensg00000115604_grp_1_upstream_enst00000233957",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000115604.grp_1.upstream.ENST00000233957"
+        },
+        "variant": {
+          "id": "2_102346612_A_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "92f6262fbe57e18c73c0be8930f539a9",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90480233",
+          "studyType": "gwas",
+          "traitFromSource": "Nasal polyps (PheCode 471)"
+        },
+        "variant": {
+          "id": "2_102344025_A_G"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.6065897941589355,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.419117271900177,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.05932832136750221,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "949b5eef8f324f5376885d7efb85a44d",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "FINNGEN_R12_J10_ASTHMA_MAIN_EXMORE",
+          "studyType": "gwas",
+          "traitFromSource": "Asthma (only as main-diagnosis) (more control exclusions)"
+        },
+        "variant": {
+          "id": "2_102334593_G_GA"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.6927061676979065,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.16507963836193085,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.0846567377448082,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "968cae7cd7a7bb7e95abf813327795d6",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST90002399",
+          "studyType": "gwas",
+          "traitFromSource": "Neutrophil percentage of white cells"
+        },
+        "variant": {
+          "id": "2_102339400_G_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.59061598777771,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.30381226539611816,
+              "target": {
+                "id": "ENSG00000180251",
+                "approvedSymbol": "SLC9A4"
+              }
+            },
+            {
+              "score": 0.29224541783332825,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            },
+            {
+              "score": 0.11010710895061493,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "982eb2c729d6f10aa9e06143747c827e",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90399695",
+          "studyType": "gwas",
+          "traitFromSource": "Chronic obstructive pulmonary disease"
+        },
+        "variant": {
+          "id": "2_102366787_C_A"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.7718273401260376,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.467459112405777,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.07538441568613052,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "a772d73fcf9f38b77f1283f5ad9cdb97",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST90691828",
+          "studyType": "gwas",
+          "traitFromSource": "Eosinophill percentage (UKB data field 30210)"
+        },
+        "variant": {
+          "id": "2_102322576_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.9454465508460999,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.13617034256458282,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.05183444917201996,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "afd762a84da017aabd133b0bcbf23dfc",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90019000",
+          "studyType": "gwas",
+          "traitFromSource": "Medication use (glucocorticoids)"
+        },
+        "variant": {
+          "id": "2_102334362_A_C"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8644800186157227,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.23082029819488525,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.05743158981204033,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "b0ccfbaf0f7d764618e8690a56d39a54",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST007596",
+          "studyType": "gwas",
+          "traitFromSource": "Adult asthma"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8217153549194336,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.22555580735206604,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.08278144150972366,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "b51fe9feff510d266802b12aa3dca6e0",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST005537",
+          "studyType": "gwas",
+          "traitFromSource": "Chronic inflammatory diseases (ankylosing spondylitis, Crohn's disease, psoriasis, primary sclerosing cholangitis, ulcerative colitis) (pleiotropy)"
+        },
+        "variant": {
+          "id": "2_102358876_T_G"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8269904851913452,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.1032835990190506,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.07454057782888412,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "b5e250bffcf48a47e2c529a092396c6c",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90475301",
+          "studyType": "gwas",
+          "traitFromSource": "eosinophil (fraction, minimum, inv-norm transformed)"
+        },
+        "variant": {
+          "id": "2_102366787_C_A"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.551487922668457,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.45912492275238037,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.08175569027662277,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "b673b2a522175bb417d31932b2ee80cc",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_lung_ensg00000115602_t_102342223-102342294_102341357-102342223",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000115602:t:102342223-102342294:102341357-102342223"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "b6ea636831d7b8e3916bb8584400b977",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_lung_ensg00000115602_s_102340666-102340828_102340828-102341188",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000115602:s:102340666-102340828:102340828-102341188"
+        },
+        "variant": {
+          "id": "2_102344124_C_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "c64e4677e6a09035a48b4329cde590bf",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST000339",
+          "studyType": "gwas",
+          "traitFromSource": "Eosinophil count"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8334869742393494,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.22661305963993073,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.08278144150972366,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "ccaaa2720c894b113cdc31d4cf2d102f",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "UKB_PPP_EUR_PRG3_Q9Y2Y8_OID30383_v1",
+          "studyType": "pqtl",
+          "traitFromSource": "PRG3:Q9Y2Y8:OID30383:v1"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "cddeefc77c679de28a8f234eec558716",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90559245",
+          "studyType": "gwas",
+          "traitFromSource": "Blood cell traits latent factor 3 (white cell)"
+        },
+        "variant": {
+          "id": "2_102344025_A_G"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.5952166318893433,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.419117271900177,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.05939676612615585,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "cee3b1bb72a91c710b652069957ba8b5",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90475287",
+          "studyType": "gwas",
+          "traitFromSource": "eosinophil (absolute count, maximum, inv-norm transformed)"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.792975902557373,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.2799609899520874,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.09942682832479477,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "d5b7ed5df24e60dd79b4c7a3ead0f132",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST007800",
+          "studyType": "gwas",
+          "traitFromSource": "Asthma (childhood onset)"
+        },
+        "variant": {
+          "id": "2_102309902_G_A"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8707557916641235,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.09767063707113266,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.09740521758794785,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "d9737959fec8c5a81193f6923d52c17c",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90705072",
+          "studyType": "gwas",
+          "traitFromSource": "FEV1/FVC ratio"
+        },
+        "variant": {
+          "id": "2_102309902_G_A"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.9040213227272034,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.23882320523262024,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.17367389798164368,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "df09c2cf2d4c34a7f55bac0413d9b119",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "nathan_2022_ge_cd4__th17-1_ensg00000115604",
+          "studyType": "sceqtl",
+          "traitFromSource": "ENSG00000115604"
+        },
+        "variant": {
+          "id": "2_102351384_C_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "e1bf24f9c58cc15e9d103f14a9ac04f6",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "cedar_microarray_t-cell_cd4_ilmn_1781700",
+          "studyType": "eqtl",
+          "traitFromSource": "ILMN_1781700"
+        },
+        "variant": {
+          "id": "2_102366787_C_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "e3de7d95b5354e540fbcb34e7473c35d",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "FINNGEN_R12_J10_ASTHMA_EXMORE",
+          "studyType": "gwas",
+          "traitFromSource": "Asthma (more control exclusions)"
+        },
+        "variant": {
+          "id": "2_102334593_G_GA"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.6931385397911072,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.1456630825996399,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.11259755492210388,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "eaa5e65a578ebf8ba6c32c4930b72840",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST90475541",
+          "studyType": "gwas",
+          "traitFromSource": "neutrophil (fraction, minimum, inv-norm transformed)"
+        },
+        "variant": {
+          "id": "2_102334362_A_C"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.9487546682357788,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.18254752457141876,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "eae6b394c0a2f164e23f23f4618f205b",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90479604",
+          "studyType": "gwas",
+          "traitFromSource": "eosinophil (fraction, maximum, inv-norm transformed)"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8154343366622925,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.32293620705604553,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.12525488436222076,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "f26cb66557d6739bc72865be0a94030a",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "schmiedel_2018_ge_th17_memory_ensg00000115607",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000115607"
+        },
+        "variant": {
+          "id": "2_102373611_TA_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "f4a842e948fdb20c3a6acbe0e03b3fe6",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_leafcutter_lung_2_102341357_102342223_clu_28466__",
+          "studyType": "sqtl",
+          "traitFromSource": "2:102341357:102342223:clu_28466_+"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "f96cd36eff2a1828df3329d7737a448c",
+        "confidence": "PICS fine-mapped credible set extracted from summary statistics",
+        "study": {
+          "id": "GCST90480248",
+          "studyType": "gwas",
+          "traitFromSource": "Asthma with exacerbation (PheCode 495.2)"
+        },
+        "variant": {
+          "id": "2_102344025_A_G"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.5952166318893433,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.09046154469251633,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.059271812438964844,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "f985e6b9287803d064353d0043bfe339",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST90692408",
+          "studyType": "gwas",
+          "traitFromSource": "ICD10 J45: Asthma"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.6863033175468445,
+              "target": {
+                "id": "ENSG00000115602",
+                "approvedSymbol": "IL33R"
+              }
+            },
+            {
+              "score": 0.26478147506713867,
+              "target": {
+                "id": "ENSG00000115604",
+                "approvedSymbol": "IL18R1"
+              }
+            },
+            {
+              "score": 0.06053069978952408,
+              "target": {
+                "id": "ENSG00000115607",
+                "approvedSymbol": "IL18RAP"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "fcdd70289f5e1ea420f802655a6f79a6",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_esophagus_muscularis_ensg00000115602_grp_1_contained_enst00000427077",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000115602.grp_1.contained.ENST00000427077"
+        },
+        "variant": {
+          "id": "2_102341256_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      }
+    ]
+  }
+}

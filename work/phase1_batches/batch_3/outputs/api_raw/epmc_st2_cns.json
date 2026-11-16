@@ -1,0 +1,3898 @@
+{
+  "hitCount": 50,
+  "nextCursorMark": "AoIIQGAxVig0NDk2NDk2OA==",
+  "results": [
+    {
+      "id": "42630486",
+      "source": "MED",
+      "pmid": "42630486",
+      "pmcid": "PMC13494139",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13494139"
+        ]
+      },
+      "doi": "10.1002/imt2.70157",
+      "title": "Human biomarker navigator.",
+      "authorString": "Li MY, Zhang Q, Wang Z, Gui Z, Liu J, Li J, Jiang M, Chang Z, Han Q, Yang B, Saeed T, Li J, Jia J, Song C, Shao T, Peng T, Zhang X, Guo P, Luo J, Yang G, Wan Y, Zengin G, Yuan Q, Li L, Fan X, Luo Y, Zhu L, Zheng Y, Mao W, Sun W.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Li MY",
+            "lastName": "Li",
+            "firstName": "Meng-Yao",
+            "initials": "MY",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-7054-448X"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Innovation Institute of Integrated Traditional Chinese and Western Medicine, Shandong First Medical University & Shandong Academy of Medical Sciences Jinan China."
+                },
+                {
+                  "affiliation": "Renji Hospital Affiliated to Shanghai Jiao Tong University School of Medicine Shanghai China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zhang Q",
+            "lastName": "Zhang",
+            "firstName": "Qian",
+            "initials": "Q",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "College of Pharmacy, Inner Mongolia Medical University Hohhot China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wang Z",
+            "lastName": "Wang",
+            "firstName": "Zijie",
+            "initials": "Z",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-0148-5244"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Urology Jiangsu Key Laboratory of Urological Disease Prevention and Treatment, The Second Affiliated Hospital of Nanjing Medical University, Nanjing Medical University Nanjing China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Gui Z",
+            "lastName": "Gui",
+            "firstName": "Zeping",
+            "initials": "Z",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Urology Jiangsu Key Laboratory of Urological Disease Prevention and Treatment, The Second Affiliated Hospital of Nanjing Medical University, Nanjing Medical University Nanjing China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Liu J",
+            "lastName": "Liu",
+            "firstName": "Jing",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "College of Pharmacy, Inner Mongolia Medical University Hohhot China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Li J",
+            "lastName": "Li",
+            "firstName": "Jingda",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "School of Life Sciences, Yangtze University Jingzhou China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Jiang M",
+            "lastName": "Jiang",
+            "firstName": "Maojun",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Innovation Institute of Integrated Traditional Chinese and Western Medicine, Shandong First Medical University & Shandong Academy of Medical Sciences Jinan China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Chang Z",
+            "lastName": "Chang",
+            "firstName": "Zukang",
+            "initials": "Z",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Innovation Institute of Integrated Traditional Chinese and Western Medicine, Shandong First Medical University & Shandong Academy of Medical Sciences Jinan China."
+                },
+                {
+                  "affiliation": "School of Life Sciences and Medicine, Shandong University of Technology Zibo China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Han Q",
+            "lastName": "Han",
+            "firstName": "Qingqing",
+            "initials": "Q",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Innovation Institute of Integrated Traditional Chinese and Western Medicine, Shandong First Medical University & Shandong Academy of Medical Sciences Jinan China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Yang B",
+            "lastName": "Yang",
+            "firstName": "Bendong",
+            "initials": "B",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Innovation Institute of Integrated Traditional Chinese and Western Medicine, Shandong First Medical University & Shandong Academy of Medical Sciences Jinan China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Saeed T",
+            "lastName": "Saeed",
+            "firstName": "Tariq",
+            "initials": "T",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Diet and Nutritional Sciences Ibadat International University Islamabad Pakistan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Li J",
+            "lastName": "Li",
+            "firstName": "Jun",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "College of Pharmacy, Inner Mongolia Medical University Hohhot China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Jia J",
+            "lastName": "Jia",
+            "firstName": "Jinghan",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "School of Life Sciences and Medicine, Shandong University of Technology Zibo China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Song C",
+            "lastName": "Song",
+            "firstName": "Chenghu",
+            "initials": "C",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Thoracic Surgery the Affiliated Wuxi People's Hospital of Nanjing Medical University, Wuxi People's Hospital, Wuxi Medical Center, Nanjing Medical University Wuxi China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Shao T",
+            "lastName": "Shao",
+            "firstName": "Tong",
+            "initials": "T",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "College of Science, National University of Defense Technology Changsha China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Peng T",
+            "lastName": "Peng",
+            "firstName": "Tianhuan",
+            "initials": "T",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Molecular Science and Biomedicine Laboratory (MBL), State Key Laboratory of Chemo and Biosensing, College of Biology, Hunan University Changsha China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zhang X",
+            "lastName": "Zhang",
+            "firstName": "Xueying",
+            "initials": "X",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "College of Pharmacy, Inner Mongolia Medical University Hohhot China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Guo P",
+            "lastName": "Guo",
+            "firstName": "Pingping",
+            "initials": "P",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "School of Life Sciences and Medicine, Shandong University of Technology Zibo China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Luo J",
+            "lastName": "Luo",
+            "firstName": "Jun",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "College of Pharmacy, Inner Mongolia Medical University Hohhot China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Yang G",
+            "lastName": "Yang",
+            "firstName": "Gangao",
+            "initials": "G",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "School of Life Sciences and Medicine, Shandong University of Technology Zibo China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wan Y",
+            "lastName": "Wan",
+            "firstName": "Yuan",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "The Pq Laboratory of BiomeDx/Rx, Department of Biomedical Engineering Binghamton University Binghamton New York USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zengin G",
+            "lastName": "Zengin",
+            "firstName": "Gokhan",
+            "initials": "G",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Biology Science Faculty, Selcuk University Konya Turkey."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Yuan Q",
+            "lastName": "Yuan",
+            "firstName": "Quan",
+            "initials": "Q",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "College of Chemistry and Molecular Sciences, Wuhan University Wuhan China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Li L",
+            "lastName": "Li",
+            "firstName": "Lingru",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Innovation Institute of Integrated Traditional Chinese and Western Medicine, Shandong First Medical University & Shandong Academy of Medical Sciences Jinan China."
+                },
+                {
+                  "affiliation": "National Institute of TCM Constitution and Preventive Medicine, Beijing University of Chinese Medicine Beijing China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Fan X",
+            "lastName": "Fan",
+            "firstName": "Xiaohui",
+            "initials": "X",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-6336-3007"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "State Key Laboratory of Chinese Medicine Modernization, College of Pharmaceutical Sciences, Zhejiang University Hangzhou China."
+                },
+                {
+                  "affiliation": "School of Pharmaceutical Sciences, Zhejiang Chinese Medical University Hangzhou China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Luo Y",
+            "lastName": "Luo",
+            "firstName": "Yang",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Laboratory Medicine Chongqing Center for Clinical Laboratory, Chongqing Academy of Medical Sciences, Chongqing General Hospital, School of Medicine, Chongqing University Chongqing China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zhu L",
+            "lastName": "Zhu",
+            "firstName": "Lvyun",
+            "initials": "L",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-2288-5981"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "College of Science, National University of Defense Technology Changsha China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zheng Y",
+            "lastName": "Zheng",
+            "firstName": "Yanfei",
+            "initials": "Y",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-8199-6035"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Innovation Institute of Integrated Traditional Chinese and Western Medicine, Shandong First Medical University & Shandong Academy of Medical Sciences Jinan China."
+                },
+                {
+                  "affiliation": "National Institute of TCM Constitution and Preventive Medicine, Beijing University of Chinese Medicine Beijing China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Mao W",
+            "lastName": "Mao",
+            "firstName": "Wenjun",
+            "initials": "W",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-4644-9749"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Thoracic Surgery the Affiliated Wuxi People's Hospital of Nanjing Medical University, Wuxi People's Hospital, Wuxi Medical Center, Nanjing Medical University Wuxi China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Sun W",
+            "lastName": "Sun",
+            "firstName": "Wenlong",
+            "initials": "W",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-2560-652X"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Innovation Institute of Integrated Traditional Chinese and Western Medicine, Shandong First Medical University & Shandong Academy of Medical Sciences Jinan China."
+                },
+                {
+                  "affiliation": "School of Life Sciences and Medicine, Shandong University of Technology Zibo China."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0002-0148-5244"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-0166-9027"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-4644-9749"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-6336-3007"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-6423-3706"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-7054-448X"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-8199-6035"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-2288-5981"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-2560-652X"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "5",
+        "volume": "5",
+        "journalIssueId": 4301725,
+        "dateOfPublication": "2026 Oct",
+        "monthOfPublication": 10,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Imeta",
+          "title": "iMeta",
+          "essn": "2770-596X",
+          "issn": "2770-5986",
+          "nlmid": "9918350383706676",
+          "isoabbreviation": "Imeta"
+        },
+        "printPublicationDate": "2026-10-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "e70157",
+      "abstractText": "Biomarkers play a pivotal role in contemporary medical research, particularly in the early diagnosis of diseases and personalized treatment. Although previous studies have systematically reviewed markers across various disease domains, an integrated framework that connects major physiological systems, encompasses multiple organs, and spans a broad spectrum of diseases is still lacking. In the context of modern health challenges, marked by the high prevalence of chronic diseases and widespread comorbidities, establishing a panoramic biomarker navigation system is imperative. This review offers the initial comprehensive elucidation of the biomarker interaction networks across diverse systems, organs, and diseases, and delineates the operational framework for establishing a \"biomarker navigation system\". The core contribution of this work is a transition from 'knowledge enumeration' to a more integrated, systems-level approach. This provides new perspectives in systems biology for understanding the shared pathological foundations of comorbidities. Furthermore, it provides a theoretical basis for a reorientation in medicine, from a focus on 'treating existing diseases' to 'preventive interventions' and from 'single-disease management' to a comprehensive, systems-based approach. To facilitate the exploration and application of this system-organ-disease-biomarker network, we developed the \"Human Biomarker Navigator\" web platform (http://www.hbiomarker.com), which allows researchers and clinicians to efficiently retrieve the functional characteristics and clinical significance of diverse biomarkers across different disease contexts.",
+      "affiliation": "Innovation Institute of Integrated Traditional Chinese and Western Medicine, Shandong First Medical University & Shandong Academy of Medical Sciences Jinan China.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic-eCollection",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "National Natural Science Foundation of China",
+            "grantId": "82360801",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Natural Science Foundation of China",
+            "grantId": "82500924",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Natural Science Foundation of China",
+            "grantId": "82460822",
+            "orderIn": 0
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Human health",
+          "Precision Medicine",
+          "Multi\u2010Omics Integration",
+          "Biomarker Navigator",
+          "Cross\u2010disease Interaction Network",
+          "Cross\u2010organ Interaction Network",
+          "Cross\u2010system Interaction Network"
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1002/imt2.70157"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13494139"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13494139?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 3,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-10-30",
+      "dateOfCreation": "2026-08-22",
+      "dateOfRevision": "2026-10-30",
+      "electronicPublicationDate": "2026-08-20",
+      "firstPublicationDate": "2026-08-20",
+      "firstIndexDate": "2026-08-23",
+      "fullTextReceivedDate": "2026-10-30",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42698373",
+      "source": "MED",
+      "pmid": "42698373",
+      "pmcid": "PMC13545642",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13545642"
+        ]
+      },
+      "doi": "10.1111/ene.70741",
+      "title": "Protein Biomarkers in Risk and Prognosis of Amyotrophic Lateral Sclerosis.",
+      "authorString": "Pan L, Hou C, Seitz C, Ingre C, Hedman \u00c5K, Laffita J, Vu TN, Pawitan Y, Ullgren A, Yazdani S, Andersson J, Joyce EE, Chourpiliadis C, Lovik A, Chen Y, Lewandowski SA, Fernandez-Capetillo O, Barz M, Samuelsson K, Press R, Piehl F, Graff C, M\u00e4larstig A, Fang F.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Pan L",
+            "lastName": "Pan",
+            "firstName": "Lu",
+            "initials": "L",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-7467-6992"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Environmental Medicine, Karolinska Institutet, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Hou C",
+            "lastName": "Hou",
+            "firstName": "Can",
+            "initials": "C",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-6903-6007"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Environmental Medicine, Karolinska Institutet, Stockholm, Sweden."
+                },
+                {
+                  "affiliation": "West China Biomedical Big Data Center, West China Hospital, Sichuan University, Chengdu, China."
+                },
+                {
+                  "affiliation": "Med-X Center for Informatics, Sichuan University, Chengdu, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Seitz C",
+            "lastName": "Seitz",
+            "firstName": "Christina",
+            "initials": "C",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Environmental Medicine, Karolinska Institutet, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ingre C",
+            "lastName": "Ingre",
+            "firstName": "Caroline",
+            "initials": "C",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-5327-7204"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Clinical Neuroscience, Karolinska Institutet, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Hedman \u00c5K",
+            "lastName": "Hedman",
+            "firstName": "\u00c5sa K",
+            "initials": "\u00c5K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Medical Epidemiology and Biostatistics, Karolinska Institutet, Stockholm, Sweden."
+                },
+                {
+                  "affiliation": "Pfizer Research and Development, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Laffita J",
+            "lastName": "Laffita",
+            "firstName": "Jose",
+            "initials": "J",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0000-6516-0185"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurobiology, Care Sciences and Society, Karolinska Institutet, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Vu TN",
+            "lastName": "Vu",
+            "firstName": "Trung Nghia",
+            "initials": "TN",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-7945-5750"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Medical Epidemiology and Biostatistics, Karolinska Institutet, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Pawitan Y",
+            "lastName": "Pawitan",
+            "firstName": "Yudi",
+            "initials": "Y",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-0324-7052"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Medical Epidemiology and Biostatistics, Karolinska Institutet, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ullgren A",
+            "lastName": "Ullgren",
+            "firstName": "Abbe",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurobiology, Care Sciences and Society, Karolinska Institutet, Stockholm, Sweden."
+                },
+                {
+                  "affiliation": "Unit for Hereditary Dementias, Karolinska University Hospital, Solna, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Yazdani S",
+            "lastName": "Yazdani",
+            "firstName": "Solmaz",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Environmental Medicine, Karolinska Institutet, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Andersson J",
+            "lastName": "Andersson",
+            "firstName": "John",
+            "initials": "J",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-2799-6349"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Environmental Medicine, Karolinska Institutet, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Joyce EE",
+            "lastName": "Joyce",
+            "firstName": "Emily E",
+            "initials": "EE",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-9722-5596"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Environmental Medicine, Karolinska Institutet, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Chourpiliadis C",
+            "lastName": "Chourpiliadis",
+            "firstName": "Charilaos",
+            "initials": "C",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-4733-5698"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Environmental Medicine, Karolinska Institutet, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Lovik A",
+            "lastName": "Lovik",
+            "firstName": "Anik\u00f3",
+            "initials": "A",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-6397-5011"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Environmental Medicine, Karolinska Institutet, Stockholm, Sweden."
+                },
+                {
+                  "affiliation": "Methodology and Statistics Unit, Leiden University, Leiden, AK, the Netherlands."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Chen Y",
+            "lastName": "Chen",
+            "firstName": "Yan",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Medical Epidemiology and Biostatistics, Karolinska Institutet, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Lewandowski SA",
+            "lastName": "Lewandowski",
+            "firstName": "Sebastian A",
+            "initials": "SA",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-5935-0211"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Clinical Neuroscience, Karolinska Institutet, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Fernandez-Capetillo O",
+            "lastName": "Fernandez-Capetillo",
+            "firstName": "Oscar",
+            "initials": "O",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Genomic Instability Group, Spanish National Cancer Research Centre (CNIO), Madrid, Spain."
+                },
+                {
+                  "affiliation": "Science for Life Laboratory, Division of Genome Biology, Department of Medical Biochemistry and Biophysics, Karolinska Institute, Stockholm, Sweden."
+                },
+                {
+                  "affiliation": "Networking Research Center on Neurodegenerative Diseases (CIBER-NED), Instituto de Salud Carlos III, Madrid, Spain."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Barz M",
+            "lastName": "Barz",
+            "firstName": "Myriam",
+            "initials": "M",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-5012-4779"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Science for Life Laboratory, Division of Genome Biology, Department of Medical Biochemistry and Biophysics, Karolinska Institute, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Samuelsson K",
+            "lastName": "Samuelsson",
+            "firstName": "Kristin",
+            "initials": "K",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-3116-7578"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Clinical Neuroscience, Karolinska Institutet, Stockholm, Sweden."
+                },
+                {
+                  "affiliation": "Department of Neurology, Karolinska University Hospital, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Press R",
+            "lastName": "Press",
+            "firstName": "Rayomand",
+            "initials": "R",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-7077-2530"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Clinical Neuroscience, Karolinska Institutet, Stockholm, Sweden."
+                },
+                {
+                  "affiliation": "Department of Neurology, Karolinska University Hospital, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Piehl F",
+            "lastName": "Piehl",
+            "firstName": "Fredrik",
+            "initials": "F",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-8329-5219"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Clinical Neuroscience, Karolinska Institutet, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Graff C",
+            "lastName": "Graff",
+            "firstName": "Caroline",
+            "initials": "C",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-9949-2951"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurobiology, Care Sciences and Society, Karolinska Institutet, Stockholm, Sweden."
+                },
+                {
+                  "affiliation": "Unit for Hereditary Dementias, Karolinska University Hospital, Solna, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "M\u00e4larstig A",
+            "lastName": "M\u00e4larstig",
+            "firstName": "Anders",
+            "initials": "A",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-2608-1358"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Medical Epidemiology and Biostatistics, Karolinska Institutet, Stockholm, Sweden."
+                },
+                {
+                  "affiliation": "Pfizer Research and Development, Stockholm, Sweden."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Fang F",
+            "lastName": "Fang",
+            "firstName": "Fang",
+            "initials": "F",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-3310-6456"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Environmental Medicine, Karolinska Institutet, Stockholm, Sweden."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-5327-7204"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-7077-2530"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-7467-6992"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-7945-5750"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-8329-5219"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-9722-5596"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-3310-6456"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-4733-5698"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-5012-4779"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-5935-0211"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-6397-5011"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-6903-6007"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-9949-2951"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-0324-7052"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-2608-1358"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-2799-6349"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-3116-7578"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0000-6516-0185"
+          }
+        ]
+      },
+      "journalInfo": {
+        "issue": "9",
+        "volume": "33",
+        "journalIssueId": 4250128,
+        "dateOfPublication": "2026 Sep",
+        "monthOfPublication": 9,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Eur J Neurol",
+          "title": "European journal of neurology",
+          "essn": "1468-1331",
+          "issn": "1351-5101",
+          "nlmid": "9506311",
+          "isoabbreviation": "Eur J Neurol"
+        },
+        "printPublicationDate": "2026-09-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "e70741",
+      "abstractText": "<h4>Background</h4>Plasma and cerebrospinal fluid (CSF) protein biomarkers in amyotrophic lateral sclerosis (ALS) may provide insight into disease mechanisms and yield clinically useful biomarkers.<h4>Methods</h4>Overall, 363 proteins in plasma and CSF from 198 patients with ALS and 125 matched controls were profiled using Olink assays. Associations with disease status, survival, and functional decline, as well as longitudinal biomarker stability across the disease course were assessed, together with network and enrichment analyses. ALS risk-associated biomarkers were externally validated in the UK Biobank (UKB).<h4>Results</h4>Overall, 125 proteins were significantly associated with at least one outcome (i.e., case status, risk, survival, or functional decline), and 21 were associated with three or more outcomes. NEFL was the most robust biomarker in plasma and CSF, alongside TNFRSF12A in plasma and CSF, EDA2R in plasma, and FABP4 in plasma and CSF. Most biomarkers remained stable longitudinally across the disease course. ALS risk-associated biomarkers were replicated in UKB, in which >\u20093000 plasma proteins were measured in 52,990 participants, including 298 with ALS. Network and enrichment analyses highlighted their roles in immune response and extracellular-matrix remodeling, and their enrichments in the brain and T-cell subsets. Construction of an ALS risk-prediction model achieved an ROC-AUC of 0.72 in the UKB validation cohort.<h4>Conclusions</h4>These findings suggest candidate protein biomarkers for ALS risk stratification, early detection, and clinical therapeutic monitoring.",
+      "affiliation": "Institute of Environmental Medicine, Karolinska Institutet, Stockholm, Sweden.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print",
+      "pubTypeList": {
+        "pubType": [
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "Swedish Research Council",
+            "grantId": "2023-02428",
+            "orderIn": 0
+          },
+          {
+            "agency": "European Research Council",
+            "grantId": "802091",
+            "orderIn": 0
+          },
+          {
+            "agency": "Vetenskapsr\u00e5det",
+            "grantId": "2021\u201002605",
+            "orderIn": 0
+          },
+          {
+            "agency": "Vetenskapsr\u00e5det",
+            "grantId": "2023\u201002428",
+            "orderIn": 0
+          },
+          {
+            "agency": "Konung Gustaf V:s och Drottning Victorias Frimurarestiftelse",
+            "orderIn": 0
+          },
+          {
+            "agency": "Fondation Thierry Latran",
+            "grantId": "FIB-ALS",
+            "orderIn": 0
+          },
+          {
+            "agency": "Fondation Thierry Latran",
+            "grantId": "FIB\u2010ALS",
+            "orderIn": 0
+          },
+          {
+            "agency": "Bruno and Ilse Frick Foundation for Research on ALS",
+            "orderIn": 0
+          },
+          {
+            "agency": "Swedish Research Council",
+            "grantId": "2021-02605",
+            "orderIn": 0
+          },
+          {
+            "agency": "Karolinska Institutet",
+            "grantId": "2021\u201001276",
+            "orderIn": 0
+          },
+          {
+            "agency": "Neuro Sweden",
+            "grantId": "F2021-0116",
+            "orderIn": 0
+          },
+          {
+            "agency": "European Research Council",
+            "grantId": "MegaALS, 802091",
+            "orderIn": 0
+          },
+          {
+            "agency": "Karolinska Institutet",
+            "grantId": "2021-01276",
+            "orderIn": 0
+          },
+          {
+            "agency": "Hj\u00e4rnfonden",
+            "grantId": "FO2022-0233",
+            "orderIn": 0
+          },
+          {
+            "agency": "Bjorklunds fund",
+            "orderIn": 0
+          },
+          {
+            "agency": "\u00c5hlen Stiftelse",
+            "grantId": "223077",
+            "orderIn": 0
+          },
+          {
+            "agency": "Hj\u00e4rnfonden",
+            "grantId": "FO2022\u20100233",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "BL",
+                  "qualifierName": "blood"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "CF",
+                  "qualifierName": "cerebrospinal fluid"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DI",
+                  "qualifierName": "diagnosis"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Prognosis"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Middle Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Female"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Male"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Biomarkers",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "BL",
+                  "qualifierName": "blood"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "CF",
+                  "qualifierName": "cerebrospinal fluid"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Proteins",
+          "Diagnosis",
+          "Prognosis",
+          "ALS",
+          "Olink"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "Biomarkers",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1111/ene.70741"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13545642"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13545642?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 1,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "N",
+      "dateOfCompletion": "2026-09-05",
+      "dateOfCreation": "2026-09-05",
+      "dateOfRevision": "2026-09-07",
+      "firstPublicationDate": "2026-09-01",
+      "firstIndexDate": "2026-09-05",
+      "fullTextReceivedDate": "2026-09-13",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42112346",
+      "source": "MED",
+      "pmid": "42112346",
+      "pmcid": "PMC13154161",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13154161"
+        ]
+      },
+      "doi": "10.3389/fimmu.2026.1788984",
+      "title": "A molecular systems architecture of asthma.",
+      "authorString": "Ayyadurai VAS, Deonikar P, Manoharan Y.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Ayyadurai VAS",
+            "lastName": "Ayyadurai",
+            "firstName": "V A Shiva",
+            "initials": "VAS",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Systems Biology Group, CytoSolve Research Division, CytoSolve, Inc., Cambridge, MA, United States."
+                },
+                {
+                  "affiliation": "Open Science Institute, International Center for Integrative Systems, Cambridge, MA, United States."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Deonikar P",
+            "lastName": "Deonikar",
+            "firstName": "Prabhakar",
+            "initials": "P",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Systems Biology Group, CytoSolve Research Division, CytoSolve, Inc., Cambridge, MA, United States."
+                },
+                {
+                  "affiliation": "Open Science Institute, International Center for Integrative Systems, Cambridge, MA, United States."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Manoharan Y",
+            "lastName": "Manoharan",
+            "firstName": "Yamuna",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Systems Biology Group, CytoSolve Research Division, CytoSolve, Inc., Cambridge, MA, United States."
+                },
+                {
+                  "affiliation": "Open Science Institute, International Center for Integrative Systems, Cambridge, MA, United States."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "journalInfo": {
+        "volume": "17",
+        "journalIssueId": 4103356,
+        "dateOfPublication": "2026 ",
+        "monthOfPublication": 0,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Front Immunol",
+          "title": "Frontiers in immunology",
+          "essn": "1664-3224",
+          "issn": "1664-3224",
+          "nlmid": "101560960",
+          "isoabbreviation": "Front Immunol"
+        },
+        "printPublicationDate": "2026-01-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "1788984",
+      "abstractText": "<h4>Background</h4>Asthma is a heterogeneous inflammatory disease driven by complex genetic, immunological, environmental, and neuro-immune interactions. Modern therapeutic strategies increasingly target distinct molecular mechanisms underlying specific asthma endotypes. Emerging evidence highlights the role of psychological stress in modulating the neuro-immune axis, contributing to allergic airway inflammation. Systems biology offers a powerful framework to understand the multi-cellular and cross-organ interactions between lung and brain microenvironments that drive asthma pathogenesis.<h4>Objective</h4>To develop a molecular systems architecture of asthma using the CytoSolve<sup>\u00ae</sup> systems biology platform and process. This approach enables a multi-layered, systems-level analysis of molecular pathway interactions across thirty-one pulmonary, immune, and neuronal cell types involved in allergic-eosinophilic and non-allergic asthma phenotypes, and identifies potential therapeutic targets.<h4>Methods</h4>A systematic bioinformatics literature review was conducted using Medical Subject Headings (MeSH) across PubMed, Medline, and Google Scholar, covering peer-reviewed publications from January 2008 to August 2025. Relevant full-length articles were curated and analyzed using the CytoSolve<sup>\u00ae</sup> platform to construct a molecular systems architecture of asthma. The relevant literature was critically analyzed to understand the link between environmental and psychological stress triggers that drive asthma pathogenesis and disease exacerbations.<h4>Result</h4>The systems architecture identified biomolecular interactions across thirty-one cell types spanning bronchial, immune, stromal, vascular, endocrine, and neuronal compartments, including airway epithelial cells, T-cells, eosinophils, mast cells, fibroblasts, microglia, hypothalamic and brainstem neurons, vagal sensory neurons, and autonomic airway neurons. Environmental triggers such as pollutants and infections initiate cascades that promote three core pathobiological processes: airway inflammation, hyperresponsiveness, and remodeling. Psychological comorbidities, including anxiety and depression, further amplify airway inflammation through brain-lung cross-talk, contributing to neuronal inflammation and asthma exacerbations.<h4>Conclusions</h4>This system architecture generated a multilayered visual map that shows the associations between various triggers and biomolecular interactions across airway and neuronal cell types in the lung and brain microenvironment, respectively. The architecture may be utilized for target identification, discovery of single and combination therapeutics, biomarkers, and clinical strategies to treat asthma endotypes.",
+      "affiliation": "Systems Biology Group, CytoSolve Research Division, CytoSolve, Inc., Cambridge, MA, United States.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic-eCollection",
+      "pubTypeList": {
+        "pubType": [
+          "Systematic Review",
+          "systematic-review",
+          "Journal Article"
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Lung",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Asthma",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ET",
+                  "qualifierName": "etiology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Stress, Psychological",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "CO",
+                  "qualifierName": "complications"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Systems Biology",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "MT",
+                  "qualifierName": "methods"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Pathogenesis",
+          "Asthma",
+          "systems biology",
+          "Airway inflammation",
+          "Psychological stress",
+          "airway remodeling",
+          "Hyperresponsiveness",
+          "Cytosolve\u00ae"
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.3389/fimmu.2026.1788984"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13154161"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13154161?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 1,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "N",
+      "dateOfCompletion": "2026-07-16",
+      "dateOfCreation": "2026-05-11",
+      "dateOfRevision": "2026-08-13",
+      "electronicPublicationDate": "2026-04-24",
+      "firstPublicationDate": "2026-04-24",
+      "firstIndexDate": "2026-05-13",
+      "fullTextReceivedDate": "2026-05-20",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "38105925",
+      "source": "MED",
+      "pmid": "38105925",
+      "pmcid": "PMC10723830",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC10723830"
+        ]
+      },
+      "doi": "10.3389/fnins.2023.1277399",
+      "title": "Immunology of amyotrophic lateral sclerosis - role of the innate and adaptive immunity.",
+      "authorString": "Mimic S, Aru B, Pehlivano\u011flu C, Sleiman H, Andjus PR, Yan\u0131kkaya Demirel G.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Mimic S",
+            "lastName": "Mimic",
+            "firstName": "Stefan",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Centre for Laser Microscopy, Institute of Physiology and Biochemistry \"Jean Giaja\", Faculty of Biology, University of Belgrade, Belgrade, Serbia."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Aru B",
+            "lastName": "Aru",
+            "firstName": "Ba\u015fak",
+            "initials": "B",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Immunology Department, Faculty of Medicine, Yeditepe University, Istanbul, T\u00fcrkiye."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Pehlivano\u011flu C",
+            "lastName": "Pehlivano\u011flu",
+            "firstName": "Cemil",
+            "initials": "C",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-1466-5831"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Immunology Department, Faculty of Medicine, Yeditepe University, Istanbul, T\u00fcrkiye."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Sleiman H",
+            "lastName": "Sleiman",
+            "firstName": "Hadi",
+            "initials": "H",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Faculty of Medicine, Yeditepe University, Istanbul, T\u00fcrkiye."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Andjus PR",
+            "lastName": "Andjus",
+            "firstName": "Pavle R",
+            "initials": "PR",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Centre for Laser Microscopy, Institute of Physiology and Biochemistry \"Jean Giaja\", Faculty of Biology, University of Belgrade, Belgrade, Serbia."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Yan\u0131kkaya Demirel G",
+            "lastName": "Yan\u0131kkaya Demirel",
+            "firstName": "G\u00fclderen",
+            "initials": "G",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Immunology Department, Faculty of Medicine, Yeditepe University, Istanbul, T\u00fcrkiye."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0003-1466-5831"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "volume": "17",
+        "journalIssueId": 3500595,
+        "dateOfPublication": "2023 ",
+        "monthOfPublication": 0,
+        "yearOfPublication": 2023,
+        "journal": {
+          "medlineAbbreviation": "Front Neurosci",
+          "title": "Frontiers in neuroscience",
+          "essn": "1662-453X",
+          "issn": "1662-4548",
+          "nlmid": "101478481",
+          "isoabbreviation": "Front Neurosci"
+        },
+        "printPublicationDate": "2023-01-01"
+      },
+      "pubYear": "2023",
+      "pageInfo": "1277399",
+      "abstractText": "This review aims to summarize the latest evidence about the role of innate and adaptive immunity in Amyotrophic Lateral Sclerosis (ALS). ALS is a devastating neurodegenerative disease affecting upper and lower motor neurons, which involves essential cells of the immune system that play a basic role in innate or adaptive immunity, that can be neurotoxic or neuroprotective for neurons. However, distinguishing between the sole neurotoxic or neuroprotective function of certain cells such as astrocytes can be challenging due to intricate nature of these cells, the complexity of the microenvironment and the contextual factors. In this review, in regard to innate immunity we focus on the involvement of monocytes/macrophages, microglia, the complement, NK cells, neutrophils, mast cells, and astrocytes, while regarding adaptive immunity, in addition to humoral immunity the most important features and roles of T and B cells are highlighted, specifically different subsets of CD4<sup>+</sup> as well as CD8<sup>+</sup> T cells. The role of autoantibodies and cytokines is also discussed in distinct sections of this review.",
+      "affiliation": "Centre for Laser Microscopy, Institute of Physiology and Biochemistry \"Jean Giaja\", Faculty of Biology, University of Belgrade, Belgrade, Serbia.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic-eCollection",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Neurodegeneration",
+          "Amyotrophic Lateral Sclerosis",
+          "Innate Immune System",
+          "Adaptive Immune System",
+          "Neuroimmunology And Neuropathy"
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.3389/fnins.2023.1277399"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC10723830"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC10723830?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 22,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCreation": "2023-12-18",
+      "dateOfRevision": "2024-10-16",
+      "electronicPublicationDate": "2023-11-30",
+      "firstPublicationDate": "2023-11-30",
+      "firstIndexDate": "2023-12-22",
+      "fullTextReceivedDate": "2025-02-05",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "40149599",
+      "source": "MED",
+      "pmid": "40149599",
+      "pmcid": "PMC11940241",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC11940241"
+        ]
+      },
+      "doi": "10.3390/biomedicines13030622",
+      "title": "Testosterone Supplementation: A Potential Therapeutic Strategy for Amyotrophic Lateral Sclerosis.",
+      "authorString": "Yang W, Xiao W, Liu X, Li H, Huang T, Fan D.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Yang W",
+            "lastName": "Yang",
+            "firstName": "Wenzhi",
+            "initials": "W",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Peking University Third Hospital, Beijing 100080, China."
+                },
+                {
+                  "affiliation": "Beijing Municipal Key Laboratory of Biomarker and Translational Research in Neurodegenerative Diseases, Beijing 100080, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Xiao W",
+            "lastName": "Xiao",
+            "firstName": "Wendi",
+            "initials": "W",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "School of Public Health, Peking University, Beijing 100080, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Liu X",
+            "lastName": "Liu",
+            "firstName": "Xiangyi",
+            "initials": "X",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Peking University Third Hospital, Beijing 100080, China."
+                },
+                {
+                  "affiliation": "Beijing Municipal Key Laboratory of Biomarker and Translational Research in Neurodegenerative Diseases, Beijing 100080, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Li H",
+            "lastName": "Li",
+            "firstName": "Hui",
+            "initials": "H",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Key Laboratory of Carcinogenesis and Translational Research, Peking University, Beijing 100080, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Huang T",
+            "lastName": "Huang",
+            "firstName": "Tao",
+            "initials": "T",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "School of Public Health, Peking University, Beijing 100080, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Fan D",
+            "lastName": "Fan",
+            "firstName": "Dongsheng",
+            "initials": "D",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-3129-9821"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Peking University Third Hospital, Beijing 100080, China."
+                },
+                {
+                  "affiliation": "Beijing Municipal Key Laboratory of Biomarker and Translational Research in Neurodegenerative Diseases, Beijing 100080, China."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0002-3129-9821"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "3",
+        "volume": "13",
+        "journalIssueId": 3917197,
+        "dateOfPublication": "2025 Mar",
+        "monthOfPublication": 3,
+        "yearOfPublication": 2025,
+        "journal": {
+          "medlineAbbreviation": "Biomedicines",
+          "title": "Biomedicines",
+          "essn": "2227-9059",
+          "issn": "2227-9059",
+          "nlmid": "101691304",
+          "isoabbreviation": "Biomedicines"
+        },
+        "printPublicationDate": "2025-03-01"
+      },
+      "pubYear": "2025",
+      "pageInfo": "622",
+      "abstractText": "<b>Objectives:</b> Amyotrophic lateral sclerosis (ALS) is a progressive and fatal disease characterized by the degeneration of spinal cord and brain neurons. Proteomics combined with Mendelian randomization (MR) is an effective method for finding disease treatment targets. <b>Methods:</b> We aimed to seek new therapeutic targets for ALS. A large-scale GWAS on proteomics (4907 circulatory protein) with 35,559 individuals was included as the exposure data; a GWAS with 138,086 ALS patients was used as the outcome data; we found that a high level of sex hormone-binding globulin (SHBG) is a risk factor by MR analysis. Colocalization analyses were used to validate the causality between SHBG and ALS further. Functional enrichment found a high level of SHBG was associated with a low level of bioavailable testosterone. Two-sample MR confirmed the association of SHBG (400,210 samples), bioavailable testosterone (367,289 samples), and ALS. <b>Results</b>: A high level of SHBG, and a low level of bioavailable testosterone are risk factors for ALS. <b>Conclusions:</b> A low level of bioavailable testosterone is a risk factor for ALS. Although our study is relatively limited and cannot fully confirm that testosterone supplementation has a therapeutic effect on ALS, it offers a promising direction for ALS therapy.",
+      "affiliation": "Department of Neurology, Peking University Third Hospital, Beijing 100080, China.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "National Natural Science Foundation of China",
+            "grantId": "82071426",
+            "orderIn": 0
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Testosterone",
+          "Proteomics",
+          "Amyotrophic Lateral Sclerosis",
+          "MR",
+          "ALS",
+          "Mendelian Randomization",
+          "Shbg",
+          "Bioavailable Testosterone"
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "doi",
+            "site": "Unpaywall",
+            "url": "https://doi.org/10.3390/biomedicines13030622"
+          },
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.3390/biomedicines13030622"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC11940241"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC11940241?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "gwas",
+          "refsnp",
+          "doi"
+        ]
+      },
+      "dateOfCreation": "2025-03-28",
+      "dateOfRevision": "2025-03-30",
+      "electronicPublicationDate": "2025-03-04",
+      "firstPublicationDate": "2025-03-04",
+      "firstIndexDate": "2025-04-01",
+      "fullTextReceivedDate": "2025-11-28",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "39456697",
+      "source": "MED",
+      "pmid": "39456697",
+      "pmcid": "PMC11507237",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC11507237"
+        ]
+      },
+      "doi": "10.3390/ijms252010911",
+      "title": "Blood-Based Biomarkers in Alzheimer's Disease: Advancing Non-Invasive Diagnostics and Prognostics.",
+      "authorString": "Dhauria M, Mondal R, Deb S, Shome G, Chowdhury D, Sarkar S, Benito-Le\u00f3n J.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Dhauria M",
+            "lastName": "Dhauria",
+            "firstName": "Mrinmay",
+            "initials": "M",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-8778-8061"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Regional Centre for Biotechnology, Faridabad 121001, India."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Mondal R",
+            "lastName": "Mondal",
+            "firstName": "Ritwick",
+            "initials": "R",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-4288-7661"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Clinical Pharmacology and Therapeutic Medicine, IPGMER and SSKM Hospital, Kolkata 700020, India."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Deb S",
+            "lastName": "Deb",
+            "firstName": "Shramana",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Stroke Medicine, Institute of Neuroscience, Kolkata 700017, India."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Shome G",
+            "lastName": "Shome",
+            "firstName": "Gourav",
+            "initials": "G",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Biological Sciences, Bose Institute, Kolkata 700054, India."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Chowdhury D",
+            "lastName": "Chowdhury",
+            "firstName": "Dipanjan",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Internal Medicine, IPGMER and SSKM Hospital, Kolkata 700020, India."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Sarkar S",
+            "lastName": "Sarkar",
+            "firstName": "Shramana",
+            "initials": "S",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0006-0900-355X"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Internal Medicine, IPGMER and SSKM Hospital, Kolkata 700020, India."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Benito-Le\u00f3n J",
+            "lastName": "Benito-Le\u00f3n",
+            "firstName": "Juli\u00e1n",
+            "initials": "J",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-1769-4809"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University Hospital \"12 de Octubre\", ES-28041 Madrid, Spain."
+                },
+                {
+                  "affiliation": "Instituto de Investigaci\u00f3n Sanitaria Hospital 12 de Octubre (imas12), ES-28041 Madrid, Spain."
+                },
+                {
+                  "affiliation": "Centro de Investigaci\u00f3n Biom\u00e9dica en Red Sobre Enfermedades Neurodegenerativas (CIBERNED), ES-28029 Madrid, Spain."
+                },
+                {
+                  "affiliation": "Department of Medicine, Complutense University, ES-28040 Madrid, Spain."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-8778-8061"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-1769-4809"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-4288-7661"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0006-0900-355X"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "20",
+        "volume": "25",
+        "journalIssueId": 3842771,
+        "dateOfPublication": "2024 Oct",
+        "monthOfPublication": 10,
+        "yearOfPublication": 2024,
+        "journal": {
+          "medlineAbbreviation": "Int J Mol Sci",
+          "title": "International journal of molecular sciences",
+          "essn": "1422-0067",
+          "issn": "1422-0067",
+          "nlmid": "101092791",
+          "isoabbreviation": "Int J Mol Sci"
+        },
+        "printPublicationDate": "2024-10-01"
+      },
+      "pubYear": "2024",
+      "pageInfo": "10911",
+      "abstractText": "Alzheimer's disease (AD), the most prevalent form of dementia, is expected to rise dramatically in incidence due to the global population aging. Traditional diagnostic approaches, such as cerebrospinal fluid analysis and positron emission tomography, are expensive and invasive, limiting their routine clinical use. Recent advances in blood-based biomarkers, including amyloid-beta, phosphorylated tau, and neurofilament light, offer promising non-invasive alternatives for early AD detection and disease monitoring. This review synthesizes current research on these blood-based biomarkers, highlighting their potential to track AD pathology and enhance diagnostic accuracy. Furthermore, this review uniquely integrates recent findings on protein-protein interaction networks and microRNA pathways, exploring novel combinations of proteomic, genomic, and epigenomic biomarkers that provide new insights into AD's molecular mechanisms. Additionally, we discuss the integration of these biomarkers with advanced neuroimaging techniques, emphasizing their potential to revolutionize AD diagnostics. Although large-scale validation is still needed, these biomarkers represent a critical advancement toward more accessible, cost-effective, and early diagnostic tools for AD.",
+      "affiliation": "Regional Centre for Biotechnology, Faridabad 121001, India.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "the Recovery, Transformation, and Resilience Plan at the Ministry of Science and Innovation",
+            "grantId": "#R01 NS39422",
+            "orderIn": 0
+          },
+          {
+            "agency": "NINDS NIH HHS",
+            "acronym": "NS",
+            "grantId": "R01 NS039422",
+            "orderIn": 0
+          },
+          {
+            "agency": "the National Institutes of Health, Bethesda, MD, USA",
+            "grantId": "TED2021-130174B-C33",
+            "orderIn": 0
+          },
+          {
+            "agency": "the Recovery, Transformation, and Resilience Plan at the Ministry of Science and Innovation",
+            "grantId": "TED2021-130174B-C33",
+            "orderIn": 0
+          },
+          {
+            "agency": "the National Institutes of Health, Bethesda, MD, USA",
+            "grantId": "#R01 NS39422",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Alzheimer Disease",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "BL",
+                  "qualifierName": "blood"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "CF",
+                  "qualifierName": "cerebrospinal fluid"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DI",
+                  "qualifierName": "diagnosis"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "tau Proteins",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "CF",
+                  "qualifierName": "cerebrospinal fluid"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Prognosis"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Proteomics",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "MT",
+                  "qualifierName": "methods"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyloid beta-Peptides",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "BL",
+                  "qualifierName": "blood"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "CF",
+                  "qualifierName": "cerebrospinal fluid"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Biomarkers"
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Neurodegeneration",
+          "Dementia",
+          "neuroinflammation",
+          "Early Detection",
+          "Blood-based Biomarkers",
+          "Alzheimer\u2019s Disease (Ad)",
+          "Amyloid-beta (A\u03b2)",
+          "Vascular Pathology",
+          "Non-invasive Diagnostics",
+          "Prognostics",
+          "Neurofilament Light Chain (Nfl)",
+          "Phosphorylated Tau (P-tau)",
+          "Advanced Neuroimaging",
+          "Abnormal Protein Accumulation"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "tau Proteins",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Amyloid beta-Peptides",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Biomarkers",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.3390/ijms252010911"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC11507237"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC11507237?pdf=render"
+          }
+        ]
+      },
+      "commentCorrectionList": {
+        "commentCorrection": [
+          {
+            "source": "PPR",
+            "id": "PPR916404",
+            "type": "Preprint in",
+            "note": "CrossRef Pre-print loader",
+            "orderIn": 10002
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 49,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2024-10-26",
+      "dateOfCreation": "2024-10-26",
+      "dateOfRevision": "2026-09-23",
+      "electronicPublicationDate": "2024-10-10",
+      "firstPublicationDate": "2024-10-10",
+      "firstIndexDate": "2024-10-27",
+      "fullTextReceivedDate": "2025-02-05",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "40761766",
+      "source": "MED",
+      "pmid": "40761766",
+      "pmcid": "PMC12321429",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC12321429"
+        ]
+      },
+      "doi": "10.1155/omcl/3242282",
+      "title": "&lt;i&gt;E2f1&lt;/i&gt; Overexpression Reduces Aging-Associated DNA Damage in Cultured Cerebral Endothelial Cells and Improves Cognitive Performance in Aged Mice.",
+      "authorString": "Monga S, Flores S, Blasco-Conesa MP, Rahman SM, Noh B, Peesh P, Ganesh BP, Marrelli SP, McCullough LD, Moruno-Manchon JF.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Monga S",
+            "lastName": "Monga",
+            "firstName": "Sheelu",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, McGovern Medical School at the University of Texas Health Science Center at Houston, 6431 Fannin Street, Houston 77030, Texas, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Flores S",
+            "lastName": "Flores",
+            "firstName": "Samantha",
+            "initials": "S",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0001-6778-2743"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, McGovern Medical School at the University of Texas Health Science Center at Houston, 6431 Fannin Street, Houston 77030, Texas, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Blasco-Conesa MP",
+            "lastName": "Blasco-Conesa",
+            "firstName": "Maria Pilar",
+            "initials": "MP",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-0700-4907"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, McGovern Medical School at the University of Texas Health Science Center at Houston, 6431 Fannin Street, Houston 77030, Texas, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Rahman SM",
+            "lastName": "Rahman",
+            "firstName": "Syed M",
+            "initials": "SM",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0002-6119-3910"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, McGovern Medical School at the University of Texas Health Science Center at Houston, 6431 Fannin Street, Houston 77030, Texas, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Noh B",
+            "lastName": "Noh",
+            "firstName": "Brian",
+            "initials": "B",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, McGovern Medical School at the University of Texas Health Science Center at Houston, 6431 Fannin Street, Houston 77030, Texas, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Peesh P",
+            "lastName": "Peesh",
+            "firstName": "Pedram",
+            "initials": "P",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, McGovern Medical School at the University of Texas Health Science Center at Houston, 6431 Fannin Street, Houston 77030, Texas, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ganesh BP",
+            "lastName": "Ganesh",
+            "firstName": "Bhanu Priya",
+            "initials": "BP",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-1575-7914"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, McGovern Medical School at the University of Texas Health Science Center at Houston, 6431 Fannin Street, Houston 77030, Texas, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Marrelli SP",
+            "lastName": "Marrelli",
+            "firstName": "Sean P",
+            "initials": "SP",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-8476-4785"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, McGovern Medical School at the University of Texas Health Science Center at Houston, 6431 Fannin Street, Houston 77030, Texas, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "McCullough LD",
+            "lastName": "McCullough",
+            "firstName": "Louise D",
+            "initials": "LD",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, McGovern Medical School at the University of Texas Health Science Center at Houston, 6431 Fannin Street, Houston 77030, Texas, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Moruno-Manchon JF",
+            "lastName": "Moruno-Manchon",
+            "firstName": "Jose Felix",
+            "initials": "JF",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-2139-6134"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, McGovern Medical School at the University of Texas Health Science Center at Houston, 6431 Fannin Street, Houston 77030, Texas, USA."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-8476-4785"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-0700-4907"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-2139-6134"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-1575-7914"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0001-6778-2743"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0002-6119-3910"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "volume": "2025",
+        "journalIssueId": 3902592,
+        "dateOfPublication": "2025 ",
+        "monthOfPublication": 0,
+        "yearOfPublication": 2025,
+        "journal": {
+          "medlineAbbreviation": "Oxid Med Cell Longev",
+          "title": "Oxidative medicine and cellular longevity",
+          "essn": "1942-0994",
+          "issn": "1942-0900",
+          "nlmid": "101479826",
+          "isoabbreviation": "Oxid Med Cell Longev"
+        },
+        "printPublicationDate": "2025-01-01"
+      },
+      "pubYear": "2025",
+      "pageInfo": "3242282",
+      "abstractText": "As we age, cerebral endothelial cells (CECs) are less efficient in maintaining genome integrity and accumulate DNA damage. DNA damage in the brain endothelium can lead to the impairment of the blood-brain barrier (BBB), which is a major factor in brain dysfunction and dementia. Thus, identifying factors that regulate DNA repair in the brain endothelium can prevent brain dysfunction associated with aging. E2F1 is a transcription factor that regulates the expression of genes associated with DNA repair, among other functions. We hypothesize that E2F1 is downregulated in the brain vasculature of mice with aging and that E2F1 upregulation can improve cognitive function. We found that in the brain endothelium, E2F1 was significantly less phosphorylated, which is associated with its transcriptional activity, in the brain vasculature of aged mice and cultured CEC derived from aged mice compared with those from young mice. We found that <i>E2f1</i> overexpression reduced DNA damage in cultured CEC, and targeting the brain vasculature to overexpress <i>E2f1</i> improved cognition and increased the expression of genes associated with BBB integrity in aged mice. From RNA sequencing data from cultured CEC, we found that <i>E2f1</i> overexpression significantly upregulated <i>Acod1</i>, which codes for aconitate decarboxylase-1 (ACOD1), an enzyme that produces itaconate. We also found that 4-octyl itaconate (4-OI), a derivative of itaconate, reduced DNA damage, promoted cell proliferation, and restored endothelial barrier function from oxidative stress in cultured CEC. Thus, our study identifies the E2F1-ACOD1 axis as a molecular pathway that can protect the brain endothelium from oxidative stress and aging.",
+      "affiliation": "Department of Neurology, McGovern Medical School at the University of Texas Health Science Center at Houston, 6431 Fannin Street, Houston 77030, Texas, USA.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic-eCollection",
+      "pubTypeList": {
+        "pubType": [
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "Texas Alzheimer&apos;s Research and Care Consortium",
+            "grantId": "957578",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Institutes of Health",
+            "grantId": "1R35NS132265-01",
+            "orderIn": 0
+          },
+          {
+            "agency": "American Heart Association",
+            "grantId": "856061",
+            "orderIn": 0
+          },
+          {
+            "agency": "NIA NIH HHS",
+            "acronym": "AG",
+            "grantId": "R21 AG075750",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Institute on Aging",
+            "grantId": "R21AG075750",
+            "orderIn": 0
+          },
+          {
+            "agency": "NINDS NIH HHS",
+            "acronym": "NS",
+            "grantId": "R35 NS132265",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Blood-Brain Barrier",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Brain",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Cells, Cultured"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Endothelial Cells",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Mice, Inbred C57BL"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Mice"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "DNA Damage"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Cognition"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Oxidative Stress"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Aging",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Male"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "E2F1 Transcription Factor",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Aging",
+          "DNA damage",
+          "Cognition",
+          "E2F1",
+          "Endothelial Cells",
+          "Itaconate"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "E2F1 Transcription Factor",
+            "registryNumber": "0"
+          },
+          {
+            "name": "E2f1 protein, mouse",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1155/omcl/3242282"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12321429"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12321429?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 3,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2025-08-05",
+      "dateOfCreation": "2025-08-05",
+      "dateOfRevision": "2026-03-07",
+      "electronicPublicationDate": "2025-07-28",
+      "firstPublicationDate": "2025-07-28",
+      "firstIndexDate": "2025-08-05",
+      "fullTextReceivedDate": "2025-11-28",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "34079543",
+      "source": "MED",
+      "pmid": "34079543",
+      "pmcid": "PMC8165230",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC8165230"
+        ]
+      },
+      "doi": "10.3389/fimmu.2021.654626",
+      "title": "Therapeutic Opportunities of Interleukin-33 in the Central Nervous System.",
+      "authorString": "Sun Y, Wen Y, Wang L, Wen L, You W, Wei S, Mao L, Wang H, Chen Z, Yang X.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Sun Y",
+            "lastName": "Sun",
+            "firstName": "Yun",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Rehabilitation Medicine, The First Affiliated Hospital, Zhejiang University, Hangzhou, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wen Y",
+            "lastName": "Wen",
+            "firstName": "Yankai",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Anesthesiology, McGovern Medical School, University of Texas Health Science Center at Houston, Houston, TX, United States."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wang L",
+            "lastName": "Wang",
+            "firstName": "Luxi",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The First Affiliated Hospital of Wenzhou Medical University, Wenzhou, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wen L",
+            "lastName": "Wen",
+            "firstName": "Liang",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurosurgery, The First Affiliated Hospital, Zhejiang University, Hangzhou, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "You W",
+            "lastName": "You",
+            "firstName": "Wendong",
+            "initials": "W",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurosurgery, The First Affiliated Hospital, Zhejiang University, Hangzhou, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wei S",
+            "lastName": "Wei",
+            "firstName": "Shuang",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Rehabilitation Medicine, The First Affiliated Hospital, Zhejiang University, Hangzhou, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Mao L",
+            "lastName": "Mao",
+            "firstName": "Lin",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Rehabilitation Medicine, The First Affiliated Hospital, Zhejiang University, Hangzhou, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wang H",
+            "lastName": "Wang",
+            "firstName": "Hao",
+            "initials": "H",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurosurgery, The First Affiliated Hospital, Zhejiang University, Hangzhou, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Chen Z",
+            "lastName": "Chen",
+            "firstName": "Zuobing",
+            "initials": "Z",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Rehabilitation Medicine, The First Affiliated Hospital, Zhejiang University, Hangzhou, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Yang X",
+            "lastName": "Yang",
+            "firstName": "Xiaofeng",
+            "initials": "X",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurosurgery, The First Affiliated Hospital, Zhejiang University, Hangzhou, China."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0002-8144-1515"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "volume": "12",
+        "journalIssueId": 3117597,
+        "dateOfPublication": "2021",
+        "monthOfPublication": 0,
+        "yearOfPublication": 2021,
+        "journal": {
+          "medlineAbbreviation": "Front Immunol",
+          "title": "Frontiers in immunology",
+          "essn": "1664-3224",
+          "issn": "1664-3224",
+          "nlmid": "101560960",
+          "isoabbreviation": "Front Immunol"
+        },
+        "printPublicationDate": "2021-01-01"
+      },
+      "pubYear": "2021",
+      "pageInfo": "654626",
+      "abstractText": "Interleukin-33 (IL-33), a member of the IL-1 cytokine family, is involved in various diseases. IL-33 exerts its effects via its heterodimeric receptor complex, which comprises suppression of tumorigenicity 2 (ST2) and the IL-1 receptor accessory protein (IL-1RAP). Increasing evidence has demonstrated that IL-33/ST2 signaling plays diverse but crucial roles in the homeostasis of the central nervous system (CNS) and the pathogenesis of CNS diseases, including neurodegenerative diseases, cerebrovascular diseases, infection, trauma, and ischemic stroke. In the current review, we focus on the functional roles and cellular signaling mechanisms of IL-33 in the CNS and evaluate the potential for diagnostic and therapeutic applications.",
+      "affiliation": "Department of Rehabilitation Medicine, The First Affiliated Hospital, Zhejiang University, Hangzhou, China.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic-eCollection",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Central Nervous System",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "Y",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Central Nervous System Diseases",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DI",
+                  "qualifierName": "diagnosis"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "abbreviation": "ET",
+                  "qualifierName": "etiology"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "TH",
+                  "qualifierName": "therapy"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Disease Susceptibility"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Cytokines",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Signal Transduction"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Disease Management"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Biomarkers"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Interleukin-33",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "Y",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Interleukin-1 Receptor-Like 1 Protein",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Trauma",
+          "Multiple sclerosis",
+          "Alzheimer\u2019s disease",
+          "Ischemic stroke",
+          "hemorrhage",
+          "St2",
+          "Interleukin-33",
+          "Anti-inflammatory Macrophages"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "Cytokines",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Biomarkers",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Interleukin-33",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Interleukin-1 Receptor-Like 1 Protein",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Unpaywall",
+            "url": "https://www.frontiersin.org/articles/10.3389/fimmu.2021.654626/pdf"
+          },
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.3389/fimmu.2021.654626"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC8165230"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC8165230?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 40,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "refsnp",
+          "nct",
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2021-09-29",
+      "dateOfCreation": "2021-06-03",
+      "dateOfRevision": "2021-09-29",
+      "electronicPublicationDate": "2021-05-17",
+      "firstPublicationDate": "2021-05-17",
+      "firstIndexDate": "2021-06-04",
+      "fullTextReceivedDate": "2025-02-05",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42244505",
+      "source": "MED",
+      "pmid": "42244505",
+      "pmcid": "PMC13229692",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13229692"
+        ]
+      },
+      "doi": "10.3389/fncel.2026.1798151",
+      "title": "Defining functional states and roles of microglia in neuropsychiatric disorders.",
+      "authorString": "Szydlowska K, Tivanello R, Kaminska B.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Szydlowska K",
+            "lastName": "Szydlowska",
+            "firstName": "Kinga",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Laboratory of Molecular Neurobiology, Nencki Institute of Experimental Biology of the Polish Academy of Sciences, Warsaw, Poland."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Tivanello R",
+            "lastName": "Tivanello",
+            "firstName": "Renan",
+            "initials": "R",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-3222-8950"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Laboratory of Molecular Neurobiology, Nencki Institute of Experimental Biology of the Polish Academy of Sciences, Warsaw, Poland."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kaminska B",
+            "lastName": "Kaminska",
+            "firstName": "Bozena",
+            "initials": "B",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Laboratory of Molecular Neurobiology, Nencki Institute of Experimental Biology of the Polish Academy of Sciences, Warsaw, Poland."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0003-3222-8950"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "volume": "20",
+        "journalIssueId": 4119138,
+        "dateOfPublication": "2026 ",
+        "monthOfPublication": 0,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Front Cell Neurosci",
+          "title": "Frontiers in cellular neuroscience",
+          "essn": "1662-5102",
+          "issn": "1662-5102",
+          "nlmid": "101477935",
+          "isoabbreviation": "Front Cell Neurosci"
+        },
+        "printPublicationDate": "2026-01-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "1798151",
+      "abstractText": "Microglia are myeloid cells of the central nervous system (CNS) that acquire a context-specific phenotype and adjust their functions to microenvironmental cues. They participate in immune signaling, synaptic remodeling, and circuit functions, and have emerged as key culprits in neurodevelopmental and psychiatric disorders such as depression, anxiety, autism spectrum disorder (ASD), and schizophrenia. We characterize and discuss different functional state of microglia defined by sc-omics approaches that bring a high resolution to cell functionalities. Subsequently, we review the evidence of microglial states, microglia-driven mechanisms and their impacts on development and progression of neuropsychiatric disorders. In affective mood disorders, chronic stress, glucocorticoid dysregulation, and peripheral inflammation drive microglial nefarious activation. This leads to excessive synaptic pruning, impaired neurotrophic support, glutamate excitotoxicity, and circuit dysfunction in mood-related brain regions, with strong modulation by circadian mechanisms and sex-dependent factors. In ASD, microglia adopt a hybrid activation state characterized by altered inflammatory signaling, dysregulated phagocytosis, and aberrant synaptic pruning, driven by genetic and epigenetic mechanisms, including TREM2, ARID1A, complement components, and calcium-dependent glial signaling, which together disrupt network connectivity and social behavior. In schizophrenia, genetic risk factors related to <i>C4</i> and <i>DISC1</i>, along with inflammatory and metabolic stress, promote excessive microglia-mediated synapse elimination, cytoskeletal and motility deficits, and secondary neuronal metabolic dysfunction, which correlate with cognitive and negative symptoms. These findings strongly position microglia as a hub and key determinants of CNS homeostasis whose context-dependent dysregulation links immune, genetic, and environmental risk factors to synaptic and behavioral pathology. We discuss which microglial signaling pathways are shared and identify promising therapeutic targets across the neuropsychiatric disease spectrum.",
+      "affiliation": "Laboratory of Molecular Neurobiology, Nencki Institute of Experimental Biology of the Polish Academy of Sciences, Warsaw, Poland.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic-eCollection",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Mood Disorders",
+          "Mass Cytometry",
+          "Single-cell Rna Sequencing",
+          "Disease-associated Microglia",
+          "Microglia Plasticity",
+          "Microglia Heterogeneity"
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.3389/fncel.2026.1798151"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13229692"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13229692?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 2,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "refsnp",
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-06-05",
+      "dateOfCreation": "2026-06-05",
+      "dateOfRevision": "2026-08-13",
+      "electronicPublicationDate": "2026-05-20",
+      "firstPublicationDate": "2026-05-20",
+      "firstIndexDate": "2026-06-06",
+      "fullTextReceivedDate": "2026-06-04",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "34821692",
+      "source": "MED",
+      "pmid": "34821692",
+      "pmcid": "PMC8621331",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC8621331"
+        ]
+      },
+      "doi": "10.3390/jcdd8110139",
+      "title": "Biomarkers Utility: At the Borderline between Cardiology and Neurology.",
+      "authorString": "Ion A, Stafie C, Mitu O, Ciobanu CE, Halitchi DI, Costache AD, Bobric C, Troase R, Mitu I, Huzum B, Duca ST, Costache II.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Ion A",
+            "lastName": "Ion",
+            "firstName": "Adriana",
+            "initials": "A",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-4792-115X"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "1st Medical Department, University of Medicine and Pharmacy \"Grigore T. Popa\", 700115 Iasi, Romania."
+                },
+                {
+                  "affiliation": "Cardiology Clinic, Clinical Emergency Hospital \"Sf. Spiridon\", 700111 Iasi, Romania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Stafie C",
+            "lastName": "Stafie",
+            "firstName": "Celina",
+            "initials": "C",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-9865-4349"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Preventive Medicine and Interdisciplinarity, University of Medicine and Pharmacy \"Grigore T. Popa\", 700115 Iasi, Romania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Mitu O",
+            "lastName": "Mitu",
+            "firstName": "Ovidiu",
+            "initials": "O",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-9438-8565"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "1st Medical Department, University of Medicine and Pharmacy \"Grigore T. Popa\", 700115 Iasi, Romania."
+                },
+                {
+                  "affiliation": "Cardiology Clinic, Clinical Emergency Hospital \"Sf. Spiridon\", 700111 Iasi, Romania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ciobanu CE",
+            "lastName": "Ciobanu",
+            "firstName": "Cosmina Elena",
+            "initials": "CE",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Cardiology Clinic, Clinical Emergency Hospital \"Sf. Spiridon\", 700111 Iasi, Romania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Halitchi DI",
+            "lastName": "Halitchi",
+            "firstName": "Dan Iliescu",
+            "initials": "DI",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "1st Medical Department, University of Medicine and Pharmacy \"Grigore T. Popa\", 700115 Iasi, Romania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Costache AD",
+            "lastName": "Costache",
+            "firstName": "Alexandru Dan",
+            "initials": "AD",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "1st Medical Department, University of Medicine and Pharmacy \"Grigore T. Popa\", 700115 Iasi, Romania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Bobric C",
+            "lastName": "Bobric",
+            "firstName": "Cezara",
+            "initials": "C",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-5558-1223"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Neurology Clinic, Clinical Rehabilitation Hospital, 700661 Iasi, Romania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Troase R",
+            "lastName": "Troase",
+            "firstName": "Roxana",
+            "initials": "R",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Neurology Clinic, Clinical Rehabilitation Hospital, 700661 Iasi, Romania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Mitu I",
+            "lastName": "Mitu",
+            "firstName": "Ivona",
+            "initials": "I",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Morpho-Functional Sciences II, University of Medicine and Pharmacy \"Grigore T. Popa\", 700115 Iasi, Romania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Huzum B",
+            "lastName": "Huzum",
+            "firstName": "Bogdan",
+            "initials": "B",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Physiology, University of Medicine and Pharmacy \"Grigore T. Popa\", 700115 Iasi, Romania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Duca ST",
+            "lastName": "Duca",
+            "firstName": "Stefania Teodora",
+            "initials": "ST",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0002-9931-7237"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "1st Medical Department, University of Medicine and Pharmacy \"Grigore T. Popa\", 700115 Iasi, Romania."
+                },
+                {
+                  "affiliation": "Cardiology Clinic, Clinical Emergency Hospital \"Sf. Spiridon\", 700111 Iasi, Romania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Costache II",
+            "lastName": "Costache",
+            "firstName": "Irina Iuliana",
+            "initials": "II",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "1st Medical Department, University of Medicine and Pharmacy \"Grigore T. Popa\", 700115 Iasi, Romania."
+                },
+                {
+                  "affiliation": "Cardiology Clinic, Clinical Emergency Hospital \"Sf. Spiridon\", 700111 Iasi, Romania."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-8544-9904"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-5558-1223"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-9438-8565"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-9865-4349"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-2370-3166"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-4792-115X"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0002-9931-7237"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "11",
+        "volume": "8",
+        "journalIssueId": 3271482,
+        "dateOfPublication": "2021 Oct",
+        "monthOfPublication": 10,
+        "yearOfPublication": 2021,
+        "journal": {
+          "medlineAbbreviation": "J Cardiovasc Dev Dis",
+          "title": "Journal of cardiovascular development and disease",
+          "essn": "2308-3425",
+          "issn": "2308-3425",
+          "nlmid": "101651414",
+          "isoabbreviation": "J Cardiovasc Dev Dis"
+        },
+        "printPublicationDate": "2021-10-01"
+      },
+      "pubYear": "2021",
+      "pageInfo": "139",
+      "abstractText": "Biomarkers are important diagnostic and prognostic tools as they provide results in a short time while still being an inexpensive, reproducible and accessible method. Their well-known benefits have placed them at the forefront of research in recent years, with new and innovative discoveries being implemented. Cardiovascular and neurological diseases often share common risk factors and pathological pathways which may play an important role in the use and interpretation of biomarkers' values. Among the biomarkers used extensively in clinical practice in cardiology, hs-TroponinT, CK-MB and NTproBNP have been shown to be strongly influenced by multiple neurological conditions. Newer ones such as galectin-3, lysophosphatidylcholine, copeptin, sST2, S100B, myeloperoxidase and GDF-15 have been extensively studied in recent years as alternatives with an increased sensitivity for cardiovascular diseases, but also with significant results in the field of neurology. Thus, given their low specificity, the values interpretation must be correlated with the clinical judgment and other available investigations.",
+      "affiliation": "1st Medical Department, University of Medicine and Pharmacy \"Grigore T. Popa\", 700115 Iasi, Romania.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Troponin",
+          "Cardiovascular diseases",
+          "Biomarkers",
+          "Stroke",
+          "Neurology",
+          "Cardiology",
+          "Bnp"
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Unpaywall",
+            "url": "https://www.mdpi.com/2308-3425/8/11/139/pdf?version=1635306953"
+          },
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.3390/jcdd8110139"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC8621331"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC8621331?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 11,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCreation": "2021-11-25",
+      "dateOfRevision": "2021-11-28",
+      "electronicPublicationDate": "2021-10-25",
+      "firstPublicationDate": "2021-10-25",
+      "firstIndexDate": "2021-12-01",
+      "fullTextReceivedDate": "2025-02-02",
+      "hasEvaluations": "N"
+    }
+  ]
+}

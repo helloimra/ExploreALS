@@ -1,0 +1,1218 @@
+{
+  "analysis_run_id": "RUN-B1-003",
+  "d003_pineda_pseudobulk": {
+    "BA4": {
+      "All_Excitatory": {
+        "UNC13A": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.061138003280864106,
+          "unadjusted_p": 0.5524006300489233,
+          "gc_adj_log2fc": 0.045473131390391774,
+          "gc_adj_p": 0.6699584587143582
+        },
+        "STMN2": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.2836413240918949,
+          "unadjusted_p": 0.10768180768117037,
+          "gc_adj_log2fc": 0.4252165748026414,
+          "gc_adj_p": 0.004472053100992563
+        },
+        "KCNQ2": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.36317986091117854,
+          "unadjusted_p": 0.014095670313244145,
+          "gc_adj_log2fc": -0.3021057802367972,
+          "gc_adj_p": 0.035677255713704
+        },
+        "CHMP7": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.17715648215226032,
+          "unadjusted_p": 0.09766650816727122,
+          "gc_adj_log2fc": -0.12238155499138575,
+          "gc_adj_p": 0.22623341409538622
+        },
+        "CHMP2B": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.0367344505594952,
+          "unadjusted_p": 0.7381271530587084,
+          "gc_adj_log2fc": 0.07433859844266338,
+          "gc_adj_p": 0.5034189279106842
+        },
+        "VPS4B": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.1560776515434733,
+          "unadjusted_p": 0.15361806941765754,
+          "gc_adj_log2fc": 0.13836851058688926,
+          "gc_adj_p": 0.2206791539419702
+        }
+      },
+      "Deep_L5_Excitatory": {
+        "UNC13A": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.015168549677847865,
+          "unadjusted_p": 0.9088908630680199,
+          "gc_adj_log2fc": 0.0012145184227899675,
+          "gc_adj_p": 0.9929626187296742
+        },
+        "STMN2": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.3622085469631954,
+          "unadjusted_p": 0.028614956804896306,
+          "gc_adj_log2fc": 0.4972442860172902,
+          "gc_adj_p": 0.00022337162921517902
+        },
+        "KCNQ2": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.3653373921340231,
+          "unadjusted_p": 0.04921600534055766,
+          "gc_adj_log2fc": -0.30907630854854506,
+          "gc_adj_p": 0.0959550392801051
+        },
+        "CHMP7": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.5848327660180581,
+          "unadjusted_p": 0.06830398650396427,
+          "gc_adj_log2fc": -0.6125187466016571,
+          "gc_adj_p": 0.06676325205678083
+        },
+        "CHMP2B": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.33424751730473,
+          "unadjusted_p": 0.35835222811580575,
+          "gc_adj_log2fc": -0.3651462538833568,
+          "gc_adj_p": 0.33524518383565616
+        },
+        "VPS4B": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.17728050380116483,
+          "unadjusted_p": 0.06905165583445917,
+          "gc_adj_log2fc": 0.1800105842323615,
+          "gc_adj_p": 0.07645973434247726
+        }
+      },
+      "Inhibitory": {
+        "UNC13A": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.06679729084711633,
+          "unadjusted_p": 0.6378318981332254,
+          "gc_adj_log2fc": -0.12365781547422894,
+          "gc_adj_p": 0.38985839211712947
+        },
+        "STMN2": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.273910644258562,
+          "unadjusted_p": 0.3208740321925844,
+          "gc_adj_log2fc": 0.39798108467193705,
+          "gc_adj_p": 0.1518203904584025
+        },
+        "KCNQ2": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.09477531042522125,
+          "unadjusted_p": 0.5349268365889225,
+          "gc_adj_log2fc": -0.04341023598118282,
+          "gc_adj_p": 0.7802982704387662
+        },
+        "CHMP7": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.12219300073739597,
+          "unadjusted_p": 0.27932877480585916,
+          "gc_adj_log2fc": -0.03350099407733109,
+          "gc_adj_p": 0.7316540773796469
+        },
+        "CHMP2B": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.03291365002738722,
+          "unadjusted_p": 0.7127761415429342,
+          "gc_adj_log2fc": 0.005181307096358778,
+          "gc_adj_p": 0.9538799538980761
+        },
+        "VPS4B": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.2027906917811086,
+          "unadjusted_p": 0.051676489541630316,
+          "gc_adj_log2fc": 0.23017167429149443,
+          "gc_adj_p": 0.03373103680550829
+        }
+      },
+      "Oligo": {
+        "UNC13A": {
+          "n_als": 14,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": 0.48929474292123776,
+          "unadjusted_p": 0.05994253377477726,
+          "gc_adj_log2fc": 0.40838828347222145,
+          "gc_adj_p": 0.1271711448836921
+        },
+        "STMN2": {
+          "n_als": 14,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": 1.614511256353503,
+          "unadjusted_p": 0.005707579528066609,
+          "gc_adj_log2fc": 1.987528772166675,
+          "gc_adj_p": 0.0006316798394550756
+        },
+        "KCNQ2": {
+          "n_als": 14,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": -0.3731571144613769,
+          "unadjusted_p": 0.3748680170806231,
+          "gc_adj_log2fc": -0.6683379310071926,
+          "gc_adj_p": 0.0990376988003043
+        },
+        "CHMP7": {
+          "n_als": 14,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": 0.10356311266268578,
+          "unadjusted_p": 0.4673512151782309,
+          "gc_adj_log2fc": 0.13236662988915812,
+          "gc_adj_p": 0.37967015809794047
+        },
+        "CHMP2B": {
+          "n_als": 14,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": -0.007852297241684597,
+          "unadjusted_p": 0.947259387158342,
+          "gc_adj_log2fc": 0.052796411565466515,
+          "gc_adj_p": 0.6582569366351705
+        },
+        "VPS4B": {
+          "n_als": 14,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": 0.09440182659155838,
+          "unadjusted_p": 0.2714299522514835,
+          "gc_adj_log2fc": 0.11666505509138266,
+          "gc_adj_p": 0.19705038894300453
+        }
+      },
+      "Astro": {
+        "UNC13A": {
+          "n_als": 15,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.02411188618542881,
+          "unadjusted_p": 0.9496644656997767,
+          "gc_adj_log2fc": -0.0030733571917295754,
+          "gc_adj_p": 0.9937754847052364
+        },
+        "STMN2": {
+          "n_als": 15,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 1.934046507395611,
+          "unadjusted_p": 0.0025593815615475787,
+          "gc_adj_log2fc": 2.134855928063924,
+          "gc_adj_p": 0.0007786536625987902
+        },
+        "KCNQ2": {
+          "n_als": 15,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.1634056445065757,
+          "unadjusted_p": 0.6866986808798726,
+          "gc_adj_log2fc": 0.166635254180453,
+          "gc_adj_p": 0.6908676116447948
+        },
+        "CHMP7": {
+          "n_als": 15,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.3399494341641012,
+          "unadjusted_p": 0.448511878619637,
+          "gc_adj_log2fc": 0.3880979696773578,
+          "gc_adj_p": 0.4005042427418562
+        },
+        "CHMP2B": {
+          "n_als": 15,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.16074681641095356,
+          "unadjusted_p": 0.06956979805443489,
+          "gc_adj_log2fc": -0.15089127376034472,
+          "gc_adj_p": 0.09590649630318494
+        },
+        "VPS4B": {
+          "n_als": 15,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.4784725618195179,
+          "unadjusted_p": 0.2557897069395395,
+          "gc_adj_log2fc": 0.4080941880622271,
+          "gc_adj_p": 0.33962112406294315
+        }
+      },
+      "Micro": {
+        "UNC13A": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.9056035759027545,
+          "unadjusted_p": 0.20824448355286013,
+          "gc_adj_log2fc": 0.8879817372595346,
+          "gc_adj_p": 0.22628091650996612
+        },
+        "STMN2": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.7999887045133722,
+          "unadjusted_p": 0.4032888982652809,
+          "gc_adj_log2fc": 0.7703043359831612,
+          "gc_adj_p": 0.42975271427473527
+        },
+        "KCNQ2": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.1813684096305111,
+          "unadjusted_p": 0.786988126590835,
+          "gc_adj_log2fc": -0.31195395705078444,
+          "gc_adj_p": 0.6215401760156135
+        },
+        "CHMP7": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.3848236035709089,
+          "unadjusted_p": 0.49456760635653957,
+          "gc_adj_log2fc": 0.3629303811012148,
+          "gc_adj_p": 0.5268736178975056
+        },
+        "CHMP2B": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.35946167471552654,
+          "unadjusted_p": 0.5288768909037513,
+          "gc_adj_log2fc": -0.406767155583877,
+          "gc_adj_p": 0.4797273042856278
+        },
+        "VPS4B": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.317162821295964,
+          "unadjusted_p": 0.49760053873447657,
+          "gc_adj_log2fc": -0.427043306500032,
+          "gc_adj_p": 0.312321674994214
+        }
+      }
+    },
+    "BA9": {
+      "All_Excitatory": {
+        "UNC13A": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.16969915092154186,
+          "unadjusted_p": 0.06594160696241896,
+          "gc_adj_log2fc": 0.22011975677782766,
+          "gc_adj_p": 0.04301106430033285
+        },
+        "STMN2": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.3388074255851027,
+          "unadjusted_p": 0.06672908640516167,
+          "gc_adj_log2fc": 0.7194494750170903,
+          "gc_adj_p": 0.0001242229806030007
+        },
+        "KCNQ2": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.48233868640031907,
+          "unadjusted_p": 0.002883375868246402,
+          "gc_adj_log2fc": -0.4036710556344993,
+          "gc_adj_p": 0.027944544729303016
+        },
+        "CHMP7": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.08980943238390468,
+          "unadjusted_p": 0.4759739797809404,
+          "gc_adj_log2fc": 0.17622602503765278,
+          "gc_adj_p": 0.13240343757970593
+        },
+        "CHMP2B": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.06965660373996913,
+          "unadjusted_p": 0.5338964576790234,
+          "gc_adj_log2fc": 0.12009707910963378,
+          "gc_adj_p": 0.29643267415221347
+        },
+        "VPS4B": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.23782565613763648,
+          "unadjusted_p": 0.005358268380462879,
+          "gc_adj_log2fc": 0.2930362308916875,
+          "gc_adj_p": 0.0034310311352754325
+        }
+      },
+      "Deep_L5_Excitatory": {
+        "UNC13A": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.09391358357250358,
+          "unadjusted_p": 0.3575671531581216,
+          "gc_adj_log2fc": 0.12211301213999072,
+          "gc_adj_p": 0.3146919528918555
+        },
+        "STMN2": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.8692611489353521,
+          "unadjusted_p": 0.13235282734035295,
+          "gc_adj_log2fc": 1.1533593418921824,
+          "gc_adj_p": 0.09206616251542947
+        },
+        "KCNQ2": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.4672980178316961,
+          "unadjusted_p": 0.011311153293441841,
+          "gc_adj_log2fc": -0.44613831277839605,
+          "gc_adj_p": 0.03894547088178697
+        },
+        "CHMP7": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.08854840102185471,
+          "unadjusted_p": 0.7802896722356031,
+          "gc_adj_log2fc": 0.2677490976003558,
+          "gc_adj_p": 0.4745435335240455
+        },
+        "CHMP2B": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.27987818797456654,
+          "unadjusted_p": 0.42626924351568996,
+          "gc_adj_log2fc": 0.3414208326781463,
+          "gc_adj_p": 0.4150655812202253
+        },
+        "VPS4B": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.1599665481933664,
+          "unadjusted_p": 0.1080203012948733,
+          "gc_adj_log2fc": 0.24576952053502538,
+          "gc_adj_p": 0.03485767378268079
+        }
+      },
+      "Inhibitory": {
+        "UNC13A": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.1334108681041715,
+          "unadjusted_p": 0.2537715493200439,
+          "gc_adj_log2fc": 0.17618131490838967,
+          "gc_adj_p": 0.20079164265130353
+        },
+        "STMN2": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.43197460367736235,
+          "unadjusted_p": 0.058389481084652556,
+          "gc_adj_log2fc": 0.642908771482228,
+          "gc_adj_p": 0.014757544873248693
+        },
+        "KCNQ2": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.34852025205531845,
+          "unadjusted_p": 0.00648578449645844,
+          "gc_adj_log2fc": -0.42723945435929994,
+          "gc_adj_p": 0.004282556046141071
+        },
+        "CHMP7": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.2678839339108959,
+          "unadjusted_p": 0.05881253884431739,
+          "gc_adj_log2fc": 0.12057911695008547,
+          "gc_adj_p": 0.1502495781442286
+        },
+        "CHMP2B": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.17439977457343492,
+          "unadjusted_p": 0.2166717581028249,
+          "gc_adj_log2fc": 0.07871505016898916,
+          "gc_adj_p": 0.566873869946498
+        },
+        "VPS4B": {
+          "n_als": 17,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.1499471516685207,
+          "unadjusted_p": 0.23422342315165717,
+          "gc_adj_log2fc": 0.3690740317089646,
+          "gc_adj_p": 0.005432755020784713
+        }
+      },
+      "Oligo": {
+        "UNC13A": {
+          "n_als": 14,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": -0.043489370816710594,
+          "unadjusted_p": 0.8953691518545754,
+          "gc_adj_log2fc": 0.16880583522205225,
+          "gc_adj_p": 0.6278180347932721
+        },
+        "STMN2": {
+          "n_als": 14,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": 1.0195693107624264,
+          "unadjusted_p": 0.048637936524897514,
+          "gc_adj_log2fc": 1.7081444621985822,
+          "gc_adj_p": 0.0003250822314237103
+        },
+        "KCNQ2": {
+          "n_als": 14,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": -1.3327959966552259,
+          "unadjusted_p": 0.007115469910857833,
+          "gc_adj_log2fc": -1.178075911115326,
+          "gc_adj_p": 0.02574660663369012
+        },
+        "CHMP7": {
+          "n_als": 14,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": -0.10104847873477582,
+          "unadjusted_p": 0.6950942424531781,
+          "gc_adj_log2fc": 0.18832948613732553,
+          "gc_adj_p": 0.43659207723318305
+        },
+        "CHMP2B": {
+          "n_als": 14,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": -0.09998012564835401,
+          "unadjusted_p": 0.5079943207856504,
+          "gc_adj_log2fc": -0.0020333125104160014,
+          "gc_adj_p": 0.9897201746255733
+        },
+        "VPS4B": {
+          "n_als": 14,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": 0.14638919705055295,
+          "unadjusted_p": 0.1962140751533062,
+          "gc_adj_log2fc": 0.17822978274882992,
+          "gc_adj_p": 0.15157159627058053
+        }
+      },
+      "Astro": {
+        "UNC13A": {
+          "n_als": 17,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": -0.30766967425381286,
+          "unadjusted_p": 0.3492759485421624,
+          "gc_adj_log2fc": -0.10292736529333024,
+          "gc_adj_p": 0.7784602118571983
+        },
+        "STMN2": {
+          "n_als": 17,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": 1.1531763154589785,
+          "unadjusted_p": 0.0938136317699685,
+          "gc_adj_log2fc": 1.7416322735422187,
+          "gc_adj_p": 0.02348134665933786
+        },
+        "KCNQ2": {
+          "n_als": 17,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": -0.18280165867777143,
+          "unadjusted_p": 0.5239284394537094,
+          "gc_adj_log2fc": -0.09491150021552586,
+          "gc_adj_p": 0.7714241457467472
+        },
+        "CHMP7": {
+          "n_als": 17,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": -0.036201762066345566,
+          "unadjusted_p": 0.9103399620475526,
+          "gc_adj_log2fc": 0.19009850513752544,
+          "gc_adj_p": 0.596127738561147
+        },
+        "CHMP2B": {
+          "n_als": 17,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": 0.030745857304218027,
+          "unadjusted_p": 0.8643063760187659,
+          "gc_adj_log2fc": 0.08450538334297936,
+          "gc_adj_p": 0.6813357916236037
+        },
+        "VPS4B": {
+          "n_als": 17,
+          "n_ctrl": 15,
+          "unadjusted_log2fc": 0.2015231062043581,
+          "unadjusted_p": 0.14595612604440222,
+          "gc_adj_log2fc": 0.19590880994358795,
+          "gc_adj_p": 0.21640696675921267
+        }
+      },
+      "Micro": {
+        "UNC13A": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.8979182360572279,
+          "unadjusted_p": 0.21736007595262297,
+          "gc_adj_log2fc": 0.9006625071290846,
+          "gc_adj_p": 0.2823904691790966
+        },
+        "STMN2": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 1.2625421553914986,
+          "unadjusted_p": 0.15490207386287866,
+          "gc_adj_log2fc": 1.5699528683657682,
+          "gc_adj_p": 0.12401614639248253
+        },
+        "KCNQ2": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.029114743585915814,
+          "unadjusted_p": 0.9705836176697487,
+          "gc_adj_log2fc": 0.08167974873858219,
+          "gc_adj_p": 0.9285679230551993
+        },
+        "CHMP7": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": 0.3001940017964704,
+          "unadjusted_p": 0.6915962162253988,
+          "gc_adj_log2fc": 0.7890288126036485,
+          "gc_adj_p": 0.357132189850724
+        },
+        "CHMP2B": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.46668079322834666,
+          "unadjusted_p": 0.5476720673979713,
+          "gc_adj_log2fc": -1.0052104905976749,
+          "gc_adj_p": 0.2518909572861434
+        },
+        "VPS4B": {
+          "n_als": 16,
+          "n_ctrl": 16,
+          "unadjusted_log2fc": -0.1911008009819698,
+          "unadjusted_p": 0.7978637900162664,
+          "gc_adj_log2fc": -0.5069196304409924,
+          "gc_adj_p": 0.5529082643838318
+        }
+      }
+    },
+    "pineda_mmc2_deg_membership": {
+      "Ex.L4_L6.RORB_LRRK1": [
+        "STMN2"
+      ]
+    }
+  },
+  "edinburgh_gse290359_pseudobulk": {
+    "BA44": {
+      "Excitatory": {
+        "UNC13A": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": 0.10769846684702067,
+          "unadjusted_p": 0.42612432233978365,
+          "gc_adj_log2fc": 0.12033895917953852,
+          "gc_adj_p": 0.2459904654412116
+        },
+        "STMN2": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.20049799707437232,
+          "unadjusted_p": 0.63950905859797,
+          "gc_adj_log2fc": -0.15199221623300208,
+          "gc_adj_p": 0.5550069058299822
+        },
+        "KCNQ2": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.18723425672734884,
+          "unadjusted_p": 0.39373021624651555,
+          "gc_adj_log2fc": -0.1764441352873105,
+          "gc_adj_p": 0.4017423765922414
+        },
+        "CHMP7": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.049848213691983334,
+          "unadjusted_p": 0.7875634859123661,
+          "gc_adj_log2fc": -0.03048853026362819,
+          "gc_adj_p": 0.8087635393558553
+        },
+        "CHMP2B": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.12418508561150943,
+          "unadjusted_p": 0.6064474256199727,
+          "gc_adj_log2fc": -0.1083793640667381,
+          "gc_adj_p": 0.6192612216859503
+        },
+        "VPS4B": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.03743388265124192,
+          "unadjusted_p": 0.8229184667078837,
+          "gc_adj_log2fc": -0.02607096987464952,
+          "gc_adj_p": 0.8618917574062175
+        }
+      },
+      "Inhibitory": {
+        "UNC13A": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.05062096165897634,
+          "unadjusted_p": 0.813837927582481,
+          "gc_adj_log2fc": -0.05483525619255114,
+          "gc_adj_p": 0.7476182947315906
+        },
+        "STMN2": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.1674999599826803,
+          "unadjusted_p": 0.609192857208379,
+          "gc_adj_log2fc": -0.1761788742473951,
+          "gc_adj_p": 0.31080407811718147
+        },
+        "KCNQ2": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.1028914829334262,
+          "unadjusted_p": 0.513429063891763,
+          "gc_adj_log2fc": -0.10599055978186311,
+          "gc_adj_p": 0.39460834037561543
+        },
+        "CHMP7": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.3849397261949409,
+          "unadjusted_p": 0.5061321596422602,
+          "gc_adj_log2fc": -0.38739481866413283,
+          "gc_adj_p": 0.5095515770173069
+        },
+        "CHMP2B": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.31694683484654296,
+          "unadjusted_p": 0.6304632205761173,
+          "gc_adj_log2fc": -0.31708800094811873,
+          "gc_adj_p": 0.6383768152324837
+        },
+        "VPS4B": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": 0.11654087020910109,
+          "unadjusted_p": 0.591557058759488,
+          "gc_adj_log2fc": 0.11214761574493615,
+          "gc_adj_p": 0.5051838714876321
+        }
+      },
+      "Oligo": {
+        "UNC13A": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.983465244110433,
+          "unadjusted_p": 0.28781819751931037,
+          "gc_adj_log2fc": -0.9867204433052107,
+          "gc_adj_p": 0.2936817019474338
+        },
+        "STMN2": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -1.0513189857721188,
+          "unadjusted_p": 0.3299021332220966,
+          "gc_adj_log2fc": -1.0519426797341973,
+          "gc_adj_p": 0.3410214355496909
+        },
+        "KCNQ2": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.2119937525026503,
+          "unadjusted_p": 0.770573873861911,
+          "gc_adj_log2fc": -0.2216548037983601,
+          "gc_adj_p": 0.7329277829845559
+        },
+        "CHMP7": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.7916906215067618,
+          "unadjusted_p": 0.31332747265596583,
+          "gc_adj_log2fc": -0.7891459671500686,
+          "gc_adj_p": 0.32291154537715544
+        },
+        "CHMP2B": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.655732148030894,
+          "unadjusted_p": 0.3420919501949441,
+          "gc_adj_log2fc": -0.6564298612201094,
+          "gc_adj_p": 0.35273842032117236
+        },
+        "VPS4B": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": 0.0648017527626128,
+          "unadjusted_p": 0.7292633440333257,
+          "gc_adj_log2fc": 0.0643513339185997,
+          "gc_adj_p": 0.7361634496226378
+        }
+      },
+      "Astro": {
+        "UNC13A": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": 0.029787728929760338,
+          "unadjusted_p": 0.9733857224567342,
+          "gc_adj_log2fc": 0.07861528424772402,
+          "gc_adj_p": 0.9312946595961314
+        },
+        "STMN2": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -1.3313473921310974,
+          "unadjusted_p": 0.15465144441017128,
+          "gc_adj_log2fc": -1.4322673901796517,
+          "gc_adj_p": 0.12652667076812243
+        },
+        "KCNQ2": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.20637476728370135,
+          "unadjusted_p": 0.8054043723619413,
+          "gc_adj_log2fc": -0.1775338067630629,
+          "gc_adj_p": 0.8362958096769751
+        },
+        "CHMP7": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.05355558063474508,
+          "unadjusted_p": 0.9493548530859854,
+          "gc_adj_log2fc": 0.06609271795864691,
+          "gc_adj_p": 0.9359884831307779
+        },
+        "CHMP2B": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": 0.5680630452823987,
+          "unadjusted_p": 0.5667638476107578,
+          "gc_adj_log2fc": 0.6581740664159821,
+          "gc_adj_p": 0.5106113753866789
+        },
+        "VPS4B": {
+          "n_als": 18,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": 0.7348416944251852,
+          "unadjusted_p": 0.4132985970402981,
+          "gc_adj_log2fc": 0.8469866406151944,
+          "gc_adj_p": 0.34122352920662474
+        }
+      },
+      "Micro": {
+        "UNC13A": {
+          "n_als": 17,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.43193354455938215,
+          "unadjusted_p": 0.7006382930776184,
+          "gc_adj_log2fc": -0.4685405309039704,
+          "gc_adj_p": 0.6823418356566324
+        },
+        "STMN2": {
+          "n_als": 17,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.562386043655009,
+          "unadjusted_p": 0.584041606026798,
+          "gc_adj_log2fc": -0.6306915740281578,
+          "gc_adj_p": 0.536357192639333
+        },
+        "KCNQ2": {
+          "n_als": 17,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": 0.27219748544709677,
+          "unadjusted_p": 0.7987082947706033,
+          "gc_adj_log2fc": 0.1311329455628023,
+          "gc_adj_p": 0.888981597290291
+        },
+        "CHMP7": {
+          "n_als": 17,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": 0.4798477219975019,
+          "unadjusted_p": 0.5782965591385001,
+          "gc_adj_log2fc": 0.4950662086130489,
+          "gc_adj_p": 0.5757239317034021
+        },
+        "CHMP2B": {
+          "n_als": 17,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": 0.6339211118043877,
+          "unadjusted_p": 0.4691484535354987,
+          "gc_adj_log2fc": 0.6461195475098104,
+          "gc_adj_p": 0.471940342956921
+        },
+        "VPS4B": {
+          "n_als": 17,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.3182966083357448,
+          "unadjusted_p": 0.29566549121520597,
+          "gc_adj_log2fc": -0.30565952909272576,
+          "gc_adj_p": 0.32120466301538997
+        }
+      }
+    },
+    "BA46": {
+      "Excitatory": {
+        "UNC13A": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.25019675491680127,
+          "unadjusted_p": 0.01625008897996444,
+          "gc_adj_log2fc": -0.14073354936731408,
+          "gc_adj_p": 0.05459291266430618
+        },
+        "STMN2": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.5119972039226308,
+          "unadjusted_p": 0.19203620324348547,
+          "gc_adj_log2fc": 0.02972101609807387,
+          "gc_adj_p": 0.8461978262418244
+        },
+        "KCNQ2": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.3016412877850624,
+          "unadjusted_p": 0.01550075452051803,
+          "gc_adj_log2fc": -0.34031023257140736,
+          "gc_adj_p": 0.010900859423846034
+        },
+        "CHMP7": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.2190133391575888,
+          "unadjusted_p": 0.31727301865468754,
+          "gc_adj_log2fc": 0.07814623828707257,
+          "gc_adj_p": 0.4351615362479077
+        },
+        "CHMP2B": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.1012942136612277,
+          "unadjusted_p": 0.6648584543792743,
+          "gc_adj_log2fc": 0.23779422230465064,
+          "gc_adj_p": 0.0035179905955420795
+        },
+        "VPS4B": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.08042069031083987,
+          "unadjusted_p": 0.5300611585279762,
+          "gc_adj_log2fc": 0.08706877003567248,
+          "gc_adj_p": 0.216863422710452
+        }
+      },
+      "Inhibitory": {
+        "UNC13A": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.4002592046056488,
+          "unadjusted_p": 0.0025216634814772656,
+          "gc_adj_log2fc": -0.2602266467802399,
+          "gc_adj_p": 0.012728197517529894
+        },
+        "STMN2": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.5452868163531737,
+          "unadjusted_p": 0.08280871062487842,
+          "gc_adj_log2fc": -0.05008570978718496,
+          "gc_adj_p": 0.6918235801996935
+        },
+        "KCNQ2": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.1655907212411999,
+          "unadjusted_p": 0.2514974909501969,
+          "gc_adj_log2fc": -0.15753927993770533,
+          "gc_adj_p": 0.3218816720080242
+        },
+        "CHMP7": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.2621465382194086,
+          "unadjusted_p": 0.14414322866566448,
+          "gc_adj_log2fc": -0.051236501071166174,
+          "gc_adj_p": 0.7168926617735598
+        },
+        "CHMP2B": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.10770326764931593,
+          "unadjusted_p": 0.5987231660933439,
+          "gc_adj_log2fc": 0.21828226117476723,
+          "gc_adj_p": 0.03342954805679534
+        },
+        "VPS4B": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.36642834081505127,
+          "unadjusted_p": 0.04459320135212834,
+          "gc_adj_log2fc": -0.11887048286038748,
+          "gc_adj_p": 0.29838404674966085
+        }
+      },
+      "Oligo": {
+        "UNC13A": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.27286725811915613,
+          "unadjusted_p": 0.6412559327147261,
+          "gc_adj_log2fc": -0.30822075306793134,
+          "gc_adj_p": 0.6215998641762295
+        },
+        "STMN2": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.17907916743014063,
+          "unadjusted_p": 0.7015918936501072,
+          "gc_adj_log2fc": 0.061926199533498205,
+          "gc_adj_p": 0.8913618903539402
+        },
+        "KCNQ2": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.1402712805338052,
+          "unadjusted_p": 0.820841744738279,
+          "gc_adj_log2fc": 0.038714028336519116,
+          "gc_adj_p": 0.9519609417974872
+        },
+        "CHMP7": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": 0.1825494285230423,
+          "unadjusted_p": 0.2839122997783428,
+          "gc_adj_log2fc": 0.25595964052994163,
+          "gc_adj_p": 0.1387205371522998
+        },
+        "CHMP2B": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.35774479717438246,
+          "unadjusted_p": 0.20145539890271802,
+          "gc_adj_log2fc": -0.35573895763786256,
+          "gc_adj_p": 0.23304867384195058
+        },
+        "VPS4B": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.16992569433602078,
+          "unadjusted_p": 0.1334254088618372,
+          "gc_adj_log2fc": -0.10860808641901809,
+          "gc_adj_p": 0.3080176562906976
+        }
+      },
+      "Astro": {
+        "UNC13A": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.510582671242553,
+          "unadjusted_p": 0.19744816940986795,
+          "gc_adj_log2fc": -0.3539705101565236,
+          "gc_adj_p": 0.39544166846567996
+        },
+        "STMN2": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": 0.17637198970893964,
+          "unadjusted_p": 0.8443109794567856,
+          "gc_adj_log2fc": 0.5499977319629759,
+          "gc_adj_p": 0.5655896197860322
+        },
+        "KCNQ2": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": 0.05734123023249221,
+          "unadjusted_p": 0.9262621345090424,
+          "gc_adj_log2fc": 0.31144537831110913,
+          "gc_adj_p": 0.6371691343976722
+        },
+        "CHMP7": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": 0.4614389079265776,
+          "unadjusted_p": 0.4270692089473713,
+          "gc_adj_log2fc": 0.6551861200929014,
+          "gc_adj_p": 0.29691150433994434
+        },
+        "CHMP2B": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": 0.07446825940399893,
+          "unadjusted_p": 0.7879883750655354,
+          "gc_adj_log2fc": 0.3451080003616529,
+          "gc_adj_p": 0.16985974141674423
+        },
+        "VPS4B": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.1384598640251895,
+          "unadjusted_p": 0.5734020093241264,
+          "gc_adj_log2fc": -0.21185790521898284,
+          "gc_adj_p": 0.4265458694911983
+        }
+      },
+      "Micro": {
+        "UNC13A": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.8684941746055622,
+          "unadjusted_p": 0.47700940743633397,
+          "gc_adj_log2fc": -0.8301708023787738,
+          "gc_adj_p": 0.5092957881249093
+        },
+        "STMN2": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.5860207843623337,
+          "unadjusted_p": 0.5301048048869085,
+          "gc_adj_log2fc": -0.5715601709296316,
+          "gc_adj_p": 0.5529306479142679
+        },
+        "KCNQ2": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -1.2950784853730184,
+          "unadjusted_p": 0.20378897579292088,
+          "gc_adj_log2fc": -1.2180490943068325,
+          "gc_adj_p": 0.24014003028241682
+        },
+        "CHMP7": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.7706250905345555,
+          "unadjusted_p": 0.37672995508388757,
+          "gc_adj_log2fc": -0.8009676785921325,
+          "gc_adj_p": 0.37279396885269867
+        },
+        "CHMP2B": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.7954611764230001,
+          "unadjusted_p": 0.27855710232215797,
+          "gc_adj_log2fc": -0.9566423751638748,
+          "gc_adj_p": 0.1602782854491228
+        },
+        "VPS4B": {
+          "n_als": 16,
+          "n_ctrl": 6,
+          "unadjusted_log2fc": -0.20679704342405947,
+          "unadjusted_p": 0.31562576229402134,
+          "gc_adj_log2fc": -0.1814201821394008,
+          "gc_adj_p": 0.37662798429281175
+        }
+      }
+    }
+  },
+  "consortia_2026_fulltexts": {
+    "PMC12919128_Tsitkov_2026_AALS594.txt": {
+      "UNC13A": {
+        "mention_count": 1,
+        "snippets": [
+          "tial to identify non-coding mutations causing disease. For example, two common intronic variants in UNC13A, (among the top GWAS hits4), were found to increase patient vulnerability by altering cryptic exonic splicing5.  Despite these advances, elucidating the functional impact of"
+        ]
+      },
+      "STMN2": {
+        "mention_count": 0,
+        "snippets": []
+      },
+      "KCNQ2": {
+        "mention_count": 0,
+        "snippets": []
+      },
+      "CHMP7": {
+        "mention_count": 0,
+        "snippets": []
+      },
+      "CHMP2B": {
+        "mention_count": 0,
+        "snippets": []
+      },
+      "VPS4B": {
+        "mention_count": 0,
+        "snippets": []
+      }
+    },
+    "PMC12982666_M1_snMultiome_2026.txt": {
+      "UNC13A": {
+        "mention_count": 1,
+        "snippets": [
+          "NPA1, NEFH, PFN1, SETX, UBQLN2, VAPB, VEGFA and with known association to ALS/ALS-FTD: NEFL, STMN2, UNC13A, NPTX1, NPTX2 and NPTXR, amongst others.  Interestingly, gene expression was regulated more concordantly between different cell types in a disease group than between disease"
+        ]
+      },
+      "STMN2": {
+        "mention_count": 16,
+        "snippets": [
+          " the oxidative phosphorylation pathways. DEGs included known targets of TDP-43 pathology, including STMN2, EPHA4, NPTX2 and its receptor NPTXR, which were all down-regulated in ALS/ALS-FTD. Taken together, this low-resolution analysis demonstrates robust transcriptomic remodeling",
+          "RN, HNRNPA1, NEFH, PFN1, SETX, UBQLN2, VAPB, VEGFA and with known association to ALS/ALS-FTD: NEFL, STMN2, UNC13A, NPTX1, NPTX2 and NPTXR, amongst others.  Interestingly, gene expression was regulated more concordantly between different cell types in a disease group than between ",
+          "logy in the TDP-43 Low fraction. The known and recently well-described targets of TDP-43 pathology, STMN2 and NPTX2 were also down-regulated in TDP-43\u00a0Low nuclei, in accordance with previous reports. Interestingly, NPTXR, the receptor for NPTX2 was also down-regulated, in line wi",
+          "h bulk RNA-seq, two could be previously detected in 10X Genomics 3\u2019GEX single-nucleus RNA-seq data: STMN2 and KALRN CEs18. We could detect reads spanning the CE junctions in both genes with significantly higher counts than the previous report, but only in the TDP-43 Low nuclei (F",
+          "test statistics. e Genomic track visualization of read coverage over the CE between exon 1 and 2 of STMN2 (red box). Blue track: TDP-43 High nuclei, yellow track: TDP-43 Low nuclei. Coverage visualized with BigWig. f, g CE counts in each TDP-43 fraction in STMN2 (f) and KALRN (g)"
+        ]
+      },
+      "KCNQ2": {
+        "mention_count": 0,
+        "snippets": []
+      },
+      "CHMP7": {
+        "mention_count": 0,
+        "snippets": []
+      },
+      "CHMP2B": {
+        "mention_count": 1,
+        "snippets": [
+          "ogenic variants in 43 known ALS-associated genes (ALS2, ANG, ARHGEF28, ATXN2, BSCL2, CCNF, CHCHD10, CHMP2B, DCTN1, ERBB4, FIG4, FUS, GBE1, GLE1, GRN, HNRNPA1, HNRNPA2B1, HSPB1, HSPB8, MAPT, MATR3, MME, NEFH, NEK1, OPTN, PFN1, PRPH, SETX, SIGMAR1, SOD1, SPG11, SPG20, SQSTM1, TAF15"
+        ]
+      },
+      "VPS4B": {
+        "mention_count": 0,
+        "snippets": []
+      }
+    },
+    "PMC13337491_Zhang_2026_Spatial.txt": {
+      "UNC13A": {
+        "mention_count": 0,
+        "snippets": []
+      },
+      "STMN2": {
+        "mention_count": 23,
+        "snippets": [
+          " only found two downregulated genes in ALS tissues\u2014neurofilament light chain (NEFL) and stathmin 2 (STMN2), likely reflecting MN loss (Fig. 5d and Source data Fig.\u20095d). The level of neurofilament light chain protein detected in CSF and blood has emerged as a reliable biomarker of",
+          "n CSF and blood has emerged as a reliable biomarker of neuroaxonal damage in ALS clinical trials35. STMN2 has a crucial role in maintaining neurofilament-dependent axoplasmic organization, essential for preserving the caliber and conduction velocity of myelinated large-diameter a",
+          "or preserving the caliber and conduction velocity of myelinated large-diameter axons36. Critically, STMN2 mRNA is a target of TAR DNA-binding protein 43 (TDP-43), which binds it directly to maintain its splicing fidelity37. In ALS, TDP-43 dysfunction leads to the mis-splicing and",
+          "its splicing fidelity37. In ALS, TDP-43 dysfunction leads to the mis-splicing and downregulation of STMN2 (refs. 37\u201340). These findings highlight region-specific transcriptional changes in the ALS spinal cord, with complement activation and APOC1 upregulation emerging as key mole",
+          "lymphocytes inferred from bulk RNA-seq-based cellular deconvolution in ALS samples in which cryptic STMN2 was present (n\u2009=\u2009122) or absent (n\u2009=\u2009118). Box plots show median (centerline), IQR (box), and 1.5\u00d7 IQR whiskers. Statistical significance determined by Wilcoxon rank sum exac"
+        ]
+      },
+      "KCNQ2": {
+        "mention_count": 0,
+        "snippets": []
+      },
+      "CHMP7": {
+        "mention_count": 0,
+        "snippets": []
+      },
+      "CHMP2B": {
+        "mention_count": 0,
+        "snippets": []
+      },
+      "VPS4B": {
+        "mention_count": 0,
+        "snippets": []
+      }
+    }
+  }
+}

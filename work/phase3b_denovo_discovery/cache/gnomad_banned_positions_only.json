@@ -1,0 +1,76 @@
+{
+  "chr2:241668845-241669015": {
+    "total_gnomad_r4_variants": 263,
+    "banned_positions_af_ge_0p001": [
+      241668907,
+      241668948
+    ]
+  },
+  "chr3:124701070-124701285": {
+    "total_gnomad_r4_variants": 52,
+    "banned_positions_af_ge_0p001": [
+      124701216,
+      124701255
+    ]
+  },
+  "chr19:3278180-3278345": {
+    "total_gnomad_r4_variants": 179,
+    "banned_positions_af_ge_0p001": [
+      3278208
+    ]
+  },
+  "chr10:3099530-3099845": {
+    "total_gnomad_r4_variants": 99,
+    "banned_positions_af_ge_0p001": [
+      3099570,
+      3099576,
+      3099689,
+      3099753,
+      3099754,
+      3099778,
+      3099814
+    ]
+  },
+  "chr2:3457770-3457885": {
+    "total_gnomad_r4_variants": 132,
+    "banned_positions_af_ge_0p001": []
+  },
+  "chrX:47631595-47631725": {
+    "total_gnomad_r4_variants": 13,
+    "banned_positions_af_ge_0p001": []
+  },
+  "chr18:4147580-4147695": {
+    "total_gnomad_r4_variants": 39,
+    "banned_positions_af_ge_0p001": []
+  },
+  "chr2:241668870-241669005": {
+    "total_gnomad_r4_variants": 212,
+    "banned_positions_af_ge_0p001": [
+      241668907,
+      241668948
+    ]
+  },
+  "chr3:124701256-124701282": {
+    "total_gnomad_r4_variants": 8,
+    "banned_positions_af_ge_0p001": []
+  },
+  "chr3:124701075-124701115": {
+    "total_gnomad_r4_variants": 7,
+    "banned_positions_af_ge_0p001": []
+  },
+  "chr2:3457770-3457820": {
+    "total_gnomad_r4_variants": 63,
+    "banned_positions_af_ge_0p001": []
+  },
+  "chrX:47631625-47632050": {
+    "total_gnomad_r4_variants": 63,
+    "banned_positions_af_ge_0p001": [
+      47631982,
+      47632011
+    ]
+  },
+  "chr18:4147642-4147692": {
+    "total_gnomad_r4_variants": 14,
+    "banned_positions_af_ge_0p001": []
+  }
+}

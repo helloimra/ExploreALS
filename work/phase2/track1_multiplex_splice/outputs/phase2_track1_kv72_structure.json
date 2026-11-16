@@ -1,0 +1,214 @@
+{
+  "pdb_id": "7CR2",
+  "cif_path": "data\\pharmacology_structures\\phase2_pdb\\pdb_00007cr2.cif",
+  "resolved_chains": {
+    "A": {
+      "count": 251,
+      "min_seq": 70,
+      "max_seq": 330
+    },
+    "B": {
+      "count": 251,
+      "min_seq": 70,
+      "max_seq": 330
+    },
+    "C": {
+      "count": 251,
+      "min_seq": 70,
+      "max_seq": 330
+    },
+    "D": {
+      "count": 251,
+      "min_seq": 70,
+      "max_seq": 330
+    }
+  },
+  "chain_A_exon5_residues": {
+    "expected_range": [
+      231,
+      272
+    ],
+    "resolved_count": 42,
+    "resolved_min": 231,
+    "resolved_max": 272,
+    "trp236_resolved": true,
+    "trp236_comp": "TRP"
+  },
+  "intra_subunit_chainA_contacts_le_5A": {
+    "S1_S3_VSD": {
+      "count": 0,
+      "residues": []
+    },
+    "S4_voltage_sensor": {
+      "count": 0,
+      "residues": []
+    },
+    "S4_S5_linker": {
+      "count": 5,
+      "residues": [
+        "VAL225(4.28A)",
+        "ALA227(4.61A)",
+        "HIS228(3.00A)",
+        "SER229(3.01A)",
+        "LYS230(1.33A)"
+      ]
+    },
+    "P_helix_selectivity_filter": {
+      "count": 14,
+      "residues": [
+        "ILE273(1.33A)",
+        "THR274(2.82A)",
+        "LEU275(3.02A)",
+        "THR276(2.96A)",
+        "TYR280(4.21A)",
+        "ASP282(3.24A)",
+        "LYS283(2.66A)",
+        "TYR284(3.26A)",
+        "PRO285(2.82A)",
+        "GLN286(2.60A)",
+        "THR287(2.37A)",
+        "ASN289(3.87A)",
+        "GLY290(3.93A)",
+        "ARG291(4.74A)"
+      ]
+    },
+    "S6_inner_pore_gate": {
+      "count": 11,
+      "residues": [
+        "LEU293(4.18A)",
+        "ALA294(3.72A)",
+        "PHE297(3.23A)",
+        "ILE300(4.26A)",
+        "GLY301(3.98A)",
+        "PHE304(3.75A)",
+        "PHE305(3.70A)",
+        "LEU307(4.04A)",
+        "PRO308(3.36A)",
+        "ILE311(3.91A)",
+        "LEU312(4.07A)"
+      ]
+    },
+    "Helix_A_B_CaM_Cterm": {
+      "count": 0,
+      "residues": []
+    }
+  },
+  "inter_subunit_tetramer_contacts_le_5A": {
+    "count": 26,
+    "residues": [
+      "B:PRO285(4.18A)",
+      "B:TRP288(3.26A)",
+      "B:ARG291(3.22A)",
+      "B:ALA294(4.50A)",
+      "B:ALA295(3.49A)",
+      "B:LEU299(3.85A)",
+      "D:PHE104(4.22A)",
+      "D:LEU107(4.34A)",
+      "D:VAL111(3.93A)",
+      "D:THR114(3.70A)",
+      "D:ILE115(4.44A)",
+      "D:ARG201(3.78A)",
+      "D:PHE202(4.49A)",
+      "D:ILE205(4.94A)",
+      "D:MET208(3.92A)",
+      "D:ILE209(3.22A)",
+      "D:MET211(4.51A)",
+      "D:ASP212(3.25A)",
+      "D:THR217(3.81A)",
+      "D:TRP218(4.14A)",
+      "D:LEU220(3.93A)",
+      "D:LEU221(3.79A)",
+      "D:TYR280(3.10A)",
+      "D:PHE316(3.33A)",
+      "D:LYS319(4.62A)",
+      "D:VAL320(2.96A)"
+    ]
+  },
+  "ligands_and_retigabine_pocket": {
+    "FBX": {
+      "instances": 4,
+      "closest_instance_to_chainA_exon5": "A:801",
+      "min_dist_to_chainA_exon5_A": 2.97,
+      "min_dist_to_chainA_Trp236_A": 2.97,
+      "pocket_residues_within_4_5A": [
+        {
+          "chain": "A",
+          "auth_seq_id": 236,
+          "comp": "TRP",
+          "dist_A": 2.97,
+          "in_exon5": true
+        },
+        {
+          "chain": "A",
+          "auth_seq_id": 240,
+          "comp": "PHE",
+          "dist_A": 3.93,
+          "in_exon5": true
+        },
+        {
+          "chain": "A",
+          "auth_seq_id": 243,
+          "comp": "LEU",
+          "dist_A": 4.0,
+          "in_exon5": true
+        },
+        {
+          "chain": "A",
+          "auth_seq_id": 305,
+          "comp": "PHE",
+          "dist_A": 3.16,
+          "in_exon5": false
+        },
+        {
+          "chain": "A",
+          "auth_seq_id": 308,
+          "comp": "PRO",
+          "dist_A": 3.68,
+          "in_exon5": false
+        },
+        {
+          "chain": "A",
+          "auth_seq_id": 312,
+          "comp": "LEU",
+          "dist_A": 4.46,
+          "in_exon5": false
+        },
+        {
+          "chain": "B",
+          "auth_seq_id": 299,
+          "comp": "LEU",
+          "dist_A": 3.07,
+          "in_exon5": false
+        },
+        {
+          "chain": "B",
+          "auth_seq_id": 300,
+          "comp": "ILE",
+          "dist_A": 3.79,
+          "in_exon5": false
+        },
+        {
+          "chain": "B",
+          "auth_seq_id": 303,
+          "comp": "SER",
+          "dist_A": 3.18,
+          "in_exon5": false
+        },
+        {
+          "chain": "B",
+          "auth_seq_id": 304,
+          "comp": "PHE",
+          "dist_A": 4.48,
+          "in_exon5": false
+        },
+        {
+          "chain": "D",
+          "auth_seq_id": 104,
+          "comp": "PHE",
+          "dist_A": 4.19,
+          "in_exon5": false
+        }
+      ]
+    }
+  }
+}

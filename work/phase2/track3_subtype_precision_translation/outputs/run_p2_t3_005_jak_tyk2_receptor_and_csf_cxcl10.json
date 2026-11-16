@@ -1,0 +1,2895 @@
+{
+  "analysis_run_id": "RUN-P2-T3-005",
+  "nygc_motor_cortex": {
+    "stratum_counts": {
+      "ALS-Ox": 121,
+      "Control": 46,
+      "ALS-TE": 32,
+      "ALS-Glia": 13,
+      "Discordant": 2
+    },
+    "axis_composites": {
+      "gp130_JAK1_JAK2_STAT3_axis_spared_by_TYK2_JH2": {
+        "genes_present": [
+          "IL6ST",
+          "OSMR",
+          "OSM",
+          "LIFR",
+          "IL6R",
+          "STAT3",
+          "SOCS3",
+          "SERPINA3",
+          "CHI3L1",
+          "GPNMB"
+        ],
+        "glia_vs_ox_z_diff": 0.7031,
+        "glia_vs_ox_welch_p": 0.0006270890224223462,
+        "within_als_glia_auc": 0.7893,
+        "te_vs_ox_z_diff": 0.1795,
+        "te_vs_ox_welch_p": 0.13509822409948957,
+        "within_als_te_auc": 0.5543
+      },
+      "IFNg_JAK1_JAK2_STAT1_axis_spared_by_TYK2_JH2": {
+        "genes_present": [
+          "IFNGR1",
+          "IFNGR2",
+          "STAT1",
+          "IRF1",
+          "CXCL10",
+          "CXCL9",
+          "GBP1"
+        ],
+        "glia_vs_ox_z_diff": 0.1785,
+        "glia_vs_ox_welch_p": 0.10477776053918886,
+        "within_als_glia_auc": 0.6667,
+        "te_vs_ox_z_diff": -0.1011,
+        "te_vs_ox_welch_p": 0.29517411305561914,
+        "within_als_te_auc": 0.4354
+      },
+      "TypeI_IFN_IL12_23_TYK2_JH2_engaged_axis": {
+        "genes_present": [
+          "IFNAR1",
+          "IFNAR2",
+          "TYK2",
+          "JAK1",
+          "JAK2",
+          "STAT2",
+          "IRF9",
+          "ISG15",
+          "MX1",
+          "OAS1",
+          "IFIT1",
+          "IL12RB1",
+          "IL23R"
+        ],
+        "glia_vs_ox_z_diff": 0.2229,
+        "glia_vs_ox_welch_p": 0.012174833555899087,
+        "within_als_glia_auc": 0.6692,
+        "te_vs_ox_z_diff": 0.2125,
+        "te_vs_ox_welch_p": 0.0031910515602982686,
+        "within_als_te_auc": 0.6364
+      }
+    },
+    "genes": {
+      "CHI3L1": {
+        "gene_gc_pct": 54.27,
+        "glia_vs_ox_diff": 0.9411,
+        "glia_vs_ox_welch_p": 0.043666878759486716,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": 0.1601,
+          "adj_p": 0.6965750998668903
+        },
+        "glia_vs_ctrl_diff": 1.4587,
+        "glia_vs_ctrl_welch_p": 0.004712694138060015,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": 0.2381,
+          "adj_p": 0.6546927643214361
+        },
+        "within_als_glia_auc": 0.6581,
+        "te_vs_ox_diff": 0.6007,
+        "te_vs_ox_welch_p": 0.03554265278248947,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.8909,
+          "adj_p": 0.000611995554316
+        },
+        "te_vs_ctrl_diff": 1.1183,
+        "te_vs_ctrl_welch_p": 0.0008058280347779842,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 1.0026,
+          "adj_p": 0.0024054673174824736
+        },
+        "ox_vs_ctrl_diff": 0.5176,
+        "ox_vs_ctrl_welch_p": 0.027963463844480365,
+        "within_als_te_auc": 0.6143
+      },
+      "CHI3L2": {
+        "gene_gc_pct": 44.64,
+        "glia_vs_ox_diff": 1.4914,
+        "glia_vs_ox_welch_p": 0.008853359327273855,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": 0.1678,
+          "adj_p": 0.5841607978623281
+        },
+        "glia_vs_ctrl_diff": 2.2643,
+        "glia_vs_ctrl_welch_p": 0.0004151025744992918,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": 0.6644,
+          "adj_p": 0.12169003863990817
+        },
+        "within_als_glia_auc": 0.7788,
+        "te_vs_ox_diff": -0.3895,
+        "te_vs_ox_welch_p": 0.09689585622123562,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.0505,
+          "adj_p": 0.7795442830251185
+        },
+        "te_vs_ctrl_diff": 0.3833,
+        "te_vs_ctrl_welch_p": 0.1467449325779612,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.2487,
+          "adj_p": 0.2888556329687286
+        },
+        "ox_vs_ctrl_diff": 0.7728,
+        "ox_vs_ctrl_welch_p": 0.0001839884491113987,
+        "within_als_te_auc": 0.3717
+      },
+      "CHIT1": {
+        "gene_gc_pct": 45.2,
+        "glia_vs_ox_diff": 0.5735,
+        "glia_vs_ox_welch_p": 0.07256466694854105,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": 0.0367,
+          "adj_p": 0.83084088606578
+        },
+        "glia_vs_ctrl_diff": 0.7725,
+        "glia_vs_ctrl_welch_p": 0.02068884892324981,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": 0.3014,
+          "adj_p": 0.12171466809517317
+        },
+        "within_als_glia_auc": 0.6244,
+        "te_vs_ox_diff": -0.1682,
+        "te_vs_ox_welch_p": 0.011045391672208929,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": -0.1495,
+          "adj_p": 0.09250380557113327
+        },
+        "te_vs_ctrl_diff": 0.0308,
+        "te_vs_ctrl_welch_p": 0.6043510601772432,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.0359,
+          "adj_p": 0.567832617343754
+        },
+        "ox_vs_ctrl_diff": 0.199,
+        "ox_vs_ctrl_welch_p": 0.0006201373602036009,
+        "within_als_te_auc": 0.4014
+      },
+      "CXCL10": {
+        "gene_gc_pct": 36.98,
+        "glia_vs_ox_diff": 0.0147,
+        "glia_vs_ox_welch_p": 0.7880426493227324,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.0702,
+          "adj_p": 0.41667791349255723
+        },
+        "glia_vs_ctrl_diff": -0.2373,
+        "glia_vs_ctrl_welch_p": 0.0954913275763448,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.4532,
+          "adj_p": 0.17799047891973072
+        },
+        "within_als_glia_auc": 0.5581,
+        "te_vs_ox_diff": 0.0887,
+        "te_vs_ox_welch_p": 0.3511396872477119,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.1193,
+          "adj_p": 0.06510387861490893
+        },
+        "te_vs_ctrl_diff": -0.1633,
+        "te_vs_ctrl_welch_p": 0.30957192961291535,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": -0.1851,
+          "adj_p": 0.30906302767503924
+        },
+        "ox_vs_ctrl_diff": -0.252,
+        "ox_vs_ctrl_welch_p": 0.06450806479392591,
+        "within_als_te_auc": 0.5058
+      },
+      "CXCL9": {
+        "gene_gc_pct": 38.44,
+        "glia_vs_ox_diff": -0.0262,
+        "glia_vs_ox_welch_p": 0.3309519713821341,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.0821,
+          "adj_p": 0.2599866912777033
+        },
+        "glia_vs_ctrl_diff": -0.1576,
+        "glia_vs_ctrl_welch_p": 0.09804055559213584,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.272,
+          "adj_p": 0.2475155507386104
+        },
+        "within_als_glia_auc": 0.5173,
+        "te_vs_ox_diff": -0.0086,
+        "te_vs_ox_welch_p": 0.8562177384047679,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": -0.0287,
+          "adj_p": 0.5296569351387052
+        },
+        "te_vs_ctrl_diff": -0.1401,
+        "te_vs_ctrl_welch_p": 0.1717587126915955,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": -0.1197,
+          "adj_p": 0.3245468820426907
+        },
+        "ox_vs_ctrl_diff": -0.1314,
+        "ox_vs_ctrl_welch_p": 0.16855761528865207,
+        "within_als_te_auc": 0.3701
+      },
+      "GBP1": {
+        "gene_gc_pct": 39.25,
+        "glia_vs_ox_diff": 0.6082,
+        "glia_vs_ox_welch_p": 0.017214764160795037,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.0749,
+          "adj_p": 0.7637271608689421
+        },
+        "glia_vs_ctrl_diff": 0.7266,
+        "glia_vs_ctrl_welch_p": 0.009265207962292582,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": 0.1224,
+          "adj_p": 0.7378800025231077
+        },
+        "within_als_glia_auc": 0.7039,
+        "te_vs_ox_diff": 0.154,
+        "te_vs_ox_welch_p": 0.3810589764138628,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.4045,
+          "adj_p": 0.009841884614384377
+        },
+        "te_vs_ctrl_diff": 0.2724,
+        "te_vs_ctrl_welch_p": 0.1988597343518773,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.2545,
+          "adj_p": 0.23786675429163015
+        },
+        "ox_vs_ctrl_diff": 0.1184,
+        "ox_vs_ctrl_welch_p": 0.46617587177293823,
+        "within_als_te_auc": 0.5324
+      },
+      "GPNMB": {
+        "gene_gc_pct": 41.79,
+        "glia_vs_ox_diff": 0.5624,
+        "glia_vs_ox_welch_p": 0.06657489387040481,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.0944,
+          "adj_p": 0.6931543799442274
+        },
+        "glia_vs_ctrl_diff": 0.9776,
+        "glia_vs_ctrl_welch_p": 0.004278496660304664,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": 0.494,
+          "adj_p": 0.12486350197872309
+        },
+        "within_als_glia_auc": 0.6631,
+        "te_vs_ox_diff": 0.1036,
+        "te_vs_ox_welch_p": 0.500547886029239,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.1426,
+          "adj_p": 0.32977848108867225
+        },
+        "te_vs_ctrl_diff": 0.5189,
+        "te_vs_ctrl_welch_p": 0.0036631282303335225,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.4146,
+          "adj_p": 0.021776649444826976
+        },
+        "ox_vs_ctrl_diff": 0.4152,
+        "ox_vs_ctrl_welch_p": 0.0010293040319532057,
+        "within_als_te_auc": 0.5201
+      },
+      "IFIT1": {
+        "gene_gc_pct": 38.55,
+        "glia_vs_ox_diff": -0.1522,
+        "glia_vs_ox_welch_p": 0.19136533545423606,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.1727,
+          "adj_p": 0.026985064871791524
+        },
+        "glia_vs_ctrl_diff": 0.2914,
+        "glia_vs_ctrl_welch_p": 0.030206590138526272,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": 0.1767,
+          "adj_p": 0.23781236189994637
+        },
+        "within_als_glia_auc": 0.4123,
+        "te_vs_ox_diff": -0.3014,
+        "te_vs_ox_welch_p": 6.784353658744824e-05,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": -0.2566,
+          "adj_p": 7.155056475438534e-07
+        },
+        "te_vs_ctrl_diff": 0.1422,
+        "te_vs_ctrl_welch_p": 0.12035817334909989,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.0189,
+          "adj_p": 0.8219900038565371
+        },
+        "ox_vs_ctrl_diff": 0.4436,
+        "ox_vs_ctrl_welch_p": 3.3651799150506056e-08,
+        "within_als_te_auc": 0.2878
+      },
+      "IFNAR1": {
+        "gene_gc_pct": 41.36,
+        "glia_vs_ox_diff": 0.1569,
+        "glia_vs_ox_welch_p": 0.11539985709041511,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": 0.023,
+          "adj_p": 0.616848850563837
+        },
+        "glia_vs_ctrl_diff": 0.4105,
+        "glia_vs_ctrl_welch_p": 0.0006337239411170808,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": 0.0959,
+          "adj_p": 0.1891181246098625
+        },
+        "within_als_glia_auc": 0.6687,
+        "te_vs_ox_diff": -0.064,
+        "te_vs_ox_welch_p": 0.21383558227168847,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": -0.0605,
+          "adj_p": 0.03513012739162997
+        },
+        "te_vs_ctrl_diff": 0.1897,
+        "te_vs_ctrl_welch_p": 0.0027701991055348488,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.0306,
+          "adj_p": 0.4503342294412075
+        },
+        "ox_vs_ctrl_diff": 0.2537,
+        "ox_vs_ctrl_welch_p": 4.142667741446423e-06,
+        "within_als_te_auc": 0.42
+      },
+      "IFNAR2": {
+        "gene_gc_pct": 43.41,
+        "glia_vs_ox_diff": 0.2855,
+        "glia_vs_ox_welch_p": 0.003010791224369156,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": 0.1125,
+          "adj_p": 0.1255328700038624
+        },
+        "glia_vs_ctrl_diff": 0.1982,
+        "glia_vs_ctrl_welch_p": 0.03231008659131048,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.058,
+          "adj_p": 0.5010977377888155
+        },
+        "within_als_glia_auc": 0.6963,
+        "te_vs_ox_diff": 0.2793,
+        "te_vs_ox_welch_p": 6.322965630117102e-08,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.2784,
+          "adj_p": 3.872429624026916e-09
+        },
+        "te_vs_ctrl_diff": 0.192,
+        "te_vs_ctrl_welch_p": 0.0006622024845786411,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.1075,
+          "adj_p": 0.03762525825070896
+        },
+        "ox_vs_ctrl_diff": -0.0873,
+        "ox_vs_ctrl_welch_p": 0.06032453673253313,
+        "within_als_te_auc": 0.7698
+      },
+      "IFNGR1": {
+        "gene_gc_pct": 38.8,
+        "glia_vs_ox_diff": 0.2494,
+        "glia_vs_ox_welch_p": 0.03836554363575738,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.1406,
+          "adj_p": 0.08083545830430733
+        },
+        "glia_vs_ctrl_diff": 0.5587,
+        "glia_vs_ctrl_welch_p": 0.00014978738395328583,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.0051,
+          "adj_p": 0.96388685998508
+        },
+        "within_als_glia_auc": 0.72,
+        "te_vs_ox_diff": -0.2445,
+        "te_vs_ox_welch_p": 0.0005557933391054947,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": -0.131,
+          "adj_p": 0.009664343144308533
+        },
+        "te_vs_ctrl_diff": 0.0649,
+        "te_vs_ctrl_welch_p": 0.42520457684450796,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": -0.0585,
+          "adj_p": 0.3848838684677943
+        },
+        "ox_vs_ctrl_diff": 0.3094,
+        "ox_vs_ctrl_welch_p": 4.622768009167106e-06,
+        "within_als_te_auc": 0.2792
+      },
+      "IFNGR2": {
+        "gene_gc_pct": 44.41,
+        "glia_vs_ox_diff": -0.0813,
+        "glia_vs_ox_welch_p": 0.17207124799179804,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.0105,
+          "adj_p": 0.8501828310838391
+        },
+        "glia_vs_ctrl_diff": 0.0916,
+        "glia_vs_ctrl_welch_p": 0.1894267413291027,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": 0.0577,
+          "adj_p": 0.509913721468265
+        },
+        "within_als_glia_auc": 0.4148,
+        "te_vs_ox_diff": -0.0702,
+        "te_vs_ox_welch_p": 0.07840108858248061,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": -0.0364,
+          "adj_p": 0.2858520187629645
+        },
+        "te_vs_ctrl_diff": 0.1028,
+        "te_vs_ctrl_welch_p": 0.06270304560565505,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.0236,
+          "adj_p": 0.6259761157155327
+        },
+        "ox_vs_ctrl_diff": 0.1729,
+        "ox_vs_ctrl_welch_p": 0.0002225745471067933,
+        "within_als_te_auc": 0.4268
+      },
+      "IL12RB1": {
+        "gene_gc_pct": 51.1,
+        "glia_vs_ox_diff": 0.0641,
+        "glia_vs_ox_welch_p": 0.2564823464821804,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.0182,
+          "adj_p": 0.7926381679135568
+        },
+        "glia_vs_ctrl_diff": 0.027,
+        "glia_vs_ctrl_welch_p": 0.6721177819349183,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.0209,
+          "adj_p": 0.8344050088501742
+        },
+        "within_als_glia_auc": 0.5792,
+        "te_vs_ox_diff": 0.002,
+        "te_vs_ox_welch_p": 0.9664355720840078,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.0605,
+          "adj_p": 0.1318099650813898
+        },
+        "te_vs_ctrl_diff": -0.035,
+        "te_vs_ctrl_welch_p": 0.5452755411386566,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.0187,
+          "adj_p": 0.7078355382577649
+        },
+        "ox_vs_ctrl_diff": -0.037,
+        "ox_vs_ctrl_welch_p": 0.4167461150357516,
+        "within_als_te_auc": 0.4944
+      },
+      "IL23R": {
+        "gene_gc_pct": 39.87,
+        "glia_vs_ox_diff": -0.0029,
+        "glia_vs_ox_welch_p": 0.1639242404115515,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.0026,
+          "adj_p": 0.5209287244088454
+        },
+        "glia_vs_ctrl_diff": -0.0044,
+        "glia_vs_ctrl_welch_p": 0.14907299326932644,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.0076,
+          "adj_p": 0.23823188601148512
+        },
+        "within_als_glia_auc": 0.4741,
+        "te_vs_ox_diff": -0.0033,
+        "te_vs_ox_welch_p": 0.058435148272344486,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": -0.0028,
+          "adj_p": 0.2344995374567683
+        },
+        "te_vs_ctrl_diff": -0.0048,
+        "te_vs_ctrl_welch_p": 0.09317077559900439,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": -0.0066,
+          "adj_p": 0.05629567526463985
+        },
+        "ox_vs_ctrl_diff": -0.0015,
+        "ox_vs_ctrl_welch_p": 0.5819152579309402,
+        "within_als_te_auc": 0.4462
+      },
+      "IL6R": {
+        "gene_gc_pct": 49.12,
+        "glia_vs_ox_diff": 0.2713,
+        "glia_vs_ox_welch_p": 0.048552808212402376,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.0151,
+          "adj_p": 0.9001784042505827
+        },
+        "glia_vs_ctrl_diff": -0.0199,
+        "glia_vs_ctrl_welch_p": 0.8869660684401078,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.3399,
+          "adj_p": 0.038464638866771594
+        },
+        "within_als_glia_auc": 0.6305,
+        "te_vs_ox_diff": 0.3139,
+        "te_vs_ox_welch_p": 0.0006935168865834436,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.3886,
+          "adj_p": 3.749601518423854e-07
+        },
+        "te_vs_ctrl_diff": 0.0227,
+        "te_vs_ctrl_welch_p": 0.8273978745029433,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.0577,
+          "adj_p": 0.5424511864086478
+        },
+        "ox_vs_ctrl_diff": -0.2913,
+        "ox_vs_ctrl_welch_p": 0.0003251964132031616,
+        "within_als_te_auc": 0.6908
+      },
+      "IL6ST": {
+        "gene_gc_pct": 37.44,
+        "glia_vs_ox_diff": 0.2836,
+        "glia_vs_ox_welch_p": 0.03248843237516732,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.0988,
+          "adj_p": 0.11805704880650486
+        },
+        "glia_vs_ctrl_diff": 0.7014,
+        "glia_vs_ctrl_welch_p": 3.0867156253437036e-05,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": 0.0378,
+          "adj_p": 0.6987121176637614
+        },
+        "within_als_glia_auc": 0.7285,
+        "te_vs_ox_diff": -0.2244,
+        "te_vs_ox_welch_p": 0.002910455492164872,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": -0.1632,
+          "adj_p": 7.689247068639978e-05
+        },
+        "te_vs_ctrl_diff": 0.1934,
+        "te_vs_ctrl_welch_p": 0.0335468684286003,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": -0.0212,
+          "adj_p": 0.721528169667078
+        },
+        "ox_vs_ctrl_diff": 0.4178,
+        "ox_vs_ctrl_welch_p": 1.5703319468756125e-07,
+        "within_als_te_auc": 0.3517
+      },
+      "IRF1": {
+        "gene_gc_pct": 49.64,
+        "glia_vs_ox_diff": 0.3407,
+        "glia_vs_ox_welch_p": 0.05479716807801241,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": 0.1208,
+          "adj_p": 0.5493031531889172
+        },
+        "glia_vs_ctrl_diff": -0.0004,
+        "glia_vs_ctrl_welch_p": 0.9982858517658387,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.2343,
+          "adj_p": 0.40110328467516704
+        },
+        "within_als_glia_auc": 0.6516,
+        "te_vs_ox_diff": 0.2847,
+        "te_vs_ox_welch_p": 0.03851724119314784,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.3813,
+          "adj_p": 0.00236073404667526
+        },
+        "te_vs_ctrl_diff": -0.0563,
+        "te_vs_ctrl_welch_p": 0.7278436410285133,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": -0.0477,
+          "adj_p": 0.7761609471859959
+        },
+        "ox_vs_ctrl_diff": -0.3411,
+        "ox_vs_ctrl_welch_p": 0.006387443669538178,
+        "within_als_te_auc": 0.6024
+      },
+      "IRF9": {
+        "gene_gc_pct": 53.31,
+        "glia_vs_ox_diff": 0.2772,
+        "glia_vs_ox_welch_p": 0.0005718256378046716,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": 0.1562,
+          "adj_p": 0.10427718525427987
+        },
+        "glia_vs_ctrl_diff": 0.0518,
+        "glia_vs_ctrl_welch_p": 0.5601709918256538,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.1662,
+          "adj_p": 0.21842697734688435
+        },
+        "within_als_glia_auc": 0.7064,
+        "te_vs_ox_diff": 0.1787,
+        "te_vs_ox_welch_p": 0.07819349041203176,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.3094,
+          "adj_p": 1.7497149284817389e-06
+        },
+        "te_vs_ctrl_diff": -0.0467,
+        "te_vs_ctrl_welch_p": 0.6804460623755338,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.0487,
+          "adj_p": 0.5616829817452217
+        },
+        "ox_vs_ctrl_diff": -0.2254,
+        "ox_vs_ctrl_welch_p": 0.004090974846015681,
+        "within_als_te_auc": 0.5714
+      },
+      "ISG15": {
+        "gene_gc_pct": 56.44,
+        "glia_vs_ox_diff": -0.2389,
+        "glia_vs_ox_welch_p": 0.1171041423712213,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.0377,
+          "adj_p": 0.7422258819063898
+        },
+        "glia_vs_ctrl_diff": -0.4725,
+        "glia_vs_ctrl_welch_p": 0.009233002102424179,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.1078,
+          "adj_p": 0.5961387016275879
+        },
+        "within_als_glia_auc": 0.3831,
+        "te_vs_ox_diff": -0.0384,
+        "te_vs_ox_welch_p": 0.738284980668437,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.0416,
+          "adj_p": 0.5766258833567429
+        },
+        "te_vs_ctrl_diff": -0.272,
+        "te_vs_ctrl_welch_p": 0.06287122150141657,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": -0.0252,
+          "adj_p": 0.8362879988861935
+        },
+        "ox_vs_ctrl_diff": -0.2336,
+        "ox_vs_ctrl_welch_p": 0.044880034890948536,
+        "within_als_te_auc": 0.4795
+      },
+      "JAK1": {
+        "gene_gc_pct": 42.71,
+        "glia_vs_ox_diff": -0.0627,
+        "glia_vs_ox_welch_p": 0.1571988910155762,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.1276,
+          "adj_p": 0.0020669997720005506
+        },
+        "glia_vs_ctrl_diff": 0.0642,
+        "glia_vs_ctrl_welch_p": 0.2445163180083785,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.0903,
+          "adj_p": 0.2926310248000151
+        },
+        "within_als_glia_auc": 0.4258,
+        "te_vs_ox_diff": -0.0317,
+        "te_vs_ox_welch_p": 0.36446155666865016,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": -0.034,
+          "adj_p": 0.18000554810378785
+        },
+        "te_vs_ctrl_diff": 0.0951,
+        "te_vs_ctrl_welch_p": 0.053656680875442515,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.0054,
+          "adj_p": 0.9055122628302998
+        },
+        "ox_vs_ctrl_diff": 0.1268,
+        "ox_vs_ctrl_welch_p": 0.002481541238423515,
+        "within_als_te_auc": 0.4471
+      },
+      "JAK2": {
+        "gene_gc_pct": 37.57,
+        "glia_vs_ox_diff": 0.0209,
+        "glia_vs_ox_welch_p": 0.7547715250674796,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.1507,
+          "adj_p": 0.01858530461880243
+        },
+        "glia_vs_ctrl_diff": 0.1843,
+        "glia_vs_ctrl_welch_p": 0.024726351919436017,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.0592,
+          "adj_p": 0.5983606522678664
+        },
+        "within_als_glia_auc": 0.5329,
+        "te_vs_ox_diff": 0.0024,
+        "te_vs_ox_welch_p": 0.9630100352538449,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": -0.0087,
+          "adj_p": 0.8290063031037624
+        },
+        "te_vs_ctrl_diff": 0.1658,
+        "te_vs_ctrl_welch_p": 0.014536367239933585,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.0463,
+          "adj_p": 0.46379007011043233
+        },
+        "ox_vs_ctrl_diff": 0.1634,
+        "ox_vs_ctrl_welch_p": 0.004858034436227097,
+        "within_als_te_auc": 0.5002
+      },
+      "LIFR": {
+        "gene_gc_pct": 39.44,
+        "glia_vs_ox_diff": 0.5027,
+        "glia_vs_ox_welch_p": 0.008659296202154502,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.0185,
+          "adj_p": 0.8514912061901948
+        },
+        "glia_vs_ctrl_diff": 0.8703,
+        "glia_vs_ctrl_welch_p": 0.00010727557626948828,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": 0.0603,
+          "adj_p": 0.6306951884500748
+        },
+        "within_als_glia_auc": 0.7733,
+        "te_vs_ox_diff": -0.192,
+        "te_vs_ox_welch_p": 0.04167859082375687,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": -0.1571,
+          "adj_p": 0.00986451831005911
+        },
+        "te_vs_ctrl_diff": 0.1755,
+        "te_vs_ctrl_welch_p": 0.11388531117848756,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": -0.0064,
+          "adj_p": 0.9325176869047949
+        },
+        "ox_vs_ctrl_diff": 0.3675,
+        "ox_vs_ctrl_welch_p": 4.426201504326479e-05,
+        "within_als_te_auc": 0.3603
+      },
+      "MX1": {
+        "gene_gc_pct": 47.98,
+        "glia_vs_ox_diff": -0.314,
+        "glia_vs_ox_welch_p": 0.04203419327828769,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.1418,
+          "adj_p": 0.19035307749601357
+        },
+        "glia_vs_ctrl_diff": -0.4774,
+        "glia_vs_ctrl_welch_p": 0.005463432235884549,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.4133,
+          "adj_p": 0.03162079544066005
+        },
+        "within_als_glia_auc": 0.2831,
+        "te_vs_ox_diff": 0.1303,
+        "te_vs_ox_welch_p": 0.05096308544677375,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.1683,
+          "adj_p": 0.00794159596293812
+        },
+        "te_vs_ctrl_diff": -0.0332,
+        "te_vs_ctrl_welch_p": 0.7055698258543854,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": -0.0,
+          "adj_p": 0.9996196322880498
+        },
+        "ox_vs_ctrl_diff": -0.1634,
+        "ox_vs_ctrl_welch_p": 0.025773971780647012,
+        "within_als_te_auc": 0.6369
+      },
+      "OAS1": {
+        "gene_gc_pct": 43.14,
+        "glia_vs_ox_diff": 0.1144,
+        "glia_vs_ox_welch_p": 0.29590117362762075,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.095,
+          "adj_p": 0.4551800340185438
+        },
+        "glia_vs_ctrl_diff": -0.0374,
+        "glia_vs_ctrl_welch_p": 0.7802407687995977,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.2053,
+          "adj_p": 0.32878717986609957
+        },
+        "within_als_glia_auc": 0.6078,
+        "te_vs_ox_diff": -0.0565,
+        "te_vs_ox_welch_p": 0.48650097180229845,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.0267,
+          "adj_p": 0.7301700745111465
+        },
+        "te_vs_ctrl_diff": -0.2084,
+        "te_vs_ctrl_welch_p": 0.07152886387252429,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": -0.1414,
+          "adj_p": 0.23289045717188897
+        },
+        "ox_vs_ctrl_diff": -0.1519,
+        "ox_vs_ctrl_welch_p": 0.12664288762578638,
+        "within_als_te_auc": 0.4573
+      },
+      "OSM": {
+        "gene_gc_pct": 60.37,
+        "glia_vs_ox_diff": -0.078,
+        "glia_vs_ox_welch_p": 0.09418498795812524,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.1588,
+          "adj_p": 0.08026649152438695
+        },
+        "glia_vs_ctrl_diff": -0.0676,
+        "glia_vs_ctrl_welch_p": 0.24678312592627977,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.0958,
+          "adj_p": 0.4141877663032537
+        },
+        "within_als_glia_auc": 0.456,
+        "te_vs_ox_diff": -0.0484,
+        "te_vs_ox_welch_p": 0.3094846900202615,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": -0.0103,
+          "adj_p": 0.8467853308520589
+        },
+        "te_vs_ctrl_diff": -0.038,
+        "te_vs_ctrl_welch_p": 0.5246259154751054,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": -0.0515,
+          "adj_p": 0.4435815156288632
+        },
+        "ox_vs_ctrl_diff": 0.0104,
+        "ox_vs_ctrl_welch_p": 0.8387705322759782,
+        "within_als_te_auc": 0.4458
+      },
+      "OSMR": {
+        "gene_gc_pct": 40.65,
+        "glia_vs_ox_diff": 0.888,
+        "glia_vs_ox_welch_p": 9.143278373823744e-05,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": 0.435,
+          "adj_p": 0.1019497406487944
+        },
+        "glia_vs_ctrl_diff": 1.0115,
+        "glia_vs_ctrl_welch_p": 3.6553390094551246e-05,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": 0.246,
+          "adj_p": 0.46767597816874423
+        },
+        "within_als_glia_auc": 0.7567,
+        "te_vs_ox_diff": 0.509,
+        "te_vs_ox_welch_p": 0.007851829417693024,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.7244,
+          "adj_p": 2.2736475485367382e-05
+        },
+        "te_vs_ctrl_diff": 0.6325,
+        "te_vs_ctrl_welch_p": 0.004354821491554078,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.5284,
+          "adj_p": 0.015050083152982119
+        },
+        "ox_vs_ctrl_diff": 0.1235,
+        "ox_vs_ctrl_welch_p": 0.43846113433284356,
+        "within_als_te_auc": 0.6409
+      },
+      "SERPINA3": {
+        "gene_gc_pct": 49.14,
+        "glia_vs_ox_diff": 2.3257,
+        "glia_vs_ox_welch_p": 1.5046722578525734e-05,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": 0.7973,
+          "adj_p": 0.1285698339365376
+        },
+        "glia_vs_ctrl_diff": 3.3902,
+        "glia_vs_ctrl_welch_p": 5.025078946973424e-08,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": 1.2362,
+          "adj_p": 0.12150373593288434
+        },
+        "within_als_glia_auc": 0.82,
+        "te_vs_ox_diff": 0.3808,
+        "te_vs_ox_welch_p": 0.3330611455501711,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.9963,
+          "adj_p": 0.0029075278062060967
+        },
+        "te_vs_ctrl_diff": 1.4453,
+        "te_vs_ctrl_welch_p": 0.0035810508345566587,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 1.2265,
+          "adj_p": 0.011483246958983534
+        },
+        "ox_vs_ctrl_diff": 1.0645,
+        "ox_vs_ctrl_welch_p": 0.006266703795405682,
+        "within_als_te_auc": 0.518
+      },
+      "SOCS3": {
+        "gene_gc_pct": 64.15,
+        "glia_vs_ox_diff": 0.651,
+        "glia_vs_ox_welch_p": 0.10247667478803017,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": 0.0521,
+          "adj_p": 0.9206159728520934
+        },
+        "glia_vs_ctrl_diff": 0.8154,
+        "glia_vs_ctrl_welch_p": 0.06755844177444091,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.339,
+          "adj_p": 0.608360713974933
+        },
+        "within_als_glia_auc": 0.5837,
+        "te_vs_ox_diff": 0.7488,
+        "te_vs_ox_welch_p": 0.030516540796775928,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 1.0913,
+          "adj_p": 0.0008670216958639286
+        },
+        "te_vs_ctrl_diff": 0.9132,
+        "te_vs_ctrl_welch_p": 0.022737880579453713,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.7314,
+          "adj_p": 0.07005962507904225
+        },
+        "ox_vs_ctrl_diff": 0.1644,
+        "ox_vs_ctrl_welch_p": 0.5742047216124568,
+        "within_als_te_auc": 0.6164
+      },
+      "STAT1": {
+        "gene_gc_pct": 38.26,
+        "glia_vs_ox_diff": -0.0934,
+        "glia_vs_ox_welch_p": 0.4337645872770998,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": -0.0817,
+          "adj_p": 0.27215801994730326
+        },
+        "glia_vs_ctrl_diff": 0.1998,
+        "glia_vs_ctrl_welch_p": 0.14453601777989547,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": 0.0154,
+          "adj_p": 0.930730861330134
+        },
+        "within_als_glia_auc": 0.4857,
+        "te_vs_ox_diff": -0.2017,
+        "te_vs_ox_welch_p": 0.00595551220600963,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": -0.1064,
+          "adj_p": 0.026136637561757683
+        },
+        "te_vs_ctrl_diff": 0.0916,
+        "te_vs_ctrl_welch_p": 0.33296483322572684,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": -0.0098,
+          "adj_p": 0.9181831458831224
+        },
+        "ox_vs_ctrl_diff": 0.2932,
+        "ox_vs_ctrl_welch_p": 0.00012477578320882541,
+        "within_als_te_auc": 0.3465
+      },
+      "STAT2": {
+        "gene_gc_pct": 48.01,
+        "glia_vs_ox_diff": 0.4101,
+        "glia_vs_ox_welch_p": 0.0005767366591950538,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": 0.3157,
+          "adj_p": 0.00021869807501553632
+        },
+        "glia_vs_ctrl_diff": 0.115,
+        "glia_vs_ctrl_welch_p": 0.25760839429376176,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.0052,
+          "adj_p": 0.9569705617804437
+        },
+        "within_als_glia_auc": 0.814,
+        "te_vs_ox_diff": 0.3103,
+        "te_vs_ox_welch_p": 5.141144004677656e-08,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.3313,
+          "adj_p": 2.3222203399829947e-10
+        },
+        "te_vs_ctrl_diff": 0.0153,
+        "te_vs_ctrl_welch_p": 0.7976299874854162,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.0624,
+          "adj_p": 0.2668851531404426
+        },
+        "ox_vs_ctrl_diff": -0.295,
+        "ox_vs_ctrl_welch_p": 2.966675567309426e-08,
+        "within_als_te_auc": 0.778
+      },
+      "STAT3": {
+        "gene_gc_pct": 45.02,
+        "glia_vs_ox_diff": 0.4218,
+        "glia_vs_ox_welch_p": 7.097889757248085e-06,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": 0.2202,
+          "adj_p": 0.019110818993926235
+        },
+        "glia_vs_ctrl_diff": 0.4056,
+        "glia_vs_ctrl_welch_p": 2.0909460643960397e-05,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": 0.0188,
+          "adj_p": 0.8775298115702708
+        },
+        "within_als_glia_auc": 0.821,
+        "te_vs_ox_diff": 0.157,
+        "te_vs_ox_welch_p": 0.026361873410260087,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.2657,
+          "adj_p": 6.437797779404166e-06
+        },
+        "te_vs_ctrl_diff": 0.1408,
+        "te_vs_ctrl_welch_p": 0.08959734024128227,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.106,
+          "adj_p": 0.15551463235055618
+        },
+        "ox_vs_ctrl_diff": -0.0162,
+        "ox_vs_ctrl_welch_p": 0.7940270777604581,
+        "within_als_te_auc": 0.5858
+      },
+      "TYK2": {
+        "gene_gc_pct": 54.36,
+        "glia_vs_ox_diff": 0.2428,
+        "glia_vs_ox_welch_p": 0.059450267786811214,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 134,
+          "adj_beta": 0.2827,
+          "adj_p": 0.004025642068602737
+        },
+        "glia_vs_ctrl_diff": -0.4068,
+        "glia_vs_ctrl_welch_p": 0.005661478335354013,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 59,
+          "adj_beta": -0.2247,
+          "adj_p": 0.14020662816269294
+        },
+        "within_als_glia_auc": 0.5742,
+        "te_vs_ox_diff": 0.5763,
+        "te_vs_ox_welch_p": 5.5177409969784394e-09,
+        "te_vs_ox_gc_cellcomp_ols": {
+          "n": 153,
+          "adj_beta": 0.5824,
+          "adj_p": 1.2745691387498007e-18
+        },
+        "te_vs_ctrl_diff": -0.0732,
+        "te_vs_ctrl_welch_p": 0.4645935087345037,
+        "te_vs_ctrl_gc_cellcomp_ols": {
+          "n": 78,
+          "adj_beta": 0.1107,
+          "adj_p": 0.17638884760166695
+        },
+        "ox_vs_ctrl_diff": -0.6496,
+        "ox_vs_ctrl_welch_p": 2.054700503507142e-12,
+        "within_als_te_auc": 0.8382
+      }
+    }
+  },
+  "nygc_spinal_cord": {
+    "stratum_counts": {
+      "ALS-Glia-cord": 125,
+      "ALS-Ox-cord": 64,
+      "Control": 43
+    },
+    "axis_composites": {
+      "gp130_JAK1_JAK2_STAT3_axis_spared_by_TYK2_JH2": {
+        "genes_present": [
+          "IL6ST",
+          "OSMR",
+          "OSM",
+          "LIFR",
+          "IL6R",
+          "STAT3",
+          "SOCS3",
+          "SERPINA3",
+          "CHI3L1",
+          "GPNMB"
+        ],
+        "glia_vs_ox_z_diff": 0.4169,
+        "glia_vs_ox_welch_p": 1.914095662811604e-06,
+        "within_als_glia_auc": 0.7186
+      },
+      "IFNg_JAK1_JAK2_STAT1_axis_spared_by_TYK2_JH2": {
+        "genes_present": [
+          "IFNGR1",
+          "IFNGR2",
+          "STAT1",
+          "IRF1",
+          "CXCL10",
+          "CXCL9",
+          "GBP1"
+        ],
+        "glia_vs_ox_z_diff": 0.1641,
+        "glia_vs_ox_welch_p": 0.0654178445561985,
+        "within_als_glia_auc": 0.6617
+      },
+      "TypeI_IFN_IL12_23_TYK2_JH2_engaged_axis": {
+        "genes_present": [
+          "IFNAR1",
+          "IFNAR2",
+          "TYK2",
+          "JAK1",
+          "JAK2",
+          "STAT2",
+          "IRF9",
+          "ISG15",
+          "MX1",
+          "OAS1",
+          "IFIT1",
+          "IL12RB1",
+          "IL23R"
+        ],
+        "glia_vs_ox_z_diff": 0.0125,
+        "glia_vs_ox_welch_p": 0.8431547173047657,
+        "within_als_glia_auc": 0.5078
+      }
+    },
+    "genes": {
+      "CHI3L1": {
+        "gene_gc_pct": 54.27,
+        "glia_vs_ox_diff": 0.0845,
+        "glia_vs_ox_welch_p": 0.6841878544391395,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.3192,
+          "adj_p": 0.2221139518201828
+        },
+        "glia_vs_ctrl_diff": 1.5887,
+        "glia_vs_ctrl_welch_p": 1.603656292285091e-06,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 1.0233,
+          "adj_p": 0.00041298725343528347
+        },
+        "within_als_glia_auc": 0.5196
+      },
+      "CHI3L2": {
+        "gene_gc_pct": 44.64,
+        "glia_vs_ox_diff": 0.489,
+        "glia_vs_ox_welch_p": 0.01082371539478311,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.2855,
+          "adj_p": 0.21471313491360075
+        },
+        "glia_vs_ctrl_diff": 2.0904,
+        "glia_vs_ctrl_welch_p": 1.173675797021681e-10,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 1.0494,
+          "adj_p": 3.78804907388003e-05
+        },
+        "within_als_glia_auc": 0.6298
+      },
+      "CHIT1": {
+        "gene_gc_pct": 45.2,
+        "glia_vs_ox_diff": 0.6095,
+        "glia_vs_ox_welch_p": 0.01897579289747484,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.5696,
+          "adj_p": 0.11632263163857465
+        },
+        "glia_vs_ctrl_diff": 3.1551,
+        "glia_vs_ctrl_welch_p": 7.776853629325158e-30,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 2.5116,
+          "adj_p": 7.68712046171669e-11
+        },
+        "within_als_glia_auc": 0.6045
+      },
+      "CXCL10": {
+        "gene_gc_pct": 36.98,
+        "glia_vs_ox_diff": -0.0376,
+        "glia_vs_ox_welch_p": 0.7691703519262761,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": -0.0584,
+          "adj_p": 0.6673966691107024
+        },
+        "glia_vs_ctrl_diff": -0.1548,
+        "glia_vs_ctrl_welch_p": 0.3397413527801188,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": -0.3421,
+          "adj_p": 0.014762144188155194
+        },
+        "within_als_glia_auc": 0.5441
+      },
+      "CXCL9": {
+        "gene_gc_pct": 38.44,
+        "glia_vs_ox_diff": 0.0441,
+        "glia_vs_ox_welch_p": 0.5566779141082758,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.0313,
+          "adj_p": 0.7036736238478858
+        },
+        "glia_vs_ctrl_diff": 0.186,
+        "glia_vs_ctrl_welch_p": 0.19369365538037153,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.0653,
+          "adj_p": 0.5840823758908881
+        },
+        "within_als_glia_auc": 0.5496
+      },
+      "GBP1": {
+        "gene_gc_pct": 39.25,
+        "glia_vs_ox_diff": 0.2412,
+        "glia_vs_ox_welch_p": 0.05174723565937123,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.199,
+          "adj_p": 0.16255922410327964
+        },
+        "glia_vs_ctrl_diff": 0.5836,
+        "glia_vs_ctrl_welch_p": 5.789188136509138e-05,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.2843,
+          "adj_p": 0.04528327975029722
+        },
+        "within_als_glia_auc": 0.6332
+      },
+      "GPNMB": {
+        "gene_gc_pct": 41.79,
+        "glia_vs_ox_diff": 0.7308,
+        "glia_vs_ox_welch_p": 0.00010988651865997308,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.4012,
+          "adj_p": 0.07746947785836417
+        },
+        "glia_vs_ctrl_diff": 2.7768,
+        "glia_vs_ctrl_welch_p": 1.4432069670366221e-23,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 2.176,
+          "adj_p": 2.7761473714317565e-17
+        },
+        "within_als_glia_auc": 0.6794
+      },
+      "IFIT1": {
+        "gene_gc_pct": 38.55,
+        "glia_vs_ox_diff": -0.2476,
+        "glia_vs_ox_welch_p": 0.0011055086040061435,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": -0.1337,
+          "adj_p": 0.10724580665865871
+        },
+        "glia_vs_ctrl_diff": -0.187,
+        "glia_vs_ctrl_welch_p": 0.07368257991382925,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": -0.3507,
+          "adj_p": 0.0006090606293716237
+        },
+        "within_als_glia_auc": 0.3506
+      },
+      "IFNAR1": {
+        "gene_gc_pct": 41.36,
+        "glia_vs_ox_diff": 0.1425,
+        "glia_vs_ox_welch_p": 0.015686796430398636,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.0957,
+          "adj_p": 0.01403968869571992
+        },
+        "glia_vs_ctrl_diff": 0.2746,
+        "glia_vs_ctrl_welch_p": 3.8416852039166156e-05,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.1505,
+          "adj_p": 0.00029132048947869165
+        },
+        "within_als_glia_auc": 0.6091
+      },
+      "IFNAR2": {
+        "gene_gc_pct": 43.41,
+        "glia_vs_ox_diff": 0.0525,
+        "glia_vs_ox_welch_p": 0.29810789396743587,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.0538,
+          "adj_p": 0.33866552465935856
+        },
+        "glia_vs_ctrl_diff": 0.0525,
+        "glia_vs_ctrl_welch_p": 0.3953941878511145,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.1333,
+          "adj_p": 0.030010467485540437
+        },
+        "within_als_glia_auc": 0.5447
+      },
+      "IFNGR1": {
+        "gene_gc_pct": 38.8,
+        "glia_vs_ox_diff": 0.1513,
+        "glia_vs_ox_welch_p": 0.019145982838430598,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.0511,
+          "adj_p": 0.3787290916533387
+        },
+        "glia_vs_ctrl_diff": 0.2981,
+        "glia_vs_ctrl_welch_p": 4.690351558120207e-05,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.0986,
+          "adj_p": 0.1108775849473003
+        },
+        "within_als_glia_auc": 0.6075
+      },
+      "IFNGR2": {
+        "gene_gc_pct": 44.41,
+        "glia_vs_ox_diff": 0.2135,
+        "glia_vs_ox_welch_p": 0.00041114400845122616,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.2084,
+          "adj_p": 0.006251277429556803
+        },
+        "glia_vs_ctrl_diff": 0.6524,
+        "glia_vs_ctrl_welch_p": 6.522934679787607e-11,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.5754,
+          "adj_p": 1.2098522864339473e-10
+        },
+        "within_als_glia_auc": 0.6899
+      },
+      "IL12RB1": {
+        "gene_gc_pct": 51.1,
+        "glia_vs_ox_diff": -0.0176,
+        "glia_vs_ox_welch_p": 0.7734829840491494,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.0165,
+          "adj_p": 0.8113162811279088
+        },
+        "glia_vs_ctrl_diff": 0.1915,
+        "glia_vs_ctrl_welch_p": 0.014894174842675226,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.1636,
+          "adj_p": 0.022028391848453902
+        },
+        "within_als_glia_auc": 0.4786
+      },
+      "IL23R": {
+        "gene_gc_pct": 39.87,
+        "glia_vs_ox_diff": 0.0083,
+        "glia_vs_ox_welch_p": 0.0032977815759016368,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.0114,
+          "adj_p": 0.01184718322710168
+        },
+        "glia_vs_ctrl_diff": -0.0025,
+        "glia_vs_ctrl_welch_p": 0.6305903208876427,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": -0.0042,
+          "adj_p": 0.4620132576297648
+        },
+        "within_als_glia_auc": 0.5735
+      },
+      "IL6R": {
+        "gene_gc_pct": 49.12,
+        "glia_vs_ox_diff": 0.0656,
+        "glia_vs_ox_welch_p": 0.3392372931735389,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.0956,
+          "adj_p": 0.23199324931483858
+        },
+        "glia_vs_ctrl_diff": 0.1305,
+        "glia_vs_ctrl_welch_p": 0.17197122885274901,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.2771,
+          "adj_p": 0.002304166053990192
+        },
+        "within_als_glia_auc": 0.5516
+      },
+      "IL6ST": {
+        "gene_gc_pct": 37.44,
+        "glia_vs_ox_diff": 0.1973,
+        "glia_vs_ox_welch_p": 0.008941060227755891,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.1092,
+          "adj_p": 0.02249984637922643
+        },
+        "glia_vs_ctrl_diff": 0.3882,
+        "glia_vs_ctrl_welch_p": 3.441392122723811e-06,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.2402,
+          "adj_p": 2.1846797280525637e-06
+        },
+        "within_als_glia_auc": 0.6262
+      },
+      "IRF1": {
+        "gene_gc_pct": 49.64,
+        "glia_vs_ox_diff": 0.1462,
+        "glia_vs_ox_welch_p": 0.20971287679634437,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.2046,
+          "adj_p": 0.10044431110823669
+        },
+        "glia_vs_ctrl_diff": 0.0249,
+        "glia_vs_ctrl_welch_p": 0.8420396659887456,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.1082,
+          "adj_p": 0.3513687887209554
+        },
+        "within_als_glia_auc": 0.6461
+      },
+      "IRF9": {
+        "gene_gc_pct": 53.31,
+        "glia_vs_ox_diff": -0.0554,
+        "glia_vs_ox_welch_p": 0.30783997903534555,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": -0.0057,
+          "adj_p": 0.9227428278888891
+        },
+        "glia_vs_ctrl_diff": 0.0482,
+        "glia_vs_ctrl_welch_p": 0.553925210711107,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.0041,
+          "adj_p": 0.951985841541543
+        },
+        "within_als_glia_auc": 0.4565
+      },
+      "ISG15": {
+        "gene_gc_pct": 56.44,
+        "glia_vs_ox_diff": -0.1311,
+        "glia_vs_ox_welch_p": 0.2525029061005301,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": -0.0003,
+          "adj_p": 0.9977466770516727
+        },
+        "glia_vs_ctrl_diff": -0.1775,
+        "glia_vs_ctrl_welch_p": 0.31748540518433166,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": -0.1915,
+          "adj_p": 0.17396676027978192
+        },
+        "within_als_glia_auc": 0.4634
+      },
+      "JAK1": {
+        "gene_gc_pct": 42.71,
+        "glia_vs_ox_diff": 0.0629,
+        "glia_vs_ox_welch_p": 0.11431108650530908,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.0868,
+          "adj_p": 0.008480168160640686
+        },
+        "glia_vs_ctrl_diff": 0.2997,
+        "glia_vs_ctrl_welch_p": 1.4102605347026368e-07,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.2501,
+          "adj_p": 4.922245575063404e-11
+        },
+        "within_als_glia_auc": 0.5685
+      },
+      "JAK2": {
+        "gene_gc_pct": 37.57,
+        "glia_vs_ox_diff": 0.1416,
+        "glia_vs_ox_welch_p": 0.013535493309832936,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.1379,
+          "adj_p": 0.016245131387090144
+        },
+        "glia_vs_ctrl_diff": 0.3707,
+        "glia_vs_ctrl_welch_p": 2.3783579936240318e-07,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.3101,
+          "adj_p": 5.567646748568457e-07
+        },
+        "within_als_glia_auc": 0.6265
+      },
+      "LIFR": {
+        "gene_gc_pct": 39.44,
+        "glia_vs_ox_diff": 0.2496,
+        "glia_vs_ox_welch_p": 0.023752880672537516,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.016,
+          "adj_p": 0.842912013346494
+        },
+        "glia_vs_ctrl_diff": 0.5737,
+        "glia_vs_ctrl_welch_p": 1.1303879409326353e-06,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.3178,
+          "adj_p": 0.00018459998118429419
+        },
+        "within_als_glia_auc": 0.6138
+      },
+      "MX1": {
+        "gene_gc_pct": 47.98,
+        "glia_vs_ox_diff": -0.1324,
+        "glia_vs_ox_welch_p": 0.1052656537344098,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.0525,
+          "adj_p": 0.6000992673234886
+        },
+        "glia_vs_ctrl_diff": 0.0037,
+        "glia_vs_ctrl_welch_p": 0.9776871411811396,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": -0.1008,
+          "adj_p": 0.4131779969730886
+        },
+        "within_als_glia_auc": 0.4384
+      },
+      "OAS1": {
+        "gene_gc_pct": 43.14,
+        "glia_vs_ox_diff": 0.0346,
+        "glia_vs_ox_welch_p": 0.7398759209722638,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": -0.065,
+          "adj_p": 0.6355276386133343
+        },
+        "glia_vs_ctrl_diff": 0.371,
+        "glia_vs_ctrl_welch_p": 0.007330860715491701,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.1935,
+          "adj_p": 0.19556249134759865
+        },
+        "within_als_glia_auc": 0.4948
+      },
+      "OSM": {
+        "gene_gc_pct": 60.37,
+        "glia_vs_ox_diff": 0.4302,
+        "glia_vs_ox_welch_p": 0.0003166512137709517,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.2096,
+          "adj_p": 0.17513652824800588
+        },
+        "glia_vs_ctrl_diff": 0.6137,
+        "glia_vs_ctrl_welch_p": 2.4968413936862657e-05,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.3912,
+          "adj_p": 0.01650313795912537
+        },
+        "within_als_glia_auc": 0.6705
+      },
+      "OSMR": {
+        "gene_gc_pct": 40.65,
+        "glia_vs_ox_diff": 0.4405,
+        "glia_vs_ox_welch_p": 0.00020239185196231616,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.2664,
+          "adj_p": 0.058176634608918
+        },
+        "glia_vs_ctrl_diff": 0.7075,
+        "glia_vs_ctrl_welch_p": 3.2881833433069435e-06,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.5779,
+          "adj_p": 0.00010027497967136403
+        },
+        "within_als_glia_auc": 0.665
+      },
+      "SERPINA3": {
+        "gene_gc_pct": 49.14,
+        "glia_vs_ox_diff": 0.6886,
+        "glia_vs_ox_welch_p": 0.00019084757978480327,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.3873,
+          "adj_p": 0.08144827354248481
+        },
+        "glia_vs_ctrl_diff": 1.8284,
+        "glia_vs_ctrl_welch_p": 4.4210517654211235e-09,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 1.2053,
+          "adj_p": 2.122314410152836e-06
+        },
+        "within_als_glia_auc": 0.6743
+      },
+      "SOCS3": {
+        "gene_gc_pct": 64.15,
+        "glia_vs_ox_diff": 0.7895,
+        "glia_vs_ox_welch_p": 0.00024340798060707876,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.6018,
+          "adj_p": 0.024105360027176084
+        },
+        "glia_vs_ctrl_diff": 0.4605,
+        "glia_vs_ctrl_welch_p": 0.0686683059881661,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.4718,
+          "adj_p": 0.0909832813158951
+        },
+        "within_als_glia_auc": 0.6669
+      },
+      "STAT1": {
+        "gene_gc_pct": 38.26,
+        "glia_vs_ox_diff": -0.1046,
+        "glia_vs_ox_welch_p": 0.13417909568801106,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": -0.0254,
+          "adj_p": 0.7253565814156239
+        },
+        "glia_vs_ctrl_diff": 0.0676,
+        "glia_vs_ctrl_welch_p": 0.5030198448421177,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": -0.1843,
+          "adj_p": 0.034703069652181597
+        },
+        "within_als_glia_auc": 0.4486
+      },
+      "STAT2": {
+        "gene_gc_pct": 48.01,
+        "glia_vs_ox_diff": -0.0775,
+        "glia_vs_ox_welch_p": 0.1882995398770793,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": -0.1153,
+          "adj_p": 0.14458145698764863
+        },
+        "glia_vs_ctrl_diff": -0.4771,
+        "glia_vs_ctrl_welch_p": 2.985526194489283e-10,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": -0.4635,
+          "adj_p": 6.347070333796585e-08
+        },
+        "within_als_glia_auc": 0.4385
+      },
+      "STAT3": {
+        "gene_gc_pct": 45.02,
+        "glia_vs_ox_diff": 0.1375,
+        "glia_vs_ox_welch_p": 0.002838385711901785,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": 0.0943,
+          "adj_p": 0.09878073184465604
+        },
+        "glia_vs_ctrl_diff": 0.2528,
+        "glia_vs_ctrl_welch_p": 1.916698341292985e-05,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": 0.1819,
+          "adj_p": 0.0022640682846948243
+        },
+        "within_als_glia_auc": 0.6366
+      },
+      "TYK2": {
+        "gene_gc_pct": 54.36,
+        "glia_vs_ox_diff": -0.0851,
+        "glia_vs_ox_welch_p": 0.15530469163783012,
+        "glia_vs_ox_gc_cellcomp_ols": {
+          "n": 189,
+          "adj_beta": -0.0475,
+          "adj_p": 0.40058959549751877
+        },
+        "glia_vs_ctrl_diff": -0.2358,
+        "glia_vs_ctrl_welch_p": 0.00048212282560702115,
+        "glia_vs_ctrl_gc_cellcomp_ols": {
+          "n": 168,
+          "adj_beta": -0.0527,
+          "adj_p": 0.3733112771835516
+        },
+        "within_als_glia_auc": 0.4156
+      }
+    }
+  },
+  "edinburgh_snrna_celltypes": {
+    "Astrocyte": {
+      "IL6ST": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 7.678,
+        "als_vs_ctrl_diff": 0.5624,
+        "welch_p": 0.1004631451625377
+      },
+      "OSMR": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 5.973,
+        "als_vs_ctrl_diff": 1.6512,
+        "welch_p": 0.08867470475469023
+      },
+      "STAT3": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 6.96,
+        "als_vs_ctrl_diff": 0.1131,
+        "welch_p": 0.6603492695971356
+      },
+      "SERPINA3": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 5.561,
+        "als_vs_ctrl_diff": 2.6591,
+        "welch_p": 0.022478552405578285
+      },
+      "IFNGR1": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 5.629,
+        "als_vs_ctrl_diff": 1.3652,
+        "welch_p": 0.10788260135504855
+      },
+      "STAT1": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 5.074,
+        "als_vs_ctrl_diff": -0.1225,
+        "welch_p": 0.7029156975567885
+      },
+      "CXCL10": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 0.0,
+        "als_vs_ctrl_diff": -0.2095,
+        "welch_p": 0.3559176837495822
+      },
+      "IFNAR1": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 5.389,
+        "als_vs_ctrl_diff": -0.0056,
+        "welch_p": 0.9749085131137532
+      },
+      "TYK2": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 3.905,
+        "als_vs_ctrl_diff": 0.4807,
+        "welch_p": 0.44592014847370604
+      },
+      "JAK1": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 8.497,
+        "als_vs_ctrl_diff": -0.0435,
+        "welch_p": 0.7174239106188622
+      },
+      "JAK2": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 5.828,
+        "als_vs_ctrl_diff": -0.1078,
+        "welch_p": 0.34051011282940485
+      },
+      "ISG15": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 2.295,
+        "als_vs_ctrl_diff": -0.6052,
+        "welch_p": 0.41962644328132775
+      }
+    },
+    "Microglia": {
+      "IL6ST": {
+        "n_als": 26,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 9.305,
+        "als_vs_ctrl_diff": -0.5663,
+        "welch_p": 0.0011077446251525087
+      },
+      "OSMR": {
+        "n_als": 26,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 1.366,
+        "als_vs_ctrl_diff": -0.0099,
+        "welch_p": 0.983141453529913
+      },
+      "STAT3": {
+        "n_als": 26,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 7.289,
+        "als_vs_ctrl_diff": 0.2007,
+        "welch_p": 0.5822548957878333
+      },
+      "SERPINA3": {
+        "n_als": 26,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 1.2,
+        "als_vs_ctrl_diff": 0.8093,
+        "welch_p": 0.1315591876562571
+      },
+      "IFNGR1": {
+        "n_als": 26,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 9.241,
+        "als_vs_ctrl_diff": -0.1234,
+        "welch_p": 0.515409361988902
+      },
+      "STAT1": {
+        "n_als": 26,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 5.717,
+        "als_vs_ctrl_diff": -0.5181,
+        "welch_p": 0.27304046807440907
+      },
+      "CXCL10": {
+        "n_als": 26,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 0.0,
+        "als_vs_ctrl_diff": -1.1558,
+        "welch_p": 0.2378160817498898
+      },
+      "IFNAR1": {
+        "n_als": 26,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 6.38,
+        "als_vs_ctrl_diff": 0.2775,
+        "welch_p": 0.13612435262905273
+      },
+      "TYK2": {
+        "n_als": 26,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 4.781,
+        "als_vs_ctrl_diff": 0.3616,
+        "welch_p": 0.13609972038857035
+      },
+      "JAK1": {
+        "n_als": 26,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 7.874,
+        "als_vs_ctrl_diff": -0.1826,
+        "welch_p": 0.3535387630798111
+      },
+      "JAK2": {
+        "n_als": 26,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 8.613,
+        "als_vs_ctrl_diff": -0.2,
+        "welch_p": 0.12036645714061386
+      },
+      "ISG15": {
+        "n_als": 26,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 2.455,
+        "als_vs_ctrl_diff": -1.1603,
+        "welch_p": 0.04604559831377672
+      }
+    },
+    "Endothelial": {
+      "IL6ST": {
+        "n_als": 23,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 8.705,
+        "als_vs_ctrl_diff": 0.1933,
+        "welch_p": 0.4089443713894675
+      },
+      "OSMR": {
+        "n_als": 23,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 7.704,
+        "als_vs_ctrl_diff": 0.4178,
+        "welch_p": 0.2916589783037129
+      },
+      "STAT3": {
+        "n_als": 23,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 8.163,
+        "als_vs_ctrl_diff": 0.5383,
+        "welch_p": 0.037193856612954344
+      },
+      "SERPINA3": {
+        "n_als": 23,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 3.292,
+        "als_vs_ctrl_diff": 2.771,
+        "welch_p": 0.0014963978477914677
+      },
+      "IFNGR1": {
+        "n_als": 23,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 8.432,
+        "als_vs_ctrl_diff": 0.601,
+        "welch_p": 0.044385052660875
+      },
+      "STAT1": {
+        "n_als": 23,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 6.059,
+        "als_vs_ctrl_diff": -1.178,
+        "welch_p": 0.0007255552520519173
+      },
+      "CXCL10": {
+        "n_als": 23,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 0.062,
+        "als_vs_ctrl_diff": -2.6747,
+        "welch_p": 0.05654709254800877
+      },
+      "IFNAR1": {
+        "n_als": 23,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 6.705,
+        "als_vs_ctrl_diff": 0.0839,
+        "welch_p": 0.8325901177480128
+      },
+      "TYK2": {
+        "n_als": 23,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 3.088,
+        "als_vs_ctrl_diff": -0.3828,
+        "welch_p": 0.25167266943782524
+      },
+      "JAK1": {
+        "n_als": 23,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 8.552,
+        "als_vs_ctrl_diff": 0.1287,
+        "welch_p": 0.253698284856898
+      },
+      "JAK2": {
+        "n_als": 23,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 7.032,
+        "als_vs_ctrl_diff": -0.2254,
+        "welch_p": 0.34192628548338255
+      },
+      "ISG15": {
+        "n_als": 23,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 6.684,
+        "als_vs_ctrl_diff": -0.9296,
+        "welch_p": 0.003024013410210317
+      }
+    },
+    "Excitatory neuron": {
+      "IL6ST": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 6.08,
+        "als_vs_ctrl_diff": 0.1088,
+        "welch_p": 0.3725071980985582
+      },
+      "OSMR": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 1.254,
+        "als_vs_ctrl_diff": 0.1022,
+        "welch_p": 0.5340727569054117
+      },
+      "STAT3": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 5.035,
+        "als_vs_ctrl_diff": -0.0705,
+        "welch_p": 0.2865391847301303
+      },
+      "SERPINA3": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 0.404,
+        "als_vs_ctrl_diff": 0.2012,
+        "welch_p": 0.3072798696137774
+      },
+      "IFNGR1": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 4.762,
+        "als_vs_ctrl_diff": -0.0499,
+        "welch_p": 0.6833396468693451
+      },
+      "STAT1": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 5.282,
+        "als_vs_ctrl_diff": -0.3183,
+        "welch_p": 0.09116658175485795
+      },
+      "CXCL10": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 0.006,
+        "als_vs_ctrl_diff": 0.0062,
+        "welch_p": 0.32652702226061586
+      },
+      "IFNAR1": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 5.735,
+        "als_vs_ctrl_diff": -0.1582,
+        "welch_p": 0.27684240247411884
+      },
+      "TYK2": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 3.302,
+        "als_vs_ctrl_diff": -0.1666,
+        "welch_p": 0.3842054166297046
+      },
+      "JAK1": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 7.504,
+        "als_vs_ctrl_diff": -0.0155,
+        "welch_p": 0.8948143524556066
+      },
+      "JAK2": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 6.931,
+        "als_vs_ctrl_diff": 0.4907,
+        "welch_p": 0.0457200008997401
+      },
+      "ISG15": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 2.466,
+        "als_vs_ctrl_diff": -0.3287,
+        "welch_p": 0.4435090079375916
+      }
+    },
+    "Oligodendrocyte": {
+      "IL6ST": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 6.847,
+        "als_vs_ctrl_diff": 0.1457,
+        "welch_p": 0.3264023885397802
+      },
+      "OSMR": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 1.381,
+        "als_vs_ctrl_diff": -0.6416,
+        "welch_p": 0.057443825819535575
+      },
+      "STAT3": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 6.094,
+        "als_vs_ctrl_diff": 0.0802,
+        "welch_p": 0.7880874972223798
+      },
+      "SERPINA3": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 0.999,
+        "als_vs_ctrl_diff": 0.76,
+        "welch_p": 0.011987088630835531
+      },
+      "IFNGR1": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 5.536,
+        "als_vs_ctrl_diff": -0.2822,
+        "welch_p": 0.26941269500593795
+      },
+      "STAT1": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 4.384,
+        "als_vs_ctrl_diff": -0.2,
+        "welch_p": 0.5820355176048132
+      },
+      "CXCL10": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 0.0,
+        "als_vs_ctrl_diff": -0.2262,
+        "welch_p": 0.35591768374958205
+      },
+      "IFNAR1": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 5.642,
+        "als_vs_ctrl_diff": 0.0722,
+        "welch_p": 0.3954907124113151
+      },
+      "TYK2": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 3.283,
+        "als_vs_ctrl_diff": -0.3096,
+        "welch_p": 0.25793770060243837
+      },
+      "JAK1": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 8.159,
+        "als_vs_ctrl_diff": -0.0626,
+        "welch_p": 0.5905700355877945
+      },
+      "JAK2": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 5.739,
+        "als_vs_ctrl_diff": -0.2788,
+        "welch_p": 0.2452664960572632
+      },
+      "ISG15": {
+        "n_als": 27,
+        "n_ctrl": 7,
+        "mean_als_log2cpm": 1.377,
+        "als_vs_ctrl_diff": -0.7869,
+        "welch_p": 0.0660461540559735
+      }
+    }
+  },
+  "ds045_living_csf_proteomics": {
+    "dia_4center_N259": {
+      "CXCL10": {
+        "detected": true,
+        "n_non_missing_total": 178,
+        "missing_pct_total": 31.27,
+        "non_missing_by_group": {
+          "Control": 40,
+          "C9orf72-Asymptomatic": 43,
+          "SOD1-Asymptomatic": 10,
+          "C9orf72": 35,
+          "SOD1": 15,
+          "sALS": 35
+        },
+        "sals_vs_ctrl_log2_diff": 0.15,
+        "sals_vs_ctrl_welch_p": 0.6273402833638085,
+        "sals_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 53,
+          "banks_included": [
+            "Emory"
+          ],
+          "beta": 0.1279,
+          "p": 0.6023392788318431
+        },
+        "c9_vs_ctrl_log2_diff": 0.8072,
+        "c9_vs_ctrl_welch_p": 0.004484637666803267,
+        "c9_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 29,
+          "banks_included": [
+            "Emory"
+          ],
+          "beta": null,
+          "p": null
+        },
+        "c9_asym_vs_ctrl_log2_diff": 0.5505,
+        "c9_asym_vs_ctrl_welch_p": 0.039680044488644074,
+        "sod1_vs_ctrl_log2_diff": 1.0005,
+        "sod1_vs_ctrl_welch_p": 0.009773467758231647,
+        "symp_als_vs_ctrl_log2_diff": 0.5707,
+        "symp_als_vs_ctrl_welch_p": 0.02544440473589904,
+        "symp_als_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 58,
+          "banks_included": [
+            "Emory"
+          ],
+          "beta": 0.0471,
+          "p": 0.8384179451267724
+        },
+        "pct_above_ctrl_p90": {
+          "sALS": 8.57,
+          "C9orf72": 28.57
+        },
+        "corr_with_bridge4_in_symp_als": {
+          "n_paired": 85,
+          "pearson_r": 0.0517,
+          "pearson_p": 0.6384179024560248,
+          "spearman_rho": 0.1014
+        }
+      },
+      "STAT1": {
+        "detected": true,
+        "n_non_missing_total": 52,
+        "missing_pct_total": 79.92,
+        "non_missing_by_group": {
+          "Control": 14,
+          "C9orf72-Asymptomatic": 12,
+          "SOD1-Asymptomatic": 1,
+          "C9orf72": 9,
+          "SOD1": 3,
+          "sALS": 13
+        },
+        "sals_vs_ctrl_log2_diff": -0.1715,
+        "sals_vs_ctrl_welch_p": 0.3336332095704415,
+        "sals_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 25,
+          "banks_included": [
+            "Emory"
+          ],
+          "beta": -0.1469,
+          "p": 0.4454553313840214
+        },
+        "c9_vs_ctrl_log2_diff": 0.0294,
+        "c9_vs_ctrl_welch_p": 0.9296509147757344,
+        "c9_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 0,
+          "banks_included": [],
+          "beta": null,
+          "p": null
+        },
+        "c9_asym_vs_ctrl_log2_diff": -0.3792,
+        "c9_asym_vs_ctrl_welch_p": 0.23465152612457504,
+        "sod1_vs_ctrl_log2_diff": null,
+        "sod1_vs_ctrl_welch_p": null,
+        "symp_als_vs_ctrl_log2_diff": -0.0814,
+        "symp_als_vs_ctrl_welch_p": 0.6441076723119322,
+        "symp_als_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 26,
+          "banks_included": [
+            "Emory"
+          ],
+          "beta": -0.1214,
+          "p": 0.5120387798852167
+        },
+        "pct_above_ctrl_p90": {
+          "sALS": 7.69,
+          "C9orf72": 11.11
+        },
+        "corr_with_bridge4_in_symp_als": {
+          "n_paired": 25,
+          "pearson_r": -0.0098,
+          "pearson_p": 0.9628534040400686,
+          "spearman_rho": -0.0108
+        }
+      },
+      "STAT3": {
+        "detected": true,
+        "n_non_missing_total": 69,
+        "missing_pct_total": 73.36,
+        "non_missing_by_group": {
+          "Control": 17,
+          "C9orf72-Asymptomatic": 17,
+          "SOD1-Asymptomatic": 4,
+          "C9orf72": 15,
+          "SOD1": 4,
+          "sALS": 12
+        },
+        "sals_vs_ctrl_log2_diff": 0.2163,
+        "sals_vs_ctrl_welch_p": 0.4829818533624352,
+        "sals_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 24,
+          "banks_included": [
+            "Emory"
+          ],
+          "beta": 0.4461,
+          "p": 0.11892406782921648
+        },
+        "c9_vs_ctrl_log2_diff": 0.9176,
+        "c9_vs_ctrl_welch_p": 0.07837162226170635,
+        "c9_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 0,
+          "banks_included": [],
+          "beta": null,
+          "p": null
+        },
+        "c9_asym_vs_ctrl_log2_diff": 0.5244,
+        "c9_asym_vs_ctrl_welch_p": 0.09728853231514431,
+        "sod1_vs_ctrl_log2_diff": null,
+        "sod1_vs_ctrl_welch_p": null,
+        "symp_als_vs_ctrl_log2_diff": 0.6606,
+        "symp_als_vs_ctrl_welch_p": 0.058554525948557215,
+        "symp_als_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 25,
+          "banks_included": [
+            "Emory"
+          ],
+          "beta": 0.3881,
+          "p": 0.16197107656645357
+        },
+        "pct_above_ctrl_p90": {
+          "sALS": 16.67,
+          "C9orf72": 40.0
+        },
+        "corr_with_bridge4_in_symp_als": {
+          "n_paired": 31,
+          "pearson_r": -0.0393,
+          "pearson_p": 0.8337828812618794,
+          "spearman_rho": -0.0452
+        }
+      },
+      "ISG15": {
+        "detected": true,
+        "n_non_missing_total": 47,
+        "missing_pct_total": 81.85,
+        "non_missing_by_group": {
+          "Control": 12,
+          "C9orf72-Asymptomatic": 5,
+          "SOD1-Asymptomatic": 1,
+          "C9orf72": 13,
+          "SOD1": 5,
+          "sALS": 11
+        },
+        "sals_vs_ctrl_log2_diff": -0.0466,
+        "sals_vs_ctrl_welch_p": 0.9289968103688699,
+        "sals_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 19,
+          "banks_included": [
+            "Emory"
+          ],
+          "beta": -0.1867,
+          "p": 0.7096054248691951
+        },
+        "c9_vs_ctrl_log2_diff": 0.7723,
+        "c9_vs_ctrl_welch_p": 0.0262945789905999,
+        "c9_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 13,
+          "banks_included": [
+            "Emory"
+          ],
+          "beta": null,
+          "p": null
+        },
+        "c9_asym_vs_ctrl_log2_diff": -0.6505,
+        "c9_asym_vs_ctrl_welch_p": 0.3915050580306198,
+        "sod1_vs_ctrl_log2_diff": 0.5145,
+        "sod1_vs_ctrl_welch_p": 0.06858256266022993,
+        "symp_als_vs_ctrl_log2_diff": 0.4173,
+        "symp_als_vs_ctrl_welch_p": 0.18564842503364734,
+        "symp_als_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 24,
+          "banks_included": [
+            "Emory"
+          ],
+          "beta": 0.0251,
+          "p": 0.9526466527917163
+        },
+        "pct_above_ctrl_p90": {
+          "sALS": 36.36,
+          "C9orf72": 53.85
+        },
+        "corr_with_bridge4_in_symp_als": {
+          "n_paired": 29,
+          "pearson_r": -0.1335,
+          "pearson_p": 0.489887859358906,
+          "spearman_rho": 0.2601
+        }
+      },
+      "CHIT1": {
+        "detected": true,
+        "n_non_missing_total": 246,
+        "missing_pct_total": 5.02,
+        "non_missing_by_group": {
+          "Control": 68,
+          "C9orf72-Asymptomatic": 55,
+          "SOD1-Asymptomatic": 13,
+          "C9orf72": 42,
+          "SOD1": 22,
+          "sALS": 46
+        },
+        "sals_vs_ctrl_log2_diff": 2.0106,
+        "sals_vs_ctrl_welch_p": 1.9140882088972943e-09,
+        "sals_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 98,
+          "banks_included": [
+            "Emory",
+            "WashU"
+          ],
+          "beta": 2.1057,
+          "p": 3.908079232180327e-12
+        },
+        "c9_vs_ctrl_log2_diff": 2.8644,
+        "c9_vs_ctrl_welch_p": 3.1981742974096147e-13,
+        "c9_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 77,
+          "banks_included": [
+            "Emory",
+            "WashU"
+          ],
+          "beta": 2.6062,
+          "p": 7.741494031929322e-09
+        },
+        "c9_asym_vs_ctrl_log2_diff": -0.0495,
+        "c9_asym_vs_ctrl_welch_p": 0.7827376977644387,
+        "sod1_vs_ctrl_log2_diff": 1.634,
+        "sod1_vs_ctrl_welch_p": 0.00040493749036292736,
+        "symp_als_vs_ctrl_log2_diff": 2.2613,
+        "symp_als_vs_ctrl_welch_p": 9.085483277602361e-22,
+        "symp_als_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 132,
+          "banks_included": [
+            "Emory",
+            "WashU"
+          ],
+          "beta": 2.2477,
+          "p": 2.840873967811338e-13
+        },
+        "pct_above_ctrl_p90": {
+          "sALS": 73.91,
+          "C9orf72": 78.57
+        },
+        "corr_with_bridge4_in_symp_als": {
+          "n_paired": 110,
+          "pearson_r": 0.6728,
+          "pearson_p": 8.296022282240411e-16,
+          "spearman_rho": 0.6855
+        }
+      },
+      "CHI3L2": {
+        "detected": true,
+        "n_non_missing_total": 259,
+        "missing_pct_total": 0.0,
+        "non_missing_by_group": {
+          "Control": 72,
+          "C9orf72-Asymptomatic": 59,
+          "SOD1-Asymptomatic": 13,
+          "C9orf72": 43,
+          "SOD1": 22,
+          "sALS": 50
+        },
+        "sals_vs_ctrl_log2_diff": 0.8691,
+        "sals_vs_ctrl_welch_p": 5.861989699497495e-10,
+        "sals_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 106,
+          "banks_included": [
+            "Emory",
+            "WashU"
+          ],
+          "beta": 0.7962,
+          "p": 2.2816197189046754e-09
+        },
+        "c9_vs_ctrl_log2_diff": 1.1911,
+        "c9_vs_ctrl_welch_p": 1.1162925035052523e-12,
+        "c9_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 81,
+          "banks_included": [
+            "Emory",
+            "WashU"
+          ],
+          "beta": 1.0853,
+          "p": 2.4512072448482953e-08
+        },
+        "c9_asym_vs_ctrl_log2_diff": -0.1621,
+        "c9_asym_vs_ctrl_welch_p": 0.05599168214033243,
+        "sod1_vs_ctrl_log2_diff": 0.9912,
+        "sod1_vs_ctrl_welch_p": 2.8074549745874067e-05,
+        "symp_als_vs_ctrl_log2_diff": 1.0128,
+        "symp_als_vs_ctrl_welch_p": 1.920674775240708e-22,
+        "symp_als_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 140,
+          "banks_included": [
+            "Emory",
+            "WashU"
+          ],
+          "beta": 0.8677,
+          "p": 2.918699261140434e-11
+        },
+        "pct_above_ctrl_p90": {
+          "sALS": 70.0,
+          "C9orf72": 86.05
+        },
+        "corr_with_bridge4_in_symp_als": {
+          "n_paired": 115,
+          "pearson_r": 0.7128,
+          "pearson_p": 4.0511706639710144e-19,
+          "spearman_rho": 0.7183
+        }
+      },
+      "GPNMB": {
+        "detected": true,
+        "n_non_missing_total": 255,
+        "missing_pct_total": 1.54,
+        "non_missing_by_group": {
+          "Control": 71,
+          "C9orf72-Asymptomatic": 57,
+          "SOD1-Asymptomatic": 13,
+          "C9orf72": 43,
+          "SOD1": 22,
+          "sALS": 49
+        },
+        "sals_vs_ctrl_log2_diff": 0.3682,
+        "sals_vs_ctrl_welch_p": 0.00018708567079564112,
+        "sals_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 105,
+          "banks_included": [
+            "Emory",
+            "WashU"
+          ],
+          "beta": 0.3401,
+          "p": 0.0005114892270466646
+        },
+        "c9_vs_ctrl_log2_diff": 0.5603,
+        "c9_vs_ctrl_welch_p": 0.00010406720887115708,
+        "c9_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 81,
+          "banks_included": [
+            "Emory",
+            "WashU"
+          ],
+          "beta": 0.6231,
+          "p": 0.000517517792105287
+        },
+        "c9_asym_vs_ctrl_log2_diff": -0.2529,
+        "c9_asym_vs_ctrl_welch_p": 0.0021045807894282476,
+        "sod1_vs_ctrl_log2_diff": 0.2798,
+        "sod1_vs_ctrl_welch_p": 0.11813176865878763,
+        "symp_als_vs_ctrl_log2_diff": 0.4236,
+        "symp_als_vs_ctrl_welch_p": 6.371388728437665e-07,
+        "symp_als_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 139,
+          "banks_included": [
+            "Emory",
+            "WashU"
+          ],
+          "beta": 0.4113,
+          "p": 0.0001864110726564887
+        },
+        "pct_above_ctrl_p90": {
+          "sALS": 34.69,
+          "C9orf72": 60.47
+        },
+        "corr_with_bridge4_in_symp_als": {
+          "n_paired": 114,
+          "pearson_r": 0.7085,
+          "pearson_p": 1.1781054026067026e-18,
+          "spearman_rho": 0.7689
+        }
+      },
+      "CHI3L1": {
+        "detected": true,
+        "n_non_missing_total": 259,
+        "missing_pct_total": 0.0,
+        "non_missing_by_group": {
+          "Control": 72,
+          "C9orf72-Asymptomatic": 59,
+          "SOD1-Asymptomatic": 13,
+          "C9orf72": 43,
+          "SOD1": 22,
+          "sALS": 50
+        },
+        "sals_vs_ctrl_log2_diff": 0.6075,
+        "sals_vs_ctrl_welch_p": 5.059284654827308e-05,
+        "sals_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 106,
+          "banks_included": [
+            "Emory",
+            "WashU"
+          ],
+          "beta": 0.5257,
+          "p": 0.0004231733270830628
+        },
+        "c9_vs_ctrl_log2_diff": 1.0385,
+        "c9_vs_ctrl_welch_p": 5.596153407722304e-10,
+        "c9_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 81,
+          "banks_included": [
+            "Emory",
+            "WashU"
+          ],
+          "beta": 0.8195,
+          "p": 5.9972330289210344e-05
+        },
+        "c9_asym_vs_ctrl_log2_diff": -0.3908,
+        "c9_asym_vs_ctrl_welch_p": 7.053074737806097e-05,
+        "sod1_vs_ctrl_log2_diff": 0.4337,
+        "sod1_vs_ctrl_welch_p": 0.02415934826686481,
+        "symp_als_vs_ctrl_log2_diff": 0.7354,
+        "symp_als_vs_ctrl_welch_p": 7.949696333366642e-11,
+        "symp_als_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 140,
+          "banks_included": [
+            "Emory",
+            "WashU"
+          ],
+          "beta": 0.5117,
+          "p": 0.00018634949456097357
+        },
+        "pct_above_ctrl_p90": {
+          "sALS": 36.0,
+          "C9orf72": 62.79
+        },
+        "corr_with_bridge4_in_symp_als": {
+          "n_paired": 115,
+          "pearson_r": 0.6388,
+          "pearson_p": 1.5832645976906836e-14,
+          "spearman_rho": 0.6268
+        }
+      },
+      "SERPINA3": {
+        "detected": true,
+        "n_non_missing_total": 259,
+        "missing_pct_total": 0.0,
+        "non_missing_by_group": {
+          "Control": 72,
+          "C9orf72-Asymptomatic": 59,
+          "SOD1-Asymptomatic": 13,
+          "C9orf72": 43,
+          "SOD1": 22,
+          "sALS": 50
+        },
+        "sals_vs_ctrl_log2_diff": 0.2667,
+        "sals_vs_ctrl_welch_p": 0.009552963948967737,
+        "sals_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 106,
+          "banks_included": [
+            "Emory",
+            "WashU"
+          ],
+          "beta": 0.2319,
+          "p": 0.04487083163877336
+        },
+        "c9_vs_ctrl_log2_diff": 0.7039,
+        "c9_vs_ctrl_welch_p": 2.90337366721343e-10,
+        "c9_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 81,
+          "banks_included": [
+            "Emory",
+            "WashU"
+          ],
+          "beta": 0.6605,
+          "p": 0.000400316680348533
+        },
+        "c9_asym_vs_ctrl_log2_diff": -0.4383,
+        "c9_asym_vs_ctrl_welch_p": 9.570390926386197e-06,
+        "sod1_vs_ctrl_log2_diff": 0.3132,
+        "sod1_vs_ctrl_welch_p": 0.10222455856451369,
+        "symp_als_vs_ctrl_log2_diff": 0.4391,
+        "symp_als_vs_ctrl_welch_p": 1.4173471110030051e-06,
+        "symp_als_vs_ctrl_matched_center_ols": {
+          "n_matched_centers": 140,
+          "banks_included": [
+            "Emory",
+            "WashU"
+          ],
+          "beta": 0.3305,
+          "p": 0.002975219231996039
+        },
+        "pct_above_ctrl_p90": {
+          "sALS": 28.0,
+          "C9orf72": 51.16
+        },
+        "corr_with_bridge4_in_symp_als": {
+          "n_paired": 115,
+          "pearson_r": 0.6295,
+          "pearson_p": 4.84142831024058e-14,
+          "spearman_rho": 0.5729
+        }
+      }
+    },
+    "tmt_emory_N101": {
+      "CXCL10": {
+        "detected": true,
+        "n_symp_als": 9,
+        "n_sals": 7,
+        "n_ctrl": 7,
+        "symp_als_vs_ctrl_log2_diff": -0.1594,
+        "symp_als_vs_ctrl_welch_p": 0.378977896347668,
+        "sals_vs_ctrl_log2_diff": -0.0539,
+        "sals_vs_ctrl_welch_p": 0.7626233689249551,
+        "corr_with_bridge4_in_symp_als": {
+          "n_paired": 9,
+          "pearson_r": -0.366,
+          "pearson_p": 0.3327436414874522
+        }
+      },
+      "STAT1": {
+        "detected": false
+      },
+      "STAT3": {
+        "detected": false
+      },
+      "ISG15": {
+        "detected": false
+      },
+      "CHIT1": {
+        "detected": true,
+        "n_symp_als": 51,
+        "n_sals": 35,
+        "n_ctrl": 44,
+        "symp_als_vs_ctrl_log2_diff": 1.2265,
+        "symp_als_vs_ctrl_welch_p": 1.361223199380461e-07,
+        "sals_vs_ctrl_log2_diff": 1.1734,
+        "sals_vs_ctrl_welch_p": 2.1455900795583508e-05,
+        "corr_with_bridge4_in_symp_als": {
+          "n_paired": 51,
+          "pearson_r": 0.78,
+          "pearson_p": 1.5153004025368395e-11
+        }
+      },
+      "CHI3L2": {
+        "detected": true,
+        "n_symp_als": 51,
+        "n_sals": 35,
+        "n_ctrl": 44,
+        "symp_als_vs_ctrl_log2_diff": 0.569,
+        "symp_als_vs_ctrl_welch_p": 4.691576028703537e-06,
+        "sals_vs_ctrl_log2_diff": 0.5513,
+        "sals_vs_ctrl_welch_p": 9.430914104740757e-05,
+        "corr_with_bridge4_in_symp_als": {
+          "n_paired": 51,
+          "pearson_r": 0.826,
+          "pearson_p": 8.640911359910419e-14
+        }
+      },
+      "GPNMB": {
+        "detected": true,
+        "n_symp_als": 51,
+        "n_sals": 35,
+        "n_ctrl": 44,
+        "symp_als_vs_ctrl_log2_diff": 0.2291,
+        "symp_als_vs_ctrl_welch_p": 0.022704362426149996,
+        "sals_vs_ctrl_log2_diff": 0.2069,
+        "sals_vs_ctrl_welch_p": 0.05168239224861439,
+        "corr_with_bridge4_in_symp_als": {
+          "n_paired": 51,
+          "pearson_r": 0.6417,
+          "pearson_p": 3.8931650229487606e-07
+        }
+      },
+      "CHI3L1": {
+        "detected": true,
+        "n_symp_als": 51,
+        "n_sals": 35,
+        "n_ctrl": 44,
+        "symp_als_vs_ctrl_log2_diff": 0.2941,
+        "symp_als_vs_ctrl_welch_p": 0.017162561865040064,
+        "sals_vs_ctrl_log2_diff": 0.3144,
+        "sals_vs_ctrl_welch_p": 0.019058963815773548,
+        "corr_with_bridge4_in_symp_als": {
+          "n_paired": 51,
+          "pearson_r": 0.8832,
+          "pearson_p": 9.890697093008546e-18
+        }
+      },
+      "SERPINA3": {
+        "detected": true,
+        "n_symp_als": 51,
+        "n_sals": 35,
+        "n_ctrl": 44,
+        "symp_als_vs_ctrl_log2_diff": 0.203,
+        "symp_als_vs_ctrl_welch_p": 9.364544350898605e-05,
+        "sals_vs_ctrl_log2_diff": 0.1892,
+        "sals_vs_ctrl_welch_p": 0.00041638820885193874,
+        "corr_with_bridge4_in_symp_als": {
+          "n_paired": 51,
+          "pearson_r": 0.4776,
+          "pearson_p": 0.0003942655666310787
+        }
+      }
+    }
+  }
+}

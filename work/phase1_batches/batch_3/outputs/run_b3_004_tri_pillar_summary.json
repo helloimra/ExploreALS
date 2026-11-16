@@ -1,0 +1,1546 @@
+{
+  "gene_profiles": {
+    "IL1RL1": {
+      "node_id": "C007",
+      "ensembl_id": "ENSG00000115602",
+      "gnomad_constraint": {
+        "pli": 4.862191700831554e-07,
+        "oe_lof": 0.629059545458912,
+        "oe_lof_lower": 0.47479623573428587,
+        "oe_lof_upper": 0.8449538375062217,
+        "oe_mis": 1.1661323482440233,
+        "oe_mis_lower": 1.0994746722050557,
+        "oe_mis_upper": 1.237522363590312
+      },
+      "gtex_v10": {
+        "top5_tissues_tpm": [
+          {
+            "tissue": "Lung",
+            "tpm": 140.076
+          },
+          {
+            "tissue": "Kidney_Cortex",
+            "tpm": 46.523
+          },
+          {
+            "tissue": "Adrenal_Gland",
+            "tpm": 18.002
+          },
+          {
+            "tissue": "Adipose_Visceral_Omentum",
+            "tpm": 13.59
+          },
+          {
+            "tissue": "Stomach",
+            "tpm": 12.459
+          }
+        ],
+        "Brain_Frontal_Cortex_BA9_tpm": 0.6766,
+        "Brain_Spinal_cord_cervical_c-1_tpm": 1.29,
+        "Brain_Cerebellum_tpm": 0.4054,
+        "Lung_tpm": 140.076,
+        "Liver_tpm": 2.2925,
+        "Whole_Blood_tpm": 2.6267
+      },
+      "opentargets_tractability_positive": [
+        "AB:Advanced Clinical",
+        "AB:UniProt loc high conf",
+        "AB:GO CC high conf",
+        "AB:UniProt loc med conf",
+        "AB:UniProt SigP or TMHMM",
+        "AB:Human Protein Atlas loc",
+        "PR:UniProt Ubiquitination"
+      ],
+      "opentargets_drugs": [
+        "ASTEGOLIMAB (PHASE_3)"
+      ],
+      "opentargets_top_diseases": [
+        "asthma",
+        "allergic disease",
+        "allergic rhinitis",
+        "atopic eczema",
+        "respiratory system disorder",
+        "Wheezing",
+        "childhood onset asthma",
+        "Ascending aortic dissection"
+      ],
+      "opentargets_mouse_phenotypes": [
+        "increased susceptibility to induced pancreatitis"
+      ],
+      "opentargets_safety_events": [],
+      "gene_liability": {
+        "node_id": "C007",
+        "gene_symbol": "IL1RL1",
+        "ensembl_id": "ENSG00000115602",
+        "pli": 0.0,
+        "oe_lof": 0.6291,
+        "loeuf": 0.845,
+        "dim1_constraint_25": 0,
+        "dim2_mouse_ko_25": 8,
+        "dim3_organ_expr_20": 12,
+        "dim4_ontarget_20": 5,
+        "dim5_depmap_10": "UNAVAILABLE_METADATA_ONLY",
+        "points_earned": 25,
+        "available_weight": 90,
+        "coverage_pct": 90,
+        "liability_score_0_100": 27.8,
+        "liability_band": "moderate",
+        "confidence": "High",
+        "known_drugs": "ASTEGOLIMAB (PHASE_3)",
+        "tractability_flags": "AB:Advanced Clinical; AB:UniProt loc high conf; AB:GO CC high conf; AB:UniProt loc med conf; AB:UniProt SigP or TMHMM; AB:Human Protein Atlas loc",
+        "rationale": "T1/T2: Tolerant to LoF (pLI=4.9e-7, LOEUF=0.845); Il1rl1-/- mice viable with impaired Th2/Treg tissue repair; high lung/adrenal/vascular TPM; peripheral anti-ST2 astegolimab well tolerated in Ph2/3 COPD/asthma, CNS sST2 vs ST2L untested",
+        "modulation_strategy": "Isoform-selective sST2 neutralization or BBB-shuttled decoy blockade sparing Treg ST2L"
+      }
+    },
+    "CHIT1": {
+      "node_id": "C017-N1",
+      "ensembl_id": "ENSG00000133063",
+      "gnomad_constraint": {
+        "pli": 5.037377148644005e-15,
+        "oe_lof": 0.9030028407779787,
+        "oe_lof_lower": 0.714722282256582,
+        "oe_lof_upper": 1.1515297735460726,
+        "oe_mis": 0.9759212740927465,
+        "oe_mis_lower": 0.9112709249949525,
+        "oe_mis_upper": 1.0459519183988728
+      },
+      "gtex_v10": {
+        "top5_tissues_tpm": [
+          {
+            "tissue": "Whole_Blood",
+            "tpm": 4.025
+          },
+          {
+            "tissue": "Lung",
+            "tpm": 2.096
+          },
+          {
+            "tissue": "Spleen",
+            "tpm": 2.006
+          },
+          {
+            "tissue": "Adipose_Subcutaneous",
+            "tpm": 1.545
+          },
+          {
+            "tissue": "Cells_EBV-transformed_lymphocytes",
+            "tpm": 0.994
+          }
+        ],
+        "Brain_Frontal_Cortex_BA9_tpm": 0.2647,
+        "Brain_Spinal_cord_cervical_c-1_tpm": 0.4367,
+        "Brain_Cerebellum_tpm": 0.1554,
+        "Lung_tpm": 2.096,
+        "Liver_tpm": 0.0456,
+        "Whole_Blood_tpm": 4.0245
+      },
+      "opentargets_tractability_positive": [
+        "SM:Structure with Ligand",
+        "SM:High-Quality Ligand",
+        "SM:High-Quality Pocket",
+        "AB:GO CC high conf",
+        "AB:UniProt loc med conf",
+        "AB:UniProt SigP or TMHMM",
+        "PR:Small Molecule Binder"
+      ],
+      "opentargets_drugs": [],
+      "opentargets_top_diseases": [
+        "asthma",
+        "chitotriosidase deficiency",
+        "neurodegenerative disease",
+        "Chronic Obstructive Asthma",
+        "sarcoidosis",
+        "amyotrophic lateral sclerosis",
+        "lower respiratory tract disorder",
+        "Gaucher disease"
+      ],
+      "opentargets_mouse_phenotypes": [
+        "decreased susceptibility to bacterial infection"
+      ],
+      "opentargets_safety_events": [],
+      "gene_liability": {
+        "node_id": "C017-N1",
+        "gene_symbol": "CHIT1",
+        "ensembl_id": "ENSG00000133063",
+        "pli": 0.0,
+        "oe_lof": 0.903,
+        "loeuf": 1.1515,
+        "dim1_constraint_25": 0,
+        "dim2_mouse_ko_25": 8,
+        "dim3_organ_expr_20": 6,
+        "dim4_ontarget_20": 0,
+        "dim5_depmap_10": "UNAVAILABLE_METADATA_ONLY",
+        "points_earned": 14,
+        "available_weight": 90,
+        "coverage_pct": 90,
+        "liability_score_0_100": 15.6,
+        "liability_band": "low",
+        "confidence": "High",
+        "known_drugs": "None in OpenTargets clinical pipeline",
+        "tractability_flags": "SM:Structure with Ligand; SM:High-Quality Ligand; SM:High-Quality Pocket; AB:GO CC high conf; AB:UniProt loc med conf; AB:UniProt SigP or TMHMM",
+        "rationale": "T1/T2: Common human 24-bp exon-10 null duplication rs3831317 (AF=0.220, 40,441 homozygotes in gnomAD) benign & does not alter ALS susceptibility or survival; Chit1-/- mice viable with altered chitin/fungal clearance; OATD-01 Ph2 tolerated",
+        "modulation_strategy": "No ALS causal rationale (human genetic LoF does not protect against ALS); genotype-adjusted CSF biomarker"
+      }
+    },
+    "GPNMB": {
+      "node_id": "C017-N2",
+      "ensembl_id": "ENSG00000136235",
+      "gnomad_constraint": {
+        "pli": 2.85888427889552e-29,
+        "oe_lof": 1.238833721173955,
+        "oe_lof_lower": 1.0230697280876127,
+        "oe_lof_upper": 1.5093187486332549,
+        "oe_mis": 0.9784537571737342,
+        "oe_mis_lower": 0.9188310816860169,
+        "oe_mis_upper": 1.0426101830391916
+      },
+      "gtex_v10": {
+        "top5_tissues_tpm": [
+          {
+            "tissue": "Skin_Not_Sun_Exposed_Suprapubic",
+            "tpm": 305.198
+          },
+          {
+            "tissue": "Skin_Sun_Exposed_Lower_leg",
+            "tpm": 258.384
+          },
+          {
+            "tissue": "Cervix_Endocervix",
+            "tpm": 243.041
+          },
+          {
+            "tissue": "Cervix_Ectocervix",
+            "tpm": 211.25
+          },
+          {
+            "tissue": "Artery_Aorta",
+            "tpm": 186.011
+          }
+        ],
+        "Brain_Frontal_Cortex_BA9_tpm": 10.6034,
+        "Brain_Spinal_cord_cervical_c-1_tpm": 19.1895,
+        "Brain_Cerebellum_tpm": 1.5699,
+        "Lung_tpm": 73.7152,
+        "Liver_tpm": 2.1521,
+        "Whole_Blood_tpm": 0.6398
+      },
+      "opentargets_tractability_positive": [
+        "AB:Advanced Clinical",
+        "AB:GO CC high conf",
+        "AB:UniProt loc med conf",
+        "AB:UniProt SigP or TMHMM",
+        "PR:Database Ubiquitination",
+        "PR:Half-life Data"
+      ],
+      "opentargets_drugs": [
+        "GLEMBATUMUMAB VEDOTIN (APPROVAL)"
+      ],
+      "opentargets_top_diseases": [
+        "familial primary localized cutaneous amyloidosis",
+        "Parkinson disease",
+        "amyloidosis cutis dyschromia",
+        "primary cutaneous amyloidosis",
+        "lymphoma",
+        "endometriosis",
+        "type 2 diabetes mellitus",
+        "temporomandibular joint disorder"
+      ],
+      "opentargets_mouse_phenotypes": [
+        "decreased tumor growth/size",
+        "abnormal dendritic cell physiology",
+        "increased hemoglobin content",
+        "abnormal iris pigmentation",
+        "abnormal iris morphology",
+        "iris atrophy",
+        "increased fasting circulating glucose level"
+      ],
+      "opentargets_safety_events": [],
+      "gene_liability": {
+        "node_id": "C017-N2",
+        "gene_symbol": "GPNMB",
+        "ensembl_id": "ENSG00000136235",
+        "pli": 0.0,
+        "oe_lof": 1.2388,
+        "loeuf": 1.5093,
+        "dim1_constraint_25": 0,
+        "dim2_mouse_ko_25": 8,
+        "dim3_organ_expr_20": 12,
+        "dim4_ontarget_20": 12,
+        "dim5_depmap_10": "UNAVAILABLE_METADATA_ONLY",
+        "points_earned": 32,
+        "available_weight": 90,
+        "coverage_pct": 90,
+        "liability_score_0_100": 35.6,
+        "liability_band": "moderate",
+        "confidence": "High",
+        "known_drugs": "GLEMBATUMUMAB VEDOTIN (APPROVAL)",
+        "tractability_flags": "AB:Advanced Clinical; AB:GO CC high conf; AB:UniProt loc med conf; AB:UniProt SigP or TMHMM; PR:Database Ubiquitination; PR:Half-life Data",
+        "rationale": "T1/T2: LoF tolerant in gnomAD (pLI=2.9e-29, LOEUF=1.509; human truncating alleles cause autosomal-recessive amyloidosis cutis dyschromica); PD 7p15 GWAS risk increases expression yet functional ALS/TDP-43 models show GPNMB is neuroprotective/pro-lysosomal",
+        "modulation_strategy": "DO NOT INHIBIT in ALS (wrong therapeutic sign); utilize CSF GPNMB as DAM/lysosomal PD biomarker"
+      }
+    },
+    "CHI3L1": {
+      "node_id": "C017-N3",
+      "ensembl_id": "ENSG00000133048",
+      "gnomad_constraint": {
+        "pli": 3.40324854151333e-08,
+        "oe_lof": 0.7366508684367854,
+        "oe_lof_lower": 0.5511256365314042,
+        "oe_lof_upper": 0.9991565918861626,
+        "oe_mis": 1.0015776729536523,
+        "oe_mis_lower": 0.9305095004248222,
+        "oe_mis_upper": 1.0790187733234684
+      },
+      "gtex_v10": {
+        "top5_tissues_tpm": [
+          {
+            "tissue": "Skin_Not_Sun_Exposed_Suprapubic",
+            "tpm": 109.139
+          },
+          {
+            "tissue": "Skin_Sun_Exposed_Lower_leg",
+            "tpm": 102.713
+          },
+          {
+            "tissue": "Liver",
+            "tpm": 100.385
+          },
+          {
+            "tissue": "Pituitary",
+            "tpm": 89.402
+          },
+          {
+            "tissue": "Minor_Salivary_Gland",
+            "tpm": 89.174
+          }
+        ],
+        "Brain_Frontal_Cortex_BA9_tpm": 34.1542,
+        "Brain_Spinal_cord_cervical_c-1_tpm": 16.9896,
+        "Brain_Cerebellum_tpm": 4.3117,
+        "Lung_tpm": 53.9724,
+        "Liver_tpm": 100.385,
+        "Whole_Blood_tpm": 66.7839
+      },
+      "opentargets_tractability_positive": [
+        "SM:Structure with Ligand",
+        "SM:High-Quality Pocket",
+        "AB:UniProt loc high conf",
+        "AB:GO CC high conf",
+        "AB:UniProt SigP or TMHMM"
+      ],
+      "opentargets_drugs": [],
+      "opentargets_top_diseases": [
+        "schizophrenia",
+        "asthma",
+        "childhood onset asthma",
+        "central nervous system cancer",
+        "glioblastoma",
+        "lower respiratory tract disorder",
+        "chronic obstructive pulmonary disease",
+        "Alzheimer disease"
+      ],
+      "opentargets_mouse_phenotypes": [
+        "impaired neutrophil recruitment",
+        "decreased splenocyte proliferation",
+        "increased T cell apoptosis",
+        "abnormal dendritic cell physiology",
+        "decreased T-helper 2 cell number",
+        "impaired eosinophil recruitment",
+        "decreased interleukin-4 secretion",
+        "decreased IgE level"
+      ],
+      "opentargets_safety_events": [],
+      "gene_liability": {
+        "node_id": "C017-N3",
+        "gene_symbol": "CHI3L1",
+        "ensembl_id": "ENSG00000133048",
+        "pli": 0.0,
+        "oe_lof": 0.7367,
+        "loeuf": 0.9992,
+        "dim1_constraint_25": 5,
+        "dim2_mouse_ko_25": 8,
+        "dim3_organ_expr_20": 12,
+        "dim4_ontarget_20": 5,
+        "dim5_depmap_10": "UNAVAILABLE_METADATA_ONLY",
+        "points_earned": 30,
+        "available_weight": 90,
+        "coverage_pct": 90,
+        "liability_score_0_100": 33.3,
+        "liability_band": "moderate",
+        "confidence": "High",
+        "known_drugs": "None in OpenTargets clinical pipeline",
+        "tractability_flags": "SM:Structure with Ligand; SM:High-Quality Pocket; AB:UniProt loc high conf; AB:GO CC high conf; AB:UniProt SigP or TMHMM",
+        "rationale": "T2/T3: Borderline LoF tolerance (pLI=3.4e-8, LOEUF=0.999); Chil1-/- mice viable with altered lung/neuroimmune inflammation; broad liver/astrocyte/lung expression; pseudochitinase lacking catalytic pocket",
+        "modulation_strategy": "Reclassify as reactive astroglial/white-matter CSF stage biomarker rather than Track B enzyme target"
+      }
+    },
+    "CHI3L2": {
+      "node_id": "C017-N4",
+      "ensembl_id": "ENSG00000064886",
+      "gnomad_constraint": {
+        "pli": 2.0616433849422624e-16,
+        "oe_lof": 0.9930808328384639,
+        "oe_lof_lower": 0.7860185674499854,
+        "oe_lof_upper": 1.266399279061171,
+        "oe_mis": 1.075433519524081,
+        "oe_mis_lower": 0.9994192658540091,
+        "oe_mis_upper": 1.1582355664208368
+      },
+      "gtex_v10": {
+        "top5_tissues_tpm": [
+          {
+            "tissue": "Cells_EBV-transformed_lymphocytes",
+            "tpm": 136.434
+          },
+          {
+            "tissue": "Minor_Salivary_Gland",
+            "tpm": 70.445
+          },
+          {
+            "tissue": "Lung",
+            "tpm": 29.535
+          },
+          {
+            "tissue": "Spleen",
+            "tpm": 16.308
+          },
+          {
+            "tissue": "Artery_Coronary",
+            "tpm": 9.597
+          }
+        ],
+        "Brain_Frontal_Cortex_BA9_tpm": 0.309,
+        "Brain_Spinal_cord_cervical_c-1_tpm": 7.6749,
+        "Brain_Cerebellum_tpm": 0.1164,
+        "Lung_tpm": 29.5354,
+        "Liver_tpm": 0.141,
+        "Whole_Blood_tpm": 3.6697
+      },
+      "opentargets_tractability_positive": [
+        "AB:UniProt loc high conf",
+        "AB:UniProt SigP or TMHMM",
+        "AB:GO CC med conf",
+        "PR:Database Ubiquitination"
+      ],
+      "opentargets_drugs": [],
+      "opentargets_top_diseases": [
+        "brain disorder",
+        "neoplasm",
+        "central nervous system cancer",
+        "breast cancer",
+        "breast carcinoma",
+        "glioma",
+        "glioblastoma",
+        "gastric cancer"
+      ],
+      "opentargets_mouse_phenotypes": [],
+      "opentargets_safety_events": [],
+      "gene_liability": {
+        "node_id": "C017-N4",
+        "gene_symbol": "CHI3L2",
+        "ensembl_id": "ENSG00000064886",
+        "pli": 0.0,
+        "oe_lof": 0.9931,
+        "loeuf": 1.2664,
+        "dim1_constraint_25": 0,
+        "dim2_mouse_ko_25": 0,
+        "dim3_organ_expr_20": 6,
+        "dim4_ontarget_20": 0,
+        "dim5_depmap_10": "UNAVAILABLE_METADATA_ONLY",
+        "points_earned": 6,
+        "available_weight": 90,
+        "coverage_pct": 90,
+        "liability_score_0_100": 6.7,
+        "liability_band": "low",
+        "confidence": "High",
+        "known_drugs": "None in OpenTargets clinical pipeline",
+        "tractability_flags": "AB:UniProt loc high conf; AB:UniProt SigP or TMHMM; AB:GO CC med conf; PR:Database Ubiquitination",
+        "rationale": "T2/T3: Fully LoF tolerant (pLI=2.1e-16, LOEUF=1.266); lacks murine ortholog (human/primate pseudochitinase); low-to-moderate tissue expression; no known human LoF pathology",
+        "modulation_strategy": "Reclassify as human CSF stage/progression biomarker alongside CHIT1/CHI3L1"
+      }
+    },
+    "C1QA": {
+      "node_id": "C018-N1",
+      "ensembl_id": "ENSG00000173372",
+      "gnomad_constraint": {
+        "pli": 0.27083035576009684,
+        "oe_lof": 0.435121967684445,
+        "oe_lof_lower": 0.19817171642574757,
+        "oe_lof_upper": 1.1245954283944763,
+        "oe_mis": 0.8360080197997072,
+        "oe_mis_lower": 0.7574694475129083,
+        "oe_mis_upper": 0.9241524291509793
+      },
+      "gtex_v10": {
+        "top5_tissues_tpm": [
+          {
+            "tissue": "Spleen",
+            "tpm": 1549.21
+          },
+          {
+            "tissue": "Lung",
+            "tpm": 392.546
+          },
+          {
+            "tissue": "Adipose_Visceral_Omentum",
+            "tpm": 257.689
+          },
+          {
+            "tissue": "Artery_Aorta",
+            "tpm": 198.234
+          },
+          {
+            "tissue": "Adipose_Subcutaneous",
+            "tpm": 180.281
+          }
+        ],
+        "Brain_Frontal_Cortex_BA9_tpm": 11.0988,
+        "Brain_Spinal_cord_cervical_c-1_tpm": 74.6796,
+        "Brain_Cerebellum_tpm": 4.333,
+        "Lung_tpm": 392.546,
+        "Liver_tpm": 17.6687,
+        "Whole_Blood_tpm": 32.0005
+      },
+      "opentargets_tractability_positive": [
+        "SM:Structure with Ligand",
+        "AB:UniProt loc high conf",
+        "AB:GO CC high conf",
+        "AB:UniProt SigP or TMHMM"
+      ],
+      "opentargets_drugs": [],
+      "opentargets_top_diseases": [
+        "immunodeficiency due to a classical component pathway complement deficiency",
+        "C1Q deficiency",
+        "C1Q deficiency 1",
+        "complement deficiency",
+        "dengue disease",
+        "systemic lupus erythematosus related to C1QA",
+        "smoking initiation",
+        "benign urinary system neoplasm"
+      ],
+      "opentargets_mouse_phenotypes": [
+        "no abnormal phenotype detected",
+        "increased susceptibility to bacterial infection",
+        "seizures",
+        "glomerulonephritis",
+        "increased anti-histone antibody level",
+        "decreased circulating glucose level",
+        "abnormal inhibitory postsynaptic currents",
+        "increased circulating chloride level"
+      ],
+      "opentargets_safety_events": [],
+      "gene_liability": {
+        "node_id": "C018-N1",
+        "gene_symbol": "C1QA",
+        "ensembl_id": "ENSG00000173372",
+        "pli": 0.27083,
+        "oe_lof": 0.4351,
+        "loeuf": 1.1246,
+        "dim1_constraint_25": 15,
+        "dim2_mouse_ko_25": 18,
+        "dim3_organ_expr_20": 12,
+        "dim4_ontarget_20": 20,
+        "dim5_depmap_10": "UNAVAILABLE_METADATA_ONLY",
+        "points_earned": 65,
+        "available_weight": 90,
+        "coverage_pct": 90,
+        "liability_score_0_100": 72.2,
+        "liability_band": "high",
+        "confidence": "High",
+        "known_drugs": "None in OpenTargets clinical pipeline",
+        "tractability_flags": "SM:Structure with Ligand; AB:UniProt loc high conf; AB:GO CC high conf; AB:UniProt SigP or TMHMM",
+        "rationale": "T1/T2: Intermediate LoF constraint (pLI=0.271, o/e=0.435); homozygous human C1QA deficiency causes >90% penetrant systemic lupus erythematosus (SLE) & encapsulated bacterial infections; C1qa-/- mice develop glomerulonephritis/autoimmunity",
+        "modulation_strategy": "Avoid chronic systemic ablation; requires transient or CNS-restricted C1q modulation with meningococcal/pneumococcal prophylaxis"
+      }
+    },
+    "C1QB": {
+      "node_id": "C018-N2",
+      "ensembl_id": "ENSG00000173369",
+      "gnomad_constraint": {
+        "pli": 0.2836813959517135,
+        "oe_lof": 0.4317884531415781,
+        "oe_lof_lower": 0.17653486255901094,
+        "oe_lof_upper": 1.3592254946433597,
+        "oe_mis": 0.8638570787270556,
+        "oe_mis_lower": 0.78523576219504,
+        "oe_mis_upper": 0.9517584061173598
+      },
+      "gtex_v10": {
+        "top5_tissues_tpm": [
+          {
+            "tissue": "Spleen",
+            "tpm": 1885.63
+          },
+          {
+            "tissue": "Lung",
+            "tpm": 496.401
+          },
+          {
+            "tissue": "Adipose_Visceral_Omentum",
+            "tpm": 282.707
+          },
+          {
+            "tissue": "Artery_Aorta",
+            "tpm": 229.54
+          },
+          {
+            "tissue": "Small_Intestine_Terminal_Ileum",
+            "tpm": 213.778
+          }
+        ],
+        "Brain_Frontal_Cortex_BA9_tpm": 15.3312,
+        "Brain_Spinal_cord_cervical_c-1_tpm": 111.262,
+        "Brain_Cerebellum_tpm": 6.0287,
+        "Lung_tpm": 496.401,
+        "Liver_tpm": 17.6697,
+        "Whole_Blood_tpm": 29.1401
+      },
+      "opentargets_tractability_positive": [],
+      "opentargets_drugs": [],
+      "opentargets_top_diseases": [
+        "immunodeficiency due to a classical component pathway complement deficiency",
+        "C1Q deficiency",
+        "C1Q deficiency 1",
+        "C1Q deficiency 2",
+        "systemic lupus erythematosus",
+        "complement deficiency",
+        "complication",
+        "medical procedure"
+      ],
+      "opentargets_mouse_phenotypes": [
+        "no abnormal phenotype detected"
+      ],
+      "opentargets_safety_events": [],
+      "gene_liability": {
+        "node_id": "C018-N2",
+        "gene_symbol": "C1QB",
+        "ensembl_id": "ENSG00000173369",
+        "pli": 0.283681,
+        "oe_lof": 0.4318,
+        "loeuf": 1.3592,
+        "dim1_constraint_25": 15,
+        "dim2_mouse_ko_25": 18,
+        "dim3_organ_expr_20": 12,
+        "dim4_ontarget_20": 20,
+        "dim5_depmap_10": "UNAVAILABLE_METADATA_ONLY",
+        "points_earned": 65,
+        "available_weight": 90,
+        "coverage_pct": 90,
+        "liability_score_0_100": 72.2,
+        "liability_band": "high",
+        "confidence": "High",
+        "known_drugs": "None in OpenTargets clinical pipeline",
+        "tractability_flags": "",
+        "rationale": "T1/T2: Intermediate LoF constraint (pLI=0.284, o/e=0.432); human C1QB deficiency causes severe early-onset SLE & encapsulated bacterial sepsis; C1qb-/- mice show impaired immune-complex clearance",
+        "modulation_strategy": "Avoid chronic systemic ablation; CNS-compartmentalized biomarker-stratified dosing + vaccination mandatory"
+      }
+    },
+    "C1QC": {
+      "node_id": "C018-N3",
+      "ensembl_id": "ENSG00000159189",
+      "gnomad_constraint": {
+        "pli": 0.05756775615875577,
+        "oe_lof": 0.6785455353378583,
+        "oe_lof_lower": 0.3342090483386511,
+        "oe_lof_upper": 1.552769867038766,
+        "oe_mis": 0.9147986276299412,
+        "oe_mis_lower": 0.8324668649371119,
+        "oe_mis_upper": 1.0067275878904236
+      },
+      "gtex_v10": {
+        "top5_tissues_tpm": [
+          {
+            "tissue": "Spleen",
+            "tpm": 1279.23
+          },
+          {
+            "tissue": "Lung",
+            "tpm": 301.895
+          },
+          {
+            "tissue": "Adipose_Visceral_Omentum",
+            "tpm": 224.569
+          },
+          {
+            "tissue": "Small_Intestine_Terminal_Ileum",
+            "tpm": 194.655
+          },
+          {
+            "tissue": "Artery_Aorta",
+            "tpm": 179.423
+          }
+        ],
+        "Brain_Frontal_Cortex_BA9_tpm": 12.8496,
+        "Brain_Spinal_cord_cervical_c-1_tpm": 88.1702,
+        "Brain_Cerebellum_tpm": 4.9125,
+        "Lung_tpm": 301.895,
+        "Liver_tpm": 12.2879,
+        "Whole_Blood_tpm": 15.8913
+      },
+      "opentargets_tractability_positive": [
+        "SM:Structure with Ligand",
+        "AB:UniProt loc high conf",
+        "AB:GO CC high conf",
+        "AB:UniProt SigP or TMHMM"
+      ],
+      "opentargets_drugs": [],
+      "opentargets_top_diseases": [
+        "immunodeficiency due to a classical component pathway complement deficiency",
+        "C1Q deficiency",
+        "neurodegenerative disease",
+        "complement deficiency",
+        "C1Q deficiency 1",
+        "C1Q deficiency 3",
+        "placenta praevia",
+        "hereditary disease"
+      ],
+      "opentargets_mouse_phenotypes": [
+        "abnormal startle reflex",
+        "increased circulating aspartate transaminase level",
+        "increased circulating total protein level",
+        "no abnormal phenotype detected",
+        "abnormal autopod morphology",
+        "increased circulating alanine transaminase level",
+        "increased circulating calcium level",
+        "absent vibrissae"
+      ],
+      "opentargets_safety_events": [],
+      "gene_liability": {
+        "node_id": "C018-N3",
+        "gene_symbol": "C1QC",
+        "ensembl_id": "ENSG00000159189",
+        "pli": 0.057568,
+        "oe_lof": 0.6785,
+        "loeuf": 1.5528,
+        "dim1_constraint_25": 5,
+        "dim2_mouse_ko_25": 18,
+        "dim3_organ_expr_20": 12,
+        "dim4_ontarget_20": 20,
+        "dim5_depmap_10": "UNAVAILABLE_METADATA_ONLY",
+        "points_earned": 55,
+        "available_weight": 90,
+        "coverage_pct": 90,
+        "liability_score_0_100": 61.1,
+        "liability_band": "high",
+        "confidence": "High",
+        "known_drugs": "None in OpenTargets clinical pipeline",
+        "tractability_flags": "SM:Structure with Ligand; AB:UniProt loc high conf; AB:GO CC high conf; AB:UniProt SigP or TMHMM",
+        "rationale": "T1/T2: Human homozygous C1QC deficiency causes severe SLE & recurrent encapsulated bacterial infections; mouse KO impairs apoptotic body clearance",
+        "modulation_strategy": "Avoid chronic systemic ablation; requires CNS-targeted transient blockade + vaccination"
+      }
+    },
+    "C3": {
+      "node_id": "C018-N4",
+      "ensembl_id": "ENSG00000125730",
+      "gnomad_constraint": {
+        "pli": 1.1966131523229477e-07,
+        "oe_lof": 0.46665066324532184,
+        "oe_lof_lower": 0.39595446265205814,
+        "oe_lof_upper": 0.5524355512608452,
+        "oe_mis": 0.7754283375424202,
+        "oe_mis_lower": 0.745062346642445,
+        "oe_mis_upper": 0.8072388135134811
+      },
+      "gtex_v10": {
+        "top5_tissues_tpm": [
+          {
+            "tissue": "Liver",
+            "tpm": 1575.28
+          },
+          {
+            "tissue": "Adipose_Visceral_Omentum",
+            "tpm": 882.346
+          },
+          {
+            "tissue": "Fallopian_Tube",
+            "tpm": 652.567
+          },
+          {
+            "tissue": "Bladder",
+            "tpm": 515.818
+          },
+          {
+            "tissue": "Artery_Coronary",
+            "tpm": 461.539
+          }
+        ],
+        "Brain_Frontal_Cortex_BA9_tpm": 10.119,
+        "Brain_Spinal_cord_cervical_c-1_tpm": 75.784,
+        "Brain_Cerebellum_tpm": 4.446,
+        "Lung_tpm": 322.676,
+        "Liver_tpm": 1575.28,
+        "Whole_Blood_tpm": 1.0405
+      },
+      "opentargets_tractability_positive": [
+        "SM:Structure with Ligand",
+        "SM:High-Quality Pocket",
+        "AB:UniProt loc high conf",
+        "AB:GO CC high conf",
+        "AB:UniProt SigP or TMHMM",
+        "PR:Database Ubiquitination",
+        "PR:Half-life Data",
+        "PR:Small Molecule Binder"
+      ],
+      "opentargets_drugs": [
+        "PEGCETACOPLAN (APPROVAL)",
+        "AL-78898A (PHASE_2)",
+        "AMY-101 (PHASE_2)"
+      ],
+      "opentargets_top_diseases": [
+        "atypical hemolytic-uremic syndrome with C3 anomaly",
+        "complement component 3 deficiency",
+        "age-related macular degeneration",
+        "complement 3 glomerulopathy",
+        "atypical hemolytic-uremic syndrome",
+        "macular degeneration",
+        "paroxysmal nocturnal hemoglobinuria",
+        "age related macular degeneration 9"
+      ],
+      "opentargets_mouse_phenotypes": [
+        "abnormal immune system morphology",
+        "polyphagia",
+        "increased circulating free fatty acids level",
+        "abnormal humoral immune response",
+        "abnormal mast cell physiology",
+        "decreased circulating insulin level",
+        "glomerulonephritis",
+        "decreased hepatocyte proliferation"
+      ],
+      "opentargets_safety_events": [
+        "fasting triglyceride levels",
+        "fasting triglyceride levels and susceptibility to metabolic syndrome"
+      ],
+      "gene_liability": {
+        "node_id": "C018-N4",
+        "gene_symbol": "C3",
+        "ensembl_id": "ENSG00000125730",
+        "pli": 0.0,
+        "oe_lof": 0.4667,
+        "loeuf": 0.5524,
+        "dim1_constraint_25": 15,
+        "dim2_mouse_ko_25": 18,
+        "dim3_organ_expr_20": 20,
+        "dim4_ontarget_20": 20,
+        "dim5_depmap_10": "UNAVAILABLE_METADATA_ONLY",
+        "points_earned": 73,
+        "available_weight": 90,
+        "coverage_pct": 90,
+        "liability_score_0_100": 81.1,
+        "liability_band": "very high",
+        "confidence": "High",
+        "known_drugs": "PEGCETACOPLAN (APPROVAL); AL-78898A (PHASE_2); AMY-101 (PHASE_2)",
+        "tractability_flags": "SM:Structure with Ligand; SM:High-Quality Pocket; AB:UniProt loc high conf; AB:GO CC high conf; AB:UniProt SigP or TMHMM; PR:Database Ubiquitination",
+        "rationale": "T1/T2: Constrained o/e=0.467 (LOEUF=0.552); human C3 deficiency causes severe pyogenic/encapsulated bacterial infections & immune-complex renal disease; massive hepatic synthesis; pegcetacoplan requires REMS vaccination & failed ALS Ph2 MERIDIAN",
+        "modulation_strategy": "No-go for systemic C3 monotherapy in ALS (clinically falsified in MERIDIAN NCT04579666 + high infection liability)"
+      }
+    },
+    "C4B": {
+      "node_id": "C018-N5",
+      "ensembl_id": "ENSG00000224389",
+      "gnomad_constraint": {
+        "pli": 0.9999997001777315,
+        "oe_lof": 0.12997401483687768,
+        "oe_lof_lower": 0.0711676117470242,
+        "oe_lof_upper": 0.2565339513719751,
+        "oe_mis": 0.21215880012571542,
+        "oe_mis_lower": 0.18286250478437288,
+        "oe_mis_upper": 0.2470470218344777
+      },
+      "gtex_v10": {
+        "top5_tissues_tpm": [
+          {
+            "tissue": "Adrenal_Gland",
+            "tpm": 60.929
+          },
+          {
+            "tissue": "Liver",
+            "tpm": 48.244
+          },
+          {
+            "tissue": "Thyroid",
+            "tpm": 22.013
+          },
+          {
+            "tissue": "Ovary",
+            "tpm": 19.463
+          },
+          {
+            "tissue": "Nerve_Tibial",
+            "tpm": 14.391
+          }
+        ],
+        "Brain_Frontal_Cortex_BA9_tpm": 0.7018,
+        "Brain_Spinal_cord_cervical_c-1_tpm": 1.0285,
+        "Brain_Cerebellum_tpm": 0.8644,
+        "Lung_tpm": 5.3939,
+        "Liver_tpm": 48.2436,
+        "Whole_Blood_tpm": 0.0988
+      },
+      "opentargets_tractability_positive": [
+        "AB:UniProt loc high conf",
+        "AB:GO CC high conf",
+        "AB:UniProt loc med conf",
+        "AB:UniProt SigP or TMHMM"
+      ],
+      "opentargets_drugs": [],
+      "opentargets_top_diseases": [
+        "immunodeficiency due to a classical component pathway complement deficiency",
+        "complement deficiency",
+        "systemic lupus erythematosus",
+        "dengue disease",
+        "neoplasm",
+        "cancer",
+        "posterior cortical atrophy",
+        "anemia (phenotype)"
+      ],
+      "opentargets_mouse_phenotypes": [
+        "abnormal blood coagulation",
+        "liver inflammation",
+        "renal glomerular protein deposits",
+        "decreased susceptibility to Coronaviridae infection",
+        "abnormal immune system physiology",
+        "decreased susceptibility to bacterial infection",
+        "decreased lean body mass",
+        "abnormal renal glomerulus morphology"
+      ],
+      "opentargets_safety_events": [],
+      "gene_liability": {
+        "node_id": "C018-N5",
+        "gene_symbol": "C4B",
+        "ensembl_id": "ENSG00000224389",
+        "pli": 1.0,
+        "oe_lof": 0.13,
+        "loeuf": 0.2565,
+        "dim1_constraint_25": 25,
+        "dim2_mouse_ko_25": 8,
+        "dim3_organ_expr_20": 12,
+        "dim4_ontarget_20": 12,
+        "dim5_depmap_10": "UNAVAILABLE_METADATA_ONLY",
+        "points_earned": 57,
+        "available_weight": 90,
+        "coverage_pct": 90,
+        "liability_score_0_100": 63.3,
+        "liability_band": "high",
+        "confidence": "High",
+        "known_drugs": "None in OpenTargets clinical pipeline",
+        "tractability_flags": "AB:UniProt loc high conf; AB:GO CC high conf; AB:UniProt loc med conf; AB:UniProt SigP or TMHMM",
+        "rationale": "T1/T2: Strong gnomAD apparent constraint (pLI=1.00, LOEUF=0.257, complicated by RCCX multi-copy CNV); human C4B deficiency increases encapsulated bacterial infection & autoimmune risk",
+        "modulation_strategy": "No-go as ALS drug target; structural CNV confounds bulk/CSF interpretation"
+      }
+    }
+  },
+  "l2g_summary": {
+    "rs199347_GPNMB_7p15": {
+      "total_credible_sets": 225,
+      "returned_rows": 225,
+      "gwas_l2g_hits": [
+        {
+          "study_id": "GCST009325",
+          "trait": "Parkinson's disease or first degree relation to individual with Parkinson's disease",
+          "top_gene": "GPNMB",
+          "l2g_score": 0.49201467633247375
+        },
+        {
+          "study_id": "GCST90691865",
+          "trait": "Eye measure - 3mm weak meridian left (UKB data field 5096)",
+          "top_gene": "GPNMB",
+          "l2g_score": 0.34240859746932983
+        },
+        {
+          "study_id": "GCST004000_2",
+          "trait": "Cerebrospinal fluid biomarker levels",
+          "top_gene": "GPNMB",
+          "l2g_score": 0.8094196915626526
+        },
+        {
+          "study_id": "GCST006585",
+          "trait": "Blood protein levels",
+          "top_gene": "GPNMB",
+          "l2g_score": 0.916394054889679
+        },
+        {
+          "study_id": "GCST90692955",
+          "trait": "Eye measure - 3mm weak meridian right (UKB data field 5099)",
+          "top_gene": "GPNMB",
+          "l2g_score": 0.2892671525478363
+        },
+        {
+          "study_id": "GCST90308590",
+          "trait": "Parkinson's disease",
+          "top_gene": "GPNMB",
+          "l2g_score": 0.8602298498153687
+        },
+        {
+          "study_id": "GCST90101618",
+          "trait": "Transmembrane glycoprotein NMB levels",
+          "top_gene": "GPNMB",
+          "l2g_score": 0.6676806211471558
+        },
+        {
+          "study_id": "GCST010796",
+          "trait": "Electrocardiogram morphology (amplitude at temporal datapoints)",
+          "top_gene": "GPNMB",
+          "l2g_score": 0.7941430807113647
+        },
+        {
+          "study_id": "GCST002544",
+          "trait": "Parkinson's disease",
+          "top_gene": "GPNMB",
+          "l2g_score": 0.746775209903717
+        },
+        {
+          "study_id": "GCST004902",
+          "trait": "Parkinson's disease",
+          "top_gene": "GPNMB",
+          "l2g_score": 0.865304172039032
+        }
+      ]
+    },
+    "rs1420101_IL1RL1_2q12": {
+      "total_credible_sets": 64,
+      "returned_rows": 64,
+      "gwas_l2g_hits": [
+        {
+          "study_id": "GCST90662882",
+          "trait": "Eosinophil count",
+          "top_gene": "IL18R1",
+          "l2g_score": 0.9123363494873047
+        },
+        {
+          "study_id": "GCST009842",
+          "trait": "Asthma (adult onset)",
+          "top_gene": "IL33R",
+          "l2g_score": 0.9355608224868774
+        },
+        {
+          "study_id": "GCST009731_11",
+          "trait": "Blood protein levels in cardiovascular risk",
+          "top_gene": "IL33R",
+          "l2g_score": 0.8054203987121582
+        },
+        {
+          "study_id": "GCST005975",
+          "trait": "Eosinophil count",
+          "top_gene": "IL18R1",
+          "l2g_score": 0.8090064525604248
+        },
+        {
+          "study_id": "GCST90244094",
+          "trait": "Lung function (FEV1/FVC)",
+          "top_gene": "IL33R",
+          "l2g_score": 0.8575037717819214
+        },
+        {
+          "study_id": "GCST90308603",
+          "trait": "FEV1/FVC ratio in never smokers",
+          "top_gene": "IL33R",
+          "l2g_score": 0.9505239725112915
+        },
+        {
+          "study_id": "GCST007942",
+          "trait": "Medication use (glucocorticoids)",
+          "top_gene": "IL18R1",
+          "l2g_score": 0.8058805465698242
+        },
+        {
+          "study_id": "GCST90281235",
+          "trait": "Eosinophil forward scatter distribution width",
+          "top_gene": "IL18R1",
+          "l2g_score": 0.8270325064659119
+        },
+        {
+          "study_id": "FINNGEN_R12_ASTHMA_OBESITY",
+          "trait": "Obesity related asthma",
+          "top_gene": "IL33R",
+          "l2g_score": 0.46549180150032043
+        },
+        {
+          "study_id": "GCST90480268",
+          "trait": "Wheezing (PheCode 512.1)",
+          "top_gene": "IL18R1",
+          "l2g_score": 0.8050517439842224
+        },
+        {
+          "study_id": "GCST90018883",
+          "trait": "Nasal polyps",
+          "top_gene": "IL33R",
+          "l2g_score": 0.8835129141807556
+        },
+        {
+          "study_id": "GCST90479584",
+          "trait": "Takes medication for asthma?",
+          "top_gene": "IL33R",
+          "l2g_score": 0.8601577877998352
+        },
+        {
+          "study_id": "GCST90475538",
+          "trait": "neutrophil (fraction, mean, inv-norm transformed)",
+          "top_gene": "IL33R",
+          "l2g_score": 0.8621848225593567
+        },
+        {
+          "study_id": "GCST90475294",
+          "trait": "eosinophil (absolute count, minimum, inv-norm transformed)",
+          "top_gene": "IL33R",
+          "l2g_score": 0.9002062678337097
+        },
+        {
+          "study_id": "GCST90475291",
+          "trait": "eosinophil (absolute count, mean, inv-norm transformed)",
+          "top_gene": "IL33R",
+          "l2g_score": 0.7782884836196899
+        }
+      ]
+    }
+  },
+  "europepmc_sources": [
+    {
+      "query_file": "epmc_anx005_c1q.json",
+      "pmid": "42319133",
+      "pmcid": "PMC13281374",
+      "year": "2026",
+      "title": "Shifting From Systemic to Precision-Targeted Complement Therapies: Opportunities and Hurdles.",
+      "url": "https://europepmc.org/article/MED/42319133"
+    },
+    {
+      "query_file": "epmc_anx005_c1q.json",
+      "pmid": "41632207",
+      "pmcid": "PMC12868058",
+      "year": "2026",
+      "title": "Complement in brain and eye disease: shared mechanisms, convergent pathologies, and common therapeutic opportunities.",
+      "url": "https://europepmc.org/article/MED/41632207"
+    },
+    {
+      "query_file": "epmc_anx005_c1q.json",
+      "pmid": "42492371",
+      "pmcid": "PMC13427468",
+      "year": "2026",
+      "title": "Site-targeted proximal complement C3 inhibition, but not C5 blockade, attenuates neurodegeneration in a mouse model of amyotrophic lateral sclerosis: Implications for failed clinical trials.",
+      "url": "https://europepmc.org/article/MED/42492371"
+    },
+    {
+      "query_file": "epmc_anx005_c1q.json",
+      "pmid": "41409222",
+      "pmcid": "PMC12705383",
+      "year": "2025",
+      "title": "Complement activation in immunological neurological disorders: mechanisms and therapeutic strategies.",
+      "url": "https://europepmc.org/article/MED/41409222"
+    },
+    {
+      "query_file": "epmc_anx005_c1q.json",
+      "pmid": "42160515",
+      "pmcid": "PMC13196659",
+      "year": "2026",
+      "title": "Immunotherapeutic landscape of amyotrophic lateral sclerosis: A bibliometric analysis of research trends, translational priorities, and collaboration networks (2006-2025).",
+      "url": "https://europepmc.org/article/MED/42160515"
+    },
+    {
+      "query_file": "epmc_anx005_c1q.json",
+      "pmid": "42666355",
+      "pmcid": "PMC13522104",
+      "year": "2026",
+      "title": "Therapeutic Challenges and Future Breakthroughs in Amyotrophic Lateral Sclerosis: From Precision Medicine to Innovative Trial Design.",
+      "url": "https://europepmc.org/article/MED/42666355"
+    },
+    {
+      "query_file": "epmc_anx005_cited.json",
+      "pmid": "34472455",
+      "pmcid": "PMC8530121",
+      "year": "2022",
+      "title": "Microglia regulation of synaptic plasticity and learning and memory.",
+      "url": "https://europepmc.org/article/MED/34472455"
+    },
+    {
+      "query_file": "epmc_anx005_cited.json",
+      "pmid": "32657463",
+      "pmcid": "PMC7429741",
+      "year": "2020",
+      "title": "Local externalization of phosphatidylserine mediates developmental synaptic pruning by microglia.",
+      "url": "https://europepmc.org/article/MED/32657463"
+    },
+    {
+      "query_file": "epmc_anx005_cited.json",
+      "pmid": "37118504",
+      "pmcid": "PMC10154216",
+      "year": "2022",
+      "title": "Complement C1q-dependent excitatory and inhibitory synapse elimination by astrocytes and microglia in Alzheimer's disease mouse models.",
+      "url": "https://europepmc.org/article/MED/37118504"
+    },
+    {
+      "query_file": "epmc_anx005_cited.json",
+      "pmid": "33239010",
+      "pmcid": "PMC7690210",
+      "year": "2020",
+      "title": "The good, the bad, and the opportunities of the complement system in neurodegenerative disease.",
+      "url": "https://europepmc.org/article/MED/33239010"
+    },
+    {
+      "query_file": "epmc_anx005_cited.json",
+      "pmid": "31488835",
+      "pmcid": "PMC6728367",
+      "year": "2019",
+      "title": "Zika virus replicates in adult human brain tissue and impairs synapses and memory in mice.",
+      "url": "https://europepmc.org/article/MED/31488835"
+    },
+    {
+      "query_file": "epmc_anx005_cited.json",
+      "pmid": "29844190",
+      "pmcid": "PMC6004452",
+      "year": "2018",
+      "title": "Local apoptotic-like mechanisms underlie complement-mediated synaptic pruning.",
+      "url": "https://europepmc.org/article/MED/29844190"
+    },
+    {
+      "query_file": "epmc_chit1_dup.json",
+      "pmid": "42760853",
+      "pmcid": "PMC13589252",
+      "year": "2026",
+      "title": "Chitinases in Tear Fluid of Patients With Amyotrophic Lateral Sclerosis.",
+      "url": "https://europepmc.org/article/MED/42760853"
+    },
+    {
+      "query_file": "epmc_chit1_dup.json",
+      "pmid": "42669892",
+      "pmcid": "PMC13527181",
+      "year": "2026",
+      "title": "Metabolic and Fluid Biomarkers Support Microglia Activation in Amyotrophic Lateral Sclerosis.",
+      "url": "https://europepmc.org/article/MED/42669892"
+    },
+    {
+      "query_file": "epmc_chit1_dup.json",
+      "pmid": "41762671",
+      "pmcid": "PMC13634644",
+      "year": "2026",
+      "title": "Constitutive neuronal expression and disease-associated upregulation of chitinases in amyotrophic lateral sclerosis.",
+      "url": "https://europepmc.org/article/MED/41762671"
+    },
+    {
+      "query_file": "epmc_chit1_dup.json",
+      "pmid": "42462180",
+      "pmcid": "PMC13377495",
+      "year": "2026",
+      "title": "Multiplex Panel Detects Glial and Inflammatory Biomarker Signatures in Sporadic and C9orf72-ALS.",
+      "url": "https://europepmc.org/article/MED/42462180"
+    },
+    {
+      "query_file": "epmc_chit1_dup.json",
+      "pmid": "42158589",
+      "pmcid": "PMC13182393",
+      "year": "2026",
+      "title": "CHI3L1 (YKL-40) and Chit-1 expressing glia in the white matter of ALS, FTLD and AD: correlations to pathology and disease duration.",
+      "url": "https://europepmc.org/article/MED/42158589"
+    },
+    {
+      "query_file": "epmc_chit1_dup.json",
+      "pmid": "42638120",
+      "pmcid": "PMC13501664",
+      "year": "2026",
+      "title": "Bridging the gap: neuroinflammation and the dawn of precision medicine in amyotrophic lateral sclerosis.",
+      "url": "https://europepmc.org/article/MED/42638120"
+    },
+    {
+      "query_file": "epmc_chit1_dup_als_cited.json",
+      "pmid": "31892365",
+      "pmcid": "PMC6937795",
+      "year": "2019",
+      "title": "CSF biomarkers of neuroinflammation in distinct forms and subtypes of neurodegenerative dementia.",
+      "url": "https://europepmc.org/article/MED/31892365"
+    },
+    {
+      "query_file": "epmc_chit1_dup_als_cited.json",
+      "pmid": "39340541",
+      "pmcid": "PMC11588799",
+      "year": "2024",
+      "title": "Exploiting the role of CSF NfL, CHIT1, and miR-181b as potential diagnostic and prognostic biomarkers for ALS.",
+      "url": "https://europepmc.org/article/MED/39340541"
+    },
+    {
+      "query_file": "epmc_chit1_dup_als_cited.json",
+      "pmid": "42760853",
+      "pmcid": "PMC13589252",
+      "year": "2026",
+      "title": "Chitinases in Tear Fluid of Patients With Amyotrophic Lateral Sclerosis.",
+      "url": "https://europepmc.org/article/MED/42760853"
+    },
+    {
+      "query_file": "epmc_chit1_dup_als_cited.json",
+      "pmid": "42462180",
+      "pmcid": "PMC13377495",
+      "year": "2026",
+      "title": "Multiplex Panel Detects Glial and Inflammatory Biomarker Signatures in Sporadic and C9orf72-ALS.",
+      "url": "https://europepmc.org/article/MED/42462180"
+    },
+    {
+      "query_file": "epmc_complement_trials_als.json",
+      "pmid": "39960672",
+      "pmcid": "PMC11833520",
+      "year": "2025",
+      "title": "Efficacy and Safety of Zilucoplan in Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial.",
+      "url": "https://europepmc.org/article/MED/39960672"
+    },
+    {
+      "query_file": "epmc_complement_trials_als.json",
+      "pmid": "37695623",
+      "pmcid": "PMC10495927",
+      "year": "2023",
+      "title": "Efficacy and Safety of Ravulizumab, a Complement C5 Inhibitor, in Adults With Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial.",
+      "url": "https://europepmc.org/article/MED/37695623"
+    },
+    {
+      "query_file": "epmc_complement_trials_als.json",
+      "pmid": "35722139",
+      "pmcid": "PMC9200494",
+      "year": "2022",
+      "title": "Analysis on Acupoint Selection and Combination for Amyotrophic Lateral Sclerosis Treated with Acupuncture Based on Data Mining.",
+      "url": "https://europepmc.org/article/MED/35722139"
+    },
+    {
+      "query_file": "epmc_complement_trials_als.json",
+      "pmid": "42492371",
+      "pmcid": "PMC13427468",
+      "year": "2026",
+      "title": "Site-targeted proximal complement C3 inhibition, but not C5 blockade, attenuates neurodegeneration in a mouse model of amyotrophic lateral sclerosis: Implications for failed clinical trials.",
+      "url": "https://europepmc.org/article/MED/42492371"
+    },
+    {
+      "query_file": "epmc_gpnmb_als.json",
+      "pmid": "42941856",
+      "pmcid": "PMC13705199",
+      "year": "2026",
+      "title": "The Role of &lt;i&gt;SOD1&lt;/i&gt; and Oxidative Stress in Amyotrophic Lateral Sclerosis: An Overview.",
+      "url": "https://europepmc.org/article/MED/42941856"
+    },
+    {
+      "query_file": "epmc_gpnmb_als.json",
+      "pmid": "42983584",
+      "pmcid": "PMC13733242",
+      "year": "2026",
+      "title": "Brain clearance of protein aggregates in degenerative diseases: the role of microglia and astrocytes.",
+      "url": "https://europepmc.org/article/MED/42983584"
+    },
+    {
+      "query_file": "epmc_gpnmb_als.json",
+      "pmid": "41708347",
+      "pmcid": "PMC12916242",
+      "year": "2026",
+      "title": "Glycoprotein Non-Metastatic Melanoma Protein B (GPNMB): A Translational Pharmacodynamic Biomarker for PIKfyve Inhibition With VRG50635.",
+      "url": "https://europepmc.org/article/MED/41708347"
+    },
+    {
+      "query_file": "epmc_gpnmb_als.json",
+      "pmid": null,
+      "pmcid": "PMC13639425",
+      "year": null,
+      "title": "Cystatin F as a neuroimmune effector in CNS inflammation and neurodegeneration",
+      "url": "https://europepmc.org/articles/PMC13639425"
+    },
+    {
+      "query_file": "epmc_gpnmb_als.json",
+      "pmid": "41386298",
+      "pmcid": "PMC12809089",
+      "year": "2026",
+      "title": "Sterile innate immune mechanisms in neurodegenerative diseases.",
+      "url": "https://europepmc.org/article/MED/41386298"
+    },
+    {
+      "query_file": "epmc_gpnmb_als.json",
+      "pmid": "42694654",
+      "pmcid": "PMC13540259",
+      "year": "2026",
+      "title": "TREM2 as a central hub of neuroimmune-metabolic crosstalk in central nervous system disorders: from microglial biology to therapeutic targeting.",
+      "url": "https://europepmc.org/article/MED/42694654"
+    },
+    {
+      "query_file": "epmc_gpnmb_cited.json",
+      "pmid": "34919646",
+      "pmcid": "PMC9050543",
+      "year": "2022",
+      "title": "Single-cell sequencing of human midbrain reveals glial activation and a Parkinson-specific neuronal state.",
+      "url": "https://europepmc.org/article/MED/34919646"
+    },
+    {
+      "query_file": "epmc_gpnmb_cited.json",
+      "pmid": "33523105",
+      "pmcid": "PMC7851759",
+      "year": "2021",
+      "title": "Identification of Candidate Parkinson Disease Genes by Integrating Genome-Wide Association Study, Expression, and Epigenetic Data Sets.",
+      "url": "https://europepmc.org/article/MED/33523105"
+    },
+    {
+      "query_file": "epmc_gpnmb_cited.json",
+      "pmid": "31404238",
+      "pmcid": "PMC6659137",
+      "year": "2019",
+      "title": "Genetic risk of Parkinson disease and progression:: An analysis of 13 longitudinal cohorts.",
+      "url": "https://europepmc.org/article/MED/31404238"
+    },
+    {
+      "query_file": "epmc_gpnmb_cited.json",
+      "pmid": "22891158",
+      "pmcid": "PMC3417778",
+      "year": "2012",
+      "title": "The potential of GPNMB as novel neuroprotective factor in amyotrophic lateral sclerosis.",
+      "url": "https://europepmc.org/article/MED/22891158"
+    },
+    {
+      "query_file": "epmc_gpnmb_cited.json",
+      "pmid": "33028409",
+      "pmcid": "PMC7541308",
+      "year": "2020",
+      "title": "Network analysis of the progranulin-deficient mouse brain proteome reveals pathogenic mechanisms shared in human frontotemporal dementia caused by GRN mutations.",
+      "url": "https://europepmc.org/article/MED/33028409"
+    },
+    {
+      "query_file": "epmc_gpnmb_cited.json",
+      "pmid": "36774388",
+      "pmcid": "PMC9922273",
+      "year": "2023",
+      "title": "A proteogenomic view of Parkinson's disease causality and heterogeneity.",
+      "url": "https://europepmc.org/article/MED/36774388"
+    },
+    {
+      "query_file": "epmc_il1rl1_als_cited.json",
+      "pmid": "30483263",
+      "pmcid": "PMC6242976",
+      "year": "2018",
+      "title": "The Pleiotropic Immunomodulatory Functions of IL-33 and Its Implications in Tumor Immunity.",
+      "url": "https://europepmc.org/article/MED/30483263"
+    },
+    {
+      "query_file": "epmc_il1rl1_als_cited.json",
+      "pmid": "36604748",
+      "pmcid": "PMC9814178",
+      "year": "2023",
+      "title": "The gut microbiota in multiple sclerosis varies with disease activity.",
+      "url": "https://europepmc.org/article/MED/36604748"
+    },
+    {
+      "query_file": "epmc_il1rl1_als_cited.json",
+      "pmid": "24884937",
+      "pmcid": "PMC4039322",
+      "year": "2014",
+      "title": "Evaluating the levels of interleukin-1 family cytokines in sporadic amyotrophic lateral sclerosis.",
+      "url": "https://europepmc.org/article/MED/24884937"
+    },
+    {
+      "query_file": "epmc_il1rl1_als_cited.json",
+      "pmid": "29728120",
+      "pmcid": "PMC5935936",
+      "year": "2018",
+      "title": "IL-33/ST2 plays a critical role in endothelial cell activation and microglia-mediated neuroinflammation modulation.",
+      "url": "https://europepmc.org/article/MED/29728120"
+    },
+    {
+      "query_file": "epmc_il1rl1_als_cited.json",
+      "pmid": "35986608",
+      "pmcid": "PMC10086999",
+      "year": "2023",
+      "title": "IL1RAP expression and the enrichment of IL-33 activation signatures in severe neutrophilic asthma.",
+      "url": "https://europepmc.org/article/MED/35986608"
+    },
+    {
+      "query_file": "epmc_il1rl1_als_cited.json",
+      "pmid": "29507527",
+      "pmcid": "PMC5817350",
+      "year": "2018",
+      "title": "Critical Roles of IL-33/ST2 Pathway in Neurological Disorders.",
+      "url": "https://europepmc.org/article/MED/29507527"
+    },
+    {
+      "query_file": "epmc_meridian_c3.json",
+      "pmid": "42492371",
+      "pmcid": "PMC13427468",
+      "year": "2026",
+      "title": "Site-targeted proximal complement C3 inhibition, but not C5 blockade, attenuates neurodegeneration in a mouse model of amyotrophic lateral sclerosis: Implications for failed clinical trials.",
+      "url": "https://europepmc.org/article/MED/42492371"
+    },
+    {
+      "query_file": "epmc_meridian_c3.json",
+      "pmid": "42638120",
+      "pmcid": "PMC13501664",
+      "year": "2026",
+      "title": "Bridging the gap: neuroinflammation and the dawn of precision medicine in amyotrophic lateral sclerosis.",
+      "url": "https://europepmc.org/article/MED/42638120"
+    },
+    {
+      "query_file": "epmc_meridian_c3.json",
+      "pmid": "39139136",
+      "pmcid": "PMC11327222",
+      "year": "2024",
+      "title": "Correction: The complement system in neurodegenerative diseases.",
+      "url": "https://europepmc.org/article/MED/39139136"
+    },
+    {
+      "query_file": "epmc_meridian_c3.json",
+      "pmid": "42771346",
+      "pmcid": "PMC13598694",
+      "year": "2026",
+      "title": "DNL343 and Disease Progression in Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial.",
+      "url": "https://europepmc.org/article/MED/42771346"
+    },
+    {
+      "query_file": "epmc_meridian_c3.json",
+      "pmid": "42319133",
+      "pmcid": "PMC13281374",
+      "year": "2026",
+      "title": "Shifting From Systemic to Precision-Targeted Complement Therapies: Opportunities and Hurdles.",
+      "url": "https://europepmc.org/article/MED/42319133"
+    },
+    {
+      "query_file": "epmc_meridian_c3.json",
+      "pmid": "40364643",
+      "pmcid": "PMC12694641",
+      "year": "2026",
+      "title": "Latest progress and challenges in drug development for degenerative motor neuron diseases.",
+      "url": "https://europepmc.org/article/MED/40364643"
+    },
+    {
+      "query_file": "epmc_st2_cns.json",
+      "pmid": "42630486",
+      "pmcid": "PMC13494139",
+      "year": "2026",
+      "title": "Human biomarker navigator.",
+      "url": "https://europepmc.org/article/MED/42630486"
+    },
+    {
+      "query_file": "epmc_st2_cns.json",
+      "pmid": "42698373",
+      "pmcid": "PMC13545642",
+      "year": "2026",
+      "title": "Protein Biomarkers in Risk and Prognosis of Amyotrophic Lateral Sclerosis.",
+      "url": "https://europepmc.org/article/MED/42698373"
+    },
+    {
+      "query_file": "epmc_st2_cns.json",
+      "pmid": "42112346",
+      "pmcid": "PMC13154161",
+      "year": "2026",
+      "title": "A molecular systems architecture of asthma.",
+      "url": "https://europepmc.org/article/MED/42112346"
+    },
+    {
+      "query_file": "epmc_st2_cns.json",
+      "pmid": "38105925",
+      "pmcid": "PMC10723830",
+      "year": "2023",
+      "title": "Immunology of amyotrophic lateral sclerosis - role of the innate and adaptive immunity.",
+      "url": "https://europepmc.org/article/MED/38105925"
+    },
+    {
+      "query_file": "epmc_st2_cns.json",
+      "pmid": "40149599",
+      "pmcid": "PMC11940241",
+      "year": "2025",
+      "title": "Testosterone Supplementation: A Potential Therapeutic Strategy for Amyotrophic Lateral Sclerosis.",
+      "url": "https://europepmc.org/article/MED/40149599"
+    },
+    {
+      "query_file": "epmc_st2_cns.json",
+      "pmid": "39456697",
+      "pmcid": "PMC11507237",
+      "year": "2024",
+      "title": "Blood-Based Biomarkers in Alzheimer's Disease: Advancing Non-Invasive Diagnostics and Prognostics.",
+      "url": "https://europepmc.org/article/MED/39456697"
+    }
+  ]
+}

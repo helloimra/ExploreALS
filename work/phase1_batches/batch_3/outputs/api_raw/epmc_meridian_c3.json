@@ -1,0 +1,5115 @@
+{
+  "hitCount": 263,
+  "nextCursorMark": "AoIIQLFtBCg1MTc5MTAwMw==",
+  "results": [
+    {
+      "id": "42492371",
+      "source": "MED",
+      "pmid": "42492371",
+      "pmcid": "PMC13427468",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13427468"
+        ]
+      },
+      "doi": "10.1016/j.neurot.2026.e00969",
+      "title": "Site-targeted proximal complement C3 inhibition, but not C5 blockade, attenuates neurodegeneration in a mouse model of amyotrophic lateral sclerosis: Implications for failed clinical trials.",
+      "authorString": "Majumder M, Borucki DM, Chowdhury N, Mallah K, Tomlinson S.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Majumder M",
+            "lastName": "Majumder",
+            "firstName": "Moumita",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Pharmacology and Immunology, Medical University of South Carolina, Charleston, SC, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Borucki DM",
+            "lastName": "Borucki",
+            "firstName": "Davis M",
+            "initials": "DM",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Pharmacology and Immunology, Medical University of South Carolina, Charleston, SC, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Chowdhury N",
+            "lastName": "Chowdhury",
+            "firstName": "Nityananda",
+            "initials": "N",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Pharmacology and Immunology, Medical University of South Carolina, Charleston, SC, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Mallah K",
+            "lastName": "Mallah",
+            "firstName": "Khalil",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Pharmacology and Immunology, Medical University of South Carolina, Charleston, SC, USA; RalphH Johnson VA Medical Center, Charleston, SC, USA; Department of Pathology and Laboratory Medicine, Medical University of South Carolina, Charleston, SC, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Tomlinson S",
+            "lastName": "Tomlinson",
+            "firstName": "Stephen",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Pharmacology and Immunology, Medical University of South Carolina, Charleston, SC, USA; RalphH Johnson VA Medical Center, Charleston, SC, USA. Electronic address: tomlinss@musc.edu."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "5",
+        "volume": "23",
+        "journalIssueId": 4252250,
+        "dateOfPublication": "2026 Sep",
+        "monthOfPublication": 9,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Neurotherapeutics",
+          "title": "Neurotherapeutics : the journal of the American Society for Experimental NeuroTherapeutics",
+          "essn": "1878-7479",
+          "issn": "1933-7213",
+          "nlmid": "101290381",
+          "isoabbreviation": "Neurotherapeutics"
+        },
+        "printPublicationDate": "2026-09-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "e00969",
+      "abstractText": "Complement activation contributes to amyotrophic lateral sclerosis (ALS) neuropathology, but whether motor neuron degeneration is driven by proximal or terminal activation products remains unresolved. Failed trials of C5 inhibition - ravulizumab (CHAMPION-ALS) and zilucoplan (ATHLEET/HEALEY ALS Trial), and of systemic C3 inhibition (pegcetacoplan, MERIDIAN) underscore this mechanistic gap. We compared two pharmacologically distinct inhibitors in hSOD1<sup>G93A</sup> mice. CR2Crry blocks complement at C3 and localizes to sites of active deposition. BB5.1, functionally equivalent to ravulizumab, selectively blocks C5a generation and membrane attack complex (MAC) assembly. Treatment began at symptom onset and continued to humane endpoint. Both agents achieved robust target engagement across spinal cord, sciatic nerve, and neuromuscular junction (NMJ). Only CR2Crry extended survival, preserved motor function, and attenuated weight loss. CR2Crry reduced microglial activation and C3 opsonization in the ventral horn, diminished macrophage infiltration, preserved sciatic nerve axonal integrity, and maintained NMJ innervation. BB5.1 failed to modify any functional or neurodegenerative pathology despite confirmed MAC suppression. Proximal C3 activation products, not C5a or MAC, are the dominant drivers of complement-mediated neurodegeneration in the hSOD1<sup>G93A</sup> model of ALS. Site-targeted C3 inhibition may address the mechanistic limitation underlying recent clinical trial failures and represents a translationally justified therapeutic strategy.",
+      "affiliation": "Department of Pharmacology and Immunology, Medical University of South Carolina, Charleston, SC, USA.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print-Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "NIGMS NIH HHS",
+            "acronym": "GM",
+            "grantId": "P20 GM148302",
+            "orderIn": 0
+          },
+          {
+            "agency": "BLRD VA",
+            "acronym": "BX",
+            "grantId": "I21 BX005853",
+            "orderIn": 0
+          },
+          {
+            "agency": "BLRD VA",
+            "acronym": "BX",
+            "grantId": "IK6 BX005235",
+            "orderIn": 0
+          },
+          {
+            "agency": "NIH HHS",
+            "acronym": "OD",
+            "grantId": "S10 OD018113",
+            "orderIn": 0
+          },
+          {
+            "agency": "RRD VA",
+            "acronym": "RX",
+            "grantId": "I01 RX003958",
+            "orderIn": 0
+          },
+          {
+            "agency": "US Department of Veterans Affairs",
+            "orderIn": 0
+          },
+          {
+            "agency": "NIH HHS",
+            "acronym": "OD",
+            "grantId": "S10 OD028663",
+            "orderIn": 0
+          },
+          {
+            "agency": "BLRD VA",
+            "acronym": "BX",
+            "grantId": "I01 BX004256",
+            "orderIn": 0
+          },
+          {
+            "agency": "NIGMS NIH HHS",
+            "acronym": "GM",
+            "grantId": "P20 GM130457",
+            "orderIn": 0
+          },
+          {
+            "agency": "NCI NIH HHS",
+            "acronym": "CA",
+            "grantId": "P30 CA138313",
+            "orderIn": 0
+          },
+          {
+            "agency": "NIDDK NIH HHS",
+            "acronym": "DK",
+            "grantId": "P30 DK123704",
+            "orderIn": 0
+          },
+          {
+            "agency": "US Department of Defense",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Spinal Cord",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DE",
+                  "qualifierName": "drug effects"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Mice, Transgenic"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Mice"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DT",
+                  "qualifierName": "drug therapy"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Disease Models, Animal"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Nerve Degeneration",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DT",
+                  "qualifierName": "drug therapy"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Complement C3",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "AI",
+                  "qualifierName": "antagonists & inhibitors"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Complement C5",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "AI",
+                  "qualifierName": "antagonists & inhibitors"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "C3",
+          "ALS",
+          "neuroinflammation",
+          "Site-targeted Complement Inhibition",
+          "Hsod1(g93a)"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "Complement C3",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Complement C5",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1016/j.neurot.2026.e00969"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13427468"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13427468?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by-nc-nd",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-09-22",
+      "dateOfCreation": "2026-07-23",
+      "dateOfRevision": "2026-09-23",
+      "electronicPublicationDate": "2026-07-23",
+      "firstPublicationDate": "2026-07-23",
+      "firstIndexDate": "2026-07-24",
+      "fullTextReceivedDate": "2026-09-04",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42638120",
+      "source": "MED",
+      "pmid": "42638120",
+      "pmcid": "PMC13501664",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13501664"
+        ]
+      },
+      "doi": "10.1186/s40035-026-00572-2",
+      "title": "Bridging the gap: neuroinflammation and the dawn of precision medicine in amyotrophic lateral sclerosis.",
+      "authorString": "Tang L, Fan D.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Tang L",
+            "lastName": "Tang",
+            "firstName": "Lu",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Peking University Third Hospital, Beijing, China. tanglu@bjmu.edu.cn."
+                },
+                {
+                  "affiliation": "Beijing Key Laboratory of Innovative Diagnostics, Therapeutics and Translational Research for Neurological Rare Disorders, Peking University Third Hospital, Beijing, China. tanglu@bjmu.edu.cn."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Fan D",
+            "lastName": "Fan",
+            "firstName": "Dongsheng",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Peking University Third Hospital, Beijing, China. dsfan2010@aliyun.com."
+                },
+                {
+                  "affiliation": "Beijing Key Laboratory of Innovative Diagnostics, Therapeutics and Translational Research for Neurological Rare Disorders, Peking University Third Hospital, Beijing, China. dsfan2010@aliyun.com."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "journalInfo": {
+        "issue": "1",
+        "volume": "15",
+        "journalIssueId": 4238133,
+        "dateOfPublication": "2026 Aug",
+        "monthOfPublication": 8,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Transl Neurodegener",
+          "title": "Translational neurodegeneration",
+          "essn": "2047-9158",
+          "issn": "2047-9158",
+          "nlmid": "101591861",
+          "isoabbreviation": "Transl Neurodegener"
+        },
+        "printPublicationDate": "2026-08-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "40",
+      "abstractText": "Neuroinflammation is no longer a secondary feature of amyotrophic lateral sclerosis (ALS), but rather a disease-modifying process that actively shapes the motor neuron vulnerability from the earliest stages of pathology. Central and peripheral immune cells, including microglia, astrocytes, and infiltrating T lymphocytes, adopt context-dependent states that can be neuroprotective or neurotoxic depending on disease stage and genetic background. These states are driven by discrete molecular programs, such as cGAS-STING-mediated innate immune sensing, NLRP3 inflammasome activation, and RIPK1-dependent necroptotic signaling, which represent tractable therapeutic targets. The repeated failure of broad-spectrum immunosuppressive trials reflects a fundamental mismatch between the non-selective interventions and the mechanistically distinct immune states of diseases. Converging transcriptomic, genetic, and immunophenotypic evidence supports the existence of putative neuroimmune endotypes in ALS, though this framework remains a working hypothesis pending prospective validation in biomarker-stratified cohorts. Advances in the following three domains are needed for realizing precision immunotherapy: standardized biomarker panels (including cerebrospinal fluid chitinases and TSPO-PET) to stratify patients by inflammatory subtype; pharmacodynamic readouts to confirm target engagement before interpreting clinical outcomes; and adaptive platform trial designs capable of evaluating mechanism-matching interventions in defined subgroups. This review integrates ALS-associated neuroinflammation with emerging precision medicine strategies, arguing that the central translational question is no longer whether or not to target neuroinflammation, but how, when, and in whom neuroinflammation should be targeted.",
+      "affiliation": "Department of Neurology, Peking University Third Hospital, Beijing, China. tanglu@bjmu.edu.cn.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "National Key Research and Development Program of China",
+            "grantId": "2022YFA1303003",
+            "orderIn": 0
+          },
+          {
+            "agency": "the Chinese Institutes for Medical Research, Beijing",
+            "grantId": "CX25YZ13",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "TH",
+                  "qualifierName": "therapy"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Immunotherapy",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "MT",
+                  "qualifierName": "methods"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Precision Medicine",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "MT",
+                  "qualifierName": "methods"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "TD",
+                  "qualifierName": "trends"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Neuroinflammatory Diseases",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "TH",
+                  "qualifierName": "therapy"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Immunotherapy",
+          "Biomarker",
+          "Neurodegeneration",
+          "Microglia",
+          "Amyotrophic Lateral Sclerosis",
+          "neuroinflammation",
+          "Precision Medicine",
+          "Neuroimmune Endotype"
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1186/s40035-026-00572-2"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13501664"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13501664?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "N",
+      "hasData": "N",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "N",
+      "dateOfCompletion": "2026-08-25",
+      "dateOfCreation": "2026-08-25",
+      "dateOfRevision": "2026-08-27",
+      "electronicPublicationDate": "2026-08-24",
+      "firstPublicationDate": "2026-08-24",
+      "firstIndexDate": "2026-08-25",
+      "fullTextReceivedDate": "2026-09-10",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "39139136",
+      "source": "MED",
+      "pmid": "39139136",
+      "pmcid": "PMC11327222",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC11327222"
+        ]
+      },
+      "doi": "10.1042/cs-2023-0513c_cor",
+      "title": "Correction: The complement system in neurodegenerative diseases.",
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "16",
+        "volume": "138",
+        "journalIssueId": 3811766,
+        "dateOfPublication": "2024 Aug",
+        "monthOfPublication": 8,
+        "yearOfPublication": 2024,
+        "journal": {
+          "medlineAbbreviation": "Clin Sci (Lond)",
+          "title": "Clinical science (London, England : 1979)",
+          "essn": "1470-8736",
+          "issn": "0143-5221",
+          "nlmid": "7905731",
+          "isoabbreviation": "Clin Sci (Lond)"
+        },
+        "printPublicationDate": "2024-08-01"
+      },
+      "pubYear": "2024",
+      "pageInfo": "989",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print",
+      "pubTypeList": {
+        "pubType": [
+          "Published Erratum",
+          "correction"
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Complement",
+          "Inflammation",
+          "Dementia"
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1042/CS-2023-0513C_COR"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC11327222"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC11327222?pdf=render"
+          }
+        ]
+      },
+      "commentCorrectionList": {
+        "commentCorrection": [
+          {
+            "source": "MED",
+            "id": "38505993",
+            "reference": "Clin Sci (Lond). 2024 Mar 20;138(6):387-412. doi: 10.1042/CS20230513",
+            "type": "Erratum for",
+            "orderIn": 1
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "N",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "nct"
+        ]
+      },
+      "dateOfCreation": "2024-08-14",
+      "dateOfRevision": "2024-08-18",
+      "firstPublicationDate": "2024-08-01",
+      "firstIndexDate": "2024-08-14",
+      "fullTextReceivedDate": "2025-02-04",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42771346",
+      "source": "MED",
+      "pmid": "42771346",
+      "pmcid": "PMC13598694",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13598694"
+        ]
+      },
+      "doi": "10.1001/jamanetworkopen.2026.34809",
+      "title": "DNL343 and Disease Progression in Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial.",
+      "authorString": "Paganoni S, Chibnik LB, Quintana M, Macklin EA, Detry MA, Vestrucci M, Paulon G, McGlothlin A, Wang J, Walk D, Elman L, Chase M, Heyd L, Harkey B, Sherman AV, Shefner J, Berry JD, Scirocco E, Giacomelli E, Yu H, Kittle G, Hall M, Ho D, Jawdat O, Ladha S, Locatelli E, Rivner M, Felice K, Katz J, Ajroud-Driss S, Fee D, Miller T, Rosow L, Quick A, Heitzman D, Foster LA, Maragakis NJ, Goutman SA, Rosenfeld J, Benatar M, Swenson A, Connors RD, Shroff S, Bedlack R, McIlduff CE, Chen IA, Fernandes JAM, Walsh A, Peltier A, Ilieva H, Diaz F, Kushlaf H, Beydoun SR, Myers B, Arcila-Londono X, Heiman-Patterson T, Elliott M, Whitesell J, Al-Lahham T, Elliott M, Olney N, Baer M, Jackson C, Young E, Caress J, Weiss MD, Kuenzler R, Nayar S, Kasarskis EJ, Simmons Z, Gibson S, Owegi MA, Goyal NA, Wymer JP, Gwathmey KG, Erickson A, Gursoy N, Alameda G, Bodkin C, Wu A, Martinez-Thompson J, Twydell PT, Andrews J, Bayat E, Rezania K, Usman U, McCluskey L, Kovvuru S, Jennings D, Garza-Meilandt A, Maciuca R, Cohen IV, Tamuly D, Eren E, Cudkowicz ME, Babu S, HEALEY ALS Platform Trial Study Group.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Paganoni S",
+            "lastName": "Paganoni",
+            "firstName": "Sabrina",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                },
+                {
+                  "affiliation": "Spaulding Rehabilitation Hospital, Boston, Massachusetts."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Chibnik LB",
+            "lastName": "Chibnik",
+            "firstName": "Lori B",
+            "initials": "LB",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Quintana M",
+            "lastName": "Quintana",
+            "firstName": "Melanie",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Berry Consultants, Austin, Texas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Macklin EA",
+            "lastName": "Macklin",
+            "firstName": "Eric A",
+            "initials": "EA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Detry MA",
+            "lastName": "Detry",
+            "firstName": "Michelle A",
+            "initials": "MA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Berry Consultants, Austin, Texas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Vestrucci M",
+            "lastName": "Vestrucci",
+            "firstName": "Matteo",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Berry Consultants, Austin, Texas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Paulon G",
+            "lastName": "Paulon",
+            "firstName": "Giorgio",
+            "initials": "G",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Berry Consultants, Austin, Texas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "McGlothlin A",
+            "lastName": "McGlothlin",
+            "firstName": "Anna",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Berry Consultants, Austin, Texas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wang J",
+            "lastName": "Wang",
+            "firstName": "Jianing",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Walk D",
+            "lastName": "Walk",
+            "firstName": "David",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Minnesota, Minneapolis."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Elman L",
+            "lastName": "Elman",
+            "firstName": "Lauren",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Pennsylvania, Philadelphia."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Chase M",
+            "lastName": "Chase",
+            "firstName": "Marianne",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Heyd L",
+            "lastName": "Heyd",
+            "firstName": "Lindsay",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Harkey B",
+            "lastName": "Harkey",
+            "firstName": "Brittney",
+            "initials": "B",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Sherman AV",
+            "lastName": "Sherman",
+            "firstName": "Alexander V",
+            "initials": "AV",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Shefner J",
+            "lastName": "Shefner",
+            "firstName": "Jeremy",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Barrow Neurological Institute, Phoenix, Arizona."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Berry JD",
+            "lastName": "Berry",
+            "firstName": "James D",
+            "initials": "JD",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Scirocco E",
+            "lastName": "Scirocco",
+            "firstName": "Erica",
+            "initials": "E",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Giacomelli E",
+            "lastName": "Giacomelli",
+            "firstName": "Elisa",
+            "initials": "E",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Yu H",
+            "lastName": "Yu",
+            "firstName": "Hong",
+            "initials": "H",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kittle G",
+            "lastName": "Kittle",
+            "firstName": "Gale",
+            "initials": "G",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Barrow Neurological Institute, Phoenix, Arizona."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Hall M",
+            "lastName": "Hall",
+            "firstName": "Meaghan",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Barrow Neurological Institute, Phoenix, Arizona."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ho D",
+            "lastName": "Ho",
+            "firstName": "Doreen",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Jawdat O",
+            "lastName": "Jawdat",
+            "firstName": "Omar",
+            "initials": "O",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Kansas Medical Center, Fairway."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ladha S",
+            "lastName": "Ladha",
+            "firstName": "Shafeeq",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Barrow Neurological Institute, Phoenix, Arizona."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Locatelli E",
+            "lastName": "Locatelli",
+            "firstName": "Eduardo",
+            "initials": "E",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Nova Southeastern University, Davie, Florida."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Rivner M",
+            "lastName": "Rivner",
+            "firstName": "Michael",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Augusta University, Augusta, Georgia."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Felice K",
+            "lastName": "Felice",
+            "firstName": "Kevin",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Hospital for Special Care, New Britain, Connecticut."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Katz J",
+            "lastName": "Katz",
+            "firstName": "Jonathan",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "California Pacific Medical Center, San Francisco."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ajroud-Driss S",
+            "lastName": "Ajroud-Driss",
+            "firstName": "Senda",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "The Ken and Ruth Davee Department of Neurology, Neuromuscular Disease, Northwestern University, Chicago, Illinois."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Fee D",
+            "lastName": "Fee",
+            "firstName": "Dominic",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Medical College of Wisconsin, Milwaukee."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Miller T",
+            "lastName": "Miller",
+            "firstName": "Timothy",
+            "initials": "T",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Washington University, St Louis, Missouri."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Rosow L",
+            "lastName": "Rosow",
+            "firstName": "Laura",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of California, San Francisco."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Quick A",
+            "lastName": "Quick",
+            "firstName": "Adam",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Ohio State University, Columbus."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Heitzman D",
+            "lastName": "Heitzman",
+            "firstName": "Daragh",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Texas Neurology, Dallas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Foster LA",
+            "lastName": "Foster",
+            "firstName": "Laura A",
+            "initials": "LA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Section of Neuromuscular Medicine, University of Colorado Anschutz, Aurora."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Maragakis NJ",
+            "lastName": "Maragakis",
+            "firstName": "Nicholas J",
+            "initials": "NJ",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Johns Hopkins University, Baltimore, Maryland."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Goutman SA",
+            "lastName": "Goutman",
+            "firstName": "Stephen A",
+            "initials": "SA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Michigan, Ann Arbor."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Rosenfeld J",
+            "lastName": "Rosenfeld",
+            "firstName": "Jeffrey",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Loma Linda University School of Medicine, Loma Linda, California."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Benatar M",
+            "lastName": "Benatar",
+            "firstName": "Michael",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Neuromuscular Division, University of Miami, Miami, Florida."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Swenson A",
+            "lastName": "Swenson",
+            "firstName": "Andrea",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Iowa, Iowa City."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Connors RD",
+            "lastName": "Connors",
+            "firstName": "Robert Dedick",
+            "initials": "RD",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Hackensack University Medical Center, Hackensack Meridian School of Medicine, Hackensack, New Jersey."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Shroff S",
+            "lastName": "Shroff",
+            "firstName": "Sheetal",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Methodist Neurological Institute, Houston, Texas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Bedlack R",
+            "lastName": "Bedlack",
+            "firstName": "Richard",
+            "initials": "R",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Duke University, Durham, North Carolina."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "McIlduff CE",
+            "lastName": "McIlduff",
+            "firstName": "Courtney E",
+            "initials": "CE",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Beth Israel Deaconess Medical Center, Boston, Massachusetts."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Chen IA",
+            "lastName": "Chen",
+            "firstName": "I-Hweii Amy",
+            "initials": "IA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "University of South Florida, College of Medicine, Tampa."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Fernandes JAM",
+            "lastName": "Fernandes",
+            "firstName": "Joseph Americo M",
+            "initials": "JAM",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "University of Nebraska Medical Center, Omaha."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Walsh A",
+            "lastName": "Walsh",
+            "firstName": "Alison",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Lehigh Valley Health Network, Allentown, Pennsylvania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Peltier A",
+            "lastName": "Peltier",
+            "firstName": "Amanda",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Vanderbilt University Medical Center, Nashville, Tennessee."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ilieva H",
+            "lastName": "Ilieva",
+            "firstName": "Hristelina",
+            "initials": "H",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Jefferson Weinberg ALS Center, Philadelphia, Pennsylvania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Diaz F",
+            "lastName": "Diaz",
+            "firstName": "Frank",
+            "initials": "F",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Cedars-Sinai Medical Center, Los Angeles, California."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kushlaf H",
+            "lastName": "Kushlaf",
+            "firstName": "Hani",
+            "initials": "H",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Cincinnati, Cincinnati, Ohio."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Beydoun SR",
+            "lastName": "Beydoun",
+            "firstName": "Said R",
+            "initials": "SR",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Division of Neuromuscular Medicine, University of Southern California, Los Angeles."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Myers B",
+            "lastName": "Myers",
+            "firstName": "Bennett",
+            "initials": "B",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Dent Neurologic Institute, Amherst, New York."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Arcila-Londono X",
+            "lastName": "Arcila-Londono",
+            "firstName": "Ximena",
+            "initials": "X",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Division of Neuromuscular Medicine, Henry Ford Hospital, Detroit, Michigan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Heiman-Patterson T",
+            "lastName": "Heiman-Patterson",
+            "firstName": "Terry",
+            "initials": "T",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Division of Neuromuscular Medicine, Lewis Katz School of Medicine at Temple University, Philadelphia, Pennsylvania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Elliott M",
+            "lastName": "Elliott",
+            "firstName": "Michael",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Swedish Medical Center, Seattle, Washington."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Whitesell J",
+            "lastName": "Whitesell",
+            "firstName": "Jackie",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Saint Alphonsus Regional Medical Center, Boise, Idaho."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Al-Lahham T",
+            "lastName": "Al-Lahham",
+            "firstName": "Tawfiq",
+            "initials": "T",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "University of Pittsburgh Medical Center, Pittsburgh, Pennsylvania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Elliott M",
+            "lastName": "Elliott",
+            "firstName": "Matthew",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Virginia, Charlottesville."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Olney N",
+            "lastName": "Olney",
+            "firstName": "Nicholas",
+            "initials": "N",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Providence ALS Clinic, Portland, Oregon."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Baer M",
+            "lastName": "Baer",
+            "firstName": "Michael",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Pennsylvania, Philadelphia."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Jackson C",
+            "lastName": "Jackson",
+            "firstName": "Carlayne",
+            "initials": "C",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Texas Health Science Center, San Antonio."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Young E",
+            "lastName": "Young",
+            "firstName": "Eufrosina",
+            "initials": "E",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Division of Neuromuscular Medicine, SUNY (State University of New York) Upstate, Syracuse."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Caress J",
+            "lastName": "Caress",
+            "firstName": "Jim",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Wake Forest University School of Medicine, Winston-Salem, North Carolina."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Weiss MD",
+            "lastName": "Weiss",
+            "firstName": "Michael D",
+            "initials": "MD",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Washington, Seattle."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kuenzler R",
+            "lastName": "Kuenzler",
+            "firstName": "Rebecca",
+            "initials": "R",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Cleveland Clinic, Cleveland, Ohio."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Nayar S",
+            "lastName": "Nayar",
+            "firstName": "Shakti",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Georgetown University, Washington, DC."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kasarskis EJ",
+            "lastName": "Kasarskis",
+            "firstName": "Edward J",
+            "initials": "EJ",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Kentucky, Lexington."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Simmons Z",
+            "lastName": "Simmons",
+            "firstName": "Zachary",
+            "initials": "Z",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Penn State Milton S. Hershey Medical Center, Hershey, Pennsylvania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Gibson S",
+            "lastName": "Gibson",
+            "firstName": "Summer",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Utah, Salt Lake City."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Owegi MA",
+            "lastName": "Owegi",
+            "firstName": "Margaret Ayo",
+            "initials": "MA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "University of Massachusetts, Worcester."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Goyal NA",
+            "lastName": "Goyal",
+            "firstName": "Namita A",
+            "initials": "NA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "University of California, Irvine Medical Center, Irvine."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wymer JP",
+            "lastName": "Wymer",
+            "firstName": "James P",
+            "initials": "JP",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Division of Neuromuscular Medicine, University of Florida, Gainesville, Florida."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Gwathmey KG",
+            "lastName": "Gwathmey",
+            "firstName": "Kelly G",
+            "initials": "KG",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Virginia Commonwealth University, Henrico."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Erickson A",
+            "lastName": "Erickson",
+            "firstName": "Amber",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Essentia Health, Duluth, Minnesota."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Gursoy N",
+            "lastName": "Gursoy",
+            "firstName": "Nurcan",
+            "initials": "N",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Stony Brook University, Stony Brook, New York."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Alameda G",
+            "lastName": "Alameda",
+            "firstName": "Gustavo",
+            "initials": "G",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Holy Cross Hospital, Fort Lauderdale, Florida."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Bodkin C",
+            "lastName": "Bodkin",
+            "firstName": "Cynthia",
+            "initials": "C",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Indiana University, Indianapolis."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wu A",
+            "lastName": "Wu",
+            "firstName": "Abel",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Kaiser Permanente Los Angeles Medical Center, Los Angeles, California."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Martinez-Thompson J",
+            "lastName": "Martinez-Thompson",
+            "firstName": "Jennifer",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Mayo Clinic, Rochester, Minnesota."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Twydell PT",
+            "lastName": "Twydell",
+            "firstName": "Paul T",
+            "initials": "PT",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Corewell Health, Grand Rapids, Michigan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Andrews J",
+            "lastName": "Andrews",
+            "firstName": "Jinsy",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Columbia University Medical Center, New York, New York."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Bayat E",
+            "lastName": "Bayat",
+            "firstName": "Elham",
+            "initials": "E",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "George Washington University, Medical Faculty Associates Inc, Washington, DC."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Rezania K",
+            "lastName": "Rezania",
+            "firstName": "Kourosh",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Chicago, Chicago, Illinois."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Usman U",
+            "lastName": "Usman",
+            "firstName": "Uzma",
+            "initials": "U",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Yale University, New Haven, Connecticut."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "McCluskey L",
+            "lastName": "McCluskey",
+            "firstName": "Leo",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Atrium Health, North Charlotte, North Carolina."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kovvuru S",
+            "lastName": "Kovvuru",
+            "firstName": "Sukanthi",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Arkansas for Medical Sciences, Little Rock."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Jennings D",
+            "lastName": "Jennings",
+            "firstName": "Danna",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Denali Therapeutics Inc, San Francisco, California."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Garza-Meilandt A",
+            "lastName": "Garza-Meilandt",
+            "firstName": "Annette",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Denali Therapeutics Inc, San Francisco, California."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Maciuca R",
+            "lastName": "Maciuca",
+            "firstName": "Romeo",
+            "initials": "R",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Denali Therapeutics Inc, San Francisco, California."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Cohen IV",
+            "lastName": "Cohen",
+            "firstName": "Isaac V",
+            "initials": "IV",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Denali Therapeutics Inc, San Francisco, California."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Tamuly D",
+            "lastName": "Tamuly",
+            "firstName": "Deepika",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Denali Therapeutics Inc, San Francisco, California."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Eren E",
+            "lastName": "Eren",
+            "firstName": "Erden",
+            "initials": "E",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Denali Therapeutics Inc, San Francisco, California."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Cudkowicz ME",
+            "lastName": "Cudkowicz",
+            "firstName": "Merit E",
+            "initials": "ME",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Babu S",
+            "lastName": "Babu",
+            "firstName": "Suma",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "collectiveName": "HEALEY ALS Platform Trial Study Group"
+          }
+        ]
+      },
+      "investigatorList": {
+        "investigator": [
+          {
+            "fullName": "Donahue RA",
+            "lastName": "Donahue",
+            "firstName": "Rachel A",
+            "initials": "RA"
+          },
+          {
+            "fullName": "Chen HW",
+            "lastName": "Chen",
+            "firstName": "Hao-Wun",
+            "initials": "HW"
+          },
+          {
+            "fullName": "Kantor A",
+            "lastName": "Kantor",
+            "firstName": "Amy",
+            "initials": "A"
+          },
+          {
+            "fullName": "Caporaletti J",
+            "lastName": "Caporaletti",
+            "firstName": "Julia",
+            "initials": "J"
+          },
+          {
+            "fullName": "McCaffrey A",
+            "lastName": "McCaffrey",
+            "firstName": "Alexandra",
+            "initials": "A"
+          },
+          {
+            "fullName": "Scalia J",
+            "lastName": "Scalia",
+            "firstName": "Jennifer",
+            "initials": "J"
+          },
+          {
+            "fullName": "Cohen JA",
+            "lastName": "Cohen",
+            "firstName": "Jeffrey A",
+            "initials": "JA"
+          },
+          {
+            "fullName": "Shah J",
+            "lastName": "Shah",
+            "firstName": "Jaimin",
+            "initials": "J"
+          },
+          {
+            "fullName": "Hayat G",
+            "lastName": "Hayat",
+            "firstName": "Ghazala",
+            "initials": "G"
+          },
+          {
+            "fullName": "Pattee GL",
+            "lastName": "Pattee",
+            "firstName": "Gary L",
+            "initials": "GL"
+          },
+          {
+            "fullName": "Chaudhry V",
+            "lastName": "Chaudhry",
+            "firstName": "Vinay",
+            "initials": "V"
+          },
+          {
+            "fullName": "Zilliox L",
+            "lastName": "Zilliox",
+            "firstName": "Lindsay",
+            "initials": "L"
+          },
+          {
+            "fullName": "Johnson S",
+            "lastName": "Johnson",
+            "firstName": "Stephen",
+            "initials": "S"
+          },
+          {
+            "fullName": "Farmakidis C",
+            "lastName": "Farmakidis",
+            "firstName": "Constantine",
+            "initials": "C"
+          },
+          {
+            "fullName": "Milliard J",
+            "lastName": "Milliard",
+            "firstName": "Jourdan",
+            "initials": "J"
+          },
+          {
+            "fullName": "Bowser R",
+            "lastName": "Bowser",
+            "firstName": "Robert",
+            "initials": "R"
+          },
+          {
+            "fullName": "Lopes G",
+            "lastName": "Lopes",
+            "firstName": "Gabriela",
+            "initials": "G"
+          },
+          {
+            "fullName": "Barnes B",
+            "lastName": "Barnes",
+            "firstName": "Benjamin",
+            "initials": "B"
+          },
+          {
+            "fullName": "Jenkins L",
+            "lastName": "Jenkins",
+            "firstName": "Liberty",
+            "initials": "L"
+          },
+          {
+            "fullName": "Sufit R",
+            "lastName": "Sufit",
+            "firstName": "Robert",
+            "initials": "R"
+          },
+          {
+            "fullName": "Szymanski A",
+            "lastName": "Szymanski",
+            "firstName": "April",
+            "initials": "A"
+          },
+          {
+            "fullName": "Shrilla D",
+            "lastName": "Shrilla",
+            "firstName": "David",
+            "initials": "D"
+          },
+          {
+            "fullName": "Malcolm A",
+            "lastName": "Malcolm",
+            "firstName": "Amber",
+            "initials": "A"
+          },
+          {
+            "fullName": "Lomen-Hoerth C",
+            "lastName": "Lomen-Hoerth",
+            "firstName": "Catherine",
+            "initials": "C"
+          },
+          {
+            "fullName": "Goslinga J",
+            "lastName": "Goslinga",
+            "firstName": "Jill",
+            "initials": "J"
+          },
+          {
+            "fullName": "Kang M",
+            "lastName": "Kang",
+            "firstName": "Min",
+            "initials": "M"
+          },
+          {
+            "fullName": "Tugizova M",
+            "lastName": "Tugizova",
+            "firstName": "Madina",
+            "initials": "M"
+          },
+          {
+            "fullName": "Sampognaro P",
+            "lastName": "Sampognaro",
+            "firstName": "Paul",
+            "initials": "P"
+          },
+          {
+            "fullName": "Kolb S",
+            "lastName": "Kolb",
+            "firstName": "Stephen",
+            "initials": "S"
+          },
+          {
+            "fullName": "Heintzman S",
+            "lastName": "Heintzman",
+            "firstName": "Sarah",
+            "initials": "S"
+          },
+          {
+            "fullName": "Martin A",
+            "lastName": "Martin",
+            "firstName": "Alan",
+            "initials": "A"
+          },
+          {
+            "fullName": "Clawson LL",
+            "lastName": "Clawson",
+            "firstName": "Lora L",
+            "initials": "LL"
+          },
+          {
+            "fullName": "Uchil A",
+            "lastName": "Uchil",
+            "firstName": "Alpa",
+            "initials": "A"
+          },
+          {
+            "fullName": "Riley K",
+            "lastName": "Riley",
+            "firstName": "Kristen",
+            "initials": "K"
+          },
+          {
+            "fullName": "Arneklev J",
+            "lastName": "Arneklev",
+            "firstName": "Jinae",
+            "initials": "J"
+          },
+          {
+            "fullName": "Feldman EL",
+            "lastName": "Feldman",
+            "firstName": "Eva L",
+            "initials": "EL"
+          },
+          {
+            "fullName": "Quigley S",
+            "lastName": "Quigley",
+            "firstName": "Savannah",
+            "initials": "S"
+          },
+          {
+            "fullName": "Kaur J",
+            "lastName": "Kaur",
+            "firstName": "Jasdeep",
+            "initials": "J"
+          },
+          {
+            "fullName": "Carberry N",
+            "lastName": "Carberry",
+            "firstName": "Nathan",
+            "initials": "N"
+          },
+          {
+            "fullName": "Nance C",
+            "lastName": "Nance",
+            "firstName": "Christopher",
+            "initials": "C"
+          },
+          {
+            "fullName": "Thomas FP",
+            "lastName": "Thomas",
+            "firstName": "Florian P",
+            "initials": "FP"
+          },
+          {
+            "fullName": "Li X",
+            "lastName": "Li",
+            "firstName": "Xiaoyan",
+            "initials": "X"
+          },
+          {
+            "fullName": "Rutkove S",
+            "lastName": "Rutkove",
+            "firstName": "Seward",
+            "initials": "S"
+          },
+          {
+            "fullName": "Farias J",
+            "lastName": "Farias",
+            "firstName": "Jerrica",
+            "initials": "J"
+          },
+          {
+            "fullName": "Vu T",
+            "lastName": "Vu",
+            "firstName": "Tuan",
+            "initials": "T"
+          },
+          {
+            "fullName": "Murray K",
+            "lastName": "Murray",
+            "firstName": "Kathleen",
+            "initials": "K"
+          },
+          {
+            "fullName": "Guerra Hernandez C",
+            "lastName": "Guerra Hernandez",
+            "firstName": "Claudia",
+            "initials": "C"
+          },
+          {
+            "fullName": "Piccione E",
+            "lastName": "Piccione",
+            "firstName": "Ezequiel",
+            "initials": "E"
+          },
+          {
+            "fullName": "Thaisetthawatkul P",
+            "lastName": "Thaisetthawatkul",
+            "firstName": "Pariwat",
+            "initials": "P"
+          },
+          {
+            "fullName": "Romano A",
+            "lastName": "Romano",
+            "firstName": "Alissa",
+            "initials": "A"
+          },
+          {
+            "fullName": "Davis DL",
+            "lastName": "Davis",
+            "firstName": "Diana L",
+            "initials": "DL"
+          },
+          {
+            "fullName": "Pasinelli P",
+            "lastName": "Pasinelli",
+            "firstName": "Piera",
+            "initials": "P"
+          },
+          {
+            "fullName": "Lewis R",
+            "lastName": "Lewis",
+            "firstName": "Richard",
+            "initials": "R"
+          },
+          {
+            "fullName": "Janecek J",
+            "lastName": "Janecek",
+            "firstName": "Jacqueline",
+            "initials": "J"
+          },
+          {
+            "fullName": "Darki L",
+            "lastName": "Darki",
+            "firstName": "Leila",
+            "initials": "L"
+          },
+          {
+            "fullName": "Rodrigue R",
+            "lastName": "Rodrigue",
+            "firstName": "Rodrigo",
+            "initials": "R"
+          },
+          {
+            "fullName": "Rojas L",
+            "lastName": "Rojas",
+            "firstName": "Luisa",
+            "initials": "L"
+          },
+          {
+            "fullName": "Steijlen K",
+            "lastName": "Steijlen",
+            "firstName": "Kara",
+            "initials": "K"
+          },
+          {
+            "fullName": "Zaman I",
+            "lastName": "Zaman",
+            "firstName": "Iram",
+            "initials": "I"
+          },
+          {
+            "fullName": "Deboo A",
+            "lastName": "Deboo",
+            "firstName": "Anahita",
+            "initials": "A"
+          },
+          {
+            "fullName": "Ivanick D",
+            "lastName": "Ivanick",
+            "firstName": "David",
+            "initials": "D"
+          },
+          {
+            "fullName": "Guthrie B",
+            "lastName": "Guthrie",
+            "firstName": "Brittany",
+            "initials": "B"
+          },
+          {
+            "fullName": "Lacomis D",
+            "lastName": "Lacomis",
+            "firstName": "David",
+            "initials": "D"
+          },
+          {
+            "fullName": "Jones S",
+            "lastName": "Jones",
+            "firstName": "Sarah",
+            "initials": "S"
+          },
+          {
+            "fullName": "Hadler M",
+            "lastName": "Hadler",
+            "firstName": "Michael",
+            "initials": "M"
+          },
+          {
+            "fullName": "Brown L",
+            "lastName": "Brown",
+            "firstName": "Lauren",
+            "initials": "L"
+          },
+          {
+            "fullName": "Bazan T",
+            "lastName": "Bazan",
+            "firstName": "Tracy",
+            "initials": "T"
+          },
+          {
+            "fullName": "Quinn C",
+            "lastName": "Quinn",
+            "firstName": "Colin",
+            "initials": "C"
+          },
+          {
+            "fullName": "Maiser S",
+            "lastName": "Maiser",
+            "firstName": "Sam",
+            "initials": "S"
+          },
+          {
+            "fullName": "Bhavaraju-Sanka R",
+            "lastName": "Bhavaraju-Sanka",
+            "firstName": "Ratna",
+            "initials": "R"
+          },
+          {
+            "fullName": "Meyer JA",
+            "lastName": "Meyer",
+            "firstName": "Jenny A",
+            "initials": "JA"
+          },
+          {
+            "fullName": "Cartwright MS",
+            "lastName": "Cartwright",
+            "firstName": "Michael S",
+            "initials": "MS"
+          },
+          {
+            "fullName": "Rad N",
+            "lastName": "Rad",
+            "firstName": "Nassim",
+            "initials": "N"
+          },
+          {
+            "fullName": "Thakore N",
+            "lastName": "Thakore",
+            "firstName": "Nimish",
+            "initials": "N"
+          },
+          {
+            "fullName": "Mahuwala Z",
+            "lastName": "Mahuwala",
+            "firstName": "Zabeen",
+            "initials": "Z"
+          },
+          {
+            "fullName": "Mathur Kumaraswamy VV",
+            "lastName": "Mathur Kumaraswamy",
+            "firstName": "Vishakhadatta Vish",
+            "initials": "VV"
+          },
+          {
+            "fullName": "Grogan J",
+            "lastName": "Grogan",
+            "firstName": "James",
+            "initials": "J"
+          },
+          {
+            "fullName": "Su X",
+            "lastName": "Su",
+            "firstName": "Xiaowei",
+            "initials": "X"
+          },
+          {
+            "fullName": "Mamarabadi M",
+            "lastName": "Mamarabadi",
+            "firstName": "Mansoureh",
+            "initials": "M"
+          },
+          {
+            "fullName": "Bromberg M",
+            "lastName": "Bromberg",
+            "firstName": "Mark",
+            "initials": "M"
+          },
+          {
+            "fullName": "Brown RH Jr",
+            "lastName": "Brown",
+            "firstName": "Robert H",
+            "initials": "RH"
+          },
+          {
+            "fullName": "Daniello K",
+            "lastName": "Daniello",
+            "firstName": "Kate",
+            "initials": "K"
+          },
+          {
+            "fullName": "Mullen J",
+            "lastName": "Mullen",
+            "firstName": "Jeffery",
+            "initials": "J"
+          },
+          {
+            "fullName": "McNeely W",
+            "lastName": "McNeely",
+            "firstName": "Whitney",
+            "initials": "W"
+          },
+          {
+            "fullName": "Fan Q",
+            "lastName": "Fan",
+            "firstName": "Qihua",
+            "initials": "Q"
+          },
+          {
+            "fullName": "Treidler S",
+            "lastName": "Treidler",
+            "firstName": "Simona",
+            "initials": "S"
+          },
+          {
+            "fullName": "Staff NP",
+            "lastName": "Staff",
+            "firstName": "Nathan P",
+            "initials": "NP"
+          },
+          {
+            "fullName": "Yasek J",
+            "lastName": "Yasek",
+            "firstName": "Julia",
+            "initials": "J"
+          },
+          {
+            "fullName": "Roos R",
+            "lastName": "Roos",
+            "firstName": "Raymond",
+            "initials": "R"
+          },
+          {
+            "fullName": "Renkl E",
+            "lastName": "Renkl",
+            "firstName": "Erika",
+            "initials": "E"
+          },
+          {
+            "fullName": "Oskarsson B",
+            "lastName": "Oskarsson",
+            "firstName": "Bjorn",
+            "initials": "B"
+          },
+          {
+            "fullName": "Diaz-Abad M",
+            "lastName": "Diaz-Abad",
+            "firstName": "Montserrat",
+            "initials": "M"
+          },
+          {
+            "fullName": "Arroyave L",
+            "lastName": "Arroyave",
+            "firstName": "Luisa",
+            "initials": "L"
+          },
+          {
+            "fullName": "Barlow V",
+            "lastName": "Barlow",
+            "firstName": "Victoria",
+            "initials": "V"
+          },
+          {
+            "fullName": "Changkuon G",
+            "lastName": "Changkuon",
+            "firstName": "Genevive",
+            "initials": "G"
+          },
+          {
+            "fullName": "Cirino M",
+            "lastName": "Cirino",
+            "firstName": "Melissa",
+            "initials": "M"
+          },
+          {
+            "fullName": "Coleman M",
+            "lastName": "Coleman",
+            "firstName": "Madison",
+            "initials": "M"
+          },
+          {
+            "fullName": "Dagostino D",
+            "lastName": "Dagostino",
+            "firstName": "Derek",
+            "initials": "D"
+          },
+          {
+            "fullName": "Deignan C",
+            "lastName": "Deignan",
+            "firstName": "Christina",
+            "initials": "C"
+          },
+          {
+            "fullName": "Deirmendjian E",
+            "lastName": "Deirmendjian",
+            "firstName": "Emma",
+            "initials": "E"
+          },
+          {
+            "fullName": "De Mattos A",
+            "lastName": "De Mattos",
+            "firstName": "Annette",
+            "initials": "A"
+          },
+          {
+            "fullName": "DiStefano S",
+            "lastName": "DiStefano",
+            "firstName": "Sofia",
+            "initials": "S"
+          },
+          {
+            "fullName": "Drake K",
+            "lastName": "Drake",
+            "firstName": "Kristin",
+            "initials": "K"
+          },
+          {
+            "fullName": "Estes M",
+            "lastName": "Estes",
+            "firstName": "Michaela",
+            "initials": "M"
+          },
+          {
+            "fullName": "Figueroa-Szostek P",
+            "lastName": "Figueroa-Szostek",
+            "firstName": "Precious",
+            "initials": "P"
+          },
+          {
+            "fullName": "Ford AM",
+            "lastName": "Ford",
+            "firstName": "Abaigeal M",
+            "initials": "AM"
+          },
+          {
+            "fullName": "Garozzo T",
+            "lastName": "Garozzo",
+            "firstName": "Tessa",
+            "initials": "T"
+          },
+          {
+            "fullName": "Hasenoehrl M",
+            "lastName": "Hasenoehrl",
+            "firstName": "Meredith",
+            "initials": "M"
+          },
+          {
+            "fullName": "Henrique J",
+            "lastName": "Henrique",
+            "firstName": "Jennifer",
+            "initials": "J"
+          },
+          {
+            "fullName": "Henrique N",
+            "lastName": "Henrique",
+            "firstName": "Natalie",
+            "initials": "N"
+          },
+          {
+            "fullName": "Hurwitz S",
+            "lastName": "Hurwitz",
+            "firstName": "Samuel",
+            "initials": "S"
+          },
+          {
+            "fullName": "Igne C",
+            "lastName": "Igne",
+            "firstName": "Courtney",
+            "initials": "C"
+          },
+          {
+            "fullName": "Irwin L",
+            "lastName": "Irwin",
+            "firstName": "Liam",
+            "initials": "L"
+          },
+          {
+            "fullName": "Jentoft K",
+            "lastName": "Jentoft",
+            "firstName": "Katie",
+            "initials": "K"
+          },
+          {
+            "fullName": "Jordan B",
+            "lastName": "Jordan",
+            "firstName": "Boglarka",
+            "initials": "B"
+          },
+          {
+            "fullName": "Katsovskiy I",
+            "lastName": "Katsovskiy",
+            "firstName": "Igor",
+            "initials": "I"
+          },
+          {
+            "fullName": "Kharakozova O",
+            "lastName": "Kharakozova",
+            "firstName": "Olga",
+            "initials": "O"
+          },
+          {
+            "fullName": "Kolvek T",
+            "lastName": "Kolvek",
+            "firstName": "Taylor",
+            "initials": "T"
+          },
+          {
+            "fullName": "Korin A",
+            "lastName": "Korin",
+            "firstName": "Alexander",
+            "initials": "A"
+          },
+          {
+            "fullName": "La T",
+            "lastName": "La",
+            "firstName": "Thuong",
+            "initials": "T"
+          },
+          {
+            "fullName": "Li H",
+            "lastName": "Li",
+            "firstName": "Haining",
+            "initials": "H"
+          },
+          {
+            "fullName": "Mazina L",
+            "lastName": "Mazina",
+            "firstName": "Lida",
+            "initials": "L"
+          },
+          {
+            "fullName": "Ostrow J",
+            "lastName": "Ostrow",
+            "firstName": "Joe",
+            "initials": "J"
+          },
+          {
+            "fullName": "Pagliaro J",
+            "lastName": "Pagliaro",
+            "firstName": "Jaclyn",
+            "initials": "J"
+          },
+          {
+            "fullName": "Palillo J",
+            "lastName": "Palillo",
+            "firstName": "Jack",
+            "initials": "J"
+          },
+          {
+            "fullName": "Patel P",
+            "lastName": "Patel",
+            "firstName": "Payal",
+            "initials": "P"
+          },
+          {
+            "fullName": "Patterson J",
+            "lastName": "Patterson",
+            "firstName": "Janae",
+            "initials": "J"
+          },
+          {
+            "fullName": "Phan M",
+            "lastName": "Phan",
+            "firstName": "Minh",
+            "initials": "M"
+          },
+          {
+            "fullName": "Popel N",
+            "lastName": "Popel",
+            "firstName": "Najla",
+            "initials": "N"
+          },
+          {
+            "fullName": "Rosenthal J",
+            "lastName": "Rosenthal",
+            "firstName": "Jesse",
+            "initials": "J"
+          },
+          {
+            "fullName": "Sanjana A",
+            "lastName": "Sanjana",
+            "firstName": "Anil",
+            "initials": "A"
+          },
+          {
+            "fullName": "Small C",
+            "lastName": "Small",
+            "firstName": "Catherine",
+            "initials": "C"
+          },
+          {
+            "fullName": "Stimpson T",
+            "lastName": "Stimpson",
+            "firstName": "Taylor",
+            "initials": "T"
+          },
+          {
+            "fullName": "Tamburello LM",
+            "lastName": "Tamburello",
+            "firstName": "Lia M",
+            "initials": "LM"
+          },
+          {
+            "fullName": "Tarasenko N",
+            "lastName": "Tarasenko",
+            "firstName": "Natalia",
+            "initials": "N"
+          },
+          {
+            "fullName": "Thomas M",
+            "lastName": "Thomas",
+            "firstName": "Mirna",
+            "initials": "M"
+          },
+          {
+            "fullName": "Tustison E",
+            "lastName": "Tustison",
+            "firstName": "Eric",
+            "initials": "E"
+          },
+          {
+            "fullName": "Udo E",
+            "lastName": "Udo",
+            "firstName": "Emem",
+            "initials": "E"
+          },
+          {
+            "fullName": "Vigneswaran P",
+            "lastName": "Vigneswaran",
+            "firstName": "Prasha",
+            "initials": "P"
+          },
+          {
+            "fullName": "Wahab Y",
+            "lastName": "Wahab",
+            "firstName": "Yusra",
+            "initials": "Y"
+          },
+          {
+            "fullName": "Weiss Sadan A",
+            "lastName": "Weiss Sadan",
+            "firstName": "Anat",
+            "initials": "A"
+          },
+          {
+            "fullName": "Whitworth I",
+            "lastName": "Whitworth",
+            "firstName": "Isaac",
+            "initials": "I"
+          },
+          {
+            "fullName": "Wong K",
+            "lastName": "Wong",
+            "firstName": "Kathy",
+            "initials": "K"
+          },
+          {
+            "fullName": "Wright S",
+            "lastName": "Wright",
+            "firstName": "Spencer",
+            "initials": "S"
+          },
+          {
+            "fullName": "Connolly M",
+            "lastName": "Connolly",
+            "firstName": "Mariah",
+            "initials": "M"
+          },
+          {
+            "fullName": "Felix A",
+            "lastName": "Felix",
+            "firstName": "Adrian",
+            "initials": "A"
+          },
+          {
+            "fullName": "Garrett K",
+            "lastName": "Garrett",
+            "firstName": "Karly",
+            "initials": "K"
+          },
+          {
+            "fullName": "Stepler A",
+            "lastName": "Stepler",
+            "firstName": "Ashley",
+            "initials": "A"
+          },
+          {
+            "fullName": "De La Rosa Garcia A",
+            "lastName": "De La Rosa Garcia",
+            "firstName": "Abigail",
+            "initials": "A"
+          },
+          {
+            "fullName": "Khan K",
+            "lastName": "Khan",
+            "firstName": "Kamran",
+            "initials": "K"
+          },
+          {
+            "fullName": "McGlaughlin I",
+            "lastName": "McGlaughlin",
+            "firstName": "Ivy",
+            "initials": "I"
+          },
+          {
+            "fullName": "Ghali G",
+            "lastName": "Ghali",
+            "firstName": "Grace",
+            "initials": "G"
+          },
+          {
+            "fullName": "Lawal O",
+            "lastName": "Lawal",
+            "firstName": "Oyinkansola",
+            "initials": "O"
+          },
+          {
+            "fullName": "Nelson L",
+            "lastName": "Nelson",
+            "firstName": "Linda",
+            "initials": "L"
+          },
+          {
+            "fullName": "Pabon M",
+            "lastName": "Pabon",
+            "firstName": "Marissa",
+            "initials": "M"
+          },
+          {
+            "fullName": "Rede D",
+            "lastName": "Rede",
+            "firstName": "Diana",
+            "initials": "D"
+          },
+          {
+            "fullName": "Sporn H",
+            "lastName": "Sporn",
+            "firstName": "Heather",
+            "initials": "H"
+          },
+          {
+            "fullName": "Bill V",
+            "lastName": "Bill",
+            "firstName": "Victor",
+            "initials": "V"
+          },
+          {
+            "fullName": "Clark K",
+            "lastName": "Clark",
+            "firstName": "Kirsten",
+            "initials": "K"
+          },
+          {
+            "fullName": "Kamp C",
+            "lastName": "Kamp",
+            "firstName": "Cornelia",
+            "initials": "C"
+          },
+          {
+            "fullName": "Kennedy J",
+            "lastName": "Kennedy",
+            "firstName": "Julie",
+            "initials": "J"
+          },
+          {
+            "fullName": "Fannon E",
+            "lastName": "Fannon",
+            "firstName": "Eileen",
+            "initials": "E"
+          },
+          {
+            "fullName": "Mark C",
+            "lastName": "Mark",
+            "firstName": "Christopher",
+            "initials": "C"
+          },
+          {
+            "fullName": "Horbovetz A",
+            "lastName": "Horbovetz",
+            "firstName": "Arian",
+            "initials": "A"
+          },
+          {
+            "fullName": "McGarry A",
+            "lastName": "McGarry",
+            "firstName": "Andrew",
+            "initials": "A"
+          },
+          {
+            "fullName": "Torti M",
+            "lastName": "Torti",
+            "firstName": "Margherita",
+            "initials": "M"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "9",
+        "volume": "9",
+        "journalIssueId": 4252087,
+        "dateOfPublication": "2026 Sep",
+        "monthOfPublication": 9,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "JAMA Netw Open",
+          "title": "JAMA network open",
+          "essn": "2574-3805",
+          "issn": "2574-3805",
+          "nlmid": "101729235",
+          "isoabbreviation": "JAMA Netw Open"
+        },
+        "printPublicationDate": "2026-09-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "e2634809",
+      "abstractText": "<h4>Importance</h4>DNL343 is a brain-penetrant small molecule that acts as an activator of eukaryotic translation initiation factor 2B (eIF2b), designed to inhibit the integrated stress response. A prior phase 1B trial of DNL343 in amyotrophic lateral sclerosis (ALS) provided evidence of a favorable safety profile, central nervous system penetrance, and target engagement based on integrated stress response biomarkers in blood and cerebrospinal fluid.<h4>Objectives</h4>To evaluate the safety and efficacy of a 200-mg formulation of DNL343 given once daily in individuals living with ALS.<h4>Design, setting, and participants</h4>DNL343 was evaluated as a regimen of the HEALEY ALS Platform Trial, a double-blind, multiregimen, placebo-controlled randomized clinical trial conducted at 74 centers in the US between May 24, 2023, and May 22, 2025. Eligible participants were randomized in a 3:1 ratio to receive DNL343 or matching placebo, with both groups enrolling concurrently. The analysis included shared randomized participants receiving placebo from an additional regimen.<h4>Intervention</h4>The study drug was administered for a placebo-controlled duration of 24 weeks.<h4>Main outcomes and measures</h4>The primary analysis was a bayesian shared parameter model of function and survival that provided an integrated estimate of the relative rate of disease progression among participants receiving DNL343 relative to placebo. The model had components for function and survival linked through an integrated estimate of disease slowing in treatment relative to controls across the 2 outcomes (denoted as the disease rate ratio [DRR]). Several safety, secondary, and exploratory end points were also evaluated.<h4>Results</h4>A total of 259 screenings were completed in this regimen; 249 participants met eligibility and were randomized to DNL343 (n = 186) and regimen-specific placebo (n = 63), with an additional 76 participants from a concurrent regimen receiving placebo included for a total of 139 shared placebo participants (325 participants, with 196 (60.3%) male and mean [SD] age of 59.3 [11.5] years). The estimated median DRR common to the ALS Functional Rating Scale-Revised and survival was 1.04 (95% credible interval, 0.83-1.32; probability of DRR <1, 0.37). Secondary outcome measures were not statistically different between the DNL343 and placebo groups. Overall, the incidence rates of adverse events were similar in participants receiving DNL343 and placebo.<h4>Conclusions and relevance</h4>In this randomized clinical trial, despite the relevance of the eIF2b activation pathway in ALS disease biology and supporting evidence of proof of mechanism and optimal dose selection in a prior phase 1B ALS clinical trial, 200-mg/d DNL343 did not show evidence of slowing disease progression in ALS, highlighting the need for alternative therapeutic approaches.<h4>Trial registration</h4>ClinicalTrials.gov Identifier: NCT05842941.",
+      "affiliation": "Sean M. Healey and AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "Clinical Trial, Phase III",
+          "Clinical Trial, Phase II",
+          "research-article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Journal Article"
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DT",
+                  "qualifierName": "drug therapy"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Disease Progression"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Treatment Outcome"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Double-Blind Method"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Middle Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Female"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Male"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1001/jamanetworkopen.2026.34809"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13598694"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "N",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by-nc-nd",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "nct",
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-09-22",
+      "dateOfCreation": "2026-09-22",
+      "dateOfRevision": "2026-09-25",
+      "electronicPublicationDate": "2026-09-01",
+      "firstPublicationDate": "2026-09-01",
+      "firstIndexDate": "2026-09-23",
+      "fullTextReceivedDate": "2026-09-25",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42319133",
+      "source": "MED",
+      "pmid": "42319133",
+      "pmcid": "PMC13281374",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13281374"
+        ]
+      },
+      "doi": "10.1002/eji.70231",
+      "title": "Shifting From Systemic to Precision-Targeted Complement Therapies: Opportunities and Hurdles.",
+      "authorString": "Mannes M, Zelek WM, Trouw LA.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Mannes M",
+            "lastName": "Mannes",
+            "firstName": "Marco",
+            "initials": "M",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0003-4875-8275"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Institute of Clinical and Experimental Trauma-Immunology, Ulm University Medical Center, Ulm, Germany."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zelek WM",
+            "lastName": "Zelek",
+            "firstName": "Wioleta M",
+            "initials": "WM",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-2230-3550"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "UK Dementia Research Institute at Cardiff University, School of Medicine, Cardiff University, Cardiff, UK."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Trouw LA",
+            "lastName": "Trouw",
+            "firstName": "Leendert A",
+            "initials": "LA",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-5186-2290"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Immunology, Leiden University Medical Center, Leiden, the Netherlands."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-5186-2290"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-2230-3550"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0003-4875-8275"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "6",
+        "volume": "56",
+        "journalIssueId": 4205299,
+        "dateOfPublication": "2026 Jun",
+        "monthOfPublication": 6,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Eur J Immunol",
+          "title": "European journal of immunology",
+          "essn": "1521-4141",
+          "issn": "0014-2980",
+          "nlmid": "1273201",
+          "isoabbreviation": "Eur J Immunol"
+        },
+        "printPublicationDate": "2026-06-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "e70231",
+      "abstractText": "The landscape of complement therapeutics has significantly broadened in recent years; systemically acting stoichiometric inhibitors against complement proteins across almost the entire complement cascade are now available. However, despite their unquestionable clinical success, several limitations remain, including increased infection risks, loss of physiological functions, and clinically observed breakthrough events. In addition, many complement diseases require lifelong treatment, further amplifying the overall healthcare burden and motivating the development of alternative concepts for more precision-based therapies. Given that many complement-associated diseases primarily manifest in specific body compartments, directing complement intervention to an organ, tissue, or even a particular cell type represents an important goal. In this article, we briefly delineate the status of approved complement therapeutics and review preclinical progress in emerging concepts. We highlight several key properties that are essential for achieving targeted complement therapies: administration routes, tissue/cell penetration, specificity, and the mode of action. In addition to approaches aimed at dampening complement activation, we outline strategies designed to specifically activate complement locally, for example, in the context of cancer. Together, these insights underscore the growing potential of next-generation complement therapeutics to achieve more precise and effective clinical outcomes.",
+      "affiliation": "Institute of Clinical and Experimental Trauma-Immunology, Ulm University Medical Center, Ulm, Germany.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "UKRI Future Leaders Fellowship Award",
+            "grantId": "UKRI2337",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Complement Activation",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DE",
+                  "qualifierName": "drug effects"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Complement System Proteins",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Complement Inactivating Agents",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "TU",
+                  "qualifierName": "therapeutic use"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Molecular Targeted Therapy"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Precision Medicine",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "MT",
+                  "qualifierName": "methods"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Complement system",
+          "Targeted Delivery",
+          "Complement Therapeutics"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "Complement System Proteins",
+            "registryNumber": "9007-36-7"
+          },
+          {
+            "name": "Complement Inactivating Agents",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1002/eji.70231"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13281374"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13281374?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 1,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "nct",
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-06-19",
+      "dateOfCreation": "2026-06-19",
+      "dateOfRevision": "2026-08-13",
+      "firstPublicationDate": "2026-06-01",
+      "firstIndexDate": "2026-06-20",
+      "fullTextReceivedDate": "2026-06-26",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "40364643",
+      "source": "MED",
+      "pmid": "40364643",
+      "pmcid": "PMC12694641",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC12694641"
+        ]
+      },
+      "doi": "10.4103/nrr.nrr-d-24-01266",
+      "title": "Latest progress and challenges in drug development for degenerative motor neuron diseases.",
+      "authorString": "Wen X, Lan T, Su W, Cao B, Wang Y, Chen Y.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Wen X",
+            "lastName": "Wen",
+            "firstName": "Xiangjin",
+            "initials": "X",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, West China Hospital, Sichuan University, Chengdu, Sichuan Province, China."
+                },
+                {
+                  "affiliation": "West China School of Medicine, West China Hospital, Sichuan University, Chengdu, Sichuan Province, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Lan T",
+            "lastName": "Lan",
+            "firstName": "Tianxiang",
+            "initials": "T",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, West China Hospital, Sichuan University, Chengdu, Sichuan Province, China."
+                },
+                {
+                  "affiliation": "West China School of Medicine, West China Hospital, Sichuan University, Chengdu, Sichuan Province, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Su W",
+            "lastName": "Su",
+            "firstName": "Weiming",
+            "initials": "W",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-7935-4159"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, West China Hospital, Sichuan University, Chengdu, Sichuan Province, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Cao B",
+            "lastName": "Cao",
+            "firstName": "Bei",
+            "initials": "B",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, West China Hospital, Sichuan University, Chengdu, Sichuan Province, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wang Y",
+            "lastName": "Wang",
+            "firstName": "Yi",
+            "initials": "Y",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-4060-5736"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Pathophysiology, West China College of Basic Medical Sciences & Forensic Medicine, Sichuan University, Chengdu, Sichuan Province, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Chen Y",
+            "lastName": "Chen",
+            "firstName": "Yongping",
+            "initials": "Y",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-5603-4192"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, West China Hospital, Sichuan University, Chengdu, Sichuan Province, China."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-7935-4159"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-5603-4192"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-4060-5736"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "5",
+        "volume": "21",
+        "journalIssueId": 4034852,
+        "dateOfPublication": "2026 May",
+        "monthOfPublication": 5,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Neural Regen Res",
+          "title": "Neural regeneration research",
+          "essn": "1876-7958",
+          "issn": "1673-5374",
+          "nlmid": "101316351",
+          "isoabbreviation": "Neural Regen Res"
+        },
+        "printPublicationDate": "2026-05-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "1849-1863",
+      "abstractText": "Motor neuron diseases are sporadic or inherited fatal neurodegenerative conditions. They selectively affect the upper and/or lower motor neurons in the brain and spinal cord and feature a slow onset and a subacute course contingent upon the site of damage. The main types include amyotrophic lateral sclerosis, progressive muscular atrophy, primary lateral sclerosis, and progressive bulbar palsy, the pathological processes of which are largely identical, with the main disparity lying in the location of the lesions. Amyotrophic lateral sclerosis is the representative condition in this group of diseases, while other types are its variants. Hence, this article mainly focuses on the advancements and challenges in drug research for amyotrophic lateral sclerosis but also briefly addresses several other important degenerative motor neuron diseases. Although the precise pathogenesis remains elusive, recent advancements have shed light on various theories, including gene mutation, excitatory amino acid toxicity, autoimmunology, and neurotrophic factors. The US Food and Drug Administration has approved four drugs for use in delaying the progression of amyotrophic lateral sclerosis: riluzole, edaravone, AMX0035, and tofersen, with the latter being the most recent to receive approval. However, following several phase III trials that failed to yield favorable outcomes, AMX0035 has been voluntarily withdrawn from both the US and Canadian markets. This article presents a comprehensive summary of drug trials primarily completed between January 1, 2023, and June 30, 2024, based on data sourced from clinicaltrials.gov. Among these trials, five are currently in phase I, seventeen are in phase II, and eleven are undergoing phase III evaluation. Notably, 24 clinical trials are now investigating potential disease-modifying therapy drugs, accounting for the majority of the drugs included in this review. Some promising drugs being investigated in preclinical studies, such as ATH-1105, are included in our analysis, and another review in frontiers in gene therapy and immunotherapy has demonstrated their therapeutic potential for motor neuron diseases. This article was written to be an overview of research trends and treatment prospects related to motor neuron disease drugs, with the aim of highlighting the latest potentialities for clinical therapy.",
+      "affiliation": "Department of Neurology, West China Hospital, Sichuan University, Chengdu, Sichuan Province, China.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print-Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Journal Article"
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Amyotrophic Lateral Sclerosis",
+          "motor neuron disease",
+          "Clinical Trial",
+          "Drug Development",
+          "Disease Modifying Therapy",
+          "Degenerative Motor Neuron Diseases"
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.4103/NRR.NRR-D-24-01266"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12694641"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12694641?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 7,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "nct",
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2025-10-21",
+      "dateOfCreation": "2025-05-14",
+      "dateOfRevision": "2026-04-20",
+      "electronicPublicationDate": "2025-05-06",
+      "firstPublicationDate": "2025-05-06",
+      "firstIndexDate": "2025-05-21",
+      "fullTextReceivedDate": "2025-12-22",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "41632207",
+      "source": "MED",
+      "pmid": "41632207",
+      "pmcid": "PMC12868058",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC12868058"
+        ]
+      },
+      "doi": "10.1007/s00335-026-10199-3",
+      "title": "Complement in brain and eye disease: shared mechanisms, convergent pathologies, and common therapeutic opportunities.",
+      "authorString": "Nimmo J, Bright M, Yang Z, Nicholls LE, Morgan BP, Daskoulidou N, Daskoulidou N, Zelek WM.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Nimmo J",
+            "lastName": "Nimmo",
+            "firstName": "Jacqui",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "UK Dementia Research Institute Cardiff, School of Medicine, Cardiff University, Cardiff, CF235NQ, UK."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Bright M",
+            "lastName": "Bright",
+            "firstName": "Matthew",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "UK Dementia Research Institute Cardiff, School of Medicine, Cardiff University, Cardiff, CF235NQ, UK."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Yang Z",
+            "lastName": "Yang",
+            "firstName": "Zhizhong",
+            "initials": "Z",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "UK Dementia Research Institute Cardiff, School of Medicine, Cardiff University, Cardiff, CF235NQ, UK."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Nicholls LE",
+            "lastName": "Nicholls",
+            "firstName": "Laura Elisabeth",
+            "initials": "LE",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "UK Dementia Research Institute Cardiff, School of Medicine, Cardiff University, Cardiff, CF235NQ, UK."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Morgan BP",
+            "lastName": "Morgan",
+            "firstName": "Bryan Paul",
+            "initials": "BP",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "UK Dementia Research Institute Cardiff, School of Medicine, Cardiff University, Cardiff, CF235NQ, UK."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Daskoulidou N",
+            "lastName": "Daskoulidou",
+            "firstName": "Nikoleta",
+            "initials": "N",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-7782-1232"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "UK Dementia Research Institute Cardiff, School of Medicine, Cardiff University, Cardiff, CF235NQ, UK. DaskoulidouN1@cardiff.ac.uk."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Daskoulidou N",
+            "lastName": "Daskoulidou",
+            "firstName": "Nikoleta",
+            "initials": "N",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-4075-7676"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "UK Dementia Research Institute Cardiff, School of Medicine, Cardiff University, Cardiff, CF235NQ, UK. DaskoulidouN1@cardiff.ac.uk."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zelek WM",
+            "lastName": "Zelek",
+            "firstName": "Wioleta Milena",
+            "initials": "WM",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-2230-3550"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "UK Dementia Research Institute Cardiff, School of Medicine, Cardiff University, Cardiff, CF235NQ, UK. zelekw@cardiff.ac.uk."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0002-2230-3550"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-7782-1232"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-4075-7676"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "1",
+        "volume": "37",
+        "journalIssueId": 4112780,
+        "dateOfPublication": "2026 Feb",
+        "monthOfPublication": 2,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Mamm Genome",
+          "title": "Mammalian genome : official journal of the International Mammalian Genome Society",
+          "essn": "1432-1777",
+          "issn": "0938-8990",
+          "nlmid": "9100916",
+          "isoabbreviation": "Mamm Genome"
+        },
+        "printPublicationDate": "2026-02-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "33",
+      "abstractText": "The brain and eye share striking anatomical, physiological, and immunological similarities. Both are protected by specialised vascular barriers, the blood-brain barrier (BBB) and blood-retinal barrier (BRB) respectively, that maintain homeostasis through tightly regulated cellular and molecular mechanisms. Increasing evidence implicates complement dysregulation as a key driver of neurodegeneration in both organs, contributing to disorders such as Alzheimer\u2019s disease (AD), and age-related macular degeneration (AMD). Genetic and molecular studies highlight overlapping mechanisms, with variants in complement regulators influencing susceptibility to both retinal and brain pathologies. Locally synthesised complement components modulate glial activation, vascular integrity, and synaptic remodelling at both sites and, when dysregulated, contribute to chronic inflammation, synapse loss and neuronal degradation. Despite these shared pathways, therapeutic development has progressed asymmetrically; several complement therapeutics are already in the clinic for AMD and other ocular pathologies, while none are yet in use for brain diseases. This is in part a consequence of the accessibility of the eye where complement targeted drugs can be directly delivered and impact on pathology monitored, difficult in the brain. Lessons learned from the eye, including local delivery to overcome challenges of barrier penetration, may help accelerate development of complement therapeutics for the brain. Here we present a brief perspective that integrates current understanding of complement-mediated mechanisms across brain and eye, emphasising clues from convergent pathophysiology and ocular translational successes.",
+      "affiliation": "UK Dementia Research Institute Cardiff, School of Medicine, Cardiff University, Cardiff, CF235NQ, UK.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Blood-Brain Barrier",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Blood-Retinal Barrier",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Brain",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Brain Diseases",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Alzheimer Disease",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Eye Diseases",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "TH",
+                  "qualifierName": "therapy"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Macular Degeneration",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Complement Activation"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Complement System Proteins",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "Complement System Proteins",
+            "registryNumber": "9007-36-7"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1007/s00335-026-10199-3"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12868058"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12868058?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 3,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "nct"
+        ]
+      },
+      "dateOfCompletion": "2026-06-27",
+      "dateOfCreation": "2026-02-03",
+      "dateOfRevision": "2026-09-20",
+      "electronicPublicationDate": "2026-02-03",
+      "firstPublicationDate": "2026-02-03",
+      "firstIndexDate": "2026-02-09",
+      "fullTextReceivedDate": "2026-02-14",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "41293411",
+      "source": "MED",
+      "pmid": "41293411",
+      "pmcid": "PMC12640833",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC12640833"
+        ]
+      },
+      "doi": "10.3389/fneur.2025.1705466",
+      "title": "Tuina combined with Riluzole in amyotrophic lateral sclerosis: protocol for a randomized controlled trial with clinical outcomes and synaptic PET biomarkers.",
+      "authorString": "Yang D, Zhou J, Zhao Y, Nasb M.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Yang D",
+            "lastName": "Yang",
+            "firstName": "Dan",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Rehabilitation Medicine Center/Tuina Department, Hubei Provincial Hospital of Traditional Chinese Medicine, Wuhan, China."
+                },
+                {
+                  "affiliation": "Affiliated Hospital of Hubei University of Chinese Medicine, Wuhan, China."
+                },
+                {
+                  "affiliation": "The First Clinical Medical School, Hubei University of Chinese Medicine, Wuhan, China."
+                },
+                {
+                  "affiliation": "Hubei Shizhen Laboratory, Wuhan, China."
+                },
+                {
+                  "affiliation": "Hubei Key Laboratory of Theory and Application Research of Liver and Kidney in Traditional Chinese Medicine (Hubei Province Hospital of Traditional Chinese Medicine), Wuhan, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zhou J",
+            "lastName": "Zhou",
+            "firstName": "Jing",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Rehabilitation Medicine Center/Tuina Department, Hubei Provincial Hospital of Traditional Chinese Medicine, Wuhan, China."
+                },
+                {
+                  "affiliation": "Affiliated Hospital of Hubei University of Chinese Medicine, Wuhan, China."
+                },
+                {
+                  "affiliation": "The First Clinical Medical School, Hubei University of Chinese Medicine, Wuhan, China."
+                },
+                {
+                  "affiliation": "Hubei Shizhen Laboratory, Wuhan, China."
+                },
+                {
+                  "affiliation": "Hubei Key Laboratory of Theory and Application Research of Liver and Kidney in Traditional Chinese Medicine (Hubei Province Hospital of Traditional Chinese Medicine), Wuhan, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zhao Y",
+            "lastName": "Zhao",
+            "firstName": "Yan",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Rehabilitation Medicine Center/Tuina Department, Hubei Provincial Hospital of Traditional Chinese Medicine, Wuhan, China."
+                },
+                {
+                  "affiliation": "Affiliated Hospital of Hubei University of Chinese Medicine, Wuhan, China."
+                },
+                {
+                  "affiliation": "The First Clinical Medical School, Hubei University of Chinese Medicine, Wuhan, China."
+                },
+                {
+                  "affiliation": "Hubei Shizhen Laboratory, Wuhan, China."
+                },
+                {
+                  "affiliation": "Hubei Key Laboratory of Theory and Application Research of Liver and Kidney in Traditional Chinese Medicine (Hubei Province Hospital of Traditional Chinese Medicine), Wuhan, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Nasb M",
+            "lastName": "Nasb",
+            "firstName": "Mohammad",
+            "initials": "M",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-0617-9035"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Rehabilitation Medicine Center/Tuina Department, Hubei Provincial Hospital of Traditional Chinese Medicine, Wuhan, China."
+                },
+                {
+                  "affiliation": "Affiliated Hospital of Hubei University of Chinese Medicine, Wuhan, China."
+                },
+                {
+                  "affiliation": "The First Clinical Medical School, Hubei University of Chinese Medicine, Wuhan, China."
+                },
+                {
+                  "affiliation": "Hubei Shizhen Laboratory, Wuhan, China."
+                },
+                {
+                  "affiliation": "Hubei Key Laboratory of Theory and Application Research of Liver and Kidney in Traditional Chinese Medicine (Hubei Province Hospital of Traditional Chinese Medicine), Wuhan, China."
+                },
+                {
+                  "affiliation": "Health Science Faculty, Homs University, Homs, Syria."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0002-0617-9035"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "volume": "16",
+        "journalIssueId": 3895108,
+        "dateOfPublication": "2025 ",
+        "monthOfPublication": 0,
+        "yearOfPublication": 2025,
+        "journal": {
+          "medlineAbbreviation": "Front Neurol",
+          "title": "Frontiers in neurology",
+          "essn": "1664-2295",
+          "issn": "1664-2295",
+          "nlmid": "101546899",
+          "isoabbreviation": "Front Neurol"
+        },
+        "printPublicationDate": "2025-01-01"
+      },
+      "pubYear": "2025",
+      "pageInfo": "1705466",
+      "abstractText": "<h4>Background</h4>Amyotrophic lateral sclerosis (ALS) is a devastating neurodegenerative disease characterized by progressive motor neuron degeneration, leading to severe functional decline and limited therapeutic options. While current pharmacological interventions such as Riluzole offer only modest benefits, there is a growing imperative to explore complementary rehabilitation strategies. Preclinical and neuroimaging evidence suggests that Tuina, a traditional Chinese manual therapy, may influence synaptic plasticity and integrity, offering a biologically reasonable mechanism for therapeutic benefit.<h4>Methods</h4>This randomized controlled trial, approved by the Ethics Committee of Hubei Provincial Hospital of Traditional Chinese Medicine (Approval No. HBZY2022-C42-01), will use a 1:1:1 allocation to enroll 135 participants. Participants will be assigned to: (i) Tuina therapy plus oral Riluzole, (ii) sham Tuina plus oral Riluzole, or (iii) Riluzole alone. Interventions will last for 1\u202fyear. The primary outcome is the change in Amyotrophic Lateral Sclerosis Functional Rating Scale-Revised (ALSFRS-R) scores. Secondary outcomes include manual muscle test (MMT), modified Ashworth scale (MAS), forced vital capacity (FVC), vital capacity (VC), forced expiratory volume in 1\u202fsecond (FEV1), FEV1/FVC ratio, peak expiratory flow (PEF), maximal voluntary ventilation (MVV), and ALS Assessment Questionnaire (ALSAQ-40). Outcomes will be assessed at baseline, 4\u202fweeks, and every 6\u202fmonths up to 24\u202fmonths. A mechanistic substudy will employ presynaptic Synaptic vesicle protein 2A (SV2A) PET imaging to quantify synaptic changes associated with Tuina intervention.<h4>Discussion</h4>This study is designed to evaluate the clinical efficacy of Tuina therapy combined with Riluzole and to investigate its potential to modulate synaptic integrity in patients with ALS. The findings are expected to provide evidence for integrating Tuina as an adjunctive, non-pharmacological therapy into comprehensive ALS management, linking functional improvements to underlying synaptic mechanisms.<h4>Clinical trial registration</h4>https://www.chictr.org.cn, identifier ChiCTR2300068650.",
+      "affiliation": "Rehabilitation Medicine Center/Tuina Department, Hubei Provincial Hospital of Traditional Chinese Medicine, Wuhan, China.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic-eCollection",
+      "pubTypeList": {
+        "pubType": [
+          "methods-article",
+          "Journal Article"
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Quality of life",
+          "Amyotrophic Lateral Sclerosis",
+          "Chinese medicine",
+          "Comprehensive Rehabilitation",
+          "Tuina Therapy"
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.3389/fneur.2025.1705466"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12640833"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12640833?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 1,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2025-11-26",
+      "dateOfCreation": "2025-11-26",
+      "dateOfRevision": "2025-11-28",
+      "electronicPublicationDate": "2025-11-10",
+      "firstPublicationDate": "2025-11-10",
+      "firstIndexDate": "2025-11-26",
+      "fullTextReceivedDate": "2025-12-22",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "41411011",
+      "source": "MED",
+      "pmid": "41411011",
+      "pmcid": "PMC12884879",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC12884879"
+        ]
+      },
+      "doi": "10.1093/jnen/nlaf127",
+      "title": "The association between virus-induced spinal cord pathology and the genetic background of the host.",
+      "authorString": "Lawley KS, Kang TW, Rech RR, Karmakar M, Carroll R, Perez Gomez AA, Amstalden K, Jones-Hall Y, Threadgill DW, Welsh CJ, Young CR, Brinkmeyer-Langford C.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Lawley KS",
+            "lastName": "Lawley",
+            "firstName": "Koedi S",
+            "initials": "KS",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Veterinary Integrative Biosciences, College of Veterinary Medicine and Biomedical Sciences, Texas A&M University, College Station, TX, United States."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kang TW",
+            "lastName": "Kang",
+            "firstName": "Tae Wook",
+            "initials": "TW",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-6891-0081"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Veterinary Integrative Biosciences, College of Veterinary Medicine and Biomedical Sciences, Texas A&M University, College Station, TX, United States."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Rech RR",
+            "lastName": "Rech",
+            "firstName": "Raquel R",
+            "initials": "RR",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Veterinary Pathobiology, College of Veterinary Medicine and Biomedical Sciences, Texas A&M University, College Station, TX, United States."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Karmakar M",
+            "lastName": "Karmakar",
+            "firstName": "Moumita",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Statistics, University of Wisconsin-Madison, Madison, WI, United States."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Carroll R",
+            "lastName": "Carroll",
+            "firstName": "Raymond",
+            "initials": "R",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Statistics, College of Arts & Sciences, Texas A&M University, College Station, TX, United States."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Perez Gomez AA",
+            "lastName": "Perez Gomez",
+            "firstName": "Aracely A",
+            "initials": "AA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Veterinary Integrative Biosciences, College of Veterinary Medicine and Biomedical Sciences, Texas A&M University, College Station, TX, United States."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Amstalden K",
+            "lastName": "Amstalden",
+            "firstName": "Katia",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Veterinary Integrative Biosciences, College of Veterinary Medicine and Biomedical Sciences, Texas A&M University, College Station, TX, United States."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Jones-Hall Y",
+            "lastName": "Jones-Hall",
+            "firstName": "Yava",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Veterinary Pathobiology, College of Veterinary Medicine and Biomedical Sciences, Texas A&M University, College Station, TX, United States."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Threadgill DW",
+            "lastName": "Threadgill",
+            "firstName": "David W",
+            "initials": "DW",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Nutrition, Texas A&M University, College Station, TX, United States."
+                },
+                {
+                  "affiliation": "Department of Biochemistry and Biophysics, Texas A&M University, College Station, TX, United States."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Welsh CJ",
+            "lastName": "Welsh",
+            "firstName": "C Jane",
+            "initials": "CJ",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-9659-8032"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Veterinary Integrative Biosciences, College of Veterinary Medicine and Biomedical Sciences, Texas A&M University, College Station, TX, United States."
+                },
+                {
+                  "affiliation": "Department of Veterinary Pathobiology, College of Veterinary Medicine and Biomedical Sciences, Texas A&M University, College Station, TX, United States."
+                },
+                {
+                  "affiliation": "Texas A&M Institute for Neuroscience, Texas A&M University, College Station, TX, United States."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Young CR",
+            "lastName": "Young",
+            "firstName": "Colin R",
+            "initials": "CR",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Veterinary Integrative Biosciences, College of Veterinary Medicine and Biomedical Sciences, Texas A&M University, College Station, TX, United States."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Brinkmeyer-Langford C",
+            "lastName": "Brinkmeyer-Langford",
+            "firstName": "Candice",
+            "initials": "C",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-6423-8585"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Texas A&M Institute for Neuroscience, Texas A&M University, College Station, TX, United States."
+                },
+                {
+                  "affiliation": "Department of Environmental and Occupational Health, Texas A&M Health Science Center School of Public Health, College Station, TX, United States."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-6423-8585"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-9659-8032"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-6891-0081"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "4",
+        "volume": "85",
+        "journalIssueId": 4156529,
+        "dateOfPublication": "2026 Apr",
+        "monthOfPublication": 4,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "J Neuropathol Exp Neurol",
+          "title": "Journal of neuropathology and experimental neurology",
+          "essn": "1554-6578",
+          "issn": "0022-3069",
+          "nlmid": "2985192R",
+          "isoabbreviation": "J Neuropathol Exp Neurol"
+        },
+        "printPublicationDate": "2026-04-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "331-340",
+      "abstractText": "Theiler's murine encephalomyelitis virus (TMEV) infection in mice has been used to study diverse neurological diseases, including multiple sclerosis and epilepsy. In this investigation, 5 strains of collaborative cross (CC) mice were infected with TMEV and examined clinically and histologically at days 4, 14, and 90 post-infection (dpi). All CC strains tested exhibited lumbar spinal cord and/or ventral peripheral nerve lesions by 14\u2009dpi; CC027, CC023, and CC078 strains exhibited lesions at 4 dpi. At 90\u2009dpi, lesions were remnants of the inflammatory responses associated with earlier infection; there was skeletal muscle atrophy in the CC023 strain. Increased microglial/macrophage reactivity was observed in all strains at 4 and 14\u2009dpi, but not at 90\u2009dpi. TMEV mRNA expression was greatest in the CC023 and CC078 strains at the acute timepoints; TMEV was completely cleared in all mice at 90\u2009dpi. The neuropathological and clinical profiles in CC023 mice, mainly at 14\u2009dpi, share some clinical and histologic features with those in amyotrophic lateral sclerosis patients. This work demonstrates how viral infection might interact with the genetic background of a susceptible individual to contribute to the onset, clinical presentation and persistence of lesions despite viral clearance.",
+      "affiliation": "Department of Veterinary Integrative Biosciences, College of Veterinary Medicine and Biomedical Sciences, Texas A&M University, College Station, TX, United States.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print",
+      "pubTypeList": {
+        "pubType": [
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "NINDS NIH HHS",
+            "acronym": "NS",
+            "grantId": "R01 NS103934",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Institute for Health",
+            "grantId": "R01 NS103934",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Institute for Neurological Disorders and Stroke",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Institute for Environmental Health Sciences (NIEHS)",
+            "grantId": "2P30 ES029067",
+            "orderIn": 0
+          },
+          {
+            "agency": "NIH HHS",
+            "acronym": "NH",
+            "grantId": "R01 NS103934",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Science Foundation Graduate Research",
+            "grantId": "DGE 1746932",
+            "orderIn": 0
+          },
+          {
+            "agency": "NIEHS NIH HHS",
+            "acronym": "ES",
+            "grantId": "P30 ES029067",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Institute for Neurological Disorders and Stroke (NINDS)",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Science Foundation",
+            "grantId": "DGE 1746932",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Institute for Environmental Health Sciences",
+            "grantId": "2P30 ES029067",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Spinal Cord",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "VI",
+                  "qualifierName": "virology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Mice"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Theilovirus",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PY",
+                  "qualifierName": "pathogenicity"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Cardiovirus Infections",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Disease Models, Animal"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Female"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Male"
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Neurological Disease",
+          "Collaborative Cross",
+          "Rna In Situ Hybridization",
+          "Tmev",
+          "Theiler\u2019s Murine Encephalomyelitis Virus",
+          "Spinal Cord Pathology",
+          "Microglial Reactivity"
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1093/jnen/nlaf127"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12884879"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12884879?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 1,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by-nc",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-03-20",
+      "dateOfCreation": "2025-12-18",
+      "dateOfRevision": "2026-08-13",
+      "firstPublicationDate": "2026-04-01",
+      "firstIndexDate": "2025-12-18",
+      "fullTextReceivedDate": "2026-03-28",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "39496035",
+      "source": "MED",
+      "pmid": "39496035",
+      "pmcid": "PMC11537586",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC11537586"
+        ]
+      },
+      "doi": "10.1097/md.0000000000040141",
+      "title": "Different intensities of physical activity for amyotrophic lateral sclerosis and Parkinson disease: A Mendelian randomization study and meta-analysis.",
+      "authorString": "Xu W, Zhao X, Wang J, Guo Y, Ren Z, Cai L, Wu S, Zhou M.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Xu W",
+            "lastName": "Xu",
+            "firstName": "Wenyuan",
+            "initials": "W",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0005-9946-0908"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Graduate School, Anhui University of Chinese Medicine, Hefei, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zhao X",
+            "lastName": "Zhao",
+            "firstName": "Xianghu",
+            "initials": "X",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "College of Sports Medicine, Wuhan Sports University, Wuhan, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wang J",
+            "lastName": "Wang",
+            "firstName": "Jiaying",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Graduate School, Anhui University of Chinese Medicine, Hefei, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Guo Y",
+            "lastName": "Guo",
+            "firstName": "Yujie",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Graduate School, Anhui University of Chinese Medicine, Hefei, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ren Z",
+            "lastName": "Ren",
+            "firstName": "Zhihao",
+            "initials": "Z",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Graduate School, Anhui University of Chinese Medicine, Hefei, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Cai L",
+            "lastName": "Cai",
+            "firstName": "Lian",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Graduate School, Anhui University of Chinese Medicine, Hefei, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wu S",
+            "lastName": "Wu",
+            "firstName": "Shengbing",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Graduate School, Anhui University of Chinese Medicine, Hefei, China."
+                },
+                {
+                  "affiliation": "Institute of Acupuncture-Moxibustion and Meridians, Anhui Academy of Traditional Chinese Medicine, Hefei, China."
+                },
+                {
+                  "affiliation": "Anhui Province Key Laboratory of Meridian Viscera Correlationship, Hefei, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zhou M",
+            "lastName": "Zhou",
+            "firstName": "Meiqi",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Graduate School, Anhui University of Chinese Medicine, Hefei, China."
+                },
+                {
+                  "affiliation": "Institute of Acupuncture-Moxibustion and Meridians, Anhui Academy of Traditional Chinese Medicine, Hefei, China."
+                },
+                {
+                  "affiliation": "Anhui Province Key Laboratory of Meridian Viscera Correlationship, Hefei, China."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0009-0005-9946-0908"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "44",
+        "volume": "103",
+        "journalIssueId": 3846894,
+        "dateOfPublication": "2024 Nov",
+        "monthOfPublication": 11,
+        "yearOfPublication": 2024,
+        "journal": {
+          "medlineAbbreviation": "Medicine (Baltimore)",
+          "title": "Medicine",
+          "essn": "1536-5964",
+          "issn": "0304-5412",
+          "nlmid": "2985248R",
+          "isoabbreviation": "Medicine (Baltimore)"
+        },
+        "printPublicationDate": "2024-11-01"
+      },
+      "pubYear": "2024",
+      "pageInfo": "e40141",
+      "abstractText": "<h4>Background</h4>The causal relationships between amyotrophic lateral sclerosis (ALS), Parkinson disease and different intensities of physical activity (PA) are still inconclusive. To evaluate the causal impact of PA on ALS and Parkinson disease (PD), this study integrates evidence from Mendelian randomization (MR) using a meta-analysis approach.<h4>Methods</h4>MR analyses on genetically predicted levels of PA (compose of self-reported moderate-to-vigorous physical activity [MVPA], self-reported vigorous physical activity [VPA], and strenuous sports or other exercises [SSOE]) regarding ALS and PD published up to July 27, 2024, were obtained from PubMed, Scopus, Web of Science, and Embase. De novo MR studies were analyzed utilizing publicly accessible datasets from genome-wide association studies and then meta-analyses were performed to pool the results.<h4>Results</h4>Meta-analyses of results of 12 de novo MR studies analyses and 2 published MR studies indicated that genetic predicted levels of MVPA (odds ratio [OR]: 1.22, 95% confidence interval [CI]: 1.08-1.38), VPA (OR: 1.32, 95% CI: 1.08-1.60), and SSOE (OR: 1.35, 95% CI: 1.07-1.70) were related to a raised risk of ALS, but not causally with PD.<h4>Conclusion</h4>Our findings showed no causal relationships between MVPA, VPA, SSOE, and PD, while MVPA, VPA, and SSOE were associated with increased ALS risk, highlighting the need for targeted PA recommendations for disease management.",
+      "affiliation": "Graduate School, Anhui University of Chinese Medicine, Hefei, China.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print",
+      "pubTypeList": {
+        "pubType": [
+          "Meta-Analysis",
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "the Anhui Province Traditional Chinese Medicine Leading Talents Construction Project",
+            "grantId": "ZYYLJRC201911",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Parkinson Disease",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "EP",
+                  "qualifierName": "epidemiology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Exercise"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Genome-Wide Association Study"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Mendelian Randomization Analysis"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "doi",
+            "site": "Unpaywall",
+            "url": "https://doi.org/10.1097/md.0000000000040141"
+          },
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1097/MD.0000000000040141"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC11537586"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC11537586?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 3,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "N",
+      "dateOfCompletion": "2024-11-04",
+      "dateOfCreation": "2024-11-04",
+      "dateOfRevision": "2025-05-03",
+      "firstPublicationDate": "2024-11-01",
+      "firstIndexDate": "2024-11-05",
+      "fullTextReceivedDate": "2025-02-05",
+      "hasEvaluations": "N"
+    }
+  ]
+}

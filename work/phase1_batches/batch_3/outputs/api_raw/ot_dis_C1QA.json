@@ -1,0 +1,363 @@
+{
+  "target": {
+    "id": "ENSG00000173372",
+    "approvedSymbol": "C1QA",
+    "associatedDiseases": {
+      "count": 478,
+      "rows": [
+        {
+          "disease": {
+            "id": "MONDO_0015699",
+            "name": "immunodeficiency due to a classical component pathway complement deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "genomics_england",
+              "score": 0.865457038266544
+            },
+            {
+              "id": "orphanet",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "impc",
+              "score": 0.31004470678192675
+            },
+            {
+              "id": "europepmc",
+              "score": 0.09197148619533811
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0013343",
+            "name": "C1Q deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.7896045340852053
+            },
+            {
+              "id": "genomics_england",
+              "score": 0.7599134970145264
+            },
+            {
+              "id": "europepmc",
+              "score": 0.09197148619533811
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0958182",
+            "name": "C1Q deficiency 1"
+          },
+          "datasourceScores": [
+            {
+              "id": "genomics_england",
+              "score": 0.7599134970145264
+            },
+            {
+              "id": "uniprot_literature",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "eva",
+              "score": 0.48634463808929684
+            },
+            {
+              "id": "impc",
+              "score": 0.4994151502379467
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0003832",
+            "name": "complement deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "genomics_england",
+              "score": 0.7599134970145264
+            },
+            {
+              "id": "europepmc",
+              "score": 0.03951550184475537
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005502",
+            "name": "dengue disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "reactome",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "europepmc",
+              "score": 0.037995674850726316
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_1060174",
+            "name": "systemic lupus erythematosus related to C1QA"
+          },
+          "datasourceScores": [
+            {
+              "id": "clingen",
+              "score": 0.607930797611621
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0005670",
+            "name": "smoking initiation"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.46624889210036047
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004180",
+            "name": "benign urinary system neoplasm"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.4364191208354977
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0003847",
+            "name": "hereditary disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.31292862069725114
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0000544",
+            "name": "infection"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.729513807541636
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005090",
+            "name": "schizophrenia"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.5955100909597343
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0019006",
+            "name": "familial idiopathic steroid-resistant nephrotic syndrome"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.5760091785852967
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005148",
+            "name": "type 2 diabetes mellitus"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.5698767076417365
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0013743",
+            "name": "autosomal systemic lupus erythematosus type 16"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.5184433842031905
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0100313",
+            "name": "focal segmental glomerulosclerosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.5024166607040383
+            },
+            {
+              "id": "europepmc",
+              "score": 0.030396539880581056
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0018905",
+            "name": "diffuse large B-cell lymphoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.4999237975820792
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0011614",
+            "name": "3-hydroxy-3-methylglutaryl-CoA synthase deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.49734818552606724
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005028",
+            "name": "esophageal adenocarcinoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.4924239460654131
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.010486282426488821
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005070",
+            "name": "neoplasm"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.4928756792770136
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005342",
+            "name": "IgA glomerulonephritis"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.4562503749108616
+            },
+            {
+              "id": "europepmc",
+              "score": 0.06889882372931705
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0006052",
+            "name": "pulmonary tuberculosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.47063975915099665
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0009724",
+            "name": "nail-patella-like renal disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.46143467365716073
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "Orphanet_101992",
+            "name": "Immunodeficiency due to a complement cascade protein anomaly"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.45388113349683623
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0012350",
+            "name": "complement factor H deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.45388113349683623
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0007671",
+            "name": "fibronectin glomerulopathy"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.4395137023132817
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,71 @@
+warning: `VIRTUAL_ENV=C:\Users\Ra\Documents\Antigravity\CarbonALS\.venv` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+Scanning region chr20:63442300-63442620 (321 bp)...
+Querying AlphaGenome Atlas interval API for chr20:63442300-63442620...
+  0%|          | 0/963 [00:00<?, ?variants/s]100%|██████████| 963/963 [00:00<00:00, 88418.08variants/s]
+Successfully retrieved and scored 963 SNVs in region.
+
+### Top Ranked AVI Variants (Total Analyzed: 963)
+
+|   Rank | Variant              | AVI Phred   |   Raw Score | Top Percentile   | Top Modality        |
+|--------|----------------------|-------------|-------------|------------------|---------------------|
+|      1 | `chr20:63442531:C>A` | **54.77**   |      3.1321 | Top 0.0003338%   | Protein Termination |
+|      2 | `chr20:63442413:C>T` | **50.49**   |      2.8535 | Top 0.0008941%   | Protein Termination |
+|      3 | `chr20:63442412:C>T` | **48.84**   |      2.7514 | Top 0.001305%    | Protein Termination |
+|      4 | `chr20:63442482:G>T` | **47.36**   |      2.663  | Top 0.001836%    | Protein Termination |
+|      5 | `chr20:63442476:A>T` | **45.97**   |      2.5854 | Top 0.002527%    | Splicing            |
+|      6 | `chr20:63442488:A>T` | **45.76**   |      2.5739 | Top 0.002652%    | Splicing            |
+|      7 | `chr20:63442531:C>G` | **44.97**   |      2.5331 | Top 0.003183%    | AlphaMissense       |
+|      8 | `chr20:63442415:C>T` | **44.19**   |      2.4942 | Top 0.003809%    | Protein Termination |
+|      9 | `chr20:63442462:C>A` | **43.97**   |      2.483  | Top 0.004011%    | Protein Termination |
+|     10 | `chr20:63442467:A>T` | **42.39**   |      2.4103 | Top 0.00577%     | Protein Termination |
+
+> [!NOTE] Phred = -10 * log10(quantile), representing the top (10^(-Phred/10) * 100)% predicted impact of all genome-wide SNVs.
+
+
+### Top Region Hotspot Feature Importances:
+
+#### Feature Importances for `chr20:63442531:C>A` (AVI Phred: 54.77 | Top 0.0003338%)
+|   Rank | Modality / Feature    | Attribution Weight   | Relative Impact   |
+|--------|-----------------------|----------------------|-------------------|
+|      1 | `Protein Termination` | `+1.5362`            | `###############` |
+|      2 | `Splicing`            | `+0.7879`            | `########`        |
+|      3 | `Cactus`              | `+0.5596`            | `#####`           |
+|      4 | `PhastCons 470`       | `+0.2303`            | `##`              |
+|      5 | `CAGE`                | `+0.0264`            | ``                |
+|      6 | `ChIP-Histone`        | `+0.0114`            | ``                |
+|      7 | `RNA-seq`             | `+0.0110`            | ``                |
+|      8 | `DNASE-seq`           | `+0.0073`            | ``                |
+|      9 | `ATAC-seq`            | `+0.0044`            | ``                |
+|     10 | `3D Genome Contacts`  | `+0.0034`            | ``                |
+
+
+#### Feature Importances for `chr20:63442413:C>T` (AVI Phred: 50.49 | Top 0.0008941%)
+|   Rank | Modality / Feature    | Attribution Weight   | Relative Impact   |
+|--------|-----------------------|----------------------|-------------------|
+|      1 | `Protein Termination` | `+1.5289`            | `###############` |
+|      2 | `Cactus`              | `+0.5571`            | `#####`           |
+|      3 | `Splicing`            | `+0.5361`            | `#####`           |
+|      4 | `PhastCons 470`       | `+0.2127`            | `##`              |
+|      5 | `DNASE-seq`           | `+0.0286`            | ``                |
+|      6 | `ATAC-seq`            | `+0.0095`            | ``                |
+|      7 | `CAGE`                | `+0.0078`            | ``                |
+|      8 | `ChIP-Histone`        | `+0.0048`            | ``                |
+|      9 | `PRO-cap`             | `+0.0034`            | ``                |
+|     10 | `Polyadenylation`     | `+0.0032`            | ``                |
+
+
+#### Feature Importances for `chr20:63442412:C>T` (AVI Phred: 48.84 | Top 0.001305%)
+|   Rank | Modality / Feature    | Attribution Weight   | Relative Impact   |
+|--------|-----------------------|----------------------|-------------------|
+|      1 | `Protein Termination` | `+1.5404`            | `###############` |
+|      2 | `Cactus`              | `+0.5570`            | `#####`           |
+|      3 | `Splicing`            | `+0.4279`            | `####`            |
+|      4 | `PhastCons 470`       | `+0.1980`            | `##`              |
+|      5 | `DNASE-seq`           | `+0.0355`            | ``                |
+|      6 | `ATAC-seq`            | `+0.0142`            | ``                |
+|      7 | `CAGE`                | `+0.0094`            | ``                |
+|      8 | `ChIP-Histone`        | `+0.0074`            | ``                |
+|      9 | `PRO-cap`             | `+0.0053`            | ``                |
+|     10 | `Polyadenylation`     | `+0.0028`            | ``                |
+
+Region scan exported to: C:\Users\Ra\Documents\Antigravity\CarbonALS\work\phase2\track1_multiplex_splice\outputs\avi_dense_kcnq2.tsv

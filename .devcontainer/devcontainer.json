@@ -1,0 +1,5 @@
+{
+  "name": "ExploreALS v1.2 Reproducibility Container",
+  "image": "mcr.microsoft.com/devcontainers/python:3.12",
+  "postCreateCommand": "curl -LsSf https://astral.sh/uv/install.sh | sh && ~/.local/bin/uv sync --frozen && ~/.local/bin/uv run python scripts/verify_carbon_als.py --mode cached"
+}

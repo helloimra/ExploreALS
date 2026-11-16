@@ -1,0 +1,499 @@
+{
+  "target": {
+    "id": "ENSG00000125730",
+    "approvedSymbol": "C3",
+    "associatedDiseases": {
+      "count": 2397,
+      "rows": [
+        {
+          "disease": {
+            "id": "MONDO_0013043",
+            "name": "atypical hemolytic-uremic syndrome with C3 anomaly"
+          },
+          "datasourceScores": [
+            {
+              "id": "uniprot_variants",
+              "score": 0.9285669064556789
+            },
+            {
+              "id": "eva",
+              "score": 0.8913988207899359
+            },
+            {
+              "id": "genomics_england",
+              "score": 0.865457038266544
+            },
+            {
+              "id": "clingen",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "uniprot_literature",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "impc",
+              "score": 0.4665412923570983
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0013417",
+            "name": "complement component 3 deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.9081401724758098
+            },
+            {
+              "id": "genomics_england",
+              "score": 0.9066612367713315
+            },
+            {
+              "id": "orphanet",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "uniprot_literature",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "uniprot_variants",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "impc",
+              "score": 0.46394956515811375
+            },
+            {
+              "id": "europepmc",
+              "score": 0.15264322491518403
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005150",
+            "name": "age-related macular degeneration"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.9547413492372937
+            },
+            {
+              "id": "uniprot_variants",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "uniprot_literature",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "clinical_precedence",
+              "score": 0.5634465394286124
+            },
+            {
+              "id": "europepmc",
+              "score": 0.8699646612135898
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0018013",
+            "name": "complement 3 glomerulopathy"
+          },
+          "datasourceScores": [
+            {
+              "id": "clinical_precedence",
+              "score": 0.7740647750255968
+            },
+            {
+              "id": "genomics_england",
+              "score": 0.7599134970145264
+            },
+            {
+              "id": "impc",
+              "score": 0.5520805329743734
+            },
+            {
+              "id": "europepmc",
+              "score": 0.2682836264684836
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0016244",
+            "name": "atypical hemolytic-uremic syndrome"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.8116035956849211
+            },
+            {
+              "id": "clingen",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "impc",
+              "score": 0.5141274977143129
+            },
+            {
+              "id": "europepmc",
+              "score": 0.14169339705421644
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0003004",
+            "name": "macular degeneration"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.9358675958949209
+            },
+            {
+              "id": "clinical_precedence",
+              "score": 0.12310598651635328
+            },
+            {
+              "id": "europepmc",
+              "score": 0.027788056866607538
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0100244",
+            "name": "paroxysmal nocturnal hemoglobinuria"
+          },
+          "datasourceScores": [
+            {
+              "id": "clinical_precedence",
+              "score": 0.907574092937848
+            },
+            {
+              "id": "impc",
+              "score": 0.41050527108724705
+            },
+            {
+              "id": "europepmc",
+              "score": 0.3711446040952917
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0012659",
+            "name": "age related macular degeneration 9"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.7013612322018578
+            },
+            {
+              "id": "uniprot_variants",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "uniprot_literature",
+              "score": 0.607930797611621
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005283",
+            "name": "retinal disorder"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.9111655964038479
+            },
+            {
+              "id": "europepmc",
+              "score": 0.10850774873910946
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_1001492",
+            "name": "atrophic macular degeneration"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.742083602200656
+            },
+            {
+              "id": "clinical_precedence",
+              "score": 0.6202680886265536
+            },
+            {
+              "id": "europepmc",
+              "score": 0.09053904166932529
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0002175",
+            "name": "degeneration of macula and posterior pole"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.891912452708433
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0100096",
+            "name": "COVID-19"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.8019115971496437
+            },
+            {
+              "id": "europepmc",
+              "score": 0.688679438293139
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005417",
+            "name": "wet macular degeneration"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.81036922537955
+            },
+            {
+              "id": "europepmc",
+              "score": 0.11551072078001089
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0003832",
+            "name": "complement deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "genomics_england",
+              "score": 0.7599134970145264
+            },
+            {
+              "id": "europepmc",
+              "score": 0.09707901466231633
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0013892",
+            "name": "C3 glomerulonephritis"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.6744943759744707
+            },
+            {
+              "id": "clingen",
+              "score": 0.3039653988058105
+            },
+            {
+              "id": "impc",
+              "score": 0.49067614502227963
+            },
+            {
+              "id": "europepmc",
+              "score": 0.13959055953765268
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005328",
+            "name": "eye disorder"
+          },
+          "datasourceScores": [
+            {
+              "id": "clinical_precedence",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.5930790260092599
+            },
+            {
+              "id": "europepmc",
+              "score": 0.03858671868173762
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0100114",
+            "name": "dry age related macular degeneration"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.7466363480904994
+            },
+            {
+              "id": "europepmc",
+              "score": 0.08763256292209562
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0035290",
+            "name": "atypical hemolytic uremic syndrome with complement gene abnormality"
+          },
+          "datasourceScores": [
+            {
+              "id": "orphanet",
+              "score": 0.607930797611621
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0001898",
+            "name": "optic choroid disorder"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.5958068343920215
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_1060213",
+            "name": "reticular pseudodrusen"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.5937013344732018
+            },
+            {
+              "id": "europepmc",
+              "score": 0.021277577916406734
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "HP_0000505",
+            "name": "Visual impairment"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.5913656666632118
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0007915",
+            "name": "systemic lupus erythematosus"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.4403857122307656
+            },
+            {
+              "id": "europepmc",
+              "score": 0.9581197471057441
+            },
+            {
+              "id": "impc",
+              "score": 0.3946686738094644
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0018922",
+            "name": "cold agglutinin disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "clinical_precedence",
+              "score": 0.4559480982087158
+            },
+            {
+              "id": "europepmc",
+              "score": 0.10247761078653991
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0002461",
+            "name": "membranoproliferative glomerulonephritis"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.42555155832813474
+            },
+            {
+              "id": "europepmc",
+              "score": 0.16591659908065454
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0100313",
+            "name": "focal segmental glomerulosclerosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "clinical_precedence",
+              "score": 0.3039653988058105
+            },
+            {
+              "id": "europepmc",
+              "score": 0.7336782058362201
+            },
+            {
+              "id": "impc",
+              "score": 0.6405071013833288
+            },
+            {
+              "id": "eva",
+              "score": 0.015198269940290528
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "target": {
+    "id": "ENSG00000136235",
+    "approvedSymbol": "GPNMB",
+    "associatedDiseases": {
+      "count": 907,
+      "rows": [
+        {
+          "disease": {
+            "id": "MONDO_0007101",
+            "name": "familial primary localized cutaneous amyloidosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.8959803493628289
+            },
+            {
+              "id": "genomics_england",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "uniprot_variants",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "uniprot_literature",
+              "score": 0.607930797611621
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005180",
+            "name": "Parkinson disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.7449279841811609
+            },
+            {
+              "id": "europepmc",
+              "score": 0.9245821084134908
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0017906",
+            "name": "amyloidosis cutis dyschromia"
+          },
+          "datasourceScores": [
+            {
+              "id": "genomics_england",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "orphanet",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "europepmc",
+              "score": 0.0895853578147125
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0015301",
+            "name": "primary cutaneous amyloidosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "gene2phenotype",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "europepmc",
+              "score": 0.04863446380892969
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005062",
+            "name": "lymphoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "clinical_precedence",
+              "score": 0.607930797611621
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005133",
+            "name": "endometriosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.5975750905194177
+            },
+            {
+              "id": "europepmc",
+              "score": 0.030396539880581056
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005148",
+            "name": "type 2 diabetes mellitus"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.49085705205671165
+            },
+            {
+              "id": "europepmc",
+              "score": 0.35185708881443845
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005473",
+            "name": "temporomandibular joint disorder"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.36241402002486706
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0003847",
+            "name": "hereditary disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.3172982918047557
+            },
+            {
+              "id": "europepmc",
+              "score": 0.07295169571339452
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0005405",
+            "name": "response to antihypertensive drug"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.27161249707418034
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005154",
+            "name": "liver disorder"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.24277233710984136
+            },
+            {
+              "id": "europepmc",
+              "score": 0.17396351608862398
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0007254",
+            "name": "breast cancer"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.8844472898243032
+            },
+            {
+              "id": "clinical_precedence",
+              "score": 0.14776095775282458
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005494",
+            "name": "triple-negative breast carcinoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.8415584106634328
+            },
+            {
+              "id": "clinical_precedence",
+              "score": 0.14505904309677292
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005070",
+            "name": "neoplasm"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9620650097796271
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005105",
+            "name": "melanoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "clinical_precedence",
+              "score": 0.1545157443929537
+            },
+            {
+              "id": "europepmc",
+              "score": 0.6339045244197269
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004992",
+            "name": "cancer"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.879853708059542
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0018177",
+            "name": "glioblastoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.8440981954491305
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.12599905578258186
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0006486",
+            "name": "uveal melanoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "clinical_precedence",
+              "score": 0.14438356443276001
+            },
+            {
+              "id": "impc",
+              "score": 0.5405062060665121
+            },
+            {
+              "id": "europepmc",
+              "score": 0.13581342888309617
+            },
+            {
+              "id": "eva",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005580",
+            "name": "esophageal squamous cell carcinoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.8210240517477745
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.2004955770523126
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0019200",
+            "name": "retinitis pigmentosa"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.844053867493468
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004975",
+            "name": "Alzheimer disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.8308395775746681
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.029477901384890027
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0002714",
+            "name": "central nervous system cancer"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.8160881138255388
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.0825956406400977
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004989",
+            "name": "breast carcinoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.8197982800449098
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0021042",
+            "name": "glioma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.8160881138255388
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0010364",
+            "name": "X-linked intellectual disability-retinitis pigmentosa syndrome"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.8144854182801294
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,3588 @@
+{
+  "credibleSets": {
+    "count": 225,
+    "rows": [
+      {
+        "studyLocusId": "010a29751068b4d9b72a858ea7e344d6",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "cedar_microarray_b-cell_cd19_ilmn_2115154",
+          "studyType": "eqtl",
+          "traitFromSource": "ILMN_2115154"
+        },
+        "variant": {
+          "id": "7_23220632_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "02a51f00eb30f1e81d919f812e7713f4",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_skin_not_sun_exposed_ensg00000136235_t_23259980-23260138_23254312-23259980",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23259980-23260138:23254312-23259980"
+        },
+        "variant": {
+          "id": "7_23235145_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "03dd6992ef038d1ed20688a30def2f62",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_artery_aorta_ensg00000136235_grp_1_upstream_enst00000492858",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_1.upstream.ENST00000492858"
+        },
+        "variant": {
+          "id": "7_23238664_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "04305445a2fcecd768900aeb17ddb93d",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_tx_brain_spinal_cord_enst00000419813",
+          "studyType": "eqtl",
+          "traitFromSource": "ENST00000419813"
+        },
+        "variant": {
+          "id": "7_23085094_T_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "045058f19cff0e2938fe5d4cf019f8b5",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_brain_anterior_cingulate_cortex_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "04faed61b40c8ab8737c25c1960c552b",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "commonmind_txrev_dlpfc_naive_ensg00000136235_grp_2_downstream_enst00000409458",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_2.downstream.ENST00000409458"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "057edede89ecfe8e4df73637e2ac7683",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "cedar_microarray_t-cell_cd4_ilmn_2115154",
+          "studyType": "eqtl",
+          "traitFromSource": "ILMN_2115154"
+        },
+        "variant": {
+          "id": "7_23292784_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "06ff555ae585de7371242bc955867848",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_adipose_visceral_ensg00000136235_17_7_23246774_23246774",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23246774_23246774"
+        },
+        "variant": {
+          "id": "7_23103945_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "07267d738e662c0fdd8774852c151707",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "fairfax_2014_microarray_monocyte_ifn24_ilmn_1760792",
+          "studyType": "eqtl",
+          "traitFromSource": "ILMN_1760792"
+        },
+        "variant": {
+          "id": "7_23256914_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "0a0496c8d3ccda8f81ed3abed4cfed2d",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "twinsuk_ge_skin_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23242134_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "0aac604156ec595e2d4d7e1ef447648d",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_artery_tibial_ensg00000136243_t_23196680-23196766_23187146-23196680",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136243:t:23196680-23196766:23187146-23196680"
+        },
+        "variant": {
+          "id": "7_23224665_T_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "0c0b63090e68b24eacb13e2ec2fb3155",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_adipose_subcutaneous_ensg00000122550_grp_1_downstream_enst00000479288",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000122550.grp_1.downstream.ENST00000479288"
+        },
+        "variant": {
+          "id": "7_23106218_G_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "0e7d193fa41878afe5c9c19f88a31759",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_blood_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23258796_C_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "0f10ccbc35563ee525de02b15ace8b27",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_skin_sun_exposed_ensg00000136235_s_23254169-23254312_23254312-23256892",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23254169-23254312:23254312-23256892"
+        },
+        "variant": {
+          "id": "7_23154394_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "0fa73d176d7909fc22295ce1e6f637e3",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_adipose_subcutaneous_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23254525_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "10deb61eb70b95dd34c1d609a92ade22",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "fusion_txrev_adipose_naive_ensg00000136235_grp_2_upstream_enst00000492858",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_2.upstream.ENST00000492858"
+        },
+        "variant": {
+          "id": "7_23244618_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "120fac24f08a9a0034b00e3b405ca226",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_brain_anterior_cingulate_cortex_ensg00000136235_17_7_23274253_23274550",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23274253_23274550"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "1299042f678a7e1c2d1f761bce4d3df8",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "quach_2016_exon_monocyte_naive_ensg00000226816_3_7_23205787_23208045",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816.3_7_23205787_23208045"
+        },
+        "variant": {
+          "id": "7_23282797_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "16493fdc3c53a98013488775e979d1cc",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_tx_skin_not_sun_exposed_enst00000521082",
+          "studyType": "eqtl",
+          "traitFromSource": "ENST00000521082"
+        },
+        "variant": {
+          "id": "7_23334111_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "18e873f1f14d111b40da56e89700376e",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_skin_not_sun_exposed_ensg00000136235_s_23259980-23260138_23260138-23260456",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23259980-23260138:23260138-23260456"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "190c69342f1958ccf3e9b12e7387ef76",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_brain_caudate_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "198be5408aba2fdaba73258d666fa356",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_breast_ensg00000136243_t_23196680-23196766_23187146-23196680",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136243:t:23196680-23196766:23187146-23196680"
+        },
+        "variant": {
+          "id": "7_23151875_TA_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "19adde936ce5c0fdc6fa7c9de3fe8ea3",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_hypothalamus_ensg00000136235_s_23246697-23246927_23246927-23247741",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23246697-23246927:23246927-23247741"
+        },
+        "variant": {
+          "id": "7_23264082_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "19c4a6fd3af32f53b00a1f817ab255e9",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_esophagus_mucosa_ensg00000136235_grp_1_upstream_enst00000647578",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_1.upstream.ENST00000647578"
+        },
+        "variant": {
+          "id": "7_23224665_T_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "1a5e54bef748566a17433d458c1c9e98",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_artery_coronary_ensg00000136235_17_7_23246768_23246773",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23246768_23246773"
+        },
+        "variant": {
+          "id": "7_23103945_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "1ac62956a93da9547ed9391d759187e8",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_skin_sun_exposed_ensg00000136235_s_23259980-23260138_23260138-23260488",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23259980-23260138:23260138-23260488"
+        },
+        "variant": {
+          "id": "7_23260430_A_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "1b54a13d3c0c3d834223373bd915401b",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_stomach_ensg00000136235_17_7_23273521_23273614",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23273521_23273614"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "1ba93b9f31d2760eb3b381cfa281f548",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_brain_spinal_cord_ensg00000226816_3_7_23205787_23208045",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816.3_7_23205787_23208045"
+        },
+        "variant": {
+          "id": "7_23106570_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "1bec81a0dbdd6278aa1529643b434274",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_putamen_ensg00000136235_t_23273521-23273925_23273372-23273520",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23273521-23273925:23273372-23273520"
+        },
+        "variant": {
+          "id": "7_23292784_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "1cefea9f05ad1b5937bb74717c66a5ec",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_brain_putamen_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "1dc880fc6d7b45b159dc8fca190f61d8",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_heart_left_ventricle_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "1fb27f9618a738935d775df0b2df3522",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_heart_atrial_appendage_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23255281_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "1fc36ad99cc149c3ff2113aadcbf81a0",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_nucleus_accumbens_ensg00000136235_t_23253307-23253459_23236823-23253307",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23253307-23253459:23236823-23253307"
+        },
+        "variant": {
+          "id": "7_23264082_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "20b8b3b7f91e999fd5d598fe849b38f0",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST009325",
+          "studyType": "gwas",
+          "traitFromSource": "Parkinson's disease or first degree relation to individual with Parkinson's disease"
+        },
+        "variant": {
+          "id": "7_23205950_A_G"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.49201467633247375,
+              "target": {
+                "id": "ENSG00000136235",
+                "approvedSymbol": "GPNMB"
+              }
+            },
+            {
+              "score": 0.3588872253894806,
+              "target": {
+                "id": "ENSG00000136243",
+                "approvedSymbol": "NUP42"
+              }
+            },
+            {
+              "score": 0.16636338829994202,
+              "target": {
+                "id": "ENSG00000156928",
+                "approvedSymbol": "MALSU1"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "233ab9159c490c8432c0ed62a9735cc3",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_cortex_ensg00000136235_s_23260456-23260773_23260773-23266517",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23260456-23260773:23260773-23266517"
+        },
+        "variant": {
+          "id": "7_23282797_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "24b8af1785a42af2ea8a6308056b5148",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST90691865",
+          "studyType": "gwas",
+          "traitFromSource": "Eye measure - 3mm weak meridian left (UKB data field 5096)"
+        },
+        "variant": {
+          "id": "7_23352652_T_C"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.34240859746932983,
+              "target": {
+                "id": "ENSG00000136235",
+                "approvedSymbol": "GPNMB"
+              }
+            },
+            {
+              "score": 0.15487568080425262,
+              "target": {
+                "id": "ENSG00000136231",
+                "approvedSymbol": "IGF2BP3"
+              }
+            },
+            {
+              "score": 0.11880279332399368,
+              "target": {
+                "id": "ENSG00000156928",
+                "approvedSymbol": "MALSU1"
+              }
+            },
+            {
+              "score": 0.051348328590393066,
+              "target": {
+                "id": "ENSG00000136243",
+                "approvedSymbol": "NUP42"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "24f6b2341deee40dcc069d174250bd1d",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_esophagus_muscularis_ensg00000136235_17_7_23257066_23258048",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23257066_23258048"
+        },
+        "variant": {
+          "id": "7_23220632_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "253c2f1b6a09f9150d5a52dacc45cdb8",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_brain_hippocampus_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "26d4a3d33ef30c608fc744a29c642cb5",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_skin_not_sun_exposed_ensg00000136235_s_23254169-23254312_23254312-23259980",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23254169-23254312:23254312-23259980"
+        },
+        "variant": {
+          "id": "7_23235145_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "2705cb2810e3162b0b07235f3dbbd114",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_esophagus_gej_ensg00000136235_17_7_23257066_23258048",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23257066_23258048"
+        },
+        "variant": {
+          "id": "7_23244618_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "2775c9325a87dcfbdbb52084cf5c20ea",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_esophagus_muscularis_ensg00000136235_grp_1_upstream_enst00000492858",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_1.upstream.ENST00000492858"
+        },
+        "variant": {
+          "id": "7_23362336_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "2a8bb14d0961d5e587ca7eb04965731d",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_leafcutter_colon_transverse_7_23260138_23260456_clu_43828__",
+          "studyType": "sqtl",
+          "traitFromSource": "7:23260138:23260456:clu_43828_+"
+        },
+        "variant": {
+          "id": "7_23292784_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "2b57ba55cb32793dd9beceb9b1ada555",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_anterior_cingulate_cortex_ensg00000136235_t_23273521-23273925_23273371-23273521",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23273521-23273925:23273371-23273521"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "2c175f6db2b24d376a8cd337fde93cf9",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_lcl_ensg00000136243_t_23196680-23196766_23187146-23196680",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136243:t:23196680-23196766:23187146-23196680"
+        },
+        "variant": {
+          "id": "7_23203211_C_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "2c2e7384f544e98e3ef2a2613c58c7cd",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "fairfax_2014_microarray_monocyte_naive_ilmn_1801205",
+          "studyType": "eqtl",
+          "traitFromSource": "ILMN_1801205"
+        },
+        "variant": {
+          "id": "7_23253479_C_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "2d11dc67ef5ff7cd72a96ce2e28143bd",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_esophagus_gej_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "2f2ed4d33ed5877f83d4bd558cf7de25",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST004000_2",
+          "studyType": "gwas",
+          "traitFromSource": "Cerebrospinal fluid biomarker levels"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8094196915626526,
+              "target": {
+                "id": "ENSG00000136235",
+                "approvedSymbol": "GPNMB"
+              }
+            },
+            {
+              "score": 0.09978997707366943,
+              "target": {
+                "id": "ENSG00000136243",
+                "approvedSymbol": "NUP42"
+              }
+            },
+            {
+              "score": 0.0690276175737381,
+              "target": {
+                "id": "ENSG00000156928",
+                "approvedSymbol": "MALSU1"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "305e552daee07b3c892519138bdd784f",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_muscle_ensg00000136243_grp_1_contained_enst00000497500",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136243.grp_1.contained.ENST00000497500"
+        },
+        "variant": {
+          "id": "7_23193040_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "307f5fa7adc2b2f1bf697e0b38e41051",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_lcl_ensg00000136243_grp_1_contained_enst00000477844",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136243.grp_1.contained.ENST00000477844"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "31aea653dcd0df6b660b4b8c7d9dc3dd",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_cortex_ensg00000136235_t_23266140-23266615_23261565-23266517",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23266140-23266615:23261565-23266517"
+        },
+        "variant": {
+          "id": "7_23266401_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "34653a71163306bd608417e8a6942eb0",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_brain_hypothalamus_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "34cf84ae174e3e7862184644a656b1c3",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_fibroblast_ensg00000136243_s_23187052-23187392_23187146-23195839",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136243:s:23187052-23187392:23187146-23195839"
+        },
+        "variant": {
+          "id": "7_23193040_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "364dd29fa8e6634c3e2883ad74a51c19",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "twinsuk_exon_fat_ensg00000226816_3_7_23205787_23208045",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816.3_7_23205787_23208045"
+        },
+        "variant": {
+          "id": "7_23272868_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "3a540bbb0e6d02dda6654939546d76fa",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "alasoo_2018_exon_macrophage_naive_ensg00000136243_18_7_23200168_23200705",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136243.18_7_23200168_23200705"
+        },
+        "variant": {
+          "id": "7_23190155_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "3ba438c74a4d80e897d8db75add99b4c",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_nucleus_accumbens_ensg00000136235_s_23246697-23246927_23246927-23250762",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23246697-23246927:23246927-23250762"
+        },
+        "variant": {
+          "id": "7_23264082_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "3be86e6799230b5e8a28720c363317de",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "cedar_microarray_monocyte_cd14_ilmn_2115154",
+          "studyType": "eqtl",
+          "traitFromSource": "ILMN_2115154"
+        },
+        "variant": {
+          "id": "7_23106218_G_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "3cf80d7d9109ef01e01fef97ef030941",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_anterior_cingulate_cortex_ensg00000136235_t_23253307-23253459_23236758-23253307",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23253307-23253459:23236758-23253307"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "3dc7da96cd94c471c966647e557839aa",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_nerve_tibial_ensg00000136235_17_7_23257066_23258048",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23257066_23258048"
+        },
+        "variant": {
+          "id": "7_23255281_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "3e0ac9323ed60f62b48775bbef30045d",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_brain_cerebellum_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "42d8cbf85c80b2eef76f34cf499c1042",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_lcl_ensg00000122550_grp_2_upstream_ensg00000122550_cage2",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000122550.grp_2.upstream.ENSG00000122550_CAGE2"
+        },
+        "variant": {
+          "id": "7_23130808_T_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "42e71029221b1ac6fe94eaaa4ff3ce33",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "commonmind_exon_dlpfc_naive_ensg00000136235_17_7_23274065_23274252",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23274065_23274252"
+        },
+        "variant": {
+          "id": "7_23238664_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "436b48803f675ce3fe9214e6a9904973",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_cortex_ensg00000136235_t_23273521-23273925_23273176-23273521",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23273521-23273925:23273176-23273521"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "43993511404672cdfcc59daa8cc703bb",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_tx_nerve_tibial_enst00000409458",
+          "studyType": "eqtl",
+          "traitFromSource": "ENST00000409458"
+        },
+        "variant": {
+          "id": "7_23362336_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "43bfc7478cb79e9c3532ecc95811d743",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_nerve_tibial_ensg00000136235_grp_1_upstream_enst00000492858",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_1.upstream.ENST00000492858"
+        },
+        "variant": {
+          "id": "7_23224665_T_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "43da5a8ea2cfab23476cc18623667037",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_esophagus_muscularis_ensg00000136243_s_23187052-23187392_23187146-23196680",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136243:s:23187052-23187392:23187146-23196680"
+        },
+        "variant": {
+          "id": "7_23350848_G_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "44ec9786928cfd0a18e192bebefd7db3",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_brain_hippocampus_ensg00000136235_17_7_23274253_23274550",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23274253_23274550"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "4503837a48b701d44b08d4470ae3819c",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "cedar_microarray_t-cell_cd8_ilmn_1789616",
+          "studyType": "eqtl",
+          "traitFromSource": "ILMN_1789616"
+        },
+        "variant": {
+          "id": "7_23237166_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "4768e79df1ff7667e7962cf97ba2e7ff",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_esophagus_mucosa_ensg00000136235_17_7_23256911_23257043",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23256911_23257043"
+        },
+        "variant": {
+          "id": "7_23083417_G_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "47bba7953d40f0a35bb565f3bf1ed11b",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_stomach_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "49419fbd1bfd1436966a2604b894d71e",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_artery_tibial_ensg00000136235_grp_2_upstream_enst00000381990",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_2.upstream.ENST00000381990"
+        },
+        "variant": {
+          "id": "7_23282797_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "497450215e703bdc1f77a7d9f1cf651a",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_anterior_cingulate_cortex_ensg00000136235_s_23246697-23246927_23246927-23247741",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23246697-23246927:23246927-23247741"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "4c75a0cdfab052519ddce54374135de7",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_caudate_ensg00000136235_t_23266140-23266615_23260773-23266481",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23266140-23266615:23260773-23266481"
+        },
+        "variant": {
+          "id": "7_23350848_G_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "4d071a68bb8e5651301125e829b727fa",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_brain_frontal_cortex_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "4d371ac8a9ab6f0b8c60546f92b72626",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "cedar_microarray_b-cell_cd19_ilmn_1789616",
+          "studyType": "eqtl",
+          "traitFromSource": "ILMN_1789616"
+        },
+        "variant": {
+          "id": "7_23223855_G_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "5032be26a7a625f657d4d0b225e7b102",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_leafcutter_skin_sun_exposed_7_23260138_23260488_clu_44562__",
+          "studyType": "sqtl",
+          "traitFromSource": "7:23260138:23260488:clu_44562_+"
+        },
+        "variant": {
+          "id": "7_23260430_A_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "55b727bde03d38b5a07c02c9b3850062",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_brain_caudate_ensg00000226816",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816"
+        },
+        "variant": {
+          "id": "7_23254127_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "561f6e06c9c28326aca8615b4dafb13e",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "geuvadis_ge_lcl_ensg00000136243",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136243"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "56be589ab714219d5fafc7764cdbbf9d",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_tx_testis_enst00000492858",
+          "studyType": "eqtl",
+          "traitFromSource": "ENST00000492858"
+        },
+        "variant": {
+          "id": "7_23208539_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "57fa9f7805830b0c3b0d4e4380d96dd1",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_nerve_tibial_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "586da31f961e5ad9dc35d6dbb87d9c65",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST006585",
+          "studyType": "gwas",
+          "traitFromSource": "Blood protein levels"
+        },
+        "variant": {
+          "id": "7_23255253_G_A"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.916394054889679,
+              "target": {
+                "id": "ENSG00000136235",
+                "approvedSymbol": "GPNMB"
+              }
+            },
+            {
+              "score": 0.1188100054860115,
+              "target": {
+                "id": "ENSG00000136243",
+                "approvedSymbol": "NUP42"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "5ae7f058f0f129921eb950b17f502005",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_heart_left_ventricle_ensg00000136235_17_7_23257066_23258048",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23257066_23258048"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "5b7308a5da6bd3db4bc222d6af143014",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "fairfax_2014_microarray_monocyte_naive_ilmn_2407389",
+          "studyType": "eqtl",
+          "traitFromSource": "ILMN_2407389"
+        },
+        "variant": {
+          "id": "7_23244618_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "5d731e5254b4505ef52d117b8f652878",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_brain_cerebellum_ensg00000226816_3_7_23205787_23208045",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816.3_7_23205787_23208045"
+        },
+        "variant": {
+          "id": "7_23211386_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "6086853e9de33adf6b9c6ac1c38f20bf",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_frontal_cortex_ensg00000136235_t_23266140-23266615_23261565-23266517",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23266140-23266615:23261565-23266517"
+        },
+        "variant": {
+          "id": "7_23223855_G_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "612dfe9ebcef2cf3741a1ec566f799ca",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "sun_2018_aptamer_plasma_gpnmb_8240_207_3_1",
+          "studyType": "pqtl",
+          "traitFromSource": "GPNMB.8240.207.3..1"
+        },
+        "variant": {
+          "id": "7_23229446_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "63a94faf97173b76bf5b5e8cf8a4de2f",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gencord_ge_t-cell_ensg00000226816",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816"
+        },
+        "variant": {
+          "id": "7_23223855_G_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "63b53d01316b60b51acdfe2a26f9c5f6",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_leafcutter_muscle_7_23187146_23196680_clu_38419__",
+          "studyType": "sqtl",
+          "traitFromSource": "7:23187146:23196680:clu_38419_+"
+        },
+        "variant": {
+          "id": "7_23190155_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "64a5bb9a12badf6f367afcf914813aa7",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "peng_2018_ge_placenta_naive_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23237166_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "66129b4a2886e7935fd2678ba50f58d7",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "rosmap_txrev_brain_naive_ensg00000136235_grp_1_contained_enst00000258733",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_1.contained.ENST00000258733"
+        },
+        "variant": {
+          "id": "7_23256914_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "66730f15ae9c746bf2684585df8768b3",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_amygdala_ensg00000136235_t_23253307-23253459_23250862-23253307",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23253307-23253459:23250862-23253307"
+        },
+        "variant": {
+          "id": "7_23223855_G_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "6811970eddb163ccfb8f0dacde255dc8",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gencord_txrev_t-cell_ensg00000136243_grp_1_contained_enst00000497500",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136243.grp_1.contained.ENST00000497500"
+        },
+        "variant": {
+          "id": "7_23208417_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "69280ef570e44480f91e537829a02f8a",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_hypothalamus_ensg00000136235_t_23253307-23253459_23236823-23253307",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23253307-23253459:23236823-23253307"
+        },
+        "variant": {
+          "id": "7_23264082_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "6a5dcde1745c38f261e4a37ad1504c88",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_tx_heart_left_ventricle_enst00000477844",
+          "studyType": "eqtl",
+          "traitFromSource": "ENST00000477844"
+        },
+        "variant": {
+          "id": "7_23148490_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "6ab40071663566fa7a65b7c98c517f6d",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "cedar_microarray_monocyte_cd14_ilmn_1801205",
+          "studyType": "eqtl",
+          "traitFromSource": "ILMN_1801205"
+        },
+        "variant": {
+          "id": "7_23260430_A_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "6b93c23e44ea2018adf11e9c442a9d01",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "rosmap_ge_brain_naive_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23245260_TA_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "6c2efc7fd091a556b5e584624d4817dd",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_caudate_ensg00000136235_s_23260456-23260773_23260773-23266481",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23260456-23260773:23260773-23266481"
+        },
+        "variant": {
+          "id": "7_23350848_G_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "6c7244bc9f995a48af25b4c69789cbe8",
+        "confidence": "SuSiE fine-mapped credible set with out-of-sample LD",
+        "study": {
+          "id": "GCST90692955",
+          "studyType": "gwas",
+          "traitFromSource": "Eye measure - 3mm weak meridian right (UKB data field 5099)"
+        },
+        "variant": {
+          "id": "7_23327570_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.2892671525478363,
+              "target": {
+                "id": "ENSG00000136235",
+                "approvedSymbol": "GPNMB"
+              }
+            },
+            {
+              "score": 0.10548713803291321,
+              "target": {
+                "id": "ENSG00000156928",
+                "approvedSymbol": "MALSU1"
+              }
+            },
+            {
+              "score": 0.09834100306034088,
+              "target": {
+                "id": "ENSG00000136231",
+                "approvedSymbol": "IGF2BP3"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "6ced6342f74d3f589f44689939d00f15",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_artery_aorta_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "6e2da279422ef3db62b86ace5e01e131",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_vagina_ensg00000226816_3_7_23205787_23208045",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816.3_7_23205787_23208045"
+        },
+        "variant": {
+          "id": "7_23362528_A_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "6e9644d3817967ea944953f862a9adf1",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "steinberg_2020_txrev_synovium_naive_ensg00000136235_grp_1_upstream_enst00000492858",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_1.upstream.ENST00000492858"
+        },
+        "variant": {
+          "id": "7_23351890_C_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "6fe3f05b4ed7a6cca4f7f5a893a5ee63",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_fibroblast_ensg00000136235_s_23254169-23254312_23254312-23256892",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23254169-23254312:23254312-23256892"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "70e375d13475a6f19bfc073e77d29ea7",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "commonmind_txrev_dlpfc_naive_ensg00000136235_grp_2_upstream_enst00000492858",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_2.upstream.ENST00000492858"
+        },
+        "variant": {
+          "id": "7_23255281_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "73fa0e317df32bb1e9c9a4a690d94378",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "cytoimmgen_ge_combined_cd4_naive_stim_5d_ensg00000226816",
+          "studyType": "sceqtl",
+          "traitFromSource": "ENSG00000226816"
+        },
+        "variant": {
+          "id": "7_23263868_C_CA"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "795a4930e57d1862c74be6d8bdb503b6",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_heart_atrial_appendage_ensg00000136235_t_23253307-23253459_23236823-23253307",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23253307-23253459:23236823-23253307"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "7a1d419be6271f2c5cf499cec1b489cc",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_esophagus_muscularis_ensg00000136243_t_23196680-23196766_23195915-23196680",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136243:t:23196680-23196766:23195915-23196680"
+        },
+        "variant": {
+          "id": "7_23182251_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "7ae0213fe5883f88ea91b77a9f1a4780",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_caudate_ensg00000136235_t_23273521-23273925_23273176-23273521",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23273521-23273925:23273176-23273521"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "7b306b0f72559895ed9461399c886fb7",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_frontal_cortex_ensg00000136235_s_23260456-23260773_23260773-23261482",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23260456-23260773:23260773-23261482"
+        },
+        "variant": {
+          "id": "7_23223855_G_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "7d55b60df2bb3f35312caf5d9fe0a2df",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_leafcutter_esophagus_muscularis_7_23187146_23196680_clu_40768__",
+          "studyType": "sqtl",
+          "traitFromSource": "7:23187146:23196680:clu_40768_+"
+        },
+        "variant": {
+          "id": "7_23106493_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "7d9820dc0fd2a0fa6feaf9a6c269c7fd",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "quach_2016_exon_monocyte_iav_ensg00000226816_3_7_23205787_23208045",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816.3_7_23205787_23208045"
+        },
+        "variant": {
+          "id": "7_23227709_CA_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "7eb5cf69c897bfded68091f1b4d40a07",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_heart_left_ventricle_ensg00000136235_s_23246697-23246927_23246927-23247009",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23246697-23246927:23246927-23247009"
+        },
+        "variant": {
+          "id": "7_23238664_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "7f033a718c7e09436fa9a04ac282e974",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "nedelec_2016_tx_macrophage_naive_enst00000479625",
+          "studyType": "eqtl",
+          "traitFromSource": "ENST00000479625"
+        },
+        "variant": {
+          "id": "7_23258796_C_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "7f58a6f7995517dcbb68b4966da54417",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "quach_2016_exon_monocyte_lps_ensg00000226816_3_7_23205787_23208045",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816.3_7_23205787_23208045"
+        },
+        "variant": {
+          "id": "7_23277123_A_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "80f51e2bfbc95ee9deb2c7e1c4aa3cac",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_cortex_ensg00000136235_t_23253307-23253459_23236823-23253307",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23253307-23253459:23236823-23253307"
+        },
+        "variant": {
+          "id": "7_23260430_A_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "824a8b91dd6e1131c509bacee371bb34",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_colon_transverse_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "83c466e38fc5f86f1d922f288070f9c0",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_amygdala_ensg00000136235_s_23246697-23246927_23246927-23247009",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23246697-23246927:23246927-23247009"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "8539622df3dda560c8208d7df2749f2f",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_artery_tibial_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23211386_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "85cd6e88e1aedca44c6a44cdf738f82c",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_heart_atrial_appendage_ensg00000136235_17_7_23257066_23258048",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23257066_23258048"
+        },
+        "variant": {
+          "id": "7_23255281_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "86a740d6c270e356e3938cad510ea66d",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_heart_atrial_appendage_ensg00000136235_grp_2_downstream_enst00000409458",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_2.downstream.ENST00000409458"
+        },
+        "variant": {
+          "id": "7_23237166_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "88da1980ddca0e41a40922680d67480d",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_lung_ensg00000136235_grp_1_upstream_enst00000258733",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_1.upstream.ENST00000258733"
+        },
+        "variant": {
+          "id": "7_23130215_T_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "8e393d58350dcacea3b4d0477480ac0b",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "sun_2018_aptamer_plasma_gpnmb_5080_131_3_1",
+          "studyType": "pqtl",
+          "traitFromSource": "GPNMB.5080.131.3..1"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "8ee4e4780fb4518e02a97cdbc36d7e08",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_lung_ensg00000136243_t_23196680-23196766_23187146-23196680",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136243:t:23196680-23196766:23187146-23196680"
+        },
+        "variant": {
+          "id": "7_23193040_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "8ef51bebed2f8dfba06fbf59592ac688",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "hipsci_exon_ipsc_ensg00000136235_17_7_23270043_23270175",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23270043_23270175"
+        },
+        "variant": {
+          "id": "7_23254525_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "8fa6cd7ece0a1ef47ebcb7c870ef13d4",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_colon_transverse_ensg00000226816_3_7_23205787_23208045",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816.3_7_23205787_23208045"
+        },
+        "variant": {
+          "id": "7_23211386_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "9120864c91ae901e3ae7b15b16c15603",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST90308590",
+          "studyType": "gwas",
+          "traitFromSource": "Parkinson's disease"
+        },
+        "variant": {
+          "id": "7_23260430_A_C"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.8602298498153687,
+              "target": {
+                "id": "ENSG00000136235",
+                "approvedSymbol": "GPNMB"
+              }
+            },
+            {
+              "score": 0.11799515783786774,
+              "target": {
+                "id": "ENSG00000136243",
+                "approvedSymbol": "NUP42"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "92eea87950d83caf59bc2b95db5403ca",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "peng_2018_txrev_placenta_naive_ensg00000136235_grp_2_downstream_enst00000409458",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_2.downstream.ENST00000409458"
+        },
+        "variant": {
+          "id": "7_23237166_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "931b413d231dc27e7380482dd3d1a9a0",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_brain_cerebellar_hemisphere_ensg00000136235_17_7_23274551_23274729",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23274551_23274729"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "9427bda827e6e90e9c64ef615bf5c41f",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_artery_tibial_ensg00000136243_s_23187052-23187392_23187146-23195839",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136243:s:23187052-23187392:23187146-23195839"
+        },
+        "variant": {
+          "id": "7_23211386_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "94689d407543e7c7c1ef51ba23c70def",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_caudate_ensg00000136235_s_23246697-23246927_23246927-23247741",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23246697-23246927:23246927-23247741"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "968d23ec328127b0bf96bd3363f0625b",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST90101618",
+          "studyType": "gwas",
+          "traitFromSource": "Transmembrane glycoprotein NMB levels"
+        },
+        "variant": {
+          "id": "7_23274928_C_T"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.6676806211471558,
+              "target": {
+                "id": "ENSG00000136235",
+                "approvedSymbol": "GPNMB"
+              }
+            },
+            {
+              "score": 0.08983886986970901,
+              "target": {
+                "id": "ENSG00000136243",
+                "approvedSymbol": "NUP42"
+              }
+            },
+            {
+              "score": 0.06494767218828201,
+              "target": {
+                "id": "ENSG00000156928",
+                "approvedSymbol": "MALSU1"
+              }
+            },
+            {
+              "score": 0.05849294364452362,
+              "target": {
+                "id": "ENSG00000122550",
+                "approvedSymbol": "KLHL7"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "97fe7a8e3068bbe5e0e076dc57dc1cfa",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "cedar_microarray_t-cell_cd4_ilmn_1789616",
+          "studyType": "eqtl",
+          "traitFromSource": "ILMN_1789616"
+        },
+        "variant": {
+          "id": "7_23223855_G_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "982af4a27c0d92daabddbd54a4183573",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_brain_amygdala_ensg00000136235_17_7_23270043_23270175",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23270043_23270175"
+        },
+        "variant": {
+          "id": "7_23255281_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "993687bae02c00d78cdf43b16096605b",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_leafcutter_artery_tibial_7_23187146_23196680_clu_40145__",
+          "studyType": "sqtl",
+          "traitFromSource": "7:23187146:23196680:clu_40145_+"
+        },
+        "variant": {
+          "id": "7_23202247_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "9b502e1ff4c6f5cbe96de4b0c64a94e2",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_brain_hippocampus_ensg00000226816",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816"
+        },
+        "variant": {
+          "id": "7_23202247_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "9c38bc8cae1dd94b5d6ff68764fe9236",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_brain_cerebellar_hemisphere_ensg00000122550_grp_1_contained_enst00000469845",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000122550.grp_1.contained.ENST00000469845"
+        },
+        "variant": {
+          "id": "7_23105676_T_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "9d5ccc04eb47831d326c95dc7e41b7fb",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_nucleus_accumbens_ensg00000136235_t_23273521-23273925_23273176-23273521",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23273521-23273925:23273176-23273521"
+        },
+        "variant": {
+          "id": "7_23256914_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "9f141bff464655a00d427a4a0d032753",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_nucleus_accumbens_ensg00000136235_s_23260456-23260773_23260773-23261482",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23260456-23260773:23260773-23261482"
+        },
+        "variant": {
+          "id": "7_23292784_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "9fdaef7eee856116eede81dccd239ac9",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_adipose_subcutaneous_ensg00000136235_grp_1_upstream_enst00000381990",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_1.upstream.ENST00000381990"
+        },
+        "variant": {
+          "id": "7_23220632_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "a24b6ceeb087a4a47bf0186f23e02bd5",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_prostate_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "a27494ff525028528699ac8d24ef3992",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_adipose_visceral_ensg00000136235_grp_2_upstream_enst00000492858",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_2.upstream.ENST00000492858"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "a56f744faac1ed34a93fc2aa6a8c6b88",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "cedar_microarray_monocyte_cd14_ilmn_3238511",
+          "studyType": "eqtl",
+          "traitFromSource": "ILMN_3238511"
+        },
+        "variant": {
+          "id": "7_23211439_AAAAG_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "a5895b6231420abb13ce511b0a539d09",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_brain_substantia_nigra_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23255253_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "a6d733e0353864f60c0991f7447d8a93",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "braineac2_exon_putamen_ensg00000136235_17_7_23270043_23270175",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23270043_23270175"
+        },
+        "variant": {
+          "id": "7_23227709_CA_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "a875014fd145d1b562435b75dc1c7ba0",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_brain_cerebellum_ensg00000226816",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816"
+        },
+        "variant": {
+          "id": "7_23212699_C_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "a92eac11d3d1f93118f872a6d45ab9d4",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_heart_left_ventricle_ensg00000136235_t_23253307-23253459_23236823-23253307",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23253307-23253459:23236823-23253307"
+        },
+        "variant": {
+          "id": "7_23220632_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "ab439e181d46ac663a90a1624c8b04c7",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_brain_cerebellar_hemisphere_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "ac9f8daf5bbb07ce3e9c3e2da723a0c1",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_adipose_subcutaneous_ensg00000136243_t_23194403-23195915_23187146-23195839",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136243:t:23194403-23195915:23187146-23195839"
+        },
+        "variant": {
+          "id": "7_23193040_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "ad0b5eb24982159c00048c87e0684ba2",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_brain_amygdala_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23255049_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "ad769b096421d5d3120e7652dac8f3d6",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_fibroblast_ensg00000136235_t_23259980-23260138_23254312-23259980",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23259980-23260138:23254312-23259980"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "ade212341ea020ed6dbb5f425c47c073",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_putamen_ensg00000136235_s_23246697-23246927_23246927-23247741",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23246697-23246927:23246927-23247741"
+        },
+        "variant": {
+          "id": "7_23224665_T_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "ae53974e57092ac477bd9b6a22b4bf1c",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_leafcutter_skin_not_sun_exposed_7_23260138_23260488_clu_43577__",
+          "studyType": "sqtl",
+          "traitFromSource": "7:23260138:23260488:clu_43577_+"
+        },
+        "variant": {
+          "id": "7_23255281_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "af4fc4c7c40b8860a3d5efdfa9fd6b32",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "brainseq_ge_brain_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23254127_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "b1457e3b09f4061c18991e2ae1c85f9b",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_caudate_ensg00000136235_t_23253307-23253459_23250862-23253307",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23253307-23253459:23250862-23253307"
+        },
+        "variant": {
+          "id": "7_23211386_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "b21010a78f46e3db8a87f0e4281f1b8b",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_tx_artery_aorta_enst00000469845",
+          "studyType": "eqtl",
+          "traitFromSource": "ENST00000469845"
+        },
+        "variant": {
+          "id": "7_23213475_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "b2972457dc0341005e324a13d1ec80da",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_muscle_ensg00000136235_grp_2_downstream_enst00000409458",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_2.downstream.ENST00000409458"
+        },
+        "variant": {
+          "id": "7_23190155_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "b2feff1fea28fd1e13fc475404cf8008",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_esophagus_muscularis_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "b4985a3506f4192718551ad69d89e063",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_brain_caudate_ensg00000136235_17_7_23274551_23274729",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23274551_23274729"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "b6a678a4456ca0e9727ca93c41b00fdd",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "fusion_txrev_muscle_naive_ensg00000136235_grp_2_upstream_enst00000492858",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_2.upstream.ENST00000492858"
+        },
+        "variant": {
+          "id": "7_23231412_A_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "b8f972157ee2d607365a30aea1bb7632",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "blueprint_exon_monocyte_ensg00000136235_17_7_23274065_23274252",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23274065_23274252"
+        },
+        "variant": {
+          "id": "7_23245260_TA_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "bb33477c6339d5f8e42568beb3a46042",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_putamen_ensg00000136235_t_23253307-23253459_23246927-23253307",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23253307-23253459:23246927-23253307"
+        },
+        "variant": {
+          "id": "7_23295689_T_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "bb34aec4811e8aee203165c5421b96a7",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_lung_ensg00000136243_s_23194403-23195915_23195915-23196379",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136243:s:23194403-23195915:23195915-23196379"
+        },
+        "variant": {
+          "id": "7_23231412_A_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "bb4d7201265a278418a44b6f5bbd0da1",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_heart_atrial_appendage_ensg00000136235_s_23246697-23246927_23246927-23247741",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23246697-23246927:23246927-23247741"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "bee14b94139093e7fe9c73fcd0cc803f",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_esophagus_gej_ensg00000136243_t_23196680-23196766_23195915-23196680",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136243:t:23196680-23196766:23195915-23196680"
+        },
+        "variant": {
+          "id": "7_23260430_A_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "beff9b18ef629e8b86b12e4638cc187e",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_putamen_ensg00000136235_t_23266140-23266615_23260773-23266517",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23266140-23266615:23260773-23266517"
+        },
+        "variant": {
+          "id": "7_23190155_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "c0954e185ae3fbf9e878e43f037807b5",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "lepik_2017_txrev_blood_ensg00000136235_grp_2_downstream_enst00000409458",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_2.downstream.ENST00000409458"
+        },
+        "variant": {
+          "id": "7_23253479_C_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "c19c62683180dac414f2a85039693c95",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_leafcutter_fibroblast_7_23260138_23260488_clu_34949__",
+          "studyType": "sqtl",
+          "traitFromSource": "7:23260138:23260488:clu_34949_+"
+        },
+        "variant": {
+          "id": "7_23203211_C_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "c254701dfe593768755963dcdcf62b7a",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_heart_left_ventricle_ensg00000136235_t_23273521-23273925_23273371-23273521",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23273521-23273925:23273371-23273521"
+        },
+        "variant": {
+          "id": "7_23224665_T_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "c310c539ac686f5acfdbe857c16e63a5",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "commonmind_tx_dlpfc_naive_enst00000479625",
+          "studyType": "eqtl",
+          "traitFromSource": "ENST00000479625"
+        },
+        "variant": {
+          "id": "7_23229446_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "c62b55e651e0bac33d5512d8078da23e",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_adrenal_gland_ensg00000136243_t_23194403-23195915_23188220-23194402",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136243:t:23194403-23195915:23188220-23194402"
+        },
+        "variant": {
+          "id": "7_23205950_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "c9254452619370c53b1037ae41750138",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_fibroblast_ensg00000136235_s_23259980-23260138_23260138-23260488",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23259980-23260138:23260138-23260488"
+        },
+        "variant": {
+          "id": "7_23076347_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "ca682e7b8011387696ec2c13725e53bf",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_leafcutter_testis_7_23103578_23104250_clu_89461_-",
+          "studyType": "sqtl",
+          "traitFromSource": "7:23103578:23104250:clu_89461_-"
+        },
+        "variant": {
+          "id": "7_23235145_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "caaa165d8823ccbca8f07b1ca905a019",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "peng_2018_txrev_placenta_naive_ensg00000136235_grp_1_contained_enst00000479625",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_1.contained.ENST00000479625"
+        },
+        "variant": {
+          "id": "7_23254127_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "cbd6519fdb58beb57d8e5fe817dcedb3",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_thyroid_ensg00000136235_grp_1_upstream_enst00000492858",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_1.upstream.ENST00000492858"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "cce6758c09bf589aa4cdf8ba4472aca3",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_colon_sigmoid_ensg00000136235_grp_1_upstream_enst00000492858",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_1.upstream.ENST00000492858"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "cf242a5034b0720fd0b43675d0096dc3",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_leafcutter_lung_7_23195915_23196680_clu_45887__",
+          "studyType": "sqtl",
+          "traitFromSource": "7:23195915:23196680:clu_45887_+"
+        },
+        "variant": {
+          "id": "7_23231412_A_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "cf438f504596e152b9423288ac8ad728",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_testis_ensg00000136235_17_7_23274730_23275096",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23274730_23275096"
+        },
+        "variant": {
+          "id": "7_23238664_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "cf66d0e9ae985835fb4e4a79d391e026",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_skin_sun_exposed_ensg00000136235_grp_2_upstream_enst00000258733",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_2.upstream.ENST00000258733"
+        },
+        "variant": {
+          "id": "7_23330889_C_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "cfd519f8b67e1e9f1b0cc99fd99305a5",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_skin_sun_exposed_ensg00000136243_t_23196680-23196766_23187146-23196680",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136243:t:23196680-23196766:23187146-23196680"
+        },
+        "variant": {
+          "id": "7_23238664_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "d0cc45639ad40ccd623cdf7044fd843d",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_colon_transverse_ensg00000226816",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816"
+        },
+        "variant": {
+          "id": "7_23193040_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "d37479215dcd30e8643b4985035d60e7",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "fusion_leafcutter_adipose_naive_7_23187146_23196680_clu_63476_-",
+          "studyType": "sqtl",
+          "traitFromSource": "7:23187146:23196680:clu_63476_-"
+        },
+        "variant": {
+          "id": "7_23155667_AC_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "d584780303ea3a9d7f906d706dcb3555",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_tx_prostate_enst00000662806",
+          "studyType": "eqtl",
+          "traitFromSource": "ENST00000662806"
+        },
+        "variant": {
+          "id": "7_23105676_T_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "d73a936f74d070b2099c5f93df918601",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_breast_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23280170_T_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "d784ef718afb2cff0fb2959ce972e48c",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_testis_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "d791d20033f5e3652f3d6eb3281393af",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_muscle_ensg00000136243_s_23187052-23187392_23187146-23196680",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136243:s:23187052-23187392:23187146-23196680"
+        },
+        "variant": {
+          "id": "7_23190155_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "d86be264be3d7028744c74ce89111aa0",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "quach_2016_ge_monocyte_naive_ensg00000226816",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816"
+        },
+        "variant": {
+          "id": "7_23255049_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "d92f7f76c3afa04703de1bd881d87345",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_amygdala_ensg00000136235_t_23273521-23273925_23273371-23273521",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23273521-23273925:23273371-23273521"
+        },
+        "variant": {
+          "id": "7_23238664_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "dd33da39349657c5bae9ff9d129169f9",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_brain_putamen_ensg00000136235_17_7_23274730_23275096",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23274730_23275096"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "de127b2618f6f7c658d042fdcc64491b",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "commonmind_ge_dlpfc_naive_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23254127_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "de8244fd2a35e2c0ddd4b3a0a142b128",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "blueprint_exon_monocyte_ensg00000136243_18_7_23182066_23182206",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136243.18_7_23182066_23182206"
+        },
+        "variant": {
+          "id": "7_23253189_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "decaac24487d661aa11656b7655095b4",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "cedar_microarray_monocyte_cd14_ilmn_1789616",
+          "studyType": "eqtl",
+          "traitFromSource": "ILMN_1789616"
+        },
+        "variant": {
+          "id": "7_23246696_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "df2dc8897f79bb60a1742aa5ef9eca37",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_fibroblast_ensg00000122550_grp_2_downstream_enst00000414163",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000122550.grp_2.downstream.ENST00000414163"
+        },
+        "variant": {
+          "id": "7_23202247_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "dffd22445bc195871bd59d63e0a52490",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_skin_sun_exposed_ensg00000136243_s_23187052-23187392_23187146-23196680",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136243:s:23187052-23187392:23187146-23196680"
+        },
+        "variant": {
+          "id": "7_23182251_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "e0712f87cb124119115cabdb0859ee0e",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_artery_coronary_ensg00000136235_grp_2_upstream_enst00000492858",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_2.upstream.ENST00000492858"
+        },
+        "variant": {
+          "id": "7_23224665_T_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "e0cd91bb1190dba9b9cf2770b6b02559",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_tx_artery_coronary_enst00000477844",
+          "studyType": "eqtl",
+          "traitFromSource": "ENST00000477844"
+        },
+        "variant": {
+          "id": "7_23258796_C_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "e0ef59a94f2dcdc7078a990ec5a16e8e",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST010796",
+          "studyType": "gwas",
+          "traitFromSource": "Electrocardiogram morphology (amplitude at temporal datapoints)"
+        },
+        "variant": {
+          "id": "7_23224665_T_G"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.7941430807113647,
+              "target": {
+                "id": "ENSG00000136235",
+                "approvedSymbol": "GPNMB"
+              }
+            },
+            {
+              "score": 0.09667010605335236,
+              "target": {
+                "id": "ENSG00000136243",
+                "approvedSymbol": "NUP42"
+              }
+            },
+            {
+              "score": 0.06331392377614975,
+              "target": {
+                "id": "ENSG00000122550",
+                "approvedSymbol": "KLHL7"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "e139aa90a007466eae7610f578bd2680",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_skin_sun_exposed_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23224665_T_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "e1679589b0cc36da1285f05652aa9d7f",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "braineac2_ge_putamen_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23227709_CA_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "e3aa7e103d579d1b91b885baaa3994f1",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_artery_aorta_ensg00000136235_17_7_23246768_23246773",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23246768_23246773"
+        },
+        "variant": {
+          "id": "7_23154986_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "e4503ca803a8509bcd9ccead21be84ee",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST002544",
+          "studyType": "gwas",
+          "traitFromSource": "Parkinson's disease"
+        },
+        "variant": {
+          "id": "7_23254127_A_G"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.746775209903717,
+              "target": {
+                "id": "ENSG00000136235",
+                "approvedSymbol": "GPNMB"
+              }
+            },
+            {
+              "score": 0.15710075199604034,
+              "target": {
+                "id": "ENSG00000136243",
+                "approvedSymbol": "NUP42"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "e59f9e7bd292a1dd2b1a5b94ad69d39e",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_skin_sun_exposed_ensg00000136235_t_23273521-23273925_23273176-23273521",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23273521-23273925:23273176-23273521"
+        },
+        "variant": {
+          "id": "7_23260430_A_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "e5cba8333c300344bb1d8aafd2e5025b",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_brain_cerebellum_ensg00000136235_17_7_23274730_23275096",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23274730_23275096"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "e81d54351628ff2e7a95ab9312e98da4",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_lung_ensg00000136235_17_7_23246774_23246774",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23246774_23246774"
+        },
+        "variant": {
+          "id": "7_23256914_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "e83b27a902840eaf7297a32a9a25da19",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_cortex_ensg00000136235_s_23246697-23246927_23246927-23247741",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:s:23246697-23246927:23246927-23247741"
+        },
+        "variant": {
+          "id": "7_23260430_A_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "e8b2500195c32c2dac61273019572907",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_esophagus_gej_ensg00000136235_grp_2_upstream_enst00000492858",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_2.upstream.ENST00000492858"
+        },
+        "variant": {
+          "id": "7_23255281_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "e8bd33f6238543ae0a47741460bd31d4",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_small_intestine_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "e949b4ad7ff8cf16ec8d033b90868954",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_leafcutter_breast_7_23187146_23196680_clu_44966__",
+          "studyType": "sqtl",
+          "traitFromSource": "7:23187146:23196680:clu_44966_+"
+        },
+        "variant": {
+          "id": "7_23182251_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "ecf1825998901a6eb6122be34d47ded2",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "commonmind_txrev_dlpfc_naive_ensg00000136243_grp_1_contained_enst00000477844",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136243.grp_1.contained.ENST00000477844"
+        },
+        "variant": {
+          "id": "7_23106493_C_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "ed01e1d2651bddd4e15ceca10e8d876c",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "hipsci_leafcutter_ipsc_7_23187146_23192977_clu_52760_-",
+          "studyType": "sqtl",
+          "traitFromSource": "7:23187146:23192977:clu_52760_-"
+        },
+        "variant": {
+          "id": "7_23211439_AAAAG_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "ee0b5cc9676565f27416fb368b1f4918",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_leafcutter_brain_nucleus_accumbens_7_23187146_23196680_clu_47678__",
+          "studyType": "sqtl",
+          "traitFromSource": "7:23187146:23196680:clu_47678_+"
+        },
+        "variant": {
+          "id": "7_23253189_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "eea1cc1f4f0fe57296a2e719ff57dd0c",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_brain_cerebellar_hemisphere_ensg00000136235_grp_2_downstream_enst00000409458",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_2.downstream.ENST00000409458"
+        },
+        "variant": {
+          "id": "7_23193040_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "eeb1ef23b8c8b2f6d6f25ce3c4e27435",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_brain_caudate_ensg00000226816_3_7_23205787_23208045",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816.3_7_23205787_23208045"
+        },
+        "variant": {
+          "id": "7_23203135_A_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "eed408a60b943b4866cb2ea581527064",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_esophagus_mucosa_ensg00000136235",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235"
+        },
+        "variant": {
+          "id": "7_23244618_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "f086c15a80eb4cfa2b6a3cca6dade2bb",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_nucleus_accumbens_ensg00000136235_t_23266140-23266615_23261565-23266517",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23266140-23266615:23261565-23266517"
+        },
+        "variant": {
+          "id": "7_23266401_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "f0c43764039469a7843fe516313baff8",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "commonmind_txrev_dlpfc_naive_ensg00000136235_grp_1_contained_enst00000479625",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_1.contained.ENST00000479625"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "f0e1b2469d4bd1f595f1c9cbb3bd173b",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_thyroid_ensg00000122550_grp_1_upstream_ensg00000122550_cage4",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000122550.grp_1.upstream.ENSG00000122550_CAGE4"
+        },
+        "variant": {
+          "id": "7_23103945_A_G"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "f33ccfeac7d1485de5354d7435179fe1",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_brain_hypothalamus_ensg00000136235_t_23273521-23273925_23273371-23273521",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23273521-23273925:23273371-23273521"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "f34e19158ed7f54176e693a0f952063e",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "cedar_microarray_t-cell_cd8_ilmn_2115154",
+          "studyType": "eqtl",
+          "traitFromSource": "ILMN_2115154"
+        },
+        "variant": {
+          "id": "7_23190155_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "f6506e1673ec2aa3564b219a31e66dee",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_leafcutter_fibroblast_7_23254312_23259980_clu_34948__",
+          "studyType": "sqtl",
+          "traitFromSource": "7:23254312:23259980:clu_34948_+"
+        },
+        "variant": {
+          "id": "7_23266401_T_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "f701510d3b174043c03586af4cbd8d02",
+        "confidence": "PICS fine-mapped credible set based on reported top hit",
+        "study": {
+          "id": "GCST004902",
+          "studyType": "gwas",
+          "traitFromSource": "Parkinson's disease"
+        },
+        "variant": {
+          "id": "7_23254127_A_G"
+        },
+        "l2GPredictions": {
+          "rows": [
+            {
+              "score": 0.865304172039032,
+              "target": {
+                "id": "ENSG00000136235",
+                "approvedSymbol": "GPNMB"
+              }
+            },
+            {
+              "score": 0.1399308741092682,
+              "target": {
+                "id": "ENSG00000136243",
+                "approvedSymbol": "NUP42"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "studyLocusId": "f72c26fac5910e2e30c2c48aeefff021",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_brain_hypothalamus_ensg00000226816",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816"
+        },
+        "variant": {
+          "id": "7_23223855_G_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "f7d1d2612ae4c6ef2f7b0d003aa515aa",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_txrev_breast_ensg00000136235_grp_1_upstream_enst00000492858",
+          "studyType": "tuqtl",
+          "traitFromSource": "ENSG00000136235.grp_1.upstream.ENST00000492858"
+        },
+        "variant": {
+          "id": "7_23220632_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "f8c0d7b0f95f077b7416a07f6f7de0b0",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "quach_2016_ge_monocyte_lps_ensg00000226816",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816"
+        },
+        "variant": {
+          "id": "7_23277123_A_C"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "f91b16e0975f9d55df25f9af9a0f37a0",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_ge_brain_spinal_cord_ensg00000226816",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000226816"
+        },
+        "variant": {
+          "id": "7_23220895_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "fb7d8d134b7ea9a3e05234cc122ffb2d",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_exon_skin_sun_exposed_ensg00000136235_17_7_23274551_23274729",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23274551_23274729"
+        },
+        "variant": {
+          "id": "7_23238664_G_T"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "fc4e04cbaa0b494b13e46b354adbde3d",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "lepik_2017_exon_blood_ensg00000136235_17_7_23253368_23253459",
+          "studyType": "eqtl",
+          "traitFromSource": "ENSG00000136235.17_7_23253368_23253459"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      },
+      {
+        "studyLocusId": "fc58b0d493a3f9382586d4558d10841a",
+        "confidence": "SuSiE fine-mapped credible set with in-sample LD",
+        "study": {
+          "id": "gtex-v10_majiq_heart_atrial_appendage_ensg00000136235_t_23273521-23273925_23273176-23273521",
+          "studyType": "sqtl",
+          "traitFromSource": "ENSG00000136235:t:23273521-23273925:23273176-23273521"
+        },
+        "variant": {
+          "id": "7_23248690_G_A"
+        },
+        "l2GPredictions": {
+          "rows": []
+        }
+      }
+    ]
+  }
+}

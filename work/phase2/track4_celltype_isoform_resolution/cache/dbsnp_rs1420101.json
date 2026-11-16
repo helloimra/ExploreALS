@@ -1,0 +1,301 @@
+{
+  "refsnp_id": "1420101",
+  "variant_type": "snv",
+  "genes": [
+    "IL1RL1"
+  ],
+  "clinical_significances": [],
+  "minor_allele_frequencies": [
+    {
+      "study": "1000Genomes",
+      "allele_count": 3205,
+      "total_count": 5008
+    },
+    {
+      "study": "1000Genomes_30X",
+      "allele_count": 4105,
+      "total_count": 6404
+    },
+    {
+      "study": "ALSPAC",
+      "allele_count": 2406,
+      "total_count": 3854
+    },
+    {
+      "study": "Estonian",
+      "allele_count": 2813,
+      "total_count": 4480
+    },
+    {
+      "study": "ExAC",
+      "allele_count": 10647,
+      "total_count": 16812
+    },
+    {
+      "study": "GENOME_DK",
+      "allele_count": 18,
+      "total_count": 40
+    },
+    {
+      "study": "GnomAD_exomes",
+      "allele_count": 660507,
+      "total_count": 1051278
+    },
+    {
+      "study": "GnomAD_genomes",
+      "allele_count": 95404,
+      "total_count": 147678
+    },
+    {
+      "study": "GoNL",
+      "allele_count": 655,
+      "total_count": 998
+    },
+    {
+      "study": "HGDP_Stanford",
+      "allele_count": 1271,
+      "total_count": 2084
+    },
+    {
+      "study": "HapMap",
+      "allele_count": 1158,
+      "total_count": 1884
+    },
+    {
+      "study": "KOREAN",
+      "allele_count": 1842,
+      "total_count": 2930
+    },
+    {
+      "study": "Korea1K",
+      "allele_count": 1183,
+      "total_count": 1832
+    },
+    {
+      "study": "Korea4K",
+      "allele_count": 4605,
+      "total_count": 7206
+    },
+    {
+      "study": "MGP",
+      "allele_count": 344,
+      "total_count": 534
+    },
+    {
+      "study": "NorthernSweden",
+      "allele_count": 378,
+      "total_count": 600
+    },
+    {
+      "study": "PAGE_STUDY",
+      "allele_count": 51855,
+      "total_count": 78696
+    },
+    {
+      "study": "PRJEB36033",
+      "allele_count": 16,
+      "total_count": 36
+    },
+    {
+      "study": "Qatari",
+      "allele_count": 96,
+      "total_count": 216
+    },
+    {
+      "study": "SGDP_PRJ",
+      "allele_count": 127,
+      "total_count": 364
+    },
+    {
+      "study": "Siberian",
+      "allele_count": 14,
+      "total_count": 36
+    },
+    {
+      "study": "TOMMO",
+      "allele_count": 45259,
+      "total_count": 77442
+    },
+    {
+      "study": "TOPMED",
+      "allele_count": 172854,
+      "total_count": 264690
+    },
+    {
+      "study": "TWINSUK",
+      "allele_count": 2282,
+      "total_count": 3708
+    },
+    {
+      "study": "Vietnamese",
+      "allele_count": 123,
+      "total_count": 212
+    },
+    {
+      "study": "dbGaP_PopFreq",
+      "allele_count": 247840,
+      "total_count": 394232
+    },
+    {
+      "study": "1000Genomes",
+      "allele_count": 1803,
+      "total_count": 5008
+    },
+    {
+      "study": "1000Genomes_30X",
+      "allele_count": 2299,
+      "total_count": 6404
+    },
+    {
+      "study": "ALSPAC",
+      "allele_count": 1448,
+      "total_count": 3854
+    },
+    {
+      "study": "Estonian",
+      "allele_count": 1667,
+      "total_count": 4480
+    },
+    {
+      "study": "ExAC",
+      "allele_count": 6165,
+      "total_count": 16812
+    },
+    {
+      "study": "GENOME_DK",
+      "allele_count": 22,
+      "total_count": 40
+    },
+    {
+      "study": "GnomAD_exomes",
+      "allele_count": 390771,
+      "total_count": 1051278
+    },
+    {
+      "study": "GnomAD_genomes",
+      "allele_count": 52274,
+      "total_count": 147678
+    },
+    {
+      "study": "GoNL",
+      "allele_count": 343,
+      "total_count": 998
+    },
+    {
+      "study": "HGDP_Stanford",
+      "allele_count": 813,
+      "total_count": 2084
+    },
+    {
+      "study": "HapMap",
+      "allele_count": 726,
+      "total_count": 1884
+    },
+    {
+      "study": "KOREAN",
+      "allele_count": 1088,
+      "total_count": 2930
+    },
+    {
+      "study": "Korea1K",
+      "allele_count": 649,
+      "total_count": 1832
+    },
+    {
+      "study": "Korea4K",
+      "allele_count": 2601,
+      "total_count": 7206
+    },
+    {
+      "study": "MGP",
+      "allele_count": 190,
+      "total_count": 534
+    },
+    {
+      "study": "NorthernSweden",
+      "allele_count": 222,
+      "total_count": 600
+    },
+    {
+      "study": "PAGE_STUDY",
+      "allele_count": 26841,
+      "total_count": 78696
+    },
+    {
+      "study": "PRJEB36033",
+      "allele_count": 20,
+      "total_count": 36
+    },
+    {
+      "study": "Qatari",
+      "allele_count": 120,
+      "total_count": 216
+    },
+    {
+      "study": "SGDP_PRJ",
+      "allele_count": 237,
+      "total_count": 364
+    },
+    {
+      "study": "Siberian",
+      "allele_count": 22,
+      "total_count": 36
+    },
+    {
+      "study": "TOMMO",
+      "allele_count": 32183,
+      "total_count": 77442
+    },
+    {
+      "study": "TOPMED",
+      "allele_count": 91836,
+      "total_count": 264690
+    },
+    {
+      "study": "TWINSUK",
+      "allele_count": 1426,
+      "total_count": 3708
+    },
+    {
+      "study": "Vietnamese",
+      "allele_count": 89,
+      "total_count": 212
+    },
+    {
+      "study": "dbGaP_PopFreq",
+      "allele_count": 146392,
+      "total_count": 394232
+    }
+  ],
+  "placements": [
+    {
+      "seq_id": "NC_000002.12",
+      "alleles": [
+        {
+          "deleted_sequence": "C",
+          "inserted_sequence": "C",
+          "position": 102341255,
+          "is_variant": false
+        },
+        {
+          "deleted_sequence": "C",
+          "inserted_sequence": "A",
+          "position": 102341255,
+          "is_variant": true
+        },
+        {
+          "deleted_sequence": "C",
+          "inserted_sequence": "G",
+          "position": 102341255,
+          "is_variant": true
+        },
+        {
+          "deleted_sequence": "C",
+          "inserted_sequence": "T",
+          "position": 102341255,
+          "is_variant": true
+        }
+      ]
+    }
+  ]
+}

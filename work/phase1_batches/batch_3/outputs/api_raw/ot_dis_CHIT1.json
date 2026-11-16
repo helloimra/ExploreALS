@@ -1,0 +1,339 @@
+{
+  "target": {
+    "id": "ENSG00000133063",
+    "approvedSymbol": "CHIT1",
+    "associatedDiseases": {
+      "count": 429,
+      "rows": [
+        {
+          "disease": {
+            "id": "MONDO_0004979",
+            "name": "asthma"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.3669249589661494
+            },
+            {
+              "id": "europepmc",
+              "score": 0.48567366273793555
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0022489",
+            "name": "chitotriosidase deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.333094598162358
+            },
+            {
+              "id": "europepmc",
+              "score": 0.05104220252878634
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005559",
+            "name": "neurodegenerative disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "crispr_screen",
+              "score": 0.3226737952234518
+            },
+            {
+              "id": "europepmc",
+              "score": 0.13098636933757649
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0009759",
+            "name": "Chronic Obstructive Asthma"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.18485521819363218
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0019338",
+            "name": "sarcoidosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9110083672642592
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.03509463946402304
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004976",
+            "name": "amyotrophic lateral sclerosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9036316714509572
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0000270",
+            "name": "lower respiratory tract disorder"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.17643207257068985
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0018150",
+            "name": "Gaucher disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.8144872500094691
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005148",
+            "name": "type 2 diabetes mellitus"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.7439752527761976
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005002",
+            "name": "chronic obstructive pulmonary disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.6731382177056133
+            },
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.033242548914806214
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004981",
+            "name": "atrial fibrillation"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.13802260870111493
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0019115",
+            "name": "obesity due to melanocortin 4 receptor deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.683644377092938
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0011122",
+            "name": "obesity disorder"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.683644377092938
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005405",
+            "name": "childhood onset asthma"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.13596139133035562
+            },
+            {
+              "id": "europepmc",
+              "score": 0.012158615952232422
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005016",
+            "name": "diabetic kidney disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.6399113349593123
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0008039",
+            "name": "tropical spastic paraparesis"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.6227913282199051
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0018076",
+            "name": "tuberculosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.6157479916004632
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005087",
+            "name": "respiratory system disorder"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.12107931728848442
+            },
+            {
+              "id": "europepmc",
+              "score": 0.012158615952232422
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0015925",
+            "name": "interstitial lung disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.5930005477151422
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0008243",
+            "name": "Pick disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.5572783590966891
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0024331",
+            "name": "colorectal carcinoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.5571651986177307
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005070",
+            "name": "neoplasm"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.550168792170901
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0002771",
+            "name": "pulmonary fibrosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.5353692113297948
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004975",
+            "name": "Alzheimer disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.5229060689330606
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0009891",
+            "name": "acquired polycythemia vera"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.49816551470952286
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,665 @@
+{
+  "dataset_id": "DS005_BYE",
+  "sha256_verified": true,
+  "screen_concentration_uM": 2.5,
+  "n_active_drugs": 107,
+  "n_fdr05_2s_hits": 20,
+  "n_fdr05_1s_greater_hits": 10,
+  "controls": {
+    "dmso_mean_days": -0.12840012168694442,
+    "dmso_sd_days": 0.3550364697813293,
+    "untreated_mean_days": 0.4114436283130556,
+    "untreated_vs_dmso_paired_p2s": 0.013031113483076666
+  },
+  "batch4_candidates": [
+    {
+      "drug_name": "Riluzole",
+      "carbon_id": "C013",
+      "catalog_no": "HY-B0211",
+      "supplier": "MedChemExpress",
+      "n_donors": 16,
+      "mean_paired_vs_dmso_days": 3.959114583333333,
+      "sd_paired_vs_dmso_days": 0.7423985445556405,
+      "median_paired_vs_dmso_days": 4.0625,
+      "iqr_paired_vs_dmso_days": 0.5625,
+      "mean_raw_table12_days": 3.8307144616463886,
+      "responders_gt_dmso_n": 16,
+      "responders_gt_dmso_pct": 100.0,
+      "responders_gt_1day_vs_dmso_n": 16,
+      "negative_lines_vs_dmso_n": 0,
+      "paired_t_stat": 21.331478152091716,
+      "paired_p_2s": 1.2376410108257613e-12,
+      "paired_p_1s_greater": 6.188205054128807e-13,
+      "wilcoxon_stat": 0.0,
+      "wilcoxon_exact_p_2s": 3.0517578125e-05,
+      "wilcoxon_exact_p_1s_greater": 1.52587890625e-05,
+      "raw_1samp_t_stat": 26.079630184694476,
+      "raw_1samp_p_2s": 6.545542758106903e-14,
+      "lodo_min_mean_diff_days": 3.8897222222222223,
+      "lodo_max_mean_diff_days": 4.085555555555556,
+      "lodo_max_p_2s": 1.1255468874339912e-11,
+      "bh_fdr_q_2s": 1.3242758815835647e-10,
+      "bh_fdr_q_1s_greater": 6.621379407917823e-11,
+      "wilcoxon_bh_fdr_q_2s": 0.0008163452148437501,
+      "rank_by_paired_mean": 1,
+      "rank_by_paired_p2s": 1
+    },
+    {
+      "drug_name": "Baricitinib",
+      "carbon_id": "C019",
+      "catalog_no": "HY-15315",
+      "supplier": "MedChemExpress",
+      "n_donors": 16,
+      "mean_paired_vs_dmso_days": 3.77421875,
+      "sd_paired_vs_dmso_days": 1.712913385324839,
+      "median_paired_vs_dmso_days": 4.3125,
+      "iqr_paired_vs_dmso_days": 0.4375,
+      "mean_raw_table12_days": 3.6458186283130556,
+      "responders_gt_dmso_n": 14,
+      "responders_gt_dmso_pct": 87.5,
+      "responders_gt_1day_vs_dmso_n": 14,
+      "negative_lines_vs_dmso_n": 2,
+      "paired_t_stat": 8.813565898509813,
+      "paired_p_2s": 2.5615976291626177e-07,
+      "paired_p_1s_greater": 1.2807988145813088e-07,
+      "wilcoxon_stat": 3.0,
+      "wilcoxon_exact_p_2s": 0.000152587890625,
+      "wilcoxon_exact_p_1s_greater": 7.62939453125e-05,
+      "raw_1samp_t_stat": 8.7254712013677,
+      "raw_1samp_p_2s": 2.9099656024730394e-07,
+      "lodo_min_mean_diff_days": 3.6791666666666667,
+      "lodo_max_mean_diff_days": 4.050833333333333,
+      "lodo_max_p_2s": 1.039298460555136e-06,
+      "bh_fdr_q_2s": 6.852273658010003e-06,
+      "bh_fdr_q_1s_greater": 6.852273658010003e-06,
+      "wilcoxon_bh_fdr_q_2s": 0.0023324148995535715,
+      "rank_by_paired_mean": 2,
+      "rank_by_paired_p2s": 4
+    },
+    {
+      "drug_name": "Trazodone",
+      "carbon_id": "C009",
+      "catalog_no": "HY-B0478",
+      "supplier": "MedChemExpress",
+      "n_donors": 15,
+      "mean_paired_vs_dmso_days": 1.8458333333333334,
+      "sd_paired_vs_dmso_days": 1.8181664298591222,
+      "median_paired_vs_dmso_days": 1.5625,
+      "iqr_paired_vs_dmso_days": 2.4375,
+      "mean_raw_table12_days": 1.7055398702005926,
+      "responders_gt_dmso_n": 13,
+      "responders_gt_dmso_pct": 86.66666666666667,
+      "responders_gt_1day_vs_dmso_n": 8,
+      "negative_lines_vs_dmso_n": 1,
+      "paired_t_stat": 3.931918246025719,
+      "paired_p_2s": 0.0015042783092593971,
+      "paired_p_1s_greater": 0.0007521391546296986,
+      "wilcoxon_stat": 1.0,
+      "wilcoxon_exact_p_2s": 0.000244140625,
+      "wilcoxon_exact_p_1s_greater": 0.0001220703125,
+      "raw_1samp_t_stat": 3.9245613493135028,
+      "raw_1samp_p_2s": 0.0015261965189884187,
+      "lodo_min_mean_diff_days": 1.6205357142857142,
+      "lodo_max_mean_diff_days": 1.9866071428571428,
+      "lodo_max_p_2s": 0.0034721678873402724,
+      "bh_fdr_q_2s": 0.01609577790907555,
+      "bh_fdr_q_1s_greater": 0.018764742258332582,
+      "wilcoxon_bh_fdr_q_2s": 0.0032653808593750004,
+      "rank_by_paired_mean": 4,
+      "rank_by_paired_p2s": 10
+    },
+    {
+      "drug_name": "Apilimod",
+      "carbon_id": "C020",
+      "catalog_no": "HY-14644A",
+      "supplier": "MedChemExpress",
+      "n_donors": 16,
+      "mean_paired_vs_dmso_days": 1.83671875,
+      "sd_paired_vs_dmso_days": 1.9813740431726496,
+      "median_paired_vs_dmso_days": 2.0,
+      "iqr_paired_vs_dmso_days": 2.140625,
+      "mean_raw_table12_days": 1.7083186283130556,
+      "responders_gt_dmso_n": 12,
+      "responders_gt_dmso_pct": 75.0,
+      "responders_gt_1day_vs_dmso_n": 11,
+      "negative_lines_vs_dmso_n": 4,
+      "paired_t_stat": 3.707969742167365,
+      "paired_p_2s": 0.0021044570757008502,
+      "paired_p_1s_greater": 0.0010522285378504251,
+      "wilcoxon_stat": 14.0,
+      "wilcoxon_exact_p_2s": 0.00335693359375,
+      "wilcoxon_exact_p_1s_greater": 0.001678466796875,
+      "raw_1samp_t_stat": 3.5311284884784424,
+      "raw_1samp_p_2s": 0.0030240771734610593,
+      "lodo_min_mean_diff_days": 1.6125,
+      "lodo_max_mean_diff_days": 2.0466666666666664,
+      "lodo_max_p_2s": 0.004831872926644411,
+      "bh_fdr_q_2s": 0.017321300546153152,
+      "bh_fdr_q_1s_greater": 0.018764742258332582,
+      "wilcoxon_bh_fdr_q_2s": 0.022449493408203125,
+      "rank_by_paired_mean": 5,
+      "rank_by_paired_p2s": 13
+    },
+    {
+      "drug_name": "Icerguastat",
+      "carbon_id": "C021",
+      "catalog_no": "HY-111022",
+      "supplier": "MedChemExpress",
+      "n_donors": 16,
+      "mean_paired_vs_dmso_days": 1.61796875,
+      "sd_paired_vs_dmso_days": 1.7354932581137656,
+      "median_paired_vs_dmso_days": 1.6875,
+      "iqr_paired_vs_dmso_days": 2.284375,
+      "mean_raw_table12_days": 1.4895686283130556,
+      "responders_gt_dmso_n": 13,
+      "responders_gt_dmso_pct": 81.25,
+      "responders_gt_1day_vs_dmso_n": 11,
+      "negative_lines_vs_dmso_n": 3,
+      "paired_t_stat": 3.7291271341693415,
+      "paired_p_2s": 0.0020152364056220703,
+      "paired_p_1s_greater": 0.0010076182028110352,
+      "wilcoxon_stat": 14.0,
+      "wilcoxon_exact_p_2s": 0.00335693359375,
+      "wilcoxon_exact_p_1s_greater": 0.001678466796875,
+      "raw_1samp_t_stat": 3.710755192986116,
+      "raw_1samp_p_2s": 0.0020924869591283277,
+      "lodo_min_mean_diff_days": 1.4466666666666665,
+      "lodo_max_mean_diff_days": 1.8883333333333332,
+      "lodo_max_p_2s": 0.004664202081756867,
+      "bh_fdr_q_2s": 0.017321300546153152,
+      "bh_fdr_q_1s_greater": 0.018764742258332582,
+      "wilcoxon_bh_fdr_q_2s": 0.022449493408203125,
+      "rank_by_paired_mean": 6,
+      "rank_by_paired_p2s": 12
+    }
+  ],
+  "donor_profiles_batch4": {
+    "Riluzole": {
+      "SALS 1": {
+        "raw_days": 4.083333,
+        "dmso_days": 0.05,
+        "paired_diff_days": 4.033333
+      },
+      "SALS 2": {
+        "raw_days": 4.545833,
+        "dmso_days": -0.016667,
+        "paired_diff_days": 4.5625
+      },
+      "SALS 3": {
+        "raw_days": 3.539749,
+        "dmso_days": -0.585251,
+        "paired_diff_days": 4.125
+      },
+      "SALS 4": {
+        "raw_days": 4.129167,
+        "dmso_days": 0.379167,
+        "paired_diff_days": 3.75
+      },
+      "SALS 5": {
+        "raw_days": 2.529167,
+        "dmso_days": 0.466667,
+        "paired_diff_days": 2.0625
+      },
+      "SALS 6": {
+        "raw_days": 4.183333,
+        "dmso_days": 0.120833,
+        "paired_diff_days": 4.0625
+      },
+      "SALS 7": {
+        "raw_days": 4.375,
+        "dmso_days": -0.0625,
+        "paired_diff_days": 4.4375
+      },
+      "SALS 8": {
+        "raw_days": 2.820833,
+        "dmso_days": 0.195833,
+        "paired_diff_days": 2.625
+      },
+      "SALS 9": {
+        "raw_days": 3.446429,
+        "dmso_days": 0.071429,
+        "paired_diff_days": 3.375
+      },
+      "SALS 10": {
+        "raw_days": 4.532979,
+        "dmso_days": 0.032979,
+        "paired_diff_days": 4.5
+      },
+      "SALS 11": {
+        "raw_days": 4.3125,
+        "dmso_days": -0.6875,
+        "paired_diff_days": 5.0
+      },
+      "SALS 12": {
+        "raw_days": 4.270833,
+        "dmso_days": -0.354167,
+        "paired_diff_days": 4.625
+      },
+      "SALS 13": {
+        "raw_days": 3.730042,
+        "dmso_days": -0.207458,
+        "paired_diff_days": 3.9375
+      },
+      "SALS 14": {
+        "raw_days": 3.573276,
+        "dmso_days": -0.489224,
+        "paired_diff_days": 4.0625
+      },
+      "SALS 15": {
+        "raw_days": 3.445652,
+        "dmso_days": -0.616848,
+        "paired_diff_days": 4.0625
+      },
+      "SALS 16": {
+        "raw_days": 3.773305,
+        "dmso_days": -0.351695,
+        "paired_diff_days": 4.125
+      }
+    },
+    "Baricitinib": {
+      "SALS 1": {
+        "raw_days": 5.25,
+        "dmso_days": 0.05,
+        "paired_diff_days": 5.2
+      },
+      "SALS 2": {
+        "raw_days": 4.545833,
+        "dmso_days": -0.016667,
+        "paired_diff_days": 4.5625
+      },
+      "SALS 3": {
+        "raw_days": 3.539749,
+        "dmso_days": -0.585251,
+        "paired_diff_days": 4.125
+      },
+      "SALS 4": {
+        "raw_days": 4.629167,
+        "dmso_days": 0.379167,
+        "paired_diff_days": 4.25
+      },
+      "SALS 5": {
+        "raw_days": 2.529167,
+        "dmso_days": 0.466667,
+        "paired_diff_days": 2.0625
+      },
+      "SALS 6": {
+        "raw_days": 4.308333,
+        "dmso_days": 0.120833,
+        "paired_diff_days": 4.1875
+      },
+      "SALS 7": {
+        "raw_days": 4.5,
+        "dmso_days": -0.0625,
+        "paired_diff_days": 4.5625
+      },
+      "SALS 8": {
+        "raw_days": 0.070833,
+        "dmso_days": 0.195833,
+        "paired_diff_days": -0.125
+      },
+      "SALS 9": {
+        "raw_days": 4.571429,
+        "dmso_days": 0.071429,
+        "paired_diff_days": 4.5
+      },
+      "SALS 10": {
+        "raw_days": 4.782979,
+        "dmso_days": 0.032979,
+        "paired_diff_days": 4.75
+      },
+      "SALS 11": {
+        "raw_days": 4.3125,
+        "dmso_days": -0.6875,
+        "paired_diff_days": 5.0
+      },
+      "SALS 12": {
+        "raw_days": -0.729167,
+        "dmso_days": -0.354167,
+        "paired_diff_days": -0.375
+      },
+      "SALS 13": {
+        "raw_days": 4.105042,
+        "dmso_days": -0.207458,
+        "paired_diff_days": 4.3125
+      },
+      "SALS 14": {
+        "raw_days": 3.823276,
+        "dmso_days": -0.489224,
+        "paired_diff_days": 4.3125
+      },
+      "SALS 15": {
+        "raw_days": 4.195652,
+        "dmso_days": -0.616848,
+        "paired_diff_days": 4.8125
+      },
+      "SALS 16": {
+        "raw_days": 3.898305,
+        "dmso_days": -0.351695,
+        "paired_diff_days": 4.25
+      }
+    },
+    "Apilimod": {
+      "SALS 1": {
+        "raw_days": 5.25,
+        "dmso_days": 0.05,
+        "paired_diff_days": 5.2
+      },
+      "SALS 2": {
+        "raw_days": 1.545833,
+        "dmso_days": -0.016667,
+        "paired_diff_days": 1.5625
+      },
+      "SALS 3": {
+        "raw_days": 3.539749,
+        "dmso_days": -0.585251,
+        "paired_diff_days": 4.125
+      },
+      "SALS 4": {
+        "raw_days": 0.129167,
+        "dmso_days": 0.379167,
+        "paired_diff_days": -0.25
+      },
+      "SALS 5": {
+        "raw_days": 1.529167,
+        "dmso_days": 0.466667,
+        "paired_diff_days": 1.0625
+      },
+      "SALS 6": {
+        "raw_days": -1.191667,
+        "dmso_days": 0.120833,
+        "paired_diff_days": -1.3125
+      },
+      "SALS 7": {
+        "raw_days": 2.5,
+        "dmso_days": -0.0625,
+        "paired_diff_days": 2.5625
+      },
+      "SALS 8": {
+        "raw_days": 2.570833,
+        "dmso_days": 0.195833,
+        "paired_diff_days": 2.375
+      },
+      "SALS 9": {
+        "raw_days": 2.571429,
+        "dmso_days": 0.071429,
+        "paired_diff_days": 2.5
+      },
+      "SALS 10": {
+        "raw_days": 1.782979,
+        "dmso_days": 0.032979,
+        "paired_diff_days": 1.75
+      },
+      "SALS 11": {
+        "raw_days": 4.3125,
+        "dmso_days": -0.6875,
+        "paired_diff_days": 5.0
+      },
+      "SALS 12": {
+        "raw_days": 2.770833,
+        "dmso_days": -0.354167,
+        "paired_diff_days": 3.125
+      },
+      "SALS 13": {
+        "raw_days": 0.605042,
+        "dmso_days": -0.207458,
+        "paired_diff_days": 0.8125
+      },
+      "SALS 14": {
+        "raw_days": -0.676724,
+        "dmso_days": -0.489224,
+        "paired_diff_days": -0.1875
+      },
+      "SALS 15": {
+        "raw_days": -1.804348,
+        "dmso_days": -0.616848,
+        "paired_diff_days": -1.1875
+      },
+      "SALS 16": {
+        "raw_days": 1.898305,
+        "dmso_days": -0.351695,
+        "paired_diff_days": 2.25
+      }
+    },
+    "Trazodone": {
+      "SALS 1": {
+        "raw_days": null,
+        "dmso_days": 0.05,
+        "paired_diff_days": null
+      },
+      "SALS 2": {
+        "raw_days": 0.545833,
+        "dmso_days": -0.016667,
+        "paired_diff_days": 0.5625
+      },
+      "SALS 3": {
+        "raw_days": 1.039749,
+        "dmso_days": -0.585251,
+        "paired_diff_days": 1.625
+      },
+      "SALS 4": {
+        "raw_days": 2.129167,
+        "dmso_days": 0.379167,
+        "paired_diff_days": 1.75
+      },
+      "SALS 5": {
+        "raw_days": 1.029167,
+        "dmso_days": 0.466667,
+        "paired_diff_days": 0.5625
+      },
+      "SALS 6": {
+        "raw_days": 4.308333,
+        "dmso_days": 0.120833,
+        "paired_diff_days": 4.1875
+      },
+      "SALS 7": {
+        "raw_days": 1.5,
+        "dmso_days": -0.0625,
+        "paired_diff_days": 1.5625
+      },
+      "SALS 8": {
+        "raw_days": 0.070833,
+        "dmso_days": 0.195833,
+        "paired_diff_days": -0.125
+      },
+      "SALS 9": {
+        "raw_days": 0.071429,
+        "dmso_days": 0.071429,
+        "paired_diff_days": 0.0
+      },
+      "SALS 10": {
+        "raw_days": 0.782979,
+        "dmso_days": 0.032979,
+        "paired_diff_days": 0.75
+      },
+      "SALS 11": {
+        "raw_days": 4.3125,
+        "dmso_days": -0.6875,
+        "paired_diff_days": 5.0
+      },
+      "SALS 12": {
+        "raw_days": 0.270833,
+        "dmso_days": -0.354167,
+        "paired_diff_days": 0.625
+      },
+      "SALS 13": {
+        "raw_days": 4.105042,
+        "dmso_days": -0.207458,
+        "paired_diff_days": 4.3125
+      },
+      "SALS 14": {
+        "raw_days": 1.323276,
+        "dmso_days": -0.489224,
+        "paired_diff_days": 1.8125
+      },
+      "SALS 15": {
+        "raw_days": 4.195652,
+        "dmso_days": -0.616848,
+        "paired_diff_days": 4.8125
+      },
+      "SALS 16": {
+        "raw_days": -0.101695,
+        "dmso_days": -0.351695,
+        "paired_diff_days": 0.25
+      }
+    },
+    "Icerguastat": {
+      "SALS 1": {
+        "raw_days": 3.25,
+        "dmso_days": 0.05,
+        "paired_diff_days": 3.2
+      },
+      "SALS 2": {
+        "raw_days": 2.545833,
+        "dmso_days": -0.016667,
+        "paired_diff_days": 2.5625
+      },
+      "SALS 3": {
+        "raw_days": 0.039749,
+        "dmso_days": -0.585251,
+        "paired_diff_days": 0.625
+      },
+      "SALS 4": {
+        "raw_days": -0.370833,
+        "dmso_days": 0.379167,
+        "paired_diff_days": -0.75
+      },
+      "SALS 5": {
+        "raw_days": -1.970833,
+        "dmso_days": 0.466667,
+        "paired_diff_days": -2.4375
+      },
+      "SALS 6": {
+        "raw_days": 4.308333,
+        "dmso_days": 0.120833,
+        "paired_diff_days": 4.1875
+      },
+      "SALS 7": {
+        "raw_days": 1.5,
+        "dmso_days": -0.0625,
+        "paired_diff_days": 1.5625
+      },
+      "SALS 8": {
+        "raw_days": 0.070833,
+        "dmso_days": 0.195833,
+        "paired_diff_days": -0.125
+      },
+      "SALS 9": {
+        "raw_days": 1.071429,
+        "dmso_days": 0.071429,
+        "paired_diff_days": 1.0
+      },
+      "SALS 10": {
+        "raw_days": 2.282979,
+        "dmso_days": 0.032979,
+        "paired_diff_days": 2.25
+      },
+      "SALS 11": {
+        "raw_days": 2.3125,
+        "dmso_days": -0.6875,
+        "paired_diff_days": 3.0
+      },
+      "SALS 12": {
+        "raw_days": 1.270833,
+        "dmso_days": -0.354167,
+        "paired_diff_days": 1.625
+      },
+      "SALS 13": {
+        "raw_days": 3.105042,
+        "dmso_days": -0.207458,
+        "paired_diff_days": 3.3125
+      },
+      "SALS 14": {
+        "raw_days": 0.323276,
+        "dmso_days": -0.489224,
+        "paired_diff_days": 0.8125
+      },
+      "SALS 15": {
+        "raw_days": 2.695652,
+        "dmso_days": -0.616848,
+        "paired_diff_days": 3.3125
+      },
+      "SALS 16": {
+        "raw_days": 1.398305,
+        "dmso_days": -0.351695,
+        "paired_diff_days": 1.75
+      }
+    }
+  },
+  "rnaseq_and_splicing": {
+    "n_sals_vs_ctrl_rows_table4": 192,
+    "n_sals_vs_ctrl_fdr05": 192,
+    "n_riluzole_vs_dmso_rows_table9": 593,
+    "n_riluzole_vs_dmso_fdr05": 593,
+    "n_overlapping_genes_t4_t9": 10,
+    "n_opposite_sign_overlap_all": 10,
+    "opposite_sign_pct_all": 100.0,
+    "binom_reversal_p_all": 0.0009765625,
+    "spearman_r_sals_vs_riluzole": -0.9515151515151514,
+    "spearman_p_sals_vs_riluzole": 2.279854920641689e-05,
+    "n_both_fdr05": 10,
+    "n_both_fdr05_opposite_sign": 10,
+    "binom_reversal_p_both_fdr05": 0.0009765625,
+    "table11_go_sets_total": 45,
+    "table11_go_sets_reversed_n": 45,
+    "top5_riluzole_degs": [
+      {
+        "HGNC_Symbol": "KCNN1",
+        "Fold_Change_Log2": 1.3194386628239,
+        "Adjusted P-value": 0.00246933882022357
+      },
+      {
+        "HGNC_Symbol": "PKM",
+        "Fold_Change_Log2": 0.441223820531231,
+        "Adjusted P-value": 0.00762984901828332
+      },
+      {
+        "HGNC_Symbol": "NEFH",
+        "Fold_Change_Log2": 0.499435153765674,
+        "Adjusted P-value": 0.00874683847492721
+      },
+      {
+        "HGNC_Symbol": "PGAM1",
+        "Fold_Change_Log2": 0.502188617205136,
+        "Adjusted P-value": 0.00874683847492721
+      },
+      {
+        "HGNC_Symbol": "NECAB2",
+        "Fold_Change_Log2": 0.762413404039287,
+        "Adjusted P-value": 0.00874683847492721
+      }
+    ],
+    "target_gene_hits": {
+      "KCNN1": {
+        "sals_vs_ctrl": null,
+        "riluzole_vs_dmso": {
+          "log2fc": 1.3194386628239,
+          "fdr": 0.00246933882022357
+        }
+      },
+      "NEFH": {
+        "sals_vs_ctrl": null,
+        "riluzole_vs_dmso": {
+          "log2fc": 0.499435153765674,
+          "fdr": 0.00874683847492721
+        }
+      },
+      "PKM": {
+        "sals_vs_ctrl": null,
+        "riluzole_vs_dmso": {
+          "log2fc": 0.441223820531231,
+          "fdr": 0.00762984901828332
+        }
+      }
+    },
+    "table7_unc13a_stmn2_splicing": [
+      {
+        "Genes": "UNC13A",
+        "Adjusted P-value": 0.0156352467069684
+      },
+      {
+        "Genes": "STMN2",
+        "Adjusted P-value": 0.0510348834434482
+      }
+    ]
+  }
+}

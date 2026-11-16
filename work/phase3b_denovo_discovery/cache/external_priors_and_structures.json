@@ -1,0 +1,676 @@
+{
+  "als_clinical_trials": {
+    "rasagiline": {
+      "total_count": 3,
+      "studies": [
+        {
+          "nct_id": "NCT01232738",
+          "status": "COMPLETED",
+          "phases": [
+            "PHASE2"
+          ],
+          "enrollment": 36
+        },
+        {
+          "nct_id": "NCT01879241",
+          "status": "COMPLETED",
+          "phases": [
+            "PHASE2"
+          ],
+          "enrollment": 252
+        },
+        {
+          "nct_id": "NCT01786603",
+          "status": "COMPLETED",
+          "phases": [
+            "PHASE2"
+          ],
+          "enrollment": 80
+        }
+      ]
+    },
+    "selegiline": {
+      "total_count": 0,
+      "studies": []
+    },
+    "lamotrigine": {
+      "total_count": 0,
+      "studies": []
+    },
+    "acetylcysteine": {
+      "total_count": 2,
+      "studies": [
+        {
+          "nct_id": "NCT04557410",
+          "status": "COMPLETED",
+          "phases": [
+            "PHASE1"
+          ],
+          "enrollment": 12
+        },
+        {
+          "nct_id": "NCT07414212",
+          "status": "RECRUITING",
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ],
+          "enrollment": 90
+        }
+      ]
+    },
+    "dolutegravir": {
+      "total_count": 4,
+      "studies": [
+        {
+          "nct_id": "NCT02868580",
+          "status": "COMPLETED",
+          "phases": [
+            "PHASE2"
+          ],
+          "enrollment": 43
+        },
+        {
+          "nct_id": "NCT02437110",
+          "status": "COMPLETED",
+          "phases": [
+            "PHASE1"
+          ],
+          "enrollment": 122
+        },
+        {
+          "nct_id": "NCT05193994",
+          "status": "TERMINATED",
+          "phases": [
+            "PHASE3"
+          ],
+          "enrollment": 419
+        },
+        {
+          "nct_id": "NCT06658977",
+          "status": "TERMINATED",
+          "phases": [
+            "PHASE3"
+          ],
+          "enrollment": 12
+        }
+      ]
+    },
+    "Triumeq": {
+      "total_count": 3,
+      "studies": [
+        {
+          "nct_id": "NCT02868580",
+          "status": "COMPLETED",
+          "phases": [
+            "PHASE2"
+          ],
+          "enrollment": 43
+        },
+        {
+          "nct_id": "NCT05193994",
+          "status": "TERMINATED",
+          "phases": [
+            "PHASE3"
+          ],
+          "enrollment": 419
+        },
+        {
+          "nct_id": "NCT06658977",
+          "status": "TERMINATED",
+          "phases": [
+            "PHASE3"
+          ],
+          "enrollment": 12
+        }
+      ]
+    },
+    "Coenzyme Q10": {
+      "total_count": 2,
+      "studies": [
+        {
+          "nct_id": "NCT06429059",
+          "status": "COMPLETED",
+          "phases": [
+            "PHASE2"
+          ],
+          "enrollment": 50
+        },
+        {
+          "nct_id": "NCT00243932",
+          "status": "COMPLETED",
+          "phases": [
+            "PHASE2"
+          ],
+          "enrollment": 185
+        }
+      ]
+    },
+    "L-serine": {
+      "total_count": 2,
+      "studies": [
+        {
+          "nct_id": "NCT01835782",
+          "status": "UNKNOWN",
+          "phases": [
+            "PHASE1",
+            "PHASE2"
+          ],
+          "enrollment": 20
+        },
+        {
+          "nct_id": "NCT03580616",
+          "status": "TERMINATED",
+          "phases": [
+            "PHASE2"
+          ],
+          "enrollment": 43
+        }
+      ]
+    },
+    "PMX205": {
+      "total_count": 0,
+      "studies": []
+    },
+    "avacopan": {
+      "total_count": 0,
+      "studies": []
+    },
+    "ATG4B": {
+      "total_count": 0,
+      "studies": []
+    },
+    "KALRN": {
+      "total_count": 0,
+      "studies": []
+    },
+    "PTPRT": {
+      "total_count": 0,
+      "studies": []
+    },
+    "TRAPPC12": {
+      "total_count": 0,
+      "studies": []
+    },
+    "ELK1": {
+      "total_count": 0,
+      "studies": []
+    },
+    "DLGAP1": {
+      "total_count": 0,
+      "studies": []
+    },
+    "DPP6": {
+      "total_count": 0,
+      "studies": []
+    }
+  },
+  "key_study_details": {
+    "NCT05193994": {
+      "title": "Triumeq in Amyotrophic Lateral Sclerosis",
+      "status": "TERMINATED",
+      "why_stopped": "A planned interim analysis resulted in the recommendation that the trial be stopped. The results showed no benefit of Triumeq for people with ALS compared with placebo on survival, the primary outcome measure.",
+      "completion_date": "2025-06-30",
+      "enrollment": 419
+    },
+    "NCT06658977": {
+      "title": "RolloverTreatment With Triumeq for People With ALS Following the Lighthouse II Trial",
+      "status": "TERMINATED",
+      "why_stopped": "This is a rollover study following the Lighthouse II trial; it was scheduled to stop when the LH II trial was stopped/completed. The LH II trial has been prematurely terminated so, likewise, this study has also now been stopped.",
+      "completion_date": "2025-06-03",
+      "enrollment": 12
+    },
+    "NCT01879241": {
+      "title": "Study of Rasagiline in Patients With Amyotrophic Lateral Sclerosis",
+      "status": "COMPLETED",
+      "why_stopped": "NONE",
+      "completion_date": "2016-08",
+      "enrollment": 252
+    },
+    "NCT01786603": {
+      "title": "Rasagiline in Subjects With Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "COMPLETED",
+      "why_stopped": "NONE",
+      "completion_date": "2016-07-27",
+      "enrollment": 80
+    },
+    "NCT00243932": {
+      "title": "Clinical Trial of High Dose CoQ10 in ALS",
+      "status": "COMPLETED",
+      "why_stopped": "NONE",
+      "completion_date": "2008-03",
+      "enrollment": 185
+    },
+    "NCT03580616": {
+      "title": "Tolerability and Efficacy of L-Serine in Patients With Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "TERMINATED",
+      "why_stopped": "Study was terminated by the IRB due to continued noncompliance.",
+      "completion_date": "2022-12-20",
+      "enrollment": 43
+    }
+  },
+  "opentargets_depmap": {
+    "ATG4B": {
+      "ensembl_id": "ENSG00000168397",
+      "ot_is_essential": false,
+      "n_depmap_lines": 1258,
+      "median_chronos": -0.0312,
+      "p10_chronos": -0.237,
+      "pct_lines_lt_minus1": 0.0,
+      "tractability_pos": [
+        "SM:High-Quality Ligand",
+        "SM:Druggable Family",
+        "PR:UniProt Ubiquitination",
+        "PR:Database Ubiquitination",
+        "PR:Half-life Data",
+        "PR:Small Molecule Binder"
+      ],
+      "safety_events": []
+    },
+    "KALRN": {
+      "ensembl_id": "ENSG00000160145",
+      "ot_is_essential": false,
+      "n_depmap_lines": 1258,
+      "median_chronos": -0.069,
+      "p10_chronos": -0.2194,
+      "pct_lines_lt_minus1": 0.0,
+      "tractability_pos": [
+        "SM:Structure with Ligand",
+        "SM:Druggable Family",
+        "PR:Half-life Data"
+      ],
+      "safety_events": []
+    },
+    "PTPRT": {
+      "ensembl_id": "ENSG00000196090",
+      "ot_is_essential": false,
+      "n_depmap_lines": 1230,
+      "median_chronos": -0.0627,
+      "p10_chronos": -0.2131,
+      "pct_lines_lt_minus1": 0.0,
+      "tractability_pos": [
+        "SM:Structure with Ligand",
+        "AB:GO CC high conf",
+        "AB:UniProt SigP or TMHMM",
+        "PR:Half-life Data"
+      ],
+      "safety_events": []
+    },
+    "CELF5": {
+      "ensembl_id": "ENSG00000161082",
+      "ot_is_essential": false,
+      "n_depmap_lines": 1256,
+      "median_chronos": -0.1304,
+      "p10_chronos": -0.2834,
+      "pct_lines_lt_minus1": 0.0,
+      "tractability_pos": [
+        "PR:Database Ubiquitination",
+        "PR:Half-life Data"
+      ],
+      "safety_events": []
+    },
+    "PRUNE2": {
+      "ensembl_id": "ENSG00000106772",
+      "ot_is_essential": false,
+      "n_depmap_lines": 1257,
+      "median_chronos": 0.0045,
+      "p10_chronos": -0.1595,
+      "pct_lines_lt_minus1": 0.0,
+      "tractability_pos": [],
+      "safety_events": []
+    },
+    "PFKP": {
+      "ensembl_id": "ENSG00000067057",
+      "ot_is_essential": false,
+      "n_depmap_lines": 1258,
+      "median_chronos": 0.035,
+      "p10_chronos": -0.1392,
+      "pct_lines_lt_minus1": 0.08,
+      "tractability_pos": [
+        "SM:Structure with Ligand",
+        "PR:Database Ubiquitination",
+        "PR:Half-life Data",
+        "PR:Small Molecule Binder"
+      ],
+      "safety_events": []
+    },
+    "TRAPPC12": {
+      "ensembl_id": "ENSG00000171853",
+      "ot_is_essential": false,
+      "n_depmap_lines": 1258,
+      "median_chronos": -0.008,
+      "p10_chronos": -0.2021,
+      "pct_lines_lt_minus1": 0.0,
+      "tractability_pos": [
+        "PR:Database Ubiquitination",
+        "PR:Half-life Data"
+      ],
+      "safety_events": []
+    },
+    "ELK1": {
+      "ensembl_id": "ENSG00000126767",
+      "ot_is_essential": false,
+      "n_depmap_lines": 1258,
+      "median_chronos": -0.0879,
+      "p10_chronos": -0.2076,
+      "pct_lines_lt_minus1": 0.0,
+      "tractability_pos": [
+        "PR:UniProt Ubiquitination",
+        "PR:Database Ubiquitination"
+      ],
+      "safety_events": []
+    },
+    "DLGAP1": {
+      "ensembl_id": "ENSG00000170579",
+      "ot_is_essential": false,
+      "n_depmap_lines": 1254,
+      "median_chronos": 0.1419,
+      "p10_chronos": 0.0187,
+      "pct_lines_lt_minus1": 0.08,
+      "tractability_pos": [
+        "AB:GO CC high conf",
+        "AB:UniProt loc med conf",
+        "PR:UniProt Ubiquitination",
+        "PR:Database Ubiquitination",
+        "PR:Half-life Data"
+      ],
+      "safety_events": []
+    },
+    "DPP6": {
+      "ensembl_id": "ENSG00000130226",
+      "ot_is_essential": false,
+      "n_depmap_lines": 79,
+      "median_chronos": 0.0902,
+      "p10_chronos": -0.0675,
+      "pct_lines_lt_minus1": 0.0,
+      "tractability_pos": [
+        "SM:High-Quality Pocket",
+        "SM:Druggable Family",
+        "AB:UniProt loc high conf",
+        "AB:UniProt SigP or TMHMM",
+        "AB:GO CC med conf",
+        "PR:Half-life Data"
+      ],
+      "safety_events": [
+        "alcoholism",
+        "tardive dyskinesia"
+      ]
+    },
+    "DPP10": {
+      "ensembl_id": "ENSG00000175497",
+      "ot_is_essential": false,
+      "n_depmap_lines": 1233,
+      "median_chronos": 0.0456,
+      "p10_chronos": -0.1136,
+      "pct_lines_lt_minus1": 0.0,
+      "tractability_pos": [
+        "SM:Druggable Family",
+        "AB:UniProt loc high conf",
+        "AB:UniProt SigP or TMHMM",
+        "AB:GO CC med conf",
+        "PR:Half-life Data"
+      ],
+      "safety_events": []
+    },
+    "CFL1": {
+      "ensembl_id": "ENSG00000172757",
+      "ot_is_essential": true,
+      "n_depmap_lines": 1258,
+      "median_chronos": -0.6076,
+      "p10_chronos": -1.3534,
+      "pct_lines_lt_minus1": 23.61,
+      "tractability_pos": [
+        "SM:Structure with Ligand",
+        "AB:UniProt loc high conf",
+        "AB:GO CC med conf",
+        "AB:Human Protein Atlas loc",
+        "PR:UniProt Ubiquitination",
+        "PR:Database Ubiquitination",
+        "PR:Half-life Data"
+      ],
+      "safety_events": []
+    },
+    "MAOB": {
+      "ensembl_id": "ENSG00000069535",
+      "ot_is_essential": false,
+      "n_depmap_lines": 1251,
+      "median_chronos": 0.0553,
+      "p10_chronos": -0.0624,
+      "pct_lines_lt_minus1": 0.0,
+      "tractability_pos": [
+        "SM:Approved Drug",
+        "SM:Structure with Ligand",
+        "SM:High-Quality Ligand",
+        "SM:High-Quality Pocket",
+        "SM:Druggable Family",
+        "AB:UniProt SigP or TMHMM",
+        "PR:Database Ubiquitination",
+        "PR:Half-life Data",
+        "PR:Small Molecule Binder"
+      ],
+      "safety_events": [
+        "Hypertension",
+        "diarrhoea",
+        "dizziness",
+        "dyskinesia",
+        "hallucinations"
+      ]
+    },
+    "C5AR1": {
+      "ensembl_id": "ENSG00000197405",
+      "ot_is_essential": false,
+      "n_depmap_lines": 1257,
+      "median_chronos": 0.0384,
+      "p10_chronos": -0.0903,
+      "pct_lines_lt_minus1": 0.0,
+      "tractability_pos": [
+        "SM:Approved Drug",
+        "SM:Structure with Ligand",
+        "SM:High-Quality Ligand",
+        "SM:Druggable Family",
+        "AB:Advanced Clinical",
+        "AB:UniProt loc high conf",
+        "AB:GO CC high conf",
+        "AB:UniProt SigP or TMHMM",
+        "PR:Half-life Data",
+        "PR:Small Molecule Binder"
+      ],
+      "safety_events": [
+        "receptor binding"
+      ]
+    }
+  },
+  "europepmc": {
+    "verified_pmids": [
+      {
+        "pmid": "39305312",
+        "year": "2024",
+        "source": "Acta Neuropathol",
+        "title": "TDP-43 regulates LC3ylation in neural tissue through ATG4B cryptic splicing inhibition.",
+        "europepmc_url": "https://europepmc.org/article/MED/39305312"
+      },
+      {
+        "pmid": "42063624",
+        "year": "2026",
+        "source": "Front Aging Neurosci",
+        "title": "Amyloid beta pathology induces astrocytic pTDP-43 mislocalization and disrupts TDP-43-regulated cryptic exon transcripts.",
+        "europepmc_url": "https://europepmc.org/article/MED/42063624"
+      },
+      {
+        "pmid": "29934198",
+        "year": "2018",
+        "source": "Lancet Neurol",
+        "title": "Safety and efficacy of rasagiline as an add-on therapy to riluzole in patients with amyotrophic lateral sclerosis: a randomised, double-blind, parallel-group, placebo-controlled, phase 2 trial.",
+        "europepmc_url": "https://europepmc.org/article/MED/29934198"
+      },
+      {
+        "pmid": "37975796",
+        "year": "2024",
+        "source": "Eur J Neurol",
+        "title": "Longitudinal course of neurofilament light chain levels in amyotrophic lateral sclerosis-insights from a completed randomized controlled trial with rasagiline.",
+        "europepmc_url": "https://europepmc.org/article/MED/37975796"
+      },
+      {
+        "pmid": "7906190",
+        "year": "1993",
+        "source": "Can J Neurol Sci",
+        "title": "Anti-glutamate therapy in amyotrophic lateral sclerosis: a trial using lamotrigine.",
+        "europepmc_url": "https://europepmc.org/article/MED/7906190"
+      },
+      {
+        "pmid": "12807386",
+        "year": "2003",
+        "source": "Acta Neurol Scand",
+        "title": "A double-blind randomized clinical trial in amyotrophic lateral sclerosis using lamotrigine: effects on CSF glutamate, aspartate, branched-chain amino acid levels and clinical parameters.",
+        "europepmc_url": "https://europepmc.org/article/MED/12807386"
+      },
+      {
+        "pmid": "7763202",
+        "year": "1995",
+        "source": "Arch Neurol",
+        "title": "Randomized, double-blind, controlled trial of acetylcysteine in amyotrophic lateral sclerosis.",
+        "europepmc_url": "https://europepmc.org/article/MED/7763202"
+      },
+      {
+        "pmid": "9443715",
+        "year": "1998",
+        "source": "Arch Neurol",
+        "title": "Selegiline is ineffective in a collaborative double-blind, placebo-controlled trial for treatment of amyotrophic lateral sclerosis.",
+        "europepmc_url": "https://europepmc.org/article/MED/9443715"
+      },
+      {
+        "pmid": "8195821",
+        "year": "1994",
+        "source": "J Neurol",
+        "title": "An open-randomized clinical trial of selegiline in amyotrophic lateral sclerosis.",
+        "europepmc_url": "https://europepmc.org/article/MED/8195821"
+      },
+      {
+        "pmid": "18084291",
+        "year": "2008",
+        "source": "Nat Genet",
+        "title": "Genetic variation in DPP6 is associated with susceptibility to amyotrophic lateral sclerosis.",
+        "europepmc_url": "https://europepmc.org/article/MED/18084291"
+      },
+      {
+        "pmid": "19525032",
+        "year": "2011",
+        "source": "Neurobiol Aging",
+        "title": "No association of DPP6 with amyotrophic lateral sclerosis in an Italian population.",
+        "europepmc_url": "https://europepmc.org/article/MED/19525032"
+      },
+      {
+        "pmid": "38381392",
+        "year": "2024",
+        "source": "Neurol Sci",
+        "title": "Association between DPP6 gene rs10260404 polymorphism and increased risk of sporadic amyotrophic lateral sclerosis (sALS): a meta-analysis.",
+        "europepmc_url": "https://europepmc.org/article/MED/38381392"
+      },
+      {
+        "pmid": "21943606",
+        "year": "2011",
+        "source": "Neuron",
+        "title": "DPP6 establishes the A-type K(+) current gradient critical for the regulation of dendritic excitability in CA1 hippocampal neurons.",
+        "europepmc_url": "https://europepmc.org/article/MED/21943606"
+      },
+      {
+        "pmid": "28128456",
+        "year": "2017",
+        "source": "Br J Pharmacol",
+        "title": "Pharmacological inhibition of complement C5a-C5a(1) receptor signalling ameliorates disease pathology in the hSOD1(G93A) mouse model of amyotrophic lateral sclerosis.",
+        "europepmc_url": "https://europepmc.org/article/MED/28128456"
+      },
+      {
+        "pmid": "41187881",
+        "year": "2026",
+        "source": "Biochem Pharmacol",
+        "title": "Targeting the C5-C5aR1 axis: A promising therapeutic strategy for Alzheimer's disease and amyotrophic lateral sclerosis by unlocking neuroprotection.",
+        "europepmc_url": "https://europepmc.org/article/MED/41187881"
+      },
+      {
+        "pmid": "19743457",
+        "year": "2009",
+        "source": "Ann Neurol",
+        "title": "Phase II trial of CoQ10 for ALS finds insufficient evidence to justify phase III.",
+        "europepmc_url": "https://europepmc.org/article/MED/19743457"
+      },
+      {
+        "pmid": "27589995",
+        "year": "2017",
+        "source": "Amyotroph Lateral Scler Frontotemporal Degener",
+        "title": "Phase I clinical trial of safety of L-serine for ALS patients.",
+        "europepmc_url": "https://europepmc.org/article/MED/27589995"
+      },
+      {
+        "pmid": "19322194",
+        "year": "2009",
+        "source": "EMBO J",
+        "title": "The structure of Atg4B-LC3 complex reveals the mechanism of LC3 processing and delipidation during autophagy.",
+        "europepmc_url": "https://europepmc.org/article/MED/19322194"
+      },
+      {
+        "pmid": "15476821",
+        "year": "2004",
+        "source": "J Mol Biol",
+        "title": "Structure of a human A-type potassium channel interacting protein DPPX, a member of the dipeptidyl aminopeptidase family.",
+        "europepmc_url": "https://europepmc.org/article/MED/15476821"
+      }
+    ]
+  },
+  "staged_pdb": {
+    "DS_PDB_2Z0D": {
+      "pdb_id": "2Z0D",
+      "relpath": "data/pharmacology_structures/phase3b_pdb/pdb_00002z0d.cif",
+      "size_bytes": 422999,
+      "sha256": "b84c3e759ce350074ed81086c0425edf9acc096d7e55605dc424f7f1b55b8440"
+    },
+    "DS_PDB_1XFD": {
+      "pdb_id": "1XFD",
+      "relpath": "data/pharmacology_structures/phase3b_pdb/pdb_00001xfd.cif",
+      "size_bytes": 2462113,
+      "sha256": "a88d58a5a8e3099ade26b30ae6dfafb3c1a63db25b3db7a89b392c474748529f"
+    }
+  },
+  "structure_metrics": {
+    "PDB_2Z0D_ATG4B_LC3B": {
+      "chains": [
+        "A",
+        "B"
+      ],
+      "n_polymer_atoms": 3363,
+      "interchain_contact_pairs_le_4p2A": 66,
+      "triad_to_LC3B_Gly120_min_dist_A": 2.9,
+      "catalytic_cleft_contacts": [
+        "A:TYR54-B:GLY120",
+        "A:GLY71-B:GLY120",
+        "A:TRP72-B:GLY120",
+        "A:GLY73-B:GLY120",
+        "A:CYS74-B:GLY120",
+        "A:MET75-B:PHE119",
+        "A:TRP142-B:PHE119",
+        "A:TRP142-B:GLY120",
+        "A:TYR143-B:PHE119",
+        "A:GLY258-B:PHE119",
+        "A:LYS259-B:PHE119",
+        "A:SER262-B:PHE119"
+      ]
+    },
+    "PDB_1XFD_DPP6_DIMER": {
+      "chains": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "n_polymer_atoms": 23348,
+      "homodimer_CA_pairs_le_8A": 64,
+      "hydrolase_pocket_residues_sample": [
+        "ASP712",
+        "GLN729",
+        "LEU757",
+        "LEU807",
+        "LEU835"
+      ]
+    }
+  }
+}

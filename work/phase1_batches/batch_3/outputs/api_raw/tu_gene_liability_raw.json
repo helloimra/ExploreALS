@@ -1,0 +1,4436 @@
+{
+  "IL1RL1": {
+    "symbol": "IL1RL1",
+    "ensembl_id": "ENSG00000115602",
+    "mygene": {
+      "status": "success",
+      "data": {
+        "took": 1,
+        "total": 0,
+        "max_score": null,
+        "hits": []
+      },
+      "metadata": {
+        "source": "MyGene.info",
+        "total_results": 0,
+        "accessible_results": 0,
+        "returned": 0,
+        "offset": 0,
+        "limit": 3,
+        "has_more": false,
+        "truncated": false,
+        "next_offset": null,
+        "upstream_truncated": false,
+        "all_results_reachable": true,
+        "warning": null
+      }
+    },
+    "mouse_models": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000115602",
+          "approvedSymbol": "IL33R",
+          "mousePhenotypes": [
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Il1rl1<tm1Anjm>/Il1rl1<tm1Anjm>",
+                  "geneticBackground": "C.129P2-Il1rl1<tm1Anjm>",
+                  "id": "MGI:5428201",
+                  "literature": [
+                    "22542450"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "target_safety": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000115602",
+          "approvedSymbol": "IL33R"
+        }
+      }
+    },
+    "associated_drugs": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000115602",
+          "approvedSymbol": "IL33R",
+          "drugAndClinicalCandidates": {
+            "count": 1,
+            "rows": [
+              {
+                "drug": {
+                  "id": "CHEMBL4594385",
+                  "name": "ASTEGOLIMAB",
+                  "maximumClinicalStage": "PHASE_3"
+                },
+                "maxClinicalStage": "PHASE_3",
+                "diseases": [
+                  {
+                    "disease": {
+                      "id": "MONDO_0005002",
+                      "name": "chronic obstructive pulmonary disease"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0004979",
+                      "name": "asthma"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0004980",
+                      "name": "atopic eczema"
+                    }
+                  }
+                ]
+              }
+            ],
+            "returned": 1,
+            "truncated": false
+          }
+        }
+      }
+    },
+    "depmap": {
+      "status": "success",
+      "data": {
+        "gene_symbol": "IL1RL1",
+        "matched_gene": {
+          "gene_id": "SIDG12941",
+          "symbol": "IL1RL1",
+          "name": null,
+          "hgnc_id": "HGNC:5998",
+          "ensembl_id": "ENSG00000115602",
+          "exact_match": true
+        },
+        "note": "Gene effect scores: negative = essential (cell death upon knockout), zero = no effect, positive = growth advantage. Full dependency profiles at depmap.org."
+      }
+    },
+    "gtex_n_tissues": 54
+  },
+  "CHIT1": {
+    "symbol": "CHIT1",
+    "ensembl_id": "ENSG00000133063",
+    "mygene": {
+      "status": "success",
+      "data": {
+        "took": 2,
+        "total": 1,
+        "max_score": 19.540138,
+        "hits": [
+          {
+            "_id": "1118",
+            "_score": 19.540138,
+            "ensembl": {
+              "gene": "ENSG00000133063"
+            },
+            "entrezgene": "1118",
+            "name": "chitinase 1",
+            "symbol": "CHIT1"
+          }
+        ]
+      },
+      "metadata": {
+        "source": "MyGene.info",
+        "total_results": 1,
+        "accessible_results": 1,
+        "returned": 1,
+        "offset": 0,
+        "limit": 3,
+        "has_more": false,
+        "truncated": false,
+        "next_offset": null,
+        "upstream_truncated": false,
+        "all_results_reachable": true,
+        "warning": null
+      }
+    },
+    "mouse_models": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000133063",
+          "approvedSymbol": "CHIT1",
+          "mousePhenotypes": [
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Chit1<tm1Eli>/Chit1<tm1Eli>",
+                  "geneticBackground": "involves: C57BL/6",
+                  "id": "MGI:5447951",
+                  "literature": [
+                    "22826322"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "target_safety": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000133063",
+          "approvedSymbol": "CHIT1"
+        }
+      }
+    },
+    "associated_drugs": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000133063",
+          "approvedSymbol": "CHIT1",
+          "drugAndClinicalCandidates": {
+            "count": 0
+          }
+        }
+      }
+    },
+    "depmap": {
+      "status": "success",
+      "data": {
+        "gene_symbol": "CHIT1",
+        "matched_gene": {
+          "gene_id": "SIDG04576",
+          "symbol": "CHIT1",
+          "name": null,
+          "hgnc_id": "HGNC:1936",
+          "ensembl_id": "ENSG00000133063",
+          "exact_match": true
+        },
+        "note": "Gene effect scores: negative = essential (cell death upon knockout), zero = no effect, positive = growth advantage. Full dependency profiles at depmap.org."
+      }
+    },
+    "gtex_n_tissues": 54
+  },
+  "GPNMB": {
+    "symbol": "GPNMB",
+    "ensembl_id": "ENSG00000136235",
+    "mygene": {
+      "status": "success",
+      "data": {
+        "took": 2,
+        "total": 1,
+        "max_score": 17.594425,
+        "hits": [
+          {
+            "_id": "10457",
+            "_score": 17.594425,
+            "ensembl": {
+              "gene": "ENSG00000136235"
+            },
+            "entrezgene": "10457",
+            "name": "glycoprotein nmb",
+            "symbol": "GPNMB"
+          }
+        ]
+      },
+      "metadata": {
+        "source": "MyGene.info",
+        "total_results": 1,
+        "accessible_results": 1,
+        "returned": 1,
+        "offset": 0,
+        "limit": 3,
+        "has_more": false,
+        "truncated": false,
+        "next_offset": null,
+        "upstream_truncated": false,
+        "all_results_reachable": true,
+        "warning": null
+      }
+    },
+    "mouse_models": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000136235",
+          "approvedSymbol": "GPNMB",
+          "mousePhenotypes": [
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Gpnmb<tm1Ari>/Gpnmb<tm1Ari>",
+                  "geneticBackground": "C57BL/6-Gpnmb<tm1Ari>",
+                  "id": "MGI:5608676",
+                  "literature": [
+                    "24936834"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Gpnmb<tm1Ari>/Gpnmb<tm1Ari>",
+                  "geneticBackground": "C57BL/6-Gpnmb<tm1Ari>",
+                  "id": "MGI:5608676",
+                  "literature": [
+                    "24936834"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Gpnmb<tm1.1(KOMP)Vlcg> hom early",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5443925"
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Gpnmb<R150X>/Gpnmb<R150X>",
+                  "geneticBackground": "B6.D2-Gpnmb<R150X>",
+                  "id": "MGI:3773274",
+                  "literature": [
+                    "10192392",
+                    "16827931"
+                  ]
+                },
+                {
+                  "allelicComposition": "Gpnmb<R150X>/Gpnmb<R150X>",
+                  "geneticBackground": "DBA/2J",
+                  "id": "MGI:2178286",
+                  "literature": [
+                    "10192392",
+                    "16827931"
+                  ]
+                },
+                {
+                  "allelicComposition": "Gpnmb<R150X>/Gpnmb<R150X>",
+                  "geneticBackground": "involves: C57BL/6J * DBA/2J",
+                  "id": "MGI:2178291",
+                  "literature": [
+                    "10192392",
+                    "16827931"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Gpnmb<R150X>/Gpnmb<R150X>",
+                  "geneticBackground": "B6.D2-Gpnmb<R150X>",
+                  "id": "MGI:3773274",
+                  "literature": [
+                    "10192392",
+                    "16827931"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Gpnmb<R150X>/Gpnmb<R150X>",
+                  "geneticBackground": "B6.D2-Gpnmb<R150X>",
+                  "id": "MGI:3773274",
+                  "literature": [
+                    "10192392",
+                    "16827931"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Gpnmb<tm1.1(KOMP)Vlcg> het early",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5443925"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "target_safety": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000136235",
+          "approvedSymbol": "GPNMB"
+        }
+      }
+    },
+    "associated_drugs": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000136235",
+          "approvedSymbol": "GPNMB",
+          "drugAndClinicalCandidates": {
+            "count": 1,
+            "rows": [
+              {
+                "drug": {
+                  "id": "CHEMBL1743028",
+                  "name": "GLEMBATUMUMAB VEDOTIN",
+                  "maximumClinicalStage": "APPROVAL"
+                },
+                "maxClinicalStage": "APPROVAL",
+                "diseases": [
+                  {
+                    "disease": {
+                      "id": "MONDO_0005062",
+                      "name": "lymphoma"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0007254",
+                      "name": "breast cancer"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0005494",
+                      "name": "triple-negative breast carcinoma"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0005105",
+                      "name": "melanoma"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0006486",
+                      "name": "uveal melanoma"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0009807",
+                      "name": "osteosarcoma"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0005097",
+                      "name": "squamous cell lung carcinoma"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0007254",
+                      "name": "breast cancer"
+                    }
+                  }
+                ]
+              }
+            ],
+            "returned": 1,
+            "truncated": false
+          }
+        }
+      }
+    },
+    "depmap": {
+      "status": "success",
+      "data": {
+        "gene_symbol": "GPNMB",
+        "matched_gene": {
+          "gene_id": "SIDG10492",
+          "symbol": "GPNMB",
+          "name": null,
+          "hgnc_id": "HGNC:4462",
+          "ensembl_id": "ENSG00000136235",
+          "exact_match": true
+        },
+        "note": "Gene effect scores: negative = essential (cell death upon knockout), zero = no effect, positive = growth advantage. Full dependency profiles at depmap.org."
+      }
+    },
+    "gtex_n_tissues": 54
+  },
+  "CHI3L1": {
+    "symbol": "CHI3L1",
+    "ensembl_id": "ENSG00000133048",
+    "mygene": {
+      "status": "success",
+      "data": {
+        "took": 1,
+        "total": 1,
+        "max_score": 19.422436,
+        "hits": [
+          {
+            "_id": "1116",
+            "_score": 19.422436,
+            "ensembl": {
+              "gene": "ENSG00000133048"
+            },
+            "entrezgene": "1116",
+            "name": "chitinase 3 like 1",
+            "symbol": "CHI3L1"
+          }
+        ]
+      },
+      "metadata": {
+        "source": "MyGene.info",
+        "total_results": 1,
+        "accessible_results": 1,
+        "returned": 1,
+        "offset": 0,
+        "limit": 3,
+        "has_more": false,
+        "truncated": false,
+        "next_offset": null,
+        "upstream_truncated": false,
+        "all_results_reachable": true,
+        "warning": null
+      }
+    },
+    "mouse_models": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000133048",
+          "approvedSymbol": "CHI3L1",
+          "mousePhenotypes": [
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Chi3l1<tm1Eli>/Chi3l1<tm1Eli>",
+                  "geneticBackground": "B6.Cg-Chi3l1<tm1Eli>",
+                  "id": "MGI:3846223",
+                  "literature": [
+                    "19414556"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Chi3l1<tm1Eli>/Chi3l1<tm1Eli>",
+                  "geneticBackground": "B6.Cg-Chi3l1<tm1Eli>",
+                  "id": "MGI:3846223",
+                  "literature": [
+                    "19414556"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Chi3l1<tm1Eli>/Chi3l1<tm1Eli>",
+                  "geneticBackground": "B6.Cg-Chi3l1<tm1Eli>",
+                  "id": "MGI:3846223",
+                  "literature": [
+                    "19414556"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Chi3l1<tm1Eli>/Chi3l1<tm1Eli>",
+                  "geneticBackground": "B6.Cg-Chi3l1<tm1Eli>",
+                  "id": "MGI:3846223",
+                  "literature": [
+                    "19414556"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Chi3l1<tm1Eli>/Chi3l1<tm1Eli>",
+                  "geneticBackground": "B6.Cg-Chi3l1<tm1Eli>",
+                  "id": "MGI:3846223",
+                  "literature": [
+                    "19414556"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Chi3l1<tm1Eli>/Chi3l1<tm1Eli>",
+                  "geneticBackground": "B6.Cg-Chi3l1<tm1Eli>",
+                  "id": "MGI:3846223",
+                  "literature": [
+                    "19414556"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Chi3l1<tm1Eli>/Chi3l1<tm1Eli>",
+                  "geneticBackground": "B6.Cg-Chi3l1<tm1Eli>",
+                  "id": "MGI:3846223",
+                  "literature": [
+                    "19414556"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Chi3l1<tm1Eli>/Chi3l1<tm1Eli>",
+                  "geneticBackground": "B6.Cg-Chi3l1<tm1Eli>",
+                  "id": "MGI:3846223",
+                  "literature": [
+                    "19414556"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Chi3l1<tm1Eli>/Chi3l1<tm1Eli>",
+                  "geneticBackground": "B6.Cg-Chi3l1<tm1Eli>",
+                  "id": "MGI:3846223",
+                  "literature": [
+                    "19414556"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Chi3l1<tm1Eli>/Chi3l1<tm1Eli>",
+                  "geneticBackground": "B6.Cg-Chi3l1<tm1Eli>",
+                  "id": "MGI:3846223",
+                  "literature": [
+                    "19414556"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Chi3l1<tm1Eli>/Chi3l1<tm1Eli>",
+                  "geneticBackground": "B6.Cg-Chi3l1<tm1Eli>",
+                  "id": "MGI:3846223",
+                  "literature": [
+                    "19414556"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Chi3l1<tm1Eli>/Chi3l1<tm1Eli>",
+                  "geneticBackground": "B6.Cg-Chi3l1<tm1Eli>",
+                  "id": "MGI:3846223",
+                  "literature": [
+                    "19414556"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "Chi3l1<tm1Eli>/Chi3l1<tm1Eli>",
+                  "geneticBackground": "B6.Cg-Chi3l1<tm1Eli>",
+                  "id": "MGI:3846223",
+                  "literature": [
+                    "19414556"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "target_safety": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000133048",
+          "approvedSymbol": "CHI3L1"
+        }
+      }
+    },
+    "associated_drugs": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000133048",
+          "approvedSymbol": "CHI3L1",
+          "drugAndClinicalCandidates": {
+            "count": 0
+          }
+        }
+      }
+    },
+    "depmap": {
+      "status": "success",
+      "data": {
+        "gene_symbol": "CHI3L1",
+        "matched_gene": {
+          "gene_id": "SIDG04567",
+          "symbol": "CHI3L1",
+          "name": null,
+          "hgnc_id": "HGNC:1932",
+          "ensembl_id": "ENSG00000133048",
+          "exact_match": true
+        },
+        "note": "Gene effect scores: negative = essential (cell death upon knockout), zero = no effect, positive = growth advantage. Full dependency profiles at depmap.org."
+      }
+    },
+    "gtex_n_tissues": 54
+  },
+  "CHI3L2": {
+    "symbol": "CHI3L2",
+    "ensembl_id": "ENSG00000064886",
+    "mygene": {
+      "status": "success",
+      "data": {
+        "took": 1,
+        "total": 1,
+        "max_score": 20.545752,
+        "hits": [
+          {
+            "_id": "1117",
+            "_score": 20.545752,
+            "ensembl": {
+              "gene": "ENSG00000064886"
+            },
+            "entrezgene": "1117",
+            "name": "chitinase 3 like 2",
+            "symbol": "CHI3L2"
+          }
+        ]
+      },
+      "metadata": {
+        "source": "MyGene.info",
+        "total_results": 1,
+        "accessible_results": 1,
+        "returned": 1,
+        "offset": 0,
+        "limit": 3,
+        "has_more": false,
+        "truncated": false,
+        "next_offset": null,
+        "upstream_truncated": false,
+        "all_results_reachable": true,
+        "warning": null
+      }
+    },
+    "mouse_models": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000064886",
+          "approvedSymbol": "CHI3L2"
+        }
+      }
+    },
+    "target_safety": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000064886",
+          "approvedSymbol": "CHI3L2"
+        }
+      }
+    },
+    "associated_drugs": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000064886",
+          "approvedSymbol": "CHI3L2",
+          "drugAndClinicalCandidates": {
+            "count": 0
+          }
+        }
+      }
+    },
+    "depmap": {
+      "status": "success",
+      "data": {
+        "gene_symbol": "CHI3L2",
+        "matched_gene": {
+          "gene_id": "SIDG04568",
+          "symbol": "CHI3L2",
+          "name": null,
+          "hgnc_id": "HGNC:1933",
+          "ensembl_id": "ENSG00000064886",
+          "exact_match": true
+        },
+        "note": "Gene effect scores: negative = essential (cell death upon knockout), zero = no effect, positive = growth advantage. Full dependency profiles at depmap.org."
+      }
+    },
+    "gtex_n_tissues": 54
+  },
+  "C1QA": {
+    "symbol": "C1QA",
+    "ensembl_id": "ENSG00000173372",
+    "mygene": {
+      "status": "success",
+      "data": {
+        "took": 2,
+        "total": 1,
+        "max_score": 18.014128,
+        "hits": [
+          {
+            "_id": "712",
+            "_score": 18.014128,
+            "ensembl": {
+              "gene": "ENSG00000173372"
+            },
+            "entrezgene": "712",
+            "name": "complement C1q A chain",
+            "symbol": "C1QA"
+          }
+        ]
+      },
+      "metadata": {
+        "source": "MyGene.info",
+        "total_results": 1,
+        "accessible_results": 1,
+        "returned": 1,
+        "offset": 0,
+        "limit": 3,
+        "has_more": false,
+        "truncated": false,
+        "next_offset": null,
+        "upstream_truncated": false,
+        "all_results_reachable": true,
+        "warning": null
+      }
+    },
+    "mouse_models": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000173372",
+          "approvedSymbol": "C1QA",
+          "mousePhenotypes": [
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1.1Tenn>/C1qa<tm1.1Tenn>",
+                  "geneticBackground": "either: (involves: 129P2/OlaHsd * C57BL/6J) or (involves: 129P2/OlaHsd * C57BL/6J * FVB/N)",
+                  "id": "MGI:3796999",
+                  "literature": [
+                    "18400300"
+                  ]
+                },
+                {
+                  "allelicComposition": "C1qa<tm1b(EUCOMM)Wtsi> het early",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5488784",
+                  "literature": [
+                    "18400300"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1Mjw>/C1qa<tm1Mjw>",
+                  "geneticBackground": "involves: 129P2/Ola * 129S/SvEv * C57BL/6",
+                  "id": "MGI:2384126",
+                  "literature": [
+                    "9590289",
+                    "12794146",
+                    "16943797"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1Mjw>/C1qa<tm1Mjw>",
+                  "geneticBackground": "involves: 129S/SvEv",
+                  "id": "MGI:4452482",
+                  "literature": [
+                    "20375278"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1Mjw>/C1qa<tm1Mjw>",
+                  "geneticBackground": "involves: 129P2/Ola * 129S/SvEv * C57BL/6",
+                  "id": "MGI:2384126",
+                  "literature": [
+                    "9590289",
+                    "12794146",
+                    "16943797"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1Mjw>/C1qa<tm1Mjw>",
+                  "geneticBackground": "involves: 129P2/Ola * 129S/SvEv * C57BL/6",
+                  "id": "MGI:2384126",
+                  "literature": [
+                    "9590289",
+                    "12794146",
+                    "16943797"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1b(EUCOMM)Wtsi> hom early",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5488784"
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1Mjw>/C1qa<tm1Mjw>",
+                  "geneticBackground": "involves: 129S/SvEv",
+                  "id": "MGI:4452482",
+                  "literature": [
+                    "20375278"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1b(EUCOMM)Wtsi> hom early",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5488784"
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1Mjw>/C1qa<tm1Mjw>",
+                  "geneticBackground": "involves: 129S/SvEv",
+                  "id": "MGI:4452482",
+                  "literature": [
+                    "20375278"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1Mjw>/C1qa<tm1Mjw>",
+                  "geneticBackground": "involves: 129S/SvEv",
+                  "id": "MGI:4452482",
+                  "literature": [
+                    "20375278"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1Mjw>/C1qa<tm1Mjw>",
+                  "geneticBackground": "involves: 129S/SvEv",
+                  "id": "MGI:4452482",
+                  "literature": [
+                    "20375278"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1Mjw>/C1qa<tm1Mjw>",
+                  "geneticBackground": "involves: 129P2/Ola * 129S/SvEv * C57BL/6",
+                  "id": "MGI:2384126",
+                  "literature": [
+                    "9590289",
+                    "12794146",
+                    "16943797"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1Mjw>/C1qa<tm1Mjw>",
+                  "geneticBackground": "involves: 129S/SvEv",
+                  "id": "MGI:4452482",
+                  "literature": [
+                    "20375278"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1Mjw>/C1qa<tm1Mjw>",
+                  "geneticBackground": "involves: 129P2/Ola * 129S/SvEv * C57BL/6",
+                  "id": "MGI:2384126",
+                  "literature": [
+                    "9590289",
+                    "12794146",
+                    "16943797"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1Mjw>/C1qa<tm1Mjw>",
+                  "geneticBackground": "involves: 129P2/Ola * 129S/SvEv * C57BL/6",
+                  "id": "MGI:2384126",
+                  "literature": [
+                    "9590289",
+                    "12794146",
+                    "16943797"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1b(EUCOMM)Wtsi> hom early",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5488784"
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1Mjw>/C1qa<tm1Mjw>",
+                  "geneticBackground": "involves: 129S/SvEv",
+                  "id": "MGI:4452482",
+                  "literature": [
+                    "20375278"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1Mjw>/C1qa<tm1Mjw>",
+                  "geneticBackground": "involves: 129P2/Ola * 129S/SvEv * C57BL/6",
+                  "id": "MGI:2384126",
+                  "literature": [
+                    "9590289",
+                    "12794146",
+                    "16943797"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qa<tm1Mjw>/C1qa<tm1Mjw>",
+                  "geneticBackground": "involves: 129S/SvEv",
+                  "id": "MGI:4452482",
+                  "literature": [
+                    "20375278"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "target_safety": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000173372",
+          "approvedSymbol": "C1QA"
+        }
+      }
+    },
+    "associated_drugs": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000173372",
+          "approvedSymbol": "C1QA",
+          "drugAndClinicalCandidates": {
+            "count": 0
+          }
+        }
+      }
+    },
+    "depmap": {
+      "status": "success",
+      "data": {
+        "gene_symbol": "C1QA",
+        "matched_gene": {
+          "gene_id": "SIDG02725",
+          "symbol": "C1QA",
+          "name": null,
+          "hgnc_id": "HGNC:1241",
+          "ensembl_id": "ENSG00000173372",
+          "exact_match": true
+        },
+        "note": "Gene effect scores: negative = essential (cell death upon knockout), zero = no effect, positive = growth advantage. Full dependency profiles at depmap.org."
+      }
+    },
+    "gtex_n_tissues": 54
+  },
+  "C1QB": {
+    "symbol": "C1QB",
+    "ensembl_id": "ENSG00000173369",
+    "mygene": {
+      "status": "success",
+      "data": {
+        "took": 1,
+        "total": 1,
+        "max_score": 17.872326,
+        "hits": [
+          {
+            "_id": "713",
+            "_score": 17.872326,
+            "ensembl": {
+              "gene": "ENSG00000173369"
+            },
+            "entrezgene": "713",
+            "name": "complement C1q B chain",
+            "symbol": "C1QB"
+          }
+        ]
+      },
+      "metadata": {
+        "source": "MyGene.info",
+        "total_results": 1,
+        "accessible_results": 1,
+        "returned": 1,
+        "offset": 0,
+        "limit": 3,
+        "has_more": false,
+        "truncated": false,
+        "next_offset": null,
+        "upstream_truncated": false,
+        "all_results_reachable": true,
+        "warning": null
+      }
+    },
+    "mouse_models": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000173369",
+          "approvedSymbol": "C1QB",
+          "mousePhenotypes": [
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qb<tm1.1(KOMP)Vlcg> hom early",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5471254"
+                },
+                {
+                  "allelicComposition": "C1qb<tm1.1(KOMP)Vlcg> het early",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5471254"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "target_safety": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000173369",
+          "approvedSymbol": "C1QB"
+        }
+      }
+    },
+    "associated_drugs": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000173369",
+          "approvedSymbol": "C1QB",
+          "drugAndClinicalCandidates": {
+            "count": 0
+          }
+        }
+      }
+    },
+    "depmap": {
+      "status": "success",
+      "data": {
+        "gene_symbol": "C1QB",
+        "matched_gene": {
+          "gene_id": "SIDG02726",
+          "symbol": "C1QB",
+          "name": null,
+          "hgnc_id": "HGNC:1242",
+          "ensembl_id": "ENSG00000173369",
+          "exact_match": true
+        },
+        "note": "Gene effect scores: negative = essential (cell death upon knockout), zero = no effect, positive = growth advantage. Full dependency profiles at depmap.org."
+      }
+    },
+    "gtex_n_tissues": 54
+  },
+  "C1QC": {
+    "symbol": "C1QC",
+    "ensembl_id": "ENSG00000159189",
+    "mygene": {
+      "status": "success",
+      "data": {
+        "took": 1,
+        "total": 1,
+        "max_score": 18.127853,
+        "hits": [
+          {
+            "_id": "714",
+            "_score": 18.127853,
+            "ensembl": {
+              "gene": "ENSG00000159189"
+            },
+            "entrezgene": "714",
+            "name": "complement C1q C chain",
+            "symbol": "C1QC"
+          }
+        ]
+      },
+      "metadata": {
+        "source": "MyGene.info",
+        "total_results": 1,
+        "accessible_results": 1,
+        "returned": 1,
+        "offset": 0,
+        "limit": 3,
+        "has_more": false,
+        "truncated": false,
+        "next_offset": null,
+        "upstream_truncated": false,
+        "all_results_reachable": true,
+        "warning": null
+      }
+    },
+    "mouse_models": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000159189",
+          "approvedSymbol": "C1QC",
+          "mousePhenotypes": [
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qc<em1(IMPC)J> hom late",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5779860"
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qc<em1(IMPC)J> hom late",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5779860"
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qc<em1(IMPC)J> hom late",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5779860"
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qc<em1(IMPC)J> hom middle",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5779860"
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qc<em1(IMPC)J> hom late",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5779860"
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qc<em1(IMPC)J> hom late",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5779860"
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qc<em1(IMPC)J> hom late",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5779860"
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qc<em1(IMPC)J> hom late",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5779860"
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C1qc<em1(IMPC)J> hom early",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5779860"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "target_safety": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000159189",
+          "approvedSymbol": "C1QC"
+        }
+      }
+    },
+    "associated_drugs": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000159189",
+          "approvedSymbol": "C1QC",
+          "drugAndClinicalCandidates": {
+            "count": 0
+          }
+        }
+      }
+    },
+    "depmap": {
+      "status": "success",
+      "data": {
+        "gene_symbol": "C1QC",
+        "matched_gene": {
+          "gene_id": "SIDG02731",
+          "symbol": "C1QC",
+          "name": null,
+          "hgnc_id": "HGNC:1245",
+          "ensembl_id": "ENSG00000159189",
+          "exact_match": true
+        },
+        "note": "Gene effect scores: negative = essential (cell death upon knockout), zero = no effect, positive = growth advantage. Full dependency profiles at depmap.org."
+      }
+    },
+    "gtex_n_tissues": 54
+  },
+  "C3": {
+    "symbol": "C3",
+    "ensembl_id": "ENSG00000125730",
+    "mygene": {
+      "status": "success",
+      "data": {
+        "took": 2,
+        "total": 1,
+        "max_score": 18.386787,
+        "hits": [
+          {
+            "_id": "718",
+            "_score": 18.386787,
+            "ensembl": {
+              "gene": "ENSG00000125730"
+            },
+            "entrezgene": "718",
+            "name": "complement C3",
+            "symbol": "C3"
+          }
+        ]
+      },
+      "metadata": {
+        "source": "MyGene.info",
+        "total_results": 1,
+        "accessible_results": 1,
+        "returned": 1,
+        "offset": 0,
+        "limit": 3,
+        "has_more": false,
+        "truncated": false,
+        "next_offset": null,
+        "upstream_truncated": false,
+        "all_results_reachable": true,
+        "warning": null
+      }
+    },
+    "mouse_models": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000125730",
+          "approvedSymbol": "C3",
+          "mousePhenotypes": [
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129",
+                  "id": "MGI:3505862",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                },
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129/Sv * C57BL/6",
+                  "id": "MGI:3505857",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129",
+                  "id": "MGI:3505862",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                },
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129/Sv * C57BL/6",
+                  "id": "MGI:3505857",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129",
+                  "id": "MGI:3505862",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                },
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129/Sv * C57BL/6",
+                  "id": "MGI:3505857",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae",
+                  "id": "MGI:3806151",
+                  "literature": [
+                    "9409643",
+                    "17383432"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae",
+                  "id": "MGI:3806151",
+                  "literature": [
+                    "9409643",
+                    "17383432"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6;129S4-C3<tm1Crr>/J",
+                  "id": "MGI:3799624",
+                  "literature": [
+                    "8524789",
+                    "30301856",
+                    "9367154",
+                    "23074214",
+                    "15980239",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129/Sv * C57BL/6",
+                  "id": "MGI:3505857",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "B6.129-C3<tm1Hrc>",
+                  "id": "MGI:3505869",
+                  "literature": [
+                    "15240660",
+                    "19620784",
+                    "21943708"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Pkna>/C3<tm1Pkna>",
+                  "geneticBackground": "D1.129P2-C3<tm1Pkna>",
+                  "id": "MGI:3040867",
+                  "literature": [
+                    "15048732"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129/Sv * C57BL/6",
+                  "id": "MGI:3505857",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                },
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<+>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224156",
+                  "literature": [
+                    "33288630"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129/Sv * C57BL/6",
+                  "id": "MGI:3505857",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1.1(KOMP)Vlcg> het early",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5471398",
+                  "literature": [
+                    "28057640",
+                    "9467654"
+                  ]
+                },
+                {
+                  "allelicComposition": "C3<tm1.1(KOMP)Vlcg> hom early",
+                  "geneticBackground": "C57BL/6NJ",
+                  "id": "MGI:5471398",
+                  "literature": [
+                    "28057640",
+                    "9467654"
+                  ]
+                },
+                {
+                  "allelicComposition": "C3<tm1Pkna>/C3<tm1Pkna>",
+                  "geneticBackground": "involves: 129P2/OlaHsd * C57BL/6",
+                  "id": "MGI:2449062",
+                  "literature": [
+                    "28057640",
+                    "9467654"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129/Sv * C57BL/6",
+                  "id": "MGI:3505857",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129",
+                  "id": "MGI:3505862",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                },
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129/Sv * C57BL/6",
+                  "id": "MGI:3505857",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6;129S4-C3<tm1Crr>/J",
+                  "id": "MGI:3799624",
+                  "literature": [
+                    "8524789",
+                    "30301856",
+                    "9367154",
+                    "23074214",
+                    "15980239",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6;129S4-C3<tm1Crr>/J",
+                  "id": "MGI:3799624",
+                  "literature": [
+                    "8524789",
+                    "30301856",
+                    "9367154",
+                    "23074214",
+                    "15980239",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae",
+                  "id": "MGI:3806151",
+                  "literature": [
+                    "9409643",
+                    "17383432"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129/Sv * C57BL/6",
+                  "id": "MGI:3505857",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6;129S4-C3<tm1Crr>/J",
+                  "id": "MGI:3799624",
+                  "literature": [
+                    "8524789",
+                    "30301856",
+                    "9367154",
+                    "23074214",
+                    "15980239",
+                    "10408374"
+                  ]
+                },
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                },
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "either: (involves: 129S2/SvPas * C57BL/6) or (involves: 129X1/SvJ * C57BL/6)",
+                  "id": "MGI:2449063",
+                  "literature": [
+                    "8524789",
+                    "9367154",
+                    "15980239",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129",
+                  "id": "MGI:3505862",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                },
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129/Sv * C57BL/6",
+                  "id": "MGI:3505857",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129",
+                  "id": "MGI:3505862",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                },
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129/Sv * C57BL/6",
+                  "id": "MGI:3505857",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129",
+                  "id": "MGI:3505862",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                },
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129/Sv * C57BL/6",
+                  "id": "MGI:3505857",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129/Sv * C57BL/6",
+                  "id": "MGI:3505857",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae",
+                  "id": "MGI:3806151",
+                  "literature": [
+                    "9409643",
+                    "17383432"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6;129S4-C3<tm1Crr>/J",
+                  "id": "MGI:3799624",
+                  "literature": [
+                    "8524789",
+                    "30301856",
+                    "9367154",
+                    "23074214",
+                    "15980239",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129/Sv * C57BL/6",
+                  "id": "MGI:3505857",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                },
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae",
+                  "id": "MGI:3806151",
+                  "literature": [
+                    "9409643",
+                    "17383432"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6;129S4-C3<tm1Crr>/J",
+                  "id": "MGI:3799624",
+                  "literature": [
+                    "8524789",
+                    "30301856",
+                    "9367154",
+                    "23074214",
+                    "15980239",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                },
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm2(C3)Lgmo>/C3<tm2(C3)Lgmo>",
+                  "geneticBackground": "involves: 129 * C57BL/6",
+                  "id": "MGI:8224154",
+                  "literature": [
+                    "33288630",
+                    "8524789",
+                    "11801636",
+                    "19620784"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "involves: 129",
+                  "id": "MGI:3505862",
+                  "literature": [
+                    "10698180",
+                    "14615480",
+                    "12244109",
+                    "10593909"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                },
+                {
+                  "allelicComposition": "C3<tm1Hrc>/C3<tm1Hrc>",
+                  "geneticBackground": "B6.129-C3<tm1Hrc>",
+                  "id": "MGI:3505869",
+                  "literature": [
+                    "15240660",
+                    "19620784",
+                    "21943708"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6;129S4-C3<tm1Crr>/J",
+                  "id": "MGI:3799624",
+                  "literature": [
+                    "8524789",
+                    "30301856",
+                    "9367154",
+                    "23074214",
+                    "15980239",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6.129S4-C3<tm1Crr>",
+                  "id": "MGI:3785287",
+                  "literature": [
+                    "26400934",
+                    "16872848",
+                    "19205046",
+                    "16778128",
+                    "17317854"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "B6;129S4-C3<tm1Crr>/J",
+                  "id": "MGI:3799624",
+                  "literature": [
+                    "8524789",
+                    "30301856",
+                    "9367154",
+                    "23074214",
+                    "15980239",
+                    "10408374"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C3<tm1Crr>/C3<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429606",
+                  "literature": [
+                    "33288630",
+                    "8752901",
+                    "11801636",
+                    "10811844",
+                    "16936276",
+                    "8524789",
+                    "10066708",
+                    "15240660",
+                    "9367154",
+                    "19620784",
+                    "15980239",
+                    "23733878",
+                    "20709903",
+                    "10408374"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "target_safety": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000125730",
+          "approvedSymbol": "C3",
+          "safetyLiabilities": [
+            {
+              "event": "fasting triglyceride levels",
+              "studies": [
+                {
+                  "name": "clozapine induced effect",
+                  "type": "clinical",
+                  "description": "Genetic variation linked to this safety liability: 19_6679500_C_T,T, 19_6679500_C_C,C"
+                }
+              ],
+              "datasource": "ClinPGx"
+            },
+            {
+              "event": "fasting triglyceride levels and susceptibility to metabolic syndrome",
+              "studies": [
+                {
+                  "name": "clozapine induced effect",
+                  "type": "clinical",
+                  "description": "Genetic variation linked to this safety liability: 19_6679500_C_C,T"
+                }
+              ],
+              "datasource": "ClinPGx"
+            }
+          ]
+        }
+      }
+    },
+    "associated_drugs": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000125730",
+          "approvedSymbol": "C3",
+          "drugAndClinicalCandidates": {
+            "count": 3,
+            "rows": [
+              {
+                "drug": {
+                  "id": "CHEMBL4298211",
+                  "name": "PEGCETACOPLAN",
+                  "maximumClinicalStage": "APPROVAL"
+                },
+                "maxClinicalStage": "APPROVAL",
+                "diseases": [
+                  {
+                    "disease": {
+                      "id": "MONDO_0100244",
+                      "name": "paroxysmal nocturnal hemoglobinuria"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0100244",
+                      "name": "paroxysmal nocturnal hemoglobinuria"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0100244",
+                      "name": "paroxysmal nocturnal hemoglobinuria"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0018013",
+                      "name": "complement 3 glomerulopathy"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0005328",
+                      "name": "eye disorder"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0005150",
+                      "name": "age-related macular degeneration"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "EFO_1001492",
+                      "name": "atrophic macular degeneration"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0018922",
+                      "name": "cold agglutinin disease"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0100313",
+                      "name": "focal segmental glomerulosclerosis"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0020108",
+                      "name": "autoimmune hemolytic anemia"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0005342",
+                      "name": "IgA glomerulonephritis"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0005556",
+                      "name": "lupus nephritis"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0014005",
+                      "name": "immunoglobulin-mediated membranoproliferative glomerulonephritis"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0004976",
+                      "name": "amyotrophic lateral sclerosis"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0002158",
+                      "name": "fallopian tube cancer"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0008170",
+                      "name": "ovarian cancer"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0015686",
+                      "name": "primary peritoneal carcinoma"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0019737",
+                      "name": "thrombotic microangiopathy"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0000831",
+                      "name": "thrombotic disease"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0005184",
+                      "name": "pancreatic ductal adenocarcinoma"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0005098",
+                      "name": "stroke disorder"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0003004",
+                      "name": "macular degeneration"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0100244",
+                      "name": "paroxysmal nocturnal hemoglobinuria"
+                    }
+                  }
+                ]
+              },
+              {
+                "drug": {
+                  "id": "CHEMBL4594457",
+                  "name": "AL-78898A",
+                  "maximumClinicalStage": "PHASE_2"
+                },
+                "maxClinicalStage": "PHASE_2",
+                "diseases": [
+                  {
+                    "disease": {
+                      "id": "MONDO_0003004",
+                      "name": "macular degeneration"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0005150",
+                      "name": "age-related macular degeneration"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "EFO_1001492",
+                      "name": "atrophic macular degeneration"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0005150",
+                      "name": "age-related macular degeneration"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0810000",
+                      "name": "choroidal neovascularization"
+                    }
+                  }
+                ]
+              },
+              {
+                "drug": {
+                  "id": "CHEMBL4297260",
+                  "name": "AMY-101",
+                  "maximumClinicalStage": "PHASE_2"
+                },
+                "maxClinicalStage": "PHASE_2",
+                "diseases": [
+                  {
+                    "disease": {
+                      "id": "MONDO_0002508",
+                      "name": "gingivitis"
+                    }
+                  },
+                  {
+                    "disease": {
+                      "id": "MONDO_0006502",
+                      "name": "acute respiratory distress syndrome"
+                    }
+                  }
+                ]
+              }
+            ],
+            "returned": 3,
+            "truncated": false
+          }
+        }
+      }
+    },
+    "depmap": {
+      "status": "success",
+      "data": {
+        "gene_symbol": "C3",
+        "matched_gene": {
+          "gene_id": "SIDG02801",
+          "symbol": "C3",
+          "name": null,
+          "hgnc_id": "HGNC:1318",
+          "ensembl_id": "ENSG00000125730",
+          "exact_match": true
+        },
+        "note": "Gene effect scores: negative = essential (cell death upon knockout), zero = no effect, positive = growth advantage. Full dependency profiles at depmap.org."
+      }
+    },
+    "gtex_n_tissues": 54
+  },
+  "C4B": {
+    "symbol": "C4B",
+    "ensembl_id": "ENSG00000224389",
+    "mygene": {
+      "status": "success",
+      "data": {
+        "took": 2,
+        "total": 1,
+        "max_score": 19.49792,
+        "hits": [
+          {
+            "_id": "721",
+            "_score": 19.49792,
+            "ensembl": [
+              {
+                "gene": "ENSG00000224389"
+              },
+              {
+                "gene": "ENSG00000228454"
+              },
+              {
+                "gene": "ENSG00000228267"
+              },
+              {
+                "gene": "ENSG00000236625"
+              },
+              {
+                "gene": "ENSG00000224639"
+              }
+            ],
+            "entrezgene": "721",
+            "name": "complement C4B (Chido/Rodgers blood group)",
+            "symbol": "C4B"
+          }
+        ]
+      },
+      "metadata": {
+        "source": "MyGene.info",
+        "total_results": 1,
+        "accessible_results": 1,
+        "returned": 1,
+        "offset": 0,
+        "limit": 3,
+        "has_more": false,
+        "truncated": false,
+        "next_offset": null,
+        "upstream_truncated": false,
+        "all_results_reachable": true,
+        "warning": null
+      }
+    },
+    "mouse_models": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000224389",
+          "approvedSymbol": "C4B",
+          "mousePhenotypes": [
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae",
+                  "id": "MGI:5296003",
+                  "literature": [
+                    "30301856",
+                    "9409643",
+                    "11067882"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429659",
+                  "literature": [
+                    "8524789",
+                    "10066708",
+                    "8752901",
+                    "9367154"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6J",
+                  "id": "MGI:3663104",
+                  "literature": [
+                    "11801636",
+                    "9409643",
+                    "11067882"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae",
+                  "id": "MGI:5296003",
+                  "literature": [
+                    "30301856",
+                    "9409643",
+                    "11067882"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6J",
+                  "id": "MGI:3663104",
+                  "literature": [
+                    "11801636",
+                    "9409643",
+                    "11067882"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429659",
+                  "literature": [
+                    "8524789",
+                    "10066708",
+                    "8752901",
+                    "9367154"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<em1(IMPC)H> hom early",
+                  "geneticBackground": "C57BL/6NTac",
+                  "id": "MGI:6144264"
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6J",
+                  "id": "MGI:3663104",
+                  "literature": [
+                    "11801636",
+                    "9409643",
+                    "11067882"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429659",
+                  "literature": [
+                    "8524789",
+                    "10066708",
+                    "8752901",
+                    "9367154"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429659",
+                  "literature": [
+                    "8524789",
+                    "10066708",
+                    "8752901",
+                    "9367154"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6J",
+                  "id": "MGI:3663104",
+                  "literature": [
+                    "11801636",
+                    "9409643",
+                    "11067882"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6J",
+                  "id": "MGI:3663104",
+                  "literature": [
+                    "11801636",
+                    "9409643",
+                    "11067882"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429659",
+                  "literature": [
+                    "8524789",
+                    "10066708",
+                    "8752901",
+                    "9367154"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429659",
+                  "literature": [
+                    "8524789",
+                    "10066708",
+                    "8752901",
+                    "9367154"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6J",
+                  "id": "MGI:3663104",
+                  "literature": [
+                    "11801636",
+                    "9409643",
+                    "11067882"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429659",
+                  "literature": [
+                    "8524789",
+                    "10066708",
+                    "8752901",
+                    "9367154"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6J",
+                  "id": "MGI:3663104",
+                  "literature": [
+                    "11801636",
+                    "9409643",
+                    "11067882"
+                  ]
+                },
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae",
+                  "id": "MGI:5296003",
+                  "literature": [
+                    "30301856",
+                    "9409643",
+                    "11067882"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429659",
+                  "literature": [
+                    "8524789",
+                    "10066708",
+                    "8752901",
+                    "9367154"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6J",
+                  "id": "MGI:3663104",
+                  "literature": [
+                    "11801636",
+                    "9409643",
+                    "11067882"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429659",
+                  "literature": [
+                    "8524789",
+                    "10066708",
+                    "8752901",
+                    "9367154"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<em1(IMPC)H> hom middle",
+                  "geneticBackground": "C57BL/6NTac",
+                  "id": "MGI:6144264"
+                },
+                {
+                  "allelicComposition": "C4b<em1(IMPC)H> hom late",
+                  "geneticBackground": "C57BL/6NTac",
+                  "id": "MGI:6144264"
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6J",
+                  "id": "MGI:3663104",
+                  "literature": [
+                    "11801636",
+                    "9409643",
+                    "11067882"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6J",
+                  "id": "MGI:3663104",
+                  "literature": [
+                    "11801636",
+                    "9409643",
+                    "11067882"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6J",
+                  "id": "MGI:3663104",
+                  "literature": [
+                    "11801636",
+                    "9409643",
+                    "11067882"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<tm1Crr>/C4b<tm1Crr>",
+                  "geneticBackground": "involves: 129S4/SvJae * C57BL/6",
+                  "id": "MGI:2429659",
+                  "literature": [
+                    "8524789",
+                    "10066708",
+                    "8752901",
+                    "9367154"
+                  ]
+                }
+              ]
+            },
+            {
+              "biologicalModels": [
+                {
+                  "allelicComposition": "C4b<em1(IMPC)H> hom early",
+                  "geneticBackground": "C57BL/6NTac",
+                  "id": "MGI:6144264"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "target_safety": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000224389",
+          "approvedSymbol": "C4B"
+        }
+      }
+    },
+    "associated_drugs": {
+      "status": "success",
+      "data": {
+        "target": {
+          "id": "ENSG00000224389",
+          "approvedSymbol": "C4B",
+          "drugAndClinicalCandidates": {
+            "count": 0
+          }
+        }
+      }
+    },
+    "depmap": {
+      "status": "success",
+      "data": {
+        "gene_symbol": "C4B",
+        "matched_gene": {
+          "gene_id": "SIDG02829",
+          "symbol": "C4B",
+          "name": null,
+          "hgnc_id": "HGNC:1324",
+          "ensembl_id": "ENSG00000224389",
+          "exact_match": true
+        },
+        "note": "Gene effect scores: negative = essential (cell death upon knockout), zero = no effect, positive = growth advantage. Full dependency profiles at depmap.org."
+      }
+    },
+    "gtex_n_tissues": 54
+  }
+}

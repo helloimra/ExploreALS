@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "carbon-als"
+version = "0.2.0"
+description = "ExploreALS v1.2: Open-Source Computational Replication Package for Causal & Epistemically Calibrated ALS Discovery"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+authors = [
+    { name = "Ricardo Agoga", email = "helloimra@proton.me" },
+]
+dependencies = [
+    "numpy>=2.0.0",
+    "scipy>=1.14.0",
+    "pandas>=2.2.0",
+    "statsmodels>=0.14.2",
+    "scikit-learn>=1.5.0",
+    "openpyxl>=3.1.5",
+    "xlrd>=2.0.1",
+    "biopython>=1.84",
+]
+
+[project.optional-dependencies]
+synapse = ["synapseclient>=4.5"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/carbon_als"]

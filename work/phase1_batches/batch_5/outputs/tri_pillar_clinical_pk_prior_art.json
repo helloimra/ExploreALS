@@ -1,0 +1,2094 @@
+{
+  "clinical_trials_gov": {
+    "targeted_ncts": {
+      "NCT02450552": {
+        "nctId": "NCT02450552",
+        "briefTitle": "Clinical Trial of Ezogabine (Retigabine) in ALS Subjects",
+        "overallStatus": "COMPLETED",
+        "whyStopped": null,
+        "startDate": "2015-06",
+        "completionDate": "2018-02",
+        "phases": [
+          "PHASE2"
+        ],
+        "enrollment": {
+          "count": 65,
+          "type": "ACTUAL"
+        },
+        "interventions": [
+          "Ezogabine",
+          "Placebo"
+        ],
+        "primaryOutcomes": [
+          "Change in Short-interval Intracortical Inhibition (SICI) Measured by Transcranial Magnetic Stimulation (TMS)"
+        ],
+        "hasResults": true,
+        "postedPrimaryOutcomeAnalyses": [
+          {
+            "title": "Change in Short-interval Intracortical Inhibition (SICI) Measured by Transcranial Magnetic Stimulation (TMS)",
+            "type": "PRIMARY",
+            "analyses": []
+          },
+          {
+            "title": "Change in Resting Motor Evoked Potential (MEP) Threshold (Prespecified Secondary Outcome of Primary Importance)",
+            "type": "SECONDARY",
+            "analyses": []
+          },
+          {
+            "title": "Change in MEP Amplitude",
+            "type": "SECONDARY",
+            "analyses": []
+          }
+        ]
+      },
+      "NCT05667779": {
+        "nctId": "NCT05667779",
+        "briefTitle": "A Study Evaluating Safety, Tolerability, and Pharmacokinetics of QRL-101 in Healthy Participants",
+        "overallStatus": "COMPLETED",
+        "whyStopped": null,
+        "startDate": "2022-12-22",
+        "completionDate": "2023-12-27",
+        "phases": [
+          "PHASE1"
+        ],
+        "enrollment": {
+          "count": 88,
+          "type": "ACTUAL"
+        },
+        "interventions": [
+          "QRL-101",
+          "Placebo"
+        ],
+        "primaryOutcomes": [
+          "Number of participants with one or more treatment emergent adverse events and serious adverse events."
+        ],
+        "hasResults": false,
+        "postedPrimaryOutcomeAnalyses": []
+      },
+      "NCT06714396": {
+        "nctId": "NCT06714396",
+        "briefTitle": "A Study Exploring the PK/PD Relationship of QRL-101 in Adults With ALS",
+        "overallStatus": "COMPLETED",
+        "whyStopped": null,
+        "startDate": "2024-11-11",
+        "completionDate": "2025-08-22",
+        "phases": [
+          "PHASE1"
+        ],
+        "enrollment": {
+          "count": 12,
+          "type": "ACTUAL"
+        },
+        "interventions": [
+          "QRL-101",
+          "Placebo"
+        ],
+        "primaryOutcomes": [
+          "QRL-101 plasma concentration",
+          "PK/PD Relationship: Strength-Duration Time Constant (SDTC)"
+        ],
+        "hasResults": false,
+        "postedPrimaryOutcomeAnalyses": []
+      },
+      "NCT06681441": {
+        "nctId": "NCT06681441",
+        "briefTitle": "A 3-way Cross-over Study on the Effects of QRL-101 on Transcranial Magnetic Stimulation and Nerve Excitability in Healthy Participants",
+        "overallStatus": "COMPLETED",
+        "whyStopped": null,
+        "startDate": "2024-10-07",
+        "completionDate": "2024-12-24",
+        "phases": [
+          "PHASE1"
+        ],
+        "enrollment": {
+          "count": 24,
+          "type": "ACTUAL"
+        },
+        "interventions": [
+          "QRL-101 Dose A",
+          "QRL-101 Dose B",
+          "Placebo"
+        ],
+        "primaryOutcomes": [
+          "Single pulse TMS-EMG motor evoked potential (MEP) amplitude (\u03bcV) compared to placebo",
+          "mNETT strength-duration time constant (SDTC) compared to placebo SDTC"
+        ],
+        "hasResults": false,
+        "postedPrimaryOutcomeAnalyses": []
+      },
+      "NCT00349622": {
+        "nctId": "NCT00349622",
+        "briefTitle": "Clinical Trial Ceftriaxone in Subjects With ALS",
+        "overallStatus": "COMPLETED",
+        "whyStopped": null,
+        "startDate": "2006-07",
+        "completionDate": "2012-11",
+        "phases": [
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 513,
+          "type": "ACTUAL"
+        },
+        "interventions": [
+          "ceftriaxone",
+          "placebo"
+        ],
+        "primaryOutcomes": [
+          "Survival",
+          "Change From Baseline in ALS Functional Rating Scale, Revised (ALSFRS-R) at One Year"
+        ],
+        "hasResults": true,
+        "postedPrimaryOutcomeAnalyses": [
+          {
+            "title": "Survival",
+            "type": "PRIMARY",
+            "analyses": []
+          },
+          {
+            "title": "Change From Baseline in ALS Functional Rating Scale, Revised (ALSFRS-R) at One Year",
+            "type": "PRIMARY",
+            "analyses": []
+          },
+          {
+            "title": "Change in % Vital Capacity From Screening to One Year",
+            "type": "SECONDARY",
+            "analyses": []
+          }
+        ]
+      },
+      "NCT04302870": {
+        "nctId": "NCT04302870",
+        "briefTitle": "Motor Neurone Disease - Systematic Multi-Arm Adaptive Randomised Trial",
+        "overallStatus": "RECRUITING",
+        "whyStopped": null,
+        "startDate": "2020-02-27",
+        "completionDate": "2030-12",
+        "phases": [
+          "PHASE2",
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 1150,
+          "type": "ESTIMATED"
+        },
+        "interventions": [
+          "Memantine Hydrochloride Oral Solution",
+          "Trazodone Hydrochloride oral solution",
+          "Placebo oral solution",
+          "Amantadine Hydrochloride Oral Solution",
+          "Tacrolimus 1Mg Cap",
+          "Placebo capsule"
+        ],
+        "primaryOutcomes": [
+          "Change in decline of ALS-FRS(R) over 18months",
+          "Survival"
+        ],
+        "hasResults": false,
+        "postedPrimaryOutcomeAnalyses": []
+      },
+      "NCT02118727": {
+        "nctId": "NCT02118727",
+        "briefTitle": "Therapy in Amyotrophic Lateral Sclerosis (TAME)",
+        "overallStatus": "COMPLETED",
+        "whyStopped": null,
+        "startDate": "2018-11-07",
+        "completionDate": "2021-07-22",
+        "phases": [
+          "PHASE2"
+        ],
+        "enrollment": {
+          "count": 89,
+          "type": "ACTUAL"
+        },
+        "interventions": [
+          "Memantine",
+          "Placebo (for Memantine)"
+        ],
+        "primaryOutcomes": [
+          "The Primary Comparison for Efficacy Will be Based on a Linear Mixed Effects (LME) Model Fit to the ALSFRS-R Data for the Patients Followed Over 36 Weeks."
+        ],
+        "hasResults": true,
+        "postedPrimaryOutcomeAnalyses": [
+          {
+            "title": "The Primary Comparison for Efficacy Will be Based on a Linear Mixed Effects (LME) Model Fit to the ALSFRS-R Data for the Patients Followed Over 36 Weeks.",
+            "type": "PRIMARY",
+            "analyses": []
+          },
+          {
+            "title": "Measuring the Levels of Tau, Phosphorylated Neurofilament Heavy Chain (pNFH) and the pNFH/C3 Ratio in Blood",
+            "type": "OTHER_PRE_SPECIFIED",
+            "analyses": []
+          },
+          {
+            "title": "Slowing of Behavioral Decline in Those With FTD Characteristics Based on the NPI-Q and the ALS-Cognitive Behavioral Screen (CBS)\u2122",
+            "type": "OTHER_PRE_SPECIFIED",
+            "analyses": []
+          }
+        ]
+      },
+      "NCT00353665": {
+        "nctId": "NCT00353665",
+        "briefTitle": "Memantine for Disability in Amyotrophic Lateral Sclerosis (MEDALS)",
+        "overallStatus": "COMPLETED",
+        "whyStopped": null,
+        "startDate": "2005-07",
+        "completionDate": "2009-01",
+        "phases": [
+          "PHASE2",
+          "PHASE3"
+        ],
+        "enrollment": {
+          "count": 63,
+          "type": "ACTUAL"
+        },
+        "interventions": [
+          "Memantine (Ebixa)",
+          "riluzole",
+          "Placebo"
+        ],
+        "primaryOutcomes": [
+          "ALS-FRS"
+        ],
+        "hasResults": false,
+        "postedPrimaryOutcomeAnalyses": []
+      },
+      "NCT03019419": {
+        "nctId": "NCT03019419",
+        "briefTitle": "Perampanel for Sporadic Amyotrophic Lateral Sclerosis (ALS)",
+        "overallStatus": "COMPLETED",
+        "whyStopped": null,
+        "startDate": "2017-04-24",
+        "completionDate": "2020-12-23",
+        "phases": [
+          "PHASE2"
+        ],
+        "enrollment": {
+          "count": 66,
+          "type": "ACTUAL"
+        },
+        "interventions": [
+          "Perampanel",
+          "placebo"
+        ],
+        "primaryOutcomes": [
+          "Change in ALS Functional rating scale"
+        ],
+        "hasResults": false,
+        "postedPrimaryOutcomeAnalyses": []
+      },
+      "NCT03020797": {
+        "nctId": "NCT03020797",
+        "briefTitle": "A Clinical Trial to Evaluate the Safety and Efficacy of Fycompa in Subjects With Amyotrophic Lateral Sclerosis (ALS)",
+        "overallStatus": "TERMINATED",
+        "whyStopped": "1\\) Enrolment below study target and 2) too many subjects had early termination due to disease progression.",
+        "startDate": "2017-01-12",
+        "completionDate": "2023-02-08",
+        "phases": [
+          "NA"
+        ],
+        "enrollment": {
+          "count": 12,
+          "type": "ACTUAL"
+        },
+        "interventions": [
+          "Perampanel",
+          "Placebo Oral Tablet"
+        ],
+        "primaryOutcomes": [
+          "Incidence of treatment-emergent adverse events"
+        ],
+        "hasResults": false,
+        "postedPrimaryOutcomeAnalyses": []
+      },
+      "NCT03377309": {
+        "nctId": "NCT03377309",
+        "briefTitle": "Safety and Tolerability of Perampanel in Amyotrophic Lateral Sclerosis Patients",
+        "overallStatus": "TERMINATED",
+        "whyStopped": "Study halted due to adverse events",
+        "startDate": "2019-12-01",
+        "completionDate": "2021-07-01",
+        "phases": [
+          "PHASE2"
+        ],
+        "enrollment": {
+          "count": 6,
+          "type": "ACTUAL"
+        },
+        "interventions": [
+          "Fycompa"
+        ],
+        "primaryOutcomes": [
+          "Safety and Tolerability: Incidence and severity of drug-related adverse effects"
+        ],
+        "hasResults": false,
+        "postedPrimaryOutcomeAnalyses": []
+      },
+      "NCT03793868": {
+        "nctId": "NCT03793868",
+        "briefTitle": "Perampanel Single Ascending Dose Transcranial Magnetic Stimulation Biomarker Study in Amyotrophic Lateral Sclerosis",
+        "overallStatus": "COMPLETED",
+        "whyStopped": null,
+        "startDate": "2018-12-04",
+        "completionDate": "2020-09-01",
+        "phases": [
+          "EARLY_PHASE1"
+        ],
+        "enrollment": {
+          "count": 22,
+          "type": "ACTUAL"
+        },
+        "interventions": [
+          "Perampanel",
+          "Placebo"
+        ],
+        "primaryOutcomes": [
+          "Motor threshold (MT)"
+        ],
+        "hasResults": false,
+        "postedPrimaryOutcomeAnalyses": []
+      }
+    },
+    "landscape_searches": {
+      "memantine_als": {
+        "count": 5,
+        "studies": [
+          {
+            "nctId": "NCT04302870",
+            "title": "Motor Neurone Disease - Systematic Multi-Arm Adaptive Randomised Trial",
+            "status": "RECRUITING",
+            "phases": [
+              "PHASE2",
+              "PHASE3"
+            ],
+            "enrollment": 1150
+          },
+          {
+            "nctId": "NCT02118727",
+            "title": "Therapy in Amyotrophic Lateral Sclerosis (TAME)",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE2"
+            ],
+            "enrollment": 89
+          },
+          {
+            "nctId": "NCT01020331",
+            "title": "Memantine Therapy in Amyotrophic Lateral Sclerosis",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE2"
+            ],
+            "enrollment": 20
+          },
+          {
+            "nctId": "NCT00409721",
+            "title": "The Effect of Memantine on Functional Outcomes and Motor Neuron Degeneration in Amyotrophic Lateral Sclerosis (ALS)",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE2"
+            ],
+            "enrollment": 42
+          },
+          {
+            "nctId": "NCT00353665",
+            "title": "Memantine for Disability in Amyotrophic Lateral Sclerosis (MEDALS)",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE2",
+              "PHASE3"
+            ],
+            "enrollment": 63
+          }
+        ]
+      },
+      "ropinirole_als": {
+        "count": 0,
+        "studies": []
+      },
+      "furosemide_als": {
+        "count": 0,
+        "studies": []
+      },
+      "perampanel_als": {
+        "count": 4,
+        "studies": [
+          {
+            "nctId": "NCT03793868",
+            "title": "Perampanel Single Ascending Dose Transcranial Magnetic Stimulation Biomarker Study in Amyotrophic Lateral Sclerosis",
+            "status": "COMPLETED",
+            "phases": [
+              "EARLY_PHASE1"
+            ],
+            "enrollment": 22
+          },
+          {
+            "nctId": "NCT03020797",
+            "title": "A Clinical Trial to Evaluate the Safety and Efficacy of Fycompa in Subjects With Amyotrophic Lateral Sclerosis (ALS)",
+            "status": "TERMINATED",
+            "phases": [
+              "NA"
+            ],
+            "enrollment": 12
+          },
+          {
+            "nctId": "NCT03377309",
+            "title": "Safety and Tolerability of Perampanel in Amyotrophic Lateral Sclerosis Patients",
+            "status": "TERMINATED",
+            "phases": [
+              "PHASE2"
+            ],
+            "enrollment": 6
+          },
+          {
+            "nctId": "NCT03019419",
+            "title": "Perampanel for Sporadic Amyotrophic Lateral Sclerosis (ALS)",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE2"
+            ],
+            "enrollment": 66
+          }
+        ]
+      },
+      "qrl101": {
+        "count": 6,
+        "studies": [
+          {
+            "nctId": "NCT06681441",
+            "title": "A 3-way Cross-over Study on the Effects of QRL-101 on Transcranial Magnetic Stimulation and Nerve Excitability in Healthy Participants",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE1"
+            ],
+            "enrollment": 24
+          },
+          {
+            "nctId": "NCT05667779",
+            "title": "A Study Evaluating Safety, Tolerability, and Pharmacokinetics of QRL-101 in Healthy Participants",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE1"
+            ],
+            "enrollment": 88
+          },
+          {
+            "nctId": "NCT06714396",
+            "title": "A Study Exploring the PK/PD Relationship of QRL-101 in Adults With ALS",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE1"
+            ],
+            "enrollment": 12
+          },
+          {
+            "nctId": "NCT07421778",
+            "title": "A Multiple Ascending Dose Study Evaluating the Safety and Tolerability of a Novel Formulation of QRL-101 in Healthy Participants",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE1"
+            ],
+            "enrollment": 48
+          },
+          {
+            "nctId": "NCT06877624",
+            "title": "A Study Evaluating the Pharmacokinetics of Three QRL-101 Formulations in Healthy Participants",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE1"
+            ],
+            "enrollment": 25
+          },
+          {
+            "nctId": "NCT06532396",
+            "title": "A Study Evaluating Multiple Ascending Doses of QRL-101 in Healthy Participants",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE1"
+            ],
+            "enrollment": 60
+          }
+        ]
+      },
+      "bhv7000": {
+        "count": 10,
+        "studies": [
+          {
+            "nctId": "NCT06309966",
+            "title": "Study to Determine if BHV-7000 is Effective and Safe in Adults With Refractory Focal Onset Epilepsy",
+            "status": "ACTIVE_NOT_RECRUITING",
+            "phases": [
+              "PHASE2",
+              "PHASE3"
+            ],
+            "enrollment": 390
+          },
+          {
+            "nctId": "NCT06423794",
+            "title": "BHV-7000 Open-Label Extension Bipolar Mania Study",
+            "status": "TERMINATED",
+            "phases": [
+              "PHASE2"
+            ],
+            "enrollment": 94
+          },
+          {
+            "nctId": "NCT07125261",
+            "title": "BHV-7000 Responsive Neurostimulation System (RNS) Study",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE1"
+            ],
+            "enrollment": 5
+          },
+          {
+            "nctId": "NCT06132893",
+            "title": "A Study to Determine if BHV-7000 is Effective and Safe in Adults With Refractory Focal Onset Epilepsy",
+            "status": "ACTIVE_NOT_RECRUITING",
+            "phases": [
+              "PHASE2",
+              "PHASE3"
+            ],
+            "enrollment": 390
+          },
+          {
+            "nctId": "NCT06443463",
+            "title": "Long-term Safety and Tolerability of BHV-7000",
+            "status": "ENROLLING_BY_INVITATION",
+            "phases": [
+              "PHASE2"
+            ],
+            "enrollment": 660
+          },
+          {
+            "nctId": "NCT06425159",
+            "title": "A Study to Determine if BHV-7000 is Effective and Safe in Adults With Idiopathic Generalized Epilepsy With Generalized Tonic-clonic Seizures",
+            "status": "TERMINATED",
+            "phases": [
+              "PHASE2",
+              "PHASE3"
+            ],
+            "enrollment": 27
+          },
+          {
+            "nctId": "NCT07262268",
+            "title": "A Phase 1b Study of BHV-7000 in Participants With Inherited Erythromelalgia",
+            "status": "ACTIVE_NOT_RECRUITING",
+            "phases": [
+              "PHASE1"
+            ],
+            "enrollment": 5
+          },
+          {
+            "nctId": "NCT06419608",
+            "title": "Efficacy and Safety Study of BHV-7000 Monotherapy in Major Depression",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE2"
+            ],
+            "enrollment": 336
+          },
+          {
+            "nctId": "NCT06419582",
+            "title": "BHV-7000 Acute Treatment of Bipolar Mania",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE2",
+              "PHASE3"
+            ],
+            "enrollment": 274
+          },
+          {
+            "nctId": "NCT06423781",
+            "title": "Long-term Safety Study of BHV-7000 in Participants With Major Depressive Disorder (MDD)",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE2"
+            ],
+            "enrollment": 233
+          }
+        ]
+      },
+      "azetukalner": {
+        "count": 15,
+        "studies": [
+          {
+            "nctId": "NCT04952467",
+            "title": "Single-dose Mass Balance Recovery and Metabolite Profile and Identification of 14C-XEN1101",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE1"
+            ],
+            "enrollment": 6
+          },
+          {
+            "nctId": "NCT05718817",
+            "title": "An Open-label Study of XEN1101 in Epilepsy",
+            "status": "ENROLLING_BY_INVITATION",
+            "phases": [
+              "PHASE3"
+            ],
+            "enrollment": 880
+          },
+          {
+            "nctId": "NCT05667142",
+            "title": "A Study to Evaluate XEN1101 as Adjunctive Therapy in Primary Generalized Tonic-Clonic Seizures",
+            "status": "RECRUITING",
+            "phases": [
+              "PHASE3"
+            ],
+            "enrollment": 160
+          },
+          {
+            "nctId": "NCT07217860",
+            "title": "An Open-label Study of Azetukalner in Bipolar I or II Depression (X-CEED-OLE)",
+            "status": "ACTIVE_NOT_RECRUITING",
+            "phases": [
+              "PHASE3"
+            ],
+            "enrollment": 400
+          },
+          {
+            "nctId": "NCT06922110",
+            "title": "An Open-Label Study of Azetukalner in Major Depressive Disorder",
+            "status": "ACTIVE_NOT_RECRUITING",
+            "phases": [
+              "PHASE3"
+            ],
+            "enrollment": 460
+          },
+          {
+            "nctId": "NCT03468725",
+            "title": "Safety, Tolerability, Pharmacokinetics and Effects on Transcranial Magnetic Stimulation of Oral Doses of XEN1101",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE1"
+            ],
+            "enrollment": 20
+          },
+          {
+            "nctId": "NCT03796962",
+            "title": "A Study to Evaluate XEN1101 as Adjunctive Therapy in Focal Epilepsy",
+            "status": "ACTIVE_NOT_RECRUITING",
+            "phases": [
+              "PHASE2"
+            ],
+            "enrollment": 325
+          },
+          {
+            "nctId": "NCT05614063",
+            "title": "A Randomized Study of XEN1101 Versus Placebo in Focal-Onset Seizures",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE3"
+            ],
+            "enrollment": 380
+          },
+          {
+            "nctId": "NCT04827901",
+            "title": "XEN1101 for Major Depressive Disorder",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE2"
+            ],
+            "enrollment": 60
+          },
+          {
+            "nctId": "NCT07172516",
+            "title": "A Randomized Study of Azetukalner Versus Placebo in Depressive Episodes Associated With Bipolar I or II Disorder (Bipolar Depression)",
+            "status": "ACTIVE_NOT_RECRUITING",
+            "phases": [
+              "PHASE3"
+            ],
+            "enrollment": 400
+          },
+          {
+            "nctId": "NCT05716100",
+            "title": "A Randomized Study of XEN1101 Versus Placebo in Focal-Onset Seizures (X-TOLE3)",
+            "status": "RECRUITING",
+            "phases": [
+              "PHASE3"
+            ],
+            "enrollment": 360
+          },
+          {
+            "nctId": "NCT05376150",
+            "title": "A Study to Evaluate the Safety, Tolerability and Efficacy of XEN1101 in Major Depressive Disorder",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE2"
+            ],
+            "enrollment": 168
+          },
+          {
+            "nctId": "NCT07076407",
+            "title": "A Randomized Study of Azetukalner Versus Placebo in Major Depressive Disorder (X-NOVA3)",
+            "status": "ACTIVE_NOT_RECRUITING",
+            "phases": [
+              "PHASE3"
+            ],
+            "enrollment": 450
+          },
+          {
+            "nctId": "NCT03340220",
+            "title": "Safety, Tolerability, and Pharmacokinetics (PK) of Single and Multiple Ascending Oral Doses of XEN1101.",
+            "status": "COMPLETED",
+            "phases": [
+              "PHASE1"
+            ],
+            "enrollment": 130
+          },
+          {
+            "nctId": "NCT06775379",
+            "title": "A Randomized Study of Azetukalner Versus Placebo in Major Depressive Disorder",
+            "status": "ACTIVE_NOT_RECRUITING",
+            "phases": [
+              "PHASE3"
+            ],
+            "enrollment": 450
+          }
+        ]
+      }
+    }
+  },
+  "openfda": {
+    "C003_ezogabine_NDA022345": {
+      "application_number": "NDA022345",
+      "sponsor": "GLAXOSMITHKLINE",
+      "products": [
+        {
+          "brand": "POTIGA",
+          "status": "Discontinued",
+          "dosage_form": "TABLET"
+        },
+        {
+          "brand": "POTIGA",
+          "status": "Discontinued",
+          "dosage_form": "TABLET"
+        },
+        {
+          "brand": "POTIGA",
+          "status": "Discontinued",
+          "dosage_form": "TABLET"
+        },
+        {
+          "brand": "POTIGA",
+          "status": "Discontinued",
+          "dosage_form": "TABLET"
+        }
+      ]
+    },
+    "C004_ceftriaxone_NDA050585": {
+      "application_number": "NDA050585",
+      "sponsor": "HOFFMANN LA ROCHE",
+      "products": [
+        {
+          "brand": "ROCEPHIN KIT",
+          "status": "Discontinued",
+          "dosage_form": "INJECTABLE"
+        },
+        {
+          "brand": "ROCEPHIN",
+          "status": "Discontinued",
+          "dosage_form": "INJECTABLE"
+        },
+        {
+          "brand": "ROCEPHIN",
+          "status": "Discontinued",
+          "dosage_form": "INJECTABLE"
+        },
+        {
+          "brand": "ROCEPHIN KIT",
+          "status": "Discontinued",
+          "dosage_form": "INJECTABLE"
+        }
+      ]
+    },
+    "C008_memantine_NDA021487": {
+      "application_number": "NDA021487",
+      "sponsor": "ABBVIE",
+      "products": [
+        {
+          "brand": "NAMENDA",
+          "status": "Discontinued",
+          "dosage_form": "TABLET"
+        },
+        {
+          "brand": "NAMENDA",
+          "status": "Discontinued",
+          "dosage_form": "TABLET"
+        }
+      ],
+      "boxed_warning_snippet": "",
+      "pharmacokinetics_snippet": "12.3 Pharmacokinetics Absorption Following oral administration memantine is highly absorbed with peak concentrations reached in about 3-7 hours. Memantine has linear pharmacokinetics over the therapeutic dose range. Food has no effect on the absorption of memantine. Distribution The mean volume of distribution of memantine is 9-11 L/kg and the plasma protein binding is low (45%). Metabolism Memantine undergoes partial hepatic metabolism. The hepatic microsomal CYP450 enzyme system does not play a significant role in the metabolism of memantine. Elimination Memantine is excreted predominantly (about 48%) unchanged in urine and has a terminal elimination half- life of about 60-80 hours. The remainder is converted primarily to three polar metabolites which possess minimal NMDA receptor antagonistic activity: the N-glucuronide conjugate, 6-hydroxy memantine, and 1-nitroso-deaminated memantin"
+    },
+    "C010_ropinirole_NDA022008": {
+      "application_number": "NDA022008",
+      "sponsor": "GLAXOSMITHKLINE LLC",
+      "products": [
+        {
+          "brand": "REQUIP XL",
+          "status": "Discontinued",
+          "dosage_form": "TABLET, EXTENDED RELEASE"
+        },
+        {
+          "brand": "REQUIP XL",
+          "status": "Discontinued",
+          "dosage_form": "TABLET, EXTENDED RELEASE"
+        },
+        {
+          "brand": "REQUIP XL",
+          "status": "Discontinued",
+          "dosage_form": "TABLET, EXTENDED RELEASE"
+        },
+        {
+          "brand": "REQUIP XL",
+          "status": "Discontinued",
+          "dosage_form": "TABLET, EXTENDED RELEASE"
+        }
+      ]
+    },
+    "C011_furosemide_NDA016273": {
+      "application_number": "NDA016273",
+      "sponsor": "VALIDUS PHARMS",
+      "products": [
+        {
+          "brand": "LASIX",
+          "status": "Discontinued",
+          "dosage_form": "TABLET"
+        },
+        {
+          "brand": "LASIX",
+          "status": "Discontinued",
+          "dosage_form": "TABLET"
+        },
+        {
+          "brand": "LASIX",
+          "status": "Discontinued",
+          "dosage_form": "TABLET"
+        }
+      ],
+      "boxed_warning_snippet": "",
+      "pharmacokinetics_snippet": "CLINICAL PHARMACOLOGY Investigations into the mode of action of LASIX have utilized micropuncture studies in rats, stop flow experiments in dogs and various clearance studies in both humans and experimental animals. It has been demonstrated that LASIX inhibits primarily the absorption of sodium and chloride not only in the proximal and distal tubu but also in the loop of Henle. The high degree of efficacy is largely due to the unique site of action. The action on the distal tubule is independent of any inhibitory effect on carbonic anhydrase and aldosterone. Recent evidence suggests that furosemide glucuronide is the only or at least the major biotransformation product of furosemide in man. Furosemide is extensively bound to plasma proteins, mainly to albumin. Plasma concentrations ranging from 1 \u03bcg/mL to 400 \u03bcg/mL are 91% to 99% bound in healthy individuals. The unbound fraction average"
+    },
+    "C012_perampanel_NDA202834": {
+      "application_number": "NDA202834",
+      "sponsor": "CATALYST PHARMS",
+      "products": [
+        {
+          "brand": "FYCOMPA",
+          "status": "Prescription",
+          "dosage_form": "TABLET"
+        },
+        {
+          "brand": "FYCOMPA",
+          "status": "Prescription",
+          "dosage_form": "TABLET"
+        },
+        {
+          "brand": "FYCOMPA",
+          "status": "Prescription",
+          "dosage_form": "TABLET"
+        },
+        {
+          "brand": "FYCOMPA",
+          "status": "Prescription",
+          "dosage_form": "TABLET"
+        }
+      ],
+      "boxed_warning_snippet": "WARNING: SERIOUS PSYCHIATRIC AND BEHAVIORAL REACTIONS Serious or life-threatening psychiatric and behavioral adverse reactions including aggression, hostility, irritability, anger, and homicidal ideation and threats have been reported in patients taking FYCOMPA ( 5.1 ) . These reactions occurred in patients with and without prior psychiatric history, prior aggressive behavior, or concomitant use of medications associated with hostility and aggression ( 5.1 ) . Advise patients and caregivers to c",
+      "pharmacokinetics_snippet": "12.3 Pharmacokinetics Pharmacokinetics of perampanel are similar in healthy subjects, patients with partial-onset seizures, and patients with primary generalized tonic-clonic seizures. The half-life of perampanel is about 105 hours, so that steady state is reached in about 2-3 weeks. AUC of perampanel increased in a dose-proportional manner after single-dose administration of 0.2-12 mg tablets and after multiple-dose administration of 1-12 mg tablets once daily. FYCOMPA oral suspension has comparable bioavailability to FYCOMPA tablets under steady state. Both formulations may be used interchangeably. The pharmacokinetics of perampanel are similar when used as monotherapy or as adjunctive therapy for the treatment of partial-onset seizures (in the absence of concomitant moderate or strong CYP3A4 inducers). Absorption Perampanel is rapidly and completely absorbed after oral administration "
+    }
+  },
+  "chembl_pubchem": {
+    "C003_ezogabine": {
+      "chembl_id": "CHEMBL41355",
+      "pref_name": "EZOGABINE",
+      "max_phase": "4.0",
+      "withdrawn_flag": false,
+      "chembl_mw_freebase": "303.34",
+      "chembl_alogp": "3.59",
+      "chembl_psa": "76.38",
+      "pubchem_props": {
+        "CID": 121892,
+        "MolecularFormula": "C16H18FN3O2",
+        "MolecularWeight": "303.33",
+        "InChIKey": "PCOBBVZJEWWZFR-UHFFFAOYSA-N",
+        "XLogP": 2.8,
+        "ExactMass": "303.13830499",
+        "TPSA": 76.4
+      },
+      "mechanisms": [
+        {
+          "action": "OPENER",
+          "mechanism": "KCNQ (Kv7) potassium channel opener",
+          "target": "CHEMBL2363063"
+        }
+      ],
+      "top_human_potencies_nM": [
+        {
+          "target_pref_name": "Potassium voltage-gated channel subfamily KQT member 2",
+          "type": "EC50",
+          "relation": "<",
+          "value_nM": 150.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Potassium voltage-gated channel subfamily KQT member 2",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 350.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Potassium voltage-gated channel subfamily KQT member 2",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 350.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Voltage-gated potassium channel, KQT; KCNQ2(Kv7.2)/KCNQ3(Kv7.3)",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 430.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Potassium voltage-gated channel subfamily KQT member 5",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 800.0,
+          "assay_type": "A"
+        },
+        {
+          "target_pref_name": "Potassium voltage-gated channel subfamily KQT member 2",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 930.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "HEK293",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 1300.0,
+          "assay_type": "F"
+        },
+        {
+          "target_pref_name": "Voltage-gated potassium channel, KQT; KCNQ2(Kv7.2)/KCNQ3(Kv7.3)",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 1720.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Voltage-gated potassium channel, KQT; KCNQ2(Kv7.2)/KCNQ3(Kv7.3)",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 1837.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Potassium voltage-gated channel subfamily KQT member 4",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 1980.0,
+          "assay_type": "A"
+        },
+        {
+          "target_pref_name": "Potassium voltage-gated channel subfamily KQT member 2",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 2040.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Voltage-gated potassium channel, KQT; KCNQ2(Kv7.2)/KCNQ3(Kv7.3)",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 2500.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Potassium voltage-gated channel subfamily KQT member 5",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 3450.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Potassium voltage-gated channel subfamily KQT member 3",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 3900.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Potassium voltage-gated channel subfamily KQT member 2",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 4210.0,
+          "assay_type": "B"
+        }
+      ]
+    },
+    "C004_ceftriaxone": {
+      "chembl_id": "CHEMBL161",
+      "pref_name": "CEFTRIAXONE",
+      "max_phase": "4.0",
+      "withdrawn_flag": false,
+      "chembl_mw_freebase": "554.59",
+      "chembl_alogp": "-1.20",
+      "chembl_psa": "215.22",
+      "pubchem_props": {
+        "CID": 5479530,
+        "MolecularFormula": "C18H18N8O7S3",
+        "MolecularWeight": "554.6",
+        "InChIKey": "VAAUVRVFOQPIGI-SPQHTLEESA-N",
+        "XLogP": -1.3,
+        "ExactMass": "554.04605846",
+        "TPSA": 288
+      },
+      "mechanisms": [],
+      "top_human_potencies_nM": [
+        {
+          "target_pref_name": "Solute carrier family 22 member 6",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 230.0,
+          "assay_type": "F"
+        },
+        {
+          "target_pref_name": "Alpha-synuclein",
+          "type": "Kd",
+          "relation": "=",
+          "value_nM": 530.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Solute carrier family 22 member 11",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 2380.0,
+          "assay_type": "F"
+        },
+        {
+          "target_pref_name": "Organic anion transporter 3",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 4390.0,
+          "assay_type": "F"
+        },
+        {
+          "target_pref_name": "D-amino-acid oxidase",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 10000.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Excitatory amino acid transporter 2",
+          "type": "EC50",
+          "relation": ">",
+          "value_nM": 10000.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Cytochrome P450 2J2",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 27400.0,
+          "assay_type": "A"
+        },
+        {
+          "target_pref_name": "Cytochrome P450 1A2",
+          "type": "IC50",
+          "relation": ">",
+          "value_nM": 50000.0,
+          "assay_type": "A"
+        },
+        {
+          "target_pref_name": "Cytochrome P450 2C19",
+          "type": "IC50",
+          "relation": ">",
+          "value_nM": 50000.0,
+          "assay_type": "A"
+        },
+        {
+          "target_pref_name": "Cytochrome P450 2C9",
+          "type": "IC50",
+          "relation": ">",
+          "value_nM": 50000.0,
+          "assay_type": "A"
+        },
+        {
+          "target_pref_name": "Cytochrome P450 2D6",
+          "type": "IC50",
+          "relation": ">",
+          "value_nM": 50000.0,
+          "assay_type": "A"
+        },
+        {
+          "target_pref_name": "Cytochrome P450 3A4",
+          "type": "IC50",
+          "relation": ">",
+          "value_nM": 50000.0,
+          "assay_type": "A"
+        },
+        {
+          "target_pref_name": "Voltage-gated L-type calcium channel",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 153800.0,
+          "assay_type": "F"
+        },
+        {
+          "target_pref_name": "Solute carrier family 15 member 1",
+          "type": "Ki",
+          "relation": ">",
+          "value_nM": 30000000.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Solute carrier family 15 member 1",
+          "type": "Ki",
+          "relation": ">",
+          "value_nM": 30000000.0,
+          "assay_type": "F"
+        }
+      ]
+    },
+    "C008_memantine": {
+      "chembl_id": "CHEMBL807",
+      "pref_name": "MEMANTINE",
+      "max_phase": "4.0",
+      "withdrawn_flag": false,
+      "chembl_mw_freebase": "179.31",
+      "chembl_alogp": "2.69",
+      "chembl_psa": "26.02",
+      "pubchem_props": {
+        "CID": 4054,
+        "MolecularFormula": "C12H21N",
+        "MolecularWeight": "179.30",
+        "InChIKey": "BUGYDGFZZOZRHP-UHFFFAOYSA-N",
+        "XLogP": 3.3,
+        "ExactMass": "179.167399674",
+        "TPSA": 26
+      },
+      "mechanisms": [],
+      "top_human_potencies_nM": [
+        {
+          "target_pref_name": "Glutamate NMDA receptor; GRIN1/GRIN2A",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 0.95,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Acetylcholinesterase",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 4.9,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Glutamate [NMDA] receptor",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 540.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Glutamate [NMDA] receptor",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 540.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "SH-SY5Y",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 718.0,
+          "assay_type": "F"
+        },
+        {
+          "target_pref_name": "Glutamate NMDA receptor; GRIN1/GRIN2A",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 911.0,
+          "assay_type": "F"
+        },
+        {
+          "target_pref_name": "Glutamate NMDA receptor; GRIN1/GRIN2B",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 1000.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Glutamate NMDA receptor; GRIN1/GRIN2B",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 1020.0,
+          "assay_type": "F"
+        },
+        {
+          "target_pref_name": "Glutamate [NMDA] receptor",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 1200.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Glutamate NMDA receptor; GRIN1/GRIN2A",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 4360.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Glutamate NMDA receptor; GRIN1/GRIN2A",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 4400.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Glutamate NMDA receptor; GRIN1/GRIN2B",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 5200.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Glutamate NMDA receptor; GRIN1/GRIN2B",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 5500.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Glutamate NMDA receptor; GRIN1/GRIN2A",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 5600.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Glutamate NMDA receptor; GRIN1/GRIN2A",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 6700.0,
+          "assay_type": "B"
+        }
+      ]
+    },
+    "C010_ropinirole": {
+      "chembl_id": "CHEMBL589",
+      "pref_name": "ROPINIROLE",
+      "max_phase": "4.0",
+      "withdrawn_flag": false,
+      "chembl_mw_freebase": "260.38",
+      "chembl_alogp": "2.85",
+      "chembl_psa": "32.34",
+      "pubchem_props": {
+        "CID": 5095,
+        "MolecularFormula": "C16H24N2O",
+        "MolecularWeight": "260.37",
+        "InChIKey": "UHSKFQJFRQCDBE-UHFFFAOYSA-N",
+        "XLogP": 2.7,
+        "ExactMass": "260.188863393",
+        "TPSA": 32.3
+      },
+      "mechanisms": [],
+      "top_human_potencies_nM": [
+        {
+          "target_pref_name": "D(3) dopamine receptor",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 2.9,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "D(2) dopamine receptor",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 3.7,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "D(3) dopamine receptor",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 4.0,
+          "assay_type": "F"
+        },
+        {
+          "target_pref_name": "D(2) dopamine receptor",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 6.457,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "D(2) dopamine receptor",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 7.2,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "D(4) dopamine receptor",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 7.8,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "D(3) dopamine receptor",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 10.3,
+          "assay_type": "F"
+        },
+        {
+          "target_pref_name": "D(3) dopamine receptor",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 10.3,
+          "assay_type": "F"
+        },
+        {
+          "target_pref_name": "D(3) dopamine receptor",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 19.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "D(3) dopamine receptor",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 19.2,
+          "assay_type": "F"
+        },
+        {
+          "target_pref_name": "D(2) dopamine receptor",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 30.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "D(3) dopamine receptor",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 36.31,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "D(3) dopamine receptor",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 61.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "D(2) dopamine receptor",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 83.0,
+          "assay_type": "F"
+        },
+        {
+          "target_pref_name": "D(2) dopamine receptor",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 89.0,
+          "assay_type": "B"
+        }
+      ]
+    },
+    "C011_furosemide": {
+      "chembl_id": "CHEMBL35",
+      "pref_name": "FUROSEMIDE",
+      "max_phase": "4.0",
+      "withdrawn_flag": false,
+      "chembl_mw_freebase": "330.75",
+      "chembl_alogp": "1.89",
+      "chembl_psa": "122.63",
+      "pubchem_props": {
+        "CID": 3440,
+        "MolecularFormula": "C12H11ClN2O5S",
+        "MolecularWeight": "330.74",
+        "InChIKey": "ZZUFCTLCJUWOSV-UHFFFAOYSA-N",
+        "XLogP": 2,
+        "ExactMass": "330.0077203",
+        "TPSA": 131
+      },
+      "mechanisms": [
+        {
+          "action": "INHIBITOR",
+          "mechanism": "Sodium-(potassium)-chloride cotransporter 2 inhibitor",
+          "target": "CHEMBL1874"
+        }
+      ],
+      "top_human_potencies_nM": [
+        {
+          "target_pref_name": "Carbonic anhydrase 14",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 52.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Carbonic anhydrase 1",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 62.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Carbonic anhydrase 2",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 65.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Carbonic anhydrase 6",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 245.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Carbonic anhydrase 12",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 261.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Carbonic anhydrase 5B, mitochondrial",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 322.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Carbonic anhydrase 9",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 420.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Carbonic anhydrase 5A, mitochondrial",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 499.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Carbonic anhydrase 7",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 513.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Carbonic anhydrase 4",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 564.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "CDGSH iron-sulfur domain-containing protein 1",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 2285.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Broad substrate specificity ATP-binding cassette transporter ABCG2",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 3200.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "G-protein coupled receptor 35",
+          "type": "Ki",
+          "relation": "=",
+          "value_nM": 3270.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "11-beta-hydroxysteroid dehydrogenase 1",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 3760.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "G-protein coupled receptor 35",
+          "type": "EC50",
+          "relation": "=",
+          "value_nM": 6200.0,
+          "assay_type": "B"
+        }
+      ]
+    },
+    "C012_perampanel": {
+      "chembl_id": "CHEMBL1214124",
+      "pref_name": "PERAMPANEL",
+      "max_phase": "4.0",
+      "withdrawn_flag": false,
+      "chembl_mw_freebase": "349.39",
+      "chembl_alogp": "4.44",
+      "chembl_psa": "58.68",
+      "pubchem_props": {
+        "CID": 9924495,
+        "MolecularFormula": "C23H15N3O",
+        "MolecularWeight": "349.4",
+        "InChIKey": "PRMWGUBFXWROHD-UHFFFAOYSA-N",
+        "XLogP": 3.4,
+        "ExactMass": "349.121512110",
+        "TPSA": 57
+      },
+      "mechanisms": [
+        {
+          "action": "ANTAGONIST",
+          "mechanism": "Glutamate receptor ionotropic AMPA antagonist",
+          "target": "CHEMBL2096670"
+        }
+      ],
+      "top_human_potencies_nM": [
+        {
+          "target_pref_name": "Glutamate receptor 1",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 243.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Glutamate receptor 1",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 485.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Glutamate receptor 1",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 623.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Glutamate receptor 1",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 1180.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Glutamate receptor 3",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 2100.0,
+          "assay_type": "B"
+        },
+        {
+          "target_pref_name": "Glutamate receptor 1",
+          "type": "IC50",
+          "relation": "=",
+          "value_nM": 6510.0,
+          "assay_type": "B"
+        }
+      ]
+    }
+  },
+  "pubmed_europepmc": {
+    "pubmed_esummary": {
+      "33226425": {
+        "pmid": "33226425",
+        "title": "Effect of Ezogabine on Cortical and Spinal Motor Neuron Excitability in Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial.",
+        "source": "JAMA Neurol",
+        "pubdate": "2021 Feb 1",
+        "articleids": [
+          {
+            "idtype": "pubmed",
+            "idtypen": 1,
+            "value": "33226425"
+          },
+          {
+            "idtype": "pmc",
+            "idtypen": 8,
+            "value": "PMC7684515"
+          },
+          {
+            "idtype": "pmcid",
+            "idtypen": 5,
+            "value": "pmc-id: PMC7684515;"
+          },
+          {
+            "idtype": "doi",
+            "idtypen": 3,
+            "value": "10.1001/jamaneurol.2020.4300"
+          },
+          {
+            "idtype": "pii",
+            "idtypen": 4,
+            "value": "2773459"
+          }
+        ]
+      },
+      "29672831": {
+        "pmid": "29672831",
+        "title": "Acute Effects of Riluzole and Retigabine on Axonal Excitability in Patients With Amyotrophic Lateral Sclerosis: A Randomized, Double-Blind, Placebo-Controlled, Crossover Trial.",
+        "source": "Clin Pharmacol Ther",
+        "pubdate": "2018 Dec",
+        "articleids": [
+          {
+            "idtype": "pubmed",
+            "idtypen": 1,
+            "value": "29672831"
+          },
+          {
+            "idtype": "doi",
+            "idtypen": 3,
+            "value": "10.1002/cpt.1096"
+          }
+        ]
+      },
+      "25297012": {
+        "pmid": "25297012",
+        "title": "Safety and efficacy of ceftriaxone for amyotrophic lateral sclerosis: a multi-stage, randomised, double-blind, placebo-controlled trial.",
+        "source": "Lancet Neurol",
+        "pubdate": "2014 Nov",
+        "articleids": [
+          {
+            "idtype": "pubmed",
+            "idtypen": 1,
+            "value": "25297012"
+          },
+          {
+            "idtype": "mid",
+            "idtypen": 8,
+            "value": "NIHMS635313"
+          },
+          {
+            "idtype": "pmc",
+            "idtypen": 8,
+            "value": "PMC4216315"
+          },
+          {
+            "idtype": "pmcid",
+            "idtypen": 5,
+            "value": "pmc-id: PMC4216315;manuscript-id: NIHMS635313;"
+          },
+          {
+            "idtype": "doi",
+            "idtypen": 3,
+            "value": "10.1016/S1474-4422(14)70222-4"
+          },
+          {
+            "idtype": "pii",
+            "idtypen": 4,
+            "value": "S1474-4422(14)70222-4"
+          }
+        ]
+      },
+      "24771634": {
+        "pmid": "24771634",
+        "title": "Systemic pharmacokinetics and cerebrospinal fluid uptake of intravenous ceftriaxone in patients with amyotrophic lateral sclerosis.",
+        "source": "J Clin Pharmacol",
+        "pubdate": "2014 Oct",
+        "articleids": [
+          {
+            "idtype": "pubmed",
+            "idtypen": 1,
+            "value": "24771634"
+          },
+          {
+            "idtype": "mid",
+            "idtypen": 8,
+            "value": "NIHMS590577"
+          },
+          {
+            "idtype": "pmc",
+            "idtypen": 8,
+            "value": "PMC4352577"
+          },
+          {
+            "idtype": "pmcid",
+            "idtypen": 5,
+            "value": "pmc-id: PMC4352577;manuscript-id: NIHMS590577;"
+          },
+          {
+            "idtype": "doi",
+            "idtypen": 3,
+            "value": "10.1002/jcph.317"
+          }
+        ]
+      },
+      "39511965": {
+        "pmid": "39511965",
+        "title": "A 40-week phase 2B randomized, multicenter, double-blind, placebo-controlled study evaluating the safety and efficacy of memantine in amyotrophic lateral sclerosis.",
+        "source": "Muscle Nerve",
+        "pubdate": "2025 Jan",
+        "articleids": [
+          {
+            "idtype": "pubmed",
+            "idtypen": 1,
+            "value": "39511965"
+          },
+          {
+            "idtype": "pmc",
+            "idtypen": 8,
+            "value": "PMC11632565"
+          },
+          {
+            "idtype": "pmcid",
+            "idtypen": 5,
+            "value": "pmc-id: PMC11632565;"
+          },
+          {
+            "idtype": "doi",
+            "idtypen": 3,
+            "value": "10.1002/mus.28287"
+          }
+        ]
+      },
+      "39307154": {
+        "pmid": "39307154",
+        "title": "Safety and efficacy of memantine and trazodone versus placebo for motor neuron disease (MND SMART): stage two interim analysis from the first cycle of a phase 3, multiarm, multistage, randomised, adaptive platform trial.",
+        "source": "Lancet Neurol",
+        "pubdate": "2024 Nov",
+        "articleids": [
+          {
+            "idtype": "pubmed",
+            "idtypen": 1,
+            "value": "39307154"
+          },
+          {
+            "idtype": "doi",
+            "idtypen": 3,
+            "value": "10.1016/S1474-4422(24)00326-0"
+          },
+          {
+            "idtype": "pii",
+            "idtypen": 4,
+            "value": "S1474-4422(24)00326-0"
+          }
+        ]
+      },
+      "37267913": {
+        "pmid": "37267913",
+        "title": "Phase 1/2a clinical trial in ALS with ropinirole, a drug candidate identified by iPSC drug discovery.",
+        "source": "Cell Stem Cell",
+        "pubdate": "2023 Jun 1",
+        "articleids": [
+          {
+            "idtype": "pubmed",
+            "idtypen": 1,
+            "value": "37267913"
+          },
+          {
+            "idtype": "doi",
+            "idtypen": 3,
+            "value": "10.1016/j.stem.2023.04.017"
+          },
+          {
+            "idtype": "pii",
+            "idtypen": 4,
+            "value": "S1934-5909(23)00135-2"
+          }
+        ]
+      },
+      "30127392": {
+        "pmid": "30127392",
+        "title": "Modeling sporadic ALS in iPSC-derived motor neurons identifies a potential therapeutic agent.",
+        "source": "Nat Med",
+        "pubdate": "2018 Oct",
+        "articleids": [
+          {
+            "idtype": "pubmed",
+            "idtypen": 1,
+            "value": "30127392"
+          },
+          {
+            "idtype": "doi",
+            "idtypen": 3,
+            "value": "10.1038/s41591-018-0140-5"
+          },
+          {
+            "idtype": "pii",
+            "idtypen": 4,
+            "value": "10.1038/s41591-018-0140-5"
+          }
+        ]
+      },
+      "40826812": {
+        "pmid": "40826812",
+        "title": "Ropinirole Functions Through a Dopamine Receptor D2-Independent Mechanism to Ameliorate Amyotrophic Lateral Sclerosis Phenotypes in TARDBP-Mutant iPSC-Derived Motor Neurons.",
+        "source": "J Neurochem",
+        "pubdate": "2025 Aug",
+        "articleids": [
+          {
+            "idtype": "pubmed",
+            "idtypen": 1,
+            "value": "40826812"
+          },
+          {
+            "idtype": "pmc",
+            "idtypen": 8,
+            "value": "PMC12361731"
+          },
+          {
+            "idtype": "pmcid",
+            "idtypen": 5,
+            "value": "pmc-id: PMC12361731;"
+          },
+          {
+            "idtype": "doi",
+            "idtypen": 3,
+            "value": "10.1111/jnc.70183"
+          }
+        ]
+      },
+      "29959396": {
+        "pmid": "29959396",
+        "title": "Azosemide is more potent than bumetanide and various other loop diuretics to inhibit the sodium-potassium-chloride-cotransporter human variants hNKCC1A and hNKCC1B.",
+        "source": "Sci Rep",
+        "pubdate": "2018 Jun 29",
+        "articleids": [
+          {
+            "idtype": "pubmed",
+            "idtypen": 1,
+            "value": "29959396"
+          },
+          {
+            "idtype": "pmc",
+            "idtypen": 8,
+            "value": "PMC6026185"
+          },
+          {
+            "idtype": "pmcid",
+            "idtypen": 5,
+            "value": "pmc-id: PMC6026185;"
+          },
+          {
+            "idtype": "doi",
+            "idtypen": 3,
+            "value": "10.1038/s41598-018-27995-w"
+          },
+          {
+            "idtype": "pii",
+            "idtypen": 4,
+            "value": "10.1038/s41598-018-27995-w"
+          }
+        ]
+      },
+      "34191081": {
+        "pmid": "34191081",
+        "title": "Randomized phase 2 study of perampanel for sporadic amyotrophic lateral sclerosis.",
+        "source": "J Neurol",
+        "pubdate": "2022 Feb",
+        "articleids": [
+          {
+            "idtype": "pubmed",
+            "idtypen": 1,
+            "value": "34191081"
+          },
+          {
+            "idtype": "pmc",
+            "idtypen": 8,
+            "value": "PMC8782807"
+          },
+          {
+            "idtype": "pmcid",
+            "idtypen": 5,
+            "value": "pmc-id: PMC8782807;"
+          },
+          {
+            "idtype": "doi",
+            "idtypen": 3,
+            "value": "10.1007/s00415-021-10670-y"
+          },
+          {
+            "idtype": "pii",
+            "idtypen": 4,
+            "value": "10.1007/s00415-021-10670-y"
+          }
+        ]
+      },
+      "26911633": {
+        "pmid": "26911633",
+        "title": "A randomized trial of mexiletine in ALS: Safety and effects on muscle cramps and progression.",
+        "source": "Neurology",
+        "pubdate": "2016 Apr 19",
+        "articleids": [
+          {
+            "idtype": "pubmed",
+            "idtypen": 1,
+            "value": "26911633"
+          },
+          {
+            "idtype": "pmc",
+            "idtypen": 8,
+            "value": "PMC4836879"
+          },
+          {
+            "idtype": "pmcid",
+            "idtypen": 5,
+            "value": "pmc-id: PMC4836879;"
+          },
+          {
+            "idtype": "doi",
+            "idtypen": 3,
+            "value": "10.1212/WNL.0000000000002507"
+          },
+          {
+            "idtype": "pii",
+            "idtypen": 4,
+            "value": "WNL.0000000000002507"
+          }
+        ]
+      }
+    },
+    "europepmc_core": {
+      "mnd_smart_memantine_2024": [
+        {
+          "pmid": "39307154",
+          "pmcid": null,
+          "doi": "10.1016/s1474-4422(24)00326-0",
+          "title": "Safety and efficacy of memantine and trazodone versus placebo for motor neuron disease (MND SMART): stage two interim analysis from the first cycle of a phase 3, multiarm, multistage, randomised, adaptive platform trial.",
+          "journal": null,
+          "pubYear": "2024",
+          "abstract_snippet": "<h4>Background</h4>Motor neuron disease represents a group of progressive and incurable diseases that are characterised by selective loss of motor neurons, resulting in an urgent need for rapid identification of effective disease-modifying therapies. The MND SMART trial aims to test the safety and efficacy of promising interventions efficiently and definitively against a single contemporaneous placebo control group. We now report results of the stage two interim analysis for memantine and trazodone.<h4>Methods</h4>MND SMART is an investigator-led, phase 3, double-blind, placebo-controlled, multiarm, multistage, randomised, adaptive platform trial recruiting at 20 hospital centres in the UK. Individuals older than 18 years with a confirmed diagnosis of either amyotrophic lateral sclerosis classified by the revised El Escorial criteria, primary lateral sclerosis, progressive muscular atrop"
+        }
+      ],
+      "berry_2013_ceftriaxone_csf": [
+        {
+          "pmid": "23613806",
+          "pmcid": "PMC3629222",
+          "doi": "10.1371/journal.pone.0061177",
+          "title": "Design and initial results of a multi-phase randomized trial of ceftriaxone in amyotrophic lateral sclerosis.",
+          "journal": null,
+          "pubYear": "2013",
+          "abstract_snippet": "<h4>Objectives</h4>Ceftriaxone increases expression of the astrocytic glutamate transporter, EAAT2, which might protect from glutamate-mediated excitotoxicity. A trial using a novel three stage nonstop design, incorporating Phases I-III, tested ceftriaxone in ALS. Stage 1 determined the cerebrospinal fluid pharmacokinetics of ceftriaxone in subjects with ALS. Stage 2 evaluated safety and tolerability for 20-weeks. Analysis of the pharmacokinetics, tolerability, and safety was used to determine the ceftriaxone dosage for Stage 3 efficacy testing.<h4>Methods</h4>In Stage 1, 66 subjects at ten clinical sites were enrolled and randomized equally into three study groups receiving intravenous placebo, ceftriaxone 2 grams daily or ceftriaxone 4 grams daily divided BID. Participants provided serum and cerebrospinal fluid for pharmacokinetic analysis on study day 7. Participants continued their a"
+        }
+      ],
+      "de_carvalho_2010_memantine_medals": [
+        {
+          "pmid": "20565333",
+          "pmcid": null,
+          "doi": "10.3109/17482968.2010.498521",
+          "title": "A randomized, placebo-controlled trial of memantine for functional disability in amyotrophic lateral sclerosis.",
+          "journal": null,
+          "pubYear": "2010",
+          "abstract_snippet": "Our objective is to describe the results of a phase II/III, 12-months, double-blinded, single-centre, randomized, parallel (1:1), clinical trial performed to evaluate the efficacy and safety of memantine in ALS. Patients with probable or definite ALS of less than 36 months disease duration and progression over a one-month lead-in period were randomly assigned to placebo or memantine at 20 mg/day. The primary endpoint was 12-months ALSFRS decline. Forced vital capacity, manual muscle testing, visual analogue scale, quality of life, motor unit number estimation and neurophysiological index were the secondary endpoints. The number of patients included was based on the assumption of a 50% change in the ALSFRS decline. Safety and adverse events were evaluated. Sixty-three patients were included in the trial. Memantine did not show more adverse events or laboratory changes than placebo. Primar"
+        }
+      ],
+      "chan_memantine_als": [],
+      "kornhuber_memantine_csf": [
+        {
+          "pmid": "41136637",
+          "pmcid": "PMC13428794",
+          "doi": "10.1007/s00702-025-03017-8",
+          "title": "Memantine: updates from the past decade and implications for future novel therapeutic applications.",
+          "journal": null,
+          "pubYear": "2026",
+          "abstract_snippet": "This review provides an update on advances during the past decade in our knowledge of the pharmacology and clinical use of memantine. It covers aspects related to preclinical research, such as new findings about the mechanism of action, and the efficacy of memantine in animal models of various diseases beyond dementia. In particular, new emerging indications since the publication of our latest review almost a decade ago were investigated. Where possible, preclinical findings were reinforced by data obtained in clinical studies in patients with Alzheimer's disease, as well as in other indications reported by researchers who initiated off-label studies. This comprehensive narrative review demonstrates that memantine continues to show robust efficacy in its primary indication of Alzheimer's disease. However, while numerous potential new indications have emerged from preclinical studies, onl"
+        },
+        {
+          "pmid": "17596105",
+          "pmcid": null,
+          "doi": "10.2165/00003088-200746070-00005",
+          "title": "Memantine pharmacotherapy: a naturalistic study using a population pharmacokinetic approach.",
+          "journal": null,
+          "pubYear": "2007",
+          "abstract_snippet": "<h4>Background and objective</h4>Memantine plasma concentrations show considerable interindividual variability. High memantine plasma concentrations are associated with the occurrence of neuropsychiatric adverse effects such as confusion. The objective of the present study was, therefore, to investigate the reasons for the observed variability of the pharmacokinetics of memantine in a representative patient population and to explore patient covariates on drug disposition.<h4>Subjects</h4>Fifty-six ambulatory Western European patients aged 50-91 years.<h4>Methods</h4>This prospective study used a full population pharmacokinetic sampling design. After at least 11 days of continuous memantine intake, the patients provided pharmacokinetic profiles, with six measurements each over a 12-hour period, with a total of 335 serum memantine concentrations. Covariates considered for inclusion in the "
+        },
+        {
+          "pmid": "7478269",
+          "pmcid": null,
+          "doi": "10.1016/0304-3940(95)11785-u",
+          "title": "Cerebrospinal fluid and serum concentrations of the N-methyl-D-aspartate (NMDA) receptor antagonist memantine in man.",
+          "journal": null,
+          "pubYear": "1995",
+          "abstract_snippet": "Memantine is an uncompetitive N-methyl-D-aspartate (NMDA) receptor antagonist with therapeutic potential in dementia, spasticity and Parkinson's disease. The Ki-value of memantine at the phencyclidine (PCP) binding site of the NMDA receptor is 0.5 microM in human frontal cortex. We investigated whether concentrations of memantine in cerebrospinal fluid (CSF) and serum samples under therapeutic conditions are in the range of its Ki-value at the PCP binding site. The serum levels ranged from 0.025 to 0.529 microM with daily doses between 5 and 30 mg. CSF levels were highly correlated to serum levels and were below serum levels in each patient with a mean CSF/serum ratio of 0.52. Serum and CSF levels were correlated to the daily dose, but not to the duration of treatment. At the concentrations reported here, memantine is expected to specifically interact with the PCP binding site of the NMD"
+        }
+      ],
+      "furosemide_renshaw_pmc4221825": [],
+      "furosemide_oat3_kusuhara": [
+        {
+          "pmid": "28456721",
+          "pmcid": "PMC5955602",
+          "doi": "10.1016/j.xphs.2017.04.040",
+          "title": "Investigation of the Importance of Multidrug Resistance-Associated Protein 4 (Mrp4/Abcc4) in the Active Efflux of Anionic Drugs Across the Blood-Brain Barrier.",
+          "journal": null,
+          "pubYear": "2017",
+          "abstract_snippet": "The importance of multidrug resistance-associated protein 4 (Mrp4/Abcc4) in limiting the penetration of Mrp4 substrate compounds into the central nervous system across the blood-brain barrier was investigated using Mrp4<sup>-/-</sup> mice. Significant adenosine triphosphate-dependent uptake by MRP4 was observed for ochratoxin A, pitavastatin, raltitrexed (K<sub>m</sub>\u00a0= 43.7 \u03bcM), pravastatin, cyclic guanosine monophosphate, 2,4-dichlorophenoxyacetate, and urate. The defect in the Mrp4 gene did not affect the brain-to-plasma ratio (K<sub>p,brain</sub>) of quinidine and dantrolene. Following intravenous infusion in wild-type and Mrp4<sup>-/-</sup> mice, the plasma concentrations of the tested compounds (cefazolin, cefmetazole, ciprofloxacin, cyclophosphamide, furosemide, hydrochlorothiazide, methotrexate, pitavastatin, pravastatin, and raltitrexed) were identical; however, Mrp4<sup>-/-</s"
+        },
+        {
+          "pmid": "15717059",
+          "pmcid": "PMC539323",
+          "doi": "10.1602/neurorx.2.1.73",
+          "title": "Active efflux across the blood-brain barrier: role of the solute carrier family.",
+          "journal": null,
+          "pubYear": "2005",
+          "abstract_snippet": "The brain uptake of xenobiotics is restricted by the blood-brain brain barrier formed by brain capillary endothelial cells. Active efflux transport systems in the blood-brain barrier work as a detoxification system in the brain by facilitating removal of xenobiotic compounds from the brain. Drugs, acting in the brain, have to overcome such efflux mechanisms to achieve clinically significant concentration in the brain. Multiple transporters are involved in this efflux transport in the brain capillaries. In the past few years, considerable progress has been made in the cloning of these transporters and their functional characterization after heterologous expression. Members of the solute carrier family (SLC) play an important role in the efflux transport, especially for organic anions, which include organic anion transporting polypeptides (OATP/SLCO) and organic anion transporters (OAT/SLC"
+        },
+        {
+          "pmid": "15894718",
+          "pmcid": null,
+          "doi": "10.1124/jpet.105.085027",
+          "title": "Rapid elimination of cefaclor from the cerebrospinal fluid is mediated by a benzylpenicillin-sensitive mechanism distinct from organic anion transporter 3.",
+          "journal": null,
+          "pubYear": "2005",
+          "abstract_snippet": "The purpose of this study was to investigate the carrier-mediated elimination of cephalosporins from the cerebrospinal fluid (CSF) via the choroid plexus. Cefaclor and cefalexin are structural analogs with similar lipophilicity, differing by only one functional group (cefaclor, -Cl; cephalexin, -CH(3)), and they are substrates of rat peptide transporter PEPT2 with similar transport activities. However, cefaclor was cleared from the CSF more rapidly than cefalexin after intracerebroventricular administration (the elimination rate constants were 0.11 and 0.050 min(-1), respectively). The elimination of cefaclor from the CSF was inhibited by benzylpenicillin, but not by glycylsarcosine (GlySar), whereas GlySar, but not benzylpenicillin, had an inhibitory effect on the elimination of cefalexin from the CSF. The uptake of cefaclor by the freshly isolated rat choroid plexus was saturable, with"
+        }
+      ],
+      "talampanel_pascuzzi_als": [
+        {
+          "pmid": "19961264",
+          "pmcid": null,
+          "doi": "10.3109/17482960903307805",
+          "title": "A phase II trial of talampanel in subjects with amyotrophic lateral sclerosis.",
+          "journal": null,
+          "pubYear": "2010",
+          "abstract_snippet": "Our objective was to determine if chronic treatment with the non-competitive AMPA antagonist talampanel is efficacious and safe in subjects with ALS. A double-blind, placebo-controlled, multicenter, randomized clinical trial of nine months treatment duration was conducted in 59 subjects with ALS, with 40 subjects receiving talampanel 50 mg p.o. t.i.d, and 19 subjects receiving placebo. Primary outcome measure was rate of decline in isometric arm strength (as measured by change in arm strength megaslope of the Tufts Quantitative Neuromuscular Exam (TQNE)). Other efficacy endpoints included rate of decline in respiratory function, isometric leg strength, bulbar function, fine motor function, the ALS Functional Rating Scale (ALSFRS), and survival. Secondary safety outcome measures were frequency of adverse events, neurological status, plasma concentration of talampanel, vital signs, routine"
+        }
+      ],
+      "flecainide_park_als": [
+        {
+          "pmid": "26844270",
+          "pmcid": "PMC4703720",
+          "doi": "10.1016/j.ebiom.2015.11.022",
+          "title": "Flecainide in Amyotrophic Lateral Sclerosis as a Neuroprotective Strategy (FANS): A Randomized Placebo-Controlled Trial.",
+          "journal": null,
+          "pubYear": "2015",
+          "abstract_snippet": "<h4>Background</h4>Abnormalities in membrane excitability and Na(+) channel function are characteristic of amyotrophic lateral sclerosis (ALS). We aimed to examine the neuroprotective potential, safety and tolerability of the Na(+) channel blocker and membrane stabiliser flecainide in ALS.<h4>Methods</h4>A double-blind, placebo-controlled, randomised clinical trial of flecainide (200 mg/day) for 32-weeks with a 12-week lead-in phase was conducted in participants with probable or definite ALS recruited from multiple Australian centres (ANZCT Registry number ACTRN12608000338369). Patients were reviewed by a cardiologist to rule out cardiac contraindications. Participants were randomly assigned (1:1) to flecainide or placebo using stratified permuted blocks by a central pharmacy. The primary outcome measure was the slope of decline of the ALS Functional Rating Scale-revised (ALS FRS-r) duri"
+        }
+      ],
+      "guo_2025_kcnq2_tdp43": [
+        {
+          "pmid": "41174170",
+          "pmcid": "PMC12672377",
+          "doi": "10.1038/s41593-025-02096-w",
+          "title": "TDP-43-dependent mis-splicing of KCNQ2 triggers intrinsic neuronal hyperexcitability in ALS/FTD.",
+          "journal": null,
+          "pubYear": "2025",
+          "abstract_snippet": "Motor neuron hyperexcitability is a broadly observed yet poorly understood feature of amyotrophic lateral sclerosis (ALS) and frontotemporal dementia (FTD). Nuclear depletion and cytoplasmic aggregation of the RNA splicing protein TAR DNA-binding protein 43 (TDP-43) are observed in most ALS and FTD patients. Here we show that TDP-43 dysfunction causes mis-splicing of KCNQ2, which encodes a voltage-gated potassium channel (K<sub>v</sub>7.2) that regulates neuronal excitability. Using iPSC-derived neurons and postmortem ALS/FTD brain and spinal cord tissue we find widespread, disease-specific and TDP-43-specific skipping of an exon encoding the KCNQ2 pore domain. The mis-spliced mRNA escapes degradation and is translated into a nonfunctional protein with severely reduced ion conductance that aggregates in the endoplasmic reticulum and causes intrinsic hyperexcitability in ALS neuronal mode"
+        }
+      ]
+    }
+  }
+}

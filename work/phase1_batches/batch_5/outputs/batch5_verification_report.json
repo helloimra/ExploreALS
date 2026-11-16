@@ -1,0 +1,37 @@
+{
+  "n_analysis_runs": 4,
+  "n_evidence_rows": 25,
+  "n_candidate_decisions": 7,
+  "decisions_summary": {
+    "C003": {
+      "epistemic_state": "ESTABLISHED_BENCHMARK",
+      "decision": "RECLASSIFY_BENCHMARK_OR_BIOMARKER"
+    },
+    "C004": {
+      "epistemic_state": "FALSIFIED_CLINICAL",
+      "decision": "DROP"
+    },
+    "C005": {
+      "epistemic_state": "UNPROVEN_UNTESTED",
+      "decision": "KEEP_EXPLORATORY_UNPROVEN"
+    },
+    "C008": {
+      "epistemic_state": "FALSIFIED_CLINICAL",
+      "decision": "DROP"
+    },
+    "C010": {
+      "epistemic_state": "FALSIFIED_CLINICAL",
+      "decision": "DROP"
+    },
+    "C011": {
+      "epistemic_state": "FALSIFIED_PK_SAFETY",
+      "decision": "DROP"
+    },
+    "C012": {
+      "epistemic_state": "FALSIFIED_CLINICAL",
+      "decision": "DROP"
+    }
+  },
+  "errors": [],
+  "status": "PASS"
+}

@@ -1,0 +1,31 @@
+{
+  "target": {
+    "id": "ENSG00000173369",
+    "approvedSymbol": "C1QB",
+    "tractability": [],
+    "safetyLiabilities": [],
+    "geneticConstraint": [
+      {
+        "constraintType": "syn",
+        "exp": 137.0500030517578,
+        "obs": 132,
+        "score": 0.2575100064277649,
+        "oe": 0.963129997253418
+      },
+      {
+        "constraintType": "mis",
+        "exp": 338.0199890136719,
+        "obs": 292,
+        "score": 1.0674999952316284,
+        "oe": 0.863860011100769
+      },
+      {
+        "constraintType": "lof",
+        "exp": 4.631899833679199,
+        "obs": 2,
+        "score": 0.2836799919605255,
+        "oe": 0.43178999423980713
+      }
+    ]
+  }
+}

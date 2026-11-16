@@ -1,0 +1,160 @@
+{
+  "target": {
+    "id": "ENSG00000133048",
+    "approvedSymbol": "CHI3L1",
+    "tractability": [
+      {
+        "modality": "SM",
+        "label": "Approved Drug",
+        "value": false
+      },
+      {
+        "modality": "SM",
+        "label": "Advanced Clinical",
+        "value": false
+      },
+      {
+        "modality": "SM",
+        "label": "Phase 1 Clinical",
+        "value": false
+      },
+      {
+        "modality": "SM",
+        "label": "Structure with Ligand",
+        "value": true
+      },
+      {
+        "modality": "SM",
+        "label": "High-Quality Ligand",
+        "value": false
+      },
+      {
+        "modality": "SM",
+        "label": "High-Quality Pocket",
+        "value": true
+      },
+      {
+        "modality": "SM",
+        "label": "Med-Quality Pocket",
+        "value": false
+      },
+      {
+        "modality": "SM",
+        "label": "Druggable Family",
+        "value": false
+      },
+      {
+        "modality": "AB",
+        "label": "Approved Drug",
+        "value": false
+      },
+      {
+        "modality": "AB",
+        "label": "Advanced Clinical",
+        "value": false
+      },
+      {
+        "modality": "AB",
+        "label": "Phase 1 Clinical",
+        "value": false
+      },
+      {
+        "modality": "AB",
+        "label": "UniProt loc high conf",
+        "value": true
+      },
+      {
+        "modality": "AB",
+        "label": "GO CC high conf",
+        "value": true
+      },
+      {
+        "modality": "AB",
+        "label": "UniProt loc med conf",
+        "value": false
+      },
+      {
+        "modality": "AB",
+        "label": "UniProt SigP or TMHMM",
+        "value": true
+      },
+      {
+        "modality": "AB",
+        "label": "GO CC med conf",
+        "value": false
+      },
+      {
+        "modality": "AB",
+        "label": "Human Protein Atlas loc",
+        "value": false
+      },
+      {
+        "modality": "PR",
+        "label": "Approved Drug",
+        "value": false
+      },
+      {
+        "modality": "PR",
+        "label": "Advanced Clinical",
+        "value": false
+      },
+      {
+        "modality": "PR",
+        "label": "Phase 1 Clinical",
+        "value": false
+      },
+      {
+        "modality": "PR",
+        "label": "Literature",
+        "value": false
+      },
+      {
+        "modality": "PR",
+        "label": "UniProt Ubiquitination",
+        "value": false
+      },
+      {
+        "modality": "PR",
+        "label": "Database Ubiquitination",
+        "value": false
+      },
+      {
+        "modality": "PR",
+        "label": "Half-life Data",
+        "value": false
+      },
+      {
+        "modality": "PR",
+        "label": "Small Molecule Binder",
+        "value": false
+      },
+      {
+        "_truncated": "(Showing 25 of 28 items)"
+      }
+    ],
+    "safetyLiabilities": [],
+    "geneticConstraint": [
+      {
+        "constraintType": "syn",
+        "exp": 192.10000610351562,
+        "obs": 210,
+        "score": -0.7703700065612793,
+        "oe": 1.0931999683380127
+      },
+      {
+        "constraintType": "mis",
+        "exp": 492.2200012207031,
+        "obs": 493,
+        "score": -0.014928000047802925,
+        "oe": 1.0016000270843506
+      },
+      {
+        "constraintType": "lof",
+        "exp": 40.724998474121094,
+        "obs": 30,
+        "score": 3.403199855256389e-08,
+        "oe": 0.7366499900817871
+      }
+    ]
+  }
+}

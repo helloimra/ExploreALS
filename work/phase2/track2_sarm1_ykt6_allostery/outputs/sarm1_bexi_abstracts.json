@@ -1,0 +1,26 @@
+{
+  "42156967": {
+    "title": "The rise and fall of SARM1 base-exchange inhibitors.",
+    "year": "2026",
+    "journal": "Communications chemistry",
+    "abstract": "The sterile alpha and TIR motif containing 1 (SARM1) enzyme is a key driver of axonal degeneration in response to injury, making it an attractive target for treating chemotherapy-induced peripheral neuropathy (CIPN) and other nervous system diseases. In this study, we identified and optimised a class of base-exchange inhibitors (BEXi) targeting human SARM1 and explored their molecular interactions and conformational effects using cryo-EM, HDX-MS and SAXS. Although BEXi produced robust inhibition across all biochemical and cellular assay formats, application at sub-inhibitory concentrations consistently led to paradoxical SARM1 activation, and in neuronal assays, accelerated neurite degeneration. Further analysis showed that BEXi only delayed, rather than prevented, neurite degeneration when applied to primary neuronal cells, even at exceedingly high inhibitor concentrations. These results prompted us to discontinue BEXi development in favour of alternative strategies, underscoring the complexity of SARM1 as a therapeutic target and the need for comprehensive, mechanistically informed screening cascades."
+  },
+  "40529094": {
+    "title": "Optimization of Brain Penetrant SARM1 Orthosteric Inhibitors and Discovery of Their Paradoxical Subinhibitory Activation.",
+    "year": "2025",
+    "journal": "ACS medicinal chemistry letters",
+    "abstract": "SARM1 (sterile alpha and Toll/interleukin-1 receptor motif-containing 1) has recently emerged as a promising therapeutic target for several neurodegenerative diseases. Herein, we detail our optimization of SARM1 orthosteric base exchange inhibitors. Early chemical matter was found to be substrates for either Pgp/MDR1 or breast cancer resistant protein (BCRP), resulting in compounds with poor overall brain exposure in rodents. Using structure-based drug design, we identified the crucial interactions for driving adduct formation and subsequently optimized the molecules to eliminate the MDR1 and BCRP efflux, yielding tool compounds with sufficient brain penetration to have a pharmacodynamic (PD) effect. Ultimately, we found these compounds activated SARM1 at low doses, leading to serious adverse events in vivo. These preclinical findings highlight the liability for these base exchange inhibitors for further progression."
+  },
+  "41948869": {
+    "title": "Structure-Based Discovery of Imidazo[4,5-&lt;i&gt;c&lt;/i&gt;]pyridine SARM1 Modulators Showing Paradoxical Activation.",
+    "year": "2026",
+    "journal": "Journal of medicinal chemistry",
+    "abstract": "Sterile Alpha and TIR Motif Containing 1 (SARM1) is an NAD<sup>+</sup> hydrolase enzyme implicated in neurological diseases with prominent axonopathies. A reported method for SARM1 inhibition involves the design of small molecules bearing reactive heterocyclic warheads, which intercept the hydrolysis of NAD<sup>+</sup> in the active site of SARM1 and subsequently inhibit enzymatic function of the TIR domain. Herein, we describe the discovery of a series of bicyclic SARM1 inhibitors, initially identified via a unique workflow for free-energy perturbation (FEP+) simulations. Subsequent hit expansion efforts identified potent and cell-active inhibitors with slow off-rates, which impart a unique conformational state of W662 in the SARM1 catalytic site, as assessed via X-ray crystallography. Finally, we discuss an identified liability associated with substrate-based SARM1 inhibitors such as <b>19</b>, whereby insufficient target engagement results in an increase in biomarkers of neurodegeneration at low doses <i>in vivo</i> and exacerbates neuronal degeneration and cell death <i>in vitro</i>."
+  },
+  "33944777": {
+    "title": "Permeant fluorescent probes visualize the activation of SARM1 and uncover an anti-neurodegenerative drug candidate.",
+    "year": "2021",
+    "journal": "eLife",
+    "abstract": "SARM1 regulates axonal degeneration through its NAD-metabolizing activity and is a drug target for neurodegenerative disorders. We designed and synthesized fluorescent conjugates of styryl derivative with pyridine to serve as substrates of SARM1, which exhibited large red shifts after conversion. With the conjugates, SARM1 activation was visualized in live cells following elevation of endogenous NMN or treatment with a cell-permeant NMN-analog. In neurons, imaging documented mouse SARM1 activation preceded vincristine-induced axonal degeneration by hours. Library screening identified a derivative of nisoldipine (NSDP) as a covalent inhibitor of SARM1 that reacted with the cysteines, especially Cys311 in its ARM domain and blocked its NMN-activation, protecting axons from degeneration. The Cryo-EM structure showed that SARM1 was locked into an inactive conformation by the inhibitor, uncovering a potential neuroprotective mechanism of dihydropyridines."
+  }
+}

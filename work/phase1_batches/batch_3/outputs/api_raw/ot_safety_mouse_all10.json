@@ -1,0 +1,1143 @@
+{
+  "targets": [
+    {
+      "id": "ENSG00000115602",
+      "approvedSymbol": "IL33R",
+      "safetyLiabilities": [],
+      "mousePhenotypes": [
+        {
+          "modelPhenotypeLabel": "increased susceptibility to induced pancreatitis",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            },
+            {
+              "label": "endocrine/exocrine gland phenotype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ENSG00000133063",
+      "approvedSymbol": "CHIT1",
+      "safetyLiabilities": [],
+      "mousePhenotypes": [
+        {
+          "modelPhenotypeLabel": "decreased susceptibility to bacterial infection",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ENSG00000136235",
+      "approvedSymbol": "GPNMB",
+      "safetyLiabilities": [],
+      "mousePhenotypes": [
+        {
+          "modelPhenotypeLabel": "decreased tumor growth/size",
+          "modelPhenotypeClasses": [
+            {
+              "label": "neoplasm"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal dendritic cell physiology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased hemoglobin content",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal iris pigmentation",
+          "modelPhenotypeClasses": [
+            {
+              "label": "vision/eye phenotype"
+            },
+            {
+              "label": "pigmentation phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal iris morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "vision/eye phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "iris atrophy",
+          "modelPhenotypeClasses": [
+            {
+              "label": "vision/eye phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased fasting circulating glucose level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ENSG00000133048",
+      "approvedSymbol": "CHI3L1",
+      "safetyLiabilities": [],
+      "mousePhenotypes": [
+        {
+          "modelPhenotypeLabel": "impaired neutrophil recruitment",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased splenocyte proliferation",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            },
+            {
+              "label": "cellular phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased T cell apoptosis",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            },
+            {
+              "label": "cellular phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal dendritic cell physiology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased T-helper 2 cell number",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "impaired eosinophil recruitment",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased interleukin-4 secretion",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased IgE level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased interleukin-13 secretion",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal macrophage morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal T-helper 2 physiology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal plasmacytoid dendritic cell physiology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased apoptosis",
+          "modelPhenotypeClasses": [
+            {
+              "label": "cellular phenotype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ENSG00000064886",
+      "approvedSymbol": "CHI3L2",
+      "safetyLiabilities": [],
+      "mousePhenotypes": []
+    },
+    {
+      "id": "ENSG00000173372",
+      "approvedSymbol": "C1QA",
+      "safetyLiabilities": [],
+      "mousePhenotypes": [
+        {
+          "modelPhenotypeLabel": "no abnormal phenotype detected",
+          "modelPhenotypeClasses": [
+            {
+              "label": "normal phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased susceptibility to bacterial infection",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "seizures",
+          "modelPhenotypeClasses": [
+            {
+              "label": "behavior/neurological phenotype"
+            },
+            {
+              "label": "nervous system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "glomerulonephritis",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            },
+            {
+              "label": "renal/urinary system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased anti-histone antibody level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased circulating glucose level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal inhibitory postsynaptic currents",
+          "modelPhenotypeClasses": [
+            {
+              "label": "nervous system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased circulating chloride level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal hippocampus pyramidal cell morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "nervous system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased excitatory postsynaptic current frequency",
+          "modelPhenotypeClasses": [
+            {
+              "label": "nervous system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "absence seizures",
+          "modelPhenotypeClasses": [
+            {
+              "label": "behavior/neurological phenotype"
+            },
+            {
+              "label": "nervous system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "premature death",
+          "modelPhenotypeClasses": [
+            {
+              "label": "mortality/aging"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal excitatory postsynaptic currents",
+          "modelPhenotypeClasses": [
+            {
+              "label": "nervous system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "glomerular crescent",
+          "modelPhenotypeClasses": [
+            {
+              "label": "renal/urinary system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased anti-nuclear antigen antibody level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased blood urea nitrogen level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal synaptic bouton morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "nervous system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased renal glomerulus apoptosis",
+          "modelPhenotypeClasses": [
+            {
+              "label": "renal/urinary system phenotype"
+            },
+            {
+              "label": "cellular phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased miniature excitatory postsynaptic current frequency",
+          "modelPhenotypeClasses": [
+            {
+              "label": "nervous system phenotype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ENSG00000173369",
+      "approvedSymbol": "C1QB",
+      "safetyLiabilities": [],
+      "mousePhenotypes": [
+        {
+          "modelPhenotypeLabel": "no abnormal phenotype detected",
+          "modelPhenotypeClasses": [
+            {
+              "label": "normal phenotype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ENSG00000159189",
+      "approvedSymbol": "C1QC",
+      "safetyLiabilities": [],
+      "mousePhenotypes": [
+        {
+          "modelPhenotypeLabel": "abnormal startle reflex",
+          "modelPhenotypeClasses": [
+            {
+              "label": "behavior/neurological phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased circulating aspartate transaminase level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased circulating total protein level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "no abnormal phenotype detected",
+          "modelPhenotypeClasses": [
+            {
+              "label": "normal phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal autopod morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "limbs/digits/tail phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased circulating alanine transaminase level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased circulating calcium level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "absent vibrissae",
+          "modelPhenotypeClasses": [
+            {
+              "label": "integument phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased grip strength",
+          "modelPhenotypeClasses": [
+            {
+              "label": "behavior/neurological phenotype"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ENSG00000125730",
+      "approvedSymbol": "C3",
+      "safetyLiabilities": [
+        {
+          "event": "fasting triglyceride levels",
+          "effects": [],
+          "biosamples": []
+        },
+        {
+          "event": "fasting triglyceride levels and susceptibility to metabolic syndrome",
+          "effects": [],
+          "biosamples": []
+        }
+      ],
+      "mousePhenotypes": [
+        {
+          "modelPhenotypeLabel": "abnormal immune system morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "polyphagia",
+          "modelPhenotypeClasses": [
+            {
+              "label": "behavior/neurological phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased circulating free fatty acids level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal humoral immune response",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal mast cell physiology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased circulating insulin level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "glomerulonephritis",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            },
+            {
+              "label": "renal/urinary system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased hepatocyte proliferation",
+          "modelPhenotypeClasses": [
+            {
+              "label": "liver/biliary system phenotype"
+            },
+            {
+              "label": "cellular phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased susceptibility to injury",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal retina horizontal cell morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "vision/eye phenotype"
+            },
+            {
+              "label": "nervous system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal blood homeostasis",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased liver enzyme/coenzyme level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            },
+            {
+              "label": "liver/biliary system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal intestine morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "digestive/alimentary phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal glucose homeostasis",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "impaired complement alternative pathway",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased susceptibility to induced arthritis",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            },
+            {
+              "label": "skeleton phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal synaptic vesicle number",
+          "modelPhenotypeClasses": [
+            {
+              "label": "nervous system phenotype"
+            },
+            {
+              "label": "cellular phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased spleen germinal center size",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased susceptibility to induced morbidity/mortality",
+          "modelPhenotypeClasses": [
+            {
+              "label": "mortality/aging"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal dendritic spine morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "nervous system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal glomerular mesangium morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "renal/urinary system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased renal glomerulus basement membrane thickness",
+          "modelPhenotypeClasses": [
+            {
+              "label": "renal/urinary system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased brown adipose tissue amount",
+          "modelPhenotypeClasses": [
+            {
+              "label": "adipose tissue phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal liver physiology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "liver/biliary system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "premature death",
+          "modelPhenotypeClasses": [
+            {
+              "label": "mortality/aging"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal lipid homeostasis",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "no abnormal phenotype detected",
+          "modelPhenotypeClasses": [
+            {
+              "label": "normal phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased circulating triglyceride level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased susceptibility to autoimmune hemolytic anemia",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "bile duct hyperplasia",
+          "modelPhenotypeClasses": [
+            {
+              "label": "liver/biliary system phenotype"
+            },
+            {
+              "label": "endocrine/exocrine gland phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased triglyceride level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "thrombocytosis",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased cerebral infarct size",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            },
+            {
+              "label": "nervous system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal hippocampus CA3 region morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "nervous system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "prolonged estrous cycle",
+          "modelPhenotypeClasses": [
+            {
+              "label": "reproductive system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal glomerular endothelium fenestra morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "cardiovascular system phenotype"
+            },
+            {
+              "label": "renal/urinary system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased b-wave amplitude",
+          "modelPhenotypeClasses": [
+            {
+              "label": "vision/eye phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased complement C5 level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal liver morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "liver/biliary system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "focal hepatic necrosis",
+          "modelPhenotypeClasses": [
+            {
+              "label": "liver/biliary system phenotype"
+            }
+          ]
+        },
+        {
+          "_truncated": "(Showing 40 of 116 items)"
+        }
+      ]
+    },
+    {
+      "id": "ENSG00000224389",
+      "approvedSymbol": "C4B",
+      "safetyLiabilities": [],
+      "mousePhenotypes": [
+        {
+          "modelPhenotypeLabel": "abnormal blood coagulation",
+          "modelPhenotypeClasses": [
+            {
+              "label": "homeostasis/metabolism phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "liver inflammation",
+          "modelPhenotypeClasses": [
+            {
+              "label": "liver/biliary system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "renal glomerular protein deposits",
+          "modelPhenotypeClasses": [
+            {
+              "label": "renal/urinary system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased susceptibility to Coronaviridae infection",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal immune system physiology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased susceptibility to bacterial infection",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased lean body mass",
+          "modelPhenotypeClasses": [
+            {
+              "label": "growth/size/body region phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal renal glomerulus morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "renal/urinary system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal humoral immune response",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased vascular permeability",
+          "modelPhenotypeClasses": [
+            {
+              "label": "cardiovascular system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased anti-single stranded DNA antibody level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased spleen germinal center number",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased susceptibility to induced morbidity/mortality",
+          "modelPhenotypeClasses": [
+            {
+              "label": "mortality/aging"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased susceptibility to bacterial infection induced morbidity/mortality",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            },
+            {
+              "label": "mortality/aging"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased neutrophil cell number",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal intestine morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "digestive/alimentary phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "glomerulonephritis",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            },
+            {
+              "label": "renal/urinary system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "abnormal spleen germinal center morphology",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased spleen weight",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            },
+            {
+              "label": "growth/size/body region phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased spleen germinal center size",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "no abnormal phenotype detected",
+          "modelPhenotypeClasses": [
+            {
+              "label": "normal phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased anti-nuclear antigen antibody level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased macrophage cell number",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased anti-double stranded DNA antibody level",
+          "modelPhenotypeClasses": [
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "decreased spleen germinal center number",
+          "modelPhenotypeClasses": [
+            {
+              "label": "hematopoietic system phenotype"
+            },
+            {
+              "label": "immune system phenotype"
+            }
+          ]
+        },
+        {
+          "modelPhenotypeLabel": "increased freezing behavior",
+          "modelPhenotypeClasses": [
+            {
+              "label": "behavior/neurological phenotype"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

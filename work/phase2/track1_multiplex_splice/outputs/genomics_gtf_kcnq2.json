@@ -1,0 +1,615 @@
+[
+  {
+    "gene_name": "KCNQ2",
+    "gene_id": "ENSG00000075043.21",
+    "transcript_id": "ENST00000359125.7",
+    "transcript_type": "protein_coding",
+    "chromosome": "chr20",
+    "start": 63400207,
+    "end": 63472655,
+    "strand": "-",
+    "is_mane_select": true,
+    "num_exons": 17,
+    "exons": [
+      {
+        "exon_number": 1,
+        "chromosome": "chr20",
+        "start": 63472167,
+        "end": 63472655,
+        "width": 489,
+        "strand": "-",
+        "acceptor": 63472655,
+        "donor": 63472167,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 2,
+        "chromosome": "chr20",
+        "start": 63446746,
+        "end": 63446837,
+        "width": 92,
+        "strand": "-",
+        "acceptor": 63446837,
+        "donor": 63446746,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 3,
+        "chromosome": "chr20",
+        "start": 63445237,
+        "end": 63445364,
+        "width": 128,
+        "strand": "-",
+        "acceptor": 63445364,
+        "donor": 63445237,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 4,
+        "chromosome": "chr20",
+        "start": 63444658,
+        "end": 63444834,
+        "width": 177,
+        "strand": "-",
+        "acceptor": 63444834,
+        "donor": 63444658,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 5,
+        "chromosome": "chr20",
+        "start": 63442405,
+        "end": 63442531,
+        "width": 127,
+        "strand": "-",
+        "acceptor": 63442531,
+        "donor": 63442405,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 6,
+        "chromosome": "chr20",
+        "start": 63439597,
+        "end": 63439708,
+        "width": 112,
+        "strand": "-",
+        "acceptor": 63439708,
+        "donor": 63439597,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 7,
+        "chromosome": "chr20",
+        "start": 63438624,
+        "end": 63438720,
+        "width": 97,
+        "strand": "-",
+        "acceptor": 63438720,
+        "donor": 63438624,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 8,
+        "chromosome": "chr20",
+        "start": 63433808,
+        "end": 63433903,
+        "width": 96,
+        "strand": "-",
+        "acceptor": 63433903,
+        "donor": 63433808,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 9,
+        "chromosome": "chr20",
+        "start": 63431339,
+        "end": 63431369,
+        "width": 31,
+        "strand": "-",
+        "acceptor": 63431369,
+        "donor": 63431339,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 10,
+        "chromosome": "chr20",
+        "start": 63428366,
+        "end": 63428435,
+        "width": 70,
+        "strand": "-",
+        "acceptor": 63428435,
+        "donor": 63428366,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 11,
+        "chromosome": "chr20",
+        "start": 63424176,
+        "end": 63424206,
+        "width": 31,
+        "strand": "-",
+        "acceptor": 63424206,
+        "donor": 63424176,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 12,
+        "chromosome": "chr20",
+        "start": 63419618,
+        "end": 63419672,
+        "width": 55,
+        "strand": "-",
+        "acceptor": 63419672,
+        "donor": 63419618,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 13,
+        "chromosome": "chr20",
+        "start": 63414902,
+        "end": 63415126,
+        "width": 225,
+        "strand": "-",
+        "acceptor": 63415126,
+        "donor": 63414902,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 14,
+        "chromosome": "chr20",
+        "start": 63414087,
+        "end": 63414193,
+        "width": 107,
+        "strand": "-",
+        "acceptor": 63414193,
+        "donor": 63414087,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 15,
+        "chromosome": "chr20",
+        "start": 63413449,
+        "end": 63413581,
+        "width": 133,
+        "strand": "-",
+        "acceptor": 63413581,
+        "donor": 63413449,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 16,
+        "chromosome": "chr20",
+        "start": 63408412,
+        "end": 63408536,
+        "width": 125,
+        "strand": "-",
+        "acceptor": 63408536,
+        "donor": 63408412,
+        "overlaps_variant": false
+      },
+      {
+        "exon_number": 17,
+        "chromosome": "chr20",
+        "start": 63400207,
+        "end": 63407375,
+        "width": 7169,
+        "strand": "-",
+        "acceptor": 63407375,
+        "donor": 63400207,
+        "overlaps_variant": false
+      }
+    ],
+    "junctions": [
+      {
+        "type": "Canonical Intron 1",
+        "upstream_exon": 1,
+        "downstream_exon": 2,
+        "junction_start": 63446837,
+        "junction_end": 63472167,
+        "junction_str": "63446837:63472167",
+        "intron_length": 25329,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 2",
+        "upstream_exon": 2,
+        "downstream_exon": 3,
+        "junction_start": 63445364,
+        "junction_end": 63446746,
+        "junction_str": "63445364:63446746",
+        "intron_length": 1381,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 3",
+        "upstream_exon": 3,
+        "downstream_exon": 4,
+        "junction_start": 63444834,
+        "junction_end": 63445237,
+        "junction_str": "63444834:63445237",
+        "intron_length": 402,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 4",
+        "upstream_exon": 4,
+        "downstream_exon": 5,
+        "junction_start": 63442531,
+        "junction_end": 63444658,
+        "junction_str": "63442531:63444658",
+        "intron_length": 2126,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 5",
+        "upstream_exon": 5,
+        "downstream_exon": 6,
+        "junction_start": 63439708,
+        "junction_end": 63442405,
+        "junction_str": "63439708:63442405",
+        "intron_length": 2696,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 6",
+        "upstream_exon": 6,
+        "downstream_exon": 7,
+        "junction_start": 63438720,
+        "junction_end": 63439597,
+        "junction_str": "63438720:63439597",
+        "intron_length": 876,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 7",
+        "upstream_exon": 7,
+        "downstream_exon": 8,
+        "junction_start": 63433903,
+        "junction_end": 63438624,
+        "junction_str": "63433903:63438624",
+        "intron_length": 4720,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 8",
+        "upstream_exon": 8,
+        "downstream_exon": 9,
+        "junction_start": 63431369,
+        "junction_end": 63433808,
+        "junction_str": "63431369:63433808",
+        "intron_length": 2438,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 9",
+        "upstream_exon": 9,
+        "downstream_exon": 10,
+        "junction_start": 63428435,
+        "junction_end": 63431339,
+        "junction_str": "63428435:63431339",
+        "intron_length": 2903,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 10",
+        "upstream_exon": 10,
+        "downstream_exon": 11,
+        "junction_start": 63424206,
+        "junction_end": 63428366,
+        "junction_str": "63424206:63428366",
+        "intron_length": 4159,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 11",
+        "upstream_exon": 11,
+        "downstream_exon": 12,
+        "junction_start": 63419672,
+        "junction_end": 63424176,
+        "junction_str": "63419672:63424176",
+        "intron_length": 4503,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 12",
+        "upstream_exon": 12,
+        "downstream_exon": 13,
+        "junction_start": 63415126,
+        "junction_end": 63419618,
+        "junction_str": "63415126:63419618",
+        "intron_length": 4491,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 13",
+        "upstream_exon": 13,
+        "downstream_exon": 14,
+        "junction_start": 63414193,
+        "junction_end": 63414902,
+        "junction_str": "63414193:63414902",
+        "intron_length": 708,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 14",
+        "upstream_exon": 14,
+        "downstream_exon": 15,
+        "junction_start": 63413581,
+        "junction_end": 63414087,
+        "junction_str": "63413581:63414087",
+        "intron_length": 505,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 15",
+        "upstream_exon": 15,
+        "downstream_exon": 16,
+        "junction_start": 63408536,
+        "junction_end": 63413449,
+        "junction_str": "63408536:63413449",
+        "intron_length": 4912,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Canonical Intron 16",
+        "upstream_exon": 16,
+        "downstream_exon": 17,
+        "junction_start": 63407375,
+        "junction_end": 63408412,
+        "junction_str": "63407375:63408412",
+        "intron_length": 1036,
+        "score_id": null,
+        "atlas_url": null
+      },
+      {
+        "type": "Exon 2 Skipping",
+        "upstream_exon": 1,
+        "downstream_exon": 3,
+        "junction_start": 63445364,
+        "junction_end": 63472167,
+        "junction_str": "63445364:63472167",
+        "intron_length": 26802
+      },
+      {
+        "type": "Exon 3 Skipping",
+        "upstream_exon": 2,
+        "downstream_exon": 4,
+        "junction_start": 63444834,
+        "junction_end": 63446746,
+        "junction_str": "63444834:63446746",
+        "intron_length": 1911
+      },
+      {
+        "type": "Exon 4 Skipping",
+        "upstream_exon": 3,
+        "downstream_exon": 5,
+        "junction_start": 63442531,
+        "junction_end": 63445237,
+        "junction_str": "63442531:63445237",
+        "intron_length": 2705
+      },
+      {
+        "type": "Exon 5 Skipping",
+        "upstream_exon": 4,
+        "downstream_exon": 6,
+        "junction_start": 63439708,
+        "junction_end": 63444658,
+        "junction_str": "63439708:63444658",
+        "intron_length": 4949
+      },
+      {
+        "type": "Exon 6 Skipping",
+        "upstream_exon": 5,
+        "downstream_exon": 7,
+        "junction_start": 63438720,
+        "junction_end": 63442405,
+        "junction_str": "63438720:63442405",
+        "intron_length": 3684
+      },
+      {
+        "type": "Exon 7 Skipping",
+        "upstream_exon": 6,
+        "downstream_exon": 8,
+        "junction_start": 63433903,
+        "junction_end": 63439597,
+        "junction_str": "63433903:63439597",
+        "intron_length": 5693
+      },
+      {
+        "type": "Exon 8 Skipping",
+        "upstream_exon": 7,
+        "downstream_exon": 9,
+        "junction_start": 63431369,
+        "junction_end": 63438624,
+        "junction_str": "63431369:63438624",
+        "intron_length": 7254
+      },
+      {
+        "type": "Exon 9 Skipping",
+        "upstream_exon": 8,
+        "downstream_exon": 10,
+        "junction_start": 63428435,
+        "junction_end": 63433808,
+        "junction_str": "63428435:63433808",
+        "intron_length": 5372
+      },
+      {
+        "type": "Exon 10 Skipping",
+        "upstream_exon": 9,
+        "downstream_exon": 11,
+        "junction_start": 63424206,
+        "junction_end": 63431339,
+        "junction_str": "63424206:63431339",
+        "intron_length": 7132
+      },
+      {
+        "type": "Exon 11 Skipping",
+        "upstream_exon": 10,
+        "downstream_exon": 12,
+        "junction_start": 63419672,
+        "junction_end": 63428366,
+        "junction_str": "63419672:63428366",
+        "intron_length": 8693
+      },
+      {
+        "type": "Exon 12 Skipping",
+        "upstream_exon": 11,
+        "downstream_exon": 13,
+        "junction_start": 63415126,
+        "junction_end": 63424176,
+        "junction_str": "63415126:63424176",
+        "intron_length": 9049
+      },
+      {
+        "type": "Exon 13 Skipping",
+        "upstream_exon": 12,
+        "downstream_exon": 14,
+        "junction_start": 63414193,
+        "junction_end": 63419618,
+        "junction_str": "63414193:63419618",
+        "intron_length": 5424
+      },
+      {
+        "type": "Exon 14 Skipping",
+        "upstream_exon": 13,
+        "downstream_exon": 15,
+        "junction_start": 63413581,
+        "junction_end": 63414902,
+        "junction_str": "63413581:63414902",
+        "intron_length": 1320
+      },
+      {
+        "type": "Exon 15 Skipping",
+        "upstream_exon": 14,
+        "downstream_exon": 16,
+        "junction_start": 63408536,
+        "junction_end": 63414087,
+        "junction_str": "63408536:63414087",
+        "intron_length": 5550
+      },
+      {
+        "type": "Exon 16 Skipping",
+        "upstream_exon": 15,
+        "downstream_exon": 17,
+        "junction_start": 63407375,
+        "junction_end": 63413449,
+        "junction_str": "63407375:63413449",
+        "intron_length": 6073
+      }
+    ],
+    "cds": [
+      {
+        "start": 63472167,
+        "end": 63472463,
+        "width": 297
+      },
+      {
+        "start": 63446746,
+        "end": 63446837,
+        "width": 92
+      },
+      {
+        "start": 63445237,
+        "end": 63445364,
+        "width": 128
+      },
+      {
+        "start": 63444658,
+        "end": 63444834,
+        "width": 177
+      },
+      {
+        "start": 63442405,
+        "end": 63442531,
+        "width": 127
+      },
+      {
+        "start": 63439597,
+        "end": 63439708,
+        "width": 112
+      },
+      {
+        "start": 63438624,
+        "end": 63438720,
+        "width": 97
+      },
+      {
+        "start": 63433808,
+        "end": 63433903,
+        "width": 96
+      },
+      {
+        "start": 63431339,
+        "end": 63431369,
+        "width": 31
+      },
+      {
+        "start": 63428366,
+        "end": 63428435,
+        "width": 70
+      },
+      {
+        "start": 63424176,
+        "end": 63424206,
+        "width": 31
+      },
+      {
+        "start": 63419618,
+        "end": 63419672,
+        "width": 55
+      },
+      {
+        "start": 63414902,
+        "end": 63415126,
+        "width": 225
+      },
+      {
+        "start": 63414087,
+        "end": 63414193,
+        "width": 107
+      },
+      {
+        "start": 63413449,
+        "end": 63413581,
+        "width": 133
+      },
+      {
+        "start": 63408412,
+        "end": 63408536,
+        "width": 125
+      },
+      {
+        "start": 63406646,
+        "end": 63407375,
+        "width": 730
+      }
+    ],
+    "utr": [
+      {
+        "start": 63472463,
+        "end": 63472655,
+        "width": 193
+      },
+      {
+        "start": 63400207,
+        "end": 63406646,
+        "width": 6440
+      }
+    ]
+  }
+]

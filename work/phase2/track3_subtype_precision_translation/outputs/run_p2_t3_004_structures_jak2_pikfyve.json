@@ -1,0 +1,376 @@
+{
+  "analysis_run_id": "RUN-P2-T3-004",
+  "structures": {
+    "6VN8": {
+      "pdb_id": "6VN8",
+      "title_line": "",
+      "n_polymer_residues": 585,
+      "chain_spans": {
+        "B": {
+          "min_seq": 843,
+          "max_seq": 1131,
+          "n_res": 288
+        },
+        "A": {
+          "min_seq": 835,
+          "max_seq": 1132,
+          "n_res": 297
+        }
+      },
+      "ligand_sites": {
+        "B:3JW:1201": {
+          "n_ligand_heavy_atoms": 26,
+          "centroid_xyz": [
+            53.588,
+            -8.627,
+            27.368
+          ],
+          "n_contact_residues_le_4p2A": 19,
+          "contacts": [
+            {
+              "chain": "B",
+              "auth_seq_id": 930,
+              "comp_id": "GLU",
+              "min_dist_A": 2.718,
+              "protein_atom": "O",
+              "ligand_atom": "NAT"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 856,
+              "comp_id": "GLY",
+              "min_dist_A": 2.984,
+              "protein_atom": "C",
+              "ligand_atom": "OAZ"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 932,
+              "comp_id": "LEU",
+              "min_dist_A": 3.104,
+              "protein_atom": "N",
+              "ligand_atom": "N1"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 857,
+              "comp_id": "LYS",
+              "min_dist_A": 3.111,
+              "protein_atom": "N",
+              "ligand_atom": "OAZ"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 980,
+              "comp_id": "ARG",
+              "min_dist_A": 3.185,
+              "protein_atom": "O",
+              "ligand_atom": "CAG"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 880,
+              "comp_id": "ALA",
+              "min_dist_A": 3.28,
+              "protein_atom": "CB",
+              "ligand_atom": "NAT"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 993,
+              "comp_id": "GLY",
+              "min_dist_A": 3.329,
+              "protein_atom": "C",
+              "ligand_atom": "NAI"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 983,
+              "comp_id": "LEU",
+              "min_dist_A": 3.335,
+              "protein_atom": "CD1",
+              "ligand_atom": "C5"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 862,
+              "comp_id": "SER",
+              "min_dist_A": 3.421,
+              "protein_atom": "CA",
+              "ligand_atom": "OAZ"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 858,
+              "comp_id": "GLY",
+              "min_dist_A": 3.441,
+              "protein_atom": "N",
+              "ligand_atom": "CAB"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 981,
+              "comp_id": "ASN",
+              "min_dist_A": 3.513,
+              "protein_atom": "OD1",
+              "ligand_atom": "CAG"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 994,
+              "comp_id": "ASP",
+              "min_dist_A": 3.566,
+              "protein_atom": "OD1",
+              "ligand_atom": "CAE"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 863,
+              "comp_id": "VAL",
+              "min_dist_A": 3.625,
+              "protein_atom": "CG2",
+              "ligand_atom": "OAY"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 929,
+              "comp_id": "MET",
+              "min_dist_A": 3.68,
+              "protein_atom": "SD",
+              "ligand_atom": "CAS"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 882,
+              "comp_id": "LYS",
+              "min_dist_A": 3.694,
+              "protein_atom": "CE",
+              "ligand_atom": "OAY"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 855,
+              "comp_id": "LEU",
+              "min_dist_A": 3.71,
+              "protein_atom": "CD1",
+              "ligand_atom": "N3"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 911,
+              "comp_id": "VAL",
+              "min_dist_A": 3.752,
+              "protein_atom": "CG2",
+              "ligand_atom": "CAS"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 861,
+              "comp_id": "GLY",
+              "min_dist_A": 3.78,
+              "protein_atom": "O",
+              "ligand_atom": "OAZ"
+            },
+            {
+              "chain": "B",
+              "auth_seq_id": 931,
+              "comp_id": "TYR",
+              "min_dist_A": 3.859,
+              "protein_atom": "CA",
+              "ligand_atom": "N1"
+            }
+          ]
+        },
+        "A:3JW:1201": {
+          "n_ligand_heavy_atoms": 26,
+          "centroid_xyz": [
+            54.62,
+            -24.144,
+            -11.768
+          ],
+          "n_contact_residues_le_4p2A": 19,
+          "contacts": [
+            {
+              "chain": "A",
+              "auth_seq_id": 930,
+              "comp_id": "GLU",
+              "min_dist_A": 2.822,
+              "protein_atom": "O",
+              "ligand_atom": "NAT"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 932,
+              "comp_id": "LEU",
+              "min_dist_A": 3.158,
+              "protein_atom": "N",
+              "ligand_atom": "N1"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 857,
+              "comp_id": "LYS",
+              "min_dist_A": 3.213,
+              "protein_atom": "N",
+              "ligand_atom": "OAZ"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 856,
+              "comp_id": "GLY",
+              "min_dist_A": 3.223,
+              "protein_atom": "C",
+              "ligand_atom": "OAZ"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 882,
+              "comp_id": "LYS",
+              "min_dist_A": 3.246,
+              "protein_atom": "CE",
+              "ligand_atom": "OAY"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 880,
+              "comp_id": "ALA",
+              "min_dist_A": 3.265,
+              "protein_atom": "CB",
+              "ligand_atom": "NAT"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 863,
+              "comp_id": "VAL",
+              "min_dist_A": 3.371,
+              "protein_atom": "CG2",
+              "ligand_atom": "OAY"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 983,
+              "comp_id": "LEU",
+              "min_dist_A": 3.378,
+              "protein_atom": "CD1",
+              "ligand_atom": "C5"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 862,
+              "comp_id": "SER",
+              "min_dist_A": 3.45,
+              "protein_atom": "CA",
+              "ligand_atom": "OAZ"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 980,
+              "comp_id": "ARG",
+              "min_dist_A": 3.453,
+              "protein_atom": "O",
+              "ligand_atom": "CAG"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 981,
+              "comp_id": "ASN",
+              "min_dist_A": 3.459,
+              "protein_atom": "OD1",
+              "ligand_atom": "CAG"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 993,
+              "comp_id": "GLY",
+              "min_dist_A": 3.476,
+              "protein_atom": "C",
+              "ligand_atom": "NAI"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 994,
+              "comp_id": "ASP",
+              "min_dist_A": 3.485,
+              "protein_atom": "OD1",
+              "ligand_atom": "CAE"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 858,
+              "comp_id": "GLY",
+              "min_dist_A": 3.536,
+              "protein_atom": "N",
+              "ligand_atom": "OAZ"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 929,
+              "comp_id": "MET",
+              "min_dist_A": 3.578,
+              "protein_atom": "CE",
+              "ligand_atom": "CAS"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 855,
+              "comp_id": "LEU",
+              "min_dist_A": 3.675,
+              "protein_atom": "O",
+              "ligand_atom": "CAN"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 861,
+              "comp_id": "GLY",
+              "min_dist_A": 3.705,
+              "protein_atom": "O",
+              "ligand_atom": "OAZ"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 911,
+              "comp_id": "VAL",
+              "min_dist_A": 3.728,
+              "protein_atom": "CG2",
+              "ligand_atom": "CAS"
+            },
+            {
+              "chain": "A",
+              "auth_seq_id": 931,
+              "comp_id": "TYR",
+              "min_dist_A": 3.959,
+              "protein_atom": "CA",
+              "ligand_atom": "N1"
+            }
+          ]
+        }
+      },
+      "local_relpath": "data/pharmacology_structures/phase2_pdb/pdb_00006vn8.cif",
+      "artifact_relpath": "structures/pdb_00006vn8.cif",
+      "size_bytes": 588996,
+      "sha256": "ac8ed2afb98de45e7744894de33a47d6dfeab77cb02ef4e3f32a30ff05e429de"
+    },
+    "7K2V": {
+      "pdb_id": "7K2V",
+      "title_line": "",
+      "n_polymer_residues": 714,
+      "chain_spans": {
+        "P": {
+          "min_seq": 1,
+          "max_seq": 264,
+          "n_res": 264
+        },
+        "A": {
+          "min_seq": 1,
+          "max_seq": 483,
+          "n_res": 450
+        }
+      },
+      "ligand_sites": {},
+      "local_relpath": "data/pharmacology_structures/phase2_pdb/pdb_00007k2v.cif",
+      "artifact_relpath": "structures/pdb_00007k2v.cif",
+      "size_bytes": 925697,
+      "sha256": "7a70b17ae229aa307f02795f8c3d1d008ace96df7cf7f500d848add905d6e6b2"
+    }
+  }
+}

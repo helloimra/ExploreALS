@@ -1,0 +1,15 @@
+{
+  "package_version": "v1.0",
+  "freeze_date": "2026-11-04",
+  "status": "frozen_v1.0",
+  "supersedes": [
+    "v0.14",
+    "v0.15"
+  ],
+  "files": {
+    "sequence_audit_union_v1.0.bed": "6c618ba5a59221efa08d3f4c651d3c96a96621121b45d68b6f4473dd041ab258",
+    "sequence_union_summary_v1.0.csv": "8d650f0e8beefc7444552380acc0775f2601e7e98ee2467856c0958ed4ccdb37",
+    "scope_blockers_resolved.csv": "b95d69d7ed508b09334642438733797611246920a223863efc1a3451b8ec1dc3",
+    "donor_adjudication_rules_v1.0.json": "228a9ff63549d986ca7e87f1dd1356658df7a1ee8506cd3fc62ca75bc2406c63"
+  }
+}

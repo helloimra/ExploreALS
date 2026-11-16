@@ -1,0 +1,71 @@
+warning: `VIRTUAL_ENV=C:\Users\Ra\Documents\Antigravity\CarbonALS\.venv` does not match the project environment path `.venv` and will be ignored; use `--active` to target the active environment instead
+Scanning region chr8:79616815-79616945 (131 bp)...
+Querying AlphaGenome Atlas interval API for chr8:79616815-79616945...
+  0%|          | 0/393 [00:00<?, ?variants/s]100%|██████████| 393/393 [00:00<00:00, 76536.26variants/s]
+Successfully retrieved and scored 393 SNVs in region.
+
+### Top Ranked AVI Variants (Total Analyzed: 393)
+
+|   Rank | Variant             | AVI Phred   |   Raw Score | Top Percentile   | Top Modality   |
+|--------|---------------------|-------------|-------------|------------------|----------------|
+|      1 | `chr8:79616854:A>G` | **25.23**   |      1.1567 | Top 0.30%        | Splicing       |
+|      2 | `chr8:79616853:G>A` | **24.19**   |      0.9819 | Top 0.38%        | Splicing       |
+|      3 | `chr8:79616821:G>T` | **23.57**   |      0.8841 | Top 0.44%        | Splicing       |
+|      4 | `chr8:79616821:G>C` | **23.24**   |      0.838  | Top 0.47%        | Splicing       |
+|      5 | `chr8:79616821:G>A` | **23.13**   |      0.8241 | Top 0.49%        | Splicing       |
+|      6 | `chr8:79616819:C>G` | **23.11**   |      0.8207 | Top 0.49%        | Splicing       |
+|      7 | `chr8:79616820:A>G` | **23.08**   |      0.8179 | Top 0.49%        | Splicing       |
+|      8 | `chr8:79616820:A>T` | **23.01**   |      0.8087 | Top 0.50%        | Splicing       |
+|      9 | `chr8:79616820:A>C` | **22.81**   |      0.7863 | Top 0.52%        | Splicing       |
+|     10 | `chr8:79616858:T>G` | **22.42**   |      0.7446 | Top 0.57%        | Splicing       |
+
+> [!NOTE] Phred = -10 * log10(quantile), representing the top (10^(-Phred/10) * 100)% predicted impact of all genome-wide SNVs.
+
+
+### Top Region Hotspot Feature Importances:
+
+#### Feature Importances for `chr8:79616854:A>G` (AVI Phred: 25.23 | Top 0.30%)
+|   Rank | Modality / Feature   | Attribution Weight   | Relative Impact   |
+|--------|----------------------|----------------------|-------------------|
+|      1 | `Splicing`           | `+1.0052`            | `###############` |
+|      2 | `CAGE`               | `+0.0791`            | `#`               |
+|      3 | `PhastCons 470`      | `+0.0200`            | ``                |
+|      4 | `ChIP-Histone`       | `+0.0196`            | ``                |
+|      5 | `RNA-seq`            | `+0.0168`            | ``                |
+|      6 | `DNASE-seq`          | `+0.0147`            | ``                |
+|      7 | `Cactus`             | `+0.0107`            | ``                |
+|      8 | `Polyadenylation`    | `+0.0101`            | ``                |
+|      9 | `PRO-cap`            | `+0.0092`            | ``                |
+|     10 | `ATAC-seq`           | `+0.0091`            | ``                |
+
+
+#### Feature Importances for `chr8:79616853:G>A` (AVI Phred: 24.19 | Top 0.38%)
+|   Rank | Modality / Feature   | Attribution Weight   | Relative Impact   |
+|--------|----------------------|----------------------|-------------------|
+|      1 | `Splicing`           | `+0.9126`            | `###############` |
+|      2 | `CAGE`               | `+0.0543`            | `#`               |
+|      3 | `DNASE-seq`          | `+0.0159`            | ``                |
+|      4 | `ChIP-Histone`       | `+0.0148`            | ``                |
+|      5 | `RNA-seq`            | `+0.0100`            | ``                |
+|      6 | `Polyadenylation`    | `+0.0081`            | ``                |
+|      7 | `ATAC-seq`           | `+0.0078`            | ``                |
+|      8 | `3D Genome Contacts` | `+0.0067`            | ``                |
+|      9 | `Cactus`             | `-0.0066`            | ``                |
+|     10 | `PRO-cap`            | `+0.0047`            | ``                |
+
+
+#### Feature Importances for `chr8:79616821:G>T` (AVI Phred: 23.57 | Top 0.44%)
+|   Rank | Modality / Feature   | Attribution Weight   | Relative Impact   |
+|--------|----------------------|----------------------|-------------------|
+|      1 | `Splicing`           | `+0.4238`            | `###############` |
+|      2 | `Cactus`             | `+0.1844`            | `#######`         |
+|      3 | `PhastCons 470`      | `+0.1521`            | `#####`           |
+|      4 | `CAGE`               | `+0.0379`            | `#`               |
+|      5 | `RNA-seq`            | `+0.0318`            | `#`               |
+|      6 | `ChIP-Histone`       | `+0.0299`            | `#`               |
+|      7 | `PRO-cap`            | `+0.0276`            | `#`               |
+|      8 | `DNASE-seq`          | `+0.0185`            | `#`               |
+|      9 | `ATAC-seq`           | `+0.0176`            | `#`               |
+|     10 | `Polyadenylation`    | `+0.0090`            | ``                |
+
+Region scan exported to: C:\Users\Ra\Documents\Antigravity\CarbonALS\work\phase2\track1_multiplex_splice\outputs\avi_dense_stmn2.tsv

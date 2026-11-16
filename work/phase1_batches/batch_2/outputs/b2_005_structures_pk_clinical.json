@@ -1,0 +1,798 @@
+{
+  "analysis_run_id": "RUN-B2-005",
+  "afdb_v6_structures": {
+    "SCFD1": {
+      "uniprot": "Q8WVM8",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-Q8WVM8-F1-model_v6.cif",
+      "n_residues": 642,
+      "mean_plddt": 84.58,
+      "median_plddt": 93.88,
+      "frac_plddt_ge_70": 0.8178,
+      "frac_plddt_ge_90": 0.6698,
+      "mean_pae_angstrom": 10.01
+    },
+    "G2E3": {
+      "uniprot": "Q7L622",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-Q7L622-F1-model_v6.cif",
+      "n_residues": 706,
+      "mean_plddt": 85.6,
+      "median_plddt": 93.25,
+      "frac_plddt_ge_70": 0.8683,
+      "frac_plddt_ge_90": 0.6671,
+      "mean_pae_angstrom": 19.62
+    },
+    "YKT6": {
+      "uniprot": "O15498",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-O15498-F1-model_v6.cif",
+      "n_residues": 198,
+      "mean_plddt": 90.91,
+      "median_plddt": 94.53,
+      "frac_plddt_ge_70": 0.9394,
+      "frac_plddt_ge_90": 0.7879,
+      "mean_pae_angstrom": 5.42,
+      "tyr64_plddt": 94.81,
+      "tyr64_5A_neighbors": [
+        "TYR4(3.48A)",
+        "PHE28(3.33A)",
+        "VAL59(4.16A)",
+        "LYS60(3.67A)",
+        "GLU61(2.92A)",
+        "GLN62(3.29A)",
+        "ASP63(1.34A)",
+        "LEU65(1.33A)",
+        "CYS66(4.29A)",
+        "ILE80(4.6A)",
+        "ALA81(3.38A)",
+        "ASP82(4.48A)",
+        "ASN83(4.67A)"
+      ],
+      "cys194_cys195_plddt": [
+        48.75,
+        43.56
+      ],
+      "longin_to_snare_centroid_A": 11.79,
+      "longin_vs_snare_mean_pae_A": 4.68
+    },
+    "SEC22B": {
+      "uniprot": "O75396",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-O75396-F1-model_v6.cif",
+      "n_residues": 215,
+      "mean_plddt": 83.49,
+      "median_plddt": 88.56,
+      "frac_plddt_ge_70": 0.814,
+      "frac_plddt_ge_90": 0.4372,
+      "mean_pae_angstrom": 11.76
+    },
+    "STX5": {
+      "uniprot": "Q13190",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-Q13190-F1-model_v6.cif",
+      "n_residues": 355,
+      "mean_plddt": 70.36,
+      "median_plddt": 74.94,
+      "frac_plddt_ge_70": 0.5408,
+      "frac_plddt_ge_90": 0.1577,
+      "mean_pae_angstrom": 20.7
+    },
+    "GOSR1": {
+      "uniprot": "O95249",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-O95249-F1-model_v6.cif",
+      "n_residues": 250,
+      "mean_plddt": 84.32,
+      "median_plddt": 89.88,
+      "frac_plddt_ge_70": 0.852,
+      "frac_plddt_ge_90": 0.496,
+      "mean_pae_angstrom": 17.56
+    },
+    "NSF": {
+      "uniprot": "P46459",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-P46459-F1-model_v6.cif",
+      "n_residues": 744,
+      "mean_plddt": 85.6,
+      "median_plddt": 89.38,
+      "frac_plddt_ge_70": 0.9032,
+      "frac_plddt_ge_90": 0.4476,
+      "mean_pae_angstrom": 14.34
+    },
+    "GDI2": {
+      "uniprot": "P50395",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-P50395-F1-model_v6.cif",
+      "n_residues": 445,
+      "mean_plddt": 93.79,
+      "median_plddt": 96.44,
+      "frac_plddt_ge_70": 0.9663,
+      "frac_plddt_ge_90": 0.8831,
+      "mean_pae_angstrom": 4.53
+    },
+    "FBXL5": {
+      "uniprot": "Q9UKA1",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-Q9UKA1-F1-model_v6.cif",
+      "n_residues": 691,
+      "mean_plddt": 69.61,
+      "median_plddt": 88.12,
+      "frac_plddt_ge_70": 0.5847,
+      "frac_plddt_ge_90": 0.4501,
+      "mean_pae_angstrom": 22.44,
+      "hr_domain_1_161_mean_plddt": 89.56,
+      "lrr_domain_200_691_mean_plddt": 64.88,
+      "hr_vs_lrr_interdomain_pae_A": 28.75
+    },
+    "IREB2": {
+      "uniprot": "P48200",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-P48200-F1-model_v6.cif",
+      "n_residues": 963,
+      "mean_plddt": 86.74,
+      "median_plddt": 92.94,
+      "frac_plddt_ge_70": 0.9003,
+      "frac_plddt_ge_90": 0.6584,
+      "mean_pae_angstrom": 12.58
+    }
+  },
+  "experimental_pdb_structures": {
+    "3KYQ": {
+      "pdb_id": "3KYQ",
+      "cif_path": "data\\pharmacology_structures\\pdb\\pdb_00003kyq.cif",
+      "entity_descriptions": [
+        "Synaptobrevin homolog YKT6",
+        "SULFATE ION",
+        "dodecyl 2-(trimethylammonio)ethyl phosphate",
+        "water"
+      ],
+      "chains": {
+        "A": {
+          "n_residues": 193,
+          "resseq_range": [
+            0,
+            192
+          ],
+          "first_last": [
+            "LEU0",
+            "ASN192"
+          ]
+        }
+      },
+      "non_water_heteroatoms": [
+        {
+          "chain": "A",
+          "resname": "SO4",
+          "resseq": 199,
+          "n_atoms": 5
+        },
+        {
+          "chain": "A",
+          "resname": "SO4",
+          "resseq": 200,
+          "n_atoms": 5
+        },
+        {
+          "chain": "A",
+          "resname": "DPV",
+          "resseq": 201,
+          "n_atoms": 23
+        }
+      ],
+      "closed_longin_to_snare_centroid_A": 11.41,
+      "res64_identity": "TYR",
+      "res64_contacts_to_snare_le_5A": [],
+      "res64_lipid_distances_A": {
+        "SO4199": 22.81,
+        "SO4200": 15.13,
+        "DPV201": 3.46
+      }
+    },
+    "6J74": {
+      "pdb_id": "6J74",
+      "cif_path": "data\\pharmacology_structures\\pdb\\pdb_00006j74.cif",
+      "entity_descriptions": [
+        "Protein prenyltransferase alpha subunit repeat-containing protein 1",
+        "Geranylgeranyl transferase type-2 subunit beta",
+        "Synaptobrevin homolog YKT6",
+        "PHOSPHATE ION",
+        "ZINC ION"
+      ],
+      "chains": {
+        "A": {
+          "n_residues": 276,
+          "resseq_range": [
+            7,
+            327
+          ],
+          "first_last": [
+            "GLU7",
+            "ASN327"
+          ]
+        },
+        "B": {
+          "n_residues": 328,
+          "resseq_range": [
+            4,
+            331
+          ],
+          "first_last": [
+            "PRO4",
+            "SER331"
+          ]
+        },
+        "C": {
+          "n_residues": 192,
+          "resseq_range": [
+            1,
+            192
+          ],
+          "first_last": [
+            "MET1",
+            "ASN192"
+          ]
+        }
+      },
+      "non_water_heteroatoms": [
+        {
+          "chain": "A",
+          "resname": "PO4",
+          "resseq": 401,
+          "n_atoms": 5
+        },
+        {
+          "chain": "B",
+          "resname": "PO4",
+          "resseq": 401,
+          "n_atoms": 5
+        },
+        {
+          "chain": "B",
+          "resname": "ZN",
+          "resseq": 402,
+          "n_atoms": 1
+        }
+      ],
+      "ykt6_chain": "C",
+      "open_longin_to_snare_centroid_A": 11.56,
+      "ykt6_c_term_modeled": [
+        "TYR185",
+        "LYS186",
+        "THR187",
+        "ALA188",
+        "ARG189",
+        "LYS190",
+        "GLN191",
+        "ASN192"
+      ]
+    },
+    "3EGD": {
+      "pdb_id": "3EGD",
+      "cif_path": "data\\pharmacology_structures\\pdb\\pdb_00003egd.cif",
+      "entity_descriptions": [
+        "Protein transport protein Sec23A",
+        "Protein transport protein Sec24A",
+        "Vesicle-trafficking protein SEC22b",
+        "10 residue peptide from VSV glycoprotein",
+        "ZINC ION",
+        "water"
+      ],
+      "chains": {
+        "A": {
+          "n_residues": 711,
+          "resseq_range": [
+            3,
+            764
+          ],
+          "first_last": [
+            "THR3",
+            "ALA764"
+          ]
+        },
+        "B": {
+          "n_residues": 731,
+          "resseq_range": [
+            346,
+            1093
+          ],
+          "first_last": [
+            "GLU346",
+            "LYS1093"
+          ]
+        },
+        "C": {
+          "n_residues": 137,
+          "resseq_range": [
+            1,
+            157
+          ],
+          "first_last": [
+            "MET1",
+            "LEU157"
+          ]
+        },
+        "D": {
+          "n_residues": 7,
+          "resseq_range": [
+            502,
+            508
+          ],
+          "first_last": [
+            "THR502",
+            "ARG508"
+          ]
+        }
+      },
+      "non_water_heteroatoms": [
+        {
+          "chain": "A",
+          "resname": "ZN",
+          "resseq": 765,
+          "n_atoms": 1
+        },
+        {
+          "chain": "B",
+          "resname": "ZN",
+          "resseq": 1094,
+          "n_atoms": 1
+        }
+      ]
+    },
+    "3V5Z": {
+      "pdb_id": "3V5Z",
+      "cif_path": "data\\pharmacology_structures\\pdb\\pdb_00003v5z.cif",
+      "entity_descriptions": [
+        "F-box/LRR-repeat protein 5",
+        "MU-OXO-DIIRON",
+        "water"
+      ],
+      "chains": {
+        "A": {
+          "n_residues": 154,
+          "resseq_range": [
+            4,
+            159
+          ],
+          "first_last": [
+            "PHE4",
+            "CYS159"
+          ]
+        },
+        "B": {
+          "n_residues": 155,
+          "resseq_range": [
+            4,
+            160
+          ],
+          "first_last": [
+            "PHE4",
+            "SER160"
+          ]
+        }
+      },
+      "non_water_heteroatoms": [
+        {
+          "chain": "A",
+          "resname": "FEO",
+          "resseq": 201,
+          "n_atoms": 3
+        },
+        {
+          "chain": "B",
+          "resname": "FEO",
+          "resseq": 201,
+          "n_atoms": 3
+        }
+      ],
+      "diiron_coordinating_residues_le_3A": [
+        "HIS15(2.04A)",
+        "HIS57(2.25A)",
+        "GLU58(2.03A)",
+        "GLU61(2.12A)",
+        "HIS80(2.39A)",
+        "HIS126(2.31A)",
+        "GLU130(1.96A)"
+      ]
+    },
+    "6VCD": {
+      "pdb_id": "6VCD",
+      "cif_path": "data\\pharmacology_structures\\pdb\\pdb_00006vcd.cif",
+      "entity_descriptions": [
+        "Iron-responsive element binding protein 2, isoform CRA_a",
+        "F-box/LRR-repeat protein 5",
+        "S-phase kinase-associated protein 1",
+        "FE2/S2 (INORGANIC) CLUSTER"
+      ],
+      "chains": {
+        "A": {
+          "n_residues": 643,
+          "resseq_range": [
+            10,
+            963
+          ],
+          "first_last": [
+            "PHE10",
+            "SER963"
+          ]
+        },
+        "B": {
+          "n_residues": 255,
+          "resseq_range": [
+            205,
+            691
+          ],
+          "first_last": [
+            "ILE205",
+            "GLU691"
+          ]
+        },
+        "C": {
+          "n_residues": 135,
+          "resseq_range": [
+            2,
+            160
+          ],
+          "first_last": [
+            "PRO2",
+            "CYS160"
+          ]
+        }
+      },
+      "non_water_heteroatoms": [
+        {
+          "chain": "B",
+          "resname": "FES",
+          "resseq": 800,
+          "n_atoms": 4
+        }
+      ],
+      "chain_roles": {
+        "SKP1": "C",
+        "FBXL5": "B",
+        "IRP2_IREB2": "A"
+      },
+      "fbxl5_irp2_contacts_le_4A_count": 37,
+      "fbxl5_irp2_contacts_sample": [
+        "B:ASP656-A:ARG763(3.61A)",
+        "B:GLU657-A:ARG763(3.47A)",
+        "B:TYR661-A:ARG779(3.75A)",
+        "B:CYS662-A:ARG779(2.23A)",
+        "B:ASP663-A:ARG224(3.9A)",
+        "B:ASP663-A:ARG779(3.48A)",
+        "B:ASN664-A:ASN217(3.54A)",
+        "B:ASN664-A:VAL220(3.79A)",
+        "B:ASN664-A:ARG224(2.95A)",
+        "B:ILE665-A:ARG779(3.62A)",
+        "B:ALA670-A:ARG779(3.44A)",
+        "B:ASP671-A:PRO778(3.81A)",
+        "B:THR672-A:ARG763(2.71A)",
+        "B:ALA673-A:ARG763(3.49A)",
+        "B:ALA673-A:PRO778(3.22A)",
+        "B:ALA673-A:ARG779(3.24A)",
+        "B:SER674-A:ARG763(2.62A)",
+        "B:SER674-A:ARG779(2.9A)",
+        "B:CYS676-A:SER760(2.48A)",
+        "B:GLN677-A:SER760(3.19A)",
+        "B:LEU679-A:GLY759(3.11A)",
+        "B:LEU679-A:SER760(3.51A)",
+        "B:LEU679-A:SER783(3.69A)",
+        "B:GLN680-A:ALA758(3.39A)",
+        "B:GLN680-A:GLY759(2.76A)",
+        "B:GLN680-A:TYR784(3.93A)",
+        "B:GLN680-A:GLY785(3.18A)",
+        "B:ARG688-A:GLU221(3.29A)",
+        "B:ARG688-A:ARG224(3.4A)",
+        "B:ARG688-A:ASN782(2.63A)"
+      ]
+    }
+  },
+  "bye2025_line_level_reanalysis": {
+    "Deferiprone": {
+      "cat_no": "HY-B0568",
+      "supplier": "MedChemExpress",
+      "screen_conc_uM": 2.5,
+      "n_donors": 16,
+      "donor_values_days": [
+        -0.75,
+        -0.4542,
+        -1.4603,
+        -0.3708,
+        -0.4708,
+        0.3083,
+        -0.5,
+        2.5708,
+        1.0714,
+        2.283,
+        0.3125,
+        -0.7292,
+        0.105,
+        -0.1767,
+        -0.8043,
+        0.8983
+      ],
+      "mean_days": 0.1146,
+      "sd_days": 1.1103,
+      "median_days": -0.2738,
+      "iqr_days": 1.0162,
+      "ttest_vs_0_t": 0.4128,
+      "ttest_vs_0_p": 0.6856184996810514,
+      "wilcoxon_exact_stat": 64.0,
+      "wilcoxon_exact_p": 0.860260009765625,
+      "responders_gt_0_days": "7/16",
+      "responders_ge_1_day": "3/16",
+      "responders_ge_2_days": "2/16",
+      "negative_worsened_donors": "9/16",
+      "loo_ttest_p_range": [
+        0.4374626166550422,
+        0.9074313194405395
+      ],
+      "mad_trimmed_n": 14,
+      "mad_trimmed_mean_days": -0.2158,
+      "mad_trimmed_ttest_p": 0.2643771115776369
+    },
+    "Riluzole": {
+      "cat_no": "HY-B0211",
+      "supplier": "MedChemExpress",
+      "screen_conc_uM": 2.5,
+      "n_donors": 16,
+      "donor_values_days": [
+        4.0833,
+        4.5458,
+        3.5397,
+        4.1292,
+        2.5292,
+        4.1833,
+        4.375,
+        2.8208,
+        3.4464,
+        4.533,
+        4.3125,
+        4.2708,
+        3.73,
+        3.5733,
+        3.4457,
+        3.7733
+      ],
+      "mean_days": 3.8307,
+      "sd_days": 0.5875,
+      "median_days": 3.9283,
+      "iqr_days": 0.7648,
+      "ttest_vs_0_t": 26.0796,
+      "ttest_vs_0_p": 6.545542758106903e-14,
+      "wilcoxon_exact_stat": 0.0,
+      "wilcoxon_exact_p": 3.0517578125e-05,
+      "responders_gt_0_days": "16/16",
+      "responders_ge_1_day": "16/16",
+      "responders_ge_2_days": "16/16",
+      "negative_worsened_donors": "0/16",
+      "loo_ttest_p_range": [
+        2.7501703934111853e-14,
+        7.039006736552078e-13
+      ],
+      "mad_trimmed_n": 16,
+      "mad_trimmed_mean_days": 3.8307,
+      "mad_trimmed_ttest_p": 6.545542758106903e-14
+    },
+    "Baricitinib": {
+      "cat_no": "HY-15315",
+      "supplier": "MedChemExpress",
+      "screen_conc_uM": 2.5,
+      "n_donors": 16,
+      "donor_values_days": [
+        5.25,
+        4.5458,
+        3.5397,
+        4.6292,
+        2.5292,
+        4.3083,
+        4.5,
+        0.0708,
+        4.5714,
+        4.783,
+        4.3125,
+        -0.7292,
+        4.105,
+        3.8233,
+        4.1957,
+        3.8983
+      ],
+      "mean_days": 3.6458,
+      "sd_days": 1.6713,
+      "median_days": 4.252,
+      "iqr_days": 0.7998,
+      "ttest_vs_0_t": 8.7255,
+      "ttest_vs_0_p": 2.9099656024730394e-07,
+      "wilcoxon_exact_stat": 2.0,
+      "wilcoxon_exact_p": 9.1552734375e-05,
+      "responders_gt_0_days": "15/16",
+      "responders_ge_1_day": "14/16",
+      "responders_ge_2_days": "14/16",
+      "negative_worsened_donors": "1/16",
+      "loo_ttest_p_range": [
+        6.735522395460798e-09,
+        1.1703969795569248e-06
+      ],
+      "mad_trimmed_n": 13,
+      "mad_trimmed_mean_days": 4.3433,
+      "mad_trimmed_ttest_p": 1.922746784704765e-13
+    },
+    "Deferiprone_vs_Riluzole_paired": {
+      "mean_diff_days": -3.7161,
+      "t": -11.3488,
+      "p": 9.231002231074606e-09
+    },
+    "lonafarnib_or_tipifarnib_in_screen": false
+  },
+  "unbound_cns_pk_and_safety": {
+    "Lonafarnib": {
+      "chembl_id": "CHEMBL298734",
+      "pubchem_cid": 148195,
+      "fda_nda": "NDA213969 (ZOKINVY)",
+      "formulation": "Free base hard capsule (50 mg, 75 mg); no salt correction needed",
+      "mw_freebase_g_mol": 638.83,
+      "xlogp3": 4.8,
+      "tpsa_A2": 79.5,
+      "ro5_violations": 2,
+      "ftase_ic50_nM": 1.9,
+      "cellular_farnesylation_ic50_nM_range": [
+        70.0,
+        500.0
+      ],
+      "regimens": {
+        "adult_100mg_BID_fasted": {
+          "cmax_total_ng_mL": 964.0,
+          "cmax_total_uM": 1.509,
+          "fup_max": 0.01,
+          "cmax_unbound_plasma_nM_max": 15.09
+        },
+        "hgps_115mg_m2_BID_fed": {
+          "cmax_total_ng_mL": 1777.0,
+          "cmax_total_uM": 2.7816,
+          "fup_max": 0.01,
+          "cmax_unbound_plasma_nM_max": 27.82
+        },
+        "hgps_150mg_m2_BID_fed_max_approved": {
+          "cmax_total_ng_mL": 2695.0,
+          "cmax_total_uM": 4.2186,
+          "fup_max": 0.01,
+          "cmax_unbound_plasma_nM_max": 42.19
+        },
+        "tqt_200mg_BID_fed_day10": {
+          "cmax_total_ng_mL": 2233.0,
+          "cmax_total_uM": 3.4955,
+          "fup_max": 0.01,
+          "cmax_unbound_plasma_nM_max": 34.95
+        }
+      },
+      "bbb_transporter_status": "Marginal P-gp substrate (FDA Sec 12.3); MW 638.8 Da; estimated Kpuu 0.05-0.20",
+      "estimated_unbound_brain_cmax_nM_range_at_150mg_m2": [
+        2.11,
+        8.44
+      ],
+      "dose_limiting_human_toxicities_fda_table4_n63": {
+        "vomiting_pct": 90.0,
+        "diarrhea_pct": 81.0,
+        "infection_pct": 78.0,
+        "nausea_pct": 56.0,
+        "decreased_appetite_pct": 53.0,
+        "electrolyte_abnormalities_pct": 43.0,
+        "weight_decreased_pct": 37.0,
+        "myelosuppression_pct": 35.0,
+        "ast_increased_pct": 35.0,
+        "alt_increased_pct": 27.0,
+        "qtc_mean_increase_ms_at_200mg_BID": 19.0,
+        "qtc_upper90ci_ms": 27.0
+      }
+    },
+    "Tipifarnib": {
+      "chembl_id": "CHEMBL289228",
+      "pubchem_cid": 159324,
+      "fda_nda": "Unapproved (Phase 3 oncology; NDA rejected 2005)",
+      "formulation": "Free base oral tablet/capsule; no salt correction needed",
+      "mw_freebase_g_mol": 489.41,
+      "xlogp3": 4.1,
+      "tpsa_A2": 64.2,
+      "ro5_violations": 1,
+      "ftase_ic50_nM_range": [
+        0.57,
+        0.9
+      ],
+      "ggtase1_ic50_nM_range": [
+        1100.0,
+        10000.0
+      ],
+      "phase1_2_glioma_200_600mg_BID": {
+        "cmax_total_ng_mL_range": [
+          1000.0,
+          2500.0
+        ],
+        "cmax_total_uM_range": [
+          2.043,
+          5.108
+        ],
+        "fup_max": 0.01,
+        "cmax_unbound_plasma_nM_max_range": [
+          20.43,
+          51.08
+        ],
+        "estimated_kpuu_range": [
+          0.1,
+          0.25
+        ],
+        "estimated_unbound_brain_cmax_nM_range": [
+          2.04,
+          12.77
+        ]
+      },
+      "dose_limiting_human_toxicities": "Grade 3/4 neutropenia, thrombocytopenia, leukopenia, peripheral/sensory neuropathy, fatigue, rash, and severe CYP3A4/EIAED clearance induction in NABTC glioma trials"
+    },
+    "Deferiprone_Comparator": {
+      "chembl_id": "CHEMBL70927",
+      "pubchem_cid": 2972,
+      "fda_boxed_warning": "Fatal agranulocytosis and neutropenia",
+      "mw_freebase_g_mol": 139.15,
+      "fda_1000mg_cmax_ug_mL": 20.0,
+      "fda_1000mg_cmax_uM": 143.73,
+      "conservative_15mg_kg_BID_est_cmax_uM": 48.0,
+      "fup_approx": 0.9,
+      "estimated_kpuu": 0.3,
+      "estimated_unbound_brain_cmax_uM": 12.96,
+      "bye2025_2_5uM_over_cu_brain_gap": 0.193,
+      "interpretation": "Exposure gap is ~0.19x (free brain concentration ~13 uM exceeds 2.5 uM screen concentration), proving clinical/cellular failure is ON-TARGET iron-stripping harm rather than insufficient CNS delivery."
+    }
+  },
+  "faers_disproportionality_summary": {
+    "LONAFARNIB": {
+      "Vomiting": {
+        "signal_detected": true,
+        "signal_strength": "Strong signal",
+        "criteria": "ROR lower CI > 1.0 and case count >= 3"
+      },
+      "Diarrhoea": {
+        "signal_detected": true,
+        "signal_strength": "Strong signal",
+        "criteria": "ROR lower CI > 1.0 and case count >= 3"
+      },
+      "Nausea": {
+        "signal_detected": false,
+        "signal_strength": "No signal",
+        "criteria": "ROR lower CI > 1.0 and case count >= 3"
+      },
+      "Decreased appetite": {
+        "signal_detected": false,
+        "signal_strength": "No signal",
+        "criteria": "ROR lower CI > 1.0 and case count >= 3"
+      },
+      "Weight decreased": {
+        "signal_detected": false,
+        "signal_strength": "No signal",
+        "criteria": "ROR lower CI > 1.0 and case count >= 3"
+      },
+      "Electrocardiogram QT prolonged": null
+    },
+    "DEFERIPRONE": {
+      "Agranulocytosis": {
+        "signal_detected": true,
+        "signal_strength": "Strong signal",
+        "criteria": "ROR lower CI > 1.0 and case count >= 3"
+      },
+      "Neutropenia": {
+        "signal_detected": true,
+        "signal_strength": "Strong signal",
+        "criteria": "ROR lower CI > 1.0 and case count >= 3"
+      },
+      "Febrile neutropenia": {
+        "signal_detected": false,
+        "signal_strength": "No signal",
+        "criteria": "ROR lower CI > 1.0 and case count >= 3"
+      }
+    }
+  },
+  "kinobead_promiscuity_audit": {
+    "CHEMBL3752910_NVP_BHG712_analog": {
+      "SCFD1_Kd_nM": 171.13,
+      "PTAR1_GGTaseIII_Kd_nM": 15.48,
+      "EPHA3_IC50_nM": 0.3,
+      "EPHA2_IC50_nM": 3.0,
+      "EPHB4_IC50_nM": 3.0,
+      "GDI2_Kd_nM": 74612.85,
+      "verdict": "Non-selective type-II kinase inhibitor chemical matter; cannot claim selective SCFD1 target engagement."
+    },
+    "CHEMBL5653589": {
+      "GDI2_Kd_nM": 513.69,
+      "NSF_Kd_nM": 3510.72,
+      "NAPA_Kd_nM": 412205.64
+    }
+  }
+}

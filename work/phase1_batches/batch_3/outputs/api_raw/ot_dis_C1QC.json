@@ -1,0 +1,347 @@
+{
+  "target": {
+    "id": "ENSG00000159189",
+    "approvedSymbol": "C1QC",
+    "associatedDiseases": {
+      "count": 356,
+      "rows": [
+        {
+          "disease": {
+            "id": "MONDO_0015699",
+            "name": "immunodeficiency due to a classical component pathway complement deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "genomics_england",
+              "score": 0.865457038266544
+            },
+            {
+              "id": "orphanet",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "europepmc",
+              "score": 0.012158615952232422
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0013343",
+            "name": "C1Q deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.7916293187157142
+            },
+            {
+              "id": "genomics_england",
+              "score": 0.7599134970145264
+            },
+            {
+              "id": "europepmc",
+              "score": 0.012158615952232422
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005559",
+            "name": "neurodegenerative disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "crispr_screen",
+              "score": 0.8868414076043878
+            },
+            {
+              "id": "europepmc",
+              "score": 0.03858671868173762
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0003832",
+            "name": "complement deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "genomics_england",
+              "score": 0.7599134970145264
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0958182",
+            "name": "C1Q deficiency 1"
+          },
+          "datasourceScores": [
+            {
+              "id": "genomics_england",
+              "score": 0.7599134970145264
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0958188",
+            "name": "C1Q deficiency 3"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.7325566111220034
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005918",
+            "name": "placenta praevia"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.5822128332037682
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0003847",
+            "name": "hereditary disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.3134342346427586
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0005670",
+            "name": "smoking initiation"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.204449546289729
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004180",
+            "name": "benign urinary system neoplasm"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.17820292406571908
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0018076",
+            "name": "tuberculosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.663811058586766
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.020536501567079517
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005260",
+            "name": "autism"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.6153272889825625
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.034407361020926196
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0000568",
+            "name": "autoimmune disorder of central nervous system"
+          },
+          "datasourceScores": [
+            {
+              "id": "crispr_screen",
+              "score": 0.11552858213127519
+            },
+            {
+              "id": "europepmc",
+              "score": 0.012158615952232422
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0012081",
+            "name": "15q11q13 microduplication syndrome"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.4138184939342304
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0011717",
+            "name": "hyperinsulinism-hyperammonemia syndrome"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.4079215651973977
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0009345",
+            "name": "histidinemia"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.3864008149619464
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005070",
+            "name": "neoplasm"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.38330184320748
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0009563",
+            "name": "maple syrup urine disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.38004793812690496
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0009400",
+            "name": "hyperprolinemia type 1"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.3770994737584885
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0009377",
+            "name": "hyperammonemia due to N-acetylglutamate synthase deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.3707313986535068
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0009401",
+            "name": "hyperprolinemia type 2"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.37048822633446216
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0007646",
+            "name": "Gamstorp-Wohlfart syndrome"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.3686340374017467
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0007256",
+            "name": "hepatocellular carcinoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.3621062770728005
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.014236057856589388
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0009376",
+            "name": "carbamoyl phosphate synthetase I deficiency disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.35808643806318513
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0016675",
+            "name": "distal arthrogryposis type 10"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.3571593435968274
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

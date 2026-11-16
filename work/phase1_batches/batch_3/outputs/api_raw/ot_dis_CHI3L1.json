@@ -1,0 +1,367 @@
+{
+  "target": {
+    "id": "ENSG00000133048",
+    "approvedSymbol": "CHI3L1",
+    "associatedDiseases": {
+      "count": 951,
+      "rows": [
+        {
+          "disease": {
+            "id": "MONDO_0005090",
+            "name": "schizophrenia"
+          },
+          "datasourceScores": [
+            {
+              "id": "uniprot_literature",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "eva",
+              "score": 0.19453785523571876
+            },
+            {
+              "id": "europepmc",
+              "score": 0.3549188182983506
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004979",
+            "name": "asthma"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.33808089950048675
+            },
+            {
+              "id": "eva",
+              "score": 0.3039653988058105
+            },
+            {
+              "id": "europepmc",
+              "score": 0.9704165801864736
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005405",
+            "name": "childhood onset asthma"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.22384779755691933
+            },
+            {
+              "id": "europepmc",
+              "score": 0.02735688589252295
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0002714",
+            "name": "central nervous system cancer"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9340419473843565
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.4559025033988949
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0018177",
+            "name": "glioblastoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9308008327785171
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.2936899565828287
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0000270",
+            "name": "lower respiratory tract disorder"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.1984331194966296
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005002",
+            "name": "chronic obstructive pulmonary disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9517590047859098
+            },
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.03196409029535121
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004975",
+            "name": "Alzheimer disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.982954193587726
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.030121060174259008
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005070",
+            "name": "neoplasm"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9879489422904177
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005138",
+            "name": "lung carcinoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9368548047303998
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.18271252360404341
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004992",
+            "name": "cancer"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9729413188247867
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004989",
+            "name": "breast carcinoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9163411649800104
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.13374803519386055
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0008383",
+            "name": "rheumatoid arthritis"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9350618162280683
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.040997282775766045
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0007256",
+            "name": "hepatocellular carcinoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9444850532795177
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0008903",
+            "name": "lung cancer"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9368367496954719
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0021042",
+            "name": "glioma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9343332711087535
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005101",
+            "name": "ulcerative colitis"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.8141072346040462
+            },
+            {
+              "id": "expression_atlas",
+              "score": 0.4786089849245632
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0007254",
+            "name": "breast cancer"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9314411905245535
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "HP_0001395",
+            "name": "Hepatic fibrosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9311206459955658
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005010",
+            "name": "coronary artery disorder"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.925940579089723
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0024331",
+            "name": "colorectal carcinoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9168027171507435
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0001056",
+            "name": "gastric cancer"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.9070482950866584
+            },
+            {
+              "id": "eva",
+              "score": 0
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005105",
+            "name": "melanoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.8945530030689115
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005015",
+            "name": "diabetes mellitus"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.8863466579502416
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_1001248",
+            "name": "non-alcoholic fatty liver"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.8862690354453621
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

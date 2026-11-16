@@ -1,0 +1,2466 @@
+{
+  "DS_BASE_REG": {
+    "local_relpath": "data/explore_als_baseline/candidates.csv",
+    "is_dir": false,
+    "tier": "TIER_C_DUA_OR_BASELINE",
+    "sha256": "2729539f20c517fd4a58d05db0e1625fc9390a5db705ff9954d3da5079316ff5",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 108205,
+        "sha256": "2729539f20c517fd4a58d05db0e1625fc9390a5db705ff9954d3da5079316ff5"
+      }
+    ]
+  },
+  "DS_BASE_DS": {
+    "local_relpath": "data/explore_als_baseline/datasets.csv",
+    "is_dir": false,
+    "tier": "TIER_C_DUA_OR_BASELINE",
+    "sha256": "31d4dfc38385f92c3259deb088b5789c94dabf88b130f080ce50eb600b759af6",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 67231,
+        "sha256": "31d4dfc38385f92c3259deb088b5789c94dabf88b130f080ce50eb600b759af6"
+      }
+    ]
+  },
+  "DS_BASE_EV": {
+    "local_relpath": "data/explore_als_baseline/evidence.csv",
+    "is_dir": false,
+    "tier": "TIER_C_DUA_OR_BASELINE",
+    "sha256": "74c1cd37bc02fd8a67b9784918da2ebcd969097ee4e516a3295f86f75ccee5dc",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 2249446,
+        "sha256": "74c1cd37bc02fd8a67b9784918da2ebcd969097ee4e516a3295f86f75ccee5dc"
+      }
+    ]
+  },
+  "DS_BASE_SRC": {
+    "local_relpath": "data/explore_als_baseline/sources.csv",
+    "is_dir": false,
+    "tier": "TIER_C_DUA_OR_BASELINE",
+    "sha256": "5f09ec80e0e3ee15cdedc1d328d8d84da23838ac46b1fdea5dc315d915b07209",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 994679,
+        "sha256": "5f09ec80e0e3ee15cdedc1d328d8d84da23838ac46b1fdea5dc315d915b07209"
+      }
+    ]
+  },
+  "DS_BASE_REV": {
+    "local_relpath": "data/explore_als_baseline/reviews.csv",
+    "is_dir": false,
+    "tier": "TIER_C_DUA_OR_BASELINE",
+    "sha256": "6f753d1b659c59a791684d9c11b2d88b7ba8d26625011ac90e50b292231c0367",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 34773,
+        "sha256": "6f753d1b659c59a791684d9c11b2d88b7ba8d26625011ac90e50b292231c0367"
+      }
+    ]
+  },
+  "DS_BASE_LNK": {
+    "local_relpath": "data/explore_als_baseline/cross_track_links.csv",
+    "is_dir": false,
+    "tier": "TIER_C_DUA_OR_BASELINE",
+    "sha256": "e5d01b9b064cf4eb8625d3d9800949a5bdbfd6b369670817b3eb8c6eca264dd8",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 9484,
+        "sha256": "e5d01b9b064cf4eb8625d3d9800949a5bdbfd6b369670817b3eb8c6eca264dd8"
+      }
+    ]
+  },
+  "DS_BASE_P10A": {
+    "local_relpath": "data/explore_als_baseline/phase10a_portfolio_triage_summary.json",
+    "is_dir": false,
+    "tier": "TIER_C_DUA_OR_BASELINE",
+    "sha256": "3d80594dc4bbe743f44a5981954fc077d57ac54320faf95cb12b6cc253537e35",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 27306,
+        "sha256": "3d80594dc4bbe743f44a5981954fc077d57ac54320faf95cb12b6cc253537e35"
+      }
+    ]
+  },
+  "DS001_COUNTS": {
+    "local_relpath": "data/transcriptomics/nygc_d001/NYGC_counts.txt.gz",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "458e332c859832f586676a0502357191b6dc39404ae298ab0299f3420282b805",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 71066165,
+        "sha256": "458e332c859832f586676a0502357191b6dc39404ae298ab0299f3420282b805"
+      }
+    ]
+  },
+  "DS001_FEAT": {
+    "local_relpath": "data/transcriptomics/nygc_d001/provisional_unique_feature_map.csv",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "783ea8747344ab00564c525238623343b98c6352afca7fb13966b8e160065f36",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 2536087,
+        "sha256": "783ea8747344ab00564c525238623343b98c6352afca7fb13966b8e160065f36"
+      }
+    ]
+  },
+  "DS001_META": {
+    "local_relpath": "data/transcriptomics/nygc_d001/nygc_collab_metadata_c05a4864.xlsx",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "c05a4864b37c1a2f0963a6a8ebc321212f243b7136b50d9e604ff11c7583b238",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 246937,
+        "sha256": "c05a4864b37c1a2f0963a6a8ebc321212f243b7136b50d9e604ff11c7583b238"
+      }
+    ]
+  },
+  "DS001_FLAGSHIP": {
+    "local_relpath": "data/transcriptomics/nygc_d001/NYGC_Flagship_ST_1_3_Metadata.xlsx",
+    "is_dir": false,
+    "tier": "TIER_B_PUBLISHER_HTTPS_FETCH",
+    "sha256": "4ff25e6f81c2ef09e14f88da9ed1ee882bf9f626715594a6cf8f536943deab5f",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 1768595,
+        "sha256": "4ff25e6f81c2ef09e14f88da9ed1ee882bf9f626715594a6cf8f536943deab5f"
+      }
+    ]
+  },
+  "DS001_ONEILL": {
+    "local_relpath": "data/transcriptomics/subtypes/oneill2025_mmc2.xlsx",
+    "is_dir": false,
+    "tier": "TIER_B_PUBLISHER_HTTPS_FETCH",
+    "sha256": "2a630f02de5a0c98ef983ab9d7e4ea6e707f7b50c0d09557b352d24d33a99796",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 197500,
+        "sha256": "2a630f02de5a0c98ef983ab9d7e4ea6e707f7b50c0d09557b352d24d33a99796"
+      }
+    ]
+  },
+  "DS001_TAM": {
+    "local_relpath": "data/transcriptomics/subtypes/Tam2019_mmc2.xlsx",
+    "is_dir": false,
+    "tier": "TIER_B_PUBLISHER_HTTPS_FETCH",
+    "sha256": "165a58fdad1ff08c24d058db20bf827f1293cabf833d60e21c438423c76255c6",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 43791,
+        "sha256": "165a58fdad1ff08c24d058db20bf827f1293cabf833d60e21c438423c76255c6"
+      }
+    ]
+  },
+  "DS_GC_REF": {
+    "local_relpath": "data/transcriptomics/ensembl116_hsapiens_gene_gc.tsv",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "48d04a45c89b229ab51b4273817d7b445aacfbf4500d070d7633ac40c96b779c",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 5491098,
+        "sha256": "48d04a45c89b229ab51b4273817d7b445aacfbf4500d070d7633ac40c96b779c"
+      }
+    ]
+  },
+  "DS003_PB": {
+    "local_relpath": "data/transcriptomics/d003_pseudobulk",
+    "is_dir": true,
+    "tier": "TIER_C_DUA_OR_BASELINE",
+    "sha256": "b5e2882a146626747d9c7ea8630384ed32d5e8637649b42a9962f318b0590298",
+    "files": [
+      {
+        "rel": "191112_ALS_110_snRNA-B9.nuclei.tsv",
+        "size_bytes": 189,
+        "sha256": "10f34fab2f7056fa4c173c87d0ce0677b6cb22a4d7dc95fc1c5c9b363571f1d0"
+      },
+      {
+        "rel": "191112_ALS_110_snRNA-B9.pseudobulk.tsv.gz",
+        "size_bytes": 1301552,
+        "sha256": "93136bd44391c472f9abb8574d7d3e61d986c900435f258180d647c0920e6293"
+      },
+      {
+        "rel": "191112_ALS_111_snRNA-B10.nuclei.tsv",
+        "size_bytes": 192,
+        "sha256": "3043216230e0c8a0e008c2e7db80e036c4d33ea371356c35833d2b0d25269108"
+      },
+      {
+        "rel": "191112_ALS_111_snRNA-B10.pseudobulk.tsv.gz",
+        "size_bytes": 1296335,
+        "sha256": "e71cb3f4d1ec111bf4dcb1d349b2bdcca955a8d46978a3a8777b51be4fc0f363"
+      },
+      {
+        "rel": "191112_ALS_112_snRNA-D1.nuclei.tsv",
+        "size_bytes": 182,
+        "sha256": "fc2ab173b844598946d926ab67cb33129a906adda4b97d262e938b1f863f3612"
+      },
+      {
+        "rel": "191112_ALS_112_snRNA-D1.pseudobulk.tsv.gz",
+        "size_bytes": 1131905,
+        "sha256": "267ad95c488a8824ab545629d70442dae57574d12b000cbdd77c0173d6a7c01a"
+      },
+      {
+        "rel": "191112_ALS_116_snRNA-C2.nuclei.tsv",
+        "size_bytes": 191,
+        "sha256": "3c6783fbdc8ebd8dbf80235153d45c84d976ed1403fac483f825f82e90d12664"
+      },
+      {
+        "rel": "191112_ALS_116_snRNA-C2.pseudobulk.tsv.gz",
+        "size_bytes": 1286545,
+        "sha256": "057f61c2fe6ab8bdb0f17b3aeb234ee7db8c15c102341b74694eb10ab6b13611"
+      },
+      {
+        "rel": "191112_ALS_117_snRNA-C3.nuclei.tsv",
+        "size_bytes": 193,
+        "sha256": "285598d8762a5b99049a11959e0086900581db769a577ead84e027929d985a8f"
+      },
+      {
+        "rel": "191112_ALS_117_snRNA-C3.pseudobulk.tsv.gz",
+        "size_bytes": 1334157,
+        "sha256": "a9e5f551c4af641006517f74455dfb2959c7d2f346f907fce762ad689a26bec3"
+      },
+      {
+        "rel": "191112_ALS_118_snRNA-C4.nuclei.tsv",
+        "size_bytes": 190,
+        "sha256": "a7ba285585a150d6885e59cc066c1905b98905ab9281c31c2e4e4b59375540f9"
+      },
+      {
+        "rel": "191112_ALS_118_snRNA-C4.pseudobulk.tsv.gz",
+        "size_bytes": 1249507,
+        "sha256": "097c2daff96e8fd6afc87c378cc47b733a1c730aab1734a68fd330064850b466"
+      },
+      {
+        "rel": "191112_ALS_120_snRNA-A1.nuclei.tsv",
+        "size_bytes": 191,
+        "sha256": "33223b675cf8ad1ad87772508513c7989a76b58d5893271e261c44b989f755b3"
+      },
+      {
+        "rel": "191112_ALS_120_snRNA-A1.pseudobulk.tsv.gz",
+        "size_bytes": 1260716,
+        "sha256": "1a8a8c511acb7b324158d08c3cb566979e35a1004b53a5d681a338c987991df6"
+      },
+      {
+        "rel": "191112_ALS_122_snRNA-D2.nuclei.tsv",
+        "size_bytes": 177,
+        "sha256": "326ae532011fa5d79c14d95beac516b552e0c2512edd2c175ba38527c9f6b272"
+      },
+      {
+        "rel": "191112_ALS_122_snRNA-D2.pseudobulk.tsv.gz",
+        "size_bytes": 917450,
+        "sha256": "cc6ccbca34a9fbc98820b3f9530328b210725feda77067aa07712ec075a6ad12"
+      },
+      {
+        "rel": "191112_ALS_124_snRNA-A3.nuclei.tsv",
+        "size_bytes": 178,
+        "sha256": "3bb9f44869c4c04d79fc7d83dbe35018262e81454c0cec20241939d1d7be1ad7"
+      },
+      {
+        "rel": "191112_ALS_124_snRNA-A3.pseudobulk.tsv.gz",
+        "size_bytes": 1140071,
+        "sha256": "e8646830d9ca6cca63e2a2c1515a7260af67be86cea2dc7d9539d054edc2ff56"
+      },
+      {
+        "rel": "191112_ALS_126_snRNA-A6.nuclei.tsv",
+        "size_bytes": 181,
+        "sha256": "9d9ed401c46cf07c5b524ee40d2fd080c8ac04652fc8b7568b8fa23e3e30c713"
+      },
+      {
+        "rel": "191112_ALS_126_snRNA-A6.pseudobulk.tsv.gz",
+        "size_bytes": 1161144,
+        "sha256": "34063c530736309b0f381c7668e5a0da31a5ad065262e518627c82944d8b52c0"
+      },
+      {
+        "rel": "191112_ALS_127_snRNA-A4.nuclei.tsv",
+        "size_bytes": 187,
+        "sha256": "177ebba888a06c4aa3889649df4285dd4650249b810b10bb8c9909277f70721f"
+      },
+      {
+        "rel": "191112_ALS_127_snRNA-A4.pseudobulk.tsv.gz",
+        "size_bytes": 1264523,
+        "sha256": "9e08a2f0b1b20cab8943b7b4053e3db245c284981021992f827e2394a2beb0d8"
+      },
+      {
+        "rel": "191114_PN_301_snRNA-E7.nuclei.tsv",
+        "size_bytes": 188,
+        "sha256": "dbd50c798bf5bb494b48f537792ddc69e6a5937508c1bfac541893d9b5ba79ef"
+      },
+      {
+        "rel": "191114_PN_301_snRNA-E7.pseudobulk.tsv.gz",
+        "size_bytes": 1239725,
+        "sha256": "4c376408804518a430d610fbd6d2c4a6db4742d2ce3639023cd7b344e1ce8209"
+      },
+      {
+        "rel": "191114_PN_303_snRNA-E8.nuclei.tsv",
+        "size_bytes": 186,
+        "sha256": "6720f065b562b480c4843552bc228ba221caffb0fc5cdf0e3dc12acef70316d3"
+      },
+      {
+        "rel": "191114_PN_303_snRNA-E8.pseudobulk.tsv.gz",
+        "size_bytes": 1229734,
+        "sha256": "4e4ac91f732128729d80c7db1ec0050952b5d92f833496fe93cfa1cb2cf5ded7"
+      },
+      {
+        "rel": "191114_PN_304_snRNA-E9.nuclei.tsv",
+        "size_bytes": 186,
+        "sha256": "6a1b42ecb101a09fd8a4faa566c711d58b98b1a2addecfed5191096f91058014"
+      },
+      {
+        "rel": "191114_PN_304_snRNA-E9.pseudobulk.tsv.gz",
+        "size_bytes": 1194909,
+        "sha256": "28cbb4a1d1205af319cb22b39c2994d8ab923273ea783d8a5e97c475f8d3b09f"
+      },
+      {
+        "rel": "191114_PN_306_snRNA-E10.nuclei.tsv",
+        "size_bytes": 185,
+        "sha256": "3d63c667525a322b52839aad3515e933585d09feca9ba146aa20e2b041b04a7a"
+      },
+      {
+        "rel": "191114_PN_306_snRNA-E10.pseudobulk.tsv.gz",
+        "size_bytes": 1035721,
+        "sha256": "459a38212df8aa0f0884eb253ab87b538208e00cda57f9239a22b105cec1c146"
+      },
+      {
+        "rel": "191114_PN_307_snRNA-E11.nuclei.tsv",
+        "size_bytes": 186,
+        "sha256": "ed91a5c896aec223a9c4abd7f4a485eff61a0cd6a731c0e2394488d66a95399a"
+      },
+      {
+        "rel": "191114_PN_307_snRNA-E11.pseudobulk.tsv.gz",
+        "size_bytes": 1203239,
+        "sha256": "5fc1348b7041ede72089ae2b58f286f576affcb37e253c992e17624c8bcd9cae"
+      },
+      {
+        "rel": "191114_PN_309_snRNA-F1.nuclei.tsv",
+        "size_bytes": 191,
+        "sha256": "b9f2b7ec767e2ec65012aa1f49a2e0ab037ead8c89d0b9548dcd97fe18f8f40b"
+      },
+      {
+        "rel": "191114_PN_309_snRNA-F1.pseudobulk.tsv.gz",
+        "size_bytes": 1236434,
+        "sha256": "3b03916220f98fca8c7e631d470f63d582ff8af410fdd4a26e28a8b8b429019d"
+      },
+      {
+        "rel": "191114_PN_317_snRNA-F2.nuclei.tsv",
+        "size_bytes": 186,
+        "sha256": "1b6e4eb1aded70993f247874a4e12cff11571541ead4e13b7ece1020cde3856b"
+      },
+      {
+        "rel": "191114_PN_317_snRNA-F2.pseudobulk.tsv.gz",
+        "size_bytes": 1209316,
+        "sha256": "1fed73f1df1ba511269b21d87e78e3342f581673ef1e8b5a5ba7b63f26ea5d27"
+      },
+      {
+        "rel": "191114_PN_318_snRNA-F3.nuclei.tsv",
+        "size_bytes": 173,
+        "sha256": "5616d848ffd331ad590bb98c8f5c3a5956ce7f57f63b13f065f5c06ab9101c93"
+      },
+      {
+        "rel": "191114_PN_318_snRNA-F3.pseudobulk.tsv.gz",
+        "size_bytes": 718568,
+        "sha256": "45f3d173cd516666e85e37c036ec0b5919d8519209a52f48c3fda85e149f06f8"
+      },
+      {
+        "rel": "191114_PN_319_snRNA-F4.nuclei.tsv",
+        "size_bytes": 165,
+        "sha256": "84eb7be6812933a074131e022e8c499295cee23242777cfa622be3680f59d305"
+      },
+      {
+        "rel": "191114_PN_319_snRNA-F4.pseudobulk.tsv.gz",
+        "size_bytes": 963039,
+        "sha256": "1f5763a44f2324ec18111c390c21b2f8bbed7b688b8cc63966f0e8ebc950fd78"
+      },
+      {
+        "rel": "191114_PN_322_snRNA-F5.nuclei.tsv",
+        "size_bytes": 172,
+        "sha256": "92a39a892043f1fdc89e86cb4b614992017fa4f2eeebe57268bc73d9d80154a4"
+      },
+      {
+        "rel": "191114_PN_322_snRNA-F5.pseudobulk.tsv.gz",
+        "size_bytes": 1029434,
+        "sha256": "b4738f22353c25a20b363cd27b8fe1cff54546858184bef8be0579c9c66d30a0"
+      },
+      {
+        "rel": "191114_PN_323_snRNA-F6.nuclei.tsv",
+        "size_bytes": 166,
+        "sha256": "a9028373747dd4b6ad587569016202d9dcf5e4aa8617dedbefddb3e9c05f6fcb"
+      },
+      {
+        "rel": "191114_PN_323_snRNA-F6.pseudobulk.tsv.gz",
+        "size_bytes": 627184,
+        "sha256": "5485fc24934ee5df34c4344a4becbd5964be9bb0c457cea54c08fd1719c95b2a"
+      },
+      {
+        "rel": "191114_PN_324_snRNA-F7.nuclei.tsv",
+        "size_bytes": 189,
+        "sha256": "74693467a3da12f98f59c5925daea5e0beedac74a405a8cabbaabfbb11bc7ab3"
+      },
+      {
+        "rel": "191114_PN_324_snRNA-F7.pseudobulk.tsv.gz",
+        "size_bytes": 1207761,
+        "sha256": "6641751e3fb9b99088ea097bd8ebc9a193be0bcf739edb5314dce6c88f4e6347"
+      },
+      {
+        "rel": "191114_PN_325_snRNA-F8.nuclei.tsv",
+        "size_bytes": 187,
+        "sha256": "8e12036ec0b7134fe32f8815d510e4f410bf91994deed5902560b7719581bf01"
+      },
+      {
+        "rel": "191114_PN_325_snRNA-F8.pseudobulk.tsv.gz",
+        "size_bytes": 1171897,
+        "sha256": "f4221bd6ebf393d77adca0085f05c4422c044f65c027eba7e88bdbc9170a9867"
+      },
+      {
+        "rel": "191114_PN_328_snRNA-F9.nuclei.tsv",
+        "size_bytes": 187,
+        "sha256": "9d2642b8b00ecea2673a64560e7ab72927e44d0879d2cd3fc866f8f2dec4168a"
+      },
+      {
+        "rel": "191114_PN_328_snRNA-F9.pseudobulk.tsv.gz",
+        "size_bytes": 1220601,
+        "sha256": "2832272089c0b1b5ab529986638205ef262f58da82161328974953e30a0b76ba"
+      },
+      {
+        "rel": "200721_PN_302_snRNA-B4.nuclei.tsv",
+        "size_bytes": 186,
+        "sha256": "bbefb5d5a086a9eb1d81d0fe2e5cd84c9d1722b519426f6fd5ee57186e2766d1"
+      },
+      {
+        "rel": "200721_PN_302_snRNA-B4.pseudobulk.tsv.gz",
+        "size_bytes": 1144406,
+        "sha256": "7e2a3f9e3d39ebc314ca6bca374a18712ed4737ce33f656b4e2da5f85b10f5cc"
+      },
+      {
+        "rel": "201019_ALS_101_snRNA-B1.nuclei.tsv",
+        "size_bytes": 193,
+        "sha256": "13fcf4af7b7af1fb986227c5936115b5930642d47227ee9ef15ea4c8e0c16e07"
+      },
+      {
+        "rel": "201019_ALS_101_snRNA-B1.pseudobulk.tsv.gz",
+        "size_bytes": 1210766,
+        "sha256": "07cad53007399e9bb57ec21dfa325f2fb0d0146c7231708d8e45751199e35101"
+      },
+      {
+        "rel": "201019_ALS_102_snRNA-B2.nuclei.tsv",
+        "size_bytes": 90,
+        "sha256": "45c33d84607d8f8c2aae27a0406d936ebbbb702454cb4c313247a7463970038f"
+      },
+      {
+        "rel": "201019_ALS_102_snRNA-B2.pseudobulk.tsv.gz",
+        "size_bytes": 225423,
+        "sha256": "9544336ac6eed16f294c7430e53b8a54ff7afa42b902661060f1c7825cb53595"
+      },
+      {
+        "rel": "201019_ALS_103_snRNA-B3.nuclei.tsv",
+        "size_bytes": 188,
+        "sha256": "3f39898dd5d0a51b50b4fe93c67314848368b8bbb62d618501e52c6909a81f08"
+      },
+      {
+        "rel": "201019_ALS_103_snRNA-B3.pseudobulk.tsv.gz",
+        "size_bytes": 1181941,
+        "sha256": "f04e049b0d8ad2d5c1776a177aa14509c5398a37a119a679596cf5c1c1c733e0"
+      },
+      {
+        "rel": "201019_ALS_104_snRNA-B4.nuclei.tsv",
+        "size_bytes": 186,
+        "sha256": "351a9ede664da3892e8a6e857f0e793bdefab0ca254f3b786fd619eea526e7ef"
+      },
+      {
+        "rel": "201019_ALS_104_snRNA-B4.pseudobulk.tsv.gz",
+        "size_bytes": 1080362,
+        "sha256": "5f2866a390c6cc0ff4bc12911706bcb3837c271c10dcb2f45143fbf198898901"
+      },
+      {
+        "rel": "201019_ALS_106_snRNA-B5.nuclei.tsv",
+        "size_bytes": 190,
+        "sha256": "99deb86c2f2808e1bfca4d7f554f691293446e228f4acec41853f5410a2e348d"
+      },
+      {
+        "rel": "201019_ALS_106_snRNA-B5.pseudobulk.tsv.gz",
+        "size_bytes": 1248324,
+        "sha256": "658428567b6d641beb4bf40637717b272a907d948c1f5ca2308caec60ccde0ec"
+      },
+      {
+        "rel": "201019_ALS_108_snRNA-B6.nuclei.tsv",
+        "size_bytes": 190,
+        "sha256": "1813a2624db4effd3741147a1d06a76164692bc87f9611b56e9011b89165bd89"
+      },
+      {
+        "rel": "201019_ALS_108_snRNA-B6.pseudobulk.tsv.gz",
+        "size_bytes": 1218991,
+        "sha256": "1e4d5dcf3c51fd6b803962de0110da14c084b9b2412813ce168084ae55677525"
+      },
+      {
+        "rel": "201019_PN_311_snRNA-B8.nuclei.tsv",
+        "size_bytes": 180,
+        "sha256": "6180482cadb6dbbeda1270759180948198e7ad3a127f06686ae00e4b96f470e4"
+      },
+      {
+        "rel": "201019_PN_311_snRNA-B8.pseudobulk.tsv.gz",
+        "size_bytes": 987620,
+        "sha256": "b5a1896903f31b6322351687ad37bc03f046e21046bb2055a8be643b28049807"
+      },
+      {
+        "rel": "210526_ALS_101_snRNA-H5.nuclei.tsv",
+        "size_bytes": 192,
+        "sha256": "416fc918b2e51914903cb923bc9d0805245bf00023373c88deb1bc34c729d74d"
+      },
+      {
+        "rel": "210526_ALS_101_snRNA-H5.pseudobulk.tsv.gz",
+        "size_bytes": 1243867,
+        "sha256": "e19dca086cb7dc0b408ecac2b5fb0d85616e264a827cbdf0f160aefe27d8f746"
+      },
+      {
+        "rel": "210526_ALS_102_snRNA-H6.nuclei.tsv",
+        "size_bytes": 159,
+        "sha256": "dbe5a15e48ca6c5605be542d38f95d7681cbbdaf790e0d93d1f97bc37b46f068"
+      },
+      {
+        "rel": "210526_ALS_102_snRNA-H6.pseudobulk.tsv.gz",
+        "size_bytes": 1050941,
+        "sha256": "efb7344064d0654cb5bcbc0e49c4682cb606c8190531393a53b1352b5dec35de"
+      },
+      {
+        "rel": "210526_ALS_103_snRNA-H7.nuclei.tsv",
+        "size_bytes": 191,
+        "sha256": "7adbb7868c3c59607a23f9c74c5df7a7c26d2e25f07330d82cc5685d8879b718"
+      },
+      {
+        "rel": "210526_ALS_103_snRNA-H7.pseudobulk.tsv.gz",
+        "size_bytes": 1384853,
+        "sha256": "1b89dc1d865144bd6ecb578be4c4107a0286e4a6851a2bd9cc5b699402964757"
+      },
+      {
+        "rel": "210526_ALS_104_snRNA-H8.nuclei.tsv",
+        "size_bytes": 181,
+        "sha256": "c3e82d2123878e0d0a5e21f8b541e7c60b80e6ddaa393e31116f27007b567da4"
+      },
+      {
+        "rel": "210526_ALS_104_snRNA-H8.pseudobulk.tsv.gz",
+        "size_bytes": 1283297,
+        "sha256": "48e4c4ab5d921f3bae22eec45bf885af14d80160e531ddbbe2ae95e6b3a508d9"
+      },
+      {
+        "rel": "210526_ALS_106_snRNA-H9.nuclei.tsv",
+        "size_bytes": 172,
+        "sha256": "c0717e404c097dee8ec20913931d989a82cd0a6db5a3224a9639b3045fdb690f"
+      },
+      {
+        "rel": "210526_ALS_106_snRNA-H9.pseudobulk.tsv.gz",
+        "size_bytes": 1278258,
+        "sha256": "75192399c93afb329aa66c24db594eea31b8b86040e11775e93a7299fbdfd968"
+      },
+      {
+        "rel": "210526_ALS_108_snRNA-H10.nuclei.tsv",
+        "size_bytes": 194,
+        "sha256": "9e08258465d3401dc370cd83c2144d828d148b26ae404e9220ad72fa07092469"
+      },
+      {
+        "rel": "210526_ALS_108_snRNA-H10.pseudobulk.tsv.gz",
+        "size_bytes": 1433823,
+        "sha256": "67ac41000862a893fdfd7dc493710b6ae93b19d69a7ac1fddf7f6e33bbce1d70"
+      },
+      {
+        "rel": "210526_ALS_110_snRNA-H11.nuclei.tsv",
+        "size_bytes": 196,
+        "sha256": "66d03941f39128ebcff58987b4422b9575f4a94853071d529d0bcde68d9abe5e"
+      },
+      {
+        "rel": "210526_ALS_110_snRNA-H11.pseudobulk.tsv.gz",
+        "size_bytes": 1373714,
+        "sha256": "f58efdd4d0ee04dd44fd9d7727a0b69da2f38e829239c93985484effea2f01b4"
+      },
+      {
+        "rel": "210526_ALS_111_snRNA-A1.nuclei.tsv",
+        "size_bytes": 182,
+        "sha256": "3f1e97c9d987c8d946956047b84765c77a5c723fa14af325c177007706410c08"
+      },
+      {
+        "rel": "210526_ALS_111_snRNA-A1.pseudobulk.tsv.gz",
+        "size_bytes": 1222910,
+        "sha256": "920004816f1a46d5b0aa7ca8210dc2aec2d779c97f9395a78a18c29d9d91831c"
+      },
+      {
+        "rel": "210526_ALS_112_snRNA-A2.nuclei.tsv",
+        "size_bytes": 187,
+        "sha256": "652772f729616953d46dcbd18447f15a9af12c231bb0e5698e209c36ce330dde"
+      },
+      {
+        "rel": "210526_ALS_112_snRNA-A2.pseudobulk.tsv.gz",
+        "size_bytes": 1121108,
+        "sha256": "bf5e83571a9d389124ba46305922c0f314e7a5e09ef4c13cb7345b6960378d88"
+      },
+      {
+        "rel": "210526_ALS_116_snRNA-A6.nuclei.tsv",
+        "size_bytes": 193,
+        "sha256": "7cb5b238ff785fcaab51358d4d5ff3ab77e6f2d44cf5736e3232526e23445d24"
+      },
+      {
+        "rel": "210526_ALS_116_snRNA-A6.pseudobulk.tsv.gz",
+        "size_bytes": 1350920,
+        "sha256": "50e92ab5a7ac44669cee05380d1da514b46192fe984a94ea1cfff184c3cc614c"
+      },
+      {
+        "rel": "210526_ALS_117_snRNA-A7.nuclei.tsv",
+        "size_bytes": 191,
+        "sha256": "926b90c859774187e645dfc1285c19f0c9697442722653579917d4520b6be5c8"
+      },
+      {
+        "rel": "210526_ALS_117_snRNA-A7.pseudobulk.tsv.gz",
+        "size_bytes": 1367361,
+        "sha256": "48189e3ede52233c36abd7de5c2914b619a22749c5d7ff3624831e1e64c1123c"
+      },
+      {
+        "rel": "210526_ALS_118_snRNA-A8.nuclei.tsv",
+        "size_bytes": 193,
+        "sha256": "837f3841011672c65d267ba9a3a6851b11c32ca44e6f6396de2bc09d8e91d8ab"
+      },
+      {
+        "rel": "210526_ALS_118_snRNA-A8.pseudobulk.tsv.gz",
+        "size_bytes": 1471003,
+        "sha256": "e5fce03adb000ddea482ffa8c462aba6397175e0d7dc6bbab0aacf620334022e"
+      },
+      {
+        "rel": "210526_ALS_120_snRNA-A9.nuclei.tsv",
+        "size_bytes": 192,
+        "sha256": "6a5ebe09faf0a0d2f4a6cbb73e30a46a64968fd95d235a7f885d5032b39abc2e"
+      },
+      {
+        "rel": "210526_ALS_120_snRNA-A9.pseudobulk.tsv.gz",
+        "size_bytes": 1436539,
+        "sha256": "779c073d7706804517ba515fb2592d29cd98c6d9d31355762c4023e7125ede12"
+      },
+      {
+        "rel": "210526_ALS_122_snRNA-A10.nuclei.tsv",
+        "size_bytes": 189,
+        "sha256": "624136c6aacaf8e41753d19cad86709869eb0b99b87232eefeb6b18eb5a3a2e0"
+      },
+      {
+        "rel": "210526_ALS_122_snRNA-A10.pseudobulk.tsv.gz",
+        "size_bytes": 1116971,
+        "sha256": "ed695efce5c52bc434530126775c341805fbbaa10c0a9dce2a077b052544ca61"
+      },
+      {
+        "rel": "210526_ALS_124_snRNA-A11.nuclei.tsv",
+        "size_bytes": 189,
+        "sha256": "faeac322fc38d8af104fdf13cdc2a123afc6037f38edd5a02d476ad06deb694c"
+      },
+      {
+        "rel": "210526_ALS_124_snRNA-A11.pseudobulk.tsv.gz",
+        "size_bytes": 1194759,
+        "sha256": "92ae8d16700f3ad92dc10d4009fc720bd32f431992e4d25e190946fd45b30c2f"
+      },
+      {
+        "rel": "210526_ALS_126_snRNA-A12.nuclei.tsv",
+        "size_bytes": 186,
+        "sha256": "1c56dc800a334f44043536457b7e46c872bdfd634866a822bfa89d614f5d4d18"
+      },
+      {
+        "rel": "210526_ALS_126_snRNA-A12.pseudobulk.tsv.gz",
+        "size_bytes": 1233109,
+        "sha256": "c9aef4a3b9f094dc470ad8aa231cd1f62211a149e8f90eaf82805d001bd61f51"
+      },
+      {
+        "rel": "210526_ALS_127_snRNA-B1.nuclei.tsv",
+        "size_bytes": 195,
+        "sha256": "c7b6a73f32b7ed528b207440a59db81b8ed35dfe0e3d56c83e084ae6fb234c35"
+      },
+      {
+        "rel": "210526_ALS_127_snRNA-B1.pseudobulk.tsv.gz",
+        "size_bytes": 1424411,
+        "sha256": "1bdcfe8ea2a88c7852c0af19b670a3504eac74b22d98e5490d1e1854d53aa8c0"
+      },
+      {
+        "rel": "210526_PN_301_snRNA-D7.nuclei.tsv",
+        "size_bytes": 189,
+        "sha256": "c6fceaa864b438dae5315c75213d21ab5351e430f06c7c25043cc6d7b9f3e313"
+      },
+      {
+        "rel": "210526_PN_301_snRNA-D7.pseudobulk.tsv.gz",
+        "size_bytes": 1286231,
+        "sha256": "febc0440589ace2d02a43d1439186096dd9535f02a814f08b6d3c68e123b72f2"
+      },
+      {
+        "rel": "210526_PN_302_snRNA-D8.nuclei.tsv",
+        "size_bytes": 187,
+        "sha256": "c016b4ab9c927a3855fd8376033b9cff4219cd35dd5c231d2f761a614e92197d"
+      },
+      {
+        "rel": "210526_PN_302_snRNA-D8.pseudobulk.tsv.gz",
+        "size_bytes": 1068418,
+        "sha256": "72bb313233aaee72c773e6f9fe31007535f51a6a51f37bcdd2faeb4eb670b775"
+      },
+      {
+        "rel": "210526_PN_303_snRNA-D9.nuclei.tsv",
+        "size_bytes": 180,
+        "sha256": "9e72a3fa2721cdf880997dd31f219fe41096b036be2753991c266547bd31709d"
+      },
+      {
+        "rel": "210526_PN_303_snRNA-D9.pseudobulk.tsv.gz",
+        "size_bytes": 1237934,
+        "sha256": "763a6a580bc4f09e5f3fd58ea32036a9e2a9cb15e3a5aedaca1ff063d42a4159"
+      },
+      {
+        "rel": "210526_PN_304_snRNA-D10.nuclei.tsv",
+        "size_bytes": 177,
+        "sha256": "01342fb926e7754ce4976eaf981d04363c899dce4019241d38f4cba569366ba9"
+      },
+      {
+        "rel": "210526_PN_304_snRNA-D10.pseudobulk.tsv.gz",
+        "size_bytes": 1044238,
+        "sha256": "66a981d871d786027f641ccebaa73b6f199a7f85e92c01ca14ef27e7097c625e"
+      },
+      {
+        "rel": "210526_PN_306_snRNA-D11.nuclei.tsv",
+        "size_bytes": 193,
+        "sha256": "ff64fdb2b9bd99d7de0fc6d12113b9f6e0dab6f86b6f75b62573cebdd8fa8db5"
+      },
+      {
+        "rel": "210526_PN_306_snRNA-D11.pseudobulk.tsv.gz",
+        "size_bytes": 1178048,
+        "sha256": "6cfb17cc0b39cb58e904f66ddbe3d661cb120c59a717a4e8a30d5ab3d772149a"
+      },
+      {
+        "rel": "210526_PN_307_snRNA-D12.nuclei.tsv",
+        "size_bytes": 178,
+        "sha256": "d4f370018977229c23e7b5c4230b945d3707a6131754d9bc63487f3f4dd737c0"
+      },
+      {
+        "rel": "210526_PN_307_snRNA-D12.pseudobulk.tsv.gz",
+        "size_bytes": 880336,
+        "sha256": "bec2689b9435638ff74e922bd9f546a14a2e7afb5334b23d30b8b1837d3b29d3"
+      },
+      {
+        "rel": "210526_PN_309_snRNA-E2.nuclei.tsv",
+        "size_bytes": 192,
+        "sha256": "9ccf6979300dba69e9c50617ee1122e1634b748039d1a4af22121d321ff9e170"
+      },
+      {
+        "rel": "210526_PN_309_snRNA-E2.pseudobulk.tsv.gz",
+        "size_bytes": 1239696,
+        "sha256": "4c50ff64f30c7c783ea61c4b281125e2bafbaa1e5e731aaa9b712109cdc5463e"
+      },
+      {
+        "rel": "210526_PN_311_snRNA-E3.nuclei.tsv",
+        "size_bytes": 191,
+        "sha256": "c16ec66faeee8cc8cc9dea8add56bef69bb82b5c95fadb2d5ca7e7493fb29cd0"
+      },
+      {
+        "rel": "210526_PN_311_snRNA-E3.pseudobulk.tsv.gz",
+        "size_bytes": 1327594,
+        "sha256": "f8d2530620f6e8074f7ea5a678f53209bee7c43f40ee158435af533c50978f31"
+      },
+      {
+        "rel": "210526_PN_317_snRNA-E4.nuclei.tsv",
+        "size_bytes": 195,
+        "sha256": "e86225de41e35d0334cb10d9f49f6b71d81d6eedfb657b1c45cee8b5271e0b11"
+      },
+      {
+        "rel": "210526_PN_317_snRNA-E4.pseudobulk.tsv.gz",
+        "size_bytes": 1547704,
+        "sha256": "14553515c88eeeb99b340861b3f573b573e01c31861ab072320ded814ba6ed6a"
+      },
+      {
+        "rel": "210526_PN_318_snRNA-H12.nuclei.tsv",
+        "size_bytes": 168,
+        "sha256": "fb1dd7e5fa3bdd8608df25fd3f8ede4b38a8953c8bfa400fe1a6924bc1b31a3b"
+      },
+      {
+        "rel": "210526_PN_318_snRNA-H12.pseudobulk.tsv.gz",
+        "size_bytes": 958787,
+        "sha256": "9c130e30187b120866982775c3ea0a1c886bd7334601be46b6d25a7ca9b0f82d"
+      },
+      {
+        "rel": "210526_PN_319_snRNA-E5.nuclei.tsv",
+        "size_bytes": 194,
+        "sha256": "2a17ac186f770c722eded236dd2c25ac3a1009e0309ae38bd655bf01fc9f5920"
+      },
+      {
+        "rel": "210526_PN_319_snRNA-E5.pseudobulk.tsv.gz",
+        "size_bytes": 1313883,
+        "sha256": "3bdffce96c80651dee9b90491521880e5c529771ed9777ed03c55c49be51dcac"
+      },
+      {
+        "rel": "210526_PN_322_snRNA-E6.nuclei.tsv",
+        "size_bytes": 191,
+        "sha256": "08d4a92055b6f3428ecaf7e35b282202c151fcc42f17a8961ecc94c6ac066e17"
+      },
+      {
+        "rel": "210526_PN_322_snRNA-E6.pseudobulk.tsv.gz",
+        "size_bytes": 1283757,
+        "sha256": "587088e36502846296155a2ee113f11e68779464f3ae3364f6a7968d3832c773"
+      },
+      {
+        "rel": "210526_PN_323_snRNA-B7.nuclei.tsv",
+        "size_bytes": 148,
+        "sha256": "d4c5cd08716053a9ea5d3d4d6fab9dea77e198d08bfde789076604f8c8ae44f5"
+      },
+      {
+        "rel": "210526_PN_323_snRNA-B7.pseudobulk.tsv.gz",
+        "size_bytes": 397400,
+        "sha256": "5d86256610f28a43fb1c0678ba04a6600022c2398b29ef6ed51d6159cf15f365"
+      },
+      {
+        "rel": "210526_PN_324_snRNA-F4.nuclei.tsv",
+        "size_bytes": 188,
+        "sha256": "8d3540db68c39df55091cd387a4c862e40e570cb8c6f647e77e363d07e49392b"
+      },
+      {
+        "rel": "210526_PN_324_snRNA-F4.pseudobulk.tsv.gz",
+        "size_bytes": 1183853,
+        "sha256": "015ba2102c2960a7e0d1e907df89b5afa71ddd4e97e01bde76176fba3c62ee1f"
+      },
+      {
+        "rel": "210526_PN_325_snRNA-F5.nuclei.tsv",
+        "size_bytes": 189,
+        "sha256": "4f792c652aa6154d65e485768ce1727567600c912d815c8a340e6fc80e8590e8"
+      },
+      {
+        "rel": "210526_PN_325_snRNA-F5.pseudobulk.tsv.gz",
+        "size_bytes": 1097864,
+        "sha256": "bfad11ff7d4b16bad4acdbb95cd790b39d747e219c7443ee823560f9b384260d"
+      },
+      {
+        "rel": "210526_PN_328_snRNA-F6.nuclei.tsv",
+        "size_bytes": 189,
+        "sha256": "a3f335149f0ca89a259f5384412b7ed537703878fd66d0c5b466c3d6fddf8c21"
+      },
+      {
+        "rel": "210526_PN_328_snRNA-F6.pseudobulk.tsv.gz",
+        "size_bytes": 1206150,
+        "sha256": "fa505480b4eb4900795d1a2a2f03cc2e380840536c3558c81db68c9e46ba749f"
+      },
+      {
+        "rel": "reduce_report.csv",
+        "size_bytes": 5576,
+        "sha256": "7fac09689cd77e21870a35a7266c29b5703b86c097ca4031407a53cb436c443f"
+      },
+      {
+        "rel": "row_metadata.tsv",
+        "size_bytes": 1312368,
+        "sha256": "49c42c1b13a5f3912c7ad12b73924819549a9cdda0e08862dacf274797a7d315"
+      }
+    ]
+  },
+  "DS003_SUPP": {
+    "local_relpath": "data/transcriptomics/Pineda2024_mmc2.xlsx",
+    "is_dir": false,
+    "tier": "TIER_B_PUBLISHER_HTTPS_FETCH",
+    "sha256": "d0f968754c0b874bb46f0ddc1eb770a4d74b0979619257881e1e2c3ba7320ffd",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 102687,
+        "sha256": "d0f968754c0b874bb46f0ddc1eb770a4d74b0979619257881e1e2c3ba7320ffd"
+      }
+    ]
+  },
+  "DS_BA9_BUNDLE": {
+    "local_relpath": "data/transcriptomics/ba9_bundle_v5",
+    "is_dir": true,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "7520d66c4e427da8f717fac8c8eb56b2aece1bf434c42a7e6cdeb65f0b1b3a4c",
+    "files": [
+      {
+        "rel": "crosswalk.py",
+        "size_bytes": 7099,
+        "sha256": "b8a4afd452c585e22594ba10b0eaff65cb9b1edebb5cfe9e05caa42655c382b2"
+      },
+      {
+        "rel": "designs/design_P35.tsv",
+        "size_bytes": 13223,
+        "sha256": "cd8185cd322bf812d13fbfc97a0c9414117d561754a84f265751d7a4d1524842"
+      },
+      {
+        "rel": "environment.txt",
+        "size_bytes": 135,
+        "sha256": "f1d12d2ea954a1a306dd8df3d9da4e133d8b4b26e3ca859e8f4621acd3879a32"
+      },
+      {
+        "rel": "MANIFEST.sha256",
+        "size_bytes": 1101,
+        "sha256": "25e32f4ac50aa645cb728a1616e75d843c087048fa6426247600975147351825"
+      },
+      {
+        "rel": "params/resid_sd_lines.out",
+        "size_bytes": 857,
+        "sha256": "11c9814c8e8f06dccd3fc29f11016986cd6f6ab570ecc63f97563e7b92544618"
+      },
+      {
+        "rel": "README.md",
+        "size_bytes": 14341,
+        "sha256": "1888271001387c4b79fc917f9f993af2820984f0a5a3b9b4040a1c1da173eb22"
+      },
+      {
+        "rel": "reference/d003_ba9_crosswalk_ranks.tsv",
+        "size_bytes": 225732,
+        "sha256": "dab80ab71fe53c576ff1b451a43b17639afd6337a8ed07d3409041f9f9510755"
+      },
+      {
+        "rel": "run_g1a06_r1.py",
+        "size_bytes": 62978,
+        "sha256": "86b389031985ad42bb5b36a545d16b26ff3d27797dd47663a3f4a2cf8b260542"
+      },
+      {
+        "rel": "simulate.py",
+        "size_bytes": 11715,
+        "sha256": "88019fe50b0efd2ea9e53b70557cd073767f6493c950c1e21a439346ed3d5e25"
+      },
+      {
+        "rel": "work/dl23e_values/coordinator/values.tsv",
+        "size_bytes": 1553,
+        "sha256": "baffe773584a7ac297eab58536128214d71704528cc800fdc9f03e6dfe7c779e"
+      },
+      {
+        "rel": "work/dl23e_values/coordinator/values_S3.tsv",
+        "size_bytes": 87,
+        "sha256": "e3c3fc9d1f5d1c799bf2593a42b0dc983d53110b9b9db0e670143e4facccb16a"
+      },
+      {
+        "rel": "work/g1a06_nullsim_v4/nullsim.py",
+        "size_bytes": 49260,
+        "sha256": "caf8d4b02a805dda0f3f63ea3899e389eed8b1b009d58e8991937b5ea9ff87c0"
+      },
+      {
+        "rel": "work/g1a06_nullsim_v4/r1pipeline.py",
+        "size_bytes": 16496,
+        "sha256": "4226da9a4f8b824ba3d6ada53df5bd791197e365f5ba62c45d95b12177b1a03f"
+      }
+    ]
+  },
+  "DS_EDIN_PB": {
+    "local_relpath": "data/transcriptomics/edinburgh_gse290359_pseudobulk",
+    "is_dir": true,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "eb68888b5ad879fed79162c2b7c4758465e1d8a9094ed7432894b222ace2e6e3",
+    "files": [
+      {
+        "rel": "celltypes.tsv",
+        "size_bytes": 185,
+        "sha256": "5b9166136b19190945b439223e602f7b599952dc9d1c0c1bef995625bdef52aa"
+      },
+      {
+        "rel": "celltypes_fine.tsv",
+        "size_bytes": 156,
+        "sha256": "34c3bfe37b8024924f34e9573c9796ead9257f9c1de85593b6bc37e18b1fa596"
+      },
+      {
+        "rel": "device_out_hashes.tsv",
+        "size_bytes": 6531,
+        "sha256": "bf4d0518efc39f0a48f182a2bfcdacb3375cf410c95c2e632dc53930ae45a9a5"
+      },
+      {
+        "rel": "genes.tsv",
+        "size_bytes": 1086948,
+        "sha256": "5e48574a94ac190ceeb8b5ebdde234c9c848f0edee68ce0b12134aa5987b793d"
+      },
+      {
+        "rel": "inventory.json",
+        "size_bytes": 32589,
+        "sha256": "293e263d2146a0fa4c77a82cffec752a1e7962a5aed96d3e34cdbe4410c2492b"
+      },
+      {
+        "rel": "inventory.txt",
+        "size_bytes": 15662,
+        "sha256": "7d740bf088f2104183d2736e010451c7d11c303443e1c1ab9ac9e2575f96c0d6"
+      },
+      {
+        "rel": "libraries.tsv",
+        "size_bytes": 2370,
+        "sha256": "7980516bbfc38c8fca9c3d2ab73ad8eb9322066dce1db47d90a4b304f5c52b1a"
+      },
+      {
+        "rel": "library_metadata.tsv",
+        "size_bytes": 8457,
+        "sha256": "9d7454359387ee4e120a20cc709abf47fbfafd100c486ffb476903030c32845e"
+      },
+      {
+        "rel": "MANIFEST.tsv",
+        "size_bytes": 9270,
+        "sha256": "aeda69dd0fe89f145762787403dbaeb583ca5ddd5a08f50c41c3d9df4c3813b0"
+      },
+      {
+        "rel": "nuclei_qc.tsv",
+        "size_bytes": 30335,
+        "sha256": "90b05e8a42dc295258061238da5102994a3f2f71a051a7311e7ade390bbe7fbe"
+      },
+      {
+        "rel": "nuclei_qc_fine.tsv",
+        "size_bytes": 41385,
+        "sha256": "a9e3fa24583940de43c64fdfc0c72690c21c4db6aa0642c1c9193cb1fb3d9963"
+      },
+      {
+        "rel": "PROJECT_MANIFEST.tsv",
+        "size_bytes": 11645,
+        "sha256": "2eb32e0ba9436f111c08056ff19d4cbabb6774783b39f04e0770310c2fc199f4"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02745_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 641385,
+        "sha256": "2f15fe6b20ca69aa0723f7a38e4efe047f7d009409ec12b240dac9d4bbc0635f"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02746_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 512023,
+        "sha256": "cf72479ae6e782d9f86ad04ef22e41c9511692bfbad2fe3a9b04ab788916db59"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02747_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 489390,
+        "sha256": "f217795db42cecf8eb6fabd48aa065df9f12bfabe2e022ab64abe0aad320f5a8"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02749_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 610357,
+        "sha256": "943262c5382cf7789e9f5f2ddeacbb9812cf3e945f2e3e5f822e4188926c1cde"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02750_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 644747,
+        "sha256": "577940db596d84b4d7acecf65b264a88b612dcaed5a33f90cf2a3f539ba30ec1"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02751_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 627040,
+        "sha256": "e8f7b1beb95b6178902b478a86910b6da5b2c0a7b20347451271a2158f4f3bc4"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02753_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 617567,
+        "sha256": "ac270e9d973bf06b745bbd3d5e7f981f5fa37dd71c822ae17ad9c0e1ce31cb0e"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02754_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 508823,
+        "sha256": "d603fd9a6cdcecc17d5dd95fc830c8dd90d1e8c45d50f51fec2ef9c50ec2adec"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02756_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 411622,
+        "sha256": "2bc02ccb298b653e12d2e820740dc772c0ca7661f045182edcd13b791f9c25dd"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02757_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 626456,
+        "sha256": "f5965187903f7cc01d195e7b5287cf31ece96f98f5f63a8ed1b768cb4268e05a"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02759_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 633273,
+        "sha256": "1a0a64e0ffa21bfc09bf0abf7dd5e9e94ece595ba87c8e972fd52e70f87ff666"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02762_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 640901,
+        "sha256": "d04f483be2267674f0aba860d3959650d0f966b4346dd38a2a9e41610c8a84e6"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02763_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 672770,
+        "sha256": "529a8ba900f3ffcfc306acbb017607c1605fb7d357c40c29f7aa55e4628549a0"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02765_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 596711,
+        "sha256": "83a9e265972d1f6f6461a802068dd50898a893a52a0c64b79684b4340b578487"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02766_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 526896,
+        "sha256": "f77aa8b76d2a538a6176a6292dea5fc0c3c9d8a4274e6387e0f0a03aa9ae0514"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02959_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 501322,
+        "sha256": "ca17f965c32ceef719774516ef5b487d0034e1c1d70e2ce7b7678e9dbfd8a925"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02964_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 306459,
+        "sha256": "cee29b27a9f2c3151be3b771d3d47ae2f6833ef7cd0a476c23b8a29e9d3b1636"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02966_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 616937,
+        "sha256": "b011346bfc4d553ed0f6fe4997ab89bd3c1ade76f0ec53bdf2b21cd9134b3d3c"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02972_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 673888,
+        "sha256": "36276330b8982c6578e2b1a19e6ed4ccb03cc4cc042f52778745fc1b4321abe6"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02978_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 254419,
+        "sha256": "cb9c0956ff581bdd5847497a7cd07a28aab4f30f4a77c00ce6f7ca701fada98e"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02985_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 558266,
+        "sha256": "88df646d9ce7c07d1294f8ffde43be77ee9aa489e1156c31d2d714a35b2e1952"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-02987_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 586297,
+        "sha256": "19b27ad37591d4eba63751b09f046da5b5b4411f580b1ff5e50a3a1ea5f64f93"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03562_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 513903,
+        "sha256": "8fa1411db94d466a8d87dffb193a4474f86a4132455a859688fbe877b6ac2698"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03629_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 581904,
+        "sha256": "e097453b363e947b4a4099e367b62b03aa6f262f27f520dbe8306e6d4de94cb7"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03630_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 608165,
+        "sha256": "15efb3e0fd8463765ee47be328396dca8473ca7e908363eee418ccb48c631a7b"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03634_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 597991,
+        "sha256": "aeadac743f3e81dd031bda3e137ff4784b29207351bf17b0ac388cd2fb614a0d"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03638_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 626624,
+        "sha256": "6f6d288d6b4315241882158dfcefb9194c1f1dffeabd298089394c679c3282ba"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03639_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 426021,
+        "sha256": "e351c98151e10e1be8376b66528a5d458c7693878481e506ec4dbf585965f213"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03640_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 594502,
+        "sha256": "c32dda11898c8bba2a2fce36b14de8ad1e88a1f682d6c158ce2ce6b9a35b644b"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03641_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 425291,
+        "sha256": "2688fe6d358e6dde2ae888266f7a384c2454733db00751621706eccf1af497c1"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03642_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 645520,
+        "sha256": "c502e454e5cd766cbbf2b78bda4d37e90cc6300b3664da7783b62140ff8d5a9a"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03646_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 581057,
+        "sha256": "bd89e67e89c48c20303fedc8be82add175a5d3142b431957813fd33321fa31ec"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03647_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 654562,
+        "sha256": "818c21cbdbb382dca971d321a060505c53bf5b7be1e22b84ca6a266ed5ca7ca6"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03648_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 654552,
+        "sha256": "b6ac000307711eb6c1348a99fdb4589b301e5f12d8767b1b5b32a4e5d5b338ae"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03649_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 662792,
+        "sha256": "a6078b176eb253de636096089cb6bd13cdc2cf8e1acf50227d59608b9c4b8265"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03653_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 530775,
+        "sha256": "091e208c5d5e33d91cd52f62b5e59bb27a467e0a5cece1184c255ef6d100af72"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03661_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 582615,
+        "sha256": "2ce4d8dc662d2b7e0cca4413717e780a13a334be6c80473bee9bf690c2501b14"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03662_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 582749,
+        "sha256": "a6dfb4c6b616d1af252ae533bd84007ec0a7158248802825ccf2958b329f6408"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03713_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 586352,
+        "sha256": "bd923fe890e92f66247f4bcc048808393e418a6c5920591bab9374a73df81abd"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03718_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 574438,
+        "sha256": "c905e69463016f2c92015a856f43307010f068588c6e05dbb229a48480a94b4d"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03750_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 671895,
+        "sha256": "3bfece8c6808a99f4be94b81f33582e4d97b9eee6e1020f0bcda9841aa588447"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03752_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 512975,
+        "sha256": "3da0fc0f4c853d4d411d89720a48623eb8e1f17be9886d559ed767d9d108890d"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03753_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 562732,
+        "sha256": "e9976ae4099ed9e1351fcf9aa3b3723516d289243f690164b12e051114a29f35"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03756_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 469102,
+        "sha256": "2d21527d349f0fed9ba7d17b91aa0bbc4aa04990d8d96afd2b4f0ad262d0dce5"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03760_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 581227,
+        "sha256": "121e0bc6018d8c94bc8b3e47dedc019c468fc8dfac59083df6ac4ccbe1cf6be7"
+      },
+      {
+        "rel": "pseudobulk/CGND-HRA-03763_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 618560,
+        "sha256": "53a1778e58b6cc0ed76b62c73c3c704c51c5173a6b2eeba58d25964195643017"
+      },
+      {
+        "rel": "pseudobulk/U54-HRA-058_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 552916,
+        "sha256": "3c19a98910e5777663fe72ae26b7362b53b9bdb25fa9653b5c89437e268ab6ca"
+      },
+      {
+        "rel": "pseudobulk/U54-HRA-059_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 589271,
+        "sha256": "dca2cf06888db7095826980dbe0629e345fb4e99d91c0ebeee667a5632d61dd0"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02745_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 986743,
+        "sha256": "49e7b74e3cbe26551bf4f630ca18230c0a2e81dea6bb6f0acac53f71fa5dde10"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02746_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 839231,
+        "sha256": "82b89f456b77bd7f109dbcc96b44320cff5d5da48ca84f1224aa6915b460a4a3"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02747_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 731952,
+        "sha256": "bc2e3a8111aa07c7fdac822d9aeec045b8d7dc4178ea6394eb6094287fb7bf6d"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02749_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 902788,
+        "sha256": "ff50ad357443b10e41526e05e85585a0f7e80bc3be394511cc281b14dc97f312"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02750_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 985554,
+        "sha256": "654b38dbfe38a7490b85992080cb20b16051ad99248369e0a461d2affecfe1c6"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02751_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 1012771,
+        "sha256": "334961c4e7e9ab363d40636313481716bcf675204c2cd0562fd75f98674ef7d2"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02753_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 979444,
+        "sha256": "a4d905fcdbff52141006c40bc119841107d3d7798639b923e3c629ca6463fe83"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02754_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 799934,
+        "sha256": "e60bfd615e43226822a032f1ace7dd1ceb10624d5ed0daf8187f036da4ee944e"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02756_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 664208,
+        "sha256": "ff3c4c91431541b62cc91d501dd9fd8a0b9f621ebfa719814c055a03124ab026"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02757_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 966506,
+        "sha256": "c9d02f039e18af2d4e341b18d367739d4400fb0df3f3caa759b074c54d869a04"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02759_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 974331,
+        "sha256": "6028274d8d9e3bcaecd221623016c7f121cf956ab31e48ec8dc1a85a91e74784"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02762_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 1018517,
+        "sha256": "f61a05df10090fd78030ab5689698f31092180e87fdfcce7fa84237dfcc900ea"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02763_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 1024329,
+        "sha256": "04ebda0e3845ba56ea9cf508ba6c8124f7e2fdc1344a9b5ca32d9a47aea2797d"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02765_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 959998,
+        "sha256": "fc7090fc2bd9943b0474b37242adf38feeb9b99f749dc9a09e1afaf279dc7568"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02766_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 842594,
+        "sha256": "a32324bf550ebf3615ce07c3af2d8f8ac30a9febfbc507e85274675f3e1a0a5b"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02959_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 764382,
+        "sha256": "60fdf2593d25dd645d8f9864916eb4dc23279a52c9e301e9ba2020dcb51571e2"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02964_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 396604,
+        "sha256": "f07f56f77be1b696f2453bd004a1bd603c6d6cba6a431f354707399dfde7a176"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02966_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 995447,
+        "sha256": "9fd1141b6125ad369f3270b791f1813cec883e41d6c1ed7e03d7d06fabefa216"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02972_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 1061879,
+        "sha256": "889f19d745b619f747ebf8d3082de10e31ec8cc1e2dbfd242202fc82e1b31c00"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02978_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 346666,
+        "sha256": "e22ebe2b87dba13d109b7ec70f5ca36edc189c5bdd43c34a59fe77d004669709"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02985_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 901441,
+        "sha256": "b40f7d6fcb7b5242f574c2c1971135fee19db4c15a87073d81aeef4485685e84"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-02987_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 874037,
+        "sha256": "9d8d357b22b408e2e6278ee2e01829730b815e572c79d343096bc4f6f936c516"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03562_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 800270,
+        "sha256": "65f85b2d96bc719f9b102d69f6ca3d7f6d37daf7539b29745cd563efa1067742"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03629_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 909183,
+        "sha256": "10b13575dd63dd1d70d38efc5e47b4fa7fa2a3934402d927619b2e19e23f73e9"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03630_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 951590,
+        "sha256": "5c66b813d780419e1867a3745b109e7a5e2ba0e45b6a1cdaf7646c182ad38d70"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03634_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 951061,
+        "sha256": "8bee04a9e37e3ae769d95c306a322188b0c11894343225ed1b1fcbdeb90f3d2b"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03638_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 964911,
+        "sha256": "7cda8ca5d6698c11d9324af9897c8919768261db3544702c138ca8fa513a4f9b"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03639_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 604482,
+        "sha256": "bc2bc3467f0197765be2b51f6e1c7a72ade13f453aea9076990a3a81aa667c73"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03640_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 925719,
+        "sha256": "ac6bdfff4db2b74997fa82d4c7217a397ebf91626a3a08243ca50e0ccb286103"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03641_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 571464,
+        "sha256": "b09418a3e35a7db75aef53408b764ef6da71617fbf693d690624c534068f9a31"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03642_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 960206,
+        "sha256": "91ddbd75e8a61aca2cd2efe6fd536738b36976c56bfd7be750716af1d7a982d4"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03646_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 890304,
+        "sha256": "ce713516a2e2344bd84cbdb6013846faabec87e402b6b6b2e632f311ddc81331"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03647_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 980043,
+        "sha256": "9b0ba5aa611298888384d7d28f7532ed263219d50b3c45f6a0ad6e0c7768c4dc"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03648_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 965421,
+        "sha256": "a55d59f5f4881da5a1ee60dff1e9312f6e69e58dd5c73716a9149d5ae8a88ac5"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03649_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 1036520,
+        "sha256": "c4df5ff184f48c8cb76f03a1bdc61ad23a159767be0fe9ee460c39997624e8ba"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03653_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 756029,
+        "sha256": "43f77c36f7cca641e6b6e5774a483b8ccaf8845778bc29a0a3158de4855ff209"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03661_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 909224,
+        "sha256": "edbcfdf1c96b938e832857d4b0eb3adcb2d8523162408c24503c8b10d614fbec"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03662_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 948881,
+        "sha256": "6eee2d0798338c1f038d3b0c61a6ba1e3fa968d6b4bf736767f3d5b60b099952"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03713_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 805488,
+        "sha256": "85f42fe58c94d5cbd3dbbb65b2c8acc21b911d476f757de256d8c5539527cf81"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03718_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 861543,
+        "sha256": "ab0160f682970143205e6b41dc5e50759666eb95b02eecf6a85af5843ae3142a"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03750_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 1034772,
+        "sha256": "881bd0dfa6c374ec56977b53a8fc89e10dd6caa4c31307961bea64dfdeabe866"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03752_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 775912,
+        "sha256": "2b720b37f3ebb90c66510bca96381176d760893ea5d028ad337eee9bf9fbd1c6"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03753_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 884861,
+        "sha256": "eae52c34858ce5737bd368c42c5ebcb9da3ea3057d4a8aa5be1cce48dd3b8fee"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03756_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 756538,
+        "sha256": "42f5eada8842d53b05fbc1906692460b0d917331d62e36284b0cff008a3fff4d"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03760_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 875105,
+        "sha256": "3ec032766d8461116a9507176c8e4f8321fbb99f64012a909011d67cd0550e61"
+      },
+      {
+        "rel": "pseudobulk_fine/CGND-HRA-03763_BA44.pseudobulk.tsv.gz",
+        "size_bytes": 907576,
+        "sha256": "79f8abcc9ae2047a01fd147426761d8fa4ab13d34b764a1eee70d8fb67ebb1ab"
+      },
+      {
+        "rel": "pseudobulk_fine/U54-HRA-058_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 865654,
+        "sha256": "49de7c230c786d3e2bcc87f5ed68df5d62156606c5cabf57d43f9a8b584df4f9"
+      },
+      {
+        "rel": "pseudobulk_fine/U54-HRA-059_BA46.pseudobulk.tsv.gz",
+        "size_bytes": 907092,
+        "sha256": "61705d282ef82a37423c2f6dee4bfeca40e85931da40bd1293c6caf550e2894d"
+      },
+      {
+        "rel": "reduce_log.txt",
+        "size_bytes": 613,
+        "sha256": "e0477f0b27fa8b87e8c496ca6f389db37dc8aab25ddd8cc63983d9af6078ee64"
+      }
+    ]
+  },
+  "DS014_PRUD": {
+    "local_relpath": "data/transcriptomics/gse67196_prudencio_primary",
+    "is_dir": true,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "11b262426698531dc47430845c761bef53b7bb56f734617d894ba5a8dfa3b61d",
+    "files": [
+      {
+        "rel": "all_sample_cooks.csv.gz",
+        "size_bytes": 4548755,
+        "sha256": "87248fe544b9fbcd865eaf0d8bdc25d325e7153dd6246c239fbbbcaf74e6e38f"
+      },
+      {
+        "rel": "contrast.json",
+        "size_bytes": 645,
+        "sha256": "08d56f1eb12b372964cc9e8dfdecbce1c849625de9e5c453cb12293778fd8d22"
+      },
+      {
+        "rel": "design_matrix.csv",
+        "size_bytes": 3225,
+        "sha256": "4260fe356f5ae948aa4c9e73f28e98460abc6e465fe4a363fa603c516c69f5e4"
+      },
+      {
+        "rel": "feature_QC.csv",
+        "size_bytes": 3475332,
+        "sha256": "11b9bb499d182d282ade36e2afe5f0dd9db9de60e7f9414bdd1ea0c49d692861"
+      },
+      {
+        "rel": "feature_QC_partial.csv",
+        "size_bytes": 2484447,
+        "sha256": "d444ee0e03c4892ce09f8ba5a69b1c8838385df13e82b0a91bbddff2e1313794"
+      },
+      {
+        "rel": "fit_receipt.json",
+        "size_bytes": 2886,
+        "sha256": "6787bd4fdce75c1ac81ce8f1474b01208f19e3e328a3bcb6df0e71770e335852"
+      },
+      {
+        "rel": "global_parameters.json",
+        "size_bytes": 201,
+        "sha256": "0c6263a1319bd76b00c3b20066f83fcec8cc5d53a3784349e8fe50f0d5c18805"
+      },
+      {
+        "rel": "inference_masked.csv",
+        "size_bytes": 2427455,
+        "sha256": "1b083191d4dafdc8fb0a7b68dd02a2abe4aa7a97fd2a472ad98f4167a12d1669"
+      },
+      {
+        "rel": "metadata.csv",
+        "size_bytes": 5220,
+        "sha256": "297e7b205f7f7b61cb70fa10e08bef925c4352c484138f60d2093e688be8709b"
+      },
+      {
+        "rel": "monitor_ready.json",
+        "size_bytes": 396,
+        "sha256": "7d637f48dee9b578fd5a3e7a6d5f7439ceec4532c9459cd9045def5f6cf4d59e"
+      },
+      {
+        "rel": "monitor_receipt.json",
+        "size_bytes": 952,
+        "sha256": "5b69c837cd8274ebe0e6a24e3077d22478a7adb1470a749e4dcd57e199d3aebc"
+      },
+      {
+        "rel": "normalization_receipt.json",
+        "size_bytes": 258,
+        "sha256": "9a3bee8b651442a3787dcb9d5571bb61242a1dd991f5c90790d68c25425e5667"
+      },
+      {
+        "rel": "normalized_counts.csv.gz",
+        "size_bytes": 2732860,
+        "sha256": "6d36e07c29ab4025b504f9ded8957c0668a1a60025ed37c631fe4eda8e6423f9"
+      },
+      {
+        "rel": "raw_full_gene_results.csv",
+        "size_bytes": 2648891,
+        "sha256": "788dfc5d9a298545372249ed037f5526b1e509ec1dcfc65bfb9fc35c82dbcecc"
+      },
+      {
+        "rel": "raw_model_coefficients_natural_log.csv.gz",
+        "size_bytes": 2952026,
+        "sha256": "caa2875b6420a08f1db330fae26c66c41234f5e0479b3d2ab3eec3442d4ba56c"
+      },
+      {
+        "rel": "resources.jsonl",
+        "size_bytes": 61520,
+        "sha256": "309b651b147549c8ff3069b46c56746fc09ff20b0c0fc4775d7b6019cb7c6062"
+      },
+      {
+        "rel": "runtime.json",
+        "size_bytes": 921,
+        "sha256": "d0c994d6076e87ebba99d00961f7080ae3d20b2344a1b2924be1f4b382b7e43d"
+      },
+      {
+        "rel": "sample_QC.csv",
+        "size_bytes": 6096,
+        "sha256": "7d80baef746ee1221232f723dea602a6f7585f257c5a0efbf6d19163ebf4d692"
+      },
+      {
+        "rel": "stage.json",
+        "size_bytes": 161,
+        "sha256": "733c1765b5c07c96da3066317f6481a992a0232bd62f7ef13a47168be636c109"
+      },
+      {
+        "rel": "statistics.log",
+        "size_bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "rel": "target_results.csv",
+        "size_bytes": 932,
+        "sha256": "ddff4ee45b8763e8a7f1685ea7f5d5d102afcf7d22b3d3efc5ea303aee6c6406"
+      },
+      {
+        "rel": "worker.log",
+        "size_bytes": 2888,
+        "sha256": "e3cab71b34ed126879240d8d682c44edf2c2f16e8cc69389bab3915b49912005"
+      }
+    ]
+  },
+  "DS_CONS2026": {
+    "local_relpath": "data/transcriptomics/consortia_2026_fulltexts",
+    "is_dir": true,
+    "tier": "TIER_B_PUBLISHER_HTTPS_FETCH",
+    "sha256": "63cac96a73c00ca810a389ac0c5b4cdccc655f5eb8a6be720693927599f87a0f",
+    "files": [
+      {
+        "rel": "PMC12919128_Tsitkov_2026_AALS594.txt",
+        "size_bytes": 64468,
+        "sha256": "860650031c6903a9ae093ecf22e9a77fdb05ae0e48ead995389930d00fc38041"
+      },
+      {
+        "rel": "PMC12982666_M1_snMultiome_2026.txt",
+        "size_bytes": 111756,
+        "sha256": "279c6fdb303891c93b4bd639050136fc21f67faf6d1602b4598cb921cc6cda6b"
+      },
+      {
+        "rel": "PMC13337491_Zhang_2026_Spatial.txt",
+        "size_bytes": 102197,
+        "sha256": "2a48daab0eb56fe354af7c6f32e7cefe1e83a088b98c9ba8fcd2fe19c74cf21d"
+      }
+    ]
+  },
+  "DS031_ZHANG": {
+    "local_relpath": "data/transcriptomics/Zhang2026_Spatial_MOESM8.xlsx",
+    "is_dir": false,
+    "tier": "TIER_B_PUBLISHER_HTTPS_FETCH",
+    "sha256": "9e4794b45048ed3fe94e672c928d4b02d1a9a03231358e88ec23a9ceab9cf8b1",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 313459,
+        "sha256": "9e4794b45048ed3fe94e672c928d4b02d1a9a03231358e88ec23a9ceab9cf8b1"
+      }
+    ]
+  },
+  "DS_CRYPTIC": {
+    "local_relpath": "data/genomics_splicing/tdp43_cryptic_sources",
+    "is_dir": true,
+    "tier": "TIER_B_PUBLISHER_HTTPS_FETCH",
+    "sha256": "9c45fc91bd44af66a50ea6b7e38757a22395eb90a899e1865e9a628d3bcac2bc",
+    "files": [
+      {
+        "rel": "Brown2022_41586_2022_4436_MOESM10_ESM.xls",
+        "size_bytes": 31744,
+        "sha256": "1c9962622d7c75ebb044768dd89f27f63b5bcdf49a1152428e4ed495667e0120"
+      },
+      {
+        "rel": "Brown2022_41586_2022_4436_MOESM11_ESM.csv",
+        "size_bytes": 2574566,
+        "sha256": "d7978f426d8d131d89e2fe576d21e2a0fc0af658ff3c4b342a5fab60247d4962"
+      },
+      {
+        "rel": "Brown2022_41586_2022_4436_MOESM12_ESM.csv",
+        "size_bytes": 2436080,
+        "sha256": "e315fb1ceab26c56a8a061aebe8384bc6c94d927ee2479efa119c4047cf76a8c"
+      },
+      {
+        "rel": "Brown2022_41586_2022_4436_MOESM13_ESM.csv",
+        "size_bytes": 2997475,
+        "sha256": "dfeb282dcf1f045af1204d1801102b0cf82764e8ba0c24cc9c38c7046e462df1"
+      },
+      {
+        "rel": "Brown2022_41586_2022_4436_MOESM14_ESM.xlsx",
+        "size_bytes": 9919,
+        "sha256": "f188a19c29c6760e5a8607f23a3b745bddcb21c3c1aaa16f6ea081e358fd6b58"
+      },
+      {
+        "rel": "Brown2022_41586_2022_4436_MOESM4_ESM.xls",
+        "size_bytes": 30720,
+        "sha256": "716db4d0c44197355476a6c97ea2b241acffc7c9412e7a6e64ea83b7efb61fc0"
+      },
+      {
+        "rel": "Brown2022_41586_2022_4436_MOESM5_ESM.xls",
+        "size_bytes": 27648,
+        "sha256": "feb221209b72f2c4b4c484b2cb469d42d8d401c52d241b059b4341441de3880e"
+      },
+      {
+        "rel": "Brown2022_41586_2022_4436_MOESM6_ESM.xls",
+        "size_bytes": 27648,
+        "sha256": "818ca84266f79c3204a436cc2c0bcf00ef99b762593a008bee25943d37cb5446"
+      },
+      {
+        "rel": "Brown2022_41586_2022_4436_MOESM7_ESM.xls",
+        "size_bytes": 29184,
+        "sha256": "f3909dbc7271a8fbb4241c728bb29115b6cb81b69028a28485ff97b30f3579fa"
+      },
+      {
+        "rel": "Brown2022_41586_2022_4436_MOESM8_ESM.xls",
+        "size_bytes": 27648,
+        "sha256": "e735629c42c49e05644dd834d1caf379ea15ecf5deb770393c96080d776d32b1"
+      },
+      {
+        "rel": "Brown2022_41586_2022_4436_MOESM9_ESM.xls",
+        "size_bytes": 29184,
+        "sha256": "54d91b96f58b0cb85234f10c11451ca86211e183e1d2d6076dab3fcd87b83a41"
+      },
+      {
+        "rel": "Klim2019_41593_2018_300_MOESM3_ESM.xlsx",
+        "size_bytes": 45738,
+        "sha256": "8348ca64484944c438d5e02e5ae8d9f52d7c7b4528b46ca28bbec351e32db6c4"
+      },
+      {
+        "rel": "liu2019_supplement2.md",
+        "size_bytes": 132795,
+        "sha256": "3b79560872ef604dcde6c431471793800ef2e32bfd988a6a806d022d1f294021"
+      },
+      {
+        "rel": "Ma2022_41586_2022_4424_MOESM1_ESM.pdf",
+        "size_bytes": 896786,
+        "sha256": "84c2c3175967b7b9c447494b15b7ca53df7a2d1ef6149cc7ea32d6341f79c8b6"
+      },
+      {
+        "rel": "Ma2022_41586_2022_4424_MOESM5_ESM.xlsx",
+        "size_bytes": 13771,
+        "sha256": "ad7c3e4fc7086a13268ffa0b6e74bc4f1bddd5bc3cba536506018ff9c976ce1d"
+      },
+      {
+        "rel": "Ma2022_41586_2022_4424_MOESM6_ESM.xlsx",
+        "size_bytes": 13147,
+        "sha256": "e540a9bcb525c37c605625cb60ecf218c30a207846a6d164e48d3218454a5dc5"
+      },
+      {
+        "rel": "Ma2022_41586_2022_4424_MOESM7_ESM.xlsx",
+        "size_bytes": 11071,
+        "sha256": "8f99bb4e99a30250763913e3fcdd3081b1040d2b5d5dd849b7699899b98875d2"
+      },
+      {
+        "rel": "manifest.csv",
+        "size_bytes": 20600,
+        "sha256": "e6821866f1b220a374b08ec769a955a3136bc3adecf27fe5e21b92fc94675893"
+      },
+      {
+        "rel": "Melamed2019_41593_2018_293_MOESM3_ESM.xlsx",
+        "size_bytes": 57100,
+        "sha256": "41dcc3cb85e675e5a742b48eb638d17b078f04447dd72191cb4a9cd945b86ba5"
+      },
+      {
+        "rel": "Melamed2019_41593_2018_293_MOESM4_ESM.xlsx",
+        "size_bytes": 94256,
+        "sha256": "8ee5a33539bcdd2a018b5f09cf91ce7cacd9f6b823a548cd84a2ae194c437e1a"
+      },
+      {
+        "rel": "Melamed2019_41593_2018_293_MOESM5_ESM.xlsx",
+        "size_bytes": 10270,
+        "sha256": "9b1b1b7b3adbb0ebec0953174a9d6a575b803808689b8412e86fa5cd3fc65ee8"
+      },
+      {
+        "rel": "Melamed2019_41593_2018_293_MOESM6_ESM.xlsx",
+        "size_bytes": 18618,
+        "sha256": "3a3aabc25c5c1c94fa866e5063c0bb6f0e682085eefa3c7653eac3827cc1f468"
+      },
+      {
+        "rel": "Melamed2019_41593_2018_293_MOESM7_ESM.xlsx",
+        "size_bytes": 12575,
+        "sha256": "3a688c81bf4b4f59f5a0995c6571974c104b6a46203f11fae23c99af6f2be6ca"
+      },
+      {
+        "rel": "source_data/Brown2022_41586_2022_4436_MOESM15_ESM.xlsx",
+        "size_bytes": 1526861,
+        "sha256": "f51eeb60b6280d2cfcd833e2ad0c4b10f70d340fbc3de315ac8bb2434122140f"
+      },
+      {
+        "rel": "source_data/Brown2022_41586_2022_4436_MOESM16_ESM.xlsx",
+        "size_bytes": 2349663,
+        "sha256": "53f512c6662163e22ece4575659a3bb7f8c645af8bf54049d59693bfac85518a"
+      },
+      {
+        "rel": "source_data/Brown2022_41586_2022_4436_MOESM17_ESM.xlsx",
+        "size_bytes": 202267,
+        "sha256": "7e001cef3b62299cf66f37844f4c3e6522c5a4ea89c858933d3054bd99aa6e24"
+      },
+      {
+        "rel": "source_data/Brown2022_41586_2022_4436_MOESM18_ESM.xlsx",
+        "size_bytes": 125082,
+        "sha256": "1062a43053d469371d43a3a0630d156447098b8860b25ac5aec7d7820c2a4f76"
+      },
+      {
+        "rel": "source_data/Ma2022_41586_2022_4424_MOESM10_ESM.xlsx",
+        "size_bytes": 22871,
+        "sha256": "69fd38b564b57361b9aec916dac701f8873485b3a796824273538b0add836dc5"
+      },
+      {
+        "rel": "source_data/Ma2022_41586_2022_4424_MOESM11_ESM.xlsx",
+        "size_bytes": 9388,
+        "sha256": "9750d5e9c6ed293cb2c3b0552b4cd467513bd565c19e10ee67ca160da788e780"
+      },
+      {
+        "rel": "source_data/Ma2022_41586_2022_4424_MOESM12_ESM.xlsx",
+        "size_bytes": 10230,
+        "sha256": "b25e17c4ce2522ca450697e0048aef3086eae41a91318fe987f584a8eaf3a75b"
+      },
+      {
+        "rel": "source_data/Ma2022_41586_2022_4424_MOESM13_ESM.xlsx",
+        "size_bytes": 23730,
+        "sha256": "69efe501e00bb44a932d865fbcd3ab1470c012fbc70f3d4095792a173d6f9e5b"
+      },
+      {
+        "rel": "source_data/Ma2022_41586_2022_4424_MOESM14_ESM.xlsx",
+        "size_bytes": 11194,
+        "sha256": "bb73d38df65d4a691bf89f17f92044707f9bea65ff537eadc8e405bd9f028c97"
+      },
+      {
+        "rel": "source_data/Ma2022_41586_2022_4424_MOESM15_ESM.xlsx",
+        "size_bytes": 18345,
+        "sha256": "ad119c2f8e2c0c98ac5178b1e9691768ce241a277a996d61f52ca20da20c6906"
+      },
+      {
+        "rel": "source_data/Ma2022_41586_2022_4424_MOESM16_ESM.xlsx",
+        "size_bytes": 10763,
+        "sha256": "06a772f65d335103e5faf923906d5f8e606f1a28340f58696b0c8bfc146eba1e"
+      },
+      {
+        "rel": "source_data/Ma2022_41586_2022_4424_MOESM17_ESM.xlsx",
+        "size_bytes": 11766,
+        "sha256": "b0dbefc06ccf30376f8a38b9016ea53153768cddef538f1459ddfb5add1a3191"
+      },
+      {
+        "rel": "source_data/Ma2022_41586_2022_4424_MOESM18_ESM.xlsx",
+        "size_bytes": 27223,
+        "sha256": "430bde4b166b5a3356b643621d713bfe4e6e4cf9faaf3634701f882e6d87b487"
+      },
+      {
+        "rel": "source_data/Ma2022_41586_2022_4424_MOESM8_ESM.xlsx",
+        "size_bytes": 12573,
+        "sha256": "9a0a2a6dda976a5c707621291d47aace043a6c83f99a3e885e830170e657216d"
+      },
+      {
+        "rel": "source_data/Ma2022_41586_2022_4424_MOESM9_ESM.xlsx",
+        "size_bytes": 179347,
+        "sha256": "9b95c8e9f5101feee456619f2018824ec5fb44f6aa681d8ea0ee5c61bb6cbc6c"
+      }
+    ]
+  },
+  "DS_ZENG_APA": {
+    "local_relpath": "data/genomics_splicing/tdp43_apa/Zeng2025_MOESM3.xlsx",
+    "is_dir": false,
+    "tier": "TIER_B_PUBLISHER_HTTPS_FETCH",
+    "sha256": "2c509dfd82e6889a95085bbb539aeddb771e6804cdf4bd31566e17eb025835c9",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 1032821,
+        "sha256": "2c509dfd82e6889a95085bbb539aeddb771e6804cdf4bd31566e17eb025835c9"
+      }
+    ]
+  },
+  "DS_BRYCE_APA": {
+    "local_relpath": "data/genomics_splicing/tdp43_apa/BryceSmith2025_MOESM3.xlsx",
+    "is_dir": false,
+    "tier": "TIER_B_PUBLISHER_HTTPS_FETCH",
+    "sha256": "837d82c65895a9594bcdcf632e530051888a1d1dfcb53434a20319e163b6d107",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 1420349,
+        "sha256": "837d82c65895a9594bcdcf632e530051888a1d1dfcb53434a20319e163b6d107"
+      }
+    ]
+  },
+  "DS_ELIG_BED": {
+    "local_relpath": "data/genomics_splicing/eligibility_v1.0",
+    "is_dir": true,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "79f79fd2e783104681064fc3a1350ccb2eb6e41da0435f165b0aec26a875f21a",
+    "files": [
+      {
+        "rel": "donor_adjudication_rules_v1.0.json",
+        "size_bytes": 4052,
+        "sha256": "709b0aec5a990e98b420ab9a687213addc27d6efccaff2d22c98db5e1b0c538a"
+      },
+      {
+        "rel": "package.json",
+        "size_bytes": 593,
+        "sha256": "7f97ff1ae63bdf038cb4ca6a5b35a6f33853e1d32cd5af2685b9c2c867488b42"
+      },
+      {
+        "rel": "scope_blockers_resolved.csv",
+        "size_bytes": 3837,
+        "sha256": "8743b53ffb172d27dd078fd7a445562e1b04630c75476202504ab6cfb950cdab"
+      },
+      {
+        "rel": "sequence_audit_union_v1.0.bed",
+        "size_bytes": 10257,
+        "sha256": "6c618ba5a59221efa08d3f4c651d3c96a96621121b45d68b6f4473dd041ab258"
+      },
+      {
+        "rel": "sequence_union_summary_v1.0.csv",
+        "size_bytes": 1273,
+        "sha256": "8d650f0e8beefc7444552380acc0775f2601e7e98ee2467856c0958ed4ccdb37"
+      }
+    ]
+  },
+  "DS026_FUJITA": {
+    "local_relpath": "data/genomics_splicing/fujita_oligodendrocyte",
+    "is_dir": true,
+    "tier": "TIER_C_DUA_OR_BASELINE",
+    "sha256": "04f0a6e65f0106b217c090adc7746df37e884d77d74345dc30cdd26209d22b35",
+    "files": [
+      {
+        "rel": "common_variants.GRCh38.tsv",
+        "size_bytes": 429469,
+        "sha256": "2af23f04433027995f135ce84a55eb0924ae5798099d4a09684cddb7562ec1fa"
+      },
+      {
+        "rel": "MOBP.Oli.all_associations.tsv",
+        "size_bytes": 366932,
+        "sha256": "f8165af32552d6d49a48aa1b5fbfefa4a41d52c725db591231b9e143391f8548"
+      },
+      {
+        "rel": "README.md",
+        "size_bytes": 1724,
+        "sha256": "ce95623fb019f9267cf9b24599c6695cc8db25aa10568f31585fc7f84ad277cc"
+      },
+      {
+        "rel": "RPSA.Oli.all_associations.tsv",
+        "size_bytes": 366418,
+        "sha256": "5d093e9f7f386ad91f3c0aaf2e2a480fe5d6f1eb8004ffb527ad7a0199150147"
+      },
+      {
+        "rel": "tested_gene_inventory.csv",
+        "size_bytes": 471249,
+        "sha256": "227cb8dd1b7a4664e27ebe34c748aa8e25c3556196df8cada41344e9c49c239e"
+      }
+    ]
+  },
+  "DS045_TRAUT": {
+    "local_relpath": "data/proteomics/trautwig2025_d045/13024_2025_838_MOESM1_ESM.xlsx",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "e2ec5fc1f6415fc3147fb391d171611fb53a49ee410c66ea762eecf20c62f586",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 72881984,
+        "sha256": "e2ec5fc1f6415fc3147fb391d171611fb53a49ee410c66ea762eecf20c62f586"
+      }
+    ]
+  },
+  "DS045_XML": {
+    "local_relpath": "data/proteomics/trautwig2025_d045/PMC12082929_Trautwig2025.xml",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "b1385a1f467d7dafd0074fcce49bab3c57e0174a00a222079cb1b47074a7c00a",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 169733,
+        "sha256": "b1385a1f467d7dafd0074fcce49bab3c57e0174a00a222079cb1b47074a7c00a"
+      }
+    ]
+  },
+  "DS046_OH_XML": {
+    "local_relpath": "data/proteomics/oh2023_d046/PMC10215566_Oh2023.xml",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "55cf275857a8cd2616674552bd69ae86dd59dc44acd56e15bdb86121648cbf6f",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 213349,
+        "sha256": "55cf275857a8cd2616674552bd69ae86dd59dc44acd56e15bdb86121648cbf6f"
+      }
+    ]
+  },
+  "DS029_SPILL": {
+    "local_relpath": "data/proteomics/spillman2026_d029_d030",
+    "is_dir": true,
+    "tier": "TIER_B_PUBLISHER_HTTPS_FETCH",
+    "sha256": "613785db86e0c62147618a1bf2ce466a462073c9cb8388e450660dace4ec7248",
+    "files": [
+      {
+        "rel": "172_0005_02A_FRCTXonly_ExperimentSetupOverview_BGS_Factory_Settings.txt",
+        "size_bytes": 284537,
+        "sha256": "e9e05bf54f28cc983c90b862d3774123a38182d34c4f2345513442a2aea3d93b"
+      },
+      {
+        "rel": "172_0005_02A_FRCTXonly_Report_IMSSR_ProteinQuant_Pivot.tsv",
+        "size_bytes": 4827212,
+        "sha256": "b0d7d4c96a1b3f65336bc940b165e04dfba57e4345f519305e45a1f7ad0dedbc"
+      },
+      {
+        "rel": "172_0005_12Synap_Report_IMSSRProteinQuant_Pivot.tsv",
+        "size_bytes": 2148711,
+        "sha256": "9d6cd4f7e8e4d3cf1af1c2105990b0f11df6ab35fc7a68ff6a73ce043ee470dd"
+      },
+      {
+        "rel": "401_2026_3084_MOESM1_ESM.xlsx",
+        "size_bytes": 6457187,
+        "sha256": "36a1d5886f4117c8336b323897ce5655dae636b1917ecb4f5c0f25a1f9578520"
+      },
+      {
+        "rel": "401_2026_3084_MOESM2_ESM.xlsx",
+        "size_bytes": 13829012,
+        "sha256": "e335194b6897ab031318aaebff2b6702e8f4e4de7d3c732fffc7577869e1f1a7"
+      },
+      {
+        "rel": "401_2026_3084_MOESM3_ESM.xlsx",
+        "size_bytes": 3021697,
+        "sha256": "7eb18b106249867c5c5e36a3b7d5e57d33aab4c6f6fcfec401372073dd5c4016"
+      },
+      {
+        "rel": "401_2026_3084_MOESM4_ESM.pdf",
+        "size_bytes": 2263193,
+        "sha256": "95ab00c82de6d92f7376770a60b3ec520c9dc3b1c631257a1177d81a793a32cd"
+      },
+      {
+        "rel": "401_2026_3084_MOESM5_ESM.xlsx",
+        "size_bytes": 18858,
+        "sha256": "8457208804fbbd0daa55e601dfff129efa559af0ffb28ce4ae98b8b8eccbf100"
+      }
+    ]
+  },
+  "DS005_BYE": {
+    "local_relpath": "data/pharmacology_structures/bye2025/41593_2025_2118_MOESM3_ESM.xlsx",
+    "is_dir": false,
+    "tier": "TIER_B_PUBLISHER_HTTPS_FETCH",
+    "sha256": "364e4368a1c560b83ebf6acc93822f4d704ba74fb0d68293ac097be1f0d7d71d",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 228638,
+        "sha256": "364e4368a1c560b83ebf6acc93822f4d704ba74fb0d68293ac097be1f0d7d71d"
+      }
+    ]
+  },
+  "DS_ROPALS": {
+    "local_relpath": "data/pharmacology_structures/ropals2023/ROPALS2023_tables.xlsx",
+    "is_dir": false,
+    "tier": "TIER_B_PUBLISHER_HTTPS_FETCH",
+    "sha256": "3f19a27086a72a5beb589ede5e6305e8ac77f378865c77924e5e1670671bd121",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 12993,
+        "sha256": "3f19a27086a72a5beb589ede5e6305e8ac77f378865c77924e5e1670671bd121"
+      }
+    ]
+  },
+  "DS_AFDB": {
+    "local_relpath": "data/pharmacology_structures/afdb",
+    "is_dir": true,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "7b3a9073958d2636c960649a16dfce3ab3da96b040968f8488e96e4b07a644de",
+    "files": [
+      {
+        "rel": "AF-O15498-F1-metadata.json",
+        "size_bytes": 2366,
+        "sha256": "e7010577789428ebf4934952e0fb8bf12e2ccd768ed42cf9ddbe65499ad6e424"
+      },
+      {
+        "rel": "AF-O15498-F1-model_v6.cif",
+        "size_bytes": 194473,
+        "sha256": "37603a55469e40c8c6e75b3b93bec26c9981c76ba7f4d388d30ffac8276dde10"
+      },
+      {
+        "rel": "AF-O15498-F1-predicted_aligned_error_v6.json",
+        "size_bytes": 84273,
+        "sha256": "a7bf33817baf38490002155f481865d1ddf2a16d0fe287953d16f2d0a0db8804"
+      },
+      {
+        "rel": "AF-O75396-F1-metadata.json",
+        "size_bytes": 2142,
+        "sha256": "9b0054ba1f076821213f7298f329ebcea0fd77224943e800169340db5f7f8c57"
+      },
+      {
+        "rel": "AF-O75396-F1-model_v6.cif",
+        "size_bytes": 211821,
+        "sha256": "89f27da77a7f2cd46e4fd9414fbd5dd92d8c5a34cd69bbdd1f338b1bed503921"
+      },
+      {
+        "rel": "AF-O75396-F1-predicted_aligned_error_v6.json",
+        "size_bytes": 116410,
+        "sha256": "71fd34dd8335cc8a3666416ac30b6c959e1e1824c74f7e3bc2774cda9d152890"
+      },
+      {
+        "rel": "AF-O95249-F1-metadata.json",
+        "size_bytes": 2480,
+        "sha256": "bb65d6b45ae1f19f6bafabd82cfaec17335b5fdf9ca05e4244cd4fc09899bf4e"
+      },
+      {
+        "rel": "AF-O95249-F1-model_v6.cif",
+        "size_bytes": 240100,
+        "sha256": "40565352fd2ecca11fa2613f4127910fc1a017c4cb946e7a058997765ca6946e"
+      },
+      {
+        "rel": "AF-O95249-F1-predicted_aligned_error_v6.json",
+        "size_bytes": 168885,
+        "sha256": "e28b095d233a0048e0f6056ecd84579771cd1afb10fe77318f7556593310d658"
+      },
+      {
+        "rel": "AF-P46459-F1-metadata.json",
+        "size_bytes": 3451,
+        "sha256": "b4e3f29f9bd4619adc9fd3abd753a2db43b4c68acc481bb4188c3cd48346cdac"
+      },
+      {
+        "rel": "AF-P46459-F1-model_v6.cif",
+        "size_bytes": 677966,
+        "sha256": "dbb73640ca96bfb494aa82a4be6c291904899953acc992c0d2667d99167a50a2"
+      },
+      {
+        "rel": "AF-P46459-F1-predicted_aligned_error_v6.json",
+        "size_bytes": 1464613,
+        "sha256": "51c5a92145463d9ef1661679fd672dd841837566d6e00e4b3cb2c48b99f79ddd"
+      },
+      {
+        "rel": "AF-P48200-F1-metadata.json",
+        "size_bytes": 3913,
+        "sha256": "b67769209cdc6ae7ccdc2b6ae90c212ac0be6cf23eeb2f59b421953a61ff639a"
+      },
+      {
+        "rel": "AF-P48200-F1-model_v6.cif",
+        "size_bytes": 862365,
+        "sha256": "9d3793167784bf3f5da96c886186beed53a728b43db59b0e155e98673e1a6f57"
+      },
+      {
+        "rel": "AF-P48200-F1-predicted_aligned_error_v6.json",
+        "size_bytes": 2351155,
+        "sha256": "728fb66f9266f3c1335ce7314cfeca82484052f71d5d2e771e0ee94b9d0bccf8"
+      },
+      {
+        "rel": "AF-P50395-F1-metadata.json",
+        "size_bytes": 2869,
+        "sha256": "df020831464be19014bfabfd53de091f864c4f6ab5521fba6f74d3a04e4b526f"
+      },
+      {
+        "rel": "AF-P50395-F1-model_v6.cif",
+        "size_bytes": 421712,
+        "sha256": "57f9e5bf7239b4d2db3f2489cb6908813aef807edd3d1e76b156ad6442dc2fdc"
+      },
+      {
+        "rel": "AF-P50395-F1-predicted_aligned_error_v6.json",
+        "size_bytes": 410345,
+        "sha256": "a23879c351205f2d4ae158f93232dde98e48f536ca82a8b93d5bc71258567864"
+      },
+      {
+        "rel": "AF-Q13190-F1-metadata.json",
+        "size_bytes": 2664,
+        "sha256": "dd995311a38c9367f28d0c21f3e02033932f697739037f1914b06c973f691a80"
+      },
+      {
+        "rel": "AF-Q13190-F1-model_v6.cif",
+        "size_bytes": 329308,
+        "sha256": "6934e6a092cbdf6cf7d0a213dc35eec157d2453f8a74caa009c334c59caa9ed2"
+      },
+      {
+        "rel": "AF-Q13190-F1-predicted_aligned_error_v6.json",
+        "size_bytes": 352180,
+        "sha256": "82c01f819853a60c5093868d554571356e57bcf1e35901f9b155aeb165fe35de"
+      },
+      {
+        "rel": "AF-Q7L622-F1-metadata.json",
+        "size_bytes": 3403,
+        "sha256": "2987e763a124b373a1305341370aca5d78c4a3c6747979219f389d7d25dbdf2c"
+      },
+      {
+        "rel": "AF-Q7L622-F1-model_v6.cif",
+        "size_bytes": 657908,
+        "sha256": "5ec8898bf90cfdb8e08f77b77494fc4b6ec55211b10bb053007f9028e51bbe3a"
+      },
+      {
+        "rel": "AF-Q7L622-F1-predicted_aligned_error_v6.json",
+        "size_bytes": 1337799,
+        "sha256": "337f6edb01a81cb6d6e1f98b8f15d46f4ffb024bea8d9d493c04448f1022a759"
+      },
+      {
+        "rel": "AF-Q8WVM8-F1-metadata.json",
+        "size_bytes": 3268,
+        "sha256": "6eec41a6849259eeb45aa75199562a8c383b89cbc00572985193e9f1bc545fca"
+      },
+      {
+        "rel": "AF-Q8WVM8-F1-model_v6.cif",
+        "size_bytes": 593990,
+        "sha256": "03439f39d3ce885f9a617619ec7713e691fb4adb328736317f6a24c12ab1e08c"
+      },
+      {
+        "rel": "AF-Q8WVM8-F1-predicted_aligned_error_v6.json",
+        "size_bytes": 969938,
+        "sha256": "cbb095452ae26cafabcbb4c54ec18daf0d800217ab7c9a8b39fbcf9bbee49d1a"
+      },
+      {
+        "rel": "AF-Q9UKA1-F1-metadata.json",
+        "size_bytes": 3353,
+        "sha256": "84c8ab4ce50250f90ecd7dc6ad49244c76561657bd60687902bad4d67f86bee5"
+      },
+      {
+        "rel": "AF-Q9UKA1-F1-model_v6.cif",
+        "size_bytes": 639706,
+        "sha256": "b2c71291baa686ded2e94f42ee0d7beb3b30709d7214bc4de8e03dd9818826ab"
+      },
+      {
+        "rel": "AF-Q9UKA1-F1-predicted_aligned_error_v6.json",
+        "size_bytes": 1335596,
+        "sha256": "bf0bded430e65333e960167c245405e8212fc2ae0618b375d92a5d6057eeb546"
+      },
+      {
+        "rel": "afdb_analysis_stdout.txt",
+        "size_bytes": 14726,
+        "sha256": "4952935abdac3ccbe948bb344179ce74ceb4749b791759328e63db93a7ead57d"
+      }
+    ]
+  },
+  "DS_PDB": {
+    "local_relpath": "data/pharmacology_structures/pdb",
+    "is_dir": true,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "6894ef02716991c9f2716e315c12f884d316d2ffb004555c8999877d4b41e93e",
+    "files": [
+      {
+        "rel": "pdb_00003egd.cif",
+        "size_bytes": 1354306,
+        "sha256": "248edbacb749cc226122b05546cad3ca50504dd7867475872bab322252fd39ae"
+      },
+      {
+        "rel": "pdb_00003egd.cif.gz",
+        "size_bytes": 340020,
+        "sha256": "9e10b0dc4e416b28e9333f4a0a5638d6906c2c2f6e1497bfcbb7a5b9b2566540"
+      },
+      {
+        "rel": "pdb_00003kyq.cif",
+        "size_bytes": 219651,
+        "sha256": "fbe6c9734549af1faf90a5bcb3c18fa4547b0e8dbcb75219b1be823daf66cc3d"
+      },
+      {
+        "rel": "pdb_00003kyq.cif.gz",
+        "size_bytes": 55897,
+        "sha256": "220957b01af8dc8b38febb1f75b1b40a64755d4b5c7f0998f7465098ecafcde2"
+      },
+      {
+        "rel": "pdb_00003v5z.cif",
+        "size_bytes": 573988,
+        "sha256": "8e547fa97dea4dc078e29380ec6c9c41f8c100eb9323ccfaea6777de87be6c28"
+      },
+      {
+        "rel": "pdb_00003v5z.cif.gz",
+        "size_bytes": 154823,
+        "sha256": "519bc956efc5159ba5a599f60f2b32b1c8ff46d383126351e16af523181d53c3"
+      },
+      {
+        "rel": "pdb_00006j74.cif",
+        "size_bytes": 686048,
+        "sha256": "f8f6033a821ff24c032bb4dcb759250a702df2f3f3a7b283b237f8fa016cff3f"
+      },
+      {
+        "rel": "pdb_00006j74.cif.gz",
+        "size_bytes": 177099,
+        "sha256": "8eb97772fa82308121f81086c6b4dff473da00a574d2e2e689957e5efaf4f350"
+      },
+      {
+        "rel": "pdb_00006vcd.cif",
+        "size_bytes": 982510,
+        "sha256": "8e34e1bd65deda97846d5d78f53138664f2cd374a6ddb20bd325a949c3c01221"
+      },
+      {
+        "rel": "pdb_00006vcd.cif.gz",
+        "size_bytes": 211241,
+        "sha256": "fb91a220aa6781b14394f76095d12e400ee48de72b3e4d6289fc9a13d5e63f6b"
+      },
+      {
+        "rel": "pdb_metadata.json",
+        "size_bytes": 5643,
+        "sha256": "f547ec85e892a4ff5e5c562d6eef93ba93fbadb4465b627ccf20fbd193b6936e"
+      }
+    ]
+  },
+  "DS_PDB_7CR2": {
+    "local_relpath": "data/pharmacology_structures/phase2_pdb/pdb_00007cr2.cif",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "9ac19791ebf3638191c9cc799f7e2a012f72a3717f78f4d81984cde3c95ec8f5",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 980054,
+        "sha256": "9ac19791ebf3638191c9cc799f7e2a012f72a3717f78f4d81984cde3c95ec8f5"
+      }
+    ]
+  },
+  "DS_PDB_7DJT": {
+    "local_relpath": "data/pharmacology_structures/phase2_pdb/pdb_00007djt.cif",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "e10319a2f90528454ee35e091f28642a329252e3197835cad32ab2df57bc4d4f",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 4003308,
+        "sha256": "e10319a2f90528454ee35e091f28642a329252e3197835cad32ab2df57bc4d4f"
+      }
+    ]
+  },
+  "DS_PDB_7ANW": {
+    "local_relpath": "data/pharmacology_structures/phase2_pdb/pdb_00007anw.cif",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "e63387e851dcdfc9d3111704cf9d0982bf8e57c09d8a87e387941ec60da5647e",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 4045746,
+        "sha256": "e63387e851dcdfc9d3111704cf9d0982bf8e57c09d8a87e387941ec60da5647e"
+      }
+    ]
+  },
+  "DS_PDB_7NAL": {
+    "local_relpath": "data/pharmacology_structures/phase2_pdb/pdb_00007nal.cif",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "641a8ed5d394fbe0080f900534bc802726aa1c69dbaad8cee3200d4bfd0692f3",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 3076275,
+        "sha256": "641a8ed5d394fbe0080f900534bc802726aa1c69dbaad8cee3200d4bfd0692f3"
+      }
+    ]
+  },
+  "DS_PDB_9TZY": {
+    "local_relpath": "data/pharmacology_structures/phase2_pdb/pdb_00009tzy.cif",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "2297c7aedcde3c952cf5ecf54798a1bc4140c3c873b7174cd0b9923c553cd62b",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 967151,
+        "sha256": "2297c7aedcde3c952cf5ecf54798a1bc4140c3c873b7174cd0b9923c553cd62b"
+      }
+    ]
+  },
+  "DS_PDB_6VN8": {
+    "local_relpath": "data/pharmacology_structures/phase2_pdb/pdb_00006vn8.cif",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "ac8ed2afb98de45e7744894de33a47d6dfeab77cb02ef4e3f32a30ff05e429de",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 588996,
+        "sha256": "ac8ed2afb98de45e7744894de33a47d6dfeab77cb02ef4e3f32a30ff05e429de"
+      }
+    ]
+  },
+  "DS_PDB_7K2V": {
+    "local_relpath": "data/pharmacology_structures/phase2_pdb/pdb_00007k2v.cif",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "7a70b17ae229aa307f02795f8c3d1d008ace96df7cf7f500d848add905d6e6b2",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 925697,
+        "sha256": "7a70b17ae229aa307f02795f8c3d1d008ace96df7cf7f500d848add905d6e6b2"
+      }
+    ]
+  },
+  "DS_PDB_4KC3": {
+    "local_relpath": "data/pharmacology_structures/phase2_pdb/pdb_00004kc3.cif",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "9efbbb8d669815dabd85ad4fa8718ce99fb28489717652b828d14ac8c9692336",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 682195,
+        "sha256": "9efbbb8d669815dabd85ad4fa8718ce99fb28489717652b828d14ac8c9692336"
+      }
+    ]
+  },
+  "DS_GENCODE_V46_TX": {
+    "local_relpath": "data/genomics_splicing/gencode_v46/gencode.v46.transcripts.fa.gz",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "d8f1b9d826f502ab9019b1a40e404e32111166e1315b4382491515a40e6b9ef6",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 83258208,
+        "sha256": "d8f1b9d826f502ab9019b1a40e404e32111166e1315b4382491515a40e6b9ef6"
+      }
+    ]
+  },
+  "DS_GENCODE_V46_GTF": {
+    "local_relpath": "data/genomics_splicing/gencode_v46/gencode.v46.basic.annotation.gtf.gz",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "d620d548ad23dad6c2d67486b7679d12f00f02f66dd5787183d8e6678dceb9b4",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 30390388,
+        "sha256": "d620d548ad23dad6c2d67486b7679d12f00f02f66dd5787183d8e6678dceb9b4"
+      }
+    ]
+  },
+  "DS_GENCODE_V46_COMP_GTF": {
+    "local_relpath": "data/genomics_splicing/gencode_v46/gencode.v46.annotation.gtf.gz",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "82b0e52bc4956486528152e3850660b3c41767ab103d87949e41d38f92ef8b38",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 51006804,
+        "sha256": "82b0e52bc4956486528152e3850660b3c41767ab103d87949e41d38f92ef8b38"
+      }
+    ]
+  },
+  "DS_GNOMAD_V41_CONSTRAINT": {
+    "local_relpath": "data/genomics_splicing/gencode_v46/gnomad.v4.1.constraint_metrics.tsv",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "68d8abdb7fc48f570869b02dfaa74b9fecaece7fcc5f301ddca40ec1ce12da00",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 95546041,
+        "sha256": "68d8abdb7fc48f570869b02dfaa74b9fecaece7fcc5f301ddca40ec1ce12da00"
+      }
+    ]
+  },
+  "DS_PDB_2Z0D": {
+    "local_relpath": "data/pharmacology_structures/phase3b_pdb/pdb_00002z0d.cif",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "b84c3e759ce350074ed81086c0425edf9acc096d7e55605dc424f7f1b55b8440",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 422999,
+        "sha256": "b84c3e759ce350074ed81086c0425edf9acc096d7e55605dc424f7f1b55b8440"
+      }
+    ]
+  },
+  "DS_PDB_1XFD": {
+    "local_relpath": "data/pharmacology_structures/phase3b_pdb/pdb_00001xfd.cif",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "a88d58a5a8e3099ade26b30ae6dfafb3c1a63db25b3db7a89b392c474748529f",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 2462113,
+        "sha256": "a88d58a5a8e3099ade26b30ae6dfafb3c1a63db25b3db7a89b392c474748529f"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1211 @@
+{
+  "nygc_feature_map": {
+    "ENSG00000115977.19": "AAK1",
+    "ENSG00000108691.9": "CCL2",
+    "ENSG00000117091.10": "CD48",
+    "ENSG00000133048.13": "CHI3L1",
+    "ENSG00000064886.14": "CHI3L2",
+    "ENSG00000133063.16": "CHIT1",
+    "ENSG00000169245.6": "CXCL10",
+    "ENSG00000057608.17": "GDI2",
+    "ENSG00000136235.16": "GPNMB",
+    "ENSG00000273079.5": "GRIN2B",
+    "ENSG00000102468.10": "HTR2A",
+    "ENSG00000115590.14": "IL1R2",
+    "ENSG00000125347.14": "IRF1",
+    "ENSG00000162434.12": "JAK1",
+    "ENSG00000096968.13": "JAK2",
+    "ENSG00000105639.18": "JAK3",
+    "ENSG00000115020.17": "PIKFYVE",
+    "ENSG00000087074.8": "PPP1R15A",
+    "ENSG00000158615.9": "PPP1R15B",
+    "ENSG00000196876.15": "SCN8A",
+    "ENSG00000147955.17": "SIGMAR1",
+    "ENSG00000115415.18": "STAT1",
+    "ENSG00000168610.14": "STAT3",
+    "ENSG00000105397.13": "TYK2"
+  },
+  "oneill2025_nygc_donor_models": {
+    "cortex": {
+      "n_samples_matched": 444,
+      "donor_counts_by_stratum": {
+        "ALS-Ox": 134,
+        "ALS-TE": 71,
+        "Control": 46,
+        "ALS-Glia": 38
+      },
+      "contrasts": [
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "JAK_STAT_7gene_z",
+          "n_group1": 38,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.46121571358301083,
+          "welch_t": 2.875102336004597,
+          "welch_p": 0.005165483069426723,
+          "mwu_p": 0.0009273863791402756
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "JAK1",
+          "n_group1": 38,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.026275136491287654,
+          "welch_t": 0.5594398683704294,
+          "welch_p": 0.5774253293311953,
+          "mwu_p": 0.6242848746271641
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "JAK2",
+          "n_group1": 38,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.09334276315163237,
+          "welch_t": 1.404882610914989,
+          "welch_p": 0.16383420970554619,
+          "mwu_p": 0.23374556905484367
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "STAT1",
+          "n_group1": 38,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.12139212532155153,
+          "welch_t": 1.2821069112640533,
+          "welch_p": 0.2034443908896499,
+          "mwu_p": 0.08856439020314812
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "STAT3",
+          "n_group1": 38,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.4621480425772795,
+          "welch_t": 6.431761025371342,
+          "welch_p": 7.938629775872862e-09,
+          "mwu_p": 2.675113919072563e-07
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "CCL2",
+          "n_group1": 38,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 1.219296377480689,
+          "welch_t": 5.707092649344543,
+          "welch_p": 1.9142513982125414e-07,
+          "mwu_p": 5.696983178143487e-07
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "AAK1",
+          "n_group1": 38,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": -0.39259443584159115,
+          "welch_t": -4.241541172004993,
+          "welch_p": 7.403396194333068e-05,
+          "mwu_p": 1.2303895128270306e-05
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "CHIT1",
+          "n_group1": 38,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.7793662665277521,
+          "welch_t": 3.4154541797063604,
+          "welch_p": 0.0015043996892537405,
+          "mwu_p": 0.029307463241895784
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "GPNMB",
+          "n_group1": 38,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 1.000023309044869,
+          "welch_t": 4.482232609084672,
+          "welch_p": 3.677827311096924e-05,
+          "mwu_p": 0.00011768867640283243
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "CHI3L1",
+          "n_group1": 38,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 1.194344514474924,
+          "welch_t": 4.26375538432379,
+          "welch_p": 5.3986852874748724e-05,
+          "mwu_p": 9.786464448872906e-05
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "PIKFYVE",
+          "n_group1": 38,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.27843345025578525,
+          "welch_t": 4.452277713623038,
+          "welch_p": 2.9131903605688506e-05,
+          "mwu_p": 3.232359790697536e-05
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "PPP1R15A",
+          "n_group1": 38,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": -0.2559309255106639,
+          "welch_t": -2.5252228096447915,
+          "welch_p": 0.013498361931884207,
+          "mwu_p": 0.011412252703480013
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_TE_vs_Control",
+          "feature": "JAK_STAT_7gene_z",
+          "n_group1": 71,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.16483761462826108,
+          "welch_t": 1.1431156527746091,
+          "welch_p": 0.256733921187924,
+          "mwu_p": 0.08516755592038976
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_TE_vs_Control",
+          "feature": "JAK1",
+          "n_group1": 71,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.05816371945580556,
+          "welch_t": 1.3199248866013722,
+          "welch_p": 0.19062218968365072,
+          "mwu_p": 0.24691727835645227
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_TE_vs_Control",
+          "feature": "JAK2",
+          "n_group1": 71,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.07159956512636345,
+          "welch_t": 1.1922700789944507,
+          "welch_p": 0.23647686839783144,
+          "mwu_p": 0.48722971001109583
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_TE_vs_Control",
+          "feature": "STAT1",
+          "n_group1": 71,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": -0.02797924988826228,
+          "welch_t": -0.3307378890179071,
+          "welch_p": 0.7415931454410098,
+          "mwu_p": 0.9266411890382188
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_TE_vs_Control",
+          "feature": "STAT3",
+          "n_group1": 71,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.21121802224336683,
+          "welch_t": 3.0089472656050402,
+          "welch_p": 0.0033289209486112798,
+          "mwu_p": 0.003364187691540343
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_TE_vs_Control",
+          "feature": "CCL2",
+          "n_group1": 71,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.623241338528483,
+          "welch_t": 3.285246591577761,
+          "welch_p": 0.0014043022032882173,
+          "mwu_p": 0.00035907164342535263
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_TE_vs_Control",
+          "feature": "AAK1",
+          "n_group1": 71,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.0810884671401002,
+          "welch_t": 1.319504869838373,
+          "welch_p": 0.19022687442269046,
+          "mwu_p": 0.14298239038539573
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_TE_vs_Control",
+          "feature": "CHIT1",
+          "n_group1": 71,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.0825365473741092,
+          "welch_t": 1.4169970110619985,
+          "welch_p": 0.15919076850110447,
+          "mwu_p": 0.2656101810858381
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_TE_vs_Control",
+          "feature": "GPNMB",
+          "n_group1": 71,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.5246247195123481,
+          "welch_t": 3.804635836571962,
+          "welch_p": 0.00024083317300178432,
+          "mwu_p": 0.0004530372678982697
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_TE_vs_Control",
+          "feature": "CHI3L1",
+          "n_group1": 71,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.9712937680403,
+          "welch_t": 3.7466980551177045,
+          "welch_p": 0.00029932032234850303,
+          "mwu_p": 0.00017893837933203913
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_TE_vs_Control",
+          "feature": "PIKFYVE",
+          "n_group1": 71,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": 0.11470161191893169,
+          "welch_t": 2.370417493825144,
+          "welch_p": 0.0199536058990051,
+          "mwu_p": 0.02434958500396445
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_TE_vs_Control",
+          "feature": "PPP1R15A",
+          "n_group1": 71,
+          "n_group2": 46,
+          "mean_diff_log2cpm_or_z": -0.1551673681924628,
+          "welch_t": -1.7682662185470184,
+          "welch_p": 0.08133666239458665,
+          "mwu_p": 0.2954374725689365
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_Ox",
+          "feature": "JAK_STAT_7gene_z",
+          "n_group1": 38,
+          "n_group2": 134,
+          "mean_diff_log2cpm_or_z": 0.26173705754599763,
+          "welch_t": 2.401359819266879,
+          "welch_p": 0.019878739690883822,
+          "mwu_p": 0.011404299900309936
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_Ox",
+          "feature": "JAK1",
+          "n_group1": 38,
+          "n_group2": 134,
+          "mean_diff_log2cpm_or_z": -0.1076016604015626,
+          "welch_t": -3.348881926631536,
+          "welch_p": 0.0014355383435438887,
+          "mwu_p": 0.0034041660872997557
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_Ox",
+          "feature": "JAK2",
+          "n_group1": 38,
+          "n_group2": 134,
+          "mean_diff_log2cpm_or_z": -0.08897593747139254,
+          "welch_t": -1.742700818920288,
+          "welch_p": 0.08620560287493534,
+          "mwu_p": 0.14743575641203147
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_Ox",
+          "feature": "STAT1",
+          "n_group1": 38,
+          "n_group2": 134,
+          "mean_diff_log2cpm_or_z": -0.1776439108626109,
+          "welch_t": -2.5272955022944688,
+          "welch_p": 0.015000632631618136,
+          "mwu_p": 0.007171677545161842
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_Ox",
+          "feature": "STAT3",
+          "n_group1": 38,
+          "n_group2": 134,
+          "mean_diff_log2cpm_or_z": 0.5077194786785784,
+          "welch_t": 9.257017400790195,
+          "welch_p": 1.9714240805962405e-13,
+          "mwu_p": 1.9189880499748822e-12
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_Ox",
+          "feature": "CCL2",
+          "n_group1": 38,
+          "n_group2": 134,
+          "mean_diff_log2cpm_or_z": 0.66950384310309,
+          "welch_t": 3.725479026913015,
+          "welch_p": 0.00042805939076976654,
+          "mwu_p": 0.00021871229695699155
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_Ox",
+          "feature": "AAK1",
+          "n_group1": 38,
+          "n_group2": 134,
+          "mean_diff_log2cpm_or_z": -0.549038167890977,
+          "welch_t": -6.571980185246848,
+          "welch_p": 3.7698384202919787e-08,
+          "mwu_p": 8.995649859735676e-11
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_Ox",
+          "feature": "CHIT1",
+          "n_group1": 38,
+          "n_group2": 134,
+          "mean_diff_log2cpm_or_z": 0.6048194641749531,
+          "welch_t": 2.6234249602498187,
+          "welch_p": 0.012216847798365,
+          "mwu_p": 0.12697105389357513
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_Ox",
+          "feature": "GPNMB",
+          "n_group1": 38,
+          "n_group2": 134,
+          "mean_diff_log2cpm_or_z": 0.5829252249353187,
+          "welch_t": 2.8048791013332846,
+          "welch_p": 0.007421123773062773,
+          "mwu_p": 0.008361966173776998
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_Ox",
+          "feature": "CHI3L1",
+          "n_group1": 38,
+          "n_group2": 134,
+          "mean_diff_log2cpm_or_z": 0.7227538795743103,
+          "welch_t": 3.12548985533658,
+          "welch_p": 0.0026520482786711384,
+          "mwu_p": 0.0010822431611029323
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_Ox",
+          "feature": "PIKFYVE",
+          "n_group1": 38,
+          "n_group2": 134,
+          "mean_diff_log2cpm_or_z": 0.06297261169077029,
+          "welch_t": 1.1679493107263617,
+          "welch_p": 0.24783982093463036,
+          "mwu_p": 0.11717198702426136
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_Ox",
+          "feature": "PPP1R15A",
+          "n_group1": 38,
+          "n_group2": 134,
+          "mean_diff_log2cpm_or_z": 0.09416028266854859,
+          "welch_t": 1.257617714414009,
+          "welch_p": 0.2132563863961646,
+          "mwu_p": 0.20619150586118717
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_TE",
+          "feature": "JAK_STAT_7gene_z",
+          "n_group1": 38,
+          "n_group2": 71,
+          "mean_diff_log2cpm_or_z": 0.29637809895474976,
+          "welch_t": 2.4352220552525297,
+          "welch_p": 0.017308109202983764,
+          "mwu_p": 0.01500615023874548
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_TE",
+          "feature": "JAK1",
+          "n_group1": 38,
+          "n_group2": 71,
+          "mean_diff_log2cpm_or_z": -0.03188858296451791,
+          "welch_t": -0.8597586124181986,
+          "welch_p": 0.39237474602197103,
+          "mwu_p": 0.4822773888664986
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_TE",
+          "feature": "JAK2",
+          "n_group1": 38,
+          "n_group2": 71,
+          "mean_diff_log2cpm_or_z": 0.021743198025268917,
+          "welch_t": 0.3903374305159044,
+          "welch_p": 0.6973400390056428,
+          "mwu_p": 0.3258878570974484
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_TE",
+          "feature": "STAT1",
+          "n_group1": 38,
+          "n_group2": 71,
+          "mean_diff_log2cpm_or_z": 0.1493713752098138,
+          "welch_t": 1.7797422769528028,
+          "welch_p": 0.07895940950259796,
+          "mwu_p": 0.09136244713491234
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_TE",
+          "feature": "STAT3",
+          "n_group1": 38,
+          "n_group2": 71,
+          "mean_diff_log2cpm_or_z": 0.25093002033391265,
+          "welch_t": 3.8434183497952072,
+          "welch_p": 0.000221284611083365,
+          "mwu_p": 0.0002590781550954182
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_TE",
+          "feature": "CCL2",
+          "n_group1": 38,
+          "n_group2": 71,
+          "mean_diff_log2cpm_or_z": 0.5960550389522061,
+          "welch_t": 2.979696723903527,
+          "welch_p": 0.0038170632861682418,
+          "mwu_p": 0.004433468333738112
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_TE",
+          "feature": "AAK1",
+          "n_group1": 38,
+          "n_group2": 71,
+          "mean_diff_log2cpm_or_z": -0.47368290298169136,
+          "welch_t": -5.4285508033717615,
+          "welch_p": 1.3638430612520255e-06,
+          "mwu_p": 6.368396539755226e-08
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_TE",
+          "feature": "CHIT1",
+          "n_group1": 38,
+          "n_group2": 71,
+          "mean_diff_log2cpm_or_z": 0.6968297191536429,
+          "welch_t": 3.0289082770648363,
+          "welch_p": 0.004278755745757998,
+          "mwu_p": 0.08894829699289804
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_TE",
+          "feature": "GPNMB",
+          "n_group1": 38,
+          "n_group2": 71,
+          "mean_diff_log2cpm_or_z": 0.4753985895325208,
+          "welch_t": 2.177442030600591,
+          "welch_p": 0.03388998804662837,
+          "mwu_p": 0.05362077304978992
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_TE",
+          "feature": "CHI3L1",
+          "n_group1": 38,
+          "n_group2": 71,
+          "mean_diff_log2cpm_or_z": 0.22305074643462408,
+          "welch_t": 0.8550030481990701,
+          "welch_p": 0.39493265701347013,
+          "mwu_p": 0.19347451667388926
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_TE",
+          "feature": "PIKFYVE",
+          "n_group1": 38,
+          "n_group2": 71,
+          "mean_diff_log2cpm_or_z": 0.16373183833685356,
+          "welch_t": 2.916291631250333,
+          "welch_p": 0.0049193496117476525,
+          "mwu_p": 0.0007426516693005984
+        },
+        {
+          "region": "cortex",
+          "contrast": "ALS_Glia_vs_ALS_TE",
+          "feature": "PPP1R15A",
+          "n_group1": 38,
+          "n_group2": 71,
+          "mean_diff_log2cpm_or_z": -0.10076355731820108,
+          "welch_t": -1.302488966224113,
+          "welch_p": 0.19722267605380772,
+          "mwu_p": 0.10155026012107785
+        }
+      ]
+    },
+    "spinal_cord": {
+      "n_samples_matched": 439,
+      "donor_counts_by_stratum": {
+        "ALS-Glia-cord": 135,
+        "ALS-Ox-cord": 99,
+        "Control": 43
+      },
+      "contrasts": [
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "JAK_STAT_7gene_z",
+          "n_group1": 135,
+          "n_group2": 43,
+          "mean_diff_log2cpm_or_z": 0.5794051049441251,
+          "welch_t": 4.711778327017809,
+          "welch_p": 1.694272241054428e-05,
+          "mwu_p": 7.9031309399487e-07
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "JAK1",
+          "n_group1": 135,
+          "n_group2": 43,
+          "mean_diff_log2cpm_or_z": 0.2969010395436671,
+          "welch_t": 5.945718631026294,
+          "welch_p": 1.616141144178045e-07,
+          "mwu_p": 2.1383935930890037e-08
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "JAK2",
+          "n_group1": 135,
+          "n_group2": 43,
+          "mean_diff_log2cpm_or_z": 0.38056830698587607,
+          "welch_t": 5.898241601225507,
+          "welch_p": 1.3478615619352727e-07,
+          "mwu_p": 7.191432926247323e-08
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "STAT1",
+          "n_group1": 135,
+          "n_group2": 43,
+          "mean_diff_log2cpm_or_z": 0.0559814367257383,
+          "welch_t": 0.5667217568998489,
+          "welch_p": 0.5731581280685393,
+          "mwu_p": 0.42058919533380523
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "STAT3",
+          "n_group1": 135,
+          "n_group2": 43,
+          "mean_diff_log2cpm_or_z": 0.26022949123161254,
+          "welch_t": 4.782355298385422,
+          "welch_p": 1.1190839900058632e-05,
+          "mwu_p": 9.970922659264349e-06
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "CCL2",
+          "n_group1": 135,
+          "n_group2": 43,
+          "mean_diff_log2cpm_or_z": 1.5470699327296291,
+          "welch_t": 6.3048220917641435,
+          "welch_p": 4.196122288146191e-08,
+          "mwu_p": 6.333240300879758e-09
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "AAK1",
+          "n_group1": 135,
+          "n_group2": 43,
+          "mean_diff_log2cpm_or_z": -0.06558302734096522,
+          "welch_t": -1.2613018522334032,
+          "welch_p": 0.21114313956909903,
+          "mwu_p": 0.23029339164506335
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "CHIT1",
+          "n_group1": 135,
+          "n_group2": 43,
+          "mean_diff_log2cpm_or_z": 3.171198716241336,
+          "welch_t": 14.404280643088859,
+          "welch_p": 1.975583556318448e-30,
+          "mwu_p": 4.7057345855018803e-17
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "GPNMB",
+          "n_group1": 135,
+          "n_group2": 43,
+          "mean_diff_log2cpm_or_z": 2.81575107878026,
+          "welch_t": 14.343484465503183,
+          "welch_p": 5.7996566683414065e-24,
+          "mwu_p": 3.5180246802669946e-19
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "CHI3L1",
+          "n_group1": 135,
+          "n_group2": 43,
+          "mean_diff_log2cpm_or_z": 1.546699951459563,
+          "welch_t": 5.1842524854888525,
+          "welch_p": 2.840899374168447e-06,
+          "mwu_p": 1.1494089293205261e-07
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "PIKFYVE",
+          "n_group1": 135,
+          "n_group2": 43,
+          "mean_diff_log2cpm_or_z": 0.12408124955666189,
+          "welch_t": 2.078889574476385,
+          "welch_p": 0.04158459164529632,
+          "mwu_p": 0.05747837013934207
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_vs_Control",
+          "feature": "PPP1R15A",
+          "n_group1": 135,
+          "n_group2": 43,
+          "mean_diff_log2cpm_or_z": 0.11993201422644884,
+          "welch_t": 0.8581818987496073,
+          "welch_p": 0.39396498938748087,
+          "mwu_p": 0.22505463482911492
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_cord_vs_ALS_Ox_cord",
+          "feature": "JAK_STAT_7gene_z",
+          "n_group1": 135,
+          "n_group2": 99,
+          "mean_diff_log2cpm_or_z": 0.0894035088106405,
+          "welch_t": 1.0686857821919238,
+          "welch_p": 0.286709109748014,
+          "mwu_p": 0.04491114725163361
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_cord_vs_ALS_Ox_cord",
+          "feature": "JAK1",
+          "n_group1": 135,
+          "n_group2": 99,
+          "mean_diff_log2cpm_or_z": 0.022693246468673323,
+          "welch_t": 0.6833481461008803,
+          "welch_p": 0.49520223314022077,
+          "mwu_p": 0.6071983350490284
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_cord_vs_ALS_Ox_cord",
+          "feature": "JAK2",
+          "n_group1": 135,
+          "n_group2": 99,
+          "mean_diff_log2cpm_or_z": 0.11177912183217042,
+          "welch_t": 2.369295725929766,
+          "welch_p": 0.01874437184949238,
+          "mwu_p": 0.011881205380065266
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_cord_vs_ALS_Ox_cord",
+          "feature": "STAT1",
+          "n_group1": 135,
+          "n_group2": 99,
+          "mean_diff_log2cpm_or_z": -0.19757654743639996,
+          "welch_t": -3.3179750062298763,
+          "welch_p": 0.0010762941479096945,
+          "mwu_p": 0.003161902187370235
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_cord_vs_ALS_Ox_cord",
+          "feature": "STAT3",
+          "n_group1": 135,
+          "n_group2": 99,
+          "mean_diff_log2cpm_or_z": 0.09577591416548348,
+          "welch_t": 2.5002471931457992,
+          "welch_p": 0.013233038531572318,
+          "mwu_p": 0.02001584752753103
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_cord_vs_ALS_Ox_cord",
+          "feature": "CCL2",
+          "n_group1": 135,
+          "n_group2": 99,
+          "mean_diff_log2cpm_or_z": 0.30363021325762585,
+          "welch_t": 1.9673467256938517,
+          "welch_p": 0.050501910054634974,
+          "mwu_p": 0.01831043576384452
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_cord_vs_ALS_Ox_cord",
+          "feature": "AAK1",
+          "n_group1": 135,
+          "n_group2": 99,
+          "mean_diff_log2cpm_or_z": -0.22277871356877377,
+          "welch_t": -5.726895442699572,
+          "welch_p": 3.3102755493613837e-08,
+          "mwu_p": 1.163778989129075e-07
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_cord_vs_ALS_Ox_cord",
+          "feature": "CHIT1",
+          "n_group1": 135,
+          "n_group2": 99,
+          "mean_diff_log2cpm_or_z": 0.563511433243554,
+          "welch_t": 2.3425255266351157,
+          "welch_p": 0.020016882486540412,
+          "mwu_p": 0.023246114139762124
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_cord_vs_ALS_Ox_cord",
+          "feature": "GPNMB",
+          "n_group1": 135,
+          "n_group2": 99,
+          "mean_diff_log2cpm_or_z": 0.6558511708039827,
+          "welch_t": 4.06251079368788,
+          "welch_p": 6.791385036006617e-05,
+          "mwu_p": 3.593691641423185e-05
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_cord_vs_ALS_Ox_cord",
+          "feature": "CHI3L1",
+          "n_group1": 135,
+          "n_group2": 99,
+          "mean_diff_log2cpm_or_z": -0.1555458143446291,
+          "welch_t": -0.8452647151225264,
+          "welch_p": 0.39893453590492317,
+          "mwu_p": 0.5868566890513358
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_cord_vs_ALS_Ox_cord",
+          "feature": "PIKFYVE",
+          "n_group1": 135,
+          "n_group2": 99,
+          "mean_diff_log2cpm_or_z": 0.002325225079433224,
+          "welch_t": 0.05344493911959933,
+          "welch_p": 0.9574305033311307,
+          "mwu_p": 0.9859643548125953
+        },
+        {
+          "region": "spinal_cord",
+          "contrast": "ALS_Glia_cord_vs_ALS_Ox_cord",
+          "feature": "PPP1R15A",
+          "n_group1": 135,
+          "n_group2": 99,
+          "mean_diff_log2cpm_or_z": 0.5283642278941425,
+          "welch_t": 6.117823168147194,
+          "welch_p": 4.050727935469313e-09,
+          "mwu_p": 6.423039712714336e-09
+        }
+      ]
+    }
+  },
+  "trautwig2025_csf": {
+    "tmt_cohort_counts": {
+      "Control": 44,
+      "Sporadic": 35,
+      "C9orf72": 10,
+      "C9-Asymptomatic": 6,
+      "SOD1": 6
+    },
+    "dia_cohort_counts": {
+      "Control": 72,
+      "C9orf72-Asymptomatic": 59,
+      "sALS": 50,
+      "C9orf72": 43,
+      "SOD1": 22,
+      "SOD1-Asymptomatic": 13
+    },
+    "csf_marker_results": {
+      "CHIT1": {
+        "tmt_n101": [
+          {
+            "protein_id": "CHIT1|Q13231",
+            "sals_vs_ctrl_diff_log2": 0.871576386,
+            "sals_vs_ctrl_p": 6.89e-05,
+            "c9_vs_ctrl_diff_log2": 1.369907857,
+            "c9_vs_ctrl_p": 7.64e-06
+          }
+        ],
+        "dia_n259": [
+          {
+            "protein_id": "CHIT1|Q13231",
+            "sals_vs_ctrl_diff_log2": 2.00596020096803,
+            "sals_vs_ctrl_p": 2.77947366467457e-12,
+            "als_vs_ctrl_diff_log2": 2.22016660041228,
+            "als_vs_ctrl_p": 5.17306364711807e-17,
+            "c9_vs_ctrl_diff_log2": 2.81781497565125,
+            "c9_vs_ctrl_p": 4.48524357137229e-20
+          }
+        ],
+        "wgcna_module": [
+          "purple"
+        ]
+      },
+      "CHI3L1": {
+        "tmt_n101": [
+          {
+            "protein_id": "CHI3L1|P36222",
+            "sals_vs_ctrl_diff_log2": 0.357857196,
+            "sals_vs_ctrl_p": 5.15e-05,
+            "c9_vs_ctrl_diff_log2": 0.628673975,
+            "c9_vs_ctrl_p": 3.16e-07
+          }
+        ],
+        "dia_n259": [
+          {
+            "protein_id": "CHI3L1|P36222",
+            "sals_vs_ctrl_diff_log2": 0.648847899629445,
+            "sals_vs_ctrl_p": 2.41608713446147e-06,
+            "als_vs_ctrl_diff_log2": 0.76123721558249,
+            "als_vs_ctrl_p": 1.77030958218219e-09,
+            "c9_vs_ctrl_diff_log2": 1.04208590655781,
+            "c9_vs_ctrl_p": 7.85908879498517e-11
+          }
+        ],
+        "wgcna_module": [
+          "purple"
+        ]
+      },
+      "CHI3L2": {
+        "tmt_n101": [
+          {
+            "protein_id": "CHI3L2|Q15782",
+            "sals_vs_ctrl_diff_log2": 0.432811225,
+            "sals_vs_ctrl_p": 1.09e-05,
+            "c9_vs_ctrl_diff_log2": 0.78530819,
+            "c9_vs_ctrl_p": 5e-09
+          }
+        ],
+        "dia_n259": [
+          {
+            "protein_id": "CHI3L2|Q15782",
+            "sals_vs_ctrl_diff_log2": 0.878935553115555,
+            "sals_vs_ctrl_p": 9.83064043465204e-13,
+            "als_vs_ctrl_diff_log2": 0.994633349942515,
+            "als_vs_ctrl_p": 7.51889326632803e-17,
+            "c9_vs_ctrl_diff_log2": 1.16292713779974,
+            "c9_vs_ctrl_p": 3.31169218522257e-16
+          }
+        ],
+        "wgcna_module": [
+          "purple"
+        ]
+      },
+      "GPNMB": {
+        "tmt_n101": [
+          {
+            "protein_id": "GPNMB|Q14956",
+            "sals_vs_ctrl_diff_log2": 0.181376417,
+            "sals_vs_ctrl_p": 0.014179222,
+            "c9_vs_ctrl_diff_log2": 0.486641752,
+            "c9_vs_ctrl_p": 2.78e-06
+          }
+        ],
+        "dia_n259": [
+          {
+            "protein_id": "GPNMB|Q14956",
+            "sals_vs_ctrl_diff_log2": 0.40202823591463,
+            "sals_vs_ctrl_p": 6.24262510946425e-06,
+            "als_vs_ctrl_diff_log2": 0.434139611128735,
+            "als_vs_ctrl_p": 1.2362314397066e-06,
+            "c9_vs_ctrl_diff_log2": 0.555299240783163,
+            "c9_vs_ctrl_p": 3.04625000330291e-07
+          }
+        ],
+        "wgcna_module": [
+          "purple"
+        ]
+      },
+      "C1QA": {
+        "tmt_n101": [
+          {
+            "protein_id": "C1QA|P02745",
+            "sals_vs_ctrl_diff_log2": 0.013137013,
+            "sals_vs_ctrl_p": 0.712718076,
+            "c9_vs_ctrl_diff_log2": 0.048959653,
+            "c9_vs_ctrl_p": 0.400220043
+          }
+        ],
+        "dia_n259": [
+          {
+            "protein_id": "C1QA|P02745",
+            "sals_vs_ctrl_diff_log2": 0.141352329221667,
+            "sals_vs_ctrl_p": 0.0104215758203621,
+            "als_vs_ctrl_diff_log2": 0.0916286015460147,
+            "als_vs_ctrl_p": 0.192969365861876,
+            "c9_vs_ctrl_diff_log2": 0.127399644762597,
+            "c9_vs_ctrl_p": 0.208992595391509
+          }
+        ],
+        "wgcna_module": [
+          "green"
+        ]
+      },
+      "C3": {
+        "tmt_n101": [
+          {
+            "protein_id": "C3|P01024",
+            "sals_vs_ctrl_diff_log2": 0.031246969,
+            "sals_vs_ctrl_p": 0.622548922,
+            "c9_vs_ctrl_diff_log2": 0.180155106,
+            "c9_vs_ctrl_p": 0.095290923
+          }
+        ],
+        "dia_n259": [
+          {
+            "protein_id": "C3|P01024",
+            "sals_vs_ctrl_diff_log2": 0.179026611897778,
+            "sals_vs_ctrl_p": 0.00241548219210121,
+            "als_vs_ctrl_diff_log2": 0.223999227060387,
+            "als_vs_ctrl_p": 2.25288940530199e-05,
+            "c9_vs_ctrl_diff_log2": 0.304161933324289,
+            "c9_vs_ctrl_p": 4.8802451909822e-05
+          }
+        ],
+        "wgcna_module": [
+          "blue"
+        ]
+      },
+      "GDI2": {
+        "tmt_n101": [
+          {
+            "protein_id": "GDI2|P50395",
+            "sals_vs_ctrl_diff_log2": 0.024523129,
+            "sals_vs_ctrl_p": 0.208456758,
+            "c9_vs_ctrl_diff_log2": 0.084598047,
+            "c9_vs_ctrl_p": 0.005978971
+          }
+        ],
+        "dia_n259": [
+          {
+            "protein_id": "GDI2|P50395",
+            "sals_vs_ctrl_diff_log2": 0.0200470426588889,
+            "sals_vs_ctrl_p": 0.504195214802141,
+            "als_vs_ctrl_diff_log2": 0.0747573647214978,
+            "als_vs_ctrl_p": 0.161076925974748,
+            "c9_vs_ctrl_diff_log2": 0.181311907859819,
+            "c9_vs_ctrl_p": 0.026799355639896
+          }
+        ],
+        "wgcna_module": [
+          "purple"
+        ]
+      },
+      "NEFL": {
+        "tmt_n101": [
+          {
+            "protein_id": "NEFL|P07196",
+            "sals_vs_ctrl_diff_log2": 0.982284152,
+            "sals_vs_ctrl_p": 2.36e-08,
+            "c9_vs_ctrl_diff_log2": 2.250684662,
+            "c9_vs_ctrl_p": 7.26e-07
+          }
+        ],
+        "dia_n259": [
+          {
+            "protein_id": "NEFL|P07196",
+            "sals_vs_ctrl_diff_log2": 0.237399060331317,
+            "sals_vs_ctrl_p": 0.0929318955652582,
+            "als_vs_ctrl_diff_log2": 0.303832645926555,
+            "als_vs_ctrl_p": 0.0231604865324551,
+            "c9_vs_ctrl_diff_log2": 0.442320158051764,
+            "c9_vs_ctrl_p": 0.0058844193808776
+          }
+        ],
+        "wgcna_module": [
+          "purple"
+        ]
+      },
+      "NEFH": {
+        "tmt_n101": [
+          {
+            "protein_id": "NEFH|P12036",
+            "sals_vs_ctrl_diff_log2": 0.325764346,
+            "sals_vs_ctrl_p": 0.173627007,
+            "c9_vs_ctrl_diff_log2": 0.756998032,
+            "c9_vs_ctrl_p": 0.06888915
+          }
+        ],
+        "dia_n259": [],
+        "wgcna_module": [
+          "grey"
+        ]
+      },
+      "STMN2": {
+        "tmt_n101": [
+          {
+            "protein_id": "STMN2|Q93045",
+            "sals_vs_ctrl_diff_log2": 0.042280692,
+            "sals_vs_ctrl_p": 0.218752101,
+            "c9_vs_ctrl_diff_log2": 0.106065885,
+            "c9_vs_ctrl_p": 0.081927752
+          }
+        ],
+        "dia_n259": [],
+        "wgcna_module": [
+          "turquoise"
+        ]
+      }
+    }
+  },
+  "zeng2025_apa_and_cryptic": {
+    "zeng2025_apa_hits": {
+      "JAK2": {
+        "rnaseq_S2": [],
+        "3endseq_S4": [
+          {
+            "delta_distal_PAS": -0.439109282538958,
+            "padj": 2.95508840865163e-61,
+            "direction": "shorter"
+          }
+        ]
+      },
+      "AAK1": {
+        "rnaseq_S2": [
+          {
+            "delta_PUI": 0.306631232,
+            "padj": 3.89716412443642e-12,
+            "direction": "distal"
+          }
+        ],
+        "3endseq_S4": [
+          {
+            "delta_distal_PAS": 0.167339796205633,
+            "padj": 6.32040684571306e-16,
+            "direction": "longer"
+          }
+        ]
+      },
+      "PPP1R15A": {
+        "rnaseq_S2": [],
+        "3endseq_S4": [
+          {
+            "delta_distal_PAS": 0.0558181610108717,
+            "padj": 6.42013788905559e-08,
+            "direction": "longer"
+          }
+        ]
+      },
+      "PPP1R15B": {
+        "rnaseq_S2": [],
+        "3endseq_S4": [
+          {
+            "delta_distal_PAS": 0.216681905561767,
+            "padj": 0.000924118131626818,
+            "direction": "longer"
+          }
+        ]
+      }
+    },
+    "brown2022_splicing_hits": [
+      {
+        "gene_name": "SCN8A",
+        "deltaPSI": -0.201855511114449,
+        "FDR": 1.94673454412264e-06,
+        "cryptic_junction": false
+      },
+      {
+        "gene_name": "SCN8A",
+        "deltaPSI": 0.20185549170127,
+        "FDR": 1.94664436679339e-06,
+        "cryptic_junction": false
+      },
+      {
+        "gene_name": "SCN8A",
+        "deltaPSI": 0.000140009530267655,
+        "FDR": 2.84991683250357e-05,
+        "cryptic_junction": false
+      },
+      {
+        "gene_name": "SCN8A",
+        "deltaPSI": 0.160595005073357,
+        "FDR": 2.66082028983658e-06,
+        "cryptic_junction": false
+      },
+      {
+        "gene_name": "SCN8A",
+        "deltaPSI": -0.190691906322822,
+        "FDR": 5.53194277053137e-07,
+        "cryptic_junction": false
+      },
+      {
+        "gene_name": "PIKFYVE",
+        "deltaPSI": -0.0362445473780546,
+        "FDR": 3.67976067938702e-05,
+        "cryptic_junction": false
+      },
+      {
+        "gene_name": "PIKFYVE",
+        "deltaPSI": -0.00568568290757568,
+        "FDR": 0.00276826807756647,
+        "cryptic_junction": false
+      },
+      {
+        "gene_name": "PIKFYVE",
+        "deltaPSI": -0.0354122562054625,
+        "FDR": 1.84393388757975e-05,
+        "cryptic_junction": false
+      },
+      {
+        "gene_name": "PIKFYVE",
+        "deltaPSI": 0.107636647490204,
+        "FDR": 3.9066338561776e-06,
+        "cryptic_junction": false
+      },
+      {
+        "gene_name": "AAK1",
+        "deltaPSI": 0.138996444733395,
+        "FDR": 1.69341978696478e-06,
+        "cryptic_junction": false
+      },
+      {
+        "gene_name": "AAK1",
+        "deltaPSI": -0.138996467400545,
+        "FDR": 1.6935092324033e-06,
+        "cryptic_junction": false
+      }
+    ],
+    "ma2022_splicing_hits": []
+  }
+}

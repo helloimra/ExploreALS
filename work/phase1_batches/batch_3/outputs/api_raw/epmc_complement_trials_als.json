@@ -1,0 +1,3442 @@
+{
+  "hitCount": 4,
+  "nextCursorMark": "",
+  "results": [
+    {
+      "id": "39960672",
+      "source": "MED",
+      "pmid": "39960672",
+      "pmcid": "PMC11833520",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC11833520"
+        ]
+      },
+      "doi": "10.1001/jamanetworkopen.2024.59058",
+      "title": "Efficacy and Safety of Zilucoplan in Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial.",
+      "authorString": "Paganoni S, Fournier CN, Macklin EA, Chibnik LB, Quintana M, Saville BR, Detry MA, Vestrucci M, Marion J, McGlothlin A, Ajroud-Driss S, Chase M, Pothier L, Harkey BA, Yu H, Sherman AV, Shefner JM, Hall M, Kittle G, Berry JD, Babu S, Andrews J, Dagostino D, Tustison E, Giacomelli E, Scirocco E, Alameda G, Locatelli E, Ho D, Quick A, Katz J, Heitzman D, Appel SH, Shroff S, Felice K, Maragakis NJ, Simmons Z, Miller TM, Olney N, Weiss MD, Goutman SA, Fernandes JA, Jawdat O, Owegi MA, Foster LA, Vu T, Ilieva H, Newman DS, Arcila-Londono X, Jackson CE, Ladha S, Heiman-Patterson T, Caress JB, Swenson A, Peltier A, Lewis R, Fee D, Elliott M, Bedlack R, Kasarskis EJ, Elman L, Rosenfeld J, Walk D, McIlduff C, Twydell P, Young E, Johnson K, Rezania K, Goyal NA, Cohen JA, Benatar M, Jones V, Glass J, Shah J, Beydoun SR, Wymer JP, Zilliox L, Nayar S, Pattee GL, Martinez-Thompson J, Harvey B, Patel S, Mahoney P, Duda PW, Cudkowicz ME, HEALEY ALS Platform Trial Study Group.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Paganoni S",
+            "lastName": "Paganoni",
+            "firstName": "Sabrina",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                },
+                {
+                  "affiliation": "Spaulding Rehabilitation Hospital, Harvard Medical School, Boston, Massachusetts."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Fournier CN",
+            "lastName": "Fournier",
+            "firstName": "Christina N",
+            "initials": "CN",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Emory University, Atlanta, Georgia."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Macklin EA",
+            "lastName": "Macklin",
+            "firstName": "Eric A",
+            "initials": "EA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                },
+                {
+                  "affiliation": "Biostatistics Center, Massachusetts General Hospital, Department of Medicine, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Chibnik LB",
+            "lastName": "Chibnik",
+            "firstName": "Lori B",
+            "initials": "LB",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                },
+                {
+                  "affiliation": "Biostatistics Center, Massachusetts General Hospital, Department of Medicine, Harvard Medical School, Boston."
+                },
+                {
+                  "affiliation": "Department of Epidemiology, Harvard T. H. Chan School of Public Health, Boston, Massachusetts."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Quintana M",
+            "lastName": "Quintana",
+            "firstName": "Melanie",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Berry Consultants LLC, Austin, Texas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Saville BR",
+            "lastName": "Saville",
+            "firstName": "Benjamin R",
+            "initials": "BR",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Berry Consultants LLC, Austin, Texas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Detry MA",
+            "lastName": "Detry",
+            "firstName": "Michelle A",
+            "initials": "MA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Berry Consultants LLC, Austin, Texas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Vestrucci M",
+            "lastName": "Vestrucci",
+            "firstName": "Matteo",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Berry Consultants LLC, Austin, Texas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Marion J",
+            "lastName": "Marion",
+            "firstName": "Joe",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Berry Consultants LLC, Austin, Texas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "McGlothlin A",
+            "lastName": "McGlothlin",
+            "firstName": "Anna",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Berry Consultants LLC, Austin, Texas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ajroud-Driss S",
+            "lastName": "Ajroud-Driss",
+            "firstName": "Senda",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, Illinois."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Chase M",
+            "lastName": "Chase",
+            "firstName": "Marianne",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Pothier L",
+            "lastName": "Pothier",
+            "firstName": "Lindsay",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Harkey BA",
+            "lastName": "Harkey",
+            "firstName": "Brittney A",
+            "initials": "BA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Yu H",
+            "lastName": "Yu",
+            "firstName": "Hong",
+            "initials": "H",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Sherman AV",
+            "lastName": "Sherman",
+            "firstName": "Alexander V",
+            "initials": "AV",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Shefner JM",
+            "lastName": "Shefner",
+            "firstName": "Jeremy M",
+            "initials": "JM",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Barrow Neurological Institute, Phoenix, Arizona."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Hall M",
+            "lastName": "Hall",
+            "firstName": "Meghan",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Barrow Neurological Institute, Phoenix, Arizona."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kittle G",
+            "lastName": "Kittle",
+            "firstName": "Gale",
+            "initials": "G",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Barrow Neurological Institute, Phoenix, Arizona."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Berry JD",
+            "lastName": "Berry",
+            "firstName": "James D",
+            "initials": "JD",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Babu S",
+            "lastName": "Babu",
+            "firstName": "Suma",
+            "initials": "S",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-2648-7625"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Andrews J",
+            "lastName": "Andrews",
+            "firstName": "Jinsy",
+            "initials": "J",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-3474-7140"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Columbia University, New York, New York."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Dagostino D",
+            "lastName": "Dagostino",
+            "firstName": "Derek",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Tustison E",
+            "lastName": "Tustison",
+            "firstName": "Eric",
+            "initials": "E",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Giacomelli E",
+            "lastName": "Giacomelli",
+            "firstName": "Elisa",
+            "initials": "E",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Scirocco E",
+            "lastName": "Scirocco",
+            "firstName": "Erica",
+            "initials": "E",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0002-9427-1452"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Alameda G",
+            "lastName": "Alameda",
+            "firstName": "Gustavo",
+            "initials": "G",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Phil Smith Neuroscience Institute, Holy Cross Hospital, Silver Spring, Maryland."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Locatelli E",
+            "lastName": "Locatelli",
+            "firstName": "Eduardo",
+            "initials": "E",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Phil Smith Neuroscience Institute, Holy Cross Hospital, Silver Spring, Maryland."
+                },
+                {
+                  "affiliation": "Department of Neurology, Nova Southeastern University, Fort Lauderdale, Florida."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ho D",
+            "lastName": "Ho",
+            "firstName": "Doreen",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Quick A",
+            "lastName": "Quick",
+            "firstName": "Adam",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Ohio State University, Columbus."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Katz J",
+            "lastName": "Katz",
+            "firstName": "Jonathan",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "California Pacific Medical Center and Forbes Norris MDA-ALS Research and Treatment Center, San Francisco."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Heitzman D",
+            "lastName": "Heitzman",
+            "firstName": "Daragh",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Texas Neurology, Dallas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Appel SH",
+            "lastName": "Appel",
+            "firstName": "Stanley H",
+            "initials": "SH",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Methodist Neurological Institute, Houston, Texas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Shroff S",
+            "lastName": "Shroff",
+            "firstName": "Sheetal",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Methodist Neurological Institute, Houston, Texas."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Felice K",
+            "lastName": "Felice",
+            "firstName": "Kevin",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neuromuscular Medicine, Hospital for Special Care, New Britain, Connecticut."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Maragakis NJ",
+            "lastName": "Maragakis",
+            "firstName": "Nicholas J",
+            "initials": "NJ",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-7311-9614"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Johns Hopkins University School of Medicine, Baltimore, Maryland."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Simmons Z",
+            "lastName": "Simmons",
+            "firstName": "Zachary",
+            "initials": "Z",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-8574-5332"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Penn State Milton S. Hershey Medical Center, Hershey, Pennsylvania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Miller TM",
+            "lastName": "Miller",
+            "firstName": "Timothy M",
+            "initials": "TM",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Hope Center for Neurological Disorders, Washington University in St Louis, St Louis, Missouri."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Olney N",
+            "lastName": "Olney",
+            "firstName": "Nicholas",
+            "initials": "N",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Providence ALS Clinic, Portland, Oregon."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Weiss MD",
+            "lastName": "Weiss",
+            "firstName": "Michael D",
+            "initials": "MD",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Washington Medical Center, Seattle."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Goutman SA",
+            "lastName": "Goutman",
+            "firstName": "Stephen A",
+            "initials": "SA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Michigan, Ann Arbor."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Fernandes JA",
+            "lastName": "Fernandes",
+            "firstName": "Joseph Americo",
+            "initials": "JA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Nebraska Medical Center, Omaha."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Jawdat O",
+            "lastName": "Jawdat",
+            "firstName": "Omar",
+            "initials": "O",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-3421-7529"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Departmennt of Neurology, University of Kansas Medical Center, Kansas City."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Owegi MA",
+            "lastName": "Owegi",
+            "firstName": "Margaret Ayo",
+            "initials": "MA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Massachusetts Medical School, Worcester."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Foster LA",
+            "lastName": "Foster",
+            "firstName": "Laura A",
+            "initials": "LA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Colorado School of Medicine, Aurora."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Vu T",
+            "lastName": "Vu",
+            "firstName": "Tuan",
+            "initials": "T",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of South Florida, Tampa."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ilieva H",
+            "lastName": "Ilieva",
+            "firstName": "Hristelina",
+            "initials": "H",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Jefferson Weinberg ALS Center, Philadelphia, Pennsylvania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Newman DS",
+            "lastName": "Newman",
+            "firstName": "Daniel S",
+            "initials": "DS",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Henry Ford Health System Department of Neurology, Detroit, Michigan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Arcila-Londono X",
+            "lastName": "Arcila-Londono",
+            "firstName": "Ximena",
+            "initials": "X",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Henry Ford Health System Department of Neurology, Detroit, Michigan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Jackson CE",
+            "lastName": "Jackson",
+            "firstName": "Carlayne E",
+            "initials": "CE",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Texas Health, San Antonio."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ladha S",
+            "lastName": "Ladha",
+            "firstName": "Shafeeq",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Barrow Neurological Institute, Phoenix, Arizona."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Heiman-Patterson T",
+            "lastName": "Heiman-Patterson",
+            "firstName": "Terry",
+            "initials": "T",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Temple Health, Philadelphia, Pennsylvania."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Caress JB",
+            "lastName": "Caress",
+            "firstName": "James B",
+            "initials": "JB",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Wake Forest University School of Medicine, Winston-Salem, North Carolina."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Swenson A",
+            "lastName": "Swenson",
+            "firstName": "Andrea",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Iowa, Iowa City."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Peltier A",
+            "lastName": "Peltier",
+            "firstName": "Amanda",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Vanderbilt University Medical Center, Nashville, Tennessee."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Lewis R",
+            "lastName": "Lewis",
+            "firstName": "Richard",
+            "initials": "R",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Cedars-Sinai Medical Center, Los Angeles, California."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Fee D",
+            "lastName": "Fee",
+            "firstName": "Dominic",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Medical College of Wisconsin, Milwaukee."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Elliott M",
+            "lastName": "Elliott",
+            "firstName": "Matthew",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Virginia, Arlington."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Bedlack R",
+            "lastName": "Bedlack",
+            "firstName": "Richard",
+            "initials": "R",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-4666-7495"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Duke University, Durham, North Carolina."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kasarskis EJ",
+            "lastName": "Kasarskis",
+            "firstName": "Edward J",
+            "initials": "EJ",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Kentucky, Lexington."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Elman L",
+            "lastName": "Elman",
+            "firstName": "Lauren",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Pennsylvania School of Medicine, Philadelphia."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Rosenfeld J",
+            "lastName": "Rosenfeld",
+            "firstName": "Jeffrey",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Loma Linda University School of Medicine, Loma Linda, California."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Walk D",
+            "lastName": "Walk",
+            "firstName": "David",
+            "initials": "D",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-7941-1993"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Minnesota/Twin Cities ALS Research Consortium, Minneapolis and St Paul."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "McIlduff C",
+            "lastName": "McIlduff",
+            "firstName": "Courtney",
+            "initials": "C",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Beth Israel Deaconess Medical Center, Harvard Medical School, Boston, Massachusetts."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Twydell P",
+            "lastName": "Twydell",
+            "firstName": "Paul",
+            "initials": "P",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Spectrum Health Medical Group, Grand Rapids, Michigan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Young E",
+            "lastName": "Young",
+            "firstName": "Eufrosina",
+            "initials": "E",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, SUNY (State University of New York) Upstate, Syracuse."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Johnson K",
+            "lastName": "Johnson",
+            "firstName": "Kristin",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Ochsner Health System, New Orleans, Louisiana."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Rezania K",
+            "lastName": "Rezania",
+            "firstName": "Kourosh",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Chicago, Chicago, Illinois."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Goyal NA",
+            "lastName": "Goyal",
+            "firstName": "Namita A",
+            "initials": "NA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of California, Irvine, Medical Center."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Cohen JA",
+            "lastName": "Cohen",
+            "firstName": "Jeffrey A",
+            "initials": "JA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Dartmouth-Hitchcock Medical Center, Lebanon, New Hampshire."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Benatar M",
+            "lastName": "Benatar",
+            "firstName": "Michael",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Miami, Miami, Florida."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Jones V",
+            "lastName": "Jones",
+            "firstName": "Vovanti",
+            "initials": "V",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Physical Medicine and Rehabilitation, School of Medicine, University of Missouri, Columbia."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Glass J",
+            "lastName": "Glass",
+            "firstName": "Jonathan",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Emory University, Atlanta, Georgia."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Shah J",
+            "lastName": "Shah",
+            "firstName": "Jaimin",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Mayo Clinic, Jacksonville, Florida."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Beydoun SR",
+            "lastName": "Beydoun",
+            "firstName": "Said R",
+            "initials": "SR",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Keck School of Medicine, University of Southern California, Los Angeles."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wymer JP",
+            "lastName": "Wymer",
+            "firstName": "James P",
+            "initials": "JP",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Florida, Gainesville."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zilliox L",
+            "lastName": "Zilliox",
+            "firstName": "Lindsay",
+            "initials": "L",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-6668-0545"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, University of Maryland School of Medicine, Baltimore."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Nayar S",
+            "lastName": "Nayar",
+            "firstName": "Shakti",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Georgetown University, Washington, DC."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Pattee GL",
+            "lastName": "Pattee",
+            "firstName": "Gary L",
+            "initials": "GL",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Neurology Associates, Lincoln, Nebraska."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Martinez-Thompson J",
+            "lastName": "Martinez-Thompson",
+            "firstName": "Jennifer",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Mayo Clinic, Rochester, Minnesota."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Harvey B",
+            "lastName": "Harvey",
+            "firstName": "Brittany",
+            "initials": "B",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "UCB Pharma, Cambridge, Massachusetts."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Patel S",
+            "lastName": "Patel",
+            "firstName": "Shital",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "UCB Pharma, Cambridge, Massachusetts."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Mahoney P",
+            "lastName": "Mahoney",
+            "firstName": "Paul",
+            "initials": "P",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "UCB, Slough, United Kingdom."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Duda PW",
+            "lastName": "Duda",
+            "firstName": "Petra W",
+            "initials": "PW",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "UCB Pharma, Cambridge, Massachusetts."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Cudkowicz ME",
+            "lastName": "Cudkowicz",
+            "firstName": "Merit E",
+            "initials": "ME",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston."
+                }
+              ]
+            }
+          },
+          {
+            "collectiveName": "HEALEY ALS Platform Trial Study Group"
+          }
+        ]
+      },
+      "investigatorList": {
+        "investigator": [
+          {
+            "fullName": "Hayden DD",
+            "lastName": "Hayden",
+            "firstName": "Douglas Deceased",
+            "initials": "DD"
+          },
+          {
+            "fullName": "Lai PY",
+            "lastName": "Lai",
+            "firstName": "Po-Ying",
+            "initials": "PY"
+          },
+          {
+            "fullName": "Donahue RA",
+            "lastName": "Donahue",
+            "firstName": "Rachel A",
+            "initials": "RA"
+          },
+          {
+            "fullName": "Chen HW",
+            "lastName": "Chen",
+            "firstName": "Hao-Wun",
+            "initials": "HW"
+          },
+          {
+            "fullName": "Wang J",
+            "lastName": "Wang",
+            "firstName": "Jianing",
+            "initials": "J"
+          },
+          {
+            "fullName": "Mathai N",
+            "lastName": "Mathai",
+            "firstName": "Nithya",
+            "initials": "N"
+          },
+          {
+            "fullName": "Lopes G",
+            "lastName": "Lopes",
+            "firstName": "Gabriela",
+            "initials": "G"
+          },
+          {
+            "fullName": "McCaffrey A",
+            "lastName": "McCaffrey",
+            "firstName": "Alexandra",
+            "initials": "A"
+          },
+          {
+            "fullName": "Scalia J",
+            "lastName": "Scalia",
+            "firstName": "Jennifer",
+            "initials": "J"
+          },
+          {
+            "fullName": "Luppino S",
+            "lastName": "Luppino",
+            "firstName": "Sarah",
+            "initials": "S"
+          },
+          {
+            "fullName": "Lagier-Tourenne C",
+            "lastName": "Lagier-Tourenne",
+            "firstName": "Clotilde",
+            "initials": "C"
+          },
+          {
+            "fullName": "Sadri-Vakili G",
+            "lastName": "Sadri-Vakili",
+            "firstName": "Ghazaleh",
+            "initials": "G"
+          },
+          {
+            "fullName": "Kolb S",
+            "lastName": "Kolb",
+            "firstName": "Stephen",
+            "initials": "S"
+          },
+          {
+            "fullName": "Heintzman S",
+            "lastName": "Heintzman",
+            "firstName": "Sarah",
+            "initials": "S"
+          },
+          {
+            "fullName": "Sufit R",
+            "lastName": "Sufit",
+            "firstName": "Robert",
+            "initials": "R"
+          },
+          {
+            "fullName": "Szymanski A",
+            "lastName": "Szymanski",
+            "firstName": "April",
+            "initials": "A"
+          },
+          {
+            "fullName": "Jenkins L",
+            "lastName": "Jenkins",
+            "firstName": "Liberty",
+            "initials": "L"
+          },
+          {
+            "fullName": "Martin A",
+            "lastName": "Martin",
+            "firstName": "Alan",
+            "initials": "A"
+          },
+          {
+            "fullName": "Simpson Greene E",
+            "lastName": "Simpson Greene",
+            "firstName": "Ericka",
+            "initials": "E"
+          },
+          {
+            "fullName": "Thonhoff JR",
+            "lastName": "Thonhoff",
+            "firstName": "Jason R",
+            "initials": "JR"
+          },
+          {
+            "fullName": "Liao B",
+            "lastName": "Liao",
+            "firstName": "Bing",
+            "initials": "B"
+          },
+          {
+            "fullName": "Whitaker CD",
+            "lastName": "Whitaker",
+            "firstName": "Charles Deceased",
+            "initials": "CD"
+          },
+          {
+            "fullName": "Clawson LL",
+            "lastName": "Clawson",
+            "firstName": "Lora L",
+            "initials": "LL"
+          },
+          {
+            "fullName": "Uchil A",
+            "lastName": "Uchil",
+            "firstName": "Alpa",
+            "initials": "A"
+          },
+          {
+            "fullName": "Riley KM",
+            "lastName": "Riley",
+            "firstName": "Kristen M",
+            "initials": "KM"
+          },
+          {
+            "fullName": "Arneklev J",
+            "lastName": "Arneklev",
+            "firstName": "JinAe",
+            "initials": "J"
+          },
+          {
+            "fullName": "Grogan J",
+            "lastName": "Grogan",
+            "firstName": "James",
+            "initials": "J",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-6867-5643"
+            }
+          },
+          {
+            "fullName": "Su X",
+            "lastName": "Su",
+            "firstName": "Xiaowei",
+            "initials": "X",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-1589-6570"
+            }
+          },
+          {
+            "fullName": "Mamarabadi M",
+            "lastName": "Mamarabadi",
+            "firstName": "Mansoureh",
+            "initials": "M"
+          },
+          {
+            "fullName": "Malcolm A",
+            "lastName": "Malcolm",
+            "firstName": "Amber",
+            "initials": "A"
+          },
+          {
+            "fullName": "Bazan T",
+            "lastName": "Bazan",
+            "firstName": "Tracy",
+            "initials": "T"
+          },
+          {
+            "fullName": "Rad N",
+            "lastName": "Rad",
+            "firstName": "Nassim",
+            "initials": "N"
+          },
+          {
+            "fullName": "Wang LH",
+            "lastName": "Wang",
+            "firstName": "Leo H",
+            "initials": "LH"
+          },
+          {
+            "fullName": "Feldman EL",
+            "lastName": "Feldman",
+            "firstName": "Eva L",
+            "initials": "EL"
+          },
+          {
+            "fullName": "Piccione E",
+            "lastName": "Piccione",
+            "firstName": "Ezequiel",
+            "initials": "E"
+          },
+          {
+            "fullName": "Thaisetthawatkul P",
+            "lastName": "Thaisetthawatkul",
+            "firstName": "Pariwat",
+            "initials": "P"
+          },
+          {
+            "fullName": "Farmakidis C",
+            "lastName": "Farmakidis",
+            "firstName": "Constantine",
+            "initials": "C"
+          },
+          {
+            "fullName": "Jabari D",
+            "lastName": "Jabari",
+            "firstName": "Duaa",
+            "initials": "D"
+          },
+          {
+            "fullName": "Statland J",
+            "lastName": "Statland",
+            "firstName": "Jeffrey",
+            "initials": "J"
+          },
+          {
+            "fullName": "Pasnoor M",
+            "lastName": "Pasnoor",
+            "firstName": "Mamatha",
+            "initials": "M"
+          },
+          {
+            "fullName": "Dimachkie M",
+            "lastName": "Dimachkie",
+            "firstName": "Mazen",
+            "initials": "M",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-7148-989X"
+            }
+          },
+          {
+            "fullName": "Brown RH Jr",
+            "lastName": "Brown",
+            "firstName": "Robert H",
+            "initials": "RH"
+          },
+          {
+            "fullName": "Ghasemi M",
+            "lastName": "Ghasemi",
+            "firstName": "Mehdi",
+            "initials": "M"
+          },
+          {
+            "fullName": "Houmani H",
+            "lastName": "Houmani",
+            "firstName": "Hajar",
+            "initials": "H"
+          },
+          {
+            "fullName": "Douthwright C",
+            "lastName": "Douthwright",
+            "firstName": "Catherine",
+            "initials": "C"
+          },
+          {
+            "fullName": "Daniello K",
+            "lastName": "Daniello",
+            "firstName": "Kate",
+            "initials": "K"
+          },
+          {
+            "fullName": "Suresh N",
+            "lastName": "Suresh",
+            "firstName": "Niraja",
+            "initials": "N"
+          },
+          {
+            "fullName": "Farias J",
+            "lastName": "Farias",
+            "firstName": "Jerrica",
+            "initials": "J"
+          },
+          {
+            "fullName": "Chen IA",
+            "lastName": "Chen",
+            "firstName": "I-Hweii A",
+            "initials": "IA"
+          },
+          {
+            "fullName": "Pasinelli P",
+            "lastName": "Pasinelli",
+            "firstName": "Piera",
+            "initials": "P"
+          },
+          {
+            "fullName": "Steijlen K",
+            "lastName": "Steijlen",
+            "firstName": "Kara",
+            "initials": "K"
+          },
+          {
+            "fullName": "Bhavaraju-Sanka R",
+            "lastName": "Bhavaraju-Sanka",
+            "firstName": "Ratna",
+            "initials": "R"
+          },
+          {
+            "fullName": "Jacobsen B",
+            "lastName": "Jacobsen",
+            "firstName": "Bill",
+            "initials": "B"
+          },
+          {
+            "fullName": "Milliard J",
+            "lastName": "Milliard",
+            "firstName": "Jourdan",
+            "initials": "J"
+          },
+          {
+            "fullName": "Bowser R",
+            "lastName": "Bowser",
+            "firstName": "Robert",
+            "initials": "R"
+          },
+          {
+            "fullName": "Deboo A",
+            "lastName": "Deboo",
+            "firstName": "Anahita",
+            "initials": "A"
+          },
+          {
+            "fullName": "Cartwright MS",
+            "lastName": "Cartwright",
+            "firstName": "Michael S",
+            "initials": "MS"
+          },
+          {
+            "fullName": "Nance C",
+            "lastName": "Nance",
+            "firstName": "Christopher",
+            "initials": "C"
+          },
+          {
+            "fullName": "Gutmann L",
+            "lastName": "Gutmann",
+            "firstName": "Ludwig",
+            "initials": "L"
+          },
+          {
+            "fullName": "Yasek J",
+            "lastName": "Yasek",
+            "firstName": "Julia",
+            "initials": "J"
+          },
+          {
+            "fullName": "Harms M",
+            "lastName": "Harms",
+            "firstName": "Matthew",
+            "initials": "M"
+          },
+          {
+            "fullName": "Burford M",
+            "lastName": "Burford",
+            "firstName": "Matthew",
+            "initials": "M"
+          },
+          {
+            "fullName": "Diaz F",
+            "lastName": "Diaz",
+            "firstName": "Frank",
+            "initials": "F"
+          },
+          {
+            "fullName": "Shrilla D",
+            "lastName": "Shrilla",
+            "firstName": "David",
+            "initials": "D"
+          },
+          {
+            "fullName": "Rakocevic G",
+            "lastName": "Rakocevic",
+            "firstName": "Goran",
+            "initials": "G"
+          },
+          {
+            "fullName": "Jones S",
+            "lastName": "Jones",
+            "firstName": "Sarah",
+            "initials": "S"
+          },
+          {
+            "fullName": "Solorzano G",
+            "lastName": "Solorzano",
+            "firstName": "Guillermo",
+            "initials": "G"
+          },
+          {
+            "fullName": "Li X",
+            "lastName": "Li",
+            "firstName": "Xiaoyan",
+            "initials": "X"
+          },
+          {
+            "fullName": "Mahuwala Z",
+            "lastName": "Mahuwala",
+            "firstName": "Zabeen",
+            "initials": "Z"
+          },
+          {
+            "fullName": "Kumaraswamy VVM",
+            "lastName": "Kumaraswamy",
+            "firstName": "Vishakhadatta Vish Mathur",
+            "initials": "VVM"
+          },
+          {
+            "fullName": "Quinn C",
+            "lastName": "Quinn",
+            "firstName": "Colin",
+            "initials": "C"
+          },
+          {
+            "fullName": "Baer M",
+            "lastName": "Baer",
+            "firstName": "Michael",
+            "initials": "M"
+          },
+          {
+            "fullName": "Borg D",
+            "lastName": "Borg",
+            "firstName": "David",
+            "initials": "D"
+          },
+          {
+            "fullName": "Bhuvaneswaran K",
+            "lastName": "Bhuvaneswaran",
+            "firstName": "Karthikeyan",
+            "initials": "K"
+          },
+          {
+            "fullName": "Kaur J",
+            "lastName": "Kaur",
+            "firstName": "Jasdeep",
+            "initials": "J"
+          },
+          {
+            "fullName": "Maiser S",
+            "lastName": "Maiser",
+            "firstName": "Sam",
+            "initials": "S"
+          },
+          {
+            "fullName": "Rutkove SB",
+            "lastName": "Rutkove",
+            "firstName": "Seward B",
+            "initials": "SB",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-6375-3312"
+            }
+          },
+          {
+            "fullName": "Mundwiler A",
+            "lastName": "Mundwiler",
+            "firstName": "Andrew",
+            "initials": "A"
+          },
+          {
+            "fullName": "Meyer JA",
+            "lastName": "Meyer",
+            "firstName": "Jenny A",
+            "initials": "JA"
+          },
+          {
+            "fullName": "Rao P",
+            "lastName": "Rao",
+            "firstName": "Pooja",
+            "initials": "P"
+          },
+          {
+            "fullName": "Soliven B",
+            "lastName": "Soliven",
+            "firstName": "Betty",
+            "initials": "B"
+          },
+          {
+            "fullName": "Roos R",
+            "lastName": "Roos",
+            "firstName": "Raymond",
+            "initials": "R"
+          },
+          {
+            "fullName": "Habib AA",
+            "lastName": "Habib",
+            "firstName": "Ali A",
+            "initials": "AA"
+          },
+          {
+            "fullName": "Mozaffar T",
+            "lastName": "Mozaffar",
+            "firstName": "Tahseen",
+            "initials": "T"
+          },
+          {
+            "fullName": "Korb MK",
+            "lastName": "Korb",
+            "firstName": "Manisha Kak",
+            "initials": "MK"
+          },
+          {
+            "fullName": "Mullen J",
+            "lastName": "Mullen",
+            "firstName": "Jeffrey",
+            "initials": "J"
+          },
+          {
+            "fullName": "Stommel E",
+            "lastName": "Stommel",
+            "firstName": "Elijah",
+            "initials": "E"
+          },
+          {
+            "fullName": "Robbins NM",
+            "lastName": "Robbins",
+            "firstName": "Nathaniel M",
+            "initials": "NM"
+          },
+          {
+            "fullName": "Carberry N",
+            "lastName": "Carberry",
+            "firstName": "Nathan",
+            "initials": "N"
+          },
+          {
+            "fullName": "Granit V",
+            "lastName": "Granit",
+            "firstName": "Volkan",
+            "initials": "V"
+          },
+          {
+            "fullName": "Govindarajan R",
+            "lastName": "Govindarajan",
+            "firstName": "Raghav",
+            "initials": "R"
+          },
+          {
+            "fullName": "Oskarsson B",
+            "lastName": "Oskarsson",
+            "firstName": "Bjorn",
+            "initials": "B"
+          },
+          {
+            "fullName": "Darki L",
+            "lastName": "Darki",
+            "firstName": "Leila",
+            "initials": "L"
+          },
+          {
+            "fullName": "Rodriguez R",
+            "lastName": "Rodriguez",
+            "firstName": "Rodrigo",
+            "initials": "R"
+          },
+          {
+            "fullName": "Chuquilin M",
+            "lastName": "Chuquilin",
+            "firstName": "Miguel",
+            "initials": "M"
+          },
+          {
+            "fullName": "McNeely W",
+            "lastName": "McNeely",
+            "firstName": "Whitney",
+            "initials": "W"
+          },
+          {
+            "fullName": "Diaz-Abad M",
+            "lastName": "Diaz-Abad",
+            "firstName": "Montserrat",
+            "initials": "M"
+          },
+          {
+            "fullName": "Jin PH",
+            "lastName": "Jin",
+            "firstName": "Peter H",
+            "initials": "PH"
+          },
+          {
+            "fullName": "Chauhan C",
+            "lastName": "Chauhan",
+            "firstName": "Chandana",
+            "initials": "C"
+          },
+          {
+            "fullName": "Bobenhouse J",
+            "lastName": "Bobenhouse",
+            "firstName": "James",
+            "initials": "J"
+          },
+          {
+            "fullName": "Staff NP",
+            "lastName": "Staff",
+            "firstName": "Nathan P",
+            "initials": "NP",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-6760-3859"
+            }
+          },
+          {
+            "fullName": "Hayat G",
+            "lastName": "Hayat",
+            "firstName": "Ghazala",
+            "initials": "G"
+          },
+          {
+            "fullName": "Arroyave L",
+            "lastName": "Arroyave",
+            "firstName": "Luisa",
+            "initials": "L"
+          },
+          {
+            "fullName": "Bailey A",
+            "lastName": "Bailey",
+            "firstName": "Abbey",
+            "initials": "A"
+          },
+          {
+            "fullName": "Bailey J",
+            "lastName": "Bailey",
+            "firstName": "Jesse",
+            "initials": "J"
+          },
+          {
+            "fullName": "Barlow V",
+            "lastName": "Barlow",
+            "firstName": "Victoria",
+            "initials": "V"
+          },
+          {
+            "fullName": "Bulat A",
+            "lastName": "Bulat",
+            "firstName": "Allison",
+            "initials": "A"
+          },
+          {
+            "fullName": "Changkuon G",
+            "lastName": "Changkuon",
+            "firstName": "Genevive",
+            "initials": "G"
+          },
+          {
+            "fullName": "Cirino M",
+            "lastName": "Cirino",
+            "firstName": "Melissa",
+            "initials": "M"
+          },
+          {
+            "fullName": "Deignan C",
+            "lastName": "Deignan",
+            "firstName": "Cristina",
+            "initials": "C"
+          },
+          {
+            "fullName": "Deirmendjian E",
+            "lastName": "Deirmendjian",
+            "firstName": "Emma",
+            "initials": "E"
+          },
+          {
+            "fullName": "De Mattos A",
+            "lastName": "De Mattos",
+            "firstName": "Annette",
+            "initials": "A"
+          },
+          {
+            "fullName": "DiStefano S",
+            "lastName": "DiStefano",
+            "firstName": "Sofia",
+            "initials": "S"
+          },
+          {
+            "fullName": "Drake K",
+            "lastName": "Drake",
+            "firstName": "Kristin",
+            "initials": "K"
+          },
+          {
+            "fullName": "Estes M",
+            "lastName": "Estes",
+            "firstName": "Michaela",
+            "initials": "M"
+          },
+          {
+            "fullName": "Faulconer K",
+            "lastName": "Faulconer",
+            "firstName": "Kenneth",
+            "initials": "K"
+          },
+          {
+            "fullName": "Figueroa-Szostek P",
+            "lastName": "Figueroa-Szostek",
+            "firstName": "Precious",
+            "initials": "P"
+          },
+          {
+            "fullName": "Garozzo T",
+            "lastName": "Garozzo",
+            "firstName": "Tessa",
+            "initials": "T"
+          },
+          {
+            "fullName": "Hasenoehrl MG",
+            "lastName": "Hasenoehrl",
+            "firstName": "Meredith Gibbons",
+            "initials": "MG"
+          },
+          {
+            "fullName": "Henrique J",
+            "lastName": "Henrique",
+            "firstName": "Jennifer",
+            "initials": "J"
+          },
+          {
+            "fullName": "Henrique N",
+            "lastName": "Henrique",
+            "firstName": "Natalie",
+            "initials": "N"
+          },
+          {
+            "fullName": "Hurwitz S",
+            "lastName": "Hurwitz",
+            "firstName": "Samuel",
+            "initials": "S"
+          },
+          {
+            "fullName": "Igne C",
+            "lastName": "Igne",
+            "firstName": "Courtney",
+            "initials": "C"
+          },
+          {
+            "fullName": "Irwin L",
+            "lastName": "Irwin",
+            "firstName": "Liam",
+            "initials": "L"
+          },
+          {
+            "fullName": "Jentoft K",
+            "lastName": "Jentoft",
+            "firstName": "Katie",
+            "initials": "K"
+          },
+          {
+            "fullName": "Jordan B",
+            "lastName": "Jordan",
+            "firstName": "Boglarka",
+            "initials": "B"
+          },
+          {
+            "fullName": "Katsovskiy I",
+            "lastName": "Katsovskiy",
+            "firstName": "Igor",
+            "initials": "I"
+          },
+          {
+            "fullName": "Kharakozova O",
+            "lastName": "Kharakozova",
+            "firstName": "Olga",
+            "initials": "O"
+          },
+          {
+            "fullName": "Kolvek T",
+            "lastName": "Kolvek",
+            "firstName": "Taylor",
+            "initials": "T"
+          },
+          {
+            "fullName": "Korin A",
+            "lastName": "Korin",
+            "firstName": "Alexander",
+            "initials": "A"
+          },
+          {
+            "fullName": "La T",
+            "lastName": "La",
+            "firstName": "Thuong",
+            "initials": "T"
+          },
+          {
+            "fullName": "Li H",
+            "lastName": "Li",
+            "firstName": "Haining",
+            "initials": "H"
+          },
+          {
+            "fullName": "Nguyen J",
+            "lastName": "Nguyen",
+            "firstName": "Joey",
+            "initials": "J"
+          },
+          {
+            "fullName": "Novak I",
+            "lastName": "Novak",
+            "firstName": "Ilya",
+            "initials": "I"
+          },
+          {
+            "fullName": "Ortiz R",
+            "lastName": "Ortiz",
+            "firstName": "Ricardo",
+            "initials": "R"
+          },
+          {
+            "fullName": "Ostrow J",
+            "lastName": "Ostrow",
+            "firstName": "Joe",
+            "initials": "J"
+          },
+          {
+            "fullName": "Pagliaro J",
+            "lastName": "Pagliaro",
+            "firstName": "Jaclyn",
+            "initials": "J"
+          },
+          {
+            "fullName": "Palillo J",
+            "lastName": "Palillo",
+            "firstName": "Jack",
+            "initials": "J"
+          },
+          {
+            "fullName": "Patel P",
+            "lastName": "Patel",
+            "firstName": "Payal",
+            "initials": "P"
+          },
+          {
+            "fullName": "Patterson J",
+            "lastName": "Patterson",
+            "firstName": "Janae",
+            "initials": "J"
+          },
+          {
+            "fullName": "Phan M",
+            "lastName": "Phan",
+            "firstName": "Minh",
+            "initials": "M"
+          },
+          {
+            "fullName": "Popel N",
+            "lastName": "Popel",
+            "firstName": "Najla",
+            "initials": "N"
+          },
+          {
+            "fullName": "Proueng S",
+            "lastName": "Proueng",
+            "firstName": "Serena",
+            "initials": "S"
+          },
+          {
+            "fullName": "Rosenthal J",
+            "lastName": "Rosenthal",
+            "firstName": "Jesse",
+            "initials": "J"
+          },
+          {
+            "fullName": "Small C",
+            "lastName": "Small",
+            "firstName": "Catherine",
+            "initials": "C"
+          },
+          {
+            "fullName": "Tarasenko N",
+            "lastName": "Tarasenko",
+            "firstName": "Natalia",
+            "initials": "N"
+          },
+          {
+            "fullName": "Thomas M",
+            "lastName": "Thomas",
+            "firstName": "Mirna",
+            "initials": "M"
+          },
+          {
+            "fullName": "Vigneswaran P",
+            "lastName": "Vigneswaran",
+            "firstName": "Prasha",
+            "initials": "P"
+          },
+          {
+            "fullName": "Wahab Y",
+            "lastName": "Wahab",
+            "firstName": "Yusra",
+            "initials": "Y"
+          },
+          {
+            "fullName": "Whitworth I",
+            "lastName": "Whitworth",
+            "firstName": "Isaac",
+            "initials": "I"
+          },
+          {
+            "fullName": "Wright S",
+            "lastName": "Wright",
+            "firstName": "Spencer",
+            "initials": "S"
+          },
+          {
+            "fullName": "Connolly M",
+            "lastName": "Connolly",
+            "firstName": "Mariah",
+            "initials": "M"
+          },
+          {
+            "fullName": "De Santiago D",
+            "lastName": "De Santiago",
+            "firstName": "Diana",
+            "initials": "D"
+          },
+          {
+            "fullName": "Felix A",
+            "lastName": "Felix",
+            "firstName": "Adrian",
+            "initials": "A"
+          },
+          {
+            "fullName": "Garrett K",
+            "lastName": "Garrett",
+            "firstName": "Karly",
+            "initials": "K"
+          },
+          {
+            "fullName": "Hamilton J",
+            "lastName": "Hamilton",
+            "firstName": "Jenny",
+            "initials": "J"
+          },
+          {
+            "fullName": "Khan K",
+            "lastName": "Khan",
+            "firstName": "Kamran",
+            "initials": "K"
+          },
+          {
+            "fullName": "Lovett M",
+            "lastName": "Lovett",
+            "firstName": "Marlee",
+            "initials": "M"
+          },
+          {
+            "fullName": "Nelson L",
+            "lastName": "Nelson",
+            "firstName": "Linda",
+            "initials": "L"
+          },
+          {
+            "fullName": "Pabon M",
+            "lastName": "Pabon",
+            "firstName": "Marissa",
+            "initials": "M"
+          },
+          {
+            "fullName": "Rede D",
+            "lastName": "Rede",
+            "firstName": "Diana",
+            "initials": "D"
+          },
+          {
+            "fullName": "Bolger P",
+            "lastName": "Bolger",
+            "firstName": "Patrick",
+            "initials": "P"
+          },
+          {
+            "fullName": "Fetouh A",
+            "lastName": "Fetouh",
+            "firstName": "Ahmed",
+            "initials": "A"
+          },
+          {
+            "fullName": "Woodcook J",
+            "lastName": "Woodcook",
+            "firstName": "Joan",
+            "initials": "J"
+          },
+          {
+            "fullName": "Kamp C",
+            "lastName": "Kamp",
+            "firstName": "Cornelia",
+            "initials": "C"
+          },
+          {
+            "fullName": "Kennedy J",
+            "lastName": "Kennedy",
+            "firstName": "Julie",
+            "initials": "J"
+          },
+          {
+            "fullName": "McGarry A",
+            "lastName": "McGarry",
+            "firstName": "Andrew",
+            "initials": "A"
+          },
+          {
+            "fullName": "Torti M",
+            "lastName": "Torti",
+            "firstName": "Margherita",
+            "initials": "M"
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-6668-0545"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-6760-3859"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-6867-5643"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-7941-1993"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-8574-5332"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-1589-6570"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-2648-7625"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-3421-7529"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-3474-7140"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-6375-3312"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-7148-989X"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-7311-9614"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-4666-7495"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0002-9427-1452"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "2",
+        "volume": "8",
+        "journalIssueId": 3895341,
+        "dateOfPublication": "2025 Feb",
+        "monthOfPublication": 2,
+        "yearOfPublication": 2025,
+        "journal": {
+          "medlineAbbreviation": "JAMA Netw Open",
+          "title": "JAMA network open",
+          "essn": "2574-3805",
+          "issn": "2574-3805",
+          "nlmid": "101729235",
+          "isoabbreviation": "JAMA Netw Open"
+        },
+        "printPublicationDate": "2025-02-01"
+      },
+      "pubYear": "2025",
+      "pageInfo": "e2459058",
+      "abstractText": "<h4>Importance</h4>The etiology of amyotrophic lateral sclerosis (ALS), a fatal neurodegenerative disease, is unknown. However, neuroinflammation and complement activation may play a role in disease progression.<h4>Objective</h4>To determine the effects of zilucoplan, an inhibitor of complement C5, in individuals with ALS.<h4>Design, setting, and participants</h4>Zilucoplan was tested as regimen A of the HEALEY ALS Platform Trial, a phase 2 to 3 multicenter, randomized, double-blind, placebo-controlled perpetual platform clinical trial with sharing of trial infrastructure and placebo data across multiple regimens. Regimen A was conducted from August 17, 2020, to May 4, 2022. A total of 162 participants were randomized to receive zilucoplan (122 [75.3%]) or regimen-specific placebo (40 [24.7%]). An additional 124 concurrently randomized participants were randomized to receive placebo in other regimens.<h4>Interventions</h4>Eligible participants were randomized in a 3:1 ratio to receive zilucoplan or matching placebo within strata of edaravone and/or riluzole use for a planned duration of 24 weeks. Active drug (zilucoplan, 0.3 mg/kg) and placebo were provided for daily subcutaneous dosing.<h4>Main outcomes and measures</h4>The primary end point was change in disease severity from baseline through 24 weeks as measured by the Amyotrophic Lateral Sclerosis Functional Rating Scale-Revised (ALSFRS-R) total score and survival, analyzed using a bayesian shared-parameter model and reported as disease rate ratio (DRR; <1 indicating treatment benefit). The study included prespecified rules for early stopping for futility. Outcome analyses were performed in the full analysis set comparing the zilucoplan group with the total shared placebo group (n\u2009=\u2009164).<h4>Results</h4>Among the 162 participants who were randomized (mean [SD] age, 59.6 [11.3]; 99 [61.1%] male), 115 (71.0%) completed the trial. The estimated DRR common to ALSFRS-R and survival was 1.08 (95% credible interval, 0.87-1.31; posterior probability of superiority,\u20090.24). The trial was stopped early for futility. No unexpected treatment-related risks were identified.<h4>Conclusions and relevance</h4>In this randomized clinical trial of zilucoplan in ALS, treatment did not alter disease progression. The adaptive platform design of the HEALEY ALS Platform Trial made it possible to test a new investigational product with efficient use of time and resources.<h4>Trial registration</h4>ClinicalTrials.gov Identifier: NCT04297683.",
+      "affiliation": "Sean M. Healey & AMG Center for ALS and the Neurological Clinical Research Institute, Massachusetts General Hospital, Harvard Medical School, Boston.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "Clinical Trial, Phase III",
+          "Clinical Trial, Phase II",
+          "Research Support, Non-U.S. Gov't",
+          "research-article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Research Support, U.S. Gov't, Non-P.H.S.",
+          "Journal Article",
+          "Research Support, N.I.H., Extramural"
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DT",
+                  "qualifierName": "drug therapy"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Treatment Outcome"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Double-Blind Method"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Middle Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Female"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Male"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Free",
+            "availabilityCode": "F",
+            "documentStyle": "doi",
+            "site": "Unpaywall",
+            "url": "https://doi.org/10.1001/jamanetworkopen.2024.59058"
+          },
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1001/jamanetworkopen.2024.59058"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC11833520"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 22,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "N",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "nct"
+        ]
+      },
+      "dateOfCompletion": "2025-02-17",
+      "dateOfCreation": "2025-02-17",
+      "dateOfRevision": "2026-02-06",
+      "electronicPublicationDate": "2025-02-03",
+      "firstPublicationDate": "2025-02-03",
+      "firstIndexDate": "2025-02-17",
+      "fullTextReceivedDate": "2025-11-29",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "37695623",
+      "source": "MED",
+      "pmid": "37695623",
+      "pmcid": "PMC10495927",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC10495927"
+        ]
+      },
+      "doi": "10.1001/jamaneurol.2023.2851",
+      "title": "Efficacy and Safety of Ravulizumab, a Complement C5 Inhibitor, in Adults With Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial.",
+      "authorString": "Genge A, van den Berg LH, Frick G, Han S, Abikoff C, Simmons A, Lin Q, Patra K, Kupperman E, Berry JD.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Genge A",
+            "lastName": "Genge",
+            "firstName": "Angela",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "McGill University, Montr\u00e9al, Qu\u00e9bec, Canada."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "van den Berg LH",
+            "lastName": "van den Berg",
+            "firstName": "Leonard H",
+            "initials": "LH",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "University Medical Center Utrecht, Utrecht, the Netherlands."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Frick G",
+            "lastName": "Frick",
+            "firstName": "Glen",
+            "initials": "G",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Alexion, AstraZeneca Rare Disease, Boston, Massachusetts."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Han S",
+            "lastName": "Han",
+            "firstName": "Steve",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Alexion, AstraZeneca Rare Disease, Boston, Massachusetts."
+                },
+                {
+                  "affiliation": "Now with Takeda Pharmaceuticals, Cambridge, Massachusetts."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Abikoff C",
+            "lastName": "Abikoff",
+            "firstName": "Cori",
+            "initials": "C",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Alexion, AstraZeneca Rare Disease, Boston, Massachusetts."
+                },
+                {
+                  "affiliation": "Now with Takeda Pharmaceuticals, Cambridge, Massachusetts."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Simmons A",
+            "lastName": "Simmons",
+            "firstName": "Adam",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Alexion, AstraZeneca Rare Disease, Boston, Massachusetts."
+                },
+                {
+                  "affiliation": "Now with Alector, West Hartford, Connecticut."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Lin Q",
+            "lastName": "Lin",
+            "firstName": "Qun",
+            "initials": "Q",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Alexion, AstraZeneca Rare Disease, Boston, Massachusetts."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Patra K",
+            "lastName": "Patra",
+            "firstName": "Kaushik",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Alexion, AstraZeneca Rare Disease, Boston, Massachusetts."
+                },
+                {
+                  "affiliation": "Now with Ultragenyx, Lexington, Massachusetts."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kupperman E",
+            "lastName": "Kupperman",
+            "firstName": "Erik",
+            "initials": "E",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Alexion, AstraZeneca Rare Disease, Boston, Massachusetts."
+                },
+                {
+                  "affiliation": "Now with Viridian Therapeutics, Waltham, Massachusetts."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Berry JD",
+            "lastName": "Berry",
+            "firstName": "James D",
+            "initials": "JD",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Sean M. Healey and AMG Center for ALS, Massachusetts General Hospital, Boston."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "10",
+        "volume": "80",
+        "journalIssueId": 3646928,
+        "dateOfPublication": "2023 Oct",
+        "monthOfPublication": 10,
+        "yearOfPublication": 2023,
+        "journal": {
+          "medlineAbbreviation": "JAMA Neurol",
+          "title": "JAMA neurology",
+          "essn": "2168-6157",
+          "issn": "2168-6149",
+          "nlmid": "101589536",
+          "isoabbreviation": "JAMA Neurol"
+        },
+        "printPublicationDate": "2023-10-01"
+      },
+      "pubYear": "2023",
+      "pageInfo": "1089-1097",
+      "abstractText": "<h4>Importance</h4>Additional therapies for amyotrophic lateral sclerosis (ALS) are urgently needed. Immune-mediated complement activation may be involved in ALS pathogenesis as evidenced by the upregulation of terminal components; thus, complement inhibition could potentially slow progression.<h4>Objective</h4>To evaluate the safety and efficacy of the terminal complement C5 inhibitor ravulizumab in adults with ALS.<h4>Design, setting, and participants</h4>This double-blind, placebo-controlled, parallel-group, multinational, randomized, phase 3 clinical trial was conducted from March 30, 2020, to October 17, 2021, in 81 ALS specialty centers across 17 countries. A preplanned, unmasked, nonbinding interim futility analysis was conducted when 33% of participants had completed week 26, wherein a conditional power of less than 10% would halt the trial. A total of 478 individuals were screened, and 96 were excluded. Inclusion criteria were weight of 40 kg or more, fulfillment of the El Escorial diagnostic criteria, and a minimal prestudy Revised Amyotrophic Lateral Sclerosis Functional Rating Scale (ALSFRS-R) progression score of -0.3 points per month.<h4>Interventions</h4>Study treatment consisted of placebo or a weight-based dose of intravenous ravulizumab every 8 weeks until week 42. Participants could continue standard-of-care treatment.<h4>Main outcomes and measures</h4>The primary end point was change from baseline in ALSFRS-R score at week 50 based on the Combined Assessment of Function and Survival (CAFS).<h4>Results</h4>A total of 382 participants were randomly assigned 2:1 to receive ravulizumab (n\u2009=\u2009255; mean [SD] age, 58.6 [10.6] years; 94 female [36.9%] and 161 male [63.1%]) or placebo (n\u2009=\u2009127; mean [SD] age, 58.0 [11.0] years; 58 female [45.7%] and 69 male [54.3%]). The interim analysis showed that the observed mean change from baseline in ALSFRS-R at week 50 was -14.67 points (SE, 0.89 points; 95% CI, -16.42 to -12.91 points) for ravulizumab and -13.33 points (SE, 1.22 points; 95% CI, -15.72 to -10.93 points) for placebo, with no significant difference between the groups (mean [SE] difference, -1.34 [1.46] points; 95% CI, -4.21 to 1.53 points). Based on these data, the trial was terminated for futility. The primary analysis at week 50 showed no significant difference in CAFS between groups (mean [SE], 5.5 [10.8] points; 95% CI, -15.7 to 26.6 points; P\u2009=\u2009.61). Overall incidence rates for treatment-emergent adverse events were similar for ravulizumab (204 participants [80.0%]) and placebo (108 participants [85.0%]).<h4>Conclusions and relevance</h4>This trial rapidly showed that terminal complement C5 inhibition with ravulizumab did not slow functional decline in participants with ALS and that the safety profiles of ravulizumab and placebo were similar. Highly effective, novel treatments are critically needed to slow functional decline and extend survival in patients with ALS.<h4>Trial registration</h4>ClinicalTrials.gov Identifier: NCT04248465.",
+      "affiliation": "McGill University, Montr\u00e9al, Qu\u00e9bec, Canada.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print",
+      "pubTypeList": {
+        "pubType": [
+          "Clinical Trial, Phase III",
+          "Research Support, Non-U.S. Gov't",
+          "research-article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Journal Article"
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DT",
+                  "qualifierName": "drug therapy"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Treatment Outcome"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Double-Blind Method"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Adult"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Middle Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Complement C5",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "AI",
+                  "qualifierName": "antagonists & inhibitors"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Female"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Male"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Complement Inactivating Agents",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "AD",
+                  "qualifierName": "administration & dosage"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "AE",
+                  "qualifierName": "adverse effects"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "TU",
+                  "qualifierName": "therapeutic use"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Antibodies, Monoclonal, Humanized",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "AD",
+                  "qualifierName": "administration & dosage"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "AE",
+                  "qualifierName": "adverse effects"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "TU",
+                  "qualifierName": "therapeutic use"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "Complement C5",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Complement Inactivating Agents",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Antibodies, Monoclonal, Humanized",
+            "registryNumber": "0"
+          },
+          {
+            "name": "ravulizumab",
+            "registryNumber": "C3VX249T6L"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Unpaywall",
+            "url": "https://jamanetwork.com/journals/jamaneurology/articlepdf/2809453/jamaneurology_genge_2023_oi_230059_1694018199.64097.pdf"
+          },
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1001/jamaneurol.2023.2851"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC10495927"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 21,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "N",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by-nc-nd",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "nct"
+        ]
+      },
+      "dateOfCompletion": "2024-09-25",
+      "dateOfCreation": "2023-09-11",
+      "dateOfRevision": "2025-06-11",
+      "firstPublicationDate": "2023-10-01",
+      "firstIndexDate": "2023-09-12",
+      "fullTextReceivedDate": "2023-09-14",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "35722139",
+      "source": "MED",
+      "pmid": "35722139",
+      "pmcid": "PMC9200494",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC9200494"
+        ]
+      },
+      "doi": "10.1155/2022/6541600",
+      "title": "Analysis on Acupoint Selection and Combination for Amyotrophic Lateral Sclerosis Treated with Acupuncture Based on Data Mining.",
+      "authorString": "Xu J, Lu Z, Zhang H, Shen Y, Zhao H.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Xu J",
+            "lastName": "Xu",
+            "firstName": "Jia",
+            "initials": "J",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-4464-4508"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "VIP Department, Longhua Hospital, Shanghai University of Traditional Chinese Medicine, Shanghai 200032, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Lu Z",
+            "lastName": "Lu",
+            "firstName": "Zhengyu",
+            "initials": "Z",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-8294-3552"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "VIP Department, Longhua Hospital, Shanghai University of Traditional Chinese Medicine, Shanghai 200032, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zhang H",
+            "lastName": "Zhang",
+            "firstName": "Hongjing",
+            "initials": "H",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Teaching Affairs Department, Yueyang Hospital of Integrated Traditional Chinese and Western Medicine, Shanghai University of Traditional Chinese Medicine, Shanghai 200437, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Shen Y",
+            "lastName": "Shen",
+            "firstName": "Yan",
+            "initials": "Y",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-5870-361X"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Teaching Affairs Department, Yueyang Hospital of Integrated Traditional Chinese and Western Medicine, Shanghai University of Traditional Chinese Medicine, Shanghai 200437, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zhao H",
+            "lastName": "Zhao",
+            "firstName": "Hong",
+            "initials": "H",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-7025-1249"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Teaching Affairs Department, Yueyang Hospital of Integrated Traditional Chinese and Western Medicine, Shanghai University of Traditional Chinese Medicine, Shanghai 200437, China."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-8294-3552"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-4464-4508"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-5870-361X"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-7025-1249"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "volume": "2022",
+        "journalIssueId": 3294371,
+        "dateOfPublication": "2022 ",
+        "monthOfPublication": 0,
+        "yearOfPublication": 2022,
+        "journal": {
+          "medlineAbbreviation": "Evid Based Complement Alternat Med",
+          "title": "Evidence-based complementary and alternative medicine : eCAM",
+          "essn": "1741-4288",
+          "issn": "1741-427X",
+          "nlmid": "101215021",
+          "isoabbreviation": "Evid Based Complement Alternat Med"
+        },
+        "printPublicationDate": "2022-01-01"
+      },
+      "pubYear": "2022",
+      "pageInfo": "6541600",
+      "abstractText": "<h4>Objective</h4>The aim of the study was to explore the regularity of acupoints in the treatment of amyotrophic lateral sclerosis (ALS) by means of data mining technology.<h4>Methods</h4>Nine databases, including SinoMed, Chongqing VIP (CQVIP), China National Knowledge Infrastructure (CNKI), Wanfang Data, Cochrane Library, PubMed, MEDLINE, Web of Science, and Embase, were comprehensively searched till December 2021. The published clinical literature testing acupuncture in the treatment of ALS was eligible for inclusion. Studies were organized to establish the prescription database. Modular data mining analysis, including acupoint frequency, complex network analysis, association rule analysis, and cluster analysis were used to conduct statistical analysis.<h4>Results</h4>Forty-two literature studies on 141 acupoints were included, involving 626 times the total application frequency. The top 5 acupoints in application frequency were Hegu (LI 4, 67%), Zusanli (ST 36, 67%), Quchi (LI 11, 52%), Sanyinjiao (SP 6, 48%), and Yanglingquan (GB 34, 45%). The most involved meridian was the large intestine meridian of hand Yangming (90 times). The generally used acupoints were mainly distributed in the lower limbs. The top 5 combinations in application frequency were Hegu-Quchi (75 times), Quchi-Zusanli (66 times), Zusanli-Sanyinjiao (54 times), Hegu-Sanyinjiao (54 times), and Quchi-Sanyinjiao (49 times). The acupoint combinations with the strongest association were Quchi, Hegu, Zusanli, Sanyinjiao, and Shousanli (LI 10). There were 7 acupoint groups according to the cluster analysis. The core prescriptions were Hegu, Zusanli, Quchi, and Jiaji (EX-B 2).<h4>Conclusions</h4>Hegu, Zusanli, Quchi, and Jiaji could be used as the main prescriptions in treating ALS. The combination of Quchi, Hegu, Zusanli, and Sanyinjiao should be selected with priority in acupuncture therapy.",
+      "affiliation": "VIP Department, Longhua Hospital, Shanghai University of Traditional Chinese Medicine, Shanghai 200032, China.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic-eCollection",
+      "pubTypeList": {
+        "pubType": [
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "National Natural Science Foundation of China",
+            "grantId": "81973803",
+            "orderIn": 0
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Unpaywall",
+            "url": "https://downloads.hindawi.com/journals/ecam/2022/6541600.pdf"
+          },
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1155/2022/6541600"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC9200494"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC9200494?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 5,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCreation": "2022-06-20",
+      "dateOfRevision": "2024-08-30",
+      "electronicPublicationDate": "2022-06-08",
+      "firstPublicationDate": "2022-06-08",
+      "firstIndexDate": "2022-06-20",
+      "fullTextReceivedDate": "2022-06-17",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42492371",
+      "source": "MED",
+      "pmid": "42492371",
+      "pmcid": "PMC13427468",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13427468"
+        ]
+      },
+      "doi": "10.1016/j.neurot.2026.e00969",
+      "title": "Site-targeted proximal complement C3 inhibition, but not C5 blockade, attenuates neurodegeneration in a mouse model of amyotrophic lateral sclerosis: Implications for failed clinical trials.",
+      "authorString": "Majumder M, Borucki DM, Chowdhury N, Mallah K, Tomlinson S.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Majumder M",
+            "lastName": "Majumder",
+            "firstName": "Moumita",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Pharmacology and Immunology, Medical University of South Carolina, Charleston, SC, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Borucki DM",
+            "lastName": "Borucki",
+            "firstName": "Davis M",
+            "initials": "DM",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Pharmacology and Immunology, Medical University of South Carolina, Charleston, SC, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Chowdhury N",
+            "lastName": "Chowdhury",
+            "firstName": "Nityananda",
+            "initials": "N",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Pharmacology and Immunology, Medical University of South Carolina, Charleston, SC, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Mallah K",
+            "lastName": "Mallah",
+            "firstName": "Khalil",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Pharmacology and Immunology, Medical University of South Carolina, Charleston, SC, USA; RalphH Johnson VA Medical Center, Charleston, SC, USA; Department of Pathology and Laboratory Medicine, Medical University of South Carolina, Charleston, SC, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Tomlinson S",
+            "lastName": "Tomlinson",
+            "firstName": "Stephen",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Pharmacology and Immunology, Medical University of South Carolina, Charleston, SC, USA; RalphH Johnson VA Medical Center, Charleston, SC, USA. Electronic address: tomlinss@musc.edu."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "5",
+        "volume": "23",
+        "journalIssueId": 4252250,
+        "dateOfPublication": "2026 Sep",
+        "monthOfPublication": 9,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Neurotherapeutics",
+          "title": "Neurotherapeutics : the journal of the American Society for Experimental NeuroTherapeutics",
+          "essn": "1878-7479",
+          "issn": "1933-7213",
+          "nlmid": "101290381",
+          "isoabbreviation": "Neurotherapeutics"
+        },
+        "printPublicationDate": "2026-09-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "e00969",
+      "abstractText": "Complement activation contributes to amyotrophic lateral sclerosis (ALS) neuropathology, but whether motor neuron degeneration is driven by proximal or terminal activation products remains unresolved. Failed trials of C5 inhibition - ravulizumab (CHAMPION-ALS) and zilucoplan (ATHLEET/HEALEY ALS Trial), and of systemic C3 inhibition (pegcetacoplan, MERIDIAN) underscore this mechanistic gap. We compared two pharmacologically distinct inhibitors in hSOD1<sup>G93A</sup> mice. CR2Crry blocks complement at C3 and localizes to sites of active deposition. BB5.1, functionally equivalent to ravulizumab, selectively blocks C5a generation and membrane attack complex (MAC) assembly. Treatment began at symptom onset and continued to humane endpoint. Both agents achieved robust target engagement across spinal cord, sciatic nerve, and neuromuscular junction (NMJ). Only CR2Crry extended survival, preserved motor function, and attenuated weight loss. CR2Crry reduced microglial activation and C3 opsonization in the ventral horn, diminished macrophage infiltration, preserved sciatic nerve axonal integrity, and maintained NMJ innervation. BB5.1 failed to modify any functional or neurodegenerative pathology despite confirmed MAC suppression. Proximal C3 activation products, not C5a or MAC, are the dominant drivers of complement-mediated neurodegeneration in the hSOD1<sup>G93A</sup> model of ALS. Site-targeted C3 inhibition may address the mechanistic limitation underlying recent clinical trial failures and represents a translationally justified therapeutic strategy.",
+      "affiliation": "Department of Pharmacology and Immunology, Medical University of South Carolina, Charleston, SC, USA.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print-Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "NIGMS NIH HHS",
+            "acronym": "GM",
+            "grantId": "P20 GM148302",
+            "orderIn": 0
+          },
+          {
+            "agency": "BLRD VA",
+            "acronym": "BX",
+            "grantId": "I21 BX005853",
+            "orderIn": 0
+          },
+          {
+            "agency": "BLRD VA",
+            "acronym": "BX",
+            "grantId": "IK6 BX005235",
+            "orderIn": 0
+          },
+          {
+            "agency": "NIH HHS",
+            "acronym": "OD",
+            "grantId": "S10 OD018113",
+            "orderIn": 0
+          },
+          {
+            "agency": "RRD VA",
+            "acronym": "RX",
+            "grantId": "I01 RX003958",
+            "orderIn": 0
+          },
+          {
+            "agency": "US Department of Veterans Affairs",
+            "orderIn": 0
+          },
+          {
+            "agency": "NIH HHS",
+            "acronym": "OD",
+            "grantId": "S10 OD028663",
+            "orderIn": 0
+          },
+          {
+            "agency": "BLRD VA",
+            "acronym": "BX",
+            "grantId": "I01 BX004256",
+            "orderIn": 0
+          },
+          {
+            "agency": "NIGMS NIH HHS",
+            "acronym": "GM",
+            "grantId": "P20 GM130457",
+            "orderIn": 0
+          },
+          {
+            "agency": "NCI NIH HHS",
+            "acronym": "CA",
+            "grantId": "P30 CA138313",
+            "orderIn": 0
+          },
+          {
+            "agency": "NIDDK NIH HHS",
+            "acronym": "DK",
+            "grantId": "P30 DK123704",
+            "orderIn": 0
+          },
+          {
+            "agency": "US Department of Defense",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Spinal Cord",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DE",
+                  "qualifierName": "drug effects"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Mice, Transgenic"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Mice"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DT",
+                  "qualifierName": "drug therapy"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Disease Models, Animal"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Nerve Degeneration",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DT",
+                  "qualifierName": "drug therapy"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Complement C3",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "AI",
+                  "qualifierName": "antagonists & inhibitors"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Complement C5",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "AI",
+                  "qualifierName": "antagonists & inhibitors"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "C3",
+          "ALS",
+          "neuroinflammation",
+          "Site-targeted Complement Inhibition",
+          "Hsod1(g93a)"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "Complement C3",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Complement C5",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1016/j.neurot.2026.e00969"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13427468"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13427468?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by-nc-nd",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-09-22",
+      "dateOfCreation": "2026-07-23",
+      "dateOfRevision": "2026-09-23",
+      "electronicPublicationDate": "2026-07-23",
+      "firstPublicationDate": "2026-07-23",
+      "firstIndexDate": "2026-07-24",
+      "fullTextReceivedDate": "2026-09-04",
+      "hasEvaluations": "N"
+    }
+  ]
+}

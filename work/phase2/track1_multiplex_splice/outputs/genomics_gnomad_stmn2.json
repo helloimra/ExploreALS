@@ -1,0 +1,1826 @@
+{
+  "data": {
+    "region": {
+      "variants": [
+        {
+          "variant_id": "8-79616651-C-T",
+          "rsids": [
+            "rs183424526"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 10,
+            "an": 152294,
+            "af": 6.566246864617122e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616664-C-G",
+          "rsids": [
+            "rs1040647997"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152112,
+            "af": 6.574103292310929e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616667-G-A",
+          "rsids": [
+            "rs924024870"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152052,
+            "af": 6.5766974456107125e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616668-T-C",
+          "rsids": [
+            "rs2130295512"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152308,
+            "af": 6.565643301730704e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616681-C-T",
+          "rsids": [
+            "rs1356633736"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152188,
+            "af": 6.570820301206403e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616690-A-G",
+          "rsids": [
+            "rs1177778392"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152200,
+            "af": 6.57030223390276e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616698-T-C",
+          "rsids": [
+            "rs551621548"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 99,
+            "an": 152374,
+            "af": 0.0006497171433446651,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616703-T-G",
+          "rsids": [
+            "rs996314084"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 16,
+            "an": 152240,
+            "af": 0.00010509721492380452,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616711-ATAT-A",
+          "rsids": [
+            "rs1366703980"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152340,
+            "af": 6.564264145989234e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616716-T-C",
+          "rsids": [
+            "rs763830744"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 7,
+            "an": 152198,
+            "af": 4.599272000946136e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616719-C-T",
+          "rsids": [
+            "rs1809389289"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152188,
+            "af": 6.570820301206403e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616723-C-T",
+          "rsids": [
+            "rs141988622"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 168,
+            "an": 152212,
+            "af": 0.0011037237537119282,
+            "homozygote_count": 3
+          }
+        },
+        {
+          "variant_id": "8-79616724-G-A",
+          "rsids": [
+            "rs530863656"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 37,
+            "an": 152122,
+            "af": 0.0002432258318980818,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616729-C-T",
+          "rsids": [
+            "rs1299556999"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152174,
+            "af": 1.3142849632657353e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616738-G-A",
+          "rsids": [
+            "rs7013510"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 72921,
+            "an": 151998,
+            "af": 0.47974973354912565,
+            "homozygote_count": 17842
+          }
+        },
+        {
+          "variant_id": "8-79616749-T-G",
+          "rsids": [
+            "rs1809389973"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152228,
+            "af": 6.569093727829309e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616763-T-G",
+          "rsids": [
+            "rs1407374118"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152234,
+            "af": 6.5688348200796145e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616763-T-C",
+          "rsids": [
+            "rs1407374118"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152234,
+            "af": 6.5688348200796145e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616766-G-A",
+          "rsids": [
+            "rs1391747144"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152126,
+            "af": 6.573498284316948e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616767-T-C",
+          "rsids": [
+            "rs1399403943"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152220,
+            "af": 6.569438969911969e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616773-C-T",
+          "rsids": [
+            "rs1809390553"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 151982,
+            "af": 6.579726546564725e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616775-C-T",
+          "rsids": [
+            "rs1167514312"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152138,
+            "af": 6.572979794660111e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616777-T-C",
+          "rsids": [
+            "rs747165292"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 10,
+            "an": 152320,
+            "af": 6.565126050420168e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616784-C-T",
+          "rsids": [
+            "rs906464557"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152180,
+            "af": 6.571165724799579e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616786-CTT-C",
+          "rsids": [
+            "rs1169222402"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152132,
+            "af": 6.57323902926406e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616790-A-G",
+          "rsids": [
+            "rs1809390990"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152108,
+            "af": 6.574276172193441e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616807-A-G",
+          "rsids": [
+            "rs1809391256"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152216,
+            "af": 6.5696116045619385e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616810-T-C",
+          "rsids": [
+            "rs993993236"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 4,
+            "an": 152172,
+            "af": 2.6286044738848147e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616817-T-G",
+          "rsids": [
+            "rs1249430782"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152190,
+            "af": 6.570733950982325e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616824-C-T",
+          "rsids": [
+            "rs1809391606"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152066,
+            "af": 6.576091960069969e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616826-C-T",
+          "rsids": [
+            "rs888190199"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152062,
+            "af": 1.3152529889124174e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616827-G-A",
+          "rsids": [
+            "rs879805065"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 3,
+            "an": 151998,
+            "af": 1.9737101803971104e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616827-G-T",
+          "rsids": [
+            "rs879805065"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 151998,
+            "af": 6.579033934657035e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616830-A-C",
+          "rsids": [
+            "rs1313826159"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152194,
+            "af": 1.3141122514685205e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616836-C-T",
+          "rsids": [
+            "rs1344938894"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152028,
+            "af": 1.3155471360538848e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616837-C-G",
+          "rsids": [
+            "rs1230800262"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 5,
+            "an": 152102,
+            "af": 3.2872677545331424e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616840-C-T",
+          "rsids": [
+            "rs1034864135"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 151926,
+            "af": 6.5821518370785775e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616841-G-A",
+          "rsids": [
+            "rs567291555"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 29,
+            "an": 152140,
+            "af": 0.0001906139082424083,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616845-G-C",
+          "rsids": [
+            "rs1351732399"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152138,
+            "af": 6.572979794660111e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616850-G-A",
+          "rsids": [
+            "rs1332005676"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152074,
+            "af": 6.575746018385786e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616853-G-A",
+          "rsids": [
+            "rs1328489488"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152156,
+            "af": 6.5722022135177055e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616861-G-A",
+          "rsids": [
+            "rs187783264"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 632,
+            "an": 152268,
+            "af": 0.004150576614915806,
+            "homozygote_count": 2
+          }
+        },
+        {
+          "variant_id": "8-79616872-T-G",
+          "rsids": [
+            "rs2130295904"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152268,
+            "af": 6.567368061575643e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616875-G-T",
+          "rsids": [
+            "rs1563432272"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152142,
+            "af": 6.572806982950139e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616887-G-A",
+          "rsids": [
+            "rs1261206094"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152174,
+            "af": 6.5714248163286764e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616890-C-T",
+          "rsids": [
+            "rs150697010"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 14,
+            "an": 151848,
+            "af": 9.219746061851325e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616891-G-A",
+          "rsids": [
+            "rs552819092"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 10,
+            "an": 152232,
+            "af": 6.568921120395186e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616893-G-T",
+          "rsids": [
+            "rs976424506"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152194,
+            "af": 1.3141122514685205e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616893-G-A",
+          "rsids": [
+            "rs976424506"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152194,
+            "af": 6.570561257342603e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616898-CGA-C",
+          "rsids": [
+            "rs141543143"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 4,
+            "an": 151370,
+            "af": 2.642531545220321e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616898-C-T",
+          "rsids": [
+            "rs191086701"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 151494,
+            "af": 6.600921488639814e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616898-CGAGA-C",
+          "rsids": [
+            "rs141543143"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 151494,
+            "af": 1.3201842977279627e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616898-C-CGA",
+          "rsids": [
+            "rs141543143"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 3,
+            "an": 151376,
+            "af": 1.981820103583131e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616899-G-C",
+          "rsids": [
+            "rs781392795"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 151900,
+            "af": 6.583278472679394e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616899-G-A",
+          "rsids": [
+            "rs781392795"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 151900,
+            "af": 6.583278472679394e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616905-G-A",
+          "rsids": [
+            "rs571388018"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 7,
+            "an": 152294,
+            "af": 4.5963728052319855e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616906-A-G",
+          "rsids": [
+            "rs1809393936"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152196,
+            "af": 6.5704749139267785e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616907-GAGAC-G",
+          "rsids": [
+            "rs955146963"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 15,
+            "an": 152308,
+            "af": 9.848464952596055e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616907-G-A",
+          "rsids": [
+            "rs1030547261"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 3,
+            "an": 152190,
+            "af": 1.9712201852946975e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616907-G-C",
+          "rsids": [
+            "rs1030547261"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 6,
+            "an": 152190,
+            "af": 3.942440370589395e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616915-C-G",
+          "rsids": [
+            "rs1288125593"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152126,
+            "af": 1.3146996568633896e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616935-G-A",
+          "rsids": [
+            "rs984549688"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152176,
+            "af": 6.57133845021554e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616939-G-T",
+          "rsids": [
+            "rs866086409"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 60,
+            "an": 152156,
+            "af": 0.00039433213281106234,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616946-C-T",
+          "rsids": [
+            "rs534735285"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 69,
+            "an": 152158,
+            "af": 0.0004534759920608841,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616956-C-T",
+          "rsids": [
+            "rs1160083850"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152050,
+            "af": 6.576783952647156e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616960-G-A",
+          "rsids": [
+            "rs1358143504"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 5,
+            "an": 152146,
+            "af": 3.286317090163396e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616966-AAGGATG-A",
+          "rsids": [
+            "rs1809394975"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152216,
+            "af": 1.3139223209123877e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616971-TG-T",
+          "rsids": [
+            "rs1336159365"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152188,
+            "af": 6.570820301206403e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616972-G-A",
+          "rsids": [
+            "rs1809395179"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152052,
+            "af": 6.5766974456107125e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616975-AAAT-A",
+          "rsids": [
+            "rs1809395380"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152236,
+            "af": 1.3137497044063165e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616978-T-C",
+          "rsids": [
+            "rs1414968044"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152118,
+            "af": 6.57384398953444e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616980-AATAATGCAAGCTTACTATCAT-A",
+          "rsids": [
+            "rs1809395657"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152248,
+            "af": 1.3136461562713467e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616980-AAT-A",
+          "rsids": [
+            "rs1398863395"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152248,
+            "af": 6.568230781356734e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616986-G-A",
+          "rsids": [
+            "rs989563219"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 4,
+            "an": 152068,
+            "af": 2.6304021884946208e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616992-T-G",
+          "rsids": [
+            "rs916572979"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 3,
+            "an": 152186,
+            "af": 1.9712719961100232e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616995-C-T",
+          "rsids": [
+            "rs1303163410"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 3,
+            "an": 152026,
+            "af": 1.973346664386355e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79616997-A-G",
+          "rsids": [
+            "rs902069445"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152248,
+            "af": 1.3136461562713467e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617001-T-G",
+          "rsids": [
+            "rs377037510"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 164,
+            "an": 152326,
+            "af": 0.0010766382626734767,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617002-T-A",
+          "rsids": [
+            "rs1443515501"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152174,
+            "af": 6.5714248163286764e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617004-A-C",
+          "rsids": [
+            "rs1809396442"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152240,
+            "af": 6.568575932737782e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617011-G-A",
+          "rsids": [
+            "rs1051143210"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 3,
+            "an": 152056,
+            "af": 1.9729573315094438e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617012-C-T",
+          "rsids": [
+            "rs1809396570"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152162,
+            "af": 6.571943060685322e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617016-A-G",
+          "rsids": [
+            "rs1809396635"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152244,
+            "af": 6.5684033525130715e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617026-TTA-T",
+          "rsids": [],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152260,
+            "af": 6.567713122290818e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617027-TAA-T",
+          "rsids": [
+            "rs1331633428"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152208,
+            "af": 6.569956901082729e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617038-A-G",
+          "rsids": [
+            "rs893294869"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 15,
+            "an": 152218,
+            "af": 9.854287929154239e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617042-C-T",
+          "rsids": [
+            "rs1809397212"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152166,
+            "af": 6.571770303484353e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617050-A-G",
+          "rsids": [
+            "rs929912224"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 3,
+            "an": 152244,
+            "af": 1.9705210057539212e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617053-T-G",
+          "rsids": [
+            "rs1336122918"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 4,
+            "an": 152254,
+            "af": 2.627188776649546e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617062-T-C",
+          "rsids": [
+            "rs1448773813"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 3,
+            "an": 152220,
+            "af": 1.970831690973591e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617068-A-G",
+          "rsids": [
+            "rs1046877018"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152222,
+            "af": 1.3138705311978557e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617069-T-C",
+          "rsids": [
+            "rs141059921"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152342,
+            "af": 1.3128355935986136e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617075-A-T",
+          "rsids": [
+            "rs1458651909"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152248,
+            "af": 6.568230781356734e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617076-A-T",
+          "rsids": [
+            "rs1353168759"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152240,
+            "af": 6.568575932737782e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617080-A-G",
+          "rsids": [
+            "rs1809398435"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152364,
+            "af": 6.563230159355229e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617081-T-C",
+          "rsids": [
+            "rs1223359890"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152254,
+            "af": 6.567971941623865e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617084-TAA-T",
+          "rsids": [
+            "rs1163830996"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 5,
+            "an": 152256,
+            "af": 3.283942833123161e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617088-A-C",
+          "rsids": [
+            "rs1005295237"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152178,
+            "af": 6.571252086372537e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617098-C-T",
+          "rsids": [
+            "rs1809398828"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 151944,
+            "af": 6.581372084452167e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617099-C-T",
+          "rsids": [
+            "rs553175385"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 11,
+            "an": 152060,
+            "af": 7.233986584243062e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617109-T-C",
+          "rsids": [
+            "rs1039440296"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 3,
+            "an": 150908,
+            "af": 1.9879661780687572e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617110-G-A",
+          "rsids": [
+            "rs779935253"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 7,
+            "an": 150530,
+            "af": 4.650235833388693e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617122-T-C",
+          "rsids": [
+            "rs1247997276"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 145826,
+            "af": 6.857487690809595e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617123-T-G",
+          "rsids": [
+            "rs1809399307"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 145182,
+            "af": 6.887906214268987e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617128-A-G",
+          "rsids": [
+            "rs1466574829"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 144946,
+            "af": 6.899121051977978e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617133-TTGAG-T",
+          "rsids": [
+            "rs60546980"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 26756,
+            "an": 152068,
+            "af": 0.17594760238840518,
+            "homozygote_count": 3123
+          }
+        },
+        {
+          "variant_id": "8-79617141-G-T",
+          "rsids": [
+            "rs536319284"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 12,
+            "an": 152238,
+            "af": 7.882394671501202e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617143-CTG-C",
+          "rsids": [
+            "rs1292230848"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 3,
+            "an": 152098,
+            "af": 1.9724125235045827e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617144-T-C",
+          "rsids": [
+            "rs1809400001"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152238,
+            "af": 6.5686622262510016e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617147-A-G",
+          "rsids": [
+            "rs1228993526"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152212,
+            "af": 6.569784248285286e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617154-A-G",
+          "rsids": [
+            "rs1809400215"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152190,
+            "af": 6.570733950982325e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617161-T-G",
+          "rsids": [
+            "rs867856527"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152200,
+            "af": 1.314060446780552e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617168-T-G",
+          "rsids": [
+            "rs1809400666"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152244,
+            "af": 6.5684033525130715e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617173-C-T",
+          "rsids": [
+            "rs954968073"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152038,
+            "af": 6.577303042660388e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617176-A-G",
+          "rsids": [
+            "rs1365743292"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152188,
+            "af": 6.570820301206403e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617177-T-C",
+          "rsids": [
+            "rs2130296714"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152330,
+            "af": 6.5646950699140026e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617180-A-G",
+          "rsids": [
+            "rs1000210618"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 4,
+            "an": 152184,
+            "af": 2.6283972033853757e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617183-C-A",
+          "rsids": [
+            "rs1809401281"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 0,
+            "an": 152180,
+            "af": 0,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617183-C-T",
+          "rsids": [
+            "rs1809401281"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152066,
+            "af": 6.576091960069969e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617186-A-G",
+          "rsids": [
+            "rs1809401363"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152184,
+            "af": 1.3141986016926878e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617191-G-A",
+          "rsids": [
+            "rs1031166253"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 151970,
+            "af": 1.316049220240837e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617192-G-A",
+          "rsids": [
+            "rs1809401512"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152006,
+            "af": 1.3157375366761838e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617207-A-G",
+          "rsids": [
+            "rs1441919132"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 2,
+            "an": 152158,
+            "af": 1.3144231653938668e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617219-TA-T",
+          "rsids": [
+            "rs1177100552"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 3,
+            "an": 152194,
+            "af": 1.9711683772027807e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617226-G-A",
+          "rsids": [
+            "rs1035670454"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152158,
+            "af": 6.572115826969334e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617233-T-G",
+          "rsids": [
+            "rs1418676937"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152198,
+            "af": 6.570388572780194e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617242-G-A",
+          "rsids": [
+            "rs1164893219"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152184,
+            "af": 6.570993008463439e-06,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617243-A-G",
+          "rsids": [
+            "rs958722614"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 20,
+            "an": 152368,
+            "af": 0.00013126115719836186,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617248-G-A",
+          "rsids": [
+            "rs554624788"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 11,
+            "an": 152286,
+            "af": 7.223250988272068e-05,
+            "homozygote_count": 0
+          }
+        },
+        {
+          "variant_id": "8-79617249-G-A",
+          "rsids": [
+            "rs1809404833"
+          ],
+          "consequence": "intron_variant",
+          "exome": null,
+          "genome": {
+            "ac": 1,
+            "an": 152154,
+            "af": 6.572288602337106e-06,
+            "homozygote_count": 0
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,1666 @@
+{
+  "analysis_run_id": "RUN-B1-005",
+  "alphagenome": {
+    "locus_avi_scans": {
+      "UNC13A_rs12608932_site": [
+        {
+          "variant": "chr19:17641880:A>G",
+          "avi_raw": -0.2388506531715393,
+          "avi_phred": 0.026068630112776207,
+          "avi_top_percent": 99.40154552459717,
+          "avi_cdf_quantile": 0.00598454475402832,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": -0.2195909172296524,
+          "fi_MERGED_SPLICING": 0.009309668093919754,
+          "fi_MAX_ABS_RNA_SEQ": 0.0015526333590969443,
+          "fi_MAX_ABS_POLYADENYLATION": 0.0029185349121689796,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr19:17641880:A%3EG&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr19:17641880:A>C",
+          "avi_raw": -0.2428564429283142,
+          "avi_phred": 0.024635785329042963,
+          "avi_top_percent": 99.43434596061707,
+          "avi_cdf_quantile": 0.005656540393829346,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": -0.21956196427345276,
+          "fi_MERGED_SPLICING": 0.00951807014644146,
+          "fi_MAX_ABS_RNA_SEQ": 0.000921945262234658,
+          "fi_MAX_ABS_POLYADENYLATION": 0.0027842577546834946,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr19:17641880:A%3EC&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr19:17641880:A>T",
+          "avi_raw": -0.24529188871383667,
+          "avi_phred": 0.023806706212497458,
+          "avi_top_percent": 99.45333003997803,
+          "avi_cdf_quantile": 0.0054666996002197266,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": -0.21947678923606873,
+          "fi_MERGED_SPLICING": 0.009723339229822159,
+          "fi_MAX_ABS_RNA_SEQ": 0.0011645924532786012,
+          "fi_MAX_ABS_POLYADENYLATION": 0.0041181668639183044,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr19:17641880:A%3ET&m=variant&lItems=avi"
+        }
+      ],
+      "UNC13A_rs12973192_site": [
+        {
+          "variant": "chr19:17642430:C>G",
+          "avi_raw": 0.12153089791536331,
+          "avi_phred": 8.902142738192891,
+          "avi_top_percent": 12.876141071319584,
+          "avi_cdf_quantile": 0.8712385892868042,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": 0.14201077818870544,
+          "fi_MERGED_SPLICING": 0.013248447328805923,
+          "fi_MAX_ABS_RNA_SEQ": 0.0012462380109354854,
+          "fi_MAX_ABS_POLYADENYLATION": 0.003894403576850891,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr19:17642430:C%3EG&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr19:17642430:C>T",
+          "avi_raw": 0.11740154772996902,
+          "avi_phred": 8.763250672957714,
+          "avi_top_percent": 13.294589519500729,
+          "avi_cdf_quantile": 0.8670541048049927,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": 0.14202426373958588,
+          "fi_MERGED_SPLICING": 0.010337275452911854,
+          "fi_MAX_ABS_RNA_SEQ": 0.0013245263835415244,
+          "fi_MAX_ABS_POLYADENYLATION": 0.003340471303090453,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr19:17642430:C%3ET&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr19:17642430:C>A",
+          "avi_raw": 0.1169881820678711,
+          "avi_phred": 8.749339489766042,
+          "avi_top_percent": 13.337242603302002,
+          "avi_cdf_quantile": 0.86662757396698,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": 0.14202900230884552,
+          "fi_MERGED_SPLICING": 0.010218577459454536,
+          "fi_MAX_ABS_RNA_SEQ": 0.002226339653134346,
+          "fi_MAX_ABS_POLYADENYLATION": 0.002961455611512065,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr19:17642430:C%3EA&m=variant&lItems=avi"
+        }
+      ],
+      "STMN2_exon2a_acceptor_dinuc": [
+        {
+          "variant": "chr8:79616821:G>T",
+          "avi_raw": 0.884087860584259,
+          "avi_phred": 23.574410165076266,
+          "avi_top_percent": 0.43909549713134766,
+          "avi_cdf_quantile": 0.9956090450286865,
+          "top_feature_key": "MERGED_SPLICING",
+          "top_feature": "Splicing",
+          "top_feature_value": 0.42375338077545166,
+          "fi_MERGED_SPLICING": 0.42375338077545166,
+          "fi_MAX_ABS_RNA_SEQ": 0.0318145789206028,
+          "fi_MAX_ABS_POLYADENYLATION": 0.009033395908772945,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79616821:G%3ET&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr8:79616821:G>C",
+          "avi_raw": 0.8379588723182678,
+          "avi_phred": 23.24041497903594,
+          "avi_top_percent": 0.47419667243957536,
+          "avi_cdf_quantile": 0.9952580332756042,
+          "top_feature_key": "MERGED_SPLICING",
+          "top_feature": "Splicing",
+          "top_feature_value": 0.39831992983818054,
+          "fi_MERGED_SPLICING": 0.39831992983818054,
+          "fi_MAX_ABS_RNA_SEQ": 0.029867297038435936,
+          "fi_MAX_ABS_POLYADENYLATION": 0.008208531886339188,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79616821:G%3EC&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr8:79616821:G>A",
+          "avi_raw": 0.8241226673126221,
+          "avi_phred": 23.13248003708607,
+          "avi_top_percent": 0.4861295223236085,
+          "avi_cdf_quantile": 0.9951387047767639,
+          "top_feature_key": "MERGED_SPLICING",
+          "top_feature": "Splicing",
+          "top_feature_value": 0.3972509503364563,
+          "fi_MERGED_SPLICING": 0.3972509503364563,
+          "fi_MAX_ABS_RNA_SEQ": 0.029860394075512886,
+          "fi_MAX_ABS_POLYADENYLATION": 0.007156283129006624,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79616821:G%3EA&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr8:79616820:A>G",
+          "avi_raw": 0.8178502917289734,
+          "avi_phred": 23.081606766344347,
+          "avi_top_percent": 0.49185752868652344,
+          "avi_cdf_quantile": 0.9950814247131348,
+          "top_feature_key": "MERGED_SPLICING",
+          "top_feature": "Splicing",
+          "top_feature_value": 0.3969978392124176,
+          "fi_MERGED_SPLICING": 0.3969978392124176,
+          "fi_MAX_ABS_RNA_SEQ": 0.03051307238638401,
+          "fi_MAX_ABS_POLYADENYLATION": 0.008372137323021889,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79616820:A%3EG&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr8:79616820:A>T",
+          "avi_raw": 0.8086679577827454,
+          "avi_phred": 23.006216036174422,
+          "avi_top_percent": 0.5004703998565676,
+          "avi_cdf_quantile": 0.9949952960014343,
+          "top_feature_key": "MERGED_SPLICING",
+          "top_feature": "Splicing",
+          "top_feature_value": 0.3947114944458008,
+          "fi_MERGED_SPLICING": 0.3947114944458008,
+          "fi_MAX_ABS_RNA_SEQ": 0.030428096652030945,
+          "fi_MAX_ABS_POLYADENYLATION": 0.007398896850645542,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79616820:A%3ET&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr8:79616820:A>C",
+          "avi_raw": 0.7862796187400818,
+          "avi_phred": 22.814183327361732,
+          "avi_top_percent": 0.5230963230133054,
+          "avi_cdf_quantile": 0.9947690367698669,
+          "top_feature_key": "MERGED_SPLICING",
+          "top_feature": "Splicing",
+          "top_feature_value": 0.3723224997520447,
+          "fi_MERGED_SPLICING": 0.3723224997520447,
+          "fi_MAX_ABS_RNA_SEQ": 0.029356397688388824,
+          "fi_MAX_ABS_POLYADENYLATION": 0.007093010004609823,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79616820:A%3EC&m=variant&lItems=avi"
+        }
+      ],
+      "STMN2_cryptic_PAS_site": [
+        {
+          "variant": "chr8:79617047:T>C",
+          "avi_raw": 0.11308328062295914,
+          "avi_phred": 8.61738570734493,
+          "avi_top_percent": 13.74869346618652,
+          "avi_cdf_quantile": 0.8625130653381348,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": 0.11698770523071289,
+          "fi_MERGED_SPLICING": 0.02556147612631321,
+          "fi_MAX_ABS_RNA_SEQ": 0.0036365666892379522,
+          "fi_MAX_ABS_POLYADENYLATION": 0.002584281377494335,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79617047:T%3EC&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr8:79617047:T>G",
+          "avi_raw": 0.11101320385932922,
+          "avi_phred": 8.547044853210469,
+          "avi_top_percent": 13.973188400268551,
+          "avi_cdf_quantile": 0.8602681159973145,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": 0.11715421825647354,
+          "fi_MERGED_SPLICING": 0.010341827757656574,
+          "fi_MAX_ABS_RNA_SEQ": 0.0016269530169665813,
+          "fi_MAX_ABS_POLYADENYLATION": 0.0031681933905929327,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79617047:T%3EG&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr8:79617047:T>A",
+          "avi_raw": 0.10026203840970993,
+          "avi_phred": 8.174364310205362,
+          "avi_top_percent": 15.225219726562504,
+          "avi_cdf_quantile": 0.847747802734375,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": 0.11692739278078079,
+          "fi_MERGED_SPLICING": 0.01567944325506687,
+          "fi_MAX_ABS_RNA_SEQ": 0.001936362823471427,
+          "fi_MAX_ABS_POLYADENYLATION": 0.003719099797308445,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79617047:T%3EA&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr8:79617048:C>T",
+          "avi_raw": 0.007493430282920599,
+          "avi_phred": 3.4558466207401706,
+          "avi_top_percent": 45.124804973602295,
+          "avi_cdf_quantile": 0.548751950263977,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": 0.01888306997716427,
+          "fi_MERGED_SPLICING": 0.012742770835757256,
+          "fi_MAX_ABS_RNA_SEQ": 0.003148917807266116,
+          "fi_MAX_ABS_POLYADENYLATION": 0.003118397668004036,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79617048:C%3ET&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr8:79617048:C>A",
+          "avi_raw": 0.00023120921105146408,
+          "avi_phred": 2.965136279628875,
+          "avi_top_percent": 50.52267909049988,
+          "avi_cdf_quantile": 0.4947732090950012,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": 0.018884414806962013,
+          "fi_MERGED_SPLICING": 0.008532891049981117,
+          "fi_MAX_ABS_RNA_SEQ": 0.0026022654492408037,
+          "fi_MAX_ABS_POLYADENYLATION": 0.0035915712360292673,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79617048:C%3EA&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr8:79617048:C>G",
+          "avi_raw": -0.004162751603871584,
+          "avi_phred": 2.68480994407549,
+          "avi_top_percent": 53.891342878341675,
+          "avi_cdf_quantile": 0.46108657121658325,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": 0.01888519711792469,
+          "fi_MERGED_SPLICING": 0.011629295535385609,
+          "fi_MAX_ABS_RNA_SEQ": 0.000951455207541585,
+          "fi_MAX_ABS_POLYADENYLATION": 0.003327201586216688,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79617048:C%3EG&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr8:79617049:A>G",
+          "avi_raw": -0.006451314780861139,
+          "avi_phred": 2.5455402895513797,
+          "avi_top_percent": 55.64754009246826,
+          "avi_cdf_quantile": 0.4435245990753174,
+          "top_feature_key": "MERGED_SPLICING",
+          "top_feature": "Splicing",
+          "top_feature_value": 0.0171336866915226,
+          "fi_MERGED_SPLICING": 0.0171336866915226,
+          "fi_MAX_ABS_RNA_SEQ": 0.0009635031456127763,
+          "fi_MAX_ABS_POLYADENYLATION": 0.003113209269940853,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79617049:A%3EG&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr8:79617049:A>C",
+          "avi_raw": -0.013800757937133312,
+          "avi_phred": 2.1306632271435535,
+          "avi_top_percent": 61.225688457489014,
+          "avi_cdf_quantile": 0.38774311542510986,
+          "top_feature_key": "MERGED_SPLICING",
+          "top_feature": "Splicing",
+          "top_feature_value": 0.009907938539981842,
+          "fi_MERGED_SPLICING": 0.009907938539981842,
+          "fi_MAX_ABS_RNA_SEQ": 0.0012916593113914132,
+          "fi_MAX_ABS_POLYADENYLATION": 0.003650362603366375,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79617049:A%3EC&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr8:79617049:A>T",
+          "avi_raw": -0.017842259258031845,
+          "avi_phred": 1.925594809974245,
+          "avi_top_percent": 64.186030626297,
+          "avi_cdf_quantile": 0.35813969373703003,
+          "top_feature_key": "MERGED_SPLICING",
+          "top_feature": "Splicing",
+          "top_feature_value": 0.010415884666144848,
+          "fi_MERGED_SPLICING": 0.010415884666144848,
+          "fi_MAX_ABS_RNA_SEQ": 0.0010210543405264616,
+          "fi_MAX_ABS_POLYADENYLATION": 0.0036651205737143755,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79617049:A%3ET&m=variant&lItems=avi"
+        }
+      ],
+      "KCNQ2_exon5_5ss_minus_dinuc": [
+        {
+          "variant": "chr20:63442405:C>G",
+          "avi_raw": 1.8652223348617554,
+          "avi_phred": 33.69928201881563,
+          "avi_top_percent": 0.042665004730224644,
+          "avi_cdf_quantile": 0.9995733499526978,
+          "top_feature_key": "MERGED_SPLICING",
+          "top_feature": "Splicing",
+          "top_feature_value": 0.991671621799469,
+          "fi_MERGED_SPLICING": 0.991671621799469,
+          "fi_MAX_ABS_RNA_SEQ": 0.02761860378086567,
+          "fi_MAX_ABS_POLYADENYLATION": 0.004000452347099781,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr20:63442405:C%3EG&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr20:63442405:C>T",
+          "avi_raw": 1.8345537185668945,
+          "avi_phred": 33.42480047916725,
+          "avi_top_percent": 0.04544854164123534,
+          "avi_cdf_quantile": 0.9995455145835876,
+          "top_feature_key": "MERGED_SPLICING",
+          "top_feature": "Splicing",
+          "top_feature_value": 0.9611971378326416,
+          "fi_MERGED_SPLICING": 0.9611971378326416,
+          "fi_MAX_ABS_RNA_SEQ": 0.027483243495225906,
+          "fi_MAX_ABS_POLYADENYLATION": 0.004295181483030319,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr20:63442405:C%3ET&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr20:63442405:C>A",
+          "avi_raw": 1.8300766944885254,
+          "avi_phred": 33.385112717680514,
+          "avi_top_percent": 0.045865774154663086,
+          "avi_cdf_quantile": 0.9995413422584534,
+          "top_feature_key": "MERGED_SPLICING",
+          "top_feature": "Splicing",
+          "top_feature_value": 0.9495604634284973,
+          "fi_MERGED_SPLICING": 0.9495604634284973,
+          "fi_MAX_ABS_RNA_SEQ": 0.028194498270750046,
+          "fi_MAX_ABS_POLYADENYLATION": 0.004563889931887388,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr20:63442405:C%3EA&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr20:63442406:C>T",
+          "avi_raw": 1.2462199926376343,
+          "avi_phred": 25.809021707362856,
+          "avi_top_percent": 0.2624809741973877,
+          "avi_cdf_quantile": 0.9973751902580261,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": 0.5254345536231995,
+          "fi_MERGED_SPLICING": 0.4847484230995178,
+          "fi_MAX_ABS_RNA_SEQ": 0.01828186586499214,
+          "fi_MAX_ABS_POLYADENYLATION": 0.00306860264390707,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr20:63442406:C%3ET&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr20:63442406:C>G",
+          "avi_raw": 1.217581868171692,
+          "avi_phred": 25.616694861129528,
+          "avi_top_percent": 0.2743661403656006,
+          "avi_cdf_quantile": 0.997256338596344,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": 0.5265491008758545,
+          "fi_MERGED_SPLICING": 0.4905150234699249,
+          "fi_MAX_ABS_RNA_SEQ": 0.012099921703338623,
+          "fi_MAX_ABS_POLYADENYLATION": 0.0025234061758965254,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr20:63442406:C%3EG&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr20:63442406:C>A",
+          "avi_raw": 1.1032915115356445,
+          "avi_phred": 24.905764027018513,
+          "avi_top_percent": 0.3231644630432129,
+          "avi_cdf_quantile": 0.9967683553695679,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": 0.5233246684074402,
+          "fi_MERGED_SPLICING": 0.3841209411621094,
+          "fi_MAX_ABS_RNA_SEQ": 0.015094250440597534,
+          "fi_MAX_ABS_POLYADENYLATION": 0.0022546695545315742,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr20:63442406:C%3EA&m=variant&lItems=avi"
+        }
+      ],
+      "KCNQ2_exon5_3ss_minus_dinuc": [
+        {
+          "variant": "chr20:63442531:C>A",
+          "avi_raw": 3.132131338119507,
+          "avi_phred": 54.76531868929349,
+          "avi_top_percent": 0.00033378601074218734,
+          "avi_cdf_quantile": 0.9999966621398926,
+          "top_feature_key": "PROTEIN_TERMINATION",
+          "top_feature": "Protein termination",
+          "top_feature_value": 1.5361719131469727,
+          "fi_MERGED_SPLICING": 0.7879431843757629,
+          "fi_MAX_ABS_RNA_SEQ": 0.011037826538085938,
+          "fi_MAX_ABS_POLYADENYLATION": 0.0023323812056332827,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr20:63442531:C%3EA&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr20:63442531:C>G",
+          "avi_raw": 2.533106565475464,
+          "avi_phred": 44.97178638906992,
+          "avi_top_percent": 0.0031828880310058607,
+          "avi_cdf_quantile": 0.9999681711196899,
+          "top_feature_key": "ALPHAMISSENSE",
+          "top_feature": "AlphaMissense",
+          "top_feature_value": 0.8889691829681396,
+          "fi_MERGED_SPLICING": 0.8822882771492004,
+          "fi_MAX_ABS_RNA_SEQ": 0.004815899301320314,
+          "fi_MAX_ABS_POLYADENYLATION": 0.002137316158041358,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr20:63442531:C%3EG&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr20:63442531:C>T",
+          "avi_raw": 2.0704965591430664,
+          "avi_phred": 35.40682858449029,
+          "avi_top_percent": 0.0287950038909912,
+          "avi_cdf_quantile": 0.9997120499610901,
+          "top_feature_key": "ALPHAMISSENSE",
+          "top_feature": "AlphaMissense",
+          "top_feature_value": 0.8579681515693665,
+          "fi_MERGED_SPLICING": 0.433986097574234,
+          "fi_MAX_ABS_RNA_SEQ": 0.009181543253362179,
+          "fi_MAX_ABS_POLYADENYLATION": 0.002227391581982374,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr20:63442531:C%3ET&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr20:63442532:C>G",
+          "avi_raw": 1.6862322092056274,
+          "avi_phred": 31.976150300561976,
+          "avi_top_percent": 0.0634431838989258,
+          "avi_cdf_quantile": 0.9993655681610107,
+          "top_feature_key": "MERGED_SPLICING",
+          "top_feature": "Splicing",
+          "top_feature_value": 0.9078038930892944,
+          "fi_MERGED_SPLICING": 0.9078038930892944,
+          "fi_MAX_ABS_RNA_SEQ": 0.020207606256008148,
+          "fi_MAX_ABS_POLYADENYLATION": 0.0021737294737249613,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr20:63442532:C%3EG&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr20:63442532:C>A",
+          "avi_raw": 1.6752796173095703,
+          "avi_phred": 31.85186808266159,
+          "avi_top_percent": 0.06528496742248537,
+          "avi_cdf_quantile": 0.9993471503257751,
+          "top_feature_key": "MERGED_SPLICING",
+          "top_feature": "Splicing",
+          "top_feature_value": 0.8836628794670105,
+          "fi_MERGED_SPLICING": 0.8836628794670105,
+          "fi_MAX_ABS_RNA_SEQ": 0.022040875628590584,
+          "fi_MAX_ABS_POLYADENYLATION": 0.002315861638635397,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr20:63442532:C%3EA&m=variant&lItems=avi"
+        },
+        {
+          "variant": "chr20:63442532:C>T",
+          "avi_raw": 1.5692888498306274,
+          "avi_phred": 30.01172040026956,
+          "avi_top_percent": 0.09973049163818362,
+          "avi_cdf_quantile": 0.9990026950836182,
+          "top_feature_key": "MERGED_SPLICING",
+          "top_feature": "Splicing",
+          "top_feature_value": 0.8136029839515686,
+          "fi_MERGED_SPLICING": 0.8136029839515686,
+          "fi_MAX_ABS_RNA_SEQ": 0.017788197845220566,
+          "fi_MAX_ABS_POLYADENYLATION": 0.0026817291509360075,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr20:63442532:C%3ET&m=variant&lItems=avi"
+        }
+      ]
+    },
+    "unc13a_risk_snv_track_dissection": {
+      "rs12608932": {
+        "avi_summary": {
+          "variant": "chr19:17641880:A>C",
+          "avi_raw": -0.2428564429283142,
+          "avi_phred": 0.024635785329042963,
+          "avi_top_percent": 99.43434596061707,
+          "avi_cdf_quantile": 0.005656540393829346,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": -0.21956196427345276,
+          "fi_MERGED_SPLICING": 0.00951807014644146,
+          "fi_MAX_ABS_RNA_SEQ": 0.000921945262234658,
+          "fi_MAX_ABS_POLYADENYLATION": 0.0027842577546834946,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr19:17641880:A%3EC&m=variant&lItems=avi"
+        },
+        "track_scorers": {
+          "POLYADENYLATION": {
+            "n_rows": 371,
+            "max_abs_track": {
+              "biosample": "immature natural killer cell",
+              "ontology_curie": "CL:0000823",
+              "gene_name": "UNC13A",
+              "raw_score": 0.028064891695976257,
+              "quantile_score": 0.9866509437561035
+            },
+            "max_abs_cns_track": {
+              "biosample": "right renal cortex interstitium",
+              "ontology_curie": "UBERON:0018118",
+              "gene_name": "UNC13A",
+              "raw_score": 0.006650865077972412,
+              "quantile_score": 0.8973734378814697
+            }
+          },
+          "RNA_SEQ": {
+            "n_rows": 24115,
+            "max_abs_track": {
+              "biosample": "luminal epithelial cell of mammary gland",
+              "ontology_curie": "CL:0002326",
+              "gene_name": "ENSG00000268623",
+              "raw_score": -0.009631633758544922,
+              "quantile_score": -0.996803879737854
+            },
+            "max_abs_cns_track": {
+              "biosample": "neuronal stem cell",
+              "ontology_curie": "CL:0000047",
+              "gene_name": "INSL3",
+              "raw_score": -0.008456230163574219,
+              "quantile_score": -0.9955178499221802
+            }
+          },
+          "SPLICE_JUNCTIONS": {
+            "n_rows": 11744,
+            "max_abs_track": {
+              "biosample": "dorsolateral prefrontal cortex",
+              "ontology_curie": "UBERON:0009834",
+              "gene_name": "UNC13A",
+              "raw_score": 0.033355712890625,
+              "quantile_score": 0.9197844862937927
+            },
+            "max_abs_cns_track": {
+              "biosample": "dorsolateral prefrontal cortex",
+              "ontology_curie": "UBERON:0009834",
+              "gene_name": "UNC13A",
+              "raw_score": 0.033355712890625,
+              "quantile_score": 0.9197844862937927
+            }
+          },
+          "SPLICE_SITES": {
+            "n_rows": 2,
+            "max_abs_track": {
+              "biosample": "nan",
+              "ontology_curie": "nan",
+              "gene_name": "UNC13A",
+              "raw_score": 0.009765625,
+              "quantile_score": 0.6927784085273743
+            },
+            "max_abs_cns_track": null
+          },
+          "SPLICE_SITE_USAGE": {
+            "n_rows": 367,
+            "max_abs_track": {
+              "biosample": "fibroblast of lung",
+              "ontology_curie": "CL:0002553",
+              "gene_name": "UNC13A",
+              "raw_score": 0.015625,
+              "quantile_score": 0.9883230328559875
+            },
+            "max_abs_cns_track": {
+              "biosample": "neuronal stem cell",
+              "ontology_curie": "CL:0000047",
+              "gene_name": "UNC13A",
+              "raw_score": 0.0078125,
+              "quantile_score": 0.6632066965103149
+            }
+          }
+        }
+      },
+      "rs12973192": {
+        "avi_summary": {
+          "variant": "chr19:17642430:C>G",
+          "avi_raw": 0.12153089791536331,
+          "avi_phred": 8.902142738192891,
+          "avi_top_percent": 12.876141071319584,
+          "avi_cdf_quantile": 0.8712385892868042,
+          "top_feature_key": "CACTUS_241_WAY",
+          "top_feature": "Zoonomia Cactus 241-way",
+          "top_feature_value": 0.14201077818870544,
+          "fi_MERGED_SPLICING": 0.013248447328805923,
+          "fi_MAX_ABS_RNA_SEQ": 0.0012462380109354854,
+          "fi_MAX_ABS_POLYADENYLATION": 0.003894403576850891,
+          "atlas_url": "https://deepmind.google.com/science/alphagenome/atlas?q=chr19:17642430:C%3EG&m=variant&lItems=avi"
+        },
+        "track_scorers": {
+          "POLYADENYLATION": {
+            "n_rows": 371,
+            "max_abs_track": {
+              "biosample": "immature natural killer cell",
+              "ontology_curie": "CL:0000823",
+              "gene_name": "UNC13A",
+              "raw_score": 0.03469851240515709,
+              "quantile_score": 0.9901247620582581
+            },
+            "max_abs_cns_track": {
+              "biosample": "renal cortex interstitium",
+              "ontology_curie": "UBERON:0005270",
+              "gene_name": "UNC13A",
+              "raw_score": 0.005366356577724218,
+              "quantile_score": 0.8576229810714722
+            }
+          },
+          "RNA_SEQ": {
+            "n_rows": 24115,
+            "max_abs_track": {
+              "biosample": "peripheral blood mononuclear cell",
+              "ontology_curie": "CL:2000001",
+              "gene_name": "CCDC194",
+              "raw_score": 0.012705802917480469,
+              "quantile_score": 0.9978704452514648
+            },
+            "max_abs_cns_track": {
+              "biosample": "frontal cortex",
+              "ontology_curie": "UBERON:0001870",
+              "gene_name": "BST2",
+              "raw_score": 0.006453275680541992,
+              "quantile_score": 0.9945102334022522
+            }
+          },
+          "SPLICE_JUNCTIONS": {
+            "n_rows": 3303,
+            "max_abs_track": {
+              "biosample": "dorsolateral prefrontal cortex",
+              "ontology_curie": "UBERON:0009834",
+              "gene_name": "UNC13A",
+              "raw_score": 0.0792236328125,
+              "quantile_score": 0.9887076616287231
+            },
+            "max_abs_cns_track": {
+              "biosample": "dorsolateral prefrontal cortex",
+              "ontology_curie": "UBERON:0009834",
+              "gene_name": "UNC13A",
+              "raw_score": 0.0792236328125,
+              "quantile_score": 0.9887076616287231
+            }
+          },
+          "SPLICE_SITES": {
+            "n_rows": 2,
+            "max_abs_track": {
+              "biosample": "nan",
+              "ontology_curie": "nan",
+              "gene_name": "UNC13A",
+              "raw_score": 0.01708984375,
+              "quantile_score": 0.9433268308639526
+            },
+            "max_abs_cns_track": null
+          },
+          "SPLICE_SITE_USAGE": {
+            "n_rows": 367,
+            "max_abs_track": {
+              "biosample": "psoas muscle",
+              "ontology_curie": "UBERON:0008450",
+              "gene_name": "UNC13A",
+              "raw_score": 0.01171875,
+              "quantile_score": 0.9787212610244751
+            },
+            "max_abs_cns_track": {
+              "biosample": "neuronal stem cell",
+              "ontology_curie": "CL:0000047",
+              "gene_name": "UNC13A",
+              "raw_score": 0.0078125,
+              "quantile_score": 0.9575901627540588
+            }
+          }
+        }
+      }
+    }
+  },
+  "gene_liability_gnomad_depmap_safety_impc": {
+    "UNC13A": {
+      "ensembl_id": "ENSG00000130477",
+      "gnomad_grch38": {
+        "gene_id": "ENSG00000130477",
+        "symbol": "UNC13A",
+        "gnomad_constraint": {
+          "exp_lof": 219.65241277112668,
+          "obs_lof": 61,
+          "oe_lof": 0.2777114953140112,
+          "oe_lof_lower": 0.22599941050828296,
+          "oe_lof_upper": 0.3437008228378368,
+          "pLI": 0.9999999999999984,
+          "lof_z": 9.081199648097881,
+          "exp_mis": 2270.3367015547774,
+          "obs_mis": 1476,
+          "oe_mis": 0.6501238336098791,
+          "mis_z": 7.109960118038343,
+          "exp_syn": 884.6056007843098,
+          "obs_syn": 920,
+          "oe_syn": 1.0400115025094898,
+          "syn_z": -0.7100567313969787
+        }
+      },
+      "depmap_essentiality_summary": {
+        "isEssential_flag": false,
+        "n_screens_total": 1256,
+        "mean_chronos": -0.04268903246961918,
+        "median_chronos": -0.037777673453092575,
+        "min_chronos": -0.4821189045906067,
+        "frac_chronos_lt_neg0_5": 0.0,
+        "frac_chronos_lt_neg1_0": 0.0,
+        "n_cns_screens": 0,
+        "cns_mean_chronos": null
+      },
+      "opentargets_safety_liabilities": {
+        "status": "success",
+        "data": {
+          "target": {
+            "id": "ENSG00000130477",
+            "approvedSymbol": "UNC13A"
+          }
+        }
+      },
+      "impc_mouse_ko": {
+        "status": "success",
+        "data": {
+          "mgi_id": "MGI:3051532",
+          "symbol": "Unc13a",
+          "name": "unc-13 homolog A",
+          "synonyms": [
+            "Munc13-1",
+            "2410078G03Rik"
+          ],
+          "human_ortholog": [
+            "UNC13A"
+          ],
+          "marker_type": "Gene",
+          "phenotype_status": null,
+          "production_status": "Selected for production",
+          "phenotyping_centre": null,
+          "production_centre": null,
+          "has_phenotype_data": false,
+          "mp_terms": [],
+          "mp_ids": [],
+          "top_level_mp_terms": [],
+          "hp_terms": [],
+          "disease_associations": []
+        },
+        "source": "IMPC (International Mouse Phenotyping Consortium)"
+      }
+    },
+    "STMN2": {
+      "ensembl_id": "ENSG00000104435",
+      "gnomad_grch38": {
+        "gene_id": "ENSG00000104435",
+        "symbol": "STMN2",
+        "gnomad_constraint": {
+          "exp_lof": 24.09127660184579,
+          "obs_lof": 2,
+          "oe_lof": 0.0830176014768253,
+          "oe_lof_lower": 0.033941391345832815,
+          "oe_lof_upper": 0.26133084294045367,
+          "pLI": 0.9998654423545086,
+          "lof_z": 3.8181715558900216,
+          "exp_mis": 213.63380752361303,
+          "obs_mis": 114,
+          "oe_mis": 0.5336234059648988,
+          "mis_z": 2.907230105450649,
+          "exp_syn": 77.51363414423832,
+          "obs_syn": 83,
+          "oe_syn": 1.0707793656733031,
+          "syn_z": -0.3718168453714502
+        }
+      },
+      "depmap_essentiality_summary": {
+        "isEssential_flag": false,
+        "n_screens_total": 1237,
+        "mean_chronos": -0.047436155193225714,
+        "median_chronos": -0.04012260586023331,
+        "min_chronos": -0.7034915685653687,
+        "frac_chronos_lt_neg0_5": 0.004850444624090542,
+        "frac_chronos_lt_neg1_0": 0.0,
+        "n_cns_screens": 0,
+        "cns_mean_chronos": null
+      },
+      "opentargets_safety_liabilities": {
+        "status": "success",
+        "data": {
+          "target": {
+            "id": "ENSG00000104435",
+            "approvedSymbol": "STMN2"
+          }
+        }
+      },
+      "impc_mouse_ko": {
+        "status": "success",
+        "data": {
+          "mgi_id": "MGI:98241",
+          "symbol": "Stmn2",
+          "name": "stathmin-like 2",
+          "synonyms": [
+            "SCG10",
+            "Scgn10"
+          ],
+          "human_ortholog": [
+            "STMN2"
+          ],
+          "marker_type": "Gene",
+          "phenotype_status": "Phenotyping data available",
+          "production_status": "Mice Produced",
+          "phenotyping_centre": [
+            "KMPC"
+          ],
+          "production_centre": [
+            "KMPC"
+          ],
+          "has_phenotype_data": true,
+          "mp_terms": [],
+          "mp_ids": [],
+          "top_level_mp_terms": [],
+          "hp_terms": [],
+          "disease_associations": []
+        },
+        "source": "IMPC (International Mouse Phenotyping Consortium)"
+      }
+    },
+    "KCNQ2": {
+      "ensembl_id": "ENSG00000075043",
+      "gnomad_grch38": {
+        "gene_id": "ENSG00000075043",
+        "symbol": "KCNQ2",
+        "gnomad_constraint": {
+          "exp_lof": 84.82597549589931,
+          "obs_lof": 14,
+          "oe_lof": 0.1650437842672,
+          "oe_lof_lower": 0.10900352677257119,
+          "oe_lof_upper": 0.2580163185265008,
+          "pLI": 0.9999999999770498,
+          "lof_z": 6.52368022743186,
+          "exp_mis": 1254.0053817772925,
+          "obs_mis": 788,
+          "oe_mis": 0.6283864578660527,
+          "mis_z": 5.612403703218549,
+          "exp_syn": 554.1307613580187,
+          "obs_syn": 599,
+          "oe_syn": 1.0809722934926396,
+          "syn_z": -1.137302298165983
+        }
+      },
+      "depmap_essentiality_summary": {
+        "isEssential_flag": false,
+        "n_screens_total": 1253,
+        "mean_chronos": 0.04094466864665062,
+        "median_chronos": 0.0413997508585453,
+        "min_chronos": -0.4745744466781616,
+        "frac_chronos_lt_neg0_5": 0.0,
+        "frac_chronos_lt_neg1_0": 0.0,
+        "n_cns_screens": 0,
+        "cns_mean_chronos": null
+      },
+      "opentargets_safety_liabilities": {
+        "status": "success",
+        "data": {
+          "target": {
+            "id": "ENSG00000075043",
+            "approvedSymbol": "KCNQ2"
+          }
+        }
+      },
+      "impc_mouse_ko": {
+        "status": "success",
+        "data": {
+          "mgi_id": "MGI:1309503",
+          "symbol": "Kcnq2",
+          "name": "potassium voltage-gated channel, subfamily Q, member 2",
+          "synonyms": [
+            "Nmf134",
+            "KQT2"
+          ],
+          "human_ortholog": [
+            "KCNQ2"
+          ],
+          "marker_type": "Gene",
+          "phenotype_status": null,
+          "production_status": "Withdrawn",
+          "phenotyping_centre": null,
+          "production_centre": null,
+          "has_phenotype_data": false,
+          "mp_terms": [],
+          "mp_ids": [],
+          "top_level_mp_terms": [],
+          "hp_terms": [],
+          "disease_associations": []
+        },
+        "source": "IMPC (International Mouse Phenotyping Consortium)"
+      }
+    },
+    "CHMP7": {
+      "ensembl_id": "ENSG00000147457",
+      "gnomad_grch38": {
+        "gene_id": "ENSG00000147457",
+        "symbol": "CHMP7",
+        "gnomad_constraint": {
+          "exp_lof": 53.723351007612074,
+          "obs_lof": 15,
+          "oe_lof": 0.2792081975280106,
+          "oe_lof_lower": 0.18680809264582443,
+          "oe_lof_upper": 0.4299271978932698,
+          "pLI": 0.9995696933328534,
+          "lof_z": 4.481835552316282,
+          "exp_mis": 569.4435517810276,
+          "obs_mis": 527,
+          "oe_mis": 0.9254648653966165,
+          "mis_z": 0.7585671827416736,
+          "exp_syn": 228.0161956962338,
+          "obs_syn": 261,
+          "oe_syn": 1.144655532924107,
+          "syn_z": -1.3033205518435382
+        }
+      },
+      "depmap_essentiality_summary": {
+        "isEssential_flag": true,
+        "n_screens_total": 1258,
+        "mean_chronos": -0.6565412173402275,
+        "median_chronos": -0.6396945416927338,
+        "min_chronos": -2.732365846633911,
+        "frac_chronos_lt_neg0_5": 0.6621621621621622,
+        "frac_chronos_lt_neg1_0": 0.15262321144674085,
+        "n_cns_screens": 0,
+        "cns_mean_chronos": null
+      },
+      "opentargets_safety_liabilities": {
+        "status": "success",
+        "data": {
+          "target": {
+            "id": "ENSG00000147457",
+            "approvedSymbol": "CHMP7"
+          }
+        }
+      },
+      "impc_mouse_ko": {
+        "status": "success",
+        "data": {
+          "mgi_id": "MGI:1913922",
+          "symbol": "Chmp7",
+          "name": "charged multivesicular body protein 7",
+          "synonyms": [
+            "CHMP family, member 7",
+            "6330407G04Rik",
+            "4930596K11Rik"
+          ],
+          "human_ortholog": [
+            "CHMP7"
+          ],
+          "marker_type": "Gene",
+          "phenotype_status": "Phenotyping data available",
+          "production_status": "Mice Produced",
+          "phenotyping_centre": [
+            "JAX"
+          ],
+          "production_centre": [
+            "JAX"
+          ],
+          "has_phenotype_data": true,
+          "mp_terms": [],
+          "mp_ids": [],
+          "top_level_mp_terms": [],
+          "hp_terms": [],
+          "disease_associations": []
+        },
+        "source": "IMPC (International Mouse Phenotyping Consortium)"
+      }
+    },
+    "CHMP2B": {
+      "ensembl_id": "ENSG00000083937",
+      "gnomad_grch38": {
+        "gene_id": "ENSG00000083937",
+        "symbol": "CHMP2B",
+        "gnomad_constraint": {
+          "exp_lof": 29.81854435267957,
+          "obs_lof": 22,
+          "oe_lof": 0.7377959078013486,
+          "oe_lof_lower": 0.5271718648444333,
+          "oe_lof_upper": 1.0535326551874777,
+          "pLI": 2.6219977755890756e-06,
+          "lof_z": 1.2146389855300699,
+          "exp_mis": 252.20980228371835,
+          "obs_mis": 261,
+          "oe_mis": 1.0348527203807618,
+          "mis_z": -0.23606159286023742,
+          "exp_syn": 75.79777556940786,
+          "obs_syn": 78,
+          "oe_syn": 1.0290539453704095,
+          "syn_z": -0.1509269140212536
+        }
+      },
+      "depmap_essentiality_summary": {
+        "isEssential_flag": false,
+        "n_screens_total": 1258,
+        "mean_chronos": 0.025853639075544863,
+        "median_chronos": 0.02468998357653618,
+        "min_chronos": -0.5073751211166382,
+        "frac_chronos_lt_neg0_5": 0.000794912559618442,
+        "frac_chronos_lt_neg1_0": 0.0,
+        "n_cns_screens": 0,
+        "cns_mean_chronos": null
+      },
+      "opentargets_safety_liabilities": {
+        "status": "success",
+        "data": {
+          "target": {
+            "id": "ENSG00000083937",
+            "approvedSymbol": "CHMP2B"
+          }
+        }
+      },
+      "impc_mouse_ko": {
+        "status": "success",
+        "data": {
+          "mgi_id": "MGI:1916192",
+          "symbol": "Chmp2b",
+          "name": "charged multivesicular body protein 2B",
+          "synonyms": [
+            "chromatin modifying protein 2B",
+            "1190006E07Rik"
+          ],
+          "human_ortholog": [
+            "CHMP2B"
+          ],
+          "marker_type": "Gene",
+          "phenotype_status": "Phenotyping data available",
+          "production_status": "Mice Produced",
+          "phenotyping_centre": [
+            "UC Davis"
+          ],
+          "production_centre": [
+            "UC Davis"
+          ],
+          "has_phenotype_data": true,
+          "mp_terms": [],
+          "mp_ids": [],
+          "top_level_mp_terms": [],
+          "hp_terms": [],
+          "disease_associations": []
+        },
+        "source": "IMPC (International Mouse Phenotyping Consortium)"
+      }
+    }
+  },
+  "prior_art_trials_and_literature": {
+    "clinicaltrials_gov_v2": {
+      "UNC13A_ALS": {
+        "total_returned": 6,
+        "studies": [
+          {
+            "nctId": "NCT07571200",
+            "briefTitle": "A Master Protocol (OLMP): A Study of LY4256984 in Participants With Amyotrophic Lateral Sclerosis (ALS)",
+            "overallStatus": "RECRUITING",
+            "phases": [
+              "PHASE1"
+            ],
+            "interventions": [
+              "LY4256984"
+            ],
+            "startDate": "2026-05-14"
+          },
+          {
+            "nctId": "NCT06681610",
+            "briefTitle": "Testing Pulse Stimulation to Improve Motor Function in People With ALS: A Pilot Study",
+            "overallStatus": "RECRUITING",
+            "phases": [
+              "NA"
+            ],
+            "interventions": [
+              "Transcranial Pulse Stimulation"
+            ],
+            "startDate": "2024-10-24"
+          },
+          {
+            "nctId": "NCT07571174",
+            "briefTitle": "A Substudy of LY4256984 in Participants With Sporadic Amyotrophic Lateral Sclerosis",
+            "overallStatus": "RECRUITING",
+            "phases": [
+              "PHASE1"
+            ],
+            "interventions": [
+              "LY4256984"
+            ],
+            "startDate": "2026-05-14"
+          },
+          {
+            "nctId": "NCT05193994",
+            "briefTitle": "Triumeq in Amyotrophic Lateral Sclerosis",
+            "overallStatus": "TERMINATED",
+            "phases": [
+              "PHASE3"
+            ],
+            "interventions": [
+              "Dolutegravir, Abacavir and Lamivudine",
+              "Placebo"
+            ],
+            "startDate": "2022-02-24"
+          },
+          {
+            "nctId": "NCT07100119",
+            "briefTitle": "A Study of LY4256984 in Participants With Sporadic Amyotrophic Lateral Sclerosis",
+            "overallStatus": "RECRUITING",
+            "phases": [
+              "PHASE1"
+            ],
+            "interventions": [
+              "LY4256984",
+              "Placebo"
+            ],
+            "startDate": "2025-08-05"
+          },
+          {
+            "nctId": "NCT07674667",
+            "briefTitle": "FUNCtion ALS: Aiming to Restore UNC13A Function in People Living With ALS",
+            "overallStatus": "RECRUITING",
+            "phases": [
+              "PHASE1",
+              "PHASE2"
+            ],
+            "interventions": [
+              "TRCN-1023",
+              "Placebo"
+            ],
+            "startDate": "2026-08-20"
+          }
+        ]
+      },
+      "STMN2_ALS": {
+        "total_returned": 3,
+        "studies": [
+          {
+            "nctId": "NCT07855211",
+            "briefTitle": "A Study to Learn About the Safety of BIIB147 and Its Effects in Adults With Amyotrophic Lateral Sclerosis (ALS)",
+            "overallStatus": "RECRUITING",
+            "phases": [
+              "PHASE1",
+              "PHASE2"
+            ],
+            "interventions": [
+              "BIIB147",
+              "Placebo"
+            ],
+            "startDate": "2026-10-07"
+          },
+          {
+            "nctId": "NCT06681610",
+            "briefTitle": "Testing Pulse Stimulation to Improve Motor Function in People With ALS: A Pilot Study",
+            "overallStatus": "RECRUITING",
+            "phases": [
+              "NA"
+            ],
+            "interventions": [
+              "Transcranial Pulse Stimulation"
+            ],
+            "startDate": "2024-10-24"
+          },
+          {
+            "nctId": "NCT05633459",
+            "briefTitle": "A Study Evaluating the Safety and Tolerability of QRL-201 in ALS",
+            "overallStatus": "ACTIVE_NOT_RECRUITING",
+            "phases": [
+              "PHASE1"
+            ],
+            "interventions": [
+              "Multiple ascending doses of QRL-201",
+              "Multiple ascending doses of Placebo",
+              "QRL-201",
+              "Placebo",
+              "QRL-201"
+            ],
+            "startDate": "2022-12-16"
+          }
+        ]
+      },
+      "KCNQ2_ALS": {
+        "total_returned": 2,
+        "studies": [
+          {
+            "nctId": "NCT06714396",
+            "briefTitle": "A Study Exploring the PK/PD Relationship of QRL-101 in Adults With ALS",
+            "overallStatus": "COMPLETED",
+            "phases": [
+              "PHASE1"
+            ],
+            "interventions": [
+              "QRL-101",
+              "Placebo"
+            ],
+            "startDate": "2024-11-11"
+          },
+          {
+            "nctId": "NCT02450552",
+            "briefTitle": "Clinical Trial of Ezogabine (Retigabine) in ALS Subjects",
+            "overallStatus": "COMPLETED",
+            "phases": [
+              "PHASE2"
+            ],
+            "interventions": [
+              "Ezogabine",
+              "Placebo"
+            ],
+            "startDate": "2015-06"
+          }
+        ]
+      },
+      "CHMP7_ALS": {
+        "total_returned": 0,
+        "studies": []
+      },
+      "CHMP2B_ALS": {
+        "total_returned": 2,
+        "studies": [
+          {
+            "nctId": "NCT06339190",
+            "briefTitle": "Neurofilament Light Chain And Voice Acoustic Analyses In Dementia Diagnosis",
+            "overallStatus": "RECRUITING",
+            "phases": [],
+            "interventions": [
+              "Venepuncture"
+            ],
+            "startDate": "2021-08-01"
+          },
+          {
+            "nctId": "NCT04060082",
+            "briefTitle": "Voices Of Individuals: Challenges and Experiences Of bvFTD",
+            "overallStatus": "COMPLETED",
+            "phases": [],
+            "interventions": [
+              "Telephone Interview"
+            ],
+            "startDate": "2019-06-26"
+          }
+        ]
+      }
+    },
+    "europepmc_literature": {
+      "UNC13A_cryptic_ASO": {
+        "hitCount": 30,
+        "top_hits": [
+          {
+            "pmid": "35197626",
+            "doi": "10.1038/s41586-022-04424-7",
+            "pubYear": "2022",
+            "title": "TDP-43 represses cryptic exon inclusion in the FTD-ALS gene UNC13A.",
+            "journalTitle": "Nature",
+            "citedByCount": 602
+          },
+          {
+            "pmid": "35197628",
+            "doi": "10.1038/s41586-022-04436-3",
+            "pubYear": "2022",
+            "title": "TDP-43 loss and ALS-risk SNPs drive mis-splicing and depletion of UNC13A.",
+            "journalTitle": "Nature",
+            "citedByCount": 569
+          },
+          {
+            "pmid": "38175301",
+            "doi": "10.1007/s00401-023-02655-0",
+            "pubYear": "2024",
+            "title": "Cryptic splicing of stathmin-2 and UNC13A mRNAs is a pathological hallmark of TDP-43-associated Alzheimer's disease.",
+            "journalTitle": "Acta Neuropathol",
+            "citedByCount": 84
+          },
+          {
+            "pmid": "36930682",
+            "doi": "10.1371/journal.pbio.3002028",
+            "pubYear": "2023",
+            "title": "TDP-43 and other hnRNPs regulate cryptic exon inclusion of a key ALS/FTD risk gene, UNC13A.",
+            "journalTitle": "PLoS Biol",
+            "citedByCount": 55
+          },
+          {
+            "pmid": "36737245",
+            "doi": "10.1136/jnnp-2022-330504",
+            "pubYear": "2023",
+            "title": "&lt;i&gt;UNC13A&lt;/i&gt; in amyotrophic lateral sclerosis: from genetic association to therapeutic target.",
+            "journalTitle": "J Neurol Neurosurg Psychiatry",
+            "citedByCount": 53
+          },
+          {
+            "pmid": "36471413",
+            "doi": "10.1186/s13063-022-06906-5",
+            "pubYear": "2022",
+            "title": "Lithium carbonate in amyotrophic lateral sclerosis patients homozygous for the C-allele at SNP rs12608932 in UNC13A: protocol for a confirmatory, randomized, group-sequential, event-driven, double-blind, placebo-controlled trial.",
+            "journalTitle": "Trials",
+            "citedByCount": 19
+          },
+          {
+            "pmid": "40682810",
+            "doi": "10.1093/brain/awaf269",
+            "pubYear": "2025",
+            "title": "Neurodegenerative disease in C9orf72 repeat expansion carriers: population risk and effect of UNC13A.",
+            "journalTitle": "Brain",
+            "citedByCount": 13
+          },
+          {
+            "pmid": "36819716",
+            "doi": "10.3389/fnagi.2023.1067954",
+            "pubYear": "2023",
+            "title": "Association of the risk factor <i>UNC13A</i> with survival and upper motor neuron involvement in amyotrophic lateral sclerosis.",
+            "journalTitle": "Front Aging Neurosci",
+            "citedByCount": 12
+          },
+          {
+            "pmid": "36313067",
+            "doi": "10.1212/nxg.0000000000200033",
+            "pubYear": "2022",
+            "title": "Clinical and Metabolic Signature of <i>UNC13A</i> rs12608932 Variant in Amyotrophic Lateral Sclerosis.",
+            "journalTitle": "Neurol Genet",
+            "citedByCount": 10
+          },
+          {
+            "pmid": "41125872",
+            "doi": "10.1038/s41588-025-02361-5",
+            "pubYear": "2025",
+            "title": "Pathogenic UNC13A variants cause a neurodevelopmental syndrome by impairing synaptic function.",
+            "journalTitle": "Nat Genet",
+            "citedByCount": 9
+          }
+        ]
+      },
+      "STMN2_cryptic_ASO": {
+        "hitCount": 23,
+        "top_hits": [
+          {
+            "pmid": "36927019",
+            "doi": "10.1126/science.abq5622",
+            "pubYear": "2023",
+            "title": "Mechanism of <i>STMN2</i> cryptic splice-polyadenylation and its correction for TDP-43 proteinopathies.",
+            "journalTitle": "Science",
+            "citedByCount": 234
+          },
+          {
+            "pmid": "35294901",
+            "doi": "10.1016/j.neuron.2022.02.011",
+            "pubYear": "2022",
+            "title": "Loss of mouse Stmn2 function causes motor neuropathy.",
+            "journalTitle": "Neuron",
+            "citedByCount": 82
+          },
+          {
+            "pmid": "38941189",
+            "doi": "10.1016/j.celrep.2024.114421",
+            "pubYear": "2024",
+            "title": "Stress-induced TDP-43 nuclear condensation causes splicing loss of function and STMN2 depletion.",
+            "journalTitle": "Cell Rep",
+            "citedByCount": 36
+          },
+          {
+            "pmid": "39725771",
+            "doi": "10.1007/s00018-024-05550-3",
+            "pubYear": "2024",
+            "title": "Targeting STMN2 for neuroprotection and neuromuscular recovery in Spinal Muscular Atrophy: evidence from in vitro and in vivo SMA models.",
+            "journalTitle": "Cell Mol Life Sci",
+            "citedByCount": 9
+          },
+          {
+            "pmid": "40140908",
+            "doi": "10.1186/s40478-025-01977-2",
+            "pubYear": "2025",
+            "title": "C9ORF72 poly-PR disrupts expression of ALS/FTD-implicated STMN2 through SRSF7.",
+            "journalTitle": "Acta Neuropathol Commun",
+            "citedByCount": 5
+          },
+          {
+            "pmid": "39603486",
+            "doi": "10.1016/j.expneurol.2024.115068",
+            "pubYear": "2025",
+            "title": "Two cardinal features of ALS, reduced STMN2 and pathogenic TDP-43, synergize to accelerate motor decline in mice.",
+            "journalTitle": "Exp Neurol",
+            "citedByCount": 5
+          },
+          {
+            "pmid": "35923349",
+            "doi": "10.1212/nxg.0000000000000678",
+            "pubYear": "2022",
+            "title": "Questioning the Association of the <i>STMN2</i> Dinucleotide Repeat With Amyotrophic Lateral Sclerosis.",
+            "journalTitle": "Neurol Genet",
+            "citedByCount": 5
+          },
+          {
+            "pmid": "40775435",
+            "doi": "10.1038/s42003-025-08578-8",
+            "pubYear": "2025",
+            "title": "Machine learning-based proteomics profiling of ALS identifies downregulation of RPS29 that maintains protein homeostasis and STMN2 level.",
+            "journalTitle": "Commun Biol",
+            "citedByCount": 4
+          },
+          {
+            "pmid": "41171096",
+            "doi": "10.1083/jcb.202502192",
+            "pubYear": "2025",
+            "title": "Tubulin regulates stability and localization of STMN2 by binding preferentially to its soluble form.",
+            "journalTitle": "J Cell Biol",
+            "citedByCount": 2
+          },
+          {
+            "pmid": "42343570",
+            "doi": "10.1093/brain/awag222",
+            "pubYear": "2026",
+            "title": "STMN2 protein depletion via translation deficits and stress granules in amyotrophic lateral sclerosis.",
+            "journalTitle": "Brain",
+            "citedByCount": 1
+          }
+        ]
+      },
+      "KCNQ2_TDP43_ALS": {
+        "hitCount": 10,
+        "top_hits": [
+          {
+            "pmid": "41174170",
+            "doi": "10.1038/s41593-025-02096-w",
+            "pubYear": "2025",
+            "title": "TDP-43-dependent mis-splicing of KCNQ2 triggers intrinsic neuronal hyperexcitability in ALS/FTD.",
+            "journalTitle": "Nat Neurosci",
+            "citedByCount": 30
+          },
+          {
+            "pmid": "36976493",
+            "doi": "10.1007/s13311-023-01361-9",
+            "pubYear": "2023",
+            "title": "Acute Treatment with the M-Channel (K&lt;sub&gt;v&lt;/sub&gt;7, KCNQ) Opener Retigabine Reduces the Long-Term Effects of Repetitive Blast Traumatic Brain Injuries.",
+            "journalTitle": "Neurotherapeutics",
+            "citedByCount": 18
+          },
+          {
+            "pmid": "39761077",
+            "doi": "10.7554/elife.91204",
+            "pubYear": "2025",
+            "title": "Plural molecular and cellular mechanisms of pore domain &lt;i&gt;KCNQ2&lt;/i&gt; encephalopathy.",
+            "journalTitle": "Elife",
+            "citedByCount": 10
+          },
+          {
+            "pmid": "35770094",
+            "doi": "10.3389/fphar.2022.872645",
+            "pubYear": "2022",
+            "title": "Functional Characterization of Two Variants at the Intron 6-Exon 7 Boundary of the KCNQ2 Potassium Channel Gene Causing Distinct Epileptic Phenotypes.",
+            "journalTitle": "Front Pharmacol",
+            "citedByCount": 6
+          },
+          {
+            "pmid": "35401395",
+            "doi": "10.3389/fneur.2022.826225",
+            "pubYear": "2022",
+            "title": "KCNQ2-Related Neonatal Epilepsy Treated With Vitamin B6: A Report of Two Cases and Literature Review.",
+            "journalTitle": "Front Neurol",
+            "citedByCount": 5
+          },
+          {
+            "pmid": "36684546",
+            "doi": "10.1055/s-0040-1721384",
+            "pubYear": "2023",
+            "title": "<i>KCNQ2</i> Encephalopathy and Responsiveness to Pyridoxal-5'-Phosphate.",
+            "journalTitle": "J Pediatr Genet",
+            "citedByCount": 3
+          },
+          {
+            "pmid": "35584591",
+            "doi": "10.1016/j.seizure.2022.05.008",
+            "pubYear": "2022",
+            "title": "Neuropathology findings in KCNQ2 neonatal epileptic encephalopathy.",
+            "journalTitle": "Seizure",
+            "citedByCount": 2
+          },
+          {
+            "pmid": "40671688",
+            "doi": "10.1021/acschemneuro.5c00197",
+            "pubYear": "2025",
+            "title": "Novel Dual Mechanism GRT-X Agonist Acting on Kv7 Potassium Channel/Translocator Protein Receptor Prevents Motoneuron Degeneration Following Exposure to Mouse and Human Amyotrophic Lateral Sclerosis/Frontotemporal Dementia Astrocyte-Conditioned Media.",
+            "journalTitle": "ACS Chem Neurosci",
+            "citedByCount": 1
+          },
+          {
+            "pmid": "42261627",
+            "doi": "10.1002/ardp.70276",
+            "pubYear": "2026",
+            "title": "K&lt;sub&gt;v&lt;/sub&gt;7 and K&lt;sub&gt;2P&lt;/sub&gt; Potassium Channels in Thalamocortical Function and Their Therapeutic Potential in Childhood Absence Epilepsy.",
+            "journalTitle": "Arch Pharm (Weinheim)",
+            "citedByCount": 0
+          },
+          {
+            "pmid": "35693682",
+            "doi": "10.4103/aian.aian_335_21",
+            "pubYear": "2022",
+            "title": "<i>KCNQ2</i> Encephalopathy and Effect of Early Treatment on the Clinical Phenotype.",
+            "journalTitle": "Ann Indian Acad Neurol",
+            "citedByCount": 0
+          }
+        ]
+      },
+      "CHMP7_nuclear_pore_ALS": {
+        "hitCount": 11,
+        "top_hits": [
+          {
+            "pmid": "34321318",
+            "doi": "10.1126/scitranslmed.abe1923",
+            "pubYear": "2021",
+            "title": "Nuclear accumulation of CHMP7 initiates nuclear pore complex injury and subsequent TDP-43 dysfunction in sporadic and familial ALS.",
+            "journalTitle": "Sci Transl Med",
+            "citedByCount": 143
+          },
+          {
+            "pmid": "34286694",
+            "doi": "10.7554/elife.59999",
+            "pubYear": "2021",
+            "title": "CDK1 controls CHMP7-dependent nuclear envelope reformation.",
+            "journalTitle": "Elife",
+            "citedByCount": 45
+          },
+          {
+            "pmid": "37639327",
+            "doi": "10.1093/brain/awad291",
+            "pubYear": "2024",
+            "title": "SUN1 facilitates CHMP7 nuclear influx and injury cascades in sporadic amyotrophic lateral sclerosis.",
+            "journalTitle": "Brain",
+            "citedByCount": 40
+          },
+          {
+            "pmid": "35962186",
+            "doi": "10.1038/s41418-022-01048-2",
+            "pubYear": "2023",
+            "title": "Oligomeric CHMP7 mediates three-way ER junctions and ER-mitochondria interactions.",
+            "journalTitle": "Cell Death Differ",
+            "citedByCount": 11
+          },
+          {
+            "pmid": "39709457",
+            "doi": "10.1186/s40478-024-01916-7",
+            "pubYear": "2024",
+            "title": "CHMP2B promotes CHMP7 mediated nuclear pore complex injury in sporadic ALS.",
+            "journalTitle": "Acta Neuropathol Commun",
+            "citedByCount": 9
+          },
+          {
+            "pmid": "39486415",
+            "doi": "10.1016/j.neuron.2024.10.007",
+            "pubYear": "2024",
+            "title": "Inhibition of RNA splicing triggers CHMP7 nuclear entry, impacting TDP-43 function and leading to the onset of ALS cellular phenotypes.",
+            "journalTitle": "Neuron",
+            "citedByCount": 9
+          },
+          {
+            "pmid": "37711849",
+            "doi": "10.3389/fcell.2023.1211843",
+            "pubYear": "2023",
+            "title": "Identification of CHMP7 as a promising immunobiomarker for immunotherapy and chemotherapy and impact on prognosis of colorectal cancer patients.",
+            "journalTitle": "Front Cell Dev Biol",
+            "citedByCount": 5
+          },
+          {
+            "pmid": "41744617",
+            "doi": "10.3390/biology15040308",
+            "pubYear": "2026",
+            "title": "CHMP7/ESCRT-III Is Localized at the Nuclear Envelope of Cortical Neurons and Required for Expression of Activity-Regulated Genes.",
+            "journalTitle": "Biology (Basel)",
+            "citedByCount": 2
+          },
+          {
+            "pmid": "41677621",
+            "doi": "10.3390/cells15030256",
+            "pubYear": "2026",
+            "title": "Reduced CHMP7 Expression Compromises Telomere Integrity in Mammalian Cells.",
+            "journalTitle": "Cells",
+            "citedByCount": 1
+          },
+          {
+            "pmid": null,
+            "doi": "10.64898/2026.07.13.738224",
+            "pubYear": "2026",
+            "title": "VPS4 and CHMP7 release centromeres from the nuclear envelope for post-mitotic positioning in daughter nuclei",
+            "journalTitle": null,
+            "citedByCount": 0
+          }
+        ]
+      },
+      "CHMP2B_ALS_ESCRT": {
+        "hitCount": 28,
+        "top_hits": [
+          {
+            "pmid": "33144171",
+            "doi": "10.1016/j.nbd.2020.105144",
+            "pubYear": "2021",
+            "title": "Lessons learned from CHMP2B, implications for frontotemporal dementia and amyotrophic lateral sclerosis.",
+            "journalTitle": "Neurobiol Dis",
+            "citedByCount": 45
+          },
+          {
+            "pmid": "33832485",
+            "doi": "10.1186/s12915-021-00983-9",
+            "pubYear": "2021",
+            "title": "The ESCRT-III isoforms CHMP2A and CHMP2B display different effects on membranes upon polymerization.",
+            "journalTitle": "BMC Biol",
+            "citedByCount": 34
+          },
+          {
+            "pmid": "35235147",
+            "doi": "10.1007/s12265-021-10184-y",
+            "pubYear": "2022",
+            "title": "SIRT6 Protects Against Myocardial Ischemia-Reperfusion Injury by Attenuating Aging-Related CHMP2B Accumulation.",
+            "journalTitle": "J Cardiovasc Transl Res",
+            "citedByCount": 24
+          },
+          {
+            "pmid": "34726688",
+            "doi": "10.1083/jcb.202103033",
+            "pubYear": "2022",
+            "title": "CHMP2B regulates TDP-43 phosphorylation and cytotoxicity independent of autophagy via CK1.",
+            "journalTitle": "J Cell Biol",
+            "citedByCount": 24
+          },
+          {
+            "pmid": "34281622",
+            "doi": "10.1186/s40478-021-01228-0",
+            "pubYear": "2021",
+            "title": "The ESCRT-III protein VPS4, but not CHMP4B or CHMP2B, is pathologically increased in familial and sporadic ALS neuronal nuclei.",
+            "journalTitle": "Acta Neuropathol Commun",
+            "citedByCount": 22
+          },
+          {
+            "pmid": "34855215",
+            "doi": "10.1111/jnc.15551",
+            "pubYear": "2022",
+            "title": "A novel synaptopathy-defective synaptic vesicle protein trafficking in the mutant CHMP2B mouse model of frontotemporal dementia.",
+            "journalTitle": "J Neurochem",
+            "citedByCount": 11
+          },
+          {
+            "pmid": "39709457",
+            "doi": "10.1186/s40478-024-01916-7",
+            "pubYear": "2024",
+            "title": "CHMP2B promotes CHMP7 mediated nuclear pore complex injury in sporadic ALS.",
+            "journalTitle": "Acta Neuropathol Commun",
+            "citedByCount": 9
+          },
+          {
+            "pmid": "42349418",
+            "doi": "10.1016/j.devcel.2026.05.014",
+            "pubYear": "2026",
+            "title": "The ALS- and FTD-associated proteins annexin A11 and CHMP2B act sequentially in plasma membrane repair.",
+            "journalTitle": "Dev Cell",
+            "citedByCount": 6
+          },
+          {
+            "pmid": "35454086",
+            "doi": "10.3390/biom12040497",
+            "pubYear": "2022",
+            "title": "Alteration of the Neuromuscular Junction and Modifications of Muscle Metabolism in Response to Neuron-Restricted Expression of the CHMP2B<sup>intron5</sup> Mutant in a Mouse Model of ALS-FTD Syndrome.",
+            "journalTitle": "Biomolecules",
+            "citedByCount": 6
+          },
+          {
+            "pmid": "34997757",
+            "doi": "10.1111/ane.13578",
+            "pubYear": "2022",
+            "title": "Six generations of CHMP2B-mediated Frontotemporal Dementia: Clinical features, predictive testing, progression, and survival.",
+            "journalTitle": "Acta Neurol Scand",
+            "citedByCount": 6
+          }
+        ]
+      }
+    }
+  }
+}

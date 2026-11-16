@@ -1,0 +1,1573 @@
+{
+  "canonical_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A26911633%20OR%20EXT_ID%3A26844270%20OR%20EXT_ID%3A19961264&resultType=core&format=json",
+  "europepmc_core_results": {
+    "hitCount": 3,
+    "request": {
+      "cursorMark": "*",
+      "pageSize": 25,
+      "queryString": "EXT_ID:26911633 OR EXT_ID:26844270 OR EXT_ID:19961264",
+      "resultType": "core",
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "abstractText": "<h4>Objective</h4>To determine the safety and tolerability of mexiletine in a phase II double-blind randomized controlled trial of sporadic amyotrophic lateral sclerosis (SALS).<h4>Methods</h4>Sixty participants with SALS from 10 centers were randomized 1:1:1 to placebo, mexiletine 300 mg/d, or mexiletine 900 mg/d and followed for 12 weeks. The primary endpoints were safety and tolerability. Secondary endpoints were pharmacokinetic study from plasma and CSF, ALS Functional Rating Scale-Revised (ALSFRS-R) score, slow vital capacity (SVC), and muscle cramp frequency and severity.<h4>Results</h4>The only serious adverse event among active arm participants was one episode of imbalance. Thirty-two percent of participants receiving 900 mg of mexiletine discontinued study drug vs 5% on placebo (p = 0.026). Pharmacokinetic study demonstrated a peak plasma concentration 2 hours postdose and strong correlation between plasma and CSF (p < 0.001). Rates of decline of ALSFRS-R and SVC did not differ from placebo. Analysis of all randomized patients demonstrated significant reductions of muscle cramp frequency (300 mg: rate = 31% of placebo, p = 0.047; 900 mg: 16% of placebo, p = 0.002) and cramp intensity (300 mg: mean = 45% of placebo, p = 0.08; 900 mg: 25% of placebo, p = 0.005).<h4>Conclusions</h4>Mexiletine was safe at both doses and well-tolerated at 300 mg/d but adverse effects at 900 mg/d led to a high rate of discontinuation. Mexiletine treatment resulted in large dose-dependent reductions in muscle cramp frequency and severity. No effect on rate of progression was detected, but clinically important differences could not be excluded in this small and short-duration study.<h4>Classification of evidence</h4>This study provides Class I evidence that mexiletine is safe when given daily to patients with amyotrophic lateral sclerosis at 300 and 900 mg and well-tolerated at the lower dose.",
+          "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City. mdweiss@uw.edu.",
+          "authMan": "N",
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-6112-2325"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0001-8574-5332"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-7075-1681"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-0618-5854"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-0790-5315"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-1547-7699"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-1618-3502"
+              }
+            ]
+          },
+          "authorList": {
+            "author": [
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City. mdweiss@uw.edu."
+                    }
+                  ]
+                },
+                "firstName": "Michael D",
+                "fullName": "Weiss MD",
+                "initials": "MD",
+                "lastName": "Weiss"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-1618-3502"
+                },
+                "firstName": "Eric A",
+                "fullName": "Macklin EA",
+                "initials": "EA",
+                "lastName": "Macklin"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-8574-5332"
+                },
+                "firstName": "Zachary",
+                "fullName": "Simmons Z",
+                "initials": "Z",
+                "lastName": "Simmons"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "firstName": "Angela S",
+                "fullName": "Knox AS",
+                "initials": "AS",
+                "lastName": "Knox"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "firstName": "David J",
+                "fullName": "Greenblatt DJ",
+                "initials": "DJ",
+                "lastName": "Greenblatt"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "firstName": "Nazem",
+                "fullName": "Atassi N",
+                "initials": "N",
+                "lastName": "Atassi"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "firstName": "Michael",
+                "fullName": "Graves M",
+                "initials": "M",
+                "lastName": "Graves"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "firstName": "Nicholas",
+                "fullName": "Parziale N",
+                "initials": "N",
+                "lastName": "Parziale"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "firstName": "Johnny S",
+                "fullName": "Salameh JS",
+                "initials": "JS",
+                "lastName": "Salameh"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-0618-5854"
+                },
+                "firstName": "Colin",
+                "fullName": "Quinn C",
+                "initials": "C",
+                "lastName": "Quinn"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "firstName": "Robert H",
+                "fullName": "Brown RH Jr",
+                "initials": "RH",
+                "lastName": "Brown"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "firstName": "Jane B",
+                "fullName": "Distad JB",
+                "initials": "JB",
+                "lastName": "Distad"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-6112-2325"
+                },
+                "firstName": "Jaya",
+                "fullName": "Trivedi J",
+                "initials": "J",
+                "lastName": "Trivedi"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "firstName": "Jeremy M",
+                "fullName": "Shefner JM",
+                "initials": "JM",
+                "lastName": "Shefner"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "firstName": "Richard J",
+                "fullName": "Barohn RJ",
+                "initials": "RJ",
+                "lastName": "Barohn"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "firstName": "Alan",
+                "fullName": "Pestronk A",
+                "initials": "A",
+                "lastName": "Pestronk"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-1547-7699"
+                },
+                "firstName": "Andrea",
+                "fullName": "Swenson A",
+                "initials": "A",
+                "lastName": "Swenson"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "From the Department of Neurology (M.D.W., J.B.D.), University of Washington Medical Center, Seattle; Biostatistics Center (E.A.M.), Massachusetts General Hospital and Harvard Medical School, Boston; Department of Neurology (Z.S.), Penn State Hershey Medical Center, Hershey, PA; Department of Neurology (A.S.K., N.A., M.E.C.), Neurological Clinical Research Institute, Massachusetts General Hospital, Boston; Program in Pharmacology and Experimental Therapeutics (D.J.G.), Tufts University School of Medicine, Boston, MA; Department of Neurology (M.G., N.P.), UCLA Medical Center, Los Angeles, CA; Department of Neurology (J.S.S., C.Q., R.H.B.), University of Massachusetts Memorial Medical Center, Worcester; Department of Neurology (J.T.), University of Texas Southwestern Medical Center, Dallas; Department of Neurology (J.M.S.), Barrow Neurological Institute, Phoenix, AZ; Department of Neurology (R.J.B.), University of Kansas Medical Center, Kansas City; Department of Neurology (A.P.), Washington University Medical Center, St. Louis, MO; and Department of Neurology (A.S.), University of Iowa Hospitals and Clinics, Iowa City."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-7075-1681"
+                },
+                "firstName": "Merit E",
+                "fullName": "Cudkowicz ME",
+                "initials": "ME",
+                "lastName": "Cudkowicz"
+              },
+              {
+                "collectiveName": "Mexiletine ALS Study Group"
+              }
+            ]
+          },
+          "authorString": "Weiss MD, Macklin EA, Simmons Z, Knox AS, Greenblatt DJ, Atassi N, Graves M, Parziale N, Salameh JS, Quinn C, Brown RH, Distad JB, Trivedi J, Shefner JM, Barohn RJ, Pestronk A, Swenson A, Cudkowicz ME, Mexiletine ALS Study Group.",
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Voltage-Gated Sodium Channel Blockers",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Mexiletine",
+                "registryNumber": "1U511HHV4Z"
+              }
+            ]
+          },
+          "citedByCount": 64,
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "id": "26911634",
+                "orderIn": 1,
+                "reference": "Neurology. 2016 Apr 19;86(16):1468-9. doi: 10.1212/WNL.0000000000002506",
+                "source": "MED",
+                "type": "Comment in"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "supporting_data"
+            ]
+          },
+          "dateOfCompletion": "2017-04-28",
+          "dateOfCreation": "2016-02-26",
+          "dateOfRevision": "2018-11-13",
+          "doi": "10.1212/wnl.0000000000002507",
+          "electronicPublicationDate": "2016-02-24",
+          "epmcAuthMan": "N",
+          "firstIndexDate": "2016-02-26",
+          "firstPublicationDate": "2016-02-24",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC4836879"
+            ]
+          },
+          "fullTextReceivedDate": "2020-07-12",
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1212/WNL.0000000000002507"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC4836879"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC4836879?pdf=render"
+              },
+              {
+                "availability": "Free",
+                "availabilityCode": "F",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1212/wnl.0000000000002507"
+              }
+            ]
+          },
+          "hasBook": "N",
+          "hasData": "Y",
+          "hasDbCrossReferences": "N",
+          "hasEvaluations": "N",
+          "hasLabsLinks": "Y",
+          "hasPDF": "Y",
+          "hasReferences": "Y",
+          "hasSuppl": "Y",
+          "hasTMAccessionNumbers": "Y",
+          "hasTextMinedTerms": "Y",
+          "id": "26911633",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "investigatorList": {
+            "investigator": [
+              {
+                "firstName": "Hong",
+                "fullName": "Yu H",
+                "initials": "H",
+                "lastName": "Yu"
+              },
+              {
+                "firstName": "Amanda",
+                "fullName": "Nichols A",
+                "initials": "A",
+                "lastName": "Nichols"
+              },
+              {
+                "firstName": "Jason",
+                "fullName": "Walker J",
+                "initials": "J",
+                "lastName": "Walker"
+              },
+              {
+                "firstName": "Igor",
+                "fullName": "Katsovskiy I",
+                "initials": "I",
+                "lastName": "Katsovskiy"
+              },
+              {
+                "firstName": "Ervin",
+                "fullName": "Sinani E",
+                "initials": "E",
+                "lastName": "Sinani"
+              },
+              {
+                "firstName": "Alexander",
+                "fullName": "Sherman A",
+                "initials": "A",
+                "lastName": "Sherman"
+              },
+              {
+                "firstName": "Annette",
+                "fullName": "De Mattos A",
+                "initials": "A",
+                "lastName": "De Mattos"
+              },
+              {
+                "firstName": "Daniela",
+                "fullName": "Grasso D",
+                "initials": "D",
+                "lastName": "Grasso"
+              },
+              {
+                "firstName": "Katelyn",
+                "fullName": "Gilardi K",
+                "initials": "K",
+                "lastName": "Gilardi"
+              },
+              {
+                "firstName": "Meghan",
+                "fullName": "Hall M",
+                "initials": "M",
+                "lastName": "Hall"
+              },
+              {
+                "firstName": "Mary Lou",
+                "fullName": "Watson ML",
+                "initials": "ML",
+                "lastName": "Watson"
+              },
+              {
+                "firstName": "Sharon",
+                "fullName": "Downing S",
+                "initials": "S",
+                "lastName": "Downing"
+              },
+              {
+                "firstName": "Divpreet",
+                "fullName": "Kaur D",
+                "initials": "D",
+                "lastName": "Kaur"
+              },
+              {
+                "firstName": "Max",
+                "fullName": "Lowden M",
+                "initials": "M",
+                "lastName": "Lowden"
+              },
+              {
+                "firstName": "Divisha",
+                "fullName": "Raheja D",
+                "initials": "D",
+                "lastName": "Raheja"
+              },
+              {
+                "firstName": "Helen",
+                "fullName": "Stephens H",
+                "initials": "H",
+                "lastName": "Stephens"
+              },
+              {
+                "firstName": "Travis",
+                "fullName": "Haines T",
+                "initials": "T",
+                "lastName": "Haines"
+              },
+              {
+                "firstName": "Martina",
+                "fullName": "Wiedau-Pazos M",
+                "initials": "M",
+                "lastName": "Wiedau-Pazos"
+              },
+              {
+                "firstName": "Thomas",
+                "fullName": "Hintz T",
+                "initials": "T",
+                "lastName": "Hintz"
+              },
+              {
+                "firstName": "Rebecca",
+                "fullName": "Alvarez R",
+                "initials": "R",
+                "lastName": "Alvarez"
+              },
+              {
+                "firstName": "Diane",
+                "fullName": "McKenna-Yasek D",
+                "initials": "D",
+                "lastName": "McKenna-Yasek"
+              },
+              {
+                "firstName": "Sharon",
+                "fullName": "Nations S",
+                "initials": "S",
+                "lastName": "Nations"
+              },
+              {
+                "firstName": "Lauren",
+                "fullName": "Phillips L",
+                "initials": "L",
+                "lastName": "Phillips"
+              },
+              {
+                "firstName": "Lydia",
+                "fullName": "Sharp L",
+                "initials": "L",
+                "lastName": "Sharp"
+              },
+              {
+                "firstName": "Nina",
+                "fullName": "Gorham N",
+                "initials": "N",
+                "lastName": "Gorham"
+              },
+              {
+                "firstName": "Mazen M",
+                "fullName": "Dimachkie MM",
+                "initials": "MM",
+                "lastName": "Dimachkie"
+              },
+              {
+                "firstName": "April L",
+                "fullName": "Mcvey AL",
+                "initials": "AL",
+                "lastName": "Mcvey"
+              },
+              {
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-0790-5315"
+                },
+                "firstName": "Jeffrey",
+                "fullName": "Statland J",
+                "initials": "J",
+                "lastName": "Statland"
+              },
+              {
+                "firstName": "Mamatha",
+                "fullName": "Pasnoor M",
+                "initials": "M",
+                "lastName": "Pasnoor"
+              },
+              {
+                "firstName": "Omar",
+                "fullName": "Jawdat O",
+                "initials": "O",
+                "lastName": "Jawdat"
+              },
+              {
+                "firstName": "Maureen",
+                "fullName": "Walsh M",
+                "initials": "M",
+                "lastName": "Walsh"
+              },
+              {
+                "firstName": "Julaine M",
+                "fullName": "Florence JM",
+                "initials": "JM",
+                "lastName": "Florence"
+              },
+              {
+                "firstName": "Jeri",
+                "fullName": "Sieren J",
+                "initials": "J",
+                "lastName": "Sieren"
+              },
+              {
+                "firstName": "Heena",
+                "fullName": "Olalde H",
+                "initials": "H",
+                "lastName": "Olalde"
+              }
+            ]
+          },
+          "isOpenAccess": "N",
+          "journalInfo": {
+            "dateOfPublication": "2016 Apr",
+            "issue": "16",
+            "journal": {
+              "essn": "1526-632X",
+              "isoabbreviation": "Neurology",
+              "issn": "0028-3878",
+              "medlineAbbreviation": "Neurology",
+              "nlmid": "0401060",
+              "title": "Neurology"
+            },
+            "journalIssueId": 2407502,
+            "monthOfPublication": 4,
+            "printPublicationDate": "2016-04-01",
+            "volume": "86",
+            "yearOfPublication": 2016
+          },
+          "language": "eng",
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "descriptorName": "Humans",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Muscle Cramp",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "DT",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "drug therapy"
+                    },
+                    {
+                      "abbreviation": "PP",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "physiopathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Amyotrophic Lateral Sclerosis",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "DT",
+                      "majorTopic_YN": "Y",
+                      "qualifierName": "drug therapy"
+                    },
+                    {
+                      "abbreviation": "PP",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "physiopathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Disease Progression",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Mexiletine",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "AE",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "adverse effects"
+                    },
+                    {
+                      "abbreviation": "PK",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "pharmacokinetics"
+                    },
+                    {
+                      "abbreviation": "TU",
+                      "majorTopic_YN": "Y",
+                      "qualifierName": "therapeutic use"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Treatment Outcome",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Follow-Up Studies",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Dose-Response Relationship, Drug",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Middle Aged",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Female",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Male",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Postural Balance",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "DE",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "drug effects"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Voltage-Gated Sodium Channel Blockers",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "AE",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "adverse effects"
+                    },
+                    {
+                      "abbreviation": "PK",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "pharmacokinetics"
+                    },
+                    {
+                      "abbreviation": "TU",
+                      "majorTopic_YN": "Y",
+                      "qualifierName": "therapeutic use"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "nihAuthMan": "N",
+          "pageInfo": "1474-1481",
+          "pmcid": "PMC4836879",
+          "pmid": "26911633",
+          "pubModel": "Print-Electronic",
+          "pubTypeList": {
+            "pubType": [
+              "Clinical Trial, Phase II",
+              "research-article",
+              "Multicenter Study",
+              "Randomized Controlled Trial",
+              "Journal Article"
+            ]
+          },
+          "pubYear": "2016",
+          "publicationStatus": "ppublish",
+          "source": "MED",
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "title": "A randomized trial of mexiletine in ALS: Safety and effects on muscle cramps and progression.",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "nct"
+            ]
+          }
+        },
+        {
+          "abstractText": "<h4>Background</h4>Abnormalities in membrane excitability and Na(+) channel function are characteristic of amyotrophic lateral sclerosis (ALS). We aimed to examine the neuroprotective potential, safety and tolerability of the Na(+) channel blocker and membrane stabiliser flecainide in ALS.<h4>Methods</h4>A double-blind, placebo-controlled, randomised clinical trial of flecainide (200 mg/day) for 32-weeks with a 12-week lead-in phase was conducted in participants with probable or definite ALS recruited from multiple Australian centres (ANZCT Registry number ACTRN12608000338369). Patients were reviewed by a cardiologist to rule out cardiac contraindications. Participants were randomly assigned (1:1) to flecainide or placebo using stratified permuted blocks by a central pharmacy. The primary outcome measure was the slope of decline of the ALS Functional Rating Scale-revised (ALS FRS-r) during the treatment period.<h4>Findings</h4>Between March 11, 2008 and July 1, 2010, 67 patients were screened, 54 of whom were randomly assigned to receive flecainide (26 patients) or placebo (28 patients). Four patients in the flecainide group and three patients in the placebo group withdrew from the study. One patient in the flecainide group died during the study, attributed to disease progression. Flecainide was generally well tolerated, with no serious adverse events reported in either group. There was no significant difference in the rate of decline in the primary outcome measure ALS-FRS-r between placebo and flecainide treated patients (Flecainide 0.65 [95% CI 0.49 to 0.98]; Placebo 0.81 [0.49 to 2.12] P = 0.50). However, the rate of decline of the neurophysiological index was significantly reduced in the flecainide group (Flecainide 0.06 [0.01 to 0.11]; Placebo 0.14 [0.09 to 0.19], P = 0.02). Placebo-treated patients demonstrated greater CMAP amplitude reduction during the course of the study in the subset of patients with a reduced baseline CMAP amplitude (Flecainide: - 15 \u00b1 12%; Placebo - 59 \u00b1 12%; P = 0.03). Flecainide-treated patients maintained stabilized peripheral axonal excitability over the study compared to placebo.<h4>Interpretation</h4>This pilot study indicated that flecainide was safe and potentially biologically effective in ALS. There was evidence that flecainide stabilized peripheral axonal membrane function in ALS. While the study was not powered to detect evidence of benefit of flecainide on ALS-FRS-r decline, further studies may demonstrate clinical efficacy of flecainide in ALS.",
+          "affiliation": "Brain and Mind Centre, Sydney Medical School, University of Sydney, Australia.",
+          "authMan": "N",
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9054-026X"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-8323-873X"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-0213-7652"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-2379-7369"
+              }
+            ]
+          },
+          "authorList": {
+            "author": [
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Brain and Mind Centre, Sydney Medical School, University of Sydney, Australia."
+                    }
+                  ]
+                },
+                "firstName": "Susanna B",
+                "fullName": "Park SB",
+                "initials": "SB",
+                "lastName": "Park"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Western Clinical School, University of Sydney, Australia."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-8323-873X"
+                },
+                "firstName": "Steve",
+                "fullName": "Vucic S",
+                "initials": "S",
+                "lastName": "Vucic"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Brain and Mind Centre, Sydney Medical School, University of Sydney, Australia."
+                    }
+                  ]
+                },
+                "firstName": "Benjamin C",
+                "fullName": "Cheah BC",
+                "initials": "BC",
+                "lastName": "Cheah"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "School of Medical Sciences, University of New South Wales, Australia."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-2379-7369"
+                },
+                "firstName": "Cindy S-Y",
+                "fullName": "Lin CS",
+                "initials": "CS",
+                "lastName": "Lin"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "National Health and Medical Research Council Clinical Trials Centre, University of Sydney, Australia."
+                    }
+                  ]
+                },
+                "firstName": "Adrienne",
+                "fullName": "Kirby A",
+                "initials": "A",
+                "lastName": "Kirby"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "National Health and Medical Research Council Clinical Trials Centre, University of Sydney, Australia."
+                    }
+                  ]
+                },
+                "firstName": "Kristy P",
+                "fullName": "Mann KP",
+                "initials": "KP",
+                "lastName": "Mann"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Brain and Mind Centre, Sydney Medical School, University of Sydney, Australia."
+                    }
+                  ]
+                },
+                "firstName": "Margie C",
+                "fullName": "Zoing MC",
+                "initials": "MC",
+                "lastName": "Zoing"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Brain and Mind Centre, Sydney Medical School, University of Sydney, Australia."
+                    }
+                  ]
+                },
+                "firstName": "Jennica",
+                "fullName": "Winhammar J",
+                "initials": "J",
+                "lastName": "Winhammar"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Brain and Mind Centre, Sydney Medical School, University of Sydney, Australia."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-9054-026X"
+                },
+                "firstName": "Matthew C",
+                "fullName": "Kiernan MC",
+                "initials": "MC",
+                "lastName": "Kiernan"
+              }
+            ]
+          },
+          "authorString": "Park SB, Vucic S, Cheah BC, Lin CS, Kirby A, Mann KP, Zoing MC, Winhammar J, Kiernan MC.",
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Neuroprotective Agents",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Voltage-Gated Sodium Channel Blockers",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Flecainide",
+                "registryNumber": "K94FTS1806"
+              }
+            ]
+          },
+          "citedByCount": 28,
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "id": "26844251",
+                "orderIn": 1,
+                "reference": "EBioMedicine. 2015 Dec 03;2(12):1842-3. doi: 10.1016/j.ebiom.2015.12.002.",
+                "source": "MED",
+                "type": "Comment in"
+              }
+            ]
+          },
+          "dateOfCompletion": "2016-10-20",
+          "dateOfCreation": "2016-02-05",
+          "dateOfRevision": "2025-04-28",
+          "doi": "10.1016/j.ebiom.2015.11.022",
+          "electronicPublicationDate": "2015-12-01",
+          "epmcAuthMan": "N",
+          "firstIndexDate": "2016-02-05",
+          "firstPublicationDate": "2015-12-01",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC4703720"
+            ]
+          },
+          "fullTextReceivedDate": "2020-07-11",
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1016/j.ebiom.2015.11.022"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC4703720"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC4703720?pdf=render"
+              }
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "National Health and Medical Research Council",
+                "grantId": "1037746",
+                "orderIn": 0
+              },
+              {
+                "agency": "National Health and Medical Research Council",
+                "grantId": "568743",
+                "orderIn": 0
+              },
+              {
+                "agency": "Motor Neurone Disease Research Institute of Australia",
+                "orderIn": 0
+              }
+            ]
+          },
+          "hasBook": "N",
+          "hasData": "N",
+          "hasDbCrossReferences": "N",
+          "hasEvaluations": "N",
+          "hasLabsLinks": "N",
+          "hasPDF": "Y",
+          "hasReferences": "Y",
+          "hasSuppl": "N",
+          "hasTMAccessionNumbers": "N",
+          "hasTextMinedTerms": "Y",
+          "id": "26844270",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "isOpenAccess": "Y",
+          "journalInfo": {
+            "dateOfPublication": "2015 Dec",
+            "issue": "12",
+            "journal": {
+              "essn": "2352-3964",
+              "isoabbreviation": "EBioMedicine",
+              "issn": "2352-3964",
+              "medlineAbbreviation": "EBioMedicine",
+              "nlmid": "101647039",
+              "title": "EBioMedicine"
+            },
+            "journalIssueId": 2371279,
+            "monthOfPublication": 12,
+            "printPublicationDate": "2015-12-01",
+            "volume": "2",
+            "yearOfPublication": 2015
+          },
+          "keywordList": {
+            "keyword": [
+              "Sodium channel",
+              "Amyotrophic Lateral Sclerosis",
+              "neuroprotection",
+              "Flecainide"
+            ]
+          },
+          "language": "eng",
+          "license": "cc by-nc-nd",
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "descriptorName": "Humans",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Amyotrophic Lateral Sclerosis",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "DT",
+                      "majorTopic_YN": "Y",
+                      "qualifierName": "drug therapy"
+                    },
+                    {
+                      "abbreviation": "ME",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "metabolism"
+                    },
+                    {
+                      "abbreviation": "PP",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "physiopathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Flecainide",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "AD",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "administration & dosage"
+                    },
+                    {
+                      "abbreviation": "AE",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "adverse effects"
+                    },
+                    {
+                      "abbreviation": "TU",
+                      "majorTopic_YN": "Y",
+                      "qualifierName": "therapeutic use"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Neuroprotective Agents",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "AD",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "administration & dosage"
+                    },
+                    {
+                      "abbreviation": "AE",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "adverse effects"
+                    },
+                    {
+                      "abbreviation": "TU",
+                      "majorTopic_YN": "Y",
+                      "qualifierName": "therapeutic use"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Treatment Outcome",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Quality of Life",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Adult",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Middle Aged",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Female",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Male",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Voltage-Gated Sodium Channel Blockers",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "AD",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "administration & dosage"
+                    },
+                    {
+                      "abbreviation": "AE",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "adverse effects"
+                    },
+                    {
+                      "abbreviation": "TU",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "therapeutic use"
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          "nihAuthMan": "N",
+          "pageInfo": "1916-1922",
+          "pmcid": "PMC4703720",
+          "pmid": "26844270",
+          "pubModel": "Electronic-eCollection",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Randomized Controlled Trial",
+              "Journal Article"
+            ]
+          },
+          "pubYear": "2015",
+          "publicationStatus": "epublish",
+          "source": "MED",
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "title": "Flecainide in Amyotrophic Lateral Sclerosis as a Neuroprotective Strategy (FANS): A Randomized Placebo-Controlled Trial."
+        },
+        {
+          "abstractText": "Our objective was to determine if chronic treatment with the non-competitive AMPA antagonist talampanel is efficacious and safe in subjects with ALS. A double-blind, placebo-controlled, multicenter, randomized clinical trial of nine months treatment duration was conducted in 59 subjects with ALS, with 40 subjects receiving talampanel 50 mg p.o. t.i.d, and 19 subjects receiving placebo. Primary outcome measure was rate of decline in isometric arm strength (as measured by change in arm strength megaslope of the Tufts Quantitative Neuromuscular Exam (TQNE)). Other efficacy endpoints included rate of decline in respiratory function, isometric leg strength, bulbar function, fine motor function, the ALS Functional Rating Scale (ALSFRS), and survival. Secondary safety outcome measures were frequency of adverse events, neurological status, plasma concentration of talampanel, vital signs, routine laboratory tests, and electrocardiograms. Decline in muscle strength was 15% less in talampanel treated subjects, and decline in ALSFRS was 30% slower in talampanel treated subjects. Talampanel was safe in subjects with ALS. Mortality rates (8% talampanel, 5% placebo) and drug discontinuation rates (25% talampanel, 16% placebo) were similar in active treatment and placebo groups. Dizziness and somnolence occurred significantly more often in talampanel treated subjects. Although no efficacy measure reached statistical significance, there was a repeated trend toward slower decline in ALSFRS and isometric muscle strength in talampanel treated subjects. Talampanel was well tolerated in subjects with ALS. Although certain adverse events occurred more frequently in the active treatment group, the rate of subject drop-out after nine months did not exceed that seen in other trials. These findings provide strong support for a phase III trial to determine the efficacy of talampanel in subjects with ALS.",
+          "affiliation": "Department of Neurology, Indiana University School of Medicine, Indianapolis, Indiana, USA.",
+          "authMan": "N",
+          "authorList": {
+            "author": [
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Neurology, Indiana University School of Medicine, Indianapolis, Indiana, USA."
+                    }
+                  ]
+                },
+                "firstName": "Robert M",
+                "fullName": "Pascuzzi RM",
+                "initials": "RM",
+                "lastName": "Pascuzzi"
+              },
+              {
+                "firstName": "Jeremy",
+                "fullName": "Shefner J",
+                "initials": "J",
+                "lastName": "Shefner"
+              },
+              {
+                "firstName": "Amy S",
+                "fullName": "Chappell AS",
+                "initials": "AS",
+                "lastName": "Chappell"
+              },
+              {
+                "firstName": "John S",
+                "fullName": "Bjerke JS",
+                "initials": "JS",
+                "lastName": "Bjerke"
+              },
+              {
+                "firstName": "Roy",
+                "fullName": "Tamura R",
+                "initials": "R",
+                "lastName": "Tamura"
+              },
+              {
+                "firstName": "Vinay",
+                "fullName": "Chaudhry V",
+                "initials": "V",
+                "lastName": "Chaudhry"
+              },
+              {
+                "firstName": "Lora",
+                "fullName": "Clawson L",
+                "initials": "L",
+                "lastName": "Clawson"
+              },
+              {
+                "firstName": "Lisa",
+                "fullName": "Haas L",
+                "initials": "L",
+                "lastName": "Haas"
+              },
+              {
+                "firstName": "Jeffrey D",
+                "fullName": "Rothstein JD",
+                "initials": "JD",
+                "lastName": "Rothstein"
+              }
+            ]
+          },
+          "authorString": "Pascuzzi RM, Shefner J, Chappell AS, Bjerke JS, Tamura R, Chaudhry V, Clawson L, Haas L, Rothstein JD.",
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Excitatory Amino Acid Antagonists",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Benzodiazepines",
+                "registryNumber": "12794-10-4"
+              },
+              {
+                "name": "talampanel",
+                "registryNumber": "CVS43XG1L5"
+              }
+            ]
+          },
+          "citedByCount": 92,
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics"
+            ]
+          },
+          "dateOfCompletion": "2010-08-10",
+          "dateOfCreation": "2009-12-08",
+          "dateOfRevision": "2021-09-02",
+          "doi": "10.3109/17482960903307805",
+          "epmcAuthMan": "N",
+          "firstIndexDate": "2010-08-11",
+          "firstPublicationDate": "2010-05-01",
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.3109/17482960903307805"
+              }
+            ]
+          },
+          "hasBook": "N",
+          "hasData": "N",
+          "hasDbCrossReferences": "N",
+          "hasEvaluations": "N",
+          "hasLabsLinks": "Y",
+          "hasPDF": "N",
+          "hasReferences": "Y",
+          "hasSuppl": "N",
+          "hasTMAccessionNumbers": "N",
+          "hasTextMinedTerms": "Y",
+          "id": "19961264",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "isOpenAccess": "N",
+          "journalInfo": {
+            "dateOfPublication": "2010 May",
+            "issue": "3",
+            "journal": {
+              "essn": "1471-180X",
+              "isoabbreviation": "Amyotroph Lateral Scler",
+              "issn": "1748-2968",
+              "medlineAbbreviation": "Amyotroph Lateral Scler",
+              "nlmid": "101283386",
+              "title": "Amyotrophic lateral sclerosis : official publication of the World Federation of Neurology Research Group on Motor Neuron Diseases"
+            },
+            "journalIssueId": 1727240,
+            "monthOfPublication": 5,
+            "printPublicationDate": "2010-05-01",
+            "volume": "11",
+            "yearOfPublication": 2010
+          },
+          "language": "eng",
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "descriptorName": "Muscle, Skeletal",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "DE",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "drug effects"
+                    },
+                    {
+                      "abbreviation": "PP",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "physiopathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Humans",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Amyotrophic Lateral Sclerosis",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "BL",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "blood"
+                    },
+                    {
+                      "abbreviation": "DT",
+                      "majorTopic_YN": "Y",
+                      "qualifierName": "drug therapy"
+                    },
+                    {
+                      "abbreviation": "PA",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "pathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Benzodiazepines",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "BL",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "blood"
+                    },
+                    {
+                      "abbreviation": "TU",
+                      "majorTopic_YN": "Y",
+                      "qualifierName": "therapeutic use"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Excitatory Amino Acid Antagonists",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "BL",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "blood"
+                    },
+                    {
+                      "abbreviation": "TU",
+                      "majorTopic_YN": "Y",
+                      "qualifierName": "therapeutic use"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Electrocardiography",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "MT",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "methods"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Neurologic Examination",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Disability Evaluation",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Treatment Outcome",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Double-Blind Method",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Time Factors",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Adolescent",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Adult",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Aged",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Aged, 80 and over",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Middle Aged",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Female",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Male",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Muscle Strength",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "DE",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "drug effects"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Young Adult",
+                "majorTopic_YN": "N"
+              }
+            ]
+          },
+          "nihAuthMan": "N",
+          "pageInfo": "266-271",
+          "pmid": "19961264",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Clinical Trial, Phase II",
+              "Randomized Controlled Trial",
+              "Journal Article"
+            ]
+          },
+          "pubYear": "2010",
+          "publicationStatus": "ppublish",
+          "source": "MED",
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "title": "A phase II trial of talampanel in subjects with amyotrophic lateral sclerosis."
+        }
+      ]
+    },
+    "version": "6.9"
+  },
+  "evidence_id": "EV-B5-012",
+  "query_tokens": [
+    "PMID:26911633",
+    "PMID:26844270",
+    "PMID:19961264"
+  ],
+  "retrieved_at_utc": "2026-11-16T12:56:37Z"
+}

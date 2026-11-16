@@ -1,0 +1,697 @@
+{
+  "prudencio": {
+    "meta_cols": [
+      "count_column",
+      "sample_id",
+      "title",
+      "tissue",
+      "genotype",
+      "donor_alias",
+      "project_disposition",
+      "source_group",
+      "clinical_diagnosis",
+      "pathological_diagnosis",
+      "sex",
+      "age_years",
+      "pmi_hours",
+      "braak_stage",
+      "fhx_mnd",
+      "fhx_ftd",
+      "fhx_neurodegeneration",
+      "source_locator"
+    ],
+    "meta_shape": [
+      30,
+      18
+    ],
+    "meta_head": [
+      {
+        "count_column": "ALS011_cereb",
+        "sample_id": "GSM1642294",
+        "title": "11_cereb",
+        "tissue": "Cerebellum",
+        "genotype": "sALS",
+        "donor_alias": 11,
+        "project_disposition": "U provisional; full eligibility not adjudicated",
+        "source_group": "sALS",
+        "clinical_diagnosis": "ALS",
+        "pathological_diagnosis": "ALS/PA",
+        "sex": "F",
+        "age_years": 61.4,
+        "pmi_hours": 10,
+        "braak_stage": 2.0,
+        "fhx_mnd": "no",
+        "fhx_ftd": "no",
+        "fhx_neurodegeneration": "no",
+        "source_locator": "Supplementary Table1 page1 sample11"
+      },
+      {
+        "count_column": "ALS011_fcx",
+        "sample_id": "GSM1642295",
+        "title": "11_FCX",
+        "tissue": "Frontal Cortex",
+        "genotype": "sALS",
+        "donor_alias": 11,
+        "project_disposition": "U provisional; full eligibility not adjudicated",
+        "source_group": "sALS",
+        "clinical_diagnosis": "ALS",
+        "pathological_diagnosis": "ALS/PA",
+        "sex": "F",
+        "age_years": 61.4,
+        "pmi_hours": 10,
+        "braak_stage": 2.0,
+        "fhx_mnd": "no",
+        "fhx_ftd": "no",
+        "fhx_neurodegeneration": "no",
+        "source_locator": "Supplementary Table1 page1 sample11"
+      },
+      {
+        "count_column": "ALS012_cereb",
+        "sample_id": "GSM1642296",
+        "title": "12_cereb",
+        "tissue": "Cerebellum",
+        "genotype": "sALS",
+        "donor_alias": 12,
+        "project_disposition": "U provisional; full eligibility not adjudicated",
+        "source_group": "sALS",
+        "clinical_diagnosis": "ALS",
+        "pathological_diagnosis": "ALS",
+        "sex": "M",
+        "age_years": 50.1,
+        "pmi_hours": 9,
+        "braak_stage": 1.0,
+        "fhx_mnd": "no",
+        "fhx_ftd": "no",
+        "fhx_neurodegeneration": "no",
+        "source_locator": "Supplementary Table1 page1 sample12"
+      },
+      {
+        "count_column": "ALS012_fcx",
+        "sample_id": "GSM1642297",
+        "title": "12_FCX",
+        "tissue": "Frontal Cortex",
+        "genotype": "sALS",
+        "donor_alias": 12,
+        "project_disposition": "U provisional; full eligibility not adjudicated",
+        "source_group": "sALS",
+        "clinical_diagnosis": "ALS",
+        "pathological_diagnosis": "ALS",
+        "sex": "M",
+        "age_years": 50.1,
+        "pmi_hours": 9,
+        "braak_stage": 1.0,
+        "fhx_mnd": "no",
+        "fhx_ftd": "no",
+        "fhx_neurodegeneration": "no",
+        "source_locator": "Supplementary Table1 page1 sample12"
+      },
+      {
+        "count_column": "ALS013_cereb",
+        "sample_id": "GSM1642298",
+        "title": "13_cereb",
+        "tissue": "Cerebellum",
+        "genotype": "sALS",
+        "donor_alias": 13,
+        "project_disposition": "U provisional; full eligibility not adjudicated",
+        "source_group": "sALS",
+        "clinical_diagnosis": "ALS",
+        "pathological_diagnosis": "ALS",
+        "sex": "M",
+        "age_years": 53.8,
+        "pmi_hours": 6,
+        "braak_stage": 1.0,
+        "fhx_mnd": "no",
+        "fhx_ftd": "no",
+        "fhx_neurodegeneration": "no",
+        "source_locator": "Supplementary Table1 page1 sample13"
+      },
+      {
+        "count_column": "ALS013_fcx",
+        "sample_id": "GSM1642299",
+        "title": "13_FCX",
+        "tissue": "Frontal Cortex",
+        "genotype": "sALS",
+        "donor_alias": 13,
+        "project_disposition": "U provisional; full eligibility not adjudicated",
+        "source_group": "sALS",
+        "clinical_diagnosis": "ALS",
+        "pathological_diagnosis": "ALS",
+        "sex": "M",
+        "age_years": 53.8,
+        "pmi_hours": 6,
+        "braak_stage": 1.0,
+        "fhx_mnd": "no",
+        "fhx_ftd": "no",
+        "fhx_neurodegeneration": "no",
+        "source_locator": "Supplementary Table1 page1 sample13"
+      }
+    ],
+    "norm_counts_cols_head": [
+      "count_column",
+      "ABCA4",
+      "ABCB10",
+      "ABCD3",
+      "ABL2",
+      "ACADM",
+      "ACAP3",
+      "ACBD3",
+      "ACBD6",
+      "ACOT11",
+      "ACOT7",
+      "ACP6",
+      "ACTA1",
+      "ACTN2",
+      "ADAM15"
+    ],
+    "norm_counts_total_cols": 16275,
+    "norm_counts_first_col_vals": [
+      "ALS011_cereb",
+      "ALS011_fcx",
+      "ALS012_cereb",
+      "ALS012_fcx",
+      "ALS013_cereb"
+    ],
+    "raw_full_cols": [
+      "gene",
+      "baseMean",
+      "log2FoldChange",
+      "lfcSE",
+      "stat",
+      "pvalue",
+      "padj",
+      "ci95_low",
+      "ci95_high"
+    ],
+    "target_results": [
+      {
+        "gene": "IL1RL1",
+        "status": "valid",
+        "unavailable_reason": NaN,
+        "log2FoldChange": -0.32179360036547133,
+        "lfcSE": 0.7303636096187692,
+        "ci95_low": -1.7532799708369309,
+        "ci95_high": 1.1096927701059882,
+        "pvalue": 0.6595071692470849,
+        "qvalue": 0.6595071692470849,
+        "p_for_BH": 0.6595071692470849,
+        "q_bookkeeping": 0.6595071692470849,
+        "cook_max": 0.14568590268081197,
+        "cook_cutoff": 4.405394766395398,
+        "interpretation": "interaction not established;not equivalence or absence"
+      },
+      {
+        "gene": "SMAD6",
+        "status": "valid",
+        "unavailable_reason": NaN,
+        "log2FoldChange": 0.22020510720628256,
+        "lfcSE": 0.4536864306336916,
+        "ci95_low": -0.6690039571102824,
+        "ci95_high": 1.1094141715228476,
+        "pvalue": 0.6274149651241376,
+        "qvalue": 0.6595071692470849,
+        "p_for_BH": 0.6274149651241376,
+        "q_bookkeeping": 0.6595071692470849,
+        "cook_max": 0.6245159460453622,
+        "cook_cutoff": 4.405394766395398,
+        "interpretation": "interaction not established;not equivalence or absence"
+      },
+      {
+        "gene": "TINAGL1",
+        "status": "valid",
+        "unavailable_reason": NaN,
+        "log2FoldChange": 0.3328484144847312,
+        "lfcSE": 0.43433447244239165,
+        "ci95_low": -0.518431508746561,
+        "ci95_high": 1.1841283377160234,
+        "pvalue": 0.44347329101416677,
+        "qvalue": 0.6595071692470849,
+        "p_for_BH": 0.44347329101416677,
+        "q_bookkeeping": 0.6595071692470849,
+        "cook_max": 0.27186918762483225,
+        "cook_cutoff": 4.405394766395398,
+        "interpretation": "interaction not established;not equivalence or absence"
+      }
+    ],
+    "contrast": {
+      "columns": [
+        "donor_11",
+        "donor_12",
+        "donor_13",
+        "donor_14",
+        "donor_24",
+        "donor_70",
+        "donor_73",
+        "donor_74",
+        "donor_75",
+        "donor_86",
+        "donor_90",
+        "donor_91",
+        "donor_93",
+        "donor_95",
+        "donor_97",
+        "R",
+        "R_disease",
+        "R_age10",
+        "R_male",
+        "R_pmi10"
+      ],
+      "vector": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "estimand": "disease difference in frontal/cerebellar log2 ratios"
+    }
+  },
+  "edin_and_tam": {
+    "edin_lib_meta_cols": [
+      "library",
+      "n_nuclei",
+      "Sample ID",
+      "Edinburgh ID",
+      "Tissue",
+      "Sex",
+      "Age",
+      "Classifcation",
+      "Disease?",
+      "Mutation"
+    ],
+    "edin_lib_meta_shape": [
+      48,
+      10
+    ],
+    "edin_lib_meta_head": [
+      {
+        "library": "CGND-HRA-02745_BA44",
+        "n_nuclei": 4149,
+        "Sample ID": "[[\"CGND-HRA-02745\", 4149]]",
+        "Edinburgh ID": "[[\"SD049/15\", 4149]]",
+        "Tissue": "[[\"BA44\", 4149]]",
+        "Sex": "[[\"Female\", 4149]]",
+        "Age": "[[\"66\", 4149]]",
+        "Classifcation": "[[\"ALSci\", 4149]]",
+        "Disease?": "[[\"Yes\", 4149]]",
+        "Mutation": "[[\"NA\", 4149]]"
+      },
+      {
+        "library": "CGND-HRA-02746_BA44",
+        "n_nuclei": 2900,
+        "Sample ID": "[[\"CGND-HRA-02746\", 2900]]",
+        "Edinburgh ID": "[[\"SD032/12\", 2900]]",
+        "Tissue": "[[\"BA44\", 2900]]",
+        "Sex": "[[\"Male\", 2900]]",
+        "Age": "[[\"57\", 2900]]",
+        "Classifcation": "[[\"ALSci\", 2900]]",
+        "Disease?": "[[\"Yes\", 2900]]",
+        "Mutation": "[[\"NA\", 2900]]"
+      },
+      {
+        "library": "CGND-HRA-02747_BA44",
+        "n_nuclei": 2458,
+        "Sample ID": "[[\"CGND-HRA-02747\", 2458]]",
+        "Edinburgh ID": "[[\"SD008/13\", 2458]]",
+        "Tissue": "[[\"BA44\", 2458]]",
+        "Sex": "[[\"Male\", 2458]]",
+        "Age": "[[\"66\", 2458]]",
+        "Classifcation": "[[\"ALS - borderline\", 2458]]",
+        "Disease?": "[[\"Yes\", 2458]]",
+        "Mutation": "[[\"NA\", 2458]]"
+      },
+      {
+        "library": "CGND-HRA-02749_BA44",
+        "n_nuclei": 3795,
+        "Sample ID": "[[\"CGND-HRA-02749\", 3795]]",
+        "Edinburgh ID": "[[\"SD004/16\", 3795]]",
+        "Tissue": "[[\"BA44\", 3795]]",
+        "Sex": "[[\"Female\", 3795]]",
+        "Age": "[[\"63\", 3795]]",
+        "Classifcation": "[[\"ALS - borderline\", 3795]]",
+        "Disease?": "[[\"Yes\", 3795]]",
+        "Mutation": "[[\"NA\", 3795]]"
+      }
+    ],
+    "edin_celltypes": [
+      {
+        "cell_type_index": 0,
+        "label": "Astrocyte"
+      },
+      {
+        "cell_type_index": 1,
+        "label": "Doublet"
+      },
+      {
+        "cell_type_index": 2,
+        "label": "Endothelial"
+      },
+      {
+        "cell_type_index": 3,
+        "label": "Excitatory neuron"
+      },
+      {
+        "cell_type_index": 4,
+        "label": "Inhibitory neuron"
+      },
+      {
+        "cell_type_index": 5,
+        "label": "Low-Quality"
+      },
+      {
+        "cell_type_index": 6,
+        "label": "Microglia"
+      },
+      {
+        "cell_type_index": 7,
+        "label": "Oligodendrocyte"
+      },
+      {
+        "cell_type_index": 8,
+        "label": "Oligodendrocyte Producing Cell"
+      }
+    ],
+    "edin_celltypes_fine_head": [
+      {
+        "cell_type_index": 0,
+        "label": "AST"
+      },
+      {
+        "cell_type_index": 1,
+        "label": "DBLT"
+      },
+      {
+        "cell_type_index": 2,
+        "label": "ENDO"
+      },
+      {
+        "cell_type_index": 3,
+        "label": "EN_L2_L3"
+      },
+      {
+        "cell_type_index": 4,
+        "label": "EN_L3_L5"
+      },
+      {
+        "cell_type_index": 5,
+        "label": "EN_L5_L6"
+      },
+      {
+        "cell_type_index": 6,
+        "label": "IN_LAMP5"
+      },
+      {
+        "cell_type_index": 7,
+        "label": "IN_PVALB"
+      },
+      {
+        "cell_type_index": 8,
+        "label": "IN_SST"
+      },
+      {
+        "cell_type_index": 9,
+        "label": "IN_VIP"
+      },
+      {
+        "cell_type_index": 10,
+        "label": "LQ"
+      },
+      {
+        "cell_type_index": 11,
+        "label": "MIG"
+      },
+      {
+        "cell_type_index": 12,
+        "label": "OD"
+      },
+      {
+        "cell_type_index": 13,
+        "label": "OPC"
+      }
+    ],
+    "edin_genes_cols": [
+      "gene_index",
+      "name",
+      "genome"
+    ],
+    "edin_genes_head": [
+      {
+        "gene_index": 1,
+        "name": "ENSG00000243485",
+        "genome": "GRCh38"
+      },
+      {
+        "gene_index": 2,
+        "name": "ENSG00000237613",
+        "genome": "GRCh38"
+      },
+      {
+        "gene_index": 3,
+        "name": "ENSG00000186092",
+        "genome": "GRCh38"
+      },
+      {
+        "gene_index": 4,
+        "name": "ENSG00000238009",
+        "genome": "GRCh38"
+      },
+      {
+        "gene_index": 5,
+        "name": "ENSG00000239945",
+        "genome": "GRCh38"
+      }
+    ],
+    "edin_pb_sample_name": "CGND-HRA-02745_BA44.pseudobulk.tsv.gz",
+    "edin_pb_cols": [
+      "gene_index",
+      "cell_type_index",
+      "sum"
+    ],
+    "tam_sheets": {
+      "Sheet1": {
+        "n_rows": 54,
+        "sample": [
+          [
+            "Principal investigators of the NYGC ALS Consortium.",
+            null,
+            null,
+            null
+          ],
+          [
+            "#",
+            "PI Name",
+            "Preferred Email",
+            "Affiliation"
+          ],
+          [
+            1,
+            "Hemali Phatnani, PhD",
+            "hphatnani@nygenome.org",
+            "Center for Genomics of Neurodegenerative Diseases (CGND), New York Genome Center, New York, NY"
+          ],
+          [
+            2,
+            "Justin Kwan, MD",
+            "Justin.Kwan@tuhs.temple.edu",
+            "Department of Neurology, Lewis Katz School of Medicine, Temple University, Philadelphia, PA"
+          ],
+          [
+            3,
+            "Dhruv Sareen, PhD",
+            "Dhruv.Sareen@cshs.org",
+            "Cedars-Sinai Department of Biomedical Sciences, Board of Governors Regenerative Medicine Institute and Brain Program, Cedars-Sinai Medical Center, and Department of Medicine, University of California, Los Angeles, CA"
+          ],
+          [
+            4,
+            "James R. Broach, PhD",
+            "jbroach@hmc.psu.edu",
+            "Department of Biochemistry and Molecular Biology, Penn State Institute for Personalized Medicine, The Pennsylvania State University, Hershey, PA"
+          ],
+          [
+            5,
+            "Zachary Simmons, MD",
+            "zsimmons@psu.edu",
+            "Department of Neurology, The Pennsylvania State University, Hershey, PA"
+          ],
+          [
+            6,
+            "Ximena Arcila-Londono, MD",
+            "Xarcila1@hfhs.org",
+            "Department of Neurology, Henry Ford Health System, Detroit, MI"
+          ]
+        ]
+      }
+    }
+  },
+  "consortia_and_xml": {
+    "consortia_2026": {
+      "PMC12919128_Tsitkov_2026_AALS594.txt": {},
+      "PMC12982666_M1_snMultiome_2026.txt": {},
+      "PMC13337491_Zhang_2026_Spatial.txt": {
+        "CHIT1": [
+          " 3c). In the ALS cervical spine, we observed upregulation of several immune-related genes including CHIT1, GPNMB, CD48, APOE, APOC1 and the complement genes C1QA, C1QB and C1QC (Fig. 3d). GSEA revealed a s",
+          "l significance determined by linear regression. h, Scatterplot showing the correlation among APOC1, CHIT1, LSP1, C1QA, C1QB and C1QC expression in the cervical spinal cord and disease duration in patients ",
+          "with ALS. Statistical significance determined by linear regression; CHIT1 (P\u2009=\u20092.76\u2009\u00d7\u200910\u221210, r\u2009=\u2009\u22120.440, FDR\u2009=\u20096.48\u2009\u00d7\u200910\u22126), APOC1 (P\u2009=\u20094.63\u2009\u00d7\u200910\u22126, r\u2009=\u2009\u22120.327, FDR\u2009=\u20090.003)",
+          "ighted numerous myeloid genes negatively correlated with disease duration (Fig. 4g). These included CHIT1, which is substantially upregulated in ALS spinal cord33, as the top gene showing a strong negative",
+          "reased immune-cell populations, including activated myeloid cells, and suggest that upregulation of CHIT1, LSP1, APOC1 and microglia cells may serve as molecular markers linked to disease progression."
+        ],
+        "GPNMB": [
+          "n the ALS cervical spine, we observed upregulation of several immune-related genes including CHIT1, GPNMB, CD48, APOE, APOC1 and the complement genes C1QA, C1QB and C1QC (Fig. 3d). GSEA revealed a signific",
+          "enger pathways (APOE, APOC1, CD163), lysosomal and antigen-processing functions (CD68, CTSS, IFI30, GPNMB), inflammatory and stress-associated mediators (S100A9, S100A6, CHI3L1) and general cytoskeletal or",
+          "2), lipid and scavenger pathways (APOC1, CD163, ABCA1) and lysosomal/stress responses (IFI30, CTSZ, GPNMB, S100A9/S100A910, CHI3L1), were concentrated near regions of TDP-43 pathology. The spatial converge"
+        ],
+        "CHI3L1": [
+          "nd adjusted for multiple comparisons using the Benjamini\u2013Hochberg method. APOC1, apolipoprotein C1; CHI3L1, chitinase-3-like protein 1; SPP1, secreted phosphoprotein 1; IBA1, ionized calcium-binding adapter",
+          "functions (CD68, CTSS, IFI30, GPNMB), inflammatory and stress-associated mediators (S100A9, S100A6, CHI3L1) and general cytoskeletal or metabolic stress responses (ACTB, SOD2), together with secreted immune",
+          "pathways (APOC1, CD163, ABCA1) and lysosomal/stress responses (IFI30, CTSZ, GPNMB, S100A9/S100A910, CHI3L1), were concentrated near regions of TDP-43 pathology. The spatial convergence of innate immune acti"
+        ],
+        "C1QA": [
+          "pressed gene sets in ALS vs. HC comparisons across cell types. k, Pseudobulk expression analysis of C1QA and C1QB in CD16+ monocytes from C9-ALS patients and healthy controls. l, GSEA pathway enrichment a",
+          "ong these, key components of the innate immune complement system, including complement C1q A chain (C1QA) and complement C1q B chain (C1QB), were specifically elevated in the ALS-fast subgroup (Fig. 2b an",
+          "plify pro-inflammatory pathways11,12. Pseudobulk analysis further confirmed increased expression of C1QA and C1QB in sALS-fast (Fig. 2d and Extended Data Fig. 1k). These findings align with prior studies ",
+          "e comparisons using the Benjamini\u2013Hochberg method. d, Per-donor pseudobulk normalized expression of C1QA and C1QB in CD16+ monocytes from HC (n\u2009=\u200918) and patients with sALS (n\u2009=\u20099 sALS-slow patients and n",
+          " of several immune-related genes including CHIT1, GPNMB, CD48, APOE, APOC1 and the complement genes C1QA, C1QB and C1QC (Fig. 3d). GSEA revealed a significant enrichment for microglia, brain immune cells,",
+          "e determined by linear regression. h, Scatterplot showing the correlation among APOC1, CHIT1, LSP1, C1QA, C1QB and C1QC expression in the cervical spinal cord and disease duration in patients with ALS. St",
+          "P\u2009=\u20092.76\u2009\u00d7\u200910\u221210, r\u2009=\u2009\u22120.440, FDR\u2009=\u20096.48\u2009\u00d7\u200910\u22126), APOC1 (P\u2009=\u20094.63\u2009\u00d7\u200910\u22126, r\u2009=\u2009\u22120.327, FDR\u2009=\u20090.003), C1QA (P\u2009=\u20090.02, r\u2009=\u2009\u22120.164, FDR\u2009=\u20090.33), C1QB (P\u2009=\u20090.0022, r\u2009=\u2009\u22120.222, FDR\u2009=\u20090.09) and C1QC (P\u2009=\u20090.0009,",
+          "crophage activation through its role in lipid metabolism and inflammation, and the complement genes C1QA, C1QB and C1QC, which we also found to be upregulated in peripheral blood of patients with ALS (Fig"
+        ],
+        "C1QB": [
+          "ene sets in ALS vs. HC comparisons across cell types. k, Pseudobulk expression analysis of C1QA and C1QB in CD16+ monocytes from C9-ALS patients and healthy controls. l, GSEA pathway enrichment analysis i",
+          "nnate immune complement system, including complement C1q A chain (C1QA) and complement C1q B chain (C1QB), were specifically elevated in the ALS-fast subgroup (Fig. 2b and Source data Fig.\u20092). A direct co",
+          "-inflammatory pathways11,12. Pseudobulk analysis further confirmed increased expression of C1QA and C1QB in sALS-fast (Fig. 2d and Extended Data Fig. 1k). These findings align with prior studies demonstra",
+          "sons using the Benjamini\u2013Hochberg method. d, Per-donor pseudobulk normalized expression of C1QA and C1QB in CD16+ monocytes from HC (n\u2009=\u200918) and patients with sALS (n\u2009=\u20099 sALS-slow patients and n\u2009=\u20099 sALS",
+          "veral immune-related genes including CHIT1, GPNMB, CD48, APOE, APOC1 and the complement genes C1QA, C1QB and C1QC (Fig. 3d). GSEA revealed a significant enrichment for microglia, brain immune cells, astro",
+          "rmined by linear regression. h, Scatterplot showing the correlation among APOC1, CHIT1, LSP1, C1QA, C1QB and C1QC expression in the cervical spinal cord and disease duration in patients with ALS. Statisti",
+          "\u00d7\u200910\u22126), APOC1 (P\u2009=\u20094.63\u2009\u00d7\u200910\u22126, r\u2009=\u2009\u22120.327, FDR\u2009=\u20090.003), C1QA (P\u2009=\u20090.02, r\u2009=\u2009\u22120.164, FDR\u2009=\u20090.33), C1QB (P\u2009=\u20090.0022, r\u2009=\u2009\u22120.222, FDR\u2009=\u20090.09) and C1QC (P\u2009=\u20090.0009, r\u2009=\u2009\u22120.240, FDR\u2009=\u20090.055), LSP1 (P\u2009=\u20093.83",
+          "ge activation through its role in lipid metabolism and inflammation, and the complement genes C1QA, C1QB and C1QC, which we also found to be upregulated in peripheral blood of patients with ALS (Fig. 2b\u2013d"
+        ],
+        "C1QC": [
+          "une-related genes including CHIT1, GPNMB, CD48, APOE, APOC1 and the complement genes C1QA, C1QB and C1QC (Fig. 3d). GSEA revealed a significant enrichment for microglia, brain immune cells, astrocytes and",
+          " linear regression. h, Scatterplot showing the correlation among APOC1, CHIT1, LSP1, C1QA, C1QB and C1QC expression in the cervical spinal cord and disease duration in patients with ALS. Statistical signi",
+          "DR\u2009=\u20090.003), C1QA (P\u2009=\u20090.02, r\u2009=\u2009\u22120.164, FDR\u2009=\u20090.33), C1QB (P\u2009=\u20090.0022, r\u2009=\u2009\u22120.222, FDR\u2009=\u20090.09) and C1QC (P\u2009=\u20090.0009, r\u2009=\u2009\u22120.240, FDR\u2009=\u20090.055), LSP1 (P\u2009=\u20093.83\u2009\u00d7\u200910\u22128, r\u2009=\u2009\u22120.388, FDR\u2009=\u20090.0003). i, Bar plo",
+          "tion through its role in lipid metabolism and inflammation, and the complement genes C1QA, C1QB and C1QC, which we also found to be upregulated in peripheral blood of patients with ALS (Fig. 2b\u2013d), all sh",
+          "of ALS-fast patients (Fig. 2a), we noted upregulation of complement genes C1QA and C1QB, as well as C1QC in the anterior/lateral white matter of ALS spinal cords compared to HC tissues (Fig. 5d and Source",
+          " and cytoplasmic aggregation in neurons. Scale bar\u2009=\u200950\u2009\u00b5m. j, Representative spatial plots showing C1QC, APOC1 and CD163 expression in the anterior horn aligned with TDP-43 pathology mapping. k, Proporti",
+          " neuron-enriched spots, we identified increased expression of complement signaling genes, including C1QC and complement C3 (C3; Fig. 5g and Source data Fig.\u20095d). C3 is known to regulate synapse eliminatio",
+          "l expression analysis of MN-enriched spots revealed upregulation of complement genes C1QA, C1QB and C1QC, as well as APOC1 and CD163 (Fig. 6d and Source data Fig.\u20096d). In contrast, STMN2 and NEFL, typical"
+        ],
+        "C3": [
+          "ts, we identified increased expression of complement signaling genes, including C1QC and complement C3 (C3; Fig. 5g and Source data Fig.\u20095d). C3 is known to regulate synapse elimination42, to influence ",
+          "hed spots (Fig. 6i and Source data Fig.\u20096i). These included complement and innate immune signaling (C3, C1QA\u2013C1QC, C1S), myeloid receptors and activation programs (TREM2, CD14, CD74, CEBPB), lipid handl",
+          "spinal cord tissue. In these regions, we observed upregulation of complement genes (C1QA/C1QB/C1QC; C3) and a macrophage-associated lipid signature (for example, APOC1), together with downregulation of "
+        ]
+      }
+    },
+    "xml_files": {
+      "DS045_XML": {
+        "tables": [
+          {
+            "id": "Tab1",
+            "label": "Table 1",
+            "caption": "Characteristics of the Emory ALS cohort (i.e. Set 1)"
+          },
+          {
+            "id": "Tab2",
+            "label": "Table 2",
+            "caption": "Characteristics of the Expanded ALS cohort (i.e. Multicenter cohort)"
+          }
+        ],
+        "gene_hits": {
+          "CHIT1": [
+            "\" rid=\"CR34\">34</xref>\u2013<xref ref-type=\"bibr\" rid=\"CR36\">36</xref>]. Furthermore, we observed an increase in chitinases, CHIT1 and CHI3L1, linked to inflammation and previously shown to increase in ALS [<xref ref-type=\"bibr\" rid=\"CR37\">37</xref>,",
+            "\"yes\">p</italic>-values (y-axis). Note the commonly increased CSF proteins in patients with ALS such as NEFL, NEFM, and CHIT1. Proteins significantly (<italic toggle=\"yes\">p</italic>\u2009&lt; 0.05) increased in abundance are depicted in red, signifi",
+            "tation, 901 DAPs were detected (416 increased, 485 decreased; Fig.\u00a0<xref rid=\"Fig6\" ref-type=\"fig\">6</xref>a). Notably, CHIT1, CHI3L1, CHI3L2, UCHL1, GFAP, and NEFL were elevated, likely reflecting neuroinflammation and degeneration associated w",
+            "als (206 increased, 199 decreased; Fig.\u00a0<xref rid=\"Fig6\" ref-type=\"fig\">6</xref>b). Similar to C9orf72 carriers, UCHL1, CHIT1, and GFAP as were most proteins in M10 and M7 (Cytoskeleton/Microglial). DAPs mapping to M7 and M10 were consistently i",
+            " panels in sample classification.</p><p id=\"Par34\">Using the 12 most differentially abundant proteins (CHI3L1, TMEM198, CHIT1, CHI3L2, HYOU1, XXYLT1, DPP6, C1QB, FABP5, MERTK, UCHL1, and WARS), PCA effectively distinguished ALS from controls (Fi",
+            "d control-enriched groups. While some of the most differentially abundant proteins were known ALS biomarkers (including CHIT1, CHI3L1, CHI3L2, FABP5, and UCHL1) [<xref ref-type=\"bibr\" rid=\"CR36\">36</xref>, <xref ref-type=\"bibr\" rid=\"CR37\">37</xr"
+          ],
+          "GPNMB": [
+            "n-names></name></person-group><article-title>Proteomics in cerebrospinal fluid and spinal cord suggests UCHL1, MAP2 and GPNMB as biomarkers and underpins importance of transcriptional pathways in amyotrophic lateral sclerosis</article-title><sou",
+            ", Thal DR, Weishaupt JH, Ludolph AC, Otto M. Proteomics in cerebrospinal fluid and spinal cord suggests UCHL1, MAP2 and GPNMB as biomarkers and underpins importance of transcriptional pathways in amyotrophic lateral sclerosis. Acta Neuropathol. "
+          ],
+          "CHI3L1": [
+            "4\">34</xref>\u2013<xref ref-type=\"bibr\" rid=\"CR36\">36</xref>]. Furthermore, we observed an increase in chitinases, CHIT1 and CHI3L1, linked to inflammation and previously shown to increase in ALS [<xref ref-type=\"bibr\" rid=\"CR37\">37</xref>, <xref ref-",
+            " 901 DAPs were detected (416 increased, 485 decreased; Fig.\u00a0<xref rid=\"Fig6\" ref-type=\"fig\">6</xref>a). Notably, CHIT1, CHI3L1, CHI3L2, UCHL1, GFAP, and NEFL were elevated, likely reflecting neuroinflammation and degeneration associated with dise",
+            "ness of these CSF panels in sample classification.</p><p id=\"Par34\">Using the 12 most differentially abundant proteins (CHI3L1, TMEM198, CHIT1, CHI3L2, HYOU1, XXYLT1, DPP6, C1QB, FABP5, MERTK, UCHL1, and WARS), PCA effectively distinguished ALS f",
+            "ol-enriched groups. While some of the most differentially abundant proteins were known ALS biomarkers (including CHIT1, CHI3L1, CHI3L2, FABP5, and UCHL1) [<xref ref-type=\"bibr\" rid=\"CR36\">36</xref>, <xref ref-type=\"bibr\" rid=\"CR37\">37</xref>, <xr",
+            ".gif?></graphic></fig></p><p id=\"Par35\">Similarly, PCA using most the 12 most differentially abundant proteins (C2 CD5, CHI3L1, CHIT1, SLC39 A10, XXYLT1, TGFBR3, SORCS3, HYOU1, MINPP1, CHI3L2, SERPINA3, and PCDH11X) effectively distinguished asym",
+            "derpinnings and pathological hallmarks. Across both analyses five proteins were shared including the chitinases (CHIT1, CHI3L1, and CHI3L2) and two ER related proteins (HYOU1 and XXYLT1). As recently reported [<xref ref-type=\"bibr\" rid=\"CR39\">39<"
+          ],
+          "CHI3L2": [
+            "s were detected (416 increased, 485 decreased; Fig.\u00a0<xref rid=\"Fig6\" ref-type=\"fig\">6</xref>a). Notably, CHIT1, CHI3L1, CHI3L2, UCHL1, GFAP, and NEFL were elevated, likely reflecting neuroinflammation and degeneration associated with disease onse",
+            " in sample classification.</p><p id=\"Par34\">Using the 12 most differentially abundant proteins (CHI3L1, TMEM198, CHIT1, CHI3L2, HYOU1, XXYLT1, DPP6, C1QB, FABP5, MERTK, UCHL1, and WARS), PCA effectively distinguished ALS from controls (Fig.\u00a0<xref",
+            "hed groups. While some of the most differentially abundant proteins were known ALS biomarkers (including CHIT1, CHI3L1, CHI3L2, FABP5, and UCHL1) [<xref ref-type=\"bibr\" rid=\"CR36\">36</xref>, <xref ref-type=\"bibr\" rid=\"CR37\">37</xref>, <xref ref-t",
+            " the 12 most differentially abundant proteins (C2 CD5, CHI3L1, CHIT1, SLC39 A10, XXYLT1, TGFBR3, SORCS3, HYOU1, MINPP1, CHI3L2, SERPINA3, and PCDH11X) effectively distinguished asymptomatic from symptomatic ALS individuals (Fig.\u00a0<xref rid=\"Fig7\" ",
+            "and pathological hallmarks. Across both analyses five proteins were shared including the chitinases (CHIT1, CHI3L1, and CHI3L2) and two ER related proteins (HYOU1 and XXYLT1). As recently reported [<xref ref-type=\"bibr\" rid=\"CR39\">39</xref>] we s"
+          ],
+          "C1QB": [
+            "><p id=\"Par34\">Using the 12 most differentially abundant proteins (CHI3L1, TMEM198, CHIT1, CHI3L2, HYOU1, XXYLT1, DPP6, C1QB, FABP5, MERTK, UCHL1, and WARS), PCA effectively distinguished ALS from controls (Fig.\u00a0<xref rid=\"Fig7\" ref-type=\"fig\">",
+            ">37</xref>, <xref ref-type=\"bibr\" rid=\"CR41\">41</xref>], novel putative biomarkers were also identified (TMEM198, DPP6, C1QB, MERTK, WARS) as well as two ER related proteins (HYOU1 and XXYLT1)."
+          ]
+        }
+      },
+      "DS046_OH_XML": {
+        "tables": [
+          {
+            "id": "biomedicines-11-01250-t001",
+            "label": "Table 1",
+            "caption": "The demographics of CSF samples used in this study."
+          },
+          {
+            "id": "biomedicines-11-01250-t002",
+            "label": "Table 2",
+            "caption": "Differentially expressed proteins in CSFs from ALS patients compared to the ones from HC individuals identified in the discovery experiment."
+          }
+        ],
+        "gene_hits": {
+          "CHIT1": [
+            "ionated CSF samples comprising 30 patients with ALS and 31 HC individuals. Fifteen proteins (APOB, APP, CAMK2A, CHI3L1, CHIT1, CLSTN3, ERAP2, FSTL4, GPNMB, JCHAIN, L1CAM, NPTX2, SERPINA1, SERPINA3, and UCHL1) showed significant differences betwe",
+            "\"bibr\">21</xref>,<xref rid=\"B22-biomedicines-11-01250\" ref-type=\"bibr\">22</xref>]. So far, multiple proteins, including CHIT1, CHI3L1, CHI3L2, UCHL1, MAP2, GPNMB, and neurofilament proteins, have been reported as candidate ALS biomarkers [<xref ",
+            "A3, GPNMB, MEGF8, GOT2, CENPF, NPTX2, CAMK2A, APP, L1CAM, CHI3L1, PF4, and LYZ) were novel, and seven proteins (CHI3L2, CHIT1, NEFL, NEFM, NEFH, UCHL1, and APOB) were reported previously [<xref rid=\"B23-biomedicines-11-01250\" ref-type=\"bibr\">23<",
+            "ve peptides, namely, APOB (WNFYYSPQSSPDK), CAMK2A (FYFENLWSR), CAMK2A (ITQYLDAGGIPR), CAMK2A (VTEQLIEAISNGDFESYTK), and CHIT1 (DNQWVGFDDVESFK), showed linear responses at the range from 0.01 fmol to 10 pmol (<xref rid=\"app1-biomedicines-11-01250",
+            "ly, IGLV3-19 (ITCQGDSLR), JCHAIN (FVYHLSDLCK), LTA4H (WEDAIPLALK), NFASC (LTVSWLK), PPBP (ICLDPDAPR), UCHL1 (FSAVALCK), CHIT1 (YPLIQTLR), ERAP2 (ILAVTDFEPTQAR), FSTL4 (FDDYNSDSSLTLR), APP (THPHFVIPYR), APP (VESLEQEAANER), APP (WYFDVTEGK), CHI3L1",
+            "m 1 fmol to 10 pmol (<xref rid=\"app1-biomedicines-11-01250\" ref-type=\"app\">Figure S1E,F</xref>). Four peptides, namely, CHIT1 (SSFYSCAAGR), CHIT1 (FTDMVATANNR), CLSTN3 (FTVTAYDCGK), and FSTL4 (LLVESLFR), showed linear responses at the range from"
+          ],
+          "GPNMB": [
+            "g 30 patients with ALS and 31 HC individuals. Fifteen proteins (APOB, APP, CAMK2A, CHI3L1, CHIT1, CLSTN3, ERAP2, FSTL4, GPNMB, JCHAIN, L1CAM, NPTX2, SERPINA1, SERPINA3, and UCHL1) showed significant differences between ALS and the control. Taken",
+            "edicines-11-01250\" ref-type=\"bibr\">22</xref>]. So far, multiple proteins, including CHIT1, CHI3L1, CHI3L2, UCHL1, MAP2, GPNMB, and neurofilament proteins, have been reported as candidate ALS biomarkers [<xref rid=\"B23-biomedicines-11-01250\" ref-",
+            "teins, 15 proteins were upregulated in ALS, while only 4 proteins were downregulated in ALS. Twelve proteins (SERPINA3, GPNMB, MEGF8, GOT2, CENPF, NPTX2, CAMK2A, APP, L1CAM, CHI3L1, PF4, and LYZ) were novel, and seven proteins (CHI3L2, CHIT1, NE",
+            " fmol to 10 pmol (<xref rid=\"app1-biomedicines-11-01250\" ref-type=\"app\">Figure S1B\u2013D</xref>). Sixteen peptides, namely, GPNMB (AYVPIAQVK), JCHAIN (IVLVDNK), L1CAM (YDIEFEDK), ST8SIA5 (EINSADFVFR), APOB (LPYTIITTPPLK), CHI3L1 (FPLTNAIK), CLSTN1 (",
+            "ns were validated by PRM assay. The expression of APOB1 (two peptides), CHI3L1 (three peptides), CHIT1 (four peptides), GPNMB (one peptide), ERAP2 (one peptide), JCHAIN (one of two quantified peptides), SERPINA1 (three peptides), SERPINA3 (two p",
+            "ntially expressed in ALS, and these include neurofilament proteins (NEFL, NEFM, and NEFH), CHIT1, CHI3L1, CHI3L2, APOB, GPNMB, and UCHL1 [<xref rid=\"B20-biomedicines-11-01250\" ref-type=\"bibr\">20</xref>,<xref rid=\"B41-biomedicines-11-01250\" ref-t"
+          ],
+          "CHI3L1": [
+            " unfractionated CSF samples comprising 30 patients with ALS and 31 HC individuals. Fifteen proteins (APOB, APP, CAMK2A, CHI3L1, CHIT1, CLSTN3, ERAP2, FSTL4, GPNMB, JCHAIN, L1CAM, NPTX2, SERPINA1, SERPINA3, and UCHL1) showed significant difference",
+            "21</xref>,<xref rid=\"B22-biomedicines-11-01250\" ref-type=\"bibr\">22</xref>]. So far, multiple proteins, including CHIT1, CHI3L1, CHI3L2, UCHL1, MAP2, GPNMB, and neurofilament proteins, have been reported as candidate ALS biomarkers [<xref rid=\"B23",
+            " 4 proteins were downregulated in ALS. Twelve proteins (SERPINA3, GPNMB, MEGF8, GOT2, CENPF, NPTX2, CAMK2A, APP, L1CAM, CHI3L1, PF4, and LYZ) were novel, and seven proteins (CHI3L2, CHIT1, NEFL, NEFM, NEFH, UCHL1, and APOB) were reported previous",
+            " CHIT1 (YPLIQTLR), ERAP2 (ILAVTDFEPTQAR), FSTL4 (FDDYNSDSSLTLR), APP (THPHFVIPYR), APP (VESLEQEAANER), APP (WYFDVTEGK), CHI3L1 (ILGQQVPYATK), CNTNAP2 (FSFSTTK), MEGF8 (LFPLPGR), MFAP4 (GFYYSLK), NELL2 (SALAYVDGK), NPTX2 (AAVLQLR), NPTX2 (TESTLNAL",
+            "LQR), RTN4RL2 (LFLQNNLIR), SERPINA3 (LINDYVK), CHI3L1 (QLLLSAALSAGK), NPTX1 (LENLEQYSR), NPTX1 (LPFVINDGK), RTN4RL2 (SLEPDTFQGLER), SERPINA1 (LSSWVLLMK), SERPINA1 (SVLGQLGIT",
+            "een peptides, namely, GPNMB (AYVPIAQVK), JCHAIN (IVLVDNK), L1CAM (YDIEFEDK), ST8SIA5 (EINSADFVFR), APOB (LPYTIITTPPLK), CHI3L1 (FPLTNAIK), CLSTN1 (YISNEFK), CSPG5 (EAGSAVEAEELVK), LINGO1 (HLNINAIR), MEGF8 (HVWTTLK), NCAN (ELGGEVFYVGPAR), NCAN (LS"
+          ],
+          "CHI3L2": [
+            ">,<xref rid=\"B22-biomedicines-11-01250\" ref-type=\"bibr\">22</xref>]. So far, multiple proteins, including CHIT1, CHI3L1, CHI3L2, UCHL1, MAP2, GPNMB, and neurofilament proteins, have been reported as candidate ALS biomarkers [<xref rid=\"B23-biomedi",
+            " (SERPINA3, GPNMB, MEGF8, GOT2, CENPF, NPTX2, CAMK2A, APP, L1CAM, CHI3L1, PF4, and LYZ) were novel, and seven proteins (CHI3L2, CHIT1, NEFL, NEFM, NEFH, UCHL1, and APOB) were reported previously [<xref rid=\"B23-biomedicines-11-01250\" ref-type=\"bi",
+            " being differentially expressed in ALS, and these include neurofilament proteins (NEFL, NEFM, and NEFH), CHIT1, CHI3L1, CHI3L2, APOB, GPNMB, and UCHL1 [<xref rid=\"B20-biomedicines-11-01250\" ref-type=\"bibr\">20</xref>,<xref rid=\"B41-biomedicines-11",
+            "0\" ref-type=\"bibr\">25</xref>,<xref rid=\"B43-biomedicines-11-01250\" ref-type=\"bibr\">43</xref>], while CHIT1, CHI3L1, and CHI3L2 are members of the human chitinase family that are implicated in inflammation [<xref rid=\"B24-biomedicines-11-01250\" re",
+            "et al. [<xref rid=\"B26-biomedicines-11-01250\" ref-type=\"bibr\">26</xref>] reported that CSF levels of CHIT1, CHI3L1, and CHI3L2 were significantly elevated in ALS patients relative to HC individuals. CLSTN3, which was decreased in ALS in our study",
+            "<italic toggle=\"yes\">CHI3L2</italic>"
+          ]
+        }
+      }
+    }
+  }
+}

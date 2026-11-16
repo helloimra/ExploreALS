@@ -1,0 +1,625 @@
+{
+  "canonical_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A37267913&resultType=core&format=json",
+  "europepmc_core_results": {
+    "hitCount": 1,
+    "request": {
+      "cursorMark": "*",
+      "pageSize": 25,
+      "queryString": "EXT_ID:37267913",
+      "resultType": "core",
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "abstractText": "iPSC-based drug discovery led to a phase 1/2a trial of ropinirole in ALS. 20 participants with sporadic ALS received ropinirole or placebo for 24\u00a0weeks in the double-blind period to evaluate safety, tolerability, and therapeutic effects. Adverse events were similar in both groups. During the double-blind period, muscle strength and daily activity were maintained, but a decline in the ALSFRS-R, which assesses the functional status of ALS patients, was not different from that in the placebo group. However, in the open-label extension period, the ropinirole group showed significant suppression of ALSFRS-R decline and an additional 27.9\u00a0weeks of disease-progression-free survival. iPSC-derived motor neurons from participants showed dopamine D2 receptor expression and a potential involvement of the SREBP2-cholesterol pathway in therapeutic effects. Lipid peroxide represents a clinical surrogate marker to assess disease progression and drug efficacy. Limitations include small sample sizes and high attrition rates in the open-label extension period, requiring further validation.",
+          "affiliation": "Department of Physiology, Keio University School of Medicine, Tokyo 160-8582, Japan; Department of Neurology, Keio University School of Medicine, Tokyo 160-8582, Japan.",
+          "authMan": "N",
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-7284-1069"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0001-8880-8554"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-5229-4296"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-7165-6336"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-0022-9529"
+              },
+              {
+                "type": "ORCID",
+                "value": "0009-0004-7871-7535"
+              }
+            ]
+          },
+          "authorList": {
+            "author": [
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Physiology, Keio University School of Medicine, Tokyo 160-8582, Japan; Department of Neurology, Keio University School of Medicine, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-0022-9529"
+                },
+                "firstName": "Satoru",
+                "fullName": "Morimoto S",
+                "initials": "S",
+                "lastName": "Morimoto"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Physiology, Keio University School of Medicine, Tokyo 160-8582, Japan; Department of Neurology, Keio University School of Medicine, Tokyo 160-8582, Japan; Department of Neurology and Stroke, Saitama Medical University International Medical Center, Saitama 350-1298, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Shinichi",
+                "fullName": "Takahashi S",
+                "initials": "S",
+                "lastName": "Takahashi"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Physiology, Keio University School of Medicine, Tokyo 160-8582, Japan; Department of Neurology, Keio University School of Medicine, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Daisuke",
+                "fullName": "Ito D",
+                "initials": "D",
+                "lastName": "Ito"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Neurology, Keio University School of Medicine, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Yugaku",
+                "fullName": "Dat\u00e9 Y",
+                "initials": "Y",
+                "lastName": "Dat\u00e9"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Neurology, Keio University School of Medicine, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Kensuke",
+                "fullName": "Okada K",
+                "initials": "K",
+                "lastName": "Okada"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Physiology, Keio University School of Medicine, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Chris",
+                "fullName": "Kato C",
+                "initials": "C",
+                "lastName": "Kato"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Physiology, Keio University School of Medicine, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Shiho",
+                "fullName": "Nakamura S",
+                "initials": "S",
+                "lastName": "Nakamura"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Physiology, Keio University School of Medicine, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Fumiko",
+                "fullName": "Ozawa F",
+                "initials": "F",
+                "lastName": "Ozawa"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Physiology, Keio University School of Medicine, Tokyo 160-8582, Japan; Keio University Global Research Institute, Tokyo 108-8345, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Chai Muh",
+                "fullName": "Chyi CM",
+                "initials": "CM",
+                "lastName": "Chyi"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Neurology, Tohoku University Graduate School of Medicine, Sendai, Miyagi 980-8575, Japan."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-5229-4296"
+                },
+                "firstName": "Ayumi",
+                "fullName": "Nishiyama A",
+                "initials": "A",
+                "lastName": "Nishiyama"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Neurology, Tohoku University Graduate School of Medicine, Sendai, Miyagi 980-8575, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Naoki",
+                "fullName": "Suzuki N",
+                "initials": "N",
+                "lastName": "Suzuki"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Physiology, Keio University School of Medicine, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0009-0004-7871-7535"
+                },
+                "firstName": "Koki",
+                "fullName": "Fujimori K",
+                "initials": "K",
+                "lastName": "Fujimori"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Research Center of Neurology, ONO Pharmaceutical Co., Ltd., Osaka 541-8564, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Tosho",
+                "fullName": "Kondo T",
+                "initials": "T",
+                "lastName": "Kondo"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Clinical Laboratory, National Center of Neurology and Psychiatry (NCNP), Tokyo 187-0031, Japan; Department of Neurology, Mihara Memorial Hospital, Isesaki, Gunmma 372-0006, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Masaki",
+                "fullName": "Takao M",
+                "initials": "M",
+                "lastName": "Takao"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Biochemistry, Keio University School of Medicine, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Miwa",
+                "fullName": "Hirai M",
+                "initials": "M",
+                "lastName": "Hirai"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Biochemistry, Keio University School of Medicine, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Yasuaki",
+                "fullName": "Kabe Y",
+                "initials": "Y",
+                "lastName": "Kabe"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Biochemistry, Keio University School of Medicine, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-7165-6336"
+                },
+                "firstName": "Makoto",
+                "fullName": "Suematsu M",
+                "initials": "M",
+                "lastName": "Suematsu"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Radiology, Keio University School of Medicine, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Masahiro",
+                "fullName": "Jinzaki M",
+                "initials": "M",
+                "lastName": "Jinzaki"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Neurology, Tohoku University Graduate School of Medicine, Sendai, Miyagi 980-8575, Japan."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-7284-1069"
+                },
+                "firstName": "Masashi",
+                "fullName": "Aoki M",
+                "initials": "M",
+                "lastName": "Aoki"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Keio University Hospital Clinical and Translational Research Center, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Yuto",
+                "fullName": "Fujiki Y",
+                "initials": "Y",
+                "lastName": "Fujiki"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Preventive Medicine and Public Health, Keio University School of Medicine, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Yasunori",
+                "fullName": "Sato Y",
+                "initials": "Y",
+                "lastName": "Sato"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Neurology, Keio University School of Medicine, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Norihiro",
+                "fullName": "Suzuki N",
+                "initials": "N",
+                "lastName": "Suzuki"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Neurology, Keio University School of Medicine, Tokyo 160-8582, Japan."
+                    }
+                  ]
+                },
+                "firstName": "Jin",
+                "fullName": "Nakahara J",
+                "initials": "J",
+                "lastName": "Nakahara"
+              },
+              {
+                "collectiveName": "Pooled Resource Open-Access ALS Clinical Trials Consortium"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Department of Physiology, Keio University School of Medicine, Tokyo 160-8582, Japan. Electronic address: hidokano@keio.jp."
+                    }
+                  ]
+                },
+                "firstName": "Hideyuki",
+                "fullName": "Okano H",
+                "initials": "H",
+                "lastName": "Okano"
+              }
+            ]
+          },
+          "authorString": "Morimoto S, Takahashi S, Ito D, Dat\u00e9 Y, Okada K, Kato C, Nakamura S, Ozawa F, Chyi CM, Nishiyama A, Suzuki N, Fujimori K, Kondo T, Takao M, Hirai M, Kabe Y, Suematsu M, Jinzaki M, Aoki M, Fujiki Y, Sato Y, Suzuki N, Nakahara J, Pooled Resource Open-Access ALS Clinical Trials Consortium, Okano H.",
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Indoles",
+                "registryNumber": "0"
+              },
+              {
+                "name": "ropinirole",
+                "registryNumber": "030PYR8953"
+              }
+            ]
+          },
+          "citedByCount": 78,
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "id": "37267911",
+                "orderIn": 1,
+                "reference": "Cell Stem Cell. 2023 Jun 1;30(6):748-749",
+                "source": "MED",
+                "type": "Comment in"
+              },
+              {
+                "id": "PPR429506",
+                "note": "CrossRef Pre-print loader",
+                "orderIn": 10002,
+                "source": "PPR",
+                "type": "Preprint in"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "related_data"
+            ]
+          },
+          "dateOfCompletion": "2023-06-05",
+          "dateOfCreation": "2023-06-02",
+          "dateOfRevision": "2023-06-12",
+          "dbCrossReferenceList": {
+            "dbName": [
+              "EMBL"
+            ]
+          },
+          "doi": "10.1016/j.stem.2023.04.017",
+          "epmcAuthMan": "N",
+          "firstIndexDate": "2023-06-04",
+          "firstPublicationDate": "2023-06-01",
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Unpaywall",
+                "url": "http://www.cell.com/article/S1934590923001352/pdf"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1016/j.stem.2023.04.017"
+              }
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "Ministry of Health, Labour and Welfare",
+                "orderIn": 0
+              },
+              {
+                "agency": "JSPS",
+                "orderIn": 0
+              },
+              {
+                "agency": "Uehara Memorial Foundation",
+                "orderIn": 0
+              },
+              {
+                "agency": "Japan Agency for Medical Research and Development",
+                "orderIn": 0
+              },
+              {
+                "agency": "GlaxoSmithKline Japan",
+                "grantId": "JP20H00485",
+                "orderIn": 0
+              },
+              {
+                "agency": "Japan Society for the Promotion of Science",
+                "grantId": "JP21H05273",
+                "orderIn": 0
+              },
+              {
+                "agency": "Japan Society for the Promotion of Science",
+                "grantId": "JP22K15736",
+                "orderIn": 0
+              },
+              {
+                "agency": "National Center of Neurology and Psychiatry",
+                "orderIn": 0
+              },
+              {
+                "agency": "Ministry of Education, Culture, Sports, Science and Technology",
+                "orderIn": 0
+              }
+            ]
+          },
+          "hasBook": "N",
+          "hasData": "Y",
+          "hasDbCrossReferences": "Y",
+          "hasEvaluations": "N",
+          "hasLabsLinks": "Y",
+          "hasPDF": "N",
+          "hasReferences": "Y",
+          "hasSuppl": "N",
+          "hasTMAccessionNumbers": "N",
+          "hasTextMinedTerms": "Y",
+          "id": "37267913",
+          "inEPMC": "N",
+          "inPMC": "N",
+          "isOpenAccess": "N",
+          "journalInfo": {
+            "dateOfPublication": "2023 Jun",
+            "issue": "6",
+            "journal": {
+              "essn": "1875-9777",
+              "isoabbreviation": "Cell Stem Cell",
+              "issn": "1934-5909",
+              "medlineAbbreviation": "Cell Stem Cell",
+              "nlmid": "101311472",
+              "title": "Cell stem cell"
+            },
+            "journalIssueId": 3581644,
+            "monthOfPublication": 6,
+            "printPublicationDate": "2023-06-01",
+            "volume": "30",
+            "yearOfPublication": 2023
+          },
+          "keywordList": {
+            "keyword": [
+              "Amyotrophic Lateral Sclerosis",
+              "ALS",
+              "Translational Research",
+              "Cholesterol Synthesis",
+              "Ropinirole Hydrochloride",
+              "Reverse Translational Research",
+              "Dopamine D2 Receptor Agonist",
+              "Pro-act Registry Data",
+              "Ipsc Drug Discovery",
+              "Phase 1/2A Trial"
+            ]
+          },
+          "language": "eng",
+          "license": "cc by",
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "descriptorName": "Motor Neurons",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Humans",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Amyotrophic Lateral Sclerosis",
+                "majorTopic_YN": "Y",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "DT",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "drug therapy"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Indoles",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "AE",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "adverse effects"
+                    },
+                    {
+                      "abbreviation": "PD",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "pharmacology"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Induced Pluripotent Stem Cells",
+                "majorTopic_YN": "Y"
+              }
+            ]
+          },
+          "nihAuthMan": "N",
+          "pageInfo": "766-780.e9",
+          "pmid": "37267913",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Clinical Trial, Phase II",
+              "Research Support, Non-U.S. Gov't",
+              "Clinical Trial, Phase I",
+              "Journal Article"
+            ]
+          },
+          "pubYear": "2023",
+          "publicationStatus": "ppublish",
+          "source": "MED",
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "title": "Phase 1/2a clinical trial in ALS with ropinirole, a drug candidate identified by iPSC drug discovery."
+        }
+      ]
+    },
+    "version": "6.9"
+  },
+  "evidence_id": "EV-B5-020",
+  "query_tokens": [
+    "PMID:37267913"
+  ],
+  "retrieved_at_utc": "2026-11-16T12:56:38Z"
+}

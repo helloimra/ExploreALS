@@ -1,0 +1,400 @@
+{
+  "analysis_run_id": "RUN-B1-004",
+  "ds045_trautwig2025_csf_proteomics": {
+    "UNC13A": {
+      "uniprot": "Q9UPW8",
+      "tmt_set1_detected": false,
+      "dia_set2_detected": false,
+      "tmt_peptide_count": 0
+    },
+    "STMN2": {
+      "uniprot": "Q93045",
+      "tmt_set1_detected": true,
+      "tmt_set1": {
+        "protein_id": "STMN2|Q93045",
+        "anova_F": 1.442530832,
+        "anova_p": 0.216186784,
+        "sals_vs_ctrl_log2diff": 0.042280692,
+        "sals_vs_ctrl_p": 0.218752101
+      },
+      "dia_set2_detected": false,
+      "tmt_peptide_count": 0,
+      "wgcna": {
+        "module": "turquoise",
+        "kME": 0.475903087484011,
+        "rank_in_module": 346,
+        "module_size": 476
+      },
+      "donor_tmt_ols": {
+        "n_sals": 35,
+        "n_ctrl": 44,
+        "batch_age_sex_adj_log2fc": 0.11333556400430489,
+        "batch_age_sex_adj_p": 0.1136359791292791,
+        "sals_elapsed_yr_spearman_r": -0.0942099391963661,
+        "sals_elapsed_yr_p": 0.5903618945481686,
+        "n_sals_elapsed": 35
+      }
+    },
+    "KCNQ2": {
+      "uniprot": "O43526",
+      "tmt_set1_detected": false,
+      "dia_set2_detected": false,
+      "tmt_peptide_count": 0
+    },
+    "CHMP7": {
+      "uniprot": "Q8WUX9",
+      "tmt_set1_detected": false,
+      "dia_set2_detected": false,
+      "tmt_peptide_count": 0
+    },
+    "CHMP2B": {
+      "uniprot": "Q9UQN3",
+      "tmt_set1_detected": false,
+      "dia_set2_detected": false,
+      "tmt_peptide_count": 0
+    },
+    "VPS4B": {
+      "uniprot": "O75351",
+      "tmt_set1_detected": false,
+      "dia_set2_detected": false,
+      "tmt_peptide_count": 0
+    },
+    "GDI2": {
+      "uniprot": "P50395",
+      "tmt_set1_detected": true,
+      "tmt_set1": {
+        "protein_id": "GDI2|P50395",
+        "anova_F": 2.245964714,
+        "anova_p": 0.055938323,
+        "sals_vs_ctrl_log2diff": 0.024523129,
+        "sals_vs_ctrl_p": 0.208456758
+      },
+      "dia_set2_detected": true,
+      "dia_set2": {
+        "protein_id": "GDI2|P50395",
+        "sals_vs_ctrl_log2diff": 0.0200470426588889,
+        "sals_vs_ctrl_p": 0.504195214802141,
+        "als_vs_ctrl_log2diff": 0.0747573647214978,
+        "als_vs_ctrl_p": 0.161076925974748,
+        "c9_vs_ctrl_log2diff": 0.181311907859819,
+        "c9_vs_ctrl_p": 0.026799355639896
+      },
+      "tmt_peptide_count": 5,
+      "tmt_peptide_median_sals_ctrl_p": 0.312463,
+      "wgcna": {
+        "module": "purple",
+        "kME": 0.749204973436301,
+        "rank_in_module": 11,
+        "module_size": 65
+      },
+      "donor_tmt_ols": {
+        "n_sals": 35,
+        "n_ctrl": 44,
+        "batch_age_sex_adj_log2fc": 0.09292522021859512,
+        "batch_age_sex_adj_p": 0.12534301401973488,
+        "sals_elapsed_yr_spearman_r": -0.2547102318050722,
+        "sals_elapsed_yr_p": 0.1397722288962103,
+        "n_sals_elapsed": 35
+      }
+    },
+    "_contrast_verification": {
+      "tmt_algebraic_max_err": 3.700000000004047e-08,
+      "dia_algebraic_max_err": 1.021405182655144e-14,
+      "tmt_raw_vs_post_tampor_spearman_r": 0.5515432920010108,
+      "chit1_pos_ctrl_tmt_log2diff": 0.871576386,
+      "chit1_pos_ctrl_dia_log2diff": 2.00596020096803
+    }
+  },
+  "ds029_spillman2026_frctx_synaptosome_multiomics": {
+    "contrast_verification": {
+      "synaptosome_max_err": 4.2636033592557965e-14,
+      "homogenate_max_err": 4.39648317751562e-14
+    },
+    "genes": {
+      "UNC13A": {
+        "frctx_proteomics_detected": true,
+        "frctx_synaptosome": {
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "recomputed_log2fc": -0.24961666960067141,
+          "recomputed_welch_p": 0.05023802961270434,
+          "table_log2fc": -0.249616669600675,
+          "table_p": 0.0502380296127011,
+          "table_padj": 0.344228142161609
+        },
+        "frctx_homogenate": {
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "recomputed_log2fc": -0.3858490779131891,
+          "recomputed_welch_p": 0.12253408814968166,
+          "table_log2fc": -0.385849077913188,
+          "table_p": 0.122534088149683,
+          "table_padj": 0.369520427588179
+        },
+        "frctx_rnaseq_homogenate": {
+          "baseMean": 8978.84847047575,
+          "log2FC": -0.394597345624645,
+          "p": 0.0956830097287121,
+          "padj": 0.439064071571184
+        },
+        "frctx_rnaseq_synaptosome": {
+          "baseMean": 12661.4857521156,
+          "log2FC": -0.365879412248077,
+          "p": 0.0602802418245626,
+          "padj": 0.323995399692609
+        },
+        "ipsc_neuron_proteomics": {
+          "homogenate_log2fc": -0.450496065525634,
+          "homogenate_p": 0.0715415850200094,
+          "homogenate_padj": 0.376701276668032,
+          "pellet_log2fc": -0.0987697185987795,
+          "pellet_p": 0.436401085725282,
+          "pellet_padj": 0.748241137405251
+        }
+      },
+      "STMN2": {
+        "frctx_proteomics_detected": true,
+        "frctx_synaptosome": {
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "recomputed_log2fc": -0.1327356880149182,
+          "recomputed_welch_p": 0.43665728231086987,
+          "table_log2fc": -0.132735688014948,
+          "table_p": 0.436657282310784,
+          "table_padj": 0.730548679273314
+        },
+        "frctx_homogenate": {
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "recomputed_log2fc": -0.48249175179202375,
+          "recomputed_welch_p": 0.014034365613302248,
+          "table_log2fc": -0.482491751792022,
+          "table_p": 0.0140343656133046,
+          "table_padj": 0.1131315614638
+        },
+        "frctx_rnaseq_homogenate": {
+          "baseMean": 3841.51293739129,
+          "log2FC": -0.401083986465368,
+          "p": 0.274607315102565,
+          "padj": 0.635156173613337
+        },
+        "frctx_rnaseq_synaptosome": {
+          "baseMean": 5646.26800732434,
+          "log2FC": -0.475695744078335,
+          "p": 0.100263134907363,
+          "padj": 0.394729253810955
+        },
+        "ipsc_neuron_proteomics": {
+          "homogenate_log2fc": -0.179591378148981,
+          "homogenate_p": 0.748267876142535,
+          "homogenate_padj": 0.876129374734606,
+          "pellet_log2fc": 0.13017376082797,
+          "pellet_p": 0.790175231189104,
+          "pellet_padj": 0.921885751420191
+        }
+      },
+      "KCNQ2": {
+        "frctx_proteomics_detected": true,
+        "frctx_synaptosome": {
+          "n_c9ftd": 10,
+          "n_ctrl": 9,
+          "recomputed_log2fc": 0.24649878622674137,
+          "recomputed_welch_p": 0.5267691094450733,
+          "table_log2fc": 0.24649878622674,
+          "table_p": 0.526769109445075,
+          "table_padj": 0.784676481784736
+        },
+        "frctx_homogenate": {
+          "n_c9ftd": 1,
+          "n_ctrl": 0,
+          "recomputed_log2fc": NaN,
+          "recomputed_welch_p": NaN,
+          "table_log2fc": NaN,
+          "table_p": NaN,
+          "table_padj": NaN
+        },
+        "frctx_rnaseq_homogenate": {
+          "baseMean": 6650.65017252356,
+          "log2FC": -0.251154199285068,
+          "p": 0.197518849640288,
+          "padj": 0.563994438355506
+        },
+        "frctx_rnaseq_synaptosome": {
+          "baseMean": 8599.53547939363,
+          "log2FC": -0.0950294839514232,
+          "p": 0.540492043493423,
+          "padj": 0.784567021550194
+        },
+        "ipsc_neuron_proteomics": {
+          "homogenate_log2fc": -0.149335596562693,
+          "homogenate_p": 0.648682697285291,
+          "homogenate_padj": 0.818031544537928,
+          "pellet_log2fc": -0.0212340162994114,
+          "pellet_p": 0.921384725826489,
+          "pellet_padj": 0.971892069673623
+        }
+      },
+      "CHMP7": {
+        "frctx_proteomics_detected": true,
+        "frctx_synaptosome": {
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "recomputed_log2fc": -0.27814280775128,
+          "recomputed_welch_p": 0.1738201993706096,
+          "table_log2fc": -0.278142807751281,
+          "table_p": 0.173820199370609,
+          "table_padj": 0.51170423853425
+        },
+        "frctx_homogenate": {
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "recomputed_log2fc": -0.30045384656556884,
+          "recomputed_welch_p": 0.1263094973447366,
+          "table_log2fc": -0.300453846565569,
+          "table_p": 0.126309497344738,
+          "table_padj": 0.37475986175881
+        },
+        "frctx_rnaseq_homogenate": {
+          "baseMean": 484.712196752811,
+          "log2FC": -0.0781751615607389,
+          "p": 0.515358462426364,
+          "padj": 0.796434179473855
+        },
+        "frctx_rnaseq_synaptosome": {
+          "baseMean": 591.373402235036,
+          "log2FC": -0.0676217841142597,
+          "p": 0.485706823864958,
+          "padj": 0.749752461748394
+        },
+        "ipsc_neuron_proteomics": {
+          "homogenate_log2fc": -0.847560491993171,
+          "homogenate_p": 0.267679161836655,
+          "homogenate_padj": 0.561766526791249,
+          "pellet_log2fc": -0.010817870278542,
+          "pellet_p": 0.94860315838486,
+          "pellet_padj": 0.982590138886396
+        }
+      },
+      "CHMP2B": {
+        "frctx_proteomics_detected": true,
+        "frctx_synaptosome": {
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "recomputed_log2fc": -0.15229694680653694,
+          "recomputed_welch_p": 0.5764970807049272,
+          "table_log2fc": -0.15229694680654,
+          "table_p": 0.576497080704918,
+          "table_padj": 0.812687510104588
+        },
+        "frctx_homogenate": {
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "recomputed_log2fc": 0.33705996554534323,
+          "recomputed_welch_p": 0.02326165656450814,
+          "table_log2fc": 0.337059965545345,
+          "table_p": 0.0232616565645071,
+          "table_padj": 0.150568050610742
+        },
+        "frctx_rnaseq_homogenate": {
+          "baseMean": 546.421796961271,
+          "log2FC": 0.0111570016649494,
+          "p": 0.941536125041413,
+          "padj": 0.980043128127911
+        },
+        "frctx_rnaseq_synaptosome": {
+          "baseMean": 604.612620471733,
+          "log2FC": -0.0770895274629403,
+          "p": 0.535530428719663,
+          "padj": 0.781589485414942
+        },
+        "ipsc_neuron_proteomics": {
+          "homogenate_log2fc": 0.0190750940662934,
+          "homogenate_p": 0.953272677672265,
+          "homogenate_padj": 0.975516214661261,
+          "pellet_log2fc": 0.566444431210847,
+          "pellet_p": 0.0213017111433771,
+          "pellet_padj": 0.324764365432793
+        }
+      },
+      "VPS4B": {
+        "frctx_proteomics_detected": true,
+        "frctx_synaptosome": {
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "recomputed_log2fc": -0.2036114040274306,
+          "recomputed_welch_p": 0.19405455008051203,
+          "table_log2fc": -0.203611404027432,
+          "table_p": 0.194054550080509,
+          "table_padj": 0.53373774081818
+        },
+        "frctx_homogenate": {
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "recomputed_log2fc": 0.04979044960845869,
+          "recomputed_welch_p": 0.7037164391542045,
+          "table_log2fc": 0.0497904496084578,
+          "table_p": 0.70371643915421,
+          "table_padj": 0.871406444627596
+        },
+        "frctx_rnaseq_homogenate": {
+          "baseMean": 446.696420005332,
+          "log2FC": -0.137908470624047,
+          "p": 0.331884242414419,
+          "padj": 0.680952335044462
+        },
+        "frctx_rnaseq_synaptosome": {
+          "baseMean": 557.755673117948,
+          "log2FC": -0.127172384751338,
+          "p": 0.265009079896646,
+          "padj": 0.582001817321295
+        },
+        "ipsc_neuron_proteomics": {
+          "homogenate_log2fc": 0.225247087359465,
+          "homogenate_p": 0.472071674588881,
+          "homogenate_padj": 0.705914931599357,
+          "pellet_log2fc": 0.233409874680193,
+          "pellet_p": 0.453946276913136,
+          "pellet_padj": 0.759547893199338
+        }
+      }
+    },
+    "fcx_cryptic_exon_junctions_moesm5": {
+      "STMN2": {
+        "n_c9ftd": 10,
+        "n_ctrl": 10,
+        "c9ftd_ce_detected": 10,
+        "ctrl_ce_detected": 0,
+        "fisher_p": 1.082508822446903e-05,
+        "psi_mwu_p": 6.386444750436982e-05,
+        "c9ftd_mean_psi": 0.07706784206325065,
+        "ctrl_mean_psi": 0.0,
+        "c9ftd_total_ce_reads": 77,
+        "ctrl_total_ce_reads": 0
+      },
+      "UNC13A": {
+        "n_c9ftd": 10,
+        "n_ctrl": 10,
+        "c9ftd_ce_detected": 6,
+        "ctrl_ce_detected": 0,
+        "fisher_p": 0.010835913312693497,
+        "psi_mwu_p": 0.005971963624595338,
+        "c9ftd_mean_psi": 0.022966205681253578,
+        "ctrl_mean_psi": 0.0,
+        "c9ftd_total_ce_reads": 26,
+        "ctrl_total_ce_reads": 0
+      },
+      "KALRN": {
+        "n_c9ftd": 10,
+        "n_ctrl": 10,
+        "c9ftd_ce_detected": 7,
+        "ctrl_ce_detected": 0,
+        "fisher_p": 0.0030959752321981426,
+        "psi_mwu_p": 0.0022125420307360353,
+        "c9ftd_mean_psi": 0.06029360930676721,
+        "ctrl_mean_psi": 0.0,
+        "c9ftd_total_ce_reads": 25,
+        "ctrl_total_ce_reads": 0
+      }
+    }
+  }
+}

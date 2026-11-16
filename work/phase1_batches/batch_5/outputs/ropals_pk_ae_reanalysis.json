@@ -1,0 +1,205 @@
+{
+  "mw_free_base_g_mol": 260.38,
+  "mw_hcl_salt_g_mol": 296.84,
+  "csf_16mg_wk24_n13": {
+    "reported_pg_ml": 17884.0,
+    "reported_ng_ml": 17.884,
+    "author_discussion_unit_typo_note": "Morimoto 2023 Discussion wrote '~18 nmol/L', mis-stating 17.884 ng/mL (17,884 pg/mL in Table S3) as nmol/L.",
+    "molar_total_csf_nM_freebase": 68.68423073968816,
+    "molar_total_csf_ci95_nM_freebase": [
+      54.481911053076274,
+      86.59267224825255
+    ],
+    "molar_total_csf_nM_if_hcl_calibrated": 60.247945020886675,
+    "ratio_bye2025_2500nM_to_csf_nM": 36.39845672109147,
+    "ratio_nonD2_1000nM_to_csf_nM": 14.559382688436589,
+    "ratio_nonD2_10000nM_to_csf_nM": 145.59382688436588
+  },
+  "plasma_16mg_predose_rows": [
+    {
+      "visit_row": "16mg_row1_n18",
+      "geomean_pg_ml": 22593.0,
+      "n": 18,
+      "total_plasma_nM": 86.76933712266688,
+      "est_unbound_plasma_nM_fup060": 52.06160227360013
+    },
+    {
+      "visit_row": "16mg_row2_n17",
+      "geomean_pg_ml": 20058.0,
+      "n": 17,
+      "total_plasma_nM": 77.03356632613873,
+      "est_unbound_plasma_nM_fup060": 46.22013979568323
+    },
+    {
+      "visit_row": "16mg_row3_n14",
+      "geomean_pg_ml": 22510.0,
+      "n": 14,
+      "total_plasma_nM": 86.45057224057149,
+      "est_unbound_plasma_nM_fup060": 51.87034334434289
+    }
+  ],
+  "adverse_events_summary": {
+    "\u2265 1 Adverse event \u2014 no. (%, 95% CI)": {
+      "db_ropinirole_n13": "12 (92.3, 64.0-99.8)",
+      "db_placebo_n7": "6 (85.7, 42.0-99.6)",
+      "ole_ropinirole_n12": "11 (91.7, 61.5-99.8)",
+      "ole_explacebo_n5": "4 (80.0, 28.4-99.5)"
+    },
+    "No. of distinct events": {
+      "db_ropinirole_n13": "0",
+      "db_placebo_n7": "1",
+      "ole_ropinirole_n12": "0",
+      "ole_explacebo_n5": "1"
+    },
+    "Trial regimen interrupted owing to adverse event \u2014 no. (%)": {
+      "db_ropinirole_n13": "0",
+      "db_placebo_n7": "0",
+      "ole_ropinirole_n12": "0",
+      "ole_explacebo_n5": "0"
+    },
+    "Dose reduced owing to adverse event \u2014 no. (%)": {
+      "db_ropinirole_n13": "0",
+      "db_placebo_n7": "0",
+      "ole_ropinirole_n12": "0",
+      "ole_explacebo_n5": "0"
+    },
+    "Trial regimen discontinued owing to adverse event \u2014 no. (%)": {
+      "db_ropinirole_n13": "0",
+      "db_placebo_n7": "0",
+      "ole_ropinirole_n12": "0",
+      "ole_explacebo_n5": "0"
+    },
+    "\u2265 1 Adverse event \u2014 no. (%)": {
+      "db_ropinirole_n13": "0",
+      "db_placebo_n7": "1 (14.3)",
+      "ole_ropinirole_n12": "0",
+      "ole_explacebo_n5": "1 (20.0)"
+    },
+    "Death \u2014 no. (%)": {
+      "db_ropinirole_n13": "0",
+      "db_placebo_n7": "1 (14.3)",
+      "ole_ropinirole_n12": "0",
+      "ole_explacebo_n5": "0"
+    },
+    "\u2265 1 Serious adverse event considered to be related to intervention \u2014 no. (%)": {
+      "db_ropinirole_n13": "0",
+      "db_placebo_n7": "0",
+      "ole_ropinirole_n12": "0",
+      "ole_explacebo_n5": "1 (20.0)"
+    },
+    "Trial regimen discontinued owing to serious adverse event \u2014 no. (%)": {
+      "db_ropinirole_n13": "0",
+      "db_placebo_n7": "0",
+      "ole_ropinirole_n12": "0",
+      "ole_explacebo_n5": "0"
+    },
+    "Gastrointestinal disorders": {
+      "db_ropinirole_n13": "10 (76.9, 46.2-95.0)",
+      "db_placebo_n7": "1 (14.3, 0.4-57.9)",
+      "ole_ropinirole_n12": "1 (8.3, 0.2-38.5)",
+      "ole_explacebo_n5": "3 (60.0, 14.7-94.7)"
+    },
+    "Musculoskeletal and connective-tissue disorders": {
+      "db_ropinirole_n13": "1 (7.7, 0.2-36.0)",
+      "db_placebo_n7": "1 (14.3, 0.4-57.9)",
+      "ole_ropinirole_n12": "0 (0, 0.0 - 26.5)",
+      "ole_explacebo_n5": "0 (0, 0.0-52.2)"
+    },
+    "Injury, poisoning, and procedural complications": {
+      "db_ropinirole_n13": "1 (7.7, 0.2-36.0)",
+      "db_placebo_n7": "2 (28.6, 3.7-71.0)",
+      "ole_ropinirole_n12": "3 (25.0, 5.5-57.2)",
+      "ole_explacebo_n5": "0 (0, 0.0-52.2)"
+    },
+    "Nervous-system disorders": {
+      "db_ropinirole_n13": "7 (53.8, 25.1-80.8)",
+      "db_placebo_n7": "0 (0, 0.0-41.0)",
+      "ole_ropinirole_n12": "7 (58.3, 27.7-84.8)",
+      "ole_explacebo_n5": "2 (40.0, 5.3-85.3)"
+    },
+    "Infections and infestations": {
+      "db_ropinirole_n13": "3 (23.1, 5.0-53.8)",
+      "db_placebo_n7": "2 (28.6, 3.7-71.0)",
+      "ole_ropinirole_n12": "5 (41.7, 15.2-72.3)",
+      "ole_explacebo_n5": "3 (60.0, 14.7-94.7)"
+    },
+    "Respiratory, thoracic, and mediastinal disorders": {
+      "db_ropinirole_n13": "1 (7.7, 0.2-36.0)",
+      "db_placebo_n7": "1 (14.3, 0.4-57.9)",
+      "ole_ropinirole_n12": "0 (0, 0.0 - 26.5)",
+      "ole_explacebo_n5": "0 (0, 0.0-52.2)"
+    },
+    "General disorders and administration-site conditions": {
+      "db_ropinirole_n13": "4 (30.8, 9.1-61.4)",
+      "db_placebo_n7": "0 (0, 0.0-41.0)",
+      "ole_ropinirole_n12": "4 (33.3, 9.9-65.1)",
+      "ole_explacebo_n5": "3 (60.0, 14.7-94.7)"
+    },
+    "Skin and subcutaneous-tissue disorders": {
+      "db_ropinirole_n13": "4 (30.8, 9.1-61.4)",
+      "db_placebo_n7": "0 (0, 0.0-41.0)",
+      "ole_ropinirole_n12": "2 (16.7, 2.1-48.4)",
+      "ole_explacebo_n5": "3 (60.0, 14.7-94.7)"
+    },
+    "Psychiatric disorders": {
+      "db_ropinirole_n13": "1 (7.7, 0.2-36.0)",
+      "db_placebo_n7": "0 (0, 0.0-41.0)",
+      "ole_ropinirole_n12": "0 (0, 0.0 - 26.5)",
+      "ole_explacebo_n5": "1 (20.0, 0.5-71.6)"
+    },
+    "Hepatobiliary disorders": {
+      "db_ropinirole_n13": "0 (0, 0.0-24.7)",
+      "db_placebo_n7": "0 (0, 0.0-41.0)",
+      "ole_ropinirole_n12": "0 (0, 0.0 - 26.5)",
+      "ole_explacebo_n5": "1 (20.0, 0.5-71.6)"
+    },
+    "Renal and urinary disorders": {
+      "db_ropinirole_n13": "0 (0, 0.0-24.7)",
+      "db_placebo_n7": "0 (0, 0.0-41.0)",
+      "ole_ropinirole_n12": "0 (0, 0.0 - 26.5)",
+      "ole_explacebo_n5": "1 (20.0, 0.5-71.6)"
+    },
+    "Metabolism and nutrition disorders": {
+      "db_ropinirole_n13": "0 (0, 0.0-24.7)",
+      "db_placebo_n7": "1 (14.3, 0.4-57.9)",
+      "ole_ropinirole_n12": "1 (8.3, 0.2-38.5)",
+      "ole_explacebo_n5": "1 (20.0, 0.5-71.6)"
+    },
+    "Cardiac disorders": {
+      "db_ropinirole_n13": "0 (0, 0.0-24.7)",
+      "db_placebo_n7": "1 (14.3, 0.4-57.9)",
+      "ole_ropinirole_n12": "0 (0, 0.0 - 26.5)",
+      "ole_explacebo_n5": "0 (0, 0.0-52.2)"
+    },
+    "Vascular disorders": {
+      "db_ropinirole_n13": "1 (7.7, 0.2-36.0)",
+      "db_placebo_n7": "1 (14.3, 0.4-57.9)",
+      "ole_ropinirole_n12": "1 (8.3, 0.2-38.5)",
+      "ole_explacebo_n5": "1 (20.0, 0.5-71.6)"
+    },
+    "Blood and lymphatic system disorders": {
+      "db_ropinirole_n13": "0 (0, 0.0-24.7)",
+      "db_placebo_n7": "0 (0, 0.0-41.0)",
+      "ole_ropinirole_n12": "0 (0, 0.0 - 26.5)",
+      "ole_explacebo_n5": "1 (20.0, 0.5-71.6)"
+    },
+    "Eye disorders": {
+      "db_ropinirole_n13": "1 (7.7, 0.2-36.0)",
+      "db_placebo_n7": "0 (0, 0.0-41.0)",
+      "ole_ropinirole_n12": "1 (8.3, 0.2-38.5)",
+      "ole_explacebo_n5": "0 (0, 0.0-52.2)"
+    },
+    "Reproductive system and breast disorders": {
+      "db_ropinirole_n13": "0 (0, 0.0-24.7)",
+      "db_placebo_n7": "0 (0, 0.0-41.0)",
+      "ole_ropinirole_n12": "1 (8.3, 0.2-38.5)",
+      "ole_explacebo_n5": "0 (0, 0.0-52.2)"
+    },
+    "Investigations": {
+      "db_ropinirole_n13": "0 (0, 0.0-24.7)",
+      "db_placebo_n7": "1 (14.3, 0.4-57.9)",
+      "ole_ropinirole_n12": "3 (25.0, 5.5-57.2)",
+      "ole_explacebo_n5": "1 (20.0, 0.5-71.6)"
+    }
+  }
+}

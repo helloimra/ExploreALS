@@ -1,0 +1,190 @@
+{
+  "totalCount": 8,
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05878769",
+          "briefTitle": "A Study to Evaluate the Long-Term Safety of Astegolimab in Participants With Chronic Obstructive Pulmonary Disease (COPD)"
+        },
+        "statusModule": {
+          "overallStatus": "ACTIVE_NOT_RECRUITING"
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Chronic Obstructive Pulmonary Disease"
+          ],
+          "keywords": [
+            "chronic obstructive pulmonary disease, COPD"
+          ]
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03615040",
+          "briefTitle": "Anti-ST2 (MSTT1041A) in COPD (COPD-ST2OP)"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "conditionsModule": {
+          "conditions": [
+            "COPD Exacerbation"
+          ],
+          "keywords": [
+            "COPD",
+            "Exacerbations",
+            "ST2 MAb",
+            "RG6149",
+            "MSTT1041A",
+            "Anti-ST2",
+            "Phase IIa",
+            "Placebo controlled"
+          ]
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05037929",
+          "briefTitle": "A Study to Evaluate the Efficacy and Safety of Astegolimab in Participants With Chronic Obstructive Pulmonary Disease"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Chronic Obstructive Pulmonary Disease"
+          ],
+          "keywords": [
+            "Chronic Obstructive Pulmonary Disease",
+            "COPD"
+          ]
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT05595642",
+          "briefTitle": "A Study to Evaluate Astegolimab in Participants With Chronic Obstructive Pulmonary Disease"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Chronic Obstructive Pulmonary Disease (COPD)"
+          ]
+        },
+        "designModule": {
+          "phases": [
+            "PHASE3"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04386616",
+          "briefTitle": "A Study to Evaluate the Safety and Efficacy of MSTT1041A (Astegolimab) or UTTR1147A in Patients With Severe COVID-19 Pneumonia"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "conditionsModule": {
+          "conditions": [
+            "COVID-19 Pneumonia"
+          ]
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT03747575",
+          "briefTitle": "A Study to Assess the Efficacy and Safety of MSTT1041A in Participants With Moderate to Severe Atopic Dermatitis"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Atopic Dermatitis"
+          ]
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT02918019",
+          "briefTitle": "A Study to Assess the Efficacy and Safety of MSTT1041A in Participants With Uncontrolled Severe Asthma"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Asthma"
+          ]
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06462118",
+          "briefTitle": "A Study to Evaluate the Effect of Injection Site on PK of Astegolimab in Healthy Subjects"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Healthy Volunteers"
+          ]
+        },
+        "designModule": {
+          "phases": [
+            "PHASE1"
+          ]
+        }
+      }
+    }
+  ]
+}

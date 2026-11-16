@@ -1,0 +1,553 @@
+{
+  "afdb_v6_structures": {
+    "SCFD1": {
+      "uniprot": "Q8WVM8",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-Q8WVM8-F1-model_v6.cif",
+      "n_residues": 642,
+      "mean_plddt": 84.58,
+      "median_plddt": 93.88,
+      "frac_plddt_ge_70": 0.8178,
+      "frac_plddt_ge_90": 0.6698,
+      "mean_pae_angstrom": 10.01
+    },
+    "G2E3": {
+      "uniprot": "Q7L622",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-Q7L622-F1-model_v6.cif",
+      "n_residues": 706,
+      "mean_plddt": 85.6,
+      "median_plddt": 93.25,
+      "frac_plddt_ge_70": 0.8683,
+      "frac_plddt_ge_90": 0.6671,
+      "mean_pae_angstrom": 19.62
+    },
+    "YKT6": {
+      "uniprot": "O15498",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-O15498-F1-model_v6.cif",
+      "n_residues": 198,
+      "mean_plddt": 90.91,
+      "median_plddt": 94.53,
+      "frac_plddt_ge_70": 0.9394,
+      "frac_plddt_ge_90": 0.7879,
+      "mean_pae_angstrom": 5.42,
+      "tyr64_plddt": 94.81,
+      "tyr64_5A_neighbors": [
+        "TYR4(3.48A)",
+        "PHE28(3.33A)",
+        "VAL59(4.16A)",
+        "LYS60(3.67A)",
+        "GLU61(2.92A)",
+        "GLN62(3.29A)",
+        "ASP63(1.34A)",
+        "LEU65(1.33A)",
+        "CYS66(4.29A)",
+        "ILE80(4.6A)",
+        "ALA81(3.38A)",
+        "ASP82(4.48A)",
+        "ASN83(4.67A)"
+      ],
+      "cys194_cys195_plddt": [
+        48.75,
+        43.56
+      ],
+      "longin_to_snare_centroid_A": 11.79,
+      "longin_vs_snare_mean_pae_A": 4.68
+    },
+    "SEC22B": {
+      "uniprot": "O75396",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-O75396-F1-model_v6.cif",
+      "n_residues": 215,
+      "mean_plddt": 83.49,
+      "median_plddt": 88.56,
+      "frac_plddt_ge_70": 0.814,
+      "frac_plddt_ge_90": 0.4372,
+      "mean_pae_angstrom": 11.76
+    },
+    "STX5": {
+      "uniprot": "Q13190",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-Q13190-F1-model_v6.cif",
+      "n_residues": 355,
+      "mean_plddt": 70.36,
+      "median_plddt": 74.94,
+      "frac_plddt_ge_70": 0.5408,
+      "frac_plddt_ge_90": 0.1577,
+      "mean_pae_angstrom": 20.7
+    },
+    "GOSR1": {
+      "uniprot": "O95249",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-O95249-F1-model_v6.cif",
+      "n_residues": 250,
+      "mean_plddt": 84.32,
+      "median_plddt": 89.88,
+      "frac_plddt_ge_70": 0.852,
+      "frac_plddt_ge_90": 0.496,
+      "mean_pae_angstrom": 17.56
+    },
+    "NSF": {
+      "uniprot": "P46459",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-P46459-F1-model_v6.cif",
+      "n_residues": 744,
+      "mean_plddt": 85.6,
+      "median_plddt": 89.38,
+      "frac_plddt_ge_70": 0.9032,
+      "frac_plddt_ge_90": 0.4476,
+      "mean_pae_angstrom": 14.34
+    },
+    "GDI2": {
+      "uniprot": "P50395",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-P50395-F1-model_v6.cif",
+      "n_residues": 445,
+      "mean_plddt": 93.79,
+      "median_plddt": 96.44,
+      "frac_plddt_ge_70": 0.9663,
+      "frac_plddt_ge_90": 0.8831,
+      "mean_pae_angstrom": 4.53
+    },
+    "FBXL5": {
+      "uniprot": "Q9UKA1",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-Q9UKA1-F1-model_v6.cif",
+      "n_residues": 691,
+      "mean_plddt": 69.61,
+      "median_plddt": 88.12,
+      "frac_plddt_ge_70": 0.5847,
+      "frac_plddt_ge_90": 0.4501,
+      "mean_pae_angstrom": 22.44,
+      "hr_domain_1_161_mean_plddt": 89.56,
+      "lrr_domain_200_691_mean_plddt": 64.88,
+      "hr_vs_lrr_interdomain_pae_A": 28.75
+    },
+    "IREB2": {
+      "uniprot": "P48200",
+      "cif_path": "data\\pharmacology_structures\\afdb\\AF-P48200-F1-model_v6.cif",
+      "n_residues": 963,
+      "mean_plddt": 86.74,
+      "median_plddt": 92.94,
+      "frac_plddt_ge_70": 0.9003,
+      "frac_plddt_ge_90": 0.6584,
+      "mean_pae_angstrom": 12.58
+    }
+  },
+  "experimental_pdb_structures": {
+    "3KYQ": {
+      "pdb_id": "3KYQ",
+      "cif_path": "data\\pharmacology_structures\\pdb\\pdb_00003kyq.cif",
+      "entity_descriptions": [
+        "Synaptobrevin homolog YKT6",
+        "SULFATE ION",
+        "dodecyl 2-(trimethylammonio)ethyl phosphate",
+        "water"
+      ],
+      "chains": {
+        "A": {
+          "n_residues": 193,
+          "resseq_range": [
+            0,
+            192
+          ],
+          "first_last": [
+            "LEU0",
+            "ASN192"
+          ]
+        }
+      },
+      "non_water_heteroatoms": [
+        {
+          "chain": "A",
+          "resname": "SO4",
+          "resseq": 199,
+          "n_atoms": 5
+        },
+        {
+          "chain": "A",
+          "resname": "SO4",
+          "resseq": 200,
+          "n_atoms": 5
+        },
+        {
+          "chain": "A",
+          "resname": "DPV",
+          "resseq": 201,
+          "n_atoms": 23
+        }
+      ],
+      "closed_longin_to_snare_centroid_A": 11.41,
+      "res64_identity": "TYR",
+      "res64_contacts_to_snare_le_5A": [],
+      "res64_lipid_distances_A": {
+        "SO4199": 22.81,
+        "SO4200": 15.13,
+        "DPV201": 3.46
+      }
+    },
+    "6J74": {
+      "pdb_id": "6J74",
+      "cif_path": "data\\pharmacology_structures\\pdb\\pdb_00006j74.cif",
+      "entity_descriptions": [
+        "Protein prenyltransferase alpha subunit repeat-containing protein 1",
+        "Geranylgeranyl transferase type-2 subunit beta",
+        "Synaptobrevin homolog YKT6",
+        "PHOSPHATE ION",
+        "ZINC ION"
+      ],
+      "chains": {
+        "A": {
+          "n_residues": 276,
+          "resseq_range": [
+            7,
+            327
+          ],
+          "first_last": [
+            "GLU7",
+            "ASN327"
+          ]
+        },
+        "B": {
+          "n_residues": 328,
+          "resseq_range": [
+            4,
+            331
+          ],
+          "first_last": [
+            "PRO4",
+            "SER331"
+          ]
+        },
+        "C": {
+          "n_residues": 192,
+          "resseq_range": [
+            1,
+            192
+          ],
+          "first_last": [
+            "MET1",
+            "ASN192"
+          ]
+        }
+      },
+      "non_water_heteroatoms": [
+        {
+          "chain": "A",
+          "resname": "PO4",
+          "resseq": 401,
+          "n_atoms": 5
+        },
+        {
+          "chain": "B",
+          "resname": "PO4",
+          "resseq": 401,
+          "n_atoms": 5
+        },
+        {
+          "chain": "B",
+          "resname": "ZN",
+          "resseq": 402,
+          "n_atoms": 1
+        }
+      ],
+      "ykt6_chain": "C",
+      "open_longin_to_snare_centroid_A": 11.56,
+      "ykt6_c_term_modeled": [
+        "TYR185",
+        "LYS186",
+        "THR187",
+        "ALA188",
+        "ARG189",
+        "LYS190",
+        "GLN191",
+        "ASN192"
+      ]
+    },
+    "3EGD": {
+      "pdb_id": "3EGD",
+      "cif_path": "data\\pharmacology_structures\\pdb\\pdb_00003egd.cif",
+      "entity_descriptions": [
+        "Protein transport protein Sec23A",
+        "Protein transport protein Sec24A",
+        "Vesicle-trafficking protein SEC22b",
+        "10 residue peptide from VSV glycoprotein",
+        "ZINC ION",
+        "water"
+      ],
+      "chains": {
+        "A": {
+          "n_residues": 711,
+          "resseq_range": [
+            3,
+            764
+          ],
+          "first_last": [
+            "THR3",
+            "ALA764"
+          ]
+        },
+        "B": {
+          "n_residues": 731,
+          "resseq_range": [
+            346,
+            1093
+          ],
+          "first_last": [
+            "GLU346",
+            "LYS1093"
+          ]
+        },
+        "C": {
+          "n_residues": 137,
+          "resseq_range": [
+            1,
+            157
+          ],
+          "first_last": [
+            "MET1",
+            "LEU157"
+          ]
+        },
+        "D": {
+          "n_residues": 7,
+          "resseq_range": [
+            502,
+            508
+          ],
+          "first_last": [
+            "THR502",
+            "ARG508"
+          ]
+        }
+      },
+      "non_water_heteroatoms": [
+        {
+          "chain": "A",
+          "resname": "ZN",
+          "resseq": 765,
+          "n_atoms": 1
+        },
+        {
+          "chain": "B",
+          "resname": "ZN",
+          "resseq": 1094,
+          "n_atoms": 1
+        }
+      ]
+    },
+    "3V5Z": {
+      "pdb_id": "3V5Z",
+      "cif_path": "data\\pharmacology_structures\\pdb\\pdb_00003v5z.cif",
+      "entity_descriptions": [
+        "F-box/LRR-repeat protein 5",
+        "MU-OXO-DIIRON",
+        "water"
+      ],
+      "chains": {
+        "A": {
+          "n_residues": 154,
+          "resseq_range": [
+            4,
+            159
+          ],
+          "first_last": [
+            "PHE4",
+            "CYS159"
+          ]
+        },
+        "B": {
+          "n_residues": 155,
+          "resseq_range": [
+            4,
+            160
+          ],
+          "first_last": [
+            "PHE4",
+            "SER160"
+          ]
+        }
+      },
+      "non_water_heteroatoms": [
+        {
+          "chain": "A",
+          "resname": "FEO",
+          "resseq": 201,
+          "n_atoms": 3
+        },
+        {
+          "chain": "B",
+          "resname": "FEO",
+          "resseq": 201,
+          "n_atoms": 3
+        }
+      ],
+      "diiron_coordinating_residues_le_3A": [
+        "HIS15(2.04A)",
+        "HIS57(2.25A)",
+        "GLU58(2.03A)",
+        "GLU61(2.12A)",
+        "HIS80(2.39A)",
+        "HIS126(2.31A)",
+        "GLU130(1.96A)"
+      ]
+    },
+    "6VCD": {
+      "pdb_id": "6VCD",
+      "cif_path": "data\\pharmacology_structures\\pdb\\pdb_00006vcd.cif",
+      "entity_descriptions": [
+        "Iron-responsive element binding protein 2, isoform CRA_a",
+        "F-box/LRR-repeat protein 5",
+        "S-phase kinase-associated protein 1",
+        "FE2/S2 (INORGANIC) CLUSTER"
+      ],
+      "chains": {
+        "A": {
+          "n_residues": 643,
+          "resseq_range": [
+            10,
+            963
+          ],
+          "first_last": [
+            "PHE10",
+            "SER963"
+          ]
+        },
+        "B": {
+          "n_residues": 255,
+          "resseq_range": [
+            205,
+            691
+          ],
+          "first_last": [
+            "ILE205",
+            "GLU691"
+          ]
+        },
+        "C": {
+          "n_residues": 135,
+          "resseq_range": [
+            2,
+            160
+          ],
+          "first_last": [
+            "PRO2",
+            "CYS160"
+          ]
+        }
+      },
+      "non_water_heteroatoms": [
+        {
+          "chain": "B",
+          "resname": "FES",
+          "resseq": 800,
+          "n_atoms": 4
+        }
+      ],
+      "chain_roles": {
+        "SKP1": "C",
+        "FBXL5": "B",
+        "IRP2_IREB2": "A"
+      },
+      "fbxl5_irp2_contacts_le_4A_count": 37,
+      "fbxl5_irp2_contacts_sample": [
+        "B:ASP656-A:ARG763(3.61A)",
+        "B:GLU657-A:ARG763(3.47A)",
+        "B:TYR661-A:ARG779(3.75A)",
+        "B:CYS662-A:ARG779(2.23A)",
+        "B:ASP663-A:ARG224(3.9A)",
+        "B:ASP663-A:ARG779(3.48A)",
+        "B:ASN664-A:ASN217(3.54A)",
+        "B:ASN664-A:VAL220(3.79A)",
+        "B:ASN664-A:ARG224(2.95A)",
+        "B:ILE665-A:ARG779(3.62A)",
+        "B:ALA670-A:ARG779(3.44A)",
+        "B:ASP671-A:PRO778(3.81A)",
+        "B:THR672-A:ARG763(2.71A)",
+        "B:ALA673-A:ARG763(3.49A)",
+        "B:ALA673-A:PRO778(3.22A)",
+        "B:ALA673-A:ARG779(3.24A)",
+        "B:SER674-A:ARG763(2.62A)",
+        "B:SER674-A:ARG779(2.9A)",
+        "B:CYS676-A:SER760(2.48A)",
+        "B:GLN677-A:SER760(3.19A)",
+        "B:LEU679-A:GLY759(3.11A)",
+        "B:LEU679-A:SER760(3.51A)",
+        "B:LEU679-A:SER783(3.69A)",
+        "B:GLN680-A:ALA758(3.39A)",
+        "B:GLN680-A:GLY759(2.76A)",
+        "B:GLN680-A:TYR784(3.93A)",
+        "B:GLN680-A:GLY785(3.18A)",
+        "B:ARG688-A:GLU221(3.29A)",
+        "B:ARG688-A:ARG224(3.4A)",
+        "B:ARG688-A:ASN782(2.63A)"
+      ]
+    }
+  },
+  "bye2025_screen_check": {
+    "sha256": "364e4368a1c560b83ebf6acc93822f4d704ba74fb0d68293ac097be1f0d7d71d",
+    "xlsx_path": "data\\pharmacology_structures\\bye2025\\41593_2025_2118_MOESM3_ESM.xlsx",
+    "sheets": {
+      "Contents": [
+        15,
+        2
+      ],
+      "Table 1": [
+        19,
+        323
+      ],
+      "Table 2": [
+        14,
+        11
+      ],
+      "Table 3": [
+        59,
+        6
+      ],
+      "Table 4": [
+        905,
+        6
+      ],
+      "Table 5": [
+        184,
+        7
+      ],
+      "Table 6": [
+        632,
+        7
+      ],
+      "Table 7": [
+        49,
+        8
+      ],
+      "Table 8": [
+        21,
+        12
+      ],
+      "Table 9": [
+        599,
+        6
+      ],
+      "Table 10": [
+        351,
+        7
+      ],
+      "Table 11": [
+        50,
+        4
+      ],
+      "Table 12": [
+        112,
+        19
+      ],
+      "Table 13": [
+        114,
+        17
+      ],
+      "Table 14": [
+        10,
+        10
+      ]
+    },
+    "keyword_matches": [
+      {
+        "sheet": "Table 12",
+        "row": 51,
+        "keyword": "deferiprone",
+        "preview": "Deferiprone | HY-B0568 | MedChemExpress | -0.75 | -0.4541666666666657 | -1.4602510460251068 | -0.37083333333333 | -0.47083333333333144 | 0.30833333333333 | -0.5 | 2.570833333333333 | 1.0714285714285694 | 2.2829787234042556 | 0.3125 | -0.7291666666666643 | 0.10504201680672054 | -0.17672413793103203 |"
+      }
+    ]
+  }
+}

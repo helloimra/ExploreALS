@@ -1,0 +1,725 @@
+{
+  "analysis_run_id": "RUN-P2-T3-003",
+  "chembl_normalized_potencies": {
+    "baricitinib_CHEMBL2105759": [
+      {
+        "target_pref_name": "Tyrosine-protein kinase JAK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 0.8,
+        "pchembl_value": "9.10"
+      },
+      {
+        "target_pref_name": "Tyrosine-protein kinase JAK1",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 0.99,
+        "pchembl_value": "9.00"
+      },
+      {
+        "target_pref_name": "Tyrosine-protein kinase JAK1",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 4.0,
+        "pchembl_value": "8.40"
+      },
+      {
+        "target_pref_name": "Tyrosine-protein kinase JAK1",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 4.0,
+        "pchembl_value": "8.40"
+      },
+      {
+        "target_pref_name": "Tyrosine-protein kinase JAK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 6.0,
+        "pchembl_value": "8.22"
+      },
+      {
+        "target_pref_name": "Tyrosine-protein kinase JAK1",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 6.0,
+        "pchembl_value": "8.22"
+      },
+      {
+        "target_pref_name": "Tyrosine-protein kinase JAK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 6.6,
+        "pchembl_value": "8.18"
+      },
+      {
+        "target_pref_name": "Tyrosine-protein kinase JAK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 7.0,
+        "pchembl_value": "8.15"
+      },
+      {
+        "target_pref_name": "Non-receptor tyrosine-protein kinase TYK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 8.7,
+        "pchembl_value": "8.06"
+      },
+      {
+        "target_pref_name": "JAK1/TYK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 15.0,
+        "pchembl_value": "7.82"
+      },
+      {
+        "target_pref_name": "JAK1/JAK2/TYK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 16.0,
+        "pchembl_value": "7.80"
+      },
+      {
+        "target_pref_name": "JAK1/JAK2/TYK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 21.1,
+        "pchembl_value": "7.68"
+      },
+      {
+        "target_pref_name": "Tyrosine-protein kinase JAK3",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 25.0,
+        "pchembl_value": "7.60"
+      },
+      {
+        "target_pref_name": "JAK1/TYK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 28.7,
+        "pchembl_value": "7.54"
+      },
+      {
+        "target_pref_name": "AP2-associated protein kinase 1",
+        "target_organism": "Homo sapiens",
+        "standard_type": "Kd",
+        "standard_relation": "=",
+        "normalized_value_nM": 46.0,
+        "pchembl_value": "7.34"
+      },
+      {
+        "target_pref_name": "Non-receptor tyrosine-protein kinase TYK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 53.0,
+        "pchembl_value": "7.28"
+      },
+      {
+        "target_pref_name": "Non-receptor tyrosine-protein kinase TYK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 61.0,
+        "pchembl_value": "7.21"
+      },
+      {
+        "target_pref_name": "JAK3/JAK1",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 67.0,
+        "pchembl_value": "7.17"
+      },
+      {
+        "target_pref_name": "JAK2/TYK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 81.9,
+        "pchembl_value": "7.09"
+      },
+      {
+        "target_pref_name": "Tyrosine-protein kinase JAK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 87.8,
+        "pchembl_value": "7.06"
+      },
+      {
+        "target_pref_name": "MAP/microtubule affinity-regulating kinase 3",
+        "target_organism": "Homo sapiens",
+        "standard_type": "Kd",
+        "standard_relation": "=",
+        "normalized_value_nM": 104.0,
+        "pchembl_value": "6.98"
+      },
+      {
+        "target_pref_name": "Serine/threonine-protein kinase MARK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "Kd",
+        "standard_relation": "=",
+        "normalized_value_nM": 125.0,
+        "pchembl_value": "6.90"
+      },
+      {
+        "target_pref_name": "Unchecked",
+        "target_organism": null,
+        "standard_type": "Kd",
+        "standard_relation": "=",
+        "normalized_value_nM": 126.0,
+        "pchembl_value": "6.90"
+      },
+      {
+        "target_pref_name": "JAK2/TYK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 149.0,
+        "pchembl_value": "6.83"
+      },
+      {
+        "target_pref_name": "JAK2/TYK2",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 200.0,
+        "pchembl_value": "6.70"
+      }
+    ],
+    "apilimod_freebase_CHEMBL4297643": [
+      {
+        "target_pref_name": "1-phosphatidylinositol 3-phosphate 5-kinase",
+        "target_organism": "Homo sapiens",
+        "standard_type": "Kd",
+        "standard_relation": "=",
+        "normalized_value_nM": 0.075,
+        "pchembl_value": "10.12"
+      },
+      {
+        "target_pref_name": "1-phosphatidylinositol 3-phosphate 5-kinase",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 0.309,
+        "pchembl_value": "9.51"
+      },
+      {
+        "target_pref_name": "1-phosphatidylinositol 3-phosphate 5-kinase",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 0.31,
+        "pchembl_value": "9.51"
+      },
+      {
+        "target_pref_name": "1-phosphatidylinositol 3-phosphate 5-kinase",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 0.312,
+        "pchembl_value": "9.51"
+      },
+      {
+        "target_pref_name": "1-phosphatidylinositol 3-phosphate 5-kinase",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 3.4,
+        "pchembl_value": "8.47"
+      },
+      {
+        "target_pref_name": "1-phosphatidylinositol 3-phosphate 5-kinase",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 3.4,
+        "pchembl_value": "8.47"
+      },
+      {
+        "target_pref_name": "1-phosphatidylinositol 3-phosphate 5-kinase",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 4.0,
+        "pchembl_value": "8.40"
+      },
+      {
+        "target_pref_name": "SARS-CoV-2",
+        "target_organism": "Severe acute respiratory syndrome coronavirus 2",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 7.0,
+        "pchembl_value": "8.15"
+      },
+      {
+        "target_pref_name": "Ebolavirus",
+        "target_organism": "Ebolavirus",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 10.0,
+        "pchembl_value": "8.00"
+      },
+      {
+        "target_pref_name": "Marburgvirus",
+        "target_organism": "Marburgvirus",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 10.0,
+        "pchembl_value": "8.00"
+      },
+      {
+        "target_pref_name": "Ebolavirus",
+        "target_organism": "Ebolavirus",
+        "standard_type": "EC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 10.0,
+        "pchembl_value": "8.00"
+      },
+      {
+        "target_pref_name": "Marburgvirus",
+        "target_organism": "Marburgvirus",
+        "standard_type": "EC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 10.0,
+        "pchembl_value": "8.00"
+      },
+      {
+        "target_pref_name": "1-phosphatidylinositol 3-phosphate 5-kinase",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 14.0,
+        "pchembl_value": "7.85"
+      },
+      {
+        "target_pref_name": "1-phosphatidylinositol 3-phosphate 5-kinase",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 14.0,
+        "pchembl_value": "7.85"
+      },
+      {
+        "target_pref_name": "1-phosphatidylinositol 3-phosphate 5-kinase",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 14.0,
+        "pchembl_value": "7.85"
+      },
+      {
+        "target_pref_name": "1-phosphatidylinositol 3-phosphate 5-kinase",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 14.0,
+        "pchembl_value": "7.85"
+      },
+      {
+        "target_pref_name": "1-phosphatidylinositol 3-phosphate 5-kinase",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 14.0,
+        "pchembl_value": "7.85"
+      },
+      {
+        "target_pref_name": "1-phosphatidylinositol 3-phosphate 5-kinase",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 15.0,
+        "pchembl_value": "7.82"
+      },
+      {
+        "target_pref_name": "Murine hepatitis virus",
+        "target_organism": "Murine hepatitis virus",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 15.7,
+        "pchembl_value": "7.80"
+      },
+      {
+        "target_pref_name": "Murine hepatitis virus",
+        "target_organism": "Murine hepatitis virus",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 15.85,
+        "pchembl_value": "7.80"
+      },
+      {
+        "target_pref_name": "SARS-CoV-2",
+        "target_organism": "Severe acute respiratory syndrome coronavirus 2",
+        "standard_type": "EC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 23.0,
+        "pchembl_value": "7.64"
+      },
+      {
+        "target_pref_name": "SARS-CoV-2",
+        "target_organism": "Severe acute respiratory syndrome coronavirus 2",
+        "standard_type": "EC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 23.0,
+        "pchembl_value": "7.64"
+      },
+      {
+        "target_pref_name": "SARS-CoV-2",
+        "target_organism": "Severe acute respiratory syndrome coronavirus 2",
+        "standard_type": "EC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 23.0,
+        "pchembl_value": "7.64"
+      },
+      {
+        "target_pref_name": "SARS-CoV-2",
+        "target_organism": "Severe acute respiratory syndrome coronavirus 2",
+        "standard_type": "EC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 23.0,
+        "pchembl_value": "7.64"
+      },
+      {
+        "target_pref_name": "MDA-MB-231",
+        "target_organism": "Homo sapiens",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 100.0,
+        "pchembl_value": "7.00"
+      }
+    ],
+    "censavudine_CHEMBL124363": [
+      {
+        "target_pref_name": "Human immunodeficiency virus 1",
+        "target_organism": "Human immunodeficiency virus 1",
+        "standard_type": "EC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 60.0,
+        "pchembl_value": "7.22"
+      },
+      {
+        "target_pref_name": "Human immunodeficiency virus 1",
+        "target_organism": "Human immunodeficiency virus 1",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 200.0,
+        "pchembl_value": "6.70"
+      },
+      {
+        "target_pref_name": "Human immunodeficiency virus 1",
+        "target_organism": "Human immunodeficiency virus 1",
+        "standard_type": "IC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 250.0,
+        "pchembl_value": "6.60"
+      },
+      {
+        "target_pref_name": "Human immunodeficiency virus 1",
+        "target_organism": "Human immunodeficiency virus 1",
+        "standard_type": "EC50",
+        "standard_relation": "=",
+        "normalized_value_nM": 250.0,
+        "pchembl_value": "6.60"
+      }
+    ]
+  },
+  "c019_baricitinib_cns_occupancy": [
+    {
+      "regimen": "2mg_QD_oral_ALS_CSF",
+      "cu_cns_nM": 1.75,
+      "occ_pct_JAK1_enzymatic_IC50_5p9nM": 22.88,
+      "occ_pct_JAK2_enzymatic_IC50_5p7nM": 23.49,
+      "occ_pct_WholeCell_IFNg_IL6_pSTAT_IC50_40nM": 4.19,
+      "occ_pct_AAK1_Kd_17nM": 9.33,
+      "occ_pct_TYK2_enzymatic_IC50_53nM": 3.2,
+      "occ_pct_JAK3_enzymatic_IC50_560nM": 0.31,
+      "fold_vs_2500nM_screen": 0.0007
+    },
+    {
+      "regimen": "4mg_QD_oral_NADALS_measured_CSF",
+      "cu_cns_nM": 3.8,
+      "occ_pct_JAK1_enzymatic_IC50_5p9nM": 39.18,
+      "occ_pct_JAK2_enzymatic_IC50_5p7nM": 40.0,
+      "occ_pct_WholeCell_IFNg_IL6_pSTAT_IC50_40nM": 8.68,
+      "occ_pct_AAK1_Kd_17nM": 18.27,
+      "occ_pct_TYK2_enzymatic_IC50_53nM": 6.69,
+      "occ_pct_JAK3_enzymatic_IC50_560nM": 0.67,
+      "fold_vs_2500nM_screen": 0.00152
+    },
+    {
+      "regimen": "8mg_QD_supratherapeutic_boxed_warning",
+      "cu_cns_nM": 7.6,
+      "occ_pct_JAK1_enzymatic_IC50_5p9nM": 56.3,
+      "occ_pct_JAK2_enzymatic_IC50_5p7nM": 57.14,
+      "occ_pct_WholeCell_IFNg_IL6_pSTAT_IC50_40nM": 15.97,
+      "occ_pct_AAK1_Kd_17nM": 30.89,
+      "occ_pct_TYK2_enzymatic_IC50_53nM": 12.54,
+      "occ_pct_JAK3_enzymatic_IC50_560nM": 1.34,
+      "fold_vs_2500nM_screen": 0.00304
+    },
+    {
+      "regimen": "20nM_in_vitro_bridge_dose",
+      "cu_cns_nM": 20.0,
+      "occ_pct_JAK1_enzymatic_IC50_5p9nM": 77.22,
+      "occ_pct_JAK2_enzymatic_IC50_5p7nM": 77.82,
+      "occ_pct_WholeCell_IFNg_IL6_pSTAT_IC50_40nM": 33.33,
+      "occ_pct_AAK1_Kd_17nM": 54.05,
+      "occ_pct_TYK2_enzymatic_IC50_53nM": 27.4,
+      "occ_pct_JAK3_enzymatic_IC50_560nM": 3.45,
+      "fold_vs_2500nM_screen": 0.008
+    },
+    {
+      "regimen": "2500nM_Bye2025_screen_dose",
+      "cu_cns_nM": 2500.0,
+      "occ_pct_JAK1_enzymatic_IC50_5p9nM": 99.76,
+      "occ_pct_JAK2_enzymatic_IC50_5p7nM": 99.77,
+      "occ_pct_WholeCell_IFNg_IL6_pSTAT_IC50_40nM": 98.43,
+      "occ_pct_AAK1_Kd_17nM": 99.32,
+      "occ_pct_TYK2_enzymatic_IC50_53nM": 97.92,
+      "occ_pct_JAK3_enzymatic_IC50_560nM": 81.7,
+      "fold_vs_2500nM_screen": 1.0
+    }
+  ],
+  "bye2025_16donor_heterogeneity": {
+    "n_unique_sals_donor_lines": 16,
+    "donor_line_ids": [
+      "SALS 1",
+      "SALS 2",
+      "SALS 3",
+      "SALS 4",
+      "SALS 5",
+      "SALS 6",
+      "SALS 7",
+      "SALS 8",
+      "SALS 9",
+      "SALS 10",
+      "SALS 11",
+      "SALS 12",
+      "SALS 13",
+      "SALS 14",
+      "SALS 15",
+      "SALS 16"
+    ],
+    "summary_table_metrics": [
+      {
+        "drug": "Riluzole",
+        "modality": "IPSC_MN_SURVIVAL_DAYS",
+        "n_donors": 16,
+        "mean_paired_dmso_days": 3.959114583333333,
+        "t_stat_paired": 21.331478152091716,
+        "p_ttest_2s": 1.2376410108257613e-12,
+        "p_wilcoxon_exact_2s": 3.0517578125e-05,
+        "rank_107": 1,
+        "q_bh_107_ttest_2s": 1.3242758815835647e-10
+      },
+      {
+        "drug": "Baricitinib",
+        "modality": "IPSC_MN_SURVIVAL_DAYS",
+        "n_donors": 16,
+        "mean_paired_dmso_days": 3.77421875,
+        "t_stat_paired": 8.813565898509813,
+        "p_ttest_2s": 2.5615976291626177e-07,
+        "p_wilcoxon_exact_2s": 0.000152587890625,
+        "rank_107": 2,
+        "q_bh_107_ttest_2s": 6.852273658010003e-06
+      },
+      {
+        "drug": "Apilimod",
+        "modality": "IPSC_MN_SURVIVAL_DAYS",
+        "n_donors": 16,
+        "mean_paired_dmso_days": 1.83671875,
+        "t_stat_paired": 3.707969742167365,
+        "p_ttest_2s": 0.0021044570757008502,
+        "p_wilcoxon_exact_2s": 0.00335693359375,
+        "rank_107": 5,
+        "q_bh_107_ttest_2s": 0.017321300546153152
+      }
+    ],
+    "per_donor_paired_dmso_days": {
+      "Riluzole": {
+        "SALS 1": 4.0333,
+        "SALS 2": 4.5625,
+        "SALS 3": 4.125,
+        "SALS 4": 3.75,
+        "SALS 5": 2.0625,
+        "SALS 6": 4.0625,
+        "SALS 7": 4.4375,
+        "SALS 8": 2.625,
+        "SALS 9": 3.375,
+        "SALS 10": 4.5,
+        "SALS 11": 5.0,
+        "SALS 12": 4.625,
+        "SALS 13": 3.9375,
+        "SALS 14": 4.0625,
+        "SALS 15": 4.0625,
+        "SALS 16": 4.125
+      },
+      "Baricitinib": {
+        "SALS 1": 5.2,
+        "SALS 2": 4.5625,
+        "SALS 3": 4.125,
+        "SALS 4": 4.25,
+        "SALS 5": 2.0625,
+        "SALS 6": 4.1875,
+        "SALS 7": 4.5625,
+        "SALS 8": -0.125,
+        "SALS 9": 4.5,
+        "SALS 10": 4.75,
+        "SALS 11": 5.0,
+        "SALS 12": -0.375,
+        "SALS 13": 4.3125,
+        "SALS 14": 4.3125,
+        "SALS 15": 4.8125,
+        "SALS 16": 4.25
+      },
+      "Apilimod": {
+        "SALS 1": 5.2,
+        "SALS 2": 1.5625,
+        "SALS 3": 4.125,
+        "SALS 4": -0.25,
+        "SALS 5": 1.0625,
+        "SALS 6": -1.3125,
+        "SALS 7": 2.5625,
+        "SALS 8": 2.375,
+        "SALS 9": 2.5,
+        "SALS 10": 1.75,
+        "SALS 11": 5.0,
+        "SALS 12": 3.125,
+        "SALS 13": 0.8125,
+        "SALS 14": -0.1875,
+        "SALS 15": -1.1875,
+        "SALS 16": 2.25
+      }
+    },
+    "apilimod_harmed_donors_n": 4,
+    "apilimod_harmed_donor_ids": [
+      "SALS 4",
+      "SALS 6",
+      "SALS 14",
+      "SALS 15"
+    ],
+    "apilimod_harmed_donors_mean_apilimod_days": -0.7344,
+    "apilimod_harmed_donors_mean_baricitinib_days": 4.3906,
+    "apilimod_harmed_donors_mean_riluzole_days": 3.9844,
+    "apilimod_helped_donors_mean_baricitinib_days": 3.5688,
+    "baricitinib_positive_in_n_of_16_donors": 14,
+    "apilimod_positive_in_n_of_16_donors": 12,
+    "donor_corr_baricitinib_vs_apilimod": {
+      "r": -0.0544,
+      "p": 0.8414088357411819
+    },
+    "donor_corr_riluzole_vs_baricitinib": {
+      "r": 0.4328,
+      "p": 0.09404556842221969
+    }
+  },
+  "c020_apilimod_pulsed_vs_continuous_pkpd": [
+    {
+      "regimen": "AIT101_125mg_BID_Continuous_12h",
+      "cmax_unbound_csf_nM": 3.89,
+      "mean_target_occupancy": 0.5494,
+      "end_substrate_pct_reduction": 82.78,
+      "peak_vacuolation_stress_index": 0.6818,
+      "end_vacuolation_stress_index": 0.5394,
+      "hours_above_vacuolation_threshold": 243.5,
+      "passes_killgate_polyGP_ge_55pct_and_end_vac_le_0p05": false
+    },
+    {
+      "regimen": "Continuous_LowDose_QD_24h",
+      "cmax_unbound_csf_nM": 3.89,
+      "mean_target_occupancy": 0.3368,
+      "end_substrate_pct_reduction": 77.97,
+      "peak_vacuolation_stress_index": 0.1657,
+      "end_vacuolation_stress_index": 0.0514,
+      "hours_above_vacuolation_threshold": 108.25,
+      "passes_killgate_polyGP_ge_55pct_and_end_vac_le_0p05": false
+    },
+    {
+      "regimen": "Pulsed_48h_ON_BID_120h_OFF_3p89nM",
+      "cmax_unbound_csf_nM": 3.89,
+      "mean_target_occupancy": 0.1696,
+      "end_substrate_pct_reduction": 42.68,
+      "peak_vacuolation_stress_index": 0.388,
+      "end_vacuolation_stress_index": 0.0001,
+      "hours_above_vacuolation_threshold": 67.0,
+      "passes_killgate_polyGP_ge_55pct_and_end_vac_le_0p05": false
+    },
+    {
+      "regimen": "Pulsed_48h_ON_BID_120h_OFF_6p5nM",
+      "cmax_unbound_csf_nM": 6.5,
+      "mean_target_occupancy": 0.2102,
+      "end_substrate_pct_reduction": 44.47,
+      "peak_vacuolation_stress_index": 0.9783,
+      "end_vacuolation_stress_index": 0.0002,
+      "hours_above_vacuolation_threshold": 94.0,
+      "passes_killgate_polyGP_ge_55pct_and_end_vac_le_0p05": false
+    },
+    {
+      "regimen": "Pulsed_24h_ON_BID_144h_OFF_8p0nM",
+      "cmax_unbound_csf_nM": 8.0,
+      "mean_target_occupancy": 0.1248,
+      "end_substrate_pct_reduction": 34.48,
+      "peak_vacuolation_stress_index": 0.5789,
+      "end_vacuolation_stress_index": 0.0,
+      "hours_above_vacuolation_threshold": 50.5,
+      "passes_killgate_polyGP_ge_55pct_and_end_vac_le_0p05": false
+    },
+    {
+      "regimen": "TwiceWeekly_SinglePulse_MonThu_8p0nM",
+      "cmax_unbound_csf_nM": 8.0,
+      "mean_target_occupancy": 0.1439,
+      "end_substrate_pct_reduction": 50.12,
+      "peak_vacuolation_stress_index": 0.2717,
+      "end_vacuolation_stress_index": 0.0015,
+      "hours_above_vacuolation_threshold": 49.0,
+      "passes_killgate_polyGP_ge_55pct_and_end_vac_le_0p05": false
+    },
+    {
+      "regimen": "Every3Days_q72h_SinglePulse_6p5nM",
+      "cmax_unbound_csf_nM": 6.5,
+      "mean_target_occupancy": 0.1632,
+      "end_substrate_pct_reduction": 61.19,
+      "peak_vacuolation_stress_index": 0.2211,
+      "end_vacuolation_stress_index": 0.0154,
+      "hours_above_vacuolation_threshold": 55.0,
+      "passes_killgate_polyGP_ge_55pct_and_end_vac_le_0p05": true
+    },
+    {
+      "regimen": "Every3Days_q72h_SinglePulse_8p0nM",
+      "cmax_unbound_csf_nM": 8.0,
+      "mean_target_occupancy": 0.1798,
+      "end_substrate_pct_reduction": 62.78,
+      "peak_vacuolation_stress_index": 0.2739,
+      "end_vacuolation_stress_index": 0.0208,
+      "hours_above_vacuolation_threshold": 61.25,
+      "passes_killgate_polyGP_ge_55pct_and_end_vac_le_0p05": true
+    },
+    {
+      "regimen": "Every48h_q48h_SinglePulse_6p5nM",
+      "cmax_unbound_csf_nM": 6.5,
+      "mean_target_occupancy": 0.2282,
+      "end_substrate_pct_reduction": 66.66,
+      "peak_vacuolation_stress_index": 0.2348,
+      "end_vacuolation_stress_index": 0.0163,
+      "hours_above_vacuolation_threshold": 77.0,
+      "passes_killgate_polyGP_ge_55pct_and_end_vac_le_0p05": true
+    }
+  ]
+}

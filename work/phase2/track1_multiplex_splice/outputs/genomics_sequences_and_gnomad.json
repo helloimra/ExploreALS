@@ -1,0 +1,1858 @@
+{
+  "sequences": {
+    "KCNQ2": {
+      "chromosome": "chr20",
+      "start_1b": 63442050,
+      "end_1b": 63442900,
+      "length_bp": 851,
+      "strand": "-",
+      "source": "Ensembl_REST_GRCh38",
+      "dna_plus_5to3_redacted_coordinate_only": true
+    },
+    "UNC13A": {
+      "chromosome": "chr19",
+      "start_1b": 17641850,
+      "end_1b": 17642900,
+      "length_bp": 1051,
+      "strand": "-",
+      "source": "Ensembl_REST_GRCh38",
+      "dna_plus_5to3_redacted_coordinate_only": true
+    },
+    "STMN2": {
+      "chromosome": "chr8",
+      "start_1b": 79616650,
+      "end_1b": 79617250,
+      "length_bp": 601,
+      "strand": "+",
+      "source": "Ensembl_REST_GRCh38",
+      "dna_plus_5to3_redacted_coordinate_only": true
+    },
+    "G2E3": {
+      "chromosome": "chr14",
+      "start_1b": 30563600,
+      "end_1b": 30564250,
+      "length_bp": 651,
+      "strand": "+",
+      "source": "Ensembl_REST_GRCh38",
+      "dna_plus_5to3_redacted_coordinate_only": true
+    }
+  },
+  "mane_proteins": {
+    "KCNQ2": "MVQKSRNGGVYPGPSGEKKLKVGFVGLDPGAPDSTRDGALLIAGSEAPKRGSILSKPRAGGAGAGKPPKRNAFYRKLQNFLYNVLERPRGWAFIYHAYVFLLVFSCLVLSVFSTIKEYEKSSEGALYILEIVTIVVFGVEYFVRIWAAGCCCRYRGWRGRLKFARKPFCVIDIMVLIASIAVLAAGSQGNVFATSALRSLRFLQILRMIRMDRRGGTWKLLGSVVYAHSKELVTAWYIGFLCLILASFLVYLAEKGENDHFDTYADALWWGLITLTTIGYGDKYPQTWNGRLLAATFTLIGVSFFALPAGILGSGFALKVQEQHRQKHFEKRRNPAAGLIQSAWRFYATNLSRTDLHSTWQYYERTVTVPMYSSQTQTYGASRLIPPLNQLELLRNLKSKSGLAFRKDPPPEPSPSKGSPCRGPLCGCCPGRSSQKVSLKDRVFSSPRGVAAKGKGSPQAQTVRRSPSADQSLEDSPSKVPKSWSFGDRSRARQAFRIKGAASRQNSEEASLPGEDIVDDKSCPCEFVTEDLTPGLKVSIRAVCVMRFLVSKRKFKESLRPYDVMDVIEQYSAGHLDMLSRIKSLQSRVDQIVGRGPAITDKDRTKGPAEAELPEDPSMMGRLGKVEKQVLSMEKKLDFLVNIYMQRMGIPPTETEAYFGAKEPEPAPPYHSPEDSREHVDRHGCIVKIVRSSSSTGQKNFSAPPAAPPVQCPPSTSWQPQSHPRQGHGTSPVGDHGSLVRIPPPPAHERSLSAYGGGNRASMEFLRQEDTPGCRPPEGNLRDSDTSISIPSVDHEELERSFSGFSISQSKENLDALNSCYAAVAPCAKVRPYIAEGESDTDSDLCTPCGPPPRSATGEGPFGDVGWAGPRK",
+    "UNC13A": "MSLLCVGVKKAKFDGAQEKFNTYVTLKVQNVKSTTIAVRGSQPSWEQDFMFEINRLDLGLTVEVWNKGLIWDTMVGTVWIPLRTIRQSNEEGPGEWLTLDSQVIMADSEICGTKDPTFHRILLDTRFELPLDIPEEEARYWAKKLEQLNAMRDQDEYSFQDEQDKPLPVPSNQCCNWNYFGWGEQHNDDPDSAVDDRDSDYRSETSNSIPPPYYTTSQPNASVHQYSVRPPPLGSRESYSDSMHSYEEFSEPQALSPTGSSRYASSGELSQGSSQLSEDFDPDEHSLQGSDMEDERDRDSYHSCHSSVSYHKDSPRWDQDEEELEEDLEDFLEEEELPEDEEELEEEEEEVPDDLGSYAQREDVAVAEPKDFKRISLPPAAPGKEDKAPVAPTEAPDMAKVAPKPATPDKVPAAEQIPEAEPPKDEESFRPREDEEGQEGQDSMSRAKANWLRAFNKVRMQLQEARGEGEMSKSLWFKGGPGGGLIIIDSMPDIRKRKPIPLVSDLAMSLVQSRKAGITSALASSTLNNEELKNHVYKKTLQALIYPISCTTPHNFEVWTATTPTYCYECEGLLWGIARQGMRCTECGVKCHEKCQDLLNADCLQRAAEKSSKHGAEDRTQNIIMVLKDRMKIRERNKPEIFELIQEIFAVTKTAHTQQMKAVKQSVLDGTSKWSAKISITVVCAQGLQAKDKTGSSDPYVTVQVGKTKKRTKTIYGNLNPVWEENFHFECHNSSDRIKVRVWDEDDDIKSRVKQRFKRESDDFLGQTIIEVRTLSGEMDVWYNLDKRTDKSAVSGAIRLHISVEIKGEEKVAPYHVQYTCLHENLFHFVTDVQNNGVVKIPDAKGDDAWKVYYDETAQEIVDEFAMRYGVESIYQAMTHFACLSSKYMCPGVPAVMSTLLANINAYYAHTTASTNVSASDRFAASNFGKERFVKLLDQLHNSLRIDLSMYRNNFPASSPERLQDLKSTVDLLTSITFFRMKVQELQSPPRASQVVKDCVKACLNSTYEYIFNNCHELYSREYQTDPAKKGEVLPEEQGPSIKNLDFWSKLITLIVSIIEEDKNSYTPCLNQFPQELNVGKISAEVMWNLFAQDMKYAMEEHDKHRLCKSADYMNLHFKVKWLYNEYVTELPAFKDRVPEYPAWFEPFVIQWLDENEEVSRDFLHGALERDKKDGFQQTSEHALFSCSVVDVFSQLNQSFEIIKKLECPDPQIVGHYMRRFAKTISNVLLQYADIISKDFASYCSKEKEKVPCILMNNTQQLRVQLEKMFEAMGGKELDAEASDILKELQVKLNNVLDELSRVFATSFQPHIEECVKQMGDILSQVKGTGNVPASACSSVAQDADNVLQPIMDLLDSNLTLFAKICEKTVLKRVLKELWKLVMNTMEKTIVLPPLTDQTMIGNLLRKHGKGLEKGRVKLPSHSDGTQMIFNAAKELGQLSKLKDHMVREEAKSLTPKQCAVVELALDTIKQYFHAGGVGLKKTFLEKSPDLQSLRYALSLYTQATDLLIKTFVQTQSAQGLGVEDPVGEVSVHVELFTHPGTGEHKVTVKVVAANDLKWQTSGIFRPFIEVNIIGPQLSDKKRKFATKSKNNSWAPKYNESFQFTLSADAGPECYELQVCVKDYCFAREDRTVGLAVLQLRELAQRGSAACWLPLGRRIHMDDTGLTVLRILSQRSNDEVAKEFVKLKSDTRSAEEGGAAPAP",
+    "STMN2": "MAKTAMAYKEKMKELSMLSLICSCFYPEPRNINIYTYDDMEVKQINKRASGQAFELILKPPSPISEAPRTLASPKKKDLSLEEIQKKLEAAEERRKSQEAQVLKQLAEKREHEREVLQKALEENNNFSKMAEEKLILKMEQIKENREANLAAIIERLQEKERHAAEVRRNKELQVELSG",
+    "G2E3": "MNESKPGDSQNLACVFCRKHDDCPNKYGEKKTKEKWNLTVHYYCLLMSSGIWQRGKEEEGVYGFLIEDIRKEVNRASKLKCCVCKKNGASIGCVAPRCKRSYHFPCGLQRECIFQFTGNFASFCWDHRPVQIITSNNYRESLPCTICLEFIEPIPSYNILRSPCCKNAWFHRDCLQVQAINAGVFFFRCTICNNSDIFQKEMLRMGIHIPEKDASWELEENAYQELLQHYERCDVRRCRCKEGRDYNAPDSKWEIKRCQCCGSSGTHLACSSLRSWEQNWECLECRGIIYNSGEFQKAKKHVLPNSNNVGITDCLLEESSPKLPRQSPGSQSKDLLRQGSKFRRNVSTLLIELGFQIKKKTKRLYINKANIWNSALDAFRNRNFNPSYAIEVAYVIENDNFGSEHPGSKQEFLSLLMQHLENSSLFEGSLSKNLSLNSQALKENLYYEAGKMLAISLVHGGPSPGFFSKTLFNCLVYGPENTQPILDDVSDFDVAQIIIRINTATTVADLKSIINECYNYLELIGCLRLITTLSDKYMLVKDILGYHVIQRVHTPFESFKQGLKTLGVLEKIQAYPEAFCSILCHKPESLSAKILSELFTVHTLPDVKALGFWNSYLQAVEDGKSTTTMEDILIFATGCSSIPPAGFKPTPSIECLHVDFPVGNKCNNCLAIPITNTYKEFQENMDFTIRNTLRLEKEESSHYIGH"
+  },
+  "gnomad_v4": {
+    "KCNQ2": {
+      "interval_queried": "chr20:63442050-63442900",
+      "total_gnomad_v4_variants": 2627,
+      "common_variants_af_ge_0_005": [
+        {
+          "variant_id": "20-63442072-C-T",
+          "rsids": [
+            "rs57575955"
+          ],
+          "pos_1b": 63442072,
+          "ref": "C",
+          "alt": "T",
+          "span_1b": [
+            63442072
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.20797960417378505,
+          "max_af": 0.20798
+        },
+        {
+          "variant_id": "20-63442215-T-C",
+          "rsids": [
+            "rs933510673"
+          ],
+          "pos_1b": 63442215,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442215
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.019544067699038627,
+          "max_af": 0.019544
+        },
+        {
+          "variant_id": "20-63442220-A-C",
+          "rsids": [
+            "rs369435334"
+          ],
+          "pos_1b": 63442220,
+          "ref": "A",
+          "alt": "C",
+          "span_1b": [
+            63442220
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.037961210974456004,
+          "max_af": 0.037961
+        },
+        {
+          "variant_id": "20-63442224-A-C",
+          "rsids": [
+            "rs886718113"
+          ],
+          "pos_1b": 63442224,
+          "ref": "A",
+          "alt": "C",
+          "span_1b": [
+            63442224
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.0334710513092513,
+          "max_af": 0.033471
+        },
+        {
+          "variant_id": "20-63442226-T-C",
+          "rsids": [
+            "rs1006453202"
+          ],
+          "pos_1b": 63442226,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442226
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.023447187464772857,
+          "max_af": 0.023447
+        },
+        {
+          "variant_id": "20-63442508-G-A",
+          "rsids": [
+            "rs147882199"
+          ],
+          "pos_1b": 63442508,
+          "ref": "G",
+          "alt": "A",
+          "span_1b": [
+            63442508
+          ],
+          "consequence": "synonymous_variant",
+          "exome_af": 0.009005723762439913,
+          "genome_af": 0.005242912846453789,
+          "max_af": 0.009006
+        },
+        {
+          "variant_id": "20-63442559-GACC-G",
+          "rsids": [
+            "rs374464103"
+          ],
+          "pos_1b": 63442559,
+          "ref": "GACC",
+          "alt": "G",
+          "span_1b": [
+            63442559,
+            63442560,
+            63442561,
+            63442562
+          ],
+          "consequence": "intron_variant",
+          "exome_af": 0.009987933672176636,
+          "genome_af": 0.0071626836368560015,
+          "max_af": 0.009988
+        },
+        {
+          "variant_id": "20-63442561-C-A",
+          "rsids": [
+            "rs201650692"
+          ],
+          "pos_1b": 63442561,
+          "ref": "C",
+          "alt": "A",
+          "span_1b": [
+            63442561
+          ],
+          "consequence": "intron_variant",
+          "exome_af": 0.0009249129925126756,
+          "genome_af": 0.008739009221531204,
+          "max_af": 0.008739
+        },
+        {
+          "variant_id": "20-63442645-A-C",
+          "rsids": [
+            "rs1219878032"
+          ],
+          "pos_1b": 63442645,
+          "ref": "A",
+          "alt": "C",
+          "span_1b": [
+            63442645
+          ],
+          "consequence": "intron_variant",
+          "exome_af": 0.0002922510115655981,
+          "genome_af": 0.006441059196401186,
+          "max_af": 0.006441
+        },
+        {
+          "variant_id": "20-63442650-TCAC-T",
+          "rsids": [
+            "rs372494294"
+          ],
+          "pos_1b": 63442650,
+          "ref": "TCAC",
+          "alt": "T",
+          "span_1b": [
+            63442650,
+            63442651,
+            63442652,
+            63442653
+          ],
+          "consequence": "intron_variant",
+          "exome_af": 0.27456171188383643,
+          "genome_af": 0.39044384899052875,
+          "max_af": 0.390444
+        },
+        {
+          "variant_id": "20-63442662-TCACCACCAC-T",
+          "rsids": [
+            "rs370394245"
+          ],
+          "pos_1b": 63442662,
+          "ref": "TCACCACCAC",
+          "alt": "T",
+          "span_1b": [
+            63442662,
+            63442663,
+            63442664,
+            63442665,
+            63442666,
+            63442667,
+            63442668,
+            63442669,
+            63442670,
+            63442671
+          ],
+          "consequence": "intron_variant",
+          "exome_af": 0.07358863718087019,
+          "genome_af": 0.0125728534519017,
+          "max_af": 0.073589
+        },
+        {
+          "variant_id": "20-63442662-TCAC-T",
+          "rsids": [
+            "rs370394245"
+          ],
+          "pos_1b": 63442662,
+          "ref": "TCAC",
+          "alt": "T",
+          "span_1b": [
+            63442662,
+            63442663,
+            63442664,
+            63442665
+          ],
+          "consequence": "intron_variant",
+          "exome_af": 0.24829926512199135,
+          "genome_af": 0.4054041834950871,
+          "max_af": 0.405404
+        },
+        {
+          "variant_id": "20-63442662-TCACCAC-T",
+          "rsids": [
+            "rs370394245"
+          ],
+          "pos_1b": 63442662,
+          "ref": "TCACCAC",
+          "alt": "T",
+          "span_1b": [
+            63442662,
+            63442663,
+            63442664,
+            63442665,
+            63442666,
+            63442667,
+            63442668
+          ],
+          "consequence": "intron_variant",
+          "exome_af": 0.01146127800935908,
+          "genome_af": 0.010985382837590419,
+          "max_af": 0.011461
+        },
+        {
+          "variant_id": "20-63442668-CCACCACCACCACCACCATCACCAT-C",
+          "rsids": [
+            "rs1568933599"
+          ],
+          "pos_1b": 63442668,
+          "ref": "CCACCACCACCACCACCATCACCAT",
+          "alt": "C",
+          "span_1b": [
+            63442668,
+            63442669,
+            63442670,
+            63442671,
+            63442672,
+            63442673,
+            63442674,
+            63442675,
+            63442676,
+            63442677,
+            63442678,
+            63442679,
+            63442680,
+            63442681,
+            63442682,
+            63442683,
+            63442684,
+            63442685,
+            63442686,
+            63442687,
+            63442688,
+            63442689,
+            63442690,
+            63442691,
+            63442692
+          ],
+          "consequence": "intron_variant",
+          "exome_af": 0.017572316842389836,
+          "genome_af": 0.006317823695555226,
+          "max_af": 0.017572
+        },
+        {
+          "variant_id": "20-63442668-C-CCACCACCACCATCACCACCACCACCAT",
+          "rsids": [
+            "rs1568933584"
+          ],
+          "pos_1b": 63442668,
+          "ref": "C",
+          "alt": "CCACCACCACCATCACCACCACCACCAT",
+          "span_1b": [
+            63442668
+          ],
+          "consequence": "intron_variant",
+          "exome_af": 0.033830372609626035,
+          "genome_af": 0.003717910888167601,
+          "max_af": 0.03383
+        },
+        {
+          "variant_id": "20-63442671-C-CCACCACCAT",
+          "rsids": [
+            "rs1568933640"
+          ],
+          "pos_1b": 63442671,
+          "ref": "C",
+          "alt": "CCACCACCAT",
+          "span_1b": [
+            63442671
+          ],
+          "consequence": "intron_variant",
+          "exome_af": 0.029422863296785298,
+          "genome_af": 0.04934269533352126,
+          "max_af": 0.049343
+        },
+        {
+          "variant_id": "20-63442674-CCACCACCACCAT-C",
+          "rsids": [
+            "rs1568933671"
+          ],
+          "pos_1b": 63442674,
+          "ref": "CCACCACCACCAT",
+          "alt": "C",
+          "span_1b": [
+            63442674,
+            63442675,
+            63442676,
+            63442677,
+            63442678,
+            63442679,
+            63442680,
+            63442681,
+            63442682,
+            63442683,
+            63442684,
+            63442685,
+            63442686
+          ],
+          "consequence": "intron_variant",
+          "exome_af": 0.007895898635821817,
+          "genome_af": 0.01036373553813912,
+          "max_af": 0.010364
+        },
+        {
+          "variant_id": "20-63442677-C-CCAT",
+          "rsids": [
+            "rs1568933689"
+          ],
+          "pos_1b": 63442677,
+          "ref": "C",
+          "alt": "CCAT",
+          "span_1b": [
+            63442677
+          ],
+          "consequence": "intron_variant",
+          "exome_af": 0.0006027799352905018,
+          "genome_af": 0.01255495847581827,
+          "max_af": 0.012555
+        },
+        {
+          "variant_id": "20-63442680-C-T",
+          "rsids": [
+            "rs796175666"
+          ],
+          "pos_1b": 63442680,
+          "ref": "C",
+          "alt": "T",
+          "span_1b": [
+            63442680
+          ],
+          "consequence": "intron_variant",
+          "exome_af": 0.3580459736473949,
+          "genome_af": 0.3574323552917,
+          "max_af": 0.358046
+        },
+        {
+          "variant_id": "20-63442686-T-C",
+          "rsids": [
+            "rs62208026"
+          ],
+          "pos_1b": 63442686,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442686
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.06544691061787643,
+          "max_af": 0.065447
+        },
+        {
+          "variant_id": "20-63442690-C-T",
+          "rsids": [
+            "rs1048383660"
+          ],
+          "pos_1b": 63442690,
+          "ref": "C",
+          "alt": "T",
+          "span_1b": [
+            63442690
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.01970096936126017,
+          "max_af": 0.019701
+        },
+        {
+          "variant_id": "20-63442692-T-TCACCAC",
+          "rsids": [
+            "rs1422312060"
+          ],
+          "pos_1b": 63442692,
+          "ref": "T",
+          "alt": "TCACCAC",
+          "span_1b": [
+            63442692
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.06178046050527662,
+          "max_af": 0.06178
+        },
+        {
+          "variant_id": "20-63442692-T-TCAC",
+          "rsids": [
+            "rs1422312060"
+          ],
+          "pos_1b": 63442692,
+          "ref": "T",
+          "alt": "TCAC",
+          "span_1b": [
+            63442692
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.016212084640759513,
+          "max_af": 0.016212
+        },
+        {
+          "variant_id": "20-63442692-TCAC-T",
+          "rsids": [
+            "rs1422312060"
+          ],
+          "pos_1b": 63442692,
+          "ref": "TCAC",
+          "alt": "T",
+          "span_1b": [
+            63442692,
+            63442693,
+            63442694,
+            63442695
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.008316927156575194,
+          "max_af": 0.008317
+        },
+        {
+          "variant_id": "20-63442692-T-C",
+          "rsids": [
+            "rs62208027"
+          ],
+          "pos_1b": 63442692,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442692
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.4805748706338939,
+          "max_af": 0.480575
+        },
+        {
+          "variant_id": "20-63442692-T-TCACCATCACCACCAC",
+          "rsids": [
+            "rs1568933788"
+          ],
+          "pos_1b": 63442692,
+          "ref": "T",
+          "alt": "TCACCATCACCACCAC",
+          "span_1b": [
+            63442692
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.007576666266842589,
+          "max_af": 0.007577
+        },
+        {
+          "variant_id": "20-63442695-C-CCAT",
+          "rsids": [
+            "rs879666633"
+          ],
+          "pos_1b": 63442695,
+          "ref": "C",
+          "alt": "CCAT",
+          "span_1b": [
+            63442695
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.10842507822459149,
+          "max_af": 0.108425
+        },
+        {
+          "variant_id": "20-63442701-T-C",
+          "rsids": [
+            "rs202133311"
+          ],
+          "pos_1b": 63442701,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442701
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.5985024747239731,
+          "max_af": 0.598502
+        },
+        {
+          "variant_id": "20-63442707-T-C",
+          "rsids": [
+            "rs375283583"
+          ],
+          "pos_1b": 63442707,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442707
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.2638262656241082,
+          "max_af": 0.263826
+        },
+        {
+          "variant_id": "20-63442707-TCAC-T",
+          "rsids": [
+            "rs749330439"
+          ],
+          "pos_1b": 63442707,
+          "ref": "TCAC",
+          "alt": "T",
+          "span_1b": [
+            63442707,
+            63442708,
+            63442709,
+            63442710
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.02074735711459099,
+          "max_af": 0.020747
+        },
+        {
+          "variant_id": "20-63442713-C-CCAT",
+          "rsids": [
+            "rs1568933940"
+          ],
+          "pos_1b": 63442713,
+          "ref": "C",
+          "alt": "CCAT",
+          "span_1b": [
+            63442713
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.005207582899368092,
+          "max_af": 0.005208
+        },
+        {
+          "variant_id": "20-63442716-C-T",
+          "rsids": [
+            "rs796956283"
+          ],
+          "pos_1b": 63442716,
+          "ref": "C",
+          "alt": "T",
+          "span_1b": [
+            63442716
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.3709261514218179,
+          "max_af": 0.370926
+        },
+        {
+          "variant_id": "20-63442719-C-CCACCACCACCATCACCACCACCACCATCACCACCAT",
+          "rsids": [
+            "rs1568933984"
+          ],
+          "pos_1b": 63442719,
+          "ref": "C",
+          "alt": "CCACCACCACCATCACCACCACCACCATCACCACCAT",
+          "span_1b": [
+            63442719
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.019299461534360504,
+          "max_af": 0.019299
+        },
+        {
+          "variant_id": "20-63442719-C-CCAT",
+          "rsids": [
+            "rs1568933980"
+          ],
+          "pos_1b": 63442719,
+          "ref": "C",
+          "alt": "CCAT",
+          "span_1b": [
+            63442719
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.012017726798748697,
+          "max_af": 0.012018
+        },
+        {
+          "variant_id": "20-63442719-C-T",
+          "rsids": [
+            "rs796942550"
+          ],
+          "pos_1b": 63442719,
+          "ref": "C",
+          "alt": "T",
+          "span_1b": [
+            63442719
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.006322777807049897,
+          "max_af": 0.006323
+        },
+        {
+          "variant_id": "20-63442722-CCAT-C",
+          "rsids": [
+            "rs879112469"
+          ],
+          "pos_1b": 63442722,
+          "ref": "CCAT",
+          "alt": "C",
+          "span_1b": [
+            63442722,
+            63442723,
+            63442724,
+            63442725
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.006355128367269508,
+          "max_af": 0.006355
+        },
+        {
+          "variant_id": "20-63442724-ATCATCACCACCT-A",
+          "rsids": [
+            "rs1568934024"
+          ],
+          "pos_1b": 63442724,
+          "ref": "ATCATCACCACCT",
+          "alt": "A",
+          "span_1b": [
+            63442724,
+            63442725,
+            63442726,
+            63442727,
+            63442728,
+            63442729,
+            63442730,
+            63442731,
+            63442732,
+            63442733,
+            63442734,
+            63442735,
+            63442736
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.0076380358436486185,
+          "max_af": 0.007638
+        },
+        {
+          "variant_id": "20-63442725-T-C",
+          "rsids": [
+            "rs532897092"
+          ],
+          "pos_1b": 63442725,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442725
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.11718604217204702,
+          "max_af": 0.117186
+        },
+        {
+          "variant_id": "20-63442725-T-TCAC",
+          "rsids": [
+            "rs1568934026"
+          ],
+          "pos_1b": 63442725,
+          "ref": "T",
+          "alt": "TCAC",
+          "span_1b": [
+            63442725
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.009267727577586732,
+          "max_af": 0.009268
+        },
+        {
+          "variant_id": "20-63442725-T-TCACCAC",
+          "rsids": [
+            "rs1568934026"
+          ],
+          "pos_1b": 63442725,
+          "ref": "T",
+          "alt": "TCACCAC",
+          "span_1b": [
+            63442725
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.2350107394906413,
+          "max_af": 0.235011
+        },
+        {
+          "variant_id": "20-63442728-T-C",
+          "rsids": [
+            "rs62208030"
+          ],
+          "pos_1b": 63442728,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442728
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.5876328445051356,
+          "max_af": 0.587633
+        },
+        {
+          "variant_id": "20-63442735-C-CACCACCACCACCACCA",
+          "rsids": [
+            "rs1568934111"
+          ],
+          "pos_1b": 63442735,
+          "ref": "C",
+          "alt": "CACCACCACCACCACCA",
+          "span_1b": [
+            63442735
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.03888326585695007,
+          "max_af": 0.038883
+        },
+        {
+          "variant_id": "20-63442735-C-CA",
+          "rsids": [
+            "rs1568934111"
+          ],
+          "pos_1b": 63442735,
+          "ref": "C",
+          "alt": "CA",
+          "span_1b": [
+            63442735
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.19638250300980337,
+          "max_af": 0.196383
+        },
+        {
+          "variant_id": "20-63442736-T-TCA",
+          "rsids": [
+            "rs1568934132"
+          ],
+          "pos_1b": 63442736,
+          "ref": "T",
+          "alt": "TCA",
+          "span_1b": [
+            63442736
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.019503153701449595,
+          "max_af": 0.019503
+        },
+        {
+          "variant_id": "20-63442736-T-TCACCATCACCACCACCA",
+          "rsids": [
+            "rs1568934132"
+          ],
+          "pos_1b": 63442736,
+          "ref": "T",
+          "alt": "TCACCATCACCACCACCA",
+          "span_1b": [
+            63442736
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.15852291830101983,
+          "max_af": 0.158523
+        },
+        {
+          "variant_id": "20-63442736-T-TCACCATCACCACCATCACCACCATCACCATCACCACCACCA",
+          "rsids": [
+            "rs1568934132"
+          ],
+          "pos_1b": 63442736,
+          "ref": "T",
+          "alt": "TCACCATCACCACCATCACCACCATCACCATCACCACCACCA",
+          "span_1b": [
+            63442736
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.02938734849742653,
+          "max_af": 0.029387
+        },
+        {
+          "variant_id": "20-63442736-T-A",
+          "rsids": [
+            "rs200312378"
+          ],
+          "pos_1b": 63442736,
+          "ref": "T",
+          "alt": "A",
+          "span_1b": [
+            63442736
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.5377585916914279,
+          "max_af": 0.537759
+        },
+        {
+          "variant_id": "20-63442743-T-C",
+          "rsids": [
+            "rs867571468"
+          ],
+          "pos_1b": 63442743,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442743
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.019242516799022603,
+          "max_af": 0.019243
+        },
+        {
+          "variant_id": "20-63442743-T-TCAC",
+          "rsids": [
+            "rs1568934195"
+          ],
+          "pos_1b": 63442743,
+          "ref": "T",
+          "alt": "TCAC",
+          "span_1b": [
+            63442743
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.023843890523510797,
+          "max_af": 0.023844
+        },
+        {
+          "variant_id": "20-63442752-T-C",
+          "rsids": [
+            "rs866549835"
+          ],
+          "pos_1b": 63442752,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442752
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.035380507343124167,
+          "max_af": 0.035381
+        },
+        {
+          "variant_id": "20-63442767-TCACCATCACCACCAC-T",
+          "rsids": [
+            "rs1568934359"
+          ],
+          "pos_1b": 63442767,
+          "ref": "TCACCATCACCACCAC",
+          "alt": "T",
+          "span_1b": [
+            63442767,
+            63442768,
+            63442769,
+            63442770,
+            63442771,
+            63442772,
+            63442773,
+            63442774,
+            63442775,
+            63442776,
+            63442777,
+            63442778,
+            63442779,
+            63442780,
+            63442781,
+            63442782
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.0110568162994865,
+          "max_af": 0.011057
+        },
+        {
+          "variant_id": "20-63442773-TCACCAC-T",
+          "rsids": [
+            "rs796989773"
+          ],
+          "pos_1b": 63442773,
+          "ref": "TCACCAC",
+          "alt": "T",
+          "span_1b": [
+            63442773,
+            63442774,
+            63442775,
+            63442776,
+            63442777,
+            63442778,
+            63442779
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.34708165284224946,
+          "max_af": 0.347082
+        },
+        {
+          "variant_id": "20-63442779-C-CCATCACCAT",
+          "rsids": [
+            "rs1187696516"
+          ],
+          "pos_1b": 63442779,
+          "ref": "C",
+          "alt": "CCATCACCAT",
+          "span_1b": [
+            63442779
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.029726205997392438,
+          "max_af": 0.029726
+        },
+        {
+          "variant_id": "20-63442782-C-CCACCAT",
+          "rsids": [
+            "rs1451409107"
+          ],
+          "pos_1b": 63442782,
+          "ref": "C",
+          "alt": "CCACCAT",
+          "span_1b": [
+            63442782
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.04743951216313684,
+          "max_af": 0.04744
+        },
+        {
+          "variant_id": "20-63442782-C-T",
+          "rsids": [
+            "rs200477302"
+          ],
+          "pos_1b": 63442782,
+          "ref": "C",
+          "alt": "T",
+          "span_1b": [
+            63442782
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.11626193374767732,
+          "max_af": 0.116262
+        },
+        {
+          "variant_id": "20-63442795-T-C",
+          "rsids": [
+            "rs1046136625"
+          ],
+          "pos_1b": 63442795,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442795
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.02522106109324759,
+          "max_af": 0.025221
+        },
+        {
+          "variant_id": "20-63442807-T-C",
+          "rsids": [
+            "rs934950542"
+          ],
+          "pos_1b": 63442807,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442807
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.0636672325976231,
+          "max_af": 0.063667
+        },
+        {
+          "variant_id": "20-63442830-T-TCACCAC",
+          "rsids": [
+            "rs747940691"
+          ],
+          "pos_1b": 63442830,
+          "ref": "T",
+          "alt": "TCACCAC",
+          "span_1b": [
+            63442830
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.15571835972071985,
+          "max_af": 0.155718
+        },
+        {
+          "variant_id": "20-63442830-T-TCAC",
+          "rsids": [
+            "rs747940691"
+          ],
+          "pos_1b": 63442830,
+          "ref": "T",
+          "alt": "TCAC",
+          "span_1b": [
+            63442830
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.16336879785224223,
+          "max_af": 0.163369
+        },
+        {
+          "variant_id": "20-63442830-T-TCACCACCAC",
+          "rsids": [
+            "rs747940691"
+          ],
+          "pos_1b": 63442830,
+          "ref": "T",
+          "alt": "TCACCACCAC",
+          "span_1b": [
+            63442830
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.018607619795758052,
+          "max_af": 0.018608
+        },
+        {
+          "variant_id": "20-63442842-CCAT-C",
+          "rsids": [
+            "rs1348911644"
+          ],
+          "pos_1b": 63442842,
+          "ref": "CCAT",
+          "alt": "C",
+          "span_1b": [
+            63442842,
+            63442843,
+            63442844,
+            63442845
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.10927387529597474,
+          "max_af": 0.109274
+        },
+        {
+          "variant_id": "20-63442845-T-C",
+          "rsids": [
+            "rs111212483"
+          ],
+          "pos_1b": 63442845,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442845
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.6040508339952343,
+          "max_af": 0.604051
+        },
+        {
+          "variant_id": "20-63442851-T-C",
+          "rsids": [
+            "rs868435946"
+          ],
+          "pos_1b": 63442851,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442851
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.024628699647398226,
+          "max_af": 0.024629
+        },
+        {
+          "variant_id": "20-63442851-TCAC-T",
+          "rsids": [
+            "rs1367220510"
+          ],
+          "pos_1b": 63442851,
+          "ref": "TCAC",
+          "alt": "T",
+          "span_1b": [
+            63442851,
+            63442852,
+            63442853,
+            63442854
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.03359036653638956,
+          "max_af": 0.03359
+        },
+        {
+          "variant_id": "20-63442857-C-T",
+          "rsids": [
+            "rs200484615"
+          ],
+          "pos_1b": 63442857,
+          "ref": "C",
+          "alt": "T",
+          "span_1b": [
+            63442857
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.2780124223602484,
+          "max_af": 0.278012
+        },
+        {
+          "variant_id": "20-63442863-T-C",
+          "rsids": [
+            "rs111220232"
+          ],
+          "pos_1b": 63442863,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442863
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.3815834767641997,
+          "max_af": 0.381583
+        },
+        {
+          "variant_id": "20-63442876-T-C",
+          "rsids": [
+            "rs199772505"
+          ],
+          "pos_1b": 63442876,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442876
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.06592465753424658,
+          "max_af": 0.065925
+        },
+        {
+          "variant_id": "20-63442878-TCAC-T",
+          "rsids": [
+            "rs1568935015"
+          ],
+          "pos_1b": 63442878,
+          "ref": "TCAC",
+          "alt": "T",
+          "span_1b": [
+            63442878,
+            63442879,
+            63442880,
+            63442881
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.011438420557818865,
+          "max_af": 0.011438
+        },
+        {
+          "variant_id": "20-63442878-T-C",
+          "rsids": [
+            "rs377087984"
+          ],
+          "pos_1b": 63442878,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            63442878
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.005039370078740157,
+          "max_af": 0.005039
+        },
+        {
+          "variant_id": "20-63442890-TCAC-T",
+          "rsids": [
+            "rs1568935057"
+          ],
+          "pos_1b": 63442890,
+          "ref": "TCAC",
+          "alt": "T",
+          "span_1b": [
+            63442890,
+            63442891,
+            63442892,
+            63442893
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.0057379662097545425,
+          "max_af": 0.005738
+        },
+        {
+          "variant_id": "20-63442893-CCACCAT-C",
+          "rsids": [
+            "rs1394834454"
+          ],
+          "pos_1b": 63442893,
+          "ref": "CCACCAT",
+          "alt": "C",
+          "span_1b": [
+            63442893,
+            63442894,
+            63442895,
+            63442896,
+            63442897,
+            63442898,
+            63442899
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.14873837981407703,
+          "max_af": 0.148738
+        },
+        {
+          "variant_id": "20-63442899-T-TCAC",
+          "rsids": [
+            "rs760611957"
+          ],
+          "pos_1b": 63442899,
+          "ref": "T",
+          "alt": "TCAC",
+          "span_1b": [
+            63442899
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.5473908413205538,
+          "max_af": 0.547391
+        }
+      ]
+    },
+    "UNC13A": {
+      "interval_queried": "chr19:17641850-17642900",
+      "total_gnomad_v4_variants": 453,
+      "common_variants_af_ge_0_005": [
+        {
+          "variant_id": "19-17641880-A-C",
+          "rsids": [
+            "rs12608932"
+          ],
+          "pos_1b": 17641880,
+          "ref": "A",
+          "alt": "C",
+          "span_1b": [
+            17641880
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.3648493486954112,
+          "max_af": 0.364849
+        },
+        {
+          "variant_id": "19-17642029-T-TTTACATCC",
+          "rsids": [
+            "rs1362793407"
+          ],
+          "pos_1b": 17642029,
+          "ref": "T",
+          "alt": "TTTACATCC",
+          "span_1b": [
+            17642029
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.0057898982539228185,
+          "max_af": 0.00579
+        },
+        {
+          "variant_id": "19-17642032-A-ACATCCATCCATCCATC",
+          "rsids": [
+            "rs56041637"
+          ],
+          "pos_1b": 17642032,
+          "ref": "A",
+          "alt": "ACATCCATCCATCCATC",
+          "span_1b": [
+            17642032
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.30047673582443335,
+          "max_af": 0.300477
+        },
+        {
+          "variant_id": "19-17642032-A-ACATCCATC",
+          "rsids": [
+            "rs56041637"
+          ],
+          "pos_1b": 17642032,
+          "ref": "A",
+          "alt": "ACATCCATC",
+          "span_1b": [
+            17642032
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.206210328813424,
+          "max_af": 0.20621
+        },
+        {
+          "variant_id": "19-17642032-A-ACATCCATCCATC",
+          "rsids": [
+            "rs56041637"
+          ],
+          "pos_1b": 17642032,
+          "ref": "A",
+          "alt": "ACATCCATCCATC",
+          "span_1b": [
+            17642032
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.02703835255617193,
+          "max_af": 0.027038
+        },
+        {
+          "variant_id": "19-17642351-C-A",
+          "rsids": [
+            "rs62121687"
+          ],
+          "pos_1b": 17642351,
+          "ref": "C",
+          "alt": "A",
+          "span_1b": [
+            17642351
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.18341658998291047,
+          "max_af": 0.183417
+        },
+        {
+          "variant_id": "19-17642430-C-G",
+          "rsids": [
+            "rs12973192"
+          ],
+          "pos_1b": 17642430,
+          "ref": "C",
+          "alt": "G",
+          "span_1b": [
+            17642430
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.3091387245233399,
+          "max_af": 0.309139
+        },
+        {
+          "variant_id": "19-17642495-C-T",
+          "rsids": [
+            "rs79026179"
+          ],
+          "pos_1b": 17642495,
+          "ref": "C",
+          "alt": "T",
+          "span_1b": [
+            17642495
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.00577241324962568,
+          "max_af": 0.005772
+        },
+        {
+          "variant_id": "19-17642770-C-T",
+          "rsids": [
+            "rs116961973"
+          ],
+          "pos_1b": 17642770,
+          "ref": "C",
+          "alt": "T",
+          "span_1b": [
+            17642770
+          ],
+          "consequence": "intron_variant",
+          "exome_af": 0.019403843463573104,
+          "genome_af": 0.015126603091088459,
+          "max_af": 0.019404
+        }
+      ]
+    },
+    "STMN2": {
+      "interval_queried": "chr8:79616650-79617250",
+      "total_gnomad_v4_variants": 130,
+      "common_variants_af_ge_0_005": [
+        {
+          "variant_id": "8-79616738-G-A",
+          "rsids": [
+            "rs7013510"
+          ],
+          "pos_1b": 79616738,
+          "ref": "G",
+          "alt": "A",
+          "span_1b": [
+            79616738
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.47974973354912565,
+          "max_af": 0.47975
+        },
+        {
+          "variant_id": "8-79617133-TTGAG-T",
+          "rsids": [
+            "rs60546980"
+          ],
+          "pos_1b": 79617133,
+          "ref": "TTGAG",
+          "alt": "T",
+          "span_1b": [
+            79617133,
+            79617134,
+            79617135,
+            79617136,
+            79617137
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.17594760238840518,
+          "max_af": 0.175948
+        }
+      ]
+    },
+    "G2E3": {
+      "interval_queried": "chr14:30563600-30564250",
+      "total_gnomad_v4_variants": 235,
+      "common_variants_af_ge_0_005": [
+        {
+          "variant_id": "14-30563695-T-TTG",
+          "rsids": [
+            "rs56029424"
+          ],
+          "pos_1b": 30563695,
+          "ref": "T",
+          "alt": "TTG",
+          "span_1b": [
+            30563695
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.06616469988241794,
+          "max_af": 0.066165
+        },
+        {
+          "variant_id": "14-30563695-T-TTGTGTG",
+          "rsids": [
+            "rs56029424"
+          ],
+          "pos_1b": 30563695,
+          "ref": "T",
+          "alt": "TTGTGTG",
+          "span_1b": [
+            30563695
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.04456266115093645,
+          "max_af": 0.044563
+        },
+        {
+          "variant_id": "14-30563695-TTGTGTGTGTG-T",
+          "rsids": [
+            "rs56029424"
+          ],
+          "pos_1b": 30563695,
+          "ref": "TTGTGTGTGTG",
+          "alt": "T",
+          "span_1b": [
+            30563695,
+            30563696,
+            30563697,
+            30563698,
+            30563699,
+            30563700,
+            30563701,
+            30563702,
+            30563703,
+            30563704,
+            30563705
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.022892982033893505,
+          "max_af": 0.022893
+        },
+        {
+          "variant_id": "14-30563695-T-TTGTGTGTG",
+          "rsids": [
+            "rs56029424"
+          ],
+          "pos_1b": 30563695,
+          "ref": "T",
+          "alt": "TTGTGTGTG",
+          "span_1b": [
+            30563695
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.013204100705162697,
+          "max_af": 0.013204
+        },
+        {
+          "variant_id": "14-30563695-TTG-T",
+          "rsids": [
+            "rs56029424"
+          ],
+          "pos_1b": 30563695,
+          "ref": "TTG",
+          "alt": "T",
+          "span_1b": [
+            30563695,
+            30563696,
+            30563697
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.11775136177939174,
+          "max_af": 0.117751
+        },
+        {
+          "variant_id": "14-30563695-TTGTGTGTGTGTG-T",
+          "rsids": [
+            "rs56029424"
+          ],
+          "pos_1b": 30563695,
+          "ref": "TTGTGTGTGTGTG",
+          "alt": "T",
+          "span_1b": [
+            30563695,
+            30563696,
+            30563697,
+            30563698,
+            30563699,
+            30563700,
+            30563701,
+            30563702,
+            30563703,
+            30563704,
+            30563705,
+            30563706,
+            30563707
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.0063201551375146854,
+          "max_af": 0.00632
+        },
+        {
+          "variant_id": "14-30563695-TTGTGTG-T",
+          "rsids": [
+            "rs56029424"
+          ],
+          "pos_1b": 30563695,
+          "ref": "TTGTGTG",
+          "alt": "T",
+          "span_1b": [
+            30563695,
+            30563696,
+            30563697,
+            30563698,
+            30563699,
+            30563700,
+            30563701
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.050094919672456294,
+          "max_af": 0.050095
+        },
+        {
+          "variant_id": "14-30563695-TTGTGTGTG-T",
+          "rsids": [
+            "rs56029424"
+          ],
+          "pos_1b": 30563695,
+          "ref": "TTGTGTGTG",
+          "alt": "T",
+          "span_1b": [
+            30563695,
+            30563696,
+            30563697,
+            30563698,
+            30563699,
+            30563700,
+            30563701,
+            30563702,
+            30563703
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.05691183550936022,
+          "max_af": 0.056912
+        },
+        {
+          "variant_id": "14-30563695-T-TTGTG",
+          "rsids": [
+            "rs56029424"
+          ],
+          "pos_1b": 30563695,
+          "ref": "T",
+          "alt": "TTGTG",
+          "span_1b": [
+            30563695
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.07690454255545319,
+          "max_af": 0.076905
+        },
+        {
+          "variant_id": "14-30563695-TTGTGTGTGTGTGTGTGTGTGTG-T",
+          "rsids": [
+            "rs56029424"
+          ],
+          "pos_1b": 30563695,
+          "ref": "TTGTGTGTGTGTGTGTGTGTGTG",
+          "alt": "T",
+          "span_1b": [
+            30563695,
+            30563696,
+            30563697,
+            30563698,
+            30563699,
+            30563700,
+            30563701,
+            30563702,
+            30563703,
+            30563704,
+            30563705,
+            30563706,
+            30563707,
+            30563708,
+            30563709,
+            30563710,
+            30563711,
+            30563712,
+            30563713,
+            30563714,
+            30563715,
+            30563716,
+            30563717
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.02965322009907997,
+          "max_af": 0.029653
+        },
+        {
+          "variant_id": "14-30563695-TTGTGTGTGTGTGTG-T",
+          "rsids": [
+            "rs56029424"
+          ],
+          "pos_1b": 30563695,
+          "ref": "TTGTGTGTGTGTGTG",
+          "alt": "T",
+          "span_1b": [
+            30563695,
+            30563696,
+            30563697,
+            30563698,
+            30563699,
+            30563700,
+            30563701,
+            30563702,
+            30563703,
+            30563704,
+            30563705,
+            30563706,
+            30563707,
+            30563708,
+            30563709
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.01291034951373848,
+          "max_af": 0.01291
+        },
+        {
+          "variant_id": "14-30563695-TTGTG-T",
+          "rsids": [
+            "rs56029424"
+          ],
+          "pos_1b": 30563695,
+          "ref": "TTGTG",
+          "alt": "T",
+          "span_1b": [
+            30563695,
+            30563696,
+            30563697,
+            30563698,
+            30563699
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.20294467916182266,
+          "max_af": 0.202945
+        },
+        {
+          "variant_id": "14-30563736-T-TGTGTGTGA",
+          "rsids": [
+            "rs59557580"
+          ],
+          "pos_1b": 30563736,
+          "ref": "T",
+          "alt": "TGTGTGTGA",
+          "span_1b": [
+            30563736
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.008237706644942906,
+          "max_af": 0.008238
+        },
+        {
+          "variant_id": "14-30563738-T-TGTGA",
+          "rsids": [
+            "rs566217168"
+          ],
+          "pos_1b": 30563738,
+          "ref": "T",
+          "alt": "TGTGA",
+          "span_1b": [
+            30563738
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.007602843293811738,
+          "max_af": 0.007603
+        },
+        {
+          "variant_id": "14-30563777-T-C",
+          "rsids": [
+            "rs79081050"
+          ],
+          "pos_1b": 30563777,
+          "ref": "T",
+          "alt": "C",
+          "span_1b": [
+            30563777
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.03407086102378394,
+          "max_af": 0.034071
+        },
+        {
+          "variant_id": "14-30563880-G-A",
+          "rsids": [
+            "rs145951353"
+          ],
+          "pos_1b": 30563880,
+          "ref": "G",
+          "alt": "A",
+          "span_1b": [
+            30563880
+          ],
+          "consequence": "intron_variant",
+          "exome_af": null,
+          "genome_af": 0.03285718043827112,
+          "max_af": 0.032857
+        }
+      ]
+    }
+  }
+}

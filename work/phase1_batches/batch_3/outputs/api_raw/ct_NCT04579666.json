@@ -1,0 +1,4858 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT04579666",
+      "briefTitle": "MERIDIAN: A Study to Evaluate the Efficacy and Safety of Pegcetacoplan in Adults With Amyotrophic Lateral Sclerosis (ALS)"
+    },
+    "statusModule": {
+      "overallStatus": "TERMINATED",
+      "whyStopped": "The study did not meet primary endpoint at Week 52. The study also did not meet key secondary efficacy endpoints. Pegcetacoplan (APL-2) was well tolerated in the study, and the data were consistent with the established safety profile.",
+      "startDateStruct": {
+        "date": "2020-09-30"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2023-03-31"
+      }
+    },
+    "descriptionModule": {
+      "briefSummary": "This is a 24-month, Phase 2, multicenter, randomized, double-blind, placebo-controlled study to evaluate the efficacy and safety of pegcetacoplan in subjects with amyotrophic lateral sclerosis (ALS)"
+    },
+    "designModule": {
+      "phases": [
+        "PHASE2"
+      ],
+      "enrollmentInfo": {
+        "count": 249
+      }
+    },
+    "armsInterventionsModule": {
+      "armGroups": [
+        {
+          "label": "1,080 mg pegcetacoplan (APL-2)",
+          "type": "EXPERIMENTAL",
+          "description": "administered subcutaneously twice weekly",
+          "interventionNames": [
+            "Drug: Pegcetacoplan (APL-2)"
+          ]
+        },
+        {
+          "label": "Placebo administered subcutaneously twice weekly",
+          "type": "PLACEBO_COMPARATOR",
+          "interventionNames": [
+            "Other: Placebo"
+          ]
+        }
+      ],
+      "interventions": [
+        {
+          "type": "DRUG",
+          "name": "Pegcetacoplan (APL-2)",
+          "description": "Complement (C3) Inhibitor",
+          "armGroupLabels": [
+            "1,080 mg pegcetacoplan (APL-2)"
+          ]
+        },
+        {
+          "type": "OTHER",
+          "name": "Placebo",
+          "description": "Sterile solution of equal volume to active arm",
+          "armGroupLabels": [
+            "Placebo administered subcutaneously twice weekly"
+          ]
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "RTP: Combined Assessment of Function and Survival (CAFS) Rank Score (Joint-Rank Score) at Week 52",
+          "description": "The CAFS scale is a combined endpoint ranking subjects' clinical outcomes based on ALS Functional Rating Scale-Revised (ALSFRS-R-described below) and survival time. For ALSFRS-R, 12 functions were rated on 5-point ordinal rating scales (0 to 4) with a total score range of 0-48 (sum of all 12 items); higher score indicated better functioning. For survival time, longer the subject survives indicated better outcome. Each subject's outcome was compared to every other subject outcome in trial in series of pairwise comparisons, summed scores (sum of comparisons \\[+1 {better}, 0 {tie}, -1 {worse}\\]) were ranked and ranged from 001-247 (number of subjects in modified \\[m\\]ITT population).Reported values are the least squares mean rank scores in each group for the composite endpoint. Higher rank indicated better outcome.",
+          "timeFrame": "Week 52"
+        },
+        {
+          "measure": "RTP: Number of Subjects With Treatment-emergent Adverse Events (TEAEs) and Treatment-emergent Serious Adverse Events (TESAEs)",
+          "description": "An AE was any untoward medical occurrence associated with the use of a drug in humans, whether or not it was considered drug related. An SAE was any AE or suspected adverse reaction that, in the view of the investigator, resulted in death, was life threatening, required inpatient hospitalization or prolongation of existing hospitalization, resulted in a persistent or significant incapacity or substantial disruption of the ability to conduct normal life functions, or was a congenital anomaly or birth defect. TEAEs were AEs that started on or after first dose of study drug or started before first dose of study drug but increased in severity on or after the first dose of study drug up to 56 days post last dose of study drug.",
+          "timeFrame": "From first dose of study drug (Day 1) up to 56 days post last dose of study drug, approximately 60 weeks"
+        },
+        {
+          "measure": "OLP: Number of Participants With Treatment-emergent Adverse Events and Treatment-emergent Serious Adverse Events",
+          "description": "An AE was any untoward medical occurrence associated with the use of a drug in humans, whether or not it was considered drug related. An SAE was any AE or suspected adverse reaction that, in the view of the investigator, resulted in death, was life threatening, required inpatient hospitalization or prolongation of existing hospitalization, resulted in a persistent or significant incapacity or substantial disruption of the ability to conduct normal life functions, or was a congenital anomaly or birth defect. TEAEs were AEs that started on or after first dose of study drug or started before first dose of study drug but increased in severity on or after the first dose of study drug up to 56 days post last dose of study drug.",
+          "timeFrame": "From first dose of study drug (Week 52) up to 56 days post last dose of study drug, approximately 60 weeks"
+        },
+        {
+          "measure": "RTP: Number of Subjects With Positive Response to Columbia-Suicide Severity Rating Scale (C-SSRS) up to Week 52",
+          "description": "The C-SSRS is a measure used to identify and assess individuals at risk for suicide and included \"yes\" or \"no\" responses for assessment of suicidal ideation (SI) and suicidal behavior (SB).C-SSRS SI items are classified on 5-item scale:1 (wish to be dead),2 (non-specific active suicidal thoughts),3 (active SI with any methods without intent to act),4 (active SI with some intent to act, without specific plan) and 5 (active SI with a specific plan and intent).C-SSRS SB items are classified on 5-item scale: 1 (preparatory acts or behavior), 2 (aborted attempt), 3 (interrupted attempt), 4 (actual attempt \\[non-fatal\\]) and 5 (completed suicide). Numeric ratings were provided for SI (1 to 5) and SB (1 to 5) with 5 being more severe for each. Number of subjects with a response of 'yes' to SI only, SB only \\& SI and SB are reported. Baseline: last available, non-missing observation prior to first study drug administration.",
+          "timeFrame": "Baseline (Day 1) up to Week 52"
+        },
+        {
+          "measure": "OLP: Number of Subjects With Positive Response to Columbia-Suicide Severity Rating Scale up to Week 104",
+          "description": "The C-SSRS is a measure used to identify and assess individuals at risk for suicide and included \"yes\" or \"no\" responses for assessment of SI and SB.C-SSRS SI items are classified on 5-item scale:1 (wish to be dead),2 (non-specific active suicidal thoughts),3 (active SI with any methods without intent to act),4 (active SI with some intent to act, without specific plan) and 5 (active SI with a specific plan and intent).C-SSRS SB items are classified on 5-item scale:1 (preparatory acts or behavior),2 (aborted attempt), 3 (interrupted attempt), 4 (actual attempt \\[non-fatal\\]) and 5 (completed suicide). Numeric ratings were provided for SI (1 to 5) and SB (1 to 5) with 5 being more severe for each. Number of subjects with a response of 'yes' to SI only, SB only \\& SI and SB are reported. Baseline: last available, non-missing observation prior to first study drug administration in OLP.",
+          "timeFrame": "From Baseline (Week 52) up to Week 104"
+        }
+      ],
+      "secondaryOutcomes": [
+        {
+          "measure": "RTP: Change From Baseline in the Amyotrophic Lateral Sclerosis Functional Rating Scale-Revised (ALSFRS-R) Score at Week 52",
+          "description": "The ALSFRS-R included 12 items for assessment of functional status: speech, salivation, swallowing, handwriting, cutting food and handling utensils, dressing and hygiene, turning in bed and adjusting bed clothes, walking, climbing stairs, dyspnea, orthopnea, and respiratory insufficiency. Each item ranged from 0 (no ability) to 4 (normal ability). Individual item scores were summed to produce a total score between 0 (worst) and 48 (best) with higher scores meaning better outcome. Least squares mean is presented here. Baseline was defined as the last available, non-missing observation prior to first study drug administration.",
+          "timeFrame": "Baseline (Day 1) and Week 52"
+        },
+        {
+          "measure": "RTP: Change From Baseline in Percent Predicted Slow Vital Capacity (%SVC) at Week 52",
+          "description": "SVC is a pulmonary function test and predictor of functional loss in ALS. It was conducted at clinic visits with the clinic spirometer which reflected the maximum amount of air that could be exhaled slowly. %SVC is the actual volume exhaled in the first 1 second, divided by the normal value for that actual value for a person of that age, gender, height and weight. Baseline was defined as the last available, non-missing observation prior to first study drug administration.",
+          "timeFrame": "Baseline (Day 1) and Week 52"
+        },
+        {
+          "measure": "RTP: Change From Baseline in Muscle Strength at Week 52",
+          "description": "Muscle strength was measured using handheld dynamometry (HHD) and assessed the following muscles: first dorsal interosseous, wrist extension, elbow extension, elbow flexion, shoulder flexion, knee extension, knee flexion, and ankle dorsiflexion, on both sides of the body. Baseline was defined as the last available, non-missing observation prior to first study drug administration.",
+          "timeFrame": "Baseline (Day 1) and Week 52"
+        },
+        {
+          "measure": "RTP: Number of Subjects With an Event of Death or Permanent Tracheostomy or Permanent Assisted Ventilation at Week 52",
+          "description": "Subjects with an event (that is, either death or permanent tracheostomy or permanent assisted ventilation) in RTP are reported.",
+          "timeFrame": "Baseline (Day 1) up to Week 52"
+        },
+        {
+          "measure": "RTP: Change From Baseline in ALS Assessment Questionnaire (ALSAQ)-40 at Week 52",
+          "description": "The ALSAQ-40 was a 40-item validated questionnaire designed to assess health related quality of life (QoL) over the previous 2 weeks in subjects with ALS. It represented 5 dimensions of health status; each scored from 0 (never, or best) to 4 (always, or worst). 5 dimensions evaluated were: physical mobility (10 items: 1-10; possible score of 0-40); activities of daily living/independence (10 items: 11-20; possible score of 0-40); eating and drinking (3 items: 21-23; possible score of 0-12); communication (7 items: 24-30; possible score: 0-28) and emotional functioning (10 items: 31-40; possible score: 0-40). The total score 0 (no impairment) to 160 (severe impairment) was calculated by adding the 5 dimension scores; least squares mean is presented here. Higher scores indicated worse QoL.",
+          "timeFrame": "Baseline (Day 1) and Week 52"
+        },
+        {
+          "measure": "OLP: Change From Baseline in the Amyotrophic Lateral Sclerosis Functional Rating Scale-Revised Score at Week 104",
+          "description": "The ALSFRS-R included 12 items for assessment of functional status: speech, salivation, swallowing, handwriting, cutting food and handling utensils, dressing and hygiene, turning in bed and adjusting bed clothes, walking, climbing stairs, dyspnea, orthopnea, and respiratory insufficiency. Each item ranged from 0 (no ability) to 4 (normal ability). Individual item scores were summed to produce a total score between 0 (worst) and 48 (best) with higher scores meaning better outcome. Mean is presented here. Baseline was defined as the last observed value for the efficacy assessment prior to taking the first dose of study drug in OLP.",
+          "timeFrame": "Baseline (Week 52) and Week 104"
+        },
+        {
+          "measure": "OLP: Change From Baseline in Percent Predicted Slow Vital Capacity at Week 104",
+          "description": "SVC is a pulmonary function test and predictor of functional loss in ALS. It was planned to be conducted at clinic visits with the clinic spirometer which reflected the maximum amount of air that could be exhaled slowly. %SVC is the actual volume exhaled in the first 1 second, divided by the normal value for that actual value for a person of that age, gender, height and weight. Baseline was defined as the last available, non-missing observation prior to first study drug administration.",
+          "timeFrame": "Baseline (Week 52) and Week 104"
+        },
+        {
+          "measure": "OLP: Change From Baseline in Muscle Strength at Week 104",
+          "description": "Muscle strength was planned to be measured using HHD and assessed the following muscles: first dorsal interosseous, wrist extension, elbow extension, elbow flexion, shoulder flexion, knee extension, knee flexion, and ankle dorsiflexion, on both sides of the body. Baseline was defined as the last available, non-missing observation prior to first study drug administration.",
+          "timeFrame": "Baseline (Week 52) and Week 104"
+        },
+        {
+          "measure": "OLP: Number of Subjects With an Event of Death or Permanent Tracheostomy or Permanent Assisted Ventilation at Week 104",
+          "description": "Subjects with an event of death are reported. Subjects were planned to be assessed for permanent tracheostomy or permanent assisted ventilation in OLP; however, that data was not collected as study was terminated early.",
+          "timeFrame": "Baseline (Week 52) and Week 104"
+        },
+        {
+          "measure": "OLP: Change From Baseline in ALS Assessment Questionnaire-40 at Week 104",
+          "description": "The ALSAQ-40 was a 40-item validated questionnaire designed to assess health related QoL over the previous 2 weeks in subjects with ALS. It represented 5 dimensions of health status; each scored from 0 (never, or best) to 4 (always, or worst). 5 dimensions evaluated were: physical mobility (10 items: 1-10; possible score of 0-40); activities of daily living/independence (10 items: 11-20; possible score of 0-40); eating and drinking (3 items: 21-23; possible score of 0-12); communication (7 items: 24-30; possible score: 0-28) and emotional functioning (10 items: 31-40; possible score: 0-40). The total score 0 (no impairment) to 160 (severe impairment) was planned to be calculated by adding the 5 dimension scores. Higher scores would have indicated worse QoL.",
+          "timeFrame": "Baseline (Week 52) and Week 104"
+        },
+        {
+          "measure": "Number of Subjects With an Event of Death During the Study",
+          "description": "Total number of subjects who died in the study are reported.",
+          "timeFrame": "RTP: Baseline (Day 1) up to Week 52; OLP: Baseline (Week 52) up to Week 104"
+        }
+      ]
+    }
+  },
+  "resultsSection": {
+    "participantFlowModule": {
+      "preAssignmentDetails": "Study consisted of 5 periods: 6-week screening period, 52-week randomized treatment period (RTP), 52-week open-label treatment period (OLP), 52-week long-term extension treatment period and a 6-week off-treatment follow-up period. Study was terminated early during OLP due to lack of efficacy as determined by the Week 52 data and no safety concerns.",
+      "recruitmentDetails": "This Phase 2, placebo-controlled study was conducted in subjects diagnosed with amyotrophic lateral sclerosis (ALS). A total of 249 subjects were randomized in a 2:1 ratio to either receive pegcetacoplan or placebo.",
+      "groups": [
+        {
+          "id": "FG000",
+          "title": "RTP: Pegcetacoplan",
+          "description": "Subjects received pegcetacoplan 1080 milligram (mg) subcutaneous (SC) injection/infusion twice per week for 52 weeks."
+        },
+        {
+          "id": "FG001",
+          "title": "RTP: Placebo",
+          "description": "Subjects received placebo matching pegcetacoplan as SC injection/infusion twice per week for 52 weeks."
+        },
+        {
+          "id": "FG002",
+          "title": "OLP: Pegcetacoplan/Pegcetacoplan",
+          "description": "Eligible subjects who had received pegcetacoplan in RTP entered OLP and continued to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+        },
+        {
+          "id": "FG003",
+          "title": "OLP: Placebo/Pegcetacoplan",
+          "description": "Eligible subjects who had received placebo matching pegcetacoplan in RTP entered OLP to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+        }
+      ],
+      "periods": [
+        {
+          "title": "RTP (Up to Week 52)",
+          "milestones": [
+            {
+              "type": "STARTED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "169"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "80"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "0"
+                }
+              ]
+            },
+            {
+              "type": "COMPLETED",
+              "comment": "Completed RTP",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "99"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "51"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "0"
+                }
+              ]
+            },
+            {
+              "type": "NOT COMPLETED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "70"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "29"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "0"
+                }
+              ]
+            }
+          ],
+          "dropWithdraws": [
+            {
+              "type": "Adverse Event",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "4"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "3"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "0"
+                }
+              ]
+            },
+            {
+              "type": "Death",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "24"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "9"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "0"
+                }
+              ]
+            },
+            {
+              "type": "Lost to Follow-up",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "1"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "0"
+                }
+              ]
+            },
+            {
+              "type": "Physician Decision",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "4"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "1"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "0"
+                }
+              ]
+            },
+            {
+              "type": "Progressive disease",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "1"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "0"
+                }
+              ]
+            },
+            {
+              "type": "Site terminated by sponsor",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "7"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "5"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "0"
+                }
+              ]
+            },
+            {
+              "type": "Study terminated by sponsor",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "2"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "0"
+                }
+              ]
+            },
+            {
+              "type": "Withdrawal by Subject",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "25"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "11"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "0"
+                }
+              ]
+            },
+            {
+              "type": "Other",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "2"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "OLP (From Week 52 up to Week 104)",
+          "milestones": [
+            {
+              "type": "STARTED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG002",
+                  "comment": "2 subjects withdrew after completing the RTP and before entering the OLP period.",
+                  "numSubjects": "97"
+                },
+                {
+                  "groupId": "FG003",
+                  "comment": "1 subject withdrew after completing the RTP and before entering the OLP period.",
+                  "numSubjects": "50"
+                }
+              ]
+            },
+            {
+              "type": "COMPLETED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "0"
+                }
+              ]
+            },
+            {
+              "type": "NOT COMPLETED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "97"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "50"
+                }
+              ]
+            }
+          ],
+          "dropWithdraws": [
+            {
+              "type": "Adverse Event",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "2"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "0"
+                }
+              ]
+            },
+            {
+              "type": "Withdrawal by Subject",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "19"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "12"
+                }
+              ]
+            },
+            {
+              "type": "Sponsor request",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "63"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "31"
+                }
+              ]
+            },
+            {
+              "type": "Physician Decision",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "3"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "1"
+                }
+              ]
+            },
+            {
+              "type": "Death",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG002",
+                  "numSubjects": "10"
+                },
+                {
+                  "groupId": "FG003",
+                  "numSubjects": "6"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "baselineCharacteristicsModule": {
+      "populationDescription": "The intent-to-treat (ITT) population included all randomized subjects who received at least 1 dose of randomized treatment (pegcetacoplan or placebo).",
+      "groups": [
+        {
+          "id": "BG000",
+          "title": "RTP: Pegcetacoplan",
+          "description": "Subjects received pegcetacoplan 1080 milligram (mg) subcutaneous (SC) infusion twice per week for 52 weeks in the RTP. Eligible subjects entered OLP and continued to receive pegcetacoplan 1080 mg SC infusion twice per week up to 104 weeks. Those subjects experiencing clinical benefit as per investigator continued to receive pegcetacoplan 1080 mg SC infusion twice per week up to 156 weeks in the open-label long-term extension treatment period."
+        },
+        {
+          "id": "BG001",
+          "title": "RTP: Placebo",
+          "description": "Subjects received placebo matched to pegcetacoplan SC infusion twice per week for 52 weeks in the RTP. Eligible subjects entered OLP to receive pegcetacoplan 1080 mg SC infusion twice per week up to 104 weeks. Those subjects experiencing clinical benefit as per investigator continued to receive pegcetacoplan 1080 mg SC infusion twice per week up to 156 weeks in the open-label long-term extension treatment period."
+        },
+        {
+          "id": "BG002",
+          "title": "Total",
+          "description": "Total of all reporting groups"
+        }
+      ],
+      "denoms": [
+        {
+          "units": "Participants",
+          "counts": [
+            {
+              "groupId": "BG000",
+              "value": "169"
+            },
+            {
+              "groupId": "BG001",
+              "value": "80"
+            },
+            {
+              "groupId": "BG002",
+              "value": "249"
+            }
+          ]
+        }
+      ],
+      "measures": [
+        {
+          "title": "Age, Continuous",
+          "paramType": "MEAN",
+          "dispersionType": "STANDARD_DEVIATION",
+          "unitOfMeasure": "years",
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "57.0",
+                      "spread": "12.47"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "57.7",
+                      "spread": "11.02"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "57.2",
+                      "spread": "12.01"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Sex: Female, Male",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "calculatePct": false,
+          "classes": [
+            {
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "64"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "25"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "89"
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "105"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "55"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "160"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Ethnicity (NIH/OMB)",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "calculatePct": false,
+          "classes": [
+            {
+              "categories": [
+                {
+                  "title": "Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "27"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "15"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "42"
+                    }
+                  ]
+                },
+                {
+                  "title": "Not Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "124"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "62"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "186"
+                    }
+                  ]
+                },
+                {
+                  "title": "Unknown or Not Reported",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "18"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "3"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "21"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Race/Ethnicity, Customized",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "calculatePct": false,
+          "classes": [
+            {
+              "title": "Caucasian",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "130"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "67"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "197"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Black or African American",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "North East Asian",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "14"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "6"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "20"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "South East Asian",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Other",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "13"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "5"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "18"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Unknown",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "12"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "2"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "14"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "outcomeMeasuresModule": {
+      "outcomeMeasures": [
+        {
+          "type": "PRIMARY",
+          "title": "RTP: Combined Assessment of Function and Survival (CAFS) Rank Score (Joint-Rank Score) at Week 52",
+          "description": "The CAFS scale is a combined endpoint ranking subjects' clinical outcomes based on ALS Functional Rating Scale-Revised (ALSFRS-R-described below) and survival time. For ALSFRS-R, 12 functions were rated on 5-point ordinal rating scales (0 to 4) with a total score range of 0-48 (sum of all 12 items); higher score indicated better functioning. For survival time, longer the subject survives indicated better outcome. Each subject's outcome was compared to every other subject outcome in trial in series of pairwise comparisons, summed scores (sum of comparisons \\[+1 {better}, 0 {tie}, -1 {worse}\\]) were ranked and ranged from 001-247 (number of subjects in modified \\[m\\]ITT population).Reported values are the least squares mean rank scores in each group for the composite endpoint. Higher rank indicated better outcome.",
+          "populationDescription": "mITT set included all randomized subjects who received at least 1 dose of randomized treatment (pegcetacoplan or placebo) and who died or had a postbaseline assessment of endpoint that was used in CAFS. Only subjects with data collected at Week 52 are reported.",
+          "reportingStatus": "POSTED",
+          "paramType": "LEAST_SQUARES_MEAN",
+          "dispersionType": "Standard Error",
+          "unitOfMeasure": "score on a scale",
+          "timeFrame": "Week 52",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "RTP: Pegcetacoplan",
+              "description": "Subjects received pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "RTP: Placebo",
+              "description": "Subjects received placebo matching pegcetacoplan as SC injection/infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "168"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "79"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "123.0",
+                      "spread": "4.71"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "126.0",
+                      "spread": "6.89"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "analyses": [
+            {
+              "groupIds": [
+                "OG000",
+                "OG001"
+              ],
+              "groupDescription": "Analysis of covariance (ANCOVA) was used to analyze the ranks of the CAFS score with treatment as a fixed effect, adjusted for baseline ALSFRS-R total score, time from symptom onset, baseline Log neurofilament light chain (NfL), and the randomization stratification factors (location of first muscle weakness and use of riluzole and edaravone).",
+              "nonInferiorityType": "SUPERIORITY",
+              "pValue": "0.7205",
+              "statisticalMethod": "ANCOVA",
+              "paramType": "Difference in LS Mean",
+              "paramValue": "-3.0",
+              "ciPctValue": "95",
+              "ciNumSides": "TWO_SIDED",
+              "ciLowerLimit": "-19.5",
+              "ciUpperLimit": "13.5"
+            }
+          ]
+        },
+        {
+          "type": "PRIMARY",
+          "title": "RTP: Number of Subjects With Treatment-emergent Adverse Events (TEAEs) and Treatment-emergent Serious Adverse Events (TESAEs)",
+          "description": "An AE was any untoward medical occurrence associated with the use of a drug in humans, whether or not it was considered drug related. An SAE was any AE or suspected adverse reaction that, in the view of the investigator, resulted in death, was life threatening, required inpatient hospitalization or prolongation of existing hospitalization, resulted in a persistent or significant incapacity or substantial disruption of the ability to conduct normal life functions, or was a congenital anomaly or birth defect. TEAEs were AEs that started on or after first dose of study drug or started before first dose of study drug but increased in severity on or after the first dose of study drug up to 56 days post last dose of study drug.",
+          "populationDescription": "The safety set for RTP included all subjects who received at least 1 dose of study drug: pegcetacoplan or placebo.",
+          "reportingStatus": "POSTED",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "calculatePct": false,
+          "timeFrame": "From first dose of study drug (Day 1) up to 56 days post last dose of study drug, approximately 60 weeks",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "RTP: Pegcetacoplan",
+              "description": "Subjects received pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "RTP: Placebo",
+              "description": "Subjects received placebo matching pegcetacoplan as SC injection/infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "169"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "80"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "title": "TEAEs",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "137"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "61"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "TESAEs",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "57"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "27"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "PRIMARY",
+          "title": "OLP: Number of Participants With Treatment-emergent Adverse Events and Treatment-emergent Serious Adverse Events",
+          "description": "An AE was any untoward medical occurrence associated with the use of a drug in humans, whether or not it was considered drug related. An SAE was any AE or suspected adverse reaction that, in the view of the investigator, resulted in death, was life threatening, required inpatient hospitalization or prolongation of existing hospitalization, resulted in a persistent or significant incapacity or substantial disruption of the ability to conduct normal life functions, or was a congenital anomaly or birth defect. TEAEs were AEs that started on or after first dose of study drug or started before first dose of study drug but increased in severity on or after the first dose of study drug up to 56 days post last dose of study drug.",
+          "populationDescription": "The safety set for the OLP included only those subjects who received at least 1 dose of the open-label treatment.",
+          "reportingStatus": "POSTED",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "calculatePct": false,
+          "timeFrame": "From first dose of study drug (Week 52) up to 56 days post last dose of study drug, approximately 60 weeks",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "OLP: Pegcetacoplan/Pegcetacoplan",
+              "description": "Eligible subjects who had received pegcetacoplan in RTP entered OLP and continued to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "OLP: Placebo/Pegcetacoplan",
+              "description": "Eligible subjects who had received placebo matching pegcetacoplan in RTP entered OLP to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "97"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "50"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "title": "TEAEs",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "54"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "33"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "TESAEs",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "24"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "14"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "PRIMARY",
+          "title": "RTP: Number of Subjects With Positive Response to Columbia-Suicide Severity Rating Scale (C-SSRS) up to Week 52",
+          "description": "The C-SSRS is a measure used to identify and assess individuals at risk for suicide and included \"yes\" or \"no\" responses for assessment of suicidal ideation (SI) and suicidal behavior (SB).C-SSRS SI items are classified on 5-item scale:1 (wish to be dead),2 (non-specific active suicidal thoughts),3 (active SI with any methods without intent to act),4 (active SI with some intent to act, without specific plan) and 5 (active SI with a specific plan and intent).C-SSRS SB items are classified on 5-item scale: 1 (preparatory acts or behavior), 2 (aborted attempt), 3 (interrupted attempt), 4 (actual attempt \\[non-fatal\\]) and 5 (completed suicide). Numeric ratings were provided for SI (1 to 5) and SB (1 to 5) with 5 being more severe for each. Number of subjects with a response of 'yes' to SI only, SB only \\& SI and SB are reported. Baseline: last available, non-missing observation prior to first study drug administration.",
+          "populationDescription": "The safety set for RTP included all subjects who received at least 1 dose of study drug: pegcetacoplan or placebo.",
+          "reportingStatus": "POSTED",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "calculatePct": false,
+          "timeFrame": "Baseline (Day 1) up to Week 52",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "RTP: Pegcetacoplan",
+              "description": "Subjects received pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "RTP: Placebo",
+              "description": "Subjects received placebo matching pegcetacoplan as SC injection/infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "169"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "80"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "title": "SI only",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "16"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "6"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "SB only",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "SI and SB",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "1"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "PRIMARY",
+          "title": "OLP: Number of Subjects With Positive Response to Columbia-Suicide Severity Rating Scale up to Week 104",
+          "description": "The C-SSRS is a measure used to identify and assess individuals at risk for suicide and included \"yes\" or \"no\" responses for assessment of SI and SB.C-SSRS SI items are classified on 5-item scale:1 (wish to be dead),2 (non-specific active suicidal thoughts),3 (active SI with any methods without intent to act),4 (active SI with some intent to act, without specific plan) and 5 (active SI with a specific plan and intent).C-SSRS SB items are classified on 5-item scale:1 (preparatory acts or behavior),2 (aborted attempt), 3 (interrupted attempt), 4 (actual attempt \\[non-fatal\\]) and 5 (completed suicide). Numeric ratings were provided for SI (1 to 5) and SB (1 to 5) with 5 being more severe for each. Number of subjects with a response of 'yes' to SI only, SB only \\& SI and SB are reported. Baseline: last available, non-missing observation prior to first study drug administration in OLP.",
+          "populationDescription": "The safety set for the OLP included only those subjects who received at least 1 dose of the open-label treatment.",
+          "reportingStatus": "POSTED",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "calculatePct": false,
+          "timeFrame": "From Baseline (Week 52) up to Week 104",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "OLP: Pegcetacoplan/Pegcetacoplan",
+              "description": "Eligible subjects who had received pegcetacoplan in RTP entered OLP and continued to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "OLP: Placebo/Pegcetacoplan",
+              "description": "Eligible subjects who had received placebo matching pegcetacoplan in RTP entered OLP to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "97"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "50"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "title": "SI only",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "11"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "3"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "SB only",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "SI and SB",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "1"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "RTP: Change From Baseline in the Amyotrophic Lateral Sclerosis Functional Rating Scale-Revised (ALSFRS-R) Score at Week 52",
+          "description": "The ALSFRS-R included 12 items for assessment of functional status: speech, salivation, swallowing, handwriting, cutting food and handling utensils, dressing and hygiene, turning in bed and adjusting bed clothes, walking, climbing stairs, dyspnea, orthopnea, and respiratory insufficiency. Each item ranged from 0 (no ability) to 4 (normal ability). Individual item scores were summed to produce a total score between 0 (worst) and 48 (best) with higher scores meaning better outcome. Least squares mean is presented here. Baseline was defined as the last available, non-missing observation prior to first study drug administration.",
+          "populationDescription": "The ITT set for RTP included all randomized subjects who received at least 1 dose of randomized treatment (pegcetacoplan or placebo). Only those subjects with data collected at Baseline and Week 52 are reported.",
+          "reportingStatus": "POSTED",
+          "paramType": "LEAST_SQUARES_MEAN",
+          "dispersionType": "Standard Error",
+          "unitOfMeasure": "score on a scale",
+          "timeFrame": "Baseline (Day 1) and Week 52",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "RTP: Pegcetacoplan",
+              "description": "Subjects received pegcetacoplan 1080 milligram (mg) subcutaneous (SC) infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "RTP: Placebo",
+              "description": "Subjects received placebo matched to pegcetacoplan SC infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "168"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "79"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "-16.5",
+                      "spread": "0.81"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "-15.8",
+                      "spread": "1.20"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "analyses": [
+            {
+              "groupIds": [
+                "OG000",
+                "OG001"
+              ],
+              "groupDescription": "The mixed-effect model for repeated measures (MMRM) included fixed categorical effects for treatment, week, and the week-by-treatment interaction, as well as the continuous, fixed covariate of the baseline value of the endpoint, and the week-by-baseline interaction, baseline log NfL, time from symptoms onset to the first dose of study drug, and randomization stratification factors location of first muscle weakness and use of riluzole and/or edaravone).",
+              "nonInferiorityType": "SUPERIORITY",
+              "pValue": "0.6447",
+              "statisticalMethod": "MMRM",
+              "paramType": "Difference in LS Mean",
+              "paramValue": "-0.7",
+              "ciPctValue": "95",
+              "ciNumSides": "TWO_SIDED",
+              "ciLowerLimit": "-3.5",
+              "ciUpperLimit": "2.2"
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "RTP: Change From Baseline in Percent Predicted Slow Vital Capacity (%SVC) at Week 52",
+          "description": "SVC is a pulmonary function test and predictor of functional loss in ALS. It was conducted at clinic visits with the clinic spirometer which reflected the maximum amount of air that could be exhaled slowly. %SVC is the actual volume exhaled in the first 1 second, divided by the normal value for that actual value for a person of that age, gender, height and weight. Baseline was defined as the last available, non-missing observation prior to first study drug administration.",
+          "populationDescription": "The ITT set for RTP included all randomized subjects who received at least 1 dose of randomized treatment (pegcetacoplan or placebo). Only those subjects with data collected at baseline and Week 52 are reported.",
+          "reportingStatus": "POSTED",
+          "paramType": "LEAST_SQUARES_MEAN",
+          "dispersionType": "Standard Error",
+          "unitOfMeasure": "percentage of predicted SVC",
+          "timeFrame": "Baseline (Day 1) and Week 52",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "RTP: Pegcetacoplan",
+              "description": "Subjects received pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "RTP: Placebo",
+              "description": "Subjects received placebo matching pegcetacoplan as SC injection/infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "167"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "75"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "-39.2",
+                      "spread": "2.30"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "-32.6",
+                      "spread": "3.17"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "analyses": [
+            {
+              "groupIds": [
+                "OG000",
+                "OG001"
+              ],
+              "groupDescription": "The MMRM included fixed categorical effects for treatment, week, and the week-by-treatment interaction, as well as the continuous, fixed covariate of the baseline value of the endpoint, and the week-by-baseline interaction, baseline log NfL, time from symptoms onset to the first dose of study drug, and randomization stratification factors (location of first muscle weakness and use of riluzole and/or edaravone).",
+              "nonInferiorityType": "SUPERIORITY",
+              "pValue": "0.0949",
+              "statisticalMethod": "MMRM",
+              "paramType": "Difference in LS Mean",
+              "paramValue": "-6.6",
+              "ciPctValue": "95",
+              "ciNumSides": "TWO_SIDED",
+              "ciLowerLimit": "-14.3",
+              "ciUpperLimit": "1.2"
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "RTP: Change From Baseline in Muscle Strength at Week 52",
+          "description": "Muscle strength was measured using handheld dynamometry (HHD) and assessed the following muscles: first dorsal interosseous, wrist extension, elbow extension, elbow flexion, shoulder flexion, knee extension, knee flexion, and ankle dorsiflexion, on both sides of the body. Baseline was defined as the last available, non-missing observation prior to first study drug administration.",
+          "populationDescription": "The ITT set for RTP included all randomized subjects who received at least 1 dose of randomized treatment (pegcetacoplan or placebo). Only those subjects with data collected at baseline and Week 52 are reported.",
+          "reportingStatus": "POSTED",
+          "paramType": "LEAST_SQUARES_MEAN",
+          "dispersionType": "Standard Error",
+          "unitOfMeasure": "pounds",
+          "timeFrame": "Baseline (Day 1) and Week 52",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "RTP: Pegcetacoplan",
+              "description": "Subjects received pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "RTP: Placebo",
+              "description": "Subjects received placebo matching pegcetacoplan as SC injection/infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "166"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "75"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "-0.78",
+                      "spread": "0.06"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "-0.59",
+                      "spread": "0.10"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "analyses": [
+            {
+              "groupIds": [
+                "OG000",
+                "OG001"
+              ],
+              "groupDescription": "The MMRM included fixed categorical effects for treatment, week, and the week-by-treatment interaction, as well as the continuous, fixed covariate of the baseline value of the endpoint, and the week-by-baseline interaction, baseline log NfL, time from symptoms onset to the first dose of study drug, and randomization stratification factors (location of first muscle weakness and use of riluzole and/or edaravone).",
+              "nonInferiorityType": "SUPERIORITY",
+              "pValue": "0.0935",
+              "statisticalMethod": "MMRM",
+              "paramType": "Difference in LS Mean",
+              "paramValue": "-0.19",
+              "ciPctValue": "95",
+              "ciNumSides": "TWO_SIDED",
+              "ciLowerLimit": "-0.42",
+              "ciUpperLimit": "0.03"
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "RTP: Number of Subjects With an Event of Death or Permanent Tracheostomy or Permanent Assisted Ventilation at Week 52",
+          "description": "Subjects with an event (that is, either death or permanent tracheostomy or permanent assisted ventilation) in RTP are reported.",
+          "populationDescription": "The ITT set for RTP included all randomized subjects who received at least 1 dose of randomized treatment (pegcetacoplan or placebo).",
+          "reportingStatus": "POSTED",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "calculatePct": false,
+          "timeFrame": "Baseline (Day 1) up to Week 52",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "RTP: Pegcetacoplan",
+              "description": "Subjects received pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "RTP: Placebo",
+              "description": "Subjects received placebo matching pegcetacoplan as SC injection/infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "169"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "80"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "42"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "27"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "RTP: Change From Baseline in ALS Assessment Questionnaire (ALSAQ)-40 at Week 52",
+          "description": "The ALSAQ-40 was a 40-item validated questionnaire designed to assess health related quality of life (QoL) over the previous 2 weeks in subjects with ALS. It represented 5 dimensions of health status; each scored from 0 (never, or best) to 4 (always, or worst). 5 dimensions evaluated were: physical mobility (10 items: 1-10; possible score of 0-40); activities of daily living/independence (10 items: 11-20; possible score of 0-40); eating and drinking (3 items: 21-23; possible score of 0-12); communication (7 items: 24-30; possible score: 0-28) and emotional functioning (10 items: 31-40; possible score: 0-40). The total score 0 (no impairment) to 160 (severe impairment) was calculated by adding the 5 dimension scores; least squares mean is presented here. Higher scores indicated worse QoL.",
+          "populationDescription": "The ITT set for RTP included all randomized subjects who received at least 1 dose of randomized treatment (pegcetacoplan or placebo). Only those subjects with data collected at baseline and Week 52 are reported.",
+          "reportingStatus": "POSTED",
+          "paramType": "LEAST_SQUARES_MEAN",
+          "dispersionType": "Standard Error",
+          "unitOfMeasure": "score on a scale",
+          "timeFrame": "Baseline (Day 1) and Week 52",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "RTP: Pegcetacoplan",
+              "description": "Subjects received pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "RTP: Placebo",
+              "description": "Subjects received placebo matching pegcetacoplan as SC injection/infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "168"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "79"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "31.3",
+                      "spread": "1.35"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "24.8",
+                      "spread": "1.94"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "analyses": [
+            {
+              "groupIds": [
+                "OG000",
+                "OG001"
+              ],
+              "groupDescription": "The MMRM included fixed categorical effects for treatment, week, and the week-by-treatment interaction, as well as the continuous, fixed covariate of the baseline value of the endpoint, and the week-by-baseline interaction, baseline log NfL, time from symptoms onset to the first dose of study drug, and randomization stratification factors (location of first muscle weakness and use of riluzole and/or edaravone).",
+              "nonInferiorityType": "SUPERIORITY",
+              "pValue": "0.0069",
+              "statisticalMethod": "MMRM",
+              "paramType": "Difference in LS Mean",
+              "paramValue": "6.5",
+              "ciPctValue": "95",
+              "ciNumSides": "TWO_SIDED",
+              "ciLowerLimit": "1.8",
+              "ciUpperLimit": "11.1"
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "OLP: Change From Baseline in the Amyotrophic Lateral Sclerosis Functional Rating Scale-Revised Score at Week 104",
+          "description": "The ALSFRS-R included 12 items for assessment of functional status: speech, salivation, swallowing, handwriting, cutting food and handling utensils, dressing and hygiene, turning in bed and adjusting bed clothes, walking, climbing stairs, dyspnea, orthopnea, and respiratory insufficiency. Each item ranged from 0 (no ability) to 4 (normal ability). Individual item scores were summed to produce a total score between 0 (worst) and 48 (best) with higher scores meaning better outcome. Mean is presented here. Baseline was defined as the last observed value for the efficacy assessment prior to taking the first dose of study drug in OLP.",
+          "populationDescription": "The ITT set for OLP included all randomized subjects who received at least 1 dose of open label treatment. Only those subjects with data collected at specified timepoints are reported.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "score on a scale",
+          "timeFrame": "Baseline (Week 52) and Week 104",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "OLP: Pegcetacoplan/Pegcetacoplan",
+              "description": "Eligible subjects who had received pegcetacoplan in RTP entered OLP and continued to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "OLP: Placebo/Pegcetacoplan",
+              "description": "Eligible subjects who had received placebo matching pegcetacoplan in RTP entered OLP to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "3"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "1"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "-19.0",
+                      "spread": "10.82"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "-28.0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "OLP: Change From Baseline in Percent Predicted Slow Vital Capacity at Week 104",
+          "description": "SVC is a pulmonary function test and predictor of functional loss in ALS. It was planned to be conducted at clinic visits with the clinic spirometer which reflected the maximum amount of air that could be exhaled slowly. %SVC is the actual volume exhaled in the first 1 second, divided by the normal value for that actual value for a person of that age, gender, height and weight. Baseline was defined as the last available, non-missing observation prior to first study drug administration.",
+          "populationDescription": "Analysis was planned to be performed on the ITT population. Data was not collected for this outcome measure as the study was terminated early since it did not meet key secondary efficacy endpoints criteria.",
+          "reportingStatus": "POSTED",
+          "timeFrame": "Baseline (Week 52) and Week 104",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "OLP: Pegcetacoplan/Pegcetacoplan",
+              "description": "Eligible subjects who had received pegcetacoplan in RTP entered OLP and continued to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "OLP: Placebo/Pegcetacoplan",
+              "description": "Eligible subjects who had received placebo matching pegcetacoplan in RTP entered OLP to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "0"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "OLP: Change From Baseline in Muscle Strength at Week 104",
+          "description": "Muscle strength was planned to be measured using HHD and assessed the following muscles: first dorsal interosseous, wrist extension, elbow extension, elbow flexion, shoulder flexion, knee extension, knee flexion, and ankle dorsiflexion, on both sides of the body. Baseline was defined as the last available, non-missing observation prior to first study drug administration.",
+          "populationDescription": "Analysis was planned to be performed on the ITT population. Data was not collected for this outcome measure as the study was terminated early since it did not meet key secondary efficacy endpoints criteria.",
+          "reportingStatus": "POSTED",
+          "timeFrame": "Baseline (Week 52) and Week 104",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "OLP: Pegcetacoplan/Pegcetacoplan",
+              "description": "Eligible subjects who had received pegcetacoplan in RTP entered OLP and continued to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "OLP: Placebo/Pegcetacoplan",
+              "description": "Eligible subjects who had received placebo matching pegcetacoplan in RTP entered OLP to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "0"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "OLP: Number of Subjects With an Event of Death or Permanent Tracheostomy or Permanent Assisted Ventilation at Week 104",
+          "description": "Subjects with an event of death are reported. Subjects were planned to be assessed for permanent tracheostomy or permanent assisted ventilation in OLP; however, that data was not collected as study was terminated early.",
+          "populationDescription": "The ITT set for OLP included all randomized subjects who received at least 1 dose of open label treatment.",
+          "reportingStatus": "POSTED",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "calculatePct": false,
+          "timeFrame": "Baseline (Week 52) and Week 104",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "OLP: Pegcetacoplan/Pegcetacoplan",
+              "description": "Eligible subjects who had received pegcetacoplan in RTP entered OLP and continued to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "OLP: Placebo/Pegcetacoplan",
+              "description": "Eligible subjects who had received placebo matching pegcetacoplan in RTP entered OLP to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "97"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "50"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "10"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "6"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "OLP: Change From Baseline in ALS Assessment Questionnaire-40 at Week 104",
+          "description": "The ALSAQ-40 was a 40-item validated questionnaire designed to assess health related QoL over the previous 2 weeks in subjects with ALS. It represented 5 dimensions of health status; each scored from 0 (never, or best) to 4 (always, or worst). 5 dimensions evaluated were: physical mobility (10 items: 1-10; possible score of 0-40); activities of daily living/independence (10 items: 11-20; possible score of 0-40); eating and drinking (3 items: 21-23; possible score of 0-12); communication (7 items: 24-30; possible score: 0-28) and emotional functioning (10 items: 31-40; possible score: 0-40). The total score 0 (no impairment) to 160 (severe impairment) was planned to be calculated by adding the 5 dimension scores. Higher scores would have indicated worse QoL.",
+          "populationDescription": "Analysis was planned to be performed on the ITT population. Data was not collected for this outcome measure as the study was terminated early since it did not meet key secondary efficacy endpoints criteria.",
+          "reportingStatus": "POSTED",
+          "timeFrame": "Baseline (Week 52) and Week 104",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "OLP: Pegcetacoplan/Pegcetacoplan",
+              "description": "Eligible subjects who had received pegcetacoplan in RTP entered OLP and continued to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "OLP: Placebo/Pegcetacoplan",
+              "description": "Eligible subjects who had received placebo matching pegcetacoplan in RTP entered OLP to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "0"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Number of Subjects With an Event of Death During the Study",
+          "description": "Total number of subjects who died in the study are reported.",
+          "populationDescription": "The ITT set for RTP included all randomized subjects who received at least 1 dose of randomized treatment (pegcetacoplan or placebo). The ITT set for OLP included all randomized subjects who received at least 1 dose of open label treatment.",
+          "reportingStatus": "POSTED",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "calculatePct": false,
+          "timeFrame": "RTP: Baseline (Day 1) up to Week 52; OLP: Baseline (Week 52) up to Week 104",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "RTP: Pegcetacoplan",
+              "description": "Subjects received pegcetacoplan 1080 milligram (mg) subcutaneous (SC) injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG001",
+              "title": "RTP: Placebo",
+              "description": "Subjects received placebo matching pegcetacoplan as SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG002",
+              "title": "OLP: Pegcetacoplan/Pegcetacoplan",
+              "description": "Eligible subjects who had received pegcetacoplan in RTP entered OLP and continued to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            },
+            {
+              "id": "OG003",
+              "title": "OLP: Placebo/Pegcetacoplan",
+              "description": "Eligible subjects who had received placebo matching pegcetacoplan in RTP entered OLP to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "169"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "80"
+                },
+                {
+                  "groupId": "OG002",
+                  "value": "97"
+                },
+                {
+                  "groupId": "OG003",
+                  "value": "50"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "26"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "11"
+                    },
+                    {
+                      "groupId": "OG002",
+                      "value": "10"
+                    },
+                    {
+                      "groupId": "OG003",
+                      "value": "6"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "adverseEventsModule": {
+      "frequencyThreshold": "5",
+      "timeFrame": "TEAEs, TESAEs and deaths were collected from first dose of study drug (RTP: Day 1/OLP: Week 52) up to 56 days post last dose of study drug, approximately 60 weeks each for RTP and OLP.",
+      "description": "RTP: Safety set included all subjects who received at least 1 dose of study treatment, pegcetacoplan or placebo. OLP: Safety set included only subjects who received at least 1 dose of the open-label treatment. RTP reporting groups: MedDRA 23.0.",
+      "eventGroups": [
+        {
+          "id": "EG000",
+          "title": "RTP: Pegcetacoplan",
+          "description": "Subjects received pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks.",
+          "deathsNumAffected": 26,
+          "deathsNumAtRisk": 169,
+          "seriousNumAffected": 57,
+          "seriousNumAtRisk": 169,
+          "otherNumAffected": 124,
+          "otherNumAtRisk": 169
+        },
+        {
+          "id": "EG001",
+          "title": "RTP: Placebo",
+          "description": "Subjects received placebo matching pegcetacoplan as SC injection/infusion twice per week for 52 weeks.",
+          "deathsNumAffected": 11,
+          "deathsNumAtRisk": 80,
+          "seriousNumAffected": 27,
+          "seriousNumAtRisk": 80,
+          "otherNumAffected": 55,
+          "otherNumAtRisk": 80
+        },
+        {
+          "id": "EG002",
+          "title": "OLP: Pegcetacoplan/Pegcetacoplan",
+          "description": "Eligible subjects who had received pegcetacoplan in RTP entered OLP and continued to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks.",
+          "deathsNumAffected": 10,
+          "deathsNumAtRisk": 97,
+          "seriousNumAffected": 24,
+          "seriousNumAtRisk": 97,
+          "otherNumAffected": 31,
+          "otherNumAtRisk": 97
+        },
+        {
+          "id": "EG003",
+          "title": "OLP: Placebo/Pegcetacoplan",
+          "description": "Eligible subjects who had received placebo matching pegcetacoplan in RTP entered OLP to receive pegcetacoplan 1080 mg SC injection/infusion twice per week for 52 weeks.",
+          "deathsNumAffected": 6,
+          "deathsNumAtRisk": 50,
+          "seriousNumAffected": 14,
+          "seriousNumAtRisk": 50,
+          "otherNumAffected": 20,
+          "otherNumAtRisk": 50
+        }
+      ],
+      "seriousEvents": [
+        {
+          "term": "Pericarditis",
+          "organSystem": "Cardiac disorders",
+          "sourceVocabulary": "23.0",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Angina Pectoris",
+          "organSystem": "Cardiac disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Atrial Fibrillation",
+          "organSystem": "Cardiac disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Cardiac Failure Acute",
+          "organSystem": "Cardiac disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Cardio-Respiratory Arrest",
+          "organSystem": "Cardiac disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 1,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Optic Atrophy",
+          "organSystem": "Eye disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Dysphagia",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Constipation",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Diarrhoea",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Gastritis",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Abdominal Pain",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Vomiting",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Disease Progression",
+          "organSystem": "General disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Cholecystitis Acute",
+          "organSystem": "Hepatobiliary disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Hepatitis",
+          "organSystem": "Hepatobiliary disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Hypersensitivity",
+          "organSystem": "Immune system disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Covid-19",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 7,
+              "numAffected": 7,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Pneumonia",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Covid-19 Pneumonia",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Urinary Tract Infection",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Febrile Infection",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Gastroenteritis",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Pneumonia Moraxella",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Respiratory Tract Infection",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Tonsillitis",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Sepsis",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Stoma Site Infection",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Pneumonia Bacterial",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Urosepsis",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Nasopharyngitis",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Viral Rash",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Concussion",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Humerus Fracture",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Head Injury",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Ankle Fracture",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Craniocerebral Injury",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Weight Decreased",
+          "organSystem": "Investigations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Hypoglycaemia",
+          "organSystem": "Metabolism and nutrition disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Dehydration",
+          "organSystem": "Metabolism and nutrition disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Food Refusal",
+          "organSystem": "Metabolism and nutrition disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Hepatic Cancer",
+          "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Metastatic Uterine Cancer",
+          "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Colon Cancer",
+          "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Invasive Ductal Breast Carcinoma",
+          "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Musculoskeletal Chest Pain",
+          "organSystem": "Musculoskeletal and connective tissue disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Amyotrophic Lateral Sclerosis",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 6,
+              "numAffected": 6,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Headache",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Syncope",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Bulbar Palsy",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Acute Stress Disorder",
+          "organSystem": "Psychiatric disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Confusional State",
+          "organSystem": "Psychiatric disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Device Dislocation",
+          "organSystem": "Product Issues",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Nephrolithiasis",
+          "organSystem": "Renal and urinary disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Haematuria",
+          "organSystem": "Renal and urinary disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Renal Colic",
+          "organSystem": "Renal and urinary disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Renal Failure",
+          "organSystem": "Renal and urinary disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Respiratory Failure",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 13,
+              "numAffected": 13,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 7,
+              "numAffected": 7,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 5,
+              "numAffected": 4,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Pneumonia Aspiration",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 7,
+              "numAffected": 7,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 4,
+              "numAffected": 4,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Dyspnoea",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 5,
+              "numAffected": 5,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Pulmonary Embolism",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Respiratory Disorder",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Acute Respiratory Failure",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Hypoxia",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Obstructive Airways Disorder",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Pleural Effusion",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Respiratory Distress",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Sleep Apnoea Syndrome",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Respiratory Symptom",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Bronchial Secretion Retention",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Ischaemic Skin Ulcer",
+          "organSystem": "Skin and subcutaneous tissue disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Hospitalisation",
+          "organSystem": "Surgical and medical procedures",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Gastrostomy",
+          "organSystem": "Surgical and medical procedures",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Deep Vein Thrombosis",
+          "organSystem": "Vascular disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Hypovolaemic Shock",
+          "organSystem": "Vascular disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 50
+            }
+          ]
+        }
+      ],
+      "otherEvents": [
+        {
+          "term": "Constipation",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 12,
+              "numAffected": 12,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 7,
+              "numAffected": 7,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 5,
+              "numAffected": 5,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Diarrhoea",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 10,
+              "numAffected": 10,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 5,
+              "numAffected": 5,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "COVID-19",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 28,
+              "numAffected": 28,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 14,
+              "numAffected": 13,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 6,
+              "numAffected": 6,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Nasopharyngitis",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 12,
+              "numAffected": 10,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 4,
+              "numAffected": 4,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Upper Respiratory Tract Infection",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 13,
+              "numAffected": 10,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 4,
+              "numAffected": 4,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 5,
+              "numAffected": 5,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Urinary Tract Infection",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 7,
+              "numAffected": 6,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 5,
+              "numAffected": 5,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Fall",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 57,
+              "numAffected": 37,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 23,
+              "numAffected": 14,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 10,
+              "numAffected": 6,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Insomnia",
+          "organSystem": "Psychiatric disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 8,
+              "numAffected": 8,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 5,
+              "numAffected": 5,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Cough",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 7,
+              "numAffected": 7,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 5,
+              "numAffected": 5,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Hypertension",
+          "organSystem": "Vascular disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 5,
+              "numAffected": 5,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 4,
+              "numAffected": 4,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Pneumonia aspiration",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 4,
+              "numAffected": 3,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Back pain",
+          "organSystem": "Musculoskeletal and connective tissue disorders",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 50
+            }
+          ]
+        },
+        {
+          "term": "Pneumonia",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "23.1",
+          "assessmentType": "SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 169
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 80
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 4,
+              "numAffected": 4,
+              "numAtRisk": 97
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 4,
+              "numAffected": 4,
+              "numAtRisk": 50
+            }
+          ]
+        }
+      ]
+    },
+    "moreInfoModule": {
+      "limitationsAndCaveats": {
+        "description": "The study was terminated early, during the OLP, due to lack of efficacy as determined by the Week 52 data and no safety concerns."
+      },
+      "certainAgreement": {
+        "piSponsorEmployee": false,
+        "restrictiveAgreement": true
+      },
+      "pointOfContact": {
+        "title": "Apellis Clinical Trial Information Line",
+        "organization": "Apellis Pharmaceuticals, Inc",
+        "email": "clinicaltrials@apellis.com",
+        "phone": "1-833-284-6361"
+      }
+    }
+  }
+}

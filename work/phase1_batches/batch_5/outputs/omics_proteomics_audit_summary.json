@@ -1,0 +1,117 @@
+{
+  "ds003_summary": {
+    "drd_ba4_rows": 95,
+    "m1_de_rows": 168
+  },
+  "ds001_summary": {
+    "nygc_rows": 84,
+    "genes_mapped": [
+      "ADARB1",
+      "DRD1",
+      "DRD2",
+      "DRD3",
+      "DRD4",
+      "DRD5",
+      "GRIA1",
+      "GRIA2",
+      "GRIN1",
+      "GRIN2A",
+      "GRIN2B",
+      "KCNA1",
+      "KCNA2",
+      "KCNQ2",
+      "KCNQ3",
+      "NPTX2",
+      "SCN1A",
+      "SCN8A",
+      "SLC12A2",
+      "SLC12A5",
+      "SLC1A2"
+    ]
+  },
+  "ds045_synaptic": {
+    "NPTX2": {
+      "tmt_n101_sals_vs_ctrl": {
+        "id": "NPTX2|P47972",
+        "diff_log2": -0.094065628,
+        "p_value": 0.186724776
+      },
+      "dia_n259_sals_vs_ctrl": {
+        "id": "NPTX2|P47972",
+        "diff_log2": -0.202066820944445,
+        "p_value": 0.0398491074068747,
+        "als_vs_ctrl_diff_log2": -0.333161280774881,
+        "als_vs_ctrl_p_value": 0.000459910816752048
+      },
+      "wgcna_tmt": {
+        "module": "yellow",
+        "kME_turquoise": 0.70234204792863
+      }
+    },
+    "NPTXR": {
+      "tmt_n101_sals_vs_ctrl": {
+        "id": "NPTXR|O95502",
+        "diff_log2": -0.01701421,
+        "p_value": 0.770413124
+      },
+      "dia_n259_sals_vs_ctrl": {
+        "id": "NPTXR|O95502",
+        "diff_log2": -0.0926877862105555,
+        "p_value": 0.23320287703771,
+        "als_vs_ctrl_diff_log2": -0.276563607060991,
+        "als_vs_ctrl_p_value": 0.000766474228344655
+      },
+      "wgcna_tmt": {
+        "module": "turquoise",
+        "kME_turquoise": 0.801906284464158
+      }
+    },
+    "NPTX1": {
+      "tmt_n101_sals_vs_ctrl": {
+        "id": "NPTX1|Q15818",
+        "diff_log2": 0.016715725,
+        "p_value": 0.769527761
+      },
+      "dia_n259_sals_vs_ctrl": {
+        "id": "NPTX1|Q15818",
+        "diff_log2": -0.0933837025505556,
+        "p_value": 0.101737251223869,
+        "als_vs_ctrl_diff_log2": -0.212889510500121,
+        "als_vs_ctrl_p_value": 6.11358269850287e-05
+      },
+      "wgcna_tmt": {
+        "module": "yellow",
+        "kME_turquoise": 0.787319958987322
+      }
+    },
+    "GRIA4": {
+      "tmt_n101_sals_vs_ctrl": {
+        "id": "GRIA4|P48058",
+        "diff_log2": -0.056204244,
+        "p_value": 0.392065995
+      },
+      "dia_n259_sals_vs_ctrl": {
+        "id": "GRIA4|P48058",
+        "diff_log2": -0.148987034902778,
+        "p_value": 0.0628934268048307,
+        "als_vs_ctrl_diff_log2": -0.283509460594083,
+        "als_vs_ctrl_p_value": 0.000239000194456421
+      },
+      "wgcna_tmt": {
+        "module": "yellow",
+        "kME_turquoise": 0.578656585845482
+      }
+    },
+    "SLC1A2": {
+      "tmt_n101_sals_vs_ctrl": {
+        "id": "SLC1A2|P43004",
+        "diff_log2": -0.028115189,
+        "p_value": 0.757801848
+      },
+      "wgcna_tmt": {
+        "module": "turquoise",
+        "kME_turquoise": 0.560885120846786
+      }
+    }
+  }
+}

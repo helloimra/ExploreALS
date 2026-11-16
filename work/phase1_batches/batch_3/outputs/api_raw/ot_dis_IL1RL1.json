@@ -1,0 +1,399 @@
+{
+  "target": {
+    "id": "ENSG00000115602",
+    "approvedSymbol": "IL33R",
+    "associatedDiseases": {
+      "count": 526,
+      "rows": [
+        {
+          "disease": {
+            "id": "MONDO_0004979",
+            "name": "asthma"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.9362550455471678
+            },
+            {
+              "id": "europepmc",
+              "score": 0.9380607801833357
+            },
+            {
+              "id": "clinical_precedence",
+              "score": 0.15911744279154166
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005271",
+            "name": "allergic disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.8601857891999295
+            },
+            {
+              "id": "europepmc",
+              "score": 0.3237332062903208
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0011786",
+            "name": "allergic rhinitis"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.8230474212519019
+            },
+            {
+              "id": "europepmc",
+              "score": 0.7774899230030835
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004980",
+            "name": "atopic eczema"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.8024086699636943
+            },
+            {
+              "id": "clinical_precedence",
+              "score": 0.12158615952232422
+            },
+            {
+              "id": "europepmc",
+              "score": 0.36853557679828275
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005087",
+            "name": "respiratory system disorder"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.8255909970808532
+            },
+            {
+              "id": "europepmc",
+              "score": 0.03434471267173653
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "HP_0030828",
+            "name": "Wheezing"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.8206991795869236
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005405",
+            "name": "childhood onset asthma"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.8039692475586611
+            },
+            {
+              "id": "europepmc",
+              "score": 0.0870472814747893
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "HP_0004933",
+            "name": "Ascending aortic dissection"
+          },
+          "datasourceScores": [
+            {
+              "id": "eva",
+              "score": 0.8007968431539079
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_1002011",
+            "name": "adult onset asthma"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.7896787769543491
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "HP_0001977",
+            "name": "Abnormal thrombosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.7116475855554282
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005002",
+            "name": "chronic obstructive pulmonary disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "clinical_precedence",
+              "score": 0.5916855357421105
+            },
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.407827740220626
+            },
+            {
+              "id": "europepmc",
+              "score": 0.721238134900648
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0009759",
+            "name": "Chronic Obstructive Asthma"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.6792138877193684
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005642",
+            "name": "atopic conjunctivitis"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.6532327987462431
+            },
+            {
+              "id": "europepmc",
+              "score": 0.04686133231589579
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0003014",
+            "name": "rhinitis"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.6415785950394134
+            },
+            {
+              "id": "europepmc",
+              "score": 0.05565155175714018
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005265",
+            "name": "inflammatory bowel disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.5890927408340453
+            },
+            {
+              "id": "europepmc",
+              "score": 0.6850202977521109
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0006314",
+            "name": "nasal cavity polyp"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.6165948731256258
+            },
+            {
+              "id": "europepmc",
+              "score": 0.03248714634570102
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0006031",
+            "name": "chronic rhinosinusitis"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.5435619344674781
+            },
+            {
+              "id": "europepmc",
+              "score": 0.07424017126499916
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004867",
+            "name": "upper respiratory tract disorder"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.5383593818992072
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0003907",
+            "name": "deep vein thrombosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.5366364382636102
+            },
+            {
+              "id": "europepmc",
+              "score": 0.02735688589252295
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004784",
+            "name": "allergic asthma"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.5170982298969607
+            },
+            {
+              "id": "europepmc",
+              "score": 0.1280788554111024
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0003799",
+            "name": "conjunctivitis"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.5164792822755734
+            },
+            {
+              "id": "europepmc",
+              "score": 0.012158615952232422
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005124",
+            "name": "leprosy"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.4600275994196145
+            },
+            {
+              "id": "europepmc",
+              "score": 0.32277410220525005
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "HP_0012393",
+            "name": "Allergy"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.45437960838862784
+            },
+            {
+              "id": "europepmc",
+              "score": 0.2376113909587688
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0010638",
+            "name": "atopic asthma"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.4212478246008412
+            },
+            {
+              "id": "europepmc",
+              "score": 0.09129600753132519
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005131",
+            "name": "cervical carcinoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "gwas_credible_sets",
+              "score": 0.3384020229212174
+            },
+            {
+              "id": "europepmc",
+              "score": 0.012158615952232422
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

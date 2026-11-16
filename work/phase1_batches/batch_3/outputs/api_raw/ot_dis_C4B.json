@@ -1,0 +1,347 @@
+{
+  "target": {
+    "id": "ENSG00000224389",
+    "approvedSymbol": "C4B",
+    "associatedDiseases": {
+      "count": 734,
+      "rows": [
+        {
+          "disease": {
+            "id": "MONDO_0015699",
+            "name": "immunodeficiency due to a classical component pathway complement deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "genomics_england",
+              "score": 0.7599134970145264
+            },
+            {
+              "id": "uniprot_literature",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "orphanet",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "eva",
+              "score": 0.5940969945726365
+            },
+            {
+              "id": "impc",
+              "score": 0.38567129800481237
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0003832",
+            "name": "complement deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "genomics_england",
+              "score": 0.7599134970145264
+            },
+            {
+              "id": "europepmc",
+              "score": 0.08495326287624394
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0007915",
+            "name": "systemic lupus erythematosus"
+          },
+          "datasourceScores": [
+            {
+              "id": "uniprot_literature",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "europepmc",
+              "score": 0.6313511140573993
+            },
+            {
+              "id": "impc",
+              "score": 0.26961730874075396
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005502",
+            "name": "dengue disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "reactome",
+              "score": 0.607930797611621
+            },
+            {
+              "id": "europepmc",
+              "score": 0.32507410705621403
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005070",
+            "name": "neoplasm"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.8224111780917005
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004992",
+            "name": "cancer"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.7782528861715531
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0018899",
+            "name": "posterior cortical atrophy"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.6415054646063829
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0004272",
+            "name": "anemia (phenotype)"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.6145167145857471
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0002280",
+            "name": "anemia"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.6145167145857471
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0013743",
+            "name": "autosomal systemic lupus erythematosus type 16"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.614207683096961
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0008383",
+            "name": "rheumatoid arthritis"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.6014728803823918
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0958182",
+            "name": "C1Q deficiency 1"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.5978391463712682
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0018076",
+            "name": "tuberculosis"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.5608818131872788
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004975",
+            "name": "Alzheimer disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.5463839403964398
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0012382",
+            "name": "hyperinsulinemic hypoglycemia, familial, 4"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.544785387034454
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004995",
+            "name": "cardiovascular disorder"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.5413566159242229
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0008903",
+            "name": "lung cancer"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.5390284753431664
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005138",
+            "name": "lung carcinoma"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.5390284753431664
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004619",
+            "name": "measles"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.5334592749041974
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0971012",
+            "name": "MHC class I deficiency 3"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.5203279696757864
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0018150",
+            "name": "Gaucher disease"
+          },
+          "datasourceScores": [
+            {
+              "id": "europepmc",
+              "score": 0.5183251754369882
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0005342",
+            "name": "IgA glomerulonephritis"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.45667092792707603
+            },
+            {
+              "id": "europepmc",
+              "score": 0.22650051272521834
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0019006",
+            "name": "familial idiopathic steroid-resistant nephrotic syndrome"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.504766001363782
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0013721",
+            "name": "complement component 4a deficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.49976808783989346
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0800130",
+            "name": "autoinflammatory syndrome with immunodeficiency"
+          },
+          "datasourceScores": [
+            {
+              "id": "impc",
+              "score": 0.4943693246177703
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

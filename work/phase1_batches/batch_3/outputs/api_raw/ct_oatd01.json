@@ -1,0 +1,31 @@
+{
+  "totalCount": 1,
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06205121",
+          "briefTitle": "Efficacy and Safety Study of OATD-01 in Patients With Active Pulmonary Sarcoidosis"
+        },
+        "statusModule": {
+          "overallStatus": "RECRUITING"
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Pulmonary Sarcoidosis"
+          ],
+          "keywords": [
+            "Pulmonary Sarcoidosis",
+            "Sarcoidosis",
+            "Chitinase"
+          ]
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    }
+  ]
+}

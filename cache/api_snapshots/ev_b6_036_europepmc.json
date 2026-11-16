@@ -1,0 +1,499 @@
+{
+  "canonical_url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=EXT_ID%3A37317638%20OR%20DOI%3A%2210.1111/nan.12919%22&resultType=core&format=json",
+  "europepmc_core_results": {
+    "hitCount": 1,
+    "request": {
+      "cursorMark": "*",
+      "pageSize": 25,
+      "queryString": "EXT_ID:37317638 OR DOI:\"10.1111/nan.12919\"",
+      "resultType": "core",
+      "sort": "",
+      "synonym": false
+    },
+    "resultList": {
+      "result": [
+        {
+          "abstractText": "<h4>Aims</h4>Although the orally available brain-penetrant copper compound CuATSM has demonstrated promising effects in SOD1-linked mouse models, the impact of CuATSM on disease pathology in patients with amyotrophic lateral sclerosis (ALS) remains unknown.<h4>Methods</h4>The present study set out to address this deficit by performing the first pilot comparative analysis of ALS pathology in patients that had been administered CuATSM and riluzole [N\u2009=\u20096 cases composed of ALS-TDP (n\u2009=\u20095) and ALS-SOD1 (n\u2009=\u20091)] versus riluzole only [N\u2009=\u20096 cases composed of ALS-TDP (n\u2009=\u20094) and ALS-SOD1 (n\u2009=\u20092)].<h4>Results</h4>Our results revealed no significant difference in neuron density or TDP-43 burden in the motor cortex and spinal cord of patients that had received CuATSM compared with patients that had not. In patients that had received CuATSM, p62-immunoreactive astrocytes were observed in the motor cortex and reduced Iba1 density was found in the spinal cord. However, no significant difference in measures of astrocytic activity and SOD1 immunoreactivity was found with CuATSM treatment.<h4>Discussion</h4>These findings, in this first postmortem investigation of patients with ALS in CuATSM trials, demonstrate that in contrast to that seen in preclinical models of disease, CuATSM does not significantly alleviate neuronal pathology or astrogliosis in patients with ALS.",
+          "affiliation": "Brain and Mind Centre, University of Sydney, Sydney, New South Wales, Australia.",
+          "authMan": "N",
+          "authorIdList": {
+            "authorId": [
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9054-026X"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0001-9407-8674"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-0385-4090"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0002-0399-3218"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-0422-8398"
+              },
+              {
+                "type": "ORCID",
+                "value": "0000-0003-0912-2146"
+              }
+            ]
+          },
+          "authorList": {
+            "author": [
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Brain and Mind Centre, University of Sydney, Sydney, New South Wales, Australia."
+                    },
+                    {
+                      "affiliation": "Faculty of Medicine and Health, School of Medical Sciences, University of Sydney, Camperdown, New South Wales, Australia."
+                    }
+                  ]
+                },
+                "firstName": "Yue",
+                "fullName": "Yang Y",
+                "initials": "Y",
+                "lastName": "Yang"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Macquarie University Centre for Motor Neuron Disease Research, Faculty of Medicine, Health and Human Sciences, Macquarie University, Sydney, New South Wales, Australia."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-0912-2146"
+                },
+                "firstName": "Dominic",
+                "fullName": "Rowe D",
+                "initials": "D",
+                "lastName": "Rowe"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Neuroscience Research Australia, Randwick, New South Wales, Australia."
+                    }
+                  ]
+                },
+                "firstName": "Heather",
+                "fullName": "McCann H",
+                "initials": "H",
+                "lastName": "McCann"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Neuroscience Research Australia, Randwick, New South Wales, Australia."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-0399-3218"
+                },
+                "firstName": "Claire E",
+                "fullName": "Shepherd CE",
+                "initials": "CE",
+                "lastName": "Shepherd"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Faculty of Medicine and Health, School of Medical Sciences, University of Sydney, Camperdown, New South Wales, Australia."
+                    },
+                    {
+                      "affiliation": "Dementia Research Centre, Macquarie Medical School, Macquarie University, Sydney, New South Wales, Australia."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-9407-8674"
+                },
+                "firstName": "Jillian J",
+                "fullName": "Kril JJ",
+                "initials": "JJ",
+                "lastName": "Kril"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Brain and Mind Centre, University of Sydney, Sydney, New South Wales, Australia."
+                    },
+                    {
+                      "affiliation": "Institute of Clinical Neurosciences, Royal Prince Alfred Hospital, Sydney, New South Wales, Australia."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0001-9054-026X"
+                },
+                "firstName": "Matthew C",
+                "fullName": "Kiernan MC",
+                "initials": "MC",
+                "lastName": "Kiernan"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Brain and Mind Centre, University of Sydney, Sydney, New South Wales, Australia."
+                    },
+                    {
+                      "affiliation": "Faculty of Medicine and Health, School of Medical Sciences, University of Sydney, Camperdown, New South Wales, Australia."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0003-0422-8398"
+                },
+                "firstName": "Glenda M",
+                "fullName": "Halliday GM",
+                "initials": "GM",
+                "lastName": "Halliday"
+              },
+              {
+                "authorAffiliationDetailsList": {
+                  "authorAffiliation": [
+                    {
+                      "affiliation": "Brain and Mind Centre, University of Sydney, Sydney, New South Wales, Australia."
+                    },
+                    {
+                      "affiliation": "Faculty of Medicine and Health, School of Medical Sciences, University of Sydney, Camperdown, New South Wales, Australia."
+                    }
+                  ]
+                },
+                "authorId": {
+                  "type": "ORCID",
+                  "value": "0000-0002-0385-4090"
+                },
+                "firstName": "Rachel H",
+                "fullName": "Tan RH",
+                "initials": "RH",
+                "lastName": "Tan"
+              }
+            ]
+          },
+          "authorString": "Yang Y, Rowe D, McCann H, Shepherd CE, Kril JJ, Kiernan MC, Halliday GM, Tan RH.",
+          "chemicalList": {
+            "chemical": [
+              {
+                "name": "Superoxide Dismutase",
+                "registryNumber": "EC 1.15.1.1"
+              },
+              {
+                "name": "DNA-Binding Proteins",
+                "registryNumber": "0"
+              },
+              {
+                "name": "Copper",
+                "registryNumber": "789U1901C5"
+              },
+              {
+                "name": "Riluzole",
+                "registryNumber": "7LJ087RS6F"
+              },
+              {
+                "name": "Superoxide Dismutase-1",
+                "registryNumber": "EC 1.15.1.1"
+              },
+              {
+                "name": "Organocopper Compounds",
+                "registryNumber": "0"
+              },
+              {
+                "name": "CuATSM",
+                "registryNumber": "0"
+              }
+            ]
+          },
+          "citedByCount": 17,
+          "commentCorrectionList": {
+            "commentCorrection": [
+              {
+                "id": "37889099",
+                "orderIn": 1,
+                "reference": "Neuropathol Appl Neurobiol. 2023 Oct;49(5):e12938. doi: 10.1111/nan.12938.",
+                "source": "MED",
+                "type": "Comment in"
+              }
+            ]
+          },
+          "dataLinksTagsList": {
+            "dataLinkstag": [
+              "altmetrics",
+              "supporting_data"
+            ]
+          },
+          "dateOfCompletion": "2023-08-31",
+          "dateOfCreation": "2023-06-15",
+          "dateOfRevision": "2026-01-27",
+          "doi": "10.1111/nan.12919",
+          "epmcAuthMan": "N",
+          "firstIndexDate": "2023-06-16",
+          "firstPublicationDate": "2023-08-01",
+          "fullTextIdList": {
+            "fullTextId": [
+              "PMC10947464"
+            ]
+          },
+          "fullTextReceivedDate": "2024-03-21",
+          "fullTextUrlList": {
+            "fullTextUrl": [
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "doi",
+                "site": "Unpaywall",
+                "url": "https://doi.org/10.1111/nan.12919"
+              },
+              {
+                "availability": "Subscription required",
+                "availabilityCode": "S",
+                "documentStyle": "doi",
+                "site": "DOI",
+                "url": "https://doi.org/10.1111/nan.12919"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "html",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC10947464"
+              },
+              {
+                "availability": "Open access",
+                "availabilityCode": "OA",
+                "documentStyle": "pdf",
+                "site": "Europe_PMC",
+                "url": "https://europepmc.org/articles/PMC10947464?pdf=render"
+              }
+            ]
+          },
+          "grantsList": {
+            "grant": [
+              {
+                "agency": "National Health and Medical Research Council",
+                "grantId": "1132524",
+                "orderIn": 0
+              },
+              {
+                "agency": "Motor Neurone Disease Research Australia",
+                "orderIn": 0
+              },
+              {
+                "agency": "FightMND",
+                "orderIn": 0
+              },
+              {
+                "agency": "National Health and Medical Research Council",
+                "grantId": "1156093",
+                "orderIn": 0
+              },
+              {
+                "acronym": "AA",
+                "agency": "NIAAA NIH HHS",
+                "grantId": "R28 AA012725",
+                "orderIn": 0
+              },
+              {
+                "agency": "National Health and Medical Research Council",
+                "grantId": "1095127",
+                "orderIn": 0
+              },
+              {
+                "agency": "National Health and Medical Research Council",
+                "grantId": "1176607",
+                "orderIn": 0
+              },
+              {
+                "agency": "National Health and Medical Research Council",
+                "grantId": "1060992",
+                "orderIn": 0
+              }
+            ]
+          },
+          "hasBook": "N",
+          "hasData": "Y",
+          "hasDbCrossReferences": "N",
+          "hasEvaluations": "N",
+          "hasLabsLinks": "Y",
+          "hasPDF": "Y",
+          "hasReferences": "Y",
+          "hasSuppl": "N",
+          "hasTMAccessionNumbers": "Y",
+          "hasTextMinedTerms": "Y",
+          "id": "37317638",
+          "inEPMC": "Y",
+          "inPMC": "Y",
+          "isOpenAccess": "Y",
+          "journalInfo": {
+            "dateOfPublication": "2023 Aug",
+            "issue": "4",
+            "journal": {
+              "essn": "1365-2990",
+              "isoabbreviation": "Neuropathol Appl Neurobiol",
+              "issn": "0305-1846",
+              "medlineAbbreviation": "Neuropathol Appl Neurobiol",
+              "nlmid": "7609829",
+              "title": "Neuropathology and applied neurobiology"
+            },
+            "journalIssueId": 3623158,
+            "monthOfPublication": 8,
+            "printPublicationDate": "2023-08-01",
+            "volume": "49",
+            "yearOfPublication": 2023
+          },
+          "keywordList": {
+            "keyword": [
+              "Amyotrophic Lateral Sclerosis",
+              "Riluzole",
+              "Tdp-43 Pathology",
+              "Copper Atsm (Cuatsm)",
+              "P62 Pathology"
+            ]
+          },
+          "language": "eng",
+          "license": "cc by",
+          "meshHeadingList": {
+            "meshHeading": [
+              {
+                "descriptorName": "Spinal Cord",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "PA",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "pathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Motor Neurons",
+                "majorTopic_YN": "N",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "PA",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "pathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Animals",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Mice, Transgenic",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Mice",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Amyotrophic Lateral Sclerosis",
+                "majorTopic_YN": "Y",
+                "meshQualifierList": {
+                  "meshQualifier": [
+                    {
+                      "abbreviation": "DT",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "drug therapy"
+                    },
+                    {
+                      "abbreviation": "PA",
+                      "majorTopic_YN": "N",
+                      "qualifierName": "pathology"
+                    }
+                  ]
+                }
+              },
+              {
+                "descriptorName": "Copper",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Riluzole",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Superoxide Dismutase",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "DNA-Binding Proteins",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Superoxide Dismutase-1",
+                "majorTopic_YN": "N"
+              },
+              {
+                "descriptorName": "Organocopper Compounds",
+                "majorTopic_YN": "N"
+              }
+            ]
+          },
+          "nihAuthMan": "N",
+          "pageInfo": "e12919",
+          "pmcid": "PMC10947464",
+          "pmid": "37317638",
+          "pubModel": "Print",
+          "pubTypeList": {
+            "pubType": [
+              "Research Support, Non-U.S. Gov't",
+              "research-article",
+              "Journal Article"
+            ]
+          },
+          "pubYear": "2023",
+          "publicationStatus": "ppublish",
+          "source": "MED",
+          "subsetList": {
+            "subset": [
+              {
+                "code": "IM",
+                "name": "Index Medicus"
+              }
+            ]
+          },
+          "title": "Treatment with the copper compound CuATSM has no significant effect on motor neuronal pathology in patients with ALS.",
+          "tmAccessionTypeList": {
+            "accessionType": [
+              "nct"
+            ]
+          }
+        }
+      ]
+    },
+    "version": "6.9"
+  },
+  "evidence_id": "EV-B6-036",
+  "query_tokens": [
+    "PMID:37317638",
+    "DOI:10.1111/nan.12919"
+  ],
+  "retrieved_at_utc": "2026-11-16T12:56:39Z"
+}

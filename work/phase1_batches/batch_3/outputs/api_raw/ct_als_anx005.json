@@ -1,0 +1,21 @@
+{
+  "totalCount": 1,
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT04569435",
+          "briefTitle": "Study of ANX005 in Adults With Amyotrophic Lateral Sclerosis (ALS)"
+        },
+        "statusModule": {
+          "overallStatus": "COMPLETED"
+        },
+        "designModule": {
+          "phases": [
+            "PHASE2"
+          ]
+        }
+      }
+    }
+  ]
+}

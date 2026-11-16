@@ -1,0 +1,304 @@
+{
+  "analysis_run_id": "RUN-P2-T2-001",
+  "sarm1": {
+    "7DJT_Cys311_allosteric_site": {
+      "chain": "A",
+      "cys311_SG_to_H8L_min_dist_A": 2.12,
+      "pocket_residues_5A": [
+        "ARG224",
+        "GLU264",
+        "LEU265",
+        "ARG307",
+        "PHE308",
+        "ARG310",
+        "LEU312",
+        "VAL313",
+        "ASP314",
+        "ALA315"
+      ],
+      "als_gof_distances_A": {
+        "res_99_VAL": {
+          "dist_to_Cys311_CA_A": 21.95,
+          "min_dist_to_NAD_NMN_sensor_CA_A": 6.65
+        },
+        "res_112_VAL": {
+          "dist_to_Cys311_CA_A": 22.2,
+          "min_dist_to_NAD_NMN_sensor_CA_A": 5.64
+        },
+        "res_223_LEU": {
+          "dist_to_Cys311_CA_A": 18.39,
+          "min_dist_to_NAD_NMN_sensor_CA_A": 17.82
+        },
+        "res_226_CYS": {
+          "dist_to_Cys311_CA_A": 19.7,
+          "min_dist_to_NAD_NMN_sensor_CA_A": 13.66
+        },
+        "res_232_ASN": {
+          "dist_to_Cys311_CA_A": 19.76,
+          "min_dist_to_NAD_NMN_sensor_CA_A": 6.26
+        },
+        "res_249_ARG": {
+          "dist_to_Cys311_CA_A": 31.7,
+          "min_dist_to_NAD_NMN_sensor_CA_A": 21.73
+        },
+        "res_252_GLU": {
+          "dist_to_Cys311_CA_A": 28.71,
+          "min_dist_to_NAD_NMN_sensor_CA_A": 23.01
+        },
+        "res_267_ARG": {
+          "dist_to_Cys311_CA_A": 14.85,
+          "min_dist_to_NAD_NMN_sensor_CA_A": 20.85
+        },
+        "res_275_ALA": {
+          "dist_to_Cys311_CA_A": 21.61,
+          "min_dist_to_NAD_NMN_sensor_CA_A": 18.02
+        },
+        "res_331_VAL": {
+          "dist_to_Cys311_CA_A": 21.75,
+          "min_dist_to_NAD_NMN_sensor_CA_A": 18.33
+        },
+        "res_340_GLU": {
+          "dist_to_Cys311_CA_A": 22.55,
+          "min_dist_to_NAD_NMN_sensor_CA_A": 24.27
+        },
+        "res_385_THR": {
+          "dist_to_Cys311_CA_A": 21.35,
+          "min_dist_to_NAD_NMN_sensor_CA_A": 30.96
+        }
+      }
+    },
+    "arm_conformational_comparison": {
+      "states": {
+        "7DJT_Cys311_dHNN": {
+          "chain": "A",
+          "W103_to_R376_ARM_span_A": 40.48,
+          "W103_to_K193_sensor_cleft_A": 21.03,
+          "A100_to_C311_hinge_A": 19.59,
+          "has_resolved_TIR_561_700": true
+        },
+        "7ANW_NAD_autoinhib": {
+          "chain": "A",
+          "W103_to_R376_ARM_span_A": 38.67,
+          "W103_to_K193_sensor_cleft_A": 19.38,
+          "A100_to_C311_hinge_A": 18.54,
+          "has_resolved_TIR_561_700": true
+        },
+        "7NAL_NMN_activated": {
+          "chain": "A",
+          "W103_to_R376_ARM_span_A": 35.17,
+          "W103_to_K193_sensor_cleft_A": 19.72,
+          "A100_to_C311_hinge_A": 17.79,
+          "has_resolved_TIR_561_700": false
+        }
+      },
+      "n_common_arm_CA": 330,
+      "ARM_CA_RMSD_7DJT_vs_7ANW_T_state_A": 1.33,
+      "ARM_CA_RMSD_7ANW_vs_7NAL_NMN_R_state_A": 2.11,
+      "ARM_CA_RMSD_7DJT_vs_7NAL_NMN_R_state_A": 2.37
+    },
+    "9TZY_2026_BEXi_adduct_TIR_glue": {
+      "ligand_id": "A1JZ0",
+      "n_chains_contacted_within_5A_by_single_adduct": 3,
+      "contacts_by_chain_5A": {
+        "A": [
+          "PHE565",
+          "ILE566",
+          "SER567",
+          "TYR568",
+          "ARG569",
+          "ARG570",
+          "ASN571",
+          "ASP594",
+          "VAL595",
+          "GLU596",
+          "LEU598",
+          "PHE603",
+          "LEU607",
+          "LYS628",
+          "ASP637",
+          "TRP638",
+          "VAL639",
+          "GLU642"
+        ],
+        "D": [
+          "GLU686",
+          "TYR687"
+        ],
+        "B": [
+          "PRO655",
+          "ILE657",
+          "TRP662",
+          "LEU676",
+          "THR677",
+          "PHE678",
+          "ASN679",
+          "GLY680",
+          "ILE681",
+          "LYS682",
+          "THR691",
+          "LYS694",
+          "PHE698"
+        ]
+      }
+    }
+  },
+  "ykt6": {
+    "longin_groove_conservation": {
+      "n_dpv201_5A_residues": 15,
+      "human_rat_identical_in_groove": "14/15",
+      "dpv201_5A_residues": [
+        "TYR4",
+        "SER27",
+        "PHE28",
+        "GLN32",
+        "VAL36",
+        "PHE39",
+        "MET40",
+        "THR43",
+        "GLU61",
+        "GLU63",
+        "TYR64",
+        "CYS66",
+        "ILE80",
+        "ASP82",
+        "MET157"
+      ],
+      "longin_CA_RMSD_3KYQ_vs_human_AF_A": 0.43,
+      "longin_CA_RMSD_3KYQ_closed_vs_6J74_open_A": 0.75
+    },
+    "tyr64cys_dual_biophysical_defect": {
+      "tyr64_to_DPV201_min_dist_A": 3.46,
+      "tyr64_to_PHE28_ring_min_dist_A": 3.44,
+      "sidechain_volume_loss_A3": -85.1,
+      "CA64_to_CA66_dist_A": 6.64,
+      "CB64_to_SG66_dist_A": 5.17,
+      "modeled_Cys64_SG_to_Cys66_SG_rotamer_dists_A": [
+        5.52,
+        3.46,
+        6.17
+      ]
+    },
+    "top_cns_chaperone_scaffolds_chembl_phase4": [
+      {
+        "molecule_chembl_id": "CHEMBL934",
+        "pref_name": "METYRAPONE",
+        "mw": 226.28,
+        "psa": 42.85,
+        "alogp": 2.64,
+        "hbd": 0,
+        "aromatic_rings": 2,
+        "heavy_atoms": 17,
+        "smiles": "CC(C)(C(=O)c1cccnc1)c1cccnc1",
+        "ykt6_groove_chaperone_score": 96.1
+      },
+      {
+        "molecule_chembl_id": "CHEMBL711",
+        "pref_name": "PHENINDIONE",
+        "mw": 222.24,
+        "psa": 34.14,
+        "alogp": 2.85,
+        "hbd": 0,
+        "aromatic_rings": 2,
+        "heavy_atoms": 17,
+        "smiles": "O=C1c2ccccc2C(=O)C1c1ccccc1",
+        "ykt6_groove_chaperone_score": 95.6
+      },
+      {
+        "molecule_chembl_id": "CHEMBL744",
+        "pref_name": "RILUZOLE",
+        "mw": 234.2,
+        "psa": 48.14,
+        "alogp": 2.78,
+        "hbd": 1,
+        "aromatic_rings": 2,
+        "heavy_atoms": 15,
+        "smiles": "Nc1nc2ccc(OC(F)(F)F)cc2s1",
+        "ykt6_groove_chaperone_score": 94.2
+      },
+      {
+        "molecule_chembl_id": "CHEMBL28318",
+        "pref_name": "PROPYPHENAZONE",
+        "mw": 230.31,
+        "psa": 26.93,
+        "alogp": 2.61,
+        "hbd": 0,
+        "aromatic_rings": 2,
+        "heavy_atoms": 17,
+        "smiles": "Cc1c(C(C)C)c(=O)n(-c2ccccc2)n1C",
+        "ykt6_groove_chaperone_score": 93.1
+      },
+      {
+        "molecule_chembl_id": "CHEMBL79",
+        "pref_name": "LIDOCAINE",
+        "mw": 234.34,
+        "psa": 32.34,
+        "alogp": 2.58,
+        "hbd": 1,
+        "aromatic_rings": 1,
+        "heavy_atoms": 17,
+        "smiles": "CCN(CC)CC(=O)Nc1c(C)cccc1C",
+        "ykt6_groove_chaperone_score": 90.1
+      },
+      {
+        "molecule_chembl_id": "CHEMBL273575",
+        "pref_name": "NOMIFENSINE",
+        "mw": 238.33,
+        "psa": 29.26,
+        "alogp": 2.85,
+        "hbd": 1,
+        "aromatic_rings": 2,
+        "heavy_atoms": 18,
+        "smiles": "CN1Cc2c(N)cccc2C(c2ccccc2)C1",
+        "ykt6_groove_chaperone_score": 90.0
+      },
+      {
+        "molecule_chembl_id": "CHEMBL742",
+        "pref_name": "KETAMINE",
+        "mw": 237.73,
+        "psa": 29.1,
+        "alogp": 2.9,
+        "hbd": 1,
+        "aromatic_rings": 1,
+        "heavy_atoms": 16,
+        "smiles": "CNC1(c2ccccc2Cl)CCCCC1=O",
+        "ykt6_groove_chaperone_score": 88.8
+      },
+      {
+        "molecule_chembl_id": "CHEMBL154",
+        "pref_name": "NAPROXEN",
+        "mw": 230.26,
+        "psa": 46.53,
+        "alogp": 3.04,
+        "hbd": 1,
+        "aromatic_rings": 2,
+        "heavy_atoms": 17,
+        "smiles": "COc1ccc2cc([C@H](C)C(=O)O)ccc2c1",
+        "ykt6_groove_chaperone_score": 88.7
+      },
+      {
+        "molecule_chembl_id": "CHEMBL681",
+        "pref_name": "ETOMIDATE",
+        "mw": 244.29,
+        "psa": 44.12,
+        "alogp": 2.67,
+        "hbd": 0,
+        "aromatic_rings": 2,
+        "heavy_atoms": 18,
+        "smiles": "CCOC(=O)c1cncn1[C@H](C)c1ccccc1",
+        "ykt6_groove_chaperone_score": 87.4
+      },
+      {
+        "molecule_chembl_id": "CHEMBL636",
+        "pref_name": "RIVASTIGMINE",
+        "mw": 250.34,
+        "psa": 32.78,
+        "alogp": 2.76,
+        "hbd": 0,
+        "aromatic_rings": 1,
+        "heavy_atoms": 18,
+        "smiles": "CCN(C)C(=O)Oc1cccc([C@H](C)N(C)C)c1",
+        "ykt6_groove_chaperone_score": 86.2
+      }
+    ]
+  }
+}

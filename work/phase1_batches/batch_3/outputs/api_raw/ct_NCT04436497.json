@@ -1,0 +1,2971 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT04436497",
+      "briefTitle": "HEALEY ALS Platform Trial - Regimen A Zilucoplan"
+    },
+    "statusModule": {
+      "overallStatus": "COMPLETED",
+      "startDateStruct": {
+        "date": "2020-07-29"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2022-04-13"
+      }
+    },
+    "descriptionModule": {
+      "briefSummary": "The HEALEY ALS Platform Trial is a perpetual multi-center, multi-regimen clinical trial evaluating the safety and efficacy of investigational products for the treatment of ALS.\n\nRegimen A will evaluate the safety and efficacy of a single study drug, zilucoplan, in participants with ALS."
+    },
+    "designModule": {
+      "phases": [
+        "PHASE2",
+        "PHASE3"
+      ],
+      "enrollmentInfo": {
+        "count": 162
+      }
+    },
+    "armsInterventionsModule": {
+      "armGroups": [
+        {
+          "label": "Zilucoplan",
+          "type": "EXPERIMENTAL",
+          "description": "Drug: Zilucoplan Administration: Subcutaneous injection\n\nDosage: 0.3mg/kg administered daily",
+          "interventionNames": [
+            "Drug: Zilucoplan"
+          ]
+        },
+        {
+          "label": "Matching Placebo",
+          "type": "PLACEBO_COMPARATOR",
+          "description": "Administration: Subcutaneous injection\n\nDosage: Daily subcutaneous injection",
+          "interventionNames": [
+            "Drug: Matching Placebo"
+          ]
+        }
+      ],
+      "interventions": [
+        {
+          "type": "DRUG",
+          "name": "Zilucoplan",
+          "description": "Drug: Zilucoplan Administration: Subcutaneous injection\n\nDosage: 0.3mg/kg administered daily",
+          "armGroupLabels": [
+            "Zilucoplan"
+          ]
+        },
+        {
+          "type": "DRUG",
+          "name": "Matching Placebo",
+          "description": "Drug: Matching Placebo\n\nAdministration: Subcutaneous injection\n\nDosage: Daily subcutaneous injection",
+          "armGroupLabels": [
+            "Matching Placebo"
+          ]
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "Disease Progression as Assessed by the ALSFRS-R Total Score",
+          "description": "Change in disease severity as measured by the ALS Functional Rating Scale-Revised (ALSFRS-R) total score using a Bayesian repeated measures model that accounts for loss to follow-up due to mortality. Each of 12 questions assessing distinct functional ability is scored from 4 (normal) to 0 (no ability), with a maximum total score of 48 and a minimum total score of 0. Patients with higher scores have more physical function.",
+          "timeFrame": "Baseline through 24 Weeks"
+        },
+        {
+          "measure": "Mortality Event Rate",
+          "description": "Mortality is defined as death or death equivalent. A participant is determined to meet the criteria of death equivalent if permanent assisted ventilation (PAV) is used for more than 22 hours per day for more than seven days in a row. The rate of mortality was estimated from a Bayesian shared-parametric model that assumed exponentially distributed survival times.",
+          "timeFrame": "Baseline through 24 Weeks"
+        }
+      ],
+      "secondaryOutcomes": [
+        {
+          "measure": "Respiratory Function",
+          "description": "Change in respiratory function as assessed by slow vital capacity (SVC).",
+          "timeFrame": "Baseline and 24 Weeks"
+        },
+        {
+          "measure": "Muscle Strength",
+          "description": "Change in muscle strength as measured isometrically using hand-held dynamometry (HHD).",
+          "timeFrame": "Baseline and 24 Weeks"
+        },
+        {
+          "measure": "Number of Participants That Experienced Death or Death Equivalent",
+          "description": "The number of participants who died or met the criterion for a death equivalent from the date of their baseline visit to the end of the Week 24 visit window (generally 175 days after baseline). The death equivalent criterion is use of permanent assisted ventilation (PAV) for more than 22 hours per day for more than 7 days in a row.",
+          "timeFrame": "Baseline through 24 Weeks"
+        }
+      ]
+    }
+  },
+  "resultsSection": {
+    "participantFlowModule": {
+      "groups": [
+        {
+          "id": "FG000",
+          "title": "Zilucoplan",
+          "description": "Drug: Zilucoplan Administration: Subcutaneous injection\n\nDosage: Minimum of .0.22 mg/kg daily to a maximum dose of 0.42 mg/kg daily, dependent on weight"
+        },
+        {
+          "id": "FG001",
+          "title": "Matching Placebo",
+          "description": "Administration: Subcutaneous injection\n\nDosage: Daily subcutaneous injection"
+        }
+      ],
+      "periods": [
+        {
+          "title": "Overall Study",
+          "milestones": [
+            {
+              "type": "STARTED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "122"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "40"
+                }
+              ]
+            },
+            {
+              "type": "COMPLETED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "88"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "29"
+                }
+              ]
+            },
+            {
+              "type": "NOT COMPLETED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "34"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "11"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "baselineCharacteristicsModule": {
+      "populationDescription": "Baseline Analysis Population includes only placebo participants from the Regimen A Efficacy Regimen Only (ERO) sample; shared placebo participants from other regimens are not included in the Baseline Analysis Population.",
+      "groups": [
+        {
+          "id": "BG000",
+          "title": "Zilucoplan",
+          "description": "Drug: Zilucoplan Administration: Subcutaneous injection\n\nDosage: 0.3mg/kg administered daily"
+        },
+        {
+          "id": "BG001",
+          "title": "Matching Placebo",
+          "description": "Administration: Subcutaneous injection\n\nDosage: Daily subcutaneous injection"
+        },
+        {
+          "id": "BG002",
+          "title": "Total",
+          "description": "Total of all reporting groups"
+        }
+      ],
+      "denoms": [
+        {
+          "units": "Participants",
+          "counts": [
+            {
+              "groupId": "BG000",
+              "value": "122"
+            },
+            {
+              "groupId": "BG001",
+              "value": "40"
+            },
+            {
+              "groupId": "BG002",
+              "value": "162"
+            }
+          ]
+        }
+      ],
+      "measures": [
+        {
+          "title": "Age, Continuous",
+          "paramType": "MEAN",
+          "dispersionType": "STANDARD_DEVIATION",
+          "unitOfMeasure": "years",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "59.5",
+                      "spread": "10.77"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "57.3",
+                      "spread": "12.69"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "58.9",
+                      "spread": "11.27"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Sex: Female, Male",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "47"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "16"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "63"
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "75"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "24"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "99"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Ethnicity (NIH/OMB)",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "title": "Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "7"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "2"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "9"
+                    }
+                  ]
+                },
+                {
+                  "title": "Not Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "113"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "37"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "150"
+                    }
+                  ]
+                },
+                {
+                  "title": "Unknown or Not Reported",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "2"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "1"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "3"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Race (NIH/OMB)",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "title": "American Indian or Alaska Native",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "0"
+                    }
+                  ]
+                },
+                {
+                  "title": "Asian",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "1"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "1"
+                    }
+                  ]
+                },
+                {
+                  "title": "Native Hawaiian or Other Pacific Islander",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "0"
+                    }
+                  ]
+                },
+                {
+                  "title": "Black or African American",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "2"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "2"
+                    }
+                  ]
+                },
+                {
+                  "title": "White",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "115"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "37"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "152"
+                    }
+                  ]
+                },
+                {
+                  "title": "More than one race",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "0"
+                    }
+                  ]
+                },
+                {
+                  "title": "Unknown or Not Reported",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "4"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "3"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "7"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "El Escorial Diagnosis",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "title": "Clinically Definite ALS",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "44"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "16"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "60"
+                    }
+                  ]
+                },
+                {
+                  "title": "Clinically Probable ALS",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "38"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "7"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "45"
+                    }
+                  ]
+                },
+                {
+                  "title": "Clinically Probable ALS - Laboratory Supported",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "35"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "13"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "48"
+                    }
+                  ]
+                },
+                {
+                  "title": "Clinically Possible ALS",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "5"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "4"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "9"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Time Since Symptom onset at Baseline",
+          "paramType": "MEAN",
+          "dispersionType": "STANDARD_DEVIATION",
+          "unitOfMeasure": "months",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "21.4",
+                      "spread": "8.32"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "22.4",
+                      "spread": "8.95"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "21.7",
+                      "spread": "8.46"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Delay in ALS Symptom Onset and Diagnosis",
+          "paramType": "MEAN",
+          "dispersionType": "STANDARD_DEVIATION",
+          "unitOfMeasure": "months",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "10.5",
+                      "spread": "6.39"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "10.5",
+                      "spread": "5.98"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "10.5",
+                      "spread": "6.28"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "ALS Onset Location",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "title": "Bulbar",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "21"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "6"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "27"
+                    }
+                  ]
+                },
+                {
+                  "title": "Limb",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "99"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "33"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "132"
+                    }
+                  ]
+                },
+                {
+                  "title": "Multiple",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "1"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "1"
+                    }
+                  ]
+                },
+                {
+                  "title": "Respiratory",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "2"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "2"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Baseline Edaravone Use",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "title": "No",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "95"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "30"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "125"
+                    }
+                  ]
+                },
+                {
+                  "title": "Yes",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "27"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "10"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "37"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Baseline Riluzole Use",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "title": "No",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "28"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "10"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "38"
+                    }
+                  ]
+                },
+                {
+                  "title": "Yes",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "94"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "30"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "124"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "ALSFRS-R Total Score",
+          "description": "The ALS Functional Rating Scare-Revised (ALSFRS-R) measures 12 aspects of physical function. Each of the 12 questions assessing distinct functional ability is scored from 4(normal) to 0 (no ability), with a maximum total score of 48 and a minimum total score of 0. Patients with higher scores have more physical function.",
+          "paramType": "MEAN",
+          "dispersionType": "STANDARD_DEVIATION",
+          "unitOfMeasure": "scores on a scale",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "34.4",
+                      "spread": "6.42"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "35.1",
+                      "spread": "7.12"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "34.6",
+                      "spread": "6.58"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Change in ALSFRS-R prior to Baseline",
+          "description": "The ALS Functional Rating Scare-Revised (ALSFRS-R) measures 12 aspects of physical function. Each of the 12 questions assessing distinct functional ability is scored from 4(normal) to 0 (no ability), with a maximum total score of 48 and a minimum total score of 0.\n\nBaseline decline in ALSFRS-R was calculated as 48 minus the ALSFRS-R total score at Baseline. The difference between 48 and ALSFRS-R total score at Baseline is divided by the number of months between onset of weakness due to ALS and the date of Baseline.\n\nA higher number indicates greater decline.",
+          "paramType": "MEAN",
+          "dispersionType": "STANDARD_DEVIATION",
+          "unitOfMeasure": "points per month",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "0.75",
+                      "spread": "0.539"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "0.66",
+                      "spread": "0.480"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "0.72",
+                      "spread": "0.525"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "SVC",
+          "populationDescription": "Number analyzed in row differs from overall number due to missing data.",
+          "paramType": "MEAN",
+          "dispersionType": "STANDARD_DEVIATION",
+          "unitOfMeasure": "percent predicted",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "119"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "39"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "158"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "76.2",
+                      "spread": "17.33"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "75.7",
+                      "spread": "15.55"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "76.1",
+                      "spread": "16.86"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Kings Stage",
+          "description": "The King's ALS Clinical Staging System is a 4-level ordinal scale with the first three levels indicating the number (1, 2, or 3) of distinct central nervous system regions (bulbar, upper limb, and lower limb) with neuromuscular dysfunction. Level 4a indicates nutritional failure and level 4b indicates respiratory failure. Higher scores indicate a worse disease state.",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "title": "1 Region with Neuromuscular Dysfunction",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "20"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "9"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "29"
+                    }
+                  ]
+                },
+                {
+                  "title": "2 Regions with Neuromuscular Dysfunction",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "27"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "11"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "38"
+                    }
+                  ]
+                },
+                {
+                  "title": "3 Regions with Neuromuscular Dysfunction",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "33"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "6"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "39"
+                    }
+                  ]
+                },
+                {
+                  "title": "4a/b Nutritional/Respiratory Failure",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "42"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "14"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "56"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Weight",
+          "paramType": "MEAN",
+          "dispersionType": "STANDARD_DEVIATION",
+          "unitOfMeasure": "kg",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "79.9",
+                      "spread": "18.30"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "83.2",
+                      "spread": "16.71"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "80.7",
+                      "spread": "17.92"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Body Mass Index",
+          "paramType": "MEAN",
+          "dispersionType": "STANDARD_DEVIATION",
+          "unitOfMeasure": "kg/m^2",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "26.8",
+                      "spread": "5.01"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "28.0",
+                      "spread": "5.41"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "27.1",
+                      "spread": "5.12"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Serum Creatinine Concentration",
+          "paramType": "MEAN",
+          "dispersionType": "STANDARD_DEVIATION",
+          "unitOfMeasure": "mg/dL",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "40"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "162"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "0.7",
+                      "spread": "0.20"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "0.7",
+                      "spread": "0.18"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "0.7",
+                      "spread": "0.19"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Neurofilament Light (NfL) Protein in Serum",
+          "populationDescription": "Number analyzed in row differs from overall number due to missing data.",
+          "paramType": "MEAN",
+          "dispersionType": "STANDARD_DEVIATION",
+          "unitOfMeasure": "ng/L",
+          "classes": [
+            {
+              "denoms": [
+                {
+                  "units": "Participants",
+                  "counts": [
+                    {
+                      "groupId": "BG000",
+                      "value": "122"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "38"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "160"
+                    }
+                  ]
+                }
+              ],
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "98.4",
+                      "spread": "79.00"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "86.0",
+                      "spread": "53.16"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "95.5",
+                      "spread": "73.72"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "outcomeMeasuresModule": {
+      "outcomeMeasures": [
+        {
+          "type": "PRIMARY",
+          "title": "Disease Progression as Assessed by the ALSFRS-R Total Score",
+          "description": "Change in disease severity as measured by the ALS Functional Rating Scale-Revised (ALSFRS-R) total score using a Bayesian repeated measures model that accounts for loss to follow-up due to mortality. Each of 12 questions assessing distinct functional ability is scored from 4 (normal) to 0 (no ability), with a maximum total score of 48 and a minimum total score of 0. Patients with higher scores have more physical function.",
+          "populationDescription": "Outcome measure data was analyzed using the Full Analysis Set, which included shared placebo from other regimens, as pre-specified in the Regimen Statistical Analysis Plan. Regimen B Verdiperstat (NCT04436510), Regimen C CNM-Au8 (NCT04414345), and Regimen D Pridopidine (NCT04615923) contributed placebo participants into the shared placebo cohort used for analysis.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "ALSFRS-R total score points per month",
+          "timeFrame": "Baseline through 24 Weeks",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Zilucoplan",
+              "description": "Drug: Zilucoplan Administration: Subcutaneous injection\n\nDosage: 0.3mg/kg administered daily"
+            },
+            {
+              "id": "OG001",
+              "title": "Matching Placebo",
+              "description": "Administration: Subcutaneous injection\n\nDosage: Daily subcutaneous injection"
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "122"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "164"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "-1.11",
+                      "spread": "0.083"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "-1.03",
+                      "spread": "0.072"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "analyses": [
+            {
+              "groupIds": [
+                "OG000",
+                "OG001"
+              ],
+              "nonInferiorityType": "SUPERIORITY",
+              "pValueComment": "Posterior probability that the disease rate ratio (DRR) is less than 1 (i.e. zilucoplan slowed progression) was 0.2418. NOTE: p-value is not provided for Bayesian model.",
+              "statisticalMethod": "Bayesian shared-parameter model",
+              "statisticalComment": "A Bayesian shared-parameter model of change in disease severity as measured by ALSFRS-R total score and mortality.",
+              "paramType": "Disease Rate Ratio",
+              "paramValue": "1.08",
+              "ciPctValue": "95",
+              "ciNumSides": "TWO_SIDED",
+              "ciLowerLimit": "0.874",
+              "ciUpperLimit": "1.307",
+              "dispersionType": "STANDARD_DEVIATION",
+              "dispersionValue": "0.110",
+              "estimateComment": "DDR \\<1 imply slowing of disease progression by zilucoplan relative to placebo. Note: reported \"Confidence Interval\" is actually a Bayesian credible interval.",
+              "otherAnalysisDescription": "The DRR parameter for active treatment represents the relative change to the rate of decline of ALSFRS-R and the rate of mortality of treated participant relative to a placebo participant. The estimated DRR can also be interpreted as the average rate of decline in function and mortality. The model includes covariates for baseline use of edaravone, baseline use of riluzole, months since onset of symptoms, and pre-baseline slope of ALSFRS-R, and random effects for regimen and participant-specific slopes."
+            }
+          ]
+        },
+        {
+          "type": "PRIMARY",
+          "title": "Mortality Event Rate",
+          "description": "Mortality is defined as death or death equivalent. A participant is determined to meet the criteria of death equivalent if permanent assisted ventilation (PAV) is used for more than 22 hours per day for more than seven days in a row. The rate of mortality was estimated from a Bayesian shared-parametric model that assumed exponentially distributed survival times.",
+          "populationDescription": "Outcome measure data was analyzed using the Full Analysis Set, which included shared placebo from other regimens, as pre-specified in the Regimen Statistical Analysis Plan. Regimen B Verdiperstat (NCT04436510), Regimen C CNM-Au8 (NCT04414345), and Regimen D Pridopidine (NCT04615923) contributed placebo participants into the shared placebo cohort used for analysis.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "events per month",
+          "timeFrame": "Baseline through 24 Weeks",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Zilucoplan",
+              "description": "Drug: Zilucoplan Administration: Subcutaneous injection\n\nDosage:0.3mg/kg administered daily"
+            },
+            {
+              "id": "OG001",
+              "title": "Matching Placebo",
+              "description": "Administration: Subcutaneous injection\n\nDosage: Daily subcutaneous injection"
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "122"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "164"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "0.009",
+                      "spread": "0.002"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "0.008",
+                      "spread": "0.002"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Respiratory Function",
+          "description": "Change in respiratory function as assessed by slow vital capacity (SVC).",
+          "populationDescription": "Outcome measure data was analyzed using the Full Analysis Set, which included shared placebo from other regimens, as pre-specified in the Regimen Statistical Analysis Plan. Regimen B Verdiperstat (NCT04436510), Regimen C CNM-Au8 (NCT04414345), and Regimen D Pridopidine (NCT04615923) contributed placebo participants into the shared placebo cohort used for analysis.",
+          "reportingStatus": "POSTED",
+          "paramType": "LEAST_SQUARES_MEAN",
+          "dispersionType": "Standard Error",
+          "unitOfMeasure": "percent change",
+          "timeFrame": "Baseline and 24 Weeks",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Zilucoplan",
+              "description": "Drug: Zilucoplan Administration: Subcutaneous injection\n\nDosage: 0.3mg/kg administered daily"
+            },
+            {
+              "id": "OG001",
+              "title": "Matching Placebo",
+              "description": "Administration: Subcutaneous injection\n\nDosage: Daily subcutaneous injection"
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "122"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "164"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "-9.66",
+                      "spread": "1.423"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "-8.57",
+                      "spread": "1.159"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "analyses": [
+            {
+              "groupIds": [
+                "OG000",
+                "OG001"
+              ],
+              "nonInferiorityType": "SUPERIORITY",
+              "pValue": "0.5495",
+              "statisticalMethod": "Mixed Models Analysis",
+              "statisticalComment": "Covariates include baseline use of edaravone and riluzole, months since symptom onset, and pre-baseline ALSFRS-R slope.",
+              "paramType": "Mean Difference (Net)",
+              "paramValue": "-1.09",
+              "ciPctValue": "95",
+              "ciNumSides": "TWO_SIDED",
+              "ciLowerLimit": "-4.66",
+              "ciUpperLimit": "2.48",
+              "dispersionType": "STANDARD_ERROR_OF_MEAN",
+              "dispersionValue": "1.819",
+              "estimateComment": "Zilucoplan 24-week change from baseline relative to placebo 24-week change from baseline."
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Muscle Strength",
+          "description": "Change in muscle strength as measured isometrically using hand-held dynamometry (HHD).",
+          "populationDescription": "Outcome measure data was analyzed using the Full Analysis Set, which included shared placebo from other regimens, as pre-specified in the Regimen Statistical Analysis Plan. Regimen B Verdiperstat (NCT04436510), Regimen C CNM-Au8 (NCT04414345), and Regimen D Pridopidine (NCT04615923) contributed placebo participants into the shared placebo cohort used for analysis.",
+          "reportingStatus": "POSTED",
+          "paramType": "LEAST_SQUARES_MEAN",
+          "dispersionType": "Standard Error",
+          "unitOfMeasure": "percent change",
+          "timeFrame": "Baseline and 24 Weeks",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Zilucoplan",
+              "description": "Drug: Zilucoplan Administration: Subcutaneous injection\n\nDosage: 0.3mg/kg administered daily"
+            },
+            {
+              "id": "OG001",
+              "title": "Matching Placebo",
+              "description": "Administration: Subcutaneous injection\n\nDosage: Daily subcutaneous injection"
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "122"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "164"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "-26.20",
+                      "spread": "2.671"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "-25.16",
+                      "spread": "2.236"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "analyses": [
+            {
+              "groupIds": [
+                "OG000",
+                "OG001"
+              ],
+              "nonInferiorityType": "SUPERIORITY",
+              "pValue": "0.7602",
+              "statisticalMethod": "Mixed Models Analysis",
+              "statisticalComment": "Covariates include baseline use of edaravone and riluzole, months since symptom onset, and pre-baseline ALSFRS-R slope.",
+              "paramType": "Mean Difference (Net)",
+              "paramValue": "-1.04",
+              "ciPctValue": "95",
+              "ciNumSides": "TWO_SIDED",
+              "ciLowerLimit": "-7.73",
+              "ciUpperLimit": "5.65",
+              "dispersionType": "STANDARD_ERROR_OF_MEAN",
+              "dispersionValue": "3.409",
+              "estimateComment": "Zilucoplan 24-week change from baseline relative to placebo 24-week change from baseline."
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Number of Participants That Experienced Death or Death Equivalent",
+          "description": "The number of participants who died or met the criterion for a death equivalent from the date of their baseline visit to the end of the Week 24 visit window (generally 175 days after baseline). The death equivalent criterion is use of permanent assisted ventilation (PAV) for more than 22 hours per day for more than 7 days in a row.",
+          "populationDescription": "Outcome measure data was analyzed using the Full Analysis Set, which included shared placebo from other regimens, as pre-specified in the Regimen Statistical Analysis Plan. Regimen B Verdiperstat (NCT04436510), Regimen C CNM-Au8 (NCT04414345), and Regimen D Pridopidine (NCT04615923) contributed placebo participants into the shared placebo cohort used for analysis. Two placebo participants from FAS were not at risk: 1 initiated PAV before baseline, 1 had 0 days of follow-up.",
+          "reportingStatus": "POSTED",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "timeFrame": "Baseline through 24 Weeks",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Zilucoplan",
+              "description": "Drug: Zilucoplan Administration: Subcutaneous injection\n\nDosage:0.3mg/kg administered daily"
+            },
+            {
+              "id": "OG001",
+              "title": "Matching Placebo",
+              "description": "Administration: Subcutaneous injection\n\nDosage: Daily subcutaneous injection"
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "122"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "162"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "6"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "6"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "analyses": [
+            {
+              "groupIds": [
+                "OG000",
+                "OG001"
+              ],
+              "nonInferiorityType": "SUPERIORITY",
+              "pValue": "0.6891",
+              "statisticalMethod": "Log Rank"
+            }
+          ]
+        }
+      ]
+    },
+    "adverseEventsModule": {
+      "frequencyThreshold": "5",
+      "timeFrame": "Up to 35 weeks after participant signed Master Protocol consent.",
+      "eventGroups": [
+        {
+          "id": "EG000",
+          "title": "Zilucoplan",
+          "description": "Drug: Zilucoplan Administration: Subcutaneous injection\n\nDosage: Minimum of .0.22 mg/kg daily to a maximum dose of 0.42 mg/kg daily, dependent on weight\n\nZilucoplan: Drug: Zilucoplan Administration: Subcutaneous injection\n\nDosage: 0.3mg/kg administered daily",
+          "deathsNumAffected": 5,
+          "deathsNumAtRisk": 122,
+          "seriousNumAffected": 25,
+          "seriousNumAtRisk": 122,
+          "otherNumAffected": 115,
+          "otherNumAtRisk": 122
+        },
+        {
+          "id": "EG001",
+          "title": "Matching Placebo",
+          "description": "Administration: Subcutaneous injection\n\nDosage: Daily subcutaneous injection\n\nMatching Placebo: Drug: Matching Placebo\n\nAdministration: Subcutaneous injection\n\nDosage: Daily subcutaneous injection",
+          "deathsNumAffected": 2,
+          "deathsNumAtRisk": 40,
+          "seriousNumAffected": 3,
+          "seriousNumAtRisk": 40,
+          "otherNumAffected": 37,
+          "otherNumAtRisk": 40
+        }
+      ],
+      "seriousEvents": [
+        {
+          "term": "Respiratory Failure",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 6,
+              "numAffected": 6,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Pneumonia aspiration",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Pulmonary embolism",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Increased upper airway secretion",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Constipation",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Dysphagia",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Faecaloma",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Pancreatitis",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Pneumoperitoneum",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "COVID-19",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "COVID-19 pneumonia",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Gastroenteritis",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Pneumonia",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Cardiac arrest",
+          "organSystem": "Cardiac disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Cardiac failure congestive",
+          "organSystem": "Cardiac disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Supraventricular tachycardia",
+          "organSystem": "Cardiac disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Generalised oedema",
+          "organSystem": "General disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Chest pain",
+          "organSystem": "General disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Sudden death",
+          "organSystem": "General disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Oesophageal carcinoma",
+          "organSystem": "Neoplasms benign, malignant and unspecified (incl cysts and polyps)",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Device malfunction",
+          "organSystem": "Product Issues",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Deep vein thrombosis",
+          "organSystem": "Vascular disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 40
+            }
+          ]
+        }
+      ],
+      "otherEvents": [
+        {
+          "term": "Muscular weakness",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 45,
+              "numAffected": 29,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 11,
+              "numAffected": 8,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Neuromyopathy",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 27,
+              "numAffected": 22,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 14,
+              "numAffected": 5,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Headache",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 21,
+              "numAffected": 14,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 4,
+              "numAffected": 4,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Dizziness",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 14,
+              "numAffected": 12,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 3,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Dysarthria",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 9,
+              "numAffected": 9,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Tension headache",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 6,
+              "numAffected": 6,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 3,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Fall",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 76,
+              "numAffected": 39,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 18,
+              "numAffected": 9,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Injection site bruising",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 24,
+              "numAffected": 22,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 7,
+              "numAffected": 6,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Injection site pain",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 23,
+              "numAffected": 18,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Contusion",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 7,
+              "numAffected": 7,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Injection site reaction",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 4,
+              "numAffected": 4,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Traumatic haematoma",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Constipation",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 15,
+              "numAffected": 13,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 5,
+              "numAffected": 3,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Dysphagia",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 13,
+              "numAffected": 12,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 4,
+              "numAffected": 4,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Nausea",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 12,
+              "numAffected": 10,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Diarrhoea",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 9,
+              "numAffected": 8,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Salivary hypersecretion",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 4,
+              "numAffected": 4,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Fatigue",
+          "organSystem": "General disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 18,
+              "numAffected": 17,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 5,
+              "numAffected": 5,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Oedema peripheral",
+          "organSystem": "General disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 10,
+              "numAffected": 9,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 3,
+              "numAffected": 1,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Urinary tract infection",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 7,
+              "numAffected": 6,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 5,
+              "numAffected": 5,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "COVID-19",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 4,
+              "numAffected": 4,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Cough",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 9,
+              "numAffected": 8,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Dyspnoea",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 8,
+              "numAffected": 7,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Pruritus",
+          "organSystem": "Skin and subcutaneous tissue disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 7,
+              "numAffected": 7,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 3,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Rash",
+          "organSystem": "Skin and subcutaneous tissue disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 7,
+              "numAffected": 7,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Pain in extremity",
+          "organSystem": "Musculoskeletal and connective tissue disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 9,
+              "numAffected": 5,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Arthralgia",
+          "organSystem": "Musculoskeletal and connective tissue disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 5,
+              "numAffected": 5,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Anxiety",
+          "organSystem": "Psychiatric disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 8,
+              "numAffected": 7,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Decreased appetite",
+          "organSystem": "Metabolism and nutrition disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 6,
+              "numAffected": 6,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 6,
+              "numAffected": 5,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Hypertension",
+          "organSystem": "Vascular disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 5,
+              "numAffected": 5,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Tinnitus",
+          "organSystem": "Ear and labyrinth disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 2,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Hypokalaemia",
+          "organSystem": "Metabolism and nutrition disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Post-traumatic pain",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Vomiting",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        },
+        {
+          "term": "Hepatic enzyme increased",
+          "organSystem": "Investigations",
+          "sourceVocabulary": "MedDRA 23.0",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 122
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 40
+            }
+          ]
+        }
+      ]
+    },
+    "moreInfoModule": {
+      "certainAgreement": {
+        "piSponsorEmployee": true
+      },
+      "pointOfContact": {
+        "title": "Healey Center for ALS Project Management",
+        "organization": "Healey Center for ALS at Massachusetts General Hospital",
+        "email": "healeyalsplatform@mgh.harvard.edu",
+        "phone": "833-425-8257 (HALT ALS)"
+      }
+    }
+  }
+}

@@ -1,0 +1,3957 @@
+{
+  "hitCount": 352,
+  "nextCursorMark": "AoIIQTgwFig1NTU0MTc3Mg==",
+  "results": [
+    {
+      "id": "42941856",
+      "source": "MED",
+      "pmid": "42941856",
+      "pmcid": "PMC13705199",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13705199"
+        ]
+      },
+      "doi": "10.3390/ijms27209084",
+      "title": "The Role of &lt;i&gt;SOD1&lt;/i&gt; and Oxidative Stress in Amyotrophic Lateral Sclerosis: An Overview.",
+      "authorString": "G\u00f3mez-P\u00e9rez CA, Ram\u00edrez-Garc\u00eda M\u00c1, Yescas-G\u00f3mez P.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "G\u00f3mez-P\u00e9rez CA",
+            "lastName": "G\u00f3mez-P\u00e9rez",
+            "firstName": "Carlos Alberto",
+            "initials": "CA",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Departamento de Gen\u00e9tica, Instituto Nacional de Neurolog\u00eda y Neurocirug\u00eda, Mexico City 14269, Mexico."
+                },
+                {
+                  "affiliation": "Posgrado en Ciencias Gen\u00f3micas, Universidad Aut\u00f3noma de la Ciudad de M\u00e9xico, Mexico City 03104, Mexico."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ram\u00edrez-Garc\u00eda M\u00c1",
+            "lastName": "Ram\u00edrez-Garc\u00eda",
+            "firstName": "Miguel \u00c1ngel",
+            "initials": "M\u00c1",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-3221-3636"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Departamento de Gen\u00e9tica, Instituto Nacional de Neurolog\u00eda y Neurocirug\u00eda, Mexico City 14269, Mexico."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Yescas-G\u00f3mez P",
+            "lastName": "Yescas-G\u00f3mez",
+            "firstName": "Petra",
+            "initials": "P",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Departamento de Gen\u00e9tica, Instituto Nacional de Neurolog\u00eda y Neurocirug\u00eda, Mexico City 14269, Mexico."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0003-3221-3636"
+          }
+        ]
+      },
+      "journalInfo": {
+        "issue": "20",
+        "volume": "27",
+        "journalIssueId": 4290164,
+        "dateOfPublication": "2026 Oct",
+        "monthOfPublication": 10,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Int J Mol Sci",
+          "title": "International journal of molecular sciences",
+          "essn": "1422-0067",
+          "issn": "1422-0067",
+          "nlmid": "101092791",
+          "isoabbreviation": "Int J Mol Sci"
+        },
+        "printPublicationDate": "2026-10-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "9084",
+      "abstractText": "Amyotrophic lateral sclerosis (ALS) is a rapidly progressing neurodegenerative disorder that selectively affects motor neurons. The median survival time after diagnosis is 2 to 5 years. Oxidative stress (OS), driven mainly by reactive oxygen species (ROS), plays a central role in motor neuron (MN) degeneration. In this narrative review, we analyse the pathogenic role of SOD1 variants and their contribution to OS in ALS. SOD1 mutations alter the Cu/Zn superoxide dismutase enzyme, thereby promoting oxidative damage and triggering neuroinflammatory cascades via the MAPK, NF-\u03baB and Nrf2/ARE signalling pathways. We also discuss emerging proteomic and machine-learning biomarkers, as well as the current therapeutic landscape. Riluzole and edaravone are approved treatments, while AMX0035 was approved in 2022 but withdrawn in 2024. Masitinib and EPI-589 remain investigational. In the realm of genetic therapies, the antisense oligonucleotide tofersen received accelerated FDA approval in 2023 for SOD1-ALS, primarily due to its ability to reduce plasma neurofilament light chain levels. However, the clinical benefit remains modest. RNA interference has reached human trials, while CRISPR/Cas9 remains in the preclinical stage. Both approaches have shown promising results in experimental models. Further research into ALS pathogenesis is needed to develop treatments that integrate antioxidant, anti-inflammatory, and gene-editing strategies.",
+      "affiliation": "Departamento de Gen\u00e9tica, Instituto Nacional de Neurolog\u00eda y Neurocirug\u00eda, Mexico City 14269, Mexico.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Motor Neurons",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "TH",
+                  "qualifierName": "therapy"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Reactive Oxygen Species",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Signal Transduction"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Oxidative Stress"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Mutation"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Superoxide Dismutase-1",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Gene therapy",
+          "ROS",
+          "Sod1"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "Reactive Oxygen Species",
+            "registryNumber": "0"
+          },
+          {
+            "name": "SOD1 protein, human",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Superoxide Dismutase-1",
+            "registryNumber": "EC 1.15.1.1"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.3390/ijms27209084"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13705199"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13705199?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "N",
+      "hasData": "N",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "N",
+      "dateOfCompletion": "2026-10-27",
+      "dateOfCreation": "2026-10-27",
+      "dateOfRevision": "2026-10-28",
+      "electronicPublicationDate": "2026-10-13",
+      "firstPublicationDate": "2026-10-13",
+      "firstIndexDate": "2026-10-28",
+      "fullTextReceivedDate": "2026-10-27",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42983584",
+      "source": "MED",
+      "pmid": "42983584",
+      "pmcid": "PMC13733242",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13733242"
+        ]
+      },
+      "doi": "10.1186/s40035-026-00592-y",
+      "title": "Brain clearance of protein aggregates in degenerative diseases: the role of microglia and astrocytes.",
+      "authorString": "Xiong M, Huang Y, Jiang H, Zhang Z.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Xiong M",
+            "lastName": "Xiong",
+            "firstName": "Min",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Renmin Hospital of Wuhan University, Wuhan, 430060, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Huang Y",
+            "lastName": "Huang",
+            "firstName": "Yeyu",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Renmin Hospital of Wuhan University, Wuhan, 430060, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Jiang H",
+            "lastName": "Jiang",
+            "firstName": "Haiqiang",
+            "initials": "H",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Innovative Institute of Chinese Medicine and Pharmacy, Shandong University of Traditional Chinese Medicine, Jinan, 250355, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zhang Z",
+            "lastName": "Zhang",
+            "firstName": "Zhentao",
+            "initials": "Z",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Renmin Hospital of Wuhan University, Wuhan, 430060, China. zhentaozhang@whu.edu.cn."
+                },
+                {
+                  "affiliation": "State Key Laboratory of Metabolism and Regulation in Complex Organisms, College of Life Sciences, Wuhan University, Wuhan, 430000, China. zhentaozhang@whu.edu.cn."
+                },
+                {
+                  "affiliation": "TaiKang Center for Life and Medical Sciences, Wuhan University, Wuhan, 430000, China. zhentaozhang@whu.edu.cn."
+                },
+                {
+                  "affiliation": "Hubei Provincial Clinical Medical Research Center for Neurodegenerative Diseases, Wuhan, 430060, China. zhentaozhang@whu.edu.cn."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "journalInfo": {
+        "issue": "1",
+        "volume": "15",
+        "journalIssueId": 4308988,
+        "dateOfPublication": "2026 Nov",
+        "monthOfPublication": 11,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Transl Neurodegener",
+          "title": "Translational neurodegeneration",
+          "essn": "2047-9158",
+          "issn": "2047-9158",
+          "nlmid": "101591861",
+          "isoabbreviation": "Transl Neurodegener"
+        },
+        "printPublicationDate": "2026-11-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "59",
+      "abstractText": "Protein aggregation and impaired clearance constitute central pathological hallmarks of numerous neurodegenerative diseases, including Alzheimer's disease, Parkinson's disease, amyotrophic lateral sclerosis, and frontotemporal dementia. Misfolded proteins, both extracellular and intracellular, disrupt proteostasis and contribute to synaptic dysfunction, neuroinflammation, and neuronal loss. Within the central nervous system, glial cells serve as the primary mediators of pathological protein clearance. Microglia detect, phagocytose, and degrade aggregated proteins. However, under chronic pathological stress, microglial function turns from clearing pathological proteins to paradoxically facilitating their spread. Astrocytes, which provide metabolic and homeostatic support for neurons, also participate in the clearance of aggregates through phagocytosis and glymphatic drainage. Critically, crosstalk between astrocytes and microglia enhances the clearance: microglia can recruit and process aggregates internalized by astrocytes, while astrocyte-derived signals modulate the microglial phagocytic activity. Aging, genetic risk factors, or sustained neuroinflammation may reduce the efficiency of glial removal of aggregates and accelerate disease progression. Understanding the cellular and molecular underpinnings of microglial and astrocytic clearance pathways is essential for developing therapies aimed at restoring proteostasis and mitigating neurodegeneration.",
+      "affiliation": "Department of Neurology, Renmin Hospital of Wuhan University, Wuhan, 430060, China.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "Natural Science Foundation of Hubei Province",
+            "grantId": "2025AFB243",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Natural Science Foundation of China",
+            "grantId": "82501688",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Natural Science Foundation of China",
+            "grantId": "82525025",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Brain",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Astrocytes",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Microglia",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Neurodegenerative Diseases",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Phagocytosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PH",
+                  "qualifierName": "physiology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Protein Aggregates",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PH",
+                  "qualifierName": "physiology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Protein Aggregation, Pathological",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Proteotoxic Stress"
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Protein aggregation",
+          "Neurodegeneration",
+          "Alzheimer\u2019s disease",
+          "Autophagy",
+          "ubiquitin-proteasome system",
+          "Parkinson\u2019s Disease"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "Protein Aggregates",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1186/s40035-026-00592-y"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13733242"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13733242?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "N",
+      "hasData": "N",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "N",
+      "dateOfCompletion": "2026-11-05",
+      "dateOfCreation": "2026-11-05",
+      "dateOfRevision": "2026-11-06",
+      "electronicPublicationDate": "2026-11-04",
+      "firstPublicationDate": "2026-11-04",
+      "firstIndexDate": "2026-11-06",
+      "fullTextReceivedDate": "2026-11-05",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "41708347",
+      "source": "MED",
+      "pmid": "41708347",
+      "pmcid": "PMC12916242",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC12916242"
+        ]
+      },
+      "doi": "10.1111/cts.70489",
+      "title": "Glycoprotein Non-Metastatic Melanoma Protein B (GPNMB): A Translational Pharmacodynamic Biomarker for PIKfyve Inhibition With VRG50635.",
+      "authorString": "Gontier G, Kim G, Wang C, Zhu K, Gau R, Zhang N, Naphade S, Stewart A, Schmidt MJ, Galemmo R, Shook B, Tarachandani A, Choi I, Raines S, Scannevin RH, Grievink HW, Smits LMG, Kremer PHC, Cadavid D.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Gontier G",
+            "lastName": "Gontier",
+            "firstName": "Geraldine",
+            "initials": "G",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-2894-7282"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Verge Genomics, South San Francisco, California, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kim G",
+            "lastName": "Kim",
+            "firstName": "Grace",
+            "initials": "G",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Verge Genomics, South San Francisco, California, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wang C",
+            "lastName": "Wang",
+            "firstName": "Chao",
+            "initials": "C",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Verge Genomics, South San Francisco, California, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zhu K",
+            "lastName": "Zhu",
+            "firstName": "Kevin",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Verge Genomics, South San Francisco, California, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Gau R",
+            "lastName": "Gau",
+            "firstName": "Raymond",
+            "initials": "R",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Verge Genomics, South San Francisco, California, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zhang N",
+            "lastName": "Zhang",
+            "firstName": "Ningzhe",
+            "initials": "N",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Verge Genomics, South San Francisco, California, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Naphade S",
+            "lastName": "Naphade",
+            "firstName": "Swati",
+            "initials": "S",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-6123-1505"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Verge Genomics, South San Francisco, California, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Stewart A",
+            "lastName": "Stewart",
+            "firstName": "Alistair",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Verge Genomics, South San Francisco, California, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Schmidt MJ",
+            "lastName": "Schmidt",
+            "firstName": "Martin J",
+            "initials": "MJ",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Verge Genomics, South San Francisco, California, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Galemmo R",
+            "lastName": "Galemmo",
+            "firstName": "Robert",
+            "initials": "R",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Verge Genomics, South San Francisco, California, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Shook B",
+            "lastName": "Shook",
+            "firstName": "Brian",
+            "initials": "B",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Verge Genomics, South San Francisco, California, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Tarachandani A",
+            "lastName": "Tarachandani",
+            "firstName": "Anil",
+            "initials": "A",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Verge Genomics, South San Francisco, California, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Choi I",
+            "lastName": "Choi",
+            "firstName": "Irene",
+            "initials": "I",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-9146-8324"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Verge Genomics, South San Francisco, California, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Raines S",
+            "lastName": "Raines",
+            "firstName": "Shane",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "2b Analytics, Wallingford, Pennsylvania, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Scannevin RH",
+            "lastName": "Scannevin",
+            "firstName": "Robert H",
+            "initials": "RH",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Verge Genomics, South San Francisco, California, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Grievink HW",
+            "lastName": "Grievink",
+            "firstName": "Henrieke W",
+            "initials": "HW",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Centre for Human Drug Research, Leiden, the Netherlands."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Smits LMG",
+            "lastName": "Smits",
+            "firstName": "Lars M G",
+            "initials": "LMG",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Centre for Human Drug Research, Leiden, the Netherlands."
+                },
+                {
+                  "affiliation": "Leiden University Medical Center, LUMC, Leiden, the Netherlands."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kremer PHC",
+            "lastName": "Kremer",
+            "firstName": "Philip H C",
+            "initials": "PHC",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-0483-841X"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Centre for Human Drug Research, Leiden, the Netherlands."
+                },
+                {
+                  "affiliation": "Leiden University Medical Center, LUMC, Leiden, the Netherlands."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Cadavid D",
+            "lastName": "Cadavid",
+            "firstName": "Diego",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Verge Genomics, South San Francisco, California, USA."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-6123-1505"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-9146-8324"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-0483-841X"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-2894-7282"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "2",
+        "volume": "19",
+        "journalIssueId": 4095980,
+        "dateOfPublication": "2026 Feb",
+        "monthOfPublication": 2,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Clin Transl Sci",
+          "title": "Clinical and translational science",
+          "essn": "1752-8062",
+          "issn": "1752-8054",
+          "nlmid": "101474067",
+          "isoabbreviation": "Clin Transl Sci"
+        },
+        "printPublicationDate": "2026-02-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "e70489",
+      "abstractText": "Glycoprotein non-metastatic melanoma protein B (GPNMB) was investigated as a pharmacodynamic (PD) biomarker for PIKfyve inhibition across translational studies ex\u00a0vivo, in\u00a0vitro, in animals, and in the clinic, demonstrating significant response to VRG50468 in cells, in\u00a0vivo in the central nervous system (CNS) and in peripheral fluids and tissues. VRG50468 is the active metabolite of VRG50635, a small molecule PIKfyve inhibitor pro-drug in development for treating amyotrophic lateral sclerosis (ALS). Peripheral pharmacology was evaluated in peripheral blood mononuclear cells (PBMCs) from healthy volunteers ex\u00a0vivo and in\u00a0vitro and in PBMCs from mice given oral VRG50635. Central pharmacology was evaluated in\u00a0vitro using C9orf72 ALS patient-derived induced pluripotent stem cell motor neurons and mouse primary neurons, and in\u00a0vivo in brains of mice given oral VRG50635. Two clinical studies in healthy adults examined plasma, PBMCs, and cerebrospinal fluid following oral VRG50635 for peripheral and central pharmacologic activity via GPNMB induction. PD GPNMB upregulation with VRG50468 was demonstrated across preclinical translational and clinical studies. A PD response to VRG50468 was observed ex\u00a0vivo in rodent and human PBMCs and in primary rodent neurons and motor neurons induced from stem cells of people with ALS. Repeated administration of VRG50635 to rodents and healthy human volunteers robustly induced GPNMB peripherally and in the CNS, which was concentration and time dependent in\u00a0vitro and dose and treatment duration dependent in\u00a0vivo, peripherally, and in CNS. GPNMB is a robust translatable PD biomarker for clinical trials with the PIKfyve inhibitor VRG50635. TRIAL REGISTRATION: Clinical trial number: VGCS-50635-001 and VGCS-50635-003; identifier: NL81735.056.22 and NCT06286475.",
+      "affiliation": "Verge Genomics, South San Francisco, California, USA.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print",
+      "pubTypeList": {
+        "pubType": [
+          "Research Support, Non-U.S. Gov't",
+          "research-article",
+          "Randomized Controlled Trial",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "Verge Genomics",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Leukocytes, Mononuclear",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DE",
+                  "qualifierName": "drug effects"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Mice"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "BL",
+                  "qualifierName": "blood"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "DT",
+                  "qualifierName": "drug therapy"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Membrane Glycoproteins",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "BL",
+                  "qualifierName": "blood"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Adult"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Female"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Male"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Phosphatidylinositol 3-Kinases",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Biomarkers",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "BL",
+                  "qualifierName": "blood"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Phosphoinositide-3 Kinase Inhibitors",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PK",
+                  "qualifierName": "pharmacokinetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PD",
+                  "qualifierName": "pharmacology"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Safety",
+          "Amyotrophic Lateral Sclerosis",
+          "ALS",
+          "Clinical Trial",
+          "Placebo",
+          "Food Effect",
+          "Pikfyve",
+          "Gpnmb",
+          "First In Human",
+          "Glycoprotein Nonmetastatic Melanoma Protein"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "Membrane Glycoproteins",
+            "registryNumber": "0"
+          },
+          {
+            "name": "GPNMB protein, human",
+            "registryNumber": "0"
+          },
+          {
+            "name": "PIKFYVE protein, human",
+            "registryNumber": "EC 2.7.1.137"
+          },
+          {
+            "name": "Phosphatidylinositol 3-Kinases",
+            "registryNumber": "EC 2.7.1.-"
+          },
+          {
+            "name": "Biomarkers",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Phosphoinositide-3 Kinase Inhibitors",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1111/cts.70489"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12916242"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12916242?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by-nc-nd",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "gen",
+          "nct",
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-07-08",
+      "dateOfCreation": "2026-02-18",
+      "dateOfRevision": "2026-08-17",
+      "firstPublicationDate": "2026-02-01",
+      "firstIndexDate": "2026-02-20",
+      "fullTextReceivedDate": "2026-02-20",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "PMC13639425",
+      "source": "PMC",
+      "pmcid": "PMC13639425",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13639425"
+        ]
+      },
+      "title": "Cystatin F as a neuroimmune effector in CNS inflammation and neurodegeneration",
+      "authorString": "Murray K, Fernandez K, Lane T.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Murray K",
+            "lastName": "Murray",
+            "firstName": "Kaitlin",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurobiology and Behavior, School of Biological Sciences, University of California , , ,"
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Fernandez K",
+            "lastName": "Fernandez",
+            "firstName": "Kellie",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Molecular Biology and Biochemistry, School of Biological Sciences, University of California , , ,"
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Lane T",
+            "lastName": "Lane",
+            "firstName": "Thomas E.",
+            "initials": "T",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurobiology and Behavior, School of Biological Sciences, University of California , , ,"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "journalInfo": {
+        "volume": "14",
+        "journalIssueId": 4280512,
+        "dateOfPublication": " ",
+        "monthOfPublication": 0,
+        "yearOfPublication": 0,
+        "journal": {
+          "medlineAbbreviation": "Front Cell Dev Biol",
+          "title": "Frontiers in cell and developmental biology",
+          "essn": "2296-634X",
+          "issn": "2296-634X",
+          "nlmid": "101630250",
+          "isoabbreviation": "Front Cell Dev Biol"
+        }
+      },
+      "language": "eng",
+      "pubModel": "Undetermined",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Inflammation",
+          "Protease inhibitor",
+          "Neurodegeneration",
+          "Neuroimmunology",
+          "Cystatin F"
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Free",
+            "availabilityCode": "F",
+            "documentStyle": "html",
+            "site": "PubMedCentral",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13639425/?tool=EBI"
+          },
+          {
+            "availability": "Free",
+            "availabilityCode": "F",
+            "documentStyle": "pdf",
+            "site": "PubMedCentral",
+            "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13639425/pdf/?tool=EBI"
+          },
+          {
+            "availability": "Free",
+            "availabilityCode": "F",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13639425"
+          },
+          {
+            "availability": "Free",
+            "availabilityCode": "F",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13639425?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "N",
+      "hasTextMinedTerms": "N",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "N",
+      "hasData": "N",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "N",
+      "dateOfCreation": "2026-10-07",
+      "dateOfRevision": "2026-10-08",
+      "firstPublicationDate": "2026-10-07",
+      "firstIndexDate": "2026-10-07",
+      "fullTextReceivedDate": "2026-10-07",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "41386298",
+      "source": "MED",
+      "pmid": "41386298",
+      "pmcid": "PMC12809089",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC12809089"
+        ]
+      },
+      "doi": "10.1016/j.jbc.2025.111039",
+      "title": "Sterile innate immune mechanisms in neurodegenerative diseases.",
+      "authorString": "Ealy A, Serapiglia AM, Panicker N.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Ealy A",
+            "lastName": "Ealy",
+            "firstName": "Alyssa",
+            "initials": "A",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0009-9262-9431"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurosciences, Cleveland Clinic Research, Cleveland, Ohio, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Serapiglia AM",
+            "lastName": "Serapiglia",
+            "firstName": "Amanda M",
+            "initials": "AM",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-1408-7285"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurosciences, Cleveland Clinic Research, Cleveland, Ohio, USA; Department of Neurosciences, Case Western Reserve University School of Medicine, Cleveland, Ohio, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Panicker N",
+            "lastName": "Panicker",
+            "firstName": "Nikhil",
+            "initials": "N",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-1752-4284"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurosciences, Cleveland Clinic Research, Cleveland, Ohio, USA; Cleveland Clinic Lerner College of Medicine of Case Western Reserve University, Cleveland, OH, USA. Electronic address: PANICKN@ccf.org."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0003-1408-7285"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-1752-4284"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0009-9262-9431"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "2",
+        "volume": "302",
+        "journalIssueId": 4133679,
+        "dateOfPublication": "2026 Feb",
+        "monthOfPublication": 2,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "J Biol Chem",
+          "title": "The Journal of biological chemistry",
+          "essn": "1083-351X",
+          "issn": "0021-9258",
+          "nlmid": "2985121R",
+          "isoabbreviation": "J Biol Chem"
+        },
+        "printPublicationDate": "2026-02-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "111039",
+      "abstractText": "Neurodegenerative diseases are characterized by the dysfunction and death of susceptible neuronal populations. Increasing evidence has demonstrated that sustained neuroinflammation and activation of innate immune complexes underlie neurodegeneration, worsening disease progression and outcomes. Sterile inflammation (which occurs in the absence of infection) can be triggered by neurodegenerative disease-associated misfolded proteins. These studies highlight the need to decipher the complexities of innate immune signaling mechanisms and their contribution to neuropathology. In this review, we focus on major neurodegenerative diseases that have a well-documented neuroinflammatory component: Alzheimer's disease, Parkinson's disease, amyotrophic lateral sclerosis, multiple sclerosis, and frontotemporal dementia. In the context of these diseases, we discuss recent advances in innate-immune mechanisms that have been demonstrated to partake in disease progression and neurodegeneration. These include evolutionarily conserved innate-immune signaling complexes whose uncontrolled activation amplifies neurodegeneration, damaging lipid droplets that accumulate within myeloid cells and prevent their ability to clear toxic protein aggregates, as well as genome-wide studies-implicated genes/proteins. The individual and/or concerted actions of these pathways could be leveraged to rationally target the pathogenesis or progression of neurodegenerative diseases.",
+      "affiliation": "Department of Neurosciences, Cleveland Clinic Research, Cleveland, Ohio, USA.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print-Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "US Office of Congressionally Directed Medical Research Programs",
+            "grantId": "PD220039",
+            "orderIn": 0
+          },
+          {
+            "agency": "NIA NIH HHS",
+            "acronym": "AG",
+            "grantId": "R00 AG066862",
+            "orderIn": 0
+          },
+          {
+            "agency": "NIGMS NIH HHS",
+            "acronym": "GM",
+            "grantId": "R35 GM162199",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Institutes of Health",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Institute on Aging",
+            "grantId": "R00AG066862",
+            "orderIn": 0
+          },
+          {
+            "agency": "Alzheimer&amp;apos;s Disease Research Center, University of Pittsburgh",
+            "orderIn": 0
+          },
+          {
+            "agency": "American Parkinson Disease Association",
+            "grantId": "1043097",
+            "orderIn": 0
+          },
+          {
+            "agency": "American Parkinson&amp;apos;s Disease Foundation",
+            "grantId": "P30 AG072959",
+            "orderIn": 0
+          },
+          {
+            "agency": "National Institute on Aging",
+            "grantId": "P30 AG072959",
+            "orderIn": 0
+          },
+          {
+            "agency": "U.S. Department of Defense",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Multiple Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Parkinson Disease",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Alzheimer Disease",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Neurodegenerative Diseases",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Signal Transduction"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Immunity, Innate"
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Astrocytes",
+          "Neurodegeneration",
+          "Microglia",
+          "lipid droplets",
+          "neuroinflammation",
+          "Inflammasomes",
+          "Cgas/sting"
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1016/j.jbc.2025.111039"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12809089"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC12809089?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 5,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-03-06",
+      "dateOfCreation": "2025-12-12",
+      "dateOfRevision": "2026-10-29",
+      "electronicPublicationDate": "2025-12-11",
+      "firstPublicationDate": "2025-12-11",
+      "firstIndexDate": "2025-12-14",
+      "fullTextReceivedDate": "2026-01-17",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42694654",
+      "source": "MED",
+      "pmid": "42694654",
+      "pmcid": "PMC13540259",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13540259"
+        ]
+      },
+      "doi": "10.3389/fimmu.2026.1912989",
+      "title": "TREM2 as a central hub of neuroimmune-metabolic crosstalk in central nervous system disorders: from microglial biology to therapeutic targeting.",
+      "authorString": "Wu Y, Duan L, Zhang L, Wang S, Yan H, He M, Wang T, Li L, Gao Y.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Wu Y",
+            "lastName": "Wu",
+            "firstName": "Yulu",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Forensic Medicine, School of Basic Medicine, Soochow University, Suzhou, Jiangsu,\u00a0China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Duan L",
+            "lastName": "Duan",
+            "firstName": "Lian",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Forensic Medicine, School of Basic Medicine, Soochow University, Suzhou, Jiangsu,\u00a0China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zhang L",
+            "lastName": "Zhang",
+            "firstName": "Luyu",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Forensic Medicine, School of Basic Medicine, Soochow University, Suzhou, Jiangsu,\u00a0China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wang S",
+            "lastName": "Wang",
+            "firstName": "Shuting",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Forensic Medicine, School of Basic Medicine, Soochow University, Suzhou, Jiangsu,\u00a0China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Yan H",
+            "lastName": "Yan",
+            "firstName": "Hongmu",
+            "initials": "H",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Forensic Medicine, School of Basic Medicine, Soochow University, Suzhou, Jiangsu,\u00a0China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "He M",
+            "lastName": "He",
+            "firstName": "Mingyuan",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Forensic Medicine, School of Basic Medicine, Soochow University, Suzhou, Jiangsu,\u00a0China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wang T",
+            "lastName": "Wang",
+            "firstName": "Tao",
+            "initials": "T",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Forensic Medicine, School of Basic Medicine, Soochow University, Suzhou, Jiangsu,\u00a0China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Li L",
+            "lastName": "Li",
+            "firstName": "Lili",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Child and Adolescent Healthcare, Children's Hospital of Soochow University, Suzhou, Jiangsu,\u00a0China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Gao Y",
+            "lastName": "Gao",
+            "firstName": "Yuan",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Forensic Medicine, School of Basic Medicine, Soochow University, Suzhou, Jiangsu,\u00a0China."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "volume": "17",
+        "journalIssueId": 4103356,
+        "dateOfPublication": "2026 ",
+        "monthOfPublication": 0,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Front Immunol",
+          "title": "Frontiers in immunology",
+          "essn": "1664-3224",
+          "issn": "1664-3224",
+          "nlmid": "101560960",
+          "isoabbreviation": "Front Immunol"
+        },
+        "printPublicationDate": "2026-01-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "1912989",
+      "abstractText": "Triggering receptor expressed on myeloid cells 2 (TREM2) is a microglia-enriched immunoreceptor that functions as a central regulator of microglial adaptation by integrating immune surveillance, lipid sensing, metabolic reprogramming, and phagocytic responses in the central nervous system (CNS). Through association with the adaptor protein DAP12, TREM2 activates interconnected signaling networks involving the SYK pathway, PLC\u03b32-mediated Ca<sup>2+</sup> signaling, PI3K-AKT-mTOR signaling, NF-\u03baB activation and inflammatory regulatory pathways, thereby shaping microglial survival, migration, clearance capacity, and interactions with surrounding neural and immune cells. Increasing evidence from genetic studies, single-cell transcriptomics, spatial analyses, and human-derived microglial models indicates that TREM2 dysfunction contributes to diverse CNS disorders; however, its biological consequences are highly dependent on disease stage, pathological substrate, cellular context, and microenvironmental cues. In Alzheimer's disease, TREM2 regulates amyloid-\u03b2-associated microglial responses, lipid metabolism, and synaptic remodeling, while its effects on tau-driven neurodegeneration remain controversial. In Parkinson's disease, stroke, epilepsy, and amyotrophic lateral sclerosis, TREM2 influences \u03b1-Syn clearance, inflammatory resolution, tissue repair, and microglial state transitions, but may exert beneficial or maladaptive effects depending on temporal dynamics and disease-specific stressors. Emerging clinical evidence, including TREM2 variants, soluble TREM2 (sTREM2) biomarkers, and human multi-omics studies, highlights both the translational potential and complexity of targeting this pathway. Herein, this review summarizes the molecular mechanisms, physiological functions, and disease-specific roles of TREM2 in CNS disorders, critically discusses unresolved controversies and species-specific challenges, and evaluates emerging therapeutic strategies toward biomarker-guided and stage-specific modulation of TREM2 signaling. Understanding how to restore appropriate microglial adaptability rather than simply enhance or suppress TREM2 activity may provide a foundation for precision therapies in CNS disorders.",
+      "affiliation": "Department of Forensic Medicine, School of Basic Medicine, Soochow University, Suzhou, Jiangsu,\u00a0China.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic-eCollection",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Microglia",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Central Nervous System Diseases",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "TH",
+                  "qualifierName": "therapy"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Membrane Glycoproteins",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Receptors, Immunologic",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Signal Transduction"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Neuroimmunomodulation"
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Microglia",
+          "Central nervous system diseases",
+          "neuroinflammation",
+          "Therapeutic Targets",
+          "Trem2"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "Membrane Glycoproteins",
+            "registryNumber": "0"
+          },
+          {
+            "name": "Receptors, Immunologic",
+            "registryNumber": "0"
+          },
+          {
+            "name": "TREM2 protein, human",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.3389/fimmu.2026.1912989"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13540259"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13540259?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "ensembl",
+          "refsnp",
+          "nct",
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-09-04",
+      "dateOfCreation": "2026-09-04",
+      "dateOfRevision": "2026-09-05",
+      "electronicPublicationDate": "2026-08-20",
+      "firstPublicationDate": "2026-08-20",
+      "firstIndexDate": "2026-09-05",
+      "fullTextReceivedDate": "2026-09-11",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42694478",
+      "source": "MED",
+      "pmid": "42694478",
+      "pmcid": "PMC13539510",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13539510"
+        ]
+      },
+      "doi": "10.3389/fnmol.2026.1921079",
+      "title": "From metabolism to neurodegeneration: how microglial functional reprogramming drives neurodegenerative diseases.",
+      "authorString": "Cui Q, Zheng K, Liu Q, Wang L, Liu Y, Bai R, Zhang W, Guo J, Chang X, Wang J.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Cui Q",
+            "lastName": "Cui",
+            "firstName": "Qiaoqiao",
+            "initials": "Q",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The First Hospital of Shanxi Medical University, Taiyuan, Shanxi, China."
+                },
+                {
+                  "affiliation": "Clinical College, Shanxi Medical University, Taiyuan, Shanxi, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zheng K",
+            "lastName": "Zheng",
+            "firstName": "Ke",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The First Hospital of Shanxi Medical University, Taiyuan, Shanxi, China."
+                },
+                {
+                  "affiliation": "Clinical College, Shanxi Medical University, Taiyuan, Shanxi, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Liu Q",
+            "lastName": "Liu",
+            "firstName": "Qiyun",
+            "initials": "Q",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The First Hospital of Shanxi Medical University, Taiyuan, Shanxi, China."
+                },
+                {
+                  "affiliation": "Clinical College, Shanxi Medical University, Taiyuan, Shanxi, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wang L",
+            "lastName": "Wang",
+            "firstName": "Lizhen",
+            "initials": "L",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The First Hospital of Shanxi Medical University, Taiyuan, Shanxi, China."
+                },
+                {
+                  "affiliation": "Clinical College, Shanxi Medical University, Taiyuan, Shanxi, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Liu Y",
+            "lastName": "Liu",
+            "firstName": "Yixin",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The First Hospital of Shanxi Medical University, Taiyuan, Shanxi, China."
+                },
+                {
+                  "affiliation": "Clinical College, Shanxi Medical University, Taiyuan, Shanxi, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Bai R",
+            "lastName": "Bai",
+            "firstName": "Ruifang",
+            "initials": "R",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The First Hospital of Shanxi Medical University, Taiyuan, Shanxi, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Zhang W",
+            "lastName": "Zhang",
+            "firstName": "Wei",
+            "initials": "W",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The First Hospital of Shanxi Medical University, Taiyuan, Shanxi, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Guo J",
+            "lastName": "Guo",
+            "firstName": "Junhong",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The First Hospital of Shanxi Medical University, Taiyuan, Shanxi, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Chang X",
+            "lastName": "Chang",
+            "firstName": "Xueli",
+            "initials": "X",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The First Hospital of Shanxi Medical University, Taiyuan, Shanxi, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wang J",
+            "lastName": "Wang",
+            "firstName": "Juan",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The First Hospital of Shanxi Medical University, Taiyuan, Shanxi, China."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "volume": "19",
+        "journalIssueId": 4113084,
+        "dateOfPublication": "2026 ",
+        "monthOfPublication": 0,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Front Mol Neurosci",
+          "title": "Frontiers in molecular neuroscience",
+          "essn": "1662-5099",
+          "issn": "1662-5099",
+          "nlmid": "101477914",
+          "isoabbreviation": "Front Mol Neurosci"
+        },
+        "printPublicationDate": "2026-01-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "1921079",
+      "abstractText": "Microglia are brain-resident myeloid cells that maintain central nervous system homeostasis and respond dynamically to neuronal injury, protein aggregation, and alterations in the local metabolic environment. Single-cell and single-nucleus studies demonstrate that microglial responses in neurodegenerative diseases are highly heterogeneous and cannot be adequately explained by the classical M1/M2 polarization model. Increasing evidence further indicates that metabolic remodeling is not merely a consequence of activation but a determinant of microglial migration, phagocytosis, inflammatory signaling, redox balance, organelle function, and interactions with surrounding neural cells. In this review, we propose a microglial immunometabolic trajectory framework in which metabolic states are viewed as branching and potentially reversible determinants of cellular function rather than fixed stages of a universal disease pathway. We summarize how glucose metabolism, mitochondrial function, lipid metabolism, amino acid metabolism, lysosomal activity, and redox regulation shape microglial plasticity. We further examine relationships among transcriptionally defined states, including disease-associated microglia, microglia associated with neurodegeneration, lipid-droplet-accumulating microglia, and other disease-enriched populations, while emphasizing that transcriptional similarity does not necessarily imply metabolic function or lineage progression. Comparative evidence from Alzheimer's disease, Parkinson's disease, and amyotrophic lateral sclerosis indicates that common metabolic regulators, including HIF-1\u03b1, mTOR, PKM2, TREM2, APOE, and NLRP3, exert disease-specific effects with unequal mechanistic support. We further distinguish associative metabolic signatures from intervention-based causal evidence and discuss limitations of animal models, immortalized cell lines, postmortem tissue, and induced pluripotent stem cell-derived microglia. Finally, we highlight the need for cell-specific, state-resolved, and temporally precise metabolic interventions that restore defined microglial functions without compromising physiological immune surveillance.",
+      "affiliation": "Department of Neurology, The First Hospital of Shanxi Medical University, Taiyuan, Shanxi, China.",
+      "publicationStatus": "epublish",
+      "language": "eng",
+      "pubModel": "Electronic-eCollection",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "National Natural Science Foundation of China",
+            "grantId": "82001222",
+            "orderIn": 0
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Neurodegenerative diseases",
+          "Microglia",
+          "lipid metabolism",
+          "glucose metabolism",
+          "Amino Acid Metabolism",
+          "Immunometabolism",
+          "Disease-associated Microglia"
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.3389/fnmol.2026.1921079"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13539510"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13539510?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-09-04",
+      "dateOfCreation": "2026-09-04",
+      "dateOfRevision": "2026-09-05",
+      "electronicPublicationDate": "2026-08-20",
+      "firstPublicationDate": "2026-08-20",
+      "firstIndexDate": "2026-09-05",
+      "fullTextReceivedDate": "2026-09-11",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "41218062",
+      "source": "MED",
+      "pmid": "41218062",
+      "pmcid": "PMC13337230",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13337230"
+        ]
+      },
+      "doi": "10.1093/brain/awaf426",
+      "title": "Single-nucleus multiome shows motor neuron glutamate overactivation in amyotrophic lateral sclerosis.",
+      "authorString": "Takeuchi E, Yasumizu Y, Yasumizu Y, Morita J, Ishikawa M, Ogawa K, Motooka D, Okuzaki D, Nagata M, Ishihara Y, Miyashita Y, Asano Y, Mori K, Morii E, Beck G, Saito Y, Murayama S, Mochizuki H, Nagano S.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Takeuchi E",
+            "lastName": "Takeuchi",
+            "firstName": "Eriko",
+            "initials": "E",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Department of Neurotherapeutics, The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Integrated Frontier Research for Medical Science Division, Institute for Open and Transdisciplinary Research Initiatives (OTRI), The University of Osaka, Suita, Osaka 565-0871, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Yasumizu Y",
+            "lastName": "Yasumizu",
+            "firstName": "Yoshiaki",
+            "initials": "Y",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0006-3533-7692"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Integrated Frontier Research for Medical Science Division, Institute for Open and Transdisciplinary Research Initiatives (OTRI), The University of Osaka, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Department of Experimental Immunology, Immunology Frontier Research Center, The University of Osaka, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Department of Neurology, Yale School of Medicine, New Haven, CT 06510, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Yasumizu Y",
+            "lastName": "Yasumizu",
+            "firstName": "Yoshiaki",
+            "initials": "Y",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-9872-4909"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Integrated Frontier Research for Medical Science Division, Institute for Open and Transdisciplinary Research Initiatives (OTRI), The University of Osaka, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Department of Experimental Immunology, Immunology Frontier Research Center, The University of Osaka, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Department of Neurology, Yale School of Medicine, New Haven, CT 06510, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Morita J",
+            "lastName": "Morita",
+            "firstName": "Junko",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurotherapeutics, The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ishikawa M",
+            "lastName": "Ishikawa",
+            "firstName": "Masakazu",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Genome Information Research Center, The University of Osaka, Suita, Osaka 565-0871, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ogawa K",
+            "lastName": "Ogawa",
+            "firstName": "Kotaro",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Motooka D",
+            "lastName": "Motooka",
+            "firstName": "Daisuke",
+            "initials": "D",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Integrated Frontier Research for Medical Science Division, Institute for Open and Transdisciplinary Research Initiatives (OTRI), The University of Osaka, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Genome Information Research Center, Research Institute for Microbial Diseases, The University of Osaka, Suita, Osaka 565-0871, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Okuzaki D",
+            "lastName": "Okuzaki",
+            "firstName": "Daisuke",
+            "initials": "D",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-4552-783X"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Integrated Frontier Research for Medical Science Division, Institute for Open and Transdisciplinary Research Initiatives (OTRI), The University of Osaka, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Genome Information Research Center, Research Institute for Microbial Diseases, The University of Osaka, Suita, Osaka 565-0871, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Nagata M",
+            "lastName": "Nagata",
+            "firstName": "Miho",
+            "initials": "M",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Cardiovascular Medicine (IRUD Analysis Center), The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ishihara Y",
+            "lastName": "Ishihara",
+            "firstName": "Yasuki",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Cardiovascular Medicine (IRUD Analysis Center), The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "NCVC Biobank, National Cerebral and Cardiovascular Center, Suita, Osaka 564-8565, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Miyashita Y",
+            "lastName": "Miyashita",
+            "firstName": "Yohei",
+            "initials": "Y",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-1739-4734"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Cardiovascular Medicine (IRUD Analysis Center), The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Department of Genomic Medicine, National Cerebral and Cardiovascular Center, Suita, Osaka 564-8565, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Asano Y",
+            "lastName": "Asano",
+            "firstName": "Yoshihiro",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Cardiovascular Medicine (IRUD Analysis Center), The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Department of Genomic Medicine, National Cerebral and Cardiovascular Center, Suita, Osaka 564-8565, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Mori K",
+            "lastName": "Mori",
+            "firstName": "Kohji",
+            "initials": "K",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Psychiatry, The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Morii E",
+            "lastName": "Morii",
+            "firstName": "Eiichi",
+            "initials": "E",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Integrated Frontier Research for Medical Science Division, Institute for Open and Transdisciplinary Research Initiatives (OTRI), The University of Osaka, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Department of Pathology, The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Beck G",
+            "lastName": "Beck",
+            "firstName": "Goichi",
+            "initials": "G",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Saito Y",
+            "lastName": "Saito",
+            "firstName": "Yuko",
+            "initials": "Y",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neuropathology (Brain Bank for Aging Research), Tokyo Metropolitan Geriatric Hospital and Institute of Gerontology, Itabashi, Tokyo 173-0015, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Murayama S",
+            "lastName": "Murayama",
+            "firstName": "Shigeo",
+            "initials": "S",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-9709-5242"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Brain Bank for Neurodevelopmental, Molecular Research Center for Children's Mental Development, Neurological and Psychiatric Disorders, The University of Osaka United Graduate School of Child Development, Suita, Osaka 565-0871, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Mochizuki H",
+            "lastName": "Mochizuki",
+            "firstName": "Hideki",
+            "initials": "H",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-0874-7542"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Integrated Frontier Research for Medical Science Division, Institute for Open and Transdisciplinary Research Initiatives (OTRI), The University of Osaka, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Department of Neurology, National Hospital Organization Osaka Toneyama Medical Center, Toyonaka, Osaka 560-0871, Japan."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Nagano S",
+            "lastName": "Nagano",
+            "firstName": "Seiichi",
+            "initials": "S",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Department of Neurotherapeutics, The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Integrated Frontier Research for Medical Science Division, Institute for Open and Transdisciplinary Research Initiatives (OTRI), The University of Osaka, Suita, Osaka 565-0871, Japan."
+                },
+                {
+                  "affiliation": "Department of Neurodevelopmental and Neurodegenerative Disease Research, The University of Osaka United Graduate School of Child Development, Suita, Osaka 565-0871, Japan."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-9709-5242"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-0874-7542"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-1739-4734"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-4552-783X"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-9872-4909"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0006-3533-7692"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "7",
+        "volume": "149",
+        "journalIssueId": 4227281,
+        "dateOfPublication": "2026 Jul",
+        "monthOfPublication": 7,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Brain",
+          "title": "Brain : a journal of neurology",
+          "essn": "1460-2156",
+          "issn": "0006-8950",
+          "nlmid": "0372537",
+          "isoabbreviation": "Brain"
+        },
+        "printPublicationDate": "2026-07-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "2480-2494",
+      "abstractText": "Amyotrophic lateral sclerosis (ALS) is a neurodegenerative disease that causes motor neuron degeneration. However, the mechanisms underlying the selective vulnerability of motor neurons and the involvement of non-motor neuron cells in ALS remain unclear. To investigate ALS pathology at the cellular level, we performed a single-nucleus multiome analysis, including RNA sequencing and chromatin accessibility profiling, on the motor cortex (75 583 nuclei) and spinal cord (62 711 nuclei) from patients with ALS (n = 6) and controls (n = 6). Our results revealed significant gene expression changes specifically in spinal motor neurons, including upregulation of a metabotropic glutamate receptor, GRM5, and enhanced glutamate signalling. By integrating genome-wide association study data, we identified ALS-associated single nucleotide polymorphisms (SNPs) in regulatory regions, suggesting cell-type-specific enrichment of risk, especially in microglia. These findings suggest that changes in spinal motor neurons and their surrounding environment, including glutamate signalling, may be involved in ALS pathology. The study also provides valuable resources for future research on the underlying mechanisms and potential therapeutic targets.",
+      "affiliation": "Department of Neurology, The University of Osaka Graduate School of Medicine, Suita, Osaka 565-0871, Japan.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print",
+      "pubTypeList": {
+        "pubType": [
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "JSPS KAKENHI",
+            "grantId": "JP24K02370",
+            "orderIn": 0
+          },
+          {
+            "agency": "AMED",
+            "grantId": "JP20lm0203007",
+            "orderIn": 0
+          },
+          {
+            "agency": "Integrated Frontier Research for Medical Science Division",
+            "orderIn": 0
+          },
+          {
+            "agency": "Osaka University",
+            "orderIn": 0
+          },
+          {
+            "agency": "AMED",
+            "grantId": "JP21ek0109520",
+            "orderIn": 0
+          },
+          {
+            "agency": "AMED",
+            "grantId": "JP21wm0525029",
+            "orderIn": 0
+          },
+          {
+            "agency": "JSPS KAKENHI",
+            "grantId": "JP22H04811",
+            "orderIn": 0
+          },
+          {
+            "agency": "Institute for Open and Transdisciplinary Research Initiatives",
+            "orderIn": 0
+          },
+          {
+            "agency": "JSPS KAKENHI",
+            "grantId": "JP21H02841",
+            "orderIn": 0
+          },
+          {
+            "agency": "JSPS KAKENHI",
+            "grantId": "JP23K18265",
+            "orderIn": 0
+          },
+          {
+            "agency": "Research Institute for Microbial Diseases",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Motor Cortex",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Spinal Cord",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Motor Neurons",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Glutamic Acid",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Polymorphism, Single Nucleotide"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Middle Aged"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Female"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Male"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Genome-Wide Association Study"
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Spinal cord",
+          "Motor cortex",
+          "Amyotrophic Lateral Sclerosis",
+          "Gwas",
+          "Single Nucleus Atac-seq",
+          "Single Nucleus Rna-seq"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "Glutamic Acid",
+            "registryNumber": "3KX376GY7L"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1093/brain/awaf426"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13337230"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13337230?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 4,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "refsnp",
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-07-07",
+      "dateOfCreation": "2025-11-11",
+      "dateOfRevision": "2026-08-13",
+      "firstPublicationDate": "2026-07-01",
+      "firstIndexDate": "2025-11-11",
+      "fullTextReceivedDate": "2026-09-03",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42684942",
+      "source": "MED",
+      "pmid": "42684942",
+      "pmcid": "PMC13539027",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13539027"
+        ]
+      },
+      "doi": "10.1177/03000605261476190",
+      "title": "Context-dependent roles of osteopontin in aging-related neurological disorders.",
+      "authorString": "Huang D, Zhang Z, Gong X.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Huang D",
+            "lastName": "Huang",
+            "firstName": "Dong",
+            "initials": "D",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0005-4404-6099"
+            }
+          },
+          {
+            "fullName": "Zhang Z",
+            "lastName": "Zhang",
+            "firstName": "Zhen",
+            "initials": "Z",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Xiangdong Hospital Hunan Normal University, China."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Gong X",
+            "lastName": "Gong",
+            "firstName": "Xili",
+            "initials": "X",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Department of Neurology, Xiangdong Hospital Hunan Normal University, China."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0009-0005-4404-6099"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "9",
+        "volume": "54",
+        "journalIssueId": 4251169,
+        "dateOfPublication": "2026 Sep",
+        "monthOfPublication": 9,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "J Int Med Res",
+          "title": "The Journal of international medical research",
+          "essn": "1473-2300",
+          "issn": "0300-0605",
+          "nlmid": "0346411",
+          "isoabbreviation": "J Int Med Res"
+        },
+        "printPublicationDate": "2026-09-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "3000605261476190",
+      "abstractText": "Osteopontin (encoded by secreted phosphoprotein 1) is a multifunctional matricellular phosphoglycoprotein that has emerged as an important mediator in the aging nervous system. During aging, osteopontin interacts with microglial priming, vascular remodeling, myelin repair, and innate immune responses and is consistently implicated in major late-life neurological disorders. However, its biological effects are highly context dependent. Depending on its cellular source, proteolytic processing, receptor interactions, anatomical distribution, and disease stage, osteopontin may either exacerbate chronic neuroinflammation and tissue injury or promote phagocytic clearance, neuronal survival, remyelination, neuroplasticity, and tissue repair. This review critically synthesizes studies indexed in PubMed and Google Scholar through 3 April 2026 on the role of osteopontin in brain aging, Alzheimer's disease and related dementias, Parkinson's disease and Lewy body disorders, cerebrovascular disease, vascular cognitive impairment, cerebral small vessel disease, and amyotrophic lateral sclerosis. In Alzheimer's disease, cerebrospinal fluid and plasma osteopontin concentrations increase from the prodromal to symptomatic stages, whereas microglial or perivascular secreted phosphoprotein 1 expression correlates with amyloid pathology, synaptic remodeling, and cognitive decline. However, under specific conditions, osteopontin also enhances macrophage-mediated amyloid-beta clearance. In stroke, elevated circulating osteopontin predicts poor clinical outcomes, whereas experimental studies demonstrate that appropriately timed exogenous osteopontin, regulatory T cell-derived osteopontin, and osteopontin-mediated autophagic and reparative pathways promote white-matter repair, peri-infarct plasticity, and blood-brain barrier integrity. Evidence from Parkinson's disease, Lewy body disease, frontotemporal dementia, and amyotrophic lateral sclerosis further supports the role of osteopontin as both a candidate biomarker and a regulator of selective neuronal vulnerability. Rather than being uniformly detrimental or protective, osteopontin should be regarded as a context-dependent regulator of age-related neuroimmune remodeling. This perspective reconciles seemingly conflicting findings and supports the development of therapeutic strategies that are tailored to disease stage, protein fragment, and cell type rather than broadly targeting osteopontin.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print-Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "review-article",
+          "Review",
+          "Journal Article"
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Brain",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Microglia",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Animals"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Nervous System Diseases",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Alzheimer Disease"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Aging",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Osteopontin",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "ME",
+                  "qualifierName": "metabolism"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "keywordList": {
+        "keyword": [
+          "Aging",
+          "Alzheimer's disease",
+          "Stroke",
+          "Amyotrophic Lateral Sclerosis",
+          "osteopontin",
+          "Parkinson's Disease",
+          "neuroinflammation",
+          "Cerebral Small Vessel Disease"
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "osteopontin",
+            "registryNumber": "106441-73-0"
+          },
+          {
+            "name": "SPP1 protein, human",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1177/03000605261476190"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13539027"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13539027?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 0,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "N",
+      "hasLabsLinks": "N",
+      "hasData": "Y",
+      "license": "cc by-nc",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "doi"
+        ]
+      },
+      "dateOfCompletion": "2026-09-02",
+      "dateOfCreation": "2026-09-02",
+      "dateOfRevision": "2026-09-05",
+      "electronicPublicationDate": "2026-09-02",
+      "firstPublicationDate": "2026-09-02",
+      "firstIndexDate": "2026-09-03",
+      "fullTextReceivedDate": "2026-09-11",
+      "hasEvaluations": "N"
+    },
+    {
+      "id": "42135512",
+      "source": "MED",
+      "pmid": "42135512",
+      "pmcid": "PMC13337491",
+      "fullTextIdList": {
+        "fullTextId": [
+          "PMC13337491"
+        ]
+      },
+      "doi": "10.1038/s41593-026-02300-5",
+      "title": "Integrated single-cell and spatial transcriptomic profiling in ALS uncovers peripheral-to-central immune infiltration and reprogramming.",
+      "authorString": "Zhang Z, van Olst L, Alessandrini F, Wright M, Edwards AJ, Boles J, Nalbandian A, Forsyth AV, Shepard N, Watson T, Kaspi E, Mittal A, Kuruvilla J, Piehl N, Ramakrishnan A, Appel S, Kiskinis E, Gate D.",
+      "authorList": {
+        "author": [
+          {
+            "fullName": "Zhang Z",
+            "lastName": "Zhang",
+            "firstName": "Ziyang",
+            "initials": "Z",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Abrams Research Center on Neurogenomics, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                },
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "van Olst L",
+            "lastName": "van Olst",
+            "firstName": "Lynn",
+            "initials": "L",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-7569-0470"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Abrams Research Center on Neurogenomics, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                },
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Alessandrini F",
+            "lastName": "Alessandrini",
+            "firstName": "Francesco",
+            "initials": "F",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Wright M",
+            "lastName": "Wright",
+            "firstName": "Matthew",
+            "initials": "M",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-6634-934X"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Edwards AJ",
+            "lastName": "Edwards",
+            "firstName": "Alex J",
+            "initials": "AJ",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0001-4548-7284"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Abrams Research Center on Neurogenomics, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                },
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Boles J",
+            "lastName": "Boles",
+            "firstName": "Jake",
+            "initials": "J",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-5501-2162"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Abrams Research Center on Neurogenomics, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                },
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Nalbandian A",
+            "lastName": "Nalbandian",
+            "firstName": "Anait",
+            "initials": "A",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0009-0001-9126-6239"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Abrams Research Center on Neurogenomics, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                },
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Forsyth AV",
+            "lastName": "Forsyth",
+            "firstName": "Anne V",
+            "initials": "AV",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Abrams Research Center on Neurogenomics, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                },
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Shepard N",
+            "lastName": "Shepard",
+            "firstName": "Nate",
+            "initials": "N",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-8629-3152"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Watson T",
+            "lastName": "Watson",
+            "firstName": "Thomas",
+            "initials": "T",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Abrams Research Center on Neurogenomics, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                },
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kaspi E",
+            "lastName": "Kaspi",
+            "firstName": "Evan",
+            "initials": "E",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Mittal A",
+            "lastName": "Mittal",
+            "firstName": "Angeli",
+            "initials": "A",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0002-3449-645X"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kuruvilla J",
+            "lastName": "Kuruvilla",
+            "firstName": "Joshua",
+            "initials": "J",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Abrams Research Center on Neurogenomics, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                },
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Piehl N",
+            "lastName": "Piehl",
+            "firstName": "Natalie",
+            "initials": "N",
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Abrams Research Center on Neurogenomics, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                },
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Ramakrishnan A",
+            "lastName": "Ramakrishnan",
+            "firstName": "Abhirami",
+            "initials": "A",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-8116-3685"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Abrams Research Center on Neurogenomics, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                },
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Appel S",
+            "lastName": "Appel",
+            "firstName": "Stanley",
+            "initials": "S",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-2747-6298"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Houston Methodist Neurological Institute, Houston Methodist Research Institute, Stanley H. Appel Department of Neurology, Houston Methodist Hospital, Houston, TX, USA."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Kiskinis E",
+            "lastName": "Kiskinis",
+            "firstName": "Evangelos",
+            "initials": "E",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0001-8342-8616"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA. evangelos.kiskinis@northwestern.edu."
+                }
+              ]
+            }
+          },
+          {
+            "fullName": "Gate D",
+            "lastName": "Gate",
+            "firstName": "David",
+            "initials": "D",
+            "authorId": {
+              "type": "ORCID",
+              "value": "0000-0003-0481-9657"
+            },
+            "authorAffiliationDetailsList": {
+              "authorAffiliation": [
+                {
+                  "affiliation": "Abrams Research Center on Neurogenomics, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA. dgate@northwestern.edu."
+                },
+                {
+                  "affiliation": "The Ken & Ruth Davee Department of Neurology, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA. dgate@northwestern.edu."
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "authorIdList": {
+        "authorId": [
+          {
+            "type": "ORCID",
+            "value": "0000-0001-5501-2162"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-7569-0470"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-8116-3685"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0001-8342-8616"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-3449-645X"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-6634-934X"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0002-8629-3152"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-0481-9657"
+          },
+          {
+            "type": "ORCID",
+            "value": "0000-0003-2747-6298"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0001-4548-7284"
+          },
+          {
+            "type": "ORCID",
+            "value": "0009-0001-9126-6239"
+          }
+        ]
+      },
+      "dataLinksTagsList": {
+        "dataLinkstag": [
+          "altmetrics",
+          "supporting_data"
+        ]
+      },
+      "journalInfo": {
+        "issue": "7",
+        "volume": "29",
+        "journalIssueId": 4227320,
+        "dateOfPublication": "2026 Jul",
+        "monthOfPublication": 7,
+        "yearOfPublication": 2026,
+        "journal": {
+          "medlineAbbreviation": "Nat Neurosci",
+          "title": "Nature neuroscience",
+          "essn": "1546-1726",
+          "issn": "1097-6256",
+          "nlmid": "9809671",
+          "isoabbreviation": "Nat Neurosci"
+        },
+        "printPublicationDate": "2026-07-01"
+      },
+      "pubYear": "2026",
+      "pageInfo": "1735-1748",
+      "abstractText": "Amyotrophic lateral sclerosis (ALS) is a fatal neurodegenerative disorder marked by progressive motor neuron (MN) degeneration in the brain and spinal cord. Although neuroinflammation is increasingly recognized as a hallmark of ALS, the precise molecular programs linking immune responses to MN pathology remain poorly defined. Using an integrated approach that combines single-cell and bulk RNA sequencing with spatial proteogenomics, we characterized both shared and distinct immune dynamics in peripheral blood and spinal cord tissues from patients with sporadic ALS and those carrying C9orf72 repeat expansions. Our analysis revealed broad immune remodeling in C9orf72 ALS, ALS subtype-specific and progression-associated differences in monocyte activation and antigen-experienced CD8 effector memory T cells with clonal features consistent with antigen-driven responses. Spatial mapping revealed complement activation and lipid-programmed myeloid states converging at sites of MN loss and TDP-43 pathology. Together, these findings connect peripheral and central immune alterations to ALS heterogeneity and highlight stratified immunomodulation as a potential therapeutic strategy.",
+      "affiliation": "Abrams Research Center on Neurogenomics, Feinberg School of Medicine, Northwestern University, Chicago, IL, USA.",
+      "publicationStatus": "ppublish",
+      "language": "eng",
+      "pubModel": "Print-Electronic",
+      "pubTypeList": {
+        "pubType": [
+          "research-article",
+          "Journal Article"
+        ]
+      },
+      "grantsList": {
+        "grant": [
+          {
+            "agency": "U.S. Department of Health &amp; Human Services | National Institutes of Health",
+            "grantId": "R01AG078713",
+            "orderIn": 0
+          },
+          {
+            "agency": "U.S. Department of Health & Human Services | National Institutes of Health (NIH)",
+            "grantId": "R01AG078713",
+            "orderIn": 0
+          },
+          {
+            "agency": "Target ALS",
+            "orderIn": 0
+          },
+          {
+            "agency": "BrightFocus Foundation",
+            "orderIn": 0
+          },
+          {
+            "agency": "Les Turner ALS Foundation",
+            "orderIn": 0
+          },
+          {
+            "agency": "New York Stem Cell Foundation",
+            "orderIn": 0
+          }
+        ]
+      },
+      "meshHeadingList": {
+        "meshHeading": [
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Spinal Cord",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Motor Neurons",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "CD8-Positive T-Lymphocytes",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Humans"
+          },
+          {
+            "majorTopic_YN": "Y",
+            "descriptorName": "Amyotrophic Lateral Sclerosis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "IM",
+                  "qualifierName": "immunology"
+                },
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "PA",
+                  "qualifierName": "pathology"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "DNA-Binding Proteins"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Gene Expression Profiling"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Single-Cell Analysis",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "MT",
+                  "qualifierName": "methods"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Transcriptome"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "C9orf72 Protein",
+            "meshQualifierList": {
+              "meshQualifier": [
+                {
+                  "majorTopic_YN": "N",
+                  "abbreviation": "GE",
+                  "qualifierName": "genetics"
+                }
+              ]
+            }
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Single-Cell Gene Expression Analysis"
+          },
+          {
+            "majorTopic_YN": "N",
+            "descriptorName": "Spatial Transcriptomics"
+          }
+        ]
+      },
+      "chemicalList": {
+        "chemical": [
+          {
+            "name": "DNA-Binding Proteins",
+            "registryNumber": "0"
+          },
+          {
+            "name": "C9orf72 protein, human",
+            "registryNumber": "0"
+          },
+          {
+            "name": "C9orf72 Protein",
+            "registryNumber": "0"
+          }
+        ]
+      },
+      "subsetList": {
+        "subset": [
+          {
+            "code": "IM",
+            "name": "Index Medicus"
+          }
+        ]
+      },
+      "fullTextUrlList": {
+        "fullTextUrl": [
+          {
+            "availability": "Subscription required",
+            "availabilityCode": "S",
+            "documentStyle": "doi",
+            "site": "DOI",
+            "url": "https://doi.org/10.1038/s41593-026-02300-5"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "html",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13337491"
+          },
+          {
+            "availability": "Open access",
+            "availabilityCode": "OA",
+            "documentStyle": "pdf",
+            "site": "Europe_PMC",
+            "url": "https://europepmc.org/articles/PMC13337491?pdf=render"
+          }
+        ]
+      },
+      "isOpenAccess": "Y",
+      "inEPMC": "Y",
+      "inPMC": "Y",
+      "citedByCount": 5,
+      "hasReferences": "Y",
+      "hasTextMinedTerms": "Y",
+      "hasDbCrossReferences": "N",
+      "hasPDF": "Y",
+      "hasBook": "N",
+      "hasSuppl": "Y",
+      "hasLabsLinks": "Y",
+      "hasData": "Y",
+      "license": "cc by-nc-nd",
+      "authMan": "N",
+      "epmcAuthMan": "N",
+      "nihAuthMan": "N",
+      "hasTMAccessionNumbers": "Y",
+      "tmAccessionTypeList": {
+        "accessionType": [
+          "geo",
+          "gen"
+        ]
+      },
+      "dateOfCompletion": "2026-07-07",
+      "dateOfCreation": "2026-05-14",
+      "dateOfRevision": "2026-08-13",
+      "electronicPublicationDate": "2026-05-14",
+      "firstPublicationDate": "2026-05-14",
+      "firstIndexDate": "2026-05-15",
+      "fullTextReceivedDate": "2026-09-03",
+      "hasEvaluations": "N"
+    }
+  ]
+}

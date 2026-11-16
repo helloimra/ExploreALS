@@ -1,0 +1,1318 @@
+{
+  "alphagenome": {
+    "kalrn_rs2173852": {
+      "variant": "chr3:124701255:G>C",
+      "rsid": "rs2173852",
+      "n_scored_rows": 11732,
+      "top_global_scores": [
+        {
+          "biosample_name": "dorsolateral prefrontal cortex",
+          "ontology_curie": "UBERON:0009834",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.8603515625,
+          "quantile_score": 0.999882161617279
+        },
+        {
+          "biosample_name": "parietal lobe",
+          "ontology_curie": "UBERON:0001872",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.66015625,
+          "quantile_score": 0.9998781085014343
+        },
+        {
+          "biosample_name": "diencephalon",
+          "ontology_curie": "UBERON:0001894",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.65625,
+          "quantile_score": 0.999882161617279
+        },
+        {
+          "biosample_name": "cerebellum",
+          "ontology_curie": "UBERON:0002037",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.640625,
+          "quantile_score": 0.9998739361763
+        },
+        {
+          "biosample_name": "spinal cord",
+          "ontology_curie": "UBERON:0002240",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.638671875,
+          "quantile_score": 0.9998650550842285
+        },
+        {
+          "biosample_name": "frontal cortex",
+          "ontology_curie": "UBERON:0001870",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.5927734375,
+          "quantile_score": 0.9998781085014343
+        },
+        {
+          "biosample_name": "occipital lobe",
+          "ontology_curie": "UBERON:0002021",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.568359375,
+          "quantile_score": 0.9998739361763
+        },
+        {
+          "biosample_name": "motor neuron",
+          "ontology_curie": "CL:0000100",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.568359375,
+          "quantile_score": 0.9998230934143066
+        },
+        {
+          "biosample_name": "spinal cord",
+          "ontology_curie": "UBERON:0002240",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.5634765625,
+          "quantile_score": 0.9998506307601929
+        },
+        {
+          "biosample_name": "temporal lobe",
+          "ontology_curie": "UBERON:0001871",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.53515625,
+          "quantile_score": 0.9998739361763
+        },
+        {
+          "biosample_name": "heart right ventricle",
+          "ontology_curie": "UBERON:0002080",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.490234375,
+          "quantile_score": 0.9998455047607422
+        },
+        {
+          "biosample_name": "camera-type eye",
+          "ontology_curie": "UBERON:0000019",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.4619140625,
+          "quantile_score": 0.9998455047607422
+        },
+        {
+          "biosample_name": "heart",
+          "ontology_curie": "UBERON:0000948",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.453125,
+          "quantile_score": 0.999860405921936
+        },
+        {
+          "biosample_name": "right cardiac atrium",
+          "ontology_curie": "UBERON:0002078",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.4306640625,
+          "quantile_score": 0.9998455047607422
+        },
+        {
+          "biosample_name": "metanephros",
+          "ontology_curie": "UBERON:0000081",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.4306640625,
+          "quantile_score": 0.9998106956481934
+        },
+        {
+          "biosample_name": "endocrine pancreas",
+          "ontology_curie": "UBERON:0000016",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.416015625,
+          "quantile_score": 0.9998230934143066
+        },
+        {
+          "biosample_name": "cerebellum",
+          "ontology_curie": "UBERON:0002037",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.3828125,
+          "quantile_score": 0.9998346567153931
+        },
+        {
+          "biosample_name": "liver",
+          "ontology_curie": "UBERON:0002107",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.3798828125,
+          "quantile_score": 0.9998230934143066
+        },
+        {
+          "biosample_name": "urinary bladder",
+          "ontology_curie": "UBERON:0001255",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.3779296875,
+          "quantile_score": 0.9997974038124084
+        },
+        {
+          "biosample_name": "liver",
+          "ontology_curie": "UBERON:0002107",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.365234375,
+          "quantile_score": 0.9998289942741394
+        },
+        {
+          "biosample_name": "adrenal gland",
+          "ontology_curie": "UBERON:0002369",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.357421875,
+          "quantile_score": 0.9997904300689697
+        },
+        {
+          "biosample_name": "left cardiac atrium",
+          "ontology_curie": "UBERON:0002079",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.34765625,
+          "quantile_score": 0.9998346567153931
+        },
+        {
+          "biosample_name": "adrenal gland",
+          "ontology_curie": "UBERON:0002369",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.3408203125,
+          "quantile_score": 0.9997974038124084
+        },
+        {
+          "biosample_name": "lung",
+          "ontology_curie": "UBERON:0002048",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.3408203125,
+          "quantile_score": 0.9997904300689697
+        },
+        {
+          "biosample_name": "muscle of trunk",
+          "ontology_curie": "UBERON:0001774",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.3369140625,
+          "quantile_score": 0.9997904300689697
+        }
+      ],
+      "brain_kalrn_scores": [
+        {
+          "biosample_name": "dorsolateral prefrontal cortex",
+          "ontology_curie": "UBERON:0009834",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.8603515625,
+          "quantile_score": 0.999882161617279
+        },
+        {
+          "biosample_name": "cerebellum",
+          "ontology_curie": "UBERON:0002037",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.640625,
+          "quantile_score": 0.9998739361763
+        },
+        {
+          "biosample_name": "spinal cord",
+          "ontology_curie": "UBERON:0002240",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.638671875,
+          "quantile_score": 0.9998650550842285
+        },
+        {
+          "biosample_name": "frontal cortex",
+          "ontology_curie": "UBERON:0001870",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.5927734375,
+          "quantile_score": 0.9998781085014343
+        },
+        {
+          "biosample_name": "motor neuron",
+          "ontology_curie": "CL:0000100",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.568359375,
+          "quantile_score": 0.9998230934143066
+        },
+        {
+          "biosample_name": "spinal cord",
+          "ontology_curie": "UBERON:0002240",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.5634765625,
+          "quantile_score": 0.9998506307601929
+        },
+        {
+          "biosample_name": "cerebellum",
+          "ontology_curie": "UBERON:0002037",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.3828125,
+          "quantile_score": 0.9998346567153931
+        },
+        {
+          "biosample_name": "left renal cortex interstitium",
+          "ontology_curie": "UBERON:0018117",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.3115234375,
+          "quantile_score": 0.9998041391372681
+        },
+        {
+          "biosample_name": "renal cortex interstitium",
+          "ontology_curie": "UBERON:0005270",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.248046875,
+          "quantile_score": 0.9997974038124084
+        },
+        {
+          "biosample_name": "neurosphere",
+          "ontology_curie": "NTR:0000427",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.2470703125,
+          "quantile_score": 0.9997832179069519
+        },
+        {
+          "biosample_name": "right renal cortex interstitium",
+          "ontology_curie": "UBERON:0018118",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.2236328125,
+          "quantile_score": 0.9997904300689697
+        },
+        {
+          "biosample_name": "brain",
+          "ontology_curie": "UBERON:0000955",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.1591796875,
+          "quantile_score": 0.9998041391372681
+        },
+        {
+          "biosample_name": "neuronal stem cell",
+          "ontology_curie": "CL:0000047",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.1416015625,
+          "quantile_score": 0.9997343420982361
+        },
+        {
+          "biosample_name": "frontal cortex",
+          "ontology_curie": "UBERON:0001870",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.123046875,
+          "quantile_score": 0.9997974038124084
+        },
+        {
+          "biosample_name": "glutamatergic neuron",
+          "ontology_curie": "CL:0000679",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.111328125,
+          "quantile_score": 0.9998106956481934
+        },
+        {
+          "biosample_name": "dorsolateral prefrontal cortex",
+          "ontology_curie": "UBERON:0009834",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.09375,
+          "quantile_score": 0.9997904300689697
+        },
+        {
+          "biosample_name": "anterior cingulate cortex",
+          "ontology_curie": "UBERON:0009835",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.076171875,
+          "quantile_score": 0.9997832179069519
+        },
+        {
+          "biosample_name": "cerebellum",
+          "ontology_curie": "UBERON:0002037",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.041015625,
+          "quantile_score": 0.9997974038124084
+        },
+        {
+          "biosample_name": "cerebellar hemisphere",
+          "ontology_curie": "UBERON:0002245",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 1.033203125,
+          "quantile_score": 0.9997904300689697
+        },
+        {
+          "biosample_name": "SK-N-SH",
+          "ontology_curie": "EFO:0003072",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.99169921875,
+          "quantile_score": 0.9996853470802307
+        },
+        {
+          "biosample_name": "C1 segment of cervical spinal cord",
+          "ontology_curie": "UBERON:0006469",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.94921875,
+          "quantile_score": 0.9997343420982361
+        },
+        {
+          "biosample_name": "cortex of kidney",
+          "ontology_curie": "UBERON:0001225",
+          "gene_name": "KALRN",
+          "output_type": "SPLICE_JUNCTIONS",
+          "variant_scorer": "SpliceJunctionScorer()",
+          "raw_score": 0.85888671875,
+          "quantile_score": 0.9996957778930664
+        },
+        {
+          "biosample_name": "brain pericyte",
+          "ontology_curie": "CL:2000043",
+          "gene_name": null,
+          "output_type": "DNASE",
+          "variant_scorer": "CenterMaskScorer(requested_output=DNASE, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.6514482498168945,
+          "quantile_score": 0.9987610578536987
+        },
+        {
+          "biosample_name": "brain microvascular endothelial cell",
+          "ontology_curie": "CL:2000044",
+          "gene_name": null,
+          "output_type": "DNASE",
+          "variant_scorer": "CenterMaskScorer(requested_output=DNASE, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.6288127899169922,
+          "quantile_score": 0.9956668615341187
+        },
+        {
+          "biosample_name": "smooth muscle cell of the brain vasculature",
+          "ontology_curie": "CL:0002590",
+          "gene_name": null,
+          "output_type": "DNASE",
+          "variant_scorer": "CenterMaskScorer(requested_output=DNASE, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.5564041137695312,
+          "quantile_score": 0.9974778294563293
+        },
+        {
+          "biosample_name": "astrocyte of the spinal cord",
+          "ontology_curie": "CL:0002606",
+          "gene_name": null,
+          "output_type": "DNASE",
+          "variant_scorer": "CenterMaskScorer(requested_output=DNASE, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.5265564918518066,
+          "quantile_score": 0.9946926236152649
+        },
+        {
+          "biosample_name": "brain microvascular endothelial cell",
+          "ontology_curie": "CL:2000044",
+          "gene_name": null,
+          "output_type": "CHIP_HISTONE",
+          "variant_scorer": "CenterMaskScorer(requested_output=CHIP_HISTONE, width=2001, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.39896106719970703,
+          "quantile_score": 0.9990225434303284
+        },
+        {
+          "biosample_name": "motor neuron",
+          "ontology_curie": "CL:0000100",
+          "gene_name": null,
+          "output_type": "ATAC",
+          "variant_scorer": "CenterMaskScorer(requested_output=ATAC, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.3931884765625,
+          "quantile_score": 0.9895756840705872
+        },
+        {
+          "biosample_name": "astrocyte of the cerebellum",
+          "ontology_curie": "CL:0002603",
+          "gene_name": null,
+          "output_type": "DNASE",
+          "variant_scorer": "CenterMaskScorer(requested_output=DNASE, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.3658590316772461,
+          "quantile_score": 0.9905784130096436
+        },
+        {
+          "biosample_name": "brain microvascular endothelial cell",
+          "ontology_curie": "CL:2000044",
+          "gene_name": null,
+          "output_type": "CHIP_HISTONE",
+          "variant_scorer": "CenterMaskScorer(requested_output=CHIP_HISTONE, width=2001, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.2685728073120117,
+          "quantile_score": 0.9985325336456299
+        },
+        {
+          "biosample_name": "SK-N-SH",
+          "ontology_curie": "EFO:0003072",
+          "gene_name": null,
+          "output_type": "CHIP_HISTONE",
+          "variant_scorer": "CenterMaskScorer(requested_output=CHIP_HISTONE, width=2001, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.2655305862426758,
+          "quantile_score": 0.9960848093032837
+        },
+        {
+          "biosample_name": "SK-N-SH",
+          "ontology_curie": "EFO:0003072",
+          "gene_name": null,
+          "output_type": "CHIP_TF",
+          "variant_scorer": "CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.22098731994628906,
+          "quantile_score": 0.9809011220932007
+        },
+        {
+          "biosample_name": "astrocyte of the hippocampus",
+          "ontology_curie": "CL:0002604",
+          "gene_name": null,
+          "output_type": "DNASE",
+          "variant_scorer": "CenterMaskScorer(requested_output=DNASE, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.21626043319702148,
+          "quantile_score": 0.9750292301177979
+        },
+        {
+          "biosample_name": "SK-N-SH",
+          "ontology_curie": "EFO:0003072",
+          "gene_name": null,
+          "output_type": "CHIP_TF",
+          "variant_scorer": "CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.1866006851196289,
+          "quantile_score": 0.9809011220932007
+        },
+        {
+          "biosample_name": "SK-N-SH",
+          "ontology_curie": "EFO:0003072",
+          "gene_name": null,
+          "output_type": "CHIP_HISTONE",
+          "variant_scorer": "CenterMaskScorer(requested_output=CHIP_HISTONE, width=2001, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.16655921936035156,
+          "quantile_score": 0.9985813498497009
+        },
+        {
+          "biosample_name": "brain",
+          "ontology_curie": "UBERON:0000955",
+          "gene_name": null,
+          "output_type": "DNASE",
+          "variant_scorer": "CenterMaskScorer(requested_output=DNASE, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.16599225997924805,
+          "quantile_score": 0.970487654209137
+        },
+        {
+          "biosample_name": "spinal cord",
+          "ontology_curie": "UBERON:0002240",
+          "gene_name": null,
+          "output_type": "DNASE",
+          "variant_scorer": "CenterMaskScorer(requested_output=DNASE, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.16141891479492188,
+          "quantile_score": 0.9723945260047913
+        },
+        {
+          "biosample_name": "dorsolateral prefrontal cortex",
+          "ontology_curie": "UBERON:0009834",
+          "gene_name": null,
+          "output_type": "DNASE",
+          "variant_scorer": "CenterMaskScorer(requested_output=DNASE, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.14437246322631836,
+          "quantile_score": 0.925530195236206
+        },
+        {
+          "biosample_name": "frontal cortex",
+          "ontology_curie": "UBERON:0001870",
+          "gene_name": null,
+          "output_type": "DNASE",
+          "variant_scorer": "CenterMaskScorer(requested_output=DNASE, width=501, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.1416916847229004,
+          "quantile_score": 0.9880717396736145
+        },
+        {
+          "biosample_name": "astrocyte of the cerebellum",
+          "ontology_curie": "CL:0002603",
+          "gene_name": null,
+          "output_type": "CHIP_HISTONE",
+          "variant_scorer": "CenterMaskScorer(requested_output=CHIP_HISTONE, width=2001, aggregation_type=DIFF_LOG2_SUM)",
+          "raw_score": 0.13750362396240234,
+          "quantile_score": 0.9945102334022522
+        }
+      ],
+      "splice_sites_base_probs": [
+        {
+          "pos_1b": 124700977,
+          "track_name": "donor",
+          "strand": "+",
+          "biosample": "",
+          "ref_G_prob": 0.000183,
+          "alt_C_prob": 0.000146,
+          "delta_alt_minus_ref": -3.7e-05
+        },
+        {
+          "pos_1b": 124700977,
+          "track_name": "acceptor",
+          "strand": "+",
+          "biosample": "",
+          "ref_G_prob": 0.139648,
+          "alt_C_prob": 0.091309,
+          "delta_alt_minus_ref": -0.04834
+        },
+        {
+          "pos_1b": 124700977,
+          "track_name": "donor",
+          "strand": "-",
+          "biosample": "",
+          "ref_G_prob": 7.6e-05,
+          "alt_C_prob": 6.7e-05,
+          "delta_alt_minus_ref": -1e-05
+        },
+        {
+          "pos_1b": 124700977,
+          "track_name": "acceptor",
+          "strand": "-",
+          "biosample": "",
+          "ref_G_prob": 5.2e-05,
+          "alt_C_prob": 5.1e-05,
+          "delta_alt_minus_ref": -2e-06
+        },
+        {
+          "pos_1b": 124701093,
+          "track_name": "donor",
+          "strand": "+",
+          "biosample": "",
+          "ref_G_prob": 0.000117,
+          "alt_C_prob": 5.3e-05,
+          "delta_alt_minus_ref": -6.4e-05
+        },
+        {
+          "pos_1b": 124701093,
+          "track_name": "acceptor",
+          "strand": "+",
+          "biosample": "",
+          "ref_G_prob": 0.068359,
+          "alt_C_prob": 0.014709,
+          "delta_alt_minus_ref": -0.05365
+        },
+        {
+          "pos_1b": 124701093,
+          "track_name": "donor",
+          "strand": "-",
+          "biosample": "",
+          "ref_G_prob": 1.6e-05,
+          "alt_C_prob": 8e-06,
+          "delta_alt_minus_ref": -8e-06
+        },
+        {
+          "pos_1b": 124701093,
+          "track_name": "acceptor",
+          "strand": "-",
+          "biosample": "",
+          "ref_G_prob": 0.000175,
+          "alt_C_prob": 0.000103,
+          "delta_alt_minus_ref": -7.3e-05
+        },
+        {
+          "pos_1b": 124701255,
+          "track_name": "donor",
+          "strand": "+",
+          "biosample": "",
+          "ref_G_prob": 0.476562,
+          "alt_C_prob": 0.006256,
+          "delta_alt_minus_ref": -0.470306
+        },
+        {
+          "pos_1b": 124701255,
+          "track_name": "acceptor",
+          "strand": "+",
+          "biosample": "",
+          "ref_G_prob": 0.000127,
+          "alt_C_prob": 2.9e-05,
+          "delta_alt_minus_ref": -9.8e-05
+        },
+        {
+          "pos_1b": 124701255,
+          "track_name": "donor",
+          "strand": "-",
+          "biosample": "",
+          "ref_G_prob": 4e-05,
+          "alt_C_prob": 5e-06,
+          "delta_alt_minus_ref": -3.4e-05
+        },
+        {
+          "pos_1b": 124701255,
+          "track_name": "acceptor",
+          "strand": "-",
+          "biosample": "",
+          "ref_G_prob": 7.4e-05,
+          "alt_C_prob": 1.7e-05,
+          "delta_alt_minus_ref": -5.7e-05
+        },
+        {
+          "pos_1b": 124701256,
+          "track_name": "donor",
+          "strand": "+",
+          "biosample": "",
+          "ref_G_prob": 1e-06,
+          "alt_C_prob": 1e-06,
+          "delta_alt_minus_ref": 0.0
+        },
+        {
+          "pos_1b": 124701256,
+          "track_name": "acceptor",
+          "strand": "+",
+          "biosample": "",
+          "ref_G_prob": 0.000113,
+          "alt_C_prob": 2e-06,
+          "delta_alt_minus_ref": -0.000111
+        },
+        {
+          "pos_1b": 124701256,
+          "track_name": "donor",
+          "strand": "-",
+          "biosample": "",
+          "ref_G_prob": 1e-06,
+          "alt_C_prob": 4e-06,
+          "delta_alt_minus_ref": 3e-06
+        },
+        {
+          "pos_1b": 124701256,
+          "track_name": "acceptor",
+          "strand": "-",
+          "biosample": "",
+          "ref_G_prob": 0.0,
+          "alt_C_prob": 0.0,
+          "delta_alt_minus_ref": -0.0
+        }
+      ],
+      "splice_usage_base_probs": [
+        {
+          "pos_1b": 124700977,
+          "biosample": "brain",
+          "ontology": "UBERON:0000955",
+          "ref_G_usage": 0.000216,
+          "alt_C_usage": 0.000116,
+          "delta_usage": -0.000101
+        },
+        {
+          "pos_1b": 124700977,
+          "biosample": "frontal cortex",
+          "ontology": "UBERON:0001870",
+          "ref_G_usage": 0.000296,
+          "alt_C_usage": 0.000158,
+          "delta_usage": -0.000137
+        },
+        {
+          "pos_1b": 124700977,
+          "biosample": "frontal cortex",
+          "ontology": "UBERON:0001870",
+          "ref_G_usage": 0.000278,
+          "alt_C_usage": 0.00014,
+          "delta_usage": -0.000138
+        },
+        {
+          "pos_1b": 124700977,
+          "biosample": "spinal cord",
+          "ontology": "UBERON:0002240",
+          "ref_G_usage": 0.000278,
+          "alt_C_usage": 0.00014,
+          "delta_usage": -0.000138
+        },
+        {
+          "pos_1b": 124700977,
+          "biosample": "spinal cord",
+          "ontology": "UBERON:0002240",
+          "ref_G_usage": 0.000336,
+          "alt_C_usage": 0.000169,
+          "delta_usage": -0.000167
+        },
+        {
+          "pos_1b": 124701093,
+          "biosample": "brain",
+          "ontology": "UBERON:0000955",
+          "ref_G_usage": 0.000103,
+          "alt_C_usage": 3.3e-05,
+          "delta_usage": -6.9e-05
+        },
+        {
+          "pos_1b": 124701093,
+          "biosample": "frontal cortex",
+          "ontology": "UBERON:0001870",
+          "ref_G_usage": 0.000158,
+          "alt_C_usage": 5.1e-05,
+          "delta_usage": -0.000107
+        },
+        {
+          "pos_1b": 124701093,
+          "biosample": "frontal cortex",
+          "ontology": "UBERON:0001870",
+          "ref_G_usage": 0.000149,
+          "alt_C_usage": 4.3e-05,
+          "delta_usage": -0.000106
+        },
+        {
+          "pos_1b": 124701093,
+          "biosample": "spinal cord",
+          "ontology": "UBERON:0002240",
+          "ref_G_usage": 0.000132,
+          "alt_C_usage": 4e-05,
+          "delta_usage": -9.2e-05
+        },
+        {
+          "pos_1b": 124701093,
+          "biosample": "spinal cord",
+          "ontology": "UBERON:0002240",
+          "ref_G_usage": 0.000169,
+          "alt_C_usage": 4.8e-05,
+          "delta_usage": -0.00012
+        },
+        {
+          "pos_1b": 124701255,
+          "biosample": "brain",
+          "ontology": "UBERON:0000955",
+          "ref_G_usage": 0.000881,
+          "alt_C_usage": 1.9e-05,
+          "delta_usage": -0.000862
+        },
+        {
+          "pos_1b": 124701255,
+          "biosample": "frontal cortex",
+          "ontology": "UBERON:0001870",
+          "ref_G_usage": 0.001328,
+          "alt_C_usage": 2.8e-05,
+          "delta_usage": -0.0013
+        },
+        {
+          "pos_1b": 124701255,
+          "biosample": "frontal cortex",
+          "ontology": "UBERON:0001870",
+          "ref_G_usage": 0.001366,
+          "alt_C_usage": 2.4e-05,
+          "delta_usage": -0.001341
+        },
+        {
+          "pos_1b": 124701255,
+          "biosample": "spinal cord",
+          "ontology": "UBERON:0002240",
+          "ref_G_usage": 0.001282,
+          "alt_C_usage": 2.1e-05,
+          "delta_usage": -0.00126
+        },
+        {
+          "pos_1b": 124701255,
+          "biosample": "spinal cord",
+          "ontology": "UBERON:0002240",
+          "ref_G_usage": 0.001648,
+          "alt_C_usage": 2.8e-05,
+          "delta_usage": -0.00162
+        },
+        {
+          "pos_1b": 124701256,
+          "biosample": "brain",
+          "ontology": "UBERON:0000955",
+          "ref_G_usage": 3e-06,
+          "alt_C_usage": 2e-06,
+          "delta_usage": -1e-06
+        },
+        {
+          "pos_1b": 124701256,
+          "biosample": "frontal cortex",
+          "ontology": "UBERON:0001870",
+          "ref_G_usage": 4e-06,
+          "alt_C_usage": 3e-06,
+          "delta_usage": -1e-06
+        },
+        {
+          "pos_1b": 124701256,
+          "biosample": "frontal cortex",
+          "ontology": "UBERON:0001870",
+          "ref_G_usage": 4e-06,
+          "alt_C_usage": 2e-06,
+          "delta_usage": -1e-06
+        },
+        {
+          "pos_1b": 124701256,
+          "biosample": "spinal cord",
+          "ontology": "UBERON:0002240",
+          "ref_G_usage": 3e-06,
+          "alt_C_usage": 2e-06,
+          "delta_usage": -1e-06
+        },
+        {
+          "pos_1b": 124701256,
+          "biosample": "spinal cord",
+          "ontology": "UBERON:0002240",
+          "ref_G_usage": 4e-06,
+          "alt_C_usage": 2e-06,
+          "delta_usage": -1e-06
+        }
+      ]
+    },
+    "ptprt_intron": {
+      "label": "PTPRT",
+      "intron_1b": "chr20:42098552-42102124(-)",
+      "top_internal_splice_peaks": [
+        {
+          "pos_1b": 42099289,
+          "prob": 0.19824,
+          "track": "acceptor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 42100500,
+          "prob": 0.08398,
+          "track": "acceptor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 42098647,
+          "prob": 0.04248,
+          "track": "acceptor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 42099129,
+          "prob": 0.04053,
+          "track": "donor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 42101409,
+          "prob": 0.03882,
+          "track": "acceptor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 42101788,
+          "prob": 0.03784,
+          "track": "donor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 42101946,
+          "prob": 0.02771,
+          "track": "donor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 42101970,
+          "prob": 0.02551,
+          "track": "acceptor",
+          "biosample": ""
+        }
+      ]
+    },
+    "prune2_intron": {
+      "label": "PRUNE2",
+      "intron_1b": "chr9:76638288-76644739(-)",
+      "top_internal_splice_peaks": [
+        {
+          "pos_1b": 76641980,
+          "prob": 0.99609,
+          "track": "acceptor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 76641972,
+          "prob": 0.99219,
+          "track": "donor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 76641790,
+          "prob": 0.57031,
+          "track": "donor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 76641905,
+          "prob": 0.53906,
+          "track": "donor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 76641833,
+          "prob": 0.17969,
+          "track": "acceptor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 76641789,
+          "prob": 0.14551,
+          "track": "acceptor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 76642787,
+          "prob": 0.09814,
+          "track": "donor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 76641439,
+          "prob": 0.07715,
+          "track": "acceptor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 76641903,
+          "prob": 0.0752,
+          "track": "donor",
+          "biosample": ""
+        },
+        {
+          "pos_1b": 76641977,
+          "prob": 0.04053,
+          "track": "acceptor",
+          "biosample": ""
+        }
+      ]
+    }
+  },
+  "kalrn_rs2173852_human_genetics": {
+    "rsid": "rs2173852",
+    "grch38_variant": "chr3:124701255:G>C",
+    "gnomad_af_total": 0.1747,
+    "gnomad_r4_af_splice_gate": 0.1761,
+    "gnomad_pop_af": {
+      "NFE": 0.2107,
+      "AFR": 0.0984,
+      "EAS": 0.2356
+    },
+    "expected_nfe_diploid_genotypes": {
+      "G_G_homozygous_permissive": 0.623,
+      "G_C_heterozygous": 0.3326,
+      "C_C_homozygous_protected": 0.0444
+    },
+    "regulomedb_ranking": "1f",
+    "dbsnp_clinvar_pathogenic_traits_count": 0,
+    "opentargets_v4_als_ftd_gwas_credible_sets_count": 0,
+    "opentargets_v4_als_studies_indexed": 40,
+    "opentargets_v4_unc13a_rs12608932_als_credible_sets_benchmark": {
+      "variant_id": "19_17641880_A_C",
+      "als_credible_sets_count": 6,
+      "lead_study_id": "GCST90027163",
+      "lead_p_value": 4.04e-25
+    },
+    "opentargets_v4_non_neurodegenerative_gwas_credible_sets_count": 12,
+    "opentargets_v4_cns_qtl_credible_sets_count": 0,
+    "opentargets_v4_peripheral_non_cns_qtl_credible_sets_count": 16,
+    "opentargets_v4_kalrn_locus_als_ftd_credible_sets_count": 0,
+    "opentargets_v4_kalrn_top_vascular_disease": {
+      "disease_id": "MONDO_0021661",
+      "name": "coronary atherosclerosis",
+      "overall_score": 0.2029
+    },
+    "als_gwas_natural_experiment_paradox": "Despite 37.7% of non-Finnish Europeans carrying G/C or C/C at rs2173852 (NFE AF=21.07%) and >99.9% power in van Rheenen 2021 (29,612 ALS vs 122,656 controls) for OR<=0.91, rs2173852 and KALRN show 0 ALS/FTD GWAS credible sets in Open Targets v4 (vs 6 ALS GWAS credible sets peaking at p=4.04e-25 for UNC13A rs12608932), arguing against Intron 56 Kalirin-12/DuET cryptic splicing as a rate-limiting human motor-ALS survival determinant.",
+    "gtex_v8_rs2173852_cns_eqtl_sqtl_count": 0,
+    "gtex_v8_rs2173852_peripheral_sqtl": {
+      "tissue": "Skin_Sun_Exposed_Lower_leg",
+      "p_value": 2.58e-06,
+      "nes": -0.397
+    },
+    "gtex_v8_kalrn_brain_cortex_sqtl_summary": {
+      "num_sqtls": 82,
+      "cluster_id": "chr3:124496413:124514599:clu_36401:ENSG00000160145.15",
+      "pos_min_grch38": 124498822,
+      "pos_max_grch38": 124559321,
+      "lead_snp": "rs4677929",
+      "lead_p_value": 1.40548e-13,
+      "lead_nes": -0.495336,
+      "distance_upstream_of_intron56_bp": 140713,
+      "biological_interpretation": "All 82 baseline GTEx Brain_Cortex sQTLs regulate the Kalirin-7 alternative terminal exon cluster (~124.50-124.56 Mb); rs2173852 (124,701,255) has 0 baseline CNS eQTL/sQTLs in TDP-43-intact brains and acts conditionally upon nuclear TDP-43 loss."
+    }
+  },
+  "gtex_v8_median_tpm": {
+    "KALRN": {
+      "gencode_id": "ENSG00000160145.15",
+      "Artery_Aorta": 37.39,
+      "Artery_Coronary": 23.12,
+      "Brain_Frontal_Cortex_BA9": 22.0,
+      "Brain_Cortex": 19.33,
+      "Brain_Anterior_cingulate_cortex_BA24": 13.08,
+      "Heart_Left_Ventricle": 3.58,
+      "Liver": 2.14,
+      "Kidney_Cortex": 1.76,
+      "Brain_Spinal_cord_cervical_c-1": 1.5,
+      "Whole_Blood": 0.057
+    },
+    "ATG4B": {
+      "gencode_id": "ENSG00000168397.16",
+      "Brain_Cerebellum": 105.8,
+      "Brain_Cortex": 45.07,
+      "Brain_Frontal_Cortex_BA9": 41.76,
+      "Kidney_Cortex": 38.68,
+      "Brain_Spinal_cord_cervical_c-1": 30.29,
+      "Liver": 26.08,
+      "Whole_Blood": 22.89,
+      "Heart_Left_Ventricle": 16.48
+    },
+    "ELK1": {
+      "gencode_id": "ENSG00000126767.17",
+      "Ovary": 80.11,
+      "Brain_Cerebellum": 79.86,
+      "Brain_Cortex": 46.17,
+      "Brain_Frontal_Cortex_BA9": 39.89,
+      "Liver": 14.6,
+      "Kidney_Cortex": 9.42,
+      "Heart_Left_Ventricle": 9.2,
+      "Whole_Blood": 7.33,
+      "Brain_Spinal_cord_cervical_c-1": 7.02
+    }
+  },
+  "uniprot_domain_architecture": {
+    "KALRN_O60229": {
+      "accession": "O60229",
+      "canonical_isoform_1_kalirin12_len_aa": 2986,
+      "isoform_2_kalirin7_len_aa": 1663,
+      "isoform_2_missing_aa_range": [
+        1664,
+        2986
+      ],
+      "isoform_4_duet_missing_aa_range": [
+        1,
+        1697
+      ],
+      "isoform_5_kalirin9_missing_aa_range": [
+        2399,
+        2986
+      ],
+      "domains_1b": [
+        {
+          "name": "CRAL-TRIO",
+          "start": 35,
+          "end": 180
+        },
+        {
+          "name": "Spectrin_repeats_1_9",
+          "start": 167,
+          "end": 1234
+        },
+        {
+          "name": "DH_1_Rac1_RhoG_GEF",
+          "start": 1281,
+          "end": 1456
+        },
+        {
+          "name": "PH_1",
+          "start": 1468,
+          "end": 1580
+        },
+        {
+          "name": "SH3_1",
+          "start": 1646,
+          "end": 1711
+        },
+        {
+          "name": "DH_2_RhoA_GEF",
+          "start": 1929,
+          "end": 2104
+        },
+        {
+          "name": "PH_2",
+          "start": 2116,
+          "end": 2226
+        },
+        {
+          "name": "SH3_2",
+          "start": 2321,
+          "end": 2386
+        },
+        {
+          "name": "Ig_like_C2",
+          "start": 2471,
+          "end": 2564
+        },
+        {
+          "name": "Fibronectin_type_III",
+          "start": 2571,
+          "end": 2665
+        },
+        {
+          "name": "Ser_Thr_Protein_Kinase",
+          "start": 2684,
+          "end": 2938
+        }
+      ],
+      "atp_binding_sites_1b": [
+        [
+          2690,
+          2698
+        ],
+        [
+          2713,
+          2713
+        ]
+      ],
+      "kinase_active_site_asp_1b": 2803,
+      "kinase_mutagenesis_k2713a_pmid": "10023074"
+    },
+    "ATG4B_Q9Y4P1": {
+      "accession": "Q9Y4P1",
+      "canonical_len_aa": 393,
+      "catalytic_triad_1b": [
+        74,
+        278,
+        280
+      ],
+      "ulk1_inhibitory_phosphosite_1b": {
+        "pos": 316,
+        "pmid": "28821708"
+      },
+      "exon10_last_residue_1b": 319,
+      "central_beta_strand_split_by_ce_1b": [
+        315,
+        325
+      ],
+      "redox_disulfide_cys292_cys361_pmid": "31880198",
+      "stk26_activating_phosphosite_ser383_pmid": "26378241",
+      "c_terminal_lir_motif_1b": {
+        "start": 388,
+        "end": 391,
+        "pmids": [
+          "28287329",
+          "29458288"
+        ]
+      }
+    }
+  },
+  "chembl_atg4b_modality_audit": {
+    "target_chembl_id": "CHEMBL1741221",
+    "uniprot_id": "Q9Y4P1",
+    "pref_name": "Cysteine protease ATG4B",
+    "organism": "Homo sapiens",
+    "total_bioactivity_records": 995,
+    "primary_confirmatory_uhts_assay": "CHEMBL1738670",
+    "related_pubchem_aids": [
+      "AID504462",
+      "AID504475"
+    ],
+    "representative_inhibitor_ic50_um_range": [
+      3.46,
+      43.0
+    ],
+    "small_molecule_catalytic_activators_count": 0,
+    "modality_conclusion": "All 995 ChEMBL bioactivity records for human ATG4B (CHEMBL1741221) derive from catalytic inhibitor campaigns (0 small-molecule activators), confirming small-molecule chemistry acts in the wrong pharmacological direction for ALS loss-of-function and locking intrathecal steric SSO (#1 chr2:241668981-241668998(+)) as the sole mechanism-matched rescue modality."
+  },
+  "recent_literature_2025_2026": {
+    "kozareva_2025_atg4b_validation": {
+      "first_author": "Velina Kozareva",
+      "senior_authors": [
+        "Michael Emmerson Ward",
+        "Ernest Fraenkel",
+        "Sarah E. Kargbo-Hill"
+      ],
+      "year": 2025,
+      "doi": "10.1101/2025.09.29.679403",
+      "openalex_id": "W4414640274",
+      "title": "Integrative multiomic analysis links TDP-43-driven splicing defects to cascading proteomic disruption of ALS/FTD pathways",
+      "key_finding": "Generated paired RNA-seq + proteomics in TDP-43-depleted human iPSC neurons (>700-protein subnetwork enriched for mRNA processing, synaptic function, and autophagy) and experimentally validated network-predicted effects of cryptic splicing in ATG4B alongside STMN2 and DAPK1."
+    },
+    "vandijk_2026_snrna_stmn2_ce_states": {
+      "first_author": "Charlotte H. van Dijk",
+      "senior_authors": [
+        "Johnathan Cooper-Knock",
+        "Kevin Patrick Kenna"
+      ],
+      "year": 2026,
+      "doi": "10.64898/2026.08.07.743523",
+      "openalex_id": "W7202378075",
+      "title": "Pathology-defined cell states reveal reproducible transcriptomic signatures across ALS cortical single-nucleus RNA-seq studies",
+      "key_finding": "Across 4 cortical ALS snRNA-seq cohorts (140 donors, 87 ALS), conventional case-control DE clusters by study, whereas STMN2-cryptic-exon-positive nuclei reveal reproducible TDP-43 signatures while sparse polyadenylation site changes were not reproducibly detected across cohorts."
+    }
+  },
+  "molstar_sidecar_annotations_2z0d": {
+    "pdb_id": "2Z0D",
+    "artifact_cif": "structures/pdb_00002z0d.cif",
+    "selections": [
+      {
+        "id": "s1",
+        "chain": "A",
+        "residues": [
+          74,
+          278,
+          280
+        ],
+        "color": "#ffc266",
+        "label": "ATG4B catalytic triad (Cys74, Asp278, H280A trap)"
+      },
+      {
+        "id": "s2",
+        "chain": "B",
+        "residues": [
+          89,
+          90,
+          91,
+          119,
+          120
+        ],
+        "color": "#00f0ff",
+        "label": "LC3B scissile Phe119-Gly120 tail & Val89-Val91 patch"
+      },
+      {
+        "id": "s3",
+        "chain": "A",
+        "residues_range": [
+          320,
+          354
+        ],
+        "color": "#ff1f3d",
+        "label": "Exons 11-12 segment (Gly320-Leu354) + disordered LIR (388-391) lost via TDP-43 CE after Glu319"
+      }
+    ]
+  }
+}

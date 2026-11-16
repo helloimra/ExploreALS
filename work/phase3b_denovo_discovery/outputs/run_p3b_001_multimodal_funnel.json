@@ -1,0 +1,2779 @@
+{
+  "analysis_run_id": "RUN-P3B-001",
+  "excluded_explore_counts": {
+    "n_genes": 49,
+    "n_drug_aliases": 30
+  },
+  "funnel1_cryptic_splicing": {
+    "partition_non_explore_genes": {
+      "total": 1826,
+      "cryptic_junc_riboseq_dn_and_human_rep": 7,
+      "cryptic_junc_riboseq_dn_i3n_only": 6,
+      "cryptic_junc_without_riboseq_dn": 161,
+      "canonical_isoform_shift_only": 1652
+    },
+    "genomewide_brown_replicated_hits": [
+      {
+        "gene": "TRAPPC12",
+        "n_human_modalities": 2,
+        "in_ma2022": 1,
+        "in_bye_sals_t6": 1,
+        "in_spillman_dia_dn": 0,
+        "riboseq_log2fc": -1.2127,
+        "riboseq_padj": 0.005154348591869604,
+        "runnerup_disposition": "ADOPTED_PHASE3B"
+      },
+      {
+        "gene": "BCKDHB",
+        "n_human_modalities": 1,
+        "in_ma2022": 0,
+        "in_bye_sals_t6": 0,
+        "in_spillman_dia_dn": 1,
+        "riboseq_log2fc": -2.5593,
+        "riboseq_padj": 0.04232281959491771,
+        "runnerup_disposition": "Autosomal-recessive maple syrup urine disease (MSUD) mitochondrial ketoacid dehydrogenase subunit; haplo-tolerant (pLI=0) metabolic enzyme rather than neuronal axon/synapse regulator."
+      },
+      {
+        "gene": "PFKP",
+        "n_human_modalities": 1,
+        "in_ma2022": 0,
+        "in_bye_sals_t6": 0,
+        "in_spillman_dia_dn": 1,
+        "riboseq_log2fc": -1.8646,
+        "riboseq_padj": 3.121891747026984e-05,
+        "runnerup_disposition": "ADOPTED_PHASE3B"
+      },
+      {
+        "gene": "ATG4B",
+        "n_human_modalities": 1,
+        "in_ma2022": 0,
+        "in_bye_sals_t6": 0,
+        "in_spillman_dia_dn": 1,
+        "riboseq_log2fc": -1.5501,
+        "riboseq_padj": 5.776091433976872e-06,
+        "runnerup_disposition": "ADOPTED_PHASE3B"
+      },
+      {
+        "gene": "CELF5",
+        "n_human_modalities": 1,
+        "in_ma2022": 0,
+        "in_bye_sals_t6": 1,
+        "in_spillman_dia_dn": 0,
+        "riboseq_log2fc": -1.3749,
+        "riboseq_padj": 5.649217296311487e-07,
+        "runnerup_disposition": "ADOPTED_PHASE3B"
+      },
+      {
+        "gene": "C20orf194",
+        "n_human_modalities": 1,
+        "in_ma2022": 0,
+        "in_bye_sals_t6": 1,
+        "in_spillman_dia_dn": 0,
+        "riboseq_log2fc": -1.2188,
+        "riboseq_padj": 0.00027741112065068625,
+        "runnerup_disposition": "Uncharacterized open reading frame with unknown neuronal substrate or functional assay."
+      },
+      {
+        "gene": "CAMK2B",
+        "n_human_modalities": 1,
+        "in_ma2022": 1,
+        "in_bye_sals_t6": 0,
+        "in_spillman_dia_dn": 0,
+        "riboseq_log2fc": -0.8797,
+        "riboseq_padj": 0.008599808892632486,
+        "runnerup_disposition": "Synaptic kinase replicated only in Ma 2022 without Bye sALS iPSC-MN splicing or Spillman fraction-proteomic loss."
+      }
+    ],
+    "genomewide_ma2022_multimodal_top15": [
+      {
+        "gene": "PRUNE2",
+        "riboseq_log2fc": -1.2079,
+        "in_zhang_mn_bh05_dn": 1,
+        "in_spillman_dia_dn": 1
+      },
+      {
+        "gene": "SCN1A",
+        "riboseq_log2fc": -3.0245,
+        "in_zhang_mn_bh05_dn": 0,
+        "in_spillman_dia_dn": 1
+      },
+      {
+        "gene": "PTPRT",
+        "riboseq_log2fc": -2.7829,
+        "in_zhang_mn_bh05_dn": 0,
+        "in_spillman_dia_dn": 1
+      },
+      {
+        "gene": "CYFIP2",
+        "riboseq_log2fc": -1.3743,
+        "in_zhang_mn_bh05_dn": 0,
+        "in_spillman_dia_dn": 0
+      },
+      {
+        "gene": "MADD",
+        "riboseq_log2fc": -1.2215,
+        "in_zhang_mn_bh05_dn": 0,
+        "in_spillman_dia_dn": 1
+      },
+      {
+        "gene": "TRAPPC12",
+        "riboseq_log2fc": -1.2127,
+        "in_zhang_mn_bh05_dn": 0,
+        "in_spillman_dia_dn": 0
+      },
+      {
+        "gene": "CADPS",
+        "riboseq_log2fc": -1.0422,
+        "in_zhang_mn_bh05_dn": 0,
+        "in_spillman_dia_dn": 0
+      },
+      {
+        "gene": "RAP1GAP",
+        "riboseq_log2fc": -0.9998,
+        "in_zhang_mn_bh05_dn": 0,
+        "in_spillman_dia_dn": 1
+      },
+      {
+        "gene": "CAMK2B",
+        "riboseq_log2fc": -0.8797,
+        "in_zhang_mn_bh05_dn": 0,
+        "in_spillman_dia_dn": 0
+      },
+      {
+        "gene": "ICA1",
+        "riboseq_log2fc": -0.848,
+        "in_zhang_mn_bh05_dn": 0,
+        "in_spillman_dia_dn": 1
+      },
+      {
+        "gene": "EPB41L1",
+        "riboseq_log2fc": -0.5608,
+        "in_zhang_mn_bh05_dn": 0,
+        "in_spillman_dia_dn": 1
+      },
+      {
+        "gene": "ANK3",
+        "riboseq_log2fc": -0.3006,
+        "in_zhang_mn_bh05_dn": 0,
+        "in_spillman_dia_dn": 1
+      },
+      {
+        "gene": "FKBP15",
+        "riboseq_log2fc": -0.2502,
+        "in_zhang_mn_bh05_dn": 0,
+        "in_spillman_dia_dn": 1
+      },
+      {
+        "gene": "STXBP1",
+        "riboseq_log2fc": -0.1866,
+        "in_zhang_mn_bh05_dn": 0,
+        "in_spillman_dia_dn": 1
+      },
+      {
+        "gene": "VWA8",
+        "riboseq_log2fc": -0.1578,
+        "in_zhang_mn_bh05_dn": 0,
+        "in_spillman_dia_dn": 1
+      }
+    ],
+    "brown_junctions_selected": [
+      {
+        "gene_name": "PFKP",
+        "lsv_id": "ENSG00000067057.17:s:3099275-3099352",
+        "deltaPSI": 0.30924987375875,
+        "FDR": 2.20066293744583e-17,
+        "control_e_psi": 0.004,
+        "tdp_kd_e_psi": 0.336,
+        "chr": "chr10",
+        "strand": "+",
+        "paste_into_igv_junction": "chr10:3099352-3099557",
+        "paste_into_igv_exon": "chr10:3099275-3099352",
+        "junc_cat": "novel_acceptor",
+        "cryptic_junction": 1
+      },
+      {
+        "gene_name": "PFKP",
+        "lsv_id": "ENSG00000067057.17:s:3099275-3099352",
+        "deltaPSI": -0.309249917803954,
+        "FDR": 0.0,
+        "control_e_psi": 0.996,
+        "tdp_kd_e_psi": 0.664,
+        "chr": "chr10",
+        "strand": "+",
+        "paste_into_igv_junction": "chr10:3099352-3101365",
+        "paste_into_igv_exon": "chr10:3099557-3099819",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "PFKP",
+        "lsv_id": "ENSG00000067057.17:t:3101365-3101554",
+        "deltaPSI": -0.300850349188776,
+        "FDR": 0.0,
+        "control_e_psi": 0.999,
+        "tdp_kd_e_psi": 0.672,
+        "chr": "chr10",
+        "strand": "+",
+        "paste_into_igv_junction": "chr10:3099352-3101365",
+        "paste_into_igv_exon": "chr10:3099275-3099352",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "PFKP",
+        "lsv_id": "ENSG00000067057.17:t:3101365-3101554",
+        "deltaPSI": 0.300850346394773,
+        "FDR": 6.48016903210611e-16,
+        "control_e_psi": 0.001,
+        "tdp_kd_e_psi": 0.328,
+        "chr": "chr10",
+        "strand": "+",
+        "paste_into_igv_junction": "chr10:3099819-3101365",
+        "paste_into_igv_exon": "chr10:3099557-3099819",
+        "junc_cat": "novel_donor",
+        "cryptic_junction": 1
+      },
+      {
+        "gene_name": "PFKP",
+        "lsv_id": "ENSG00000067057.17:t:3129007-3129983",
+        "deltaPSI": -0.0600146948334178,
+        "FDR": 3.11068689246019e-05,
+        "control_e_psi": 0.095,
+        "tdp_kd_e_psi": 0.018,
+        "chr": "chr10",
+        "strand": "+",
+        "paste_into_igv_junction": "chr10:3118869-3129819",
+        "paste_into_igv_exon": "chr10:3118782-3118869",
+        "junc_cat": "novel_exon_skip",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "PFKP",
+        "lsv_id": "ENSG00000067057.17:t:3129007-3129983",
+        "deltaPSI": -0.251705056212074,
+        "FDR": 4.30102718995684e-08,
+        "control_e_psi": 0.61,
+        "tdp_kd_e_psi": 0.349,
+        "chr": "chr10",
+        "strand": "+",
+        "paste_into_igv_junction": "chr10:3120044-3129819",
+        "paste_into_igv_exon": "chr10:3119892-3120044",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "PFKP",
+        "lsv_id": "ENSG00000067057.17:t:3129007-3129983",
+        "deltaPSI": 0.336580854733499,
+        "FDR": 2.88663779943042e-10,
+        "control_e_psi": 0.293,
+        "tdp_kd_e_psi": 0.632,
+        "chr": "chr10",
+        "strand": "+",
+        "paste_into_igv_junction": "chr10:3125249-3129819",
+        "paste_into_igv_exon": "chr10:3125097-3125249",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "KALRN",
+        "lsv_id": "ENSG00000160145.15:s:124671660-124671898",
+        "deltaPSI": 0.161505743484995,
+        "FDR": 3.33419432069246e-07,
+        "control_e_psi": 0.096,
+        "tdp_kd_e_psi": 0.261,
+        "chr": "chr3",
+        "strand": "+",
+        "paste_into_igv_junction": "chr3:124671898-124674361",
+        "paste_into_igv_exon": "chr3:124671660-124671898",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "KALRN",
+        "lsv_id": "ENSG00000160145.15:s:124671660-124671898",
+        "deltaPSI": -0.161505686732873,
+        "FDR": 3.33435878352439e-07,
+        "control_e_psi": 0.904,
+        "tdp_kd_e_psi": 0.739,
+        "chr": "chr3",
+        "strand": "+",
+        "paste_into_igv_junction": "chr3:124671898-124674364",
+        "paste_into_igv_exon": "chr3:124674361-124675427",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "KALRN",
+        "lsv_id": "ENSG00000160145.15:s:124699869-124700033",
+        "deltaPSI": 0.22822119182134,
+        "FDR": 2.95665824531581e-13,
+        "control_e_psi": 0.001,
+        "tdp_kd_e_psi": 0.258,
+        "chr": "chr3",
+        "strand": "+",
+        "paste_into_igv_junction": "chr3:124700033-124700977",
+        "paste_into_igv_exon": "chr3:124699869-124700033",
+        "junc_cat": "novel_acceptor",
+        "cryptic_junction": 1
+      },
+      {
+        "gene_name": "KALRN",
+        "lsv_id": "ENSG00000160145.15:s:124699869-124700033",
+        "deltaPSI": 0.377619849794128,
+        "FDR": 2.69878045496222e-18,
+        "control_e_psi": 0.02,
+        "tdp_kd_e_psi": 0.398,
+        "chr": "chr3",
+        "strand": "+",
+        "paste_into_igv_junction": "chr3:124700033-124701093",
+        "paste_into_igv_exon": "chr3:124700977-124701255",
+        "junc_cat": "novel_acceptor",
+        "cryptic_junction": 1
+      },
+      {
+        "gene_name": "KALRN",
+        "lsv_id": "ENSG00000160145.15:s:124699869-124700033",
+        "deltaPSI": -0.64368032747861,
+        "FDR": 1.21902488103842e-11,
+        "control_e_psi": 0.979,
+        "tdp_kd_e_psi": 0.344,
+        "chr": "chr3",
+        "strand": "+",
+        "paste_into_igv_junction": "chr3:124700033-124702038",
+        "paste_into_igv_exon": "chr3:124702038-124702116",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "KALRN",
+        "lsv_id": "ENSG00000160145.15:t:124666449-124666634",
+        "deltaPSI": -0.131026210155492,
+        "FDR": 1.90065399197081e-07,
+        "control_e_psi": 0.998,
+        "tdp_kd_e_psi": 0.842,
+        "chr": "chr3",
+        "strand": "+",
+        "paste_into_igv_junction": "chr3:124661928-124666449",
+        "paste_into_igv_exon": "chr3:nan-124664330",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "KALRN",
+        "lsv_id": "ENSG00000160145.15:t:124666449-124666634",
+        "deltaPSI": 0.13102619096641,
+        "FDR": 1.90055263639417e-07,
+        "control_e_psi": 0.002,
+        "tdp_kd_e_psi": 0.158,
+        "chr": "chr3",
+        "strand": "+",
+        "paste_into_igv_junction": "chr3:124664330-124666449",
+        "paste_into_igv_exon": "chr3:124661851-124661928",
+        "junc_cat": "novel_donor",
+        "cryptic_junction": 1
+      },
+      {
+        "gene_name": "KALRN",
+        "lsv_id": "ENSG00000160145.15:t:124702038-124702116",
+        "deltaPSI": -0.494608981910162,
+        "FDR": 0.0,
+        "control_e_psi": 0.996,
+        "tdp_kd_e_psi": 0.493,
+        "chr": "chr3",
+        "strand": "+",
+        "paste_into_igv_junction": "chr3:124700033-124702038",
+        "paste_into_igv_exon": "chr3:124699869-124700033",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "KALRN",
+        "lsv_id": "ENSG00000160145.15:t:124702038-124702116",
+        "deltaPSI": 0.494608965626625,
+        "FDR": 3.90211739159783e-19,
+        "control_e_psi": 0.004,
+        "tdp_kd_e_psi": 0.507,
+        "chr": "chr3",
+        "strand": "+",
+        "paste_into_igv_junction": "chr3:124701255-124702038",
+        "paste_into_igv_exon": "chr3:124700977-124701255",
+        "junc_cat": "novel_donor",
+        "cryptic_junction": 1
+      },
+      {
+        "gene_name": "ATG4B",
+        "lsv_id": "ENSG00000168397.17:s:241668259-241668860",
+        "deltaPSI": 0.107668707661094,
+        "FDR": 7.53619734490783e-06,
+        "control_e_psi": 0.0,
+        "tdp_kd_e_psi": 0.135,
+        "chr": "chr2",
+        "strand": "+",
+        "paste_into_igv_junction": "chr2:241668685-241668875",
+        "paste_into_igv_exon": "chr2:241668259-241668860",
+        "junc_cat": "novel_acceptor",
+        "cryptic_junction": 1
+      },
+      {
+        "gene_name": "ATG4B",
+        "lsv_id": "ENSG00000168397.17:s:241668259-241668860",
+        "deltaPSI": -0.299879856689426,
+        "FDR": 0.0,
+        "control_e_psi": 0.944,
+        "tdp_kd_e_psi": 0.637,
+        "chr": "chr2",
+        "strand": "+",
+        "paste_into_igv_junction": "chr2:241668685-241670726",
+        "paste_into_igv_exon": "chr2:241668875-241668985",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "ATG4B",
+        "lsv_id": "ENSG00000168397.17:s:241668259-241668860",
+        "deltaPSI": 0.16119226797027,
+        "FDR": 5.06421414217674e-07,
+        "control_e_psi": 0.056,
+        "tdp_kd_e_psi": 0.229,
+        "chr": "chr2",
+        "strand": "+",
+        "paste_into_igv_junction": "chr2:241668861-241668874",
+        "paste_into_igv_exon": "chr2:241670561-241670782",
+        "junc_cat": "none",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "ATG4B",
+        "lsv_id": "ENSG00000168397.17:s:241671312-241671917",
+        "deltaPSI": -0.193615369297039,
+        "FDR": 4.95206531336834e-09,
+        "control_e_psi": 0.889,
+        "tdp_kd_e_psi": 0.69,
+        "chr": "chr2",
+        "strand": "+",
+        "paste_into_igv_junction": "chr2:241671405-241672191",
+        "paste_into_igv_exon": "chr2:241671312-241671917",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "ATG4B",
+        "lsv_id": "ENSG00000168397.17:s:241671312-241671917",
+        "deltaPSI": 0.193615383736143,
+        "FDR": 4.95178456311721e-09,
+        "control_e_psi": 0.111,
+        "tdp_kd_e_psi": 0.31,
+        "chr": "chr2",
+        "strand": "+",
+        "paste_into_igv_junction": "chr2:241671918-241672190",
+        "paste_into_igv_exon": "chr2:241672191-241673857",
+        "junc_cat": "none",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "ATG4B",
+        "lsv_id": "ENSG00000168397.17:t:241670561-241670782",
+        "deltaPSI": -0.214625313997354,
+        "FDR": 1.15414344747933e-11,
+        "control_e_psi": 1.0,
+        "tdp_kd_e_psi": 0.757,
+        "chr": "chr2",
+        "strand": "+",
+        "paste_into_igv_junction": "chr2:241668685-241670726",
+        "paste_into_igv_exon": "chr2:241668259-241668860",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "ATG4B",
+        "lsv_id": "ENSG00000168397.17:t:241670561-241670782",
+        "deltaPSI": 0.214625327051276,
+        "FDR": 1.15587858869275e-11,
+        "control_e_psi": 0.0,
+        "tdp_kd_e_psi": 0.243,
+        "chr": "chr2",
+        "strand": "+",
+        "paste_into_igv_junction": "chr2:241668985-241670726",
+        "paste_into_igv_exon": "chr2:241668875-241668985",
+        "junc_cat": "novel_donor",
+        "cryptic_junction": 1
+      },
+      {
+        "gene_name": "TRAPPC12",
+        "lsv_id": "ENSG00000171853.16:s:3457621-3457693",
+        "deltaPSI": 0.438013209666648,
+        "FDR": 6.49175791650979e-20,
+        "control_e_psi": 0.059,
+        "tdp_kd_e_psi": 0.492,
+        "chr": "chr2",
+        "strand": "+",
+        "paste_into_igv_junction": "chr2:3457693-3457795",
+        "paste_into_igv_exon": "chr2:3457621-3457693",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "TRAPPC12",
+        "lsv_id": "ENSG00000171853.16:s:3457621-3457693",
+        "deltaPSI": 0.0653522750992412,
+        "FDR": 1.91727304621742e-05,
+        "control_e_psi": 0.001,
+        "tdp_kd_e_psi": 0.098,
+        "chr": "chr2",
+        "strand": "+",
+        "paste_into_igv_junction": "chr2:3457693-3458462",
+        "paste_into_igv_exon": "chr2:3457795-3458181",
+        "junc_cat": "novel_acceptor",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "TRAPPC12",
+        "lsv_id": "ENSG00000171853.16:s:3457621-3457693",
+        "deltaPSI": -0.540574559021973,
+        "FDR": 1.33226762955019e-15,
+        "control_e_psi": 0.941,
+        "tdp_kd_e_psi": 0.409,
+        "chr": "chr2",
+        "strand": "+",
+        "paste_into_igv_junction": "chr2:3457693-3460263",
+        "paste_into_igv_exon": "chr2:3458462-3458515",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "TRAPPC12",
+        "lsv_id": "ENSG00000171853.16:t:3459931-3460336",
+        "deltaPSI": -0.648664466135546,
+        "FDR": 1.2655929193528e-08,
+        "control_e_psi": 0.953,
+        "tdp_kd_e_psi": 0.324,
+        "chr": "chr2",
+        "strand": "+",
+        "paste_into_igv_junction": "chr2:3457693-3460263",
+        "paste_into_igv_exon": "chr2:3457621-3457693",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "TRAPPC12",
+        "lsv_id": "ENSG00000171853.16:t:3459931-3460336",
+        "deltaPSI": -1.41244387185358e-06,
+        "FDR": 0.475557275503394,
+        "control_e_psi": 0.017,
+        "tdp_kd_e_psi": 0.001,
+        "chr": "chr2",
+        "strand": "+",
+        "paste_into_igv_junction": "chr2:3458461-3460263",
+        "paste_into_igv_exon": "chr2:3458313-3458461",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "TRAPPC12",
+        "lsv_id": "ENSG00000171853.16:t:3459931-3460336",
+        "deltaPSI": 0.62016128361782,
+        "FDR": 4.72979838020601e-09,
+        "control_e_psi": 0.003,
+        "tdp_kd_e_psi": 0.631,
+        "chr": "chr2",
+        "strand": "+",
+        "paste_into_igv_junction": "chr2:3458515-3460263",
+        "paste_into_igv_exon": "chr2:3458462-3458515",
+        "junc_cat": "novel_donor",
+        "cryptic_junction": 1
+      },
+      {
+        "gene_name": "TRAPPC12",
+        "lsv_id": "ENSG00000171853.16:t:3459931-3460336",
+        "deltaPSI": 0.00865442025215165,
+        "FDR": 0.0773145200191473,
+        "control_e_psi": 0.027,
+        "tdp_kd_e_psi": 0.044,
+        "chr": "chr2",
+        "strand": "+",
+        "paste_into_igv_junction": "chr2:3458516-3459930",
+        "paste_into_igv_exon": "chr2:3459931-3460336",
+        "junc_cat": "none",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "CELF5",
+        "lsv_id": "ENSG00000161082.13:s:3225485-3225618",
+        "deltaPSI": 0.121795138312776,
+        "FDR": 3.67323363611746e-07,
+        "control_e_psi": 0.001,
+        "tdp_kd_e_psi": 0.149,
+        "chr": "chr19",
+        "strand": "+",
+        "paste_into_igv_junction": "chr19:3225618-3244124",
+        "paste_into_igv_exon": "chr19:3225485-3225618",
+        "junc_cat": "novel_acceptor",
+        "cryptic_junction": 1
+      },
+      {
+        "gene_name": "CELF5",
+        "lsv_id": "ENSG00000161082.13:s:3225485-3225618",
+        "deltaPSI": -0.121795174750327,
+        "FDR": 3.67343407581267e-07,
+        "control_e_psi": 0.999,
+        "tdp_kd_e_psi": 0.851,
+        "chr": "chr19",
+        "strand": "+",
+        "paste_into_igv_junction": "chr19:3225618-3250985",
+        "paste_into_igv_exon": "chr19:3244124-3244216",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "CELF5",
+        "lsv_id": "ENSG00000161082.13:s:3278031-3278110",
+        "deltaPSI": 0.159196372630913,
+        "FDR": 5.45234706676008e-12,
+        "control_e_psi": 0.0,
+        "tdp_kd_e_psi": 0.184,
+        "chr": "chr19",
+        "strand": "+",
+        "paste_into_igv_junction": "chr19:3278109-3278209",
+        "paste_into_igv_exon": "chr19:3278031-3278110",
+        "junc_cat": "none",
+        "cryptic_junction": 1
+      },
+      {
+        "gene_name": "CELF5",
+        "lsv_id": "ENSG00000161082.13:s:3278031-3278110",
+        "deltaPSI": 2.81054272919474e-06,
+        "FDR": 0.475280221632403,
+        "control_e_psi": 0.0,
+        "tdp_kd_e_psi": 0.024,
+        "chr": "chr19",
+        "strand": "+",
+        "paste_into_igv_junction": "chr19:3278110-3278213",
+        "paste_into_igv_exon": "chr19:3278209-3278316",
+        "junc_cat": "novel_acceptor",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "CELF5",
+        "lsv_id": "ENSG00000161082.13:s:3278031-3278110",
+        "deltaPSI": 0.0447958359429143,
+        "FDR": 0.127496694466959,
+        "control_e_psi": 0.0,
+        "tdp_kd_e_psi": 0.065,
+        "chr": "chr19",
+        "strand": "+",
+        "paste_into_igv_junction": "chr19:3278110-3278231",
+        "paste_into_igv_exon": "chr19:3281199-3281345",
+        "junc_cat": "novel_acceptor",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "CELF5",
+        "lsv_id": "ENSG00000161082.13:s:3278031-3278110",
+        "deltaPSI": -0.435271384103926,
+        "FDR": 0.0,
+        "control_e_psi": 0.972,
+        "tdp_kd_e_psi": 0.546,
+        "chr": "chr19",
+        "strand": "+",
+        "paste_into_igv_junction": "chr19:3278110-3281199",
+        "paste_into_igv_exon": "chr19:NA-NA",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "CELF5",
+        "lsv_id": "ENSG00000161082.13:s:3278031-3278110",
+        "deltaPSI": 0.152158781968522,
+        "FDR": 1.23146629284894e-06,
+        "control_e_psi": 0.028,
+        "tdp_kd_e_psi": 0.182,
+        "chr": "chr19",
+        "strand": "+",
+        "paste_into_igv_junction": "chr19:3278111-3278208",
+        "paste_into_igv_exon": "chr19:NA-NA",
+        "junc_cat": "none",
+        "cryptic_junction": 1
+      },
+      {
+        "gene_name": "CELF5",
+        "lsv_id": "ENSG00000161082.13:t:3281199-3281345",
+        "deltaPSI": -0.347089562729472,
+        "FDR": 0.0,
+        "control_e_psi": 1.0,
+        "tdp_kd_e_psi": 0.633,
+        "chr": "chr19",
+        "strand": "+",
+        "paste_into_igv_junction": "chr19:3278110-3281199",
+        "paste_into_igv_exon": "chr19:3278031-3278110",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "CELF5",
+        "lsv_id": "ENSG00000161082.13:t:3281199-3281345",
+        "deltaPSI": 0.347089538211962,
+        "FDR": 2.83494032098806e-22,
+        "control_e_psi": 0.0,
+        "tdp_kd_e_psi": 0.367,
+        "chr": "chr19",
+        "strand": "+",
+        "paste_into_igv_junction": "chr19:3278316-3281199",
+        "paste_into_igv_exon": "chr19:3278209-3278316",
+        "junc_cat": "novel_donor",
+        "cryptic_junction": 1
+      },
+      {
+        "gene_name": "DLGAP1",
+        "lsv_id": "ENSG00000170579.17:s:4151180-4151290",
+        "deltaPSI": 0.519558432099666,
+        "FDR": 3.81656720703815e-13,
+        "control_e_psi": 0.006,
+        "tdp_kd_e_psi": 0.53,
+        "chr": "chr18",
+        "strand": "-",
+        "paste_into_igv_junction": "chr18:4147667-4151180",
+        "paste_into_igv_exon": "chr18:nan-4147667",
+        "junc_cat": "novel_acceptor",
+        "cryptic_junction": 1
+      },
+      {
+        "gene_name": "DLGAP1",
+        "lsv_id": "ENSG00000170579.17:s:4151180-4151290",
+        "deltaPSI": -0.519558435958311,
+        "FDR": 3.50497408874162e-13,
+        "control_e_psi": 0.994,
+        "tdp_kd_e_psi": 0.47,
+        "chr": "chr18",
+        "strand": "-",
+        "paste_into_igv_junction": "chr18:4005201-4151180",
+        "paste_into_igv_exon": "chr18:4005025-4005259",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "PTPRT",
+        "lsv_id": "ENSG00000196090.12:s:42118403-42118500",
+        "deltaPSI": -0.154577594962327,
+        "FDR": 6.70567467442318e-07,
+        "control_e_psi": 0.195,
+        "tdp_kd_e_psi": 0.029,
+        "chr": "chr20",
+        "strand": "-",
+        "paste_into_igv_junction": "chr20:42116098-42118403",
+        "paste_into_igv_exon": "chr20:42115199-42115315",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      },
+      {
+        "gene_name": "PTPRT",
+        "lsv_id": "ENSG00000196090.12:s:42118403-42118500",
+        "deltaPSI": 0.154577623978059,
+        "FDR": 6.70534784576127e-07,
+        "control_e_psi": 0.805,
+        "tdp_kd_e_psi": 0.971,
+        "chr": "chr20",
+        "strand": "-",
+        "paste_into_igv_junction": "chr20:42115315-42118403",
+        "paste_into_igv_exon": "chr20:42116039-42116098",
+        "junc_cat": "annotated",
+        "cryptic_junction": 0
+      }
+    ],
+    "brown_riboseq": {
+      "TRAPPC12": {
+        "log2FoldChange": -1.2127492654324858,
+        "pvalue": 4.94938579201216e-05,
+        "padj": 0.005154348591869604
+      },
+      "DPP10": {
+        "log2FoldChange": -0.03504248950053862,
+        "pvalue": 0.9438347447352645,
+        "padj": 0.998665554108594
+      },
+      "ATG4B": {
+        "log2FoldChange": -1.550128453998789,
+        "pvalue": 1.5007919451137376e-08,
+        "padj": 5.776091433976872e-06
+      },
+      "KALRN": {
+        "log2FoldChange": -0.555761972865056,
+        "pvalue": 0.004215836691571581,
+        "padj": 0.1395311152655591
+      },
+      "DPP6": {
+        "log2FoldChange": 0.10883426093833813,
+        "pvalue": 0.9784057502528954,
+        "padj": null
+      },
+      "PRUNE2": {
+        "log2FoldChange": -1.2079423297641094,
+        "pvalue": 0.14121935034735955,
+        "padj": null
+      },
+      "PFKP": {
+        "log2FoldChange": -1.8645866477104016,
+        "pvalue": 1.0580292861591677e-07,
+        "padj": 3.121891747026984e-05
+      },
+      "CFL1": {
+        "log2FoldChange": -0.1677062725694306,
+        "pvalue": 0.1272201517342458,
+        "padj": 0.854835733077116
+      },
+      "DLGAP1": {
+        "log2FoldChange": -0.6772329863195715,
+        "pvalue": 0.24860008027126604,
+        "padj": 0.9575436557009573
+      },
+      "CELF5": {
+        "log2FoldChange": -1.3748927822222743,
+        "pvalue": 1.004349825457321e-09,
+        "padj": 5.649217296311487e-07
+      },
+      "C5AR1": {
+        "log2FoldChange": -0.8529416149564758,
+        "pvalue": 0.7661559993872986,
+        "padj": null
+      },
+      "PTPRT": {
+        "log2FoldChange": -2.7829288216590697,
+        "pvalue": 1.3226324677614222e-10,
+        "padj": 1.0643584186021918e-07
+      },
+      "MAOB": {
+        "log2FoldChange": null,
+        "pvalue": null,
+        "padj": null
+      },
+      "ELK1": {
+        "log2FoldChange": 0.93457389976679,
+        "pvalue": 0.042559260749488285,
+        "padj": 0.60276588639411
+      }
+    },
+    "ma2022_moesm5": [
+      {
+        "Genes": "KALRN",
+        "hg38": "chr3",
+        "Coordinates": "124700033-124702038",
+        "MAJIQ abs(maximum delta PSI)": 0.709,
+        "Leafcutter p-values (FDR-adjusted)": 2.26e-12,
+        "Leafcutter abs(maximum delta PSI)": 0.831
+      },
+      {
+        "Genes": "PRUNE2",
+        "hg38": "chr9",
+        "Coordinates": "76638288-76644739",
+        "MAJIQ abs(maximum delta PSI)": 0.621,
+        "Leafcutter p-values (FDR-adjusted)": 2.88e-05,
+        "Leafcutter abs(maximum delta PSI)": 0.416
+      },
+      {
+        "Genes": "PTPRT",
+        "hg38": "chr20",
+        "Coordinates": "42098552-42102124",
+        "MAJIQ abs(maximum delta PSI)": 0.874,
+        "Leafcutter p-values (FDR-adjusted)": 3.54e-06,
+        "Leafcutter abs(maximum delta PSI)": 0.927
+      },
+      {
+        "Genes": "TRAPPC12",
+        "hg38": "chr2",
+        "Coordinates": "3465695-3478846",
+        "MAJIQ abs(maximum delta PSI)": 0.338,
+        "Leafcutter p-values (FDR-adjusted)": 0.03,
+        "Leafcutter abs(maximum delta PSI)": 0.316
+      }
+    ],
+    "spillman_kalrn_ce_fcx": {
+      "all_sheet3_genes_scanned": {
+        "KALRN": {
+          "is_explore_als": 0,
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "ce_pos_c9ftd": 7,
+          "ce_pos_ctrl": 0,
+          "fisher_2s_p": 0.0030959752321981426,
+          "mwu_psi_2s_p": 0.0022125420307360353,
+          "mean_ce_frac_c9ftd": 0.0603,
+          "mean_ce_frac_ctrl": 0.0
+        },
+        "STMN2": {
+          "is_explore_als": 1,
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "ce_pos_c9ftd": 10,
+          "ce_pos_ctrl": 0,
+          "fisher_2s_p": 1.082508822446903e-05,
+          "mwu_psi_2s_p": 6.386444750436982e-05,
+          "mean_ce_frac_c9ftd": 0.0771,
+          "mean_ce_frac_ctrl": 0.0
+        },
+        "UNC13A": {
+          "is_explore_als": 1,
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "ce_pos_c9ftd": 6,
+          "ce_pos_ctrl": 0,
+          "fisher_2s_p": 0.010835913312693497,
+          "mwu_psi_2s_p": 0.005971963624595338,
+          "mean_ce_frac_c9ftd": 0.023,
+          "mean_ce_frac_ctrl": 0.0
+        }
+      },
+      "non_explore_genes_on_sheet3": [
+        "KALRN"
+      ],
+      "n_c9ftd": 10,
+      "n_ctrl": 10,
+      "kalrn_ce_pos_c9ftd": 7,
+      "kalrn_ce_pos_ctrl": 0,
+      "fisher_2s_p": 0.0030959752321981426,
+      "mwu_psi_2s_p": 0.0022125420307360353,
+      "mean_kalrn_ce_frac_c9ftd": 0.0603,
+      "mean_kalrn_ce_frac_ctrl": 0.0,
+      "benchmark_unc13a_pos_c9ftd": 6,
+      "benchmark_stmn2_pos_c9ftd": 10
+    },
+    "bye2025_sals_splicing_t6": [
+      {
+        "Cluster": "chr19:clu_25763_+",
+        "Loglr": 12.4453125,
+        "df": 4.0,
+        "P-value": 5.29225005824967e-05,
+        "Adjusted P-value": 0.00903845746614934,
+        "Genes": "CELF5",
+        "_unnamed_col_6": null
+      },
+      {
+        "Cluster": "chr2:clu_29117_+",
+        "Loglr": 11.650390625,
+        "df": 4.0,
+        "P-value": 0.000110256340966416,
+        "Adjusted P-value": 0.015318319620843599,
+        "Genes": "TRAPPC12",
+        "_unnamed_col_6": null
+      }
+    ],
+    "spillman_fractions": {
+      "ATG4B": {
+        "synaptosome_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": 0.0745781545831861,
+          "p_value": 0.656953720861454,
+          "padj": 0.856380515192191
+        },
+        "homogenate_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": -0.490479507602152,
+          "p_value": 0.0226700801811631,
+          "padj": 0.148041661618878
+        },
+        "homogenate_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": 0.0450161864063171,
+          "p_value": 0.737547126319076,
+          "padj": 0.901900865992373
+        },
+        "synaptosome_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.141855388444541,
+          "p_value": 0.120860753414163,
+          "padj": 0.425070637394703
+        }
+      },
+      "KALRN": {
+        "synaptosome_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": -0.154034523338544,
+          "p_value": 0.167368587309865,
+          "padj": 0.503429705929408
+        },
+        "homogenate_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 9,
+          "n_ctrl": 10,
+          "log2fc": -0.393287826550379,
+          "p_value": 0.0917292947065054,
+          "padj": 0.316495404464962
+        },
+        "homogenate_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.36844041096798,
+          "p_value": 0.0235669001191207,
+          "padj": 0.262934233872663
+        },
+        "synaptosome_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.370895871296227,
+          "p_value": 0.05388844042887,
+          "padj": 0.309926352109712
+        }
+      },
+      "PTPRT": {
+        "synaptosome_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": -0.164603944851653,
+          "p_value": 0.280860027625363,
+          "padj": 0.615815360948418
+        },
+        "homogenate_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": -0.366228835284603,
+          "p_value": 0.00624491305561599,
+          "padj": 0.0770237675807759
+        },
+        "homogenate_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.449427591975432,
+          "p_value": 0.112704249486052,
+          "padj": 0.463843266085739
+        },
+        "synaptosome_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.312377003711911,
+          "p_value": 0.189820526858115,
+          "padj": 0.510082874037913
+        }
+      },
+      "CELF5": {
+        "synaptosome_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": -0.0825223902714027,
+          "p_value": 0.615698844432138,
+          "padj": 0.834451842922406
+        },
+        "homogenate_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 7,
+          "n_ctrl": 9,
+          "log2fc": -0.0553011856851899,
+          "p_value": 0.701038773238155,
+          "padj": 0.869954710777594
+        },
+        "homogenate_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.125588039785532,
+          "p_value": 0.580574780364448,
+          "padj": 0.830386859885989
+        },
+        "synaptosome_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": 0.13026757635837,
+          "p_value": 0.417700531394983,
+          "padj": 0.701373871269469
+        }
+      },
+      "PRUNE2": {
+        "synaptosome_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": -0.494346510834804,
+          "p_value": 0.00681404121597612,
+          "padj": 0.212105066508916
+        },
+        "homogenate_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": -0.049892563382457,
+          "p_value": 0.773358027508735,
+          "padj": 0.904900167994297
+        },
+        "homogenate_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.102351883349615,
+          "p_value": 0.649013738401272,
+          "padj": 0.865061616972329
+        },
+        "synaptosome_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.370821960853056,
+          "p_value": 0.100720813616176,
+          "padj": 0.395345745405952
+        }
+      },
+      "PFKP": {
+        "synaptosome_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": -0.507502624105928,
+          "p_value": 0.00348010290652033,
+          "padj": 0.1774269224855
+        },
+        "homogenate_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": 0.168907041099878,
+          "p_value": 0.298877313956627,
+          "padj": 0.576853644734228
+        },
+        "homogenate_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": 0.168808157969643,
+          "p_value": 0.460644738750588,
+          "padj": 0.765578987380432
+        },
+        "synaptosome_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.200561977790021,
+          "p_value": 0.418401106621002,
+          "padj": 0.701946903752603
+        }
+      },
+      "TRAPPC12": {
+        "synaptosome_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": -0.113240142839157,
+          "p_value": 0.28162088925243,
+          "padj": 0.615815360948418
+        },
+        "homogenate_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 9,
+          "log2fc": 0.0263064695478938,
+          "p_value": 0.837688033515882,
+          "padj": 0.936519089601468
+        },
+        "homogenate_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.163835032993013,
+          "p_value": 0.0048314497416461,
+          "padj": 0.138181668752513
+        },
+        "synaptosome_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.264952273731475,
+          "p_value": 0.0605563720445916,
+          "padj": 0.324500025832719
+        }
+      },
+      "ELK1": {
+        "homogenate_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": 0.132003330366564,
+          "p_value": 0.487914473110032,
+          "padj": 0.780082780867032
+        },
+        "synaptosome_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": 0.264118188570864,
+          "p_value": 0.231146802948304,
+          "padj": 0.552040473281868
+        }
+      },
+      "DLGAP1": {
+        "synaptosome_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": -0.736371518914887,
+          "p_value": 0.0212126755403694,
+          "padj": 0.279749822227472
+        },
+        "homogenate_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 7,
+          "n_ctrl": 5,
+          "log2fc": -0.863727341594037,
+          "p_value": 0.012057229949945,
+          "padj": 0.106221615695114
+        },
+        "homogenate_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.373209312282319,
+          "p_value": 0.118668739988292,
+          "padj": 0.47243331760617
+        },
+        "synaptosome_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.3918349932715,
+          "p_value": 0.0431191574937419,
+          "padj": 0.285230495412718
+        }
+      },
+      "DPP6": {
+        "synaptosome_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": -0.402283342334641,
+          "p_value": 0.0286959969641923,
+          "padj": 0.298425629124515
+        },
+        "homogenate_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": -0.109936081873609,
+          "p_value": 0.419969966347158,
+          "padj": 0.683285139295165
+        },
+        "homogenate_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.369356076889484,
+          "p_value": 0.110641763422102,
+          "padj": 0.460468229365006
+        },
+        "synaptosome_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.372553876668192,
+          "p_value": 0.0966024537579525,
+          "padj": 0.388920663977603
+        }
+      },
+      "DPP10": {
+        "synaptosome_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": -0.330504235329933,
+          "p_value": 0.069920472785845,
+          "padj": 0.379140959384208
+        },
+        "homogenate_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": 0.0573167668866983,
+          "p_value": 0.746323626807041,
+          "padj": 0.891409846975441
+        },
+        "homogenate_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.0513264754823973,
+          "p_value": 0.745833124683874,
+          "padj": 0.905423354806434
+        },
+        "synaptosome_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": 0.0666060890450388,
+          "p_value": 0.711350600446744,
+          "padj": 0.879987546846047
+        }
+      },
+      "CFL1": {
+        "synaptosome_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": -0.015966615003185,
+          "p_value": 0.939539210471998,
+          "padj": 0.978012414140236
+        },
+        "homogenate_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": 0.452736798738695,
+          "p_value": 0.139728869159367,
+          "padj": 0.394193263726792
+        },
+        "homogenate_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.300315427052403,
+          "p_value": 0.0374703770818456,
+          "padj": 0.311267515719019
+        },
+        "synaptosome_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": -0.248903154179798,
+          "p_value": 0.0175422148040743,
+          "padj": 0.205546949431553
+        }
+      },
+      "MAOB": {
+        "synaptosome_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": 0.772239310772074,
+          "p_value": 0.00128524814064941,
+          "padj": 0.131543751321897
+        },
+        "homogenate_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 10,
+          "n_ctrl": 10,
+          "log2fc": 1.16332803072646,
+          "p_value": 0.000884152451259434,
+          "padj": 0.0276671092849164
+        },
+        "homogenate_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": 0.435560660323635,
+          "p_value": 0.030938182042583,
+          "padj": 0.291488121575991
+        },
+        "synaptosome_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": 0.517581540487761,
+          "p_value": 0.0278315963811121,
+          "padj": 0.241844110643037
+        }
+      },
+      "C5AR1": {
+        "synaptosome_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 4,
+          "n_ctrl": 1,
+          "log2fc": 0.353637704047346,
+          "p_value": null,
+          "padj": null
+        },
+        "homogenate_protein": {
+          "modality": "PROTEOMICS_DIA",
+          "n_c9ftd": 1,
+          "n_ctrl": 0,
+          "log2fc": null,
+          "p_value": null,
+          "padj": null
+        },
+        "homogenate_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": 0.379396490109416,
+          "p_value": 0.267337803110232,
+          "padj": 0.629334509633157
+        },
+        "synaptosome_rnaseq": {
+          "modality": "RNASEQ_DESEQ2",
+          "log2fc": 0.493822579326327,
+          "p_value": 0.306374520352166,
+          "padj": 0.619855769077037
+        }
+      }
+    }
+  },
+  "funnel2_cryptic_apa": {
+    "partition_non_explore_events": {
+      "ALE": 90,
+      "3'Ext": 84,
+      "IPA": 20,
+      "3'Shortening": 20,
+      "Complex": 9
+    },
+    "riboseq_event_partition": {
+      "total_non_explore_events": 223,
+      "events_with_riboseq_padj05": 20,
+      "events_without_riboseq_padj05": 203
+    },
+    "genomewide_bs6_riboseq_sig": [
+      {
+        "gene_name": "TRAPPC12",
+        "log2FoldChange": -1.487270699952704,
+        "pvalue": 7.380135444272947e-20,
+        "padj": 3.300396570678861e-17
+      },
+      {
+        "gene_name": "RNF144A",
+        "log2FoldChange": -1.278807788095285,
+        "pvalue": 5.477830883256075e-16,
+        "padj": 1.717911643724108e-13
+      },
+      {
+        "gene_name": "ADARB2",
+        "log2FoldChange": -1.975956791887833,
+        "pvalue": 1.999194687120113e-15,
+        "padj": 5.803129173975964e-13
+      },
+      {
+        "gene_name": "PCBP3",
+        "log2FoldChange": -1.27988779232582,
+        "pvalue": 5.439930051287688e-13,
+        "padj": 1.013640299556606e-10
+      },
+      {
+        "gene_name": "SIX3",
+        "log2FoldChange": 1.988411689600246,
+        "pvalue": 3.047958702615553e-09,
+        "padj": 3.281117564614626e-07
+      },
+      {
+        "gene_name": "TLX1",
+        "log2FoldChange": 0.9157143510116624,
+        "pvalue": 3.427874983937868e-08,
+        "padj": 2.881476866197395e-06
+      },
+      {
+        "gene_name": "KIF26B",
+        "log2FoldChange": -0.7686723104851455,
+        "pvalue": 5.857853674054759e-08,
+        "padj": 4.455156739859333e-06
+      },
+      {
+        "gene_name": "ELK1",
+        "log2FoldChange": 1.124757620425058,
+        "pvalue": 3.692463734266469e-07,
+        "padj": 2.268227722477974e-05
+      },
+      {
+        "gene_name": "AKT3",
+        "log2FoldChange": -1.052531697544365,
+        "pvalue": 6.653850945042615e-07,
+        "padj": 3.915265977135603e-05
+      },
+      {
+        "gene_name": "HS6ST3",
+        "log2FoldChange": -1.889214747911433,
+        "pvalue": 6.529071768671684e-06,
+        "padj": 0.0002967277332266237
+      },
+      {
+        "gene_name": "ETV5",
+        "log2FoldChange": -0.6858790186511656,
+        "pvalue": 1.069360021746192e-05,
+        "padj": 0.0004408586872048688
+      },
+      {
+        "gene_name": "ADCY8",
+        "log2FoldChange": -1.051254278075239,
+        "pvalue": 9.635517196005222e-05,
+        "padj": 0.00292090242263588
+      },
+      {
+        "gene_name": "DLGAP1",
+        "log2FoldChange": -1.021498423309274,
+        "pvalue": 0.0002574356448089789,
+        "padj": 0.00642439845750978
+      },
+      {
+        "gene_name": "BRINP2",
+        "log2FoldChange": 1.038540503780972,
+        "pvalue": 0.0004428404097269198,
+        "padj": 0.00996168165140234
+      },
+      {
+        "gene_name": "RAB3GAP1",
+        "log2FoldChange": -0.4495993391166253,
+        "pvalue": 0.00109926151368199,
+        "padj": 0.02018589618619491
+      },
+      {
+        "gene_name": "VSTM4",
+        "log2FoldChange": -1.345020543285741,
+        "pvalue": 0.0017238956294022,
+        "padj": 0.02841778291611465
+      },
+      {
+        "gene_name": "EEFSEC",
+        "log2FoldChange": -0.5340967520416152,
+        "pvalue": 0.0019211165390071,
+        "padj": 0.03039241658994165
+      },
+      {
+        "gene_name": "CAMK2D",
+        "log2FoldChange": -0.6051276255097588,
+        "pvalue": 0.00289073177614824,
+        "padj": 0.0413798811694856
+      },
+      {
+        "gene_name": "BRD9",
+        "log2FoldChange": -0.4817697029433552,
+        "pvalue": 0.00291132738801164,
+        "padj": 0.0414104837124302
+      }
+    ],
+    "genomewide_bs5_nygc_selective_top15": [
+      {
+        "le_id": "ENSG00000078269.15_1",
+        "gene_name": "SYNJ2",
+        "count_not_path": 2,
+        "count_path": 144,
+        "fold_enrichment": 42.68387983506781
+      },
+      {
+        "le_id": "ENSG00000197724.11_1",
+        "gene_name": "PHF2",
+        "count_not_path": 1,
+        "count_path": 77,
+        "fold_enrichment": 36.06572045664924
+      },
+      {
+        "le_id": "ENSG00000170579.17_1",
+        "gene_name": "DLGAP1",
+        "count_not_path": 0,
+        "count_path": 17,
+        "fold_enrichment": 19.3585313174946
+      },
+      {
+        "le_id": "ENSG00000129158.11_4",
+        "gene_name": "SERGEF",
+        "count_not_path": 1,
+        "count_path": 26,
+        "fold_enrichment": 12.46189447701328
+      },
+      {
+        "le_id": "ENSG00000132849.22_1",
+        "gene_name": "PATJ",
+        "count_not_path": 1,
+        "count_path": 26,
+        "fold_enrichment": 12.46189447701328
+      },
+      {
+        "le_id": "ENSG00000048649.14_1",
+        "gene_name": "RSF1",
+        "count_not_path": 1,
+        "count_path": 14,
+        "fold_enrichment": 6.908053070040121
+      }
+    ],
+    "genomewide_zeng_s4_top15": [
+      {
+        "gene_name": "RPS20",
+        "APA_direction": "longer",
+        "PAS_ID_down": "chr8:56073055:-",
+        "PAS_ID_up": "chr8:56067254:-",
+        "Delta_distal_PAS_usage": 0.171752572129193,
+        "padj": 0.0
+      },
+      {
+        "gene_name": "AUTS2",
+        "APA_direction": "shorter",
+        "PAS_ID_down": "chr7:70792868:+",
+        "PAS_ID_up": "chr7:69674593:+",
+        "Delta_distal_PAS_usage": -0.496267783293672,
+        "padj": 5.50462038940684e-263
+      },
+      {
+        "gene_name": "GOLGA7B",
+        "APA_direction": "longer",
+        "PAS_ID_down": "chr10:97868023:+",
+        "PAS_ID_up": "chr10:97871534:+",
+        "Delta_distal_PAS_usage": 0.604164827178837,
+        "padj": 2.080545743886e-209
+      },
+      {
+        "gene_name": "UBE2E3",
+        "APA_direction": "longer",
+        "PAS_ID_down": "chr2:181063424:+",
+        "PAS_ID_up": "chr2:181074385:+",
+        "Delta_distal_PAS_usage": 0.221370323905587,
+        "padj": 1.51988565376846e-201
+      },
+      {
+        "gene_name": "UQCRB",
+        "APA_direction": "longer",
+        "PAS_ID_down": "chr8:96230934:-",
+        "PAS_ID_up": "chr8:96227837:-",
+        "Delta_distal_PAS_usage": 0.204078498713672,
+        "padj": 5.68533249107874e-200
+      },
+      {
+        "gene_name": "DYNC1H1",
+        "APA_direction": "longer",
+        "PAS_ID_down": "chr14:102050791:+",
+        "PAS_ID_up": "chr14:102056441:+",
+        "Delta_distal_PAS_usage": 0.218198543825259,
+        "padj": 5.8705071358586e-183
+      },
+      {
+        "gene_name": "SLC25A3",
+        "APA_direction": "longer",
+        "PAS_ID_down": "chr12:98601707:+",
+        "PAS_ID_up": "chr12:98606364:+",
+        "Delta_distal_PAS_usage": 0.311740569760175,
+        "padj": 4.0044720897364e-180
+      },
+      {
+        "gene_name": "PRDM2",
+        "APA_direction": "shorter",
+        "PAS_ID_down": "chr1:13825077:+",
+        "PAS_ID_up": "chr1:13788074:+",
+        "Delta_distal_PAS_usage": -0.298162564162696,
+        "padj": 1.46031525831476e-167
+      },
+      {
+        "gene_name": "ZFTRAF1",
+        "APA_direction": "longer",
+        "PAS_ID_down": "chr8:144463820:-",
+        "PAS_ID_up": "chr8:144449583:-",
+        "Delta_distal_PAS_usage": 0.531380991448407,
+        "padj": 1.96406534206196e-162
+      },
+      {
+        "gene_name": "EEF1A1",
+        "APA_direction": "longer",
+        "PAS_ID_down": "chr6:73517517:-",
+        "PAS_ID_up": "chr6:73513698:-",
+        "Delta_distal_PAS_usage": 0.124874586820295,
+        "padj": 3.01025862281825e-162
+      },
+      {
+        "gene_name": "RPS24",
+        "APA_direction": "longer",
+        "PAS_ID_down": "chr10:78040696:+",
+        "PAS_ID_up": "chr10:78044841:+",
+        "Delta_distal_PAS_usage": 0.105021542201067,
+        "padj": 1.81179553462576e-160
+      },
+      {
+        "gene_name": "PTPRD",
+        "APA_direction": "shorter",
+        "PAS_ID_down": "chr9:8314246:-",
+        "PAS_ID_up": "chr9:9983471:-",
+        "Delta_distal_PAS_usage": -0.324409074508755,
+        "padj": 7.31944943063906e-155
+      },
+      {
+        "gene_name": "DPYSL3",
+        "APA_direction": "longer",
+        "PAS_ID_down": "chr5:147393373:-",
+        "PAS_ID_up": "chr5:147390810:-",
+        "Delta_distal_PAS_usage": 0.156707997695472,
+        "padj": 2.55175516429243e-152
+      },
+      {
+        "gene_name": "HNRNPA0",
+        "APA_direction": "longer",
+        "PAS_ID_down": "chr5:137752617:-",
+        "PAS_ID_up": "chr5:137751385:-",
+        "Delta_distal_PAS_usage": 0.101846056971216,
+        "padj": 6.99255009210549e-142
+      },
+      {
+        "gene_name": "NEFM",
+        "APA_direction": "longer",
+        "PAS_ID_down": "chr8:24917352:+",
+        "PAS_ID_up": "chr8:24919092:+",
+        "Delta_distal_PAS_usage": 0.161723873094057,
+        "padj": 5.50801532949646e-139
+      }
+    ],
+    "trappc12_locus_dissection": {
+      "bryce_smith_intronic_ale": "chr2:3457795-3458181(+)",
+      "brown_secondary_cassette_ce": "chr2:3458462-3458515(+)",
+      "zeng_canonical_distal_3utr_pas": "chr2:3479564-3485092(+) (27 kb downstream canonical 3'UTR lengthening, distinct from intronic ALE)"
+    },
+    "bryce_smith_t2": [
+      {
+        "le_id": "ENSG00000126767.18_2",
+        "gene_name": "ELK1",
+        "event_type": "3'Ext",
+        "n_exper_cryptic": 8,
+        "annot_status": "novel",
+        "chromosome": "chrX",
+        "strand": "-",
+        "start_rep": 47631618.0,
+        "end_rep": 47636927.0,
+        "binding_start": 1.0,
+        "binding_end": 0.0
+      },
+      {
+        "le_id": "ENSG00000171853.16_4",
+        "gene_name": "TRAPPC12",
+        "event_type": "ALE",
+        "n_exper_cryptic": 5,
+        "annot_status": "annotated",
+        "chromosome": "chr2",
+        "strand": "+",
+        "start_rep": 3457794.0,
+        "end_rep": 3458181.0,
+        "binding_start": 0.0,
+        "binding_end": 1.0
+      },
+      {
+        "le_id": "ENSG00000170579.17_1",
+        "gene_name": "DLGAP1",
+        "event_type": "ALE",
+        "n_exper_cryptic": 4,
+        "annot_status": "novel",
+        "chromosome": "chr18",
+        "strand": "-",
+        "start_rep": 4145795.0,
+        "end_rep": 4147667.0,
+        "binding_start": 0.0,
+        "binding_end": 0.0
+      },
+      {
+        "le_id": "ENSG00000130226.17_3",
+        "gene_name": "DPP6",
+        "event_type": "ALE",
+        "n_exper_cryptic": 1,
+        "annot_status": "annotated",
+        "chromosome": "chr7",
+        "strand": "+",
+        "start_rep": 154587649.0,
+        "end_rep": 154588631.0,
+        "binding_start": 0.0,
+        "binding_end": 0.0
+      }
+    ],
+    "bryce_smith_t5_nygc": [
+      {
+        "paste_into_igv_junction": "chr18:4147667-4151180",
+        "le_id": "ENSG00000170579.17_1",
+        "gene_name": "DLGAP1",
+        "count_not_path": 0,
+        "count_path": 17,
+        "fraction_not_path": 0.0,
+        "fraction_path": 0.0183585313174946,
+        "selective": 1,
+        "fold_enrichment": 19.3585313174946
+      },
+      {
+        "paste_into_igv_junction": "chr2:3457693-3457795",
+        "le_id": "ENSG00000171853.16_4",
+        "gene_name": "TRAPPC12",
+        "count_not_path": 255,
+        "count_path": 768,
+        "fraction_not_path": 0.34,
+        "fraction_path": 0.8293736501079914,
+        "selective": 0,
+        "fold_enrichment": 2.435113343425194
+      },
+      {
+        "paste_into_igv_junction": "chr7:154566916-154587650",
+        "le_id": "ENSG00000130226.17_3",
+        "gene_name": "DPP6",
+        "count_not_path": 2,
+        "count_path": 5,
+        "fraction_not_path": 0.00266666666666666,
+        "fraction_path": 0.00539956803455723,
+        "selective": 0,
+        "fold_enrichment": 1.74533673669743
+      }
+    ],
+    "bryce_smith_t6_riboseq": [
+      {
+        "gene_id": "ENSG00000171853.16",
+        "gene_name": "TRAPPC12",
+        "le_id": "ENSG00000171853.16_4",
+        "event_type": "ALE",
+        "baseMean": 183.5193288306988,
+        "log2FoldChange": -1.487270699952704,
+        "lfcSE": 0.1630435069445685,
+        "log2FoldChangeShrink": -1.451621286267669,
+        "lfcSEShrink": 0.1649741284990907,
+        "pvalue": 7.380135444272947e-20,
+        "padj": 3.300396570678861e-17
+      },
+      {
+        "gene_id": "ENSG00000126767.18",
+        "gene_name": "ELK1",
+        "le_id": "ENSG00000126767.18_2",
+        "event_type": "3'Ext",
+        "baseMean": 78.65425624680137,
+        "log2FoldChange": 1.124757620425058,
+        "lfcSE": 0.2212275892814963,
+        "log2FoldChangeShrink": 1.036945297120413,
+        "lfcSEShrink": 0.2291254666768256,
+        "pvalue": 3.692463734266469e-07,
+        "padj": 2.268227722477974e-05
+      },
+      {
+        "gene_id": "ENSG00000170579.17",
+        "gene_name": "DLGAP1",
+        "le_id": "ENSG00000170579.17_1",
+        "event_type": "ALE",
+        "baseMean": 41.57543996873836,
+        "log2FoldChange": -1.021498423309274,
+        "lfcSE": 0.279499074333232,
+        "log2FoldChangeShrink": -0.8545505372001273,
+        "lfcSEShrink": 0.3050748046166456,
+        "pvalue": 0.0002574356448089789,
+        "padj": 0.00642439845750978
+      }
+    ],
+    "zeng2025_trappc12": [
+      {
+        "sheet": "S3",
+        "row": {
+          "gene_id": "ENSG00000171853.16",
+          "gene_name": "TRAPPC12",
+          "PAS_ID": "chr2:3479564:+",
+          "PAS_location": "three_prime_utr",
+          "Control_PAS_usage": 0.891840971098899,
+          "TDP43KD_PAS_usage": 0.597053078061965,
+          "Delta_PAS_usage": -0.294787893036934,
+          "padj": 8.40553087100946e-40,
+          "cryptic": "no"
+        }
+      },
+      {
+        "sheet": "S3",
+        "row": {
+          "gene_id": "ENSG00000171853.16",
+          "gene_name": "TRAPPC12",
+          "PAS_ID": "chr2:3485092:+",
+          "PAS_location": "three_prime_utr",
+          "Control_PAS_usage": 0.108159028901101,
+          "TDP43KD_PAS_usage": 0.402946921938035,
+          "Delta_PAS_usage": 0.294787893036934,
+          "padj": 8.40553087100946e-40,
+          "cryptic": "no"
+        }
+      },
+      {
+        "sheet": "S4",
+        "row": {
+          "gene_id": "ENSG00000171853.16",
+          "gene_name": "TRAPPC12",
+          "APA_direction": "longer",
+          "PAS_ID_down": "chr2:3479564:+",
+          "PAS_ID_up": "chr2:3485092:+",
+          "Delta_distal_PAS_usage": 0.294787893036934,
+          "padj": 8.40553087100946e-40
+        }
+      }
+    ]
+  },
+  "funnel3_csf_and_spatial": {
+    "trautwig_deconfounded_dia": {
+      "n_non_explore_proteins_tested": 2305,
+      "bank_status_crosstab": {
+        "Emory": {
+          "C9orf72": 10,
+          "C9orf72-Asymptomatic": 6,
+          "Control": 54,
+          "SOD1": 6,
+          "SOD1-Asymptomatic": 0,
+          "sALS": 42
+        },
+        "MGH": {
+          "C9orf72": 0,
+          "C9orf72-Asymptomatic": 50,
+          "Control": 16,
+          "SOD1": 0,
+          "SOD1-Asymptomatic": 12,
+          "sALS": 0
+        },
+        "UMilan": {
+          "C9orf72": 18,
+          "C9orf72-Asymptomatic": 0,
+          "Control": 0,
+          "SOD1": 13,
+          "SOD1-Asymptomatic": 0,
+          "sALS": 0
+        },
+        "WashU": {
+          "C9orf72": 15,
+          "C9orf72-Asymptomatic": 3,
+          "Control": 2,
+          "SOD1": 3,
+          "SOD1-Asymptomatic": 1,
+          "sALS": 8
+        }
+      },
+      "partition_counts": {
+        "emory_fdr05_and_washu_concordant_p05": 3,
+        "emory_fdr05_washu_unreplicated": 7,
+        "emory_q_ge_0p05": 2295
+      },
+      "replicated_hits": [
+        {
+          "gene": "DPP6",
+          "n_em_sals": 42,
+          "n_em_ctrl": 54,
+          "n_em_total": 96,
+          "em_log2fc": -0.502,
+          "em_p": 7.088225858448466e-12,
+          "n_wu_als": 26,
+          "n_wu_nonals": 6,
+          "n_wu_ctrl_only": 2,
+          "wu_log2fc": -0.1859,
+          "wu_p": 0.04714246320976422,
+          "wu_mwu_p": 0.037777866059289865,
+          "em_q_bh": 8.169180301861858e-09
+        },
+        {
+          "gene": "CFL1",
+          "n_em_sals": 42,
+          "n_em_ctrl": 53,
+          "n_em_total": 95,
+          "em_log2fc": 0.3582,
+          "em_p": 2.6515637919870732e-05,
+          "n_wu_als": 26,
+          "n_wu_nonals": 6,
+          "n_wu_ctrl_only": 2,
+          "wu_log2fc": 0.26,
+          "wu_p": 0.0023457646966230884,
+          "wu_mwu_p": 0.03311660222116285,
+          "em_q_bh": 0.007639818175662755
+        },
+        {
+          "gene": "DPP10",
+          "n_em_sals": 42,
+          "n_em_ctrl": 53,
+          "n_em_total": 95,
+          "em_log2fc": -0.3161,
+          "em_p": 0.00019022892259824096,
+          "n_wu_als": 26,
+          "n_wu_nonals": 6,
+          "n_wu_ctrl_only": 2,
+          "wu_log2fc": -0.3125,
+          "wu_p": 0.013953284593678464,
+          "wu_mwu_p": 0.1440577714215089,
+          "em_q_bh": 0.04384776665889454
+        }
+      ],
+      "set1_tmtpro_n101_anova": {
+        "CFL1": {
+          "F-Value": 6.223516294,
+          "Pr(>F)": 4.92e-05,
+          "Sporadic-Control": 2.27e-05,
+          "Control-ALS.C9": 0.000823999,
+          "Sporadic-ALS.C9": 0.443226162,
+          "diff Sporadic-Control": 0.258509754,
+          "diff Control-ALS.C9_inv": 0.320581038,
+          "diff Sporadic-ALS.C9_inv": 0.062071284
+        },
+        "DPP10": {
+          "F-Value": 1.097360677,
+          "Pr(>F)": 0.36707431,
+          "Sporadic-Control": 0.991401678,
+          "Control-ALS.C9": 0.056919583,
+          "Sporadic-ALS.C9": 0.033849963,
+          "diff Sporadic-Control": 0.000434089,
+          "diff Control-ALS.C9_inv": -0.12823228,
+          "diff Sporadic-ALS.C9_inv": -0.128666369
+        },
+        "DPP6": {
+          "F-Value": 1.401610824,
+          "Pr(>F)": 0.230713577,
+          "Sporadic-Control": 0.723985892,
+          "Control-ALS.C9": 0.067328713,
+          "Sporadic-ALS.C9": 0.026927202,
+          "diff Sporadic-Control": 0.011118708,
+          "diff Control-ALS.C9_inv": -0.09998061,
+          "diff Sporadic-ALS.C9_inv": -0.111099317
+        }
+      },
+      "oh2023_prm_xml_mentions": {
+        "DPP6": 0,
+        "DPP10": 0,
+        "CFL1": 0,
+        "CHIT1": 17,
+        "CHI3L1": 12
+      },
+      "target_lookup": {
+        "CFL1": {
+          "gene": "CFL1",
+          "n_em_sals": 42,
+          "n_em_ctrl": 53,
+          "n_em_total": 95,
+          "em_log2fc": 0.3582,
+          "em_p": 2.6515637919870732e-05,
+          "n_wu_als": 26,
+          "n_wu_nonals": 6,
+          "n_wu_ctrl_only": 2,
+          "wu_log2fc": 0.26,
+          "wu_p": 0.0023457646966230884,
+          "wu_mwu_p": 0.03311660222116285,
+          "em_q_bh": 0.007639818175662755
+        },
+        "DPP10": {
+          "gene": "DPP10",
+          "n_em_sals": 42,
+          "n_em_ctrl": 53,
+          "n_em_total": 95,
+          "em_log2fc": -0.3161,
+          "em_p": 0.00019022892259824096,
+          "n_wu_als": 26,
+          "n_wu_nonals": 6,
+          "n_wu_ctrl_only": 2,
+          "wu_log2fc": -0.3125,
+          "wu_p": 0.013953284593678464,
+          "wu_mwu_p": 0.1440577714215089,
+          "em_q_bh": 0.04384776665889454
+        },
+        "DPP6": {
+          "gene": "DPP6",
+          "n_em_sals": 42,
+          "n_em_ctrl": 54,
+          "n_em_total": 96,
+          "em_log2fc": -0.502,
+          "em_p": 7.088225858448466e-12,
+          "n_wu_als": 26,
+          "n_wu_nonals": 6,
+          "n_wu_ctrl_only": 2,
+          "wu_log2fc": -0.1859,
+          "wu_p": 0.04714246320976422,
+          "wu_mwu_p": 0.037777866059289865,
+          "em_q_bh": 8.169180301861858e-09
+        },
+        "PTPRT": {
+          "gene": "PTPRT",
+          "n_em_sals": 42,
+          "n_em_ctrl": 54,
+          "n_em_total": 96,
+          "em_log2fc": -0.134,
+          "em_p": 0.041285541024043415,
+          "n_wu_als": 26,
+          "n_wu_nonals": 6,
+          "n_wu_ctrl_only": 2,
+          "wu_log2fc": -0.2507,
+          "wu_p": 0.027173066536441377,
+          "wu_mwu_p": 0.0777583558451189,
+          "em_q_bh": 0.3817718119707075
+        }
+      }
+    },
+    "zhang2026_mn_partition": {
+      "total_non_explore": 2307,
+      "bh05_up": 174,
+      "bh05_down": 65,
+      "bh_ge_0p05": 2068
+    },
+    "zhang2026_mn_top15_down": [
+      {
+        "gene": "MBP",
+        "avg_log2FC": -0.702414190640777,
+        "p_val": 1.46680218413189e-27,
+        "BH": 1.13628275864084e-24
+      },
+      {
+        "gene": "MOBP",
+        "avg_log2FC": -0.486452561334239,
+        "p_val": 9.3358878370251e-16,
+        "BH": 1.80805027777053e-13
+      },
+      {
+        "gene": "SLC1A2",
+        "avg_log2FC": -1.47760732271094,
+        "p_val": 5.09487983952235e-11,
+        "BH": 5.1480438030652e-09
+      },
+      {
+        "gene": "CST3",
+        "avg_log2FC": -0.317165148861402,
+        "p_val": 7.7329605561356e-09,
+        "BH": 6.41835726159255e-07
+      },
+      {
+        "gene": "NDRG2",
+        "avg_log2FC": -0.383501925845737,
+        "p_val": 9.05333649160601e-09,
+        "BH": 7.25515655396289e-07
+      },
+      {
+        "gene": "ATP1A2",
+        "avg_log2FC": -0.645335825008913,
+        "p_val": 1.96656710993801e-08,
+        "BH": 1.42821936359248e-06
+      },
+      {
+        "gene": "MTURN",
+        "avg_log2FC": -0.267056112809611,
+        "p_val": 2.42063136157971e-07,
+        "BH": 1.52041818494898e-05
+      },
+      {
+        "gene": "MT3",
+        "avg_log2FC": -1.09591151303651,
+        "p_val": 5.12110458407084e-07,
+        "BH": 2.90279196423918e-05
+      },
+      {
+        "gene": "ITM2C",
+        "avg_log2FC": -0.558246188849102,
+        "p_val": 1.32379361716327e-06,
+        "BH": 6.99203719610783e-05
+      },
+      {
+        "gene": "KCNJ16",
+        "avg_log2FC": -1.4392038104096,
+        "p_val": 1.85878827013219e-06,
+        "BH": 8.81596722405554e-05
+      },
+      {
+        "gene": "NEFM",
+        "avg_log2FC": -0.47764784273063,
+        "p_val": 3.74399621352461e-06,
+        "BH": 0.000164170701891155
+      },
+      {
+        "gene": "C1orf61",
+        "avg_log2FC": -0.607786145360499,
+        "p_val": 9.37205643431614e-06,
+        "BH": 0.000357059986120503
+      },
+      {
+        "gene": "GPSM2",
+        "avg_log2FC": -0.328061972689746,
+        "p_val": 1.09277652107655e-05,
+        "BH": 0.000409614941126113
+      },
+      {
+        "gene": "PAQR6",
+        "avg_log2FC": -0.782423934083925,
+        "p_val": 1.31522283284319e-05,
+        "BH": 0.000479008512314098
+      },
+      {
+        "gene": "ETNPPL",
+        "avg_log2FC": -1.32036758089975,
+        "p_val": 1.31912843322299e-05,
+        "BH": 0.000479008512314098
+      }
+    ],
+    "zhang2026_mn_top15_up": [
+      {
+        "gene": "SPP1",
+        "avg_log2FC": 1.48074497993057,
+        "p_val": 1.43553255169486e-37,
+        "BH": 3.33617765013885e-34
+      },
+      {
+        "gene": "SOD2",
+        "avg_log2FC": 1.52423100743426,
+        "p_val": 6.37551456518176e-25,
+        "BH": 3.7041739623706e-22
+      },
+      {
+        "gene": "AQP1",
+        "avg_log2FC": 1.47496616666018,
+        "p_val": 4.35177050048645e-22,
+        "BH": 2.0227029286261e-19
+      },
+      {
+        "gene": "SERPINA3",
+        "avg_log2FC": 3.23098652717859,
+        "p_val": 4.55923146195389e-20,
+        "BH": 1.76594231959681e-17
+      },
+      {
+        "gene": "VIM",
+        "avg_log2FC": 1.72402653845871,
+        "p_val": 7.43117228276151e-18,
+        "BH": 1.91889382057086e-15
+      },
+      {
+        "gene": "CD163",
+        "avg_log2FC": 2.5541015370164,
+        "p_val": 7.3751619614552e-18,
+        "BH": 1.91889382057086e-15
+      },
+      {
+        "gene": "CTSB",
+        "avg_log2FC": 1.29826263258681,
+        "p_val": 3.2818627025935e-16,
+        "BH": 7.62704892082729e-14
+      },
+      {
+        "gene": "APOE",
+        "avg_log2FC": 0.854284251490505,
+        "p_val": 9.13207451701803e-16,
+        "BH": 1.80805027777053e-13
+      },
+      {
+        "gene": "F3",
+        "avg_log2FC": 1.7011865621006,
+        "p_val": 2.17840207365014e-15,
+        "BH": 3.89431263012533e-13
+      },
+      {
+        "gene": "APOC1",
+        "avg_log2FC": 3.59849565637485,
+        "p_val": 3.69363282372394e-13,
+        "BH": 6.13143048738175e-11
+      },
+      {
+        "gene": "FTL",
+        "avg_log2FC": 1.27189972044464,
+        "p_val": 6.79807723209276e-13,
+        "BH": 1.03934147523039e-10
+      },
+      {
+        "gene": "TIMP1",
+        "avg_log2FC": 2.02510784844047,
+        "p_val": 2.35483843324971e-12,
+        "BH": 3.21920265816019e-10
+      },
+      {
+        "gene": "S100A6",
+        "avg_log2FC": 1.33438821587583,
+        "p_val": 5.47759330944802e-12,
+        "BH": 6.88693679414424e-10
+      },
+      {
+        "gene": "S100A9",
+        "avg_log2FC": 2.21435216504179,
+        "p_val": 2.66202877329256e-11,
+        "BH": 2.94597850911044e-09
+      },
+      {
+        "gene": "PSAP",
+        "avg_log2FC": 0.803621136375708,
+        "p_val": 4.82738409446742e-11,
+        "BH": 5.09947301615558e-09
+      }
+    ],
+    "zhang2026_mn_selected": {
+      "CFL1": {
+        "avg_log2FC": 0.347965006437867,
+        "p_val": 0.00846754603524682,
+        "BH": 0.0652068321352754
+      },
+      "DPP6": {
+        "avg_log2FC": 0.695457386261937,
+        "p_val": 0.0127290645862068,
+        "BH": 0.0840407559612065
+      },
+      "MAOB": {
+        "avg_log2FC": 1.18391827352181,
+        "p_val": 9.94446763042623e-05,
+        "BH": 0.00242695205844006
+      },
+      "PFKP": {
+        "avg_log2FC": -0.485426827170242,
+        "p_val": 0.386890845146089,
+        "BH": 0.635078069136506
+      },
+      "PRUNE2": {
+        "avg_log2FC": -1.22600854885033,
+        "p_val": 0.00142737869789674,
+        "BH": 0.0188478868972274
+      }
+    },
+    "pineda_ba4_gc_adjusted": {
+      "n_high_gc_ref": 1185,
+      "n_low_gc_ref": 2338,
+      "n_pc_genes_fdr": 18060,
+      "ba4_exc_by_gene": {
+        "ATG4B": {
+          "gc_pct": 52.34,
+          "n_sals": 16,
+          "n_pn": 16,
+          "unadj_diff_log2cpm": -0.027,
+          "unadj_welch_p": 0.800139608418943,
+          "gc_adj_beta_sals": -0.0056,
+          "gc_adj_p": 0.9612373395755626,
+          "gc_adj_q_bh": 0.9818418840978825
+        },
+        "KALRN": {
+          "gc_pct": 42.78,
+          "n_sals": 16,
+          "n_pn": 16,
+          "unadj_diff_log2cpm": -0.1402,
+          "unadj_welch_p": 0.5725549247051208,
+          "gc_adj_beta_sals": -0.4789,
+          "gc_adj_p": 0.015936999695448668,
+          "gc_adj_q_bh": 0.14033669706332916
+        },
+        "PTPRT": {
+          "gc_pct": 42.34,
+          "n_sals": 16,
+          "n_pn": 16,
+          "unadj_diff_log2cpm": -0.3356,
+          "unadj_welch_p": 0.3696162869568981,
+          "gc_adj_beta_sals": -0.809,
+          "gc_adj_p": 0.01067714816484193,
+          "gc_adj_q_bh": 0.1312656881259668
+        },
+        "CELF5": {
+          "gc_pct": 53.46,
+          "n_sals": 16,
+          "n_pn": 16,
+          "unadj_diff_log2cpm": -0.491,
+          "unadj_welch_p": 0.12366378863185834,
+          "gc_adj_beta_sals": -0.7684,
+          "gc_adj_p": 0.013296596443391016,
+          "gc_adj_q_bh": 0.13568337056887078
+        },
+        "PRUNE2": {
+          "gc_pct": 41.09,
+          "n_sals": 16,
+          "n_pn": 16,
+          "unadj_diff_log2cpm": -0.204,
+          "unadj_welch_p": 0.41565032141265085,
+          "gc_adj_beta_sals": -0.4534,
+          "gc_adj_p": 0.05530835780264103,
+          "gc_adj_q_bh": 0.21625657855422842
+        },
+        "PFKP": {
+          "gc_pct": 51.32,
+          "n_sals": 16,
+          "n_pn": 16,
+          "unadj_diff_log2cpm": -0.1817,
+          "unadj_welch_p": 0.3553498612545424,
+          "gc_adj_beta_sals": -0.267,
+          "gc_adj_p": 0.19784591878248067,
+          "gc_adj_q_bh": 0.4158148834180846
+        },
+        "TRAPPC12": {
+          "gc_pct": 47.7,
+          "n_sals": 16,
+          "n_pn": 16,
+          "unadj_diff_log2cpm": -0.0298,
+          "unadj_welch_p": 0.793028740420376,
+          "gc_adj_beta_sals": -0.169,
+          "gc_adj_p": 0.0835267819731129,
+          "gc_adj_q_bh": 0.26062434043441934
+        },
+        "ELK1": {
+          "gc_pct": 48.51,
+          "n_sals": 16,
+          "n_pn": 16,
+          "unadj_diff_log2cpm": -0.5172,
+          "unadj_welch_p": 0.09032681020587721,
+          "gc_adj_beta_sals": -0.2618,
+          "gc_adj_p": 0.36752316070091173,
+          "gc_adj_q_bh": 0.5897488723078435
+        },
+        "DLGAP1": {
+          "gc_pct": 39.67,
+          "n_sals": 16,
+          "n_pn": 16,
+          "unadj_diff_log2cpm": -0.4174,
+          "unadj_welch_p": 0.2993187216097148,
+          "gc_adj_beta_sals": -0.8563,
+          "gc_adj_p": 0.019089127303000615,
+          "gc_adj_q_bh": 0.148279414663308
+        },
+        "DPP6": {
+          "gc_pct": 43.35,
+          "n_sals": 16,
+          "n_pn": 16,
+          "unadj_diff_log2cpm": -0.3644,
+          "unadj_welch_p": 0.3184264476501723,
+          "gc_adj_beta_sals": -0.6956,
+          "gc_adj_p": 0.04826592969981418,
+          "gc_adj_q_bh": 0.2043804666772905
+        },
+        "DPP10": {
+          "gc_pct": 36.62,
+          "n_sals": 16,
+          "n_pn": 16,
+          "unadj_diff_log2cpm": -0.6712,
+          "unadj_welch_p": 0.2327085749494957,
+          "gc_adj_beta_sals": -1.3373,
+          "gc_adj_p": 0.006618201115442674,
+          "gc_adj_q_bh": 0.1239269088896776
+        },
+        "CFL1": {
+          "gc_pct": 50.18,
+          "n_sals": 16,
+          "n_pn": 16,
+          "unadj_diff_log2cpm": -0.1074,
+          "unadj_welch_p": 0.6167996481172381,
+          "gc_adj_beta_sals": 0.1993,
+          "gc_adj_p": 0.21434998104826672,
+          "gc_adj_q_bh": 0.4351085374543888
+        },
+        "MAOB": {
+          "gc_pct": 39.35,
+          "n_sals": 16,
+          "n_pn": 16,
+          "unadj_diff_log2cpm": -0.1849,
+          "unadj_welch_p": 0.48606761581948177,
+          "gc_adj_beta_sals": -0.5088,
+          "gc_adj_p": 0.026513178196871663,
+          "gc_adj_q_bh": 0.1606493599532692
+        },
+        "C5AR1": {
+          "gc_pct": 49.69,
+          "n_sals": 16,
+          "n_pn": 16,
+          "unadj_diff_log2cpm": -0.2792,
+          "unadj_welch_p": 0.12441998463171995,
+          "gc_adj_beta_sals": -0.2674,
+          "gc_adj_p": 0.1695909019711423,
+          "gc_adj_q_bh": 0.38280361074851016
+        }
+      },
+      "ba4_astro_maob_gfap": {
+        "MAOB": {
+          "n_case": 15,
+          "n_ctrl": 16,
+          "mean_case_log2cpm": 7.6886,
+          "mean_ctrl_log2cpm": 7.5966,
+          "diff_log2cpm": 0.0921,
+          "t_welch": 0.2788,
+          "p_welch": 0.7824493025202466,
+          "p_mwu": 0.8588186957821996
+        },
+        "GFAP": {
+          "n_case": 15,
+          "n_ctrl": 16,
+          "mean_case_log2cpm": 9.1157,
+          "mean_ctrl_log2cpm": 9.406,
+          "diff_log2cpm": -0.2903,
+          "t_welch": -0.7734,
+          "p_welch": 0.4456667168014546,
+          "p_mwu": 0.5400804783898523
+        }
+      }
+    },
+    "edinburgh_sals_non_c9": {
+      "Excitatory": {
+        "ATG4B": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 5.0432,
+          "mean_ctrl_log2cpm": 4.9758,
+          "diff_log2cpm": 0.0674,
+          "t_welch": 0.6794,
+          "p_welch": 0.5081091375934288,
+          "p_mwu": 0.8937060884363444
+        },
+        "KALRN": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 10.0979,
+          "mean_ctrl_log2cpm": 9.874,
+          "diff_log2cpm": 0.2239,
+          "t_welch": 1.539,
+          "p_welch": 0.15718456458804742,
+          "p_mwu": 0.11197508152458095
+        },
+        "PTPRT": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 9.1001,
+          "mean_ctrl_log2cpm": 8.8384,
+          "diff_log2cpm": 0.2616,
+          "t_welch": 1.3817,
+          "p_welch": 0.19196235142594778,
+          "p_mwu": 0.22396145289638061
+        },
+        "CELF5": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 6.8587,
+          "mean_ctrl_log2cpm": 7.1135,
+          "diff_log2cpm": -0.2548,
+          "t_welch": -1.2089,
+          "p_welch": 0.25395079988550695,
+          "p_mwu": 0.0483508504225968
+        },
+        "PRUNE2": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 7.2894,
+          "mean_ctrl_log2cpm": 7.3547,
+          "diff_log2cpm": -0.0654,
+          "t_welch": -0.4326,
+          "p_welch": 0.6766260417551021,
+          "p_mwu": 0.6555913265451642
+        },
+        "PFKP": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 6.815,
+          "mean_ctrl_log2cpm": 7.3607,
+          "diff_log2cpm": -0.5457,
+          "t_welch": -2.4165,
+          "p_welch": 0.03913963276309062,
+          "p_mwu": 0.015200293773708677
+        },
+        "TRAPPC12": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 5.9902,
+          "mean_ctrl_log2cpm": 6.0002,
+          "diff_log2cpm": -0.01,
+          "t_welch": -0.1346,
+          "p_welch": 0.8955646144328603,
+          "p_mwu": 0.8237316153751082
+        },
+        "ELK1": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 5.581,
+          "mean_ctrl_log2cpm": 4.9003,
+          "diff_log2cpm": 0.6807,
+          "t_welch": 3.2106,
+          "p_welch": 0.005252118716500428,
+          "p_mwu": 0.017509364631166632
+        },
+        "DLGAP1": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 10.7442,
+          "mean_ctrl_log2cpm": 10.6908,
+          "diff_log2cpm": 0.0535,
+          "t_welch": 0.3772,
+          "p_welch": 0.7145170537526875,
+          "p_mwu": 0.6555913265451642
+        },
+        "DPP6": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 9.0559,
+          "mean_ctrl_log2cpm": 9.1198,
+          "diff_log2cpm": -0.0639,
+          "t_welch": -0.6469,
+          "p_welch": 0.5295786681188427,
+          "p_mwu": 0.8237316153751082
+        },
+        "DPP10": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 11.1237,
+          "mean_ctrl_log2cpm": 10.9084,
+          "diff_log2cpm": 0.2152,
+          "t_welch": 0.731,
+          "p_welch": 0.486933564837451,
+          "p_mwu": 0.42049451907627655
+        },
+        "CFL1": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 7.6392,
+          "mean_ctrl_log2cpm": 8.0882,
+          "diff_log2cpm": -0.4491,
+          "t_welch": -1.2229,
+          "p_welch": 0.243742886187284,
+          "p_mwu": 0.42049451907627655
+        },
+        "MAOB": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 6.0875,
+          "mean_ctrl_log2cpm": 5.8797,
+          "diff_log2cpm": 0.2078,
+          "t_welch": 2.6701,
+          "p_welch": 0.0194637932372502,
+          "p_mwu": 0.02981351549204719
+        },
+        "C5AR1": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 2.1112,
+          "mean_ctrl_log2cpm": 2.0565,
+          "diff_log2cpm": 0.0547,
+          "t_welch": 0.1723,
+          "p_welch": 0.8673077027149068,
+          "p_mwu": 0.6555913265451642
+        }
+      },
+      "Oligo": {
+        "ATG4B": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 5.0002,
+          "mean_ctrl_log2cpm": 5.2612,
+          "diff_log2cpm": -0.261,
+          "t_welch": -0.8136,
+          "p_welch": 0.4260915343617911,
+          "p_mwu": 0.8585857505490432
+        },
+        "KALRN": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 5.6417,
+          "mean_ctrl_log2cpm": 5.5362,
+          "diff_log2cpm": 0.1056,
+          "t_welch": 0.5349,
+          "p_welch": 0.6012857854068224,
+          "p_mwu": 0.3701887424773965
+        },
+        "PTPRT": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 3.1328,
+          "mean_ctrl_log2cpm": 3.1414,
+          "diff_log2cpm": -0.0086,
+          "t_welch": -0.0198,
+          "p_welch": 0.9844466939188312,
+          "p_mwu": 0.7152550342925781
+        },
+        "CELF5": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 2.1312,
+          "mean_ctrl_log2cpm": 2.6233,
+          "diff_log2cpm": -0.4922,
+          "t_welch": -1.7389,
+          "p_welch": 0.10112079834095569,
+          "p_mwu": 0.2943929232784577
+        },
+        "PRUNE2": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 10.2469,
+          "mean_ctrl_log2cpm": 10.2432,
+          "diff_log2cpm": 0.0037,
+          "t_welch": 0.0471,
+          "p_welch": 0.963144384332755,
+          "p_mwu": 0.9290260783586702
+        },
+        "PFKP": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 2.8643,
+          "mean_ctrl_log2cpm": 3.7434,
+          "diff_log2cpm": -0.8791,
+          "t_welch": -2.7642,
+          "p_welch": 0.009747289115789617,
+          "p_mwu": 0.11048137360080226
+        },
+        "TRAPPC12": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 6.3775,
+          "mean_ctrl_log2cpm": 6.3523,
+          "diff_log2cpm": 0.0251,
+          "t_welch": 0.2708,
+          "p_welch": 0.7892343524150599,
+          "p_mwu": 0.8937060884363444
+        },
+        "ELK1": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 2.5901,
+          "mean_ctrl_log2cpm": 2.5123,
+          "diff_log2cpm": 0.0778,
+          "t_welch": 0.2117,
+          "p_welch": 0.8353826346834026,
+          "p_mwu": 0.5533067457201003
+        },
+        "DLGAP1": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 5.4687,
+          "mean_ctrl_log2cpm": 5.547,
+          "diff_log2cpm": -0.0783,
+          "t_welch": -0.2735,
+          "p_welch": 0.7884010589316246,
+          "p_mwu": 0.42049451907627655
+        },
+        "DPP6": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 7.8106,
+          "mean_ctrl_log2cpm": 7.9251,
+          "diff_log2cpm": -0.1145,
+          "t_welch": -0.3061,
+          "p_welch": 0.7661741190855543,
+          "p_mwu": 0.8237316153751082
+        },
+        "DPP10": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 6.7399,
+          "mean_ctrl_log2cpm": 6.1704,
+          "diff_log2cpm": 0.5694,
+          "t_welch": 1.7324,
+          "p_welch": 0.10111065678010903,
+          "p_mwu": 0.20686743580236353
+        },
+        "CFL1": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 6.7568,
+          "mean_ctrl_log2cpm": 6.8057,
+          "diff_log2cpm": -0.0489,
+          "t_welch": -0.2533,
+          "p_welch": 0.8018691282151534,
+          "p_mwu": 0.7892048857705143
+        },
+        "MAOB": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 1.6366,
+          "mean_ctrl_log2cpm": 1.3781,
+          "diff_log2cpm": 0.2585,
+          "t_welch": 0.6109,
+          "p_welch": 0.5558050596855569,
+          "p_mwu": 0.714477615317202
+        },
+        "C5AR1": {
+          "n_case": 25,
+          "n_ctrl": 7,
+          "mean_case_log2cpm": 0.3569,
+          "mean_ctrl_log2cpm": 1.4823,
+          "diff_log2cpm": -1.1253,
+          "t_welch": -4.6107,
+          "p_welch": 0.001483064832317322,
+          "p_mwu": 0.0004434038094372179
+        }
+      }
+    }
+  },
+  "funnel4_bye2025_screen": {
+    "partition_107_drugs": {
+      "explore_adopted": 17,
+      "unadopted_pos_p05": 6,
+      "unadopted_neg_p05": 11,
+      "unadopted_null": 73
+    },
+    "unadopted_positive_p05_hits": [
+      {
+        "drug": "PMX 205",
+        "modality": "IPSC_MN_SURVIVAL_DAYS",
+        "n_donors": 16,
+        "mean_paired_dmso_days": 1.30546875,
+        "t_stat_paired": 2.7771284820674635,
+        "p_ttest_2s": 0.014094959326435804,
+        "p_wilcoxon_exact_2s": 0.010986328125,
+        "rank_107": 9,
+        "q_bh_107_ttest_2s": 0.06952324290536778
+      },
+      {
+        "drug": "Acetylcysteine",
+        "modality": "IPSC_MN_SURVIVAL_DAYS",
+        "n_donors": 15,
+        "mean_paired_dmso_days": 0.9458333333333333,
+        "t_stat_paired": 2.6212201505992834,
+        "p_ttest_2s": 0.02012803774990691,
+        "p_wilcoxon_exact_2s": 0.0067138671875,
+        "rank_107": 12,
+        "q_bh_107_ttest_2s": 0.09363913214087127
+      },
+      {
+        "drug": "Lamotrigine",
+        "modality": "IPSC_MN_SURVIVAL_DAYS",
+        "n_donors": 16,
+        "mean_paired_dmso_days": 0.89921875,
+        "t_stat_paired": 2.770150420859101,
+        "p_ttest_2s": 0.01429449854129057,
+        "p_wilcoxon_exact_2s": 0.01824951171875,
+        "rank_107": 13,
+        "q_bh_107_ttest_2s": 0.06952324290536778
+      },
+      {
+        "drug": "Dolutegravir",
+        "modality": "IPSC_MN_SURVIVAL_DAYS",
+        "n_donors": 15,
+        "mean_paired_dmso_days": 0.7458333333333333,
+        "t_stat_paired": 2.224577384375726,
+        "p_ttest_2s": 0.043066771616817164,
+        "p_wilcoxon_exact_2s": 0.0579833984375,
+        "rank_107": 17,
+        "q_bh_107_ttest_2s": 0.170672020851831
+      },
+      {
+        "drug": "Coenzyme Q10",
+        "modality": "IPSC_MN_SURVIVAL_DAYS",
+        "n_donors": 16,
+        "mean_paired_dmso_days": 0.74296875,
+        "t_stat_paired": 2.13663272345572,
+        "p_ttest_2s": 0.04951232965440066,
+        "p_wilcoxon_exact_2s": 0.07391357421875,
+        "rank_107": 19,
+        "q_bh_107_ttest_2s": 0.18268342320761624
+      },
+      {
+        "drug": "L-Serine",
+        "modality": "IPSC_MN_SURVIVAL_DAYS",
+        "n_donors": 16,
+        "mean_paired_dmso_days": 0.71171875,
+        "t_stat_paired": 2.2243011428839177,
+        "p_ttest_2s": 0.04190313829537687,
+        "p_wilcoxon_exact_2s": 0.02899169921875,
+        "rank_107": 20,
+        "q_bh_107_ttest_2s": 0.170672020851831
+      }
+    ]
+  }
+}

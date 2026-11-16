@@ -1,0 +1,189 @@
+{
+  "target": {
+    "id": "ENSG00000125730",
+    "approvedSymbol": "C3",
+    "tractability": [
+      {
+        "modality": "SM",
+        "label": "Approved Drug",
+        "value": false
+      },
+      {
+        "modality": "SM",
+        "label": "Advanced Clinical",
+        "value": false
+      },
+      {
+        "modality": "SM",
+        "label": "Phase 1 Clinical",
+        "value": false
+      },
+      {
+        "modality": "SM",
+        "label": "Structure with Ligand",
+        "value": true
+      },
+      {
+        "modality": "SM",
+        "label": "High-Quality Ligand",
+        "value": false
+      },
+      {
+        "modality": "SM",
+        "label": "High-Quality Pocket",
+        "value": true
+      },
+      {
+        "modality": "SM",
+        "label": "Med-Quality Pocket",
+        "value": false
+      },
+      {
+        "modality": "SM",
+        "label": "Druggable Family",
+        "value": false
+      },
+      {
+        "modality": "AB",
+        "label": "Approved Drug",
+        "value": false
+      },
+      {
+        "modality": "AB",
+        "label": "Advanced Clinical",
+        "value": false
+      },
+      {
+        "modality": "AB",
+        "label": "Phase 1 Clinical",
+        "value": false
+      },
+      {
+        "modality": "AB",
+        "label": "UniProt loc high conf",
+        "value": true
+      },
+      {
+        "modality": "AB",
+        "label": "GO CC high conf",
+        "value": true
+      },
+      {
+        "modality": "AB",
+        "label": "UniProt loc med conf",
+        "value": false
+      },
+      {
+        "modality": "AB",
+        "label": "UniProt SigP or TMHMM",
+        "value": true
+      },
+      {
+        "modality": "AB",
+        "label": "GO CC med conf",
+        "value": false
+      },
+      {
+        "modality": "AB",
+        "label": "Human Protein Atlas loc",
+        "value": false
+      },
+      {
+        "modality": "PR",
+        "label": "Approved Drug",
+        "value": false
+      },
+      {
+        "modality": "PR",
+        "label": "Advanced Clinical",
+        "value": false
+      },
+      {
+        "modality": "PR",
+        "label": "Phase 1 Clinical",
+        "value": false
+      },
+      {
+        "modality": "PR",
+        "label": "Literature",
+        "value": false
+      },
+      {
+        "modality": "PR",
+        "label": "UniProt Ubiquitination",
+        "value": false
+      },
+      {
+        "modality": "PR",
+        "label": "Database Ubiquitination",
+        "value": true
+      },
+      {
+        "modality": "PR",
+        "label": "Half-life Data",
+        "value": true
+      },
+      {
+        "modality": "PR",
+        "label": "Small Molecule Binder",
+        "value": true
+      },
+      {
+        "_truncated": "(Showing 25 of 28 items)"
+      }
+    ],
+    "safetyLiabilities": [
+      {
+        "event": "fasting triglyceride levels",
+        "eventId": null,
+        "biosamples": [],
+        "effects": [],
+        "studies": [
+          {
+            "name": "clozapine induced effect",
+            "type": "clinical",
+            "description": "Genetic variation linked to this safety liability: 19_6679500_C_T,T, 19_6679500_C_C,C"
+          }
+        ],
+        "datasource": "ClinPGx"
+      },
+      {
+        "event": "fasting triglyceride levels and susceptibility to metabolic syndrome",
+        "eventId": null,
+        "biosamples": [],
+        "effects": [],
+        "studies": [
+          {
+            "name": "clozapine induced effect",
+            "type": "clinical",
+            "description": "Genetic variation linked to this safety liability: 19_6679500_C_C,T"
+          }
+        ],
+        "datasource": "ClinPGx"
+      }
+    ],
+    "geneticConstraint": [
+      {
+        "constraintType": "syn",
+        "exp": 857.6099853515625,
+        "obs": 848,
+        "score": 0.19583000242710114,
+        "oe": 0.988789975643158
+      },
+      {
+        "constraintType": "mis",
+        "exp": 2171.699951171875,
+        "obs": 1684,
+        "score": 4.463399887084961,
+        "oe": 0.7754300236701965
+      },
+      {
+        "constraintType": "lof",
+        "exp": 207.86000061035156,
+        "obs": 97,
+        "score": 1.196600010189286e-07,
+        "oe": 0.46665000915527344
+      }
+    ]
+  }
+}

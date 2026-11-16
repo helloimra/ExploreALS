@@ -1,0 +1,1 @@
+https://deepmind.google.com/science/alphagenome/atlas?q=chr8:79616810-79616827&m=locus&lItems=avi,section:RNA_SEQ,section:DNASE

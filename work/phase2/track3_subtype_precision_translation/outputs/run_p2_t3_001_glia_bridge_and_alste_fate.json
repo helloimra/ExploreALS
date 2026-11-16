@@ -1,0 +1,434 @@
+{
+  "analysis_run_id": "RUN-P2-T3-001",
+  "s09_paired_cortex_to_cord_fate": {
+    "n_paired_als_donors": 266,
+    "crosstab_cortex_x_cord": {
+      "ALS-Glia": {
+        "ALS-Glia-cord": 23,
+        "ALS-Ox-cord": 3
+      },
+      "ALS-Ox": {
+        "ALS-Glia-cord": 145,
+        "ALS-Ox-cord": 61
+      },
+      "ALS-TE": {
+        "ALS-Glia-cord": 21,
+        "ALS-Ox-cord": 13
+      }
+    },
+    "clinical_by_cortical_subtype": {
+      "ALS-Glia": {
+        "n_donors": 28,
+        "c9_pos": 4,
+        "c9_evaluated": 28,
+        "c9_pct": 14.29,
+        "median_duration_months": 33.0,
+        "mean_age_onset_yr": 63.0,
+        "bulbar_onset_pct": 35.71
+      },
+      "ALS-Ox": {
+        "n_donors": 234,
+        "c9_pos": 26,
+        "c9_evaluated": 234,
+        "c9_pct": 11.11,
+        "median_duration_months": 34.0,
+        "mean_age_onset_yr": 61.01,
+        "bulbar_onset_pct": 33.33
+      },
+      "ALS-TE": {
+        "n_donors": 41,
+        "c9_pos": 6,
+        "c9_evaluated": 41,
+        "c9_pct": 14.63,
+        "median_duration_months": 36.0,
+        "mean_age_onset_yr": 62.27,
+        "bulbar_onset_pct": 41.46
+      }
+    },
+    "intra_donor_multi_region_cortex_concordance": {
+      "n_als_donors_with_2plus_cortical_regions": 122,
+      "n_discordant_across_frontal_motor_cortex": 44,
+      "concordance_pct": 63.93
+    }
+  },
+  "nygc_subtype_transcriptomics": {
+    "CHI3L2": {
+      "glia_vs_ox_diff": 1.4914,
+      "glia_vs_ox_p": 0.008853359327273855,
+      "te_vs_ox_diff": -0.3895,
+      "glia_vs_non_glia_als_auc": 0.7788,
+      "te_vs_ox_p": 0.09689585622123562,
+      "te_vs_ctrl_diff": 0.3833,
+      "te_vs_ctrl_p": 0.1467449325779612
+    },
+    "OAS1": {
+      "glia_vs_ox_diff": 0.1144,
+      "glia_vs_ox_p": 0.29590117362762075,
+      "te_vs_ox_diff": -0.0565,
+      "glia_vs_non_glia_als_auc": 0.6078,
+      "te_vs_ox_p": 0.48650097180229845,
+      "te_vs_ctrl_diff": -0.2084,
+      "te_vs_ctrl_p": 0.07152886387252429
+    },
+    "JAK2": {
+      "glia_vs_ox_diff": 0.0209,
+      "glia_vs_ox_p": 0.7547715250674796,
+      "te_vs_ox_diff": 0.0024,
+      "glia_vs_non_glia_als_auc": 0.5329,
+      "te_vs_ox_p": 0.9630100352538449,
+      "te_vs_ctrl_diff": 0.1658,
+      "te_vs_ctrl_p": 0.014536367239933585
+    },
+    "MMP9": {
+      "glia_vs_ox_diff": 0.051,
+      "glia_vs_ox_p": 0.5248237921210077,
+      "te_vs_ox_diff": 0.0625,
+      "glia_vs_non_glia_als_auc": 0.6466,
+      "te_vs_ox_p": 0.43228195967543054,
+      "te_vs_ctrl_diff": 0.0098,
+      "te_vs_ctrl_p": 0.9164061503667944
+    },
+    "TIMP1": {
+      "glia_vs_ox_diff": 0.412,
+      "glia_vs_ox_p": 0.07231177398863754,
+      "te_vs_ox_diff": 0.0794,
+      "glia_vs_non_glia_als_auc": 0.6672,
+      "te_vs_ox_p": 0.6491247490066304,
+      "te_vs_ctrl_diff": 0.1823,
+      "te_vs_ctrl_p": 0.352688289137066
+    },
+    "TYK2": {
+      "glia_vs_ox_diff": 0.2428,
+      "glia_vs_ox_p": 0.059450267786811214,
+      "te_vs_ox_diff": 0.5763,
+      "glia_vs_non_glia_als_auc": 0.5742,
+      "te_vs_ox_p": 5.5177409969784394e-09,
+      "te_vs_ctrl_diff": -0.0732,
+      "te_vs_ctrl_p": 0.4645935087345037
+    },
+    "JAK3": {
+      "glia_vs_ox_diff": 0.0996,
+      "glia_vs_ox_p": 0.39802383848020984,
+      "te_vs_ox_diff": 0.3862,
+      "glia_vs_non_glia_als_auc": 0.5199,
+      "te_vs_ox_p": 0.0012524611418214969,
+      "te_vs_ctrl_diff": 0.2739,
+      "te_vs_ctrl_p": 0.03793114974676692
+    },
+    "DDX58": {
+      "glia_vs_ox_diff": 0.317,
+      "glia_vs_ox_p": 0.00886234149606629,
+      "te_vs_ox_diff": 0.0709,
+      "glia_vs_non_glia_als_auc": 0.728,
+      "te_vs_ox_p": 0.2011653998291104,
+      "te_vs_ctrl_diff": 0.0735,
+      "te_vs_ctrl_p": 0.35286259794608554
+    },
+    "LGALS3BP": {
+      "glia_vs_ox_diff": 0.7407,
+      "glia_vs_ox_p": 0.0002422139509059482,
+      "te_vs_ox_diff": -0.1329,
+      "glia_vs_non_glia_als_auc": 0.8356,
+      "te_vs_ox_p": 0.1997767081700897,
+      "te_vs_ctrl_diff": -0.1047,
+      "te_vs_ctrl_p": 0.4213330661959623
+    },
+    "CCL2": {
+      "glia_vs_ox_diff": 0.2378,
+      "glia_vs_ox_p": 0.3702176984463578,
+      "te_vs_ox_diff": 0.1215,
+      "glia_vs_non_glia_als_auc": 0.5812,
+      "te_vs_ox_p": 0.5734519460410087,
+      "te_vs_ctrl_diff": 0.7163,
+      "te_vs_ctrl_p": 0.004432386603174086
+    },
+    "IFIH1": {
+      "glia_vs_ox_diff": 0.3042,
+      "glia_vs_ox_p": 0.023144863686059922,
+      "te_vs_ox_diff": -0.0028,
+      "glia_vs_non_glia_als_auc": 0.7179,
+      "te_vs_ox_p": 0.9690912031211778,
+      "te_vs_ctrl_diff": 0.0016,
+      "te_vs_ctrl_p": 0.9870059825205828
+    },
+    "STAT1": {
+      "glia_vs_ox_diff": -0.0934,
+      "glia_vs_ox_p": 0.4337645872770998,
+      "te_vs_ox_diff": -0.2017,
+      "glia_vs_non_glia_als_auc": 0.4857,
+      "te_vs_ox_p": 0.00595551220600963,
+      "te_vs_ctrl_diff": 0.0916,
+      "te_vs_ctrl_p": 0.33296483322572684
+    },
+    "AAK1": {
+      "glia_vs_ox_diff": -0.2858,
+      "glia_vs_ox_p": 0.01913095170311071,
+      "te_vs_ox_diff": 0.1108,
+      "glia_vs_non_glia_als_auc": 0.2459,
+      "te_vs_ox_p": 0.03742955020058663,
+      "te_vs_ctrl_diff": 0.2207,
+      "te_vs_ctrl_p": 0.0009873887174521652
+    },
+    "TARDBP": {
+      "glia_vs_ox_diff": 0.0513,
+      "glia_vs_ox_p": 0.4653580249108287,
+      "te_vs_ox_diff": -0.0395,
+      "glia_vs_non_glia_als_auc": 0.5757,
+      "te_vs_ox_p": 0.26499871321405116,
+      "te_vs_ctrl_diff": 0.1648,
+      "te_vs_ctrl_p": 0.00024453072047992005
+    },
+    "LBP": {
+      "glia_vs_ox_diff": 0.0526,
+      "glia_vs_ox_p": 0.06646199136882888,
+      "te_vs_ox_diff": -0.0163,
+      "glia_vs_non_glia_als_auc": 0.7215,
+      "te_vs_ox_p": 0.00021834670972893614,
+      "te_vs_ctrl_diff": -0.0043,
+      "te_vs_ctrl_p": 0.2175069911603703
+    },
+    "CHI3L1": {
+      "glia_vs_ox_diff": 0.9411,
+      "glia_vs_ox_p": 0.043666878759486716,
+      "te_vs_ox_diff": 0.6007,
+      "glia_vs_non_glia_als_auc": 0.6581,
+      "te_vs_ox_p": 0.03554265278248947,
+      "te_vs_ctrl_diff": 1.1183,
+      "te_vs_ctrl_p": 0.0008058280347779842
+    },
+    "CHIT1": {
+      "glia_vs_ox_diff": 0.5735,
+      "glia_vs_ox_p": 0.07256466694854105,
+      "te_vs_ox_diff": -0.1682,
+      "glia_vs_non_glia_als_auc": 0.6244,
+      "te_vs_ox_p": 0.011045391672208929,
+      "te_vs_ctrl_diff": 0.0308,
+      "te_vs_ctrl_p": 0.6043510601772432
+    },
+    "GPNMB": {
+      "glia_vs_ox_diff": 0.5624,
+      "glia_vs_ox_p": 0.06657489387040481,
+      "te_vs_ox_diff": 0.1036,
+      "glia_vs_non_glia_als_auc": 0.6631,
+      "te_vs_ox_p": 0.500547886029239,
+      "te_vs_ctrl_diff": 0.5189,
+      "te_vs_ctrl_p": 0.0036631282303335225
+    },
+    "IL6": {
+      "glia_vs_ox_diff": -0.1068,
+      "glia_vs_ox_p": 0.15429410571686164,
+      "te_vs_ox_diff": 0.0787,
+      "glia_vs_non_glia_als_auc": 0.461,
+      "te_vs_ox_p": 0.32064624972228445,
+      "te_vs_ctrl_diff": 0.0912,
+      "te_vs_ctrl_p": 0.40380649511243805
+    },
+    "MX1": {
+      "glia_vs_ox_diff": -0.314,
+      "glia_vs_ox_p": 0.04203419327828769,
+      "te_vs_ox_diff": 0.1303,
+      "glia_vs_non_glia_als_auc": 0.2831,
+      "te_vs_ox_p": 0.05096308544677375,
+      "te_vs_ctrl_diff": -0.0332,
+      "te_vs_ctrl_p": 0.7055698258543854
+    },
+    "C1QC": {
+      "glia_vs_ox_diff": 0.8204,
+      "glia_vs_ox_p": 0.017643375010062277,
+      "te_vs_ox_diff": -0.0841,
+      "glia_vs_non_glia_als_auc": 0.7034,
+      "te_vs_ox_p": 0.699907653973436,
+      "te_vs_ctrl_diff": 0.4543,
+      "te_vs_ctrl_p": 0.07552388892918882
+    },
+    "JAK1": {
+      "glia_vs_ox_diff": -0.0627,
+      "glia_vs_ox_p": 0.1571988910155762,
+      "te_vs_ox_diff": -0.0317,
+      "glia_vs_non_glia_als_auc": 0.4258,
+      "te_vs_ox_p": 0.36446155666865016,
+      "te_vs_ctrl_diff": 0.0951,
+      "te_vs_ctrl_p": 0.053656680875442515
+    },
+    "CGAS": {
+      "glia_vs_ox_diff": 0.2658,
+      "glia_vs_ox_p": 0.022346106717303815,
+      "te_vs_ox_diff": 0.0715,
+      "glia_vs_non_glia_als_auc": 0.6958,
+      "te_vs_ox_p": 0.3831763824984717,
+      "te_vs_ctrl_diff": 0.0799,
+      "te_vs_ctrl_p": 0.41493873690727606
+    },
+    "B2M": {
+      "glia_vs_ox_diff": 0.3421,
+      "glia_vs_ox_p": 0.08010385203303455,
+      "te_vs_ox_diff": -0.2737,
+      "glia_vs_non_glia_als_auc": 0.6782,
+      "te_vs_ox_p": 0.011576914240162006,
+      "te_vs_ctrl_diff": 0.0288,
+      "te_vs_ctrl_p": 0.8228543216430956
+    },
+    "HDGFL2": {
+      "glia_vs_ox_diff": -0.1705,
+      "glia_vs_ox_p": 0.1491192524304644,
+      "te_vs_ox_diff": 0.1999,
+      "glia_vs_non_glia_als_auc": 0.3529,
+      "te_vs_ox_p": 0.005827355167696728,
+      "te_vs_ctrl_diff": -0.1663,
+      "te_vs_ctrl_p": 0.03255737758816679
+    },
+    "STAT3": {
+      "glia_vs_ox_diff": 0.4218,
+      "glia_vs_ox_p": 7.097889757248085e-06,
+      "te_vs_ox_diff": 0.157,
+      "glia_vs_non_glia_als_auc": 0.821,
+      "te_vs_ox_p": 0.026361873410260087,
+      "te_vs_ctrl_diff": 0.1408,
+      "te_vs_ctrl_p": 0.08959734024128227
+    },
+    "CXCL10": {
+      "glia_vs_ox_diff": 0.0147,
+      "glia_vs_ox_p": 0.7880426493227324,
+      "te_vs_ox_diff": 0.0887,
+      "glia_vs_non_glia_als_auc": 0.5581,
+      "te_vs_ox_p": 0.3511396872477119,
+      "te_vs_ctrl_diff": -0.1633,
+      "te_vs_ctrl_p": 0.30957192961291535
+    },
+    "CD14": {
+      "glia_vs_ox_diff": 0.4327,
+      "glia_vs_ox_p": 0.12086780677621896,
+      "te_vs_ox_diff": 0.1895,
+      "glia_vs_non_glia_als_auc": 0.6179,
+      "te_vs_ox_p": 0.4157632732384489,
+      "te_vs_ctrl_diff": 0.6406,
+      "te_vs_ctrl_p": 0.014732961566232872
+    },
+    "C1QB": {
+      "glia_vs_ox_diff": 1.016,
+      "glia_vs_ox_p": 0.007498648935446279,
+      "te_vs_ox_diff": -0.0864,
+      "glia_vs_non_glia_als_auc": 0.736,
+      "te_vs_ox_p": 0.6871233217967883,
+      "te_vs_ctrl_diff": 0.5437,
+      "te_vs_ctrl_p": 0.036232261871865505
+    },
+    "C1QA": {
+      "glia_vs_ox_diff": 0.6771,
+      "glia_vs_ox_p": 0.04443977762045018,
+      "te_vs_ox_diff": -0.2239,
+      "glia_vs_non_glia_als_auc": 0.6878,
+      "te_vs_ox_p": 0.26923008035591933,
+      "te_vs_ctrl_diff": 0.2542,
+      "te_vs_ctrl_p": 0.284692853232632
+    },
+    "GAK": {
+      "glia_vs_ox_diff": -0.1405,
+      "glia_vs_ox_p": 0.2493801561990415,
+      "te_vs_ox_diff": 0.4131,
+      "glia_vs_non_glia_als_auc": 0.3193,
+      "te_vs_ox_p": 1.5001343889246304e-07,
+      "te_vs_ctrl_diff": -0.0844,
+      "te_vs_ctrl_p": 0.28393741631163677
+    },
+    "ISG15": {
+      "glia_vs_ox_diff": -0.2389,
+      "glia_vs_ox_p": 0.1171041423712213,
+      "te_vs_ox_diff": -0.0384,
+      "glia_vs_non_glia_als_auc": 0.3831,
+      "te_vs_ox_p": 0.738284980668437,
+      "te_vs_ctrl_diff": -0.272,
+      "te_vs_ctrl_p": 0.06287122150141657
+    },
+    "SERPINA3": {
+      "glia_vs_ox_diff": 2.3257,
+      "glia_vs_ox_p": 1.5046722578525734e-05,
+      "te_vs_ox_diff": 0.3808,
+      "glia_vs_non_glia_als_auc": 0.82,
+      "te_vs_ox_p": 0.3330611455501711,
+      "te_vs_ctrl_diff": 1.4453,
+      "te_vs_ctrl_p": 0.0035810508345566587
+    }
+  },
+  "c019_within_als_subtype_specificity_maj1": {
+    "cortex_predicting_cortical_ALS_Glia": {
+      "n_als_donors": 166,
+      "n_als_glia_positive": 13,
+      "auc_bridge_4gene": 0.7803,
+      "auc_cxcl10_alone": 0.5581,
+      "auc_jak_stat_4gene": 0.7149,
+      "auc_dual_bridge_plus_cxcl10": 0.7667,
+      "cxcl10_glia_vs_nonglia_welch_p": 0.9456915773131536
+    },
+    "spinal_cord_predicting_cord_ALS_Glia": {
+      "n_als_donors": 189,
+      "n_als_glia_positive": 125,
+      "auc_bridge_4gene": 0.6663,
+      "auc_cxcl10_alone": 0.5441,
+      "auc_jak_stat_4gene": 0.5278,
+      "auc_dual_bridge_plus_cxcl10": 0.6595,
+      "cxcl10_glia_vs_nonglia_welch_p": 0.7691703519262768
+    },
+    "spinal_cord_predicting_true_cortical_ALS_Glia": {
+      "n_als_donors": 156,
+      "n_als_glia_positive": 11,
+      "auc_bridge_4gene": 0.6796,
+      "auc_cxcl10_alone": 0.4389,
+      "auc_jak_stat_4gene": 0.3931,
+      "auc_dual_bridge_plus_cxcl10": 0.605,
+      "cxcl10_glia_vs_nonglia_welch_p": 0.1383546399645236
+    }
+  },
+  "ds045_csf_detection_34_genes": {
+    "CHIT1": true,
+    "GPNMB": true,
+    "CHI3L1": true,
+    "CHI3L2": true,
+    "SERPINA3": true,
+    "C1QA": true,
+    "C1QB": true,
+    "C1QC": true,
+    "TIMP1": true,
+    "CD14": true,
+    "LBP": true,
+    "B2M": true,
+    "LGALS3BP": true,
+    "CCL2": false,
+    "CXCL10": true,
+    "JAK1": false,
+    "JAK2": false,
+    "JAK3": false,
+    "TYK2": false,
+    "STAT1": true,
+    "STAT3": true,
+    "AAK1": true,
+    "GAK": false,
+    "CGAS": false,
+    "STING1": false,
+    "DDX58": false,
+    "IFIH1": false,
+    "ISG15": true,
+    "MX1": false,
+    "OAS1": false,
+    "IL6": false,
+    "MMP9": true,
+    "HDGFL2": true,
+    "TARDBP": true
+  },
+  "c019_living_csf_als_glia_bridge": {
+    "n_dia_total": 259,
+    "control_95th_pct_cutoff_z": 1.0772,
+    "sals_exceeding_ctrl95_pct": 54.0,
+    "c9_symp_exceeding_ctrl95_pct": 93.02,
+    "c9_asymp_exceeding_ctrl95_pct": 3.39,
+    "roc_auc_sals_vs_ctrl_bridge_4prot": 0.8317,
+    "roc_auc_sals_vs_ctrl_chit1_only_with_nulls": 0.7892,
+    "sals_vs_ctrl_bridge_welch_p": 1.079958056267447e-09,
+    "c9_asymp_vs_ctrl_bridge_welch_p": 5.2183782080794394e-06,
+    "chit1_null_or_low_despite_high_non_chit1_glia_in_symp_ALS": {
+      "n_discordant": 5,
+      "n_high_non_chit1_glia": 77,
+      "pct_rescued_from_false_negative": 6.49
+    }
+  }
+}

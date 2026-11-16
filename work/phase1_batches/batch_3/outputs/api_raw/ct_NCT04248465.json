@@ -1,0 +1,3575 @@
+{
+  "protocolSection": {
+    "identificationModule": {
+      "nctId": "NCT04248465",
+      "briefTitle": "An Efficacy and Safety Study of Ravulizumab in ALS Participants"
+    },
+    "statusModule": {
+      "overallStatus": "TERMINATED",
+      "whyStopped": "The IDMC recommended the study be discontinued due to lack of efficacy with ravulizumab.",
+      "startDateStruct": {
+        "date": "2020-03-30"
+      },
+      "primaryCompletionDateStruct": {
+        "date": "2021-10-17"
+      }
+    },
+    "descriptionModule": {
+      "briefSummary": "The purpose of the study is to assess the efficacy and safety of ravulizumab for the treatment of adult participants with ALS."
+    },
+    "designModule": {
+      "phases": [
+        "PHASE3"
+      ],
+      "enrollmentInfo": {
+        "count": 382
+      }
+    },
+    "armsInterventionsModule": {
+      "armGroups": [
+        {
+          "label": "Ravulizumab",
+          "type": "EXPERIMENTAL",
+          "description": "Participants will receive ravulizumab for the duration of the study.",
+          "interventionNames": [
+            "Biological: Ravulizumab"
+          ]
+        },
+        {
+          "label": "Placebo",
+          "type": "PLACEBO_COMPARATOR",
+          "description": "Participants will receive placebo during the 50-week Randomized Controlled Period of the study, after which they will enter the Open-label Extension Period of the study and switch to receive ravulizumab.",
+          "interventionNames": [
+            "Drug: Placebo",
+            "Biological: Ravulizumab"
+          ]
+        }
+      ],
+      "interventions": [
+        {
+          "type": "DRUG",
+          "name": "Placebo",
+          "description": "Single loading dose via intravenous infusion, followed by regular maintenance dosing, based on weight.",
+          "armGroupLabels": [
+            "Placebo"
+          ]
+        },
+        {
+          "type": "BIOLOGICAL",
+          "name": "Ravulizumab",
+          "description": "Single loading dose via intravenous infusion, followed by regular maintenance dosing, based on weight.",
+          "armGroupLabels": [
+            "Placebo",
+            "Ravulizumab"
+          ],
+          "otherNames": [
+            "ALXN1210",
+            "Ultomiris"
+          ]
+        }
+      ]
+    },
+    "outcomesModule": {
+      "primaryOutcomes": [
+        {
+          "measure": "Change From Baseline In Amyotrophic Lateral Sclerosis Functional Rating Scale-Revised (ALSFRS-R) Total Score",
+          "description": "The ALSFRS-Revised is a validated instrument for evaluating the levels of the functional status of participants with amyotrophic lateral sclerosis (ALS) in 4 areas, including bulbar, gross motor activity, fine motor activity, and respiratory functions. The scale included 12 functional items and each item is rated on a 0 to 4 scale, with a maximum total score of 48. A higher score indicated greater retention of function. Baseline was defined as last non-missing value on or before first study drug administration.",
+          "timeFrame": "Baseline, Week 50"
+        }
+      ],
+      "secondaryOutcomes": [
+        {
+          "measure": "Time To Ventilator Assistance-free Survival",
+          "description": "Ventilation Assistance-Free Survival (VAFS) is a composite endpoint of survival and severe and irreversible respiratory decline. The use of VAFS allowed for the collection of survival data that was not impacted by survival prolongation from noninvasive or permanent ventilatory interventions which could prolong life without impacting underlying disease progression.",
+          "timeFrame": "Up to Week 50"
+        },
+        {
+          "measure": "Change From Baseline In Percent Predicted Slow Vital Capacity",
+          "description": "Slow vital capacity measures slow and gradual expulsion of air from the lungs using a spirometer.",
+          "timeFrame": "Baseline, Week 50"
+        },
+        {
+          "measure": "Number of Participants With Treatment-emergent Adverse Events (TEAEs), Treatment-emergent Serious Adverse Events, and TEAEs Leading To Study Drug Discontinuation",
+          "description": "An adverse event (AE) was defined as any unfavorable and unintended sign (for example, including an abnormal laboratory finding), symptom, or disease temporally associated with the use of a medicinal product or procedure, whether or not considered related to the medicinal product or procedure, which occurred during the course of the clinical study. TEAEs were defined as AEs that occurred on or after the date and time of study drug administration, or those that first occurred before dosing but worsened in frequency or severity after study drug administration. A summary of all Serious Adverse Events and Other Adverse Events (nonserious) regardless of causality is located in the 'Reported Adverse Events' Section.",
+          "timeFrame": "Baseline up to Week 156"
+        },
+        {
+          "measure": "Change From Baseline In Muscle Strength As Assessed By Handheld Dynamometry",
+          "description": "Handheld dynamometry (HHD) is a procedure for quantitative strength testing. Muscle strength testing was performed on prespecified muscles in the upper and lower extremities bilaterally and the force measurements were recorded. Force of measurement is reported in megascores (lower, upper, total). The total megascore is defined as the average of the non-missing ratios over baseline for all the muscles involved. The megascore at baseline is always 100. The range of a potential megascore can not be determined in advance. A megascore \\>100 indicates more strength compared to baseline.",
+          "timeFrame": "Baseline, Week 50"
+        },
+        {
+          "measure": "Change From Baseline In Serum Neurofilament Light Chain",
+          "timeFrame": "Baseline, Week 50"
+        },
+        {
+          "measure": "Change From Baseline in Serum Ravulizumab Concentration Over the Study Duration",
+          "timeFrame": "Baseline, Predose at Week 50"
+        },
+        {
+          "measure": "Change From Baseline in Serum Free Complement Component 5 (C5) Concentration Over the Study Duration",
+          "timeFrame": "Baseline, Predose at Week 50"
+        },
+        {
+          "measure": "Number of Participants With Positive Antidrug Antibodies (ADAs) to ALXN1210",
+          "description": "Blood samples were collected to evaluate antibody response through development of ADAs.",
+          "timeFrame": "Week 50"
+        }
+      ]
+    }
+  },
+  "resultsSection": {
+    "participantFlowModule": {
+      "groups": [
+        {
+          "id": "FG000",
+          "title": "Ravulizumab/Ravulizumab",
+          "description": "Participants received a weight-based loading dose of ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then once every 8 weeks (q8w) up to Week 42 (inclusive) during the Randomized Controlled Period. Then during the Open Label Extension Period, participants received ravulizumab, with a blinded 900 milligrams (mg) dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+        },
+        {
+          "id": "FG001",
+          "title": "Placebo/Ravulizumab",
+          "description": "Participants received a weight-based loading dose of placebo matched to ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then during the Open Label Extension Period, participants received ravulizumab, with a blinded loading dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+        }
+      ],
+      "periods": [
+        {
+          "title": "Randomized-Controlled Period",
+          "milestones": [
+            {
+              "type": "STARTED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "255"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "127"
+                }
+              ]
+            },
+            {
+              "type": "Received at Least 1 Dose of Study Drug",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "255"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "127"
+                }
+              ]
+            },
+            {
+              "type": "COMPLETED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "15"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "5"
+                }
+              ]
+            },
+            {
+              "type": "NOT COMPLETED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "240"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "122"
+                }
+              ]
+            }
+          ],
+          "dropWithdraws": [
+            {
+              "type": "Death",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "12"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "5"
+                }
+              ]
+            },
+            {
+              "type": "Adverse Event",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "2"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                }
+              ]
+            },
+            {
+              "type": "Study Terminated by Sponsor",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "194"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "99"
+                }
+              ]
+            },
+            {
+              "type": "Withdrawal by Subject",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "30"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "17"
+                }
+              ]
+            },
+            {
+              "type": "Physician Decision",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "1"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "1"
+                }
+              ]
+            },
+            {
+              "type": "Lost to Follow-up",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "1"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Open-label Extension Period",
+          "milestones": [
+            {
+              "type": "STARTED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "14"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "5"
+                }
+              ]
+            },
+            {
+              "type": "Received at Least 1 Dose of Study Drug",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "14"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "5"
+                }
+              ]
+            },
+            {
+              "type": "COMPLETED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "0"
+                }
+              ]
+            },
+            {
+              "type": "NOT COMPLETED",
+              "achievements": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "14"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "5"
+                }
+              ]
+            }
+          ],
+          "dropWithdraws": [
+            {
+              "type": "Study Terminated by Sponsor",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "14"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "4"
+                }
+              ]
+            },
+            {
+              "type": "Withdrawal by Subject",
+              "reasons": [
+                {
+                  "groupId": "FG000",
+                  "numSubjects": "0"
+                },
+                {
+                  "groupId": "FG001",
+                  "numSubjects": "1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "baselineCharacteristicsModule": {
+      "populationDescription": "Full Analysis Set (FAS) included all randomized participants who received at least 1 dose of study drug grouped by randomized treatment group.",
+      "groups": [
+        {
+          "id": "BG000",
+          "title": "Ravulizumab",
+          "description": "Participants received a weight-based loading dose of ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then, during the Open Label Extension Period, participants received ravulizumab, with a blinded 900 mg dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+        },
+        {
+          "id": "BG001",
+          "title": "Placebo",
+          "description": "Participants received a weight-based loading dose of placebo matched to ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then during the Open Label Extension Period, participants received ravulizumab, with a blinded loading dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+        },
+        {
+          "id": "BG002",
+          "title": "Total",
+          "description": "Total of all reporting groups"
+        }
+      ],
+      "denoms": [
+        {
+          "units": "Participants",
+          "counts": [
+            {
+              "groupId": "BG000",
+              "value": "255"
+            },
+            {
+              "groupId": "BG001",
+              "value": "127"
+            },
+            {
+              "groupId": "BG002",
+              "value": "382"
+            }
+          ]
+        }
+      ],
+      "measures": [
+        {
+          "title": "Age, Continuous",
+          "paramType": "MEAN",
+          "dispersionType": "STANDARD_DEVIATION",
+          "unitOfMeasure": "years",
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "58.6",
+                      "spread": "10.57"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "58.0",
+                      "spread": "11.03"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "58.4",
+                      "spread": "10.72"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Sex: Female, Male",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "classes": [
+            {
+              "categories": [
+                {
+                  "title": "Female",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "94"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "58"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "152"
+                    }
+                  ]
+                },
+                {
+                  "title": "Male",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "161"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "69"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "230"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Ethnicity (NIH/OMB)",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "classes": [
+            {
+              "categories": [
+                {
+                  "title": "Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "22"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "12"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "34"
+                    }
+                  ]
+                },
+                {
+                  "title": "Not Hispanic or Latino",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "205"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "105"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "310"
+                    }
+                  ]
+                },
+                {
+                  "title": "Unknown or Not Reported",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "28"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "10"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "38"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Race (NIH/OMB)",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "classes": [
+            {
+              "categories": [
+                {
+                  "title": "American Indian or Alaska Native",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "2"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "2"
+                    }
+                  ]
+                },
+                {
+                  "title": "Asian",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "22"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "12"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "34"
+                    }
+                  ]
+                },
+                {
+                  "title": "Native Hawaiian or Other Pacific Islander",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "0"
+                    }
+                  ]
+                },
+                {
+                  "title": "Black or African American",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "1"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "1"
+                    }
+                  ]
+                },
+                {
+                  "title": "White",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "202"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "103"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "305"
+                    }
+                  ]
+                },
+                {
+                  "title": "More than one race",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "4"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "0"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "4"
+                    }
+                  ]
+                },
+                {
+                  "title": "Unknown or Not Reported",
+                  "measurements": [
+                    {
+                      "groupId": "BG000",
+                      "value": "26"
+                    },
+                    {
+                      "groupId": "BG001",
+                      "value": "10"
+                    },
+                    {
+                      "groupId": "BG002",
+                      "value": "36"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "outcomeMeasuresModule": {
+      "outcomeMeasures": [
+        {
+          "type": "PRIMARY",
+          "title": "Change From Baseline In Amyotrophic Lateral Sclerosis Functional Rating Scale-Revised (ALSFRS-R) Total Score",
+          "description": "The ALSFRS-Revised is a validated instrument for evaluating the levels of the functional status of participants with amyotrophic lateral sclerosis (ALS) in 4 areas, including bulbar, gross motor activity, fine motor activity, and respiratory functions. The scale included 12 functional items and each item is rated on a 0 to 4 scale, with a maximum total score of 48. A higher score indicated greater retention of function. Baseline was defined as last non-missing value on or before first study drug administration.",
+          "populationDescription": "FAS included all randomized participants who received at least 1 dose of study drug grouped by randomized treatment group. Here, Number of Participants analyzed signifies those participants who were evaluable for this outcome measure.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "units on a scale",
+          "timeFrame": "Baseline, Week 50",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Ravulizumab",
+              "description": "Participants received a weight-based loading dose of ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then, during the Open Label Extension Period, participants received ravulizumab, with a blinded 900 mg dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            },
+            {
+              "id": "OG001",
+              "title": "Placebo",
+              "description": "Participants received a weight-based loading dose of placebo matched to ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then during the Open Label Extension Period, participants received ravulizumab, with a blinded loading dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "32"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "14"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "-11.9",
+                      "spread": "7.30"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "-10.6",
+                      "spread": "6.05"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Time To Ventilator Assistance-free Survival",
+          "description": "Ventilation Assistance-Free Survival (VAFS) is a composite endpoint of survival and severe and irreversible respiratory decline. The use of VAFS allowed for the collection of survival data that was not impacted by survival prolongation from noninvasive or permanent ventilatory interventions which could prolong life without impacting underlying disease progression.",
+          "populationDescription": "FAS included all randomized participants who received at least 1 dose of study drug grouped by randomized treatment group.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEDIAN",
+          "dispersionType": "Full Range",
+          "unitOfMeasure": "months",
+          "timeFrame": "Up to Week 50",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Ravulizumab",
+              "description": "Participants received a weight-based loading dose of ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then, during the Open Label Extension Period, participants received ravulizumab, with a blinded 900 mg dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            },
+            {
+              "id": "OG001",
+              "title": "Placebo",
+              "description": "Participants received a weight-based loading dose of placebo matched to ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then during the Open Label Extension Period, participants received ravulizumab, with a blinded loading dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "255"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "127"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "6.05",
+                      "lowerLimit": "0.79",
+                      "upperLimit": "11.10"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "7.69",
+                      "lowerLimit": "4.83",
+                      "upperLimit": "9.53"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Change From Baseline In Percent Predicted Slow Vital Capacity",
+          "description": "Slow vital capacity measures slow and gradual expulsion of air from the lungs using a spirometer.",
+          "populationDescription": "FAS included all randomized participants who received at least 1 dose of study drug grouped by randomized treatment group. Here, Number of Participants analyzed signifies those participants who were evaluable for this outcome measure.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "percentage of predicted volume",
+          "timeFrame": "Baseline, Week 50",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Ravulizumab",
+              "description": "Participants received a weight-based loading dose of ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then, during the Open Label Extension Period, participants received ravulizumab, with a blinded 900 mg dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            },
+            {
+              "id": "OG001",
+              "title": "Placebo",
+              "description": "Participants received a weight-based loading dose of placebo matched to ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then during the Open Label Extension Period, participants received ravulizumab, with a blinded loading dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "19"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "9"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "-20.9",
+                      "spread": "19.74"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "-21.3",
+                      "spread": "13.90"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Number of Participants With Treatment-emergent Adverse Events (TEAEs), Treatment-emergent Serious Adverse Events, and TEAEs Leading To Study Drug Discontinuation",
+          "description": "An adverse event (AE) was defined as any unfavorable and unintended sign (for example, including an abnormal laboratory finding), symptom, or disease temporally associated with the use of a medicinal product or procedure, whether or not considered related to the medicinal product or procedure, which occurred during the course of the clinical study. TEAEs were defined as AEs that occurred on or after the date and time of study drug administration, or those that first occurred before dosing but worsened in frequency or severity after study drug administration. A summary of all Serious Adverse Events and Other Adverse Events (nonserious) regardless of causality is located in the 'Reported Adverse Events' Section.",
+          "populationDescription": "Safety Set included all participants who received at least 1 dose of study drug grouped by treatment actually received (for reporting exposure and safety data).",
+          "reportingStatus": "POSTED",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "timeFrame": "Baseline up to Week 156",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Ravulizumab",
+              "description": "Participants received a weight-based loading dose of ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then, during the Open Label Extension Period, participants received ravulizumab, with a blinded 900 mg dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            },
+            {
+              "id": "OG001",
+              "title": "Placebo",
+              "description": "Participants received a weight-based loading dose of placebo matched to ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then during the Open Label Extension Period, participants received ravulizumab, with a blinded loading dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "255"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "127"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "title": "TEAEs",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "204"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "108"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "Treatment Emergent Serious AEs",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "41"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "24"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "title": "TEAE Leading to Study Drug Discontinuation",
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "2"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Change From Baseline In Muscle Strength As Assessed By Handheld Dynamometry",
+          "description": "Handheld dynamometry (HHD) is a procedure for quantitative strength testing. Muscle strength testing was performed on prespecified muscles in the upper and lower extremities bilaterally and the force measurements were recorded. Force of measurement is reported in megascores (lower, upper, total). The total megascore is defined as the average of the non-missing ratios over baseline for all the muscles involved. The megascore at baseline is always 100. The range of a potential megascore can not be determined in advance. A megascore \\>100 indicates more strength compared to baseline.",
+          "populationDescription": "FAS included all randomized participants who received at least 1 dose of study drug grouped by randomized treatment group. Here, Number of Participants analyzed signifies those participants who were evaluable for this outcome measure.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "% (as the unit of megascore)",
+          "timeFrame": "Baseline, Week 50",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Ravulizumab",
+              "description": "Participants received a weight-based loading dose of ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then, during the Open Label Extension Period, participants received ravulizumab, with a blinded 900 mg dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            },
+            {
+              "id": "OG001",
+              "title": "Placebo",
+              "description": "Participants received a weight-based loading dose of placebo matched to ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then during the Open Label Extension Period, participants received ravulizumab, with a blinded loading dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "26"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "13"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "-46.5",
+                      "spread": "27.57"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "-53.4",
+                      "spread": "20.28"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Change From Baseline In Serum Neurofilament Light Chain",
+          "populationDescription": "FAS included all randomized participants who received at least 1 dose of study drug grouped by randomized treatment group. Here, Number of Participants analyzed signifies those participants who were evaluable for this outcome measure.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "picograms/milliliter",
+          "timeFrame": "Baseline, Week 50",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Ravulizumab",
+              "description": "Participants received a weight-based loading dose of ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then, during the Open Label Extension Period, participants received ravulizumab, with a blinded 900 mg dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            },
+            {
+              "id": "OG001",
+              "title": "Placebo",
+              "description": "Participants received a weight-based loading dose of placebo matched to ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then during the Open Label Extension Period, participants received ravulizumab, with a blinded loading dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "14"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "7"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "91.5",
+                      "spread": "40.40"
+                    },
+                    {
+                      "groupId": "OG001",
+                      "value": "73.1",
+                      "spread": "27.82"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Change From Baseline in Serum Ravulizumab Concentration Over the Study Duration",
+          "populationDescription": "Pharmacokinetic Analysis Set (PKAS) included all participants who received at least 1 dose of the study drug and had at least 1 postdose pharmacokinetic (PK) sample. This endpoint was planned to be reported for Ravulizumab arm only.",
+          "reportingStatus": "POSTED",
+          "paramType": "GEOMETRIC_MEAN",
+          "dispersionType": "Geometric Coefficient of Variation",
+          "unitOfMeasure": "micrograms/milliliter",
+          "timeFrame": "Baseline, Predose at Week 50",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Ravulizumab",
+              "description": "Participants received a weight-based loading dose of ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then, during the Open Label Extension Period, participants received ravulizumab, with a blinded 900 mg dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "14"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "634",
+                      "spread": "29.1"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Change From Baseline in Serum Free Complement Component 5 (C5) Concentration Over the Study Duration",
+          "populationDescription": "Pharmacodynamic analysis set (PDAS) included all participants who received at least 1 dose of the study drug and had at least 1 postdose pharmacodynamics (PD) sample. Here, Number of Participants analyzed signifies those participants who were evaluable for this outcome measure. There were no participants with evaluable C5 data in the Placebo arm at Week 50.",
+          "reportingStatus": "POSTED",
+          "paramType": "MEAN",
+          "dispersionType": "Standard Deviation",
+          "unitOfMeasure": "micrograms/milliliter",
+          "timeFrame": "Baseline, Predose at Week 50",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Ravulizumab",
+              "description": "Participants received a weight-based loading dose of ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then, during the Open Label Extension Period, participants received ravulizumab, with a blinded 900 mg dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            },
+            {
+              "id": "OG001",
+              "title": "Placebo",
+              "description": "Participants received a weight-based loading dose of placebo matched to ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then during the Open Label Extension Period, participants received ravulizumab, with a blinded loading dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "13"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "0"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "-155.2",
+                      "spread": "24.42"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "SECONDARY",
+          "title": "Number of Participants With Positive Antidrug Antibodies (ADAs) to ALXN1210",
+          "description": "Blood samples were collected to evaluate antibody response through development of ADAs.",
+          "populationDescription": "PDAS included all participants who received at least 1 dose of the study drug and had at least 1 postdose PD sample. Here, Number of Participants analyzed signifies those participants who were evaluable at Week 50. There were no participants with evaluable C5 data in the Placebo arm at Week 50.",
+          "reportingStatus": "POSTED",
+          "paramType": "COUNT_OF_PARTICIPANTS",
+          "unitOfMeasure": "Participants",
+          "timeFrame": "Week 50",
+          "groups": [
+            {
+              "id": "OG000",
+              "title": "Ravulizumab",
+              "description": "Participants received a weight-based loading dose of ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then, during the Open Label Extension Period, participants received ravulizumab, with a blinded 900 mg dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            },
+            {
+              "id": "OG001",
+              "title": "Placebo",
+              "description": "Participants received a weight-based loading dose of placebo matched to ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive) during the Randomized Controlled Period. Then during the Open Label Extension Period, participants received ravulizumab, with a blinded loading dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment."
+            }
+          ],
+          "denoms": [
+            {
+              "units": "Participants",
+              "counts": [
+                {
+                  "groupId": "OG000",
+                  "value": "23"
+                },
+                {
+                  "groupId": "OG001",
+                  "value": "0"
+                }
+              ]
+            }
+          ],
+          "classes": [
+            {
+              "categories": [
+                {
+                  "measurements": [
+                    {
+                      "groupId": "OG000",
+                      "value": "0"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "adverseEventsModule": {
+      "frequencyThreshold": "5",
+      "timeFrame": "Baseline up to Week 156",
+      "description": "Safety Set included all participants who received at least 1 dose of study drug grouped by treatment actually received (for reporting exposure and safety data). \"All-Cause Mortality\" reports all deaths that occurred during the study, including the deaths that led to Study Discontinuation.",
+      "eventGroups": [
+        {
+          "id": "EG000",
+          "title": "Randomized Controlled Period: Ravulizumab",
+          "description": "Participants received a weight-based loading dose of ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive).",
+          "deathsNumAffected": 15,
+          "deathsNumAtRisk": 255,
+          "seriousNumAffected": 41,
+          "seriousNumAtRisk": 255,
+          "otherNumAffected": 196,
+          "otherNumAtRisk": 255
+        },
+        {
+          "id": "EG001",
+          "title": "Randomized Controlled Period: Placebo",
+          "description": "Participants received a weight-based loading dose of placebo matched to ravulizumab on Day 1, followed by a weight-based maintenance dose on Day 15, then q8w up to Week 42 (inclusive).",
+          "deathsNumAffected": 6,
+          "deathsNumAtRisk": 127,
+          "seriousNumAffected": 24,
+          "seriousNumAtRisk": 127,
+          "otherNumAffected": 106,
+          "otherNumAtRisk": 127
+        },
+        {
+          "id": "EG002",
+          "title": "Open Label Extension Period: Ravulizumab",
+          "description": "Participants received ravulizumab, with a blinded 900 mg dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment.",
+          "deathsNumAffected": 0,
+          "deathsNumAtRisk": 14,
+          "seriousNumAffected": 2,
+          "seriousNumAtRisk": 14,
+          "otherNumAffected": 3,
+          "otherNumAtRisk": 14
+        },
+        {
+          "id": "EG003",
+          "title": "Open Label Extension Period: Placebo",
+          "description": "Participants received ravulizumab, with a blinded loading dose at Week 50, followed by an open-label ravulizumab maintenance dose at Week 52, then q8w for up to 106 weeks of treatment.",
+          "deathsNumAffected": 0,
+          "deathsNumAtRisk": 5,
+          "seriousNumAffected": 0,
+          "seriousNumAtRisk": 5,
+          "otherNumAffected": 1,
+          "otherNumAtRisk": 5
+        }
+      ],
+      "seriousEvents": [
+        {
+          "term": "Respiratory failure",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 8,
+              "numAffected": 8,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 4,
+              "numAffected": 4,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Dyspnoea",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Atelectasis",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Pneumonitis aspiration",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Pulmonary embolism",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 4,
+              "numAffected": 4,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Respiratory disorder",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Respiratory distress",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Aspiration",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Cough",
+          "organSystem": "Respiratory, thoracic and mediastinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Pneumonia",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 3,
+              "numAffected": 3,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 6,
+              "numAffected": 5,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Pneumonia aspiration",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Bronchitis",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Pneumonia bacterial",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Pyelonephritis",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Respiratory tract infection",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Appendicitis",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "COVID-19",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "COVID-19 pneumonia",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Femoral neck fracture",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Femur fracture",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Gastrostomy failure",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Gastrostomy tube site complication",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Hip fracture",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Rib fracture",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Skin laceration",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Infusion related reaction",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Abdominal pain",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Abdominal pain upper",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Colitis ulcerative",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Dysphagia",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Pancreatitis",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Pancreatitis relapsing",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Constipation",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Death",
+          "organSystem": "General disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Complication associated with device",
+          "organSystem": "General disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Pyrexia",
+          "organSystem": "General disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Amyotrophic lateral sclerosis",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Headache",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Subarachnoid haemorrhage",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Transient ischaemic attack",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Haemorrhage intracranial",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Syncope",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Completed suicide",
+          "organSystem": "Psychiatric disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 2,
+              "numAffected": 2,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Assisted suicide",
+          "organSystem": "Psychiatric disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Mental status changes",
+          "organSystem": "Psychiatric disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Dehydration",
+          "organSystem": "Metabolism and nutrition disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Euglycaemic diabetic ketoacidosis",
+          "organSystem": "Metabolism and nutrition disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Malnutrition",
+          "organSystem": "Metabolism and nutrition disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Myocardial necrosis marker increased",
+          "organSystem": "Investigations",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Weight decreased",
+          "organSystem": "Investigations",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "SARS-CoV-2 test positive",
+          "organSystem": "Investigations",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Cardio-respiratory arrest",
+          "organSystem": "Cardiac disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Cholelithiasis",
+          "organSystem": "Hepatobiliary disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Feeding tube user",
+          "organSystem": "Social circumstances",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Infusion related hypersensitivity reaction",
+          "organSystem": "Immune system disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Euthanasia",
+          "organSystem": "Surgical and medical procedures",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Cholecystitis",
+          "organSystem": "Hepatobiliary disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        }
+      ],
+      "otherEvents": [
+        {
+          "term": "Fall",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 81,
+              "numAffected": 54,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 65,
+              "numAffected": 36,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Contusion",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 13,
+              "numAffected": 11,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 13,
+              "numAffected": 8,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Constipation",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 29,
+              "numAffected": 26,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 5,
+              "numAffected": 5,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Nausea",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 28,
+              "numAffected": 23,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 10,
+              "numAffected": 10,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Diarrhoea",
+          "organSystem": "Gastrointestinal disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 6,
+              "numAffected": 4,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 10,
+              "numAffected": 9,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Headache",
+          "organSystem": "Nervous system disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 62,
+              "numAffected": 42,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 29,
+              "numAffected": 22,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Fatigue",
+          "organSystem": "General disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 40,
+              "numAffected": 22,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 11,
+              "numAffected": 11,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Back Pain",
+          "organSystem": "Musculoskeletal and connective tissue disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 31,
+              "numAffected": 21,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 7,
+              "numAffected": 5,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Arthralgia",
+          "organSystem": "Musculoskeletal and connective tissue disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 23,
+              "numAffected": 18,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 5,
+              "numAffected": 4,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Urinary tract infection",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 12,
+              "numAffected": 12,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 12,
+              "numAffected": 11,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Insomnia",
+          "organSystem": "Psychiatric disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 14,
+              "numAffected": 13,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 8,
+              "numAffected": 8,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Hordeolum",
+          "organSystem": "Infections and infestations",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Ankle fracture",
+          "organSystem": "Injury, poisoning and procedural complications",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Dermatitis contact",
+          "organSystem": "Skin and subcutaneous tissue disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        },
+        {
+          "term": "Cholelithiasis",
+          "organSystem": "Hepatobiliary disorders",
+          "sourceVocabulary": "MedDRA v24.1",
+          "assessmentType": "NON_SYSTEMATIC_ASSESSMENT",
+          "stats": [
+            {
+              "groupId": "EG000",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 255
+            },
+            {
+              "groupId": "EG001",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 127
+            },
+            {
+              "groupId": "EG002",
+              "numEvents": 1,
+              "numAffected": 1,
+              "numAtRisk": 14
+            },
+            {
+              "groupId": "EG003",
+              "numEvents": 0,
+              "numAffected": 0,
+              "numAtRisk": 5
+            }
+          ]
+        }
+      ]
+    },
+    "moreInfoModule": {
+      "limitationsAndCaveats": {
+        "description": "The IDMC recommended the study be discontinued due to lack of efficacy with ravulizumab."
+      },
+      "certainAgreement": {
+        "piSponsorEmployee": false,
+        "restrictiveAgreement": true
+      },
+      "pointOfContact": {
+        "title": "Alexion Pharmaceuticals Inc.",
+        "organization": "Alexion Pharmaceuticals Inc.",
+        "email": "clinicaltrials@alexion.com",
+        "phone": "+1 855-752-2356"
+      }
+    }
+  }
+}

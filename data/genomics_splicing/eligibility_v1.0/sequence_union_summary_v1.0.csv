@@ -1,0 +1,19 @@
+gene,chromosome,input_segments,merged_segments,union_bases,status
+ALS2,2,166,34,7203,draft audit scope;not validated assay coverage
+ANXA11,10,76,16,6974,draft audit scope;not validated assay coverage
+C9orf72,9,51,11,3391,draft audit scope;not validated assay coverage
+CHMP2B,3,26,6,2670,draft audit scope;not validated assay coverage
+FUS,16,71,15,2048,draft audit scope;not validated assay coverage
+GRN,17,61,13,2322,draft audit scope;not validated assay coverage
+KIF5A,12,141,29,6227,draft audit scope;not validated assay coverage
+NEK1,4,176,36,6656,draft audit scope;not validated assay coverage
+OPTN,10,71,15,3703,draft audit scope;not validated assay coverage
+PFN1,17,11,3,839,draft audit scope;not validated assay coverage
+SOD1,21,23,7,961,draft audit scope;not validated assay coverage
+SPTLC1,9,71,15,3007,draft audit scope;not validated assay coverage
+SPTLC2,14,56,12,8210,draft audit scope;not validated assay coverage
+TARDBP,1,26,6,4265,draft audit scope;not validated assay coverage
+TBK1,12,101,21,3342,draft audit scope;not validated assay coverage
+UBQLN2,X,1,1,4242,draft audit scope;not validated assay coverage
+VAPB,20,26,6,7909,draft audit scope;not validated assay coverage
+VCP,9,81,17,4002,draft audit scope;not validated assay coverage

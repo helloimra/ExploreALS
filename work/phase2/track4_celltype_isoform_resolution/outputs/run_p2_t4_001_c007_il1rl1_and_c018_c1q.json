@@ -1,0 +1,1053 @@
+{
+  "analysis_run_id": "RUN-P2-T4-001",
+  "c007_edinburgh_celltype_stats": {
+    "Endothelial": {
+      "IL1RL1": {
+        "n_case": 23,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 5.1627,
+        "mean_ctrl_log2cpm": 2.32,
+        "diff_log2cpm": 2.8427,
+        "t_welch": 2.8545,
+        "p_welch": 0.011494911153060323,
+        "p_mwu": 0.030315577227290516
+      },
+      "IL33": {
+        "n_case": 23,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 0.8594,
+        "mean_ctrl_log2cpm": 0.569,
+        "diff_log2cpm": 0.2904,
+        "t_welch": 0.4521,
+        "p_welch": 0.661267416736036,
+        "p_mwu": 0.5287727995281565
+      },
+      "IL1RAP": {
+        "n_case": 23,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 4.685,
+        "mean_ctrl_log2cpm": 3.8715,
+        "diff_log2cpm": 0.8135,
+        "t_welch": 1.5928,
+        "p_welch": 0.13310020334269537,
+        "p_mwu": 0.10676687297376952
+      },
+      "C1QA": {
+        "n_case": 23,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 2.4917,
+        "mean_ctrl_log2cpm": 2.436,
+        "diff_log2cpm": 0.0557,
+        "t_welch": 0.0634,
+        "p_welch": 0.9505334568377426,
+        "p_mwu": 0.8416074052778493
+      },
+      "C1QB": {
+        "n_case": 23,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 3.3899,
+        "mean_ctrl_log2cpm": 2.3222,
+        "diff_log2cpm": 1.0677,
+        "t_welch": 1.0373,
+        "p_welch": 0.3268306313538595,
+        "p_mwu": 0.3001146110309536
+      },
+      "C1QC": {
+        "n_case": 23,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 3.1668,
+        "mean_ctrl_log2cpm": 2.6589,
+        "diff_log2cpm": 0.5079,
+        "t_welch": 0.5509,
+        "p_welch": 0.5919616015078254,
+        "p_mwu": 0.5508931189167117
+      }
+    },
+    "Astrocyte": {
+      "IL1RL1": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 0.0722,
+        "mean_ctrl_log2cpm": 0.0,
+        "diff_log2cpm": 0.0722,
+        "t_welch": 1.4401,
+        "p_welch": 0.16177872536626914,
+        "p_mwu": 0.49732589448172326
+      },
+      "IL33": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 6.0666,
+        "mean_ctrl_log2cpm": 6.1951,
+        "diff_log2cpm": -0.1285,
+        "t_welch": -0.7817,
+        "p_welch": 0.4442557790059913,
+        "p_mwu": 0.4518601327678406
+      },
+      "IL1RAP": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 3.8466,
+        "mean_ctrl_log2cpm": 2.9905,
+        "diff_log2cpm": 0.8561,
+        "t_welch": 1.4027,
+        "p_welch": 0.198476982043305,
+        "p_mwu": 0.274900290280942
+      },
+      "C1QA": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 0.7133,
+        "mean_ctrl_log2cpm": 0.8205,
+        "diff_log2cpm": -0.1072,
+        "t_welch": -0.2271,
+        "p_welch": 0.8267508734563719,
+        "p_mwu": 0.7239134071793087
+      },
+      "C1QB": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 1.0081,
+        "mean_ctrl_log2cpm": 1.036,
+        "diff_log2cpm": -0.0279,
+        "t_welch": -0.0478,
+        "p_welch": 0.9631065331568818,
+        "p_mwu": 0.7572612061218811
+      },
+      "C1QC": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 0.7567,
+        "mean_ctrl_log2cpm": 0.8785,
+        "diff_log2cpm": -0.1218,
+        "t_welch": -0.273,
+        "p_welch": 0.792245070899707,
+        "p_mwu": 1.0
+      }
+    },
+    "Microglia": {
+      "IL1RL1": {
+        "n_case": 26,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 0.2099,
+        "mean_ctrl_log2cpm": 0.0,
+        "diff_log2cpm": 0.2099,
+        "t_welch": 1.4342,
+        "p_welch": 0.16390797739815416,
+        "p_mwu": 0.4889688017211562
+      },
+      "IL33": {
+        "n_case": 26,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 0.3799,
+        "mean_ctrl_log2cpm": 0.3831,
+        "diff_log2cpm": -0.0032,
+        "t_welch": -0.0107,
+        "p_welch": 0.9916323966208912,
+        "p_mwu": 0.8376052139980803
+      },
+      "IL1RAP": {
+        "n_case": 26,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 7.5675,
+        "mean_ctrl_log2cpm": 7.4518,
+        "diff_log2cpm": 0.1157,
+        "t_welch": 0.5928,
+        "p_welch": 0.557592455707097,
+        "p_mwu": 0.982838207810399
+      },
+      "C1QA": {
+        "n_case": 26,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 8.0006,
+        "mean_ctrl_log2cpm": 7.8816,
+        "diff_log2cpm": 0.119,
+        "t_welch": 0.1973,
+        "p_welch": 0.8484813426616583,
+        "p_mwu": 0.7467345872518285
+      },
+      "C1QB": {
+        "n_case": 26,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 8.8934,
+        "mean_ctrl_log2cpm": 8.7496,
+        "diff_log2cpm": 0.1438,
+        "t_welch": 0.3312,
+        "p_welch": 0.7479166645670436,
+        "p_mwu": 0.5314963689546558
+      },
+      "C1QC": {
+        "n_case": 26,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 8.6155,
+        "mean_ctrl_log2cpm": 8.202,
+        "diff_log2cpm": 0.4135,
+        "t_welch": 0.9547,
+        "p_welch": 0.36673220333237205,
+        "p_mwu": 0.5033899431841589
+      }
+    },
+    "Excitatory neuron": {
+      "IL1RL1": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 0.1049,
+        "mean_ctrl_log2cpm": 0.0,
+        "diff_log2cpm": 0.1049,
+        "t_welch": 3.4867,
+        "p_welch": 0.00175448641520306,
+        "p_mwu": 0.028397569856948756
+      },
+      "IL33": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 1.2842,
+        "mean_ctrl_log2cpm": 1.7614,
+        "diff_log2cpm": -0.4772,
+        "t_welch": -1.0715,
+        "p_welch": 0.3205017498782904,
+        "p_mwu": 0.35680799521750245
+      },
+      "IL1RAP": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 5.5941,
+        "mean_ctrl_log2cpm": 5.3986,
+        "diff_log2cpm": 0.1955,
+        "t_welch": 1.0386,
+        "p_welch": 0.32602948340874754,
+        "p_mwu": 0.29412210834379254
+      },
+      "C1QA": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 0.5651,
+        "mean_ctrl_log2cpm": 0.7853,
+        "diff_log2cpm": -0.2202,
+        "t_welch": -0.8023,
+        "p_welch": 0.44374353882667605,
+        "p_mwu": 0.4818677461623516
+      },
+      "C1QB": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 0.789,
+        "mean_ctrl_log2cpm": 1.0405,
+        "diff_log2cpm": -0.2515,
+        "t_welch": -0.8055,
+        "p_welch": 0.43895572750812806,
+        "p_mwu": 0.2862316129114769
+      },
+      "C1QC": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 0.6452,
+        "mean_ctrl_log2cpm": 0.8775,
+        "diff_log2cpm": -0.2323,
+        "t_welch": -0.7621,
+        "p_welch": 0.4658681051782032,
+        "p_mwu": 0.5503752335675951
+      }
+    },
+    "Oligodendrocyte": {
+      "IL1RL1": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 0.0632,
+        "mean_ctrl_log2cpm": 0.0,
+        "diff_log2cpm": 0.0632,
+        "t_welch": 1.3569,
+        "p_welch": 0.18648693204108235,
+        "p_mwu": 0.49732589448172326
+      },
+      "IL33": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 0.4111,
+        "mean_ctrl_log2cpm": 0.5381,
+        "diff_log2cpm": -0.127,
+        "t_welch": -0.5237,
+        "p_welch": 0.6097257066841424,
+        "p_mwu": 0.2991539916473388
+      },
+      "IL1RAP": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 1.3679,
+        "mean_ctrl_log2cpm": 1.6112,
+        "diff_log2cpm": -0.2433,
+        "t_welch": -0.534,
+        "p_welch": 0.6057648460802991,
+        "p_mwu": 0.7155773703140809
+      },
+      "C1QA": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 0.4699,
+        "mean_ctrl_log2cpm": 1.153,
+        "diff_log2cpm": -0.6831,
+        "t_welch": -1.7891,
+        "p_welch": 0.11616504530521207,
+        "p_mwu": 0.09935815044676621
+      },
+      "C1QB": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 0.6605,
+        "mean_ctrl_log2cpm": 1.3612,
+        "diff_log2cpm": -0.7007,
+        "t_welch": -1.5256,
+        "p_welch": 0.16772113451214454,
+        "p_mwu": 0.06735946894753511
+      },
+      "C1QC": {
+        "n_case": 27,
+        "n_ctrl": 7,
+        "mean_case_log2cpm": 0.6028,
+        "mean_ctrl_log2cpm": 1.0301,
+        "diff_log2cpm": -0.4273,
+        "t_welch": -1.3688,
+        "p_welch": 0.19943122718226633,
+        "p_mwu": 0.08739723920880453
+      }
+    }
+  },
+  "c007_edinburgh_non_c9_endothelial": {
+    "IL1RL1": {
+      "n_case": 22,
+      "n_ctrl": 7,
+      "mean_case_log2cpm": 5.426,
+      "mean_ctrl_log2cpm": 2.32,
+      "diff_log2cpm": 3.106,
+      "t_welch": 3.1517,
+      "p_welch": 0.006406462872165044,
+      "p_mwu": 0.01523227690701979
+    },
+    "IL33": {
+      "n_case": 22,
+      "n_ctrl": 7,
+      "mean_case_log2cpm": 0.8132,
+      "mean_ctrl_log2cpm": 0.569,
+      "diff_log2cpm": 0.2442,
+      "t_welch": 0.3773,
+      "p_welch": 0.7139674965669303,
+      "p_mwu": 0.6107084874076629
+    }
+  },
+  "c007_within_donor_astro_il33_vs_endo_il1rl1_als": {
+    "n_als_paired": 23,
+    "pearson_r": 0.2345,
+    "p_value": 0.2815088656407316
+  },
+  "c007_pineda_ba4_vascular_and_astro": {
+    "BA4_Vascular": {
+      "IL1RL1": {
+        "n_case": 15,
+        "n_ctrl": 16,
+        "mean_case_log2cpm": 1.5525,
+        "mean_ctrl_log2cpm": 1.4772,
+        "diff_log2cpm": 0.0753,
+        "t_welch": 0.1041,
+        "p_welch": 0.9178126844116876,
+        "p_mwu": 0.588804814881117
+      },
+      "IL33": {
+        "n_case": 15,
+        "n_ctrl": 16,
+        "mean_case_log2cpm": 1.7701,
+        "mean_ctrl_log2cpm": 0.5539,
+        "diff_log2cpm": 1.2162,
+        "t_welch": 2.5268,
+        "p_welch": 0.019240683280259362,
+        "p_mwu": 0.025937682573552952
+      },
+      "IL1RAP": {
+        "n_case": 15,
+        "n_ctrl": 16,
+        "mean_case_log2cpm": 7.1424,
+        "mean_ctrl_log2cpm": 7.6237,
+        "diff_log2cpm": -0.4813,
+        "t_welch": -1.2529,
+        "p_welch": 0.22066128683275657,
+        "p_mwu": 0.21307778331415017
+      }
+    },
+    "BA4_Astro": {
+      "IL1RL1": {
+        "n_case": 15,
+        "n_ctrl": 16,
+        "mean_case_log2cpm": 0.0,
+        "mean_ctrl_log2cpm": 0.0,
+        "diff_log2cpm": 0.0,
+        "t_welch": NaN,
+        "p_welch": NaN,
+        "p_mwu": NaN
+      },
+      "IL33": {
+        "n_case": 15,
+        "n_ctrl": 16,
+        "mean_case_log2cpm": 5.7645,
+        "mean_ctrl_log2cpm": 5.9917,
+        "diff_log2cpm": -0.2272,
+        "t_welch": -1.0816,
+        "p_welch": 0.28839675617410243,
+        "p_mwu": 0.24357810494667897
+      },
+      "IL1RAP": {
+        "n_case": 15,
+        "n_ctrl": 16,
+        "mean_case_log2cpm": 3.4364,
+        "mean_ctrl_log2cpm": 3.4308,
+        "diff_log2cpm": 0.0056,
+        "t_welch": 0.0102,
+        "p_welch": 0.991920070000462,
+        "p_mwu": 0.7668532908209345
+      }
+    }
+  },
+  "c007_gencode_v46_isoform_coordinates_1based_grch38": {
+    "st2l_transmembrane_transcripts": [
+      {
+        "transcript_id": "ENST00000233954.6",
+        "is_mane_select": true,
+        "chromosome": "chr2",
+        "strand": "+",
+        "start_1b": 102311562,
+        "end_1b": 102352037,
+        "num_exons": 11,
+        "first_exon_1b": "chr2:102311562-102311623",
+        "last_exon_1b": "chr2:102351535-102352037"
+      }
+    ],
+    "sst2_soluble_short_transcripts": [
+      {
+        "transcript_id": "ENST00000311734.6",
+        "is_mane_select": false,
+        "chromosome": "chr2",
+        "strand": "+",
+        "start_1b": 102337147,
+        "end_1b": 102346100,
+        "num_exons": 8,
+        "first_exon_1b": "chr2:102337147-102337337",
+        "last_exon_1b": "chr2:102343269-102346100"
+      },
+      {
+        "transcript_id": "ENST00000404917.6",
+        "is_mane_select": false,
+        "chromosome": "chr2",
+        "strand": "+",
+        "start_1b": 102311501,
+        "end_1b": 102346099,
+        "num_exons": 7,
+        "first_exon_1b": "chr2:102311501-102311623",
+        "last_exon_1b": "chr2:102343269-102346099"
+      },
+      {
+        "transcript_id": "ENST00000409584.5",
+        "is_mane_select": false,
+        "chromosome": "chr2",
+        "strand": "+",
+        "start_1b": 102337257,
+        "end_1b": 102344951,
+        "num_exons": 8,
+        "first_exon_1b": "chr2:102337257-102337337",
+        "last_exon_1b": "chr2:102343269-102344951"
+      },
+      {
+        "transcript_id": "ENST00000447231.5",
+        "is_mane_select": false,
+        "chromosome": "chr2",
+        "strand": "+",
+        "start_1b": 102311567,
+        "end_1b": 102338891,
+        "num_exons": 5,
+        "first_exon_1b": "chr2:102311567-102311623",
+        "last_exon_1b": "chr2:102338836-102338891"
+      }
+    ]
+  },
+  "c007_alphagenome_snps_and_atlas_links": {
+    "avi_records": [
+      {
+        "variant": "chr2:102341256:C>A",
+        "chromosome": "chr2",
+        "position": 102341256,
+        "ref": "C",
+        "alt": "A",
+        "avi_phred": 5.665596238332591,
+        "avi_raw": 0.042022641748189926,
+        "avi_quantile": 0.27129411697387695,
+        "top_percentile": 27.129411697387695,
+        "top_modality": "AlphaMissense",
+        "top_feature_importance": 0.06278327107429504,
+        "fi_MERGED_SPLICING": 0.028112217783927917,
+        "fi_MAX_ABS_ATAC": 0.004201252944767475,
+        "fi_MAX_ABS_CONTACT_MAPS": 0.0013341325102373958,
+        "fi_MAX_ABS_DNASE": 0.0069706616923213005,
+        "fi_MAX_ABS_CHIP_TF": 0.0007025919621810317,
+        "fi_MAX_ABS_CHIP_HISTONE": 0.00964802224189043,
+        "fi_MAX_ABS_CAGE": 0.0016685794107615948,
+        "fi_MAX_ABS_PROCAP": 0.0013444339856505394,
+        "fi_MAX_ABS_RNA_SEQ": 0.0012011792277917266,
+        "fi_MAX_ABS_POLYADENYLATION": 0.0015440764836966991,
+        "fi_ALPHAMISSENSE": 0.06278327107429504,
+        "fi_CACTUS_241_WAY": -0.02845403179526329,
+        "fi_PROTEIN_TERMINATION": 0.0,
+        "fi_START_LOST": 0.0,
+        "fi_STOP_LOST": 0.0,
+        "fi_PHASTCONS_470_WAY": 0.0,
+        "fi_IS_INSERTION": 0.0,
+        "fi_IS_DELETION": 0.0,
+        "track_idx_MERGED_SPLICING": 354,
+        "track_name_MERGED_SPLICING": "junction_UBERON:0010414 gtex Adipose_Visceral_Omentum polyA plus RNA-seq",
+        "track_biosample_MERGED_SPLICING": "omental fat pad",
+        "track_gene_MERGED_SPLICING": "IL1RL1",
+        "track_idx_MAX_ABS_ATAC": 130,
+        "track_name_MAX_ABS_ATAC": "UBERON:0001115 ATAC-seq",
+        "track_biosample_MAX_ABS_ATAC": "left lobe of liver",
+        "track_idx_MAX_ABS_CONTACT_MAPS": 1,
+        "track_name_MAX_ABS_CONTACT_MAPS": "4dn:4DNFI9FVHJZQ",
+        "track_biosample_MAX_ABS_CONTACT_MAPS": "HFFc6",
+        "track_idx_MAX_ABS_DNASE": 261,
+        "track_name_MAX_ABS_DNASE": "UBERON:0002108 DNase-seq",
+        "track_biosample_MAX_ABS_DNASE": "small intestine",
+        "track_idx_MAX_ABS_CHIP_TF": 350,
+        "track_name_MAX_ABS_CHIP_TF": "EFO:0001187 TF ChIP-seq HNF4A",
+        "track_biosample_MAX_ABS_CHIP_TF": "HepG2",
+        "track_idx_MAX_ABS_CHIP_HISTONE": 319,
+        "track_name_MAX_ABS_CHIP_HISTONE": "CL:2000045 Histone ChIP-seq H3K4me1",
+        "track_biosample_MAX_ABS_CHIP_HISTONE": "foreskin melanocyte",
+        "track_idx_MAX_ABS_CAGE": 21,
+        "track_name_MAX_ABS_CAGE": "hCAGE CL:0000182",
+        "track_biosample_MAX_ABS_CAGE": "hepatocyte",
+        "track_idx_MAX_ABS_PROCAP": 2,
+        "track_name_MAX_ABS_PROCAP": "ENCSR740IPL",
+        "track_biosample_MAX_ABS_PROCAP": "K562",
+        "track_idx_MAX_ABS_RNA_SEQ": 120,
+        "track_name_MAX_ABS_RNA_SEQ": "EFO:0002067 total RNA-seq",
+        "track_biosample_MAX_ABS_RNA_SEQ": "K562",
+        "track_gene_MAX_ABS_RNA_SEQ": "IL1RL1",
+        "track_idx_MAX_ABS_POLYADENYLATION": 120,
+        "track_name_MAX_ABS_POLYADENYLATION": "EFO:0002067 total RNA-seq",
+        "track_biosample_MAX_ABS_POLYADENYLATION": "K562",
+        "track_gene_MAX_ABS_POLYADENYLATION": "IL18R1",
+        "track_idx_ALPHAMISSENSE": 0,
+        "track_name_ALPHAMISSENSE": "AlphaMissense",
+        "track_biosample_ALPHAMISSENSE": "N/A",
+        "track_idx_CACTUS_241_WAY": 0,
+        "track_name_CACTUS_241_WAY": "Cactus",
+        "track_biosample_CACTUS_241_WAY": "N/A",
+        "track_idx_PROTEIN_TERMINATION": 0,
+        "track_name_PROTEIN_TERMINATION": "Protein Termination",
+        "track_biosample_PROTEIN_TERMINATION": "N/A",
+        "track_idx_START_LOST": 0,
+        "track_name_START_LOST": "Start Lost",
+        "track_biosample_START_LOST": "N/A",
+        "track_idx_STOP_LOST": 0,
+        "track_name_STOP_LOST": "Stop Lost",
+        "track_biosample_STOP_LOST": "N/A",
+        "track_idx_PHASTCONS_470_WAY": 0,
+        "track_name_PHASTCONS_470_WAY": "PhastCons 470",
+        "track_biosample_PHASTCONS_470_WAY": "N/A",
+        "track_idx_IS_INSERTION": 0,
+        "track_name_IS_INSERTION": "Insertion",
+        "track_biosample_IS_INSERTION": "N/A",
+        "track_idx_IS_DELETION": 0,
+        "track_name_IS_DELETION": "Deletion",
+        "track_biosample_IS_DELETION": "N/A"
+      },
+      {
+        "variant": "chr2:102315833:C>G",
+        "chromosome": "chr2",
+        "position": 102315833,
+        "ref": "C",
+        "alt": "G",
+        "avi_phred": 2.5128052469619093,
+        "avi_raw": -0.007000219076871872,
+        "avi_quantile": 0.5606856942176819,
+        "top_percentile": 56.06856942176819,
+        "top_modality": "Splicing",
+        "top_feature_importance": 0.007921025156974792,
+        "fi_MERGED_SPLICING": 0.007921025156974792,
+        "fi_MAX_ABS_ATAC": 0.004616893827915192,
+        "fi_MAX_ABS_CONTACT_MAPS": 0.0011955049121752381,
+        "fi_MAX_ABS_DNASE": 0.007344909477978945,
+        "fi_MAX_ABS_CHIP_TF": 0.0007473901496268809,
+        "fi_MAX_ABS_CHIP_HISTONE": 0.006597441621124744,
+        "fi_MAX_ABS_CAGE": 0.0022149356082081795,
+        "fi_MAX_ABS_PROCAP": 0.0035693892277777195,
+        "fi_MAX_ABS_RNA_SEQ": 0.001189141534268856,
+        "fi_MAX_ABS_POLYADENYLATION": 0.0011146435281261802,
+        "fi_ALPHAMISSENSE": 0.0,
+        "fi_CACTUS_241_WAY": 0.005492886528372765,
+        "fi_PROTEIN_TERMINATION": 0.0,
+        "fi_START_LOST": 0.0,
+        "fi_STOP_LOST": 0.0,
+        "fi_PHASTCONS_470_WAY": 0.0,
+        "fi_IS_INSERTION": 0.0,
+        "fi_IS_DELETION": 0.0,
+        "track_idx_MERGED_SPLICING": 263,
+        "track_name_MERGED_SPLICING": "usage_UBERON:0001870 total RNA-seq",
+        "track_biosample_MERGED_SPLICING": "frontal cortex",
+        "track_gene_MERGED_SPLICING": "IL18R1",
+        "track_idx_MAX_ABS_ATAC": 162,
+        "track_name_MAX_ABS_ATAC": "UBERON:0008953 ATAC-seq",
+        "track_biosample_MAX_ABS_ATAC": "lower lobe of left lung",
+        "track_idx_MAX_ABS_CONTACT_MAPS": 16,
+        "track_name_MAX_ABS_CONTACT_MAPS": "4dn:4DNFIMDOXUT8",
+        "track_biosample_MAX_ABS_CONTACT_MAPS": "skin fibroblast",
+        "track_idx_MAX_ABS_DNASE": 56,
+        "track_name_MAX_ABS_DNASE": "CL:0002536 DNase-seq",
+        "track_biosample_MAX_ABS_DNASE": "amniotic epithelial cell",
+        "track_idx_MAX_ABS_CHIP_TF": 1278,
+        "track_name_MAX_ABS_CHIP_TF": "EFO:0002791 TF ChIP-seq CEBPB",
+        "track_biosample_MAX_ABS_CHIP_TF": "HeLa-S3",
+        "track_idx_MAX_ABS_CHIP_HISTONE": 199,
+        "track_name_MAX_ABS_CHIP_HISTONE": "CL:0001054 Histone ChIP-seq H3K4me1",
+        "track_biosample_MAX_ABS_CHIP_HISTONE": "CD14-positive monocyte",
+        "track_idx_MAX_ABS_CAGE": 276,
+        "track_name_MAX_ABS_CAGE": "LQhCAGE CL:0000771",
+        "track_biosample_MAX_ABS_CAGE": "eosinophil",
+        "track_idx_MAX_ABS_PROCAP": 11,
+        "track_name_MAX_ABS_PROCAP": "ENCSR860TYZ",
+        "track_biosample_MAX_ABS_PROCAP": "MCF 10A",
+        "track_idx_MAX_ABS_RNA_SEQ": 233,
+        "track_name_MAX_ABS_RNA_SEQ": "UBERON:0002107 polyA plus RNA-seq",
+        "track_biosample_MAX_ABS_RNA_SEQ": "liver",
+        "track_gene_MAX_ABS_RNA_SEQ": "LINC01127",
+        "track_idx_MAX_ABS_POLYADENYLATION": 148,
+        "track_name_MAX_ABS_POLYADENYLATION": "EFO:0005719 total RNA-seq",
+        "track_biosample_MAX_ABS_POLYADENYLATION": "Karpas-422",
+        "track_gene_MAX_ABS_POLYADENYLATION": "IL18R1",
+        "track_idx_ALPHAMISSENSE": 0,
+        "track_name_ALPHAMISSENSE": "AlphaMissense",
+        "track_biosample_ALPHAMISSENSE": "N/A",
+        "track_idx_CACTUS_241_WAY": 0,
+        "track_name_CACTUS_241_WAY": "Cactus",
+        "track_biosample_CACTUS_241_WAY": "N/A",
+        "track_idx_PROTEIN_TERMINATION": 0,
+        "track_name_PROTEIN_TERMINATION": "Protein Termination",
+        "track_biosample_PROTEIN_TERMINATION": "N/A",
+        "track_idx_START_LOST": 0,
+        "track_name_START_LOST": "Start Lost",
+        "track_biosample_START_LOST": "N/A",
+        "track_idx_STOP_LOST": 0,
+        "track_name_STOP_LOST": "Stop Lost",
+        "track_biosample_STOP_LOST": "N/A",
+        "track_idx_PHASTCONS_470_WAY": 0,
+        "track_name_PHASTCONS_470_WAY": "PhastCons 470",
+        "track_biosample_PHASTCONS_470_WAY": "N/A",
+        "track_idx_IS_INSERTION": 0,
+        "track_name_IS_INSERTION": "Insertion",
+        "track_biosample_IS_INSERTION": "N/A",
+        "track_idx_IS_DELETION": 0,
+        "track_name_IS_DELETION": "Deletion",
+        "track_biosample_IS_DELETION": "N/A"
+      }
+    ],
+    "atlas_links": {
+      "variants": {
+        "rs1420101": "chr2:102341256:C>A",
+        "rs953934": "chr2:102315833:C>G"
+      },
+      "links": {
+        "rs1420101": "https://deepmind.google.com/science/alphagenome/atlas?q=chr2:102341256:C%3EA&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF",
+        "rs953934": "https://deepmind.google.com/science/alphagenome/atlas?q=chr2:102315833:C%3EG&m=variant&lItems=avi,section:RNA_SEQ,section:DNASE,section:CHIP_TF"
+      }
+    }
+  },
+  "c007_pdb_4kc3_structural_epitope": {
+    "pdb_id": "4KC3",
+    "st2_chain": "B",
+    "il33_chain": "A",
+    "st2_resolved_seq_span": [
+      21,
+      317
+    ],
+    "n_st2_contact_residues_le_4A": 30,
+    "domain_contact_counts": {
+      "D1_orthosteric": 8,
+      "D2_orthosteric": 11,
+      "D3_membrane_proximal": 11
+    },
+    "sst2_unique_cterm_divergence_after_ectodomain_seq": 317,
+    "top_closest_contacts": [
+      {
+        "auth_seq_id": 118,
+        "comp_id": "MET",
+        "domain": "D2_orthosteric",
+        "min_dist_to_il33_A": 2.3
+      },
+      {
+        "auth_seq_id": 313,
+        "comp_id": "ARG",
+        "domain": "D3_membrane_proximal",
+        "min_dist_to_il33_A": 2.44
+      },
+      {
+        "auth_seq_id": 119,
+        "comp_id": "TYR",
+        "domain": "D2_orthosteric",
+        "min_dist_to_il33_A": 2.51
+      },
+      {
+        "auth_seq_id": 137,
+        "comp_id": "ASP",
+        "domain": "D2_orthosteric",
+        "min_dist_to_il33_A": 2.68
+      },
+      {
+        "auth_seq_id": 37,
+        "comp_id": "PRO",
+        "domain": "D1_orthosteric",
+        "min_dist_to_il33_A": 2.76
+      },
+      {
+        "auth_seq_id": 311,
+        "comp_id": "LEU",
+        "domain": "D3_membrane_proximal",
+        "min_dist_to_il33_A": 2.89
+      },
+      {
+        "auth_seq_id": 115,
+        "comp_id": "ASP",
+        "domain": "D2_orthosteric",
+        "min_dist_to_il33_A": 2.91
+      },
+      {
+        "auth_seq_id": 257,
+        "comp_id": "LYS",
+        "domain": "D3_membrane_proximal",
+        "min_dist_to_il33_A": 2.94
+      },
+      {
+        "auth_seq_id": 135,
+        "comp_id": "THR",
+        "domain": "D2_orthosteric",
+        "min_dist_to_il33_A": 2.98
+      },
+      {
+        "auth_seq_id": 39,
+        "comp_id": "GLN",
+        "domain": "D1_orthosteric",
+        "min_dist_to_il33_A": 3.06
+      },
+      {
+        "auth_seq_id": 307,
+        "comp_id": "ASN",
+        "domain": "D3_membrane_proximal",
+        "min_dist_to_il33_A": 3.1
+      },
+      {
+        "auth_seq_id": 22,
+        "comp_id": "LYS",
+        "domain": "D1_orthosteric",
+        "min_dist_to_il33_A": 3.12
+      }
+    ]
+  },
+  "c007_il33_decoy_sink_mass_action": {
+    "bulk_csf_baseline_5pM_sST2": {
+      "free_il33_pM": 10.7603,
+      "sst2_sequestered_il33_pM": 1.4636,
+      "active_treg_st2l_il33_pM": 2.7761,
+      "treg_st2l_fractional_signaling_pct": 27.76
+    },
+    "perivascular_baseline_35pM_sST2": {
+      "free_il33_pM": 6.3174,
+      "sst2_sequestered_il33_pM": 6.8418,
+      "active_treg_st2l_il33_pM": 1.8409,
+      "treg_st2l_fractional_signaling_pct": 18.41
+    },
+    "perivascular_als_endothelial_surge_400pM_sST2": {
+      "free_il33_pM": 0.9259,
+      "sst2_sequestered_il33_pM": 13.7541,
+      "active_treg_st2l_il33_pM": 0.3201,
+      "treg_st2l_fractional_signaling_pct": 3.2
+    },
+    "pan_st2_d1d2_blocker_astegolimab_5nM": {
+      "free_il33_pM": 13.607,
+      "sst2_sequestered_il33_pM": 1.3606,
+      "active_treg_st2l_il33_pM": 0.0324,
+      "treg_st2l_fractional_signaling_pct": 0.32
+    },
+    "isoform_selective_sst2_sweeping_mAb_5nM": {
+      "free_il33_pM": 11.0016,
+      "sst2_sequestered_il33_pM": 1.1775,
+      "active_treg_st2l_il33_pM": 2.8208,
+      "treg_st2l_fractional_signaling_pct": 28.21
+    }
+  },
+  "c007_and_c018_zhang2026_cervical_spatial": {
+    "mn_niche_6d": [
+      {
+        "_unnamed_col_0": "C1QA",
+        "p_val": 8.80324493816567e-05,
+        "gene": "C1QA",
+        "BH": 0.00222377622133663,
+        "avg_log2FC": 1.48698734115786,
+        "DE": "Upregulated",
+        "DE_gene": "C1QA"
+      },
+      {
+        "_unnamed_col_0": "C1QB",
+        "p_val": 2.91073470489801e-05,
+        "gene": "C1QB",
+        "BH": 0.00092665033618945,
+        "avg_log2FC": 1.62449086490779,
+        "DE": "Upregulated",
+        "DE_gene": "C1QB"
+      },
+      {
+        "_unnamed_col_0": "C1QC",
+        "p_val": 7.15553511346227e-13,
+        "gene": "C1QC",
+        "BH": 1.03934147523039e-10,
+        "avg_log2FC": 2.37352929137457,
+        "DE": "Upregulated",
+        "DE_gene": "C1QC"
+      },
+      {
+        "_unnamed_col_0": "C1S",
+        "p_val": 5.59951910572484e-05,
+        "gene": "C1S",
+        "BH": 0.00153092929669038,
+        "avg_log2FC": 1.7520409146283,
+        "DE": "Upregulated",
+        "DE_gene": "C1S"
+      },
+      {
+        "_unnamed_col_0": "C3",
+        "p_val": 5.63045607094408e-12,
+        "gene": "C3",
+        "BH": 6.88693679414424e-10,
+        "avg_log2FC": 1.65907109661794,
+        "DE": "Upregulated",
+        "DE_gene": "C3"
+      },
+      {
+        "_unnamed_col_0": "CALR",
+        "p_val": 0.713435473268829,
+        "gene": "CALR",
+        "BH": 0.861802518782848,
+        "avg_log2FC": 0.00441451104277046,
+        "DE": "Not DE",
+        "DE_gene": "NA"
+      },
+      {
+        "_unnamed_col_0": "CLDN5",
+        "p_val": 0.0100818621529689,
+        "gene": "CLDN5",
+        "BH": 0.0716521334663599,
+        "avg_log2FC": -0.144389909335175,
+        "DE": "Not DE",
+        "DE_gene": "NA"
+      },
+      {
+        "_unnamed_col_0": "IL1RL1",
+        "p_val": 1.59002959160007e-11,
+        "gene": "IL1RL1",
+        "BH": 1.84761438543928e-09,
+        "avg_log2FC": 3.76055241448382,
+        "DE": "Upregulated",
+        "DE_gene": "IL1RL1"
+      },
+      {
+        "_unnamed_col_0": "LRP1",
+        "p_val": 0.435364139956625,
+        "gene": "LRP1",
+        "BH": 0.675118858800277,
+        "avg_log2FC": 0.228331375834639,
+        "DE": "Not DE",
+        "DE_gene": "NA"
+      },
+      {
+        "_unnamed_col_0": "PECAM1",
+        "p_val": 0.000676894160819724,
+        "gene": "PECAM1",
+        "BH": 0.0107352810372982,
+        "avg_log2FC": 0.483712209124997,
+        "DE": "Not DE",
+        "DE_gene": "NA"
+      },
+      {
+        "_unnamed_col_0": "SLC18A3",
+        "p_val": 0.574331668550103,
+        "gene": "SLC18A3",
+        "BH": 0.782842696604363,
+        "avg_log2FC": -0.570594210432919,
+        "DE": "Not DE",
+        "DE_gene": "NA"
+      },
+      {
+        "_unnamed_col_0": "SLC5A7",
+        "p_val": 0.0786552671471474,
+        "gene": "SLC5A7",
+        "BH": 0.25753503866765,
+        "avg_log2FC": 0.234924053145068,
+        "DE": "Not DE",
+        "DE_gene": "NA"
+      },
+      {
+        "_unnamed_col_0": "SYP",
+        "p_val": 0.264601160365295,
+        "gene": "SYP",
+        "BH": 0.517620451758371,
+        "avg_log2FC": -0.30150855364843,
+        "DE": "Not DE",
+        "DE_gene": "NA"
+      },
+      {
+        "_unnamed_col_0": "VWF",
+        "p_val": 0.663535968305796,
+        "gene": "VWF",
+        "BH": 0.839900648334787,
+        "avg_log2FC": -0.152167259926894,
+        "DE": "Not DE",
+        "DE_gene": "NA"
+      }
+    ],
+    "tdp43_niche_6i": [
+      {
+        "Column1": "C1QA",
+        "p_val": 1.61623481604276e-07,
+        "gene": "C1QA",
+        "BH": 7.3624654066969e-06,
+        "avg_log2FC": 0.97326644833638,
+        "DE": "Upregulated"
+      },
+      {
+        "Column1": "C1QB",
+        "p_val": 3.01144777827361e-07,
+        "gene": "C1QB",
+        "BH": 1.23990571024688e-05,
+        "avg_log2FC": 1.29651618511536,
+        "DE": "Upregulated"
+      },
+      {
+        "Column1": "C1QC",
+        "p_val": 9.22436063193085e-11,
+        "gene": "C1QC",
+        "BH": 7.59590619729383e-09,
+        "avg_log2FC": 1.19862783735217,
+        "DE": "Upregulated"
+      },
+      {
+        "Column1": "C1S",
+        "p_val": 0.00012399163319706,
+        "gene": "C1S",
+        "BH": 0.00237023291674022,
+        "avg_log2FC": 0.796094552761634,
+        "DE": "Upregulated"
+      },
+      {
+        "Column1": "C3",
+        "p_val": 1.63166752230749e-25,
+        "gene": "C3",
+        "BH": 5.82233360876722e-23,
+        "avg_log2FC": 1.2919689289148,
+        "DE": "Upregulated"
+      },
+      {
+        "Column1": "CALR",
+        "p_val": 0.930268934338289,
+        "gene": "CALR",
+        "BH": 0.953425461186346,
+        "avg_log2FC": -0.0118834956524046,
+        "DE": "Not DE"
+      },
+      {
+        "Column1": "CLDN5",
+        "p_val": 0.0221248845735049,
+        "gene": "CLDN5",
+        "BH": 0.10100080569696,
+        "avg_log2FC": 0.380189243595251,
+        "DE": "Not DE"
+      },
+      {
+        "Column1": "LRP1",
+        "p_val": 0.0808256063033641,
+        "gene": "LRP1",
+        "BH": 0.230730164127337,
+        "avg_log2FC": 0.268720585943935,
+        "DE": "Not DE"
+      },
+      {
+        "Column1": "PECAM1",
+        "p_val": 0.0039275662461429,
+        "gene": "PECAM1",
+        "BH": 0.0301394958171755,
+        "avg_log2FC": 0.847837635387303,
+        "DE": "Not DE"
+      },
+      {
+        "Column1": "SYP",
+        "p_val": 0.732084066764868,
+        "gene": "SYP",
+        "BH": 0.824273500251532,
+        "avg_log2FC": -0.483274798919694,
+        "DE": "Not DE"
+      },
+      {
+        "Column1": "VWF",
+        "p_val": 0.270107575481492,
+        "gene": "VWF",
+        "BH": 0.469018912494627,
+        "avg_log2FC": 0.338892984423499,
+        "DE": "Not DE"
+      }
+    ]
+  },
+  "c018_cns_vs_systemic_c1q_pk_model": [
+    {
+      "regimen": "Systemic_IV_ANX005_75mgkg_q2w_150kDa_IgG4",
+      "trough_serum_binder_nM": 6000.0,
+      "trough_csf_binder_nM": 9.0,
+      "est_anterior_horn_interstitial_binder_nM": 1.8,
+      "free_systemic_serum_c1q_pct": 0.0,
+      "free_csf_c1q_pct": 0.24,
+      "free_anterior_horn_c1q_pct": 3.05,
+      "passes_dual_gate_cns_suppression_ge90_and_serum_sparing_ge95": false
+    },
+    {
+      "regimen": "Systemic_SC_Pegcetacoplan_MERIDIAN_C3_Benchmark",
+      "trough_serum_binder_nM": 14000.0,
+      "trough_csf_binder_nM": 4.5,
+      "est_anterior_horn_interstitial_binder_nM": 0.9,
+      "free_systemic_serum_c1q_pct": 0.0,
+      "free_csf_c1q_pct": 0.52,
+      "free_anterior_horn_c1q_pct": 29.07,
+      "passes_dual_gate_cns_suppression_ge90_and_serum_sparing_ge95": false
+    },
+    {
+      "regimen": "BBB_TfR_Shuttled_FcSilent_AntiC1q_10mgkg_IV",
+      "trough_serum_binder_nM": 320.0,
+      "trough_csf_binder_nM": 22.0,
+      "est_anterior_horn_interstitial_binder_nM": 18.0,
+      "free_systemic_serum_c1q_pct": 0.01,
+      "free_csf_c1q_pct": 0.09,
+      "free_anterior_horn_c1q_pct": 0.12,
+      "passes_dual_gate_cns_suppression_ge90_and_serum_sparing_ge95": false
+    },
+    {
+      "regimen": "Unmodified_Intrathecal_AntiC1q_Fab_30mg_q4w_BulkFlowWashout",
+      "trough_serum_binder_nM": 0.001,
+      "trough_csf_binder_nM": 0.0,
+      "est_anterior_horn_interstitial_binder_nM": 0.0,
+      "free_systemic_serum_c1q_pct": 100.0,
+      "free_csf_c1q_pct": 100.0,
+      "free_anterior_horn_c1q_pct": 100.0,
+      "passes_dual_gate_cns_suppression_ge90_and_serum_sparing_ge95": false
+    },
+    {
+      "regimen": "Intrathecal_Pump_or_ECM_Anchored_HLE_AntiC1q_Fab_SteadyState",
+      "trough_serum_binder_nM": 0.6,
+      "trough_csf_binder_nM": 35.0,
+      "est_anterior_horn_interstitial_binder_nM": 9.5,
+      "free_systemic_serum_c1q_pct": 99.67,
+      "free_csf_c1q_pct": 0.06,
+      "free_anterior_horn_c1q_pct": 0.24,
+      "passes_dual_gate_cns_suppression_ge90_and_serum_sparing_ge95": true
+    }
+  ]
+}

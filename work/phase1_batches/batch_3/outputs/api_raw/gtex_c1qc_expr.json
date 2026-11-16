@@ -1,0 +1,488 @@
+[
+  {
+    "median": 170.65,
+    "tissueSiteDetailId": "Adipose_Subcutaneous",
+    "ontologyId": "UBERON:0002190",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 224.569,
+    "tissueSiteDetailId": "Adipose_Visceral_Omentum",
+    "ontologyId": "UBERON:0010414",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 173.003,
+    "tissueSiteDetailId": "Adrenal_Gland",
+    "ontologyId": "UBERON:0002369",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 179.423,
+    "tissueSiteDetailId": "Artery_Aorta",
+    "ontologyId": "UBERON:0001496",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 169.788,
+    "tissueSiteDetailId": "Artery_Coronary",
+    "ontologyId": "UBERON:0001621",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 49.4499,
+    "tissueSiteDetailId": "Artery_Tibial",
+    "ontologyId": "UBERON:0007610",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 93.325,
+    "tissueSiteDetailId": "Bladder",
+    "ontologyId": "UBERON:0001255",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 19.1267,
+    "tissueSiteDetailId": "Brain_Amygdala",
+    "ontologyId": "UBERON:0001876",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 13.4417,
+    "tissueSiteDetailId": "Brain_Anterior_cingulate_cortex_BA24",
+    "ontologyId": "UBERON:0009835",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 22.9444,
+    "tissueSiteDetailId": "Brain_Caudate_basal_ganglia",
+    "ontologyId": "UBERON:0001873",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 7.06856,
+    "tissueSiteDetailId": "Brain_Cerebellar_Hemisphere",
+    "ontologyId": "UBERON:0002037",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 4.91251,
+    "tissueSiteDetailId": "Brain_Cerebellum",
+    "ontologyId": "UBERON:0002037",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 12.2244,
+    "tissueSiteDetailId": "Brain_Cortex",
+    "ontologyId": "UBERON:0001870",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 12.8496,
+    "tissueSiteDetailId": "Brain_Frontal_Cortex_BA9",
+    "ontologyId": "UBERON:0009834",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 19.1358,
+    "tissueSiteDetailId": "Brain_Hippocampus",
+    "ontologyId": "UBERON:0001954",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 28.6765,
+    "tissueSiteDetailId": "Brain_Hypothalamus",
+    "ontologyId": "UBERON:0001898",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 17.3131,
+    "tissueSiteDetailId": "Brain_Nucleus_accumbens_basal_ganglia",
+    "ontologyId": "UBERON:0001882",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 16.9922,
+    "tissueSiteDetailId": "Brain_Putamen_basal_ganglia",
+    "ontologyId": "UBERON:0001874",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 88.1702,
+    "tissueSiteDetailId": "Brain_Spinal_cord_cervical_c-1",
+    "ontologyId": "UBERON:0006469",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 46.4151,
+    "tissueSiteDetailId": "Brain_Substantia_nigra",
+    "ontologyId": "UBERON:0002038",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 79.4459,
+    "tissueSiteDetailId": "Breast_Mammary_Tissue",
+    "ontologyId": "UBERON:0008367",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 0.126888,
+    "tissueSiteDetailId": "Cells_Cultured_fibroblasts",
+    "ontologyId": "EFO:0002009",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 0.671278,
+    "tissueSiteDetailId": "Cells_EBV-transformed_lymphocytes",
+    "ontologyId": "EFO:0000572",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 34.8622,
+    "tissueSiteDetailId": "Cervix_Ectocervix",
+    "ontologyId": "UBERON:0012249",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 52.7177,
+    "tissueSiteDetailId": "Cervix_Endocervix",
+    "ontologyId": "UBERON:0000458",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 73.3183,
+    "tissueSiteDetailId": "Colon_Sigmoid",
+    "ontologyId": "UBERON:0001159",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 100.871,
+    "tissueSiteDetailId": "Colon_Transverse",
+    "ontologyId": "UBERON:0001157",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 68.2466,
+    "tissueSiteDetailId": "Esophagus_Gastroesophageal_Junction",
+    "ontologyId": "UBERON:0004550",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 20.6572,
+    "tissueSiteDetailId": "Esophagus_Mucosa",
+    "ontologyId": "UBERON:0006920",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 77.2902,
+    "tissueSiteDetailId": "Esophagus_Muscularis",
+    "ontologyId": "UBERON:0004648",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 88.8349,
+    "tissueSiteDetailId": "Fallopian_Tube",
+    "ontologyId": "UBERON:0003889",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 28.1014,
+    "tissueSiteDetailId": "Heart_Atrial_Appendage",
+    "ontologyId": "UBERON:0006631",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 15.7679,
+    "tissueSiteDetailId": "Heart_Left_Ventricle",
+    "ontologyId": "UBERON:0006566",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 12.4007,
+    "tissueSiteDetailId": "Kidney_Cortex",
+    "ontologyId": "UBERON:0001225",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 19.8033,
+    "tissueSiteDetailId": "Kidney_Medulla",
+    "ontologyId": "UBERON:0001293",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 12.2879,
+    "tissueSiteDetailId": "Liver",
+    "ontologyId": "UBERON:0001114",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 301.895,
+    "tissueSiteDetailId": "Lung",
+    "ontologyId": "UBERON:0008952",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 57.0868,
+    "tissueSiteDetailId": "Minor_Salivary_Gland",
+    "ontologyId": "UBERON:0006330",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 5.99999,
+    "tissueSiteDetailId": "Muscle_Skeletal",
+    "ontologyId": "UBERON:0011907",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 120.691,
+    "tissueSiteDetailId": "Nerve_Tibial",
+    "ontologyId": "UBERON:0001323",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 40.6418,
+    "tissueSiteDetailId": "Ovary",
+    "ontologyId": "UBERON:0000992",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 15.4689,
+    "tissueSiteDetailId": "Pancreas",
+    "ontologyId": "UBERON:0001150",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 44.331,
+    "tissueSiteDetailId": "Pituitary",
+    "ontologyId": "UBERON:0000007",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 50.4061,
+    "tissueSiteDetailId": "Prostate",
+    "ontologyId": "UBERON:0002367",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 15.3566,
+    "tissueSiteDetailId": "Skin_Not_Sun_Exposed_Suprapubic",
+    "ontologyId": "UBERON:0036149",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 19.7197,
+    "tissueSiteDetailId": "Skin_Sun_Exposed_Lower_leg",
+    "ontologyId": "UBERON:8480050",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 194.655,
+    "tissueSiteDetailId": "Small_Intestine_Terminal_Ileum",
+    "ontologyId": "UBERON:0001211",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 1279.23,
+    "tissueSiteDetailId": "Spleen",
+    "ontologyId": "UBERON:0002106",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 42.9981,
+    "tissueSiteDetailId": "Stomach",
+    "ontologyId": "UBERON:0000945",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 10.7108,
+    "tissueSiteDetailId": "Testis",
+    "ontologyId": "UBERON:0000473",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 37.6226,
+    "tissueSiteDetailId": "Thyroid",
+    "ontologyId": "UBERON:0002046",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 38.4084,
+    "tissueSiteDetailId": "Uterus",
+    "ontologyId": "UBERON:0000995",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 27.1315,
+    "tissueSiteDetailId": "Vagina",
+    "ontologyId": "UBERON:0000996",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  },
+  {
+    "median": 15.8913,
+    "tissueSiteDetailId": "Whole_Blood",
+    "ontologyId": "UBERON:0013756",
+    "datasetId": "gtex_v10",
+    "gencodeId": "ENSG00000159189.12",
+    "geneSymbol": "C1QC",
+    "unit": "TPM"
+  }
+]

@@ -1,0 +1,1932 @@
+{
+  "analysis_run_id": "RUN-P3B-004",
+  "kalrn_rs2173852_alphagenome_summary": {
+    "variant": "chr3:124701255:G>C",
+    "rsid": "rs2173852",
+    "n_scored_rows": 11732,
+    "donor_124701255_plus": {
+      "ref_G_prob": 0.476562,
+      "alt_C_prob": 0.006256,
+      "delta_alt_minus_ref": -0.470306,
+      "fold_reduction": 76.18
+    },
+    "major_acceptor_124701093_plus": {
+      "ref_G_prob": 0.068359,
+      "alt_C_prob": 0.014709,
+      "fold_reduction": 4.65
+    },
+    "alt_acceptor_124700977_plus": {
+      "ref_G_prob": 0.139648,
+      "alt_C_prob": 0.091309,
+      "fold_reduction": 1.53
+    },
+    "max_frontal_cortex_usage_fold_drop": 56.92,
+    "max_spinal_cord_usage_fold_drop": 61.05,
+    "top_cns_splice_junction_scores": {
+      "dorsolateral prefrontal cortex": {
+        "raw_score": 1.8604,
+        "quantile_score": 0.999882
+      },
+      "spinal cord": {
+        "raw_score": 1.6387,
+        "quantile_score": 0.999865
+      },
+      "frontal cortex": {
+        "raw_score": 1.5928,
+        "quantile_score": 0.999878
+      },
+      "motor neuron": {
+        "raw_score": 1.5684,
+        "quantile_score": 0.999823
+      }
+    }
+  },
+  "kalrn_rs2173852_genetics_summary": {
+    "rsid": "rs2173852",
+    "grch38_variant": "chr3:124701255:G>C",
+    "gnomad_af_total": 0.1747,
+    "gnomad_r4_af_splice_gate": 0.1761,
+    "gnomad_pop_af": {
+      "NFE": 0.2107,
+      "AFR": 0.0984,
+      "EAS": 0.2356
+    },
+    "expected_nfe_diploid_genotypes": {
+      "G_G_homozygous_permissive": 0.623,
+      "G_C_heterozygous": 0.3326,
+      "C_C_homozygous_protected": 0.0444
+    },
+    "regulomedb_ranking": "1f",
+    "dbsnp_clinvar_pathogenic_traits_count": 0,
+    "opentargets_v4_als_ftd_gwas_credible_sets_count": 0,
+    "opentargets_v4_als_studies_indexed": 40,
+    "opentargets_v4_unc13a_rs12608932_als_credible_sets_benchmark": {
+      "variant_id": "19_17641880_A_C",
+      "als_credible_sets_count": 6,
+      "lead_study_id": "GCST90027163",
+      "lead_p_value": 4.04e-25
+    },
+    "opentargets_v4_non_neurodegenerative_gwas_credible_sets_count": 12,
+    "opentargets_v4_cns_qtl_credible_sets_count": 0,
+    "opentargets_v4_peripheral_non_cns_qtl_credible_sets_count": 16,
+    "opentargets_v4_kalrn_locus_als_ftd_credible_sets_count": 0,
+    "opentargets_v4_kalrn_top_vascular_disease": {
+      "disease_id": "MONDO_0021661",
+      "name": "coronary atherosclerosis",
+      "overall_score": 0.2029
+    },
+    "als_gwas_natural_experiment_paradox": "Despite 37.7% of non-Finnish Europeans carrying G/C or C/C at rs2173852 (NFE AF=21.07%) and >99.9% power in van Rheenen 2021 (29,612 ALS vs 122,656 controls) for OR<=0.91, rs2173852 and KALRN show 0 ALS/FTD GWAS credible sets in Open Targets v4 (vs 6 ALS GWAS credible sets peaking at p=4.04e-25 for UNC13A rs12608932), arguing against Intron 56 Kalirin-12/DuET cryptic splicing as a rate-limiting human motor-ALS survival determinant.",
+    "gtex_v8_rs2173852_cns_eqtl_sqtl_count": 0,
+    "gtex_v8_rs2173852_peripheral_sqtl": {
+      "tissue": "Skin_Sun_Exposed_Lower_leg",
+      "p_value": 2.58e-06,
+      "nes": -0.397
+    },
+    "gtex_v8_kalrn_brain_cortex_sqtl_summary": {
+      "num_sqtls": 82,
+      "cluster_id": "chr3:124496413:124514599:clu_36401:ENSG00000160145.15",
+      "pos_min_grch38": 124498822,
+      "pos_max_grch38": 124559321,
+      "lead_snp": "rs4677929",
+      "lead_p_value": 1.40548e-13,
+      "lead_nes": -0.495336,
+      "distance_upstream_of_intron56_bp": 140713,
+      "biological_interpretation": "All 82 baseline GTEx Brain_Cortex sQTLs regulate the Kalirin-7 alternative terminal exon cluster (~124.50-124.56 Mb); rs2173852 (124,701,255) has 0 baseline CNS eQTL/sQTLs in TDP-43-intact brains and acts conditionally upon nuclear TDP-43 loss."
+    }
+  },
+  "gtex_v8_median_tpm": {
+    "KALRN": {
+      "gencode_id": "ENSG00000160145.15",
+      "Artery_Aorta": 37.39,
+      "Artery_Coronary": 23.12,
+      "Brain_Frontal_Cortex_BA9": 22.0,
+      "Brain_Cortex": 19.33,
+      "Brain_Anterior_cingulate_cortex_BA24": 13.08,
+      "Heart_Left_Ventricle": 3.58,
+      "Liver": 2.14,
+      "Kidney_Cortex": 1.76,
+      "Brain_Spinal_cord_cervical_c-1": 1.5,
+      "Whole_Blood": 0.057
+    },
+    "ATG4B": {
+      "gencode_id": "ENSG00000168397.16",
+      "Brain_Cerebellum": 105.8,
+      "Brain_Cortex": 45.07,
+      "Brain_Frontal_Cortex_BA9": 41.76,
+      "Kidney_Cortex": 38.68,
+      "Brain_Spinal_cord_cervical_c-1": 30.29,
+      "Liver": 26.08,
+      "Whole_Blood": 22.89,
+      "Heart_Left_Ventricle": 16.48
+    },
+    "ELK1": {
+      "gencode_id": "ENSG00000126767.17",
+      "Ovary": 80.11,
+      "Brain_Cerebellum": 79.86,
+      "Brain_Cortex": 46.17,
+      "Brain_Frontal_Cortex_BA9": 39.89,
+      "Liver": 14.6,
+      "Kidney_Cortex": 9.42,
+      "Heart_Left_Ventricle": 9.2,
+      "Whole_Blood": 7.33,
+      "Brain_Spinal_cord_cervical_c-1": 7.02
+    }
+  },
+  "chembl_atg4b_summary": {
+    "target_chembl_id": "CHEMBL1741221",
+    "uniprot_id": "Q9Y4P1",
+    "pref_name": "Cysteine protease ATG4B",
+    "organism": "Homo sapiens",
+    "total_bioactivity_records": 995,
+    "primary_confirmatory_uhts_assay": "CHEMBL1738670",
+    "related_pubchem_aids": [
+      "AID504462",
+      "AID504475"
+    ],
+    "representative_inhibitor_ic50_um_range": [
+      3.46,
+      43.0
+    ],
+    "small_molecule_catalytic_activators_count": 0,
+    "modality_conclusion": "All 995 ChEMBL bioactivity records for human ATG4B (CHEMBL1741221) derive from catalytic inhibitor campaigns (0 small-molecule activators), confirming small-molecule chemistry acts in the wrong pharmacological direction for ALS loss-of-function and locking intrathecal steric SSO (#1 chr2:241668981-241668998(+)) as the sole mechanism-matched rescue modality."
+  },
+  "recent_literature_2025_2026": {
+    "kozareva_2025_atg4b_validation": {
+      "first_author": "Velina Kozareva",
+      "senior_authors": [
+        "Michael Emmerson Ward",
+        "Ernest Fraenkel",
+        "Sarah E. Kargbo-Hill"
+      ],
+      "year": 2025,
+      "doi": "10.1101/2025.09.29.679403",
+      "openalex_id": "W4414640274",
+      "title": "Integrative multiomic analysis links TDP-43-driven splicing defects to cascading proteomic disruption of ALS/FTD pathways",
+      "key_finding": "Generated paired RNA-seq + proteomics in TDP-43-depleted human iPSC neurons (>700-protein subnetwork enriched for mRNA processing, synaptic function, and autophagy) and experimentally validated network-predicted effects of cryptic splicing in ATG4B alongside STMN2 and DAPK1."
+    },
+    "vandijk_2026_snrna_stmn2_ce_states": {
+      "first_author": "Charlotte H. van Dijk",
+      "senior_authors": [
+        "Johnathan Cooper-Knock",
+        "Kevin Patrick Kenna"
+      ],
+      "year": 2026,
+      "doi": "10.64898/2026.08.07.743523",
+      "openalex_id": "W7202378075",
+      "title": "Pathology-defined cell states reveal reproducible transcriptomic signatures across ALS cortical single-nucleus RNA-seq studies",
+      "key_finding": "Across 4 cortical ALS snRNA-seq cohorts (140 donors, 87 ALS), conventional case-control DE clusters by study, whereas STMN2-cryptic-exon-positive nuclei reveal reproducible TDP-43 signatures while sparse polyadenylation site changes were not reproducibly detected across cohorts."
+    }
+  },
+  "prune2_intron_alphagenome_peaks": [
+    {
+      "pos_1b": 76641980,
+      "prob": 0.99609,
+      "track": "acceptor",
+      "biosample": ""
+    },
+    {
+      "pos_1b": 76641972,
+      "prob": 0.99219,
+      "track": "donor",
+      "biosample": ""
+    },
+    {
+      "pos_1b": 76641790,
+      "prob": 0.57031,
+      "track": "donor",
+      "biosample": ""
+    },
+    {
+      "pos_1b": 76641905,
+      "prob": 0.53906,
+      "track": "donor",
+      "biosample": ""
+    },
+    {
+      "pos_1b": 76641833,
+      "prob": 0.17969,
+      "track": "acceptor",
+      "biosample": ""
+    }
+  ],
+  "ptprt_intron_alphagenome_peaks": [
+    {
+      "pos_1b": 42099289,
+      "prob": 0.19824,
+      "track": "acceptor",
+      "biosample": ""
+    },
+    {
+      "pos_1b": 42100500,
+      "prob": 0.08398,
+      "track": "acceptor",
+      "biosample": ""
+    },
+    {
+      "pos_1b": 42098647,
+      "prob": 0.04248,
+      "track": "acceptor",
+      "biosample": ""
+    },
+    {
+      "pos_1b": 42099129,
+      "prob": 0.04053,
+      "track": "donor",
+      "biosample": ""
+    },
+    {
+      "pos_1b": 42101409,
+      "prob": 0.03882,
+      "track": "acceptor",
+      "biosample": ""
+    }
+  ],
+  "atg4b_3d_truncation_2z0d": {
+    "mane_transcript": "ENST00000404914.8",
+    "exon10_cum_nt": 957,
+    "exon10_last_aa_1b": 319,
+    "exon10_phase": 0,
+    "deleted_aa_range_1b": [
+      320,
+      393
+    ],
+    "intramolecular_core_contacts_le_4p0A": 73,
+    "lc3b_patch_heavy_atom_contacts_le_4p5A": 27,
+    "min_dist_Glu350_to_LC3B_Val91_A": 2.7,
+    "deleted_lir_motif_1b": [
+      388,
+      391
+    ]
+  },
+  "kalrn_isoform_and_ptc_audit": {
+    "isoforms_by_name": {
+      "KALRN-226": {
+        "transcript_id": "ENST00000682506.1",
+        "mane_select": 1,
+        "tx_end": 124726325,
+        "total_aa": 2986,
+        "spans_intron56_ce": 1,
+        "aa_at_exon56_end": 2665,
+        "carry_rem_nt": 1
+      },
+      "KALRN-211": {
+        "transcript_id": "ENST00000460856.5",
+        "mane_select": 0,
+        "tx_end": 124519849,
+        "total_aa": 1654,
+        "spans_intron56_ce": 0,
+        "aa_at_exon56_end": 1654,
+        "carry_rem_nt": 0
+      },
+      "KALRN-201": {
+        "transcript_id": "ENST00000240874.7",
+        "mane_select": 0,
+        "tx_end": 124519850,
+        "total_aa": 1663,
+        "spans_intron56_ce": 0,
+        "aa_at_exon56_end": 1663,
+        "carry_rem_nt": 0
+      },
+      "KALRN-204": {
+        "transcript_id": "ENST00000360013.7",
+        "mane_select": 0,
+        "tx_end": 124721188,
+        "total_aa": 2986,
+        "spans_intron56_ce": 1,
+        "aa_at_exon56_end": 2665,
+        "carry_rem_nt": 1
+      },
+      "KALRN-246": {
+        "transcript_id": "ENST00000684276.1",
+        "mane_select": 0,
+        "tx_end": 124519839,
+        "total_aa": 1613,
+        "spans_intron56_ce": 0,
+        "aa_at_exon56_end": 1613,
+        "carry_rem_nt": 0
+      },
+      "KALRN-203": {
+        "transcript_id": "ENST00000354186.8",
+        "mane_select": 0,
+        "tx_end": 124721189,
+        "total_aa": 2954,
+        "spans_intron56_ce": 1,
+        "aa_at_exon56_end": 2634,
+        "carry_rem_nt": 0
+      },
+      "KALRN-202": {
+        "transcript_id": "ENST00000291478.9",
+        "mane_select": 0,
+        "tx_end": 124726325,
+        "total_aa": 1289,
+        "spans_intron56_ce": 1,
+        "aa_at_exon56_end": 968,
+        "carry_rem_nt": 1
+      }
+    },
+    "kalirin7_distance_upstream_of_intron56_bp": 180184,
+    "dual_3ss_ptc_audit": {
+      "alt_3SS_124700977": {
+        "ce_len_bp": 279,
+        "ce_codons_spanned": 93,
+        "cassette_len_mod3": 0,
+        "ce_exit_phase_mod3": 1,
+        "inframe_stop_codon_indices_1b": [
+          28,
+          34,
+          89
+        ]
+      },
+      "major_3SS_124701093": {
+        "ce_len_bp": 163,
+        "ce_codons_spanned": 54,
+        "cassette_len_mod3": 1,
+        "ce_exit_phase_mod3": 2,
+        "inframe_stop_codon_indices_1b": [
+          44,
+          59,
+          70,
+          75,
+          78
+        ]
+      }
+    }
+  },
+  "prune2_ptprt_intron_audit": {
+    "prune2_internal_gencode_exons_1b": [
+      [
+        76641947,
+        76641980
+      ],
+      [
+        76641972,
+        76641980
+      ]
+    ],
+    "ptprt_internal_gencode_exons_1b": []
+  },
+  "gene_liability_profiles": {
+    "ATG4B": {
+      "gnomad_v41_pli": 0.0,
+      "gnomad_v41_loeuf": 0.851,
+      "gnomad_v2_loeuf": null,
+      "depmap_median_chronos": -0.0312,
+      "depmap_p10_chronos": -0.237,
+      "ot_is_essential": 0,
+      "gtex_cns_spinal_cervical_tpm": 30.29,
+      "gtex_cns_ba9_tpm": 41.76,
+      "max_non_cns_gtex_tissue": "Kidney_Cortex",
+      "max_non_cns_gtex_tpm": 38.68,
+      "on_target_canonical_skip_haploinsufficiency_risk": 0,
+      "qualitative_safety_tier": "FAVORABLE_RESTORATION_LOW_CONSTRAINT",
+      "rationale": "gnomAD v4.1 pLI=0.00/LOEUF=0.851; intrathecal steric SSO restores physiological splicing (non-inhibitory); Atg4b-KO mice viable with inner-ear/autophagy phenotype; 995 ChEMBL records are inhibitors (wrong direction)."
+    },
+    "KALRN": {
+      "gnomad_v41_pli": 1.0,
+      "gnomad_v41_loeuf": 0.231,
+      "gnomad_v2_loeuf": 0.179,
+      "depmap_median_chronos": -0.069,
+      "depmap_p10_chronos": -0.2194,
+      "ot_is_essential": 0,
+      "gtex_cns_spinal_cervical_tpm": 1.5,
+      "gtex_cns_ba9_tpm": 22.0,
+      "max_non_cns_gtex_tissue": "Artery_Aorta",
+      "max_non_cns_gtex_tpm": 37.39,
+      "on_target_canonical_skip_haploinsufficiency_risk": 1,
+      "qualitative_safety_tier": "INTRATHECAL_RESTORATION_PLI1_CANONICAL_SKIP_SENSITIVE",
+      "rationale": "gnomAD v4.1 pLI=1.00/LOEUF=0.231 (v2.1.1=0.179) prohibits pan-inhibition and demands zero accidental Exon 56/57 skipping; high vascular GTEx TPM (Artery_Aorta=37.39, Artery_Coronary=23.12 vs cervical cord=1.50) requires CNS-confined intrathecal steric SSO."
+    },
+    "ELK1": {
+      "gnomad_v41_pli": null,
+      "gnomad_v41_loeuf": null,
+      "gnomad_v2_loeuf": 0.616,
+      "depmap_median_chronos": -0.0879,
+      "depmap_p10_chronos": -0.2076,
+      "ot_is_essential": 0,
+      "gtex_cns_spinal_cervical_tpm": 7.02,
+      "gtex_cns_ba9_tpm": 39.89,
+      "max_non_cns_gtex_tissue": "Ovary",
+      "max_non_cns_gtex_tpm": 80.11,
+      "on_target_canonical_skip_haploinsufficiency_risk": 0,
+      "qualitative_safety_tier": "MODERATE_CAUTION_KNOCKDOWN_SIGN_AMBIGUOUS",
+      "rationale": "3'Ext RNase-H gapmer lowers transcript abundance in X-linked TF (gnomAD v4.1 chrX=null; v2.1.1 LOEUF=0.616; Ovary=80.11, Liver=14.60 TPM); nuclear pELK1-SRF neuroprotection vs dendritic pro-apoptotic sign unresolved."
+    }
+  },
+  "nygc_multiregion_donor_analysis": {
+    "n_high_gc_ref": 1214,
+    "n_low_gc_ref": 2401,
+    "tdp43_spared_mn_neur_markers": [
+      "CHAT",
+      "ISL1",
+      "MNX1",
+      "NEFH",
+      "RBFOX3",
+      "SNAP25",
+      "SYP",
+      "SYN1",
+      "ENO2",
+      "TUBB3"
+    ],
+    "regions": {
+      "Spinal_Cord_Cervical": {
+        "n_donors_total": 206,
+        "n_als_tdp": 162,
+        "n_ctrl": 35,
+        "n_als_sod1_fus": 9,
+        "n_noncryptic_neuronal_ref": 2791,
+        "noncryptic_neuronal_ref_median_t": -1.4673,
+        "noncryptic_neuronal_ref_pct_neg": 69.72,
+        "genes": {
+          "ATG4B": {
+            "n_als_tdp": 162,
+            "n_ctrl": 35,
+            "n_als_sod1_fus": 9,
+            "mean_als_tdp": 4.8989,
+            "mean_ctrl": 5.2569,
+            "mean_als_sod1_fus": 4.6958,
+            "unadj_diff_tdp_vs_ctrl": -0.358,
+            "welch_p_tdp_vs_ctrl": 2.820585678348012e-06,
+            "mwu_p_tdp_vs_ctrl": 4.676996906427263e-06,
+            "adj_beta_tdp_vs_ctrl": -0.1642,
+            "adj_t_tdp_vs_ctrl": -3.3389,
+            "adj_p_tdp_vs_ctrl": 0.001009368509874895,
+            "unadj_diff_tdp_vs_sod1fus": 0.2032,
+            "welch_p_tdp_vs_sod1fus": 0.07500965915582318,
+            "adj_beta_tdp_vs_sod1fus": 0.0971,
+            "adj_p_tdp_vs_sod1fus": 0.2703260317682191,
+            "within_tdp_spearman_tSTMN2_rho": -0.05,
+            "within_tdp_spearman_tSTMN2_p": 0.5277781653685352,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.5638,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -4.9201,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 2.1648700491387697e-06,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 6.2,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 104,
+                "mean_log2cpm": 4.751,
+                "adj_beta_vs_ctrl": -0.2696,
+                "adj_p_vs_ctrl": 1.141715898374948e-07
+              },
+              "ALS-Glia": {
+                "n": 9,
+                "mean_log2cpm": 4.8138,
+                "adj_beta_vs_ctrl": -0.1158,
+                "adj_p_vs_ctrl": 0.2593865955354226
+              },
+              "ALS-TE": {
+                "n": 22,
+                "mean_log2cpm": 5.2038,
+                "adj_beta_vs_ctrl": 0.0039,
+                "adj_p_vs_ctrl": 0.9566051424597989
+              }
+            },
+            "oneill_kruskal_3subtype_p": 4.526282105181996e-05
+          },
+          "KALRN": {
+            "n_als_tdp": 162,
+            "n_ctrl": 35,
+            "n_als_sod1_fus": 9,
+            "mean_als_tdp": 5.7913,
+            "mean_ctrl": 5.7662,
+            "mean_als_sod1_fus": 5.6749,
+            "unadj_diff_tdp_vs_ctrl": 0.0251,
+            "welch_p_tdp_vs_ctrl": 0.7057379044572136,
+            "mwu_p_tdp_vs_ctrl": 0.7924074099613478,
+            "adj_beta_tdp_vs_ctrl": 0.041,
+            "adj_t_tdp_vs_ctrl": 0.6179,
+            "adj_p_tdp_vs_ctrl": 0.5373504895146515,
+            "unadj_diff_tdp_vs_sod1fus": 0.1164,
+            "welch_p_tdp_vs_sod1fus": 0.20643376685571332,
+            "adj_beta_tdp_vs_sod1fus": 0.1279,
+            "adj_p_tdp_vs_sod1fus": 0.27312012954190357,
+            "within_tdp_spearman_tSTMN2_rho": -0.1187,
+            "within_tdp_spearman_tSTMN2_p": 0.13240464203066243,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.5456,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -3.6188,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.0003987227581315532,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 17.05,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 104,
+                "mean_log2cpm": 5.7349,
+                "adj_beta_vs_ctrl": -0.036,
+                "adj_p_vs_ctrl": 0.6240033470313057
+              },
+              "ALS-Glia": {
+                "n": 9,
+                "mean_log2cpm": 5.794,
+                "adj_beta_vs_ctrl": 0.1254,
+                "adj_p_vs_ctrl": 0.38852050955456624
+              },
+              "ALS-TE": {
+                "n": 22,
+                "mean_log2cpm": 5.966,
+                "adj_beta_vs_ctrl": 0.2135,
+                "adj_p_vs_ctrl": 0.02459778157472862
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.02274326633822779
+          },
+          "PTPRT": {
+            "n_als_tdp": 162,
+            "n_ctrl": 35,
+            "n_als_sod1_fus": 9,
+            "mean_als_tdp": 3.174,
+            "mean_ctrl": 3.683,
+            "mean_als_sod1_fus": 2.8239,
+            "unadj_diff_tdp_vs_ctrl": -0.509,
+            "welch_p_tdp_vs_ctrl": 0.03666886943501893,
+            "mwu_p_tdp_vs_ctrl": 0.05154424166180357,
+            "adj_beta_tdp_vs_ctrl": -0.4079,
+            "adj_t_tdp_vs_ctrl": -1.6477,
+            "adj_p_tdp_vs_ctrl": 0.10103679505783465,
+            "unadj_diff_tdp_vs_sod1fus": 0.3501,
+            "welch_p_tdp_vs_sod1fus": 0.4571199541185878,
+            "adj_beta_tdp_vs_sod1fus": 0.2985,
+            "adj_p_tdp_vs_sod1fus": 0.5027065037487916,
+            "within_tdp_spearman_tSTMN2_rho": 0.2056,
+            "within_tdp_spearman_tSTMN2_p": 0.008685258821896302,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -1.0609,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -3.245,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.001435446393210322,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 22.54,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 104,
+                "mean_log2cpm": 3.2049,
+                "adj_beta_vs_ctrl": -0.347,
+                "adj_p_vs_ctrl": 0.22342840524183316
+              },
+              "ALS-Glia": {
+                "n": 9,
+                "mean_log2cpm": 2.5559,
+                "adj_beta_vs_ctrl": -1.2577,
+                "adj_p_vs_ctrl": 0.02614509494696869
+              },
+              "ALS-TE": {
+                "n": 22,
+                "mean_log2cpm": 3.3093,
+                "adj_beta_vs_ctrl": -0.4362,
+                "adj_p_vs_ctrl": 0.1825921865618613
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.2815633884228603
+          },
+          "CELF5": {
+            "n_als_tdp": 162,
+            "n_ctrl": 35,
+            "n_als_sod1_fus": 9,
+            "mean_als_tdp": 2.203,
+            "mean_ctrl": 2.7981,
+            "mean_als_sod1_fus": 2.1471,
+            "unadj_diff_tdp_vs_ctrl": -0.5951,
+            "welch_p_tdp_vs_ctrl": 0.0026937601512708144,
+            "mwu_p_tdp_vs_ctrl": 0.0016693082783529227,
+            "adj_beta_tdp_vs_ctrl": -0.402,
+            "adj_t_tdp_vs_ctrl": -2.4036,
+            "adj_p_tdp_vs_ctrl": 0.01717881547433777,
+            "unadj_diff_tdp_vs_sod1fus": 0.0559,
+            "welch_p_tdp_vs_sod1fus": 0.8217702719687865,
+            "adj_beta_tdp_vs_sod1fus": -0.05,
+            "adj_p_tdp_vs_sod1fus": 0.8634699746262632,
+            "within_tdp_spearman_tSTMN2_rho": 0.1017,
+            "within_tdp_spearman_tSTMN2_p": 0.19765005589324544,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -1.3932,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -5.9133,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 2.0248178472395735e-08,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 1.9,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 104,
+                "mean_log2cpm": 2.1307,
+                "adj_beta_vs_ctrl": -0.4186,
+                "adj_p_vs_ctrl": 0.03209170939760413
+              },
+              "ALS-Glia": {
+                "n": 9,
+                "mean_log2cpm": 1.7256,
+                "adj_beta_vs_ctrl": -0.7373,
+                "adj_p_vs_ctrl": 0.06965079534276039
+              },
+              "ALS-TE": {
+                "n": 22,
+                "mean_log2cpm": 2.6206,
+                "adj_beta_vs_ctrl": -0.1418,
+                "adj_p_vs_ctrl": 0.5539728587756141
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.004731477893478275
+          },
+          "PRUNE2": {
+            "n_als_tdp": 162,
+            "n_ctrl": 35,
+            "n_als_sod1_fus": 9,
+            "mean_als_tdp": 8.6555,
+            "mean_ctrl": 8.8145,
+            "mean_als_sod1_fus": 8.6598,
+            "unadj_diff_tdp_vs_ctrl": -0.159,
+            "welch_p_tdp_vs_ctrl": 0.042932459261142725,
+            "mwu_p_tdp_vs_ctrl": 0.05394170835273211,
+            "adj_beta_tdp_vs_ctrl": -0.2625,
+            "adj_t_tdp_vs_ctrl": -3.5514,
+            "adj_p_tdp_vs_ctrl": 0.0004814436649645504,
+            "unadj_diff_tdp_vs_sod1fus": -0.0043,
+            "welch_p_tdp_vs_sod1fus": 0.974157866375257,
+            "adj_beta_tdp_vs_sod1fus": 0.0854,
+            "adj_p_tdp_vs_sod1fus": 0.5135020370118896,
+            "within_tdp_spearman_tSTMN2_rho": -0.1662,
+            "within_tdp_spearman_tSTMN2_p": 0.03453930351127956,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.5885,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -3.338,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.0010539273997614924,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 21.35,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 104,
+                "mean_log2cpm": 8.6441,
+                "adj_beta_vs_ctrl": -0.3423,
+                "adj_p_vs_ctrl": 6.747605964100875e-05
+              },
+              "ALS-Glia": {
+                "n": 9,
+                "mean_log2cpm": 8.8305,
+                "adj_beta_vs_ctrl": -0.1671,
+                "adj_p_vs_ctrl": 0.3054714139131551
+              },
+              "ALS-TE": {
+                "n": 22,
+                "mean_log2cpm": 8.7752,
+                "adj_beta_vs_ctrl": -0.0754,
+                "adj_p_vs_ctrl": 0.4375222372502798
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.25591601428869765
+          },
+          "PFKP": {
+            "n_als_tdp": 162,
+            "n_ctrl": 35,
+            "n_als_sod1_fus": 9,
+            "mean_als_tdp": 6.3276,
+            "mean_ctrl": 5.9724,
+            "mean_als_sod1_fus": 6.2286,
+            "unadj_diff_tdp_vs_ctrl": 0.3551,
+            "welch_p_tdp_vs_ctrl": 0.0010714181737213055,
+            "mwu_p_tdp_vs_ctrl": 0.0003414769793824551,
+            "adj_beta_tdp_vs_ctrl": 0.4223,
+            "adj_t_tdp_vs_ctrl": 4.973,
+            "adj_p_tdp_vs_ctrl": 1.4524120538680991e-06,
+            "unadj_diff_tdp_vs_sod1fus": 0.0989,
+            "welch_p_tdp_vs_sod1fus": 0.34469662931351436,
+            "adj_beta_tdp_vs_sod1fus": 0.0272,
+            "adj_p_tdp_vs_sod1fus": 0.8515680185738606,
+            "within_tdp_spearman_tSTMN2_rho": 0.0896,
+            "within_tdp_spearman_tSTMN2_p": 0.2567325223151295,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.2179,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -1.0947,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.2753460403509998,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 55.25,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 104,
+                "mean_log2cpm": 6.2988,
+                "adj_beta_vs_ctrl": 0.355,
+                "adj_p_vs_ctrl": 0.0001864668697776681
+              },
+              "ALS-Glia": {
+                "n": 9,
+                "mean_log2cpm": 6.308,
+                "adj_beta_vs_ctrl": 0.5989,
+                "adj_p_vs_ctrl": 0.009436061855945041
+              },
+              "ALS-TE": {
+                "n": 22,
+                "mean_log2cpm": 6.3788,
+                "adj_beta_vs_ctrl": 0.4235,
+                "adj_p_vs_ctrl": 0.0025252547487218256
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.7723165633225194
+          },
+          "TRAPPC12": {
+            "n_als_tdp": 162,
+            "n_ctrl": 35,
+            "n_als_sod1_fus": 9,
+            "mean_als_tdp": 5.4031,
+            "mean_ctrl": 5.7056,
+            "mean_als_sod1_fus": 5.2403,
+            "unadj_diff_tdp_vs_ctrl": -0.3025,
+            "welch_p_tdp_vs_ctrl": 3.191017909111609e-05,
+            "mwu_p_tdp_vs_ctrl": 6.690867491282337e-05,
+            "adj_beta_tdp_vs_ctrl": -0.0913,
+            "adj_t_tdp_vs_ctrl": -1.8131,
+            "adj_p_tdp_vs_ctrl": 0.07136435461142478,
+            "unadj_diff_tdp_vs_sod1fus": 0.1628,
+            "welch_p_tdp_vs_sod1fus": 0.060183234465081135,
+            "adj_beta_tdp_vs_sod1fus": 0.0476,
+            "adj_p_tdp_vs_sod1fus": 0.6014032981051659,
+            "within_tdp_spearman_tSTMN2_rho": 0.0567,
+            "within_tdp_spearman_tSTMN2_p": 0.47323441904226043,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.3356,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -2.6991,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.007714674293376059,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 31.14,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 104,
+                "mean_log2cpm": 5.3105,
+                "adj_beta_vs_ctrl": -0.1025,
+                "adj_p_vs_ctrl": 0.04973004896340809
+              },
+              "ALS-Glia": {
+                "n": 9,
+                "mean_log2cpm": 5.1548,
+                "adj_beta_vs_ctrl": -0.2541,
+                "adj_p_vs_ctrl": 0.023135986842858544
+              },
+              "ALS-TE": {
+                "n": 22,
+                "mean_log2cpm": 5.5757,
+                "adj_beta_vs_ctrl": -0.0547,
+                "adj_p_vs_ctrl": 0.4228848122666745
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.014719825288546309
+          },
+          "ELK1": {
+            "n_als_tdp": 162,
+            "n_ctrl": 35,
+            "n_als_sod1_fus": 9,
+            "mean_als_tdp": 3.6979,
+            "mean_ctrl": 3.7394,
+            "mean_als_sod1_fus": 3.7709,
+            "unadj_diff_tdp_vs_ctrl": -0.0415,
+            "welch_p_tdp_vs_ctrl": 0.4436083883258451,
+            "mwu_p_tdp_vs_ctrl": 0.31631099279874886,
+            "adj_beta_tdp_vs_ctrl": 0.0595,
+            "adj_t_tdp_vs_ctrl": 1.2632,
+            "adj_p_tdp_vs_ctrl": 0.20802889980102118,
+            "unadj_diff_tdp_vs_sod1fus": -0.073,
+            "welch_p_tdp_vs_sod1fus": 0.31478854491231817,
+            "adj_beta_tdp_vs_sod1fus": -0.1122,
+            "adj_p_tdp_vs_sod1fus": 0.1767981022284176,
+            "within_tdp_spearman_tSTMN2_rho": 0.089,
+            "within_tdp_spearman_tSTMN2_p": 0.25996185521872794,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.2553,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -2.3078,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.02231330872013527,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 36.55,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 104,
+                "mean_log2cpm": 3.6318,
+                "adj_beta_vs_ctrl": 0.0299,
+                "adj_p_vs_ctrl": 0.5789246435826422
+              },
+              "ALS-Glia": {
+                "n": 9,
+                "mean_log2cpm": 3.6278,
+                "adj_beta_vs_ctrl": 0.0679,
+                "adj_p_vs_ctrl": 0.5182816853421466
+              },
+              "ALS-TE": {
+                "n": 22,
+                "mean_log2cpm": 3.8596,
+                "adj_beta_vs_ctrl": 0.1542,
+                "adj_p_vs_ctrl": 0.022293266647117574
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.002254296110669337
+          },
+          "DLGAP1": {
+            "n_als_tdp": 162,
+            "n_ctrl": 35,
+            "n_als_sod1_fus": 9,
+            "mean_als_tdp": 4.8015,
+            "mean_ctrl": 4.6461,
+            "mean_als_sod1_fus": 4.6671,
+            "unadj_diff_tdp_vs_ctrl": 0.1555,
+            "welch_p_tdp_vs_ctrl": 0.07369653291942568,
+            "mwu_p_tdp_vs_ctrl": 0.025441855024900303,
+            "adj_beta_tdp_vs_ctrl": 0.1237,
+            "adj_t_tdp_vs_ctrl": 1.5638,
+            "adj_p_tdp_vs_ctrl": 0.11951075381690428,
+            "unadj_diff_tdp_vs_sod1fus": 0.1344,
+            "welch_p_tdp_vs_sod1fus": 0.45260363490465705,
+            "adj_beta_tdp_vs_sod1fus": 0.1476,
+            "adj_p_tdp_vs_sod1fus": 0.2909561963941548,
+            "within_tdp_spearman_tSTMN2_rho": -0.0996,
+            "within_tdp_spearman_tSTMN2_p": 0.2074023737396909,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.4524,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -2.6405,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.009114503351300506,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 31.89,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 104,
+                "mean_log2cpm": 4.852,
+                "adj_beta_vs_ctrl": 0.1562,
+                "adj_p_vs_ctrl": 0.07406590319114426
+              },
+              "ALS-Glia": {
+                "n": 9,
+                "mean_log2cpm": 4.5314,
+                "adj_beta_vs_ctrl": -0.2449,
+                "adj_p_vs_ctrl": 0.19382176822142694
+              },
+              "ALS-TE": {
+                "n": 22,
+                "mean_log2cpm": 4.7706,
+                "adj_beta_vs_ctrl": 0.0889,
+                "adj_p_vs_ctrl": 0.45210207384240253
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.0269723400885169
+          },
+          "STMN2": {
+            "n_als_tdp": 162,
+            "n_ctrl": 35,
+            "n_als_sod1_fus": 9,
+            "mean_als_tdp": 4.2483,
+            "mean_ctrl": 4.8424,
+            "mean_als_sod1_fus": 3.2951,
+            "unadj_diff_tdp_vs_ctrl": -0.5941,
+            "welch_p_tdp_vs_ctrl": 0.04283482775052881,
+            "mwu_p_tdp_vs_ctrl": 0.1231911148947646,
+            "adj_beta_tdp_vs_ctrl": -0.5492,
+            "adj_t_tdp_vs_ctrl": -1.7712,
+            "adj_p_tdp_vs_ctrl": 0.07810354525425124,
+            "unadj_diff_tdp_vs_sod1fus": 0.9532,
+            "welch_p_tdp_vs_sod1fus": 0.241815004497959,
+            "adj_beta_tdp_vs_sod1fus": 0.9116,
+            "adj_p_tdp_vs_sod1fus": 0.11378822566574011,
+            "within_tdp_spearman_tSTMN2_rho": 0.2638,
+            "within_tdp_spearman_tSTMN2_p": 0.0006954542309032492,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.6337,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -2.0787,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.039269223817222476,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 40.06,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 104,
+                "mean_log2cpm": 4.4092,
+                "adj_beta_vs_ctrl": -0.3474,
+                "adj_p_vs_ctrl": 0.3297998501269069
+              },
+              "ALS-Glia": {
+                "n": 9,
+                "mean_log2cpm": 3.6146,
+                "adj_beta_vs_ctrl": -1.4599,
+                "adj_p_vs_ctrl": 0.025465965405426536
+              },
+              "ALS-TE": {
+                "n": 22,
+                "mean_log2cpm": 4.1682,
+                "adj_beta_vs_ctrl": -0.8095,
+                "adj_p_vs_ctrl": 0.04221424629329735
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.19937007837307397
+          }
+        }
+      },
+      "Spinal_Cord_Lumbar": {
+        "n_donors_total": 181,
+        "n_als_tdp": 141,
+        "n_ctrl": 32,
+        "n_als_sod1_fus": 8,
+        "n_noncryptic_neuronal_ref": 6229,
+        "noncryptic_neuronal_ref_median_t": -0.9437,
+        "noncryptic_neuronal_ref_pct_neg": 70.4,
+        "genes": {
+          "ATG4B": {
+            "n_als_tdp": 141,
+            "n_ctrl": 32,
+            "n_als_sod1_fus": 8,
+            "mean_als_tdp": 4.9173,
+            "mean_ctrl": 5.147,
+            "mean_als_sod1_fus": 4.7022,
+            "unadj_diff_tdp_vs_ctrl": -0.2296,
+            "welch_p_tdp_vs_ctrl": 0.0027948630702017583,
+            "mwu_p_tdp_vs_ctrl": 0.0027999915039939208,
+            "adj_beta_tdp_vs_ctrl": -0.0314,
+            "adj_t_tdp_vs_ctrl": -0.5227,
+            "adj_p_tdp_vs_ctrl": 0.6018474659977551,
+            "unadj_diff_tdp_vs_sod1fus": 0.2151,
+            "welch_p_tdp_vs_sod1fus": 0.014201764475475947,
+            "adj_beta_tdp_vs_sod1fus": 0.0981,
+            "adj_p_tdp_vs_sod1fus": 0.35676116558726284,
+            "within_tdp_spearman_tSTMN2_rho": 0.0631,
+            "within_tdp_spearman_tSTMN2_p": 0.45745490990128773,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.3688,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -4.3421,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 2.736568638192756e-05,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 4.93,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 90,
+                "mean_log2cpm": 4.7728,
+                "adj_beta_vs_ctrl": -0.1331,
+                "adj_p_vs_ctrl": 0.03442050668259327
+              },
+              "ALS-Glia": {
+                "n": 8,
+                "mean_log2cpm": 4.7904,
+                "adj_beta_vs_ctrl": -0.0925,
+                "adj_p_vs_ctrl": 0.44413866224985366
+              },
+              "ALS-TE": {
+                "n": 21,
+                "mean_log2cpm": 5.3138,
+                "adj_beta_vs_ctrl": 0.068,
+                "adj_p_vs_ctrl": 0.453467155749222
+              }
+            },
+            "oneill_kruskal_3subtype_p": 2.3582257077924704e-06
+          },
+          "KALRN": {
+            "n_als_tdp": 141,
+            "n_ctrl": 32,
+            "n_als_sod1_fus": 8,
+            "mean_als_tdp": 5.8485,
+            "mean_ctrl": 5.774,
+            "mean_als_sod1_fus": 5.7711,
+            "unadj_diff_tdp_vs_ctrl": 0.0745,
+            "welch_p_tdp_vs_ctrl": 0.34041845980251967,
+            "mwu_p_tdp_vs_ctrl": 0.41275243631945646,
+            "adj_beta_tdp_vs_ctrl": 0.0846,
+            "adj_t_tdp_vs_ctrl": 1.0401,
+            "adj_p_tdp_vs_ctrl": 0.2997875759396114,
+            "unadj_diff_tdp_vs_sod1fus": 0.0774,
+            "welch_p_tdp_vs_sod1fus": 0.5870482883065586,
+            "adj_beta_tdp_vs_sod1fus": 0.0675,
+            "adj_p_tdp_vs_sod1fus": 0.6361092990330466,
+            "within_tdp_spearman_tSTMN2_rho": 0.0883,
+            "within_tdp_spearman_tSTMN2_p": 0.2977258426038773,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.3791,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -3.841,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.00018719082927180032,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 7.06,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 90,
+                "mean_log2cpm": 5.8043,
+                "adj_beta_vs_ctrl": -0.0479,
+                "adj_p_vs_ctrl": 0.6171559556043471
+              },
+              "ALS-Glia": {
+                "n": 8,
+                "mean_log2cpm": 5.8601,
+                "adj_beta_vs_ctrl": -0.0511,
+                "adj_p_vs_ctrl": 0.7512375034501274
+              },
+              "ALS-TE": {
+                "n": 21,
+                "mean_log2cpm": 5.9461,
+                "adj_beta_vs_ctrl": 0.1025,
+                "adj_p_vs_ctrl": 0.34537263096785303
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.2652087408122355
+          },
+          "PTPRT": {
+            "n_als_tdp": 141,
+            "n_ctrl": 32,
+            "n_als_sod1_fus": 8,
+            "mean_als_tdp": 3.8458,
+            "mean_ctrl": 3.6595,
+            "mean_als_sod1_fus": 3.3723,
+            "unadj_diff_tdp_vs_ctrl": 0.1863,
+            "welch_p_tdp_vs_ctrl": 0.3756735670230128,
+            "mwu_p_tdp_vs_ctrl": 0.2884835059752259,
+            "adj_beta_tdp_vs_ctrl": 0.2222,
+            "adj_t_tdp_vs_ctrl": 0.8205,
+            "adj_p_tdp_vs_ctrl": 0.41307148487311185,
+            "unadj_diff_tdp_vs_sod1fus": 0.4735,
+            "welch_p_tdp_vs_sod1fus": 0.07494547392245082,
+            "adj_beta_tdp_vs_sod1fus": 0.3795,
+            "adj_p_tdp_vs_sod1fus": 0.43527772187287705,
+            "within_tdp_spearman_tSTMN2_rho": 0.2617,
+            "within_tdp_spearman_tSTMN2_p": 0.0017225689988634159,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -1.1989,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -6.3666,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 2.7564842518677967e-09,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 0.69,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 90,
+                "mean_log2cpm": 3.876,
+                "adj_beta_vs_ctrl": 0.227,
+                "adj_p_vs_ctrl": 0.48847841235122275
+              },
+              "ALS-Glia": {
+                "n": 8,
+                "mean_log2cpm": 3.5375,
+                "adj_beta_vs_ctrl": -0.5288,
+                "adj_p_vs_ctrl": 0.3244717626736236
+              },
+              "ALS-TE": {
+                "n": 21,
+                "mean_log2cpm": 3.6726,
+                "adj_beta_vs_ctrl": 0.0087,
+                "adj_p_vs_ctrl": 0.9782214377182552
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.6048167262962412
+          },
+          "CELF5": {
+            "n_als_tdp": 141,
+            "n_ctrl": 32,
+            "n_als_sod1_fus": 8,
+            "mean_als_tdp": 2.7919,
+            "mean_ctrl": 2.8027,
+            "mean_als_sod1_fus": 2.5074,
+            "unadj_diff_tdp_vs_ctrl": -0.0108,
+            "welch_p_tdp_vs_ctrl": 0.9490940582826545,
+            "mwu_p_tdp_vs_ctrl": 0.7948731244216383,
+            "adj_beta_tdp_vs_ctrl": 0.1909,
+            "adj_t_tdp_vs_ctrl": 0.9021,
+            "adj_p_tdp_vs_ctrl": 0.36829402649104986,
+            "unadj_diff_tdp_vs_sod1fus": 0.2845,
+            "welch_p_tdp_vs_sod1fus": 0.1434136156276577,
+            "adj_beta_tdp_vs_sod1fus": 0.1386,
+            "adj_p_tdp_vs_sod1fus": 0.7152558356092316,
+            "within_tdp_spearman_tSTMN2_rho": 0.225,
+            "within_tdp_spearman_tSTMN2_p": 0.0073078295343532735,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -1.194,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -7.2713,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 2.5373877069343883e-11,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 0.14,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 90,
+                "mean_log2cpm": 2.7033,
+                "adj_beta_vs_ctrl": 0.1241,
+                "adj_p_vs_ctrl": 0.6311596935734453
+              },
+              "ALS-Glia": {
+                "n": 8,
+                "mean_log2cpm": 2.465,
+                "adj_beta_vs_ctrl": -0.2345,
+                "adj_p_vs_ctrl": 0.5626403720163217
+              },
+              "ALS-TE": {
+                "n": 21,
+                "mean_log2cpm": 2.9681,
+                "adj_beta_vs_ctrl": 0.0807,
+                "adj_p_vs_ctrl": 0.7440856626817626
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.3390216385173942
+          },
+          "PRUNE2": {
+            "n_als_tdp": 141,
+            "n_ctrl": 32,
+            "n_als_sod1_fus": 8,
+            "mean_als_tdp": 8.5431,
+            "mean_ctrl": 8.7809,
+            "mean_als_sod1_fus": 8.3142,
+            "unadj_diff_tdp_vs_ctrl": -0.2378,
+            "welch_p_tdp_vs_ctrl": 0.040446246151008045,
+            "mwu_p_tdp_vs_ctrl": 0.08937237044360112,
+            "adj_beta_tdp_vs_ctrl": -0.376,
+            "adj_t_tdp_vs_ctrl": -3.7947,
+            "adj_p_tdp_vs_ctrl": 0.00020568774464927095,
+            "unadj_diff_tdp_vs_sod1fus": 0.2289,
+            "welch_p_tdp_vs_sod1fus": 0.11057731639196385,
+            "adj_beta_tdp_vs_sod1fus": 0.3013,
+            "adj_p_tdp_vs_sod1fus": 0.07887299171406638,
+            "within_tdp_spearman_tSTMN2_rho": 0.0557,
+            "within_tdp_spearman_tSTMN2_p": 0.5114695219322666,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.2015,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -1.6264,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.10617065392536826,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 34.76,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 90,
+                "mean_log2cpm": 8.5619,
+                "adj_beta_vs_ctrl": -0.4751,
+                "adj_p_vs_ctrl": 0.000123275753093708
+              },
+              "ALS-Glia": {
+                "n": 8,
+                "mean_log2cpm": 8.5962,
+                "adj_beta_vs_ctrl": -0.7269,
+                "adj_p_vs_ctrl": 0.0018296788041154606
+              },
+              "ALS-TE": {
+                "n": 21,
+                "mean_log2cpm": 8.5285,
+                "adj_beta_vs_ctrl": -0.2627,
+                "adj_p_vs_ctrl": 0.06103188902881052
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.7469019243114035
+          },
+          "PFKP": {
+            "n_als_tdp": 141,
+            "n_ctrl": 32,
+            "n_als_sod1_fus": 8,
+            "mean_als_tdp": 6.241,
+            "mean_ctrl": 5.8797,
+            "mean_als_sod1_fus": 6.2137,
+            "unadj_diff_tdp_vs_ctrl": 0.3614,
+            "welch_p_tdp_vs_ctrl": 0.011353278513858946,
+            "mwu_p_tdp_vs_ctrl": 0.004908904725523506,
+            "adj_beta_tdp_vs_ctrl": 0.3221,
+            "adj_t_tdp_vs_ctrl": 2.7825,
+            "adj_p_tdp_vs_ctrl": 0.0060075607703870505,
+            "unadj_diff_tdp_vs_sod1fus": 0.0273,
+            "welch_p_tdp_vs_sod1fus": 0.7806368444730184,
+            "adj_beta_tdp_vs_sod1fus": -0.0814,
+            "adj_p_tdp_vs_sod1fus": 0.6631421775628816,
+            "within_tdp_spearman_tSTMN2_rho": 0.1563,
+            "within_tdp_spearman_tSTMN2_p": 0.06426106633527556,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.3971,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -2.904,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.004301127476984461,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 14.51,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 90,
+                "mean_log2cpm": 6.2109,
+                "adj_beta_vs_ctrl": 0.1884,
+                "adj_p_vs_ctrl": 0.19139464850273757
+              },
+              "ALS-Glia": {
+                "n": 8,
+                "mean_log2cpm": 6.2836,
+                "adj_beta_vs_ctrl": 0.0905,
+                "adj_p_vs_ctrl": 0.7588169182856255
+              },
+              "ALS-TE": {
+                "n": 21,
+                "mean_log2cpm": 6.2481,
+                "adj_beta_vs_ctrl": 0.2231,
+                "adj_p_vs_ctrl": 0.20536846040777482
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.8330561531374643
+          },
+          "TRAPPC12": {
+            "n_als_tdp": 141,
+            "n_ctrl": 32,
+            "n_als_sod1_fus": 8,
+            "mean_als_tdp": 5.4227,
+            "mean_ctrl": 5.6556,
+            "mean_als_sod1_fus": 5.2384,
+            "unadj_diff_tdp_vs_ctrl": -0.2329,
+            "welch_p_tdp_vs_ctrl": 0.00048782580444972667,
+            "mwu_p_tdp_vs_ctrl": 0.003517079896937391,
+            "adj_beta_tdp_vs_ctrl": -0.0153,
+            "adj_t_tdp_vs_ctrl": -0.2544,
+            "adj_p_tdp_vs_ctrl": 0.799471269751923,
+            "unadj_diff_tdp_vs_sod1fus": 0.1843,
+            "welch_p_tdp_vs_sod1fus": 0.1920289338027727,
+            "adj_beta_tdp_vs_sod1fus": 0.0786,
+            "adj_p_tdp_vs_sod1fus": 0.4879128877405025,
+            "within_tdp_spearman_tSTMN2_rho": 0.2307,
+            "within_tdp_spearman_tSTMN2_p": 0.0059285925895944756,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.1778,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -1.983,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.04938337069193207,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 28.3,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 90,
+                "mean_log2cpm": 5.3382,
+                "adj_beta_vs_ctrl": -0.0088,
+                "adj_p_vs_ctrl": 0.8932225865428549
+              },
+              "ALS-Glia": {
+                "n": 8,
+                "mean_log2cpm": 5.1143,
+                "adj_beta_vs_ctrl": -0.2659,
+                "adj_p_vs_ctrl": 0.016211857776527866
+              },
+              "ALS-TE": {
+                "n": 21,
+                "mean_log2cpm": 5.6713,
+                "adj_beta_vs_ctrl": -0.0284,
+                "adj_p_vs_ctrl": 0.696694200661695
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.00030786690227213207
+          },
+          "ELK1": {
+            "n_als_tdp": 141,
+            "n_ctrl": 32,
+            "n_als_sod1_fus": 8,
+            "mean_als_tdp": 3.877,
+            "mean_ctrl": 3.7343,
+            "mean_als_sod1_fus": 3.7269,
+            "unadj_diff_tdp_vs_ctrl": 0.1428,
+            "welch_p_tdp_vs_ctrl": 0.02155966982749907,
+            "mwu_p_tdp_vs_ctrl": 0.06247343007276955,
+            "adj_beta_tdp_vs_ctrl": 0.2362,
+            "adj_t_tdp_vs_ctrl": 3.7646,
+            "adj_p_tdp_vs_ctrl": 0.0002298961446865308,
+            "unadj_diff_tdp_vs_sod1fus": 0.1502,
+            "welch_p_tdp_vs_sod1fus": 0.04111504020291823,
+            "adj_beta_tdp_vs_sod1fus": 0.0957,
+            "adj_p_tdp_vs_sod1fus": 0.3763382126568927,
+            "within_tdp_spearman_tSTMN2_rho": 0.1472,
+            "within_tdp_spearman_tSTMN2_p": 0.08161635611502266,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.2791,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -3.3909,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.000912119947390516,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 10.07,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 90,
+                "mean_log2cpm": 3.8218,
+                "adj_beta_vs_ctrl": 0.2028,
+                "adj_p_vs_ctrl": 0.011385276247187482
+              },
+              "ALS-Glia": {
+                "n": 8,
+                "mean_log2cpm": 3.8377,
+                "adj_beta_vs_ctrl": 0.1374,
+                "adj_p_vs_ctrl": 0.3047636653515194
+              },
+              "ALS-TE": {
+                "n": 21,
+                "mean_log2cpm": 3.9991,
+                "adj_beta_vs_ctrl": 0.2211,
+                "adj_p_vs_ctrl": 0.009796807420130265
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.037555631470165406
+          },
+          "DLGAP1": {
+            "n_als_tdp": 141,
+            "n_ctrl": 32,
+            "n_als_sod1_fus": 8,
+            "mean_als_tdp": 4.9093,
+            "mean_ctrl": 4.5954,
+            "mean_als_sod1_fus": 4.7506,
+            "unadj_diff_tdp_vs_ctrl": 0.314,
+            "welch_p_tdp_vs_ctrl": 0.0015580054228506103,
+            "mwu_p_tdp_vs_ctrl": 0.001470448835376278,
+            "adj_beta_tdp_vs_ctrl": 0.2284,
+            "adj_t_tdp_vs_ctrl": 2.105,
+            "adj_p_tdp_vs_ctrl": 0.03677215884469584,
+            "unadj_diff_tdp_vs_sod1fus": 0.1587,
+            "welch_p_tdp_vs_sod1fus": 0.2902893929669989,
+            "adj_beta_tdp_vs_sod1fus": 0.1229,
+            "adj_p_tdp_vs_sod1fus": 0.5253321515460406,
+            "within_tdp_spearman_tSTMN2_rho": 0.0902,
+            "within_tdp_spearman_tSTMN2_p": 0.28771558191642566,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.4534,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -3.6416,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.0003841073772919582,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 8.35,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 90,
+                "mean_log2cpm": 4.9375,
+                "adj_beta_vs_ctrl": 0.1662,
+                "adj_p_vs_ctrl": 0.19838498381028327
+              },
+              "ALS-Glia": {
+                "n": 8,
+                "mean_log2cpm": 4.7254,
+                "adj_beta_vs_ctrl": -0.1979,
+                "adj_p_vs_ctrl": 0.34477212343916896
+              },
+              "ALS-TE": {
+                "n": 21,
+                "mean_log2cpm": 4.8574,
+                "adj_beta_vs_ctrl": 0.2404,
+                "adj_p_vs_ctrl": 0.05792203773630576
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.24724250536386022
+          },
+          "STMN2": {
+            "n_als_tdp": 141,
+            "n_ctrl": 32,
+            "n_als_sod1_fus": 8,
+            "mean_als_tdp": 5.1743,
+            "mean_ctrl": 5.2955,
+            "mean_als_sod1_fus": 4.3434,
+            "unadj_diff_tdp_vs_ctrl": -0.1213,
+            "welch_p_tdp_vs_ctrl": 0.714266490476429,
+            "mwu_p_tdp_vs_ctrl": 0.9236913248552618,
+            "adj_beta_tdp_vs_ctrl": -0.344,
+            "adj_t_tdp_vs_ctrl": -0.9933,
+            "adj_p_tdp_vs_ctrl": 0.3219902761988487,
+            "unadj_diff_tdp_vs_sod1fus": 0.8309,
+            "welch_p_tdp_vs_sod1fus": 0.06735305808535764,
+            "adj_beta_tdp_vs_sod1fus": 0.7456,
+            "adj_p_tdp_vs_sod1fus": 0.21802359371620122,
+            "within_tdp_spearman_tSTMN2_rho": 0.3704,
+            "within_tdp_spearman_tSTMN2_p": 6.152228605687186e-06,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.7186,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -3.8716,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.0001672193144517609,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 6.92,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 90,
+                "mean_log2cpm": 5.3588,
+                "adj_beta_vs_ctrl": -0.2576,
+                "adj_p_vs_ctrl": 0.5406561255054381
+              },
+              "ALS-Glia": {
+                "n": 8,
+                "mean_log2cpm": 5.0468,
+                "adj_beta_vs_ctrl": -1.5816,
+                "adj_p_vs_ctrl": 0.03721781673860695
+              },
+              "ALS-TE": {
+                "n": 21,
+                "mean_log2cpm": 4.4342,
+                "adj_beta_vs_ctrl": -0.9165,
+                "adj_p_vs_ctrl": 0.05031112011339053
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.04719815260517601
+          }
+        }
+      },
+      "Cortex_Motor": {
+        "n_donors_total": 120,
+        "n_als_tdp": 96,
+        "n_ctrl": 18,
+        "n_als_sod1_fus": 6,
+        "n_noncryptic_neuronal_ref": 5617,
+        "noncryptic_neuronal_ref_median_t": -0.3194,
+        "noncryptic_neuronal_ref_pct_neg": 60.66,
+        "genes": {
+          "ATG4B": {
+            "n_als_tdp": 96,
+            "n_ctrl": 18,
+            "n_als_sod1_fus": 6,
+            "mean_als_tdp": 5.0808,
+            "mean_ctrl": 5.3229,
+            "mean_als_sod1_fus": 5.1963,
+            "unadj_diff_tdp_vs_ctrl": -0.2421,
+            "welch_p_tdp_vs_ctrl": 0.0020751999019681983,
+            "mwu_p_tdp_vs_ctrl": 0.00484833393703756,
+            "adj_beta_tdp_vs_ctrl": 0.0978,
+            "adj_t_tdp_vs_ctrl": 1.7974,
+            "adj_p_tdp_vs_ctrl": 0.0750101124163823,
+            "unadj_diff_tdp_vs_sod1fus": -0.1155,
+            "welch_p_tdp_vs_sod1fus": 0.37081541509350713,
+            "adj_beta_tdp_vs_sod1fus": -0.0715,
+            "adj_p_tdp_vs_sod1fus": 0.3149991239432342,
+            "within_tdp_spearman_tSTMN2_rho": 0.0466,
+            "within_tdp_spearman_tSTMN2_p": 0.6523062169430641,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": 0.1729,
+            "within_tdp_mn_adj_log2_tSTMN2_t": 1.0073,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.3164678678714791,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 85.6,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 74,
+                "mean_log2cpm": 5.023,
+                "adj_beta_vs_ctrl": 0.0408,
+                "adj_p_vs_ctrl": 0.43219073983709544
+              },
+              "ALS-Glia": {
+                "n": 7,
+                "mean_log2cpm": 5.1713,
+                "adj_beta_vs_ctrl": 0.0237,
+                "adj_p_vs_ctrl": 0.826761919423644
+              },
+              "ALS-TE": {
+                "n": 9,
+                "mean_log2cpm": 5.2972,
+                "adj_beta_vs_ctrl": 0.1201,
+                "adj_p_vs_ctrl": 0.24805826614775267
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.09905633595565909
+          },
+          "KALRN": {
+            "n_als_tdp": 96,
+            "n_ctrl": 18,
+            "n_als_sod1_fus": 6,
+            "mean_als_tdp": 8.4161,
+            "mean_ctrl": 8.3496,
+            "mean_als_sod1_fus": 8.6229,
+            "unadj_diff_tdp_vs_ctrl": 0.0665,
+            "welch_p_tdp_vs_ctrl": 0.6210678597244155,
+            "mwu_p_tdp_vs_ctrl": 0.5999072097019278,
+            "adj_beta_tdp_vs_ctrl": 0.0666,
+            "adj_t_tdp_vs_ctrl": 0.6234,
+            "adj_p_tdp_vs_ctrl": 0.5343263006216202,
+            "unadj_diff_tdp_vs_sod1fus": -0.2068,
+            "welch_p_tdp_vs_sod1fus": 0.15018453735860954,
+            "adj_beta_tdp_vs_sod1fus": -0.1997,
+            "adj_p_tdp_vs_sod1fus": 0.16675582600443373,
+            "within_tdp_spearman_tSTMN2_rho": -0.1807,
+            "within_tdp_spearman_tSTMN2_p": 0.07814945224507557,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.2034,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -0.9403,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.34955085444112965,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 29.23,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 74,
+                "mean_log2cpm": 8.4572,
+                "adj_beta_vs_ctrl": 0.1151,
+                "adj_p_vs_ctrl": 0.2854574338085987
+              },
+              "ALS-Glia": {
+                "n": 7,
+                "mean_log2cpm": 7.9944,
+                "adj_beta_vs_ctrl": -0.4172,
+                "adj_p_vs_ctrl": 0.0889511458923188
+              },
+              "ALS-TE": {
+                "n": 9,
+                "mean_log2cpm": 8.4978,
+                "adj_beta_vs_ctrl": 0.0936,
+                "adj_p_vs_ctrl": 0.6880831024468128
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.0023151608194334045
+          },
+          "PTPRT": {
+            "n_als_tdp": 96,
+            "n_ctrl": 18,
+            "n_als_sod1_fus": 6,
+            "mean_als_tdp": 7.9304,
+            "mean_ctrl": 7.4923,
+            "mean_als_sod1_fus": 8.043,
+            "unadj_diff_tdp_vs_ctrl": 0.4381,
+            "welch_p_tdp_vs_ctrl": 0.015514040116394434,
+            "mwu_p_tdp_vs_ctrl": 0.003268635927710464,
+            "adj_beta_tdp_vs_ctrl": 0.326,
+            "adj_t_tdp_vs_ctrl": 2.5503,
+            "adj_p_tdp_vs_ctrl": 0.012137840744723242,
+            "unadj_diff_tdp_vs_sod1fus": -0.1125,
+            "welch_p_tdp_vs_sod1fus": 0.2577289913893847,
+            "adj_beta_tdp_vs_sod1fus": -0.1041,
+            "adj_p_tdp_vs_sod1fus": 0.5498579750688156,
+            "within_tdp_spearman_tSTMN2_rho": -0.017,
+            "within_tdp_spearman_tSTMN2_p": 0.8692903930685485,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": 0.3375,
+            "within_tdp_mn_adj_log2_tSTMN2_t": 1.4642,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.14658825940480516,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 92.33,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 74,
+                "mean_log2cpm": 8.0359,
+                "adj_beta_vs_ctrl": 0.4458,
+                "adj_p_vs_ctrl": 0.0003337433681999221
+              },
+              "ALS-Glia": {
+                "n": 7,
+                "mean_log2cpm": 7.4659,
+                "adj_beta_vs_ctrl": -0.2089,
+                "adj_p_vs_ctrl": 0.4693472581540001
+              },
+              "ALS-TE": {
+                "n": 9,
+                "mean_log2cpm": 7.796,
+                "adj_beta_vs_ctrl": 0.0994,
+                "adj_p_vs_ctrl": 0.7004270916405473
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.0035532532132430796
+          },
+          "CELF5": {
+            "n_als_tdp": 96,
+            "n_ctrl": 18,
+            "n_als_sod1_fus": 6,
+            "mean_als_tdp": 5.7859,
+            "mean_ctrl": 5.9835,
+            "mean_als_sod1_fus": 6.121,
+            "unadj_diff_tdp_vs_ctrl": -0.1976,
+            "welch_p_tdp_vs_ctrl": 0.25109398417627726,
+            "mwu_p_tdp_vs_ctrl": 0.1775791018474936,
+            "adj_beta_tdp_vs_ctrl": 0.0806,
+            "adj_t_tdp_vs_ctrl": 0.5537,
+            "adj_p_tdp_vs_ctrl": 0.5808835821373848,
+            "unadj_diff_tdp_vs_sod1fus": -0.3351,
+            "welch_p_tdp_vs_sod1fus": 0.24098815943933097,
+            "adj_beta_tdp_vs_sod1fus": -0.2888,
+            "adj_p_tdp_vs_sod1fus": 0.15917743128411424,
+            "within_tdp_spearman_tSTMN2_rho": -0.1452,
+            "within_tdp_spearman_tSTMN2_p": 0.15815613599563358,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.5877,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -1.4892,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.13988435038232377,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 14.88,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 74,
+                "mean_log2cpm": 5.8415,
+                "adj_beta_vs_ctrl": 0.2107,
+                "adj_p_vs_ctrl": 0.15069773215170582
+              },
+              "ALS-Glia": {
+                "n": 7,
+                "mean_log2cpm": 5.2612,
+                "adj_beta_vs_ctrl": -0.6358,
+                "adj_p_vs_ctrl": 0.04881476137465286
+              },
+              "ALS-TE": {
+                "n": 9,
+                "mean_log2cpm": 5.6545,
+                "adj_beta_vs_ctrl": -0.21,
+                "adj_p_vs_ctrl": 0.4591070951523822
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.021558749161351726
+          },
+          "PRUNE2": {
+            "n_als_tdp": 96,
+            "n_ctrl": 18,
+            "n_als_sod1_fus": 6,
+            "mean_als_tdp": 8.9198,
+            "mean_ctrl": 8.5624,
+            "mean_als_sod1_fus": 8.7328,
+            "unadj_diff_tdp_vs_ctrl": 0.3574,
+            "welch_p_tdp_vs_ctrl": 0.0213634822708645,
+            "mwu_p_tdp_vs_ctrl": 0.01452785509348116,
+            "adj_beta_tdp_vs_ctrl": 0.1452,
+            "adj_t_tdp_vs_ctrl": 1.5429,
+            "adj_p_tdp_vs_ctrl": 0.12573259275136298,
+            "unadj_diff_tdp_vs_sod1fus": 0.187,
+            "welch_p_tdp_vs_sod1fus": 0.15724838916277148,
+            "adj_beta_tdp_vs_sod1fus": 0.1661,
+            "adj_p_tdp_vs_sod1fus": 0.19592044537553532,
+            "within_tdp_spearman_tSTMN2_rho": 0.0384,
+            "within_tdp_spearman_tSTMN2_p": 0.7102581436151464,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": 0.0875,
+            "within_tdp_mn_adj_log2_tSTMN2_t": 0.2794,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.7805902930466849,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 68.15,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 74,
+                "mean_log2cpm": 8.9116,
+                "adj_beta_vs_ctrl": 0.077,
+                "adj_p_vs_ctrl": 0.4282099071108371
+              },
+              "ALS-Glia": {
+                "n": 7,
+                "mean_log2cpm": 9.1478,
+                "adj_beta_vs_ctrl": 0.3453,
+                "adj_p_vs_ctrl": 0.04888995974691672
+              },
+              "ALS-TE": {
+                "n": 9,
+                "mean_log2cpm": 9.0762,
+                "adj_beta_vs_ctrl": 0.3209,
+                "adj_p_vs_ctrl": 0.07139234463236241
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.033162646731642514
+          },
+          "PFKP": {
+            "n_als_tdp": 96,
+            "n_ctrl": 18,
+            "n_als_sod1_fus": 6,
+            "mean_als_tdp": 7.1196,
+            "mean_ctrl": 7.0175,
+            "mean_als_sod1_fus": 7.2808,
+            "unadj_diff_tdp_vs_ctrl": 0.1022,
+            "welch_p_tdp_vs_ctrl": 0.4566933719409328,
+            "mwu_p_tdp_vs_ctrl": 0.5626363604991077,
+            "adj_beta_tdp_vs_ctrl": 0.2319,
+            "adj_t_tdp_vs_ctrl": 2.1086,
+            "adj_p_tdp_vs_ctrl": 0.03724949183350371,
+            "unadj_diff_tdp_vs_sod1fus": -0.1612,
+            "welch_p_tdp_vs_sod1fus": 0.11342388820838346,
+            "adj_beta_tdp_vs_sod1fus": -0.1198,
+            "adj_p_tdp_vs_sod1fus": 0.40178172111407745,
+            "within_tdp_spearman_tSTMN2_rho": 0.096,
+            "within_tdp_spearman_tSTMN2_p": 0.35201448508497907,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": 0.2272,
+            "within_tdp_mn_adj_log2_tSTMN2_t": 0.9354,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.3520684595524748,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 84.16,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 74,
+                "mean_log2cpm": 7.1811,
+                "adj_beta_vs_ctrl": 0.3178,
+                "adj_p_vs_ctrl": 0.004790750447723846
+              },
+              "ALS-Glia": {
+                "n": 7,
+                "mean_log2cpm": 6.8113,
+                "adj_beta_vs_ctrl": -0.2716,
+                "adj_p_vs_ctrl": 0.18361654999825522
+              },
+              "ALS-TE": {
+                "n": 9,
+                "mean_log2cpm": 6.9847,
+                "adj_beta_vs_ctrl": -0.0352,
+                "adj_p_vs_ctrl": 0.8753459101110905
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.0748396834935922
+          },
+          "TRAPPC12": {
+            "n_als_tdp": 96,
+            "n_ctrl": 18,
+            "n_als_sod1_fus": 6,
+            "mean_als_tdp": 5.4125,
+            "mean_ctrl": 5.7403,
+            "mean_als_sod1_fus": 5.4873,
+            "unadj_diff_tdp_vs_ctrl": -0.3278,
+            "welch_p_tdp_vs_ctrl": 0.0021836108975411103,
+            "mwu_p_tdp_vs_ctrl": 0.002287897033357413,
+            "adj_beta_tdp_vs_ctrl": 0.0615,
+            "adj_t_tdp_vs_ctrl": 1.1534,
+            "adj_p_tdp_vs_ctrl": 0.2512476114149925,
+            "unadj_diff_tdp_vs_sod1fus": -0.0748,
+            "welch_p_tdp_vs_sod1fus": 0.5904311221930805,
+            "adj_beta_tdp_vs_sod1fus": -0.0305,
+            "adj_p_tdp_vs_sod1fus": 0.6995884506890778,
+            "within_tdp_spearman_tSTMN2_rho": 0.072,
+            "within_tdp_spearman_tSTMN2_p": 0.48600636494778854,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": 0.2187,
+            "within_tdp_mn_adj_log2_tSTMN2_t": 1.1883,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.2378220449769258,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 88.71,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 74,
+                "mean_log2cpm": 5.3704,
+                "adj_beta_vs_ctrl": 0.084,
+                "adj_p_vs_ctrl": 0.14667128707476665
+              },
+              "ALS-Glia": {
+                "n": 7,
+                "mean_log2cpm": 5.4232,
+                "adj_beta_vs_ctrl": -0.0991,
+                "adj_p_vs_ctrl": 0.1973890986971926
+              },
+              "ALS-TE": {
+                "n": 9,
+                "mean_log2cpm": 5.5987,
+                "adj_beta_vs_ctrl": 0.0046,
+                "adj_p_vs_ctrl": 0.9521005502239597
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.2523718373457965
+          },
+          "ELK1": {
+            "n_als_tdp": 96,
+            "n_ctrl": 18,
+            "n_als_sod1_fus": 6,
+            "mean_als_tdp": 5.8008,
+            "mean_ctrl": 5.9102,
+            "mean_als_sod1_fus": 5.9348,
+            "unadj_diff_tdp_vs_ctrl": -0.1094,
+            "welch_p_tdp_vs_ctrl": 0.5521473175841725,
+            "mwu_p_tdp_vs_ctrl": 0.2614837025924903,
+            "adj_beta_tdp_vs_ctrl": 0.1524,
+            "adj_t_tdp_vs_ctrl": 0.9965,
+            "adj_p_tdp_vs_ctrl": 0.32120651724410165,
+            "unadj_diff_tdp_vs_sod1fus": -0.134,
+            "welch_p_tdp_vs_sod1fus": 0.5364035423371456,
+            "adj_beta_tdp_vs_sod1fus": -0.1164,
+            "adj_p_tdp_vs_sod1fus": 0.6014989009777179,
+            "within_tdp_spearman_tSTMN2_rho": 0.0473,
+            "within_tdp_spearman_tSTMN2_p": 0.6468986485159502,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": 0.5446,
+            "within_tdp_mn_adj_log2_tSTMN2_t": 0.9699,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.33467969672191383,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 84.92,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 74,
+                "mean_log2cpm": 5.7128,
+                "adj_beta_vs_ctrl": 0.0318,
+                "adj_p_vs_ctrl": 0.8437890744732006
+              },
+              "ALS-Glia": {
+                "n": 7,
+                "mean_log2cpm": 5.7097,
+                "adj_beta_vs_ctrl": -0.0133,
+                "adj_p_vs_ctrl": 0.9608730316975787
+              },
+              "ALS-TE": {
+                "n": 9,
+                "mean_log2cpm": 5.9634,
+                "adj_beta_vs_ctrl": 0.0868,
+                "adj_p_vs_ctrl": 0.7513120197321624
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.651552799526562
+          },
+          "DLGAP1": {
+            "n_als_tdp": 96,
+            "n_ctrl": 18,
+            "n_als_sod1_fus": 6,
+            "mean_als_tdp": 8.2793,
+            "mean_ctrl": 8.0114,
+            "mean_als_sod1_fus": 8.506,
+            "unadj_diff_tdp_vs_ctrl": 0.2678,
+            "welch_p_tdp_vs_ctrl": 0.1691869052985055,
+            "mwu_p_tdp_vs_ctrl": 0.11028477070700608,
+            "adj_beta_tdp_vs_ctrl": 0.117,
+            "adj_t_tdp_vs_ctrl": 0.804,
+            "adj_p_tdp_vs_ctrl": 0.42310954440706994,
+            "unadj_diff_tdp_vs_sod1fus": -0.2267,
+            "welch_p_tdp_vs_sod1fus": 0.09544814772851241,
+            "adj_beta_tdp_vs_sod1fus": -0.2187,
+            "adj_p_tdp_vs_sod1fus": 0.27855372197456507,
+            "within_tdp_spearman_tSTMN2_rho": -0.2204,
+            "within_tdp_spearman_tSTMN2_p": 0.030919873349796772,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.4447,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -2.4266,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.01721108189950879,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 2.63,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 74,
+                "mean_log2cpm": 8.4307,
+                "adj_beta_vs_ctrl": 0.3056,
+                "adj_p_vs_ctrl": 0.024729746838292085
+              },
+              "ALS-Glia": {
+                "n": 7,
+                "mean_log2cpm": 7.6005,
+                "adj_beta_vs_ctrl": -0.5995,
+                "adj_p_vs_ctrl": 0.06701021451758228
+              },
+              "ALS-TE": {
+                "n": 9,
+                "mean_log2cpm": 8.0105,
+                "adj_beta_vs_ctrl": -0.0774,
+                "adj_p_vs_ctrl": 0.791975393185843
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.00021620764417692111
+          },
+          "STMN2": {
+            "n_als_tdp": 96,
+            "n_ctrl": 18,
+            "n_als_sod1_fus": 6,
+            "mean_als_tdp": 8.1616,
+            "mean_ctrl": 7.4905,
+            "mean_als_sod1_fus": 8.4048,
+            "unadj_diff_tdp_vs_ctrl": 0.6711,
+            "welch_p_tdp_vs_ctrl": 0.05194559737004586,
+            "mwu_p_tdp_vs_ctrl": 0.06272664232383186,
+            "adj_beta_tdp_vs_ctrl": 0.1762,
+            "adj_t_tdp_vs_ctrl": 0.9026,
+            "adj_p_tdp_vs_ctrl": 0.36869763553779533,
+            "unadj_diff_tdp_vs_sod1fus": -0.2432,
+            "welch_p_tdp_vs_sod1fus": 0.37623646965961194,
+            "adj_beta_tdp_vs_sod1fus": -0.2548,
+            "adj_p_tdp_vs_sod1fus": 0.34686449987836065,
+            "within_tdp_spearman_tSTMN2_rho": -0.1731,
+            "within_tdp_spearman_tSTMN2_p": 0.09164628912732341,
+            "within_tdp_mn_adj_log2_tSTMN2_beta": -0.136,
+            "within_tdp_mn_adj_log2_tSTMN2_t": -0.5654,
+            "within_tdp_mn_adj_log2_tSTMN2_p": 0.5731794948163433,
+            "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 41.59,
+            "oneill_motor_subtypes": {
+              "ALS-Ox": {
+                "n": 74,
+                "mean_log2cpm": 8.416,
+                "adj_beta_vs_ctrl": 0.4274,
+                "adj_p_vs_ctrl": 0.012541337861920243
+              },
+              "ALS-Glia": {
+                "n": 7,
+                "mean_log2cpm": 7.3438,
+                "adj_beta_vs_ctrl": -0.691,
+                "adj_p_vs_ctrl": 0.09363086310253585
+              },
+              "ALS-TE": {
+                "n": 9,
+                "mean_log2cpm": 7.6392,
+                "adj_beta_vs_ctrl": -0.1723,
+                "adj_p_vs_ctrl": 0.6703595242638173
+              }
+            },
+            "oneill_kruskal_3subtype_p": 0.00014042192353876212
+          }
+        }
+      }
+    }
+  },
+  "elk1_st7_regulon_sign_test": {
+    "regulon_sizes_st7": {
+      "ELK1_unique": 377,
+      "ELK4_unique": 445,
+      "ELK1_all": 1330,
+      "ELK4_all": 1398,
+      "n_shared_elk1_elk4": 953
+    },
+    "contrasts": {
+      "Pineda_BA4_Exc_GC_adj_t": {
+        "n_elk1_unique": 369,
+        "n_elk4_unique": 435,
+        "mean_elk1_unique": 0.5213,
+        "median_elk1_unique": 0.6264,
+        "pct_pos_elk1_unique": 60.98,
+        "onesamp_wilcoxon_p_elk1": 3.6311340149974616e-09,
+        "mean_elk4_unique": 0.6284,
+        "median_elk4_unique": 0.7738,
+        "pct_pos_elk4_unique": 65.75,
+        "diff_elk1_minus_elk4": -0.1071,
+        "welch_p_elk1_vs_elk4": 0.34404787770154766,
+        "mwu_p_elk1_vs_elk4": 0.34934105502398816,
+        "fisher_pos_p_elk1_vs_elk4": 0.16335211178329292,
+        "n_genome_bg": 17725,
+        "mean_genome_bg": 0.1238,
+        "mwu_p_elk1_vs_genome_bg": 5.012049149489219e-06
+      },
+      "Edinburgh_sALS_nonC9_Exc_Welch_t": {
+        "n_elk1_unique": 371,
+        "n_elk4_unique": 437,
+        "mean_elk1_unique": -0.4191,
+        "median_elk1_unique": -0.6475,
+        "pct_pos_elk1_unique": 32.08,
+        "onesamp_wilcoxon_p_elk1": 6.732090154510326e-11,
+        "mean_elk4_unique": -0.438,
+        "median_elk4_unique": -0.5953,
+        "pct_pos_elk4_unique": 31.81,
+        "diff_elk1_minus_elk4": 0.0189,
+        "welch_p_elk1_vs_elk4": 0.8285476137087746,
+        "mwu_p_elk1_vs_elk4": 0.9820217135415843,
+        "fisher_pos_p_elk1_vs_elk4": 0.9397961307527833
+      },
+      "Zhang2026_Cervical_MN_Visium_log2FC": {
+        "n_elk1_unique": 48,
+        "n_elk4_unique": 60,
+        "mean_elk1_unique": 0.131,
+        "median_elk1_unique": 0.0638,
+        "pct_pos_elk1_unique": 60.42,
+        "onesamp_wilcoxon_p_elk1": 0.1393363564845913,
+        "mean_elk4_unique": -0.0183,
+        "median_elk4_unique": -0.0791,
+        "pct_pos_elk4_unique": 40.0,
+        "diff_elk1_minus_elk4": 0.1493,
+        "welch_p_elk1_vs_elk4": 0.08045937250004738,
+        "mwu_p_elk1_vs_elk4": 0.10726515650588207,
+        "fisher_pos_p_elk1_vs_elk4": 0.05230138524158425,
+        "n_genome_bg": 2276,
+        "mean_genome_bg": -0.0069,
+        "mwu_p_elk1_vs_genome_bg": 0.05194323154912865
+      },
+      "Zhang2026_Cervical_pTDP43_Visium_log2FC": {
+        "n_elk1_unique": 39,
+        "n_elk4_unique": 53,
+        "mean_elk1_unique": 0.2551,
+        "median_elk1_unique": 0.3087,
+        "pct_pos_elk1_unique": 64.1,
+        "onesamp_wilcoxon_p_elk1": 0.0013906063504691701,
+        "mean_elk4_unique": 0.1525,
+        "median_elk4_unique": 0.2234,
+        "pct_pos_elk4_unique": 71.7,
+        "diff_elk1_minus_elk4": 0.1025,
+        "welch_p_elk1_vs_elk4": 0.25662428842427704,
+        "mwu_p_elk1_vs_elk4": 0.35117570323122527,
+        "fisher_pos_p_elk1_vs_elk4": 0.4993663503943588,
+        "n_genome_bg": 2102,
+        "mean_genome_bg": 0.1181,
+        "mwu_p_elk1_vs_genome_bg": 0.0758738468610362
+      },
+      "NYGC_Spinal_Cord_Cervical_RIN_GC_t": {
+        "n_elk1_unique": 364,
+        "n_elk4_unique": 433,
+        "mean_elk1_unique": 0.295,
+        "median_elk1_unique": 0.001,
+        "pct_pos_elk1_unique": 50.0,
+        "onesamp_wilcoxon_p_elk1": 0.22814709603510386,
+        "mean_elk4_unique": 0.5911,
+        "median_elk4_unique": 0.4784,
+        "pct_pos_elk4_unique": 56.58,
+        "diff_elk1_minus_elk4": -0.2961,
+        "welch_p_elk1_vs_elk4": 0.17136949904663745,
+        "mwu_p_elk1_vs_elk4": 0.11253793359148785,
+        "fisher_pos_p_elk1_vs_elk4": 0.0643550936743518,
+        "n_genome_bg": 18550,
+        "mean_genome_bg": 0.1171,
+        "mwu_p_elk1_vs_genome_bg": 0.34923109825679677
+      },
+      "NYGC_Cortex_Motor_RIN_GC_t": {
+        "n_elk1_unique": 364,
+        "n_elk4_unique": 433,
+        "mean_elk1_unique": 0.678,
+        "median_elk1_unique": 0.7741,
+        "pct_pos_elk1_unique": 69.78,
+        "onesamp_wilcoxon_p_elk1": 1.3099216209433773e-18,
+        "mean_elk4_unique": 0.7059,
+        "median_elk4_unique": 0.7693,
+        "pct_pos_elk4_unique": 70.67,
+        "diff_elk1_minus_elk4": -0.0279,
+        "welch_p_elk1_vs_elk4": 0.7629867698693545,
+        "mwu_p_elk1_vs_elk4": 0.8666791669688736,
+        "fisher_pos_p_elk1_vs_elk4": 0.8156281525715412,
+        "n_genome_bg": 18493,
+        "mean_genome_bg": 0.4119,
+        "mwu_p_elk1_vs_genome_bg": 0.00027030815300278994
+      }
+    }
+  }
+}

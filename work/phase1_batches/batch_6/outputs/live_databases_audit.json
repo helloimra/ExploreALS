@@ -1,0 +1,1883 @@
+{
+  "targets_genetics_safety": {
+    "AGAP2": {
+      "ensembl_id": "ENSG00000135439",
+      "opentargets_constraint": [
+        {
+          "constraintType": "syn",
+          "exp": 713.02001953125,
+          "obs": 702,
+          "score": 0.24618999660015106,
+          "oe": 0.9845499992370605,
+          "oeLower": 0.9255899786949158,
+          "oeUpper": 1.0478999614715576
+        },
+        {
+          "constraintType": "mis",
+          "exp": 1638.5,
+          "obs": 1285,
+          "score": 3.724299907684326,
+          "oe": 0.7842699885368347,
+          "oeLower": 0.7492300271987915,
+          "oeUpper": 0.8212199807167053
+        },
+        {
+          "constraintType": "lof",
+          "exp": 110.9000015258789,
+          "obs": 32,
+          "score": 1,
+          "oe": 0.2885499894618988,
+          "oeLower": 0.21778999269008636,
+          "oeUpper": 0.387580007314682
+        }
+      ],
+      "safety_liabilities": [],
+      "tractability_true": [
+        {
+          "label": "Med-Quality Pocket",
+          "modality": "SM",
+          "value": true
+        },
+        {
+          "label": "Database Ubiquitination",
+          "modality": "PR",
+          "value": true
+        },
+        {
+          "label": "Half-life Data",
+          "modality": "PR",
+          "value": true
+        }
+      ],
+      "disease_associations": [],
+      "clinvar_pathogenic_count": 11,
+      "clinvar_top_records": [
+        {
+          "uid": "4857746",
+          "title": "Single allele",
+          "traits": []
+        },
+        {
+          "uid": "2498574",
+          "title": "GRCh37/hg19 12q13.3-14.1(chr12:57064059-59314016)x1",
+          "traits": []
+        },
+        {
+          "uid": "1808720",
+          "title": "GRCh37/hg19 12q13.3-14.1(chr12:57631073-58236597)x1",
+          "traits": []
+        },
+        {
+          "uid": "815529",
+          "title": "GRCh37/hg19 12q13.3-14.1(chr12:57582163-59031979)x1",
+          "traits": []
+        },
+        {
+          "uid": "815528",
+          "title": "GRCh37/hg19 12q13.2-14.1(chr12:55552371-62126304)x3",
+          "traits": []
+        }
+      ]
+    },
+    "AP1G2": {
+      "ensembl_id": "ENSG00000213983",
+      "opentargets_constraint": [
+        {
+          "constraintType": "syn",
+          "exp": 400.0299987792969,
+          "obs": 378,
+          "score": 0.657069981098175,
+          "oe": 0.9449399709701538,
+          "oeLower": 0.8688399791717529,
+          "oeUpper": 1.0289000272750854
+        },
+        {
+          "constraintType": "mis",
+          "exp": 1005.7999877929688,
+          "obs": 967,
+          "score": 0.5219500064849854,
+          "oe": 0.9614099860191345,
+          "oeLower": 0.9121000170707703,
+          "oeUpper": 1.013800024986267
+        },
+        {
+          "constraintType": "lof",
+          "exp": 95.78299713134766,
+          "obs": 85,
+          "score": 7.148600207437664e-26,
+          "oe": 0.8874199986457825,
+          "oeLower": 0.7447599768638611,
+          "oeUpper": 1.0628000497817993
+        }
+      ],
+      "safety_liabilities": [],
+      "tractability_true": [
+        {
+          "label": "Structure with Ligand",
+          "modality": "SM",
+          "value": true
+        },
+        {
+          "label": "UniProt loc high conf",
+          "modality": "AB",
+          "value": true
+        },
+        {
+          "label": "UniProt loc med conf",
+          "modality": "AB",
+          "value": true
+        },
+        {
+          "label": "Database Ubiquitination",
+          "modality": "PR",
+          "value": true
+        },
+        {
+          "label": "Half-life Data",
+          "modality": "PR",
+          "value": true
+        }
+      ],
+      "disease_associations": [],
+      "clinvar_pathogenic_count": 17,
+      "clinvar_top_records": [
+        {
+          "uid": "2684714",
+          "title": "GRCh37/hg19 14q11.2-23.1(chr14:20511673-61826023)x3",
+          "traits": []
+        },
+        {
+          "uid": "1676204",
+          "title": "NC_000014.8:g.(21162263_36986276)_(36987308_50713602)del",
+          "traits": []
+        },
+        {
+          "uid": "916555",
+          "title": "NM_003917.5(AP1G2):c.464G>A (p.Arg155His)",
+          "traits": []
+        },
+        {
+          "uid": "815628",
+          "title": "GRCh37/hg19 14q11.2-21.2(chr14:20511672-44829030)x3",
+          "traits": []
+        },
+        {
+          "uid": "625814",
+          "title": "GRCh37/hg19 14q11.2-12(chr14:19100682-28730087)",
+          "traits": []
+        }
+      ]
+    },
+    "BRSK2": {
+      "ensembl_id": "ENSG00000174672",
+      "opentargets_constraint": [
+        {
+          "constraintType": "syn",
+          "exp": 435.3500061035156,
+          "obs": 519,
+          "score": -2.392199993133545,
+          "oe": 1.1921000480651855,
+          "oeLower": 1.1095999479293823,
+          "oeUpper": 1.2819000482559204
+        },
+        {
+          "constraintType": "mis",
+          "exp": 1042.300048828125,
+          "obs": 798,
+          "score": 3.227400064468384,
+          "oe": 0.7656099796295166,
+          "oeLower": 0.7225099802017212,
+          "oeUpper": 0.811710000038147
+        },
+        {
+          "constraintType": "lof",
+          "exp": 83.28299713134766,
+          "obs": 19,
+          "score": 1,
+          "oe": 0.2281399965286255,
+          "oeLower": 0.15915000438690186,
+          "oeUpper": 0.3347499966621399
+        }
+      ],
+      "safety_liabilities": [],
+      "tractability_true": [
+        {
+          "label": "High-Quality Ligand",
+          "modality": "SM",
+          "value": true
+        },
+        {
+          "label": "Druggable Family",
+          "modality": "SM",
+          "value": true
+        },
+        {
+          "label": "UniProt Ubiquitination",
+          "modality": "PR",
+          "value": true
+        },
+        {
+          "label": "Database Ubiquitination",
+          "modality": "PR",
+          "value": true
+        },
+        {
+          "label": "Half-life Data",
+          "modality": "PR",
+          "value": true
+        },
+        {
+          "label": "Small Molecule Binder",
+          "modality": "PR",
+          "value": true
+        }
+      ],
+      "disease_associations": [],
+      "clinvar_pathogenic_count": 66,
+      "clinvar_top_records": [
+        {
+          "uid": "4867949",
+          "title": "NM_001256627.2(BRSK2):c.1226+1G>A",
+          "traits": []
+        },
+        {
+          "uid": "4849560",
+          "title": "NM_001256627.2(BRSK2):c.832G>T (p.Glu278Ter)",
+          "traits": []
+        },
+        {
+          "uid": "4849559",
+          "title": "NM_001256627.2(BRSK2):c.812+2dup",
+          "traits": []
+        },
+        {
+          "uid": "4849558",
+          "title": "NM_001256627.2(BRSK2):c.804_805del (p.Ile268fs)",
+          "traits": []
+        },
+        {
+          "uid": "4849557",
+          "title": "NM_001256627.2(BRSK2):c.564+1G>T",
+          "traits": []
+        }
+      ]
+    },
+    "DNAJB2": {
+      "ensembl_id": "ENSG00000135924",
+      "opentargets_constraint": [
+        {
+          "constraintType": "syn",
+          "exp": 164.6300048828125,
+          "obs": 172,
+          "score": -0.3425300121307373,
+          "oe": 1.044700026512146,
+          "oeLower": 0.922950029373169,
+          "oeUpper": 1.1856000423431396
+        },
+        {
+          "constraintType": "mis",
+          "exp": 430.8999938964844,
+          "obs": 368,
+          "score": 1.2924000024795532,
+          "oe": 0.8540199995040894,
+          "oeLower": 0.7843599915504456,
+          "oeUpper": 0.9309599995613098
+        },
+        {
+          "constraintType": "lof",
+          "exp": 33.34600067138672,
+          "obs": 19,
+          "score": 0.0006510699749924242,
+          "oe": 0.5697799921035767,
+          "oeLower": 0.397489994764328,
+          "oeUpper": 0.8360499739646912
+        }
+      ],
+      "safety_liabilities": [],
+      "tractability_true": [
+        {
+          "label": "UniProt Ubiquitination",
+          "modality": "PR",
+          "value": true
+        },
+        {
+          "label": "Database Ubiquitination",
+          "modality": "PR",
+          "value": true
+        },
+        {
+          "label": "Half-life Data",
+          "modality": "PR",
+          "value": true
+        }
+      ],
+      "disease_associations": [
+        {
+          "disease": {
+            "id": "EFO_0009162",
+            "name": "charcot-marie-tooth disease, axonal, type 2t"
+          },
+          "score": 0.4547474789753764,
+          "datatypeScores": [
+            {
+              "id": "literature",
+              "score": 0.012158615952232422
+            },
+            {
+              "id": "genetic_association",
+              "score": 0.5982039048498351
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0010549",
+            "name": "Charcot-Marie-Tooth disease X-linked dominant 1"
+          },
+          "score": 0.3400134663099256,
+          "datatypeScores": [
+            {
+              "id": "genetic_association",
+              "score": 0.5592963338026914
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0015626",
+            "name": "Charcot-Marie-Tooth disease"
+          },
+          "score": 0.18228379748089535,
+          "datatypeScores": [
+            {
+              "id": "literature",
+              "score": 0.11381815488617571
+            },
+            {
+              "id": "genetic_association",
+              "score": 0.29415209773762113
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0004149",
+            "name": "neuropathy"
+          },
+          "score": 0.01857248158536983,
+          "datatypeScores": [
+            {
+              "id": "literature",
+              "score": 0.1527516097089963
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0018894",
+            "name": "distal hereditary motor neuropathy"
+          },
+          "score": 0.0129298643865027,
+          "datatypeScores": [
+            {
+              "id": "literature",
+              "score": 0.10634322555544384
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004976",
+            "name": "amyotrophic lateral sclerosis"
+          },
+          "score": 0.011447518105973793,
+          "datatypeScores": [
+            {
+              "id": "literature",
+              "score": 0.09415149019384836
+            }
+          ]
+        }
+      ],
+      "clinvar_pathogenic_count": 55,
+      "clinvar_top_records": [
+        {
+          "uid": "4851091",
+          "title": "GRCh37/hg19 2q35-37.3(chr2:215591606-239217386)x3",
+          "traits": []
+        },
+        {
+          "uid": "4795860",
+          "title": "NM_006736.6(DNAJB2):c.176-2A>G",
+          "traits": []
+        },
+        {
+          "uid": "4682551",
+          "title": "GRCh37/hg19 2q33.3-37.3(chr2:206965837-242783384)x3",
+          "traits": []
+        },
+        {
+          "uid": "4073419",
+          "title": "NM_006736.6(DNAJB2):c.159T>G (p.Tyr53Ter)",
+          "traits": []
+        },
+        {
+          "uid": "3896845",
+          "title": "NM_006736.6(DNAJB2):c.446-1G>C",
+          "traits": []
+        }
+      ]
+    },
+    "KIFC2": {
+      "ensembl_id": "ENSG00000167702",
+      "opentargets_constraint": [
+        {
+          "constraintType": "syn",
+          "exp": 503.8699951171875,
+          "obs": 729,
+          "score": -5.984300136566162,
+          "oe": 1.4467999935150146,
+          "oeLower": 1.3617000579833984,
+          "oeUpper": 1.538100004196167
+        },
+        {
+          "constraintType": "mis",
+          "exp": 1103.300048828125,
+          "obs": 1357,
+          "score": -3.257699966430664,
+          "oe": 1.2300000190734863,
+          "oeLower": 1.1763999462127686,
+          "oeUpper": 1.2862999439239502
+        },
+        {
+          "constraintType": "lof",
+          "exp": 91.48899841308594,
+          "obs": 94,
+          "score": 3.0882999007825925e-33,
+          "oe": 1.027400016784668,
+          "oeLower": 0.8695700168609619,
+          "oeUpper": 1.219599962234497
+        }
+      ],
+      "safety_liabilities": [],
+      "tractability_true": [
+        {
+          "label": "Half-life Data",
+          "modality": "PR",
+          "value": true
+        }
+      ],
+      "disease_associations": [],
+      "clinvar_pathogenic_count": 55,
+      "clinvar_top_records": [
+        {
+          "uid": "4682719",
+          "title": "GRCh37/hg19 8q24.13-24.3(chr8:126446968-146295771)x3",
+          "traits": []
+        },
+        {
+          "uid": "3391849",
+          "title": "GRCh37/hg19 8q23.2-24.3(chr8:111432348-146295771)x3",
+          "traits": []
+        },
+        {
+          "uid": "3384214",
+          "title": "Single allele",
+          "traits": []
+        },
+        {
+          "uid": "3063013",
+          "title": "GRCh37/hg19 8p23.3-q24.3(chr8:158048-146295771)x3",
+          "traits": []
+        },
+        {
+          "uid": "3024645",
+          "title": "GRCh37/hg19 8q23.3-24.3(chr8:113392581-146364022)x3",
+          "traits": []
+        }
+      ]
+    },
+    "MIB2": {
+      "ensembl_id": "ENSG00000197530",
+      "opentargets_constraint": [
+        {
+          "constraintType": "syn",
+          "exp": 629.47998046875,
+          "obs": 820,
+          "score": -4.531000137329102,
+          "oe": 1.3027000427246094,
+          "oeLower": 1.230299949645996,
+          "oeUpper": 1.3799999952316284
+        },
+        {
+          "constraintType": "mis",
+          "exp": 1424,
+          "obs": 1543,
+          "score": -1.3451000452041626,
+          "oe": 1.0836000442504883,
+          "oeLower": 1.0392999649047852,
+          "oeUpper": 1.1301000118255615
+        },
+        {
+          "constraintType": "lof",
+          "exp": 96.62999725341797,
+          "obs": 78,
+          "score": 1.1578000181877845e-21,
+          "oe": 0.807200014591217,
+          "oeLower": 0.6723600029945374,
+          "oeUpper": 0.9745000004768372
+        }
+      ],
+      "safety_liabilities": [],
+      "tractability_true": [
+        {
+          "label": "GO CC med conf",
+          "modality": "AB",
+          "value": true
+        },
+        {
+          "label": "UniProt Ubiquitination",
+          "modality": "PR",
+          "value": true
+        },
+        {
+          "label": "Database Ubiquitination",
+          "modality": "PR",
+          "value": true
+        },
+        {
+          "label": "Half-life Data",
+          "modality": "PR",
+          "value": true
+        }
+      ],
+      "disease_associations": [],
+      "clinvar_pathogenic_count": 134,
+      "clinvar_top_records": [
+        {
+          "uid": "5038308",
+          "title": "GRCh38/hg38 1p36.33-36.21(chr1:82154-14026576)x1",
+          "traits": []
+        },
+        {
+          "uid": "5038301",
+          "title": "GRCh38/hg38 1p36.33-36.12(chr1:1-23211062)x1",
+          "traits": []
+        },
+        {
+          "uid": "4852053",
+          "title": "GRCh38/hg38 1p36.33-36.23(chr1:82154-7350122)x1",
+          "traits": []
+        },
+        {
+          "uid": "4851114",
+          "title": "GRCh37/hg19 1p36.33-36.22(chr1:849466-10271903)x1",
+          "traits": []
+        },
+        {
+          "uid": "3391839",
+          "title": "GRCh37/hg19 1p36.33-36.32(chr1:849467-3153423)x3",
+          "traits": []
+        }
+      ]
+    },
+    "MYO18A": {
+      "ensembl_id": "ENSG00000196535",
+      "opentargets_constraint": [
+        {
+          "constraintType": "syn",
+          "exp": 1077.800048828125,
+          "obs": 977,
+          "score": 1.8327000141143799,
+          "oe": 0.906440019607544,
+          "oeLower": 0.8601800203323364,
+          "oeUpper": 0.9556199908256531
+        },
+        {
+          "constraintType": "mis",
+          "exp": 2699.300048828125,
+          "obs": 2215,
+          "score": 3.975399971008301,
+          "oe": 0.8205900192260742,
+          "oeLower": 0.7924900054931641,
+          "oeUpper": 0.8498600125312805
+        },
+        {
+          "constraintType": "lof",
+          "exp": 235.80999755859375,
+          "obs": 78,
+          "score": 1,
+          "oe": 0.3307799994945526,
+          "oeLower": 0.275519996881485,
+          "oeUpper": 0.3993400037288666
+        }
+      ],
+      "safety_liabilities": [],
+      "tractability_true": [
+        {
+          "label": "UniProt loc high conf",
+          "modality": "AB",
+          "value": true
+        },
+        {
+          "label": "Database Ubiquitination",
+          "modality": "PR",
+          "value": true
+        },
+        {
+          "label": "Half-life Data",
+          "modality": "PR",
+          "value": true
+        }
+      ],
+      "disease_associations": [
+        {
+          "disease": {
+            "id": "MONDO_0014181",
+            "name": "amyotrophic lateral sclerosis type 20"
+          },
+          "score": 0.05843057502565136,
+          "datatypeScores": [
+            {
+              "id": "animal_model",
+              "score": 0.48056929551198646
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "MONDO_0004976",
+            "name": "amyotrophic lateral sclerosis"
+          },
+          "score": 0.05843057502565136,
+          "datatypeScores": [
+            {
+              "id": "animal_model",
+              "score": 0.48056929551198646
+            }
+          ]
+        }
+      ],
+      "clinvar_pathogenic_count": 8,
+      "clinvar_top_records": [
+        {
+          "uid": "1526572",
+          "title": "GRCh37/hg19 17p11.2-q11.2(chr17:21690653-28281232)x3",
+          "traits": []
+        },
+        {
+          "uid": "815920",
+          "title": "GRCh37/hg19 17q11.1-11.2(chr17:25274363-28450707)x3",
+          "traits": []
+        },
+        {
+          "uid": "686144",
+          "title": "GRCh37/hg19 17p11.2-q21.2(chr17:21690653-38772647)x3",
+          "traits": []
+        },
+        {
+          "uid": "624545",
+          "title": "GRCh37/hg19 17q11.1-11.2(chr17:25403446-31685464)x3",
+          "traits": []
+        },
+        {
+          "uid": "590265",
+          "title": "t(13;17)(q12.2;q11.2)",
+          "traits": []
+        }
+      ]
+    },
+    "SNPH": {
+      "ensembl_id": "ENSG00000101298",
+      "opentargets_constraint": [
+        {
+          "constraintType": "syn",
+          "exp": 312.17999267578125,
+          "obs": 281,
+          "score": 1.0530999898910522,
+          "oe": 0.9001100063323975,
+          "oeLower": 0.8166900277137756,
+          "oeUpper": 0.9935799837112427
+        },
+        {
+          "constraintType": "mis",
+          "exp": 743.969970703125,
+          "obs": 622,
+          "score": 1.907099962234497,
+          "oe": 0.8360599875450134,
+          "oeLower": 0.7829899787902832,
+          "oeUpper": 0.893339991569519
+        },
+        {
+          "constraintType": "lof",
+          "exp": 36.7869987487793,
+          "obs": 10,
+          "score": 0.9956499934196472,
+          "oe": 0.2718299925327301,
+          "oeLower": 0.1676899939775467,
+          "oeUpper": 0.46108999848365784
+        }
+      ],
+      "safety_liabilities": [],
+      "tractability_true": [
+        {
+          "label": "UniProt SigP or TMHMM",
+          "modality": "AB",
+          "value": true
+        },
+        {
+          "label": "Database Ubiquitination",
+          "modality": "PR",
+          "value": true
+        },
+        {
+          "label": "Half-life Data",
+          "modality": "PR",
+          "value": true
+        }
+      ],
+      "disease_associations": [],
+      "clinvar_pathogenic_count": 40,
+      "clinvar_top_records": [
+        {
+          "uid": "4851009",
+          "title": "GRCh37/hg19 20p13(chr20:1135360-4031301)x3",
+          "traits": []
+        },
+        {
+          "uid": "4820252",
+          "title": "GRCh37/hg19 20p13(chr20:61568-1700861)x1",
+          "traits": []
+        },
+        {
+          "uid": "3024619",
+          "title": "GRCh37/hg19 20p13-11.21(chr20:68351-23860313)x3",
+          "traits": []
+        },
+        {
+          "uid": "3024618",
+          "title": "GRCh37/hg19 20p13-12.1(chr20:68351-16142323)x3",
+          "traits": []
+        },
+        {
+          "uid": "2684899",
+          "title": "GRCh37/hg19 20p13-12.2(chr20:61569-9542361)x3",
+          "traits": []
+        }
+      ]
+    },
+    "ZNF783": {
+      "ensembl_id": "ENSG00000204946",
+      "opentargets_constraint": [
+        {
+          "constraintType": "syn",
+          "exp": 319.1499938964844,
+          "obs": 369,
+          "score": -1.6648999452590942,
+          "oe": 1.1562000513076782,
+          "oeLower": 1.062000036239624,
+          "oeUpper": 1.260200023651123
+        },
+        {
+          "constraintType": "mis",
+          "exp": 760.02001953125,
+          "obs": 797,
+          "score": -0.5720700025558472,
+          "oe": 1.048699975013733,
+          "oeLower": 0.9895899891853333,
+          "oeUpper": 1.111799955368042
+        },
+        {
+          "constraintType": "lof",
+          "exp": 31.329999923706055,
+          "obs": 25,
+          "score": 1.3166000201181305e-07,
+          "oe": 0.797950029373169,
+          "oeLower": 0.5814999938011169,
+          "oeUpper": 1.1145000457763672
+        }
+      ],
+      "safety_liabilities": [],
+      "tractability_true": [
+        {
+          "label": "Human Protein Atlas loc",
+          "modality": "AB",
+          "value": true
+        },
+        {
+          "label": "Database Ubiquitination",
+          "modality": "PR",
+          "value": true
+        }
+      ],
+      "disease_associations": [],
+      "clinvar_pathogenic_count": 65,
+      "clinvar_top_records": [
+        {
+          "uid": "4884749",
+          "title": "GRCh37/hg19 7q32.2-36.3(chr7:129853288-159085681)x1",
+          "traits": []
+        },
+        {
+          "uid": "4884743",
+          "title": "GRCh37/hg19 7q21.12-36.3(chr7:88192865-159128556)x3",
+          "traits": []
+        },
+        {
+          "uid": "4819206",
+          "title": "Single allele",
+          "traits": []
+        },
+        {
+          "uid": "4682694",
+          "title": "GRCh37/hg19 7q33-36.3(chr7:137521595-159119707)x1",
+          "traits": []
+        },
+        {
+          "uid": "3391899",
+          "title": "GRCh37/hg19 7q35-36.3(chr7:147773827-159119707)x1",
+          "traits": []
+        }
+      ]
+    },
+    "CAPG": {
+      "ensembl_id": "ENSG00000042493",
+      "opentargets_constraint": [
+        {
+          "constraintType": "syn",
+          "exp": 179.5500030517578,
+          "obs": 175,
+          "score": 0.2024800032377243,
+          "oe": 0.9746699929237366,
+          "oeLower": 0.8619599938392639,
+          "oeUpper": 1.1049000024795532
+        },
+        {
+          "constraintType": "mis",
+          "exp": 438.3299865722656,
+          "obs": 412,
+          "score": 0.536270022392273,
+          "oe": 0.9399399757385254,
+          "oeLower": 0.8672800064086914,
+          "oeUpper": 1.0197999477386475
+        },
+        {
+          "constraintType": "lof",
+          "exp": 44.58000183105469,
+          "obs": 32,
+          "score": 2.043000080220736e-08,
+          "oe": 0.7178099751472473,
+          "oeLower": 0.5417799949645996,
+          "oeUpper": 0.9641600251197815
+        }
+      ],
+      "safety_liabilities": [
+        {
+          "event": "grade 3-4 neurotoxicity",
+          "biosamples": [],
+          "effects": []
+        },
+        {
+          "event": "grade 3-4 neurotoxicity or grade 3-4 neurotoxicity",
+          "biosamples": [],
+          "effects": []
+        }
+      ],
+      "tractability_true": [
+        {
+          "label": "Database Ubiquitination",
+          "modality": "PR",
+          "value": true
+        },
+        {
+          "label": "Half-life Data",
+          "modality": "PR",
+          "value": true
+        }
+      ],
+      "disease_associations": [],
+      "clinvar_pathogenic_count": 12,
+      "clinvar_top_records": [
+        {
+          "uid": "1708190",
+          "title": "GRCh37/hg19 2p25.1-q13(chr2:11504318-111365996)x1",
+          "traits": []
+        },
+        {
+          "uid": "1526840",
+          "title": "GRCh37/hg19 2p12-11.2(chr2:82486900-87322042)x1",
+          "traits": []
+        },
+        {
+          "uid": "1180533",
+          "title": "GRCh37/hg19 2p12-11.2(chr2:81209244-86688030)x1",
+          "traits": []
+        },
+        {
+          "uid": "685879",
+          "title": "GRCh37/hg19 2p12-11.2(chr2:77907114-87330965)x1",
+          "traits": []
+        },
+        {
+          "uid": "562678",
+          "title": "GRCh37/hg19 2p13.1-11.2(chr2:74527522-89125488)x1",
+          "traits": []
+        }
+      ]
+    },
+    "SARM1": {
+      "ensembl_id": "ENSG00000004139",
+      "opentargets_constraint": [
+        {
+          "constraintType": "syn",
+          "exp": 465.3900146484375,
+          "obs": 417,
+          "score": 1.3385000228881836,
+          "oe": 0.8960199952125549,
+          "oeLower": 0.8271499872207642,
+          "oeUpper": 0.9716299772262573
+        },
+        {
+          "constraintType": "mis",
+          "exp": 1015.7000122070312,
+          "obs": 913,
+          "score": 1.3738000392913818,
+          "oe": 0.898930013179779,
+          "oeLower": 0.8515200018882751,
+          "oeUpper": 0.949429988861084
+        },
+        {
+          "constraintType": "lof",
+          "exp": 65.07099914550781,
+          "obs": 60,
+          "score": 2.7458999726370223e-19,
+          "oe": 0.9220700263977051,
+          "oeLower": 0.7491300106048584,
+          "oeUpper": 1.1432000398635864
+        }
+      ],
+      "safety_liabilities": [],
+      "tractability_true": [
+        {
+          "label": "Structure with Ligand",
+          "modality": "SM",
+          "value": true
+        },
+        {
+          "label": "High-Quality Ligand",
+          "modality": "SM",
+          "value": true
+        },
+        {
+          "label": "Database Ubiquitination",
+          "modality": "PR",
+          "value": true
+        },
+        {
+          "label": "Half-life Data",
+          "modality": "PR",
+          "value": true
+        },
+        {
+          "label": "Small Molecule Binder",
+          "modality": "PR",
+          "value": true
+        }
+      ],
+      "disease_associations": [
+        {
+          "disease": {
+            "id": "MONDO_0004976",
+            "name": "amyotrophic lateral sclerosis"
+          },
+          "score": 0.14508312165642664,
+          "datatypeScores": [
+            {
+              "id": "literature",
+              "score": 0.88225726555326
+            },
+            {
+              "id": "genetic_association",
+              "score": 0.19453785523571876
+            }
+          ]
+        },
+        {
+          "disease": {
+            "id": "EFO_0004149",
+            "name": "neuropathy"
+          },
+          "score": 0.06314266140238045,
+          "datatypeScores": [
+            {
+              "id": "literature",
+              "score": 0.5193244169439116
+            }
+          ]
+        }
+      ],
+      "clinvar_pathogenic_count": 12,
+      "clinvar_top_records": [
+        {
+          "uid": "3255576",
+          "title": "NM_080669.6(SLC46A1):c.1173_1174del (p.Ser393fs)",
+          "traits": []
+        },
+        {
+          "uid": "3254553",
+          "title": "NM_080669.6(SLC46A1):c.1253del (p.Leu418fs)",
+          "traits": []
+        },
+        {
+          "uid": "1701314",
+          "title": "NM_080669.6(SLC46A1):c.1322+2_1322+4delinsAT",
+          "traits": []
+        },
+        {
+          "uid": "1526572",
+          "title": "GRCh37/hg19 17p11.2-q11.2(chr17:21690653-28281232)x3",
+          "traits": []
+        },
+        {
+          "uid": "1455352",
+          "title": "NM_080669.6(SLC46A1):c.1236_1239del (p.Leu413fs)",
+          "traits": []
+        }
+      ]
+    }
+  },
+  "chembl": {
+    "CHEMBL778": {
+      "pref_name": "DEXMEDETOMIDINE",
+      "max_phase": "4.0",
+      "molecule_properties": {
+        "alogp": "3.18",
+        "aromatic_rings": 2,
+        "full_molformula": "C13H16N2",
+        "full_mwt": "200.28",
+        "hba": 1,
+        "hbd": 1,
+        "heavy_atoms": 15,
+        "mw_freebase": "200.28",
+        "np_likeness_score": "-0.44",
+        "num_ro5_violations": 0,
+        "psa": "28.68",
+        "qed_weighted": "0.79",
+        "ro3_pass": "N",
+        "rtb": 2
+      },
+      "mechanisms": []
+    },
+    "CHEMBL4297643": {
+      "pref_name": "APILIMOD",
+      "max_phase": "2.0",
+      "molecule_properties": {
+        "alogp": "3.08",
+        "aromatic_rings": 3,
+        "full_molformula": "C23H26N6O2",
+        "full_mwt": "418.50",
+        "hba": 8,
+        "hbd": 1,
+        "heavy_atoms": 31,
+        "mw_freebase": "418.50",
+        "np_likeness_score": "-2.06",
+        "num_ro5_violations": 0,
+        "psa": "84.76",
+        "qed_weighted": "0.44",
+        "ro3_pass": "N",
+        "rtb": 8
+      },
+      "mechanisms": [
+        {
+          "action": "INHIBITOR",
+          "mechanism": "1-phosphatidylinositol 3-phosphate 5-kinase inhibitor",
+          "target": "CHEMBL1938222"
+        }
+      ]
+    },
+    "CHEMBL1230607": {
+      "pref_name": "PHA-793887",
+      "max_phase": "1.0",
+      "molecule_properties": {
+        "alogp": "2.31",
+        "aromatic_rings": 1,
+        "full_molformula": "C19H31N5O2",
+        "full_mwt": "361.49",
+        "hba": 4,
+        "hbd": 2,
+        "heavy_atoms": 26,
+        "mw_freebase": "361.49",
+        "np_likeness_score": "-0.82",
+        "num_ro5_violations": 0,
+        "psa": "81.33",
+        "qed_weighted": "0.86",
+        "ro3_pass": "N",
+        "rtb": 4
+      },
+      "mechanisms": [
+        {
+          "action": "INHIBITOR",
+          "mechanism": "Cyclin-dependent kinase inhibitor",
+          "target": "CHEMBL3559691"
+        }
+      ]
+    },
+    "CHEMBL1077": {
+      "pref_name": "BROMFENAC",
+      "max_phase": "4.0",
+      "molecule_properties": {
+        "alogp": "2.89",
+        "aromatic_rings": 2,
+        "full_molformula": "C15H12BrNO3",
+        "full_mwt": "334.17",
+        "hba": 3,
+        "hbd": 2,
+        "heavy_atoms": 20,
+        "mw_freebase": "334.17",
+        "np_likeness_score": "-0.41",
+        "num_ro5_violations": 0,
+        "psa": "80.39",
+        "qed_weighted": "0.67",
+        "ro3_pass": "N",
+        "rtb": 4
+      },
+      "mechanisms": []
+    },
+    "CHEMBL83": {
+      "pref_name": "TAMOXIFEN",
+      "max_phase": "4.0",
+      "molecule_properties": {
+        "alogp": "6.00",
+        "aromatic_rings": 3,
+        "full_molformula": "C26H29NO",
+        "full_mwt": "371.52",
+        "hba": 2,
+        "hbd": 0,
+        "heavy_atoms": 28,
+        "mw_freebase": "371.52",
+        "np_likeness_score": "-0.40",
+        "num_ro5_violations": 1,
+        "psa": "12.47",
+        "qed_weighted": "0.45",
+        "ro3_pass": "N",
+        "rtb": 8
+      },
+      "mechanisms": []
+    },
+    "CHEMBL1201585": {
+      "pref_name": "TRASTUZUMAB",
+      "max_phase": "4.0",
+      "molecule_properties": null,
+      "mechanisms": [
+        {
+          "action": "INHIBITOR",
+          "mechanism": "Receptor protein-tyrosine kinase erbB-2 inhibitor",
+          "target": "CHEMBL1824"
+        }
+      ]
+    },
+    "CHEMBL2110732": {
+      "pref_name": "DACOMITINIB ANHYDROUS",
+      "max_phase": "4.0",
+      "molecule_properties": {
+        "alogp": "5.16",
+        "aromatic_rings": 3,
+        "full_molformula": "C24H25ClFN5O2",
+        "full_mwt": "469.95",
+        "hba": 6,
+        "hbd": 2,
+        "heavy_atoms": 33,
+        "mw_freebase": "469.95",
+        "np_likeness_score": "-1.61",
+        "num_ro5_violations": 1,
+        "psa": "79.38",
+        "qed_weighted": "0.47",
+        "ro3_pass": "N",
+        "rtb": 7
+      },
+      "mechanisms": [
+        {
+          "action": "INHIBITOR",
+          "mechanism": "Epidermal growth factor receptor erbB1 inhibitor",
+          "target": "CHEMBL203"
+        },
+        {
+          "action": "INHIBITOR",
+          "mechanism": "Receptor protein-tyrosine kinase erbB-2 inhibitor",
+          "target": "CHEMBL1824"
+        },
+        {
+          "action": "INHIBITOR",
+          "mechanism": "Receptor protein-tyrosine kinase erbB-4 inhibitor",
+          "target": "CHEMBL3009"
+        }
+      ]
+    },
+    "search_CuATSM": [
+      {
+        "chembl_id": "CHEMBL4297372",
+        "pref_name": "ATSM COPPER (II)",
+        "max_phase": "2.0",
+        "props": {
+          "alogp": null,
+          "aromatic_rings": null,
+          "full_molformula": "C8H14CuN6S2",
+          "full_mwt": "321.92",
+          "hba": null,
+          "hbd": null,
+          "heavy_atoms": null,
+          "mw_freebase": "321.92",
+          "np_likeness_score": null,
+          "num_ro5_violations": null,
+          "psa": null,
+          "qed_weighted": null,
+          "ro3_pass": null,
+          "rtb": null
+        }
+      }
+    ],
+    "search_censavudine": [
+      {
+        "chembl_id": "CHEMBL6146943",
+        "pref_name": null,
+        "max_phase": null,
+        "props": {
+          "alogp": "-0.71",
+          "aromatic_rings": 1,
+          "full_molformula": "C12H12N2O4",
+          "full_mwt": "248.24",
+          "hba": 5,
+          "hbd": 2,
+          "heavy_atoms": 18,
+          "mw_freebase": "248.24",
+          "np_likeness_score": "0.51",
+          "num_ro5_violations": 0,
+          "psa": "84.32",
+          "qed_weighted": "0.53",
+          "ro3_pass": "N",
+          "rtb": 2
+        }
+      },
+      {
+        "chembl_id": "CHEMBL124363",
+        "pref_name": "CENSAVUDINE",
+        "max_phase": "2.0",
+        "props": {
+          "alogp": "-0.71",
+          "aromatic_rings": 1,
+          "full_molformula": "C12H12N2O4",
+          "full_mwt": "248.24",
+          "hba": 5,
+          "hbd": 2,
+          "heavy_atoms": 18,
+          "mw_freebase": "248.24",
+          "np_likeness_score": "0.51",
+          "num_ro5_violations": 0,
+          "psa": "84.32",
+          "qed_weighted": "0.53",
+          "ro3_pass": "N",
+          "rtb": 2
+        }
+      }
+    ],
+    "search_DSRM-3716": [
+      {
+        "chembl_id": "CHEMBL609606",
+        "pref_name": null,
+        "max_phase": null,
+        "props": {
+          "alogp": "3.81",
+          "aromatic_rings": 2,
+          "full_molformula": "C19H21IN2",
+          "full_mwt": "404.30",
+          "hba": 1,
+          "hbd": 0,
+          "heavy_atoms": 21,
+          "mw_freebase": "277.39",
+          "np_likeness_score": "-0.14",
+          "num_ro5_violations": 0,
+          "psa": "7.12",
+          "qed_weighted": "0.76",
+          "ro3_pass": "N",
+          "rtb": 2
+        }
+      },
+      {
+        "chembl_id": "CHEMBL12261",
+        "pref_name": "METHYL PALMOXIRATE",
+        "max_phase": "-1.0",
+        "props": {
+          "alogp": "5.02",
+          "aromatic_rings": 0,
+          "full_molformula": "C18H34O3",
+          "full_mwt": "298.47",
+          "hba": 3,
+          "hbd": 0,
+          "heavy_atoms": 21,
+          "mw_freebase": "298.47",
+          "np_likeness_score": "0.73",
+          "num_ro5_violations": 1,
+          "psa": "38.83",
+          "qed_weighted": "0.26",
+          "ro3_pass": "N",
+          "rtb": 14
+        }
+      },
+      {
+        "chembl_id": "CHEMBL1235931",
+        "pref_name": "LEVULINIC ACID",
+        "max_phase": "3.0",
+        "props": {
+          "alogp": "0.44",
+          "aromatic_rings": 0,
+          "full_molformula": "C5H8O3",
+          "full_mwt": "116.12",
+          "hba": 2,
+          "hbd": 1,
+          "heavy_atoms": 8,
+          "mw_freebase": "116.12",
+          "np_likeness_score": "0.79",
+          "num_ro5_violations": 0,
+          "psa": "54.37",
+          "qed_weighted": "0.58",
+          "ro3_pass": "Y",
+          "rtb": 3
+        }
+      }
+    ]
+  },
+  "clinical_trials": {
+    "NCT04082832": {
+      "title": "CuATSM Compared With Placebo for Treatment of ALS/MND",
+      "status": "UNKNOWN",
+      "whyStopped": null,
+      "phases": [
+        "PHASE2",
+        "PHASE3"
+      ],
+      "enrollment": {
+        "count": 80,
+        "type": "ESTIMATED"
+      },
+      "hasResults": false,
+      "primaryOutcomes": [
+        "Revised ALS Functional Rating Scale (ALSFRS-R) total score (range: 48 [best] to 0 [worst])",
+        "Edinburgh Cognitive and Behavioral Amyotrophic Lateral Sclerosis Screen (ECAS) total score (range: 136 [best] to 0 [worst])"
+      ]
+    },
+    "NCT02870634": {
+      "title": "Phase 1 Dose Escalation and PK Study of Cu(II)ATSM in ALS/MND",
+      "status": "COMPLETED",
+      "whyStopped": null,
+      "phases": [
+        "PHASE1"
+      ],
+      "enrollment": {
+        "count": 50,
+        "type": "ESTIMATED"
+      },
+      "hasResults": false,
+      "primaryOutcomes": [
+        "recommended phase 2 dose as determined by the number of participants at each dose level with dose limiting toxicities"
+      ]
+    },
+    "NCT04313166": {
+      "title": "Treatment Continuation Study for Patients With ALS/MND Who Completed Study CMD-2019-001",
+      "status": "COMPLETED",
+      "whyStopped": null,
+      "phases": [
+        "PHASE2"
+      ],
+      "enrollment": {
+        "count": 55,
+        "type": "ACTUAL"
+      },
+      "hasResults": false,
+      "primaryOutcomes": [
+        "Treatment-related changes in disease severity"
+      ]
+    },
+    "NCT00214110": {
+      "title": "Tamoxifen Therapy in Amyotrophic Lateral Sclerosis [ALS]",
+      "status": "COMPLETED",
+      "whyStopped": null,
+      "phases": [
+        "PHASE2"
+      ],
+      "enrollment": {
+        "count": 100
+      },
+      "hasResults": false,
+      "primaryOutcomes": [
+        "Stability at 6, 12, 18 and 24 months on of the patient's mean percent predicted arm strength"
+      ]
+    },
+    "NCT01257581": {
+      "title": "Safety and Efficacy Study of Creatine and Tamoxifen in Volunteers With Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "COMPLETED",
+      "whyStopped": null,
+      "phases": [
+        "PHASE2"
+      ],
+      "enrollment": {
+        "count": 60,
+        "type": "ACTUAL"
+      },
+      "hasResults": true,
+      "primaryOutcomes": [
+        "Change in ALS Functional Rating Scale - Revised (ALSFRS-R)"
+      ]
+    },
+    "NCT03039673": {
+      "title": "MIROCALS: Modifying Immune Response and OutComes in ALS",
+      "status": "COMPLETED",
+      "whyStopped": null,
+      "phases": [
+        "PHASE2"
+      ],
+      "enrollment": {
+        "count": 304,
+        "type": "ACTUAL"
+      },
+      "hasResults": false,
+      "primaryOutcomes": [
+        "Time to death from date of randomization to date of death"
+      ]
+    },
+    "NCT03548311": {
+      "title": "Clinical Trial of Ultra-high Dose Methylcobalamin for ALS",
+      "status": "COMPLETED",
+      "whyStopped": null,
+      "phases": [
+        "PHASE3"
+      ],
+      "enrollment": {
+        "count": 130,
+        "type": "ACTUAL"
+      },
+      "hasResults": false,
+      "primaryOutcomes": [
+        "Treatment Phase: ALSFRS-R"
+      ]
+    },
+    "NCT04993755": {
+      "title": "A Phase 2a Study of TPN-101 in Patients With C9ORF72 ALS/FTD",
+      "status": "COMPLETED",
+      "whyStopped": null,
+      "phases": [
+        "PHASE2"
+      ],
+      "enrollment": {
+        "count": 42,
+        "type": "ACTUAL"
+      },
+      "hasResults": false,
+      "primaryOutcomes": [
+        "Assess the safety and tolerability of TPN-101 in patients with C9ORF72 amyotrophic lateral sclerosis (ALS)/frontotemporal dementia (FTD)"
+      ]
+    },
+    "search_SARM1": [],
+    "search_LY3873862": [
+      {
+        "nctId": "NCT05492201",
+        "title": "A Study of LY3873862 in Healthy Participants",
+        "status": "COMPLETED",
+        "phases": [
+          "PHASE1"
+        ]
+      },
+      {
+        "nctId": "NCT07883590",
+        "title": "A Study of LY3873862 in Participants With Sporadic or Familial Amyotrophic Lateral Sclerosis (ALS).",
+        "status": "NOT_YET_RECRUITING",
+        "phases": [
+          "PHASE1"
+        ]
+      }
+    ],
+    "search_dexmedetomidine amyotrophic": [
+      {
+        "nctId": "NCT04391361",
+        "title": "The Safety and Effectiveness of Cholinergic Receptor Block Therapy in the Treatment of ALS",
+        "status": "UNKNOWN",
+        "phases": [
+          "PHASE2"
+        ]
+      }
+    ],
+    "search_mycophenolate amyotrophic": [
+      {
+        "nctId": "NCT01884571",
+        "title": "Immunosuppression in Amyotrophic Lateral Sclerosis (ALS)",
+        "status": "COMPLETED",
+        "phases": [
+          "PHASE2"
+        ]
+      },
+      {
+        "nctId": "NCT07539662",
+        "title": "Unrelated Umbilical Cord Blood Transplantation for the Treatment of Amyotrophic Lateral Sclerosis (ALS)",
+        "status": "ENROLLING_BY_INVITATION",
+        "phases": [
+          "NA"
+        ]
+      }
+    ]
+  },
+  "openfda": {
+    "dexmedetomidine": {
+      "boxed_warning": "",
+      "pharmacokinetics": "12.3 Pharmacokinetics Following intravenous administration to adults, dexmedetomidine exhibits the following pharmacokinetic parameters: a rapid distribution phase with a distribution half-life (t 1/2 ) of approximately 6 minutes; a terminal elimination half-life (t 1/2 ) of approximately 2 hours; and steady-state volume of distribution (V ss ) of approximately 118 liters. Clearance is estimated to be approximately 39 L/hour. The mean body weight associated with this clearance estimate was 72 kg. Dexmedetomidine exhibits linear pharmacokinetics in the dosage range of 0.2 to 0.7 mcg/kg/hr when administered to adults by intravenous infusion for up to 24 hours. Table 8 shows the main pharmacokinetic parameters when dexmedetomidine was infused (after appropriate loading doses) at maintenance i"
+    },
+    "mycophenolate mofetil": {
+      "boxed_warning": "WARNING: EMBRYOFETAL TOXICITY, MALIGNANCIES and SERIOUS INFECTIONS Use during pregnancy is associated with increased risks of first trimester pregnancy loss and congenital malformations. Avoid if safer treatment options are available. Females of reproductive potential must be counseled regarding pregnancy prevention and planning [see Warnings and Precautions (5.1) , Use in Special Populations (8.1 , 8.3) ] . Increased risk of development of lymphoma and other malignancies, particularly of the skin [see Warnings and Precautions (5.2) ] . Increased susceptibility to bacterial, viral, fungal and ",
+      "pharmacokinetics": "12.3 Pharmacokinetics Absorption Following oral and intravenous administration, MMF undergoes complete conversion to MPA, the active metabolite. In 12 healthy volunteers, the mean absolute bioavailability of oral MMF relative to intravenous MMF was 94%. Two 500 mg mycophenolate mofetil tablets have been shown to be bioequivalent to four 250 mg mycophenolate mofetil capsules. Five mL of the 200 mg/mL constituted mycophenolate mofetil oral suspension have been shown to be bioequivalent to four 250 mg capsules. The mean (\u00b1 SD) pharmacokinetic parameters estimates for MPA following the administration of MMF given as single doses to healthy volunteers, and multiple doses to kidney, heart, and liver transplant patients, are shown in Table 10 . The area under the plasma-concentration time curve ("
+    },
+    "tamoxifen": {
+      "boxed_warning": "WARNING: UTERINE MALIGNANCIES and THROMBOEMBOLIC EVENTS Serious and life-threatening events from the use of SOLTAMOX include uterine malignancies, stroke, and pulmonary embolism [see Warnings and Precautions (5.1 , 5.2) ] . Fatal cases of each type of event have occurred. Incidence rates per 1000 women-years for these events were estimated from the National Surgical Adjuvant Breast and Bowel Project (NSABP) P-1 trial in women at high risk for breast cancer [see Clinical Studies (14.4) ] : Endometrial adenocarcinoma: 2.20 for tamoxifen vs. 0.71 for placebo Uterine sarcoma: 0.17 for tamoxifen vs",
+      "pharmacokinetics": "12.3 Pharmacokinetics Absorption and Distribution Following a single oral dose of 20 mg tamoxifen, an average peak plasma concentration of 40 ng/mL (range 35 to 45 ng/mL) occurred approximately 5 hours after dosing. The decline in plasma concentrations of tamoxifen is biphasic with a terminal elimination half-life of about 5 to 7 days. The average peak plasma concentration of N- desmethyl tamoxifen, the major metabolite, is 15 ng/mL (range 10 to 20 ng/mL). Chronic administration of 10 mg tamoxifen given twice daily for 3 months to patients results in average steady-state plasma concentrations of 120 ng/mL (range 67 to 183 ng/mL) for tamoxifen and 336 ng/mL (range 148 to 654 ng/mL) for N-desmethyl tamoxifen. The average steady-state plasma concentrations of tamoxifen and N-desmethyl tamoxif"
+    },
+    "aldesleukin": {
+      "boxed_warning": "",
+      "pharmacokinetics": ""
+    }
+  },
+  "europepmc": {
+    "MIROCALS_IL2": [
+      {
+        "pmid": "42638120",
+        "pmcid": "PMC13501664",
+        "doi": "10.1186/s40035-026-00572-2",
+        "year": "2026",
+        "title": "Bridging the gap: neuroinflammation and the dawn of precision medicine in amyotrophic lateral sclerosis.",
+        "journal": "Transl Neurodegener"
+      },
+      {
+        "pmid": "42160515",
+        "pmcid": "PMC13196659",
+        "doi": "10.1080/21645515.2026.2664985",
+        "year": "2026",
+        "title": "Immunotherapeutic landscape of amyotrophic lateral sclerosis: A bibliometric analysis of research trends, translational priorities, and collaboration networks (2006-2025).",
+        "journal": "Hum Vaccin Immunother"
+      },
+      {
+        "pmid": "42836993",
+        "pmcid": "PMC13642438",
+        "doi": "10.1007/s00415-026-14040-4",
+        "year": "2026",
+        "title": "TRICALS risk score augments but cannot replace neurofilament as a prognostic biomarker in ALS.",
+        "journal": "J Neurol"
+      },
+      {
+        "pmid": "41131592",
+        "pmcid": "PMC12548220",
+        "doi": "10.1186/s13024-025-00890-5",
+        "year": "2025",
+        "title": "Entering the era of precision medicine to treat amyotrophic lateral sclerosis.",
+        "journal": "Mol Neurodegener"
+      },
+      {
+        "pmid": "36518658",
+        "pmcid": "PMC9742490",
+        "doi": "10.3389/fphar.2022.1054006",
+        "year": "2022",
+        "title": "New developments and opportunities in drugs being trialed for amyotrophic lateral sclerosis from 2020 to 2022.",
+        "journal": "Front Pharmacol"
+      }
+    ],
+    "JETALS_MeCbl": [
+      {
+        "pmid": "39083229",
+        "pmcid": null,
+        "doi": "10.1097/wco.0000000000001311",
+        "year": "2024",
+        "title": "Ultra-high dose methylcobalamin and other emerging therapies for amyotrophic lateral sclerosis.",
+        "journal": "Curr Opin Neurol"
+      },
+      {
+        "pmid": "35532908",
+        "pmcid": "PMC9086935",
+        "doi": "10.1001/jamaneurol.2022.0901",
+        "year": "2022",
+        "title": "Efficacy and Safety of Ultrahigh-Dose Methylcobalamin in Early-Stage Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial.",
+        "journal": "JAMA Neurol"
+      },
+      {
+        "pmid": "40395632",
+        "pmcid": "PMC12089939",
+        "doi": "10.1093/braincomms/fcaf184",
+        "year": "2025",
+        "title": "Drug repurposing candidates for amyotrophic lateral sclerosis using common and rare genetic variants.",
+        "journal": "Brain Commun"
+      },
+      {
+        "pmid": "31722312",
+        "pmcid": null,
+        "doi": "10.11477/mf.1416201436",
+        "year": "2019",
+        "title": "[JETALS: The Japanese Early-stage Trial of high dose methylcobalamin for ALS].",
+        "journal": "Brain Nerve"
+      },
+      {
+        "pmid": "40145976",
+        "pmcid": "PMC13378947",
+        "doi": "10.4103/nrr.nrr-d-24-01081",
+        "year": "2026",
+        "title": "The role of the peripheral immune system in mediating axonal dysfunction in early-stage amyotrophic lateral sclerosis: An age- and sex-based analysis.",
+        "journal": "Neural Regen Res"
+      }
+    ],
+    "CuATSM_ALS": [
+      {
+        "pmid": null,
+        "pmcid": null,
+        "doi": "10.21203/rs.3.rs-8734109/v1",
+        "year": "2026",
+        "title": "Histological analysis of the motor cortex in a Copper-ATSM treated mouse model of amyotrophic lateral sclerosis",
+        "journal": null
+      },
+      {
+        "pmid": "41169216",
+        "pmcid": "PMC13378896",
+        "doi": "10.4103/nrr.nrr-d-25-00778",
+        "year": "2026",
+        "title": "From translation to stabilization and degradation: A multifaceted approach for the treatment of superoxide dismutase 1-associated amyotrophic lateral sclerosis.",
+        "journal": "Neural Regen Res"
+      },
+      {
+        "pmid": "40222103",
+        "pmcid": "PMC12018197",
+        "doi": "10.1016/j.ebiom.2025.105692",
+        "year": "2025",
+        "title": "A polytherapy approach demonstrates therapeutic efficacy for the treatment of SOD1 associated amyotrophic lateral sclerosis.",
+        "journal": "EBioMedicine"
+      },
+      {
+        "pmid": null,
+        "pmcid": "PMC13664480",
+        "doi": null,
+        "year": "2026",
+        "title": "Motor Neuron Disease in a Dish: The Power of Human Induced Pluripotent Stem Cell-Derived Spinal Motor Neurons and Glial Cells",
+        "journal": "Cells"
+      },
+      {
+        "pmid": "40563111",
+        "pmcid": "PMC12188662",
+        "doi": "10.1186/s40478-025-02048-2",
+        "year": "2025",
+        "title": "Copper supplementation mitigates Parkinson-like wild-type SOD1 pathology and nigrostriatal degeneration in a novel mouse model.",
+        "journal": "Acta Neuropathol Commun"
+      }
+    ],
+    "SARM1_ALS_genetics": [
+      {
+        "pmid": null,
+        "pmcid": null,
+        "doi": "10.64898/2026.03.23.712947",
+        "year": "2026",
+        "title": "Human promoter analysis of the Programmed Axon Death genes  <i>NMNAT2</i>  and  <i>SARM1</i>",
+        "journal": null
+      },
+      {
+        "pmid": "42694220",
+        "pmcid": "PMC13538860",
+        "doi": "10.3389/fncir.2026.1842408",
+        "year": "2026",
+        "title": "New mechanistic insight into SARM1 activation: TRIM32-mediated ubiquitination is a key lever that actuates SARM1's catalytic action, leading to axon degeneration and cell death.",
+        "journal": "Front Neural Circuits"
+      },
+      {
+        "pmid": "42646333",
+        "pmcid": "PMC13515651",
+        "doi": "10.3390/metabo16080597",
+        "year": "2026",
+        "title": "Nicotinamide Mononucleotide Adenylyltransferase 1 and NAD&lt;sup&gt;+&lt;/sup&gt; Homeostasis in Neuroprotection and Aging.",
+        "journal": "Metabolites"
+      },
+      {
+        "pmid": "41890230",
+        "pmcid": "PMC13016588",
+        "doi": "10.3389/fgene.2026.1742595",
+        "year": "2026",
+        "title": "An in silico protocol for predicting genetic biomarkers in rare diseases: a case study in sporadic amyotrophic lateral sclerosis.",
+        "journal": "Front Genet"
+      },
+      {
+        "pmid": "42479906",
+        "pmcid": "PMC13688049",
+        "doi": "10.1002/ana.78316",
+        "year": "2026",
+        "title": "Neurotransmitter-Defined Degeneration Patterns in Sporadic and C9orf72-Associated Amyotrophic Lateral Sclerosis: Predilection to GABAergic, Serotonergic, Opioid, Glutamatergic, Endocannabinoid, and Microglial Systems-Implications for Therapy Development.",
+        "journal": "Ann Neurol"
+      }
+    ],
+    "SARM1_inhibitor_biphasic": [
+      {
+        "pmid": "42913314",
+        "pmcid": "PMC13718798",
+        "doi": "10.1016/j.jphyss.2026.100112",
+        "year": "2026",
+        "title": "Toll-like receptor signaling modulates AMPA receptor trafficking in homeostatic synaptic downscaling.",
+        "journal": "J Physiol Sci"
+      },
+      {
+        "pmid": "42068248",
+        "pmcid": "PMC13135277",
+        "doi": "10.1096/fj.202504642r",
+        "year": "2026",
+        "title": "Quantification of SARM1 NADase Activity in Human Peripheral Blood Mononuclear Cells.",
+        "journal": "FASEB J"
+      },
+      {
+        "pmid": "42156967",
+        "pmcid": "PMC13187307",
+        "doi": "10.1038/s42004-026-02074-8",
+        "year": "2026",
+        "title": "The rise and fall of SARM1 base-exchange inhibitors.",
+        "journal": "Commun Chem"
+      },
+      {
+        "pmid": "41794034",
+        "pmcid": "PMC13020464",
+        "doi": "10.1016/j.immuni.2026.01.019",
+        "year": "2026",
+        "title": "Macrophage metabolic exhaustion and PANoptotic cell death drive chronic tissue inflammation in rheumatoid arthritis.",
+        "journal": "Immunity"
+      },
+      {
+        "pmid": "41997149",
+        "pmcid": "PMC13285980",
+        "doi": "10.1016/j.neuron.2026.03.027",
+        "year": "2026",
+        "title": "SARM1 executes neuronal parthanatos and promotes excitotoxic cell death.",
+        "journal": "Neuron"
+      }
+    ],
+    "TPN101_ALS_TE": [
+      {
+        "pmid": "42353250",
+        "pmcid": "PMC13299275",
+        "doi": "10.3390/ijms27125537",
+        "year": "2026",
+        "title": "Microglial Dysfunction Induced by C9ORF72 Dipeptide Repeat Proteins: Biomarker and Therapeutic Perspectives.",
+        "journal": "Int J Mol Sci"
+      },
+      {
+        "pmid": "41283303",
+        "pmcid": "PMC12642023",
+        "doi": "10.3390/neurosci6040114",
+        "year": "2025",
+        "title": "Update on Disease-Modifying Pharmacological Treatments for Frontotemporal Dementia (FTD): A Scoping Review of Registered Trials.",
+        "journal": "NeuroSci"
+      },
+      {
+        "pmid": null,
+        "pmcid": "PMC13662833",
+        "doi": null,
+        "year": "2026",
+        "title": "Therapeutic intervention strategies in frontotemporal dementia: drug development pipeline",
+        "journal": "Alzheimers Dement (N Y)"
+      },
+      {
+        "pmid": "42921272",
+        "pmcid": "PMC13693915",
+        "doi": "10.1002/mco2.71090",
+        "year": "2026",
+        "title": "Neurodegenerative Diseases: Epidemiology, Risk Factors, Classification, Pathophysiology, Clinical Features, Diagnosis, and Therapeutic Strategies.",
+        "journal": "MedComm (2020)"
+      },
+      {
+        "pmid": "41155689",
+        "pmcid": "PMC12566694",
+        "doi": "10.3390/ph18101573",
+        "year": "2025",
+        "title": "The Other Side of the Same Coin: Beyond the Coding Region in Amyotrophic Lateral Sclerosis.",
+        "journal": "Pharmaceuticals (Basel)"
+      }
+    ],
+    "DNAJB2_ALS": [
+      {
+        "pmid": "42362484",
+        "pmcid": "PMC13428392",
+        "doi": "10.1111/nan.70086",
+        "year": "2026",
+        "title": "Neuropathological and Molecular Features Associated With a Heterozygous DNAJC7 Mutation in Amyotrophic Lateral Sclerosis.",
+        "journal": "Neuropathol Appl Neurobiol"
+      },
+      {
+        "pmid": "42955121",
+        "pmcid": "PMC13719752",
+        "doi": "10.1007/s10048-026-00952-w",
+        "year": "2026",
+        "title": "Expanding the genetic spectrum of inherited peripheral neuropathies in complex neurogenetic disorders using whole-exome sequencing.",
+        "journal": "Neurogenetics"
+      },
+      {
+        "pmid": "38702287",
+        "pmcid": null,
+        "doi": "10.1016/j.neurol.2023.09.005",
+        "year": "2024",
+        "title": "Distal hereditary motor neuropathies.",
+        "journal": "Rev Neurol (Paris)"
+      },
+      {
+        "pmid": "39017652",
+        "pmcid": "PMC11377054",
+        "doi": "10.1097/wco.0000000000001299",
+        "year": "2024",
+        "title": "Current advance on distal myopathy genetics.",
+        "journal": "Curr Opin Neurol"
+      },
+      {
+        "pmid": "42817626",
+        "pmcid": "PMC13628053",
+        "doi": "10.1098/rstb.2025.0269",
+        "year": "2026",
+        "title": "Chaperone-mediated remodelling of mutant huntingtin.",
+        "journal": "Philos Trans R Soc Lond B Biol Sci"
+      }
+    ],
+    "SNPH_ALS": [
+      {
+        "pmid": null,
+        "pmcid": null,
+        "doi": "10.64898/2026.07.08.737141",
+        "year": "2026",
+        "title": "Synaptic and Extrasynaptic NMDA Receptors Oppositely Regulate Dendritic Syntaphilin Intrusion in Multiple Sclerosis",
+        "journal": null
+      },
+      {
+        "pmid": "41193975",
+        "pmcid": "PMC12590865",
+        "doi": "10.1186/s10020-025-01319-x",
+        "year": "2025",
+        "title": "Syntaphilin loss enhances mitochondrial axonal transport and neuromuscular junction formation in a human stem cell derived neuromuscular assembloid model.",
+        "journal": "Mol Med"
+      },
+      {
+        "pmid": "42589220",
+        "pmcid": "PMC13465459",
+        "doi": "10.3390/ijms27156564",
+        "year": "2026",
+        "title": "Syntaphilin Regulates Epithelial-Mesenchymal Transition and Metastasis in Gastric Cancer via the FAK/NF-\u03baB/MMP-9 Signaling Pathway.",
+        "journal": "Int J Mol Sci"
+      },
+      {
+        "pmid": "39768167",
+        "pmcid": "PMC11674045",
+        "doi": "10.3390/cells13242076",
+        "year": "2024",
+        "title": "Exploring the Role of Axons in ALS from Multiple Perspectives.",
+        "journal": "Cells"
+      },
+      {
+        "pmid": null,
+        "pmcid": null,
+        "doi": "10.22541/authorea.15004075/v1",
+        "year": "2026",
+        "title": "Excitotoxic Tauopathy as A Novel Common Cascade for Neurodegeneration in Alzheimer\u2019s Disease and Multiple Sclerosis",
+        "journal": null
+      }
+    ]
+  }
+}

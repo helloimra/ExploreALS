@@ -1,0 +1,144 @@
+rsid,variant_str,biosample_name,gene_name,output_type,variant_scorer,raw_score,quantile_score
+rs1420101,chr2:102341256:C>T,omental fat pad,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.18457031,0.99615246
+rs1420101,chr2:102341256:C>T,omental fat pad,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.18457031,0.99615246
+rs1420101,chr2:102341256:C>T,omental fat pad,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.18432617,0.9970632
+rs1420101,chr2:102341256:C>T,omental fat pad,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.18432617,0.9970632
+rs1420101,chr2:102341256:C>T,omental fat pad,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.18151855,0.99696237
+rs1420101,chr2:102341256:C>T,omental fat pad,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.18151855,0.99696237
+rs1420101,chr2:102341256:C>T,placental basal plate,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.18066406,0.99559647
+rs1420101,chr2:102341256:C>T,placental basal plate,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.18066406,0.99559647
+rs1420101,chr2:102341256:C>T,upper lobe of left lung,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.17822266,0.9966385
+rs1420101,chr2:102341256:C>T,upper lobe of left lung,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.17822266,0.9966385
+rs1420101,chr2:102341256:C>T,adipose tissue,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.17785645,0.9958838
+rs1420101,chr2:102341256:C>T,adipose tissue,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.17785645,0.9958838
+rs1420101,chr2:102341256:C>T,upper lobe of left lung,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.1743164,0.996523
+rs1420101,chr2:102341256:C>T,upper lobe of left lung,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.1743164,0.996523
+rs1420101,chr2:102341256:C>T,chorionic villus,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.17346191,0.99544543
+rs1420101,chr2:102341256:C>T,chorionic villus,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.17346191,0.99544543
+rs1420101,chr2:102341256:C>T,lung microvascular endothelial cell,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.17224121,0.9958838
+rs1420101,chr2:102341256:C>T,lung microvascular endothelial cell,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.17224121,0.9958838
+rs1420101,chr2:102341256:C>T,dermis blood vessel endothelial cell,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.17199707,0.99615246
+rs1420101,chr2:102341256:C>T,dermis blood vessel endothelial cell,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.17199707,0.99615246
+rs1420101,chr2:102341256:C>T,dermis microvascular lymphatic vessel endothelial cell,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.17150879,0.9958838
+rs1420101,chr2:102341256:C>T,dermis microvascular lymphatic vessel endothelial cell,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.17150879,0.9958838
+rs1420101,chr2:102341256:C>T,subcutaneous adipose tissue,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.17041016,0.99675006
+rs1420101,chr2:102341256:C>T,subcutaneous adipose tissue,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.17041016,0.99675006
+rs1420101,chr2:102341256:C>T,dermis lymphatic vessel endothelial cell,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.17016602,0.9958838
+rs1420101,chr2:102341256:C>T,coronary artery,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.15356445,0.9966385
+rs1420101,chr2:102341256:C>T,ascending aorta,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.14111328,0.996523
+rs1420101,chr2:102341256:C>T,coronary artery,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.1517334,0.996523
+rs1420101,chr2:102341256:C>T,ascending aorta,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.13806152,0.99640363
+rs1420101,chr2:102341256:C>T,ascending aorta,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.09320068,0.99628013
+rs1420101,chr2:102341256:C>T,ascending aorta,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.09069824,0.99615246
+rs1420101,chr2:102341256:C>T,mammary microvascular endothelial cell,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.14941406,0.9960204
+rs1420101,chr2:102341256:C>T,vein endothelial cell,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.1640625,0.9960204
+rs1420101,chr2:102341256:C>T,bladder microvascular endothelial cell,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.16601562,0.9958838
+rs1420101,chr2:102341256:C>T,endothelial cell of coronary artery,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.16601562,0.99574256
+rs1420101,chr2:102341256:C>T,thoracic aorta endothelial cell,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.16247559,0.99574256
+rs1420101,chr2:102341256:C>T,epithelial cell of umbilical artery,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.14648438,0.99574256
+rs1420101,chr2:102341256:C>T,aorta,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.14660645,0.99559647
+rs1420101,chr2:102341256:C>T,pulmonary artery endothelial cell,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.16088867,0.99559647
+rs1420101,chr2:102341256:C>T,glomerular endothelial cell,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.14318848,0.99559647
+rs1420101,chr2:102341256:C>T,lower lobe of right lung,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.13708496,0.99559647
+rs1420101,chr2:102341256:C>T,upper lobe of right lung,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.13562012,0.99559647
+rs1420101,chr2:102341256:C>T,thoracic aorta,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.14086914,0.99559647
+rs1420101,chr2:102341256:C>T,endothelial cell of umbilical vein,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.14367676,0.99544543
+rs1041973,chr2:102339008:C>A,HepG2,,CHIP_TF,"CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",0.8565674,0.9974778
+rs1041973,chr2:102339008:C>A,HepG2,,CHIP_TF,"CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",0.85317993,0.99756175
+rs1041973,chr2:102339008:C>A,K562,,CHIP_TF,"CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",0.7910929,0.9984297
+rs1041973,chr2:102339008:C>A,IMR-90,,CHIP_TF,"CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",0.644722,0.9963409
+rs1041973,chr2:102339008:C>A,K562,,CHIP_TF,"CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",0.6016083,0.99800986
+rs1041973,chr2:102339008:C>A,A549,,CHIP_TF,"CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",0.59429264,0.99837565
+rs1041973,chr2:102339008:C>A,K562,,CHIP_TF,"CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",0.41226006,0.9972084
+rs1041973,chr2:102339008:C>A,HeLa-S3,,CHIP_TF,"CenterMaskScorer(requested_output=CHIP_TF, width=501, aggregation_type=DIFF_LOG2_SUM)",0.326746,0.9902553
+rs1041973,chr2:102339008:C>A,omental fat pad,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.28686523,0.99829006
+rs1041973,chr2:102339008:C>A,omental fat pad,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.28686523,0.99829006
+rs1041973,chr2:102339008:C>A,subcutaneous adipose tissue,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.26953125,0.9981075
+rs1041973,chr2:102339008:C>A,subcutaneous adipose tissue,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.26953125,0.9981075
+rs1041973,chr2:102339008:C>A,upper lobe of left lung,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.25854492,0.99783343
+rs1041973,chr2:102339008:C>A,upper lobe of left lung,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.25854492,0.99783343
+rs1041973,chr2:102339008:C>A,breast epithelium,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.25561523,0.99790543
+rs1041973,chr2:102339008:C>A,breast epithelium,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.25561523,0.99790543
+rs1041973,chr2:102339008:C>A,esophagus,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.25,0.9971608
+rs1041973,chr2:102339008:C>A,esophagus,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.25,0.9971608
+rs1041973,chr2:102339008:C>A,urinary bladder,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.24645996,0.9971608
+rs1041973,chr2:102339008:C>A,urinary bladder,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.24645996,0.9971608
+rs1041973,chr2:102339008:C>A,urinary bladder,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.24291992,0.9971608
+rs1041973,chr2:102339008:C>A,urinary bladder,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.24291992,0.9971608
+rs1041973,chr2:102339008:C>A,chorionic villus,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.24267578,0.996858
+rs1041973,chr2:102339008:C>A,chorionic villus,IL1RL1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.24267578,0.996858
+rs1041973,chr2:102339008:C>A,coronary artery,IL18R1,SPLICE_JUNCTIONS,SpliceJunctionScorer(),0.24194336,0.9980424
+rs1041973,chr2:102339008:C>A,umbilical cord,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.019137144,0.9996693
+rs1041973,chr2:102339008:C>A,ascending aorta,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.02370584,0.9996083
+rs1041973,chr2:102339008:C>A,epithelial cell of alveolus of lung,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.0226717,0.9995515
+rs1041973,chr2:102339008:C>A,smooth muscle cell of the umbilical artery,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.022972107,0.99953604
+rs1041973,chr2:102339008:C>A,smooth muscle cell of the coronary artery,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.021469474,0.9995035
+rs1041973,chr2:102339008:C>A,fibroblast of lung,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.01992488,0.9994687
+rs1041973,chr2:102339008:C>A,fibroblast of lung,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.0208807,0.9994119
+rs1041973,chr2:102339008:C>A,bronchus fibroblast of lung,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.016535282,0.9993265
+rs1041973,chr2:102339008:C>A,astrocyte,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.016591072,0.9993265
+rs1041973,chr2:102339008:C>A,spinal cord,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.017712355,0.9992793
+rs1041973,chr2:102339008:C>A,aorta,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.018944025,0.9992793
+rs1041973,chr2:102339008:C>A,spinal cord,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.015814066,0.99922884
+rs1041973,chr2:102339008:C>A,thoracic aorta,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.016578674,0.99920225
+rs1041973,chr2:102339008:C>A,aorta,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.016780257,0.9991748
+rs1041973,chr2:102339008:C>A,lung,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.015756011,0.99914634
+rs1041973,chr2:102339008:C>A,left lung,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.016611934,0.99911696
+rs1041973,chr2:102339008:C>A,glomerular endothelial cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.015545338,0.99911696
+rs1041973,chr2:102339008:C>A,epithelial cell of umbilical artery,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.014885545,0.99908656
+rs1041973,chr2:102339008:C>A,dermis blood vessel endothelial cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.014799193,0.99902254
+rs1041973,chr2:102339008:C>A,endothelial cell of coronary artery,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.014358699,0.99902254
+rs1041973,chr2:102339008:C>A,mammary microvascular endothelial cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.014838904,0.99898887
+rs1041973,chr2:102339008:C>A,brain,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.016077995,0.99898887
+rs1041973,chr2:102339008:C>A,lower lobe of left lung,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.015586972,0.99895406
+rs1041973,chr2:102339008:C>A,pulmonary artery endothelial cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.014069542,0.99895406
+rs1041973,chr2:102339008:C>A,lung microvascular endothelial cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.013417214,0.99895406
+rs953934,chr2:102315833:C>T,hematopoietic multipotent progenitor cell,ENSG00000236525,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.009392023,-0.9968039
+rs953934,chr2:102315833:C>T,"common myeloid progenitor, CD34-positive",ENSG00000236525,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.008902907,-0.9939247
+rs953934,chr2:102315833:C>T,mesodermal cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.008383989,-0.99451023
+rs953934,chr2:102315833:C>T,endothelial cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.007825375,-0.99581087
+rs953934,chr2:102315833:C>T,astrocyte,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.007409334,-0.99551785
+rs953934,chr2:102315833:C>T,hair follicular keratinocyte,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0072267056,-0.99304605
+rs953934,chr2:102315833:C>T,kidney epithelial cell,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.007129431,-0.99451023
+rs953934,chr2:102315833:C>T,GM23248,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.007121086,-0.9914851
+rs953934,chr2:102315833:C>T,mammary epithelial cell,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0070078373,-0.9914851
+rs953934,chr2:102315833:C>T,"CD4-positive, alpha-beta memory T cell",IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.0069975853,0.9905784
+rs953934,chr2:102315833:C>T,hematopoietic multipotent progenitor cell,IL18RAP,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.006952405,-0.99204075
+rs953934,chr2:102315833:C>T,tracheal epithelial cell,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.006848097,-0.993716
+rs953934,chr2:102315833:C>T,mammary epithelial cell,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0068204403,-0.9939247
+rs953934,chr2:102315833:C>T,MCF 10A,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.006771326,-0.9928072
+rs953934,chr2:102315833:C>T,smooth muscle cell,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.006762266,-0.9902553
+rs953934,chr2:102315833:C>T,mesenchymal stem cell,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0066697598,-0.9905784
+rs953934,chr2:102315833:C>T,foreskin keratinocyte,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0066280365,-0.9905784
+rs953934,chr2:102315833:C>T,osteocyte,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0066273212,-0.9939247
+rs953934,chr2:102315833:C>T,epithelial cell of proximal tubule,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0066161156,-0.99256027
+rs953934,chr2:102315833:C>T,AG04450,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.006586075,-0.99089086
+rs953934,chr2:102315833:C>T,airway epithelial cell,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0065846443,-0.9914851
+rs953934,chr2:102315833:C>T,endothelial cell of umbilical vein,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0065517426,-0.9914851
+rs953934,chr2:102315833:C>T,nasal cavity respiratory epithelium epithelial cell of viscerocranial mucosa,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0065050125,-0.9928072
+rs953934,chr2:102315833:C>T,mesenchymal stem cell of Wharton's jelly,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0064873695,-0.9941265
+rs953934,chr2:102315833:C>T,bronchial epithelial cell,TMEM182,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0064737797,-0.99256027
+rs953934,chr2:102315833:C>T,ascending aorta,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0056877136,-0.9902553
+rs953934,chr2:102315833:C>T,umbilical cord,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.004071951,-0.9833016
+rs953934,chr2:102315833:C>T,endothelial cell of umbilical vein,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0049913526,-0.9815315
+rs953934,chr2:102315833:C>T,endothelial cell of umbilical vein,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.005251104,-0.9795758
+rs953934,chr2:102315833:C>T,glomerular endothelial cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0045752227,-0.9781595
+rs953934,chr2:102315833:C>T,right renal cortex interstitium,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0053629875,-0.97585106
+rs953934,chr2:102315833:C>T,left renal cortex interstitium,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0051789284,-0.97585106
+rs953934,chr2:102315833:C>T,epithelial cell of umbilical artery,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.00431782,-0.9741798
+rs953934,chr2:102315833:C>T,renal cortex interstitium,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0051555634,-0.9741798
+rs953934,chr2:102315833:C>T,dermis blood vessel endothelial cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.004301712,-0.9733019
+rs953934,chr2:102315833:C>T,T-cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),0.004714966,0.9723945
+rs953934,chr2:102315833:C>T,vein endothelial cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0041784644,-0.9723945
+rs953934,chr2:102315833:C>T,bladder microvascular endothelial cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0040513277,-0.97145677
+rs953934,chr2:102315833:C>T,lung microvascular endothelial cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.003951192,-0.97145677
+rs953934,chr2:102315833:C>T,endothelial cell of coronary artery,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.004030317,-0.97145677
+rs953934,chr2:102315833:C>T,thoracic aorta endothelial cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.003936708,-0.97048765
+rs953934,chr2:102315833:C>T,ascending aorta,IL1RL1,SPLICE_SITE_USAGE,"GeneMaskSplicingScorer(requested_output=SPLICE_SITE_USAGE, width=None)",0.01171875,0.97039413
+rs953934,chr2:102315833:C>T,mammary microvascular endothelial cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0042016506,-0.9694861
+rs953934,chr2:102315833:C>T,pulmonary artery endothelial cell,IL1RL1,RNA_SEQ,GeneMaskLFCScorer(requested_output=RNA_SEQ),-0.0040080845,-0.96845114
+rs953934,chr2:102315833:C>T,endothelial cell of umbilical vein,,DNASE,"CenterMaskScorer(requested_output=DNASE, width=501, aggregation_type=DIFF_LOG2_SUM)",-0.108846664,-0.96845114
+rs953934,chr2:102315833:C>T,endothelial cell of umbilical vein,IL1RL1,SPLICE_SITE_USAGE,"GeneMaskSplicingScorer(requested_output=SPLICE_SITE_USAGE, width=None)",0.01171875,0.9683841
+rs953934,chr2:102315833:C>T,endothelial cell of umbilical vein,,CHIP_HISTONE,"CenterMaskScorer(requested_output=CHIP_HISTONE, width=2001, aggregation_type=DIFF_LOG2_SUM)",-0.055440903,-0.9662766
+rs953934,chr2:102315833:C>T,epithelial cell of umbilical artery,IL1RL1,SPLICE_SITE_USAGE,"GeneMaskSplicingScorer(requested_output=SPLICE_SITE_USAGE, width=None)",0.01171875,0.9662423
+rs953934,chr2:102315833:C>T,endothelial cell of umbilical vein,,CHIP_HISTONE,"CenterMaskScorer(requested_output=CHIP_HISTONE, width=2001, aggregation_type=DIFF_LOG2_SUM)",-0.048070908,-0.9639548
