@@ -4,7 +4,7 @@ from __future__ import annotations
 CANDIDATE_HYPOTHESES: dict[str, str] = {
     "C001": (
         "UNC13A (ENSG00000130477) encodes presynaptic Munc13-1, an essential synaptic vesicle-priming protein required for neurotransmitter release at motor synapses. "
-        "Nuclear TDP-43 depletion — potentiated by human ALS GWAS risk alleles rs12608932 and rs12973192 — unmasks a frameshifting intron 20–21 cryptic exon that degrades UNC13A mRNA via nonsense-mediated decay; intrathecal steric splice-switching aims to restore synaptic Munc13-1 within a multiplexed splice-rescue regimen."
+        "Nuclear TDP-43 depletion — potentiated by human ALS GWAS risk alleles rs12608932 and rs12973192 — unmasks a frameshifting intron 20–21 cryptic exon whose steric splice correction restores human cortical/spinal motor neuron synaptic transmission and network synchrony (>30% protein threshold; DOI:10.1038/s41586-026-11256-2) while leaving STMN2 and KCNQ2 mis-splicing unaddressed, anchoring a multiplexed splice-rescue regimen."
     ),
     "C002": (
         "STMN2 (ENSG00000104435) encodes stathmin-2, a dynamic microtubule-regulating phosphoprotein indispensable for motor axon outgrowth, repair, and neuromuscular junction maintenance. "
@@ -234,7 +234,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
         "Nominated from marginal survival extension in sporadic ALS iPSC motor neuron screening, its hypothesis proposed high-dose oral supplementation to rescue motor neuron bioenergetics and lipid peroxidation (NCT00243932, PMID:19743457)."
     ),
     "DN-19": (
-        "L-Serine is a neurotrophic amino acid and obligate substrate of serine palmitoyltransferase whose supplementation competitively suppresses synthesis of neurotoxic 1-deoxysphingolipids. "
-        "Crossing the human ALS blood-brain barrier in Phase 1 (NCT01835782) while its open-label Phase 2 study (NCT03580616) ended administratively rather than for clinical futility, the hypothesis requires serine-defined media deconvolution to separate metabolic efficacy from basal-media noise."
+        "L-Serine is an obligate substrate of serine palmitoyltransferase that competitively suppresses neurotoxic 1-deoxysphingolipids in HSAN1, whereas SPTLC1/SPTLC2-ALS variants lose ceramide feedback and overproduce canonical C18–C22 sphingolipids (PMID:43025655). "
+        "Crossing the human ALS blood-brain barrier in Phase 1 (NCT01835782) while its open-label Phase 2 study (NCT03580616) ended administratively rather than for clinical futility, the hypothesis requires SPTLC1/2 exclusion and serine-defined lipidomic deconvolution."
     ),
 }

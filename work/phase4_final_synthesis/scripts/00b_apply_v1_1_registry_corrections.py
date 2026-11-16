@@ -27,6 +27,10 @@ def main() -> None:
     ev_cols, ev_rows = _load("evidence_ledger.csv")
     ev_map = {r["evidence_id"]: r for r in ev_rows}
 
+    ev_map["EV-B1-001"].update({
+        "source_id_or_locator": "DS_CRYPTIC:Brown2022_MOESM11;10.1038/s41586-026-11256-2",
+        "notes": "Paired Brown 2022 canonical dPSI=-0.5868 (FDR=1.50e-13), RNA log2FC=-0.2508 (padj=1.14e-5), Ribo-seq log2FC=-0.7811 (padj=0.0296); replicated in Ma 2022 MAJIQ dPSI=0.779; Keuss et al. 2026 (Nature, 10.1038/s41586-026-11256-2) show isolated Intron-20 CE deletion (~75% protein rescue; >30% physiological threshold) and 18/21-nt 2'-O-MOE ASOs restore presynaptic UNC13A, mEPSC frequency (~80% recovery), evoked AMPA eEPSCs, and MEA network synchrony in human cortical/spinal MNs and hUNC13A mice across reference & risk alleles while STMN2, KCNQ2, and ~10% postsynaptic mEPSC amplitude remain unrescued. [Sample context: i3Neuron TDP-43 KD vs Ctrl replicates (Brown 2022 MOESM11)]",
+    })
     ev_map["EV-B1-014"].update({
         "effect_direction": "STABLE_HOMOGENATE_ER_RETAINED_CSF_ABSENT",
         "notes": "Spillman iPSC homogenate log2FC=-0.1493 (p=0.6487, n=6); undetected (0 peptides) in Trautwig 2025 CSF TMT & DIA; Joseph et al. 2025 (PMID:41174170) & Brown Ribo-seq (padj=0.983) show NMD-escaping KCNQ2-DeltaE5 accumulates in soma ER with impaired surface trafficking (cortical P2 synaptosome null reflects sparse cortical TDP-43 pathology + co-fractionated ER across non-Exon-5 peptides). [Sample context: 19 postmortem frontal cortex synaptosome preps (10 C9-FTD/ALS vs 9 Ctrl)]",

@@ -168,7 +168,7 @@ DN_VERDICT_HEADLINES: dict[str, str] = {
     "DN-16": "Falsified in Phase 3 human ALS clinical testing (Rank #{rk}/59 · Drop): LIGHTHOUSE II interim survival futility and a 60–250x unbound human CSF exposure gap refute repurposing dolutegravir/Triumeq.",
     "DN-17": "Falsified by human ALS clinical futility and poor CNS penetration (Rank #{rk}/59 · Drop): in vitro rescue reflects media thiol buffering while high-dose subcutaneous N-acetylcysteine failed human ALS survival testing.",
     "DN-18": "Falsified in randomized human ALS clinical testing (Rank #{rk}/59 · Drop): marginal in vitro antioxidant survival gain failed to translate in the multicenter Phase II QALS trial at 2,700 mg/day.",
-    "DN-19": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/59) under Epistemic Asymmetry: Phase 2 IRB termination did not test clinical efficacy, but the +0.625% basal-media serine shift requires serine-defined media deconvolution before any clinical re-entry.",
+    "DN-19": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/59) under Epistemic Asymmetry: Phase 2 IRB termination did not test clinical efficacy in non-SPT sporadic ALS, but +0.625% basal-media noise and SPTLC1/2-ALS ceramide-feedback loss (PMID:43025655) mandate SPT exclusion and lipidomic deconvolution.",
 }
 
 DN_TOP_SPLIT_RE = re.compile(

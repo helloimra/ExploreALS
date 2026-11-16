@@ -699,11 +699,11 @@
     }
   },
   "registry_sha12": {
-    "phase4_unified_portfolio": "0dfe3b2d9e03",
+    "phase4_unified_portfolio": "0ba71fbeabe8",
     "phase4_unified_cis_intervals": "601f6f08fd5c",
     "phase3_sso_offtarget_audit": "038dea57c22d",
     "phase3_execution_readiness": "6fe7e0774170",
-    "phase3b_denovo_candidates": "542dc9a29648",
+    "phase3b_denovo_candidates": "c2e9f4a4922c",
     "phase3b_denovo_sso_intervals": "f46fb8103ef2"
   }
 }

@@ -38,7 +38,7 @@ def main() -> None:
     ]
     print_audit_report(
         "C001", "UNC13A Cryptic-Exon Steric SSO", checks,
-        "Human rs12973192/rs12608932 genetics & TDP-43 CE pathology are [MEASURED] (Bio #1; ~43% NFE A/A modulates magnitude without conferring biological exemption); SantaLucia Tm & Stage 2 24-48 mg multiplex dosing are [MODEL_PRIOR].",
+        "Human rs12973192/rs12608932 genetics, TDP-43 CE pathology, and human cortical/spinal MN synaptic rescue (>30% protein threshold; Keuss 2026 Nature 10.1038/s41586-026-11256-2) are [MEASURED] (Bio #1; ~43% NFE A/A modulates magnitude without conferring exemption); SantaLucia Tm & Stage 2 24-48 mg multiplex dosing are [MODEL_PRIOR].",
     )
 
 

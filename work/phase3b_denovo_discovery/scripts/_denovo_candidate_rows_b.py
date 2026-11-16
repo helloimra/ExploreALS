@@ -139,13 +139,13 @@ def build_candidates_dn10_to_dn19(f1234: dict[str, Any]) -> list[dict[str, str]]
         make_cand_row(
             "DN-19", "F4_BYE2025_SCREEN", "L-Serine", "DRUG_REPURPOSING",
             "High-dose oral L-serine amino-acid supplementation",
-            "De novo sphingolipid substrate & competitive inhibitor of non-canonical neurotoxic deoxysphingolipid synthesis",
+            "De novo sphingolipid substrate suppressing non-canonical 1-deoxysphingolipids in HSAN1, whereas SPTLC1/SPTLC2-ALS variants lose ceramide feedback and overproduce canonical C18-C22 sphingolipids (PMID:43025655)",
             "METABOLIC_HYPOTHESIS_MEDIA_CONFOUNDED_UNPROVEN", "UNPROVEN_UNTESTED", "KEEP_EXPLORATORY_UNPROVEN",
             "TRL_4_ACTIVE_PH1_CLASS_OR_NCE", "TARGETED_PRECLINICAL_VALIDATION_GATE", "MEASURED_HUMAN_PK_AND_IPSC_SCREEN",
-            "NONE", "BASAL_MEDIA_400UM_SERINE_CONFOUND_AT_2P5UM;NO_PLACEBO_CONTROLLED_ALS_RCT;NON_FDR_SCREEN_BORDERLINE",
+            "NONE", "BASAL_MEDIA_400UM_SERINE_CONFOUND_AT_2P5UM;SPTLC1_SPTLC2_ALS_IMPAIRED_CERAMIDE_FEEDBACK_OVERPRODUCTION_HAZARD;NO_PLACEBO_CONTROLLED_ALS_RCT;NON_FDR_SCREEN_BORDERLINE",
             "TIER_3_EXPLORATORY_DISCOVERY",
-            "[MEASURED] Oral L-serine (up to 15 g BID) crosses the human ALS BBB and elevates CSF L-serine in Phase 1 (Levine 2017 NCT01835782, PMID:28181924, N=20), while open-label Phase 2 NCT03580616 (N=43) was terminated by the IRB for protocol noncompliance rather than efficacy futility (preserving UNPROVEN_UNTESTED under Epistemic Asymmetry); however, Bye 2025 Rank #20/107 (+0.7117d, p=0.0419, q_BH=0.1707 at 2.5 uM) shifts ~400 uM basal media L-serine by only +0.625% (<1%), carrying zero positive efficacy weight (funnel-entry noise) and precluding clinical progression prior to serine-defined media deconvolution.",
-            "Execute L-serine dose-response deconvolution (0-1,000 uM) in serine-defined human sALS iPSC-MN media quantifying 1-deoxysphinganine suppression vs isotonic amino-acid osmolyte controls before any clinical re-entry.",
+            "[MEASURED] Oral L-serine (up to 15 g BID) crosses the human ALS BBB and elevates CSF L-serine in Phase 1 (Levine 2017 NCT01835782, PMID:28181924, N=20), while open-label Phase 2 NCT03580616 (N=43) was terminated by the IRB for protocol noncompliance rather than efficacy futility (preserving UNPROVEN_UNTESTED in non-SPT sporadic ALS under Epistemic Asymmetry); however, Bye 2025 Rank #20/107 (+0.7117d, p=0.0419, q_BH=0.1707 at 2.5 uM) shifts ~400 uM basal media L-serine by only +0.625% (<1%, funnel-entry noise), and Ziak et al. 2026 (PMID:43025655, 10.1016/j.jlr.2026.101187) prove SPTLC1/SPTLC2-ALS variants impair ceramide homeostatic feedback to overproduce canonical C18-C22 dihydrosphingolipids/sphingolipids (making L-serine counterproductive in SPT-ALS unlike HSAN1), barring clinical progression prior to genetic exclusion and lipidomic deconvolution.",
+            "Mandate prospective SPTLC1/SPTLC2 sequencing exclusion and execute L-serine dose-response deconvolution (0-1,000 uM) in serine-defined non-SPT human sALS iPSC-MN media quantifying paired 1-deoxysphinganine suppression vs canonical C18-C22 dihydrosphingolipid/ceramide accumulation (PMID:43025655) and isotonic osmolyte controls before any clinical re-entry.",
             "EV-P3B-021",
         ),
     ]

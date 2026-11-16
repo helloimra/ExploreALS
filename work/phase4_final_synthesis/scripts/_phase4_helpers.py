@@ -92,9 +92,9 @@ PHASE3A_NEXT_TEST_OVERRIDES: dict[str, str] = {
     ),
     "C001": (
         "Advance promoted clean lead UNC13A #2 chr19:17642537-17642554(-) (PASS_CLEAN_GE2MM; superseding #1 chr19:17642546-17642563(-) CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED) "
-        "through sponsor-owned Stage 1 single-entity GLP IT tox, NHP cervical (C3-C5 phrenic) + BA4 Betz splice-rescue EC80 bridging (no right of reference to LY4256984/TRCN-1023), and 3-layer Phase 1b PK/TE/PD "
+        "through sponsor-owned Stage 1 single-entity GLP IT tox, NHP cervical (C3-C5 phrenic) + BA4 Betz splice-rescue EC80 bridging (>30% Munc13-1 synaptic rescue threshold per Keuss et al. 2026 Nature 10.1038/s41586-026-11256-2; no right of reference to LY4256984/TRCN-1023), and 3-layer Phase 1b PK/TE/PD "
         "(strand-specific CSF PK, L1CAM+/ATP1A3+ neuron-derived EV pre-amplified dPCR/Nanopore enrichment + CSF synaptic secretome NPTX2/VGF/SNAP25 TE, and >=16-24 wk post-loading downstream CSF pNfH/NfL PD accounting for ANQUR NCT05633459 low-vs-10mg pNfH dissociation; unfractionated CSF EVs sit at qPCR Cq>35 / <3-10 copies/mL ddPCR LOQ, PMID:38158550), "
-        "followed by Stage 2 genotype-stratified 2-plex vs 3-plex randomization across rs12973192/rs12608932 genotypes (24-48 mg unvalidated multiplex scenario gated on Ca2+/Mg2+ chelation, DRG, TLR9, and <1-2% endosomal-escape competition beyond single-agent DEVOTE 50 mg nusinersen PMID:41634391)."
+        "followed by Stage 2 genotype-stratified 2-plex vs 3-plex randomization across rs12973192/rs12608932 genotypes (since UNC13A rescue leaves STMN2 and KCNQ2 mis-spliced; 24-48 mg unvalidated multiplex scenario gated on Ca2+/Mg2+ chelation, DRG, TLR9, and <1-2% endosomal-escape competition beyond single-agent DEVOTE 50 mg nusinersen PMID:41634391)."
     ),
     "C002": (
         "Advance promoted clean lead STMN2 #2 chr8:79616829-79616846(+) (PASS_CLEAN_GE2MM, modeled Tm_phys~64C; superseding #1 chr8:79616819-79616836(+) CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED) "

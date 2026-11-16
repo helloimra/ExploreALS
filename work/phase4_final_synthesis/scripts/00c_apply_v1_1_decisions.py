@@ -66,6 +66,25 @@ def main() -> None:
             txt = txt.replace("with CSF pNfH/NfL while treating late-cycle RT-qPCR (Cq>35)", "with L1CAM+/ATP1A3+ NDEV Exon-5/skip pre-amplified dPCR TE and >=16-24 wk post-loading CSF pNfH/NfL PD while treating late-cycle RT-qPCR (Cq>35)")
             dm[cid][k] = txt
         dm[cid]["updated_at"] = TS
+    dm["C001"].update({
+        "evidence_proves_hypothesis": (
+            "Germline GWAS risk + sQTL + 100% TDP-43-pathology cryptic exon specificity (Ma 2022 61/860 vs 0/246; Spillman 2026 6/10 C9FTD vs 0/10 Ctrl, p=0.0108) "
+            "+ GC/cell-composition-adjusted NYGC mRNA depletion across all 4 CNS regions (Motor -0.1976 p=0.0105, Frontal -0.1565 p=0.00187, Cervical -0.2912 p=0.00330, Lumbar -0.3554 p=7.38e-4; O'Neill 2025 ALS-Glia Cortical n=64 [5 ALS-Glia vs 59 Ctrl]: beta=-0.8266, p=8.62e-4) "
+            "+ gnomAD extreme LoF intolerance (pLI=1.000, LOEUF=0.344) + published human electrophysiological rescue (Keuss et al. 2026 Nature, 10.1038/s41586-026-11256-2: isolated Intron-20 CE deletion [~75% protein rescue; >30% synaptic threshold] and 18/21-nt 2'-O-MOE ASOs restore presynaptic UNC13A, mEPSC frequency [~80% recovery], evoked AMPA eEPSCs, and MEA network synchrony across human cortical/spinal MNs and hUNC13A mice) prove UNC13A loss causally drives TDP-43 presynaptic failure."
+        ),
+        "evidence_disproves_hypothesis": (
+            "Does NOT disprove biological validity, but deprioritizes standalone me-too single-target ASO monotherapy (crowded by 4 recruiting Phase 1/2 trials on LY4256984 and TRCN-1023, neither yet with completed Phase 2/3 clinical efficacy proof; external ASOs including Keuss 2026 validate target biology rather than ExploreALS's un-synthesized #2 window), "
+            "confirms isolated UNC13A CE rescue leaves STMN2 polyadenylation, KCNQ2 Exon-5 skipping, Intron-31 retention, and ~10% postsynaptic mEPSC amplitude unrescued (Keuss et al. 2026, 10.1038/s41586-026-11256-2; Guo et al. 2026), "
+            "notes risk alleles rs12608932-C/rs12973192-G potentiate magnitude while TDP-43 loss still mis-splices and ASOs rescue both reference and risk alleles (motivating genotype-stratified 2-plex vs 3-plex testing rather than excluding A/A homozygotes), "
+            "and confirms soluble CSF UNC13A protein is undetectable (DS045=0 peptides) while lumbar CSF EV junction RNA sits near late-cycle RT-qPCR (Cq>35) / Poisson-limited 20,000-partition RT-ddPCR (<3-10 copies/mL CSF) (PMID:38158550; PMID:38278991)."
+        ),
+        "factual_justification": (
+            "Unlike Riluzole or Methylcobalamin, UNC13A has not yet completed Phase 2/3 human clinical efficacy proof, possesses genome-wide human ALS causal GWAS/sQTL genetics directly inside its cryptic exon (rs12608932/rs12973192; EV-B1-001..EV-B1-005), "
+            "and has direct human cortical and spinal motor-neuron electrophysiological rescue proof (Keuss et al. 2026 Nature, 10.1038/s41586-026-11256-2: >30% protein threshold restores presynaptic vesicle release and network synchrony while leaving STMN2 and KCNQ2 unrescued). "
+            "Standalone me-too single-target ASOs (LY4256984, TRCN-1023) are clinically crowded and deprioritized; UNC13A is retained in KEEP_CORE as an orthogonal presynaptic multiplex splice-rescue anchor (evaluating 2-plex vs 3-plex stratified by rs12973192/rs12608932 genotype under 21 CFR 300.50 rather than excluding A/A patients)."
+        ),
+        "updated_at": TS,
+    })
     dm["C006"]["causal_vs_reactive_assessment"] = (
         "SOMATIC_DOWNSTREAM_TDP43_MEDIATOR_OF_HYPEREXCITABILITY: KCNQ2 lacks an ALS germline GWAS locus (somatic TDP-43 downstream effector, unlike UNC13A), "
         "but TDP-43 loss induces 42-aa in-frame deletion (KCNQ2-DeltaE5) that escapes NMD, undergoes soma ER retention / impaired surface trafficking, and co-assembles into pore-dead Kv7.2/7.3 subunits, suppressing M-current and driving intrinsic ALS motor neuron hyperexcitability (Joseph et al. 2025, Nat Neurosci, PMID:41174170)."
