@@ -81,7 +81,14 @@ GITHUB_README_MD = """# ExploreALS v1.2 — Unified ALS Therapeutic & Genetic Ta
 **Author:** Ricardo Agoga (Independent Researcher) · [helloimra@proton.me](mailto:helloimra@proton.me) · [github.com/helloimra/ExploreALS](https://github.com/helloimra/ExploreALS)
 
 ## Overview
-`ExploreALS v1.2` synthesizes **59 ALS drug and genetic target candidates**, **19 single-gene sub-nodes** de-bundled from multi-gene composite axes, and **26 Coordinate-Only Cis-Regulatory Search Windows** (`0` chemically modified synthesis-ready ASO sequences) across `48` SHA-256-verified open-access human ALS cohorts (`NYGC GSE153960`, `Pineda 2024`, `Edinburgh GSE290359`, `Zhang 2026` spatial, `Spillman 2026` fraction DIA, `Trautwig 2025` & `Oh 2023` living CSF proteomics, `Brown/Ma 2022` & `Bryce-Smith/Zeng 2025` TDP-43 splicing/APA, and `Bye 2025` sALS patient iPSC-MN drug screening).
+`ExploreALS v1.2` synthesizes **59 ALS drug and genetic target candidates**, **19 single-gene sub-nodes** de-bundled from multi-gene composite axes, and **26 Coordinate-Only Cis-Regulatory Search Windows** (`0` chemically modified synthesis-ready ASO sequences).
+
+**Evidence base:** `48` SHA-256-verified open-access staged datasets (`39` distinct accessions; `22` human tissue/CSF/iPSC/in-vitro data files, `13` 3D structures, `6` genome references, `7` baseline snapshots). The cohort data resolves into **`8` independent donor-overlap clusters** ([`cohort_overlap_map.csv`](registries/cohort_overlap_map.csv)):
+- **Postmortem tissue:** NYGC ALS Consortium (`GSE153960`, incl. Tam 2019, O'Neill 2025, Ma 2022 and Bryce-Smith 2025 reanalyses) · Pineda 2024 BA4/BA9 snRNA-seq · Edinburgh `GSE290359` snRNA-seq · Prudencio 2015 paired regions + Zhang 2026 spinal-cord spatial · Spillman 2026 C9-FTD subcellular-fraction DIA
+- **Living-patient biofluids:** Trautwig 2025 multi-center CSF proteomics (+ Oh 2023 external CSF cohort)
+- **Patient-derived and in-vitro models:** Bye 2025 / AnswerALS sALS iPSC-MN drug screen · TDP-43 knockdown neuron series (Brown 2022, Zeng 2025, Bryce-Smith 2025)
+
+Agreement *within* a cluster is treated as cross-platform validation, not independent replication.
 
 ## 3-Level Independent Computational Replication Quickstart
 

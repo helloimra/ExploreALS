@@ -55,7 +55,8 @@ def audit_directory(target_dir: Path) -> list[str]:
     if not target_dir.is_dir():
         return [f"Target directory missing: {target_dir}"]
     for p in sorted(target_dir.rglob("*")):
-        if not p.is_file() or ".git" in p.parts:
+        # Skip VCS metadata and gitignored local environments/caches (never published).
+        if not p.is_file() or {".git", ".venv", "__pycache__"} & set(p.relative_to(target_dir).parts):
             continue
         rel = p.relative_to(target_dir).as_posix()
         name_low = p.name.lower()

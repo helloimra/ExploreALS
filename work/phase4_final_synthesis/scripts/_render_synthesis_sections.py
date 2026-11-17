@@ -49,7 +49,7 @@ def build_exec_and_transition_md(
         "",
         "## 1. Executive Summary & `ExploreALS` -> `CarbonALS` Paradigm Shift",
         "",
-        "Across four staged computational and clinical-archaeology phases (`49` reproducible runs in `registries/analysis_runs.csv` across `48` SHA-256-locked open-access human ALS datasets), `CarbonALS` re-adjudicated all `40` `ExploreALS`-inherited candidates, decomposed `4` multi-gene composite bundles into `19` single-gene sub-nodes, and executed an unbiased genome-wide / proteome-wide / phenotypic-screen *de novo* expansion yielding `19` non-overlapping Phase 3B candidates (**`59` unified candidates total**):",
+        "Across four staged computational and clinical-archaeology phases (`49` reproducible runs in `registries/analysis_runs.csv` across `48` SHA-256-locked open-access staged datasets), `CarbonALS` re-adjudicated all `40` `ExploreALS`-inherited candidates, decomposed `4` multi-gene composite bundles into `19` single-gene sub-nodes, and executed an unbiased genome-wide / proteome-wide / phenotypic-screen *de novo* expansion yielding `19` non-overlapping Phase 3B candidates (**`59` unified candidates total**):",
         "",
         "| Scientific Actionability & Decision Partition | `ExploreALS`-Inherited (`40`) | Phase 3B *De Novo* (`19`) | Unified Total (`59`) | Epistemic State & Governance Rule |",
         "| :--- | :---: | :---: | :---: | :--- |",
