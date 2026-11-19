@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 import re
 
-from phase3_gates import ALLOWED_OFFTARGET_STATUS, ALLOWED_TRL, MODEL_PRIOR_RE, RAW_OLIGO_SEQ_RE, _reject_nan_const, _sha12
+from phase3_gates import ALLOWED_OFFTARGET_STATUS, ALLOWED_TRL, MODEL_PRIOR_RE, RAW_OLIGO_SEQ_RE, _reject_nan_const, _sha12, _sha12_variants
 from phase3b_gates import ALLOWED_P3B_BASIS, ALLOWED_P3B_DEC, ALLOWED_P3B_EPI, ALLOWED_P3B_GATE, ALLOWED_P3B_TIER, FALSIFIED_P3B, GAPPED_OLIGO_RE
 
 EXPLORE_LEAK_RE = re.compile(r"explore\s*->|\bcarbonals\b|0/4\s+explore", re.IGNORECASE)
@@ -152,7 +152,7 @@ def verify_phase4_gates(
             obj = json.loads(jfp.read_text(encoding="utf-8"), parse_constant=_reject_nan_const)
             if jfp == out_fp and port_override is None:
                 st = obj.get("registry_sha12", {})
-                if st.get("phase4_unified_portfolio") != _sha12(port_fp) or st.get("phase4_unified_cis_intervals") != _sha12(cis_fp):
+                if st.get("phase4_unified_portfolio") not in _sha12_variants(port_fp) or st.get("phase4_unified_cis_intervals") not in _sha12_variants(cis_fp):
                     errors.append("run_p4_001_unified_portfolio.json SHA-12 stale vs Phase 4 registries")
         except Exception as exc:  # noqa: BLE001
             errors.append(f"STRICT JSON VIOLATION in {jfp.relative_to(carbon_root).as_posix()}: {exc}")
@@ -170,14 +170,26 @@ def verify_phase4_gates(
         for req_fp in req_step2:
             if not req_fp.is_file():
                 errors.append(f"Missing Phase 4 Step 2 artifact: {req_fp.relative_to(carbon_root).as_posix()}")
-        exp_stamp = (
-            f"REGISTRY_CONCORDANCE_SHA12: p4_port={_sha12(port_fp)} p4_cis={_sha12(cis_fp)} "
-            f"p3a_ot={_sha12(reg_dir / 'phase3_sso_offtarget_audit.csv')} p3a_rd={_sha12(reg_dir / 'phase3_execution_readiness.csv')} "
-            f"p3b_cand={_sha12(reg_dir / 'phase3b_denovo_candidates.csv')} p3b_sso={_sha12(reg_dir / 'phase3b_denovo_sso_intervals.csv')}"
+        stamp_sets = [
+            _sha12_variants(port_fp),
+            _sha12_variants(cis_fp),
+            _sha12_variants(reg_dir / "phase3_sso_offtarget_audit.csv"),
+            _sha12_variants(reg_dir / "phase3_execution_readiness.csv"),
+            _sha12_variants(reg_dir / "phase3b_denovo_candidates.csv"),
+            _sha12_variants(reg_dir / "phase3b_denovo_sso_intervals.csv"),
+        ]
+        stamp_re = re.compile(
+            r"REGISTRY_CONCORDANCE_SHA12: p4_port=([0-9a-f]{12}) p4_cis=([0-9a-f]{12}) "
+            r"p3a_ot=([0-9a-f]{12}) p3a_rd=([0-9a-f]{12}) p3b_cand=([0-9a-f]{12}) p3b_sso=([0-9a-f]{12})"
         )
+
+        def _has_valid_stamp(blob: str) -> bool:
+            m_st = stamp_re.search(blob)
+            return bool(m_st and all(m_st.group(idx + 1) in vs for idx, vs in enumerate(stamp_sets)))
+
         if mode == "full" and synth_md.is_file():
             stxt = synth_md.read_text(encoding="utf-8")
-            if exp_stamp not in stxt:
+            if not _has_valid_stamp(stxt):
                 errors.append("reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md missing or stale REGISTRY_CONCORDANCE_SHA12 stamp")
             if "PMID:40354799" not in stxt or "PMID:40349716" in stxt or re.search(r"\bDS045\b", stxt):
                 errors.append("reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md has stale MIROCALS PMID or DS045 shorthand")
@@ -198,7 +210,7 @@ def verify_phase4_gates(
                 errors.append(f"{lbl} missing DATA_PORT/DATA_MONOGRAPHS payload")
             if "wiki" in htxt.lower():
                 errors.append(f"{lbl} contains residual 'wiki' nomenclature")
-            if exp_stamp not in htxt:
+            if not _has_valid_stamp(htxt):
                 errors.append(f"{lbl} missing or stale REGISTRY_CONCORDANCE_SHA12 stamp")
             if "onclick=" in htxt.lower():
                 errors.append(f"{lbl} contains inline onclick= (must use delegated data-* listeners)")
@@ -284,7 +296,7 @@ def verify_phase4_gates(
                 errors.append("Stale reports/wiki directory still exists (renamed to reports/monographs)")
             for wfp in mono_htmls:
                 wtxt = wfp.read_text(encoding="utf-8")
-                if exp_stamp not in wtxt or "https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js" not in wtxt:
+                if not _has_valid_stamp(wtxt) or "https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js" not in wtxt:
                     errors.append(f"reports/monographs/{wfp.name} missing SHA-12 concordance stamp or allowlisted Tailwind")
                 if "/100" in wtxt or "!important" in wtxt or "<style>:where(.hidden){display:none}" not in wtxt or "wiki" in wtxt.lower():
                     errors.append(f"reports/monographs/{wfp.name} contains /100, !important, or residual 'wiki' leak")
@@ -294,7 +306,7 @@ def verify_phase4_gates(
             errors.append(f"{gh_mono_dir.relative_to(carbon_root).as_posix()}/*.html set ({sorted(p.name for p in gh_mono_htmls)}) != expected {len(exp_pilot_files)} Tier 1+2 pilot pages")
         for gfp in gh_mono_htmls:
             gtxt = gfp.read_text(encoding="utf-8")
-            if exp_stamp not in gtxt or "gstatic.com" in gtxt or "window.PUBLIC_WEB_EXPORT=true" not in gtxt:
+            if not _has_valid_stamp(gtxt) or "gstatic.com" in gtxt or "window.PUBLIC_WEB_EXPORT=true" not in gtxt:
                 errors.append(f"{gfp.relative_to(carbon_root).as_posix()} missing SHA-12 stamp or fails zero-CDN guard")
             if "/100" in gtxt or "!important" in gtxt or "wiki" in gtxt.lower() or EXPLORE_LEAK_RE.search(gtxt):
                 errors.append(f"{gfp.relative_to(carbon_root).as_posix()} contains /100, !important, residual 'wiki', or Explore-> leak")

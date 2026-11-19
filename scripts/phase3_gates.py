@@ -53,6 +53,13 @@ def _sha12(fp: Path) -> str:
     return hashlib.sha256(fp.read_bytes()).hexdigest()[:12]
 
 
+def _sha12_variants(fp: Path) -> set[str]:
+    raw = fp.read_bytes()
+    lf = raw.replace(b"\r\n", b"\n")
+    crlf = lf.replace(b"\n", b"\r\n")
+    return {hashlib.sha256(b).hexdigest()[:12] for b in (raw, lf, crlf)}
+
+
 def _reject_nan_const(val: str) -> None:
     raise ValueError(f"Non-RFC-8259 constant '{val}' detected")
 

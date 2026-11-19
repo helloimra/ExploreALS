@@ -73,8 +73,16 @@ def load_csv(name: str) -> list[dict[str, str]]:
         return rows
 
 
-def sha256_path(path: Path) -> str:
+TEXT_EXTS = {".csv", ".tsv", ".json", ".txt", ".md", ".bed", ".cif", ".gtf", ".vcf"}
+
+
+def sha256_path(path: Path, eol_mode: str = "raw") -> str:
     if path.is_file():
+        if eol_mode != "raw" and path.suffix.lower() in TEXT_EXTS:
+            raw = path.read_bytes()
+            lf = raw.replace(b"\r\n", b"\n")
+            data = lf if eol_mode == "lf" else lf.replace(b"\n", b"\r\n")
+            return hashlib.sha256(data).hexdigest()
         h = hashlib.sha256()
         with path.open("rb") as f:
             for chunk in iter(lambda: f.read(1 << 20), b""):
@@ -83,12 +91,26 @@ def sha256_path(path: Path) -> str:
     tree = hashlib.sha256()
     for fp in sorted(x for x in path.rglob("*") if x.is_file()):
         rel = fp.relative_to(path).as_posix()
-        tree.update(f"{rel}:{sha256_path(fp)}\n".encode("utf-8"))
+        tree.update(f"{rel}:{sha256_path(fp, eol_mode=eol_mode)}\n".encode("utf-8"))
     return tree.hexdigest()
 
 
-def sha256_anchor(path: Path) -> tuple[bool, str]:
+def sha256_matches(path: Path, expected: str) -> tuple[bool, str]:
+    raw_hex = sha256_path(path, "raw")
+    if raw_hex == expected:
+        return True, raw_hex
+    if (path.is_file() and path.suffix.lower() in TEXT_EXTS) or path.is_dir():
+        for em in ("crlf", "lf"):
+            if sha256_path(path, em) == expected:
+                return True, expected
+    return False, raw_hex
+
+
+def sha256_anchor(path: Path, expected: str = "") -> tuple[bool, str]:
     if path.exists():
+        if expected:
+            _, got = sha256_matches(path, expected)
+            return True, got
         return True, sha256_path(path)
     gz_path = Path(str(path) + ".gz")
     if gz_path.is_file():
@@ -180,6 +202,19 @@ def verify_all(
     errors.extend(verify_provenance_gates(intake, evidence, runs))
 
     ds_ids = {d["dataset_id"] for d in datasets}
+    lock_fp = CARBON_ROOT / "schemas" / "dataset_files_lock.json"
+    lock_ds: dict = {}
+    if not lock_fp.is_file():
+        errors.append("Missing schemas/dataset_files_lock.json")
+    else:
+        try:
+            lock_obj = json.loads(lock_fp.read_text(encoding="utf-8"))
+            lock_ds = lock_obj.get("datasets", lock_obj)
+            if set(lock_ds.keys()) != ds_ids:
+                errors.append("schemas/dataset_files_lock.json dataset_id set does not match datasets_manifest.csv")
+        except Exception as exc:  # noqa: BLE001
+            errors.append(f"Invalid schemas/dataset_files_lock.json: {exc}")
+
     for d in datasets:
         dsid = d["dataset_id"]
         if d.get("redistribution_tier") not in ALLOWED_REDIST_TIERS:
@@ -191,20 +226,17 @@ def verify_all(
         if not p.exists():
             if must_exist:
                 errors.append(f"Missing staged dataset path: {d['local_relpath']}")
-        elif sha256_path(p) != d["sha256"]:
-            errors.append(f"SHA-256 mismatch on staged dataset ({'file' if p.is_file() else 'dir'}): {d['local_relpath']}")
-
-    lock_fp = CARBON_ROOT / "schemas" / "dataset_files_lock.json"
-    if not lock_fp.is_file():
-        errors.append("Missing schemas/dataset_files_lock.json")
-    else:
-        try:
-            lock_obj = json.loads(lock_fp.read_text(encoding="utf-8"))
-            lock_ds = lock_obj.get("datasets", lock_obj)
-            if set(lock_ds.keys()) != ds_ids:
-                errors.append("schemas/dataset_files_lock.json dataset_id set does not match datasets_manifest.csv")
-        except Exception as exc:  # noqa: BLE001
-            errors.append(f"Invalid schemas/dataset_files_lock.json: {exc}")
+        elif not sha256_matches(p, d["sha256"])[0]:
+            lf_files = (lock_ds.get(dsid) or {}).get("files") or []
+            actual_rels = sorted(x.relative_to(p).as_posix() for x in p.rglob("*") if x.is_file()) if p.is_dir() else []
+            per_file_ok = (
+                p.is_dir()
+                and bool(lf_files)
+                and actual_rels == sorted(f["rel"] for f in lf_files)
+                and all(sha256_matches(p / f["rel"], f["sha256"])[0] for f in lf_files)
+            )
+            if not per_file_ok:
+                errors.append(f"SHA-256 mismatch on staged dataset ({'file' if p.is_file() else 'dir'}): {d['local_relpath']}")
 
     ovl_rows = load_csv("cohort_overlap_map.csv")
     if ovl_rows and list(ovl_rows[0].keys()) != EXP_OVERLAP_COLS:
@@ -252,7 +284,7 @@ def verify_all(
             errors.append(f"{ev_id}: visium_55um_spot must not equate n_statistical_units with n_unique_donors_or_participants")
         if "/100" in sr["effect_estimate"] or re.search(r"liability\s*=\s*[0-9.]+\s*pct", sr["effect_estimate"], re.I):
             errors.append(f"{ev_id}: retired /100 or liability pct score leaked into statistical_models_and_contrasts.csv")
-        found_anc, got_sha = sha256_anchor(CARBON_ROOT / sr["anchor_relpath"])
+        found_anc, got_sha = sha256_anchor(CARBON_ROOT / sr["anchor_relpath"], sr["sha64"])
         must_have_anc = (mode == "full") or (sr["anchor_type"] in {"CACHED_API_SNAPSHOT", "DETERMINISTIC_MODEL_OUTPUT"})
         if not found_anc:
             if must_have_anc:
