@@ -1,4 +1,4 @@
-"""Flagship Reproducer #8: DN-04 — CELF5 Cryptic-Exon Steric SSO (Tier 2, Act #8 / Bio #9)."""
+"""Flagship Reproducer #8: EALS-037 — CELF5 Cryptic-Exon Steric SSO (Tier 2, Act #8 / Bio #9)."""
 from __future__ import annotations
 
 import sys
@@ -9,7 +9,7 @@ from _flagship_common import ROOT, assert_close, has_raw_dataset, load_csv_by_ke
 
 
 def main() -> None:
-    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "portfolio_id")["DN-04"]
+    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "accession_id")["EALS-037"]
     p4 = load_json_any("work/phase4_final_synthesis/outputs/run_p4_001_unified_portfolio.json")
     sso = {r["interval_id"]: r for r in load_csv_rows("registries/phase3b_denovo_sso_intervals.csv") if r["gene_symbol"] == "CELF5"}
 
@@ -45,7 +45,7 @@ def main() -> None:
         ("Lead #1 Clean >=2mm Off-Target Status", lead1["offtarget_safety_status"], "PASS_CLEAN_GE2MM", "PASS"),
     ]
     print_audit_report(
-        "DN-04", "CELF5 Cryptic-Exon Steric SSO", checks,
+        "EALS-037", "CELF5 Cryptic-Exon Steric SSO", checks,
         "Brown CE/Ribo-seq, Bye LeafCutter cluster padj=0.00904, nominal Pineda BA4_Exc (p=0.0133, FDR=0.1357), & NYGC cervical loss are [MEASURED]; Nanopore <1-2% LOQ Exon-5 / 98-bp micro-intron sparing & spinal protein rescue are prospective kill-gates.",
     )
 

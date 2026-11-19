@@ -5,6 +5,7 @@ import re
 
 from _candidate_contrasts_b import build_edges_and_lenses
 from _candidate_hypotheses import CANDIDATE_HYPOTHESES
+from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose
 
 CAUSAL_MAP: dict[str, str] = {
     "AMBIGUOUS_ISOFORM_DEPENDENT": "Isoform-Dependent Sign (Secreted Decoy sST2 vs. Membrane ST2L)",
@@ -150,7 +151,7 @@ def clean_prose(txt: str) -> str:
     ):
         s = s.replace(old_seg, new_seg)
     s = re.sub(r"\s+([.,;:\)])", r"\1", s)
-    s = re.sub(r"\s{2,}", " ", s).strip()
+    s = translate_legacy_tokens_in_prose(re.sub(r"\s{2,}", " ", s).strip())
     return (s[0].upper() + s[1:]) if s and s[0].islower() else s
 
 
@@ -259,6 +260,7 @@ def build_summary_dossiers(
                 proves, disproves = _split_top_level_dn(just)
             verdict = DN_VERDICT_HEADLINES[pid].format(rk=r["unified_rank"])
 
+        acc_id = r.get("accession_id") or legacy_to_accession(pid)
         item = {
             "hyp": hyp,
             "sub": sub,
@@ -266,7 +268,7 @@ def build_summary_dossiers(
             "verdict": verdict,
             "proves": proves,
             "disproves": disproves,
-            **edges_map[pid],
+            **edges_map[acc_id],
         }
         assert len(hyp) >= 60 and hyp not in {verdict, proves, disproves}, f"{pid}: invalid or duplicated hypothesis summary"
         blob = " ".join(item.values())
@@ -283,5 +285,5 @@ def build_summary_dossiers(
             blob,
             re.I,
         ), f"{pid}: financial/capital leak in summary projection: {blob}"
-        out[pid] = item
+        out[acc_id] = item
     return out

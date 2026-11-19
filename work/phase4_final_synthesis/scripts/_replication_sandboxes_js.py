@@ -98,24 +98,71 @@ function rowsToCsv(rows){
   return [ks.join(','), ...rows.map(r => ks.map(k => escCsv(r[k])).join(','))].join('\r\n');
 }
 function exportRegistryBlob(which){
-  if(which === 'updates'){
-    const uRows = (typeof DATA_UPDATES !== 'undefined' ? DATA_UPDATES : []).map(u => ({
+  const builders = {
+    updates: ['living_evidence_updates.csv', () => (typeof DATA_UPDATES !== 'undefined' ? DATA_UPDATES : []).map(u => ({
       update_id:u.id, date_iso:u.dt, release_tag:u.tag, update_category:u.cat,
       affected_ids:u.ids.join(';'), decision_impact:u.imp, headline:u.hdr,
       prior_state_or_assumption:u.pre, new_evidence_or_revision:u.post,
       portfolio_and_gate_consequence:u.cons, primary_sources:u.srcs.join(';'),
       verification_anchor:u.ancs.join(';')
-    }));
-    downloadBlob('living_evidence_updates.csv', 'text/csv;charset=utf-8', rowsToCsv(uRows));
-    return;
-  }
-  const map = {portfolio:[DATA_PORT,'phase4_unified_portfolio.csv'], intervals:[DATA_CIS,'phase4_unified_cis_intervals.csv'], subnodes:[DATA_SUB,'subnode_dissection.csv'], formulas:[DATA_FORMULAS,'statistical_models_and_contrasts.csv'], datasets:[DATA_DATASETS,'datasets_manifest.csv'], runs:[DATA_RUNS,'analysis_runs_and_flagship.csv'], overlap:[DATA_OVERLAP,'cohort_overlap_map.csv']};
+    }))],
+    portfolio: ['phase4_unified_portfolio.csv', () => DATA_PORT.map(r => ({
+      unified_rank:r.rk, biological_rank:r.brk, accession_id:r.id, primary_symbol:r.sym,
+      synonyms:(r.syn||[]).join(';'), origin_phase:r.o, origin_subcohort:r.sub, track:r.trk,
+      gene_or_drug:r.name, primary_modality:r.mod, epistemic_state:r.epi, decision:r.dec,
+      scientific_actionability_tier:r.tier, clinical_readiness_trl:r.trl,
+      next_gate_experimental_class:r.gate, primary_evidence_basis:r.basis,
+      clinical_crowding:r.crowd, model_prior_dependency:r.prior,
+      unsolved_hurdle_count:r.hcnt, unsolved_hurdles:r.hurdles,
+      lead_cis_interval_id:r.iv, lead_offtarget_safety_status:r.ivst,
+      discriminating_next_test:r.nxt
+    }))],
+    intervals: ['phase4_unified_cis_intervals.csv', () => DATA_CIS.map(c => ({
+      unified_interval_order:c.ord, origin_phase:c.o, accession_id:c.pid, target_accession_id:c.sc,
+      gene_symbol:c.gene, program_role:c.role, rank_within_gene:c.rk, is_promoted_lead:c.lead,
+      interval_id:c.iv, chrom:c.chr, grch38_start:c.lo, grch38_end:c.hi, strand:c.strd,
+      length_bp:c.len, cis_mechanism_or_mode:c.mode, gc_pct:c.gc, tm_phys_pops_c:c.tm,
+      dg37_kcal:c.dg, max_avi_phred:c.avi, spliced_0_1_wobble:c.sp, premRNA_6tier:c.pm,
+      premRNA_1mm_sense_genes:c.pm1_all, flagged_constrained_neuronal_hits:c.flags,
+      offtarget_safety_status:c.st
+    }))],
+    subnodes: ['subnode_dissection.csv', () => DATA_SUB.map(s => ({
+      subunit_accession_id:s.id, parent_accession_id:s.par, gene_symbol:s.gene,
+      molecular_role:s.role, idg_tdl:s.tdl, target_safety_class:s.tsa,
+      gnomad_essentiality_check:s.gnomad, druggability_check:s.drug,
+      verdict_code:s.vraw, verdict_label:s.vlbl, verdict_rationale:s.vbody
+    }))],
+    formulas: ['statistical_models_and_contrasts.csv', () => DATA_FORMULAS.map(f => ({
+      evidence_id:f.eid, accession_id:f.cid, analysis_run_id:f.run, inference_class:f.cls,
+      statistical_unit:f.unit, n_statistical_units:f.nu, n_unique_donors_or_participants:f.ndon,
+      exact_contrast:f.con, model_formula_or_test:f.mod, effect_estimate:f.est, se_or_ci95:f.ci,
+      unadjusted_or_primary_nominal_p:f.up, covariate_adjusted_nominal_p:f.cp,
+      multiplicity_adjusted_p:f.mp, multiple_testing_family:f.mfam,
+      missingness_or_exclusion_rule:f.excl, overlap_group_id:f.ovl,
+      anchor_type:f.anc, anchor_relpath:f.arel, sha64:f.sha
+    }))],
+    datasets: ['datasets_manifest.csv', () => DATA_DATASETS.map(d => ({
+      dataset_id:d.id, domain:d.dom, local_relpath:d.rel, accession_or_doi:d.acc,
+      license_or_access:d.lic, size_display:d.mb, sha256:d.sha, relevant_candidates:d.cands,
+      description:d.desc, redistribution_tier:d.tier, canonical_fetch_url:d.url
+    }))],
+    runs: ['analysis_runs_and_flagship.csv', () => DATA_RUNS.map(r => ({
+      analysis_run_id:r.id, stage_group:r.grp, script_relpath:r.script, output_artifacts:r.out,
+      datasets_used:r.ds, relevant_candidates:r.cands, summary:r.sum, is_flagship:r.flag
+    }))],
+    overlap: ['cohort_overlap_map.csv', () => DATA_OVERLAP.map(o => ({
+      overlap_group_id:o.id, cluster_name:o.name, datasets_involved:o.ds,
+      donor_accounting_rule:o.rule, canonical_model_formula:o.formula
+    }))]
+  };
   if(which === 'json_all'){
-    downloadBlob('exploreals_v1_2_provenance_bundle.json', 'application/json', JSON.stringify({version:'1.2.1', portfolio:DATA_PORT, cis_intervals:DATA_CIS, subnodes:DATA_SUB, statistical_models:DATA_FORMULAS, datasets:DATA_DATASETS, runs:DATA_RUNS, cohort_overlap:DATA_OVERLAP, living_updates:(typeof DATA_UPDATES!=='undefined'?DATA_UPDATES:[])}, null, 2));
+    const outObj = {version:'1.2.3'};
+    Object.keys(builders).forEach(k => { outObj[k] = builders[k][1](); });
+    downloadBlob('exploreals_v1_2_provenance_bundle.json', 'application/json', JSON.stringify(outObj, null, 2));
     return;
   }
-  const hit = map[which];
-  if(hit) downloadBlob(hit[1], 'text/csv;charset=utf-8', rowsToCsv(hit[0]));
+  const hit = builders[which];
+  if(hit) downloadBlob(hit[0], 'text/csv;charset=utf-8', rowsToCsv(hit[1]()));
 }
 
 function initSandboxes(){
@@ -123,14 +170,14 @@ function initSandboxes(){
   if(!sb) return;
   sb.innerHTML = `
     <div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-2">
-      <div class="font-mono font-semibold text-[var(--foreground)]">1. KCNQ2 ER Co-Trapping &amp; 2:2 Heteromers (#4 C006)</div>
+      <div class="font-mono font-semibold text-[var(--foreground)]">1. KCNQ2 ER Co-Trapping &amp; 2:2 Heteromers (#4 EALS-006)</div>
       <label class="block"><span>RNA Exon-5 Skip (&Delta;PSI): <strong id="sb-k-p-val" class="font-mono">0.214</strong></span><input id="sb-k-p" aria-label="KCNQ2 RNA Exon-5 Skip fraction" type="range" min="0.05" max="0.50" step="0.005" value="0.214" class="w-full mt-0.5"/></label>
       <label class="block"><span>2:2 Kv7.2:Kv7.3 Heteromer Share (&theta;): <strong id="sb-k-h-val" class="font-mono">0.00 (4:0 Homomer)</strong></span><input id="sb-k-h" aria-label="Kv7.2 to Kv7.3 heteromer share" type="range" min="0" max="1" step="0.05" value="0" class="w-full mt-0.5"/></label>
       <label class="block"><span>Mutant Surface Escape (&alpha;_esc): <strong id="sb-k-a-val" class="font-mono">0.15</strong></span><input id="sb-k-a" aria-label="Mutant subunit surface escape" type="range" min="0" max="1" step="0.05" value="0.15" class="w-full mt-0.5"/></label>
       <div id="sb-k-out" class="p-2 rounded bg-[var(--card)] border border-[var(--border)] font-mono space-y-0.5"></div>
     </div>
     <div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-2">
-      <div class="font-mono font-semibold text-[var(--foreground)]">2. SARM1 Washout: Orthosteric BEXi vs T-Lock (#1 S06)</div>
+      <div class="font-mono font-semibold text-[var(--foreground)]">2. SARM1 Washout: Orthosteric BEXi vs T-Lock (#1 EALS-030)</div>
       <select id="sb-s-mode" aria-label="STMN2-SARM1 interaction model" class="w-full bg-[var(--card)] border border-[var(--border)] rounded px-2 py-1 text-xs font-mono">
         <option value="bliss">Mode 1 (Default): Parallel Bliss Independence (Krus 2022)</option>
         <option value="mwc">Mode 2: Hypothetical Indirect L_eff Shift (Unproven in Mice)</option>
@@ -140,7 +187,7 @@ function initSandboxes(){
       <div id="sb-s-out" class="p-2 rounded bg-[var(--card)] border border-[var(--border)] font-mono space-y-0.5"></div>
     </div>
     <div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-2">
-      <div class="font-mono font-semibold text-[var(--foreground)]">3. MIROCALS Ph3 Survival &amp; Assay Sizing (#2 S07)</div>
+      <div class="font-mono font-semibold text-[var(--foreground)]">3. MIROCALS Ph3 Survival &amp; Assay Sizing (#2 EALS-031)</div>
       <select id="sb-m-pre" aria-label="MIROCALS follow-up horizon preset" class="w-full bg-[var(--card)] border border-[var(--border)] rounded px-2 py-1 text-xs font-mono">
         <option value="0.41">Preset A: 36–42 mo Event-Driven Follow-Up (P0=0.41)</option>
         <option value="0.37">Preset B: &lt;750 pg/mL Zero-Death Stratum Dilution (P0=0.37)</option>

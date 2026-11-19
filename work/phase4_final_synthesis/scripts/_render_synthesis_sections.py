@@ -6,6 +6,7 @@ from typing import Any
 
 from _candidate_contrasts_b import KEY_MECHANISTIC_CONTRASTS_9
 from _phase4_helpers import biological_evidence_sort_key
+from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose
 
 ROOT_POSIX = Path(__file__).resolve().parents[3].as_posix()
 
@@ -94,11 +95,11 @@ def build_exec_and_transition_md(
         "| Program(s) | Mechanistic Domain | Naive Field Assumption | Verified Re-Analysis Finding | Pre-Specified Falsification / Gate |",
         "| :--- | :--- | :--- | :--- | :--- |",
         *[
-            f"| {', '.join(f'**`{x}`**' for x in row['ids'])} | **{row['domain']}** | {row['naive']} | {row['finding']} | {row['gate']} |"
+            f"| {', '.join(f'**`{legacy_to_accession(str(x))}`**' for x in row['ids'])} | **{row['domain']}** | {row['naive']} | {row['finding']} | {row['gate']} |"
             for row in KEY_MECHANISTIC_CONTRASTS_9
         ],
     ])
-    return lines
+    return [translate_legacy_tokens_in_prose(ln) for ln in lines]
 
 
 def build_roadmaps_and_tables_md(
@@ -126,8 +127,9 @@ def build_roadmaps_and_tables_md(
     ]
     for r in port_rows[:8]:
         brk = bio_rk_map[r["portfolio_id"]]
+        acc_id = r.get("accession_id") or legacy_to_accession(r["portfolio_id"])
         lines.append(
-            f"| `#{r['unified_rank']}` (`#{brk}`) | **`{r['portfolio_id']}`** ({r['gene_or_drug']}) | `{r['origin_phase']}` | **`{r['decision']}`** (`{r['epistemic_state']}`) | "
+            f"| `#{r['unified_rank']}` (`#{brk}`) | **`{acc_id}`** ({r['gene_or_drug']}) | `{r['origin_phase']}` | **`{r['decision']}`** (`{r['epistemic_state']}`) | "
             f"`{r['primary_modality_specific']}` (Lead: `{r['lead_cis_interval_id']}` `{r['lead_offtarget_safety_status']}`) | "
             f"`{r['clinical_readiness_trl']}` · `{r['next_gate_experimental_class']}` | `{r['model_prior_dependency']}` | **`{r['unsolved_hurdle_count']}`** |"
         )
@@ -152,11 +154,12 @@ def build_roadmaps_and_tables_md(
     ])
     for r in port_rows:
         pid = r["portfolio_id"]
+        acc_id = r.get("accession_id") or legacy_to_accession(pid)
         brk = bio_rk_map[pid]
         link = (
-            f"[{pid}](file:///{ROOT_POSIX}/reports/candidates/{pid}.md)"
+            f"[{acc_id}](file:///{ROOT_POSIX}/reports/candidates/{pid}.md)"
             if r["origin_phase"] == "CURATED_CLINICAL_33"
-            else f"[{pid}](file:///{ROOT_POSIX}/reports/phase3/PHASE3B_DENOVO_UNBIASED_DISCOVERY.md)"
+            else f"[{acc_id}](file:///{ROOT_POSIX}/reports/phase3/PHASE3B_DENOVO_UNBIASED_DISCOVERY.md)"
         )
         iv_disp = f"`{r['lead_cis_interval_id']}` (`{r['lead_offtarget_safety_status']}`)" if r["lead_cis_interval_id"] != "NONE" else "`NONE`"
         lines.append(
@@ -167,9 +170,9 @@ def build_roadmaps_and_tables_md(
 
     lines.extend([
         "",
-        "## 4. Subunit & Pathway Gene Dissection Ledger (`18` Subunits Across `C014`, `C015`, `C023`, `C017`, `C018`)",
+        "## 4. Subunit & Pathway Gene Dissection Ledger (`18` Subunits Across `EALS-014`, `EALS-015`, `EALS-023`, `EALS-017`, `EALS-018`)",
         "",
-        "*Scope Note:* Multi-subunit complexes, genetic loci, and biofluid panels (`C014 CHMP7/CHMP2B`, `C015 chr14q12 SCFD1/G2E3`, `C023 YKT6` + `5` cis-Golgi SNARE selectivity comparators, `C017` `4`-protein CSF panel, and `C018` `C1QA/B/C` + `C4B` RCCX comparator; systemic `C3` / pegcetacoplan is evaluated independently as `C024`) are audited at the individual gene level below.",
+        "*Scope Note:* Multi-subunit complexes, genetic loci, and biofluid panels (`EALS-014 CHMP7/CHMP2B`, `EALS-015 chr14q12 SCFD1/G2E3`, `EALS-023 YKT6` + `5` cis-Golgi SNARE selectivity comparators, `EALS-017` `4`-protein CSF panel, and `EALS-018` `C1QA/B/C` + `C4B` RCCX comparator; systemic `C3` / pegcetacoplan is evaluated independently as `EALS-024`) are audited at the individual gene level below.",
         "",
         "| Sub-Node | Parent | Gene | Molecular Role | Human Constraint & Essentiality (`gnomAD v4` / `DepMap`) | Single-Gene Verdict |",
         "| :--- | :---: | :--- | :--- | :--- | :--- |",
@@ -177,7 +180,7 @@ def build_roadmaps_and_tables_md(
     for s in sub_rows:
         v_short = s["subnode_verdict"].split(":")[0].strip()
         gn_short = s["gnomad_essentiality_check"].split(";")[0] + "; " + (s["gnomad_essentiality_check"].split(";")[1].strip() if ";" in s["gnomad_essentiality_check"] else "")
-        lines.append(f"| `{s['subnode_id']}` | `{s['parent_carbon_id']}` | **`{s['gene_symbol']}`** | {s['molecular_role']} | {gn_short} | **`{v_short}`** |")
+        lines.append(f"| `{legacy_to_accession(s['subnode_id'])}` | `{legacy_to_accession(s['parent_carbon_id'])}` | **`{s['gene_symbol']}`** | {s['molecular_role']} | {gn_short} | **`{v_short}`** |")
 
     lines.extend([
         "",
@@ -193,11 +196,12 @@ def build_roadmaps_and_tables_md(
         fl = c["flagged_constrained_neuronal_hits"]
         fl_short = fl if len(fl) <= 68 else fl[:65] + "..."
         a_link = f"[Atlas]({atlas_url(c['chrom'], c['grch38_start'], c['grch38_end'])})"
+        sc_acc = c.get("subnode_accession_id") or legacy_to_accession(c["subnode_or_cand_id"])
         lines.append(
-            f"| `{c['unified_interval_order']}` | `{c['subnode_or_cand_id']}` (`{c['gene_symbol']}` #{c['rank_within_gene']}) | {lead_tag} | "
+            f"| `{c['unified_interval_order']}` | `{sc_acc}` (`{c['gene_symbol']}` #{c['rank_within_gene']}) | {lead_tag} | "
             f"`{c['interval_id']}` | `{c['length_bp']}` | `{c['cis_mechanism_or_mode']}` | `{c['tm_phys_pops_c']}` | `{c['max_avi_phred']}` | "
             f"`{c['spliced_0mm_genes']}/{c['spliced_1mm_genes']}/{c['spliced_wobble_only_pc_genes']}` | "
             f"`{c['premRNA_0mm_sense_genes']}/{c['premRNA_1mm_splice50bp_genes']}/{c['premRNA_wobble_only_splice50bp_pc_genes']}/{c['premRNA_2mm_splice25bp_pc_genes']}/{c['bulge_1nt_steric_pc_genes']}/{c['sub18_core_steric_pc_genes']}` | "
             f"`{fl_short}` | **`{c['offtarget_safety_status']}`** | {a_link} |"
         )
-    return lines
+    return [translate_legacy_tokens_in_prose(ln) for ln in lines]

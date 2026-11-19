@@ -3,15 +3,17 @@ from __future__ import annotations
 
 import re
 
+from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose
+
 FLAGSHIP_DEFS = [
-    ("FLAGSHIP-S06", "Monograph #1 · S06 (SARM1)", "pipelines/flagship/reproduce_S06_sarm1.py", "DS_PDB_9TZY;DS_PDB_7DJT;DS_PDB_7ANW", "S06;C002", "Verifies PDB 9TZY 3-chain BEXi filament gluing, gnomAD LOEUF=1.1432, Leahey ~2.8x empirical BEXi washout spike vs theoretical 8-mer ceiling and monotonic T-Lock, and default Krus 2022 Bliss additivity."),
-    ("FLAGSHIP-S07", "Monograph #2 · S07 (Aldesleukin)", "pipelines/flagship/reproduce_S07_aldesleukin.py", "DS045_TRAUT", "S07", "Verifies MIROCALS BioVendor ELISA 750-3,700 pg/mL stratum, Trautwig MS NEFL vs NEFH r=0.278 (n=51 Emory TMT nested in n=77 DIA), and proportional-hazards Schoenfeld Ph3 sizing (247 events at HR=0.70)."),
-    ("FLAGSHIP-C001", "Monograph #3 · C001 (UNC13A)", "pipelines/flagship/reproduce_C001_unc13a.py", "DS_CRYPTIC;DS029_SPILL;DS_GENCODE_V46_TX", "C001", "Verifies Brown UNC13A cryptic junction dPSI, Spillman synaptosome Munc13-1 loss, rs12973192/rs12608932 genotype-stratified rules, and promoted Clean >=2mm Lead #2 chr19:17642537-17642554(-)."),
-    ("FLAGSHIP-C006", "Monograph #4 · C006 (KCNQ2)", "pipelines/flagship/reproduce_C006_kcnq2.py", "DS_CRYPTIC;DS_PDB_7CR2;DS_GENCODE_V46_TX", "C006;C003;C005", "Verifies Exon-5 126-bp (42-aa) in-frame skipping, PDB 7CR2 Trp236 2.97A retigabine H-bond, post-assembly ER co-trapping across 4:0 vs 2:2 Kv7.2:Kv7.3 channels, and Lead #3 off-target hygiene."),
-    ("FLAGSHIP-C002", "Monograph #5 · C002 (STMN2)", "pipelines/flagship/reproduce_C002_stmn2.py", "DS_CRYPTIC;DS029_SPILL;DS_GENCODE_V46_TX", "C002;S06", "Verifies STMN2 Exon-2a cryptic junction dPSI=+0.482, Spillman C9-FTD homogenate -0.4825 log2FC (-28.4%, p=0.014, FDR=0.113), and promoted Clean >=2mm Lead #2 chr8:79616829-79616846(+)."),
-    ("FLAGSHIP-C007", "Monograph #6 · C007 (IL1RL1)", "pipelines/flagship/reproduce_C007_il1rl1.py", "DS_EDIN_PB;DS031_ZHANG;DS_PDB_4KC3", "C007", "Verifies Edinburgh donor-collapsed endothelial +3.106 log2CPM (p=0.00641, n=7 Ctrl), Zhang 55-um Visium +3.76 (within-donor spot pseudoreplicated across N=14 donors), GENCODE v46 sST2 intron-8 polyA exon, and PDB 4KC3."),
-    ("FLAGSHIP-DN01", "Monograph #7 · DN-01 (ATG4B)", "pipelines/flagship/reproduce_DN01_atg4b.py", "DS029_SPILL;DS001_COUNTS;DS_PDB_2Z0D", "DN-01", "Verifies Spillman C9-FTD homogenate ATG4B -0.4905 log2FC (p=0.0227), NYGC cervical RIN+GC OLS beta=-0.1642, PDB 2Z0D 27 LC3B contacts, and promoted Lead #2 chr2:241668970-241668987(+)."),
-    ("FLAGSHIP-DN04", "Monograph #8 · DN-04 (CELF5)", "pipelines/flagship/reproduce_DN04_celf5.py", "DS001_COUNTS;DS005_BYE;DS_GENCODE_V46_TX", "DN-04", "Verifies NYGC cervical RIN+GC beta=-0.4020, #1 neuronal-mass-adjusted tSTMN2 coupling (1.90% cervical / 0.14% lumbar tail), gnomAD LOEUF=0.248, and Clean >=2mm Lead #1 chr19:3278299-3278318(+)."),
+    ("FLAGSHIP-EALS-030", "Monograph #1 · SARM1 (EALS-030)", "pipelines/flagship/reproduce_EALS_030_sarm1.py", "DS_PDB_9TZY;DS_PDB_7DJT;DS_PDB_7ANW", "EALS-030;EALS-002", "Verifies PDB 9TZY 3-chain BEXi filament gluing, gnomAD LOEUF=1.1432, Leahey ~2.8x empirical BEXi washout spike vs theoretical 8-mer ceiling and monotonic T-Lock, and default Krus 2022 Bliss additivity."),
+    ("FLAGSHIP-EALS-031", "Monograph #2 · Aldesleukin (EALS-031)", "pipelines/flagship/reproduce_EALS_031_aldesleukin.py", "DS045_TRAUT", "EALS-031", "Verifies MIROCALS BioVendor ELISA 750-3,700 pg/mL stratum, Trautwig MS NEFL vs NEFH r=0.278 (n=51 Emory TMT nested in n=77 DIA), and proportional-hazards Schoenfeld Ph3 sizing (247 events at HR=0.70)."),
+    ("FLAGSHIP-EALS-001", "Monograph #3 · UNC13A (EALS-001)", "pipelines/flagship/reproduce_EALS_001_unc13a.py", "DS_CRYPTIC;DS029_SPILL;DS_GENCODE_V46_TX", "EALS-001", "Verifies Brown UNC13A cryptic junction dPSI, Spillman synaptosome Munc13-1 loss, rs12973192/rs12608932 genotype-stratified rules, and promoted Clean >=2mm Lead #2 chr19:17642537-17642554(-)."),
+    ("FLAGSHIP-EALS-006", "Monograph #4 · KCNQ2 (EALS-006)", "pipelines/flagship/reproduce_EALS_006_kcnq2.py", "DS_CRYPTIC;DS_PDB_7CR2;DS_GENCODE_V46_TX", "EALS-006;EALS-003;EALS-005", "Verifies Exon-5 126-bp (42-aa) in-frame skipping, PDB 7CR2 Trp236 2.97A retigabine H-bond, post-assembly ER co-trapping across 4:0 vs 2:2 Kv7.2:Kv7.3 channels, and Lead #3 off-target hygiene."),
+    ("FLAGSHIP-EALS-002", "Monograph #5 · STMN2 (EALS-002)", "pipelines/flagship/reproduce_EALS_002_stmn2.py", "DS_CRYPTIC;DS029_SPILL;DS_GENCODE_V46_TX", "EALS-002;EALS-030", "Verifies STMN2 Exon-2a cryptic junction dPSI=+0.482, Spillman C9-FTD homogenate -0.4825 log2FC (-28.4%, p=0.014, FDR=0.113), and promoted Clean >=2mm Lead #2 chr8:79616829-79616846(+)."),
+    ("FLAGSHIP-EALS-007", "Monograph #6 · IL1RL1 (EALS-007)", "pipelines/flagship/reproduce_EALS_007_il1rl1.py", "DS_EDIN_PB;DS031_ZHANG;DS_PDB_4KC3", "EALS-007", "Verifies Edinburgh donor-collapsed endothelial +3.106 log2CPM (p=0.00641, n=7 Ctrl), Zhang 55-um Visium +3.76 (within-donor spot pseudoreplicated across N=14 donors), GENCODE v46 sST2 intron-8 polyA exon, and PDB 4KC3."),
+    ("FLAGSHIP-EALS-034", "Monograph #7 · ATG4B (EALS-034)", "pipelines/flagship/reproduce_EALS_034_atg4b.py", "DS029_SPILL;DS001_COUNTS;DS_PDB_2Z0D", "EALS-034", "Verifies Spillman C9-FTD homogenate ATG4B -0.4905 log2FC (p=0.0227), NYGC cervical RIN+GC OLS beta=-0.1642, PDB 2Z0D 27 LC3B contacts, and promoted Lead #2 chr2:241668970-241668987(+)."),
+    ("FLAGSHIP-EALS-037", "Monograph #8 · CELF5 (EALS-037)", "pipelines/flagship/reproduce_EALS_037_celf5.py", "DS001_COUNTS;DS005_BYE;DS_GENCODE_V46_TX", "EALS-037", "Verifies NYGC cervical RIN+GC beta=-0.4020, #1 neuronal-mass-adjusted tSTMN2 coupling (1.90% cervical / 0.14% lumbar tail), gnomAD LOEUF=0.248, and Clean >=2mm Lead #1 chr19:3278299-3278318(+)."),
 ]
 
 STAGE_LABELS = {
@@ -46,7 +48,22 @@ def clean_rep_text(txt: str) -> str:
     s = re.sub(r"(?:5D\s*(?:Liability)?|gene-liability|liability)\s*=\s*[0-9.]+/100(?:\s*\([^)]*\))?[;,\s]*", "", s, flags=re.I)
     s = re.sub(r"[;,\s]*\([^)]*[0-9.]+/100[^)]*\)", "", s)
     s = s.replace("pm1_50", "50bp-SS 1mm").replace("pm2_25", "25bp-SS 2mm").replace("sp0;", "spliced 0mm;")
-    return re.sub(r"\s{2,}", " ", s).strip()
+    return translate_legacy_tokens_in_prose(re.sub(r"\s{2,}", " ", s).strip())
+
+
+def _map_cand_list(raw_cands: str) -> str:
+    out: list[str] = []
+    for tok in raw_cands.split(";"):
+        t = tok.strip()
+        if not t:
+            continue
+        try:
+            acc = legacy_to_accession(t)
+        except ValueError:
+            acc = translate_legacy_tokens_in_prose(t)
+        if acc not in out:
+            out.append(acc)
+    return ";".join(out)
 
 
 def build_replication_payloads(
@@ -59,7 +76,8 @@ def build_replication_payloads(
     run_cands: dict[str, list[str]] = {}
     ev_cid_map: dict[str, str] = {}
     for e in ev_all_rows:
-        cid = e["carbon_id"].strip()
+        lcid = e["carbon_id"].strip()
+        cid = legacy_to_accession(lcid)
         rid = e["analysis_run_id"].strip()
         ev_cid_map[e["evidence_id"].strip()] = cid
         if cid not in run_cands.setdefault(rid, []):
@@ -87,14 +105,15 @@ def build_replication_payloads(
             "id": d["dataset_id"], "dom": d["domain"].replace("_", " "), "rel": d["local_relpath"],
             "acc": clean_rep_text(d["accession_or_doi"]), "lic": clean_rep_text(d["license_or_access"]),
             "mb": f"{int(d['size_bytes'])/1e6:.2f} MB" if int(d["size_bytes"]) >= 100_000 else f"{int(d['size_bytes'])/1e3:.1f} KB",
-            "sha": d["sha256"], "cands": d["relevant_candidates"], "desc": clean_rep_text(d["description"]),
+            "sha": d["sha256"], "cands": _map_cand_list(d["relevant_candidates"]), "desc": clean_rep_text(d["description"]),
             "tier": d["redistribution_tier"], "url": d["canonical_fetch_url_or_instructions"],
         }
         for d in ds_rows
     ]
     js_formulas = [
         {
-            "eid": s["evidence_id"], "cid": ev_cid_map.get(s["evidence_id"], ""), "run": s["analysis_run_id"],
+            "eid": s["evidence_id"], "cid": ev_cid_map.get(s["evidence_id"], ""),
+            "run": s["analysis_run_id"],
             "cls": s["inference_class"], "unit": s["statistical_unit"], "nu": s["n_statistical_units"],
             "ndon": s["n_unique_donors_or_participants"], "con": clean_rep_text(s["exact_contrast"]),
             "mod": clean_rep_text(s["model_formula_or_test"]), "est": clean_rep_text(s["effect_estimate"]),

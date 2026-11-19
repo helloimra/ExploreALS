@@ -3,13 +3,13 @@ from __future__ import annotations
 
 DOSSIER_JS_SVG_CORE = """
 const GENE_ENSG = {
-  S06:'ENSG00000004139', C006:'ENSG00000075043', S07:'ENSG00000134460', C001:'ENSG00000130477',
-  C002:'ENSG00000104435', C007:'ENSG00000115602', 'DN-01':'ENSG00000168397', 'DN-02':'ENSG00000160145',
-  'DN-03':'ENSG00000196090', 'DN-04':'ENSG00000161082', 'DN-05':'ENSG00000106772', 'DN-06':'ENSG00000067057',
-  'DN-07':'ENSG00000171853', 'DN-08':'ENSG00000126767', 'DN-09':'ENSG00000170579', 'DN-10':'ENSG00000130226',
-  'DN-11':'ENSG00000175497', 'DN-12':'ENSG00000172757', 'DN-13':'ENSG00000069535', 'DN-14':'ENSG00000197405',
-  C016:'ENSG00000118564', C019:'ENSG00000162434', C020:'ENSG00000115020',
-  C022:'ENSG00000135924', C023:'ENSG00000106636', C024:'ENSG00000125730',
+  'EALS-030':'ENSG00000004139', 'EALS-006':'ENSG00000075043', 'EALS-031':'ENSG00000134460', 'EALS-001':'ENSG00000130477',
+  'EALS-002':'ENSG00000104435', 'EALS-007':'ENSG00000115602', 'EALS-034':'ENSG00000168397', 'EALS-035':'ENSG00000160145',
+  'EALS-036':'ENSG00000196090', 'EALS-037':'ENSG00000161082', 'EALS-038':'ENSG00000106772', 'EALS-039':'ENSG00000067057',
+  'EALS-040':'ENSG00000171853', 'EALS-041':'ENSG00000126767', 'EALS-042':'ENSG00000170579', 'EALS-043':'ENSG00000130226',
+  'EALS-044':'ENSG00000175497', 'EALS-045':'ENSG00000172757', 'EALS-046':'ENSG00000069535', 'EALS-047':'ENSG00000197405',
+  'EALS-016':'ENSG00000118564', 'EALS-019':'ENSG00000162434', 'EALS-020':'ENSG00000115020',
+  'EALS-022':'ENSG00000135924', 'EALS-023':'ENSG00000106636', 'EALS-024':'ENSG00000125730',
   AGAP2:'ENSG00000135439', AP1G2:'ENSG00000213983', ARHGEF11:'ENSG00000132694', ATG4B:'ENSG00000168397',
   BRSK2:'ENSG00000174672', C1QA:'ENSG00000173372', C1QB:'ENSG00000173369', C1QC:'ENSG00000159189',
   C3:'ENSG00000125730', C4B:'ENSG00000224389', C5AR1:'ENSG00000197405', CAPG:'ENSG00000042493',
@@ -102,6 +102,102 @@ function genePortalPills(symOrId){
   const gid = GENE_ENSG[symOrId];
   if(!gid) return '';
   return `${mkExtA('https://www.ensembl.org/Homo_sapiens/Gene/Summary?g='+gid, 'Ensembl')} &middot; ${mkExtA('https://gnomad.broadinstitute.org/gene/'+gid+'?dataset=gnomad_r4', 'gnomAD v4')}`;
+}
+
+const VALID_SUB_IDS = new Set([
+  'EALS-014.1','EALS-014.2','EALS-015.1','EALS-015.2',
+  'EALS-017.1','EALS-017.2','EALS-017.3','EALS-017.4',
+  'EALS-018.1','EALS-018.2','EALS-018.3','EALS-018.4',
+  'EALS-023.1','EALS-023.2','EALS-023.3','EALS-023.4','EALS-023.5','EALS-023.6'
+]);
+function padEals(n){ return 'EALS-' + String(Number(n)).padStart(3, '0'); }
+function normSlugJs(s){ return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ''); }
+function normQueryJs(qRaw){ return String(qRaw || '').trim().toLowerCase().replace(/\\b(eals|ea)\\s+(0*\\d)/g, (_, a, b) => a + '-' + b); }
+
+function parseIdTokenJs(rawTok){
+  const tk = String(rawTok || '').trim().toLowerCase();
+  if(!tk) return null;
+  const mRk = /^#([1-9]|[1-4][0-9]|5[0-2])$/.exec(tk);
+  if(mRk && typeof DATA_PORT !== 'undefined'){
+    const hit = DATA_PORT.find(x => x.rk === Number(mRk[1]));
+    if(hit) return {id: hit.id, sub: '', kind: 'rank'};
+  }
+  const mEa = /^(?:eals|ea)[-_ ]?0*([1-9]|[1-4][0-9]|5[0-2])(?:[.-]([1-9]))?$/.exec(tk);
+  if(mEa){
+    const par = padEals(mEa[1]);
+    const sub = mEa[2] ? (par + '.' + mEa[2]) : '';
+    if(sub && !VALID_SUB_IDS.has(sub)) return null;
+    return {id: par, sub: sub, kind: 'eals'};
+  }
+  const mPad = /^0(0[1-9]|[1-4][0-9]|5[0-2])(?:[.]([1-9]))?$/.exec(tk);
+  if(mPad){
+    const par = padEals(mPad[1]);
+    const sub = mPad[2] ? (par + '.' + mPad[2]) : '';
+    if(sub && !VALID_SUB_IDS.has(sub)) return null;
+    return {id: par, sub: sub, kind: 'eals'};
+  }
+  return null;
+}
+
+function resolveCandidateId(raw){
+  if(!raw) return null;
+  const tok = normQueryJs(raw);
+  const parsed = parseIdTokenJs(tok);
+  if(parsed && (typeof DATA_PORT === 'undefined' || DATA_PORT.some(x => x.id === parsed.id))) return parsed;
+  const slug = normSlugJs(tok);
+  if(!slug) return null;
+  if(typeof DATA_SUB !== 'undefined'){
+    const snHit = DATA_SUB.find(sn => normSlugJs(sn.gene) === slug);
+    if(snHit) return {id: snHit.par, sub: snHit.id, kind: 'subunit'};
+  }
+  if(typeof DATA_PORT !== 'undefined'){
+    const pHit = DATA_PORT.find(r => normSlugJs(r.sym) === slug || normSlugJs(r.name.split('(')[0]) === slug || (r.syn || []).some(a => normSlugJs(a) === slug));
+    if(pHit) return {id: pHit.id, sub: '', kind: 'slug'};
+  }
+  return null;
+}
+
+function matchCandidateQuery(r, qRaw, extraHay=''){
+  const q = normQueryJs(qRaw);
+  if(!q) return {ok: true, tier: 9, sub: ''};
+  const hay = (r.id + ' ' + r.name + ' ' + (r.sym || '') + ' ' + (r.syn || []).join(' ') + ' ' + r.mod + ' ' + r.hurdles + ' ' + r.sub + ' ' + (r.crowd || '') + ' ' + extraHay).toLowerCase();
+  const subList = (typeof DATA_SUB !== 'undefined') ? DATA_SUB.filter(sn => sn.par === r.id) : [];
+  const toks = q.split(/\\s+/).filter(Boolean);
+  let bestTier = 9;
+  let subHit = '';
+  for(let i = 0; i < toks.length; i++){
+    const tk = toks[i];
+    const pTok = parseIdTokenJs(tk);
+    if(pTok && pTok.id === r.id){
+      bestTier = Math.min(bestTier, 1);
+      if(pTok.sub) subHit = subHit || pTok.sub;
+      continue;
+    }
+    const slug = normSlugJs(tk);
+    const snMatch = slug ? subList.find(sn => normSlugJs(sn.gene) === slug) : null;
+    if(snMatch) subHit = subHit || snMatch.id;
+    const exactBio = (slug && (normSlugJs(r.sym) === slug || (r.syn || []).some(a => normSlugJs(a) === slug) || Boolean(snMatch))) ||
+      (tk === 'c3' && r.id === 'EALS-024') || (tk === 'c4' && r.id === 'EALS-018') || (tk === 'c5' && r.id === 'EALS-047') ||
+      (tk === 'c1' && r.id === 'EALS-018') || (tk === 'c9' && (hay.includes('c9orf72') || hay.includes('c9-als') || hay.includes('c9-ftd')));
+    if(exactBio){ bestTier = Math.min(bestTier, 2); continue; }
+    if(hay.includes(tk)){ bestTier = Math.min(bestTier, 4); continue; }
+    return {ok: false, tier: 99, sub: ''};
+  }
+  return {ok: true, tier: bestTier, sub: subHit};
+}
+
+function queryMatchesIdOrText(idsList, qRaw, hayRaw){
+  const q = normQueryJs(qRaw);
+  if(!q) return true;
+  const hay = String(hayRaw || '').toLowerCase();
+  const toks = q.split(/\\s+/).filter(Boolean);
+  return toks.every(tk => {
+    if(hay.includes(tk)) return true;
+    const res = resolveCandidateId(tk);
+    if(!res) return false;
+    if(res.sub) return idsList.some(id => id === res.sub || id === res.id);
+    return idsList.some(id => id === res.id || String(id).startsWith(res.id + '.'));
+  });
 }
 
 function renderCausalGrid(c, geneCtx){
@@ -220,7 +316,7 @@ function renderEvidenceMatrix(ev, geneCtx){
 }
 
 function renderLocusSsoSvg(candId, sig){
-  const cis = DATA_CIS.filter(c => c.sc === candId || (candId==='DN-01'&&c.gene==='ATG4B') || (candId==='DN-04'&&c.gene==='CELF5') || (candId==='C006'&&c.gene==='KCNQ2') || (candId==='C001'&&c.gene==='UNC13A') || (candId==='C002'&&c.gene==='STMN2')).sort((a,b)=>(b.lead-a.lead)||(a.rk-b.rk));
+  const cis = DATA_CIS.filter(c => c.sc === candId || c.pid === candId).sort((a,b)=>(b.lead-a.lead)||(a.rk-b.rk));
   const L = 14, R = 446, W = R - L;
   const mapTop = p => L + ((p - sig.win_lo) / Math.max(1, sig.win_hi - sig.win_lo)) * W;
   const mapBot = p => L + ((p - sig.zoom_lo) / Math.max(1, sig.zoom_hi - sig.zoom_lo)) * W;

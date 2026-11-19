@@ -1,4 +1,4 @@
-"""Flagship Reproducer #2: S07 — Low-Dose Aldesleukin / IL-2 (Tier 1, Act #2 / Bio #5)."""
+"""Flagship Reproducer #2: EALS-031 — Low-Dose Aldesleukin / IL-2 (Tier 1, Act #2 / Bio #5)."""
 from __future__ import annotations
 
 import math
@@ -18,7 +18,7 @@ def schoenfeld_ph_trial(hr: float, p0_cum: float, censor: float = 0.05, z_alpha:
 
 
 def main() -> None:
-    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "portfolio_id")["S07"]
+    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "accession_id")["EALS-031"]
     s07 = load_json_any("work/phase2/track3_subtype_precision_translation/outputs/run_p2_t3_002_s07_mirocals_pnfh_gate.json")
     evs = load_csv_by_key("registries/evidence_ledger.csv", "evidence_id")
 
@@ -54,7 +54,7 @@ def main() -> None:
         ("Event-driven 36-42m N_rand (P0=0.41) vs Fixed 24m N_rand (P0=0.29)", f"{d70_var['n_rand']} vs {d70_24m['n_rand']}", "724 vs 1034", "PASS"),
     ]
     print_audit_report(
-        "S07", "Low-Dose Aldesleukin (MIROCALS BioVendor pNfH Gate)", checks,
+        "EALS-031", "Low-Dose Aldesleukin (MIROCALS BioVendor pNfH Gate)", checks,
         "MIROCALS HRs & Trautwig MS NEFL/NEFH r=0.278 (n=51 Emory TMT nested in n=77 DIA) are [MEASURED]; BioVendor-to-CLIA pNfH calibration & Schoenfeld Phase 3 sizing are [MODEL_PRIOR] / prospective Stage-0 gates.",
     )
 

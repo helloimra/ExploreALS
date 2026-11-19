@@ -1,4 +1,4 @@
-"""Flagship Reproducer #7: DN-01 — ATG4B Cryptic-Exon Steric SSO (Tier 2, Act #7 / Bio #6)."""
+"""Flagship Reproducer #7: EALS-034 — ATG4B Cryptic-Exon Steric SSO (Tier 2, Act #7 / Bio #6)."""
 from __future__ import annotations
 
 import sys
@@ -9,7 +9,7 @@ from _flagship_common import ROOT, assert_close, has_raw_dataset, load_csv_by_ke
 
 
 def main() -> None:
-    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "portfolio_id")["DN-01"]
+    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "accession_id")["EALS-034"]
     f1 = load_json_any("work/phase3b_denovo_discovery/outputs/run_p3b_001_multimodal_funnel.json")
     dd = load_json_any("work/phase3b_denovo_discovery/outputs/run_p3b_004_targeted_deep_dive.json")
     sso = {r["interval_id"]: r for r in load_csv_rows("registries/phase3b_denovo_sso_intervals.csv") if r["gene_symbol"] == "ATG4B"}
@@ -40,7 +40,7 @@ def main() -> None:
         checks.append(("Raw mmCIF PDB 2Z0D ATG4B:LC3B complex loaded", len(st.polymer_atoms) > 1500, True, "PASS"))
 
     print_audit_report(
-        "DN-01", "ATG4B Cryptic-Exon Steric SSO", checks,
+        "EALS-034", "ATG4B Cryptic-Exon Steric SSO", checks,
         "Brown CE/Ribo-seq, Spillman C9-FTD homogenate DIA (indirect cortical proxy), & PDB 2Z0D contacts are [MEASURED]; empirical iPSC-MN SSO rescue & single-alpha-MN BaseScope ISH are prospective kill-gates.",
     )
 

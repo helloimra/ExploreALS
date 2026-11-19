@@ -38,7 +38,7 @@ def _ordered_canonical_runs(runs: list[dict[str, str]]) -> list[dict[str, str]]:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description="Reproduce ExploreALS v1.2 gates, 8 flagship claims, or all 50 runs.")
-    ap.add_argument("--cached-gates", action="store_true", help="Level 1 (<10s): verify 17 CSVs, SHA-256s, & loaders.")
+    ap.add_argument("--cached-gates", action="store_true", help="Level 1 (<10s): verify 18 CSVs, SHA-256s, & loaders.")
     ap.add_argument("--flagship-only", action="store_true", help="Run all 8 Tier 1+2 Flagship Monograph Reproducers.")
     ap.add_argument("--all-canonical", action="store_true", help="Execute all 49 non-bootstrap canonical runs (requires staged data/).")
     args = ap.parse_args()

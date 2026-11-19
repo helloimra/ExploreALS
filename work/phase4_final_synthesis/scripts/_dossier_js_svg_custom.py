@@ -1,4 +1,4 @@
-"""Client-side pure inline SVG generators (Part B: Exact 2-Panel S06 MWC & S07 IL-2 Stratification)."""
+"""Client-side pure inline SVG generators (Part B: Exact 2-Panel EALS-030 MWC & EALS-031 IL-2 Stratification)."""
 from __future__ import annotations
 
 DOSSIER_JS_SVG_CUSTOM = """

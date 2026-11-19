@@ -81,7 +81,7 @@ GITHUB_README_MD = """# ExploreALS v1.2 — Unified ALS Therapeutic & Genetic Ta
 **Author:** Ricardo Agoga · [helloimra@proton.me](mailto:helloimra@proton.me) · [github.com/helloimra/ExploreALS](https://github.com/helloimra/ExploreALS)
 
 ## Overview
-`ExploreALS v1.2` is an independent computational triage audit evaluating **52 ALS therapeutic and biomarker hypotheses** (33 published clinical, genetic & neuropathological programs and 19 candidates filtered from open multi-omic screens), **18 subunit & selectivity dissections** across multi-subunit complexes, GWAS loci & biofluid panels, and **26 Coordinate-Only Cis-Regulatory Search Windows** (`0` chemically modified synthesis-ready ASO sequences).
+`ExploreALS v1.2` (`v1.2.3`) is an independent computational triage audit evaluating **52 ALS therapeutic and biomarker hypotheses** (`EALS-001`–`EALS-052`, covering 33 published clinical, genetic & neuropathological programs and 19 candidates filtered from open multi-omic screens), **18 subunit & selectivity dissections** (`EALS-014.1`–`EALS-023.6` across 5 multi-gene loci/complexes: `EALS-014`, `EALS-015`, `EALS-017`, `EALS-018`, `EALS-023`), and **26 Coordinate-Only Cis-Regulatory Search Windows** (`0` chemically modified synthesis-ready ASO sequences).
 
 **Evidence base:** `40` open-access biomedical datasets & reference maps (`38` external accessions + `2` repo-bundled reference maps: `21` human tissue/CSF/iPSC/in-vitro cohort & assay files, `13` 3D structures, `6` genome/feature references; published tables/counts, zero new wet-lab data). The cohort data resolves into **`8` independent donor-overlap clusters** ([`cohort_overlap_map.csv`](registries/cohort_overlap_map.csv)):
 - **Postmortem tissue:** NYGC ALS Consortium (`GSE153960`, incl. Tam 2019, O'Neill 2025, Ma 2022 and Bryce-Smith 2025 reanalyses) · Pineda 2024 BA4/BA9 snRNA-seq · Edinburgh `GSE290359` snRNA-seq · Prudencio 2015 paired regions + Zhang 2026 spinal-cord spatial · Spillman 2026 C9-FTD subcellular-fraction DIA
@@ -93,7 +93,7 @@ Agreement *within* a cluster is treated as cross-platform validation, not indepe
 ## 3-Level Independent Computational Replication Quickstart
 
 ```bash
-# Level 1 (<10s, 0 MB extra data): Verify all 17 CSV schemas, FKs, citation lock, Epistemic Asymmetry & 194/194 64-char SHA-256s
+# Level 1 (<10s, 0 MB extra data): Verify all 18 CSV schemas, FKs, citation lock, Epistemic Asymmetry & 194/194 64-char SHA-256s
 uv sync --frozen
 uv run python scripts/verify_carbon_als.py --mode cached
 
@@ -110,8 +110,8 @@ uv run python scripts/audit_public_sanitization.py --target .
 ```
 
 ### Standalone Tier 1 & Tier 2 Translational Monographs
-- **Tier 1 (`Actionable Now`):** [#1 S06 · SARM1](https://helloimra.github.io/ExploreALS/monographs/S06.html) · [#2 S07 · Aldesleukin](https://helloimra.github.io/ExploreALS/monographs/S07.html)
-- **Tier 2 (`Focused Preclinical / Biofluid Gate First`):** [#3 C001 · UNC13A](https://helloimra.github.io/ExploreALS/monographs/C001.html) · [#4 C006 · KCNQ2](https://helloimra.github.io/ExploreALS/monographs/C006.html) · [#5 C002 · STMN2](https://helloimra.github.io/ExploreALS/monographs/C002.html) · [#6 C007 · IL1RL1 / sST2](https://helloimra.github.io/ExploreALS/monographs/C007.html) · [#7 DN-01 · ATG4B](https://helloimra.github.io/ExploreALS/monographs/DN-01.html) · [#8 DN-04 · CELF5](https://helloimra.github.io/ExploreALS/monographs/DN-04.html)
+- **Tier 1 (`Actionable Now`):** [#1 SARM1 · EALS-030](https://helloimra.github.io/ExploreALS/monographs/EALS-030.html) · [#2 Aldesleukin · EALS-031](https://helloimra.github.io/ExploreALS/monographs/EALS-031.html)
+- **Tier 2 (`Focused Preclinical / Biofluid Gate First`):** [#3 UNC13A · EALS-001](https://helloimra.github.io/ExploreALS/monographs/EALS-001.html) · [#4 KCNQ2 · EALS-006](https://helloimra.github.io/ExploreALS/monographs/EALS-006.html) · [#5 STMN2 · EALS-002](https://helloimra.github.io/ExploreALS/monographs/EALS-002.html) · [#6 IL1RL1 / sST2 · EALS-007](https://helloimra.github.io/ExploreALS/monographs/EALS-007.html) · [#7 ATG4B · EALS-034](https://helloimra.github.io/ExploreALS/monographs/EALS-034.html) · [#8 CELF5 · EALS-037](https://helloimra.github.io/ExploreALS/monographs/EALS-037.html)
 
 ## Licensing, Disclaimers & Open-Data Provenance
 - **Dual Software & Data License:** Python source code (`src/`, `scripts/`, `pipelines/`, `work/**/*.py`) is licensed under the **MIT License** ([LICENSE](./LICENSE)); original curated registries (`registries/*.csv`), schemas, and monographs are licensed under **CC BY 4.0** ([LICENSE-DATA.md](./LICENSE-DATA.md)). Non-`CC-BY` publisher supplements (`Tier B`) are never re-hosted and are fetched directly from canonical publisher HTTPS endpoints.
@@ -157,12 +157,13 @@ def collect_all_utility_tokens(blobs: list[str]) -> set[str]:
     return tokens
 
 
-def export_public_web_bundle(repo_dir: Path, agy_explorer_html: str, agy_mono_files: list[Path]) -> list[Path]:
+def export_public_web_bundle(repo_dir: Path, agy_explorer_html: str, agy_mono_files: list[Path], sha_stamp: str = "") -> list[Path]:
     docs_dir = repo_dir / "docs"
     mono_out = docs_dir / "monographs"
     mono_out.mkdir(parents=True, exist_ok=True)
+    keep_stems = {p.stem for p in agy_mono_files}
     for stale in mono_out.glob("*.html"):
-        if stale.stem not in {p.stem for p in agy_mono_files}:
+        if stale.stem not in keep_stems:
             stale.unlink()
 
     raw_monos = {p.stem: p.read_text(encoding="utf-8") for p in agy_mono_files}

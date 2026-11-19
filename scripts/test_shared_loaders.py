@@ -273,7 +273,37 @@ def main() -> None:
     cd38_b = compute_cd38_cadpr_dilution_and_audit_bound(0.10, 0.90, 0.50)
     assert cd38_b["selective_sarm1_fluid_cadpr_drop_pct"] == 9.0 and abs(cd38_b["min_offtarget_cd38_inhibition_pct_if_cell_free_plasma"] - 44.44) < 0.02
 
-    print("PASS: All 26 v0.5.4 shared-loader, directory-SHA256, mmCIF, skill-CLI, splice-Tm/bystander, MWC/PKPD/CASM/CD38, off-target/bulge/EEJ, Phase 3B, Phase 4 portfolio, and biosecurity tests verified (0 errors).")
+    # Test 27: ExploreALS EALS-001..EALS-052 accession bijection & collision-safe fuzzy resolver
+    from carbon_als.accessions import (
+        AMBIGUOUS_SHORT_BIO_TOKENS,
+        accession_to_legacy,
+        legacy_to_accession,
+        resolve_candidate_query,
+        translate_legacy_tokens_in_prose,
+    )
+    rk_map = {int(r["unified_rank"]): r["accession_id"] for r in p4_rows}
+    sub_slug = {r["gene_symbol"].lower(): (legacy_to_accession(r["parent_carbon_id"]), legacy_to_accession(r["subnode_id"])) for r in load_csv("subnode_dissection.csv")}
+    assert legacy_to_accession("C006") == "EALS-006" and accession_to_legacy("EALS-006") == "C006"
+    assert legacy_to_accession("S06") == "EALS-030" and accession_to_legacy("EALS-030") == "S06"
+    assert legacy_to_accession("DN-13") == "EALS-046" and accession_to_legacy("EALS-046") == "DN-13"
+    assert legacy_to_accession("C015-N1") == "EALS-015.1" and accession_to_legacy("EALS-015.1") == "C015-N1"
+    for q_in, exp_pair in (
+        ("c006", ("EALS-006", None)), ("c6", ("EALS-006", None)), ("eals6", ("EALS-006", None)), ("006", ("EALS-006", None)),
+        ("#4", ("EALS-006", None)), ("kcnq2", ("EALS-006", None)), ("dn013", ("EALS-046", None)), ("dn-13", ("EALS-046", None)),
+        ("d013", ("EALS-046", None)), ("maob", ("EALS-046", None)), ("s06", ("EALS-030", None)), ("sarm1", ("EALS-030", None)),
+        ("scfd1", ("EALS-015", "EALS-015.1")), ("c015-n2", ("EALS-015", "EALS-015.2")), ("eals-015.2", ("EALS-015", "EALS-015.2")),
+    ):
+        assert resolve_candidate_query(q_in, rk_map, sub_slug) == exp_pair, f"Failed query {q_in}: {resolve_candidate_query(q_in, rk_map, sub_slug)}"
+    assert resolve_candidate_query("sod1", rk_map, sub_slug) == (None, None)  # never hijacks S01
+    assert "c3" in AMBIGUOUS_SHORT_BIO_TOKENS and "c9" in AMBIGUOUS_SHORT_BIO_TOKENS
+    assert translate_legacy_tokens_in_prose("Pair S06 with C006 and C015-N1 (FLAGSHIP-S06, candidates/C006.md, C3-C5 cord, ALS17)") == (
+        "Pair EALS-030 with EALS-006 and EALS-015.1 (FLAGSHIP-S06, candidates/C006.md, C3-C5 cord, ALS17)"
+    )
+    assert translate_legacy_tokens_in_prose("LINKED_TO_C005_TMS; DN-10..12; C017-N1..N4; 01_c019_als_glia.py") == (
+        "LINKED_TO_EALS-005_TMS; EALS-043–EALS-045; EALS-017.1–EALS-017.4; 01_c019_als_glia.py"
+    )
+
+    print("PASS: All 27 v0.5.5 shared-loader, EALS accession/fuzzy-alias, directory-SHA256, mmCIF, skill-CLI, splice-Tm/bystander, MWC/PKPD/CASM/CD38, off-target/bulge/EEJ, Phase 3B, Phase 4 portfolio, and biosecurity tests verified (0 errors).")
 
 
 if __name__ == "__main__":

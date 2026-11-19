@@ -28,6 +28,7 @@ from _dossier_js_view import DOSSIER_JS_VIEW  # noqa: E402
 from _replication_payload_builder import build_replication_payloads  # noqa: E402
 from _replication_sandboxes_js import REPLICATION_SANDBOXES_JS  # noqa: E402
 from _replication_tab_js import REPLICATION_TAB_JS  # noqa: E402
+from carbon_als.accessions import PRIMARY_SYMBOL_AND_ALIASES, legacy_to_accession, translate_legacy_tokens_in_prose  # noqa: E402
 import tempfile  # noqa: E402
 
 RAW_OLIGO_SEQ_RE = re.compile(r"(?<![A-Za-z0-9_])[ACGTU]{15,}(?![A-Za-z0-9_])", re.IGNORECASE)
@@ -83,25 +84,32 @@ def main() -> None:
             return "N/A (Companion Protocol)"
         return "Whitespace (0 ALS Trials)"
 
-    js_port = [
-        {
-            "rk": int(r["unified_rank"]), "brk": bio_rk_map[r["portfolio_id"]], "id": r["portfolio_id"],
+    js_port = []
+    for r in port_rows:
+        lid = r["portfolio_id"]
+        acc_id = r.get("accession_id") or legacy_to_accession(lid)
+        sym, syn_list = PRIMARY_SYMBOL_AND_ALIASES[lid]
+        js_port.append({
+            "rk": int(r["unified_rank"]), "brk": bio_rk_map[lid],
+            "id": acc_id, "sym": sym, "syn": syn_list,
             "o": r["origin_phase"], "sub": r["origin_subcohort"],
-            "trk": r["track"], "name": r["gene_or_drug"], "mod": r["primary_modality_specific"],
+            "trk": r["track"], "name": r["gene_or_drug"],
+            "mod": translate_legacy_tokens_in_prose(r["primary_modality_specific"]),
             "epi": r["epistemic_state"], "dec": r["decision"], "tier": r["scientific_actionability_tier"],
             "trl": r["clinical_readiness_trl"], "gate": r["next_gate_experimental_class"],
             "basis": r["primary_evidence_basis"],
             "crowd": _resolve_crowd(r),
             "prior": r["model_prior_dependency"], "hcnt": int(r["unsolved_hurdle_count"]),
-            "hurdles": r["unsolved_hurdles_structured"], "iv": r["lead_cis_interval_id"],
+            "hurdles": translate_legacy_tokens_in_prose(r["unsolved_hurdles_structured"]),
+            "iv": r["lead_cis_interval_id"],
             "ivst": r["lead_offtarget_safety_status"],
             "nxt": r["discriminating_next_test"] if r["discriminating_next_test"].startswith("NONE_") else clean_prose(r["discriminating_next_test"]),
-        }
-        for r in port_rows
-    ]
+        })
     js_cis = [
         {
-            "ord": int(c["unified_interval_order"]), "o": c["origin_phase"], "pid": c["portfolio_id"], "sc": c["subnode_or_cand_id"],
+            "ord": int(c["unified_interval_order"]), "o": c["origin_phase"],
+            "pid": c.get("accession_id") or legacy_to_accession(c["portfolio_id"]),
+            "sc": c.get("subnode_accession_id") or legacy_to_accession(c["subnode_or_cand_id"]),
             "gene": c["gene_symbol"], "role": c["program_role"], "rk": int(c["rank_within_gene"]), "lead": c["is_promoted_lead"] == "True",
             "iv": c["interval_id"], "chr": c["chrom"], "lo": c["grch38_start"], "hi": c["grch38_end"], "strd": c["strand"],
             "len": int(c["length_bp"]), "mode": c["cis_mechanism_or_mode"], "gc": c["gc_pct"], "tm": c["tm_phys_pops_c"],
@@ -190,12 +198,12 @@ def main() -> None:
             "dt": u["date_iso"],
             "tag": u["release_tag"],
             "cat": u["update_category"],
-            "ids": [x.strip() for x in u["affected_ids"].split(";") if x.strip()],
-            "imp": u["decision_impact"],
-            "hdr": u["headline"],
-            "pre": u["prior_state_or_assumption"],
-            "post": u["new_evidence_or_revision"],
-            "cons": u["portfolio_and_gate_consequence"],
+            "ids": [legacy_to_accession(x.strip()) for x in u["affected_ids"].split(";") if x.strip()],
+            "imp": translate_legacy_tokens_in_prose(u["decision_impact"]),
+            "hdr": translate_legacy_tokens_in_prose(u["headline"]),
+            "pre": translate_legacy_tokens_in_prose(u["prior_state_or_assumption"]),
+            "post": translate_legacy_tokens_in_prose(u["new_evidence_or_revision"]),
+            "cons": translate_legacy_tokens_in_prose(u["portfolio_and_gate_consequence"]),
             "srcs": [x.strip() for x in u["primary_sources"].split(";") if x.strip()],
             "ancs": [x.strip() for x in u["verification_anchor"].split(";") if x.strip()],
         }
@@ -280,14 +288,14 @@ def main() -> None:
     if public_docs_only:
         with tempfile.TemporaryDirectory() as tmp_d:
             mono_tmp = write_standalone_monographs(Path(tmp_d), sha_stamp, js_port, js_cis, mono_map, ev_by_id, js_sum, js_lenses)
-            pub_written = export_public_web_bundle(ROOT, html_text, mono_tmp)
+            pub_written = export_public_web_bundle(ROOT, html_text, mono_tmp, sha_stamp=sha_stamp)
         print(f"PUBLIC DOCS REBUILD OK: {len(pub_written)} files written to {ROOT / 'docs'}")
         return
 
     html_fp = ROOT / "reports" / "CARBON_ALS_INTERACTIVE_EXPLORER.html"
     html_fp.write_text(html_text, encoding="utf-8")
     mono_written = write_standalone_monographs(ROOT / "reports" / "monographs", sha_stamp, js_port, js_cis, mono_map, ev_by_id, js_sum, js_lenses)
-    pub_written = export_public_web_bundle(ROOT / "reports" / "github_pages", html_text, mono_written)
+    pub_written = export_public_web_bundle(ROOT / "reports" / "github_pages", html_text, mono_written, sha_stamp=sha_stamp)
 
     with (REG_DIR / "analysis_runs.csv").open("w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=run_cols, lineterminator="\r\n")

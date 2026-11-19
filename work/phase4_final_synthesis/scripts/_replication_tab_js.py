@@ -3,7 +3,7 @@ from __future__ import annotations
 
 REPLICATION_TAB_JS = r"""
 let repMode = 'runs';
-let selectedRepKey = 'FLAGSHIP-S06';
+let selectedRepKey = 'FLAGSHIP-EALS-030';
 let repReturnDossier = '';
 let repReturnTab = 'dossiers';
 
@@ -73,7 +73,7 @@ function setRepMode(mode, keepFilter=false){
 
 function renderReplicationWorkbench(){
   if(typeof DATA_RUNS === 'undefined') return;
-  const q = ((document.getElementById('rep-search')||{}).value||'').trim().toLowerCase();
+  const q = ((document.getElementById('rep-search')||{}).value||'').trim();
   const fv = ((document.getElementById('rep-filter')||{}).value||'ALL');
   const th = document.getElementById('rep-thead');
   const tb = document.getElementById('rep-tbody');
@@ -87,7 +87,8 @@ function renderReplicationWorkbench(){
       if(fv === 'PHASE2' && !r.grp.startsWith('Stage 2')) return false;
       if(fv === 'PHASE34' && !r.grp.startsWith('Stage 3') && !r.grp.startsWith('Stage 4')) return false;
       if(!q) return true;
-      return (r.id+' '+r.grp+' '+r.script+' '+r.ds+' '+r.cands+' '+r.sum).toLowerCase().includes(q);
+      const rIds = r.cands ? r.cands.split(';').filter(Boolean) : [];
+      return queryMatchesIdOrText(rIds, q, r.id+' '+r.grp+' '+r.script+' '+r.ds+' '+r.cands+' '+r.sum);
     });
     if(!items.some(x=>x.id===selectedRepKey) && items.length) selectedRepKey = items[0].id;
     document.getElementById('rep-count').textContent = `${items.length} / ${DATA_RUNS.length}`;
@@ -106,7 +107,8 @@ function renderReplicationWorkbench(){
     items = DATA_DATASETS.filter(d => {
       if(fv !== 'ALL' && d.tier !== fv) return false;
       if(!q) return true;
-      return (d.id+' '+d.dom+' '+d.acc+' '+d.lic+' '+d.sha+' '+d.cands+' '+d.desc).toLowerCase().includes(q);
+      const dIds = d.cands ? d.cands.split(';').filter(Boolean) : [];
+      return queryMatchesIdOrText(dIds, q, d.id+' '+d.dom+' '+d.acc+' '+d.lic+' '+d.sha+' '+d.cands+' '+d.desc);
     });
     if(!items.some(x=>x.id===selectedRepKey) && items.length) selectedRepKey = items[0].id;
     document.getElementById('rep-count').textContent = `${items.length} / ${DATA_DATASETS.length}`;
@@ -125,7 +127,7 @@ function renderReplicationWorkbench(){
     items = DATA_FORMULAS.filter(f => {
       if(fv !== 'ALL' && f.anc !== fv) return false;
       if(!q) return true;
-      return (f.eid+' '+f.cid+' '+f.run+' '+f.unit+' '+f.con+' '+f.mod+' '+f.sha).toLowerCase().includes(q);
+      return queryMatchesIdOrText([f.cid], q, f.eid+' '+f.cid+' '+f.run+' '+f.unit+' '+f.con+' '+f.mod+' '+f.sha);
     });
     if(!items.some(x=>x.eid===selectedRepKey) && items.length) selectedRepKey = items[0].eid;
     document.getElementById('rep-count').textContent = `${items.length} / ${DATA_FORMULAS.length}`;

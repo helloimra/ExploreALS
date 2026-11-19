@@ -2,8 +2,8 @@
 from __future__ import annotations
 
 DOSSIER_JS_VIEW = """
-const MONOGRAPH_ORDER = ['S06','S07','C001','C006','C002','C007','DN-01','DN-04'];
-let dossierId = 'S06';
+const MONOGRAPH_ORDER = ['EALS-030','EALS-031','EALS-001','EALS-006','EALS-002','EALS-007','EALS-034','EALS-037'];
+let dossierId = 'EALS-030';
 let dossierSlice = 'ALL';
 let dossierLens = 'ALL';
 
@@ -142,7 +142,7 @@ function formatHurdle(code){
     .replace(/Q48_TO_Q72H/g, 'q48h-q72h');
   const words = pre.split('_').filter(Boolean).map(w => {
     if(HURDLE_TOK[w]) return HURDLE_TOK[w];
-    if(/^(#|<=|>=|<|>|[0-9]|pLI=|Chronos=|21CFR|ICH|no 21|Pre-|Post-|ALS-|non-|aa )/.test(w)) return w;
+    if(/^(#|<=|>=|<|>|[0-9]|EALS-|pLI=|Chronos=|21CFR|ICH|no 21|Pre-|Post-|ALS-|non-|aa )/.test(w)) return w;
     if(/^RS[0-9]+$/.test(w)) return w.toLowerCase();
     return w.toLowerCase();
   });
@@ -418,9 +418,11 @@ function toggleDossierRail(){
     document.querySelectorAll('[data-toggle-d-rail]').forEach(b => b.setAttribute('aria-expanded', wasHidden ? 'true' : 'false'));
   } catch(_e) {}
 }
-function openDossier(id){
-  if(!id) return;
-  id = String(id).replace(/-N[0-9]+$/, '');
+function openDossier(rawId){
+  if(!rawId) return;
+  const res = (typeof resolveCandidateId === 'function') ? resolveCandidateId(rawId) : null;
+  const id = res ? res.id : String(rawId).replace(/\\.[0-9]+$/, '');
+  if(res && res.sub && typeof pendingDossierSec !== 'undefined' && !pendingDossierSec) pendingDossierSec = 'sec-subunits';
   if(!DATA_PORT.some(x=>x.id===id)) return;
   dossierId = id;
   selectedId = id;
@@ -487,7 +489,7 @@ function renderSummaryDomainPanels(r){
       </table></div>
       <div class="text-[var(--muted-foreground)] font-mono text-xs pt-1 border-t border-[var(--card-border)]">Key: mRNA = spliced 0mm&middot;1mm&middot;wobble genes &middot; pre = pre-mRNA 0mm / 1mm(&le;50bp SS; + whole-intron 1mm on gapmers) / wobble / 2mm(&le;25bp) / 1-nt bulge / 18-nt sub-core (Coordinate-Only Search Windows, 0 chemically modified synthesis-ready ASO sequences).</div></div>`;
   }
-  if(!isFull && location.protocol !== 'about:' && (['C014','C015','C023','C017','C018'].includes(r.id) || /^DN-0[1-9]$/.test(r.id))){
+  if(!isFull && location.protocol !== 'about:' && (['EALS-014','EALS-015','EALS-023','EALS-017','EALS-018'].includes(r.id) || /^EALS-0(?:3[4-9]|4[0-2])$/.test(r.id))){
     out += `<div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex items-center justify-between gap-2 flex-wrap text-xs">
       <span class="text-[var(--muted-foreground)]">Interactive single-gene subunit cards &amp; 3-region NYGC RNA-seq profiles are available in the full 5-view Explorer.</span>
       <a href="../CARBON_ALS_INTERACTIVE_EXPLORER.html#dossier/${esc(r.id)}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono cursor-pointer">Open in Full Explorer &rarr;</a>
@@ -506,8 +508,9 @@ function renderSummaryDomainPanels(r){
         return `<div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--card-border)] space-y-2">
           <div class="flex items-start justify-between gap-2 flex-wrap border-b border-[var(--card-border)] pb-1.5">
             <div>
-              <div class="flex items-center gap-1.5 flex-wrap">
-                <span class="font-mono font-bold text-sm">${esc(sn.id)} &middot; ${esc(sn.gene)}</span>
+              <div class="flex items-center gap-1.5 flex-wrap" title="ExploreALS Subunit ${esc(sn.id)}">
+                <span class="font-mono font-bold text-sm">${esc(sn.gene)}</span>
+                <span class="font-mono text-xs text-[var(--muted-foreground)]">${esc(sn.id)}</span>
                 ${gPills?`<span class="font-mono">${gPills}</span>`:''}
               </div>
               <div class="text-[var(--muted-foreground)] mt-0.5">${esc(sn.role)}</div>
@@ -575,7 +578,7 @@ function renderSummaryDomainPanels(r){
           </div>`;
         }).join('')}</div>
         <details class="rounded bg-[var(--background)] border border-[var(--card-border)] px-3 py-2 text-xs">
-          <summary class="cursor-pointer font-mono text-xs text-[var(--link)] flex flex-wrap items-center justify-between gap-2 select-none"><span>Compare All 9 Cryptic-Splicing &amp; APA Candidates Across NYGC Cervical (N=206), Lumbar (N=181) &amp; Motor Cortex (N=120)</span><span class="text-[var(--muted-foreground)]">DN-01 &ndash; DN-09 Cross-Region Table</span></summary>
+          <summary class="cursor-pointer font-mono text-xs text-[var(--link)] flex flex-wrap items-center justify-between gap-2 select-none"><span>Compare All 9 Cryptic-Splicing &amp; APA Candidates Across NYGC Cervical (N=206), Lumbar (N=181) &amp; Motor Cortex (N=120)</span><span class="text-[var(--muted-foreground)]">EALS-034 &ndash; EALS-042 Cross-Region Table</span></summary>
           <div class="pt-2 mt-2 border-t border-[var(--card-border)] overflow-x-auto">
             <table class="w-full text-left border-collapse text-xs">
               <thead><tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
@@ -593,20 +596,25 @@ function renderSummaryDomainPanels(r){
 
 function getFilteredDossierList(){
   const qEl = document.getElementById('d-search');
-  const q = qEl ? qEl.value.trim().toLowerCase() : '';
+  const q = qEl ? qEl.value.trim() : '';
   const activeLensObj = (dossierLens !== 'ALL' && typeof DATA_LENSES !== 'undefined') ? DATA_LENSES.find(l => l.k === dossierLens) : null;
-  return DATA_PORT.filter(r => {
-    if(activeLensObj && !activeLensObj.ids.includes(r.id)) return false;
-    if(dossierSlice === 'T12' && r.tier !== 'TIER_1_ACTIONABLE_NOW' && r.tier !== 'TIER_2_FOCUSED_GATE_FIRST') return false;
-    if(dossierSlice === 'WATCH' && r.tier !== 'TIER_3_EXPLORATORY_DISCOVERY' && r.tier !== 'COMPANION_PROTOCOL_ONLY') return false;
-    if(dossierSlice === 'BIO' && r.tier !== 'BIOMARKER_BENCHMARK_ONLY') return false;
-    if(dossierSlice === 'DROP' && r.tier !== 'DROPPED_FALSIFIED_EXCLUDED') return false;
-    if(!q) return true;
+  const scored = [];
+  for(let i = 0; i < DATA_PORT.length; i++){
+    const r = DATA_PORT[i];
+    if(activeLensObj && !activeLensObj.ids.includes(r.id)) continue;
+    if(dossierSlice === 'T12' && r.tier !== 'TIER_1_ACTIONABLE_NOW' && r.tier !== 'TIER_2_FOCUSED_GATE_FIRST') continue;
+    if(dossierSlice === 'WATCH' && r.tier !== 'TIER_3_EXPLORATORY_DISCOVERY' && r.tier !== 'COMPANION_PROTOCOL_ONLY') continue;
+    if(dossierSlice === 'BIO' && r.tier !== 'BIOMARKER_BENCHMARK_ONLY') continue;
+    if(dossierSlice === 'DROP' && r.tier !== 'DROPPED_FALSIFIED_EXCLUDED') continue;
+    if(!q){ scored.push({r: r, tier: 9}); continue; }
     const sObj = (typeof DATA_SUM !== 'undefined' && DATA_SUM[r.id]) ? DATA_SUM[r.id] : null;
     const hTxt = sObj ? ((sObj.hyp || '') + ' ' + (sObj.verdict || '') + ' ' + (sObj.edge_text || '')) : '';
     const snTxt = (typeof DATA_SUB !== 'undefined') ? DATA_SUB.filter(sn => sn.par === r.id).map(sn => sn.id + ' ' + sn.gene + ' ' + sn.role).join(' ') : '';
-    return (r.id+' '+r.name+' '+r.mod+' '+r.tier+' '+r.sub+' '+hTxt+' '+snTxt).toLowerCase().includes(q);
-  });
+    const m = matchCandidateQuery(r, q, r.tier + ' ' + hTxt + ' ' + snTxt);
+    if(m.ok) scored.push({r: r, tier: m.tier});
+  }
+  if(q) scored.sort((a, b) => (a.tier - b.tier) || (a.r.rk - b.r.rk));
+  return scored.map(x => x.r);
 }
 
 function renderDossierSidebar(){
@@ -632,8 +640,9 @@ function renderDossierSidebar(){
     }
     dLensSel.value = dossierLens;
   }
-  const dSearchQ = ((document.getElementById('d-search') || {}).value || '').trim().toLowerCase();
-  const SHORT_NAV_NAME = {S06:'SARM1',S07:'Aldesleukin',C001:'UNC13A',C006:'KCNQ2',C002:'STMN2',C007:'IL1RL1 / sST2',C015:'SCFD1 / G2E3',C014:'CHMP7 / CHMP2B',C018:'C1q (C1QA/B/C)',C016:'FBXL5 / IRP2',C020:'Apilimod',C019:'Baricitinib',S02:'CuATSM',C005:'TMS / SDTC PD',S08:'Methylcobalamin',C017:'CHIT1 / GPNMB',S03:'Mycophenolate',S05:'Lonafarnib'};
+  const dSearchQ = ((document.getElementById('d-search') || {}).value || '').trim();
+  const dSearchLow = dSearchQ.toLowerCase();
+  const SHORT_NAV_NAME = {'EALS-030':'SARM1','EALS-031':'Aldesleukin','EALS-001':'UNC13A','EALS-006':'KCNQ2','EALS-002':'STMN2','EALS-007':'IL1RL1 / sST2','EALS-015':'SCFD1 / G2E3','EALS-014':'CHMP7 / CHMP2B','EALS-018':'C1q (C1QA/B/C)','EALS-016':'FBXL5 / IRP2','EALS-020':'Apilimod','EALS-019':'Baricitinib','EALS-026':'CuATSM','EALS-005':'TMS / SDTC PD','EALS-032':'Methylcobalamin','EALS-017':'CHIT1 / GPNMB','EALS-027':'Mycophenolate','EALS-029':'Lonafarnib'};
   const mkBtn = r => {
     const isPilot = Boolean(DATA_MONOGRAPHS[r.id]);
     const on = r.id === dossierId;
@@ -641,18 +650,21 @@ function renderDossierSidebar(){
       : ((r.tier==='TIER_2_FOCUSED_GATE_FIRST' || r.tier==='BIOMARKER_BENCHMARK_ONLY') ? 'var(--primary)'
       : (r.tier==='DROPPED_FALSIFIED_EXCLUDED' ? 'var(--error)' : 'var(--warning)'));
     const cls = on ? 'bg-[var(--content)] border-[var(--primary)] border-l-2 font-semibold text-[var(--foreground)]' : 'bg-[var(--background)] border-[var(--card-border)] hover:bg-[var(--content)]';
-    const subM = (dSearchQ && typeof DATA_SUB !== 'undefined') ? DATA_SUB.filter(sn => sn.par === r.id && !r.name.toLowerCase().includes(sn.gene.toLowerCase()) && (sn.gene+' '+sn.id+' '+sn.role).toLowerCase().includes(dSearchQ)).map(sn => sn.gene) : [];
+    const mq = dSearchQ ? matchCandidateQuery(r, dSearchQ, '') : {sub: ''};
+    const subM = (dSearchLow && typeof DATA_SUB !== 'undefined') ? DATA_SUB.filter(sn => sn.par === r.id && !r.name.toLowerCase().includes(sn.gene.toLowerCase()) && (sn.id === mq.sub || (sn.gene+' '+sn.id+' '+sn.role).toLowerCase().includes(dSearchLow))).map(sn => sn.gene) : [];
     const baseShort = SHORT_NAV_NAME[r.id] || r.name.split('(')[0].trim();
     const shortLbl = baseShort + (subM.length ? ' (+' + subM.join(',') + ')' : '');
-    const tip = `#${r.rk} ${r.id} — ${r.name} [${isPilot ? 'Full Monograph' : 'Summary Report'}]`;
+    const tip = `#${r.rk} ${r.name} (${r.id}) [${isPilot ? 'Full Monograph' : 'Summary Report'}]`;
     return `<button type="button" data-open-dossier="${esc(r.id)}" ${on?'aria-current="true"':''} title="${esc(tip)}" class="w-full text-left px-2 py-1 rounded border ${cls} flex items-center justify-between gap-1.5 text-xs cursor-pointer">
       <span class="min-w-0 flex items-center gap-1.5 pointer-events-none">
         <span class="w-1.5 h-1.5 rounded-full shrink-0" style="background:${dotCol}"></span>
         <span class="font-mono text-[var(--muted-foreground)] shrink-0">#${r.rk}</span>
-        <span class="font-mono font-semibold shrink-0">${esc(r.id)}</span>
-        <span class="truncate text-[var(--muted-foreground)]">${esc(shortLbl)}</span>
+        <span class="font-medium truncate text-[var(--foreground)]">${esc(shortLbl)}</span>
       </span>
-      ${isPilot?'<span class="px-1 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono text-xs shrink-0 pointer-events-none" title="Full Translational Monograph">M</span>':''}
+      <span class="shrink-0 flex items-center gap-1 pointer-events-none">
+        <span class="font-mono text-xs text-[var(--muted-foreground)]">${esc(r.id)}</span>
+        ${isPilot?'<span class="px-1 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono text-xs" title="Full Translational Monograph">M</span>':''}
+      </span>
     </button>`;
   };
   const matched = getFilteredDossierList();
@@ -680,7 +692,7 @@ function renderDossierSidebar(){
       const g3 = DATA_PORT.filter(r => r.tier==='TIER_3_EXPLORATORY_DISCOVERY' || r.tier==='COMPANION_PROTOCOL_ONLY');
       const gB = DATA_PORT.filter(r => r.tier==='BIOMARKER_BENCHMARK_ONLY');
       const gD = DATA_PORT.filter(r => r.tier==='DROPPED_FALSIFIED_EXCLUDED');
-      const mkOpt = r => `<option value="${esc(r.id)}">#${r.rk} ${esc(r.id)} — ${esc(r.name.split('(')[0].trim())} ${DATA_MONOGRAPHS[r.id]?'[Monograph]':'[Summary]'}</option>`;
+      const mkOpt = r => `<option value="${esc(r.id)}">#${r.rk} ${esc(r.name.split('(')[0].trim())} (${esc(r.id)}) ${DATA_MONOGRAPHS[r.id]?'[Monograph]':'[Summary]'}</option>`;
       mobSel.innerHTML = `<optgroup label="Tier 1 · Actionable Leads (${g1.length})">${g1.map(mkOpt).join('')}</optgroup><optgroup label="Tier 2 · Focused Gate (${g2.length})">${g2.map(mkOpt).join('')}</optgroup><optgroup label="Tier 3 & Companion (${g3.length})">${g3.map(mkOpt).join('')}</optgroup><optgroup label="Benchmarks & Fluid Biomarkers (${gB.length})">${gB.map(mkOpt).join('')}</optgroup><optgroup label="Dropped · Scientifically Falsified (${gD.length})">${gD.map(mkOpt).join('')}</optgroup>`;
     }
     mobSel.value = dossierId;
@@ -706,15 +718,15 @@ function renderDossierMain(){
   const nextId = (!isFullExplorer && pIdx >= 0) ? MONOGRAPH_ORDER[(pIdx + 1) % MONOGRAPH_ORDER.length] : navPool[(poolIdx + 1) % navPool.length].id;
   const prevObj = DATA_PORT.find(x=>x.id===prevId) || r;
   const nextObj = DATA_PORT.find(x=>x.id===nextId) || r;
-  const prevLbl = `#${prevObj.rk} ${prevObj.id}`;
-  const nextLbl = `#${nextObj.rk} ${nextObj.id}`;
+  const prevLbl = `#${prevObj.rk} ${prevObj.sym || prevObj.id}`;
+  const nextLbl = `#${nextObj.rk} ${nextObj.sym || nextObj.id}`;
   const mp = document.getElementById('d-mobile-prev'), mn = document.getElementById('d-mobile-next');
-  if(mp){ mp.setAttribute('data-open-dossier', prevId); mp.textContent = '\u2190 ' + prevLbl; }
-  if(mn){ mn.setAttribute('data-open-dossier', nextId); mn.textContent = nextLbl + ' \u2192'; }
+  if(mp){ mp.setAttribute('data-open-dossier', prevId); mp.textContent = '\u2190 #' + prevObj.rk; }
+  if(mn){ mn.setAttribute('data-open-dossier', nextId); mn.textContent = '#' + nextObj.rk + ' \u2192'; }
 
   const w = DATA_MONOGRAPHS[r.id];
   const s = (typeof DATA_SUM !== 'undefined' && DATA_SUM[r.id]) ? DATA_SUM[r.id] : null;
-  const candUpds = (isFullExplorer && typeof DATA_UPDATES !== 'undefined') ? DATA_UPDATES.filter(u => u.ids.includes(r.id) || u.ids.some(x => x.startsWith(r.id + '-'))) : [];
+  const candUpds = (isFullExplorer && typeof DATA_UPDATES !== 'undefined') ? DATA_UPDATES.filter(u => u.ids.includes(r.id) || u.ids.some(x => x.startsWith(r.id + '.'))) : [];
   const updPill = candUpds.length
     ? `<button type="button" data-jump-updates="${esc(r.id)}" class="px-2.5 py-1 rounded border border-[var(--primary)] text-[var(--primary)] font-mono text-xs cursor-pointer" title="View living research updates and revisions for ${esc(r.id)}">&#8634; ${candUpds.length} Update${candUpds.length>1?'s':''} &rarr;</button>`
     : '';
@@ -909,7 +921,7 @@ function renderDossierMain(){
       </div>
       <div class="flex flex-wrap items-center justify-between gap-2 pt-0.5">
         <div class="flex flex-wrap gap-1.5">${w.grades.map(([g,d])=>`<span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] text-xs"><strong class="text-[var(--primary)]">${esc(g)}:</strong> ${escLink(d, r.id)}</span>`).join('')}</div>
-        <div class="flex flex-wrap items-center gap-1.5 text-xs"><span class="text-[var(--muted-foreground)]">Related:</span>${w.related.map(x=>{const rp=DATA_PORT.find(q=>q.id===x); const rShort=x==='C005'?'Excitability PD':(rp?rp.name.replace(/^(?:Low-Dose|Ultrahigh-Dose|Stage-Gated)\\s+/i,'').split(/[\\s(/]/)[0]:''); const rTip=rp?`#${rp.rk} ${rp.id} — ${rp.name}`:x; return `<button type="button" data-open-dossier="${esc(x)}" title="${esc(rTip)}" class="px-2 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-[var(--link)] cursor-pointer">${esc(x)}${rShort?' &middot; '+esc(rShort):''} &rarr;</button>`;}).join('')}</div>
+        <div class="flex flex-wrap items-center gap-1.5 text-xs"><span class="text-[var(--muted-foreground)]">Related:</span>${w.related.map(x=>{const rp=DATA_PORT.find(q=>q.id===x); const rShort=x==='EALS-005'?'Excitability PD':(rp?(rp.sym || rp.name.split(/[\\s(/]/)[0]):''); const rTip=rp?`#${rp.rk} ${rp.name} (${rp.id})`:x; return `<button type="button" data-open-dossier="${esc(x)}" title="${esc(rTip)}" class="px-2 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-[var(--link)] cursor-pointer">${rp?'#'+rp.rk+' ':''}${esc(rShort || x)} &middot; ${esc(x)} &rarr;</button>`;}).join('')}</div>
       </div>
     </div>
 

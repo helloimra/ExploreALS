@@ -110,6 +110,7 @@ def _rule_for_base(b: str) -> tuple[int, str, str]:
         "grid-cols-6": (20, "grid-template-columns:repeat(6,minmax(0,1fr))"),
         "grid-cols-12": (20, "grid-template-columns:repeat(12,minmax(0,1fr))"),
         "grid-cols-[228px_minmax(0,1fr)]": (20, "grid-template-columns:228px minmax(0,1fr)"),
+        "grid-cols-[268px_minmax(0,1fr)]": (20, "grid-template-columns:268px minmax(0,1fr)"),
         "w-full": (24, "width:100%"), "w-auto": (24, "width:auto"), "h-auto": (24, "height:auto"),
         "min-w-0": (25, "min-width:0px"), "min-h-0": (25, "min-height:0px"),
         "max-w-[1440px]": (26, "max-width:1440px"), "max-w-[260px]": (26, "max-width:260px"), "max-w-[220px]": (26, "max-width:220px"),

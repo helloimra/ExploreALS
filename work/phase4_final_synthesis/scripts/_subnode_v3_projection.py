@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import re
 
+from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose
+
 SUBNODE_TDL: dict[str, str] = {
     "C3": "Tclin",
     "CHIT1": "Tchem",
@@ -52,7 +54,7 @@ VERDICT_LABELS: dict[str, str] = {
 
 COLONLESS_VERDICT_PROSE: dict[str, str] = {
     "KEEP_EXPLORATORY_UNPROVEN_PRIMARY_SUBNODE": (
-        "Retained as primary C014 nuclear-envelope surveillance subunit requiring titrated <=35–50% knockdown or selective SUN1-CHMP7 nuclear-import blockade."
+        "Retained as primary EALS-014 nuclear-envelope surveillance subunit requiring titrated <=35–50% knockdown or selective SUN1-CHMP7 nuclear-import blockade."
     ),
     "KEEP_EXPLORATORY_UNPROVEN_SECONDARY_SUBUNIT": (
         "Evaluated separately from CHMP7 due to neuronal ANXA11 membrane-repair and autophagy requirements; gated on head-to-head single vs. dual partial knockdown under NE rupture challenge."
@@ -92,17 +94,17 @@ def project_subnode_v3(s: dict[str, str], clean_ui_fn) -> dict[str, str]:
         vbody = COLONLESS_VERDICT_PROSE[vcode]
 
     out = {
-        "id": s["subnode_id"],
-        "par": s["parent_carbon_id"],
+        "id": legacy_to_accession(s["subnode_id"]),
+        "par": legacy_to_accession(s["parent_carbon_id"]),
         "gene": gene,
-        "role": s["molecular_role"],
+        "role": translate_legacy_tokens_in_prose(s["molecular_role"]),
         "tdl": SUBNODE_TDL.get(gene, "Tbio"),
         "tsa": SUBNODE_TSA[gene],
-        "gnomad": gnomad,
-        "drug": drug,
+        "gnomad": translate_legacy_tokens_in_prose(gnomad),
+        "drug": translate_legacy_tokens_in_prose(drug),
         "vraw": vcode,
         "vlbl": vlbl,
-        "vbody": vbody,
+        "vbody": translate_legacy_tokens_in_prose(vbody),
     }
     assert "/100" not in (out["gnomad"] + out["drug"] + out["vbody"]), f"Residual /100 score in {s['subnode_id']}"
     return out

@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import re
 
+from carbon_als.accessions import accession_to_legacy, legacy_to_accession
 from phase3_gates import ALLOWED_OFFTARGET_STATUS, ALLOWED_TRL, MODEL_PRIOR_RE, RAW_OLIGO_SEQ_RE, _reject_nan_const, _sha12, _sha12_variants
 from phase3b_gates import ALLOWED_P3B_BASIS, ALLOWED_P3B_DEC, ALLOWED_P3B_EPI, ALLOWED_P3B_GATE, ALLOWED_P3B_TIER, FALSIFIED_P3B, GAPPED_OLIGO_RE
 
@@ -15,23 +16,43 @@ CAPITAL_DOLLAR_LEAK_RE = re.compile(
     re.IGNORECASE,
 )
 
+EXP_ACC_COLS = (
+    "accession_id,legacy_id,entity_kind,parent_accession_id,origin_phase,primary_symbol_or_inn,search_aliases"
+).split(",")
+
 EXP_PORT_COLS = (
-    "unified_rank,portfolio_id,origin_phase,origin_subcohort,track,gene_or_drug,candidate_type,primary_modality_specific,"
+    "unified_rank,accession_id,portfolio_id,origin_phase,origin_subcohort,track,gene_or_drug,candidate_type,primary_modality_specific,"
     "epistemic_state,decision,scientific_actionability_tier,clinical_readiness_trl,next_gate_experimental_class,"
     "primary_evidence_basis,model_prior_dependency,unsolved_hurdle_count,unsolved_hurdles_structured,"
     "lead_cis_interval_id,lead_offtarget_safety_status,key_quantitative_anchor,discriminating_next_test,"
     "source_registry_ref,analysis_run_id"
 ).split(",")
 
-EXP_CIS_COLS = (
-    "unified_interval_order,origin_phase,portfolio_id,subnode_or_cand_id,gene_symbol,program_role,rank_within_gene,"
-    "is_promoted_lead,interval_id,chrom,grch38_start,grch38_end,strand,length_bp,cis_mechanism_or_mode,gc_pct,"
-    "tm_phys_pops_c,dg37_kcal,cpg_dinucs,max_self_stem_bp,ese_motifs,mean_avi_phred,max_avi_phred,boundary_dist_bp,"
-    "composite_score,spliced_0mm_genes,spliced_1mm_genes,spliced_2mm_pc_genes,spliced_wobble_only_pc_genes,"
+CIS_BIO_COLS = (
+    "gc_pct,tm_phys_pops_c,dg37_kcal,cpg_dinucs,max_self_stem_bp,ese_motifs,"
+    "mean_avi_phred,max_avi_phred,boundary_dist_bp,composite_score"
+).split(",")
+
+CIS_OT_COLS = (
+    "spliced_0mm_genes,spliced_1mm_genes,spliced_2mm_pc_genes,spliced_wobble_only_pc_genes,"
     "premRNA_0mm_sense_genes,premRNA_1mm_sense_genes,premRNA_1mm_splice50bp_genes,premRNA_wobble_only_splice50bp_pc_genes,"
     "premRNA_2mm_splice25bp_pc_genes,bulge_1nt_steric_pc_genes,sub18_core_steric_pc_genes,"
-    "flagged_constrained_neuronal_hits,offtarget_safety_status,source_offtarget_run_id,analysis_run_id"
+    "flagged_constrained_neuronal_hits,offtarget_safety_status"
 ).split(",")
+
+EXP_CIS_COLS = [
+    "unified_interval_order", "origin_phase", "accession_id", "subnode_accession_id",
+    "portfolio_id", "subnode_or_cand_id", "gene_symbol", "program_role", "rank_within_gene",
+    "is_promoted_lead", "interval_id", "chrom", "grch38_start", "grch38_end", "strand", "length_bp", "cis_mechanism_or_mode",
+    *CIS_BIO_COLS, *CIS_OT_COLS, "source_offtarget_run_id", "analysis_run_id",
+]
+SITE_WORK_PATH_RE = re.compile(r"work/[A-Za-z0-9_/-]+\.(?:py|json|csv)")
+SITE_LEGACY_ID_OR_ALIAS_RE = re.compile(
+    r"((?<![A-Za-z0-9])(?:C0(?:0[1-9]|1\d|2[0-4])(?:-?N[1-6])?|S0[1-9]|DN-?(?:0[1-9]|1\d))(?![A-Za-z0-9])|"
+    r"EALS-\d{3}(?:\.\d)?\.\.|\bLegacy\s+ID\b|\bLegacy:\s|\bAlias:\s|\baliases\b|"
+    r"FLAGSHIP-(?:C0|S0|DN)|reproduce_(?:C0|S0|DN))",
+    re.IGNORECASE,
+)
 
 
 def verify_phase4_gates(
@@ -44,19 +65,23 @@ def verify_phase4_gates(
 ) -> list[str]:
     errors: list[str] = []
     reg_dir = carbon_root / "registries"
+    acc_fp = reg_dir / "candidate_accessions.csv"
     port_fp = reg_dir / "phase4_unified_portfolio.csv"
     cis_fp = reg_dir / "phase4_unified_cis_intervals.csv"
     celf_fp = carbon_root / "work" / "phase4_final_synthesis" / "cache" / "celf5_target_profile.json"
     out_fp = carbon_root / "work" / "phase4_final_synthesis" / "outputs" / "run_p4_001_unified_portfolio.json"
 
-    for fp in (port_fp, cis_fp, celf_fp, out_fp):
+    for fp in (acc_fp, port_fp, cis_fp, celf_fp, out_fp):
         if not fp.is_file():
             errors.append(f"Missing mandatory Phase 4 artifact: {fp.relative_to(carbon_root).as_posix()}")
     if errors:
         return errors
 
+    acc_rows = load_csv_fn("candidate_accessions.csv")
     port_rows = port_override if port_override is not None else load_csv_fn("phase4_unified_portfolio.csv")
     cis_rows = load_csv_fn("phase4_unified_cis_intervals.csv")
+    if acc_rows and list(acc_rows[0].keys()) != EXP_ACC_COLS:
+        errors.append("Schema header mismatch in candidate_accessions.csv")
     if port_rows and list(port_rows[0].keys()) != EXP_PORT_COLS:
         errors.append("Schema header mismatch in phase4_unified_portfolio.csv")
     if cis_rows and list(cis_rows[0].keys()) != EXP_CIS_COLS:
@@ -65,11 +90,18 @@ def verify_phase4_gates(
     dec_map = {r["carbon_id"]: r for r in decisions}
     rd_map = {r["candidate_id"]: r for r in load_csv_fn("phase3_execution_readiness.csv")}
     p3b_map = {r["denovo_id"]: r for r in load_csv_fn("phase3b_denovo_candidates.csv")}
+    sub_map = {r["subnode_id"]: r for r in load_csv_fn("subnode_dissection.csv")}
     p2_map = {r["interval_id"]: r for r in load_csv_fn("phase2_multiplex_intervals.csv")}
     ot3a_map = {r["interval_id"]: r for r in load_csv_fn("phase3_sso_offtarget_audit.csv")}
     sso3b_map = {r["interval_id"]: r for r in load_csv_fn("phase3b_denovo_sso_intervals.csv")}
 
     exp_pids = set(dec_map) | set(p3b_map)
+    exp_all_legs = exp_pids | set(sub_map)
+    if len(acc_rows) != 70 or {r["legacy_id"] for r in acc_rows} != exp_all_legs or len({r["accession_id"] for r in acc_rows}) != 70:
+        errors.append("candidate_accessions.csv must be an exact 70-row bijection over 52 candidates + 18 subunits")
+    for ar in acc_rows:
+        if ar["accession_id"] != legacy_to_accession(ar["legacy_id"]) or accession_to_legacy(ar["accession_id"]) != ar["legacy_id"]:
+            errors.append(f"candidate_accessions.csv non-canonical mapping {ar['accession_id']} <-> {ar['legacy_id']}")
     got_pids = [r["portfolio_id"] for r in port_rows]
     if len(got_pids) != len(set(got_pids)) or set(got_pids) != exp_pids:
         errors.append(f"phase4_unified_portfolio.csv portfolio_id set ({len(got_pids)}) != disjoint union of 33 Curated + 19 Phase 3B ({len(exp_pids)})")
@@ -91,12 +123,14 @@ def verify_phase4_gates(
         if src_ot is None or src_bio is None:
             errors.append(f"{iv_id}: missing source biophysical/offtarget row")
         else:
-            for k_bio in EXP_CIS_COLS[15:25]:
+            for k_bio in CIS_BIO_COLS:
                 if c[k_bio] != src_bio[k_bio]:
                     errors.append(f"{iv_id}: Phase 4 {k_bio}='{c[k_bio]}' != source '{src_bio[k_bio]}'")
-            for k_ot in EXP_CIS_COLS[25:38]:
+            for k_ot in CIS_OT_COLS:
                 if c[k_ot] != src_ot[k_ot]:
                     errors.append(f"{iv_id}: Phase 4 {k_ot}='{c[k_ot]}' != source '{src_ot[k_ot]}'")
+        if c["accession_id"] != legacy_to_accession(c["portfolio_id"]) or c["subnode_accession_id"] != legacy_to_accession(c["subnode_or_cand_id"]):
+            errors.append(f"{iv_id}: accession_id/subnode_accession_id mismatch in phase4_unified_cis_intervals.csv")
         lo, hi, w = int(c["grch38_start"]), int(c["grch38_end"]), int(c["length_bp"])
         if lo > hi or (hi - lo + 1) != w or c["offtarget_safety_status"] not in ALLOWED_OFFTARGET_STATUS:
             errors.append(f"{iv_id}: invalid GRCh38 span or offtarget_safety_status")
@@ -109,6 +143,8 @@ def verify_phase4_gates(
 
     for r in port_rows:
         pid = r["portfolio_id"]
+        if r["accession_id"] != legacy_to_accession(pid):
+            errors.append(f"{pid}: accession_id '{r['accession_id']}' != expected '{legacy_to_accession(pid)}'")
         if r["epistemic_state"] not in ALLOWED_P3B_EPI or r["decision"] not in ALLOWED_P3B_DEC:
             errors.append(f"{pid}: invalid epistemic_state/decision in phase4_unified_portfolio.csv")
         if r["decision"] == "DROP":
@@ -140,7 +176,7 @@ def verify_phase4_gates(
                 errors.append(f"{pid}: lead_cis_interval ({r['lead_cis_interval_id']},{r['lead_offtarget_safety_status']}) != {exp_lead}")
             if mode == "full" and pid in dec_map:
                 md_txt = (carbon_root / "reports" / "candidates" / f"{pid}.md").read_text(encoding="utf-8")
-                if f"unified_rank = #{r['unified_rank']}/52" not in md_txt or f"scientific_actionability_tier = {r['scientific_actionability_tier']}" not in md_txt:
+                if f"accession_id = {r['accession_id']}" not in md_txt or f"unified_rank = #{r['unified_rank']}/52" not in md_txt or f"scientific_actionability_tier = {r['scientific_actionability_tier']}" not in md_txt:
                     errors.append(f"reports/candidates/{pid}.md out of sync with phase4_unified_portfolio.csv")
                 if pid in rd_map and f"primary_modality_specific = {rd_map[pid]['primary_modality_specific']}" not in md_txt:
                     errors.append(f"reports/candidates/{pid}.md missing Phase 3A primary_modality_specific sync")
@@ -195,6 +231,8 @@ def verify_phase4_gates(
                 errors.append("reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md has stale MIROCALS PMID or DS045 shorthand")
             if "miss 60%–75% of top-quintile" in stxt or "in `rs12608932 A/A`" in stxt or "in rs12608932 A/A" in stxt:
                 errors.append("reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md has stale v1.0 MS-NEFH responder or binary rs12608932 A/A prose")
+            if re.search(r"EALS-\d{3}(?:\.\d)?\.\.", stxt):
+                errors.append("reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md has half-translated EALS-NNN.. range token")
 
         def _audit_explorer_html(html_fp: Path, is_public_export: bool) -> None:
             if not html_fp.is_file():
@@ -270,28 +308,32 @@ def verify_phase4_gates(
                 "Monograph &rarr;", "Summary &rarr;", "Summary Report",
                 "Methodology &amp; Decision Guide", "6-Tier GRCh38 Hybridization Screen", "Target Modality (TPP)",
                 "https://alphafold.ebi.ac.uk/entry/", "https://www.informatics.jax.org/marker/MGI:",
-                "PMID:40354799", "PMID:37267913", "C016:'ENSG00000118564'",
+                "PMID:40354799", "PMID:37267913", "'EALS-016':'ENSG00000118564'", "FLAGSHIP-EALS-030",
+                "resolveCandidateId", "matchCandidateQuery",
                 "Secreted Decoy sST2 vs. Membrane ST2L", 'role="tabpanel"',
-                "md:grid-cols-[228px_minmax(0,1fr)]",
+                "md:grid-cols-[268px_minmax(0,1fr)]",
                 'id="d-aside"', 'id="d-slice-bar"', 'id="d-lens"', 'id="p-lens-bar"', 'id="contrasts-drawer"',
                 'id="tab-btn-home"', 'id="view-home"', "const DATA_UPDATES =", "Living Research Log",
                 "ADVANCE GATE (GO CRITERIA)", "FALSIFICATION GATE (KILL / NO-GO CRITERIA)",
             ):
                 if req_str not in htxt:
                     errors.append(f"Dossier Schema 3.0 missing verified anchor '{req_str}' in {lbl}")
+            m_leg = SITE_LEGACY_ID_OR_ALIAS_RE.search(SITE_WORK_PATH_RE.sub("", htxt))
+            if m_leg:
+                errors.append(f"{lbl} contains residual legacy candidate ID or alias token '{m_leg.group(0)}'")
 
         if mode == "full":
             _audit_explorer_html(explorer_html, is_public_export=False)
         _audit_explorer_html(gh_docs / "index.html", is_public_export=True)
 
         exp_pilot_files = {
-            f"{r['portfolio_id']}.html"
+            f"{r['accession_id']}.html"
             for r in port_rows
             if r["scientific_actionability_tier"] in {"TIER_1_ACTIONABLE_NOW", "TIER_2_FOCUSED_GATE_FIRST"}
         }
         if mode == "full":
             if {p.name for p in mono_htmls} != exp_pilot_files:
-                errors.append(f"reports/monographs/*.html set ({sorted(p.name for p in mono_htmls)}) != expected {len(exp_pilot_files)} Tier 1+2 pilot pages ({sorted(exp_pilot_files)})")
+                errors.append(f"reports/monographs/*.html set ({sorted(p.name for p in mono_htmls)}) != expected 8 EALS pages ({sorted(exp_pilot_files)})")
             if (carbon_root / "reports" / "wiki").exists():
                 errors.append("Stale reports/wiki directory still exists (renamed to reports/monographs)")
             for wfp in mono_htmls:
@@ -300,16 +342,16 @@ def verify_phase4_gates(
                     errors.append(f"reports/monographs/{wfp.name} missing SHA-12 concordance stamp or allowlisted Tailwind")
                 if "/100" in wtxt or "!important" in wtxt or "<style>:where(.hidden){display:none}" not in wtxt or "wiki" in wtxt.lower():
                     errors.append(f"reports/monographs/{wfp.name} contains /100, !important, or residual 'wiki' leak")
-                if EXPLORE_LEAK_RE.search(wtxt):
-                    errors.append(f"reports/monographs/{wfp.name} contains ExploreALS / Explore-> leak outside Tab 4 audit panel")
+                if EXPLORE_LEAK_RE.search(wtxt) or SITE_LEGACY_ID_OR_ALIAS_RE.search(SITE_WORK_PATH_RE.sub("", wtxt)):
+                    errors.append(f"reports/monographs/{wfp.name} contains ExploreALS or residual legacy ID/alias leak")
         if {p.name for p in gh_mono_htmls} != exp_pilot_files:
-            errors.append(f"{gh_mono_dir.relative_to(carbon_root).as_posix()}/*.html set ({sorted(p.name for p in gh_mono_htmls)}) != expected {len(exp_pilot_files)} Tier 1+2 pilot pages")
+            errors.append(f"{gh_mono_dir.relative_to(carbon_root).as_posix()}/*.html set ({sorted(p.name for p in gh_mono_htmls)}) != expected 8 EALS pages")
         for gfp in gh_mono_htmls:
             gtxt = gfp.read_text(encoding="utf-8")
             if not _has_valid_stamp(gtxt) or "gstatic.com" in gtxt or "window.PUBLIC_WEB_EXPORT=true" not in gtxt:
                 errors.append(f"{gfp.relative_to(carbon_root).as_posix()} missing SHA-12 stamp or fails zero-CDN guard")
-            if "/100" in gtxt or "!important" in gtxt or "wiki" in gtxt.lower() or EXPLORE_LEAK_RE.search(gtxt):
-                errors.append(f"{gfp.relative_to(carbon_root).as_posix()} contains /100, !important, residual 'wiki', or Explore-> leak")
+            if "/100" in gtxt or "!important" in gtxt or "wiki" in gtxt.lower() or EXPLORE_LEAK_RE.search(gtxt) or SITE_LEGACY_ID_OR_ALIAS_RE.search(SITE_WORK_PATH_RE.sub("", gtxt)):
+                errors.append(f"{gfp.relative_to(carbon_root).as_posix()} contains /100, !important, residual 'wiki', Explore->, or legacy ID/alias leak")
 
         no_money_paths = [
             reg_dir / "phase3_execution_readiness.csv",

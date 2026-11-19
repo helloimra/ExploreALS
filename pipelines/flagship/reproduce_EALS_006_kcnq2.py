@@ -1,4 +1,4 @@
-"""Flagship Reproducer #4: C006 — KCNQ2 Exon-5 Steric SSO (Tier 2, Act #4 / Bio #4)."""
+"""Flagship Reproducer #4: EALS-006 — KCNQ2 Exon-5 Steric SSO (Tier 2, Act #4 / Bio #4)."""
 from __future__ import annotations
 
 import sys
@@ -17,7 +17,7 @@ def kcnq2_er_cotrapping_model(p_skip: float, theta_het: float = 0.0, alpha_esc: 
 
 
 def main() -> None:
-    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "portfolio_id")["C006"]
+    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "accession_id")["EALS-006"]
     sp_b1 = load_json_any("work/phase1_batches/batch_1/outputs/run_b1_001_splicing_apa.json")
     kv_3d = load_json_any("work/phase2/track1_multiplex_splice/outputs/phase2_track1_kv72_structure.json")
     ot_rows = {r["interval_id"]: r for r in load_csv_rows("registries/phase3_sso_offtarget_audit.csv") if r["gene_symbol"] == "KCNQ2"}
@@ -64,7 +64,7 @@ def main() -> None:
         checks.append(("Raw mmCIF PDB 7CR2 FBX ligand atoms present", any(a.comp_id == "FBX" for a in st.ligand_atoms), True, "PASS"))
 
     print_audit_report(
-        "C006", "KCNQ2 Exon-5 Steric SSO", checks,
+        "EALS-006", "KCNQ2 Exon-5 Steric SSO", checks,
         "Exon-5 skipping, Joseph 2025 ER retention, & PDB 7CR2 Trp236 geometry are [MEASURED]; binomial ER co-trapping across 4:0 vs 2:2 Kv7.2:Kv7.3 channels and Intron-5 ISS polarity on #3 are [MODEL_PRIOR].",
     )
 

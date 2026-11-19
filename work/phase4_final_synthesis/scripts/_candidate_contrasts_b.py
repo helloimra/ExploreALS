@@ -4,6 +4,7 @@ from __future__ import annotations
 import re
 
 from _candidate_contrasts_a import CANDIDATE_EDGES_ACTIVE, CANDIDATE_LENSES, EDGE_ROLE_LABELS, LENS_DEFS
+from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose
 
 CANDIDATE_EDGES_DROPS: dict[str, tuple[str, str]] = {
     "C004": ("FALSIFIED_TRAP", "Phase 3 futility in 513 ALS patients (p=0.24; survival HR=0.90, p=0.41) with 12.1% biliary SAEs, >10 uM human EAAT2 EC50 vs 2-6 uM CSF, and absent human astrocytic SLC1A2 mRNA loss."),
@@ -55,15 +56,27 @@ def build_edges_and_lenses(port_rows: list[dict[str, str]]) -> tuple[dict[str, d
     for lk, llbl in LENS_DEFS:
         ids = [r["portfolio_id"] for r in port_rows] if lk == "ALL" else lens_map[lk]
         assert int(llbl.rsplit("·", 1)[1].strip()) == len(ids), f"Lens count label mismatch on {lk}: {llbl} vs {len(ids)}"
-        lenses_out.append({"k": lk, "lbl": llbl, "ids": ids})
+        lenses_out.append({"k": lk, "lbl": llbl, "ids": [legacy_to_accession(x) for x in ids]})
 
     edges_out: dict[str, dict[str, str]] = {}
     for pid, (rk, txt) in all_edges.items():
-        wcnt = len(txt.split())
-        assert 14 <= wcnt <= 62, f"{pid}: edge_text word count {wcnt} out of bounds: {txt}"
-        edges_out[pid] = {"edge_kind": rk, "edge_label": EDGE_ROLE_LABELS[rk], "edge_text": txt}
+        clean_txt = translate_legacy_tokens_in_prose(txt)
+        wcnt = len(clean_txt.split())
+        assert 14 <= wcnt <= 62, f"{pid}: edge_text word count {wcnt} out of bounds: {clean_txt}"
+        edges_out[legacy_to_accession(pid)] = {"edge_kind": rk, "edge_label": EDGE_ROLE_LABELS[rk], "edge_text": clean_txt}
 
-    blob = " ".join([*(v["edge_text"] for v in edges_out.values()), *(str(r) for r in KEY_MECHANISTIC_CONTRASTS_9)])
+    contrasts_out: list[dict[str, object]] = [
+        {
+            "ids": [legacy_to_accession(str(x)) for x in row["ids"]],  # type: ignore[union-attr]
+            "domain": translate_legacy_tokens_in_prose(str(row["domain"])),
+            "naive": translate_legacy_tokens_in_prose(str(row["naive"])),
+            "finding": translate_legacy_tokens_in_prose(str(row["finding"])),
+            "gate": translate_legacy_tokens_in_prose(str(row["gate"])),
+        }
+        for row in KEY_MECHANISTIC_CONTRASTS_9
+    ]
+
+    blob = " ".join([*(v["edge_text"] for v in edges_out.values()), *(str(r) for r in contrasts_out)])
     assert not re.search(r"exploreals|\bD003\b|\bD045\b|\bDS045\b|Phase\s*3A|/100|Cytosolic\s+vs\.\s+ER", blob, re.I), "Banned token in contrasts!"
     assert not re.search(r"\$\s*\d|\b(?:USD|capital|dollar|dollars|cheap|expensive|budget|fund|funds|funding|funded|cost|costs|evoi)\b", blob, re.I), "Financial token in contrasts!"
-    return edges_out, lenses_out, KEY_MECHANISTIC_CONTRASTS_9
+    return edges_out, lenses_out, contrasts_out

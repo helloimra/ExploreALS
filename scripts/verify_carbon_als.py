@@ -55,8 +55,8 @@ ALLOWED_UPDATE_CATEGORIES = {
     "CLINICAL_TRIAL", "LITERATURE_INGESTION", "MODEL_REVISION",
 }
 FLAGSHIP_RUN_IDS = {
-    "FLAGSHIP-S06", "FLAGSHIP-C006", "FLAGSHIP-S07", "FLAGSHIP-C001",
-    "FLAGSHIP-C002", "FLAGSHIP-C007", "FLAGSHIP-DN01", "FLAGSHIP-DN04",
+    "FLAGSHIP-EALS-030", "FLAGSHIP-EALS-006", "FLAGSHIP-EALS-031", "FLAGSHIP-EALS-001",
+    "FLAGSHIP-EALS-002", "FLAGSHIP-EALS-007", "FLAGSHIP-EALS-034", "FLAGSHIP-EALS-037",
 }
 
 
@@ -406,8 +406,8 @@ def verify_all(
             errors.append("living_evidence_updates.csv must contain at least 1 row")
         elif list(upd_rows[0].keys()) != EXP_UPDATES_COLS:
             errors.append(f"Schema header mismatch in living_evidence_updates.csv: {list(upd_rows[0].keys())}")
-        port_ids = {r["portfolio_id"] for r in load_csv("phase4_unified_portfolio.csv")}
-        valid_aff = port_ids | subnode_ids | {"PORTFOLIO_WIDE"}
+        acc_ids = {r["accession_id"] for r in load_csv("candidate_accessions.csv")}
+        valid_aff = acc_ids | {"PORTFOLIO_WIDE"}
         valid_anc = ev_ids | {e["evidence_id"] for e in p3b_ev_rows} | run_ids | FLAGSHIP_RUN_IDS
         seen_upd_ids: set[str] = set()
         sort_keys: list[tuple[str, str]] = []

@@ -70,7 +70,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--primary)] text-[var(--primary)] font-mono font-semibold text-xs">START HERE &middot; OVERVIEW &amp; SCOPE</span>
-              <span class="font-mono text-xs text-[var(--muted-foreground)]">Updated 2026-11-19 (v1.2.2)</span>
+              <span class="font-mono text-xs text-[var(--muted-foreground)]">Updated 2026-11-19 (v1.2.3)</span>
             </div>
             <h2 class="text-sm font-semibold text-[var(--foreground)]">How 52 ALS Hypotheses Map Across Evidence, Open Gates &amp; Trial Readouts</h2>
             <p class="text-xs text-[var(--muted-foreground)] leading-snug">Synthesizes donor-level statistics (<span class="font-mono">8</span> participant-overlap clusters, <span class="font-mono">194</span> SHA-256 contrasts; zero new wet-lab data), unbound human brain PK, and GENCODE v46 off-target scans across four evidence states:</p>
@@ -86,14 +86,14 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
             <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--success)] space-y-1.5">
               <div class="font-mono font-semibold text-xs text-[var(--foreground)]">Flagship Tier 1 (2) + Tier 2 (6) Leads &mdash; Open Monograph</div>
               <div class="flex flex-wrap gap-1">
-                <button type="button" data-open-dossier="S06" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#1 S06 &middot; SARM1</button>
-                <button type="button" data-open-dossier="S07" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#2 S07 &middot; IL-2</button>
-                <button type="button" data-open-dossier="C001" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#3 C001 &middot; UNC13A</button>
-                <button type="button" data-open-dossier="C006" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#4 C006 &middot; KCNQ2</button>
-                <button type="button" data-open-dossier="C002" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#5 C002 &middot; STMN2</button>
-                <button type="button" data-open-dossier="C007" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#6 C007 &middot; sST2</button>
-                <button type="button" data-open-dossier="DN-01" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#7 DN-01 &middot; ATG4B</button>
-                <button type="button" data-open-dossier="DN-04" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#8 DN-04 &middot; CELF5</button>
+                <button type="button" data-open-dossier="EALS-030" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#1 SARM1 &middot; EALS-030</button>
+                <button type="button" data-open-dossier="EALS-031" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#2 IL-2 &middot; EALS-031</button>
+                <button type="button" data-open-dossier="EALS-001" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#3 UNC13A &middot; EALS-001</button>
+                <button type="button" data-open-dossier="EALS-006" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#4 KCNQ2 &middot; EALS-006</button>
+                <button type="button" data-open-dossier="EALS-002" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#5 STMN2 &middot; EALS-002</button>
+                <button type="button" data-open-dossier="EALS-007" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#6 sST2 &middot; EALS-007</button>
+                <button type="button" data-open-dossier="EALS-034" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#7 ATG4B &middot; EALS-034</button>
+                <button type="button" data-open-dossier="EALS-037" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#8 CELF5 &middot; EALS-037</button>
               </div>
             </div>
             <div class="pt-1.5 border-t border-[var(--card-border)] space-y-1.5">
@@ -140,7 +140,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
             <button type="button" data-upd-cat="MODEL_REVISION" class="px-2 py-1 rounded border font-mono text-xs cursor-pointer">&#9671; Model / Re-Analysis</button>
           </div>
           <div class="flex flex-wrap items-center gap-2">
-            <input id="upd-search" aria-label="Search living research updates" type="text" placeholder="Filter by candidate ID (e.g. S06, C001, C020), gene, trial NCT, PMID, or topic..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs flex-1 min-w-[180px] text-[var(--foreground)]" />
+            <input id="upd-search" aria-label="Search living research updates" type="text" placeholder="Filter by ID (e.g. EALS-030, EALS-001), gene, trial NCT, PMID..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs flex-1 min-w-[180px] text-[var(--foreground)]" />
             <button type="button" data-reset-updates="1" class="px-2.5 py-1.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] text-xs cursor-pointer">Reset</button>
           </div>
           <div id="upd-feed" class="space-y-2.5 max-h-[74vh] overflow-y-auto pr-1"></div>
@@ -154,7 +154,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2.5 mt-2 border-t border-[var(--card-border)] text-[var(--muted-foreground)] leading-relaxed">
           <div><strong class="text-[var(--foreground)]">1. Drug Regimens (Track A) &amp; Molecular Targets (Track B):</strong> Audits 52 ALS therapeutic &amp; biomarker hypotheses across 6 discovery modalities (including 18 complex/panel subunits and selectivity comparators) using donor-level statistics (Trautwig Emory TMT n=51 is a nested subset of n=77 DIA; multi-region NYGC/Pineda donors analyzed per-region without pooling) and unbound human CNS PK (Cu,brain / Kp,uu).</div>
           <div><strong class="text-[var(--foreground)]">2. Epistemic Asymmetry Rule:</strong> Never drops an untested hypothesis due to bulk-assay blind spots. <span class="font-mono text-[var(--warning)]" title="Untested preclinical or biofluid triage queue — prospective kill-gate required">Keep &middot; Exploratory (23)</span> denotes an untested preclinical/biofluid triage queue (not therapeutic endorsement) with prospective Go/No-Go gates; <span class="font-mono text-[var(--error)]" title="Scientifically falsified by human RCT futility, CNS PK/safety wall, or assay confounding">Drop &middot; Falsified (18)</span> requires positive human RCT futility, insurmountable PK/safety failure, or confounding collapse.</div>
-          <div><strong class="text-[var(--foreground)]">3. Combinatorial Portfolio Thesis:</strong> Pairs Stage 1-gated genotype-stratified intrathecal splice rescue (evaluating 2-plex KCNQ2 C006 + STMN2 C002 vs. 3-plex + UNC13A C001 across rs12973192/rs12608932 genotypes at a 6&ndash;9 mg [&le;3 mg/strand] multiplex polyanion/DRG margin target vs. 12&ndash;50 mg nusinersen &amp; 100 mg tofersen; &ge;24&ndash;48 mg flagged as radiculotoxicity hazard) with oral non-covalent SARM1 ARM&ndash;TIR T-lock (S06, 1.0x parallel Bliss floor to ~2&ndash;7x MWC [MODEL_PRIOR]) and biomarker-gated neuroimmune precision (S07 BioVendor-bridged pNfH &le;3,700, oximetry-verified C007 sST2, Tier 3 C019 high-chitinase CSF glial stratum).</div>
+          <div><strong class="text-[var(--foreground)]">3. Combinatorial Portfolio Thesis:</strong> Pairs Stage 1-gated genotype-stratified intrathecal splice rescue (evaluating 2-plex KCNQ2 EALS-006 + STMN2 EALS-002 vs. 3-plex + UNC13A EALS-001 across rs12973192/rs12608932 genotypes at a 6&ndash;9 mg [&le;3 mg/strand] multiplex polyanion/DRG margin target vs. 12&ndash;50 mg nusinersen &amp; 100 mg tofersen; &ge;24&ndash;48 mg flagged as radiculotoxicity hazard) with oral non-covalent SARM1 ARM&ndash;TIR T-lock (EALS-030, 1.0x parallel Bliss floor to ~2&ndash;7x MWC [MODEL_PRIOR]) and biomarker-gated neuroimmune precision (EALS-031 BioVendor-bridged pNfH &le;3,700, oximetry-verified EALS-007 sST2, Tier 3 EALS-019 high-chitinase CSF glial stratum).</div>
         </div>
         <div class="pt-2 mt-2 border-t border-[var(--card-border)] text-[var(--muted-foreground)] font-mono text-xs">Data &amp; Provenance Standards: Open Targets / NIH IDG TDL &amp; TSA &middot; 6-Tier GRCh38 Hybridization Screen (OSWG-adapted) &middot; Script &amp; Checksum Provenance / FAIR / 4-Level Evidence Design Tiers &middot; 100% open-access published tables/counts (Coordinate-Only Cis-Regulatory Search Windows, 0 chemically modified synthesis-ready ASO sequences; SantaLucia Tm/&Delta;G37 &amp; AlphaGenome AVI never rank candidates).</div>
       </details>
@@ -179,7 +179,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
         </div>
       </details>
       <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex flex-wrap items-center gap-2">
-        <input id="p-search" aria-label="Search candidates" type="text" placeholder="Search ID, gene/drug, subunit (e.g. G2E3, STX5, C1QA), modality, hurdle..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs flex-1 min-w-[200px] text-[var(--foreground)]" />
+        <input id="p-search" aria-label="Search candidates" type="text" placeholder="Search ID (e.g. EALS-006, #4), gene/drug, subunit (G2E3, C1QA)..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs flex-1 min-w-[200px] text-[var(--foreground)]" />
         <select id="p-origin" aria-label="Filter by discovery modality" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
           <option value="ALL">Discovery Modality: All (52)</option>
           <option value="CANONICAL_24">Clinical, Mendelian &amp; GWAS Programs (24)</option>
@@ -308,18 +308,18 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
 
     <div id="view-dossiers" role="tabpanel" aria-labelledby="tab-btn-dossiers" class="hidden">
       <div class="md:hidden mb-3 sticky top-2 z-20 bg-[var(--card)] border border-[var(--border)] rounded-lg p-2 flex items-center gap-1.5 shadow-sm">
-        <button id="d-mobile-prev" type="button" data-open-dossier="DN-19" class="px-2 py-1 rounded border border-[var(--border)] font-mono text-xs shrink-0 cursor-pointer">&larr;</button>
+        <button id="d-mobile-prev" type="button" data-open-dossier="EALS-052" class="px-2 py-1 rounded border border-[var(--border)] font-mono text-xs shrink-0 cursor-pointer">&larr;</button>
         <select id="d-mobile-select" aria-label="Select Candidate Dossier" class="flex-1 min-w-0 truncate bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1 text-xs font-medium text-[var(--foreground)]"></select>
-        <button id="d-mobile-next" type="button" data-open-dossier="S07" class="px-2 py-1 rounded border border-[var(--border)] font-mono text-xs shrink-0 cursor-pointer">&rarr;</button>
+        <button id="d-mobile-next" type="button" data-open-dossier="EALS-031" class="px-2 py-1 rounded border border-[var(--border)] font-mono text-xs shrink-0 cursor-pointer">&rarr;</button>
         <button type="button" data-toggle-d-rail="1" aria-expanded="false" aria-controls="d-aside" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs shrink-0 cursor-pointer">List</button>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-[228px_minmax(0,1fr)] gap-3 items-start">
+      <div class="grid grid-cols-1 md:grid-cols-[268px_minmax(0,1fr)] gap-3 items-start">
         <aside id="d-aside" aria-label="Candidate Directory" class="hidden md:flex md:flex-col bg-[var(--card)] border border-[var(--border)] rounded-lg p-2.5 gap-2 md:sticky md:top-3 max-h-[calc(100vh-1.5rem)]">
           <div class="flex items-center justify-between">
             <span class="font-semibold text-xs">Candidate Directory</span>
             <span id="d-nav-count" class="font-mono tabular-nums text-xs text-[var(--muted-foreground)]">52 / 52</span>
           </div>
-          <input id="d-search" aria-label="Search candidate directory" type="text" placeholder="Jump: ID, gene, subunit, drug..." class="w-full bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1 text-xs text-[var(--foreground)]" />
+          <input id="d-search" aria-label="Search candidate directory" type="text" placeholder="Jump: EALS-006, KCNQ2, #4..." class="w-full bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1 text-xs text-[var(--foreground)]" />
           <div id="d-slice-bar" class="flex flex-wrap gap-1"></div>
           <select id="d-lens" aria-label="Filter by Mechanistic Problem Lens" class="w-full bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1 text-xs text-[var(--foreground)]"></select>
           <div id="d-nav" class="space-y-0.5 flex-1 min-h-0 max-h-[68vh] overflow-y-auto pr-0.5"></div>
@@ -335,7 +335,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
             <span class="font-mono font-semibold text-xs text-[var(--success)]">LEVEL 1 &middot; CACHED GATES (&lt;10s &middot; 0 MB)</span>
             <span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">Offline Ready</span>
           </div>
-          <p class="text-[var(--muted-foreground)] text-xs leading-snug">Clones the &lt;18 MB repository, installs pinned Python 3.12 dependencies (<span class="font-mono">uv.lock</span>), and verifies all 17 CSV schemas, foreign keys, citation lock, Epistemic Asymmetry rules, and 194/194 64-char SHA-256 digests.</p>
+          <p class="text-[var(--muted-foreground)] text-xs leading-snug">Clones the &lt;18 MB repository, installs pinned Python 3.12 dependencies (<span class="font-mono">uv.lock</span>), and verifies all 18 CSV schemas, foreign keys, citation lock, Epistemic Asymmetry rules, and 194/194 64-char SHA-256 digests.</p>
           <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] flex items-center justify-between gap-2 font-mono text-xs">
             <span class="truncate">uv sync --frozen &amp;&amp; uv run python scripts/verify_carbon_als.py --mode cached</span>
             <button type="button" data-copy-cmd="git clone https://github.com/helloimra/ExploreALS.git &amp;&amp; cd ExploreALS &amp;&amp; uv sync --frozen &amp;&amp; uv run python scripts/verify_carbon_als.py --mode cached" class="px-2 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] shrink-0 cursor-pointer">Copy</button>

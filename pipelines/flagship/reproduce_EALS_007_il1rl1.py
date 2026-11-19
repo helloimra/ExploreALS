@@ -1,4 +1,4 @@
-"""Flagship Reproducer #6: C007 — IL1RL1 / sST2 Decoy Suppression (Tier 2, Act #6 / Bio #12)."""
+"""Flagship Reproducer #6: EALS-007 — IL1RL1 / sST2 Decoy Suppression (Tier 2, Act #6 / Bio #12)."""
 from __future__ import annotations
 
 import sys
@@ -9,7 +9,7 @@ from _flagship_common import ROOT, assert_close, has_raw_dataset, load_csv_by_ke
 
 
 def main() -> None:
-    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "portfolio_id")["C007"]
+    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "accession_id")["EALS-007"]
     t4 = load_json_any("work/phase2/track4_celltype_isoform_resolution/outputs/run_p2_t4_001_c007_il1rl1_and_c018_c1q.json")
     b3_sp = load_json_any("work/phase1_batches/batch_3/outputs/run_b3_003_singlecell_spatial.json")
 
@@ -47,7 +47,7 @@ def main() -> None:
         checks.append(("Raw mmCIF PDB 4KC3 IL-33:ST2 complex loaded", len(st.polymer_atoms) > 1000, True, "PASS"))
 
     print_audit_report(
-        "C007", "IL1RL1 / sST2 Decoy Suppression", checks,
+        "EALS-007", "IL1RL1 / sST2 Decoy Suppression", checks,
         "Gene-level endothelial snRNA & 55-um Visium spot elevation are [MEASURED] (small n=7 Ctrl & spot-level BH=1.85e-9); soluble sST2 vs membrane ST2L attribution and oximetry-verified normoxic CSF stratification are prospective kill-gates.",
     )
 

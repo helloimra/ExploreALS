@@ -1,4 +1,4 @@
-"""Flagship Reproducer #1: S06 — SARM1 Non-Orthosteric ARM-TIR T-Lock (Tier 1, Act #1 / Bio #3)."""
+"""Flagship Reproducer #1: EALS-030 — SARM1 Non-Orthosteric ARM-TIR T-Lock (Tier 1, Act #1 / Bio #3)."""
 from __future__ import annotations
 
 import sys
@@ -17,7 +17,7 @@ def mwc_tlock_8mer(u: float, l0: float) -> float:
 
 
 def main() -> None:
-    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "portfolio_id")["S06"]
+    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "accession_id")["EALS-030"]
     st = load_json_any("work/phase2/track2_sarm1_ykt6_allostery/outputs/run_p2_t2_001_structural_biophysics.json")
     b6 = load_json_any("work/phase1_batches/batch_6/outputs/live_databases_audit.json")
 
@@ -83,7 +83,7 @@ def main() -> None:
         checks.append(("Raw mmCIF PDB 9TZY polymer chains verified", len({a.chain_id for a in cif9.polymer_atoms}) >= 3, True, "PASS"))
 
     print_audit_report(
-        "S06", "SARM1 Non-Covalent ARM-TIR T-Lock", checks,
+        "EALS-030", "SARM1 Non-Covalent ARM-TIR T-Lock", checks,
         "PDB 9TZY 3-chain BEXi gluing & gnomAD constraint are [MEASURED]; 8-mer MWC washout & ~2-7x conditional sensitivity are [MODEL_PRIOR] (defaulting to non-epistatic Bliss additivity per Krus et al. 2022 PMID:35767949).",
     )
 

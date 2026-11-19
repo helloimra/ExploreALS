@@ -3,8 +3,8 @@ from __future__ import annotations
 
 EXPLORER_JS_BODY = """
 const TRL_NUM = {TRL_6_PH2B_SUBGROUP_BIOLOGIC:6,TRL_5_HUMAN_ALS_PK_PD_PROVEN:5,TRL_4_ACTIVE_PH1_CLASS_OR_NCE:4,TRL_3_PRECLINICAL_SSO_COORDINATE:3,TRL_2_PRECLINICAL_MODALITY_DISCOVERY:2,TRL_1_TARGET_TOOL_PROBE_WATCHLIST:1,PROTOCOL_COMPANION_NA:0};
-const NYGC_GENE_TO_ID = {ATG4B:'DN-01',KALRN:'DN-02',PTPRT:'DN-03',CELF5:'DN-04',PRUNE2:'DN-05',PFKP:'DN-06',TRAPPC12:'DN-07',ELK1:'DN-08',DLGAP1:'DN-09'};
-let selectedId = 'S06';
+const NYGC_GENE_TO_ID = {ATG4B:'EALS-034',KALRN:'EALS-035',PTPRT:'EALS-036',CELF5:'EALS-037',PRUNE2:'EALS-038',PFKP:'EALS-039',TRAPPC12:'EALS-040',ELK1:'EALS-041',DLGAP1:'EALS-042'};
+let selectedId = 'EALS-030';
 let activeTab = 'home';
 let activeQuick = 'ALL';
 let activeEpi = 'ALL';
@@ -18,22 +18,22 @@ let lastSelHidden = false;
 const expandedDetailGates = {};
 
 const DETAIL_GATE_SHORT = {
-  'S06:go': 'Monotonic NADase & axonal cADPR suppression from 0.01x–10x IC50 across 48–72 h simulated oral CNS washout in WT, Cys311Ala, and p.L223P ARM-GoF motor axons.',
-  'S06:kill': 'Any bell-shaped sub-IC50 axonal cADPR or washout CSF pNfH/NfL spike (0.05x–0.30x Kd), Cys311 covalent liability, off-target CD38 inhibition, or CSF Kpuu <0.20.',
-  'S07:go': 'Stage-0 Passing-Bablok BioVendor-to-CLIA CSF pNfH bridging + event-driven Phase 3 (247 deaths @ HR=0.70) achieving OS HR <=0.70 (p<0.05) with Treg TSDR stability.',
-  'S07:kill': 'Null overall survival in prospectively gated low/moderate CSF pNfH (<=3,700 pg/mL) Phase 3 cohort, BioVendor-to-CLIA bridging failure, or Treg TSDR loss.',
-  'C001:go': 'Stage 1 single-entity UNC13A #2 ICH M3(R2) GLP IT tox + NHP cervical/BA4 EC80 splice rescue + Stage 2 genotype-stratified 2-plex vs 3-plex testing (6–9 mg).',
-  'C001:kill': 'Multiplex uptake/endosomal-escape loss >30% vs 1-plex, inadequate cervical/BA4 splice rescue, acute Ca2+-oscillation/DRG neurotox, or unrescued Munc13-1 priming.',
-  'C006:go': 'Stage 1 >=50-oligo Intron-4/Exon-5/Intron-5 microwalk across TDP-43-CRISPRi & WT human neurons/DRGs suppresses Exon-5 skip >=60% without ISE worsening or WT cis-eviction.',
-  'C006:kill': 'Zero Exon-5 inclusion gain or wrong-sign ISE exacerbation (#3), WT TDP-43 cis-eviction (#1), >30% multiplex escape loss, or acute PS-oligo Ca2+/DRG neurotox.',
-  'C002:go': 'STMN2 #2 SSO + sub-IC80 non-covalent SARM1 T-lock shows additive/synergistic axon outgrowth & NAD+ preservation + NHP cervical/BA4 rescue at <=3 mg/strand.',
-  'C002:kill': 'Redundant functional ceiling with SARM1 T-lock alone, >30% multiplex endosomal-escape competition loss, or acute human neuron Ca2+-oscillation/DRG neurotox.',
-  'C007:go': 'Oximetry-verified normoxic living-CSF Simoa sST2/IL-33 + microvessel sST2/ST2L ddPCR confirms pre-hypoxic decoy excess before IT HLE sST2 biologic or PAS SSO.',
-  'C007:kill': 'Living-CSF sST2 elevation restricted to nocturnal-hypoxic/NIV ALS, protective ST2L dominance in microvessels, capillary delivery failure, or Treg ST2L loss.',
-  'DN-01:go': 'SSO #2 vs #1 in graded TDP-43-CRISPRi human iPSC-MNs restores full-length ATG4B & LC3ylation + cervical alpha-MN BaseScope ISH confirms stage-(ii) penetrance.',
-  'DN-01:kill': 'Negligible cryptic exon PSI (<2%) in stage-(ii) cervical sALS alpha-MNs, acute Ca2+/DRG neurotox, or failure to restore endogenous LC3B-I recycling.',
-  'DN-04:go': 'SSO #1 vs #2 in Bye sALS iPSC-MNs suppresses cryptic junction >=70% while preserving canonical Exon 5 & 98-bp micro-intron (<1–2% Nanopore LOQ) + BaseScope ISH.',
-  'DN-04:kill': 'Canonical Exon-5 skipping >5%, induced 98-bp micro-intron retention >5% (mod3=2 frameshift), or negligible stage-(ii) cervical alpha-MN CE penetrance (<2%).'
+  'EALS-030:go': 'Monotonic NADase & axonal cADPR suppression from 0.01x–10x IC50 across 48–72 h simulated oral CNS washout in WT, Cys311Ala, and p.L223P ARM-GoF motor axons.',
+  'EALS-030:kill': 'Any bell-shaped sub-IC50 axonal cADPR or washout CSF pNfH/NfL spike (0.05x–0.30x Kd), Cys311 covalent liability, off-target CD38 inhibition, or CSF Kpuu <0.20.',
+  'EALS-031:go': 'Stage-0 Passing-Bablok BioVendor-to-CLIA CSF pNfH bridging + event-driven Phase 3 (247 deaths @ HR=0.70) achieving OS HR <=0.70 (p<0.05) with Treg TSDR stability.',
+  'EALS-031:kill': 'Null overall survival in prospectively gated low/moderate CSF pNfH (<=3,700 pg/mL) Phase 3 cohort, BioVendor-to-CLIA bridging failure, or Treg TSDR loss.',
+  'EALS-001:go': 'Stage 1 single-entity UNC13A #2 ICH M3(R2) GLP IT tox + NHP cervical/BA4 EC80 splice rescue + Stage 2 genotype-stratified 2-plex vs 3-plex testing (6–9 mg).',
+  'EALS-001:kill': 'Multiplex uptake/endosomal-escape loss >30% vs 1-plex, inadequate cervical/BA4 splice rescue, acute Ca2+-oscillation/DRG neurotox, or unrescued Munc13-1 priming.',
+  'EALS-006:go': 'Stage 1 >=50-oligo Intron-4/Exon-5/Intron-5 microwalk across TDP-43-CRISPRi & WT human neurons/DRGs suppresses Exon-5 skip >=60% without ISE worsening or WT cis-eviction.',
+  'EALS-006:kill': 'Zero Exon-5 inclusion gain or wrong-sign ISE exacerbation (#3), WT TDP-43 cis-eviction (#1), >30% multiplex escape loss, or acute PS-oligo Ca2+/DRG neurotox.',
+  'EALS-002:go': 'STMN2 #2 SSO + sub-IC80 non-covalent SARM1 T-lock shows additive/synergistic axon outgrowth & NAD+ preservation + NHP cervical/BA4 rescue at <=3 mg/strand.',
+  'EALS-002:kill': 'Redundant functional ceiling with SARM1 T-lock alone, >30% multiplex endosomal-escape competition loss, or acute human neuron Ca2+-oscillation/DRG neurotox.',
+  'EALS-007:go': 'Oximetry-verified normoxic living-CSF Simoa sST2/IL-33 + microvessel sST2/ST2L ddPCR confirms pre-hypoxic decoy excess before IT HLE sST2 biologic or PAS SSO.',
+  'EALS-007:kill': 'Living-CSF sST2 elevation restricted to nocturnal-hypoxic/NIV ALS, protective ST2L dominance in microvessels, capillary delivery failure, or Treg ST2L loss.',
+  'EALS-034:go': 'SSO #2 vs #1 in graded TDP-43-CRISPRi human iPSC-MNs restores full-length ATG4B & LC3ylation + cervical alpha-MN BaseScope ISH confirms stage-(ii) penetrance.',
+  'EALS-034:kill': 'Negligible cryptic exon PSI (<2%) in stage-(ii) cervical sALS alpha-MNs, acute Ca2+/DRG neurotox, or failure to restore endogenous LC3B-I recycling.',
+  'EALS-037:go': 'SSO #1 vs #2 in Bye sALS iPSC-MNs suppresses cryptic junction >=70% while preserving canonical Exon 5 & 98-bp micro-intron (<1–2% Nanopore LOQ) + BaseScope ISH.',
+  'EALS-037:kill': 'Canonical Exon-5 skipping >5%, induced 98-bp micro-intron retention >5% (mod3=2 frameshift), or negligible stage-(ii) cervical alpha-MN CE penetrance (<2%).'
 };
 
 function valOf(id, fb=''){ const el = document.getElementById(id); return el ? String(el.value || '') : fb; }
@@ -47,7 +47,7 @@ function defaultHashForCurrentState(){
     return '#home';
   }
   if(activeTab === 'portfolio') return '#portfolio';
-  if(activeTab === 'dossiers') return '#dossier/' + encodeURIComponent((typeof dossierId !== 'undefined' && dossierId) ? dossierId : (selectedId || 'S06'));
+  if(activeTab === 'dossiers') return '#dossier/' + encodeURIComponent((typeof dossierId !== 'undefined' && dossierId) ? dossierId : (selectedId || 'EALS-030'));
   if(activeTab === 'intervals'){
     const iq = valOf('iv-search').trim();
     return iq ? '#intervals/' + encodeURIComponent(iq) : '#intervals';
@@ -55,7 +55,7 @@ function defaultHashForCurrentState(){
   if(activeTab === 'replication'){
     const rq = valOf('rep-search').trim();
     if(typeof repMode !== 'undefined' && repMode === 'evidence' && rq) return '#replication/cand/' + encodeURIComponent(rq);
-    if(typeof selectedRepKey !== 'undefined' && selectedRepKey && selectedRepKey !== 'FLAGSHIP-S06') return '#replication/' + encodeURIComponent(selectedRepKey);
+    if(typeof selectedRepKey !== 'undefined' && selectedRepKey && selectedRepKey !== 'FLAGSHIP-EALS-030') return '#replication/' + encodeURIComponent(selectedRepKey);
     return '#replication';
   }
   return '#home';
@@ -76,7 +76,7 @@ function buildHistorySnapshot(targetHash){
     activeUpdCat: activeUpdCat, updSearch: valOf('upd-search'),
     ivSearch: valOf('iv-search'), ivStatus: valOf('iv-status','ALL'), ivOrigin: valOf('iv-origin','ALL'), ivLeads: Boolean(ivL && ivL.checked),
     repMode: (typeof repMode !== 'undefined' ? repMode : 'runs'),
-    selectedRepKey: (typeof selectedRepKey !== 'undefined' ? selectedRepKey : 'FLAGSHIP-S06'),
+    selectedRepKey: (typeof selectedRepKey !== 'undefined' ? selectedRepKey : 'FLAGSHIP-EALS-030'),
     repSearch: valOf('rep-search'), repFilter: valOf('rep-filter','ALL'),
     repReturnDossier: (typeof repReturnDossier !== 'undefined' ? repReturnDossier : ''),
     repReturnTab: (typeof repReturnTab !== 'undefined' ? repReturnTab : 'dossiers'),
@@ -122,32 +122,32 @@ function renderUpdatesLog(){
     b.className = 'px-2 py-1 rounded border font-mono text-xs cursor-pointer ' + (on ? 'bg-[var(--primary)] text-[var(--primary-foreground)] border-[var(--primary)] font-semibold' : 'bg-[var(--background)] text-[var(--muted-foreground)] border-[var(--border)] hover:text-[var(--foreground)] hover:border-[var(--primary)]');
   });
   const qEl = document.getElementById('upd-search');
-  const q = (qEl ? qEl.value : '').trim().toLowerCase();
+  const q = (qEl ? qEl.value : '').trim();
   const rows = DATA_UPDATES.filter(u => {
     if(activeUpdCat !== 'ALL' && u.cat !== activeUpdCat) return false;
     if(!q) return true;
     const cNames = u.ids.map(aid => {
       const cp = DATA_PORT.find(x => x.id === aid);
       const sn = DATA_SUB.find(x => x.id === aid);
-      return (cp ? cp.name : '') + ' ' + (sn ? sn.gene : '');
+      return (cp ? cp.name + ' ' + (cp.sym || '') : '') + ' ' + (sn ? sn.gene : '');
     }).join(' ');
-    const hay = [u.id, u.dt, u.tag, u.cat, u.ids.join(' '), cNames, u.imp, u.hdr, u.pre, u.post, u.cons, u.srcs.join(' '), u.ancs.join(' ')].join(' ').toLowerCase();
-    return hay.includes(q);
+    const hay = [u.id, u.dt, u.tag, u.cat, u.ids.join(' '), cNames, u.imp, u.hdr, u.pre, u.post, u.cons, u.srcs.join(' '), u.ancs.join(' ')].join(' ');
+    return queryMatchesIdOrText(u.ids, q, hay);
   });
   const cntEl = document.getElementById('upd-count');
   if(cntEl) cntEl.textContent = `${rows.length} / ${DATA_UPDATES.length}`;
   feed.innerHTML = rows.length ? rows.map(u => {
-    const gCtx = u.ids.find(x => x !== 'PORTFOLIO_WIDE' && !x.includes('-N')) || 'S06';
+    const gCtx = u.ids.find(x => x !== 'PORTFOLIO_WIDE' && !x.includes('.')) || 'EALS-030';
     const idPills = u.ids.map(aid => {
       if(aid === 'PORTFOLIO_WIDE') return '<span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">All 52 Hypotheses</span>';
-      if(aid.includes('-N')){
+      if(aid.includes('.')){
         const sn = DATA_SUB.find(x => x.id === aid);
-        const parId = aid.split('-N')[0];
-        return `<button type="button" data-open-dossier="${esc(parId)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono font-semibold text-xs text-[var(--link)] cursor-pointer">${esc(aid)}${sn ? ' &middot; ' + esc(sn.gene) : ''} (${esc(parId)}) &rarr;</button>`;
+        const parId = aid.split('.')[0];
+        return `<button type="button" data-open-dossier="${esc(aid)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono font-semibold text-xs text-[var(--link)] cursor-pointer">${sn ? esc(sn.gene) + ' &middot; ' : ''}${esc(aid)} &rarr;</button>`;
       }
       const cp = DATA_PORT.find(x => x.id === aid);
-      const shortNm = cp ? cp.name.replace(/^(?:Low-Dose|Ultrahigh-Dose|Stage-Gated)\\s+/i,'').split(/[\\s(/]/)[0] : '';
-      return `<button type="button" data-open-dossier="${esc(aid)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono font-semibold text-xs text-[var(--link)] cursor-pointer">${cp ? '#' + cp.rk + ' ' : ''}${esc(aid)}${shortNm ? ' &middot; ' + esc(shortNm) : ''} &rarr;</button>`;
+      const shortNm = cp ? (cp.sym || cp.name.replace(/^(?:Low-Dose|Ultrahigh-Dose|Stage-Gated)\\s+/i,'').split(/[\\s(/]/)[0]) : '';
+      return `<button type="button" data-open-dossier="${esc(aid)}" title="${cp ? esc('#' + cp.rk + ' ' + cp.name + ' (' + cp.id + ')') : esc(aid)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono font-semibold text-xs text-[var(--link)] cursor-pointer">${cp ? '#' + cp.rk + ' ' : ''}${shortNm ? esc(shortNm) + ' &middot; ' : ''}${esc(aid)} &rarr;</button>`;
     }).join(' ');
     const ancPills = u.ancs.map(anc => {
       const attr = anc.startsWith('EV-') ? `data-open-rep-ev="${esc(anc)}"` : `data-open-rep-run="${esc(anc)}"`;
@@ -270,8 +270,12 @@ function renderContrastsTable(){
   if(dr) dr.open = false;
   if(!tb || typeof DATA_CONTRASTS === 'undefined') return;
   tb.innerHTML = DATA_CONTRASTS.map(row => {
-    const ctx = row.ids[0] || 'S06';
-    const idBtns = row.ids.map(cid => `<button type="button" data-open-dossier="${esc(cid)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono font-semibold text-[var(--link)] text-xs cursor-pointer whitespace-nowrap">${esc(cid)} &rarr;</button>`).join(' ');
+    const ctx = row.ids[0] || 'EALS-030';
+    const idBtns = row.ids.map(cid => {
+      const cp = DATA_PORT.find(x => x.id === cid);
+      const sLbl = cp ? (cp.sym || cp.name).split(/[\\s(/]/)[0] : '';
+      return `<button type="button" data-open-dossier="${esc(cid)}" title="${cp ? esc('#' + cp.rk + ' ' + cp.name + ' (' + cid + ')') : esc(cid)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono font-semibold text-[var(--link)] text-xs cursor-pointer whitespace-nowrap">${sLbl ? esc(sLbl) + ' &middot; ' : ''}${esc(cid)} &rarr;</button>`;
+    }).join(' ');
     return `<tr class="align-top hover:bg-[var(--content)]">
       <td class="py-2 px-2"><div class="flex flex-wrap gap-1">${idBtns}</div></td>
       <td class="py-2 px-2 font-semibold whitespace-nowrap">${esc(row.domain)}</td>
@@ -284,12 +288,14 @@ function renderContrastsTable(){
 
 function renderPortfolio(){
   renderLensBar();
-  const q = document.getElementById('p-search').value.trim().toLowerCase();
+  const qRaw = document.getElementById('p-search').value.trim();
+  const q = qRaw.toLowerCase();
   const orig = document.getElementById('p-origin').value;
   const dec = document.getElementById('p-dec').value;
   const tier = document.getElementById('p-tier').value;
   const sortBy = document.getElementById('p-sort').value;
   const lensObj = (activeLens !== 'ALL' && typeof DATA_LENSES !== 'undefined') ? DATA_LENSES.find(x => x.k === activeLens) : null;
+  const matchMeta = {};
   let rows = DATA_PORT.filter(r => {
     if(lensObj && !lensObj.ids.includes(r.id)) return false;
     if(orig!=='ALL' && r.sub!==orig) return false;
@@ -300,17 +306,23 @@ function renderPortfolio(){
     if(activeEpi!=='ALL' && r.epi!==activeEpi) return false;
     if(tier==='TIER_12' && r.tier!=='TIER_1_ACTIONABLE_NOW' && r.tier!=='TIER_2_FOCUSED_GATE_FIRST') return false;
     if(tier!=='ALL' && tier!=='TIER_12' && r.tier!==tier) return false;
+    if(!qRaw){ matchMeta[r.id] = {tier: 9}; return true; }
     const sumObj = (typeof DATA_SUM !== 'undefined' && DATA_SUM[r.id]) ? DATA_SUM[r.id] : null;
     const sumTxt = sumObj ? ((sumObj.hyp || '') + ' ' + (sumObj.edge_text || '') + ' ' + sumObj.verdict + ' ' + sumObj.sub + ' ' + sumObj.proves + ' ' + sumObj.disproves) : '';
     const subTxt = DATA_SUB.filter(sn => sn.par === r.id).map(sn => sn.id + ' ' + sn.gene + ' ' + sn.role + ' ' + sn.vlbl + ' ' + sn.vbody).join(' ');
-    if(q && !(r.id+' '+r.name+' '+r.mod+' '+r.hurdles+' '+r.sub+' '+(r.crowd||'')+' '+humanizeEnum(r.basis||'')+' '+sumTxt+' '+subTxt).toLowerCase().includes(q)) return false;
+    const m = matchCandidateQuery(r, qRaw, humanizeEnum(r.basis||'') + ' ' + sumTxt + ' ' + subTxt);
+    if(!m.ok) return false;
+    matchMeta[r.id] = m;
     return true;
   });
   const hurdleKey = r => r.tier==='DROPPED_FALSIFIED_EXCLUDED'?99:(r.tier==='BIOMARKER_BENCHMARK_ONLY'?98:(r.tier==='COMPANION_PROTOCOL_ONLY'?97:r.hcnt));
-  if(sortBy==='bio') rows.sort((a,b)=>a.brk-b.brk);
-  else if(sortBy==='trl') rows.sort((a,b)=>(TRL_NUM[b.trl]-TRL_NUM[a.trl])||(a.rk-b.rk));
-  else if(sortBy==='hurdles') rows.sort((a,b)=>(hurdleKey(a)-hurdleKey(b))||(a.rk-b.rk));
-  else rows.sort((a,b)=>a.rk-b.rk);
+  const baseCmp = (a, b) => {
+    if(sortBy==='bio') return a.brk - b.brk;
+    if(sortBy==='trl') return (TRL_NUM[b.trl]-TRL_NUM[a.trl])||(a.rk-b.rk);
+    if(sortBy==='hurdles') return (hurdleKey(a)-hurdleKey(b))||(a.rk-b.rk);
+    return a.rk - b.rk;
+  };
+  rows.sort((a, b) => qRaw ? (((matchMeta[a.id]||{}).tier||9) - ((matchMeta[b.id]||{}).tier||9)) || baseCmp(a, b) : baseCmp(a, b));
   const epiNote = activeEpi !== 'ALL' ? ` \u00b7 ${humanizeEnum(activeEpi)}` : '';
   const lensNote = lensObj ? ` \u00b7 ${lensObj.lbl.split(' \u00b7 ')[0]}` : '';
   document.getElementById('p-count').textContent = `${rows.length} / ${DATA_PORT.length}${epiNote}${lensNote}`;
@@ -325,7 +337,8 @@ function renderPortfolio(){
     const rkSecondary = (r.rk !== r.brk || (r.dec !== 'DROP' && r.dec !== 'RECLASSIFY_BENCHMARK_OR_BIOMARKER'))
       ? `<div class="text-xs font-semibold text-[var(--primary)]">${sortBy==='bio' ? 'Act #'+r.rk : 'Bio #'+r.brk}</div>`
       : '';
-    const matchedSub = q ? DATA_SUB.filter(sn => sn.par === r.id && !r.name.toLowerCase().includes(sn.gene.toLowerCase()) && (sn.gene+' '+sn.id+' '+sn.role).toLowerCase().includes(q)).map(sn => sn.gene) : [];
+    const mSub = (matchMeta[r.id] && matchMeta[r.id].sub) ? matchMeta[r.id].sub : '';
+    const matchedSub = q ? DATA_SUB.filter(sn => sn.par === r.id && !r.name.toLowerCase().includes(sn.gene.toLowerCase()) && (sn.id === mSub || (sn.gene+' '+sn.id+' '+sn.role).toLowerCase().includes(q))).map(sn => sn.gene) : [];
     const subCnt = DATA_SUB.filter(sn => sn.par === r.id).length;
     const hasNygc = Object.values(NYGC_GENE_TO_ID).includes(r.id);
     const metaChips = [
@@ -334,7 +347,7 @@ function renderPortfolio(){
     ].filter(Boolean).join(' ');
     return `<tr tabindex="0" data-select-cand="${esc(r.id)}" aria-selected="${r.id===selectedId?'true':'false'}" class="cursor-pointer focus:bg-[var(--content)] ${active}">
       <td class="py-2 px-2 font-mono tabular-nums whitespace-nowrap text-[var(--muted-foreground)]" title="Portfolio Actionability #${r.rk} · Pure Biological Evidence #${r.brk}"><div>${rkPrimary}</div>${rkSecondary}</td>
-      <td class="py-2 px-1.5 font-mono font-semibold whitespace-nowrap">${esc(r.id)}</td>
+      <td class="py-2 px-1.5 font-mono text-xs text-[var(--muted-foreground)] whitespace-nowrap" title="ExploreALS Accession ${esc(r.id)}">${esc(r.id)}</td>
       <td class="py-2 px-2"><div class="font-medium flex flex-wrap items-center gap-1"><span>${esc(r.name)}</span>${metaChips}</div><div class="text-[var(--muted-foreground)] text-xs">${esc(humanizeEnum(r.sub))} &middot; ${trackLabel(r.trk)}</div></td>
       <td class="hidden xl:table-cell py-2 px-2 text-xs text-[var(--muted-foreground)] max-w-[220px] break-words" title="${esc(formatModality(r.mod))}">${esc(shortMod(r.mod))}</td>
       <td class="py-2 px-1.5">${decBadge(r.dec)}</td>
@@ -461,7 +474,7 @@ function renderDetail(selHidden=false){
   const pubMonoLink = (typeof window !== 'undefined' && window.PUBLIC_WEB_EXPORT && w)
     ? `<a href="./monographs/${esc(r.id)}.html" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs shrink-0" title="Open lightweight standalone monograph page">Page &nearr;</a>`
     : '';
-  const candUpds = (typeof DATA_UPDATES !== 'undefined') ? DATA_UPDATES.filter(u => u.ids.includes(r.id) || u.ids.some(x => x.startsWith(r.id + '-'))) : [];
+  const candUpds = (typeof DATA_UPDATES !== 'undefined') ? DATA_UPDATES.filter(u => u.ids.includes(r.id) || u.ids.some(x => x.startsWith(r.id + '.'))) : [];
   const updDetailBtn = candUpds.length
     ? `<button type="button" data-jump-updates="${esc(r.id)}" class="px-2 py-1 rounded border border-[var(--primary)] text-[var(--primary)] font-mono text-xs shrink-0 cursor-pointer" title="View living research updates for ${esc(r.id)}">&#8634; ${candUpds.length}</button>`
     : '';
@@ -469,7 +482,7 @@ function renderDetail(selHidden=false){
   document.getElementById('p-detail').innerHTML = `${hiddenBanner}
     <div class="space-y-1.5 border-b border-[var(--card-border)] pb-2">
       <div class="flex items-center justify-between gap-1.5 flex-wrap">
-        <div class="flex items-center gap-1.5 flex-wrap"><span class="font-mono font-bold text-sm" title="Portfolio Actionability Rank #${r.rk} · Pure Biological Evidence Rank #${r.brk}">#${r.rk} <span class="font-normal text-xs text-[var(--muted-foreground)]">(Bio #${r.brk})</span> &middot; ${esc(r.id)}</span> ${decBadge(r.dec)} ${crowdChip}</div>
+        <div class="flex items-center gap-1.5 flex-wrap"><span class="font-mono font-bold text-sm" title="Portfolio Actionability Rank #${r.rk} · Pure Biological Evidence Rank #${r.brk}">#${r.rk} <span class="font-normal text-xs text-[var(--muted-foreground)]">(Bio #${r.brk})</span> &middot; <span class="text-[var(--muted-foreground)] font-normal">${esc(r.id)}</span></span> ${decBadge(r.dec)} ${crowdChip}</div>
         <div class="flex items-center gap-1 shrink-0">${updDetailBtn}${pubMonoLink}</div>
       </div>
       <div class="text-sm font-semibold leading-snug">${esc(r.name)}</div>
@@ -553,7 +566,7 @@ function resetPortfolioFilters(redraw=true, keepQuick='ALL'){
 EXPLORER_JS_TABS234 = """
 function renderIntervals(){
   const qEl = document.getElementById('iv-search');
-  const q = qEl ? qEl.value.trim().toLowerCase() : '';
+  const q = qEl ? qEl.value.trim() : '';
   const st = document.getElementById('iv-status').value;
   const orig = document.getElementById('iv-origin').value;
   const leadsOnly = document.getElementById('iv-leads').checked;
@@ -561,7 +574,7 @@ function renderIntervals(){
     if(st!=='ALL' && c.st!==st) return false;
     if(orig!=='ALL' && c.o!==orig) return false;
     if(leadsOnly && !c.lead) return false;
-    if(q && !(c.pid+' '+c.sc+' '+c.gene+' '+c.iv+' '+c.flags+' '+c.mode).toLowerCase().includes(q)) return false;
+    if(q && !queryMatchesIdOrText([c.sc], q, (c.sc===c.pid ? c.pid+' ' : '')+c.sc+' '+c.gene+' '+c.iv+' '+c.flags+' '+c.mode)) return false;
     return true;
   });
   document.getElementById('iv-count').textContent = `${rows.length} / ${DATA_CIS.length}`;
@@ -572,7 +585,7 @@ function renderIntervals(){
     const ensUrl = `https://www.ensembl.org/Homo_sapiens/Location/View?r=${c.chr.replace('chr','')}:${c.lo}-${c.hi}`;
     const gid = GENE_ENSG[c.gene] || '';
     const gnomUrl = gid ? `https://gnomad.broadinstitute.org/gene/${gid}?dataset=gnomad_r4` : '';
-    const linkId = (c.pid && c.pid !== 'NONE') ? c.pid : String(c.sc).replace(/-N[0-9]+$/, '');
+    const linkId = (c.pid && c.pid !== 'NONE') ? c.pid : String(c.sc).replace(/\\.[0-9]+$/, '');
     return `<tr class="hover:bg-[var(--content)] align-top">
       <td class="py-2 px-2.5 font-mono tabular-nums text-[var(--muted-foreground)]">${c.ord}</td>
       <td class="py-2 px-2 font-mono"><div class="font-semibold"><button type="button" data-open-dossier="${esc(linkId)}" class="text-[var(--link)] hover:underline font-mono font-semibold cursor-pointer">${esc(c.gene)} &middot; Walk #${c.rk}</button> <span class="text-[var(--muted-foreground)] font-normal">(${esc(c.sc)})</span></div>${gnomUrl?`<div class="text-xs mt-0.5">${mkExtA(gnomUrl, 'gnomAD v4')}</div>`:''}</td>
@@ -657,7 +670,7 @@ function switchTab(tab, historyMode='push', explicitHash=''){
 
 function restoreHistorySnapshot(snap){
   if(!snap || !snap.tab) return false;
-  selectedId = snap.selectedId || 'S06';
+  selectedId = snap.selectedId || 'EALS-030';
   if(typeof dossierId !== 'undefined') dossierId = snap.dossierId || selectedId;
   dossierFromPortfolio = Boolean(snap.dossierFromPortfolio);
   if(typeof dossierSlice !== 'undefined' && snap.dossierSlice) dossierSlice = snap.dossierSlice;
@@ -705,12 +718,23 @@ function syncFromHash(fromPop=false){
   if(h === '#subnodes' || h === '#analytics' || h === '#portfolio'){ switchTab('portfolio', 'none'); return true; }
   const mi = /^#intervals(?:[/](.+))?$/.exec(h);
   if(mi){ resetIntervalFilters(false); if(mi[1]) setValOf('iv-search', decodeURIComponent(mi[1])); switchTab('intervals', 'none'); return true; }
-  const m = /^#(?:dossier|monograph)[/]([A-Za-z0-9-]+)$/.exec(h);
-  const cid = m ? m[1].replace(/-N[0-9]+$/, '') : '';
-  if(cid && DATA_PORT.some(x=>x.id===cid)){ dossierId = cid; selectedId = cid; switchTab('dossiers', 'none'); return true; }
-  const mr = /^#replication(?:[/](?:cand[/]([A-Za-z0-9-]+)|([A-Za-z0-9_-]+)))?$/.exec(h);
+  const m = /^#(?:dossier|monograph)[/](.+)$/.exec(h);
+  if(m){
+    const res = resolveCandidateId(decodeURIComponent(m[1]));
+    if(res && DATA_PORT.some(x=>x.id===res.id)){
+      if(res.sub) pendingDossierSec = 'sec-subunits';
+      dossierId = res.id; selectedId = res.id;
+      switchTab('dossiers', 'none');
+      return true;
+    }
+  }
+  const mr = /^#replication(?:[/](?:cand[/]([^/]+)|([A-Za-z0-9_.-]+)))?$/.exec(h);
   if(mr && typeof openReplicationTarget === 'function'){
-    if(mr[1]){ openReplicationTarget('cand', mr[1], mr[1], 'dossiers', 'none'); }
+    if(mr[1]){
+      const rc = resolveCandidateId(decodeURIComponent(mr[1]));
+      const cKey = rc ? rc.id : decodeURIComponent(mr[1]);
+      openReplicationTarget('cand', cKey, cKey, 'dossiers', 'none');
+    }
     else if(mr[2]){ openReplicationTarget(mr[2].startsWith('DS') ? 'ds' : (mr[2].startsWith('EV-') ? 'ev' : 'run'), mr[2], '', 'dossiers', 'none'); }
     else { switchTab('replication', 'none'); }
     return true;
@@ -736,7 +760,7 @@ document.addEventListener('click', e => {
   const juBtn = tgt.closest('[data-jump-updates]');
   if(juBtn){ e.preventDefault(); e.stopPropagation(); jumpToUpdates(juBtn.getAttribute('data-jump-updates')); return; }
   const hfBtn = tgt.closest('[data-home-flagships]');
-  if(hfBtn){ e.preventDefault(); dossierSlice = 'T12'; dossierLens = 'ALL'; openDossier('S06'); return; }
+  if(hfBtn){ e.preventDefault(); dossierSlice = 'T12'; dossierLens = 'ALL'; openDossier('EALS-030'); return; }
   const hcBtn = tgt.closest('[data-home-contrasts]');
   if(hcBtn){ e.preventDefault(); const dr = document.getElementById('contrasts-drawer'); if(dr) dr.open = true; switchTab('portfolio', 'push'); if(dr && dr.scrollIntoView){ try{ dr.scrollIntoView({behavior:'smooth', block:'start'}); }catch(_e){} } return; }
   const reBtn = tgt.closest('[data-open-rep-ev]');

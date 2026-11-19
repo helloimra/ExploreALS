@@ -1,4 +1,4 @@
-"""Flagship Reproducer #3: C001 — UNC13A Cryptic-Exon Steric SSO (Tier 2, Act #3 / Bio #1)."""
+"""Flagship Reproducer #3: EALS-001 — UNC13A Cryptic-Exon Steric SSO (Tier 2, Act #3 / Bio #1)."""
 from __future__ import annotations
 
 import sys
@@ -9,7 +9,7 @@ from _flagship_common import assert_close, has_raw_dataset, load_csv_by_key, loa
 
 
 def main() -> None:
-    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "portfolio_id")["C001"]
+    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "accession_id")["EALS-001"]
     sp_b1 = load_json_any("work/phase1_batches/batch_1/outputs/run_b1_001_splicing_apa.json")
     pr_b1 = load_json_any("work/phase1_batches/batch_1/outputs/run_b1_004_proteomics.json")
     ot_rows = {r["interval_id"]: r for r in load_csv_rows("registries/phase3_sso_offtarget_audit.csv") if r["gene_symbol"] == "UNC13A"}
@@ -37,7 +37,7 @@ def main() -> None:
         assert_close("Promoted Lead #2 sp0+sp1+pm1_50+bulge+sub18 hits", float(int(lead2["spliced_0mm_genes"]) + int(lead2["spliced_1mm_genes"]) + int(lead2["premRNA_1mm_splice50bp_genes"]) + int(lead2["bulge_1nt_steric_pc_genes"]) + int(lead2["sub18_core_steric_pc_genes"])), 0.0, rtol=1e-6),
     ]
     print_audit_report(
-        "C001", "UNC13A Cryptic-Exon Steric SSO", checks,
+        "EALS-001", "UNC13A Cryptic-Exon Steric SSO", checks,
         "Human rs12973192/rs12608932 genetics, TDP-43 CE pathology, and human cortical/spinal MN synaptic rescue (>30% protein threshold; Keuss 2026 Nature 10.1038/s41586-026-11256-2) are [MEASURED] (Bio #1; ~43% NFE A/A modulates magnitude without conferring exemption); SantaLucia Tm & Stage 2 6-9 mg multiplex dosing are [MODEL_PRIOR].",
     )
 

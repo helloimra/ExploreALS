@@ -16,6 +16,7 @@ for p in (SCRIPTS_DIR, SCRIPT_DIR):
 
 from _retrospective_registry_specs import NEW_EVIDENCE_ROWS, RUN_P4_003_ROW  # noqa: E402
 from _retrospective_stat_and_log_specs import NEW_STAT_SPECS, UPD_2026_11_19_01  # noqa: E402
+from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose  # noqa: E402
 from verify_carbon_als import sha256_anchor  # noqa: E402
 
 TS = "2026-11-19T03:56:00Z"
@@ -178,6 +179,23 @@ def main() -> None:
         elif uid == "UPD-2026-11-18-01":
             u["new_evidence_or_revision"] = "Kuwahara et al. (2026, Life Sci Alliance, PMID:42994990) demonstrated direct, threshold-free PIKfyve -> +PI(3)P -> LRRK2 Rab10-pThr73 / ATG16L1 CASM recruitment alongside Drosophila C9orf72 secreted DPR data (DOI:10.64898/2026.11.09.765393). In [MODEL_PRIOR] pulsed q48h–q72h turnover simulations (>=55% substrate clearance and end-of-cycle stress <=0.05), removing the occupancy dead-zone cuts grid survival from ~79% (64/81) to ~30% (24/81) at matched 10–20 h repair and 0% (0/81) at slower 24–48 h postmitotic CASM washout."
     u_rows.insert(0, dict(UPD_2026_11_19_01))
+    def _map_anchor_tok(tok: str) -> str:
+        t = tok.strip()
+        if t.startswith("FLAGSHIP-") and not t.startswith("FLAGSHIP-EALS-"):
+            raw = t.removeprefix("FLAGSHIP-")
+            raw_leg = f"DN-{raw[2:]}" if re.fullmatch(r"DN\d{2}", raw) else raw
+            return f"FLAGSHIP-{legacy_to_accession(raw_leg)}"
+        return t
+
+    for u in u_rows:
+        u["affected_ids"] = ";".join(
+            legacy_to_accession(tok.strip()) for tok in u["affected_ids"].split(";") if tok.strip()
+        )
+        u["verification_anchor"] = ";".join(
+            _map_anchor_tok(tok) for tok in u["verification_anchor"].split(";") if tok.strip()
+        )
+        for pk in ("decision_impact", "headline", "prior_state_or_assumption", "new_evidence_or_revision", "portfolio_and_gate_consequence"):
+            u[pk] = translate_legacy_tokens_in_prose(u[pk])
     u_rows.sort(key=lambda x: (x["date_iso"], x["update_id"]), reverse=True)
     _save("living_evidence_updates.csv", u_cols, u_rows)
     print(f"RUN-P4-003 registries updated: {len(r_rows)} runs, {len(e_rows)} evidence, {len(s_rows)} SHA-64 contrasts, {len(u_rows)} living updates.")

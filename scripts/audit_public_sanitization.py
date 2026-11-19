@@ -25,14 +25,18 @@ HOST_PATH_RE = re.compile(
     r"(?<![A-Za-z0-9_.:/-])[cC]:[/\\]+(?:Windows|Temp|Documents|Projects|Antigravity))"
 )
 SECRET_TOKEN_RE = re.compile(
-    r"(?:AIza[0-9A-Za-z\-_]{30,}|ghp_[0-9A-Za-z]{30,}|sk-[0-9A-Za-z]{30,}|SYNAPSE_AUTH_TOKEN\s*=\s*['\"][A-Za-z0-9._\-]{16,})"
+    r"(?:AIza[0-9A-Za-z\-_]{30,}|ghp_[0-9A-Za-z]{30,}|github_pat_[0-9A-Za-z_]{24,}|"
+    r"sk-[0-9A-Za-z\-_]{24,}|(?:SYNAPSE_AUTH_TOKEN|ALPHAGENOME_API_KEY)\s*=\s*['\"]?[A-Za-z0-9._\-]{16,})"
 )
 OLIGO_KEY_RE = re.compile(
     r'"(?:aso_sequence|oligo_sequence|oligomer_sequence|antisense_sequence|spacer_sequence|dna_plus_5to3)"\s*:\s*"[ACGTUacgtu]{15,}"'
 )
 MODIFIED_ASO_RE = re.compile(r"(?:\+[ACGTU]|\b(?:mA|mC|mG|mU|moeA|moeC|moeG|moeT)\*){8,}")
+RAW_OLIGO_SEQ_RE = re.compile(r"(?<![A-Za-z0-9_])[ACGTU]{15,}(?![A-Za-z0-9_])", re.IGNORECASE)
+GAPPED_OLIGO_RE = re.compile(r"(?<![A-Za-z0-9_])(?:[ACGTU][\s\-_:|,;/\\]+){14,}[ACGTU](?![A-Za-z0-9_])", re.IGNORECASE)
 
 TEXT_EXTS = {".py", ".md", ".csv", ".tsv", ".json", ".html", ".js", ".css", ".toml", ".lock", ".cff", ".txt", ".bed", ""}
+PROSE_OR_DOC_PREFIXES = ("docs/", "registries/", "pipelines/flagship/", "README.md", "CITATION.cff", "LICENSE")
 
 
 def _scan_text_blob(label: str, text: str, errors: list[str]) -> None:
@@ -48,6 +52,9 @@ def _scan_text_blob(label: str, text: str, errors: list[str]) -> None:
     m_mod = MODIFIED_ASO_RE.search(text)
     if m_mod:
         errors.append(f"[BIOSECURITY_MOD_ASO] {label}: synthesis-ready modified oligomer notation")
+    if label.startswith(PROSE_OR_DOC_PREFIXES):
+        if RAW_OLIGO_SEQ_RE.search(text) or GAPPED_OLIGO_RE.search(text):
+            errors.append(f"[BIOSECURITY_RAW_OLIGO] {label}: >=15-nt raw or gapped nucleotide sequence")
 
 
 def audit_directory(target_dir: Path) -> list[str]:

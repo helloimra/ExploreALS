@@ -1,4 +1,4 @@
-"""Flagship Reproducer #5: C002 — STMN2 Cryptic-Exon-2a Steric SSO (Tier 2, Act #5 / Bio #2)."""
+"""Flagship Reproducer #5: EALS-002 — STMN2 Cryptic-Exon-2a Steric SSO (Tier 2, Act #5 / Bio #2)."""
 from __future__ import annotations
 
 import sys
@@ -9,7 +9,7 @@ from _flagship_common import assert_close, has_raw_dataset, load_csv_by_key, loa
 
 
 def main() -> None:
-    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "portfolio_id")["C002"]
+    port = load_csv_by_key("registries/phase4_unified_portfolio.csv", "accession_id")["EALS-002"]
     sp_b1 = load_json_any("work/phase1_batches/batch_1/outputs/run_b1_001_splicing_apa.json")
     pr_b1 = load_json_any("work/phase1_batches/batch_1/outputs/run_b1_004_proteomics.json")
     ot_rows = {r["interval_id"]: r for r in load_csv_rows("registries/phase3_sso_offtarget_audit.csv") if r["gene_symbol"] == "STMN2"}
@@ -38,7 +38,7 @@ def main() -> None:
         ("Promoted Lead #2 Clean >=2mm Off-Target Status", lead2["offtarget_safety_status"], "PASS_CLEAN_GE2MM", "PASS"),
     ]
     print_audit_report(
-        "C002", "STMN2 Cryptic-Exon-2a Steric SSO", checks,
+        "EALS-002", "STMN2 Cryptic-Exon-2a Steric SSO", checks,
         "Human tSTMN2 pathology & iPSC-MN rescue are [MEASURED] (Bio #2; Spillman -28.4% sits at nominal p=0.014, FDR=0.113 in n=20 C9-FTD cortices); Stage 2 multiplex dosing & ANQUR interim pNfH dissociation are gated separately.",
     )
 

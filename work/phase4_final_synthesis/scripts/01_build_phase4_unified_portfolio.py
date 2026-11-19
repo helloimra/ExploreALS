@@ -23,24 +23,36 @@ from _phase4_helpers import (  # noqa: E402
     portfolio_sort_key,
     sha12,
 )
+from carbon_als.accessions import PRIMARY_SYMBOL_AND_ALIASES, legacy_to_accession  # noqa: E402
 
 SEQ_GUARD_RE = re.compile(r"(?<![A-Za-z0-9_])[ACGTU]{15,}(?![A-Za-z0-9_])", re.IGNORECASE)
+ACCESSION_COLS = [
+    "accession_id", "legacy_id", "entity_kind", "parent_accession_id",
+    "origin_phase", "primary_symbol_or_inn", "search_aliases",
+]
 PORTFOLIO_COLS = [
-    "unified_rank", "portfolio_id", "origin_phase", "origin_subcohort", "track", "gene_or_drug",
+    "unified_rank", "accession_id", "portfolio_id", "origin_phase", "origin_subcohort", "track", "gene_or_drug",
     "candidate_type", "primary_modality_specific", "epistemic_state", "decision", "scientific_actionability_tier",
     "clinical_readiness_trl", "next_gate_experimental_class", "primary_evidence_basis", "model_prior_dependency",
     "unsolved_hurdle_count", "unsolved_hurdles_structured", "lead_cis_interval_id", "lead_offtarget_safety_status",
     "key_quantitative_anchor", "discriminating_next_test", "source_registry_ref", "analysis_run_id",
 ]
-CIS_COLS = [
-    "unified_interval_order", "origin_phase", "portfolio_id", "subnode_or_cand_id", "gene_symbol", "program_role",
-    "rank_within_gene", "is_promoted_lead", "interval_id", "chrom", "grch38_start", "grch38_end", "strand", "length_bp",
-    "cis_mechanism_or_mode", "gc_pct", "tm_phys_pops_c", "dg37_kcal", "cpg_dinucs", "max_self_stem_bp", "ese_motifs",
-    "mean_avi_phred", "max_avi_phred", "boundary_dist_bp", "composite_score", "spliced_0mm_genes", "spliced_1mm_genes",
-    "spliced_2mm_pc_genes", "spliced_wobble_only_pc_genes", "premRNA_0mm_sense_genes", "premRNA_1mm_sense_genes",
-    "premRNA_1mm_splice50bp_genes", "premRNA_wobble_only_splice50bp_pc_genes", "premRNA_2mm_splice25bp_pc_genes",
+CIS_BIO_COPY_COLS = [
+    "gc_pct", "tm_phys_pops_c", "dg37_kcal", "cpg_dinucs", "max_self_stem_bp", "ese_motifs",
+    "mean_avi_phred", "max_avi_phred", "boundary_dist_bp", "composite_score",
+]
+CIS_OT_COPY_COLS = [
+    "spliced_0mm_genes", "spliced_1mm_genes", "spliced_2mm_pc_genes", "spliced_wobble_only_pc_genes",
+    "premRNA_0mm_sense_genes", "premRNA_1mm_sense_genes", "premRNA_1mm_splice50bp_genes",
+    "premRNA_wobble_only_splice50bp_pc_genes", "premRNA_2mm_splice25bp_pc_genes",
     "bulge_1nt_steric_pc_genes", "sub18_core_steric_pc_genes", "flagged_constrained_neuronal_hits",
-    "offtarget_safety_status", "source_offtarget_run_id", "analysis_run_id",
+    "offtarget_safety_status",
+]
+CIS_COLS = [
+    "unified_interval_order", "origin_phase", "accession_id", "subnode_accession_id",
+    "portfolio_id", "subnode_or_cand_id", "gene_symbol", "program_role",
+    "rank_within_gene", "is_promoted_lead", "interval_id", "chrom", "grch38_start", "grch38_end", "strand", "length_bp",
+    "cis_mechanism_or_mode", *CIS_BIO_COPY_COLS, *CIS_OT_COPY_COLS, "source_offtarget_run_id", "analysis_run_id",
 ]
 
 
@@ -72,15 +84,13 @@ def build_cis_intervals() -> tuple[list[dict[str, str]], dict[str, dict[str, str
         is_lead = PROMOTED_LEADS.get(pid) == (rk, iv_id)
         row = {
             "unified_interval_order": str(len(cis_rows) + 1), "origin_phase": "PHASE2_3A_MULTIPLEX_12",
+            "accession_id": legacy_to_accession(pid), "subnode_accession_id": legacy_to_accession(sc_id),
             "portfolio_id": pid, "subnode_or_cand_id": sc_id, "gene_symbol": p2["gene_symbol"],
             "program_role": p2["multiplex_tier"], "rank_within_gene": str(rk), "is_promoted_lead": str(is_lead),
             "interval_id": iv_id, "chrom": p2["chrom"], "grch38_start": p2["grch38_start"], "grch38_end": p2["grch38_end"],
             "strand": p2["strand"], "length_bp": p2["length_bp"], "cis_mechanism_or_mode": p2["mode"],
-            "gc_pct": p2["gc_pct"], "tm_phys_pops_c": p2["tm_phys_pops_c"], "dg37_kcal": p2["dg37_kcal"],
-            "cpg_dinucs": p2["cpg_dinucs"], "max_self_stem_bp": p2["max_self_stem_bp"], "ese_motifs": p2["ese_motifs"],
-            "mean_avi_phred": p2["mean_avi_phred"], "max_avi_phred": p2["max_avi_phred"], "boundary_dist_bp": p2["boundary_dist_bp"],
-            "composite_score": p2["composite_score"],
-            **{k: ot[k] for k in CIS_COLS[25:38]},
+            **{k: p2[k] for k in CIS_BIO_COPY_COLS},
+            **{k: ot[k] for k in CIS_OT_COPY_COLS},
             "source_offtarget_run_id": ot["analysis_run_id"], "analysis_run_id": "RUN-P4-001",
         }
         cis_rows.append(row)
@@ -90,13 +100,15 @@ def build_cis_intervals() -> tuple[list[dict[str, str]], dict[str, dict[str, str
     for s in p3b_sso:
         pid, iv_id, rk = s["denovo_id"], s["interval_id"], int(s["rank_within_gene"])
         is_lead = PROMOTED_LEADS.get(pid) == (rk, iv_id)
+        acc_id = legacy_to_accession(pid)
         row = {
             "unified_interval_order": str(len(cis_rows) + 1), "origin_phase": "PHASE3B_DENOVO_14",
+            "accession_id": acc_id, "subnode_accession_id": acc_id,
             "portfolio_id": pid, "subnode_or_cand_id": pid, "gene_symbol": s["gene_symbol"],
             "program_role": "DENOVO_SINGLE_ENTITY", "rank_within_gene": str(rk), "is_promoted_lead": str(is_lead),
             "interval_id": iv_id, "chrom": s["chrom"], "grch38_start": s["grch38_start"], "grch38_end": s["grch38_end"],
             "strand": s["strand"], "length_bp": s["length_bp"], "cis_mechanism_or_mode": s["cis_mechanism_class"],
-            **{k: s[k] for k in CIS_COLS[15:38]},
+            **{k: s[k] for k in [*CIS_BIO_COPY_COLS, *CIS_OT_COPY_COLS]},
             "source_offtarget_run_id": s["analysis_run_id"], "analysis_run_id": "RUN-P4-001",
         }
         cis_rows.append(row)
@@ -213,9 +225,40 @@ def main() -> None:
     rows.sort(key=lambda r: portfolio_sort_key(r, p3a_rank_map, dn_idx_map))
     for rk_i, r in enumerate(rows, start=1):
         r["unified_rank"] = str(rk_i)
+        r["accession_id"] = legacy_to_accession(r["portfolio_id"])
 
+    acc_rows: list[dict[str, str]] = []
+    for r in sorted(rows, key=lambda x: x["accession_id"]):
+        lid = r["portfolio_id"]
+        sym, aliases = PRIMARY_SYMBOL_AND_ALIASES[lid]
+        acc_rows.append({
+            "accession_id": r["accession_id"],
+            "legacy_id": lid,
+            "entity_kind": "CANDIDATE",
+            "parent_accession_id": "NONE",
+            "origin_phase": r["origin_phase"],
+            "primary_symbol_or_inn": sym,
+            "search_aliases": ";".join(dict.fromkeys([lid.lower(), lid.lower().replace("-", ""), *aliases])),
+        })
+    for sn in sorted(subnodes, key=lambda s: legacy_to_accession(s["subnode_id"])):
+        slid = sn["subnode_id"]
+        sacc = legacy_to_accession(slid)
+        pacc = legacy_to_accession(sn["parent_carbon_id"])
+        gsym = sn["gene_symbol"]
+        acc_rows.append({
+            "accession_id": sacc,
+            "legacy_id": slid,
+            "entity_kind": "SUBUNIT",
+            "parent_accession_id": pacc,
+            "origin_phase": "CURATED_CLINICAL_33",
+            "primary_symbol_or_inn": gsym,
+            "search_aliases": ";".join(dict.fromkeys([slid.lower(), slid.lower().replace("-", ""), gsym.lower()])),
+        })
+
+    acc_fp = REG_DIR / "candidate_accessions.csv"
     port_fp = REG_DIR / "phase4_unified_portfolio.csv"
     cis_fp = REG_DIR / "phase4_unified_cis_intervals.csv"
+    _write_csv(acc_fp, ACCESSION_COLS, acc_rows)
     _write_csv(port_fp, PORTFOLIO_COLS, rows)
     _write_csv(cis_fp, CIS_COLS, cis_rows)
 
@@ -225,7 +268,7 @@ def main() -> None:
     p4_run = {
         "analysis_run_id": "RUN-P4-001", "phase_batch": "Phase4_Final_Synthesis",
         "script_relpath": "work/phase4_final_synthesis/scripts/00_cache_celf5_profile.py;work/phase4_final_synthesis/scripts/01_build_phase4_unified_portfolio.py",
-        "output_artifacts": "registries/phase4_unified_portfolio.csv;registries/phase4_unified_cis_intervals.csv;work/phase4_final_synthesis/outputs/run_p4_001_unified_portfolio.json",
+        "output_artifacts": "registries/candidate_accessions.csv;registries/phase4_unified_portfolio.csv;registries/phase4_unified_cis_intervals.csv;work/phase4_final_synthesis/outputs/run_p4_001_unified_portfolio.json",
         "datasets_used": "DS001_COUNTS;DS001_META;DS001_ONEILL;DS_GENCODE_V46_COMP_GTF;DS_GNOMAD_V41_CONSTRAINT",
         "tools_and_skills_used": "gtex-database;opentargets-database;gnomad-database;tooluniverse-gene-liability;scripts.phase4_gates;uv-python",
         "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-15T01:05:00Z",
@@ -273,6 +316,7 @@ def main() -> None:
         },
         "dn04_celf5_deep_profile": celf5_prof,
         "registry_sha12": {
+            "candidate_accessions": sha12(acc_fp),
             "phase4_unified_portfolio": sha12(port_fp),
             "phase4_unified_cis_intervals": sha12(cis_fp),
             "phase3_sso_offtarget_audit": sha12(REG_DIR / "phase3_sso_offtarget_audit.csv"),

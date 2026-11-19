@@ -701,8 +701,9 @@
     }
   },
   "registry_sha12": {
-    "phase4_unified_portfolio": "37bf8f973537",
-    "phase4_unified_cis_intervals": "601f6f08fd5c",
+    "candidate_accessions": "8e0fb05b86f4",
+    "phase4_unified_portfolio": "3f3b30ef56be",
+    "phase4_unified_cis_intervals": "bb4f7dd9f1c9",
     "phase3_sso_offtarget_audit": "038dea57c22d",
     "phase3_execution_readiness": "3a5ecb8e5a49",
     "phase3b_denovo_candidates": "1dae00481660",
