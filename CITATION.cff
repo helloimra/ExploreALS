@@ -2,13 +2,12 @@ cff-version: 1.2.0
 title: "ExploreALS: Unified ALS Therapeutic & Genetic Target Portfolio Explorer and Computational Replication Package"
 message: "If you use ExploreALS software, registries, or interactive analyses, please cite it using this metadata."
 type: software
-version: "1.2.0"
-date-released: "2026-11-16"
+version: "1.2.2"
+date-released: "2026-11-19"
 authors:
   - family-names: Agoga
     given-names: Ricardo
     email: helloimra@proton.me
-    affiliation: Independent Researcher
 repository-code: "https://github.com/helloimra/ExploreALS"
 url: "https://helloimra.github.io/ExploreALS/"
 # Dual licensing: Python code is MIT (LICENSE); curated registries, schemas, and monographs are CC-BY-4.0 (LICENSE-DATA.md).

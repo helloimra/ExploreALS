@@ -79,10 +79,9 @@ def _extract_tar_safe(tar_path: Path, target_root: Path) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description="Fetch and SHA-256 verify ExploreALS v1.2 open datasets.")
-    ap.add_argument("--list", action="store_true", help="Print 48-dataset legal tier & status summary.")
+    ap.add_argument("--list", action="store_true", help="Print 40-dataset legal tier & status summary.")
     ap.add_argument("--verify-existing", action="store_true", help="Verify SHA-256 of all currently staged datasets.")
     ap.add_argument("--source", choices=["release", "upstream"], default="release")
-    ap.add_argument("--with-baseline", action="store_true", help="Also fetch v1.0-baseline.tar.gz historical intake CSVs.")
     ap.add_argument("--with-synapse", action="store_true", help="Fetch Synapse cohorts using SYNAPSE_AUTH_TOKEN.")
     args = ap.parse_args()
 
@@ -99,7 +98,7 @@ def main() -> None:
             if args.list:
                 st = "SHA256_OK" if ok else ("MISMATCH" if ex else "MISSING")
                 print(f"{r['dataset_id']:24s} | {r['redistribution_tier']:28s} | {st:9s} | {r['local_relpath']}")
-        print(f"Summary: {present}/48 staged locally, {matched}/48 SHA-256 verified.")
+        print(f"Summary: {present}/{len(rows)} staged locally, {matched}/{len(rows)} SHA-256 verified.")
         if args.verify_existing and present > matched:
             raise SystemExit(1)
         return
@@ -109,10 +108,6 @@ def main() -> None:
         print(f"Fetching frozen Tier A bundle from {RELEASE_BASE}/open-datasets-v1.2.tar.gz ...")
         _download_url(f"{RELEASE_BASE}/open-datasets-v1.2.tar.gz", tar_tmp)
         _extract_tar_safe(tar_tmp, ROOT)
-    if args.with_baseline:
-        b_tmp = ROOT / ".tmp" / "v1.0-baseline.tar.gz"
-        _download_url(f"{RELEASE_BASE}/v1.0-baseline.tar.gz", b_tmp)
-        _extract_tar_safe(b_tmp, ROOT)
 
     for r in rows:
         did = r["dataset_id"]

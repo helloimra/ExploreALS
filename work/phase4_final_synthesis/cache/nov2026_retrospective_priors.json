@@ -1,0 +1,550 @@
+{
+  "s06_sarm1_octamer_and_genetics": {
+    "octamer_pdb_distances": {
+      "7ANW": {
+        "variants": {
+          "p.V112I": {
+            "intra_chain_tir_A": 72.2,
+            "inter_protomer_adj_tir_A": 31.55,
+            "cys311_pocket_A": 19.35,
+            "nad_nmn_sensor_A": 10.24
+          },
+          "p.V184G": {
+            "intra_chain_tir_A": 60.04,
+            "inter_protomer_adj_tir_A": 11.58,
+            "cys311_pocket_A": 21.05,
+            "nad_nmn_sensor_A": 10.33
+          },
+          "p.G206S": {
+            "intra_chain_tir_A": 54.37,
+            "inter_protomer_adj_tir_A": 5.19,
+            "cys311_pocket_A": 28.49,
+            "nad_nmn_sensor_A": 18.8
+          },
+          "p.L223P": {
+            "intra_chain_tir_A": 53.52,
+            "inter_protomer_adj_tir_A": 4.95,
+            "cys311_pocket_A": 14.99,
+            "nad_nmn_sensor_A": 13.83
+          },
+          "p.del226_232": {
+            "intra_chain_tir_A": 47.01,
+            "inter_protomer_adj_tir_A": 10.89,
+            "cys311_pocket_A": 10.01,
+            "nad_nmn_sensor_A": 8.03
+          },
+          "p.R244S": {
+            "intra_chain_tir_A": 42.2,
+            "inter_protomer_adj_tir_A": 11.44,
+            "cys311_pocket_A": 29.48,
+            "nad_nmn_sensor_A": 22.75
+          },
+          "p.R249C": {
+            "intra_chain_tir_A": 38.57,
+            "inter_protomer_adj_tir_A": 3.09,
+            "cys311_pocket_A": 26.91,
+            "nad_nmn_sensor_A": 24.99
+          },
+          "p.del249_252": {
+            "intra_chain_tir_A": 37.83,
+            "inter_protomer_adj_tir_A": 3.07,
+            "cys311_pocket_A": 23.38,
+            "nad_nmn_sensor_A": 21.75
+          },
+          "p.E252K": {
+            "intra_chain_tir_A": 37.83,
+            "inter_protomer_adj_tir_A": 3.07,
+            "cys311_pocket_A": 25.05,
+            "nad_nmn_sensor_A": 25.66
+          },
+          "p.R267W": {
+            "intra_chain_tir_A": 42.04,
+            "inter_protomer_adj_tir_A": 5.47,
+            "cys311_pocket_A": 11.46,
+            "nad_nmn_sensor_A": 18.45
+          },
+          "p.A275V": {
+            "intra_chain_tir_A": 38.96,
+            "inter_protomer_adj_tir_A": 14.03,
+            "cys311_pocket_A": 18.91,
+            "nad_nmn_sensor_A": 19.16
+          },
+          "p.V331E": {
+            "intra_chain_tir_A": 40.91,
+            "inter_protomer_adj_tir_A": 25.45,
+            "cys311_pocket_A": 19.71,
+            "nad_nmn_sensor_A": 14.63
+          },
+          "p.E340K": {
+            "intra_chain_tir_A": 33.23,
+            "inter_protomer_adj_tir_A": 11.23,
+            "cys311_pocket_A": 19.27,
+            "nad_nmn_sensor_A": 21.9
+          },
+          "p.T385A": {
+            "intra_chain_tir_A": 35.39,
+            "inter_protomer_adj_tir_A": 11.21,
+            "cys311_pocket_A": 18.09,
+            "nad_nmn_sensor_A": 24.64
+          },
+          "p.P332Q_benign": {
+            "intra_chain_tir_A": 38.73,
+            "inter_protomer_adj_tir_A": 22.3,
+            "cys311_pocket_A": 22.08,
+            "nad_nmn_sensor_A": 15.92
+          }
+        },
+        "cys311_h8l_wall_le_5A": []
+      },
+      "7DJT": {
+        "variants": {
+          "p.V112I": {
+            "intra_chain_tir_A": 77.51,
+            "inter_protomer_adj_tir_A": 30.5,
+            "cys311_pocket_A": 19.31,
+            "nad_nmn_sensor_A": null
+          },
+          "p.V184G": {
+            "intra_chain_tir_A": 66.93,
+            "inter_protomer_adj_tir_A": 14.05,
+            "cys311_pocket_A": 18.88,
+            "nad_nmn_sensor_A": null
+          },
+          "p.G206S": {
+            "intra_chain_tir_A": 65.39,
+            "inter_protomer_adj_tir_A": 8.65,
+            "cys311_pocket_A": 27.84,
+            "nad_nmn_sensor_A": null
+          },
+          "p.L223P": {
+            "intra_chain_tir_A": 54.44,
+            "inter_protomer_adj_tir_A": 5.88,
+            "cys311_pocket_A": 11.75,
+            "nad_nmn_sensor_A": null
+          },
+          "p.del226_232": {
+            "intra_chain_tir_A": 54.54,
+            "inter_protomer_adj_tir_A": 11.42,
+            "cys311_pocket_A": 9.32,
+            "nad_nmn_sensor_A": null
+          },
+          "p.R244S": {
+            "intra_chain_tir_A": 55.93,
+            "inter_protomer_adj_tir_A": 11.03,
+            "cys311_pocket_A": 28.88,
+            "nad_nmn_sensor_A": null
+          },
+          "p.R249C": {
+            "intra_chain_tir_A": 48.31,
+            "inter_protomer_adj_tir_A": 3.75,
+            "cys311_pocket_A": 25.5,
+            "nad_nmn_sensor_A": null
+          },
+          "p.del249_252": {
+            "intra_chain_tir_A": 44.68,
+            "inter_protomer_adj_tir_A": 3.26,
+            "cys311_pocket_A": 22.4,
+            "nad_nmn_sensor_A": null
+          },
+          "p.E252K": {
+            "intra_chain_tir_A": 44.68,
+            "inter_protomer_adj_tir_A": 3.26,
+            "cys311_pocket_A": 22.4,
+            "nad_nmn_sensor_A": null
+          },
+          "p.R267W": {
+            "intra_chain_tir_A": 42.3,
+            "inter_protomer_adj_tir_A": 4.91,
+            "cys311_pocket_A": 9.17,
+            "nad_nmn_sensor_A": null
+          },
+          "p.A275V": {
+            "intra_chain_tir_A": 46.01,
+            "inter_protomer_adj_tir_A": 15.07,
+            "cys311_pocket_A": 17.78,
+            "nad_nmn_sensor_A": null
+          },
+          "p.V331E": {
+            "intra_chain_tir_A": 49.48,
+            "inter_protomer_adj_tir_A": 24.94,
+            "cys311_pocket_A": 18.77,
+            "nad_nmn_sensor_A": null
+          },
+          "p.E340K": {
+            "intra_chain_tir_A": 37.93,
+            "inter_protomer_adj_tir_A": 11.95,
+            "cys311_pocket_A": 18.47,
+            "nad_nmn_sensor_A": null
+          },
+          "p.T385A": {
+            "intra_chain_tir_A": 36.25,
+            "inter_protomer_adj_tir_A": 12.24,
+            "cys311_pocket_A": 18.0,
+            "nad_nmn_sensor_A": null
+          },
+          "p.P332Q_benign": {
+            "intra_chain_tir_A": 48.44,
+            "inter_protomer_adj_tir_A": 24.2,
+            "cys311_pocket_A": 21.54,
+            "nad_nmn_sensor_A": null
+          }
+        },
+        "cys311_h8l_wall_le_5A": [
+          "ALA309",
+          "ALA315",
+          "ARG224",
+          "ARG307",
+          "ARG310",
+          "ASP314",
+          "GLU264",
+          "ILE355",
+          "LEU265",
+          "LEU312",
+          "PHE308",
+          "VAL313"
+        ]
+      },
+      "7NAL": {
+        "variants": {
+          "p.V112I": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": 19.1,
+            "nad_nmn_sensor_A": 10.41
+          },
+          "p.V184G": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": 20.91,
+            "nad_nmn_sensor_A": 11.17
+          },
+          "p.G206S": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": 28.21,
+            "nad_nmn_sensor_A": 20.41
+          },
+          "p.L223P": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": 13.76,
+            "nad_nmn_sensor_A": 14.78
+          },
+          "p.del226_232": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": 10.96,
+            "nad_nmn_sensor_A": 7.67
+          },
+          "p.R244S": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": 30.37,
+            "nad_nmn_sensor_A": 24.15
+          },
+          "p.R249C": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": 26.87,
+            "nad_nmn_sensor_A": 26.0
+          },
+          "p.del249_252": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": 23.41,
+            "nad_nmn_sensor_A": 22.35
+          },
+          "p.E252K": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": 24.12,
+            "nad_nmn_sensor_A": 26.1
+          },
+          "p.R267W": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": 11.08,
+            "nad_nmn_sensor_A": 18.11
+          },
+          "p.A275V": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": 19.96,
+            "nad_nmn_sensor_A": 20.43
+          },
+          "p.V331E": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": 18.73,
+            "nad_nmn_sensor_A": 15.2
+          },
+          "p.E340K": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": 19.73,
+            "nad_nmn_sensor_A": 22.3
+          },
+          "p.T385A": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": 18.69,
+            "nad_nmn_sensor_A": 24.82
+          },
+          "p.P332Q_benign": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": 21.44,
+            "nad_nmn_sensor_A": 16.54
+          }
+        },
+        "cys311_h8l_wall_le_5A": []
+      },
+      "9TZY": {
+        "variants": {
+          "p.V112I": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": null,
+            "nad_nmn_sensor_A": null
+          },
+          "p.V184G": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": null,
+            "nad_nmn_sensor_A": null
+          },
+          "p.G206S": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": null,
+            "nad_nmn_sensor_A": null
+          },
+          "p.L223P": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": null,
+            "nad_nmn_sensor_A": null
+          },
+          "p.del226_232": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": null,
+            "nad_nmn_sensor_A": null
+          },
+          "p.R244S": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": null,
+            "nad_nmn_sensor_A": null
+          },
+          "p.R249C": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": null,
+            "nad_nmn_sensor_A": null
+          },
+          "p.del249_252": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": null,
+            "nad_nmn_sensor_A": null
+          },
+          "p.E252K": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": null,
+            "nad_nmn_sensor_A": null
+          },
+          "p.R267W": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": null,
+            "nad_nmn_sensor_A": null
+          },
+          "p.A275V": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": null,
+            "nad_nmn_sensor_A": null
+          },
+          "p.V331E": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": null,
+            "nad_nmn_sensor_A": null
+          },
+          "p.E340K": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": null,
+            "nad_nmn_sensor_A": null
+          },
+          "p.T385A": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": null,
+            "nad_nmn_sensor_A": null
+          },
+          "p.P332Q_benign": {
+            "intra_chain_tir_A": null,
+            "inter_protomer_adj_tir_A": null,
+            "cys311_pocket_A": null,
+            "nad_nmn_sensor_A": null
+          }
+        },
+        "cys311_h8l_wall_le_5A": []
+      }
+    },
+    "gnomad_v41_gof_and_benign": {
+      "p.V112I": {
+        "hgvsp_vcf": "p.Val112Ile",
+        "ac": 31,
+        "an": 1509444,
+        "nhomalt": 0,
+        "af": 2.054e-05
+      },
+      "p.V184G": {
+        "hgvsp_vcf": "p.Val184Gly",
+        "ac": 0,
+        "an": 0,
+        "nhomalt": 0,
+        "af": 0.0
+      },
+      "p.G206S": {
+        "hgvsp_vcf": "p.Gly206Ser",
+        "ac": 1,
+        "an": 1583894,
+        "nhomalt": 0,
+        "af": 6.3e-07
+      },
+      "p.L223P": {
+        "hgvsp_vcf": "p.Leu223Pro",
+        "ac": 0,
+        "an": 0,
+        "nhomalt": 0,
+        "af": 0.0
+      },
+      "p.del226_232": {
+        "hgvsp_vcf": "p.Ala229_Leu235del",
+        "ac": 52,
+        "an": 1550282,
+        "nhomalt": 0,
+        "af": 3.354e-05
+      },
+      "p.R244S": {
+        "hgvsp_vcf": "p.Arg244Ser",
+        "ac": 0,
+        "an": 1399116,
+        "nhomalt": 0,
+        "af": 0.0
+      },
+      "p.R249C": {
+        "hgvsp_vcf": "p.Arg249Cys",
+        "ac": 1,
+        "an": 1552844,
+        "nhomalt": 0,
+        "af": 6.4e-07
+      },
+      "p.del249_252": {
+        "hgvsp_vcf": "p.Arg249_Glu252del",
+        "ac": 0,
+        "an": 0,
+        "nhomalt": 0,
+        "af": 0.0
+      },
+      "p.E252K": {
+        "hgvsp_vcf": "p.Glu252Lys",
+        "ac": 13,
+        "an": 1554904,
+        "nhomalt": 0,
+        "af": 8.36e-06
+      },
+      "p.R267W": {
+        "hgvsp_vcf": "p.Arg267Trp",
+        "ac": 137,
+        "an": 1576014,
+        "nhomalt": 0,
+        "af": 8.693e-05
+      },
+      "p.A275V": {
+        "hgvsp_vcf": "p.Ala275Val",
+        "ac": 251,
+        "an": 1589760,
+        "nhomalt": 0,
+        "af": 0.00015789
+      },
+      "p.V331E": {
+        "hgvsp_vcf": "p.Val331Glu",
+        "ac": 22,
+        "an": 1400778,
+        "nhomalt": 0,
+        "af": 1.571e-05
+      },
+      "p.E340K": {
+        "hgvsp_vcf": "p.Glu340Lys",
+        "ac": 69,
+        "an": 1507520,
+        "nhomalt": 0,
+        "af": 4.577e-05
+      },
+      "p.T385A": {
+        "hgvsp_vcf": "p.Thr385Ala",
+        "ac": 12,
+        "an": 1460562,
+        "nhomalt": 0,
+        "af": 8.22e-06
+      },
+      "p.P332Q_benign": {
+        "hgvsp_vcf": "p.Pro332Gln",
+        "ac": 15275,
+        "an": 1549280,
+        "nhomalt": 97,
+        "af": 0.00985942
+      }
+    },
+    "cumulative_validated_gof_allele_freq": 0.0003782,
+    "approx_heterozygote_carrier_pct": 0.0756,
+    "gnomad_v41_plof": {
+      "n_variants": 246,
+      "total_ac": 1033,
+      "total_nhomalt": 3,
+      "loeuf": 1.1432072728653015
+    },
+    "clinvar_grch38": {
+      "total_overlapping": 12,
+      "single_gene_sarm1_plp": 0,
+      "opposite_strand_slc46a1_records": 6,
+      "multigene_17p_q_cnvs": 6
+    }
+  },
+  "c001_unc13a_majiq_intron31_ceiling": {
+    "dataset_id": "DS_CRYPTIC",
+    "intron20_cryptic_exon_17642414_17642591": {
+      "control_psi": 0.001,
+      "tdp_kd_psi": 0.449,
+      "delta_psi": 0.43719,
+      "fdr": 2.22612e-19
+    },
+    "intron31_retention_17628338_17629239": {
+      "lsv_id": "ENSG00000130477.15:s:17629240-17629323",
+      "grch38_span_1b": "chr19:17628338-17629239(-)",
+      "control_psi": 0.097,
+      "tdp_kd_psi": 0.444,
+      "delta_psi": 0.35432,
+      "fdr": 1.821979e-15,
+      "canonical_exon31_32_control_psi": 0.791,
+      "canonical_exon31_32_tdp_kd_psi": 0.461,
+      "canonical_exon31_32_delta_psi": -0.33373,
+      "canonical_exon31_32_fdr": 9.467427e-12,
+      "implied_intron20_only_aso_mrna_ceiling_pct": 55.6
+    }
+  },
+  "c022_dnajb2_tdp43_independence": {
+    "majiq_cryptic_junctions_n": 0,
+    "brown2022_i3neuron_rnaseq_log2fc": 0.09225,
+    "brown2022_i3neuron_rnaseq_pvalue": 0.124149,
+    "brown2022_i3neuron_rnaseq_padj": 0.283432,
+    "brown2022_i3neuron_riboseq_log2fc": 0.16601,
+    "brown2022_i3neuron_riboseq_padj": 0.998666
+  }
+}

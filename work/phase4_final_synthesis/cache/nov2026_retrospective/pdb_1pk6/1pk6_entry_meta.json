@@ -1,0 +1,1056 @@
+{
+  "audit_author": [
+    {
+      "name": "Gaboriaud, C.",
+      "pdbx_ordinal": 1
+    },
+    {
+      "name": "Juanhuix, J.",
+      "pdbx_ordinal": 2
+    },
+    {
+      "name": "Gruez, A.",
+      "pdbx_ordinal": 3
+    },
+    {
+      "name": "Lacroix, M.",
+      "pdbx_ordinal": 4
+    },
+    {
+      "name": "Darnault, C.",
+      "pdbx_ordinal": 5
+    },
+    {
+      "name": "Pignol, D.",
+      "pdbx_ordinal": 6
+    },
+    {
+      "name": "Verger, D.",
+      "pdbx_ordinal": 7
+    },
+    {
+      "name": "Fontecilla-Camps, J.C.",
+      "pdbx_ordinal": 8
+    },
+    {
+      "name": "Arlaud, G.J.",
+      "pdbx_ordinal": 9
+    }
+  ],
+  "cell": {
+    "Z_PDB": 4,
+    "angle_alpha": 90.0,
+    "angle_beta": 112.32,
+    "angle_gamma": 90.0,
+    "length_a": 80.182,
+    "length_b": 53.222,
+    "length_c": 90.88
+  },
+  "citation": [
+    {
+      "country": "US",
+      "id": "primary",
+      "journal_abbrev": "J.Biol.Chem.",
+      "journal_id_ASTM": "JBCHA3",
+      "journal_id_CSD": "0071",
+      "journal_id_ISSN": "0021-9258",
+      "journal_volume": "278",
+      "page_first": "46974",
+      "page_last": "46982",
+      "pdbx_database_id_DOI": "10.1074/jbc.M307764200",
+      "pdbx_database_id_PubMed": 12960167,
+      "rcsb_authors": [
+        "Gaboriaud, C.",
+        "Juanhuix, J.",
+        "Gruez, A.",
+        "Lacroix, M.",
+        "Darnault, C.",
+        "Pignol, D.",
+        "Verger, D.",
+        "Fontecilla-Camps, J.C.",
+        "Arlaud, G.J."
+      ],
+      "rcsb_is_primary": "Y",
+      "rcsb_journal_abbrev": "J Biol Chem",
+      "title": "The crystal structure of the globular head of complement protein C1q provides a basis for its versatile recognition properties.",
+      "year": 2003
+    }
+  ],
+  "database_2": [
+    {
+      "database_code": "1PK6",
+      "database_id": "PDB",
+      "pdbx_DOI": "10.2210/pdb1pk6/pdb",
+      "pdbx_database_accession": "pdb_00001pk6"
+    },
+    {
+      "database_code": "RCSB019383",
+      "database_id": "RCSB"
+    },
+    {
+      "database_code": "D_1000019383",
+      "database_id": "WWPDB"
+    }
+  ],
+  "diffrn": [
+    {
+      "ambient_temp": 100.0,
+      "crystal_id": "1",
+      "id": "1"
+    }
+  ],
+  "diffrn_detector": [
+    {
+      "detector": "CCD",
+      "diffrn_id": "1",
+      "pdbx_collection_date": "1998-01-28T00:00:00.000+00:00",
+      "type": "ADSC"
+    }
+  ],
+  "diffrn_radiation": [
+    {
+      "diffrn_id": "1",
+      "monochromator": "SI(111)",
+      "pdbx_diffrn_protocol": "SINGLE WAVELENGTH",
+      "pdbx_monochromatic_or_laue_m_l": "M",
+      "pdbx_scattering_type": "x-ray",
+      "wavelength_id": "1"
+    }
+  ],
+  "diffrn_source": [
+    {
+      "diffrn_id": "1",
+      "pdbx_synchrotron_beamline": "ID29",
+      "pdbx_synchrotron_site": "ESRF",
+      "pdbx_wavelength_list": "1.0",
+      "source": "SYNCHROTRON",
+      "type": "ESRF BEAMLINE ID29"
+    }
+  ],
+  "entry": {
+    "id": "1PK6"
+  },
+  "exptl": [
+    {
+      "crystals_number": 1,
+      "method": "X-RAY DIFFRACTION"
+    }
+  ],
+  "exptl_crystal": [
+    {
+      "density_Matthews": 2.03,
+      "density_percent_sol": 39.34,
+      "id": "1"
+    }
+  ],
+  "exptl_crystal_grow": [
+    {
+      "crystal_id": "1",
+      "method": "VAPOR DIFFUSION, HANGING DROP",
+      "pH": 7.0,
+      "pdbx_details": "PEG 4000, CaCl2, B-mercaptoethanol, agarose, pH 7.0, VAPOR DIFFUSION, HANGING DROP, temperature 20K",
+      "temp": 293.0
+    }
+  ],
+  "pdbx_audit_revision_category": [
+    {
+      "category": "exptl_crystal_grow",
+      "data_content_type": "Structure model",
+      "ordinal": 1,
+      "revision_ordinal": 4
+    },
+    {
+      "category": "pdbx_unobs_or_zero_occ_atoms",
+      "data_content_type": "Structure model",
+      "ordinal": 2,
+      "revision_ordinal": 4
+    },
+    {
+      "category": "chem_comp_atom",
+      "data_content_type": "Structure model",
+      "ordinal": 3,
+      "revision_ordinal": 5
+    },
+    {
+      "category": "chem_comp_bond",
+      "data_content_type": "Structure model",
+      "ordinal": 4,
+      "revision_ordinal": 5
+    },
+    {
+      "category": "database_2",
+      "data_content_type": "Structure model",
+      "ordinal": 5,
+      "revision_ordinal": 5
+    },
+    {
+      "category": "pdbx_initial_refinement_model",
+      "data_content_type": "Structure model",
+      "ordinal": 6,
+      "revision_ordinal": 5
+    },
+    {
+      "category": "pdbx_struct_conn_angle",
+      "data_content_type": "Structure model",
+      "ordinal": 7,
+      "revision_ordinal": 5
+    },
+    {
+      "category": "pdbx_unobs_or_zero_occ_atoms",
+      "data_content_type": "Structure model",
+      "ordinal": 8,
+      "revision_ordinal": 5
+    },
+    {
+      "category": "struct_conn",
+      "data_content_type": "Structure model",
+      "ordinal": 9,
+      "revision_ordinal": 5
+    },
+    {
+      "category": "struct_site",
+      "data_content_type": "Structure model",
+      "ordinal": 10,
+      "revision_ordinal": 5
+    },
+    {
+      "category": "pdbx_entry_details",
+      "data_content_type": "Structure model",
+      "ordinal": 11,
+      "revision_ordinal": 6
+    },
+    {
+      "category": "pdbx_modification_feature",
+      "data_content_type": "Structure model",
+      "ordinal": 12,
+      "revision_ordinal": 6
+    }
+  ],
+  "pdbx_audit_revision_details": [
+    {
+      "data_content_type": "Structure model",
+      "ordinal": 1,
+      "provider": "repository",
+      "revision_ordinal": 1,
+      "type": "Initial release"
+    }
+  ],
+  "pdbx_audit_revision_group": [
+    {
+      "data_content_type": "Structure model",
+      "group": "Version format compliance",
+      "ordinal": 1,
+      "revision_ordinal": 2
+    },
+    {
+      "data_content_type": "Structure model",
+      "group": "Version format compliance",
+      "ordinal": 2,
+      "revision_ordinal": 3
+    },
+    {
+      "data_content_type": "Structure model",
+      "group": "Advisory",
+      "ordinal": 3,
+      "revision_ordinal": 4
+    },
+    {
+      "data_content_type": "Structure model",
+      "group": "Experimental preparation",
+      "ordinal": 4,
+      "revision_ordinal": 4
+    },
+    {
+      "data_content_type": "Structure model",
+      "group": "Advisory",
+      "ordinal": 5,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "group": "Data collection",
+      "ordinal": 6,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "group": "Database references",
+      "ordinal": 7,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "group": "Derived calculations",
+      "ordinal": 8,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "group": "Refinement description",
+      "ordinal": 9,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "group": "Structure summary",
+      "ordinal": 10,
+      "revision_ordinal": 6
+    }
+  ],
+  "pdbx_audit_revision_history": [
+    {
+      "data_content_type": "Structure model",
+      "major_revision": 1,
+      "minor_revision": 0,
+      "ordinal": 1,
+      "revision_date": "2003-10-21T00:00:00.000+00:00"
+    },
+    {
+      "data_content_type": "Structure model",
+      "major_revision": 1,
+      "minor_revision": 1,
+      "ordinal": 2,
+      "revision_date": "2008-04-29T00:00:00.000+00:00"
+    },
+    {
+      "data_content_type": "Structure model",
+      "major_revision": 1,
+      "minor_revision": 2,
+      "ordinal": 3,
+      "revision_date": "2011-07-13T00:00:00.000+00:00"
+    },
+    {
+      "data_content_type": "Structure model",
+      "major_revision": 1,
+      "minor_revision": 3,
+      "ordinal": 4,
+      "revision_date": "2018-01-31T00:00:00.000+00:00"
+    },
+    {
+      "data_content_type": "Structure model",
+      "major_revision": 1,
+      "minor_revision": 4,
+      "ordinal": 5,
+      "revision_date": "2023-08-16T00:00:00.000+00:00"
+    },
+    {
+      "data_content_type": "Structure model",
+      "major_revision": 1,
+      "minor_revision": 5,
+      "ordinal": 6,
+      "revision_date": "2024-10-30T00:00:00.000+00:00"
+    }
+  ],
+  "pdbx_audit_revision_item": [
+    {
+      "data_content_type": "Structure model",
+      "item": "_exptl_crystal_grow.temp",
+      "ordinal": 1,
+      "revision_ordinal": 4
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_database_2.pdbx_DOI",
+      "ordinal": 2,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_database_2.pdbx_database_accession",
+      "ordinal": 3,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_pdbx_struct_conn_angle.ptnr1_auth_asym_id",
+      "ordinal": 4,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_pdbx_struct_conn_angle.ptnr1_auth_comp_id",
+      "ordinal": 5,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_pdbx_struct_conn_angle.ptnr1_auth_seq_id",
+      "ordinal": 6,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_pdbx_struct_conn_angle.ptnr1_label_asym_id",
+      "ordinal": 7,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_pdbx_struct_conn_angle.ptnr1_label_atom_id",
+      "ordinal": 8,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_pdbx_struct_conn_angle.ptnr1_label_comp_id",
+      "ordinal": 9,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_pdbx_struct_conn_angle.ptnr1_label_seq_id",
+      "ordinal": 10,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_pdbx_struct_conn_angle.ptnr3_auth_asym_id",
+      "ordinal": 11,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_pdbx_struct_conn_angle.ptnr3_auth_comp_id",
+      "ordinal": 12,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_pdbx_struct_conn_angle.ptnr3_auth_seq_id",
+      "ordinal": 13,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_pdbx_struct_conn_angle.ptnr3_label_asym_id",
+      "ordinal": 14,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_pdbx_struct_conn_angle.ptnr3_label_atom_id",
+      "ordinal": 15,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_pdbx_struct_conn_angle.ptnr3_label_comp_id",
+      "ordinal": 16,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_pdbx_struct_conn_angle.ptnr3_label_seq_id",
+      "ordinal": 17,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_pdbx_struct_conn_angle.value",
+      "ordinal": 18,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_conn.pdbx_dist_value",
+      "ordinal": 19,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_conn.ptnr1_auth_asym_id",
+      "ordinal": 20,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_conn.ptnr1_auth_comp_id",
+      "ordinal": 21,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_conn.ptnr1_auth_seq_id",
+      "ordinal": 22,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_conn.ptnr1_label_asym_id",
+      "ordinal": 23,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_conn.ptnr1_label_atom_id",
+      "ordinal": 24,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_conn.ptnr1_label_comp_id",
+      "ordinal": 25,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_conn.ptnr1_label_seq_id",
+      "ordinal": 26,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_conn.ptnr2_auth_asym_id",
+      "ordinal": 27,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_conn.ptnr2_auth_comp_id",
+      "ordinal": 28,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_conn.ptnr2_auth_seq_id",
+      "ordinal": 29,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_conn.ptnr2_label_asym_id",
+      "ordinal": 30,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_conn.ptnr2_label_atom_id",
+      "ordinal": 31,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_conn.ptnr2_label_comp_id",
+      "ordinal": 32,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_conn.ptnr2_label_seq_id",
+      "ordinal": 33,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_site.pdbx_auth_asym_id",
+      "ordinal": 34,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_site.pdbx_auth_comp_id",
+      "ordinal": 35,
+      "revision_ordinal": 5
+    },
+    {
+      "data_content_type": "Structure model",
+      "item": "_struct_site.pdbx_auth_seq_id",
+      "ordinal": 36,
+      "revision_ordinal": 5
+    }
+  ],
+  "pdbx_database_related": [
+    {
+      "content_type": "unspecified",
+      "db_id": "1GPZ",
+      "db_name": "PDB",
+      "details": "The Crystal Structure Of The Zymogen Catalytic Domain Of Complement Protease C1R"
+    },
+    {
+      "content_type": "unspecified",
+      "db_id": "1ELV",
+      "db_name": "PDB",
+      "details": "Crystal Structure Of The Catalytic Domain Of Human Complement C1S Protease"
+    },
+    {
+      "content_type": "unspecified",
+      "db_id": "1NZI",
+      "db_name": "PDB",
+      "details": "Crystal Structure of the CUB1-EGF Interaction Domain of Complement Protease C1s"
+    }
+  ],
+  "pdbx_database_status": {
+    "deposit_site": "RCSB",
+    "pdb_format_compatible": "Y",
+    "process_site": "RCSB",
+    "recvd_initial_deposition_date": "2003-06-05T00:00:00.000+00:00",
+    "status_code": "REL",
+    "status_code_sf": "REL"
+  },
+  "pdbx_initial_refinement_model": [
+    {
+      "accession_code": "1GR3",
+      "details": "PDB: 1GR3",
+      "id": 1,
+      "source_name": "PDB",
+      "type": "experimental model"
+    }
+  ],
+  "pdbx_vrpt_summary": {
+    "attempted_validation_steps": "molprobity,validation-pack,xtriage,eds,mogul,validation_schema,percentiles,writexml,writecif,writepdf",
+    "ligands_for_buster_report": "N",
+    "report_creation_date": "2026-03-09T22:55:00.000+00:00"
+  },
+  "pdbx_vrpt_summary_diffraction": [
+    {
+      "B_factor_type": "FULL",
+      "CCP4_version": "9.0.010 (Gargrove)",
+      "DCC_R": 0.2073,
+      "DCC_Rfree": 0.2431,
+      "EDS_R": 0.2076,
+      "EDS_res_high": 1.85,
+      "EDS_res_low": 25.4,
+      "Fo_Fc_correlation": 0.95,
+      "I_over_sigma": "0.59(1.85A)",
+      "Padilla_Yeates_L2_mean": 0.352,
+      "Padilla_Yeates_L_mean": 0.515,
+      "Wilson_B_aniso": "[13.464,26.248,22.977,0.000,5.227,0.000]",
+      "Wilson_B_estimate": 22.714,
+      "acentric_outliers": 1,
+      "bulk_solvent_b": 48.282,
+      "bulk_solvent_k": 0.404,
+      "centric_outliers": 0,
+      "data_anisotropy": 0.612,
+      "data_completeness": 73.39,
+      "density_fitness_version": "1.0.12",
+      "exp_method": "x-ray",
+      "num_miller_indices": 26237,
+      "number_reflns_R_free": 1267,
+      "percent_RSRZ_outliers": 4.82,
+      "percent_free_reflections": 4.83,
+      "trans_NCS_details": "The largest off-origin peak in the Patterson function is 7.35% of the height of the origin peak. No significant pseudotranslation is detected."
+    }
+  ],
+  "pdbx_vrpt_summary_geometry": [
+    {
+      "angles_RMSZ": 1.05,
+      "bonds_RMSZ": 0.53,
+      "clashscore": 5.99,
+      "num_H_reduce": 3028,
+      "num_angles_RMSZ": 4323,
+      "num_bonds_RMSZ": 3191,
+      "percent_ramachandran_outliers": 0.0,
+      "percent_rotamer_outliers": 1.74
+    }
+  ],
+  "rcsb_accession_info": {
+    "deposit_date": "2003-06-05T00:00:00.000+00:00",
+    "has_released_experimental_data": "Y",
+    "initial_release_date": "2003-10-21T00:00:00.000+00:00",
+    "major_revision": 1,
+    "minor_revision": 5,
+    "revision_date": "2024-10-30T00:00:00.000+00:00",
+    "status_code": "REL"
+  },
+  "rcsb_entry_container_identifiers": {
+    "assembly_ids": [
+      "1"
+    ],
+    "entity_ids": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "entry_id": "1PK6",
+    "model_ids": [
+      1
+    ],
+    "non_polymer_entity_ids": [
+      "4"
+    ],
+    "polymer_entity_ids": [
+      "1",
+      "2",
+      "3"
+    ],
+    "pubmed_id": 12960167,
+    "rcsb_id": "1PK6"
+  },
+  "rcsb_entry_info": {
+    "assembly_count": 1,
+    "branched_entity_count": 0,
+    "cis_peptide_count": 0,
+    "deposited_atom_count": 3314,
+    "deposited_branched_entity_instance_count": 0,
+    "deposited_deuterated_water_count": 0,
+    "deposited_hydrogen_atom_count": 0,
+    "deposited_model_count": 1,
+    "deposited_modeled_polymer_monomer_count": 394,
+    "deposited_nonpolymer_entity_instance_count": 1,
+    "deposited_polymer_entity_instance_count": 3,
+    "deposited_polymer_monomer_count": 394,
+    "deposited_solvent_atom_count": 198,
+    "deposited_unmodeled_polymer_monomer_count": 0,
+    "diffrn_radiation_wavelength_maximum": 1.0,
+    "diffrn_radiation_wavelength_minimum": 1.0,
+    "disulfide_bond_count": 3,
+    "entity_count": 5,
+    "experimental_method": "X-ray",
+    "experimental_method_count": 1,
+    "inter_mol_covalent_bond_count": 0,
+    "inter_mol_metalic_bond_count": 6,
+    "molecular_weight": 44.25,
+    "na_polymer_entity_types": "Other",
+    "nonpolymer_bound_components": [
+      "CA"
+    ],
+    "nonpolymer_entity_count": 1,
+    "nonpolymer_molecular_weight_maximum": 0.04,
+    "nonpolymer_molecular_weight_minimum": 0.04,
+    "polymer_composition": "heteromeric protein",
+    "polymer_entity_count": 3,
+    "polymer_entity_count_DNA": 0,
+    "polymer_entity_count_RNA": 0,
+    "polymer_entity_count_nucleic_acid": 0,
+    "polymer_entity_count_nucleic_acid_hybrid": 0,
+    "polymer_entity_count_protein": 3,
+    "polymer_entity_taxonomy_count": 3,
+    "polymer_molecular_weight_maximum": 15.0,
+    "polymer_molecular_weight_minimum": 14.3,
+    "polymer_monomer_count_maximum": 133,
+    "polymer_monomer_count_minimum": 129,
+    "resolution_combined": [
+      1.85
+    ],
+    "selected_polymer_entity_types": "Protein (only)",
+    "software_programs_combined": [
+      "AMORE",
+      "CCP4",
+      "REFMAC",
+      "XDS"
+    ],
+    "solvent_entity_count": 1,
+    "structure_determination_methodology": "experimental",
+    "structure_determination_methodology_priority": 10,
+    "diffrn_resolution_high": {
+      "provenance_source": "Depositor assigned",
+      "value": 1.85
+    }
+  },
+  "rcsb_primary_citation": {
+    "country": "US",
+    "id": "primary",
+    "journal_abbrev": "J.Biol.Chem.",
+    "journal_id_ASTM": "JBCHA3",
+    "journal_id_CSD": "0071",
+    "journal_id_ISSN": "0021-9258",
+    "journal_volume": "278",
+    "page_first": "46974",
+    "page_last": "46982",
+    "pdbx_database_id_DOI": "10.1074/jbc.M307764200",
+    "pdbx_database_id_PubMed": 12960167,
+    "rcsb_ORCID_identifiers": [
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?"
+    ],
+    "rcsb_authors": [
+      "Gaboriaud, C.",
+      "Juanhuix, J.",
+      "Gruez, A.",
+      "Lacroix, M.",
+      "Darnault, C.",
+      "Pignol, D.",
+      "Verger, D.",
+      "Fontecilla-Camps, J.C.",
+      "Arlaud, G.J."
+    ],
+    "rcsb_journal_abbrev": "J Biol Chem",
+    "title": "The crystal structure of the globular head of complement protein C1q provides a basis for its versatile recognition properties.",
+    "year": 2003
+  },
+  "refine": [
+    {
+      "B_iso_mean": 24.877,
+      "aniso_B_1_1": 0.0,
+      "aniso_B_1_2": 0.0,
+      "aniso_B_1_3": 0.03,
+      "aniso_B_2_2": -0.02,
+      "aniso_B_2_3": 0.0,
+      "aniso_B_3_3": 0.04,
+      "correlation_coeff_Fo_to_Fc": 0.95,
+      "correlation_coeff_Fo_to_Fc_free": 0.932,
+      "details": "HYDROGENS HAVE BEEN ADDED IN THE RIDING POSITIONS. RESIDUES A90, A92, A160, B92, B93, B108, B109, B150, B163, B165, C89 HAVE DIFFUSE LATERAL CHAINS",
+      "ls_R_factor_R_free": 0.23858,
+      "ls_R_factor_R_work": 0.19869,
+      "ls_R_factor_all": 0.20057,
+      "ls_R_factor_obs": 0.20057,
+      "ls_d_res_high": 1.85,
+      "ls_d_res_low": 25.4,
+      "ls_number_reflns_R_free": 1074,
+      "ls_number_reflns_all": 26237,
+      "ls_number_reflns_obs": 21245,
+      "ls_percent_reflns_R_free": 4.8,
+      "ls_percent_reflns_obs": 85.09,
+      "overall_SU_B": 5.396,
+      "overall_SU_ML": 0.141,
+      "pdbx_R_Free_selection_details": "RANDOM",
+      "pdbx_diffrn_id": [
+        "1"
+      ],
+      "pdbx_ls_cross_valid_method": "THROUGHOUT",
+      "pdbx_method_to_determine_struct": "MOLECULAR REPLACEMENT",
+      "pdbx_overall_ESU_R": 0.25,
+      "pdbx_overall_ESU_R_Free": 0.186,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "pdbx_solvent_ion_probe_radii": 0.8,
+      "pdbx_solvent_shrinkage_radii": 0.8,
+      "pdbx_solvent_vdw_probe_radii": 1.4,
+      "pdbx_starting_model": "PDB: 1GR3",
+      "pdbx_stereochemistry_target_values": "MAXIMUM LIKELIHOOD",
+      "solvent_model_details": "BABINET MODEL WITH MASK"
+    }
+  ],
+  "refine_hist": [
+    {
+      "cycle_id": "LAST",
+      "d_res_high": 1.85,
+      "d_res_low": 25.4,
+      "number_atoms_solvent": 198,
+      "number_atoms_total": 3314,
+      "pdbx_number_atoms_ligand": 1,
+      "pdbx_number_atoms_nucleic_acid": 0,
+      "pdbx_number_atoms_protein": 3115,
+      "pdbx_refine_id": "X-RAY DIFFRACTION"
+    }
+  ],
+  "refine_ls_restr": [
+    {
+      "dev_ideal": 0.01,
+      "dev_ideal_target": 0.021,
+      "number": 3158,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_bond_refined_d"
+    },
+    {
+      "dev_ideal": 0.004,
+      "dev_ideal_target": 0.02,
+      "number": 2767,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_bond_other_d"
+    },
+    {
+      "dev_ideal": 1.321,
+      "dev_ideal_target": 1.935,
+      "number": 4290,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_angle_refined_deg"
+    },
+    {
+      "dev_ideal": 2.611,
+      "dev_ideal_target": 3.0,
+      "number": 6428,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_angle_other_deg"
+    },
+    {
+      "dev_ideal": 5.06,
+      "dev_ideal_target": 5.0,
+      "number": 391,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_dihedral_angle_1_deg"
+    },
+    {
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_dihedral_angle_2_deg"
+    },
+    {
+      "dev_ideal": 0.076,
+      "dev_ideal_target": 0.2,
+      "number": 476,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_chiral_restr"
+    },
+    {
+      "dev_ideal": 0.004,
+      "dev_ideal_target": 0.02,
+      "number": 3555,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_gen_planes_refined"
+    },
+    {
+      "dev_ideal": 0.003,
+      "dev_ideal_target": 0.02,
+      "number": 681,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_gen_planes_other"
+    },
+    {
+      "dev_ideal": 0.189,
+      "dev_ideal_target": 0.2,
+      "number": 537,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_nbd_refined"
+    },
+    {
+      "dev_ideal": 0.274,
+      "dev_ideal_target": 0.2,
+      "number": 3348,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_nbd_other"
+    },
+    {
+      "dev_ideal": 0.105,
+      "dev_ideal_target": 0.2,
+      "number": 1798,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_nbtor_other"
+    },
+    {
+      "dev_ideal": 0.144,
+      "dev_ideal_target": 0.2,
+      "number": 188,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_xyhbond_nbd_refined"
+    },
+    {
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_xyhbond_nbd_other"
+    },
+    {
+      "dev_ideal": 0.17,
+      "dev_ideal_target": 0.2,
+      "number": 22,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_symmetry_vdw_refined"
+    },
+    {
+      "dev_ideal": 0.338,
+      "dev_ideal_target": 0.2,
+      "number": 66,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_symmetry_vdw_other"
+    },
+    {
+      "dev_ideal": 0.181,
+      "dev_ideal_target": 0.2,
+      "number": 10,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_symmetry_hbond_refined"
+    },
+    {
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_symmetry_hbond_other"
+    },
+    {
+      "dev_ideal": 0.96,
+      "dev_ideal_target": 1.5,
+      "number": 1956,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_mcbond_it"
+    },
+    {
+      "dev_ideal": 1.823,
+      "dev_ideal_target": 2.0,
+      "number": 3163,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_mcangle_it"
+    },
+    {
+      "dev_ideal": 1.925,
+      "dev_ideal_target": 3.0,
+      "number": 1202,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_scbond_it"
+    },
+    {
+      "dev_ideal": 3.428,
+      "dev_ideal_target": 4.5,
+      "number": 1127,
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_scangle_it"
+    },
+    {
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_rigid_bond_restr"
+    },
+    {
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_sphericity_free"
+    },
+    {
+      "pdbx_refine_id": "X-RAY DIFFRACTION",
+      "type": "r_sphericity_bonded"
+    }
+  ],
+  "reflns": [
+    {
+      "d_resolution_high": 1.85,
+      "d_resolution_low": 25.4,
+      "number_all": 26237,
+      "number_obs": 26090,
+      "pdbx_Rmerge_I_obs": 0.073,
+      "pdbx_diffrn_id": [
+        "1"
+      ],
+      "pdbx_netI_over_sigmaI": 7.1,
+      "pdbx_ordinal": 1,
+      "pdbx_redundancy": 4.73,
+      "percent_possible_obs": 90.0
+    }
+  ],
+  "reflns_shell": [
+    {
+      "Rmerge_I_obs": 0.23,
+      "d_res_high": 1.86,
+      "d_res_low": 1.98,
+      "meanI_over_sigI_obs": 1.7,
+      "pdbx_ordinal": 1,
+      "pdbx_redundancy": 1.1,
+      "percent_possible_all": 67.2
+    }
+  ],
+  "software": [
+    {
+      "classification": "refinement",
+      "name": "REFMAC",
+      "pdbx_ordinal": 1,
+      "version": "5.1.24"
+    },
+    {
+      "classification": "data reduction",
+      "name": "XDS",
+      "pdbx_ordinal": 2
+    },
+    {
+      "classification": "data scaling",
+      "name": "CCP4",
+      "pdbx_ordinal": 3
+    },
+    {
+      "classification": "phasing",
+      "name": "AMoRE",
+      "pdbx_ordinal": 4
+    }
+  ],
+  "struct": {
+    "title": "Globular Head of the Complement System Protein C1q"
+  },
+  "struct_keywords": {
+    "pdbx_keywords": "IMMUNE SYSTEM",
+    "text": "Complement system, C1q, immunology, jellyroll, IgG, IMMUNE SYSTEM"
+  },
+  "symmetry": {
+    "Int_Tables_number": 5,
+    "space_group_name_H_M": "C 1 2 1"
+  },
+  "rcsb_id": "1PK6"
+}

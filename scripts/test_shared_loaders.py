@@ -14,8 +14,11 @@ if str(SRC) not in sys.path:
 
 from carbon_als.allostery_pkpd import (  # noqa: E402
     calibrate_bexi_mwc_to_empirical,
+    compute_cd38_cadpr_dilution_and_audit_bound,
     hetero_octamer_tlock_inhibition,
+    simulate_coupled_pikfyve_casm_pkpd,
     simulate_pulsed_vs_continuous_pkpd,
+    sweep_coupled_pikfyve_casm_sensitivity,
     sweep_pulsed_pkpd_sensitivity,
     sweep_sarm1_mwc_threshold_synergy,
 )
@@ -250,15 +253,27 @@ def main() -> None:
     errs_b = verify_phase3b_gates(ROOT, load_csv("candidate_intake_ledger.csv"), load_csv("subnode_dissection.csv"), load_csv("analysis_runs.csv"), load_csv, cand_override=bad_bundle)
     assert any("non-atomic gene_or_drug" in e for e in errs_b)
 
-    # Test 25: Phase 4 59-candidate & 26-interval cross-phase portfolio gate
+    # Test 25: Phase 4 52-hypothesis & 26-interval cross-phase portfolio gate
     from phase4_gates import verify_phase4_gates
     errs_p4 = verify_phase4_gates(ROOT, load_csv("candidate_decisions.csv"), {r["analysis_run_id"] for r in load_csv("analysis_runs.csv")}, load_csv)
     assert not errs_p4, f"Unexpected Phase 4 gate errors: {errs_p4}"
     p4_rows = load_csv("phase4_unified_portfolio.csv")
     cis4_rows = load_csv("phase4_unified_cis_intervals.csv")
-    assert len(p4_rows) == 59 and len(cis4_rows) == 26, f"Expected 59 portfolio & 26 cis rows, got {len(p4_rows)} & {len(cis4_rows)}"
+    assert len(p4_rows) == 52 and len(cis4_rows) == 26, f"Expected 52 portfolio & 26 cis rows, got {len(p4_rows)} & {len(cis4_rows)}"
 
-    print("PASS: All 25 v0.5.3 shared-loader, directory-SHA256, mmCIF, skill-CLI, splice-Tm/bystander, MWC/PKPD, off-target/bulge/EEJ, Phase 3B, Phase 4 portfolio, and biosecurity tests verified (0 errors).")
+    # Test 26: Coupled zero-dead-zone +PI(3)P->LRRK2/CASM turnover ODE, finite-d_lock hetero-octamer & CD38 cADPR bound
+    casm_q48 = sweep_coupled_pikfyve_casm_sensitivity([float(h) for h in range(0, 336, 48)], 336.0, 6.5, 4.5, 1.5)
+    casm_q72 = sweep_coupled_pikfyve_casm_sensitivity([0.0, 72.0, 144.0, 216.0, 288.0], 336.0, 8.0, 4.5, 1.5)
+    assert casm_q48["n_parameter_combinations"] == 81 and casm_q48["killgate_pass_rate"] == 0.0 and casm_q48["end_casm_min"] > 0.05
+    assert casm_q72["n_parameter_combinations"] == 81 and casm_q72["killgate_pass_rate"] == 0.0 and casm_q72["end_casm_min"] > 0.05
+    casm_decay = simulate_coupled_pikfyve_casm_pkpd([0.0], 168.0, 8.0, 4.5, 1.5, ec50_casm=0.22, tau_casm_repair_h=24.0)
+    assert casm_decay["end_casm_stress_index"] < 0.02 * casm_decay["peak_casm_stress_index"]  # continuous repair never freezes
+    het_rev = hetero_octamer_tlock_inhibition(100.0, gof_allele_fraction=0.5, d_lock=6.5)
+    assert 0.30 <= het_rev["treated_fractional_activity"] <= 0.40  # ~34.8% residual NADase ceiling in ARM-broken GoF heterozygote
+    cd38_b = compute_cd38_cadpr_dilution_and_audit_bound(0.10, 0.90, 0.50)
+    assert cd38_b["selective_sarm1_fluid_cadpr_drop_pct"] == 9.0 and abs(cd38_b["min_offtarget_cd38_inhibition_pct_if_cell_free_plasma"] - 44.44) < 0.02
+
+    print("PASS: All 26 v0.5.4 shared-loader, directory-SHA256, mmCIF, skill-CLI, splice-Tm/bystander, MWC/PKPD/CASM/CD38, off-target/bulge/EEJ, Phase 3B, Phase 4 portfolio, and biosecurity tests verified (0 errors).")
 
 
 if __name__ == "__main__":

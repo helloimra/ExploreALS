@@ -1,0 +1,96 @@
+{
+  "encode_eclip_exps": [
+    {
+      "acc": "ENCSR720BJU",
+      "target": "TARDBP",
+      "bio": "Homo sapiens K562"
+    },
+    {
+      "acc": "ENCSR187VEQ",
+      "target": "TARDBP",
+      "bio": "Homo sapiens HepG2"
+    },
+    {
+      "acc": "ENCSR584TCR",
+      "target": "TARDBP",
+      "bio": "Homo sapiens K562"
+    },
+    {
+      "acc": "ENCSR756CKJ",
+      "target": "RBFOX2",
+      "bio": "Homo sapiens K562"
+    },
+    {
+      "acc": "ENCSR987FTF",
+      "target": "RBFOX2",
+      "bio": "Homo sapiens HepG2"
+    },
+    {
+      "acc": "ENCSR384KAN",
+      "target": "PTBP1",
+      "bio": "Homo sapiens HepG2"
+    },
+    {
+      "acc": "ENCSR981WKN",
+      "target": "PTBP1",
+      "bio": "Homo sapiens K562"
+    },
+    {
+      "acc": "ENCSR953ZOA",
+      "target": "HNRNPK",
+      "bio": "Homo sapiens K562"
+    },
+    {
+      "acc": "ENCSR268ETU",
+      "target": "HNRNPK",
+      "bio": "Homo sapiens K562"
+    },
+    {
+      "acc": "ENCSR828ZID",
+      "target": "HNRNPK",
+      "bio": "Homo sapiens HepG2"
+    },
+    {
+      "acc": "ENCSR321PWZ",
+      "target": "SRSF1",
+      "bio": "Homo sapiens K562"
+    },
+    {
+      "acc": "ENCSR432XUP",
+      "target": "SRSF1",
+      "bio": "Homo sapiens K562"
+    },
+    {
+      "acc": "ENCSR989VIY",
+      "target": "SRSF1",
+      "bio": "Homo sapiens HepG2"
+    }
+  ],
+  "encode_tf_chip_exps": [
+    {
+      "acc": "ENCSR000BGQ",
+      "target": "SPI1",
+      "bio": "Homo sapiens GM12878"
+    },
+    {
+      "acc": "ENCSR000BUW",
+      "target": "SPI1",
+      "bio": "Homo sapiens HL-60"
+    },
+    {
+      "acc": "ENCSR000BIJ",
+      "target": "SPI1",
+      "bio": "Homo sapiens GM12891"
+    },
+    {
+      "acc": "ENCSR000BGW",
+      "target": "SPI1",
+      "bio": "Homo sapiens K562"
+    },
+    {
+      "acc": "ENCSR008LHT",
+      "target": "ISL1",
+      "bio": "Homo sapiens SK-N-SH genetically modified (insertion) using CRISPR targeting H. sapiens ISL1 treated with 6 \u03bcM all-trans-retinoic acid for 48 hours"
+    }
+  ]
+}

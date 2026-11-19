@@ -1,4 +1,4 @@
-"""Verified 1-2 sentence Candidate & Biological Hypothesis summaries for all 59 CarbonALS portfolio entries."""
+"""Verified 1-2 sentence Candidate & Biological Hypothesis summaries for all 52 ExploreALS v1.2 portfolio entries."""
 from __future__ import annotations
 
 CANDIDATE_HYPOTHESES: dict[str, str] = {
@@ -20,7 +20,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "C005": (
         "Motor neuron excitability in ALS follows a biphasic trajectory: early intrinsic hyperexcitability driven by TDP-43-mediated KCNQ2 loss transitions into late symptomatic synaptic attrition and hypoexcitability. "
-        "Rather than bundling disparate ion-channel drugs, this companion protocol pairs transcranial magnetic stimulation (SICI), axonal threshold tracking (SDTC), and living-CSF synaptic markers (NPTX2) to stage-gate KCNQ2 interventions prior to synaptic collapse."
+        "This companion protocol pairs transcranial magnetic stimulation (SICI), axonal threshold tracking (SDTC), and living-CSF synaptic markers (NPTX2) to stage-gate KCNQ2 interventions prior to synaptic collapse."
     ),
     "C006": (
         "KCNQ2 (ENSG00000075043) encodes the pore-forming Kv7.2 voltage-gated potassium channel subunit that generates the stabilizing M-current in motor neurons. "
@@ -56,10 +56,11 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "C014": (
         "CHMP7 (ENSG00000147457) and CHMP2B (ENSG00000083937) are ESCRT-III nuclear-envelope surveillance factors that remodel damaged nuclear pore complexes. "
-        "In sporadic and C9orf72 ALS, aberrant SUN1-facilitated nuclear retention of CHMP7 (modulated by CHMP2B) initiates nucleoporin stripping upstream of nuclear TDP-43 loss; the unbundled hypothesis tests whether selective nuclear-import blockade rescues pore integrity without ablating essential membrane repair."
+        "In sporadic and C9orf72 ALS, aberrant SUN1-facilitated nuclear retention of CHMP7 (modulated by CHMP2B) initiates nucleoporin stripping upstream of nuclear TDP-43 loss; this subunit-resolved hypothesis tests whether selective nuclear-import blockade rescues pore integrity without ablating essential membrane repair."
     ),
     "C015": (
-        "Originally bundled as an eight-gene ER-to-Golgi SNARE/vesicle-recycling axis, single-gene dissection isolates two distinct human ALS hypotheses: conformational stabilization of the autoinhibited Longin SNARE YKT6 (ENSG00000106636, harboring rare ALS risk variant p.Tyr64Cys on PDB 3KYQ and TDP-43-impaired PTAR1 prenylation) and cis-regulatory dissection of the colocalized chr14q12 ALS GWAS locus spanning SCFD1 and TDP-43-cryptic G2E3."
+        "SCFD1 (ENSG00000092108) and G2E3 (ENSG00000092140) span the genome-wide significant human ALS chr14q12 GWAS locus, pairing opposing motor-neuron (+0.048) vs primary/iPSC-microglial (-0.22 to -0.33, PP_H4=0.88–0.89) SCFD1 eQTL colocalization with G2E3 exon-2 sQTLs and TDP-43-regulated Intron-1 cryptic polyadenylation. "
+        "Because G2E3's Alu-derived cryptic exon fails 0-mismatch transcriptome hybridization safety and SCFD1 is pan-essential, this hypothesis gates bidirectional motor-neuron and microglial secretory effector dissection."
     ),
     "C016": (
         "FBXL5 (ENSG00000118564) is an iron- and oxygen-sensing SCF E3 ubiquitin ligase subunit (PDB 6VCD) that degrades iron-regulatory protein IRP2 (IREB2) when cytosolic iron is replete. "
@@ -67,11 +68,11 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "C017": (
         "CHIT1 (ENSG00000133063), GPNMB (ENSG00000136235), CHI3L1, and CHI3L2 form a coordinated microglial/astroglial chitinase and endolysosomal glycoprotein signature elevated in symptomatic ALS relative to asymptomatic carriers and controls. "
-        "Originally evaluated as candidate neuroinflammatory inhibitor targets, human genetic and functional sign analysis reclassifies this four-protein suite as a living-CSF symptomatic staging, ALS-Glia stratification, and lysosomal pharmacodynamic biomarker panel."
+        "Human genetic null homozygosity (CHIT1 rs3831317) and protective lysosomal sign analysis (GPNMB) establish this four-protein suite as a living-CSF symptomatic staging, ALS-Glia stratification, and pharmacodynamic biomarker panel rather than an inhibition target."
     ),
     "C018": (
         "Complement C1q (encoded by microglial C1QA/C1QB/C1QC, ENSG00000173372) initiates classical synaptic pruning and undergoes C3-independent neuronal uptake into ribonucleoprotein complexes. "
-        "While systemic C3/C5 complement blockade is clinically falsified in ALS, this unbundled exploratory hypothesis tests whether CNS-restricted, half-life-extended intrathecal C1q blockade protects vulnerable motor synapses without depleting systemic serum C1q or protective spinal C-boutons."
+        "Distinct from systemic C3/C5 complement blockade, this exploratory hypothesis tests whether CNS-restricted, half-life-extended intrathecal C1q blockade protects vulnerable motor synapses without depleting systemic serum C1q or protective spinal C-boutons."
     ),
     "C019": (
         "Baricitinib (CHEMBL2105759) is an oral ATP-competitive JAK1/JAK2 tyrosine kinase inhibitor that suppresses cytokine-induced STAT phosphorylation. "
@@ -85,45 +86,17 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
         "Icerguastat (Sephin1, CHEMBL2365743) is a chlorobenzylidene aminoguanidine small molecule originally proposed to prolong protective eIF2alpha phosphorylation by selectively inhibiting the stress-inducible phosphatase cofactor PPP1R15A (GADD34). "
         "Its ALS hypothesis tested whether oral dosing could attenuate endoplasmic reticulum proteotoxic stress and slow bulbar/limb progression."
     ),
-    "BA9-01": (
-        "AGAP2 (ENSG00000135439, PIKE) encodes a neuronal ArfGAP and GTPase signaling scaffold implicated in postsynaptic PI3K/Akt survival and endosomal trafficking. "
-        "Nominated from unadjusted postmortem prefrontal cortex (BA9) single-nucleus RNA-seq downregulation in ALS Layer 2/3 excitatory neurons, the hypothesis proposed restoring cortical AGAP2 signaling."
+    "C022": (
+        "DNAJB2 (ENSG00000135924, HSJ1) encodes a neuronal Hsp40 co-chaperone with two alternatively spliced isoforms: cytosolic DNAJB2a (ENST00000392086), which clears misfolded ubiquitylated TDP-43, and intron-9-retaining ER-prenylated DNAJB2b, with recessive human loss-of-function mutations (OMIM 614881) causing distal motor neuropathy and juvenile ALS. "
+        "Backed by concordant human cortical oligodendrocyte, cervical spinal cord, and synaptosomal protein loss, this hypothesis tests enhancing intron-9 excision or augmenting cytosolic DNAJB2a while preserving ERAD-essential DNAJB2b."
     ),
-    "BA9-02": (
-        "AP1G2 (ENSG00000213983) encodes the gamma-2 adaptin subunit of clathrin-associated adaptor complex AP-1 involved in trans-Golgi and endosomal cargo sorting. "
-        "Nominated from unadjusted postmortem BA9 cortical snRNA-seq downregulation in ALS upper-layer excitatory neurons, the hypothesis proposed correcting endosomal sorting defects."
+    "C023": (
+        "YKT6 (ENSG00000106636) encodes an autoinhibited Longin R-SNARE required for ER-to-Golgi and autophagosome membrane fusion that harbors an exome-wide human ALS missense risk variant (p.Tyr64Cys, PMID:41917433) inside its PDB 3KYQ prenyl-binding groove alongside TDP-43 3'-UTR lengthening and PTAR1 prenyltransferase mis-splicing. "
+        "Because YKT6 and partner cis-Golgi SNAREs (STX5, NSF) are cellularly pan-essential, this hypothesis tests positive allele-split Longin-groove conformational stabilization without ejecting endogenous Cys195-farnesyl."
     ),
-    "BA9-03": (
-        "BRSK2 (ENSG00000174672, SAD-A) encodes an AMPK-related serine/threonine kinase governing neuronal polarization, axon specification, and presynaptic vesicle maturation. "
-        "Nominated from unadjusted postmortem BA9 excitatory neuron snRNA-seq reductions, the hypothesis proposed rescuing cortical BRSK2 kinase activity in ALS."
-    ),
-    "BA9-04": (
-        "DNAJB2 (ENSG00000135924, HSJ1) encodes a neuronal Hsp40 co-chaperone with two alternatively spliced isoforms: cytosolic DNAJB2a (ENST00000392086), which clears misfolded ubiquitylated TDP-43, and intron-9-retaining ER-prenylated DNAJB2b, with recessive human loss-of-function mutations causing distal motor neuropathy and juvenile ALS. "
-        "Surviving as the sole GC-robust oligodendroglial and spinal lead from the BA9 cohort, the hypothesis tests enhancing intron-9 excision or augmenting cytosolic DNAJB2a."
-    ),
-    "BA9-05": (
-        "KIFC2 (ENSG00000167702) encodes a C-terminal minus-end-directed kinesin-14 motor protein expressed in adult mammalian dendrites. "
-        "Nominated from unadjusted postmortem BA9 excitatory neuron snRNA-seq downregulation, the hypothesis proposed restoring dendritic microtubule transport in ALS cortex."
-    ),
-    "BA9-06": (
-        "MIB2 (ENSG00000197530, Mindbomb E3 ubiquitin protein ligase 2) encodes a RING-finger ubiquitin ligase regulating Notch ligand endocytosis and NF-kappaB signaling. "
-        "Nominated from unadjusted postmortem BA9 Layer 2/3 excitatory snRNA-seq reduction, the hypothesis proposed rescuing cortical MIB2 ubiquitin-ligase activity."
-    ),
-    "BA9-07": (
-        "MYO18A (ENSG00000196535) encodes an unconventional PDZ-containing myosin scaffold linking Golgi membranes to the actin cytoskeleton. "
-        "Nominated from unadjusted postmortem BA9 oligodendrocyte snRNA-seq upregulation, the hypothesis proposed inhibiting glial MYO18A remodeling in ALS."
-    ),
-    "BA9-08": (
-        "SNPH (ENSG00000101298) encodes syntaphilin, an outer-mitochondrial-membrane static anchor that clamps axonal mitochondria onto microtubules and halts kinesin-driven transport. "
-        "Motivated by primary motor cortex RNA shifts, insoluble cortical protein accumulation, and enhanced neuromuscular junction outgrowth upon SNPH depletion in human assembloids (PMID:41193975), this exploratory hypothesis tests graded partial release of stalled axonal mitochondria."
-    ),
-    "BA9-09": (
-        "ZNF783 (ENSG00000204946) encodes an uncharacterized KRAB-domain zinc-finger transcriptional regulator. "
-        "Nominated solely from unadjusted postmortem BA9 Layer 2/3 excitatory neuron snRNA-seq reduction, the hypothesis posited loss of cortical transcriptional repression in sporadic ALS."
-    ),
-    "BA9-10": (
-        "CAPG (ENSG00000042493) encodes gelsolin-like macrophage-capping protein, a Ca2+-sensitive actin-filament barbed-end capper enriched in myeloid cells and microglia. "
-        "Nominated from bulk postmortem spinal cord and cortical homogenate elevation, the hypothesis proposed inhibiting microglial CAPG-mediated cytoskeletal activation in ALS."
+    "C024": (
+        "Pegcetacoplan is a subcutaneously administered ~43.5 kDa PEGylated cyclic peptide inhibitor of central complement component C3 (ENSG00000125730) that blocks classical, lectin, and alternative C3 convertase cleavage. "
+        "Evaluated clinically in the 249-patient Phase 2 MERIDIAN trial (NCT04579666), its ALS hypothesis proposed that systemic C3 inhibition would halt complement-mediated motor axon and neuromuscular junction injury."
     ),
     "S01": (
         "Dexmedetomidine (CHEMBL778) is a potent intravenous alpha-2A adrenergic receptor agonist clinically restricted to intensive-care sedation and anesthesia. "

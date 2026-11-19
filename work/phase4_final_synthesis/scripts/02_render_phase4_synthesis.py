@@ -108,6 +108,8 @@ def main() -> None:
             "dg": c["dg37_kcal"], "avi": c["max_avi_phred"],
             "sp": f"{c['spliced_0mm_genes']}/{c['spliced_1mm_genes']}/{c['spliced_wobble_only_pc_genes']}",
             "pm": f"{c['premRNA_0mm_sense_genes']}/{c['premRNA_1mm_splice50bp_genes']}/{c['premRNA_wobble_only_splice50bp_pc_genes']}/{c['premRNA_2mm_splice25bp_pc_genes']}/{c['bulge_1nt_steric_pc_genes']}/{c['sub18_core_steric_pc_genes']}",
+            "pm1_all": int(c["premRNA_1mm_sense_genes"]),
+            "is_gap": "GAPMER" in c["cis_mechanism_or_mode"],
             "flags": (
                 re.sub(r";?\.\.\.\(\+(\d+)_more_in_JSON\)", r"; +\1 additional GENCODE v46 hits", c["flagged_constrained_neuronal_hits"])
                 .replace("sub18_core_nonconstr", "18nt-subcore(non-constrained)")
@@ -119,9 +121,8 @@ def main() -> None:
     ]
     js_sub = [project_subnode_v3(s, _clean_ui) for s in sub_rows]
     funnel_defs = [
-        ("CANONICAL_21", "Genetic, Splicing & Clinical"),
+        ("CANONICAL_24", "Clinical, Mendelian & GWAS Programs"),
         ("SCREEN_AND_BLIND_SURVIVORS_9", "RCT Subgroup & Screen Survivors"),
-        ("HISTORICAL_BA9_NAMED_10", "Postmortem Cortical BA9 RNA-seq"),
         ("F1_CRYPTIC_SPLICE", "Unbiased · TDP-43 Cryptic Exons"),
         ("F2_CRYPTIC_APA", "Unbiased · Cryptic APA / 3'Ext"),
         ("F3_CSF_SPATIAL", "Unbiased · Living CSF & Spatial"),
@@ -142,7 +143,7 @@ def main() -> None:
     drop_defs = [
         ("FALSIFIED_CLINICAL", "Human ALS RCT Futility / Harm", "Adequately powered Ph2/3 futility or class failure"),
         ("FALSIFIED_PK_SAFETY", "Unbound CNS PK / Safety Wall", "Cu,brain << IC50/EC50 or severe clinical toxicity"),
-        ("ARTIFACT_CONFOUNDED", "Postmortem Confounding Collapse", "Collapses under GC%, RIN & cell-type adjustment"),
+        ("ARTIFACT_CONFOUNDED", "Assay / Media Confounding", "Within basal media noise & opposes genetic polarity"),
     ]
     js_drops = [
         {
@@ -182,6 +183,24 @@ def main() -> None:
     ds_rows = _read_csv("datasets_manifest.csv")
     stat_rows = _read_csv("statistical_models_and_contrasts.csv")
     ovl_rows = _read_csv("cohort_overlap_map.csv")
+    upd_rows = _read_csv("living_evidence_updates.csv")
+    js_updates = [
+        {
+            "id": u["update_id"],
+            "dt": u["date_iso"],
+            "tag": u["release_tag"],
+            "cat": u["update_category"],
+            "ids": [x.strip() for x in u["affected_ids"].split(";") if x.strip()],
+            "imp": u["decision_impact"],
+            "hdr": u["headline"],
+            "pre": u["prior_state_or_assumption"],
+            "post": u["new_evidence_or_revision"],
+            "cons": u["portfolio_and_gate_consequence"],
+            "srcs": [x.strip() for x in u["primary_sources"].split(";") if x.strip()],
+            "ancs": [x.strip() for x in u["verification_anchor"].split(";") if x.strip()],
+        }
+        for u in upd_rows
+    ]
 
     runs = _read_csv("analysis_runs.csv")
     run_cols = list(runs[0].keys())
@@ -191,8 +210,8 @@ def main() -> None:
         "output_artifacts": "reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md;reports/CARBON_ALS_INTERACTIVE_EXPLORER.html;reports/monographs;reports/github_pages",
         "datasets_used": "DS001_COUNTS;DS001_META;DS001_ONEILL;DS_GENCODE_V46_COMP_GTF;DS_GNOMAD_V41_CONSTRAINT",
         "tools_and_skills_used": "generative_ui;tooluniverse-gene-liability;alphagenome-atlas-website-links;scripts.phase4_gates;uv-python",
-        "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-16T13:20:00Z",
-        "summary": "Programmatically rendered canonical Phase 4 v1.2 synthesis report (SHA-12 locked, 8 Tier 1+2 roadmaps + 9-row Mechanistic Contrasts matrix), standalone 6-tab interactive 59-candidate ExploreALS v1.2 Explorer (with Tab 6 Replication workbench, 216/216 64-char SHA-256 anchors, 8-cluster cohort overlap & 3 sensitivity sandboxes), 8 Tier 1+2 Monographs, and zero-CDN GitHub Pages bundle (Coordinate-Only Cis-Regulatory Search Windows, 0 chemically modified synthesis-ready ASO sequences).",
+        "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-19T08:45:00Z",
+        "summary": "Programmatically rendered canonical Phase 4 v1.2 synthesis report (SHA-12 locked, 8 Tier 1+2 roadmaps + 9-row Mechanistic Contrasts matrix), standalone 5-view interactive 52-hypothesis ExploreALS v1.2 Explorer (with Tab 4 Replication workbench, 194/194 64-char SHA-256 anchors, 40 open external datasets, 8-cluster cohort overlap & 3 sensitivity sandboxes), 8 Tier 1+2 Monographs, and zero-CDN GitHub Pages bundle (Coordinate-Only Cis-Regulatory Search Windows, 0 chemically modified synthesis-ready ASO sequences).",
     }
     runs = (
         [p4_r2 if r["analysis_run_id"] == "RUN-P4-002" else r for r in runs]
@@ -229,6 +248,7 @@ def main() -> None:
         f"const DATA_DATASETS = {_safe_json_for_script(js_datasets)};",
         f"const DATA_FORMULAS = {_safe_json_for_script(js_formulas)};",
         f"const DATA_OVERLAP = {_safe_json_for_script(js_overlap)};",
+        f"const DATA_UPDATES = {_safe_json_for_script(js_updates)};",
     ])
     st = summary["registry_sha12"]
     sha_stamp = (

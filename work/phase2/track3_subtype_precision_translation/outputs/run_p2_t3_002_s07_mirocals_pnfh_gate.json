@@ -602,6 +602,38 @@
       "screened_lp_patients_needed_at_70pct_pass": 952
     },
     {
+      "assumed_hr": 0.64,
+      "power": 0.8,
+      "required_deaths": 158,
+      "expected_21mo_event_rate_pooled": 0.3042,
+      "randomized_low_pnfh_n": 566,
+      "screened_lp_patients_needed_at_70pct_pass": 809
+    },
+    {
+      "assumed_hr": 0.64,
+      "power": 0.9,
+      "required_deaths": 212,
+      "expected_21mo_event_rate_pooled": 0.3042,
+      "randomized_low_pnfh_n": 758,
+      "screened_lp_patients_needed_at_70pct_pass": 1083
+    },
+    {
+      "assumed_hr": 0.66,
+      "power": 0.8,
+      "required_deaths": 182,
+      "expected_21mo_event_rate_pooled": 0.3076,
+      "randomized_low_pnfh_n": 644,
+      "screened_lp_patients_needed_at_70pct_pass": 921
+    },
+    {
+      "assumed_hr": 0.66,
+      "power": 0.9,
+      "required_deaths": 244,
+      "expected_21mo_event_rate_pooled": 0.3076,
+      "randomized_low_pnfh_n": 864,
+      "screened_lp_patients_needed_at_70pct_pass": 1235
+    },
+    {
       "assumed_hr": 0.68,
       "power": 0.8,
       "required_deaths": 212,
@@ -633,5 +665,87 @@
       "randomized_low_pnfh_n": 1146,
       "screened_lp_patients_needed_at_70pct_pass": 1638
     }
-  ]
+  ],
+  "nov2026_platform_offset_and_tricals_cox_sensitivity": {
+    "mirocals_lognormal_fit": {
+      "mu_ln": 7.6136,
+      "sigma_ln": 0.7441,
+      "tricals_pnfh_r2": 0.127
+    },
+    "unbridged_3700_platform_offset_grid": [
+      {
+        "platform_scenario": "unbridged_assay_4p5x_higher",
+        "assay_vs_biovendor_slope_k": 4.5,
+        "effective_biovendor_cutoff_pg_ml": 822.2,
+        "apparent_lp_eligible_fraction": 0.1128,
+        "true_low_pnfh_responders_captured_pct": 14.27,
+        "top_quintile_nonresponders_admitted_pct": 0.0,
+        "diluted_event_weighted_hr_if_true_low_0p70": 0.7,
+        "power_at_247_deaths_pct": 80.03
+      },
+      {
+        "platform_scenario": "unbridged_assay_1p8x_higher",
+        "assay_vs_biovendor_slope_k": 1.8,
+        "effective_biovendor_cutoff_pg_ml": 2055.6,
+        "apparent_lp_eligible_fraction": 0.5079,
+        "true_low_pnfh_responders_captured_pct": 64.21,
+        "top_quintile_nonresponders_admitted_pct": 0.0,
+        "diluted_event_weighted_hr_if_true_low_0p70": 0.7,
+        "power_at_247_deaths_pct": 80.03
+      },
+      {
+        "platform_scenario": "calibrated_biovendor_or_p80_bridged",
+        "assay_vs_biovendor_slope_k": 1.0,
+        "effective_biovendor_cutoff_pg_ml": 3700.0,
+        "apparent_lp_eligible_fraction": 0.7909,
+        "true_low_pnfh_responders_captured_pct": 100.0,
+        "top_quintile_nonresponders_admitted_pct": 0.0,
+        "diluted_event_weighted_hr_if_true_low_0p70": 0.7,
+        "power_at_247_deaths_pct": 80.03
+      },
+      {
+        "platform_scenario": "unbridged_assay_1p8x_lower_eg_MSD",
+        "assay_vs_biovendor_slope_k": 0.5556,
+        "effective_biovendor_cutoff_pg_ml": 6660.0,
+        "apparent_lp_eligible_fraction": 0.9451,
+        "true_low_pnfh_responders_captured_pct": 100.0,
+        "top_quintile_nonresponders_admitted_pct": 73.76,
+        "diluted_event_weighted_hr_if_true_low_0p70": 0.9056,
+        "power_at_247_deaths_pct": 11.88
+      },
+      {
+        "platform_scenario": "unbridged_assay_4p5x_lower",
+        "assay_vs_biovendor_slope_k": 0.2222,
+        "effective_biovendor_cutoff_pg_ml": 16650.0,
+        "apparent_lp_eligible_fraction": 0.9977,
+        "true_low_pnfh_responders_captured_pct": 100.0,
+        "top_quintile_nonresponders_admitted_pct": 98.89,
+        "diluted_event_weighted_hr_if_true_low_0p70": 0.95,
+        "power_at_247_deaths_pct": 5.98
+      }
+    ],
+    "tricals_covariate_cox_deattenuation_grid": [
+      {
+        "cox_model": "unadjusted_marginal_logrank",
+        "log_hr_multiplier": 1.0,
+        "effective_conditional_hr_from_0p70": 0.7,
+        "required_deaths_80pct_power": 247,
+        "power_at_preserved_247_deaths_pct": 80.03
+      },
+      {
+        "cox_model": "conservative_half_deattenuation",
+        "log_hr_multiplier": 1.06,
+        "effective_conditional_hr_from_0p70": 0.6852,
+        "required_deaths_80pct_power": 220,
+        "power_at_preserved_247_deaths_pct": 84.4
+      },
+      {
+        "cox_model": "mirocals_observed_tricals_log_hr_ratio_1p1172",
+        "log_hr_multiplier": 1.1172,
+        "effective_conditional_hr_from_0p70": 0.6713,
+        "required_deaths_80pct_power": 198,
+        "power_at_preserved_247_deaths_pct": 87.93
+      }
+    ]
+  }
 }

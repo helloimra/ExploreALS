@@ -152,6 +152,7 @@ def simulate_8mer_mwc_epistasis() -> dict:
     states = {
         "healthy_axon_100pct_NMNAT2": 120.0,
         "als_axon_STMN2_depleted_25pct_NMNAT2": 8.0,
+        "als_axon_parallel_plus_end_STMN2_rescue_no_NMNAT2_shift": 8.0,
         "als_axon_plus_Track1_STMN2_rescue_80pct_NMNAT2": 65.0,
         "als_axon_SARM1_ARM_GoF_plus_STMN2_loss": 2.2,
     }
@@ -195,16 +196,46 @@ def simulate_8mer_mwc_epistasis() -> dict:
     return curves
 
 
-from carbon_als.allostery_pkpd import sweep_sarm1_mwc_threshold_synergy  # noqa: E402
+from carbon_als.allostery_pkpd import (  # noqa: E402
+    compute_cd38_cadpr_dilution_and_audit_bound,
+    hetero_octamer_tlock_inhibition,
+    sweep_sarm1_mwc_threshold_synergy,
+)
+
+
+def summarize_nov2026_sarm1_sensitivity(mwc_grid: dict) -> dict:
+    well_sep = [
+        float(r["absolute_threshold_dose_sparing_fold"])
+        for r in mwc_grid["grid"]
+        if r["absolute_threshold_dose_sparing_fold"] is not None
+        and float(r["baseline_rescued_nadase"]) >= 1.5 * float(r["nadase_catastrophe_floor"])
+    ]
+    return {
+        "parallel_plus_end_lower_bound_fold": 1.0,
+        "parallel_mechanism_note": "Matson & Holzbaur 2026 (10.64898/2026.11.07.764673 [PREPRINT]) + Krus 2022 (PMID:35767949): STMN2 rescue suppresses microtubule plus-end catastrophe independently of L_eff (1.00x SARM1 Kd_T potency shift, yielding orthogonal Bliss survival additivity).",
+        "well_separated_epistatic_n": len(well_sep),
+        "well_separated_epistatic_min_fold": round(float(np.min(well_sep)), 2),
+        "well_separated_epistatic_median_fold": round(float(np.median(well_sep)), 2),
+        "well_separated_epistatic_max_fold": round(float(np.max(well_sep)), 2),
+        "reversible_noncovalent_tlock_gof_heterozygote_100xKd": hetero_octamer_tlock_inhibition(
+            100.0, gof_allele_fraction=0.5, d_lock=6.5
+        ),
+        "cd38_fluid_cadpr_dilution_bounds": {
+            "f_sarm1_10pct_basal_fluid": compute_cd38_cadpr_dilution_and_audit_bound(0.10, 0.90, 0.50),
+            "f_sarm1_05pct_basal_fluid": compute_cd38_cadpr_dilution_and_audit_bound(0.05, 0.90, 0.50),
+        },
+    }
 
 
 if __name__ == "__main__":
+    mwc_sw = sweep_sarm1_mwc_threshold_synergy()
     res = {
         "analysis_run_id": "RUN-P2-T2-002",
         "cohorts": analyze_brown_and_spillman(),
         "pineda_d003": analyze_pineda_excitatory(),
         "mwc_8mer_epistasis": simulate_8mer_mwc_epistasis(),
-        "mwc_threshold_synergy_sensitivity_grid": sweep_sarm1_mwc_threshold_synergy(),
+        "mwc_threshold_synergy_sensitivity_grid": mwc_sw,
+        "nov2026_parallel_and_cd38_sensitivity": summarize_nov2026_sarm1_sensitivity(mwc_sw),
     }
     (OUT / "run_p2_t2_002_epistasis_mwc.json").write_text(json.dumps(res, indent=2), encoding="utf-8")
-    print(json.dumps(res["mwc_8mer_epistasis"], indent=2))
+    print(json.dumps(res["nov2026_parallel_and_cd38_sensitivity"], indent=2))

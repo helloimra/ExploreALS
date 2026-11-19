@@ -17,7 +17,11 @@ for p in (ROOT, SRC):
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
 
-from carbon_als.allostery_pkpd import simulate_pulsed_vs_continuous_pkpd  # noqa: E402
+from carbon_als.allostery_pkpd import (  # noqa: E402
+    simulate_pulsed_vs_continuous_pkpd,
+    sweep_coupled_pikfyve_casm_sensitivity,
+    sweep_pulsed_pkpd_sensitivity,
+)
 from carbon_als.loaders import (  # noqa: E402
     assert_modality,
     assert_unique_donors,
@@ -212,17 +216,41 @@ def model_apilimod_pulsed_killgate() -> list[dict]:
     return rows
 
 
+def model_coupled_vs_decoupled_pikfyve_sweeps() -> dict:
+    key_schedules = [
+        ("AIT101_125mg_BID_Continuous_12h", [float(h) for h in range(0, 336, 12)], 3.89, 336.0),
+        ("Every48h_q48h_SinglePulse_6p5nM", [float(h) for h in range(0, 336, 48)], 6.50, 336.0),
+        ("Every3Days_q72h_SinglePulse_6p5nM", [0.0, 72.0, 144.0, 216.0, 288.0], 6.50, 336.0),
+        ("Every3Days_q72h_SinglePulse_8p0nM_336h", [0.0, 72.0, 144.0, 216.0, 288.0], 8.00, 336.0),
+        ("Every3Days_q72h_SinglePulse_8p0nM_360h_Full5CycleTrough", [0.0, 72.0, 144.0, 216.0, 288.0], 8.00, 360.0),
+    ]
+    rows = []
+    for name, hrs, cmax_u, tot_h in key_schedules:
+        m1 = sweep_pulsed_pkpd_sensitivity(hrs, tot_h, cmax_u, 4.5, 1.5)
+        m2 = sweep_coupled_pikfyve_casm_sensitivity(hrs, tot_h, cmax_u, 4.5, 1.5)
+        rows.append({
+            "regimen": name,
+            "cmax_unbound_csf_nM": cmax_u,
+            "total_hours": tot_h,
+            "model1_decoupled_osmotic_deadzone_81pt": m1,
+            "model2_coupled_zero_deadzone_pi3p_lrrk2_casm_81pt": m2,
+        })
+    return {"regimen_sweeps": rows}
+
+
 def main() -> None:
     chembl_pot = query_chembl_target_potencies()
     bye_het = analyze_bye2025_donor_heterogeneity()
     bari_occ = model_baricitinib_cns_occupancy()
     apil_grid = model_apilimod_pulsed_killgate()
+    apil_sweeps = model_coupled_vs_decoupled_pikfyve_sweeps()
     out = {
         "analysis_run_id": "RUN-P2-T3-003",
         "chembl_normalized_potencies": chembl_pot,
         "c019_baricitinib_cns_occupancy": bari_occ,
         "bye2025_16donor_heterogeneity": bye_het,
         "c020_apilimod_pulsed_vs_continuous_pkpd": apil_grid,
+        "c020_nov2026_decoupled_vs_coupled_casm_sweeps": apil_sweeps,
     }
     (OUT_DIR / "run_p2_t3_003_pk_selectivity_and_pulsed_killgate.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
     print("SAVED run_p2_t3_003_pk_selectivity_and_pulsed_killgate.json")

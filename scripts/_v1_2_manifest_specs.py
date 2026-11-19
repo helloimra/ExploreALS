@@ -5,13 +5,6 @@ RELEASE_TAG_BASE = "https://github.com/helloimra/ExploreALS/releases/download/v1
 
 # dataset_id -> (redistribution_tier, canonical_fetch_url_or_instructions, updated_license_opt, updated_desc_opt)
 DATASET_TIER_SPECS: dict[str, tuple[str, str, str | None, str | None]] = {
-    "DS_BASE_REG": ("TIER_C_DUA_OR_BASELINE", f"{RELEASE_TAG_BASE}/v1.0-baseline.tar.gz", "CC BY 4.0 (Historical Intake)", None),
-    "DS_BASE_DS": ("TIER_C_DUA_OR_BASELINE", f"{RELEASE_TAG_BASE}/v1.0-baseline.tar.gz", "CC BY 4.0 (Historical Intake)", None),
-    "DS_BASE_EV": ("TIER_C_DUA_OR_BASELINE", f"{RELEASE_TAG_BASE}/v1.0-baseline.tar.gz", "CC BY 4.0 (Historical Intake)", None),
-    "DS_BASE_SRC": ("TIER_C_DUA_OR_BASELINE", f"{RELEASE_TAG_BASE}/v1.0-baseline.tar.gz", "CC BY 4.0 (Historical Intake)", None),
-    "DS_BASE_REV": ("TIER_C_DUA_OR_BASELINE", f"{RELEASE_TAG_BASE}/v1.0-baseline.tar.gz", "CC BY 4.0 (Historical Intake)", None),
-    "DS_BASE_LNK": ("TIER_C_DUA_OR_BASELINE", f"{RELEASE_TAG_BASE}/v1.0-baseline.tar.gz", "CC BY 4.0 (Historical Intake)", None),
-    "DS_BASE_P10A": ("TIER_C_DUA_OR_BASELINE", f"{RELEASE_TAG_BASE}/v1.0-baseline.tar.gz", "CC BY 4.0 (Historical Intake)", None),
     "DS001_COUNTS": ("TIER_A_OPEN_REDISTRIBUTABLE", f"{RELEASE_TAG_BASE}/open-datasets-v1.2.tar.gz | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153960", None, None),
     "DS001_FEAT": ("TIER_A_OPEN_REDISTRIBUTABLE", "Bundled in git: data/transcriptomics/nygc_d001/provisional_unique_feature_map.csv", "CC BY 4.0 (Open Reference Map)", None),
     "DS001_META": ("TIER_A_OPEN_REDISTRIBUTABLE", f"{RELEASE_TAG_BASE}/open-datasets-v1.2.tar.gz | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153960", "Public NCBI GEO GSE153960 Sample Sheet", "NYGC GSE153960 public NCBI GEO sample characteristics (GSM4660..., donor ID, CNS region, RIN, sex, age)"),
@@ -21,7 +14,6 @@ DATASET_TIER_SPECS: dict[str, tuple[str, str, str | None, str | None]] = {
     "DS_GC_REF": ("TIER_A_OPEN_REDISTRIBUTABLE", f"{RELEASE_TAG_BASE}/open-datasets-v1.2.tar.gz | https://www.ensembl.org/biomart/martview", "Apache-2.0 / Ensembl Public Reference", None),
     "DS003_PB": ("TIER_C_DUA_OR_BASELINE", "https://www.synapse.org/#!Synapse:syn51105515 (fetch_open_datasets.py --with-synapse)", "Synapse Controlled/Registered Open Access", None),
     "DS003_SUPP": ("TIER_B_PUBLISHER_HTTPS_FETCH", "https://doi.org/10.1016/j.cell.2024.02.031 (Pineda et al. 2024 Cell mmc2.xlsx)", "Publisher Supplement (Direct HTTPS Fetch)", None),
-    "DS_BA9_BUNDLE": ("TIER_A_OPEN_REDISTRIBUTABLE", "Bundled in git: data/transcriptomics/ba9_bundle_v5", "CC BY 4.0 (Open Design Crosswalk)", None),
     "DS_EDIN_PB": ("TIER_A_OPEN_REDISTRIBUTABLE", f"{RELEASE_TAG_BASE}/open-datasets-v1.2.tar.gz | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE290359", None, None),
     "DS014_PRUD": ("TIER_A_OPEN_REDISTRIBUTABLE", f"{RELEASE_TAG_BASE}/open-datasets-v1.2.tar.gz | https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE67196", None, None),
     "DS_CONS2026": ("TIER_B_PUBLISHER_HTTPS_FETCH", "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC12919128;PMC12982666;PMC13337491/fullTextXML", "EuropePMC OA (CC BY + CC BY-NC-ND; Direct Fetch)", None),
@@ -67,10 +59,10 @@ COHORT_OVERLAP_CLUSTERS: list[dict[str, str]] = [
     {
         "overlap_group_id": "OVL_MIT_PINEDA_CORTEX",
         "cluster_name": "MIT / Pineda Primary Motor (BA4) & Prefrontal (BA9) snRNA-seq Cohort",
-        "datasets_involved": "DS003_PB;DS003_SUPP;DS_BA9_BUNDLE",
+        "datasets_involved": "DS003_PB;DS003_SUPP",
         "overlap_mechanism": "SHARED_DONORS_ACROSS_BA4_BA9_REGIONS_AND_REANALYZED_SUPPLEMENTS",
-        "donor_accounting_and_anti_pseudoreplication_rule": "Single nuclei are collapsed to donor-by-lineage pseudobulk prior to regression (never cell-level pseudoreplication); BA4 and BA9 libraries share MIT donors and are analyzed separately per region, while Pineda mmc2 and DS_BA9_BUNDLE represent derived views of the same cohort.",
-        "canonical_model_formula": "Donor-pseudobulk OLS per lineage/region: log2(CPM+1) ~ diagnosis + sex + pmi + donor_gc_tilt_z (Holm m=14 for BA9; BH-FDR protein-coding for BA4)",
+        "donor_accounting_and_anti_pseudoreplication_rule": "Single nuclei are collapsed to donor-by-lineage pseudobulk prior to regression (never cell-level pseudoreplication); BA4 and BA9 libraries share MIT donors and are analyzed separately per region, while Pineda mmc2 represents a published summary view of the same cohort.",
+        "canonical_model_formula": "Donor-pseudobulk OLS per lineage/region: log2(CPM+1) ~ diagnosis + sex + pmi + donor_gc_tilt_z (Holm / BH-FDR protein-coding)",
     },
     {
         "overlap_group_id": "OVL_EDINBURGH_SNRNA",

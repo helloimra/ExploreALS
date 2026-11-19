@@ -17,5 +17,3 @@ work/.live_api_check/
 !/data/transcriptomics/nygc_d001/
 /data/transcriptomics/nygc_d001/*
 !/data/transcriptomics/nygc_d001/provisional_unique_feature_map.csv
-!/data/transcriptomics/ba9_bundle_v5/
-!/data/transcriptomics/ba9_bundle_v5/**

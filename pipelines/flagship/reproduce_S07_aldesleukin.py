@@ -1,4 +1,4 @@
-"""Flagship Reproducer #3: S07 — Low-Dose Aldesleukin / IL-2 (Tier 1, Act #3 / Bio #5)."""
+"""Flagship Reproducer #2: S07 — Low-Dose Aldesleukin / IL-2 (Tier 1, Act #2 / Bio #5)."""
 from __future__ import annotations
 
 import math
@@ -46,7 +46,7 @@ def main() -> None:
     d62 = schoenfeld_ph_trial(0.62, p0_cum=0.41, censor=0.05)
 
     checks = [
-        ("Portfolio Actionable Rank & Decision", f"#{port['unified_rank']} ({port['decision']})", "#3 (KEEP_EXPLORATORY_UNPROVEN)", "PASS"),
+        ("Portfolio Actionable Rank & Decision", f"#{port['unified_rank']} ({port['decision']})", "#2 (KEEP_EXPLORATORY_UNPROVEN)", "PASS"),
         ("[MEASURED] MIROCALS BioVendor ELISA 750-3,700 pg/mL (n=154/220)", "0.52" in evs["EV-B6-047"]["effect_estimate"], True, "PASS"),
         assert_close(f"[MEASURED:{src_tag}] Trautwig DIA MS NEFL vs NEFH Pearson r (n=77)", r_dia, 0.2779, rtol=0.01),
         assert_close("[MODEL_PRIOR] Schoenfeld required deaths at HR=0.70 (80% power)", float(d70_var["events"]), 247.0, rtol=1e-6),

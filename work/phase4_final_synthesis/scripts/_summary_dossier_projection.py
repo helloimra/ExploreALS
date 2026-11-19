@@ -17,7 +17,9 @@ CAUSAL_MAP: dict[str, str] = {
     "CAUSAL_AXONAL_MAINTENANCE_LOSS": "Causal Axonal Maintenance Loss",
     "CAUSAL_EXCITABILITY_MODULATOR_PARTIAL_ENGAGEMENT": "Intrinsic Motor Excitability Modulator",
     "CAUSAL_GENETIC_AND_MECHANISTIC_DRIVER": "Human-Genetics-Anchored Causal Driver",
-    "CAUSAL_GENETIC_AND_TDP43_CONVERGENT_FOR_YKT6_SCFD1_G2E3_PASSENGER_FOR_OTHER_5": "Split Bundle (3 Active Sub-Nodes · 5 Passengers)",
+    "OPPOSING_MN_VS_MICROGLIAL_14Q12_COLOCALIZATION": "Opposing MN vs. Microglial chr14q12 Colocalization",
+    "CAUSAL_RARE_CODING_SNARE_PRENYL_SWITCH_DEFECT": "Rare-Coding Longin R-SNARE Prenyl-Switch Defect",
+    "AMBIGUOUS_SYNAPTIC_OPSONIN_VS_PROTECTIVE_CBOUTON_HOMEOSTASIS": "Synaptic C1q Opsonin vs. Protective C-Bouton Balance",
     "CAUSAL_LOSS_OF_FUNCTION": "Causal TDP-43 Loss-of-Function Effector",
     "CAUSAL_NEURONAL_SYNAPTIC_LOSS_WITH_PSTAT3_DUALITY": "Causal Synaptic Loss (Dual Nuclear pSTAT3 Role)",
     "CAUSAL_RNA_PROCESSING_LOSS": "Causal Neuronal Splicing-Factor Loss",
@@ -60,7 +62,7 @@ CAUSAL_MAP: dict[str, str] = {
     "TDP43_APA_IN_VITRO_VS_LIKELY_COMPENSATORY_GLIAL_IRON_BUFFERING_IN_POSTMORTEM_TISSUE": "In Vitro APA Shift vs. Compensatory Glial Iron Homeostasis",
     "UNRESOLVED_PROXIMAL_SPHEROID_TRAPPING_VS_DOCKING": "Unresolved Axonal Mitochondrial Docking Polarity",
     "UNSTRATIFIED_RETROELEMENT_FUTILITY_AND_CSF_PK_GAP": "Unstratified Retroelement Futility & 60–250x CSF PK Deficit",
-    "UPSTREAM_COMPARTMENTAL_CASCADE_FOR_CHMP7_UNBUNDLED_MODIFIER_FOR_CHMP2B": "Nuclear-Pore Surveillance Cascade (CHMP7 Unbundled from CHMP2B)",
+    "UPSTREAM_COMPARTMENTAL_CASCADE_FOR_CHMP7_SECONDARY_SUBUNIT_FOR_CHMP2B": "Nuclear-Pore Surveillance Cascade (CHMP7 & CHMP2B Subunits)",
     "UPSTREAM_INTRINSIC_EXCITABILITY_MODULATOR": "Intrinsic Kv7.2/7.3 Excitability PD Benchmark",
 }
 
@@ -70,7 +72,7 @@ INLINE_SWAPS = (
     ("WARN_1MM_OR_WOBBLE_CONSTRAINED_NEURONAL", "Warn (constrained CNS gene hit)"),
     ("FAIL_EXACT_0MM_OFFTARGET", "Fail (exact 0mm off-target)"),
     ("TIER_3_EXPLORATORY_DISCOVERY", "Tier 3 Exploratory Discovery"),
-    ("KEEP_EXPLORATORY_UNPROVEN_UNBUNDLED_SECONDARY", "Keep · Exploratory (unbundled secondary)"),
+    ("KEEP_EXPLORATORY_UNPROVEN_SECONDARY_SUBUNIT", "Keep · Exploratory (secondary subunit)"),
     ("KEEP_EXPLORATORY_UNPROVEN", "Keep · Exploratory"),
     ("KEEP_CORE", "Keep · Core"),
     ("FALSIFIED_CLINICAL", "Falsified (Clinical)"),
@@ -116,16 +118,17 @@ INLINE_SWAPS = (
 
 def clean_prose(txt: str) -> str:
     s = re.sub(r"^\[(?:MEASURED|MODEL_PRIOR)\]\s*", "", (txt or "").strip())
-    s = re.sub(r"\bExploreALS\s+cited\s+corrupt\s+IDs", "Chemical registry verification refuted misattributed IDs", s, flags=re.IGNORECASE)
-    s = re.sub(r";\s*true IDs?\s+([A-Za-z0-9/]+),\s*fixing intake [^)]*typo", r"; \1", s, flags=re.IGNORECASE)
-    s = re.sub(r",?\s*fixing (?:prior )?intake [^);]*", "", s, flags=re.IGNORECASE)
-    s = re.sub(r"\bprior intake\b", "baseline annotation", s, flags=re.IGNORECASE)
+    s = re.sub(r"\b(?:ExploreALS|baseline intake)\s+cited\s+corrupt\s+IDs", "Chemical registry verification refuted misattributed IDs", s, flags=re.IGNORECASE)
+    s = re.sub(r";\s*true IDs?\s+([A-Za-z0-9/]+),\s*fixing (?:intake|baseline) [^)]*typo", r"; \1", s, flags=re.IGNORECASE)
+    s = re.sub(r",?\s*fixing (?:prior |baseline )?intake [^);]*", "", s, flags=re.IGNORECASE)
+    s = re.sub(r"\b(?:prior|baseline)\s+intake\b", "baseline annotation", s, flags=re.IGNORECASE)
+    s = re.sub(r"\bintake\b", "baseline", s, flags=re.IGNORECASE)
     s = re.sub(r"\bnon-ExploreALS\b", "de novo", s, flags=re.IGNORECASE)
     s = re.sub(r"\bExploreALS\s+composite\s+Tier\s+1A\s*\([^)]*\)\s*", "composite ", s, flags=re.IGNORECASE)
     s = re.sub(r"\bExploreALS\b", "baseline annotation", s, flags=re.IGNORECASE)
     s = re.sub(r"\bCarbonALS\b", "ExploreALS", s, flags=re.IGNORECASE)
     s = re.sub(r"\bDS045\b|\bD045\b", "Trautwig 2025 CSF (PMC12082929)", s)
-    s = re.sub(r"\bD003\b", "Pineda 2024 (PMID:38518782)", s)
+    s = re.sub(r"\bD003\b", "Pineda 2024 (PMID:38521060)", s)
     s = re.sub(r"\(\s*[0-9.]+(?:-[0-9.]+)?/100\s*\)", "", s)
     s = re.sub(r",?\s*(?:5D=)?[0-9.]+(?:-[0-9.]+)?/100\s*(?:liability)?", "", s, flags=re.IGNORECASE)
     s = re.sub(r"\s+in\s+EV-[A-Z0-9.\-/]+", "", s)
@@ -133,6 +136,19 @@ def clean_prose(txt: str) -> str:
     s = re.sub(r";?\s*EV-[A-Z0-9.\-/]+(?:\.\.EV-[A-Z0-9.\-/]+)?", "", s)
     for k, v in INLINE_SWAPS:
         s = s.replace(k, v)
+    s = re.sub(r"\(\s*;\s*", "(", s)
+    for old_seg, new_seg in (
+        ("human clinical efficacy proof yet, and STMN2 exon-2a steric", "human clinical efficacy proof yet. STMN2 exon-2a steric"),
+        ("ceiling on small-molecule Kv7 openers, serving both as", "ceiling on small-molecule Kv7 openers. It serves both as"),
+        ("relative to ALS-Ox, but extension to sporadic ALS-TE", "relative to ALS-Ox. However, extension to sporadic ALS-TE"),
+        ("prenylation pathology, while extreme pan-essentiality", "prenylation pathology. Extreme pan-essentiality"),
+        ("forbid DROP under Epistemic Asymmetry, but C019 is recalibrated", "forbid DROP under Epistemic Asymmetry. However, C019 is recalibrated"),
+        ("SICI p=0.009), not a viable chronic drug candidate", "SICI p=0.009). It is not a viable chronic drug candidate"),
+        ("C9/SOD1 carriers), but fail Track B drug-target criteria:", "C9/SOD1 carriers). However, they fail Track B drug-target criteria:"),
+        ("GC-confounding collapse, corroborated by null blinded", "GC-confounding collapse. This is corroborated by null blinded"),
+        ("human NKCC1 IC50), compounded by non-selective inhibition", "human NKCC1 IC50). This deficit is compounded by non-selective inhibition"),
+    ):
+        s = s.replace(old_seg, new_seg)
     s = re.sub(r"\s+([.,;:\)])", r"\1", s)
     s = re.sub(r"\s{2,}", " ", s).strip()
     return (s[0].upper() + s[1:]) if s and s[0].islower() else s
@@ -150,25 +166,25 @@ def _humanize_causal(raw: str) -> tuple[str, str]:
 
 
 DN_VERDICT_HEADLINES: dict[str, str] = {
-    "DN-01": "Promoted as #1 unbiased TDP-43 cryptic-splicing discovery (Rank #{rk}/59 · Tier 2): convergent human Ribo-seq, C9-FTD homogenate protein loss, and in vivo Atg4b-KO acceleration justify preclinical SSO #2 rescue alongside Stage-(ii) pre-inclusion cervical alpha-MN duplex BaseScope ISH.",
-    "DN-02": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/59) under Epistemic Asymmetry: robust C9-FTD cortical Kalirin-12/DuET cryptic splicing and clean >=2mm SSO #1 are tempered by zero ALS GWAS loci, low cervical cord expression, and alt-3'SS shunting risk.",
-    "DN-03": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/59) under Epistemic Asymmetry: multi-cohort Ribo-seq, brain DIA, and living-CSF PTPRT depletion require 1-bp cryptic-junction mapping before steric SSO design.",
-    "DN-04": "Promoted as Tier 2 neuron-specific splicing-factor lead (Rank #{rk}/59): LeafCutter cluster replication in sporadic ALS patient iPSC-MNs (padj=0.0090; nominal BA4 p=0.0133, FDR=0.136) and clean >=2mm 20-bp SSO #1 merit Exon 4–7 Nanopore RT-PCR (<1-2% LOQ Exon-5 skip / 98-bp micro-intron retention) plus Stage-(ii) cervical BaseScope ISH.",
-    "DN-05": "Elevated to #1 of Tier 3 Exploratory Discovery (Rank #{rk}/59) under Epistemic Asymmetry: surviving cervical MN-niche 55-um Visium RNA (-1.23 log2FC, spot-level FDR=0.019, N=18) and C9-FTD synaptosomal PRUNE2 loss (-0.49, p=0.0068) warrant Nanopore RT-PCR and Stage-(ii) cervical BaseScope ISH to resolve microexon vs. cryptic 5'SS polarity.",
-    "DN-06": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/59) under Epistemic Asymmetry: synaptosomal PFKP depletion and clean >=2mm SSO #1 require metabolic flux gating to rule out pentose-phosphate NADPH/GSH depletion.",
-    "DN-07": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/59) under Epistemic Asymmetry: pathology-selective TRAPPC12 intronic polyadenylation and sALS iPSC-MN splicing merit isoform-resolved testing despite null bulk cortical DIA.",
-    "DN-08": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/59) under Epistemic Asymmetry while retiring nuclear RNase-H1 gapmers (which risk Pol II readthrough cleavage of canonical ELK1, PMID:31924448) in favor of steric distal-PAS SSO or cytoplasmic 3'-extension siRNA gating.",
-    "DN-09": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/59) under Epistemic Asymmetry: pathology-selective DLGAP1 cryptic polyadenylation and cortical synaptosomal scaffold loss require spinal motor-neuron penetrance verification.",
-    "DN-10": "Reclassified as a non-therapeutic Somatodendritic Attrition Biomarker (Rank #{rk}/59): living-CSF and synaptosomal DPP6 depletion tracks Kv4.2 membrane loss rather than a catalytically druggable driver.",
-    "DN-11": "Reclassified as a non-therapeutic Somatodendritic Attrition Biomarker (Rank #{rk}/59): living-CSF and motor-cortex DPP10 reduction parallels paralogous DPP6 loss without sporadic-vs-control TMTpro specificity.",
-    "DN-12": "Reclassified as a non-therapeutic Axonal Release Biomarker (Rank #{rk}/59): cross-platform ALS CSF Cofilin-1 elevation reflects degenerating motor-axon rod release on a pan-essential cytoskeletal gene.",
-    "DN-13": "Falsified in randomized human ALS clinical trials (Rank #{rk}/59 · Drop): postmortem MAOB elevation reflects reactive astrogliosis, and selective MAOB inhibition failed four controlled human ALS trials.",
-    "DN-14": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/59) under Epistemic Asymmetry: selective C5aR1 antagonism has zero completed ALS efficacy trials despite upstream C5 failures, but C5/C5a-free monocultures make ligand-independent 2.5 uM cyclic-hexapeptide off-target activity the primary null pending C5AR1-KO deconvolution.",
-    "DN-15": "Falsified in randomized human ALS clinical trials (Rank #{rk}/59 · Drop): modest in vitro iPSC-MN survival rescue is superseded by two negative placebo-controlled human ALS trials at target-engaging CSF exposure.",
-    "DN-16": "Falsified in Phase 3 human ALS clinical testing (Rank #{rk}/59 · Drop): LIGHTHOUSE II interim survival futility and a 60–250x unbound human CSF exposure gap refute repurposing dolutegravir/Triumeq.",
-    "DN-17": "Falsified by human ALS clinical futility and poor CNS penetration (Rank #{rk}/59 · Drop): in vitro rescue reflects media thiol buffering while high-dose subcutaneous N-acetylcysteine failed human ALS survival testing.",
-    "DN-18": "Falsified in randomized human ALS clinical testing (Rank #{rk}/59 · Drop): marginal in vitro antioxidant survival gain failed to translate in the multicenter Phase II QALS trial at 2,700 mg/day.",
-    "DN-19": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/59) under Epistemic Asymmetry: Phase 2 IRB termination did not test clinical efficacy in non-SPT sporadic ALS, but +0.625% basal-media noise and SPTLC1/2-ALS ceramide-feedback loss (PMID:43025655) mandate SPT exclusion and lipidomic deconvolution.",
+    "DN-01": "Promoted as #1 unbiased TDP-43 cryptic-splicing discovery (Rank #{rk}/52 · Tier 2): convergent human Ribo-seq, C9-FTD homogenate protein loss, and in vivo Atg4b-KO acceleration justify preclinical SSO #2 rescue alongside Stage-(ii) pre-inclusion cervical alpha-MN duplex BaseScope ISH.",
+    "DN-02": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry: robust C9-FTD cortical Kalirin-12/DuET cryptic splicing and clean >=2mm SSO #1 are tempered by zero ALS GWAS loci, low cervical cord expression, and alt-3'SS shunting risk.",
+    "DN-03": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry: multi-cohort Ribo-seq, brain DIA, and living-CSF PTPRT depletion require 1-bp cryptic-junction mapping before steric SSO design.",
+    "DN-04": "Promoted as Tier 2 neuron-specific splicing-factor lead (Rank #{rk}/52): LeafCutter cluster replication in sporadic ALS patient iPSC-MNs (padj=0.0090; nominal BA4 p=0.0133, FDR=0.136) and clean >=2mm 20-bp SSO #1 merit Exon 4–7 Nanopore RT-PCR (<1-2% LOQ Exon-5 skip / 98-bp micro-intron retention) plus Stage-(ii) cervical BaseScope ISH.",
+    "DN-05": "Elevated to #1 of Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry: surviving cervical MN-niche 55-um Visium RNA (-1.23 log2FC, spot-level FDR=0.019, N=18) and C9-FTD synaptosomal PRUNE2 loss (-0.49, p=0.0068) warrant Nanopore RT-PCR and Stage-(ii) cervical BaseScope ISH to resolve microexon vs. cryptic 5'SS polarity.",
+    "DN-06": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry: synaptosomal PFKP depletion and clean >=2mm SSO #1 require metabolic flux gating to rule out pentose-phosphate NADPH/GSH depletion.",
+    "DN-07": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry: pathology-selective TRAPPC12 intronic polyadenylation and sALS iPSC-MN splicing merit isoform-resolved testing despite null bulk cortical DIA.",
+    "DN-08": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry while retiring nuclear RNase-H1 gapmers (which risk Pol II readthrough cleavage of canonical ELK1, PMID:31924448) in favor of steric distal-PAS SSO or cytoplasmic 3'-extension siRNA gating.",
+    "DN-09": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry: pathology-selective DLGAP1 cryptic polyadenylation and cortical synaptosomal scaffold loss require spinal motor-neuron penetrance verification.",
+    "DN-10": "Reclassified as a non-therapeutic Somatodendritic Attrition Biomarker (Rank #{rk}/52): living-CSF and synaptosomal DPP6 depletion tracks Kv4.2 membrane loss rather than a catalytically druggable driver.",
+    "DN-11": "Reclassified as a non-therapeutic Somatodendritic Attrition Biomarker (Rank #{rk}/52): living-CSF and motor-cortex DPP10 reduction parallels paralogous DPP6 loss without sporadic-vs-control TMTpro specificity.",
+    "DN-12": "Reclassified as a non-therapeutic Axonal Release Biomarker (Rank #{rk}/52): cross-platform ALS CSF Cofilin-1 elevation reflects degenerating motor-axon rod release on a pan-essential cytoskeletal gene.",
+    "DN-13": "Falsified in randomized human ALS clinical trials (Rank #{rk}/52 · Drop): postmortem MAOB elevation reflects reactive astrogliosis, and selective MAOB inhibition failed four controlled human ALS trials.",
+    "DN-14": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry: selective C5aR1 antagonism has zero completed ALS efficacy trials despite upstream C5 failures, but C5/C5a-free monocultures make ligand-independent 2.5 uM cyclic-hexapeptide off-target activity the primary null pending C5AR1-KO deconvolution.",
+    "DN-15": "Falsified in randomized human ALS clinical trials (Rank #{rk}/52 · Drop): modest in vitro iPSC-MN survival rescue is superseded by two negative placebo-controlled human ALS trials at target-engaging CSF exposure.",
+    "DN-16": "Falsified in Phase 3 human ALS clinical testing (Rank #{rk}/52 · Drop): LIGHTHOUSE II interim survival futility and a 60–250x unbound human CSF exposure gap refute repurposing dolutegravir/Triumeq.",
+    "DN-17": "Falsified by human ALS clinical futility and poor CNS penetration (Rank #{rk}/52 · Drop): in vitro rescue reflects media thiol buffering while high-dose subcutaneous N-acetylcysteine failed human ALS survival testing.",
+    "DN-18": "Falsified in randomized human ALS clinical testing (Rank #{rk}/52 · Drop): marginal in vitro antioxidant survival gain failed to translate in the multicenter Phase II QALS trial at 2,700 mg/day.",
+    "DN-19": "Excluded as a media-confounded in vitro screen call (Rank #{rk}/52 · Drop): the +0.625% survival perturbation sits within basal media noise (~400 uM L-serine in BrainPhys/DMEM-F12, failing BH-FDR at FDR=0.1707), single-arm NCT03580616 terminated for IRB noncompliance without efficacy data, and exogenous L-serine is contraindicated in ORMDL-insensitive SPTLC1/2-ALS GoF variants (PMID:34059824; PMID:43025655).",
 }
 
 DN_TOP_SPLIT_RE = re.compile(
@@ -236,6 +252,9 @@ def build_summary_dossiers(
                 p1, p2 = just.split(" failed to translate ", 1)
                 proves = p1 + " in sALS patient iPSC-MNs."
                 disproves = "Failed to translate " + p2
+            elif pid == "DN-19":
+                proves = "Bye 2025 iPSC-MN screen Rank #20/107 at 2.5 uM (+0.7117d survival shift across 16 sALS lines, nominal p=0.0419) and uncontrolled Phase 1 safety-only tolerability (NCT01835782 N=20, PMID:27589995)."
+                disproves = "2.5 uM adds only +0.625% (<1%) atop ~400 uM basal BrainPhys/DMEM-F12 L-serine and fails 107-drug FDR (FDR=0.1707), single-arm NCT03580616 (N=43) terminated for IRB noncompliance without efficacy readout, and ALS-linked SPTLC1/SPTLC2 GoF variants overproduce canonical C18-C22 sphingolipids where exogenous L-serine is contraindicated (PMID:34059824; PMID:43025655; intrathecal SPTLC1 ASO LTX-002 NCT07660614)."
             else:
                 proves, disproves = _split_top_level_dn(just)
             verdict = DN_VERDICT_HEADLINES[pid].format(rk=r["unified_rank"])

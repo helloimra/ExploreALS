@@ -5,12 +5,17 @@ REPLICATION_SANDBOXES_JS = r"""
 function renderRepInspector(){
   const box = document.getElementById('rep-detail');
   if(!box) return;
-  const retBar = repReturnDossier ? `<div class="p-2 rounded bg-[var(--background)] border border-[var(--primary)] flex items-center justify-between gap-2 text-xs font-mono"><span>Auditing provenance from <strong>${esc(repReturnDossier)}</strong></span><button type="button" data-open-dossier="${esc(repReturnDossier)}" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} Dossier</button></div>` : '';
+  const retBtn = repReturnDossier
+    ? (repReturnTab === 'portfolio'
+      ? `<button type="button" data-switch-tab="portfolio" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} in Triage Table</button>`
+      : `<button type="button" data-open-dossier="${esc(repReturnDossier)}" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} Report</button>`)
+    : '';
+  const retBar = repReturnDossier ? `<div class="p-2 rounded bg-[var(--background)] border border-[var(--primary)] flex items-center justify-between gap-2 text-xs font-mono"><span>Auditing provenance from <strong>${esc(repReturnDossier)}</strong></span>${retBtn}</div>` : '';
 
   if(repMode === 'runs'){
     const r = DATA_RUNS.find(x => x.id === selectedRepKey) || DATA_RUNS[0];
     if(!r){ box.innerHTML = retBar + '<div class="text-[var(--muted-foreground)]">No matching run.</div>'; return; }
-    const sLinks = r.script.split(';').filter(Boolean).map(sp => `<a href="https://github.com/helloimra/ExploreALS/blob/main/${esc(sp)}" target="_blank" rel="noopener noreferrer" class="text-[var(--link)] underline decoration-dotted hover:decoration-solid font-mono break-words">${esc(sp)} &nearr;</a>`).join('<br/>');
+    const sLinks = r.script.split(';').filter(Boolean).map(sp => `<a href="https://github.com/helloimra/ExploreALS/blob/main/${esc(sp)}" target="_blank" rel="noopener noreferrer" class="text-[var(--link)] underline decoration-dotted hover:decoration-solid font-mono break-all">${esc(sp)} &nearr;</a>`).join('<br/>');
     const dsChips = r.ds ? r.ds.split(';').filter(Boolean).map(d => `<button type="button" data-open-rep-ds="${esc(d)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">${esc(d)} &rarr;</button>`).join(' ') : '<span class="text-[var(--muted-foreground)] font-mono">Cached API / Portfolio Synthesis</span>';
     const cChips = r.cands ? r.cands.split(';').filter(Boolean).slice(0,18).map(c => `<button type="button" data-open-dossier="${esc(c)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--primary)] cursor-pointer">${esc(c)}</button>`).join(' ') : '';
     const cmd = `uv run python ${r.script.split(';')[0]}`;
@@ -66,14 +71,17 @@ function renderRepInspector(){
   }
 }
 
-function openReplicationTarget(kind, key, fromDossier=''){
-  if(fromDossier) repReturnDossier = fromDossier;
-  switchTab('replication');
+function openReplicationTarget(kind, key, fromDossier='', fromTab='dossiers', historyMode='push'){
+  if(fromDossier){ repReturnDossier = fromDossier; repReturnTab = fromTab || 'dossiers'; }
+  const newH = kind === 'cand' ? '#replication/cand/' + encodeURIComponent(key) : '#replication/' + encodeURIComponent(key);
+  switchTab('replication', 'none');
   document.getElementById('rep-search').value = '';
   if(kind === 'run'){ setRepMode('runs'); selectedRepKey = key; }
   else if(kind === 'ds'){ setRepMode('datasets'); selectedRepKey = key; }
+  else if(kind === 'ev'){ setRepMode('evidence'); selectedRepKey = key; }
   else if(kind === 'cand'){ setRepMode('evidence'); document.getElementById('rep-search').value = key; }
   renderReplicationWorkbench();
+  if(typeof commitHistory === 'function') commitHistory(historyMode, newH);
 }
 
 function downloadBlob(filename, mime, content){
@@ -90,9 +98,20 @@ function rowsToCsv(rows){
   return [ks.join(','), ...rows.map(r => ks.map(k => escCsv(r[k])).join(','))].join('\r\n');
 }
 function exportRegistryBlob(which){
+  if(which === 'updates'){
+    const uRows = (typeof DATA_UPDATES !== 'undefined' ? DATA_UPDATES : []).map(u => ({
+      update_id:u.id, date_iso:u.dt, release_tag:u.tag, update_category:u.cat,
+      affected_ids:u.ids.join(';'), decision_impact:u.imp, headline:u.hdr,
+      prior_state_or_assumption:u.pre, new_evidence_or_revision:u.post,
+      portfolio_and_gate_consequence:u.cons, primary_sources:u.srcs.join(';'),
+      verification_anchor:u.ancs.join(';')
+    }));
+    downloadBlob('living_evidence_updates.csv', 'text/csv;charset=utf-8', rowsToCsv(uRows));
+    return;
+  }
   const map = {portfolio:[DATA_PORT,'phase4_unified_portfolio.csv'], intervals:[DATA_CIS,'phase4_unified_cis_intervals.csv'], subnodes:[DATA_SUB,'subnode_dissection.csv'], formulas:[DATA_FORMULAS,'statistical_models_and_contrasts.csv'], datasets:[DATA_DATASETS,'datasets_manifest.csv'], runs:[DATA_RUNS,'analysis_runs_and_flagship.csv'], overlap:[DATA_OVERLAP,'cohort_overlap_map.csv']};
   if(which === 'json_all'){
-    downloadBlob('exploreals_v1_2_provenance_bundle.json', 'application/json', JSON.stringify({version:'1.2.0', portfolio:DATA_PORT, cis_intervals:DATA_CIS, subnodes:DATA_SUB, statistical_models:DATA_FORMULAS, datasets:DATA_DATASETS, runs:DATA_RUNS, cohort_overlap:DATA_OVERLAP}, null, 2));
+    downloadBlob('exploreals_v1_2_provenance_bundle.json', 'application/json', JSON.stringify({version:'1.2.1', portfolio:DATA_PORT, cis_intervals:DATA_CIS, subnodes:DATA_SUB, statistical_models:DATA_FORMULAS, datasets:DATA_DATASETS, runs:DATA_RUNS, cohort_overlap:DATA_OVERLAP, living_updates:(typeof DATA_UPDATES!=='undefined'?DATA_UPDATES:[])}, null, 2));
     return;
   }
   const hit = map[which];
@@ -104,27 +123,28 @@ function initSandboxes(){
   if(!sb) return;
   sb.innerHTML = `
     <div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-2">
-      <div class="font-mono font-semibold text-[var(--foreground)]">1. KCNQ2 ER Co-Trapping &amp; 2:2 Heteromers (#2 C006)</div>
+      <div class="font-mono font-semibold text-[var(--foreground)]">1. KCNQ2 ER Co-Trapping &amp; 2:2 Heteromers (#4 C006)</div>
       <label class="block"><span>RNA Exon-5 Skip (&Delta;PSI): <strong id="sb-k-p-val" class="font-mono">0.214</strong></span><input id="sb-k-p" aria-label="KCNQ2 RNA Exon-5 Skip fraction" type="range" min="0.05" max="0.50" step="0.005" value="0.214" class="w-full mt-0.5"/></label>
-      <label class="block"><span>2:2 Kv7.2:Kv7.3 Heteromer Share (&theta;): <strong id="sb-k-h-val" class="font-mono">0.00 (4:0 Nodal)</strong></span><input id="sb-k-h" aria-label="Kv7.2 to Kv7.3 heteromer share" type="range" min="0" max="1" step="0.05" value="0" class="w-full mt-0.5"/></label>
+      <label class="block"><span>2:2 Kv7.2:Kv7.3 Heteromer Share (&theta;): <strong id="sb-k-h-val" class="font-mono">0.00 (4:0 Homomer)</strong></span><input id="sb-k-h" aria-label="Kv7.2 to Kv7.3 heteromer share" type="range" min="0" max="1" step="0.05" value="0" class="w-full mt-0.5"/></label>
       <label class="block"><span>Mutant Surface Escape (&alpha;_esc): <strong id="sb-k-a-val" class="font-mono">0.15</strong></span><input id="sb-k-a" aria-label="Mutant subunit surface escape" type="range" min="0" max="1" step="0.05" value="0.15" class="w-full mt-0.5"/></label>
       <div id="sb-k-out" class="p-2 rounded bg-[var(--card)] border border-[var(--border)] font-mono space-y-0.5"></div>
     </div>
     <div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-2">
-      <div class="font-mono font-semibold text-[var(--foreground)]">2. SARM1 Washout &amp; Parallel Bliss vs MWC (#1 S06)</div>
+      <div class="font-mono font-semibold text-[var(--foreground)]">2. SARM1 Washout: Orthosteric BEXi vs T-Lock (#1 S06)</div>
       <select id="sb-s-mode" aria-label="STMN2-SARM1 interaction model" class="w-full bg-[var(--card)] border border-[var(--border)] rounded px-2 py-1 text-xs font-mono">
         <option value="bliss">Mode 1 (Default): Parallel Bliss Independence (Krus 2022)</option>
         <option value="mwc">Mode 2: Hypothetical Indirect L_eff Shift (Unproven in Mice)</option>
       </select>
-      <label class="block"><span>Oral Washout Ratio ([I]/Kd): <strong id="sb-s-u-val" class="font-mono">0.35x</strong></span><input id="sb-s-u" aria-label="Inhibitor over Kd washout ratio" type="range" min="-2.0" max="1.3" step="0.05" value="-0.456" class="w-full mt-0.5"/></label>
-      <label class="block"><span>Axonal Allosteric L0: <strong id="sb-s-l-val" class="font-mono">8 (ALS)</strong></span><input id="sb-s-l" aria-label="Baseline SARM1 allosteric L0" type="range" min="4" max="120" step="2" value="8" class="w-full mt-0.5"/></label>
+      <label class="block"><span>Oral Washout Ratio ([I]/Kd): <strong id="sb-s-u-val" class="font-mono">0.20x</strong></span><input id="sb-s-u" aria-label="Inhibitor over Kd washout ratio" aria-valuetext="0.20x Kd" type="range" min="-2.0" max="1.3" step="0.05" value="-0.70" class="w-full mt-0.5"/></label>
+      <label class="block"><span>Allosteric L_eff: <strong id="sb-s-l-val" class="font-mono">2.5 (Leahey Cal.)</strong></span><input id="sb-s-l" aria-label="Baseline SARM1 allosteric L_eff" type="range" min="2.0" max="65.0" step="0.5" value="2.5" class="w-full mt-0.5"/></label>
       <div id="sb-s-out" class="p-2 rounded bg-[var(--card)] border border-[var(--border)] font-mono space-y-0.5"></div>
     </div>
     <div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-2">
-      <div class="font-mono font-semibold text-[var(--foreground)]">3. MIROCALS Ph3 Survival &amp; LP Sizing (#3 S07)</div>
+      <div class="font-mono font-semibold text-[var(--foreground)]">3. MIROCALS Ph3 Survival &amp; Assay Sizing (#2 S07)</div>
       <select id="sb-m-pre" aria-label="MIROCALS follow-up horizon preset" class="w-full bg-[var(--card)] border border-[var(--border)] rounded px-2 py-1 text-xs font-mono">
         <option value="0.41">Preset A: 36–42 mo Event-Driven Follow-Up (P0=0.41)</option>
-        <option value="0.29">Preset B: Fixed 24-mo Slow-Progressor Rate (P0=0.29)</option>
+        <option value="0.37">Preset B: &lt;750 pg/mL Zero-Death Stratum Dilution (P0=0.37)</option>
+        <option value="0.29">Preset C: Fixed 24-mo Slow-Progressor Rate (P0=0.29)</option>
       </select>
       <label class="block"><span>Target Hazard Ratio (HR): <strong id="sb-m-hr-val" class="font-mono">0.70</strong></span><input id="sb-m-hr" aria-label="Target hazard ratio" type="range" min="0.52" max="0.80" step="0.01" value="0.70" class="w-full mt-0.5"/></label>
       <label class="block"><span>Control Event Prob P0(T) / Censoring 5% / LP Pass 79%: <strong id="sb-m-p0-val" class="font-mono">0.41</strong></span><input id="sb-m-p0" aria-label="Control cumulative mortality P0" type="range" min="0.22" max="0.50" step="0.01" value="0.41" class="w-full mt-0.5"/></label>
@@ -142,20 +162,25 @@ function updateSandboxes(){
   document.getElementById('sb-k-a-val').textContent = al.toFixed(2);
   const im = (1-th)*Math.pow(1-p,4) + th*Math.pow(1-p,2);
   const ns = (1-th)*Math.pow(1-p+al*p,4) + th*Math.pow(1-p+al*p,2);
-  document.getElementById('sb-k-out').innerHTML = `<div>WT Functional M-Current: <strong class="text-[var(--warning)]">${(100*im).toFixed(1)}%</strong> (${(100*(1-im)).toFixed(1)}% loss)</div><div>Surface Kv7 Density: <strong>${(100*ns).toFixed(1)}%</strong> &middot; ER-Trapped: <strong>${(100*(1-ns)).toFixed(1)}%</strong></div><div class="text-[var(--muted-foreground)]">Lowering &alpha;_esc co-traps WT in ER (I_M stays ${(100*im).toFixed(1)}%).</div>`;
+  const erTrap = Math.max(0, 1 - ns), surfDead = Math.max(0, ns - im);
+  const poisPct = ns > 0 ? (100 * surfDead / ns).toFixed(0) : '0';
+  document.getElementById('sb-k-out').innerHTML = `<div>WT Functional M-Current: <strong class="text-[var(--warning)]">${(100*im).toFixed(1)}%</strong> (${(100*(1-im)).toFixed(1)}% loss)</div><div>ER-Trapped: <strong>${(100*erTrap).toFixed(1)}%</strong> &middot; Surface Pore-Dead: <strong>${(100*surfDead).toFixed(1)}%</strong></div><div class="text-[var(--muted-foreground)]">Surface Kv7: ${(100*ns).toFixed(1)}% (${poisPct}% poisoned; I_M invariant to &alpha;_esc)</div>`;
 
   const sm = document.getElementById('sb-s-mode').value;
-  const u = Math.pow(10, parseFloat(document.getElementById('sb-s-u').value));
+  const suEl = document.getElementById('sb-s-u');
+  const u = Math.pow(10, parseFloat(suEl.value));
   const l0 = parseFloat(document.getElementById('sb-s-l').value);
+  suEl.setAttribute('aria-valuetext', u.toFixed(2) + 'x Kd');
   document.getElementById('sb-s-u-val').textContent = u.toFixed(2) + 'x';
-  document.getElementById('sb-s-l-val').textContent = l0 + (l0<=12?' (ALS)':'');
+  document.getElementById('sb-s-l-val').textContent = l0.toFixed(1) + (Math.abs(l0-2.5)<0.3?' (Leahey Cal.)':(l0<=10?' (ALS Prior)':''));
   const base = 1 / (1 + l0);
-  const aBexi = Math.pow(1 + u/0.22, 7) / (l0*Math.pow(1+0.05*u, 8) + Math.pow(1+u/0.22, 8));
+  const zR = Math.pow(1 + 5.154 * u, 6);
+  const aBexi = (zR / (l0 + zR)) / (1 + u);
   const aTlock = Math.pow(1 + u/6.5, 8) / (l0*Math.pow(1+u, 8) + Math.pow(1+u/6.5, 8));
   const rB = aBexi / base, rT = aTlock / base;
-  const fRatio = ((1 + l0) / (1 + 8)).toFixed(2);
-  const combLine = sm === 'bliss' ? 'STMN2+SARM1: 1.00x IC90 shift (Bliss E=83.5% at 45%+70%)' : `Hypothetical L_eff 8&rarr;${l0}: IC90 1.00x; floor-dose ~${fRatio}x [Unproven]`;
-  document.getElementById('sb-s-out').innerHTML = `<div>BEXi NADase vs Base: <strong class="${rB>1.05?'text-[var(--error)]':'text-[var(--success)]'}">${rB.toFixed(2)}x</strong> ${rB>1.05?'(Washout Spike!)':''}</div><div>T-Lock NADase vs Base: <strong class="text-[var(--success)]">${rT.toFixed(2)}x</strong> (Monotonic &le;1.0x)</div><div class="text-[var(--muted-foreground)]">${combLine}</div>`;
+  const fRatio = ((1 + l0) / (1 + 8)).toFixed(1);
+  const combLine = sm === 'bliss' ? 'STMN2+SARM1: 1.0x IC90 shift (Bliss E=83.5% at 45%+70%)' : `Hypothetical L_eff 8&rarr;${l0.toFixed(1)}: IC90 1.0x; floor-dose ~${fRatio}x [Unproven]`;
+  document.getElementById('sb-s-out').innerHTML = `<div>BEXi (Base-Exchange) vs Base: <strong class="${rB>1.05?'text-[var(--error)]':'text-[var(--success)]'}">${rB.toFixed(2)}x</strong> ${rB>1.05?'(Washout Spike!)':''}</div><div>T-Lock (ARM&ndash;TIR) vs Base: <strong class="text-[var(--success)]">${rT.toFixed(2)}x</strong> (Monotonic &le;1.0x)</div><div class="text-[var(--muted-foreground)]">${combLine}</div>`;
 
   const hr = parseFloat(document.getElementById('sb-m-hr').value), p0 = parseFloat(document.getElementById('sb-m-p0').value);
   document.getElementById('sb-m-hr-val').textContent = hr.toFixed(2);
@@ -163,7 +188,7 @@ function updateSandboxes(){
   const dReq = Math.ceil(Math.pow(1.959964+0.841621, 2) / (0.25 * Math.pow(Math.log(hr), 2)));
   const p1 = 1 - Math.pow(1 - p0, hr), pbar = 0.5*(p0 + p1);
   const nRand = 2 * Math.ceil(dReq / (2 * pbar * 0.95));
-  const nScr = Math.ceil(nRand / 0.7909);
-  document.getElementById('sb-m-out').innerHTML = `<div>Required Deaths (80% pwr, 2s &alpha;=0.05): <strong class="text-[var(--primary)]">${dReq}</strong></div><div>Pooled Event Rate: <strong>${(100*pbar).toFixed(1)}%</strong> &rarr; N_rand = <strong>${nRand}</strong></div><div class="text-[var(--muted-foreground)]">LP Screen (~79% &le;3,700 pg/mL): N_screen &approx; <strong>${nScr}</strong> (gated on Stage-0 BioVendor&rarr;CLIA pNfH bridge)</div>`;
+  const nScr = Math.ceil(nRand / 0.79);
+  document.getElementById('sb-m-out').innerHTML = `<div>Required Deaths (80% pwr, 2s &alpha;=0.05): <strong class="text-[var(--primary)]">${dReq}</strong></div><div>Pooled Event Rate: <strong>${(100*pbar).toFixed(1)}%</strong> &rarr; N_rand = <strong>${nRand}</strong></div><div class="text-[var(--muted-foreground)]">LP Screen (~79% &le;3,700 pg/mL; &lt;750 n=20 had 0 deaths): N_screen &approx; <strong>${nScr}</strong></div>`;
 }
 """

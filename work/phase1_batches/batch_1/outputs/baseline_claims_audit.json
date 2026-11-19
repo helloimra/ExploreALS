@@ -12,7 +12,7 @@
       "mechanism": NaN,
       "evidence_ids": "E009;E010;E011;E205;E206;E2106;E2107;E2116;E2118;E2119;E2120;E2121;E2122;E2123;E2124;E2125;E2127;E2128;E2129",
       "counterevidence_ids": NaN,
-      "replication_status": "Direct human TDP-43 cryptic-exon splice pathology in Brown et al. 2022 (PMID:35197628), Ma et al. 2022 (PMID:35197629), and Bryce-Smith et al. 2025 (PMID:40038262; E2118), with AlphaGenome rs12608932 C>A splice impact (AVI 27.6, 97.6th percentile; E2116) and common-risk susceptibility in van Rheenen et al. 2021 GWAS (D023; E063)",
+      "replication_status": "Direct human TDP-43 cryptic-exon splice pathology in Brown et al. 2022 (PMID:35197628), Ma et al. 2022 (PMID:35197629), and Bryce-Smith et al. 2025 (PMID:41120751; E2118), with AlphaGenome rs12608932 C>A splice impact (AVI 27.6, 97.6th percentile; E2116) and common-risk susceptibility in van Rheenen et al. 2021 GWAS (D023; E063)",
       "exposure_status": "Intrathecal splice-switching ASO modality; UNC13A is an intracellular presynaptic protein not detected in untargeted cell-free D045 CSF TMTpro/DIA-MS proteomics (Trautwig et al. 2025 PMC12082929; E2126), whereas dual STMN2/UNC13A snRNA (10.64898/2025.12.01.691001) and multi-target cryptic-exon rescue (10.64898/2026.09.11.751082; E2127) provide prior-art context",
       "clinical_efficacy_evidence": NaN,
       "review_ids": "RV001;RV020",

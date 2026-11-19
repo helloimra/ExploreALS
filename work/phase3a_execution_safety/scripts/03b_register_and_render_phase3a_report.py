@@ -71,7 +71,7 @@ def main() -> None:
             "datasets_used": "DS_GENCODE_V46_TX;DS_GENCODE_V46_COMP_GTF;DS_GNOMAD_V41_CONSTRAINT;DS045_TRAUT;DS046_OH_XML",
             "tools_and_skills_used": "scripts.phase3_gates;uv-python",
             "reproduced_verified": "yes", "run_timestamp_utc": now_iso,
-            "summary": "Separated Clinical Translational Readiness (TRL) from Scientific Actionability & Experimental Gate Class with atomic 1-domain-per-token hurdles, 21 CFR 300.50 IND staging, [MEASURED] vs [MODEL_PRIOR] tags, and 4-column backup symmetry across all 17 surviving programs.",
+            "summary": "Separated Clinical Translational Readiness (TRL) from Scientific Actionability & Experimental Gate Class with atomic 1-domain-per-token hurdles, ICH M3(R2) / 21 CFR 312.23(b) single-entity IND staging before Stage 2 21 CFR 300.50 combination testing, [MEASURED] vs [MODEL_PRIOR] tags, and 4-column backup symmetry across all 17 surviving programs.",
         },
     ])
 
@@ -125,18 +125,18 @@ def main() -> None:
             "effect_direction": "UNCONFOUNDED_OOF_AND_WITHIN_CENTER_REPLICATION_WITH_INTERACTION_PD_MANDATE",
             "effect_estimate": f"Emory leak-free sALS-vs-Ctrl OOF AUC={oof['oof_roc_auc']}; within-WashU ALS-vs-nonALS AUC={wu_int['roc_auc']} (n={wu_int['n_total']}); cross-sectional C9 Symp-vs-Asym center-adj AUC={c9_adj['roc_auc']} (n={c9_adj['n_total']}); MGH-offset-adj ext ALS-vs-Ctrl AUC={ext_adj['roc_auc']} (vs raw confounded {ext_raw['roc_auc']})",
             "p_value": f"{oof['oof_welch_p']:.3e}", "fdr_or_adjusted_p": "", "sample_size_n": "96", "epistemic_weight": "HIGH",
-            "notes": f"Eliminates max(Z1,Z2) order-statistic bias against rs3831317-/- carriers; separates pure MGH Ctrl drift ({aud['bridge_ctrl_drift_pure_mgh_n16_minus_emory_n54_z']:+.4f}z, n=16 vs 54, p={aud['bridge_ctrl_drift_pure_mgh_n16_minus_emory_n54_welch_p']:.5f}) from pooled External Ctrl ({aud['bridge_ctrl_drift_pooled_ext_n18_minus_emory_n54_z']:+.4f}z, n=18); shows within-MGH Asym vs Ctrl is null (p={mgh_sp['welch_p']:.3f}), WashU sALS vs adj-Ctrl AUC={wu_sals['roc_auc']} (p={wu_sals['welch_p']:.4f}), header-resolved Oh 2023 replicates 5/5 univariate proteins (FDR<=0.044), and matched sALS-p80 (z>{p80['frozen_emory_sals_p80_cutoff']}) passes {100*p80['emory_sals_pass_at_sals_p80']:.1f}% Emory sALS vs {100*oof['oof_sensitivity_at_fold_z95']:.1f}% at Ctrl-z95 (note: sALS-vs-Ctrl diagnostic ROC is distinct from within-ALS subtype assignment and Thompson 2019 PMID:30737180 mimic AUC 0.51-0.92 [0.688 ext], requiring biomarker-stratified pSTAT3/CXCL10 PD interaction testing). [Sample context: 96 single-center Emory sALS+Ctrl OOF donors]",
+            "notes": f"Eliminates max(Z1,Z2) order-statistic bias against rs3831317-/- carriers; separates pure MGH Ctrl drift ({aud['bridge_ctrl_drift_pure_mgh_n16_minus_emory_n54_z']:+.4f}z, n=16 vs 54, p={aud['bridge_ctrl_drift_pure_mgh_n16_minus_emory_n54_welch_p']:.5f}) from pooled External Ctrl ({aud['bridge_ctrl_drift_pooled_ext_n18_minus_emory_n54_z']:+.4f}z, n=18); shows within-MGH Asym vs Ctrl is null (p={mgh_sp['welch_p']:.3f}), WashU sALS vs adj-Ctrl AUC={wu_sals['roc_auc']} (p={wu_sals['welch_p']:.4f}), header-resolved Oh 2023 replicates 5/5 univariate proteins (FDR<=0.044), and matched sALS-p80 (z>{p80['frozen_emory_sals_p80_cutoff']}) passes {100*p80['emory_sals_pass_at_sals_p80']:.1f}% Emory sALS vs {100*oof['oof_sensitivity_at_fold_z95']:.1f}% at Ctrl-z95 (note: sALS-vs-Ctrl diagnostic ROC is distinct from unproven living-CSF-to-cortical ALS-Glia subtype assignment and Thompson 2019 PMID:31123140 mimic AUC 0.51-0.92 [0.688 ext], requiring biomarker-stratified pSTAT3/CXCL10 PD interaction testing). [Sample context: 96 single-center Emory sALS+Ctrl OOF donors]",
         },
         {
             "evidence_id": "EV-P3A-004", "carbon_id": "C006", "subnode_id": "", "analysis_run_id": "RUN-P3A-003",
             "source_type": "TRL_VS_SCIENTIFIC_ACTIONABILITY_ATOMIC_HURDLE_AND_IND_TRIAGE",
             "source_id_or_locator": "registries/phase3_execution_readiness.csv",
-            "cohort_and_stratum": f"All 17 non-dropped CarbonALS survivors ({all_16_ids})",
+            "cohort_and_stratum": f"All 17 non-dropped survivors ({all_16_ids})",
             "assay_and_contrast": "Separation of Clinical Readiness (TRL) from Scientific Actionability & Next-Gate Experimental Class, atomic 1-clause hurdles, and 4-column backup symmetry",
             "effect_direction": "TRL_SEPARATED_FROM_SCIENTIFIC_DISCOVERY_PRIORITY_ACROSS_17_SURVIVORS",
-            "effect_estimate": f"TIER_1={tier_counts['TIER_1_ACTIONABLE_NOW']} (S06 T-lock Ph1b, C006 1-plex kill-gate, S07 calibrated-pNfH Ph3), TIER_2={tier_counts['TIER_2_FOCUSED_GATE_FIRST']} (C001, C002, C007), TIER_3={tier_counts['TIER_3_EXPLORATORY_DISCOVERY']} (novel genetics/pathology leads BA9-04, C014, S09, C018, C015, C016, BA9-08 ahead of screen hits C020, C019, S02), PROTOCOL={tier_counts['COMPANION_PROTOCOL_ONLY']} (C005)",
+            "effect_estimate": f"TIER_1={tier_counts['TIER_1_ACTIONABLE_NOW']} (S06 T-lock Ph1b, S07 calibrated-pNfH Ph3), TIER_2={tier_counts['TIER_2_FOCUSED_GATE_FIRST']} (C001, C006, C002, C007), TIER_3={tier_counts['TIER_3_EXPLORATORY_DISCOVERY']} (novel genetics/pathology leads C022, C014, S09, C018, C015, C023, C016 ahead of screen hits C020, C019, S02), PROTOCOL={tier_counts['COMPANION_PROTOCOL_ONLY']} (C005)",
             "p_value": "", "fdr_or_adjusted_p": "", "sample_size_n": "", "epistemic_weight": "HIGH",
-            "notes": f"Portfolio-wide triage covering {all_16_ids}: decomposes compound hurdles atomically, enforces KEEP_CORE-first TIER_1 ordering & 21 CFR 300.50 proprietary single-entity tox rules, populates COARSE_PRIOR_ONLY on S07/BA9-04/C019/C014/C016, and replaces strawman backups (AAV-DNAJB2a on BA9-04, HLE Fc-IL-33 on C007, AAV9-U7 on C001/C002).",
+            "notes": f"Portfolio-wide triage covering {all_16_ids}: decomposes compound hurdles atomically, enforces KEEP_CORE-first TIER_1 ordering, moves C006 to TIER_2_FOCUSED_GATE_FIRST pending Intron-5 ISS-vs-ISE microwalk proof, applies ICH M3(R2) / 21 CFR 312.23(b) single-entity GLP tox rules prior to Stage 2 21 CFR 300.50 combination testing, populates COARSE_PRIOR_ONLY tags, and maintains symmetric 4-column backups.",
         },
     ])
 
@@ -158,14 +158,14 @@ def main() -> None:
         for r in rd_rows if r["backup_modality"] != "NONE"
     )
     with (REG_DIR / "candidate_decisions.csv").open(encoding="utf-8") as fh:
-        cdec_40 = list(csv.DictReader(fh))
-    d40 = {k: sum(1 for r in cdec_40 if r["decision"] == k) for k in ("KEEP_CORE", "KEEP_EXPLORATORY_UNPROVEN", "RECLASSIFY_BENCHMARK_OR_BIOMARKER", "DROP")}
-    assert (d40["KEEP_CORE"], d40["KEEP_EXPLORATORY_UNPROVEN"], d40["RECLASSIFY_BENCHMARK_OR_BIOMARKER"], d40["DROP"]) == (4, 13, 4, 19), d40
+        cdec_33 = list(csv.DictReader(fh))
+    d33 = {k: sum(1 for r in cdec_33 if r["decision"] == k) for k in ("KEEP_CORE", "KEEP_EXPLORATORY_UNPROVEN", "RECLASSIFY_BENCHMARK_OR_BIOMARKER", "DROP")}
+    assert (d33["KEEP_CORE"], d33["KEEP_EXPLORATORY_UNPROVEN"], d33["RECLASSIFY_BENCHMARK_OR_BIOMARKER"], d33["DROP"]) == (4, 13, 4, 12), d33
     REP_FP.parent.mkdir(parents=True, exist_ok=True)
     REP_FP.write_text(
         f"# Phase 3A (v2.1) — Execution-Safety, Deconfounded CSF Calibration & TRL/Scientific-Gate Triage\n\n"
         f"> **Programmatically rendered** by `03b_register_and_render_phase3a_report.py` (`{stamp}`). Zero raw synthetic oligomer sequences stored.\n"
-        f"> **v1.1 Registry Sync:** Reflects all `40` `candidate_decisions.csv` classifications (`{d40['KEEP_CORE']} KEEP_CORE`, `{d40['KEEP_EXPLORATORY_UNPROVEN']} KEEP_EXPLORATORY_UNPROVEN` [incl. `S02` CuATSM behind 5 hurdles], `{d40['RECLASSIFY_BENCHMARK_OR_BIOMARKER']} RECLASSIFY_BENCHMARK_OR_BIOMARKER`, `{d40['DROP']} DROP`).\n\n"
+        f"> **v1.2 Registry Sync:** Reflects all `33` `candidate_decisions.csv` classifications (`{d33['KEEP_CORE']} KEEP_CORE`, `{d33['KEEP_EXPLORATORY_UNPROVEN']} KEEP_EXPLORATORY_UNPROVEN` [incl. `S02` CuATSM behind 5 hurdles], `{d33['RECLASSIFY_BENCHMARK_OR_BIOMARKER']} RECLASSIFY_BENCHMARK_OR_BIOMARKER`, `{d33['DROP']} DROP`).\n\n"
         f"## 1. Comprehensive Spliced + Pre-mRNA + `1-nt` Bulge + `18-bp` Sub-Core Off-Target Audit (`RUN-P3A-001`)\n\n"
         f"Scanned `{n_tx:,}` GENCODE v46 spliced human transcripts (`DS_GENCODE_V46_TX` × comprehensive `DS_GENCODE_V46_COMP_GTF` exon-exon junction & `CDS` coordinates) and `GRCh38` internal splice boundaries (`DBCLS GGGenome` × `DS_GNOMAD_V41_CONSTRAINT` × `7` human CNS lineages across `Pineda BA4` & `Edinburgh`) across all `12` candidate splice windows (`G2E3 #1` `Alu` capped at `gggenome_max_mm_queried = {g1['gggenome_max_mm_queried']}`; `2` on all other `11` windows):\n\n"
         f"| ID | Gene #Rank | `GRCh38` Interval (1-based) | Len | `Tm_phys` (°C) | Spliced `0mm / 1mm / Wob-Only` | Pre-mRNA `0mm / <=50bp 1mm / <=50bp Wob` | `1-nt Bulge / 18-bp Core` | Steric Constrained CNS / Aux Flags | Safety Verdict |\n"

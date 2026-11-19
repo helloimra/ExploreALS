@@ -1,4 +1,4 @@
-"""Flagship Reproducer #2: C006 — KCNQ2 Exon-5 Steric SSO (Tier 1, Act #2 / Bio #4)."""
+"""Flagship Reproducer #4: C006 — KCNQ2 Exon-5 Steric SSO (Tier 2, Act #4 / Bio #4)."""
 from __future__ import annotations
 
 import sys
@@ -50,7 +50,7 @@ def main() -> None:
     lead3 = ot_rows["chr20:63442302-63442319(-)"]
 
     checks = [
-        ("Portfolio Actionable Rank & Promoted Lead", f"#{port['unified_rank']} ({port['lead_cis_interval_id']})", "#2 (chr20:63442302-63442319(-))", "PASS"),
+        ("Portfolio Actionable Rank & Promoted Lead", f"#{port['unified_rank']} ({port['lead_cis_interval_id']})", "#4 (chr20:63442302-63442319(-))", "PASS"),
         assert_close(f"[MEASURED:{src_tag}] Brown 2022 i3Neuron KCNQ2 Exon-4-Exon-6 skip dPSI", i3n_dpsi, 0.2139, rtol=1e-3),
         assert_close("[MEASURED] Exon 5 in-frame length (bp = 42 aa Glu231-Leu272)", float(63442531 - 63442406 + 1), 126.0, rtol=1e-6),
         assert_close(f"[MEASURED:{src_tag}] PDB 7CR2 Retigabine-to-Trp236 H-bond (A)", trp_dist, 2.97, rtol=0.02),

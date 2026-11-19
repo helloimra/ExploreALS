@@ -1,4 +1,4 @@
-"""Orchestrator for ExploreALS v1.2 computational replication (Level 1 Cached, 8 Flagship, or Full 49-Run DAG)."""
+"""Orchestrator for ExploreALS v1.2 computational replication (Level 1 Cached, 8 Flagship, or Full 50-Run DAG)."""
 from __future__ import annotations
 
 import argparse
@@ -37,10 +37,10 @@ def _ordered_canonical_runs(runs: list[dict[str, str]]) -> list[dict[str, str]]:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Reproduce ExploreALS v1.2 gates, 8 flagship claims, or all 49 runs.")
-    ap.add_argument("--cached-gates", action="store_true", help="Level 1 (<10s): verify 16 CSVs, SHA-256s, & loaders.")
+    ap = argparse.ArgumentParser(description="Reproduce ExploreALS v1.2 gates, 8 flagship claims, or all 50 runs.")
+    ap.add_argument("--cached-gates", action="store_true", help="Level 1 (<10s): verify 17 CSVs, SHA-256s, & loaders.")
     ap.add_argument("--flagship-only", action="store_true", help="Run all 8 Tier 1+2 Flagship Monograph Reproducers.")
-    ap.add_argument("--all-canonical", action="store_true", help="Execute all 48 non-bootstrap canonical runs (requires staged data/).")
+    ap.add_argument("--all-canonical", action="store_true", help="Execute all 49 non-bootstrap canonical runs (requires staged data/).")
     args = ap.parse_args()
 
     if not (args.cached_gates or args.flagship_only or args.all_canonical):
@@ -74,6 +74,7 @@ def main() -> None:
                 for patch_s in (
                     "work/phase4_final_synthesis/scripts/00b_apply_v1_1_registry_corrections.py",
                     "work/phase4_final_synthesis/scripts/00c_apply_v1_1_decisions.py",
+                    "work/phase4_final_synthesis/scripts/03b_apply_nov2026_retrospective_registries.py",
                 ):
                     if (ROOT / patch_s).is_file():
                         _run_py(patch_s)

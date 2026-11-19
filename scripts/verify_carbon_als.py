@@ -31,7 +31,7 @@ ALLOWED_REDIST_TIERS = {
     "TIER_B_PUBLISHER_HTTPS_FETCH",
     "TIER_C_DUA_OR_BASELINE",
 }
-BUNDLED_DATASET_IDS = {"DS001_FEAT", "DS_BA9_BUNDLE", "DS_ELIG_BED"}
+BUNDLED_DATASET_IDS = {"DS001_FEAT", "DS_ELIG_BED"}
 ALLOWED_ANCHOR_TYPES = {"STAGED_DATASET", "CACHED_API_SNAPSHOT", "DETERMINISTIC_MODEL_OUTPUT"}
 EXP_OVERLAP_COLS = [
     "overlap_group_id", "cluster_name", "datasets_involved",
@@ -45,6 +45,19 @@ EXP_STAT_COLS = [
     "multiple_testing_family", "missingness_or_exclusion_rule", "overlap_group_id",
     "anchor_type", "anchor_relpath", "sha64",
 ]
+EXP_UPDATES_COLS = [
+    "update_id", "date_iso", "release_tag", "update_category", "affected_ids",
+    "decision_impact", "headline", "prior_state_or_assumption",
+    "new_evidence_or_revision", "portfolio_and_gate_consequence",
+    "primary_sources", "verification_anchor",
+]
+ALLOWED_UPDATE_CATEGORIES = {
+    "CLINICAL_TRIAL", "LITERATURE_INGESTION", "MODEL_REVISION",
+}
+FLAGSHIP_RUN_IDS = {
+    "FLAGSHIP-S06", "FLAGSHIP-C006", "FLAGSHIP-S07", "FLAGSHIP-C001",
+    "FLAGSHIP-C002", "FLAGSHIP-C007", "FLAGSHIP-DN01", "FLAGSHIP-DN04",
+}
 
 
 def load_csv(name: str) -> list[dict[str, str]]:
@@ -91,6 +104,63 @@ def resolve_mode(mode_arg: str) -> str:
     if mode_arg in {"full", "cached"}:
         return mode_arg
     return "full" if (CARBON_ROOT / "reports" / "candidates").is_dir() else "cached"
+
+
+def verify_citations_blob(txt: str, label: str, cite_lock: dict) -> list[str]:
+    errs: list[str] = []
+    banned = set(cite_lock.get("banned_mismatched_ids", []))
+    pmids_ok = cite_lock.get("pmids", {})
+    ncts_ok = cite_lock.get("ncts", {})
+    dois_ok = cite_lock.get("dois", {})
+    for m in sorted(set(re.findall(r"PMID:(\d{5,9})", txt))):
+        tok = f"PMID:{m}"
+        if tok in banned:
+            errs.append(f"CITATION LOCK VIOLATION in {label}: banned/mismatched {tok}")
+        elif m not in pmids_ok or not pmids_ok[m].get("title"):
+            errs.append(f"CITATION LOCK VIOLATION in {label}: unverified {tok} absent from schemas/verified_citations_lock.json")
+    for nct in sorted(set(re.findall(r"\b(NCT\d{8})\b", txt))):
+        if nct in banned:
+            errs.append(f"CITATION LOCK VIOLATION in {label}: banned/mismatched {nct}")
+        elif nct not in ncts_ok or not ncts_ok[nct].get("title"):
+            errs.append(f"CITATION LOCK VIOLATION in {label}: unverified {nct} absent from schemas/verified_citations_lock.json")
+    for raw_doi in sorted(set(re.findall(r"(?<![A-Za-z0-9_])(10\.\d{4,9}/[A-Za-z0-9._()/:+-]+)", txt))):
+        clean_d = raw_doi.rstrip(".,:)]'\"\\")
+        if len(clean_d) <= 8 or clean_d.endswith("/"):
+            continue
+        if clean_d in banned:
+            errs.append(f"CITATION LOCK VIOLATION in {label}: banned/mismatched DOI {clean_d}")
+        elif clean_d not in dois_ok or not dois_ok[clean_d].get("title"):
+            errs.append(f"CITATION LOCK VIOLATION in {label}: unverified DOI {clean_d} absent from schemas/verified_citations_lock.json")
+    return errs
+
+
+def verify_citations_lock(mode: str) -> list[str]:
+    cite_fp = CARBON_ROOT / "schemas" / "verified_citations_lock.json"
+    if not cite_fp.is_file():
+        return ["Missing schemas/verified_citations_lock.json"]
+    try:
+        cite_lock = json.loads(cite_fp.read_text(encoding="utf-8"))
+    except Exception as exc:  # noqa: BLE001
+        return [f"Invalid schemas/verified_citations_lock.json: {exc}"]
+    errs: list[str] = []
+    targets: list[Path] = sorted(REG_DIR.glob("*.csv"))
+    if mode == "full":
+        targets.extend([
+            CARBON_ROOT / "reports" / "CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md",
+            CARBON_ROOT / "reports" / "CARBON_ALS_INTERACTIVE_EXPLORER.html",
+            *sorted((CARBON_ROOT / "reports" / "monographs").glob("*.html")),
+            CARBON_ROOT / "reports" / "github_pages" / "docs" / "index.html",
+            *sorted((CARBON_ROOT / "reports" / "github_pages" / "docs" / "monographs").glob("*.html")),
+        ])
+    else:
+        targets.extend([
+            CARBON_ROOT / "docs" / "index.html",
+            *sorted((CARBON_ROOT / "docs" / "monographs").glob("*.html")),
+        ])
+    for fp in targets:
+        if fp.is_file():
+            errs.extend(verify_citations_blob(fp.read_text(encoding="utf-8"), fp.relative_to(CARBON_ROOT).as_posix(), cite_lock))
+    return errs
 
 
 def verify_all(
@@ -295,18 +365,67 @@ def verify_all(
                     errors.append(f"reports/candidates/{cid}.md contains stale batch registry link")
 
     if decisions_override is None and evidence_override is None:
-        from phase3_gates import verify_phase3a_gates
-        from phase3b_gates import verify_phase3b_gates
-        from phase4_gates import verify_phase4_gates
+        from phase3_gates import RAW_OLIGO_SEQ_RE, verify_phase3a_gates
+        from phase3b_gates import GAPPED_OLIGO_RE, verify_phase3b_gates
+        from phase4_gates import CAPITAL_DOLLAR_LEAK_RE, verify_phase4_gates
+
+        upd_rows = load_csv("living_evidence_updates.csv")
+        if not upd_rows:
+            errors.append("living_evidence_updates.csv must contain at least 1 row")
+        elif list(upd_rows[0].keys()) != EXP_UPDATES_COLS:
+            errors.append(f"Schema header mismatch in living_evidence_updates.csv: {list(upd_rows[0].keys())}")
+        port_ids = {r["portfolio_id"] for r in load_csv("phase4_unified_portfolio.csv")}
+        valid_aff = port_ids | subnode_ids | {"PORTFOLIO_WIDE"}
+        valid_anc = ev_ids | {e["evidence_id"] for e in p3b_ev_rows} | run_ids | FLAGSHIP_RUN_IDS
+        seen_upd_ids: set[str] = set()
+        sort_keys: list[tuple[str, str]] = []
+        for ur in upd_rows:
+            uid = ur["update_id"].strip()
+            if not re.fullmatch(r"UPD-\d{4}-\d{2}-\d{2}-\d{2}", uid):
+                errors.append(f"living_evidence_updates.csv invalid update_id '{uid}'")
+            if uid in seen_upd_ids:
+                errors.append(f"living_evidence_updates.csv duplicate update_id '{uid}'")
+            seen_upd_ids.add(uid)
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", ur["date_iso"].strip()) or not uid.startswith(f"UPD-{ur['date_iso'].strip()}-"):
+                errors.append(f"{uid}: date_iso '{ur['date_iso']}' mismatch with update_id")
+            sort_keys.append((ur["date_iso"].strip(), uid))
+            if not re.fullmatch(r"v\d+\.\d+\.\d+", ur["release_tag"].strip()):
+                errors.append(f"{uid}: release_tag must be bare semantic version vX.Y.Z (got '{ur['release_tag']}')")
+            if ur["update_category"] not in ALLOWED_UPDATE_CATEGORIES:
+                errors.append(f"{uid}: invalid update_category '{ur['update_category']}'")
+            for col_k in EXP_UPDATES_COLS:
+                if not ur[col_k].strip():
+                    errors.append(f"{uid}: empty required column '{col_k}'")
+            for aid in filter(None, ur["affected_ids"].split(";")):
+                if aid.strip() not in valid_aff:
+                    errors.append(f"{uid}: unknown affected_id '{aid}'")
+            for anc_tok in filter(None, ur["verification_anchor"].split(";")):
+                if anc_tok.strip() not in valid_anc:
+                    errors.append(f"{uid}: unknown verification_anchor '{anc_tok}'")
+            joined_txt = " ".join(ur.values())
+            if RAW_OLIGO_SEQ_RE.search(joined_txt) or GAPPED_OLIGO_RE.search(joined_txt):
+                errors.append(f"{uid}: biosecurity oligomer sequence guard failed in living_evidence_updates.csv")
+            if CAPITAL_DOLLAR_LEAK_RE.search(joined_txt):
+                errors.append(f"{uid}: financial/capital token leaked in living_evidence_updates.csv")
+            if "/100" in joined_txt or "CarbonALS" in joined_txt or "ExploreALS v1.0" in joined_txt or "ExploreALS v1.1" in joined_txt:
+                errors.append(f"{uid}: banned nomenclature leaked in living_evidence_updates.csv")
+        if sort_keys != sorted(sort_keys, reverse=True):
+            errors.append("living_evidence_updates.csv must be sorted reverse-chronologically by (date_iso, update_id)")
 
         errors.extend(verify_phase3a_gates(CARBON_ROOT, p2_rows, decisions, run_ids, load_csv, mode=mode))
         errors.extend(verify_phase3b_gates(CARBON_ROOT, intake, subnodes, runs, load_csv, mode=mode))
         errors.extend(verify_phase4_gates(CARBON_ROOT, decisions, run_ids, load_csv, mode=mode))
+        errors.extend(verify_citations_lock(mode=mode))
 
     return errors
 
 
 def run_selftest(mode: str = "full") -> None:
+    cite_lock = json.loads((CARBON_ROOT / "schemas" / "verified_citations_lock.json").read_text(encoding="utf-8"))
+    errs_cite1 = verify_citations_blob("Fake citation PMID:99999999 and NCT99999999", "selftest", cite_lock)
+    assert len(errs_cite1) == 2 and all("unverified" in e for e in errs_cite1), "Self-test failed to block unverified PMID/NCT!"
+    errs_cite2 = verify_citations_blob("Mismatched PMID:24145411", "selftest", cite_lock)
+    assert any("banned/mismatched" in e for e in errs_cite2), "Self-test failed to block banned mismatched PMID!"
     base = load_csv("candidate_decisions.csv")
     bad = [dict(r) for r in base]
     bad[0]["epistemic_state"] = "UNPROVEN_UNTESTED"
@@ -366,6 +485,6 @@ if __name__ == "__main__":
     n_stat = len(load_csv("statistical_models_and_contrasts.csv"))
     print(
         f"PASS [{eff_mode}]: All {n_reg} registries, {n_stat}/{n_stat} 64-char SHA-256 contrast anchors, "
-        f"{n_ds} dataset manifest entries, 59-candidate/26-interval Phase 4 portfolio, "
+        f"{n_ds} dataset manifest entries, 52-hypothesis/26-interval Phase 4 portfolio, "
         "Explorer v1.2 + 8 Monographs, biosecurity/provenance gates, and Epistemic Asymmetry self-tests verified (0 errors)."
     )

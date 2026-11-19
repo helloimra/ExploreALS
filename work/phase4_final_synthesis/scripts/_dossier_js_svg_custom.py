@@ -5,14 +5,20 @@ DOSSIER_JS_SVG_CUSTOM = """
 function renderMwcSarm1Svg(){
   const xL = 52, xR = 446, W = xR - xL;
   const mapX = lg => xL + ((lg + 2.0) / 3.0) * W;
-  const yAT = 44, yAB = 138, HA = yAB - yAT;
+  const yAT = 50, yAB = 140, HA = yAB - yAT;
   const mapYA = mult => yAB - ((Math.log10(Math.max(0.05, Math.min(55, mult))) - Math.log10(0.05)) / (Math.log10(55) - Math.log10(0.05))) * HA;
   const yBT = 178, yBB = 262, HB = yBB - yBT;
-  const mapYB = pct => yBB - ((Math.log10(Math.max(0.15, Math.min(20, pct))) - Math.log10(0.15)) / (Math.log10(20) - Math.log10(0.15))) * HB;
-  const cGlue = 0.22, dLock = 6.5;
+  const mapYB = pct => yBB - ((Math.log10(Math.max(0.15, Math.min(100, pct))) - Math.log10(0.15)) / (Math.log10(100) - Math.log10(0.15))) * HB;
+  const cGlue = 0.22, dLock = 6.5, binom8 = [1, 8, 28, 56, 70, 56, 28, 8, 1];
   const bexiRel = (u, L) => (Math.pow(1 + u/cGlue, 7) / (L * Math.pow(1 + 0.05*u, 8) + Math.pow(1 + u/cGlue, 8))) * (1 + L);
   const tlockAbs = (u, L) => Math.pow(1 + u/dLock, 8) / (L * Math.pow(1 + u, 8) + Math.pow(1 + u/dLock, 8));
-  let ptsH = [], ptsA = [], ptsTL = [], ptsDep = [], ptsRes = [];
+  const heteroOctGoF = u => {
+    const r = (1 + u) / (1 + u / dLock);
+    let s = 0;
+    for(let k=0; k<=8; k++) s += (binom8[k] / 256) / (1 + 8 * Math.pow(0.16, 8 - k) * Math.pow(r, k));
+    return s;
+  };
+  let ptsH = [], ptsA = [], ptsTL = [], ptsDep = [], ptsRes = [], ptsGoF = [];
   for(let i=0; i<=80; i++){
     const lg = -2.0 + (i/80)*3.0, u = Math.pow(10, lg), xp = mapX(lg).toFixed(1);
     ptsH.push(`${xp},${mapYA(bexiRel(u, 120)).toFixed(1)}`);
@@ -20,15 +26,16 @@ function renderMwcSarm1Svg(){
     ptsTL.push(`${xp},${mapYA(tlockAbs(u, 8)*(1+8)).toFixed(1)}`);
     ptsDep.push(`${xp},${mapYB(100*tlockAbs(u, 8)).toFixed(1)}`);
     ptsRes.push(`${xp},${mapYB(100*tlockAbs(u, 65)).toFixed(1)}`);
+    ptsGoF.push(`${xp},${mapYB(100*heteroOctGoF(u)).toFixed(1)}`);
   }
-  const y1x = mapYA(1.0).toFixed(1), yFlr = mapYB(1.0).toFixed(1);
+  const y1x = mapYA(1.0).toFixed(1), yFlr = mapYB(1.0).toFixed(1), yGoFTop = mapYB(95.2).toFixed(1), yGoFEnd = mapYB(44.9).toFixed(1);
   const xDepCross = mapX(Math.log10(0.47)).toFixed(1), xResCross = mapX(Math.log10(0.066)).toFixed(1);
   return `<svg viewBox="0 0 460 304" class="w-full h-auto block select-none" role="img" aria-label="Modeled 8-protomer SARM1 MWC curves">
     <text x="12" y="16" font-size="12.8" font-weight="700" fill="var(--foreground)">A. Relative Fold vs Baseline (BEXi Spike vs T-Lock)</text>
     <text x="${xR}" y="16" text-anchor="end" font-size="12.5" font-family="monospace" fill="var(--warning)">[PRIOR]</text>
-    <line x1="14" y1="30" x2="30" y2="30" stroke="var(--error)" stroke-width="2.2"/><text x="34" y="34" font-size="12.5" fill="var(--error)">9TZY WT (~45x)</text>
-    <line x1="144" y1="30" x2="160" y2="30" stroke="var(--warning)" stroke-width="2" stroke-dasharray="4,2"/><text x="164" y="34" font-size="12.5" fill="var(--warning)">ALS (~5x)</text>
-    <line x1="260" y1="30" x2="276" y2="30" stroke="var(--success)" stroke-width="2.3"/><text x="280" y="34" font-size="12.5" fill="var(--success)">ARM-TIR T-Lock (0 spike)</text>
+    <line x1="14" y1="30" x2="28" y2="30" stroke="var(--error)" stroke-width="2.2"/><text x="32" y="34" font-size="12.5" fill="var(--error)">8-mer Max (~45x; Emp 2.8x)</text>
+    <line x1="208" y1="30" x2="222" y2="30" stroke="var(--warning)" stroke-width="2" stroke-dasharray="4,2"/><text x="226" y="34" font-size="12.5" fill="var(--warning)">ALS (~5x)</text>
+    <line x1="296" y1="30" x2="310" y2="30" stroke="var(--success)" stroke-width="2.3"/><text x="314" y="34" font-size="12.5" fill="var(--success)">ARM-TIR T-Lock (0 spike)</text>
     <line x1="${xL}" y1="${yAT}" x2="${xL}" y2="${yAB}" stroke="var(--border)" stroke-width="1.2"/>
     <line x1="${xL}" y1="${yAB}" x2="${xR}" y2="${yAB}" stroke="var(--border)" stroke-width="1.2"/>
     <line x1="${xL}" y1="${y1x}" x2="${xR}" y2="${y1x}" stroke="var(--muted-foreground)" stroke-width="1" stroke-dasharray="3,3"/>
@@ -44,15 +51,18 @@ function renderMwcSarm1Svg(){
     <line x1="${xL}" y1="${yBT}" x2="${xL}" y2="${yBB}" stroke="var(--border)" stroke-width="1.2"/>
     <line x1="${xL}" y1="${yBB}" x2="${xR}" y2="${yBB}" stroke="var(--border)" stroke-width="1.2"/>
     <line x1="${xL}" y1="${yFlr}" x2="${xR}" y2="${yFlr}" stroke="var(--error)" stroke-width="1" stroke-dasharray="3,2"/>
-    <text x="${xL-5}" y="${mapYB(11.1).toFixed(1)}" text-anchor="end" font-size="12.5" font-family="monospace" fill="var(--foreground)">11%</text>
+    <text x="${xL-5}" y="${Number(yGoFTop)+4}" text-anchor="end" font-size="12.5" font-family="monospace" fill="var(--warning)">95%</text>
+    <text x="${xL-5}" y="${(mapYB(11.1)+4).toFixed(1)}" text-anchor="end" font-size="12.5" font-family="monospace" fill="var(--foreground)">11%</text>
     <text x="${xL-5}" y="${Number(yFlr)+4}" text-anchor="end" font-size="12.5" font-family="monospace" fill="var(--error)">1%</text>
     <text x="${xL-5}" y="${mapYB(0.2).toFixed(1)}" text-anchor="end" font-size="12.5" font-family="monospace" fill="var(--muted-foreground)">0.2%</text>
+    <polyline fill="none" stroke="var(--warning)" stroke-width="1.8" stroke-dasharray="3,2" points="${ptsGoF.join(' ')}"/>
+    <text x="${xR-2}" y="${(Number(yGoFEnd)+14).toFixed(1)}" text-anchor="end" font-size="12.5" font-family="monospace" fill="var(--warning)">ARM-GoF (~0.08%, &ge;36% floor)</text>
     <polyline fill="none" stroke="var(--success)" stroke-width="2.1" points="${ptsDep.join(' ')}"/>
     <polyline fill="none" stroke="var(--primary)" stroke-width="2.1" stroke-dasharray="4,2" points="${ptsRes.join(' ')}"/>
     <circle cx="${xDepCross}" cy="${yFlr}" r="3.5" fill="var(--success)"/>
     <circle cx="${xResCross}" cy="${yFlr}" r="3.5" fill="var(--primary)"/>
     <line x1="${xResCross}" y1="${Number(yFlr)-10}" x2="${xDepCross}" y2="${Number(yFlr)-10}" stroke="var(--primary)" stroke-width="1.6"/>
-    <text x="${((Number(xResCross)+Number(xDepCross))/2).toFixed(1)}" y="${Number(yFlr)-15}" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="var(--primary)">~2-7x sparing</text>
+    <text x="${((Number(xResCross)+Number(xDepCross))/2).toFixed(1)}" y="${Number(yFlr)-17}" text-anchor="middle" font-size="12.5" font-family="monospace" font-weight="700" fill="var(--primary)">~2-7x sparing</text>
     <text x="${xR-2}" y="${(Number(yFlr)-5).toFixed(1)}" text-anchor="end" font-size="12.5" font-family="monospace" fill="var(--error)">&lt;1% floor</text>
     ${[-2,-1,0,1].map(g=>`<text x="${mapX(g).toFixed(1)}" y="${yBB+16}" text-anchor="middle" font-size="12.5" font-family="monospace" fill="var(--muted-foreground)">${Math.pow(10,g)}x</text>`).join('')}
     <text x="248" y="298" text-anchor="middle" font-size="12.5" fill="var(--muted-foreground)">Unbound CNS [Inhibitor]/Kd (Solid L_eff=8 \u00b7 Dashed +STMN2 L_eff=65)</text>

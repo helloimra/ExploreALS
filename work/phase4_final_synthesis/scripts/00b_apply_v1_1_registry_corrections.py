@@ -43,7 +43,7 @@ def main() -> None:
     ev_map["EV-B3-006"]["sample_size_n"] = ""
     ev_map["EV-B3-007"]["notes"] = (
         ev_map["EV-B3-007"]["notes"].split("; Thompson 2019")[0]
-        + "; Thompson 2019 (PMID:30737180) shows standalone CSF chitinase AUC spans 0.51-0.92 (0.688 vs neurological ALS mimics), confirming symptomatic staging/PD utility rather than standalone mimic diagnosis."
+        + "; Thompson 2019 (PMID:31123140) shows standalone CSF chitinase AUC spans 0.51-0.92 (0.688 vs neurological ALS mimics), confirming symptomatic staging/PD utility rather than standalone mimic diagnosis."
     )
     ev_map["EV-B3-022"].update({
         "cohort_and_stratum": "Zhang 2026 human cervical spinal cord 55-um multicellular TDP-43+ anterior horn Visium spots (N=14 donors)",
@@ -53,7 +53,7 @@ def main() -> None:
         "effect_direction": "unreported_withheld_rct_outcomes",
         "effect_estimate": "Randomized efficacy unreported (CT.gov hasResults=false; completed late 2021, OLE NCT04313166 terminated)",
         "epistemic_weight": "MODERATE",
-        "notes": "Collaborative Medicinal Development completed Phase 2/3 NCT04082832 in late 2021 without releasing randomized ALSFRS-R/ECAS outcomes (hasResults=false; ALS/MND International Alliance moved CuATSM to discontinued); 62Cu/64Cu-ATSM PET reflects hypoxic Cu(I) reductive trapping rather than verified intact 2.5 uM normoxic CNS exposure (PMID:22036688).",
+        "notes": "Collaborative Medicinal Development completed Phase 2/3 NCT04082832 in late 2021 without releasing randomized ALSFRS-R/ECAS outcomes (hasResults=false; ALS/MND International Alliance moved CuATSM to discontinued); 62Cu/64Cu-ATSM PET reflects hypoxic Cu(I) reductive trapping rather than verified intact 2.5 uM normoxic CNS exposure (PMID:25904686).",
     })
     ev_map["EV-B6-036"].update({
         "source_id_or_locator": "PMID:37317638;DOI:10.1111/nan.12919",
@@ -106,7 +106,7 @@ def main() -> None:
                 "+ favorable DepMap non-essentiality (Chronos=-0.018)",
                 "(dividing cancer-line DepMap Chronos=-0.018 despite human LoF constraint LOEUF=0.50 & mouse blastocyst lethality)",
             )
-        elif s["subnode_id"] == "C015-N3":
+        elif s["subnode_id"] in {"C015-N3", "C023-N1"}:
             s["druggability_check"] = (
                 "PDB 3KYQ (2.44A) shows Tyr64 (pLDDT=94.81) makes direct 3.46A contact to lipid DPV201 inside the cytosolic Longin prenyl-binding groove (4.29A from Cys66) "
                 "that regulates Cys195-farnesyl / Cys194-geranylgeranyl membrane-opening switches (PMID:32128853); 0 ligands, with risk of sterically ejecting Cys195-farnesyl or freezing closed cytosolic YKT6 in >99.9% WT sALS."

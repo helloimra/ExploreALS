@@ -472,6 +472,18 @@
       "Cys311_allost_IC90_rel_in_Kd_units": 0.447,
       "Cys311_allost_dose_to_reach_lt_1pct_max_NADase_in_Kd_units": 0.501
     },
+    "als_axon_parallel_plus_end_STMN2_rescue_no_NMNAT2_shift": {
+      "L_eff_T_over_R": 8.0,
+      "baseline_fractional_NADase": 0.11111,
+      "BEXi_peak_fold_over_baseline": 4.724,
+      "BEXi_peak_fractional_NADase": 0.5249,
+      "BEXi_peak_at_dose_over_Kd": 0.141,
+      "BEXi_trough_0p3xKd_fold_over_baseline": 3.666,
+      "Cys311_allost_max_fold_over_baseline": 0.9812,
+      "Cys311_allost_trough_0p3xKd_fold_over_baseline": 0.179,
+      "Cys311_allost_IC90_rel_in_Kd_units": 0.447,
+      "Cys311_allost_dose_to_reach_lt_1pct_max_NADase_in_Kd_units": 0.501
+    },
     "als_axon_plus_Track1_STMN2_rescue_80pct_NMNAT2": {
       "L_eff_T_over_R": 65.0,
       "baseline_fractional_NADase": 0.01515,
@@ -668,5 +680,34 @@
         "regime_note": "already_below_floor_without_drug"
       }
     ]
+  },
+  "nov2026_parallel_and_cd38_sensitivity": {
+    "parallel_plus_end_lower_bound_fold": 1.0,
+    "parallel_mechanism_note": "Matson & Holzbaur 2026 (10.64898/2026.11.07.764673 [PREPRINT]) + Krus 2022 (PMID:35767949): STMN2 rescue suppresses microtubule plus-end catastrophe independently of L_eff (1.00x SARM1 Kd_T potency shift, yielding orthogonal Bliss survival additivity).",
+    "well_separated_epistatic_n": 9,
+    "well_separated_epistatic_min_fold": 1.73,
+    "well_separated_epistatic_median_fold": 2.98,
+    "well_separated_epistatic_max_fold": 7.22,
+    "reversible_noncovalent_tlock_gof_heterozygote_100xKd": {
+      "baseline_fractional_activity": 0.95183,
+      "treated_fractional_activity": 0.35946,
+      "percent_inhibition": 62.23
+    },
+    "cd38_fluid_cadpr_dilution_bounds": {
+      "f_sarm1_10pct_basal_fluid": {
+        "f_sarm1_basal_fluid_fraction": 0.1,
+        "f_cd38_ecto_background_fraction": 0.9,
+        "selective_sarm1_fluid_cadpr_drop_pct": 9.0,
+        "max_100pct_selective_sarm1_drop_pct": 10.0,
+        "min_offtarget_cd38_inhibition_pct_if_cell_free_plasma": 44.44
+      },
+      "f_sarm1_05pct_basal_fluid": {
+        "f_sarm1_basal_fluid_fraction": 0.05,
+        "f_cd38_ecto_background_fraction": 0.95,
+        "selective_sarm1_fluid_cadpr_drop_pct": 4.5,
+        "max_100pct_selective_sarm1_drop_pct": 5.0,
+        "min_offtarget_cd38_inhibition_pct_if_cell_free_plasma": 47.37
+      }
+    }
   }
 }

@@ -72,8 +72,9 @@ def hetero_octamer_tlock_inhibition(
     gof_allele_fraction: float = 0.5,
     beta_tlock: float = 25.0,
     n_protomers: int = 8,
+    d_lock: float | None = None,
 ) -> dict[str, float]:
-    """Binomial WT_k : GoF_(8-k) octamer response when GoF subunits cannot engage ARM Cys311 T-locks."""
+    """Binomial WT_k : GoF_(8-k) octamer response for irreversible Cys311 (d_lock=None) or reversible non-covalent ARM T-locks."""
     p_gof = min(max(gof_allele_fraction, 0.0), 1.0)
     p_wt = 1.0 - p_gof
     act_0, act_d = 0.0, 0.0
@@ -81,7 +82,11 @@ def hetero_octamer_tlock_inhibition(
         weight = math.comb(n_protomers, k_wt) * (p_wt**k_wt) * (p_gof ** (n_protomers - k_wt))
         l_k = l_wt * (0.16 ** (n_protomers - k_wt))
         r0 = 1.0 / (1.0 + l_k)
-        rd = 1.0 / (1.0 + l_k * ((1.0 + beta_tlock * conc_over_kd) ** k_wt))
+        if d_lock is None:
+            rd = 1.0 / (1.0 + l_k * ((1.0 + beta_tlock * conc_over_kd) ** k_wt))
+        else:
+            ratio_t_over_r = (1.0 + conc_over_kd) / (1.0 + conc_over_kd / d_lock)
+            rd = 1.0 / (1.0 + l_k * (ratio_t_over_r**k_wt))
         act_0 += weight * r0
         act_d += weight * rd
     return {
@@ -250,4 +255,125 @@ def sweep_sarm1_mwc_threshold_synergy(
         "threshold_sparing_median_fold": round(float(np.percentile(arr, 50)), 2) if len(arr) else None,
         "threshold_sparing_p90_fold": round(float(np.percentile(arr, 90)), 2) if len(arr) else None,
         "grid": grid_rows,
+    }
+
+
+def simulate_coupled_pikfyve_casm_pkpd(
+    dose_schedule_hours: list[float],
+    total_hours: float,
+    cmax_unbound_nm: float,
+    half_life_hours: float,
+    target_ki_nm: float,
+    occ_clear_ec50: float = 0.22,
+    ec50_casm: float = 0.22,
+    tau_clear_h: float = 28.0,
+    tau_substrate_regen_h: float = 192.0,
+    tau_casm_accum_h: float = 18.0,
+    tau_casm_repair_h: float = 36.0,
+    dt_h: float = 0.25,
+) -> dict[str, float]:
+    """Zero-dead-zone simultaneous production/clearance ODE for stoichiometrically coupled +PI(3)P -> LRRK2/CASM stress."""
+    ke = math.log(2.0) / max(half_life_hours, 0.25)
+    n_steps = int(round(total_hours / dt_h))
+    dose_set = {int(round(t / dt_h)) for t in dose_schedule_hours}
+    conc = 0.0
+    substrate = 1.0
+    casm_stress = 0.0
+    max_casm = 0.0
+    occ_sum = 0.0
+    for step in range(n_steps):
+        if step in dose_set:
+            conc += cmax_unbound_nm
+        occ = conc / (conc + target_ki_nm)
+        occ_sum += occ
+        k_clear = (1.0 / tau_clear_h) * (occ / (occ + occ_clear_ec50))
+        k_prod = 1.0 / tau_substrate_regen_h
+        substrate += dt_h * (k_prod * (1.0 - substrate) - k_clear * substrate)
+        substrate = min(max(substrate, 0.02), 1.5)
+        # Simultaneous +PI(3)P -> LRRK2/CASM activation and ATG4/PPM1H turnover at every t (no dead-zone threshold)
+        f_on_casm = occ / (occ + max(ec50_casm, 1e-6))
+        casm_stress += dt_h * ((f_on_casm / tau_casm_accum_h) - (casm_stress / tau_casm_repair_h))
+        casm_stress = max(casm_stress, 0.0)
+        max_casm = max(max_casm, casm_stress)
+        conc *= math.exp(-ke * dt_h)
+    return {
+        "mean_target_occupancy": round(occ_sum / max(n_steps, 1), 4),
+        "end_substrate_pct_reduction": round(100.0 * (1.0 - substrate), 2),
+        "peak_casm_stress_index": round(max_casm, 4),
+        "end_casm_stress_index": round(casm_stress, 4),
+    }
+
+
+def sweep_coupled_pikfyve_casm_sensitivity(
+    dose_schedule_hours: list[float],
+    total_hours: float,
+    cmax_unbound_nm: float,
+    half_life_hours: float,
+    target_ki_nm: float,
+    tau_clear_grid: tuple[float, ...] = (22.0, 28.0, 36.0),
+    tau_regen_grid: tuple[float, ...] = (144.0, 192.0, 240.0),
+    tau_casm_repair_grid: tuple[float, ...] = (24.0, 36.0, 48.0),
+    ec50_casm_grid: tuple[float, ...] = (0.10, 0.16, 0.22),
+    min_substrate_reduction_pct: float = 55.0,
+    max_end_stress_index: float = 0.05,
+) -> dict[str, float | int]:
+    """81-point sweep under stoichiometrically coupled +PI(3)P -> LRRK2/CASM activation (Kuwahara et al. 2026)."""
+    reds: list[float] = []
+    end_casm: list[float] = []
+    passes = 0
+    for tc in tau_clear_grid:
+        for tr in tau_regen_grid:
+            for tvr in tau_casm_repair_grid:
+                for ec_c in ec50_casm_grid:
+                    sim = simulate_coupled_pikfyve_casm_pkpd(
+                        dose_schedule_hours=dose_schedule_hours,
+                        total_hours=total_hours,
+                        cmax_unbound_nm=cmax_unbound_nm,
+                        half_life_hours=half_life_hours,
+                        target_ki_nm=target_ki_nm,
+                        occ_clear_ec50=0.22,
+                        ec50_casm=ec_c,
+                        tau_clear_h=tc,
+                        tau_substrate_regen_h=tr,
+                        tau_casm_accum_h=18.0,
+                        tau_casm_repair_h=tvr,
+                    )
+                    r_val = float(sim["end_substrate_pct_reduction"])
+                    c_val = float(sim["end_casm_stress_index"])
+                    reds.append(r_val)
+                    end_casm.append(c_val)
+                    if r_val >= min_substrate_reduction_pct and c_val <= max_end_stress_index:
+                        passes += 1
+    r_arr = np.asarray(reds, dtype=float)
+    c_arr = np.asarray(end_casm, dtype=float)
+    n_tot = len(reds)
+    return {
+        "n_parameter_combinations": n_tot,
+        "killgate_pass_rate": round(passes / max(n_tot, 1), 4),
+        "substrate_reduction_p10": round(float(np.percentile(r_arr, 10)), 2),
+        "substrate_reduction_median": round(float(np.percentile(r_arr, 50)), 2),
+        "substrate_reduction_p90": round(float(np.percentile(r_arr, 90)), 2),
+        "end_casm_min": round(float(np.min(c_arr)), 4),
+        "end_casm_p10": round(float(np.percentile(c_arr, 10)), 4),
+        "end_casm_median": round(float(np.percentile(c_arr, 50)), 4),
+        "end_casm_p90": round(float(np.percentile(c_arr, 90)), 4),
+    }
+
+
+def compute_cd38_cadpr_dilution_and_audit_bound(
+    f_sarm1_fluid: float = 0.10,
+    sarm1_inhibition_frac: float = 0.90,
+    observed_fluid_cadpr_drop_frac: float = 0.50,
+) -> dict[str, float]:
+    """Two-source SARM1 vs ecto-CD38/BST1 steady-state fluid cADPR dilution and inverse off-target CD38 bound."""
+    f_s = min(max(f_sarm1_fluid, 0.0), 0.999)
+    selective_drop = f_s * min(max(sarm1_inhibition_frac, 0.0), 1.0)
+    max_selective_drop = f_s
+    min_cd38_inhib = max(0.0, (observed_fluid_cadpr_drop_frac - f_s) / (1.0 - f_s))
+    return {
+        "f_sarm1_basal_fluid_fraction": round(f_s, 4),
+        "f_cd38_ecto_background_fraction": round(1.0 - f_s, 4),
+        "selective_sarm1_fluid_cadpr_drop_pct": round(100.0 * selective_drop, 2),
+        "max_100pct_selective_sarm1_drop_pct": round(100.0 * max_selective_drop, 2),
+        "min_offtarget_cd38_inhibition_pct_if_cell_free_plasma": round(100.0 * min(min_cd38_inhib, 1.0), 2),
     }

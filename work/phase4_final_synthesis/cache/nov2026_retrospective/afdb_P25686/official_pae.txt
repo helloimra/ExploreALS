@@ -1,0 +1,15 @@
+
+[*] Analyzing Predicted Aligned Error (PAE) from AF-P25686-F1-predicted_aligned_error_v6.json...
+  -> PAE Matrix Shape: 324x324
+  -> Mean Error: 24.50 Å
+  -> Max Error: 32.00 Å (suggests max possible distance between domains)
+  -> Min Error: 0.00 Å
+  -> Fraction of confident residue pairs (<5Å PAE): 6.6%
+
+[*] Domain Boundary Analysis:
+  -> Number of distinct Global Domains detected: 2
+     Domain 1: residues 1 - 73 (Length: 73 AAs)
+     Domain 2: residues 164 - 223 (Length: 60 AAs)
+
+[*] PAE Structural Conclusion:
+  -> The protein has 2 independently positioned global domains separated by truly flexible joints.

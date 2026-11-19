@@ -721,5 +721,139 @@
       "hours_above_vacuolation_threshold": 77.0,
       "passes_killgate_polyGP_ge_55pct_and_end_vac_le_0p05": true
     }
-  ]
+  ],
+  "c020_nov2026_decoupled_vs_coupled_casm_sweeps": {
+    "regimen_sweeps": [
+      {
+        "regimen": "AIT101_125mg_BID_Continuous_12h",
+        "cmax_unbound_csf_nM": 3.89,
+        "total_hours": 336.0,
+        "model1_decoupled_osmotic_deadzone_81pt": {
+          "n_parameter_combinations": 81,
+          "killgate_pass_rate": 0.0,
+          "substrate_reduction_p10": 73.73,
+          "substrate_reduction_median": 82.38,
+          "substrate_reduction_p90": 88.42,
+          "end_vac_p10": 0.0988,
+          "end_vac_median": 0.5394,
+          "end_vac_p90": 4.0727
+        },
+        "model2_coupled_zero_deadzone_pi3p_lrrk2_casm_81pt": {
+          "n_parameter_combinations": 81,
+          "killgate_pass_rate": 0.0,
+          "substrate_reduction_p10": 73.73,
+          "substrate_reduction_median": 82.38,
+          "substrate_reduction_p90": 88.42,
+          "end_casm_min": 0.9324,
+          "end_casm_p10": 0.9324,
+          "end_casm_median": 1.5262,
+          "end_casm_p90": 2.232
+        }
+      },
+      {
+        "regimen": "Every48h_q48h_SinglePulse_6p5nM",
+        "cmax_unbound_csf_nM": 6.5,
+        "total_hours": 336.0,
+        "model1_decoupled_osmotic_deadzone_81pt": {
+          "n_parameter_combinations": 81,
+          "killgate_pass_rate": 0.7901,
+          "substrate_reduction_p10": 54.09,
+          "substrate_reduction_median": 66.56,
+          "substrate_reduction_p90": 75.68,
+          "end_vac_p10": 0.0027,
+          "end_vac_median": 0.0163,
+          "end_vac_p90": 0.063
+        },
+        "model2_coupled_zero_deadzone_pi3p_lrrk2_casm_81pt": {
+          "n_parameter_combinations": 81,
+          "killgate_pass_rate": 0.0,
+          "substrate_reduction_p10": 54.09,
+          "substrate_reduction_median": 66.56,
+          "substrate_reduction_p90": 75.68,
+          "end_casm_min": 0.2823,
+          "end_casm_p10": 0.2823,
+          "end_casm_median": 0.5923,
+          "end_casm_p90": 1.0325
+        }
+      },
+      {
+        "regimen": "Every3Days_q72h_SinglePulse_6p5nM",
+        "cmax_unbound_csf_nM": 6.5,
+        "total_hours": 336.0,
+        "model1_decoupled_osmotic_deadzone_81pt": {
+          "n_parameter_combinations": 81,
+          "killgate_pass_rate": 0.5926,
+          "substrate_reduction_p10": 48.05,
+          "substrate_reduction_median": 59.97,
+          "substrate_reduction_p90": 71.41,
+          "end_vac_p10": 0.0026,
+          "end_vac_median": 0.0154,
+          "end_vac_p90": 0.0546
+        },
+        "model2_coupled_zero_deadzone_pi3p_lrrk2_casm_81pt": {
+          "n_parameter_combinations": 81,
+          "killgate_pass_rate": 0.0,
+          "substrate_reduction_p10": 48.05,
+          "substrate_reduction_median": 59.97,
+          "substrate_reduction_p90": 71.41,
+          "end_casm_min": 0.2573,
+          "end_casm_p10": 0.2573,
+          "end_casm_median": 0.5058,
+          "end_casm_p90": 0.8436
+        }
+      },
+      {
+        "regimen": "Every3Days_q72h_SinglePulse_8p0nM_336h",
+        "cmax_unbound_csf_nM": 8.0,
+        "total_hours": 336.0,
+        "model1_decoupled_osmotic_deadzone_81pt": {
+          "n_parameter_combinations": 81,
+          "killgate_pass_rate": 0.7901,
+          "substrate_reduction_p10": 49.73,
+          "substrate_reduction_median": 61.63,
+          "substrate_reduction_p90": 72.77,
+          "end_vac_p10": 0.004,
+          "end_vac_median": 0.0208,
+          "end_vac_p90": 0.0695
+        },
+        "model2_coupled_zero_deadzone_pi3p_lrrk2_casm_81pt": {
+          "n_parameter_combinations": 81,
+          "killgate_pass_rate": 0.0,
+          "substrate_reduction_p10": 49.73,
+          "substrate_reduction_median": 61.63,
+          "substrate_reduction_p90": 72.77,
+          "end_casm_min": 0.2799,
+          "end_casm_p10": 0.2799,
+          "end_casm_median": 0.5432,
+          "end_casm_p90": 0.8975
+        }
+      },
+      {
+        "regimen": "Every3Days_q72h_SinglePulse_8p0nM_360h_Full5CycleTrough",
+        "cmax_unbound_csf_nM": 8.0,
+        "total_hours": 360.0,
+        "model1_decoupled_osmotic_deadzone_81pt": {
+          "n_parameter_combinations": 81,
+          "killgate_pass_rate": 0.5556,
+          "substrate_reduction_p10": 42.21,
+          "substrate_reduction_median": 55.52,
+          "substrate_reduction_p90": 65.96,
+          "end_vac_p10": 0.0004,
+          "end_vac_median": 0.0037,
+          "end_vac_p90": 0.0208
+        },
+        "model2_coupled_zero_deadzone_pi3p_lrrk2_casm_81pt": {
+          "n_parameter_combinations": 81,
+          "killgate_pass_rate": 0.0,
+          "substrate_reduction_p10": 42.21,
+          "substrate_reduction_median": 55.52,
+          "substrate_reduction_p90": 65.96,
+          "end_casm_min": 0.105,
+          "end_casm_p10": 0.105,
+          "end_casm_median": 0.2827,
+          "end_casm_p90": 0.5517
+        }
+      }
+    ]
+  }
 }

@@ -1,0 +1,880 @@
+{
+  "data": {
+    "l_type": {
+      "fields": [
+        {
+          "name": "posteriorProbability"
+        },
+        {
+          "name": "is95CredibleSet"
+        },
+        {
+          "name": "standardError"
+        },
+        {
+          "name": "pValueExponent"
+        },
+        {
+          "name": "logBF"
+        },
+        {
+          "name": "beta"
+        },
+        {
+          "name": "is99CredibleSet"
+        },
+        {
+          "name": "pValueMantissa"
+        },
+        {
+          "name": "r2Overall"
+        },
+        {
+          "name": "variant"
+        }
+      ]
+    },
+    "eur": {
+      "studyLocusId": "80e8a16e49865cd8e56514fce3b5c1c6",
+      "studyId": "GCST90027164",
+      "beta": 0.02136670525795472,
+      "pValueMantissa": 5.559523105621338,
+      "pValueExponent": -15,
+      "variant": {
+        "id": "14_30614542_C_A",
+        "rsIds": [
+          "rs229243"
+        ],
+        "position": 30614542,
+        "referenceAllele": "C",
+        "alternateAllele": "A"
+      },
+      "locus": {
+        "count": 59,
+        "rows": [
+          {
+            "posteriorProbability": 0.04126961063418485,
+            "logBF": 29.972659487139055,
+            "beta": 0.02136670525795472,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30614542_C_A",
+              "rsIds": [
+                "rs229243"
+              ],
+              "position": 30614542,
+              "referenceAllele": "C",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.038691847252377974,
+            "logBF": 29.908161990545448,
+            "beta": 0.021345192099500556,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30609296_G_A",
+              "rsIds": [
+                "rs2045180"
+              ],
+              "position": 30609296,
+              "referenceAllele": "G",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.02921045749637492,
+            "logBF": 29.627059856613258,
+            "beta": 0.021251176103348212,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30630532_A_G",
+              "rsIds": [
+                "rs229150"
+              ],
+              "position": 30630532,
+              "referenceAllele": "A",
+              "alternateAllele": "G"
+            }
+          },
+          {
+            "posteriorProbability": 0.028373512926509168,
+            "logBF": 29.597989144567894,
+            "beta": 0.021241429518032994,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30581009_A_T",
+              "rsIds": [
+                "rs58049"
+              ],
+              "position": 30581009,
+              "referenceAllele": "A",
+              "alternateAllele": "T"
+            }
+          },
+          {
+            "posteriorProbability": 0.028355096670920146,
+            "logBF": 29.597339868783887,
+            "beta": 0.021241211783217997,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30581311_G_A",
+              "rsIds": [
+                "rs229200"
+              ],
+              "position": 30581311,
+              "referenceAllele": "G",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.026482518841323473,
+            "logBF": 29.52901792696743,
+            "beta": 0.0212182875132295,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30575975_G_A",
+              "rsIds": [
+                "rs229194"
+              ],
+              "position": 30575975,
+              "referenceAllele": "G",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.026482422913389866,
+            "logBF": 29.52901430464933,
+            "beta": 0.021218286297165437,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30576390_G_A",
+              "rsIds": [
+                "rs229195"
+              ],
+              "position": 30576390,
+              "referenceAllele": "G",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.026457083044383874,
+            "logBF": 29.528056990428777,
+            "beta": 0.021217964910628054,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30588780_C_T",
+              "rsIds": [
+                "rs229247"
+              ],
+              "position": 30588780,
+              "referenceAllele": "C",
+              "alternateAllele": "T"
+            }
+          },
+          {
+            "posteriorProbability": 0.02494403231635773,
+            "logBF": 29.469167685886934,
+            "beta": -0.021198185408398323,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30559979_A_G",
+              "rsIds": [
+                "rs12434151"
+              ],
+              "position": 30559979,
+              "referenceAllele": "A",
+              "alternateAllele": "G"
+            }
+          },
+          {
+            "posteriorProbability": 0.02404949966227991,
+            "logBF": 29.432647270288154,
+            "beta": 0.021185909801388365,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30622552_T_A",
+              "rsIds": [
+                "rs229143"
+              ],
+              "position": 30622552,
+              "referenceAllele": "T",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.023427443729274945,
+            "logBF": 29.40644122211987,
+            "beta": 0.021177096777614063,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30570171_A_T",
+              "rsIds": [
+                "rs229184"
+              ],
+              "position": 30570171,
+              "referenceAllele": "A",
+              "alternateAllele": "T"
+            }
+          },
+          {
+            "posteriorProbability": 0.023359117791777708,
+            "logBF": 29.403520469499938,
+            "beta": 0.021176114309161033,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30582595_T_C",
+              "rsIds": [
+                "rs229201"
+              ],
+              "position": 30582595,
+              "referenceAllele": "T",
+              "alternateAllele": "C"
+            }
+          },
+          {
+            "posteriorProbability": 0.023183064192359475,
+            "logBF": 29.39595509840593,
+            "beta": 0.021173569294739545,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30599139_C_T",
+              "rsIds": [
+                "rs170665"
+              ],
+              "position": 30599139,
+              "referenceAllele": "C",
+              "alternateAllele": "T"
+            }
+          },
+          {
+            "posteriorProbability": 0.023112229855010876,
+            "logBF": 29.392894986397476,
+            "beta": 0.021172539776623183,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30563264_T_A",
+              "rsIds": [
+                "rs229179"
+              ],
+              "position": 30563264,
+              "referenceAllele": "T",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.020541339585850207,
+            "logBF": 29.274972498785605,
+            "beta": 0.021132828730157694,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30558061_T_C",
+              "rsIds": [
+                "rs229176"
+              ],
+              "position": 30558061,
+              "referenceAllele": "T",
+              "alternateAllele": "C"
+            }
+          },
+          {
+            "posteriorProbability": 0.020283263386011392,
+            "logBF": 29.262329160263302,
+            "beta": 0.0211285665861795,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30599998_G_T",
+              "rsIds": [
+                "rs448175"
+              ],
+              "position": 30599998,
+              "referenceAllele": "G",
+              "alternateAllele": "T"
+            }
+          },
+          {
+            "posteriorProbability": 0.02023050179909482,
+            "logBF": 29.259724533588702,
+            "beta": 0.021127688444358004,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30580203_T_G",
+              "rsIds": [
+                "rs170663"
+              ],
+              "position": 30580203,
+              "referenceAllele": "T",
+              "alternateAllele": "G"
+            }
+          },
+          {
+            "posteriorProbability": 0.018298590292970866,
+            "logBF": 29.159357101725174,
+            "beta": 0.021093822029223,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30634228_A_G",
+              "rsIds": [
+                "rs179287"
+              ],
+              "position": 30634228,
+              "referenceAllele": "A",
+              "alternateAllele": "G"
+            }
+          },
+          {
+            "posteriorProbability": 0.017756029978495888,
+            "logBF": 29.129258253344993,
+            "beta": 0.0210836553420617,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30578403_A_G",
+              "rsIds": [
+                "rs172946"
+              ],
+              "position": 30578403,
+              "referenceAllele": "A",
+              "alternateAllele": "G"
+            }
+          },
+          {
+            "posteriorProbability": 0.016523814617782996,
+            "logBF": 29.0573357285202,
+            "beta": 0.02105934171847264,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30611845_G_A",
+              "rsIds": [
+                "rs229240"
+              ],
+              "position": 30611845,
+              "referenceAllele": "G",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.01649988110442751,
+            "logBF": 29.055886253104298,
+            "beta": 0.021058851430427426,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30610473_A_G",
+              "rsIds": [
+                "rs229235"
+              ],
+              "position": 30610473,
+              "referenceAllele": "A",
+              "alternateAllele": "G"
+            }
+          },
+          {
+            "posteriorProbability": 0.01649709532064386,
+            "logBF": 29.055717402252366,
+            "beta": 0.021058794315536637,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30610615_G_A",
+              "rsIds": [
+                "rs229236"
+              ],
+              "position": 30610615,
+              "referenceAllele": "G",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.015438387777972733,
+            "logBF": 28.98939019863555,
+            "beta": 0.021036346716272532,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30610684_C_T",
+              "rsIds": [
+                "rs229237"
+              ],
+              "position": 30610684,
+              "referenceAllele": "C",
+              "alternateAllele": "T"
+            }
+          },
+          {
+            "posteriorProbability": 0.014956078929743292,
+            "logBF": 28.957650912580384,
+            "beta": 0.02102559648016217,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30631479_T_C",
+              "rsIds": [
+                "rs229152"
+              ],
+              "position": 30631479,
+              "referenceAllele": "T",
+              "alternateAllele": "C"
+            }
+          },
+          {
+            "posteriorProbability": 0.014450374774547848,
+            "logBF": 28.923253428192975,
+            "beta": 0.02101393969081214,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30725785_G_A",
+              "rsIds": [
+                "rs2378782"
+              ],
+              "position": 30725785,
+              "referenceAllele": "G",
+              "alternateAllele": "A"
+            }
+          }
+        ]
+      }
+    },
+    "xanc": {
+      "studyLocusId": "f61f531768d2893ace3aec6a4baf9848",
+      "studyId": "GCST90027163",
+      "beta": 0.019956661194815484,
+      "pValueMantissa": 9.50097942352295,
+      "pValueExponent": -15,
+      "variant": {
+        "id": "14_30576390_G_A",
+        "rsIds": [
+          "rs229195"
+        ],
+        "position": 30576390,
+        "referenceAllele": "G",
+        "alternateAllele": "A"
+      },
+      "locus": {
+        "count": 36,
+        "rows": [
+          {
+            "posteriorProbability": 0.23978170375681734,
+            "logBF": 28.812837042830377,
+            "beta": 0.019956661194815484,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30576390_G_A",
+              "rsIds": [
+                "rs229195"
+              ],
+              "position": 30576390,
+              "referenceAllele": "G",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.12957166493114103,
+            "logBF": 28.197342226299526,
+            "beta": 0.019756607494666695,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30637580_A_G",
+              "rsIds": [
+                "rs229161"
+              ],
+              "position": 30637580,
+              "referenceAllele": "A",
+              "alternateAllele": "G"
+            }
+          },
+          {
+            "posteriorProbability": 0.10563799195630363,
+            "logBF": 27.993126179959102,
+            "beta": 0.019689782270388978,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30558061_T_C",
+              "rsIds": [
+                "rs229176"
+              ],
+              "position": 30558061,
+              "referenceAllele": "T",
+              "alternateAllele": "C"
+            }
+          },
+          {
+            "posteriorProbability": 0.04580021139487269,
+            "logBF": 27.15739680779406,
+            "beta": 0.01941391148861918,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30611845_G_A",
+              "rsIds": [
+                "rs229240"
+              ],
+              "position": 30611845,
+              "referenceAllele": "G",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.042880009502947965,
+            "logBF": 27.09151383945578,
+            "beta": 0.019391996909891344,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30610473_A_G",
+              "rsIds": [
+                "rs229235"
+              ],
+              "position": 30610473,
+              "referenceAllele": "A",
+              "alternateAllele": "G"
+            }
+          },
+          {
+            "posteriorProbability": 0.04270323659932392,
+            "logBF": 27.087382817017026,
+            "beta": 0.019390621987312152,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30580203_T_G",
+              "rsIds": [
+                "rs170663"
+              ],
+              "position": 30580203,
+              "referenceAllele": "T",
+              "alternateAllele": "G"
+            }
+          },
+          {
+            "posteriorProbability": 0.03184750847781766,
+            "logBF": 26.794067253278183,
+            "beta": 0.019292747695556108,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30588780_C_T",
+              "rsIds": [
+                "rs229247"
+              ],
+              "position": 30588780,
+              "referenceAllele": "C",
+              "alternateAllele": "T"
+            }
+          },
+          {
+            "posteriorProbability": 0.027857473918385882,
+            "logBF": 26.660209394763566,
+            "beta": 0.019247916274714023,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30581009_A_T",
+              "rsIds": [
+                "rs58049"
+              ],
+              "position": 30581009,
+              "referenceAllele": "A",
+              "alternateAllele": "T"
+            }
+          },
+          {
+            "posteriorProbability": 0.026046308588586944,
+            "logBF": 26.592984154381586,
+            "beta": 0.01922536188947812,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30581311_G_A",
+              "rsIds": [
+                "rs229200"
+              ],
+              "position": 30581311,
+              "referenceAllele": "G",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.026018428496897787,
+            "logBF": 26.59191317636788,
+            "beta": 0.019225002357172657,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30563264_T_A",
+              "rsIds": [
+                "rs229179"
+              ],
+              "position": 30563264,
+              "referenceAllele": "T",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.02283093241072073,
+            "logBF": 26.46122440225199,
+            "beta": 0.019181078941027083,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30582595_T_C",
+              "rsIds": [
+                "rs229201"
+              ],
+              "position": 30582595,
+              "referenceAllele": "T",
+              "alternateAllele": "C"
+            }
+          },
+          {
+            "posteriorProbability": 0.021369778869850028,
+            "logBF": 26.395085822662832,
+            "beta": 0.019158811935655037,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30570171_A_T",
+              "rsIds": [
+                "rs229184"
+              ],
+              "position": 30570171,
+              "referenceAllele": "A",
+              "alternateAllele": "T"
+            }
+          },
+          {
+            "posteriorProbability": 0.018655908327953115,
+            "logBF": 26.259270997421606,
+            "beta": 0.019113005561639574,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30599139_C_T",
+              "rsIds": [
+                "rs170665"
+              ],
+              "position": 30599139,
+              "referenceAllele": "C",
+              "alternateAllele": "T"
+            }
+          },
+          {
+            "posteriorProbability": 0.018653617252236354,
+            "logBF": 26.259148182902578,
+            "beta": 0.019112964090208337,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30599998_G_T",
+              "rsIds": [
+                "rs448175"
+              ],
+              "position": 30599998,
+              "referenceAllele": "G",
+              "alternateAllele": "T"
+            }
+          },
+          {
+            "posteriorProbability": 0.01630727440452864,
+            "logBF": 26.124719391820726,
+            "beta": 0.019067516723718203,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30575975_G_A",
+              "rsIds": [
+                "rs229194"
+              ],
+              "position": 30575975,
+              "referenceAllele": "G",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.015794485547042363,
+            "logBF": 26.09276896417868,
+            "beta": 0.019056699057448778,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30549760_T_C",
+              "rsIds": [
+                "rs229173"
+              ],
+              "position": 30549760,
+              "referenceAllele": "T",
+              "alternateAllele": "C"
+            }
+          },
+          {
+            "posteriorProbability": 0.014922572431728044,
+            "logBF": 26.035983095985035,
+            "beta": 0.019037457521778246,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30614542_C_A",
+              "rsIds": [
+                "rs229243"
+              ],
+              "position": 30614542,
+              "referenceAllele": "C",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.010888132893573366,
+            "logBF": 25.720781571858886,
+            "beta": 0.01893029789105436,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30622552_T_A",
+              "rsIds": [
+                "rs229143"
+              ],
+              "position": 30622552,
+              "referenceAllele": "T",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.010701230982522755,
+            "logBF": 25.703466881022266,
+            "beta": 0.018924393802664738,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30670996_C_A",
+              "rsIds": [
+                "rs230366"
+              ],
+              "position": 30670996,
+              "referenceAllele": "C",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.008726366273189474,
+            "logBF": 25.4994571498208,
+            "beta": 0.018854689869212897,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30590763_G_A",
+              "rsIds": [
+                "rs7154847"
+              ],
+              "position": 30590763,
+              "referenceAllele": "G",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.007915312123279079,
+            "logBF": 25.40190722803185,
+            "beta": 0.018821268792557494,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30678058_A_G",
+              "rsIds": [
+                "rs7158351"
+              ],
+              "position": 30678058,
+              "referenceAllele": "A",
+              "alternateAllele": "G"
+            }
+          },
+          {
+            "posteriorProbability": 0.0073811866202259276,
+            "logBF": 25.33204251541177,
+            "beta": 0.0187972962844663,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30610615_G_A",
+              "rsIds": [
+                "rs229236"
+              ],
+              "position": 30610615,
+              "referenceAllele": "G",
+              "alternateAllele": "A"
+            }
+          },
+          {
+            "posteriorProbability": 0.007381136557946876,
+            "logBF": 25.33203573297266,
+            "beta": 0.018797293955740414,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30610684_C_T",
+              "rsIds": [
+                "rs229237"
+              ],
+              "position": 30610684,
+              "referenceAllele": "C",
+              "alternateAllele": "T"
+            }
+          },
+          {
+            "posteriorProbability": 0.0071833776968830655,
+            "logBF": 25.30487780483877,
+            "beta": 0.01878796706505335,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30717291_T_C",
+              "rsIds": [
+                "rs7152417"
+              ],
+              "position": 30717291,
+              "referenceAllele": "T",
+              "alternateAllele": "C"
+            }
+          },
+          {
+            "posteriorProbability": 0.006747157849126723,
+            "logBF": 25.24222945790141,
+            "beta": 0.018766433962978803,
+            "pValueMantissa": null,
+            "pValueExponent": null,
+            "variant": {
+              "id": "14_30717625_T_C",
+              "rsIds": [
+                "rs10147505"
+              ],
+              "position": 30717625,
+              "referenceAllele": "T",
+              "alternateAllele": "C"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,55 +1,51 @@
 {
   "analysis_run_id": "RUN-P4-001",
-  "total_unified_candidates": 59,
+  "total_unified_candidates": 52,
   "counts_by_origin_phase": {
-    "EXPLORE_INHERITED_40": 40,
+    "CURATED_CLINICAL_33": 33,
     "PHASE3B_DENOVO_19": 19
   },
   "counts_by_decision": {
     "KEEP_CORE": 4,
-    "KEEP_EXPLORATORY_UNPROVEN": 24,
+    "KEEP_EXPLORATORY_UNPROVEN": 23,
     "RECLASSIFY_BENCHMARK_OR_BIOMARKER": 7,
-    "DROP": 24
+    "DROP": 18
   },
   "counts_by_scientific_tier": {
-    "TIER_1_ACTIONABLE_NOW": 3,
-    "TIER_2_FOCUSED_GATE_FIRST": 5,
-    "TIER_3_EXPLORATORY_DISCOVERY": 19,
+    "TIER_1_ACTIONABLE_NOW": 2,
+    "TIER_2_FOCUSED_GATE_FIRST": 6,
+    "TIER_3_EXPLORATORY_DISCOVERY": 18,
     "COMPANION_PROTOCOL_ONLY": 1,
     "BIOMARKER_BENCHMARK_ONLY": 7,
-    "DROPPED_FALSIFIED_EXCLUDED": 24
+    "DROPPED_FALSIFIED_EXCLUDED": 18
   },
   "counts_by_epistemic_state": {
     "SUPPORTED": 4,
-    "UNPROVEN_UNTESTED": 24,
+    "UNPROVEN_UNTESTED": 23,
     "ESTABLISHED_BENCHMARK": 7,
-    "FALSIFIED_CLINICAL": 9,
+    "FALSIFIED_CLINICAL": 10,
     "FALSIFIED_PK_SAFETY": 7,
-    "ARTIFACT_CONFOUNDED": 8
+    "ARTIFACT_CONFOUNDED": 1
   },
   "origin_x_tier_matrix": {
-    "EXPLORE_INHERITED_40": {
-      "TIER_1_ACTIONABLE_NOW": 3,
-      "TIER_2_FOCUSED_GATE_FIRST": 3,
+    "CURATED_CLINICAL_33": {
+      "TIER_1_ACTIONABLE_NOW": 2,
+      "TIER_2_FOCUSED_GATE_FIRST": 4,
       "TIER_3_EXPLORATORY_DISCOVERY": 10,
       "COMPANION_PROTOCOL_ONLY": 1,
       "BIOMARKER_BENCHMARK_ONLY": 4,
-      "DROPPED_FALSIFIED_EXCLUDED": 19
+      "DROPPED_FALSIFIED_EXCLUDED": 12
     },
     "PHASE3B_DENOVO_19": {
       "TIER_2_FOCUSED_GATE_FIRST": 2,
-      "TIER_3_EXPLORATORY_DISCOVERY": 9,
+      "TIER_3_EXPLORATORY_DISCOVERY": 8,
       "BIOMARKER_BENCHMARK_ONLY": 3,
-      "DROPPED_FALSIFIED_EXCLUDED": 5
+      "DROPPED_FALSIFIED_EXCLUDED": 6
     }
   },
   "explore_tier_to_carbon_decision": {
-    "BA9_Frozen_Naming_Call_Unscored": {
-      "KEEP_EXPLORATORY_UNPROVEN": 2,
-      "DROP": 8
-    },
     "Tier_1_White_Space_Core": {
-      "KEEP_EXPLORATORY_UNPROVEN": 3,
+      "KEEP_EXPLORATORY_UNPROVEN": 4,
       "RECLASSIFY_BENCHMARK_OR_BIOMARKER": 1
     },
     "Tier_2_Crowded_Clinical_Benchmarks_And_Combinatorial_Anchors": {
@@ -62,12 +58,12 @@
     },
     "Tier_4_Exploratory_Mechanistic_Comparators": {
       "KEEP_CORE": 1,
-      "KEEP_EXPLORATORY_UNPROVEN": 3,
+      "KEEP_EXPLORATORY_UNPROVEN": 4,
       "DROP": 1
     },
     "Tier_5_Parked_Negative_Or_Exposure_Benchmarks": {
       "RECLASSIFY_BENCHMARK_OR_BIOMARKER": 1,
-      "DROP": 5
+      "DROP": 6
     },
     "Unadopted_Screen_Or_Blind_Survivor": {
       "KEEP_CORE": 1,
@@ -77,7 +73,7 @@
     }
   },
   "subnode_unbundling_summary": {
-    "total_subnodes": 19,
+    "total_subnodes": 18,
     "by_parent": {
       "C014": {
         "total": 2,
@@ -86,17 +82,24 @@
           "CHMP2B"
         ],
         "reclassified_biomarker": [],
-        "dropped_from_bundle": []
+        "excluded_comparators": []
       },
       "C015": {
-        "total": 8,
+        "total": 2,
         "retained_exploratory": [
           "SCFD1",
-          "G2E3",
+          "G2E3"
+        ],
+        "reclassified_biomarker": [],
+        "excluded_comparators": []
+      },
+      "C023": {
+        "total": 6,
+        "retained_exploratory": [
           "YKT6"
         ],
         "reclassified_biomarker": [],
-        "dropped_from_bundle": [
+        "excluded_comparators": [
           "SEC22B",
           "STX5",
           "GOSR1",
@@ -113,18 +116,17 @@
           "CHI3L1",
           "CHI3L2"
         ],
-        "dropped_from_bundle": []
+        "excluded_comparators": []
       },
       "C018": {
-        "total": 5,
+        "total": 4,
         "retained_exploratory": [
           "C1QA",
           "C1QB",
           "C1QC"
         ],
         "reclassified_biomarker": [],
-        "dropped_from_bundle": [
-          "C3",
+        "excluded_comparators": [
           "C4B"
         ]
       }
@@ -699,11 +701,11 @@
     }
   },
   "registry_sha12": {
-    "phase4_unified_portfolio": "0ba71fbeabe8",
+    "phase4_unified_portfolio": "37bf8f973537",
     "phase4_unified_cis_intervals": "601f6f08fd5c",
     "phase3_sso_offtarget_audit": "038dea57c22d",
-    "phase3_execution_readiness": "6fe7e0774170",
-    "phase3b_denovo_candidates": "c2e9f4a4922c",
+    "phase3_execution_readiness": "3a5ecb8e5a49",
+    "phase3b_denovo_candidates": "1dae00481660",
     "phase3b_denovo_sso_intervals": "f46fb8103ef2"
   }
 }

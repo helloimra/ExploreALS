@@ -1,4 +1,4 @@
-"""Hardened Phase 4 cross-phase portfolio (59), cis-interval (26), dossier-sync, JSON, & biosecurity validators."""
+"""Hardened Phase 4 cross-phase portfolio (52), cis-interval (26), dossier-sync, JSON, & biosecurity validators."""
 from __future__ import annotations
 
 import json
@@ -72,9 +72,9 @@ def verify_phase4_gates(
     exp_pids = set(dec_map) | set(p3b_map)
     got_pids = [r["portfolio_id"] for r in port_rows]
     if len(got_pids) != len(set(got_pids)) or set(got_pids) != exp_pids:
-        errors.append(f"phase4_unified_portfolio.csv portfolio_id set ({len(got_pids)}) != disjoint union of 40 ExploreALS + 19 Phase 3B ({len(exp_pids)})")
+        errors.append(f"phase4_unified_portfolio.csv portfolio_id set ({len(got_pids)}) != disjoint union of 33 Curated + 19 Phase 3B ({len(exp_pids)})")
     if sorted(int(r["unified_rank"]) for r in port_rows) != list(range(1, len(port_rows) + 1)):
-        errors.append("phase4_unified_portfolio.csv unified_rank is not contiguous 1..59")
+        errors.append("phase4_unified_portfolio.csv unified_rank is not contiguous 1..52")
 
     exp_ivs = set(ot3a_map) | set(sso3b_map)
     got_ivs = [r["interval_id"] for r in cis_rows]
@@ -140,7 +140,7 @@ def verify_phase4_gates(
                 errors.append(f"{pid}: lead_cis_interval ({r['lead_cis_interval_id']},{r['lead_offtarget_safety_status']}) != {exp_lead}")
             if mode == "full" and pid in dec_map:
                 md_txt = (carbon_root / "reports" / "candidates" / f"{pid}.md").read_text(encoding="utf-8")
-                if f"unified_rank = #{r['unified_rank']}/59" not in md_txt or f"scientific_actionability_tier = {r['scientific_actionability_tier']}" not in md_txt:
+                if f"unified_rank = #{r['unified_rank']}/52" not in md_txt or f"scientific_actionability_tier = {r['scientific_actionability_tier']}" not in md_txt:
                     errors.append(f"reports/candidates/{pid}.md out of sync with phase4_unified_portfolio.csv")
                 if pid in rd_map and f"primary_modality_specific = {rd_map[pid]['primary_modality_specific']}" not in md_txt:
                     errors.append(f"reports/candidates/{pid}.md missing Phase 3A primary_modality_specific sync")
@@ -218,7 +218,7 @@ def verify_phase4_gates(
                 "1. Right Target", "3. Right Modality",
                 "Translational Dossier Schema 3.0", "<footer", "more_in_JSON", "Quantitative Anchor:",
                 "PMID:40349716", "PMID:37264228", "PMID:35197629", "D003", "D045", "Phase 3A",
-                "fixing intake", "prior intake", "Cytosolic vs. ER",
+                "fixing intake", "prior intake", "IL1RL1 — Cytosolic vs. ER",
                 'font-size="9', 'font-size="10', 'font-size="11',
                 "sp0;", "pm1_50", "pm2_25", "sub18_core_nonconstr",
                 "!important", "hidden lg:block", "hidden lg:flex", "hidden lg:inline-block",
@@ -230,6 +230,11 @@ def verify_phase4_gates(
                 "miss 60%–75% of top-quintile", "miss 60%-75% of top-quintile", "in rs12608932 A/A",
                 "ASHA624_or_Cys311_Class", "SARM1 T-lock epistasis", "phenoconversion axis",
                 "genotype-modular genotype-stratified",
+                "OTS Coordinate", "W3C PROV", "from scratch",
+                "BA9-01", "BA9-02", "BA9-03", "BA9-05", "BA9-06", "BA9-07", "BA9-08", "BA9-09", "BA9-10",
+                "DROP_FROM_BUNDLE", "Sole GC-adjusted BA9", "HISTORICAL_BA9", "CANONICAL_21",
+                "59-Candidate", "Verify in Tab 6", "Inspect in Tab 2", "3. Pathway Genes",
+                "SELF_CORRECTION", "RELEASE_MILESTONE", "Self-Corrections",
             ):
                 if banned in htxt:
                     errors.append(f"Dossier Schema 3.0 regression in {lbl}: found banned string '{banned}'")
@@ -247,14 +252,17 @@ def verify_phase4_gates(
                 "const DATA_NYGC_META =", "const DATA_FUNNEL =", "const DATA_DROPS =", "const DATA_SUM =",
                 "const DATA_LENSES =", "const DATA_CONTRASTS =",
                 "const DATA_RUNS =", "const DATA_DATASETS =", "const DATA_FORMULAS =", "const DATA_OVERLAP =",
-                "4. Funnel &amp; Cohorts", "5. Dossiers (59)", "6. Replication", 'id="rep-dag-box"', 'id="sandbox-drawer"',
-                "Monograph &rarr;", "Summary &rarr;", "Summary-of-Findings Dossier",
-                "Methodology &amp; Decision Guide", "OTS Coordinate &amp; Hybridization Standard", "Target Modality (TPP)",
+                "1. Triage Table (52)", "2. Candidate Reports (52)",
+                "3. Splice Windows (26)", "4. Replication", 'id="rep-dag-box"', 'id="sandbox-drawer"',
+                "Subunit &amp; Selectivity", "194 / 194 (100%) SHA-256",
+                "Monograph &rarr;", "Summary &rarr;", "Summary Report",
+                "Methodology &amp; Decision Guide", "6-Tier GRCh38 Hybridization Screen", "Target Modality (TPP)",
                 "https://alphafold.ebi.ac.uk/entry/", "https://www.informatics.jax.org/marker/MGI:",
                 "PMID:40354799", "PMID:37267913", "C016:'ENSG00000118564'",
                 "Secreted Decoy sST2 vs. Membrane ST2L", 'role="tabpanel"',
                 "md:grid-cols-[228px_minmax(0,1fr)]",
                 'id="d-aside"', 'id="d-slice-bar"', 'id="d-lens"', 'id="p-lens-bar"', 'id="contrasts-drawer"',
+                'id="tab-btn-home"', 'id="view-home"', "const DATA_UPDATES =", "Living Research Log",
                 "ADVANCE GATE (GO CRITERIA)", "FALSIFICATION GATE (KILL / NO-GO CRITERIA)",
             ):
                 if req_str not in htxt:

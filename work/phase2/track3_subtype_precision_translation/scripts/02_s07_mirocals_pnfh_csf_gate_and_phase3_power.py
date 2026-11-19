@@ -159,9 +159,61 @@ def main() -> None:
 
     power_grid = [
         schoenfeld_phase3_design(hr=hr, power=pw)
-        for hr in (0.52, 0.62, 0.68, 0.70)
+        for hr in (0.52, 0.62, 0.64, 0.66, 0.68, 0.70)
         for pw in (0.80, 0.90)
     ]
+
+    # Calibrate MIROCALS BioVendor log-normal (P<=750=20/220, P<=3700=174/220) & Al Khleifat 2026 (PMID:42836993) sensitivities
+    z_750 = float(stats.norm.ppf(20.0 / 220.0))
+    z_3700 = float(stats.norm.ppf(174.0 / 220.0))
+    sigma_ln = (math.log(3700.0) - math.log(750.0)) / (z_3700 - z_750)
+    mu_ln = math.log(3700.0) - z_3700 * sigma_ln
+    # Event hazard ratio high(>3700, 20.91%) vs low(<=3700, 79.09%) from ITT HR=0.81 = exp(w_low*ln(0.52) + w_hi*ln(1.37))
+    w_low_itt = (math.log(1.37) - math.log(0.81)) / (math.log(1.37) - math.log(0.52))
+    rel_event_rate_hi_vs_low = ((1.0 - w_low_itt) / (46.0 / 220.0)) / (w_low_itt / (174.0 / 220.0))
+
+    offset_rows = []
+    for k_slope, label in [
+        (4.5, "unbridged_assay_4p5x_higher"),
+        (1.8, "unbridged_assay_1p8x_higher"),
+        (1.0, "calibrated_biovendor_or_p80_bridged"),
+        (1.0 / 1.8, "unbridged_assay_1p8x_lower_eg_MSD"),
+        (1.0 / 4.5, "unbridged_assay_4p5x_lower"),
+    ]:
+        eff_bv_cut = 3700.0 / k_slope
+        elig_total = float(stats.norm.cdf((math.log(eff_bv_cut) - mu_ln) / sigma_ln))
+        true_low_captured = min(elig_total, 174.0 / 220.0) / (174.0 / 220.0)
+        false_hi_admitted_frac_of_hi = max(0.0, elig_total - (174.0 / 220.0)) / (46.0 / 220.0)
+        n_low_in = min(elig_total, 174.0 / 220.0)
+        n_hi_in = max(0.0, elig_total - (174.0 / 220.0))
+        ev_share_hi = (n_hi_in * rel_event_rate_hi_vs_low) / max(n_low_in + n_hi_in * rel_event_rate_hi_vs_low, 1e-9)
+        hr_diluted_from_0p70 = math.exp((1.0 - ev_share_hi) * math.log(0.70) + ev_share_hi * math.log(1.37))
+        z_pow_247 = abs(math.log(hr_diluted_from_0p70)) * math.sqrt(247.0 * 0.25) - float(stats.norm.ppf(0.975))
+        pow_at_247 = float(stats.norm.cdf(z_pow_247))
+        offset_rows.append({
+            "platform_scenario": label,
+            "assay_vs_biovendor_slope_k": round(k_slope, 4),
+            "effective_biovendor_cutoff_pg_ml": round(eff_bv_cut, 1),
+            "apparent_lp_eligible_fraction": round(elig_total, 4),
+            "true_low_pnfh_responders_captured_pct": round(100.0 * true_low_captured, 2),
+            "top_quintile_nonresponders_admitted_pct": round(100.0 * false_hi_admitted_frac_of_hi, 2),
+            "diluted_event_weighted_hr_if_true_low_0p70": round(hr_diluted_from_0p70, 4),
+            "power_at_247_deaths_pct": round(100.0 * pow_at_247, 2),
+        })
+
+    # Non-collapsible Cox conditional de-attenuation (Al Khleifat 2026 PMID:42836993: |ln(0.28)/ln(0.32)| = 1.1172x, TRICALS r^2=12.7%)
+    tricals_deatten_rows = []
+    for mult, note in [(1.00, "unadjusted_marginal_logrank"), (1.06, "conservative_half_deattenuation"), (round(abs(math.log(0.28) / math.log(0.32)), 4), "mirocals_observed_tricals_log_hr_ratio_1p1172")]:
+        hr_cond = math.exp(math.log(0.70) * mult)
+        d_80 = math.ceil(((float(stats.norm.ppf(0.975)) + float(stats.norm.ppf(0.80))) ** 2) / (0.25 * (math.log(hr_cond) ** 2)))
+        pow_247 = float(stats.norm.cdf(abs(math.log(hr_cond)) * math.sqrt(247.0 * 0.25) - float(stats.norm.ppf(0.975))))
+        tricals_deatten_rows.append({
+            "cox_model": note,
+            "log_hr_multiplier": mult,
+            "effective_conditional_hr_from_0p70": round(hr_cond, 4),
+            "required_deaths_80pct_power": int(d_80),
+            "power_at_preserved_247_deaths_pct": round(100.0 * pow_247, 2),
+        })
 
     out = {
         "analysis_run_id": "RUN-P2-T3-002",
@@ -170,6 +222,11 @@ def main() -> None:
         "dia_4center_symptomatic_als": analyze_cohort_nefh(dia_mat, c2_idx["SymptomStatus"], ["sALS", "C9orf72", "SOD1"]),
         "dia_4center_sals_only": analyze_cohort_nefh(dia_mat, c2_idx["SymptomStatus"], ["sALS"]),
         "prospective_phase3_schoenfeld_grid": power_grid,
+        "nov2026_platform_offset_and_tricals_cox_sensitivity": {
+            "mirocals_lognormal_fit": {"mu_ln": round(mu_ln, 4), "sigma_ln": round(sigma_ln, 4), "tricals_pnfh_r2": 0.127},
+            "unbridged_3700_platform_offset_grid": offset_rows,
+            "tricals_covariate_cox_deattenuation_grid": tricals_deatten_rows,
+        },
     }
     (OUT_DIR / "run_p2_t3_002_s07_mirocals_pnfh_gate.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
     print("SAVED run_p2_t3_002_s07_mirocals_pnfh_gate.json")

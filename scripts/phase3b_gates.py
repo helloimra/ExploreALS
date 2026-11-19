@@ -38,7 +38,7 @@ EXP_EV_COLS = "evidence_id,carbon_id,subnode_id,analysis_run_id,source_type,sour
 
 
 def _build_explore_exclusions(intake: list[dict[str, str]], subnodes: list[dict[str, str]]) -> tuple[set[str], set[str]]:
-    genes = {"TARDBP", "SOD1", "C9ORF72", "FUS", "NPTX2", "NEFL", "NEFH", "GFAP", "IREB2", "PTAR1", "NMNAT2", "ST2"}
+    genes = {"TARDBP", "SOD1", "C9ORF72", "FUS", "NPTX2", "NEFL", "NEFH", "GFAP", "IREB2", "PTAR1", "NMNAT2", "ST2", "C3"}
     drugs = {
         "riluzole", "baricitinib", "memantine", "trazodone", "apilimod", "icerguastat", "sephin1", "ifb-088",
         "dexmedetomidine", "cuatsm", "mycophenolate mofetil", "mycophenolate", "tamoxifen", "ezogabine", "retigabine",

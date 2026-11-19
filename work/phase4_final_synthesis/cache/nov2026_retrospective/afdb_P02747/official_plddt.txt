@@ -1,0 +1,12 @@
+
+[*] AlphaFold pLDDT Metrics for Accession: P02747
+-----------------------------------------------------------------
+  -> Overall Global pLDDT   : 80.56
+  -> Fraction Very Low (<50): 0.037 (3.7%)
+  -> Fraction Low (50-70)   : 0.355 (35.5%)
+  -> Fraction Confident     : 0.131 (13.1%)
+  -> Fraction Very High     : 0.478 (47.8%)
+-----------------------------------------------------------------
+[*] pLDDT Conclusion:
+  -> Protein has moderate prediction confidence. Certain regions might be flexible or poorly predicted.
+

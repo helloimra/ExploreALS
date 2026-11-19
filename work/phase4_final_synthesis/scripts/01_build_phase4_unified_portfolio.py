@@ -128,7 +128,7 @@ def main() -> None:
         if cid in rd_map:
             rd = rd_map[cid]
             rows.append({
-                "unified_rank": "0", "portfolio_id": cid, "origin_phase": "EXPLORE_INHERITED_40",
+                "unified_rank": "0", "portfolio_id": cid, "origin_phase": "CURATED_CLINICAL_33",
                 "origin_subcohort": it["cohort_group"], "track": d["track"], "gene_or_drug": rd["gene_or_drug"],
                 "candidate_type": classify_explore_type(cid, it, dec), "primary_modality_specific": rd["primary_modality_specific"],
                 "epistemic_state": epi, "decision": dec, "scientific_actionability_tier": rd["scientific_actionability_tier"],
@@ -144,7 +144,7 @@ def main() -> None:
             ctype, pmod, gclass, ebasis, hcnt, hstr = EXPLORE_BENCHMARK_SPECS[cid]
             nxt = d["discriminating_next_test"].strip() or f"Reference calibration benchmark ({d['name']}); not an active NCE discovery program."
             rows.append({
-                "unified_rank": "0", "portfolio_id": cid, "origin_phase": "EXPLORE_INHERITED_40",
+                "unified_rank": "0", "portfolio_id": cid, "origin_phase": "CURATED_CLINICAL_33",
                 "origin_subcohort": it["cohort_group"], "track": "BIOMARKER" if ctype == "BIOMARKER_CSF" else d["track"],
                 "gene_or_drug": d["name"], "candidate_type": ctype, "primary_modality_specific": pmod,
                 "epistemic_state": epi, "decision": dec, "scientific_actionability_tier": "BIOMARKER_BENCHMARK_ONLY",
@@ -158,7 +158,7 @@ def main() -> None:
         else:
             pmod, ebasis = classify_explore_drop_basis(cid, it, epi)
             rows.append({
-                "unified_rank": "0", "portfolio_id": cid, "origin_phase": "EXPLORE_INHERITED_40",
+                "unified_rank": "0", "portfolio_id": cid, "origin_phase": "CURATED_CLINICAL_33",
                 "origin_subcohort": it["cohort_group"], "track": d["track"], "gene_or_drug": d["name"],
                 "candidate_type": classify_explore_type(cid, it, dec), "primary_modality_specific": pmod,
                 "epistemic_state": epi, "decision": dec, "scientific_actionability_tier": "DROPPED_FALSIFIED_EXCLUDED",
@@ -229,7 +229,7 @@ def main() -> None:
         "datasets_used": "DS001_COUNTS;DS001_META;DS001_ONEILL;DS_GENCODE_V46_COMP_GTF;DS_GNOMAD_V41_CONSTRAINT",
         "tools_and_skills_used": "gtex-database;opentargets-database;gnomad-database;tooluniverse-gene-liability;scripts.phase4_gates;uv-python",
         "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-15T01:05:00Z",
-        "summary": "Unified all 59 CarbonALS candidates (40 ExploreALS + 19 Phase 3B de novo), 19 sub-nodes, and 26 coordinate-only GRCh38 cis-regulatory intervals under pure scientific actionability & causal evidence basis with CELF5 NYGC/GTEx/liability profile and Phase 3A dossier sync.",
+        "summary": "Unified all 52 ALS hypotheses (33 curated clinical/genetic/pathology programs + 19 systematic multi-omic screen nominations), 18 subunit/comparator dissections, and 26 coordinate-only GRCh38 cis-regulatory intervals under pure scientific actionability & causal evidence basis with CELF5 NYGC/GTEx/liability profile and Phase 3A dossier sync.",
     }
     runs = (
         [p4_run if r["analysis_run_id"] == "RUN-P4-001" else r for r in runs]
@@ -247,10 +247,10 @@ def main() -> None:
         "counts_by_epistemic_state": dict(Counter(r["epistemic_state"] for r in rows)),
         "origin_x_tier_matrix": {
             orig: dict(Counter(r["scientific_actionability_tier"] for r in rows if r["origin_phase"] == orig))
-            for orig in ("EXPLORE_INHERITED_40", "PHASE3B_DENOVO_19")
+            for orig in ("CURATED_CLINICAL_33", "PHASE3B_DENOVO_19")
         },
         "explore_tier_to_carbon_decision": {
-            et: dict(Counter(r["decision"] for r in rows if r["origin_phase"] == "EXPLORE_INHERITED_40" and intake[r["portfolio_id"]]["explore_tier"] == et))
+            et: dict(Counter(r["decision"] for r in rows if r["origin_phase"] == "CURATED_CLINICAL_33" and intake[r["portfolio_id"]]["explore_tier"] == et))
             for et in sorted({v["explore_tier"] for v in intake.values()})
         },
         "subnode_unbundling_summary": {
@@ -260,9 +260,9 @@ def main() -> None:
                     "total": sum(1 for s in subnodes if s["parent_carbon_id"] == par),
                     "retained_exploratory": [s["gene_symbol"] for s in subnodes if s["parent_carbon_id"] == par and s["subnode_verdict"].startswith("KEEP_")],
                     "reclassified_biomarker": [s["gene_symbol"] for s in subnodes if s["parent_carbon_id"] == par and s["subnode_verdict"].startswith("RECLASSIFY_")],
-                    "dropped_from_bundle": [s["gene_symbol"] for s in subnodes if s["parent_carbon_id"] == par and s["subnode_verdict"].startswith("DROP")],
+                    "excluded_comparators": [s["gene_symbol"] for s in subnodes if s["parent_carbon_id"] == par and s["subnode_verdict"].startswith(("DROP", "EXCLUDE"))],
                 }
-                for par in ("C014", "C015", "C017", "C018")
+                for par in ("C014", "C015", "C023", "C017", "C018")
             },
         },
         "unified_cis_intervals_summary": {

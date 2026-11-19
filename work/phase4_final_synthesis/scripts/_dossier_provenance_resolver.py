@@ -21,15 +21,15 @@ DS_LABELS: dict[str, tuple[str, list[str]]] = {
     "DS001_FLAGSHIP": ("NYGC ALS Consortium", ["PMID:36482247", "GSE153960"]),
     "DS001_ONEILL": ("O'Neill et al. 2025 Subtypes", ["DOI:10.1016/j.celrep.2025.115402"]),
     "DS001_TAM": ("Tam et al. 2019 Subtypes", ["PMID:31665631", "GSE124439"]),
-    "DS003_PB": ("Pineda et al. 2024 snRNA-seq", ["PMID:38518782", "PRJNA1073234"]),
-    "DS003_SUPP": ("Pineda et al. 2024 snRNA-seq", ["PMID:38518782"]),
+    "DS003_PB": ("Pineda et al. 2024 snRNA-seq", ["PMID:38521060", "PRJNA1073234"]),
+    "DS003_SUPP": ("Pineda et al. 2024 snRNA-seq", ["PMID:38521060"]),
     "DS_EDIN_PB": ("Edinburgh Cortex snRNA-seq", ["GSE290359"]),
     "DS014_PRUD": ("Prudencio et al. 2015", ["GSE67196"]),
     "DS_CONS2026": ("2026 ALS Multiome Consortia", ["PMC12919128", "PMC12982666"]),
     "DS031_ZHANG": ("Zhang et al. 2026 Spatial", ["PMID:42135512", "GSE288365"]),
     "DS_CRYPTIC": ("Brown & Ma 2022 Cryptic Atlas", ["PMID:35197628", "PMID:35197626"]),
     "DS_ZENG_APA": ("Zeng et al. 2025 TDP-43 APA", ["DOI:10.1038/s41593-025-02049-3"]),
-    "DS_BRYCE_APA": ("Bryce-Smith et al. 2025 APA/CE", ["PMID:40038262"]),
+    "DS_BRYCE_APA": ("Bryce-Smith et al. 2025 APA/CE", ["PMID:41120751"]),
     "DS026_FUJITA": ("Fujita et al. ROSMAP eQTL", ["syn52335732"]),
     "DS045_TRAUT": ("Trautwig et al. 2025 CSF", ["PMC12082929", "PMID:40375307"]),
     "DS045_XML": ("Trautwig et al. 2025 CSF", ["PMC12082929"]),
@@ -54,10 +54,11 @@ PAREN_VS_RE = re.compile(r"\((\d+\s+[^()]{1,40}?\s+vs\.?\s+\d+\s+[^()]{1,40}?)\)
 
 SUBNODE_GENE_MAP: dict[str, str] = {
     "C014-N1": "CHMP7", "C014-N2": "CHMP2B",
-    "C015-N1": "SCFD1", "C015-N2": "G2E3", "C015-N3": "YKT6", "C015-N4": "SEC22B",
-    "C015-N5": "STX5", "C015-N6": "GOSR1", "C015-N7": "NSF", "C015-N8": "GDI2",
+    "C015-N1": "SCFD1", "C015-N2": "G2E3",
+    "C023-N1": "YKT6", "C023-N2": "SEC22B", "C023-N3": "STX5",
+    "C023-N4": "GOSR1", "C023-N5": "NSF", "C023-N6": "GDI2",
     "C017-N1": "CHIT1", "C017-N2": "GPNMB", "C017-N3": "CHI3L1", "C017-N4": "CHI3L2",
-    "C018-N1": "C1QA", "C018-N2": "C1QB", "C018-N3": "C1QC", "C018-N4": "C3", "C018-N5": "C4B",
+    "C018-N1": "C1QA", "C018-N2": "C1QB", "C018-N3": "C1QC", "C018-N4": "C4B",
 }
 
 MODEL_EIDS = {
@@ -170,8 +171,10 @@ def _classify_nonfile_prov(row: dict[str, str]) -> str:
 
 
 def _clean_v0_text(txt: str) -> str:
-    txt = txt.replace("Audit of ExploreALS C021 identifiers", "Chemical registry verification of Sephin1 / icerguastat")
-    txt = txt.replace("ExploreALS CHEMBL3545058=", "Misattributed CHEMBL3545058=")
+    txt = re.sub(r"Audit of (?:ExploreALS|baseline intake) C021 identifiers", "Chemical registry verification of Sephin1 / icerguastat", txt, flags=re.IGNORECASE)
+    txt = re.sub(r"(?:ExploreALS|Baseline intake) CHEMBL3545058=", "Misattributed CHEMBL3545058=", txt, flags=re.IGNORECASE)
+    txt = re.sub(r"\b(?:baseline|prior)\s+intake\b", "baseline annotation", txt, flags=re.IGNORECASE)
+    txt = re.sub(r"\bintake\b", "baseline", txt, flags=re.IGNORECASE)
     txt = re.sub(r"\bnon-ExploreALS\b", "de novo", txt, flags=re.IGNORECASE)
     txt = re.sub(r"\bExploreALS\b", "baseline annotation", txt, flags=re.IGNORECASE)
     txt = re.sub(r"\bCarbonALS\b", "ExploreALS", txt, flags=re.IGNORECASE)
@@ -179,7 +182,7 @@ def _clean_v0_text(txt: str) -> str:
     txt = re.sub(r"[;,\s]*(?:[A-Z0-9/]+\s+)?(?:5D\s+)?liability=[0-9./]+/100(?:\s*\([A-Z]+\))?", "", txt, flags=re.IGNORECASE)
     txt = re.sub(r"[;,\s]*5D=[0-9.]+/100", "", txt, flags=re.IGNORECASE)
     txt = re.sub(r"\bDS045\b|\bD045\b", "Trautwig 2025 CSF (PMC12082929)", txt)
-    txt = re.sub(r"\bD003\b", "Pineda 2024 (PMID:38518782)", txt)
+    txt = re.sub(r"\bD003\b", "Pineda 2024 (PMID:38521060)", txt)
     for k, v in (
         ("PASS_CLEAN_GE2MM", "Clean >=2mm"), ("CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED", "Caution (1mm/wobble)"),
         ("WARN_1MM_OR_WOBBLE_CONSTRAINED_NEURONAL", "Warn (CNS hit)"), ("FAIL_EXACT_0MM_OFFTARGET", "Fail (exact 0mm)"),

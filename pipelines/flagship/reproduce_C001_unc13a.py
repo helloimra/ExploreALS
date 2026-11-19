@@ -1,4 +1,4 @@
-"""Flagship Reproducer #4: C001 — UNC13A Cryptic-Exon Steric SSO (Tier 2, Act #4 / Bio #1)."""
+"""Flagship Reproducer #3: C001 — UNC13A Cryptic-Exon Steric SSO (Tier 2, Act #3 / Bio #1)."""
 from __future__ import annotations
 
 import sys
@@ -30,7 +30,7 @@ def main() -> None:
     lead2 = ot_rows["chr19:17642537-17642554(-)"]
 
     checks = [
-        ("Portfolio Actionable Rank & Biological Rank #1", f"Act #{port['unified_rank']} ({port['decision']})", "Act #4 (KEEP_CORE)", "PASS"),
+        ("Portfolio Actionable Rank & Biological Rank #1", f"Act #{port['unified_rank']} ({port['decision']})", "Act #3 (KEEP_CORE)", "PASS"),
         assert_close(f"[MEASURED:{src_tag}] Brown 2022 UNC13A cryptic junction dPSI", ce_inc, 0.4632, rtol=1e-3),
         assert_close(f"[MEASURED:{src_tag}] Spillman 2026 C9-FTD synaptosome UNC13A log2FC", syn_lfc, -0.2496, rtol=1e-3),
         ("Promoted Lead #2 Clean >=2mm Off-Target Status", lead2["offtarget_safety_status"], "PASS_CLEAN_GE2MM", "PASS"),
@@ -38,7 +38,7 @@ def main() -> None:
     ]
     print_audit_report(
         "C001", "UNC13A Cryptic-Exon Steric SSO", checks,
-        "Human rs12973192/rs12608932 genetics, TDP-43 CE pathology, and human cortical/spinal MN synaptic rescue (>30% protein threshold; Keuss 2026 Nature 10.1038/s41586-026-11256-2) are [MEASURED] (Bio #1; ~43% NFE A/A modulates magnitude without conferring exemption); SantaLucia Tm & Stage 2 24-48 mg multiplex dosing are [MODEL_PRIOR].",
+        "Human rs12973192/rs12608932 genetics, TDP-43 CE pathology, and human cortical/spinal MN synaptic rescue (>30% protein threshold; Keuss 2026 Nature 10.1038/s41586-026-11256-2) are [MEASURED] (Bio #1; ~43% NFE A/A modulates magnitude without conferring exemption); SantaLucia Tm & Stage 2 6-9 mg multiplex dosing are [MODEL_PRIOR].",
     )
 
 

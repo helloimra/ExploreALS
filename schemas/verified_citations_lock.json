@@ -1,0 +1,1477 @@
+{
+  "schema_version": "1.2.2",
+  "description": "Deterministic live-verified bibliographic & trial registry lock enforced by scripts/verify_carbon_als.py",
+  "banned_mismatched_ids": [
+    "PMID:22036688",
+    "PMID:23963640",
+    "PMID:24145411",
+    "PMID:27545677",
+    "PMID:28181924",
+    "PMID:30737180",
+    "PMID:32641517",
+    "PMID:33097810",
+    "PMID:33789108",
+    "PMID:34077762",
+    "PMID:34432976",
+    "PMID:35197629",
+    "PMID:35580603",
+    "PMID:35650188",
+    "PMID:36167809",
+    "PMID:37264228",
+    "PMID:38518782",
+    "PMID:39481520",
+    "PMID:39609622",
+    "PMID:39938518",
+    "PMID:40038262",
+    "PMID:40349716",
+    "PMID:40493192",
+    "PMID:40522184",
+    "PMID:40825311",
+    "PMID:41634399",
+    "PMID:41908214",
+    "NCT05695521",
+    "NCT05868837",
+    "NCT06069687",
+    "NCT06123456",
+    "NCT06392347",
+    "NCT07429695",
+    "NCT07625359",
+    "NCT07979323",
+    "10.1038/s41586-026-08912-4",
+    "10.1038/s41586-026-10912-3",
+    "10.1038/s41588-026-02189-3"
+  ],
+  "pmids": {
+    "11175792": {
+      "first_author": "LaVaute T",
+      "pubdate": "2001 Feb",
+      "journal": "Nat Genet",
+      "title": "Targeted deletion of the gene encoding iron regulatory protein-2 causes misregulation of iron metabolism and neurodegenerative disease in mice."
+    },
+    "12807386": {
+      "first_author": "Ryberg H",
+      "pubdate": "2003 Jul",
+      "journal": "Acta Neurol Scand",
+      "title": "A double-blind randomized clinical trial in amyotrophic lateral sclerosis using lamotrigine: effects on CSF glutamate, aspartate, branched-chain amino acid levels and clinical parameters."
+    },
+    "15476821": {
+      "first_author": "Strop P",
+      "pubdate": "2004 Oct 29",
+      "journal": "J Mol Biol",
+      "title": "Structure of a human A-type potassium channel interacting protein DPPX, a member of the dipeptidyl aminopeptidase family."
+    },
+    "16750163": {
+      "first_author": "Young GS",
+      "pubdate": "2006 Jul 21",
+      "journal": "Biochem Biophys Res Commun",
+      "title": "Decreased cADPR and increased NAD+ in the Cd38-/- mouse."
+    },
+    "17694575": {
+      "first_author": "Baron U",
+      "pubdate": "2007 Sep",
+      "journal": "Eur J Immunol",
+      "title": "DNA demethylation in the human FOXP3 locus discriminates regulatory T cells from activated FOXP3(+) conventional T cells."
+    },
+    "19322194": {
+      "first_author": "Satoo K",
+      "pubdate": "2009 May 6",
+      "journal": "EMBO J",
+      "title": "The structure of Atg4B-LC3 complex reveals the mechanism of LC3 processing and delipidation during autophagy."
+    },
+    "19743457": {
+      "first_author": "Kaufmann P",
+      "pubdate": "2009 Aug",
+      "journal": "Ann Neurol",
+      "title": "Phase II trial of CoQ10 for ALS finds insufficient evidence to justify phase III."
+    },
+    "19961264": {
+      "first_author": "Pascuzzi RM",
+      "pubdate": "2010 May 3",
+      "journal": "Amyotroph Lateral Scler",
+      "title": "A phase II trial of talampanel in subjects with amyotrophic lateral sclerosis."
+    },
+    "20565333": {
+      "first_author": "de Carvalho M",
+      "pubdate": "2010 Oct",
+      "journal": "Amyotroph Lateral Scler",
+      "title": "A randomized, placebo-controlled trial of memantine for functional disability in amyotrophic lateral sclerosis."
+    },
+    "21358643": {
+      "first_author": "Polymenidou M",
+      "pubdate": "2011 Apr",
+      "journal": "Nat Neurosci",
+      "title": "Long pre-mRNA depletion and RNA missplicing contribute to neuronal vulnerability from loss of TDP-43."
+    },
+    "21518771": {
+      "first_author": "Zhu YB",
+      "pubdate": "2011 Jul 1",
+      "journal": "J Biol Chem",
+      "title": "Increased axonal mitochondrial mobility does not slow amyotrophic lateral sclerosis (ALS)-like disease in mutant SOD1 mice."
+    },
+    "21907140": {
+      "first_author": "Moroishi T",
+      "pubdate": "2011 Sep 7",
+      "journal": "Cell Metab",
+      "title": "The FBXL5-IRP2 axis is integral to control of iron metabolism in vivo."
+    },
+    "22343569": {
+      "first_author": "Boyman O",
+      "pubdate": "2012 Feb 17",
+      "journal": "Nat Rev Immunol",
+      "title": "The role of interleukin-2 during homeostasis and activation of the immune system."
+    },
+    "23613806": {
+      "first_author": "Berry JD",
+      "pubdate": "2013",
+      "journal": "PLoS One",
+      "title": "Design and initial results of a multi-phase randomized trial of ceftriaxone in amyotrophic lateral sclerosis."
+    },
+    "23980170": {
+      "first_author": "Liu X",
+      "pubdate": "2013 Sep 10",
+      "journal": "Proc Natl Acad Sci U S A",
+      "title": "Structural insights into the interaction of IL-33 with its receptors."
+    },
+    "24170856": {
+      "first_author": "Lobsiger CS",
+      "pubdate": "2013 Nov 12",
+      "journal": "Proc Natl Acad Sci U S A",
+      "title": "C1q induction and global complement pathway activation do not contribute to ALS toxicity in mutant SOD1 mice."
+    },
+    "24771634": {
+      "first_author": "Zhao Y",
+      "pubdate": "2014 Oct",
+      "journal": "J Clin Pharmacol",
+      "title": "Systemic pharmacokinetics and cerebrospinal fluid uptake of intravenous ceftriaxone in patients with amyotrophic lateral sclerosis."
+    },
+    "25297012": {
+      "first_author": "Cudkowicz ME",
+      "pubdate": "2014 Nov",
+      "journal": "Lancet Neurol",
+      "title": "Safety and efficacy of ceftriaxone for amyotrophic lateral sclerosis: a multi-stage, randomised, double-blind, placebo-controlled trial."
+    },
+    "25904686": {
+      "first_author": "Ikawa M",
+      "pubdate": "2015 May 19",
+      "journal": "Neurology",
+      "title": "Increased oxidative stress is related to disease severity in the ALS motor cortex: A PET study."
+    },
+    "26844270": {
+      "first_author": "Park SB",
+      "pubdate": "2015 Dec",
+      "journal": "EBioMedicine",
+      "title": "Flecainide in Amyotrophic Lateral Sclerosis as a Neuroprotective Strategy (FANS): A Randomized Placebo-Controlled Trial."
+    },
+    "26911633": {
+      "first_author": "Weiss MD",
+      "pubdate": "2016 Apr 19",
+      "journal": "Neurology",
+      "title": "A randomized trial of mexiletine in ALS: Safety and effects on muscle cramps and progression."
+    },
+    "26936937": {
+      "first_author": "Chen HJ",
+      "pubdate": "2016 May",
+      "journal": "Brain",
+      "title": "The heat shock response plays an important role in TDP-43 clearance: evidence for dysfunction in amyotrophic lateral sclerosis."
+    },
+    "27589995": {
+      "first_author": "Levine TD",
+      "pubdate": "2017 Feb",
+      "journal": "Amyotroph Lateral Scler Frontotemporal Degener",
+      "title": "Phase I clinical trial of safety of L-serine for ALS patients."
+    },
+    "27648472": {
+      "first_author": "Engel AG",
+      "pubdate": "2016 Oct",
+      "journal": "Neurol Genet",
+      "title": "Loss of MUNC13-1 function causes microcephaly, cortical hyperexcitability, and fatal myasthenia."
+    },
+    "27732842": {
+      "first_author": "Westergard T",
+      "pubdate": "2016 Oct 11",
+      "journal": "Cell Rep",
+      "title": "Cell-to-Cell Transmission of Dipeptide Repeat Proteins Linked to C9orf72-ALS/FTD."
+    },
+    "28128456": {
+      "first_author": "Lee JD",
+      "pubdate": "2017 Apr",
+      "journal": "Br J Pharmacol",
+      "title": "Pharmacological inhibition of complement C5a-C5a(1) receptor signalling ameliorates disease pathology in the hSOD1(G93A) mouse model of amyotrophic lateral sclerosis."
+    },
+    "28287329": {
+      "first_author": "Skytte Rasmussen M",
+      "pubdate": "2017 May 4",
+      "journal": "Autophagy",
+      "title": "ATG4B contains a C-terminal LIR motif important for binding and efficient cleavage of mammalian orthologs of yeast Atg8."
+    },
+    "28447936": {
+      "first_author": "Crespillo-Casado A",
+      "pubdate": "2017 Apr 27",
+      "journal": "Elife",
+      "title": "PPP1R15A-mediated dephosphorylation of eIF2α is unaffected by Sephin1 or Guanabenz."
+    },
+    "28456721": {
+      "first_author": "Kanamitsu K",
+      "pubdate": "2017 Sep",
+      "journal": "J Pharm Sci",
+      "title": "Investigation of the Importance of Multidrug Resistance-Associated Protein 4 (Mrp4/Abcc4) in the Active Efflux of Anionic Drugs Across the Blood-Brain Barrier."
+    },
+    "29672831": {
+      "first_author": "Kovalchuk MO",
+      "pubdate": "2018 Dec",
+      "journal": "Clin Pharmacol Ther",
+      "title": "Acute Effects of Riluzole and Retigabine on Axonal Excitability in Patients With Amyotrophic Lateral Sclerosis: A Randomized, Double-Blind, Placebo-Controlled, Crossover Trial."
+    },
+    "29934198": {
+      "first_author": "Ludolph AC",
+      "pubdate": "2018 Aug",
+      "journal": "Lancet Neurol",
+      "title": "Safety and efficacy of rasagiline as an add-on therapy to riluzole in patients with amyotrophic lateral sclerosis: a randomised, double-blind, parallel-group, placebo-controlled, phase 2 trial."
+    },
+    "29959396": {
+      "first_author": "Hampel P",
+      "pubdate": "2018 Jun 29",
+      "journal": "Sci Rep",
+      "title": "Azosemide is more potent than bumetanide and various other loop diuretics to inhibit the sodium-potassium-chloride-cotransporter human variants hNKCC1A and hNKCC1B."
+    },
+    "30562096": {
+      "first_author": "Pascual-Figal DA",
+      "pubdate": "2018 Dec",
+      "journal": "Circ Heart Fail",
+      "title": "Pulmonary Production of Soluble ST2 in Heart Failure."
+    },
+    "30643292": {
+      "first_author": "Klim JR",
+      "pubdate": "2019 Feb",
+      "journal": "Nat Neurosci",
+      "title": "ALS-implicated protein TDP-43 sustains levels of STMN2, a mediator of motor neuron growth and repair."
+    },
+    "30643298": {
+      "first_author": "Melamed Z",
+      "pubdate": "2019 Feb",
+      "journal": "Nat Neurosci",
+      "title": "Premature polyadenylation-mediated loss of stathmin-2 is a hallmark of TDP-43-dependent neurodegeneration."
+    },
+    "31059641": {
+      "first_author": "Tabrizi SJ",
+      "pubdate": "2019 Jun 13",
+      "journal": "N Engl J Med",
+      "title": "Targeting Huntingtin Expression in Patients with Huntington's Disease."
+    },
+    "31123140": {
+      "first_author": "Thompson AG",
+      "pubdate": "2019 Nov",
+      "journal": "J Neurol Neurosurg Psychiatry",
+      "title": "CSF chitinase proteins in amyotrophic lateral sclerosis."
+    },
+    "31665631": {
+      "first_author": "Tam OH",
+      "pubdate": "2019 Oct 29",
+      "journal": "Cell Rep",
+      "title": "Postmortem Cortex Samples Identify Distinct Molecular Subtypes of ALS: Retrotransposon Activation, Oxidative Stress, and Activated Glia."
+    },
+    "31892365": {
+      "first_author": "Abu-Rumeileh S",
+      "pubdate": "2019 Dec 31",
+      "journal": "Alzheimers Res Ther",
+      "title": "CSF biomarkers of neuroinflammation in distinct forms and subtypes of neurodegenerative dementia."
+    },
+    "31924448": {
+      "first_author": "Lee JS",
+      "pubdate": "2020 Mar 5",
+      "journal": "Mol Cell",
+      "title": "Antisense-Mediated Transcript Knockdown Triggers Premature Transcription Termination."
+    },
+    "32087251": {
+      "first_author": "Sasaki Y",
+      "pubdate": "2020 Jul",
+      "journal": "Exp Neurol",
+      "title": "cADPR is a gene dosage-sensitive biomarker of SARM1 activity in healthy, compromised, and degenerating axons."
+    },
+    "32128853": {
+      "first_author": "Shirakawa R",
+      "pubdate": "2020 Apr 15",
+      "journal": "EMBO J",
+      "title": "A SNARE geranylgeranyltransferase essential for the organization of the Golgi apparatus."
+    },
+    "32884139": {
+      "first_author": "Li X",
+      "pubdate": "2021 Jan",
+      "journal": "Cell Res",
+      "title": "Molecular basis for ligand activation of the human KCNQ2 channel."
+    },
+    "33098764": {
+      "first_author": "Lees JA",
+      "pubdate": "2020 Nov 19",
+      "journal": "Mol Cell",
+      "title": "Insights into Lysosomal PI(3,5)P(2) Homeostasis from a Structural-Biochemical Analysis of the PIKfyve Lipid Kinase Complex."
+    },
+    "33185189": {
+      "first_author": "Sporny M",
+      "pubdate": "2020 Nov 13",
+      "journal": "Elife",
+      "title": "Structural basis for SARM1 inhibition and activation under energetic stress."
+    },
+    "33226425": {
+      "first_author": "Wainger BJ",
+      "pubdate": "2021 Feb 1",
+      "journal": "JAMA Neurol",
+      "title": "Effect of Ezogabine on Cortical and Spinal Motor Neuron Excitability in Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial."
+    },
+    "33406435": {
+      "first_author": "Hughes RO",
+      "pubdate": "2021 Jan 5",
+      "journal": "Cell Rep",
+      "title": "Small Molecule SARM1 Inhibitors Recapitulate the SARM1(-/-) Phenotype and Allow Recovery of a Metastable Pool of Axons Fated to Degenerate."
+    },
+    "33570945": {
+      "first_author": "Davis RR",
+      "pubdate": "2021 Feb 25",
+      "journal": "J Med Chem",
+      "title": "Structural Insights into JAK2 Inhibition by Ruxolitinib, Fedratinib, and Derivatives Thereof."
+    },
+    "33944777": {
+      "first_author": "Li WH",
+      "pubdate": "2021 May 4",
+      "journal": "Elife",
+      "title": "Permeant fluorescent probes visualize the activation of SARM1 and uncover an anti-neurodegenerative drug candidate."
+    },
+    "34059824": {
+      "first_author": "Mohassel P",
+      "pubdate": "2021 Jul",
+      "journal": "Nat Med",
+      "title": "Childhood amyotrophic lateral sclerosis caused by excess sphingolipid synthesis."
+    },
+    "34191081": {
+      "first_author": "Aizawa H",
+      "pubdate": "2022 Feb",
+      "journal": "J Neurol",
+      "title": "Randomized phase 2 study of perampanel for sporadic amyotrophic lateral sclerosis."
+    },
+    "34321318": {
+      "first_author": "Coyne AN",
+      "pubdate": "2021 Jul 28",
+      "journal": "Sci Transl Med",
+      "title": "Nuclear accumulation of CHMP7 initiates nuclear pore complex injury and subsequent TDP-43 dysfunction in sporadic and familial ALS."
+    },
+    "34745222": {
+      "first_author": "Xie MJ",
+      "pubdate": "2021",
+      "journal": "Front Genet",
+      "title": "Autistic-Like Behavior and Impairment of Serotonin Transporter and AMPA Receptor Trafficking in N-Ethylmaleimide Sensitive Factor Gene-Deficient Mice."
+    },
+    "34873335": {
+      "first_author": "van Rheenen W",
+      "pubdate": "2021 Dec",
+      "journal": "Nat Genet",
+      "title": "Common and rare variant association analyses in amyotrophic lateral sclerosis identify 15 risk loci with distinct genetic architectures and neuron-specific biology."
+    },
+    "34991663": {
+      "first_author": "Bloom AJ",
+      "pubdate": "2022 Jan 6",
+      "journal": "Mol Neurodegener",
+      "title": "Constitutively active SARM1 variants that induce neuropathy are enriched in ALS patients."
+    },
+    "35197626": {
+      "first_author": "Ma XR",
+      "pubdate": "2022 Mar",
+      "journal": "Nature",
+      "title": "TDP-43 represses cryptic exon inclusion in the FTD-ALS gene UNC13A."
+    },
+    "35197628": {
+      "first_author": "Brown AL",
+      "pubdate": "2022 Mar",
+      "journal": "Nature",
+      "title": "TDP-43 loss and ALS-risk SNPs drive mis-splicing and depletion of UNC13A."
+    },
+    "35294901": {
+      "first_author": "Guerra San Juan I",
+      "pubdate": "2022 May 18",
+      "journal": "Neuron",
+      "title": "Loss of mouse Stmn2 function causes motor neuropathy."
+    },
+    "35334231": {
+      "first_author": "Shi Y",
+      "pubdate": "2022 May 5",
+      "journal": "Mol Cell",
+      "title": "Structural basis of SARM1 activation, substrate recognition, and inhibition by small molecules."
+    },
+    "35532908": {
+      "first_author": "Oki R",
+      "pubdate": "2022 Jun 1",
+      "journal": "JAMA Neurol",
+      "title": "Efficacy and Safety of Ultrahigh-Dose Methylcobalamin in Early-Stage Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial."
+    },
+    "35767949": {
+      "first_author": "Krus KL",
+      "pubdate": "2022 Jun 28",
+      "journal": "Cell Rep",
+      "title": "Loss of Stathmin-2, a hallmark of TDP-43-associated ALS, causes motor neuropathy."
+    },
+    "36129998": {
+      "first_author": "Miller TM",
+      "pubdate": "2022 Sep 22",
+      "journal": "N Engl J Med",
+      "title": "Trial of Antisense Oligonucleotide Tofersen for SOD1 ALS."
+    },
+    "36482247": {
+      "first_author": "Humphrey J",
+      "pubdate": "2023 Jan",
+      "journal": "Nat Neurosci",
+      "title": "Integrative transcriptomic analysis of the amyotrophic lateral sclerosis spinal cord implicates glial activation and suggests new risk genes."
+    },
+    "36927019": {
+      "first_author": "Baughn MW",
+      "pubdate": "2023 Mar 17",
+      "journal": "Science",
+      "title": "Mechanism of STMN2 cryptic splice-polyadenylation and its correction for TDP-43 proteinopathies."
+    },
+    "37070754": {
+      "first_author": "Sarparanta J",
+      "pubdate": "2023 Oct 17",
+      "journal": "Hum Mol Genet",
+      "title": "Extension of the DNAJB2a isoform in a dominant neuromyopathy family."
+    },
+    "37124168": {
+      "first_author": "Sun Y",
+      "pubdate": "2023 Jun",
+      "journal": "Ophthalmol Sci",
+      "title": "Safety and Target Engagement of Complement C1q Inhibitor ANX007 in Neurodegenerative Eye Disease: Results from Phase I Studies in Glaucoma."
+    },
+    "37188501": {
+      "first_author": "Mortberg MA",
+      "pubdate": "2023 Aug 11",
+      "journal": "Nucleic Acids Res",
+      "title": "A single-cell map of antisense oligonucleotide activity in the brain."
+    },
+    "37238921": {
+      "first_author": "Oh S",
+      "pubdate": "2023 Apr 23",
+      "journal": "Biomedicines",
+      "title": "Discovery of Biomarkers for Amyotrophic Lateral Sclerosis from Human Cerebrospinal Fluid Using Mass-Spectrometry-Based Proteomics."
+    },
+    "37267913": {
+      "first_author": "Morimoto S",
+      "pubdate": "2023 Jun 1",
+      "journal": "Cell Stem Cell",
+      "title": "Phase 1/2a clinical trial in ALS with ropinirole, a drug candidate identified by iPSC drug discovery."
+    },
+    "37317638": {
+      "first_author": "Yang Y",
+      "pubdate": "2023 Aug",
+      "journal": "Neuropathol Appl Neurobiol",
+      "title": "Treatment with the copper compound CuATSM has no significant effect on motor neuronal pathology in patients with ALS."
+    },
+    "37639327": {
+      "first_author": "Baskerville V",
+      "pubdate": "2024 Jan 4",
+      "journal": "Brain",
+      "title": "SUN1 facilitates CHMP7 nuclear influx and injury cascades in sporadic amyotrophic lateral sclerosis."
+    },
+    "37996528": {
+      "first_author": "López-Erauskin J",
+      "pubdate": "2024 Jan",
+      "journal": "Nat Neurosci",
+      "title": "Stathmin-2 loss leads to neurofilament-dependent axonal collapse driving motor and sensory denervation."
+    },
+    "38158550": {
+      "first_author": "Sandau US",
+      "pubdate": "2024 Jan",
+      "journal": "J Extracell Vesicles",
+      "title": "Recommendations for reproducibility of cerebrospinal fluid extracellular vesicle studies."
+    },
+    "38278991": {
+      "first_author": "Irwin KE",
+      "pubdate": "2024 Feb",
+      "journal": "Nat Med",
+      "title": "A fluid biomarker reveals loss of TDP-43 splicing repression in presymptomatic ALS-FTD."
+    },
+    "38521060": {
+      "first_author": "Pineda SS",
+      "pubdate": "2024 Apr 11",
+      "journal": "Cell",
+      "title": "Single-cell dissection of the human motor and prefrontal cortices in ALS and FTLD."
+    },
+    "38606777": {
+      "first_author": "Babu S",
+      "pubdate": "2024 Sep 3",
+      "journal": "Brain",
+      "title": "Apilimod dimesylate in C9orf72 amyotrophic lateral sclerosis: a randomized phase 2a clinical trial."
+    },
+    "39305312": {
+      "first_author": "Torres P",
+      "pubdate": "2024 Sep 21",
+      "journal": "Acta Neuropathol",
+      "title": "TDP-43 regulates LC3ylation in neural tissue through ATG4B cryptic splicing inhibition."
+    },
+    "39307154": {
+      "first_author": "Pal S",
+      "pubdate": "2024 Nov",
+      "journal": "Lancet Neurol",
+      "title": "Safety and efficacy of memantine and trazodone versus placebo for motor neuron disease (MND SMART): stage two interim analysis from the first cycle of a phase 3, multiarm, multistage, randomised, adaptive platform trial."
+    },
+    "39486415": {
+      "first_author": "Al-Azzam N",
+      "pubdate": "2024 Dec 18",
+      "journal": "Neuron",
+      "title": "Inhibition of RNA splicing triggers CHMP7 nuclear entry, impacting TDP-43 function and leading to the onset of ALS cellular phenotypes."
+    },
+    "39511965": {
+      "first_author": "Bhai S",
+      "pubdate": "2025 Jan",
+      "journal": "Muscle Nerve",
+      "title": "A 40-week phase 2B randomized, multicenter, double-blind, placebo-controlled study evaluating the safety and efficacy of memantine in amyotrophic lateral sclerosis."
+    },
+    "39603486": {
+      "first_author": "Krus KL",
+      "pubdate": "2025 Feb",
+      "journal": "Exp Neurol",
+      "title": "Two cardinal features of ALS, reduced STMN2 and pathogenic TDP-43, synergize to accelerate motor decline in mice."
+    },
+    "39709457": {
+      "first_author": "Keeley O",
+      "pubdate": "2024 Dec 21",
+      "journal": "Acta Neuropathol Commun",
+      "title": "CHMP2B promotes CHMP7 mediated nuclear pore complex injury in sporadic ALS."
+    },
+    "39960672": {
+      "first_author": "Paganoni S",
+      "pubdate": "2025 Feb 3",
+      "journal": "JAMA Netw Open",
+      "title": "Efficacy and Safety of Zilucoplan in Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial."
+    },
+    "40050409": {
+      "first_author": "de Santiago PR",
+      "pubdate": "2025 Mar 6",
+      "journal": "NPJ Precis Oncol",
+      "title": "LINE-1 ORF1p expression occurs in clear cell ovarian carcinoma precursors and is a candidate blood biomarker."
+    },
+    "40354799": {
+      "first_author": "Bensimon G",
+      "pubdate": "2025 May 24",
+      "journal": "Lancet",
+      "title": "Efficacy and safety of low-dose IL-2 as an add-on therapy to riluzole (MIROCALS): a phase 2b, double-blind, randomised, placebo-controlled trial."
+    },
+    "40375307": {
+      "first_author": "Trautwig AN",
+      "pubdate": "2025 May 15",
+      "journal": "Mol Neurodegener",
+      "title": "Network analysis of the cerebrospinal fluid proteome reveals shared and unique differences between sporadic and familial forms of amyotrophic lateral sclerosis."
+    },
+    "40392845": {
+      "first_author": "Beccari MS",
+      "pubdate": "2025 May 27",
+      "journal": "Proc Natl Acad Sci U S A",
+      "title": "Stathmin-2 enhances motor axon regeneration after injury independent of its binding to tubulin."
+    },
+    "40402026": {
+      "first_author": "Labar AS",
+      "pubdate": "2025 Aug 1",
+      "journal": "Crit Care Med",
+      "title": "Plasma Levels of Soluble ST2 Reflect Extrapulmonary Organ Dysfunction and Predict Outcomes in Acute Respiratory Failure."
+    },
+    "40473123": {
+      "first_author": "Loreto A",
+      "pubdate": "2025 Sep",
+      "journal": "Neurobiol Dis",
+      "title": "SARM1 activation induces reversible mitochondrial dysfunction and can be prevented in human neurons by antisense oligonucleotides."
+    },
+    "40826812": {
+      "first_author": "Asano H",
+      "pubdate": "2025 Aug",
+      "journal": "J Neurochem",
+      "title": "Ropinirole Functions Through a Dopamine Receptor D2-Independent Mechanism to Ameliorate Amyotrophic Lateral Sclerosis Phenotypes in TARDBP-Mutant iPSC-Derived Motor Neurons."
+    },
+    "41120751": {
+      "first_author": "Bryce-Smith S",
+      "pubdate": "2025 Nov",
+      "journal": "Nat Neurosci",
+      "title": "TDP-43 loss induces cryptic polyadenylation in ALS/FTD."
+    },
+    "41174170": {
+      "first_author": "Joseph BJ",
+      "pubdate": "2025 Dec",
+      "journal": "Nat Neurosci",
+      "title": "TDP-43-dependent mis-splicing of KCNQ2 triggers intrinsic neuronal hyperexcitability in ALS/FTD."
+    },
+    "41187881": {
+      "first_author": "Ge TQ",
+      "pubdate": "2026 Jan",
+      "journal": "Biochem Pharmacol",
+      "title": "Targeting the C5-C5aR1 axis: A promising therapeutic strategy for Alzheimer's disease and amyotrophic lateral sclerosis by unlocking neuroprotection."
+    },
+    "41193975": {
+      "first_author": "Salzinger A",
+      "pubdate": "2025 Nov 5",
+      "journal": "Mol Med",
+      "title": "Syntaphilin loss enhances mitochondrial axonal transport and neuromuscular junction formation in a human stem cell derived neuromuscular assembloid model."
+    },
+    "41634391": {
+      "first_author": "Finkel RS",
+      "pubdate": "2026 Mar",
+      "journal": "Nat Med",
+      "title": "High-dose nusinersen for spinal muscular atrophy: a phase 3 randomized trial."
+    },
+    "41635251": {
+      "first_author": "Li X",
+      "pubdate": "2026 Feb 4",
+      "journal": "Can J Neurol Sci",
+      "title": "Nocturnal Hypoxia and Sleep-Disordered Breathing as Potential Early Biomarkers of Respiratory Progression in Mild ALS."
+    },
+    "41677621": {
+      "first_author": "Burla R",
+      "pubdate": "2026 Jan 29",
+      "journal": "Cells",
+      "title": "Reduced CHMP7 Expression Compromises Telomere Integrity in Mammalian Cells."
+    },
+    "41708347": {
+      "first_author": "Gontier G",
+      "pubdate": "2026 Feb",
+      "journal": "Clin Transl Sci",
+      "title": "Glycoprotein Non-Metastatic Melanoma Protein B (GPNMB): A Translational Pharmacodynamic Biomarker for PIKfyve Inhibition With VRG50635."
+    },
+    "41713194": {
+      "first_author": "Lv Y",
+      "pubdate": "2026 Mar",
+      "journal": "Respir Investig",
+      "title": "Serum soluble ST2: An effective prognostic biomarker for mortality in patients with severe acute exacerbation of chronic obstructive pulmonary disease requiring invasive mechanical ventilation."
+    },
+    "41720774": {
+      "first_author": "Yang M",
+      "pubdate": "2026 Feb 20",
+      "journal": "Nat Commun",
+      "title": "A neurotoxic cryptic peptide arising from TDP-43-dependent cryptic splicing of PKN1."
+    },
+    "41744617": {
+      "first_author": "Chietera P",
+      "pubdate": "2026 Feb 10",
+      "journal": "Biology (Basel)",
+      "title": "CHMP7/ESCRT-III Is Localized at the Nuclear Envelope of Cortical Neurons and Required for Expression of Activity-Regulated Genes."
+    },
+    "41765683": {
+      "first_author": "Chen J",
+      "pubdate": "2026 Dec",
+      "journal": "MAbs",
+      "title": "Structures of clinical antibodies bound to IL-33 uncover two distinct epitopes underlying differential efficacy."
+    },
+    "41787606": {
+      "first_author": "Kumar R",
+      "pubdate": "2026 Jun",
+      "journal": "Mov Disord",
+      "title": "An Open-Label Phase 1b Study of the Safety, Pharmacokinetics, Pharmacodynamics, and Clinical Activity of ANX005 in Patients with Huntington's Disease."
+    },
+    "41804798": {
+      "first_author": "Jagaraj CJ",
+      "pubdate": "2026 Nov 4",
+      "journal": "Brain",
+      "title": "Cofilin hyperphosphorylation triggers TDP-43 pathology in sporadic amyotrophic lateral sclerosis."
+    },
+    "41917433": {
+      "first_author": "Hop PJ",
+      "pubdate": "2026 Apr",
+      "journal": "Nat Genet",
+      "title": "Large-scale exome analyses reveal new rare variant contributions in amyotrophic lateral sclerosis."
+    },
+    "42135512": {
+      "first_author": "Zhang Z",
+      "pubdate": "2026 Jul",
+      "journal": "Nat Neurosci",
+      "title": "Integrated single-cell and spatial transcriptomic profiling in ALS uncovers peripheral-to-central immune infiltration and reprogramming."
+    },
+    "42156967": {
+      "first_author": "Lundbäck T",
+      "pubdate": "2026 May 19",
+      "journal": "Commun Chem",
+      "title": "The rise and fall of SARM1 base-exchange inhibitors."
+    },
+    "42234776": {
+      "first_author": "Guo C",
+      "pubdate": "2026 Jun 3",
+      "journal": "Sci Transl Med",
+      "title": "Cryptic splicing in synaptic and membrane excitability genes links TDP-43 loss to neuronal dysfunction."
+    },
+    "42349418": {
+      "first_author": "Heffner CM",
+      "pubdate": "2026 Jul 8",
+      "journal": "Dev Cell",
+      "title": "The ALS- and FTD-associated proteins annexin A11 and CHMP2B act sequentially in plasma membrane repair."
+    },
+    "42380237": {
+      "first_author": "Leahey RR",
+      "pubdate": "2025 Aug 25",
+      "journal": "NPJ Drug Discov",
+      "title": "Therapeutic safety implications of SARM1 active site inhibitors: subinhibitory concentrations cause neurodegeneration."
+    },
+    "42790826": {
+      "first_author": "Ding XS",
+      "pubdate": "2026 Dec",
+      "journal": "Biochem Pharmacol",
+      "title": "Sephin1 directly targets PHB2 to activate PINK1-PRKN-dependent mitophagy and alleviate α-synuclein neurotoxicity in Parkinson's disease models."
+    },
+    "42836993": {
+      "first_author": "Al Khleifat A",
+      "pubdate": "2026 Oct 6",
+      "journal": "J Neurol",
+      "title": "TRICALS risk score augments but cannot replace neurofilament as a prognostic biomarker in ALS."
+    },
+    "42854693": {
+      "first_author": "Citrano KJ",
+      "pubdate": "2026 Oct 20",
+      "journal": "Cell Rep Med",
+      "title": "Anti-HDGFL2 cryptic protein antibodies provide a sensitive readout of TDP-43 pathology and clinical disease features."
+    },
+    "42900584": {
+      "first_author": "Clegg D",
+      "pubdate": "2026 Nov 2",
+      "journal": "J Cell Biol",
+      "title": "ClC-7 links PIKfyve inhibition to Rab-dependent LRRK2 activity at lysosomes."
+    },
+    "42994990": {
+      "first_author": "Kuwahara T",
+      "pubdate": "2027 Jan",
+      "journal": "Life Sci Alliance",
+      "title": "PIKfyve inhibition induces LRRK2 activation through phosphatidylinositol 3-phosphate and CASM."
+    },
+    "43025655": {
+      "first_author": "Ziak N",
+      "pubdate": "2026 Nov 13",
+      "journal": "J Lipid Res",
+      "title": "Sphingolipid remodeling in SPT-related neuropathies."
+    },
+    "43045849": {
+      "first_author": "Perez-Alcantara M",
+      "pubdate": "2026 Nov 17",
+      "journal": "Nat Genet",
+      "title": "Integrated QTL mapping and CRISPR screening in pooled iPSC-derived microglia reveals genetic drivers of neurodegenerative risk."
+    },
+    "7478269": {
+      "first_author": "Kornhuber J",
+      "pubdate": "1995 Aug 4",
+      "journal": "Neurosci Lett",
+      "title": "Cerebrospinal fluid and serum concentrations of the N-methyl-D-aspartate (NMDA) receptor antagonist memantine in man."
+    },
+    "7763202": {
+      "first_author": "Louwerse ES",
+      "pubdate": "1995 Jun",
+      "journal": "Arch Neurol",
+      "title": "Randomized, double-blind, controlled trial of acetylcysteine in amyotrophic lateral sclerosis."
+    },
+    "7906190": {
+      "first_author": "Eisen A",
+      "pubdate": "1993 Nov",
+      "journal": "Can J Neurol Sci",
+      "title": "Anti-glutamate therapy in amyotrophic lateral sclerosis: a trial using lamotrigine."
+    },
+    "8195821": {
+      "first_author": "Mazzini L",
+      "pubdate": "1994 Feb",
+      "journal": "J Neurol",
+      "title": "An open-randomized clinical trial of selegiline in amyotrophic lateral sclerosis."
+    },
+    "9443715": {
+      "first_author": "Lange DJ",
+      "pubdate": "1998 Jan",
+      "journal": "Arch Neurol",
+      "title": "Selegiline is ineffective in a collaborative double-blind, placebo-controlled trial for treatment of amyotrophic lateral sclerosis."
+    },
+    "43015463": {
+      "first_author": "Keuss MJ",
+      "pubdate": "2026 Nov 11",
+      "journal": "Nature",
+      "title": "UNC13A splice correction rescues synaptic dysfunction induced by TDP-43 loss."
+    },
+    "38942014": {
+      "first_author": "Scott-Hewitt N",
+      "pubdate": "2024 Aug 8",
+      "journal": "Cell",
+      "title": "Microglial-derived C1q integrates into neuronal ribonucleoprotein complexes and impacts protein homeostasis in the aging brain."
+    },
+    "12960167": {
+      "first_author": "Gaboriaud C",
+      "pubdate": "2003 Nov 21",
+      "journal": "J Biol Chem",
+      "title": "The crystal structure of the globular head of complement protein C1q provides a basis for its versatile recognition properties."
+    },
+    "34796871": {
+      "first_author": "Gilley J",
+      "pubdate": "2021 Nov 19",
+      "journal": "Elife",
+      "title": "Enrichment of SARM1 alleles encoding variants with constitutively hyperactive NADase in patients with ALS and other motor nerve disorders."
+    }
+  },
+  "ncts": {
+    "NCT00005845": {
+      "acronym": "",
+      "title": "Tipifarnib in Treating Patients With Myelodysplastic Syndromes",
+      "status": "COMPLETED",
+      "conditions": [
+        "Chronic Myelomonocytic Leukemia",
+        "de Novo Myelodysplastic Syndromes",
+        "Previously Treated Myelodysplastic Syndromes",
+        "Refractory Anemia"
+      ]
+    },
+    "NCT00214110": {
+      "acronym": "",
+      "title": "Tamoxifen Therapy in Amyotrophic Lateral Sclerosis [ALS]",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis (ALS)"
+      ]
+    },
+    "NCT00243932": {
+      "acronym": "",
+      "title": "Clinical Trial of High Dose CoQ10 in ALS",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis",
+        "Lou Gehrig's Disease"
+      ]
+    },
+    "NCT00349622": {
+      "acronym": "",
+      "title": "Clinical Trial Ceftriaxone in Subjects With ALS",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis",
+        "ALS"
+      ]
+    },
+    "NCT00353665": {
+      "acronym": "",
+      "title": "Memantine for Disability in Amyotrophic Lateral Sclerosis (MEDALS)",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT00409721": {
+      "acronym": "",
+      "title": "The Effect of Memantine on Functional Outcomes and Motor Neuron Degeneration in Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT00444613": {
+      "acronym": "",
+      "title": "A Study in Patients With Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis (ALS)"
+      ]
+    },
+    "NCT01020331": {
+      "acronym": "TAME",
+      "title": "Memantine Therapy in Amyotrophic Lateral Sclerosis",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT01257581": {
+      "acronym": "SDALS-001",
+      "title": "Safety and Efficacy Study of Creatine and Tamoxifen in Volunteers With Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT01786603": {
+      "acronym": "",
+      "title": "Rasagiline in Subjects With Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis (ALS)"
+      ]
+    },
+    "NCT01835782": {
+      "acronym": "",
+      "title": "Determining the Safety of L-serine in ALS",
+      "status": "UNKNOWN",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis (ALS)"
+      ]
+    },
+    "NCT01879241": {
+      "acronym": "",
+      "title": "Study of Rasagiline in Patients With Amyotrophic Lateral Sclerosis",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT01884571": {
+      "acronym": "NIPALS2013",
+      "title": "Immunosuppression in Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis (ALS)"
+      ]
+    },
+    "NCT02118727": {
+      "acronym": "TAME",
+      "title": "Therapy in Amyotrophic Lateral Sclerosis (TAME)",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis",
+        "Frontal Temporal Dementia"
+      ]
+    },
+    "NCT02450552": {
+      "acronym": "",
+      "title": "Clinical Trial of Ezogabine (Retigabine) in ALS Subjects",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT02655315": {
+      "acronym": "FAIRPARKII",
+      "title": "Conservative Iron Chelation as a Disease-modifying Strategy in Parkinson's Disease",
+      "status": "COMPLETED",
+      "conditions": [
+        "Parkinson Disease"
+      ]
+    },
+    "NCT02870634": {
+      "acronym": "",
+      "title": "Phase 1 Dose Escalation and PK Study of Cu(II)ATSM in ALS/MND",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis",
+        "Motor Neuron Disease"
+      ]
+    },
+    "NCT03019419": {
+      "acronym": "",
+      "title": "Perampanel for Sporadic Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "COMPLETED",
+      "conditions": [
+        "ALS"
+      ]
+    },
+    "NCT03020797": {
+      "acronym": "",
+      "title": "A Clinical Trial to Evaluate the Safety and Efficacy of Fycompa in Subjects With Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "TERMINATED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT03039673": {
+      "acronym": "MIROCALS",
+      "title": "MIROCALS: Modifying Immune Response and OutComes in ALS",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT03293069": {
+      "acronym": "FAIR-ALS II",
+      "title": "Conservative Iron Chelation as a Disease-modifying Strategy in Amyotrophic Lateral Sclerosis",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT03377309": {
+      "acronym": "",
+      "title": "Safety and Tolerability of Perampanel in Amyotrophic Lateral Sclerosis Patients",
+      "status": "TERMINATED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT03548311": {
+      "acronym": "JETALS",
+      "title": "Clinical Trial of Ultra-high Dose Methylcobalamin for ALS",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT03580616": {
+      "acronym": "ALS",
+      "title": "Tolerability and Efficacy of L-Serine in Patients With Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "TERMINATED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis (ALS)"
+      ]
+    },
+    "NCT03610334": {
+      "acronym": "",
+      "title": "A Combined SAD and MAD Study to Investigate the Safety, Tolerability and Pharmacokinetic Profile of IFB-088",
+      "status": "COMPLETED",
+      "conditions": [
+        "Healthy Volunteers"
+      ]
+    },
+    "NCT03793868": {
+      "acronym": "",
+      "title": "Perampanel Single Ascending Dose Transcranial Magnetic Stimulation Biomarker Study in Amyotrophic Lateral Sclerosis",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT03921554": {
+      "acronym": "",
+      "title": "JAK Inhibitor Treatment in AGS",
+      "status": "COMPLETED",
+      "conditions": [
+        "Aicardi Goutieres Syndrome"
+      ]
+    },
+    "NCT04082832": {
+      "acronym": "",
+      "title": "CuATSM Compared With Placebo for Treatment of ALS/MND",
+      "status": "UNKNOWN",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT04248465": {
+      "acronym": "",
+      "title": "An Efficacy and Safety Study of Ravulizumab in ALS Participants",
+      "status": "TERMINATED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis",
+        "ALS"
+      ]
+    },
+    "NCT04302870": {
+      "acronym": "MND-SMART",
+      "title": "Motor Neurone Disease - Systematic Multi-Arm Adaptive Randomised Trial",
+      "status": "RECRUITING",
+      "conditions": [
+        "Motor Neuron Disease, Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT04313166": {
+      "acronym": "",
+      "title": "Treatment Continuation Study for Patients With ALS/MND Who Completed Study CMD-2019-001",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT04436497": {
+      "acronym": "",
+      "title": "HEALEY ALS Platform Trial - Regimen A Zilucoplan",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT04514367": {
+      "acronym": "",
+      "title": "An Open Label Study of ANX005 in Participants With, or at Risk for, Manifest Huntington's Disease",
+      "status": "COMPLETED",
+      "conditions": [
+        "Huntington Disease"
+      ]
+    },
+    "NCT04569435": {
+      "acronym": "",
+      "title": "Study of ANX005 in Adults With Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT04579666": {
+      "acronym": "",
+      "title": "MERIDIAN: A Study to Evaluate the Efficacy and Safety of Pegcetacoplan in Adults With Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "TERMINATED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis",
+        "Motor Neuron Disease"
+      ]
+    },
+    "NCT04744532": {
+      "acronym": "",
+      "title": "iPSC-based Drug Repurposing for ALS Medicine (iDReAM) Study",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT04993755": {
+      "acronym": "",
+      "title": "A Phase 2a Study of TPN-101 in Patients With C9ORF72 ALS/FTD",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis",
+        "Frontotemporal Dementia"
+      ]
+    },
+    "NCT05163886": {
+      "acronym": "",
+      "title": "Study of Safety, Tolerability, and Biological Activity of LAM-002A in C9ORF72-Associated Amyotrophic Lateral Sclerosis",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis",
+        "ALS"
+      ]
+    },
+    "NCT05189106": {
+      "acronym": "NADALS",
+      "title": "Neurodegenerative Alzheimer's Disease and Amyotrophic Lateral Sclerosis (NADALS) Basket Trial",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis",
+        "Alzheimer Disease",
+        "Mild Cognitive Impairment"
+      ]
+    },
+    "NCT05193994": {
+      "acronym": "LIGHTHOUSE II",
+      "title": "Triumeq in Amyotrophic Lateral Sclerosis",
+      "status": "TERMINATED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT05492201": {
+      "acronym": "",
+      "title": "A Study of LY3873862 in Healthy Participants",
+      "status": "COMPLETED",
+      "conditions": [
+        "Healthy"
+      ]
+    },
+    "NCT05508074": {
+      "acronym": "",
+      "title": "Treatment Combining Riluzole and IFB-088 in Bulbar Amyotrophic Lateral Sclerosis (TRIALS Protocol)",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis",
+        "ALS"
+      ]
+    },
+    "NCT05633459": {
+      "acronym": "",
+      "title": "A Study Evaluating the Safety and Tolerability of QRL-201 in ALS",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT05667779": {
+      "acronym": "",
+      "title": "A Study Evaluating Safety, Tolerability, and Pharmacokinetics of QRL-101 in Healthy Participants",
+      "status": "COMPLETED",
+      "conditions": [
+        "Healthy Volunteers"
+      ]
+    },
+    "NCT05740813": {
+      "acronym": "",
+      "title": "HEALEY ALS Platform Trial - Regimen F ABBV-CLS-7262",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT05842941": {
+      "acronym": "",
+      "title": "HEALEY ALS Platform Trial - Regimen G DNL343",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT06205121": {
+      "acronym": "",
+      "title": "Efficacy and Safety Study of OATD-01 in Patients With Active Pulmonary Sarcoidosis",
+      "status": "RECRUITING",
+      "conditions": [
+        "Pulmonary Sarcoidosis"
+      ]
+    },
+    "NCT06215755": {
+      "acronym": "",
+      "title": "A Study of VRG50635 in Participants With Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "TERMINATED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT06286475": {
+      "acronym": "",
+      "title": "A Study of VRG50635 in Healthy Volunteers",
+      "status": "COMPLETED",
+      "conditions": [
+        "Healthy Volunteers"
+      ]
+    },
+    "NCT06365216": {
+      "acronym": "SEALS",
+      "title": "ALS Phase II Study of NX210c",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT06532396": {
+      "acronym": "",
+      "title": "A Study Evaluating Multiple Ascending Doses of QRL-101 in Healthy Participants",
+      "status": "COMPLETED",
+      "conditions": [
+        "Healthy Volunteers"
+      ]
+    },
+    "NCT06658977": {
+      "acronym": "Lighthouse III",
+      "title": "RolloverTreatment With Triumeq for People With ALS Following the Lighthouse II Trial",
+      "status": "TERMINATED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis",
+        "ALS"
+      ]
+    },
+    "NCT06681441": {
+      "acronym": "",
+      "title": "A 3-way Cross-over Study on the Effects of QRL-101 on Transcranial Magnetic Stimulation and Nerve Excitability in Healthy Participants",
+      "status": "COMPLETED",
+      "conditions": [
+        "Healthy"
+      ]
+    },
+    "NCT06714396": {
+      "acronym": "",
+      "title": "A Study Exploring the PK/PD Relationship of QRL-101 in Adults With ALS",
+      "status": "COMPLETED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT07100119": {
+      "acronym": "",
+      "title": "A Study of LY4256984 in Participants With Sporadic Amyotrophic Lateral Sclerosis",
+      "status": "RECRUITING",
+      "conditions": [
+        "ALS (Amyotrophic Lateral Sclerosis)"
+      ]
+    },
+    "NCT07161999": {
+      "acronym": "ALSTARS",
+      "title": "Study of COYA 302 for the Treatment of ALS",
+      "status": "ACTIVE_NOT_RECRUITING",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis (ALS)"
+      ]
+    },
+    "NCT07369076": {
+      "acronym": "",
+      "title": "A Clinical Trial to Evaluate NB-4746 in Participants With Amyotrophic Lateral Sclerosis.",
+      "status": "RECRUITING",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis (ALS)"
+      ]
+    },
+    "NCT07414212": {
+      "acronym": "NADALS-001-ALS",
+      "title": "Evaluation of the Combined Therapy of EH-301 and N-acetylcysteine Together With Riluzole in Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "RECRUITING",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT07421778": {
+      "acronym": "",
+      "title": "A Multiple Ascending Dose Study Evaluating the Safety and Tolerability of a Novel Formulation of QRL-101 in Healthy Participants",
+      "status": "COMPLETED",
+      "conditions": [
+        "Healthy Participant Study"
+      ]
+    },
+    "NCT07571174": {
+      "acronym": "",
+      "title": "A Substudy of LY4256984 in Participants With Sporadic Amyotrophic Lateral Sclerosis",
+      "status": "RECRUITING",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT07571200": {
+      "acronym": "",
+      "title": "A Master Protocol (OLMP): A Study of LY4256984 in Participants With Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "RECRUITING",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT07660614": {
+      "acronym": "NeurALS",
+      "title": "A Study of LTX-002 in Adult Participants With Amyotrophic Lateral Sclerosis",
+      "status": "RECRUITING",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT07674667": {
+      "acronym": "FUNCtion ALS",
+      "title": "FUNCtion ALS: Aiming to Restore UNC13A Function in People Living With ALS",
+      "status": "RECRUITING",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT07765446": {
+      "acronym": "",
+      "title": "Study of SIR2501 in Solid Tumor Patients Receiving Paclitaxel",
+      "status": "RECRUITING",
+      "conditions": [
+        "Chemotherapy-induced Peripheral Neuropathy"
+      ]
+    },
+    "NCT07855211": {
+      "acronym": "HORIZON",
+      "title": "A Study to Learn About the Safety of BIIB147 and Its Effects in Adults With Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "RECRUITING",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
+    },
+    "NCT07883590": {
+      "acronym": "",
+      "title": "A Study of LY3873862 in Participants With Sporadic or Familial Amyotrophic Lateral Sclerosis (ALS).",
+      "status": "NOT_YET_RECRUITING",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis",
+        "Cytochrome P-450 Enzyme System"
+      ]
+    }
+  },
+  "dois": {
+    "10.1007/s00401-026-03084-5": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.1016/j.cell.2024.02.031": {
+      "title": "Single-cell dissection of the human motor and prefrontal cortices in ALS and FTLD",
+      "type": "journal-article"
+    },
+    "10.1016/j.cell.2024.05.058": {
+      "title": "Microglial-derived C1q integrates into neuronal ribonucleoprotein complexes and impacts protein homeostasis in the aging brain",
+      "type": "journal-article"
+    },
+    "10.1016/j.celrep.2019.09.066": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.1016/j.celrep.2025.115402": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.1016/j.jlr.2026.101187": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.1016/j.jmb.2004.09.003": {
+      "title": "Structure of a Human A-type Potassium Channel Interacting Protein DPPX, a Member of the Dipeptidyl Aminopeptidase Family",
+      "type": "journal-article"
+    },
+    "10.1016/j.stem.2018.12.005": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.1016/j.stem.2023.04.017": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.1038/emboj.2009.80": {
+      "title": "The structure of Atg4B–LC3 complex reveals the mechanism of LC3 processing and delipidation during autophagy",
+      "type": "journal-article"
+    },
+    "10.1038/s41586-022-04424-7": {
+      "title": "TDP-43 represses cryptic exon inclusion in the FTD–ALS gene UNC13A",
+      "type": "journal-article"
+    },
+    "10.1038/s41586-022-04436-3": {
+      "title": "TDP-43 loss and ALS-risk SNPs drive mis-splicing and depletion of UNC13A",
+      "type": "journal-article"
+    },
+    "10.1038/s41586-026-11256-2": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.1038/s41588-026-02843-0": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.1038/s41593-018-0293-z": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.1038/s41593-022-01205-3": {
+      "title": "Integrative transcriptomic analysis of the amyotrophic lateral sclerosis spinal cord implicates glial activation and suggests new risk genes",
+      "type": "journal-article"
+    },
+    "10.1038/s41593-025-02049-3": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.1038/s41593-025-02096-w": {
+      "title": "TDP-43-dependent mis-splicing of KCNQ2 triggers intrinsic neuronal hyperexcitability in ALS/FTD",
+      "type": "journal-article"
+    },
+    "10.1038/s41593-025-02118-7": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.1101/2025.09.29.679403": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.1111/nan.12919": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.1186/s12916-026-05410-w": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.1200/JCO.2026.44.16_suppl.12148": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.1371/journal.pone.0061177": {
+      "title": "Design and Initial Results of a Multi-Phase Randomized Trial of Ceftriaxone in Amyotrophic Lateral Sclerosis",
+      "type": "journal-article"
+    },
+    "10.26508/lsa.202603939": {
+      "title": "PIKfyve inhibition induces LRRK2 activation through phosphatidylinositol 3-phosphate and CASM",
+      "type": "journal-article"
+    },
+    "10.64898/2026.08.07.743523": {
+      "title": "[Resolved via doi.org handle]",
+      "type": "handle"
+    },
+    "10.64898/2026.11.07.764673": {
+      "title": "Stathmin-2 regulates microtubule dynamics and axonal resilience in human motor neurons",
+      "type": "posted-content"
+    },
+    "10.64898/2026.11.09.765393": {
+      "title": "Pharmaco-genetic evidence of presymptomatic lysosomal dysfunction coupled to detrimental DPR secretion in\n                  <i>Drosophila</i>\n                  Models of C9orf72-linked ALS/FTD",
+      "type": "posted-content"
+    },
+    "10.1074/jbc.M307764200": {
+      "title": "The crystal structure of the globular head of complement protein C1q provides a basis for its versatile recognition properties.",
+      "journal": "J Biol Chem",
+      "year": "2003"
+    },
+    "10.1186/s13024-021-00511-x": {
+      "title": "Constitutively active SARM1 variants that induce neuropathy are enriched in ALS patients.",
+      "journal": "Mol Neurodegener",
+      "year": "2022"
+    },
+    "10.7554/eLife.70905": {
+      "title": "Enrichment of SARM1 alleles encoding variants with constitutively hyperactive NADase in patients with ALS and other motor nerve disorders.",
+      "journal": "Elife",
+      "year": "2021"
+    }
+  }
+}

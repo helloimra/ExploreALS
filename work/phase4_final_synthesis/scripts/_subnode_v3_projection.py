@@ -36,27 +36,26 @@ SUBNODE_TSA: dict[str, str] = {
 
 VERDICT_LABELS: dict[str, str] = {
     "KEEP_EXPLORATORY_UNPROVEN": "Keep · Exploratory",
-    "KEEP_EXPLORATORY_UNPROVEN (LEAD SUB-NODE)": "Keep · Exploratory (Lead Sub-Node)",
+    "KEEP_EXPLORATORY_UNPROVEN (LEAD SUB-NODE)": "Keep · Exploratory (Primary Target)",
     "KEEP_EXPLORATORY_UNPROVEN (C9-ASYM CLAIM REFUTED)": "Keep · Exploratory (C9-Asym Refuted)",
-    "KEEP_EXPLORATORY_UNPROVEN_PRIMARY_SUBNODE": "Keep · Exploratory (Primary Sub-Node)",
-    "KEEP_EXPLORATORY_UNPROVEN_UNBUNDLED_SECONDARY": "Keep · Exploratory (Unbundled Secondary)",
+    "KEEP_EXPLORATORY_UNPROVEN_PRIMARY_SUBNODE": "Keep · Exploratory (Primary Subunit)",
+    "KEEP_EXPLORATORY_UNPROVEN_SECONDARY_SUBUNIT": "Keep · Exploratory (Secondary Subunit)",
     "RECLASSIFY_BENCHMARK_OR_BIOMARKER": "Reclassify · Fluid Biomarker",
     "RECLASSIFY_BENCHMARK_OR_BIOMARKER (WRONG SIGN FOR INHIBITION)": "Reclassify · Biomarker (Neuroprotective Sign)",
-    "DROP_FROM_BUNDLE_PASSENGER_PARALOG": "Drop · Passenger Paralog",
-    "DROP_FROM_BUNDLE_ESSENTIAL_HOUSEKEEPING_PASSENGER": "Drop · Essential Housekeeping Passenger",
-    "DROP_FROM_BUNDLE_INFRAME_PASSENGER": "Drop · In-Frame Splicing Passenger",
-    "DROP_FROM_BUNDLE_PAN_ESSENTIAL_TOXIC_TARGET": "Drop · Pan-Essential Toxic Target",
-    "DROP_FROM_BUNDLE_CSF_PEPTIDE_ARTIFACT": "Drop · Passive CSF Leakage Artifact",
-    "DROP (FALSIFIED_CLINICAL)": "Drop · Falsified Clinical (MERIDIAN)",
-    "DROP (ARTIFACT_CONFOUNDED)": "Drop · Confounded RCCX / Null CSF",
+    "EXCLUDE_SELECTIVITY_PARALOG": "Counter-Screen · Non-Causal Paralog",
+    "EXCLUDE_PAN_ESSENTIAL_SNARE": "Counter-Screen · Pan-Essential cis-SNARE",
+    "EXCLUDE_INFRAME_NONCRYPTIC": "Counter-Screen · In-Frame Splice Isoform",
+    "EXCLUDE_PAN_ESSENTIAL_ATPASE": "Counter-Screen · Pan-Essential AAA+ ATPase",
+    "EXCLUDE_NULL_CSF_PROTEIN": "Counter-Screen · Null CSF Protein",
+    "DROP (ARTIFACT_CONFOUNDED)": "Excluded · Confounded RCCX / Null CSF",
 }
 
 COLONLESS_VERDICT_PROSE: dict[str, str] = {
     "KEEP_EXPLORATORY_UNPROVEN_PRIMARY_SUBNODE": (
-        "Retained as primary unbundled C014 nuclear-envelope surveillance sub-node requiring titrated <=35–50% knockdown or selective SUN1-CHMP7 nuclear-import blockade."
+        "Retained as primary C014 nuclear-envelope surveillance subunit requiring titrated <=35–50% knockdown or selective SUN1-CHMP7 nuclear-import blockade."
     ),
-    "KEEP_EXPLORATORY_UNPROVEN_UNBUNDLED_SECONDARY": (
-        "Strictly unbundled from CHMP7 due to neuronal ANXA11 membrane-repair and autophagy requirements; gated on head-to-head single vs. dual partial knockdown under NE rupture challenge."
+    "KEEP_EXPLORATORY_UNPROVEN_SECONDARY_SUBUNIT": (
+        "Evaluated separately from CHMP7 due to neuronal ANXA11 membrane-repair and autophagy requirements; gated on head-to-head single vs. dual partial knockdown under NE rupture challenge."
     ),
 }
 
@@ -64,7 +63,7 @@ PREFIX_REPLACEMENTS = (
     ("HIGH_LIABILITY_FOR_COMPLETE_ABLATION:", "High liability for complete ablation —"),
     ("PARALOG_COMPENSATED_IN_MITOSIS_BUT_NEURONAL_REPAIR_AND_AUTOPHAGY_REQUIRED:", "Paralog-compensated in mitosis, neuronal repair & autophagy required —"),
     ("INTRATHECAL_ASO_PARTIAL_LOWERING_OR_NUCLEAR_IMPORT_BLOCKADE:", "Intrathecal ASO partial lowering or nuclear-import blockade —"),
-    ("STRICTLY_UNBUNDLED_EXPLORATORY_PARTIAL_ASO:", "Strictly unbundled exploratory partial ASO —"),
+    ("SUBUNIT_SELECTIVE_EXPLORATORY_PARTIAL_ASO:", "Subunit-selective exploratory partial ASO —"),
 )
 
 SCORE_100_RE = re.compile(r";?\s*(?:5D\s+liability|gene-liability)\s*=\s*[0-9.]+/100\s*(?:\([^)]*\))?\.?", re.IGNORECASE)

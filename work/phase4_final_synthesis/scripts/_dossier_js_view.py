@@ -2,10 +2,16 @@
 from __future__ import annotations
 
 DOSSIER_JS_VIEW = """
-const MONOGRAPH_ORDER = ['S06','C006','S07','C001','C002','C007','DN-01','DN-04'];
+const MONOGRAPH_ORDER = ['S06','S07','C001','C006','C002','C007','DN-01','DN-04'];
 let dossierId = 'S06';
 let dossierSlice = 'ALL';
 let dossierLens = 'ALL';
+
+function trackLabel(t){
+  if(t === 'A') return 'Drug Regimen (Track A)';
+  if(t === 'B') return 'Molecular Target (Track B)';
+  return 'Track ' + esc(t);
+}
 
 const ENUM_LABELS = {
   TIER_1_ACTIONABLE_NOW: 'Tier 1 · Actionable Now',
@@ -35,10 +41,9 @@ const ENUM_LABELS = {
   BIOMARKER_ENRICHED_PHASE3_EFFICACY_TRIAL: 'Biomarker-Enriched Phase 3 Survival RCT',
   CLINICAL_PROTOCOL_STANDARDIZATION: 'Clinical Protocol / Calibration Standard',
   NOT_APPLICABLE_FALSIFIED: 'N/A — Scientifically Falsified',
-  EXPLORE_INHERITED_40: 'Seeded Literature, Clinical & QTL Set (40)',
+  CURATED_CLINICAL_33: 'Published Clinical, Genetic & Pathology Set (33)',
   PHASE3B_DENOVO_19: 'Unbiased Multi-Omic Discovery Set (19)',
-  CANONICAL_21: 'Genetic, Splicing & Clinical Targets',
-  HISTORICAL_BA9_NAMED_10: 'Postmortem Cortical BA9 RNA-seq',
+  CANONICAL_24: 'Clinical, Mendelian & GWAS Programs',
   SCREEN_AND_BLIND_SURVIVORS_9: 'RCT Subgroup & Screen Survivors',
   F1_CRYPTIC_SPLICE: 'Unbiased · TDP-43 Cryptic Exons',
   F2_CRYPTIC_APA: "Unbiased · Cryptic APA / 3'Ext",
@@ -51,7 +56,7 @@ const ENUM_LABELS = {
   ESTABLISHED_BENCHMARK: 'Established SOC / PD Benchmark',
   FALSIFIED_CLINICAL: 'Falsified · Human ALS RCT Futility',
   FALSIFIED_PK_SAFETY: 'Falsified · CNS PK / Safety Wall',
-  ARTIFACT_CONFOUNDED: 'Falsified · Postmortem Confounding',
+  ARTIFACT_CONFOUNDED: 'Falsified · Assay Confounding',
   KEEP_CORE: 'Keep · Core',
   KEEP_EXPLORATORY_UNPROVEN: 'Keep · Exploratory',
   RECLASSIFY_BENCHMARK_OR_BIOMARKER: 'Benchmark / Biomarker',
@@ -60,7 +65,7 @@ const ENUM_LABELS = {
   CRYPTIC_CASSETTE_EXON_SKIP: "Steric 2'-MOE SSO · Cryptic Cassette Skip",
   CRYPTIC_CASSETTE_MAJOR_3SS_AND_SHARED_EXON: "Steric 2'-MOE SSO · Major 3'SS + Exonic",
   CRYPTIC_CASSETTE_DOWNSTREAM_INTRONIC_ISE: "Steric 2'-MOE SSO · Downstream Intronic ISE",
-  INCLUDE_CONSTITUTIVE_EXON: "Steric 2'-MOE SSO · Exon-5 Inclusion (ISS)",
+  INCLUDE_CONSTITUTIVE_EXON: "Steric 2'-MOE SSO · Putative Intron-5 Site (ISS vs ISE Gate)",
   INCLUDE_EXON_UPSTREAM_UG: "Steric 2'-MOE SSO · Exon-5 Inclusion (UG)",
   CRYPTIC_ALE_3SS_ACCEPTOR_BLOCK: "Steric 2'-MOE SSO · Cryptic ALE 3'SS Block",
   CRYPTIC_3EXT_ISOFORM_GAPMER_WINDOW: "Historical 3'Ext Window (Nuclear Gapmer Retired -> Steric PAS SSO)",
@@ -69,7 +74,7 @@ const ENUM_LABELS = {
   DENOVO_SINGLE_ENTITY: 'De Novo 1-Plex',
   NONE_FALSIFIED_CLINICAL: 'None — Falsified in human ALS clinical trials.',
   NONE_FALSIFIED_PK_SAFETY: 'None — Falsified by insurmountable human CNS PK deficit or clinical toxicity.',
-  NONE_ARTIFACT_CONFOUNDED: 'None — Postmortem discovery signal collapsed under GC / cell-type confounding adjustment.',
+  NONE_ARTIFACT_CONFOUNDED: 'None — Assay perturbation sits within basal media noise and contradicts human genetic polarity.',
 };
 const HURDLE_TOK = {
   SSO:'SSO', ASO:'ASO', IT:'IT', IV:'IV', SC:'SC', GLP:'GLP', CSF:'CSF', CNS:'CNS', BBB:'BBB', PD:'PD', PK:'PK',
@@ -80,13 +85,14 @@ const HURDLE_TOK = {
   IREB2:'IREB2', TFRC:'TFRC', HDGFL2:'HDGFL2', CASM:'CASM', ECM:'ECM', C1Q:'C1q', C1QA:'C1QA', '3KYQ':'3KYQ',
   '6VCD':'6VCD', FBXL5:'FBXL5', IRP2:'IRP2', '2Z0D':'2Z0D', TMS:'TMS', SICI:'SICI', SDTC:'SDTC', NPTX2:'NPTX2',
   CXCL10:'CXCL10', PE:'PE', DVT:'DVT', NADALS:'NADALS', FAIR:'FAIR-ALS', II:'II', PROTAC:'PROTAC', SATB2:'SATB2',
-  LEMD2:'LEMD2', ANXA11:'ANXA11', SUN1:'SUN1', CHMP7:'CHMP7', SNPH:'SNPH', NEFH:'NEFH', BSN:'BSN', APP:'APP',
-  SOD1:'SOD1', G93A:'G93A', KO:'KO', WT:'WT', SCFD1:'SCFD1', G2E3:'G2E3', YKT6:'YKT6', CYS195:'Cys195',
+  LEMD2:'LEMD2', ANXA11:'ANXA11', SUN1:'SUN1', CHMP7:'CHMP7', NEFH:'NEFH', BSN:'BSN', APP:'APP',
+  SOD1:'SOD1', G93A:'G93A', KO:'KO', WT:'WT', SCFD1:'SCFD1', G2E3:'G2E3', YKT6:'YKT6', CYS195:'Cys195', Y64C:'Y64C',
+  ALU:'Alu', EQTL:'eQTL', INTRON1:'Intron-1', '0MM':'0mm', CRISPRI:'CRISPRi', CRISPRA:'CRISPRa',
   PFKM:'PFKM', PFKL:'PFKL', SRF:'SRF', IFN:'IFN', ISGS:'ISGs', UG8:'UG8', CADPR:'cADPR', NFL:'NfL', PNFH:'pNfH',
   KPUU:'Kp,uu', IPSC:'iPSC', TLOCK:'T-Lock', GOF:'GoF', LOF:'LoF', TDP43:'TDP-43', TSTMN2:'tSTMN2', SST2:'sST2',
   PSTAT:'pSTAT', PSTAT2:'pSTAT2', PSTAT3:'pSTAT3', DISIRNA:'di-siRNA', QPCR:'qPCR', DDPCR:'ddPCR', PH1B:'Ph1b',
   PH3:'Ph3', CA2:'Ca2+', '2FE2S':'[2Fe-2S]', QRL201:'QRL-201', TPN101:'TPN-101', ORF1P:'ORF1p', '3SS':"3'SS",
-  '5SS':"5'SS", C5AR1:'C5aR1', CTAIL:'C-tail', SUB160DA:'<=160 Da', LT1PCT:'<1%', '34PCT':'34%', '36PCT':'36%',
+  '5SS':"5'SS", C5AR1:'C5aR1', CTAIL:'C-tail', LT1PCT:'<1%', '34PCT':'34%', '36PCT':'36%',
   '1P5TPM':'1.5 TPM', '2P5UM':'2.5 uM', '400UM':'400 uM', '4NM':'4 nM', '2500NM':'2,500 nM', PGML:'pg/mL',
   '1PLEX':'1-plex', '2PLEX':'2-plex', '3PLEX':'3-plex', PLI1:'pLI=1.0', '14Q12':'14q12', N6:'n=6', N7:'n=7', P80:'p80',
   ELLA:'Ella', EUROIMMUN:'Euroimmun', GFAP:'GFAP', ER:'ER', EV:'EV', NHP:'NHP', EC50:'EC50', MRNA:'mRNA',
@@ -98,6 +104,7 @@ const HURDLE_TOK = {
   BIOVENDOR:'BioVendor', ELISA:'ELISA', NDEV:'NDEV', DPCR:'dPCR', LOQ:'LOQ', SCG10:'SCG10', N9:'N=9',
   '1PE':'1 PE', '1DVT':'1 DVT', NCT04082832:'NCT04082832', NCT04313166:'NCT04313166', OLE:'OLE',
   PTDP43:'pTDP-43', '144MG':'144 mg', '53NM':'53 nM', MNS:'MNs', MTD:'MTD', PET:'PET', CUATSM:'CuATSM',
+  ICH:'ICH', M3R2:'M3(R2)', FCRN:'FcRn', CD38:'CD38', IMGL:'iMGL', CONQUR:'CONQUR',
 };
 function humanizeEnum(s){
   if(!s || s === 'NONE') return 'None';
@@ -108,16 +115,24 @@ function formatHurdle(code){
   if(!code || code === 'NONE') return 'None';
   const pre = String(code)
     .replace(/21CFR300_50/g, '21CFR300.50')
+    .replace(/ICH_M3R2/g, 'ICH M3(R2)')
+    .replace(/NO_312_23_REF/g, 'no 21 CFR 312.23(b) right-of-reference')
+    .replace(/6_TO_9MG/g, '6–9 mg')
+    .replace(/LE_3MG/g, '<=3 mg')
     .replace(/24_TO_48MG/g, '24–48 mg')
     .replace(/PH2_3/g, 'Ph2/3')
     .replace(/6VS6/g, '6 vs 6')
     .replace(/PMID_37317638/g, 'PMID:37317638')
     .replace(/KP_UU/g, 'Kp,uu')
     .replace(/GT99_9PCT/g, '>99.9%')
+    .replace(/LT0_1PCT/g, '<0.1%')
+    .replace(/PLUS0048/g, '+0.048')
+    .replace(/MINUS022_TO_033/g, '-0.22..-0.33')
     .replace(/8_7PCT/g, '8.7%')
     .replace(/LE_3700/g, '<=3,700')
     .replace(/PLI_0_996/g, 'pLI=0.996')
     .replace(/CHRONOS_MINUS1_54/g, 'Chronos=-1.54')
+    .replace(/CHRONOS_MINUS1_26/g, 'Chronos=-1.26')
     .replace(/NON_ORTHOSTERIC/g, 'non-orthosteric')
     .replace(/NON_C9/g, 'non-C9')
     .replace(/PRE_PH3/g, 'Pre-Ph3')
@@ -127,7 +142,7 @@ function formatHurdle(code){
     .replace(/Q48_TO_Q72H/g, 'q48h-q72h');
   const words = pre.split('_').filter(Boolean).map(w => {
     if(HURDLE_TOK[w]) return HURDLE_TOK[w];
-    if(/^(#|<=|>=|<|>|[0-9]|pLI=|Chronos=|21CFR|Pre-|Post-|ALS-|non-|aa )/.test(w)) return w;
+    if(/^(#|<=|>=|<|>|[0-9]|pLI=|Chronos=|21CFR|ICH|no 21|Pre-|Post-|ALS-|non-|aa )/.test(w)) return w;
     if(/^RS[0-9]+$/.test(w)) return w.toLowerCase();
     return w.toLowerCase();
   });
@@ -138,13 +153,22 @@ function formatPrior(code){
   if(!code || code === 'NONE') return 'None — Direct empirical data only';
   return String(code)
     .replace(/^COARSE_PRIOR_ONLY:/, '')
-    .replace(/8mer_MWC_order_of_magnitude_2_to_7x/g, '8-mer MWC order-of-magnitude (2–7x)')
+    .replace(/8mer_MWC_1x_parallel_Bliss_to_2_to_7x_epistatic_bounds/g, '8-mer MWC (1.0x parallel Bliss to ~2–7x epistatic bounds)')
+    .replace(/1x_parallel_Bliss_to_2_to_7x_MWC_SARM1_bounds/g, '1.0x parallel Bliss to ~2–7x MWC SARM1 bounds')
+    .replace(/Bifurcated_PKPD_ODE_79_to_30_to_0pct_coupled_PI3P_LRRK2_CASM/g, 'Bifurcated PK/PD ODE (~79% dead-zone -> ~30% matched -> 0% slow coupled +PI(3)P->LRRK2/CASM)')
+    .replace(/Bifurcated_PKPD_ODE_79pct_osmotic_deadzone_vs_0pct_coupled_PI3P_LRRK2_CASM/g, 'Bifurcated PK/PD ODE (~79% osmotic dead-zone vs ~30%/0% coupled +PI(3)P->LRRK2/CASM)')
+    .replace(/8mer_MWC_order_of_magnitude_2_to_7x/g, '8-mer MWC order-of-magnitude (~2–7x)')
     .replace(/Tm_dG37_AVI_2Z0D_contacts/g, 'SantaLucia Tm, ΔG37, AlphaGenome AVI & PDB 2Z0D contacts')
     .replace(/Tm_dG37_AVI_composite_score/g, 'SantaLucia Tm, ΔG37 & AlphaGenome AVI composite score')
+    .replace(/79_to_30_to_0pct/g, '~79% -> ~30% -> 0%')
+    .replace(/80_to_6_to_12pct/g, '80% -> ~6–12%')
+    .replace(/84_to_88pct/g, '~84–88%')
+    .replace(/30_to_40pct/g, '~30–40%')
+    .replace(/45_to_50pct/g, '~45–50%')
     .replace(/Post_hoc/g, 'Post-hoc')
     .replace(/8_7pct/g, '8.7%')
     .replace(/35_to_50pct/g, '35–50%')
-    .replace(/2_to_7x/g, '2–7x')
+    .replace(/2_to_7x/g, '~2–7x')
     .replace(/minus85A3/g, '-85 Å³')
     .replace(/tau_ge_72h/g, 'τ ≥ 72h')
     .replace(/3700pg/g, '3,700 pg/mL')
@@ -161,7 +185,7 @@ function formatModality(s){
   return raw
     .replace(/^Dropped_Failed_Human_ALS_Clinical_Regimen_/, 'Dropped (Failed Human ALS RCT): ')
     .replace(/^Dropped_PK_or_Safety_Infeasible_Regimen_/, 'Dropped (Infeasible Human CNS PK / Safety): ')
-    .replace(/^Dropped_Confounded_Postmortem_Transcriptomic_Target_/, 'Dropped (Confounded Postmortem Call): ')
+    .replace(/^Dropped_Confounded_Postmortem_Transcriptomic_Target_/, 'Dropped (Assay-Confounded Screen Hit): ')
     .replace(/2OMOE/g, "2'-O-MOE").replace(/POPS/g, 'PO/PS').replace(/TLock/g, 'T-Lock').replace(/72mg/g, '72 mg')
     .replace(/ARM_TIR/g, 'ARM-TIR').replace(/ASHA624/g, 'ASHA-624').replace(/NaV1_6/g, 'NaV1.6')
     .replace(/Kv7_2_7_3/g, 'Kv7.2/7.3').replace(/Half_Life_Extended/g, 'Half-Life-Extended')
@@ -172,7 +196,7 @@ function formatModality(s){
     .replace(/ERAD_Sparing/g, 'ERAD-Sparing')
     .replace(/Early_Onset_LE12m/g, 'Early-Onset (<=12m)').replace(/Q48_to_Q72h/g, 'q48h–q72h')
     .replace(/LINE1_RT/g, 'LINE-1 RT').replace(/TPN101/g, 'TPN-101').replace(/JAK2_Sparing/g, 'JAK2-Sparing')
-    .replace(/Brain_Penetrant/g, 'Brain-Penetrant').replace(/Low_Dose/g, 'Low-Dose').replace(/Sub160Da/g, '<=160 Da')
+    .replace(/Brain_Penetrant/g, 'Brain-Penetrant').replace(/Low_Dose/g, 'Low-Dose')
     .replace(/_/g, ' ');
 }
 function splitTopClauses(raw, sepRe){
@@ -227,6 +251,126 @@ function formatNextTest(s, ctx){
   if(clauses.length <= 1) return escLink(s, ctx);
   return `<ul class="list-disc pl-4 space-y-1 mt-1 leading-snug">${clauses.map(c => `<li class="break-words">${escLink(capClause(c), ctx)}</li>`).join('')}</ul>`;
 }
+function ensurePeriod(c){
+  const t = String(c || '').trim();
+  return (!t || /[.!?:]$/.test(t)) ? t : (t + '.');
+}
+function topDepths(s){
+  const dp = new Array(s.length).fill(0);
+  let d = 0;
+  for(let i = 0; i < s.length; i++){
+    const ch = s[i];
+    if(ch === '(' || ch === '[') d++;
+    dp[i] = d;
+    if((ch === ')' || ch === ']') && d > 0) d--;
+  }
+  return dp;
+}
+function formatBulletBody(rawBody, ctx){
+  const body = ensurePeriod(capClause(rawBody));
+  const linked = escLink(body, ctx);
+  const cm = /^([^:<()]{2,34}:)\\s+([\\s\\S]+)$/.exec(linked);
+  return cm ? `<strong class="font-semibold text-[var(--foreground)]">${cm[1]}</strong> ${cm[2]}` : linked;
+}
+function formatProseParas(raw, ctx, gapCls='space-y-2', toneCls='text-[var(--foreground)]'){
+  const txt = String(raw || '').trim();
+  if(!txt) return '';
+  const htmlBlocks = [];
+  for(const blk of txt.split(/\\n\\n+/)){
+    const b = blk.trim();
+    if(!b) continue;
+    if(/^\\(1\\)\\s/.test(b) && b.includes('(2) ')){
+      const items = splitTopClauses(b, /[;,]\\s+(?:and\\s+)?(?=\\([2-9]\\)\\s)/);
+      htmlBlocks.push(`<ul class="space-y-1.5 pl-0.5">${items.map(it => {
+        const m = /^\\(([0-9]+)\\)\\s*(.+)$/.exec(it.trim());
+        const num = m ? m[1] : '&bull;';
+        const rawBody = m ? m[2] : it;
+        return `<li class="flex items-baseline gap-1.5"><span class="font-mono font-semibold text-[var(--primary)] shrink-0">(${num})</span><span class="min-w-0 break-words">${formatBulletBody(rawBody, ctx)}</span></li>`;
+      }).join('')}</ul>`);
+      continue;
+    }
+    const dp0 = topDepths(b);
+    let enumColon = -1;
+    for(let i = 15; i < b.length - 20; i++){
+      if(b[i] === ':' && dp0[i] === 0 && /^:\\s+\\(1\\)\\s/.test(b.slice(i)) && b.slice(i).includes('(2) ')){
+        enumColon = i; break;
+      }
+    }
+    if(enumColon > 0){
+      const intro = b.slice(0, enumColon + 1).trim();
+      const rest = b.slice(enumColon + 1).trim();
+      const items = splitTopClauses(rest, /[;,]\\s+(?:and\\s+)?(?=\\([2-9]\\)\\s)/);
+      let postNote = '';
+      if(items.length >= 2){
+        const lastIt = items[items.length - 1];
+        const dpL = topDepths(lastIt);
+        for(let i = 30; i < lastIt.length - 55; i++){
+          if(lastIt[i] === '.' && dpL[i] === 0 && /^\\s+[A-Z]/.test(lastIt.slice(i + 1)) && !/\\b(?:et\\s+al|vs|v|e\\.g|i\\.e|incl|cf|Fig|Figs|[A-Z])$/.test(lastIt.slice(0, i))){
+            postNote = lastIt.slice(i + 1).trim();
+            items[items.length - 1] = lastIt.slice(0, i + 1).trim();
+            break;
+          }
+        }
+      }
+      htmlBlocks.push(`<p class="break-words">${escLink(intro, ctx)}</p>`);
+      htmlBlocks.push(`<ul class="space-y-1.5 pl-1">${items.map(it => {
+        const m = /^\\(([0-9]+)\\)\\s*(.+)$/.exec(it.trim());
+        const num = m ? m[1] : '&bull;';
+        const rawBody = m ? m[2] : it;
+        return `<li class="flex items-baseline gap-1.5"><span class="font-mono font-semibold text-[var(--primary)] shrink-0">(${num})</span><span class="min-w-0 break-words">${formatBulletBody(rawBody, ctx)}</span></li>`;
+      }).join('')}</ul>`);
+      if(postNote) htmlBlocks.push(`<p class="break-words">${escLink(postNote, ctx)}</p>`);
+      continue;
+    }
+    const sents = [];
+    let last = 0;
+    for(let i = 0; i < b.length; i++){
+      if(b[i] === '.' && dp0[i] === 0){
+        const rem = b.slice(i + 1);
+        const m = /^(\\s+)(?=[A-Z0-9#])/.exec(rem);
+        if(m && !/\\b(?:et\\s+al|vs|v|e\\.g|i\\.e|incl|cf|esp|Fig|Figs|Suppl|Ext|Ref|Refs|Eq|Tab|No|ca|approx|Dr|St|Prof|[A-Z])$/.test(b.slice(0, i))){
+          const seg = b.slice(last, i + 1).trim();
+          if(seg.length >= 65 && rem.trim().length >= 65){
+            sents.push(seg);
+            last = i + 1 + m[1].length;
+          }
+        }
+      }
+    }
+    if(b.slice(last).trim()) sents.push(b.slice(last).trim());
+    for(const st of sents){
+      const semis = st.length >= 220 ? splitTopClauses(st, /;\\s+/) : [st];
+      const merged = [];
+      for(let idx = 0; idx < semis.length; idx++){
+        const sm = semis[idx].trim();
+        if(merged.length && (merged[merged.length - 1].length < 80 || sm.length < 80)){
+          merged[merged.length - 1] = merged[merged.length - 1].replace(/\\.+$/, '') + '; ' + sm;
+        } else {
+          merged.push(idx > 0 ? capClause(sm) : sm);
+        }
+      }
+      for(let idx = 0; idx < merged.length; idx++){
+        const p = idx < merged.length - 1 ? ensurePeriod(merged[idx]) : merged[idx];
+        if(p.length >= 240){
+          const dpP = topDepths(p);
+          let cIdx = -1;
+          for(let k = 24; k <= Math.min(310, p.length - 80); k++){
+            if(p[k] === ':' && dpP[k] === 0 && p[k + 1] === ' ' && !/\\b(?:DOI|PMID|CID|OMIM|HGNC|MGI|HR|OR)$/i.test(p.slice(0, k))){ cIdx = k; break; }
+          }
+          if(cIdx > 0){
+            const lead = p.slice(0, cIdx + 1).trim();
+            const tail = p.slice(cIdx + 1).trim();
+            htmlBlocks.push(`<p class="font-medium break-words">${escLink(lead, ctx)}</p>`);
+            htmlBlocks.push(`<p class="break-words">${escLink(capClause(tail), ctx)}</p>`);
+            continue;
+          }
+        }
+        htmlBlocks.push(`<p class="break-words">${escLink(p, ctx)}</p>`);
+      }
+    }
+  }
+  return `<div class="${gapCls} leading-relaxed text-xs ${toneCls}">${htmlBlocks.join('')}</div>`;
+}
 function riskStateBadge(st){
   if(st==='LOW') return '<span class="px-2 py-0.5 rounded font-mono font-semibold text-[var(--success)] border border-[var(--success)] text-xs shrink-0">&#10003; LOW / DE-RISKED</span>';
   if(st==='MITIGATED') return '<span class="px-2 py-0.5 rounded font-mono font-semibold text-[var(--primary)] border border-[var(--primary)] text-xs shrink-0">&#9670; MITIGATED BY ROUTE / SELECTIVITY</span>';
@@ -250,7 +394,7 @@ function setDossierLens(lk){
   dossierLens = lk || 'ALL';
   renderDossierSidebar();
 }
-function renderEdgeRibbon(s, cid){
+function renderEdgeRibbon(s, cid, compact=false){
   if(!s || !s.edge_text) return '';
   const k = s.edge_kind || 'HIGH_HURDLE_WATCHLIST';
   const pillCls = k === 'FALSIFIED_TRAP'
@@ -258,9 +402,10 @@ function renderEdgeRibbon(s, cid){
     : (k === 'HIGH_HURDLE_WATCHLIST'
       ? 'text-[var(--warning)] border-[var(--warning)]'
       : 'text-[var(--primary)] border-[var(--primary)]');
-  return `<div class="p-2.5 rounded-lg bg-[var(--content)] border border-[var(--card-border)] flex flex-wrap sm:flex-nowrap items-baseline gap-2 text-xs">
-    <span class="px-1.5 py-0.5 rounded border font-mono font-semibold shrink-0 whitespace-nowrap ${pillCls}">${esc(s.edge_label)}</span>
-    <span class="leading-relaxed text-[var(--foreground)] min-w-0">${escLink(s.edge_text, cid)}</span>
+  const rawTxt = (compact && typeof firstGateSummary === 'function') ? firstGateSummary(s.edge_text, 175) : s.edge_text;
+  return `<div class="${compact?'p-2':'p-2.5'} rounded-lg bg-[var(--content)] border border-[var(--card-border)] space-y-1 text-xs">
+    <div><span class="inline-block px-1.5 py-0.5 rounded border font-mono font-semibold ${pillCls}">${esc(s.edge_label)}</span></div>
+    <div class="leading-snug text-[var(--foreground)]">${escLink(rawTxt, cid)}</div>
   </div>`;
 }
 function toggleDossierRail(){
@@ -285,13 +430,23 @@ function openDossier(id){
       if(a && a.classList) a.classList.add('hidden');
     }
   } catch(_e) {}
-  try {
-    if((location.protocol==='http:' || location.protocol==='https:') && location.hash !== '#dossier/'+id){
-      history.replaceState(null, '', '#dossier/'+id);
+  const hasPendSec = (typeof pendingDossierSec !== 'undefined' && Boolean(pendingDossierSec));
+  if(activeTab === 'dossiers'){
+    renderDossierMain();
+    if(typeof commitHistory === 'function') commitHistory('push', '#dossier/' + id);
+    if(hasPendSec){
+      const secId = pendingDossierSec;
+      pendingDossierSec = '';
+      setTimeout(() => {
+        const secEl = document.getElementById(secId);
+        if(secEl && secEl.scrollIntoView) secEl.scrollIntoView({behavior:'smooth', block:'start'});
+      }, 30);
+      return;
     }
-  } catch(_e) {}
-  if(activeTab === 'dossiers') renderDossierMain();
-  else switchTab('dossiers');
+  } else {
+    switchTab('dossiers', 'push', '#dossier/' + id);
+    if(hasPendSec) return;
+  }
   try { if(typeof window !== 'undefined' && window.scrollTo) window.scrollTo(0, 0); } catch(_e) {}
 }
 
@@ -301,17 +456,17 @@ function renderSummaryDomainPanels(r){
   const cisRows = (typeof DATA_CIS !== 'undefined') ? DATA_CIS.filter(c => c.pid === r.id || c.sc === r.id) : [];
   if(cisRows.length){
     const jumpBtn = isFull
-      ? `<button type="button" data-jump-intervals="${esc(r.id)}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs cursor-pointer">Inspect in Tab 2 (GRCh38 Cis-Intervals) &rarr;</button>`
-      : (location.protocol !== 'about:' ? `<a href="../CARBON_ALS_INTERACTIVE_EXPLORER.html#dossier/${esc(r.id)}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs">Open in Full Explorer &rarr;</a>` : '');
-    out += `<div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
+      ? `<button type="button" data-jump-intervals="${esc(r.id)}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs cursor-pointer">Inspect in Tab 3 (Splice Windows) &rarr;</button>`
+      : (location.protocol !== 'about:' ? `<a href="../CARBON_ALS_INTERACTIVE_EXPLORER.html#intervals/${esc(r.id)}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs">Inspect in Tab 3 (Splice Windows) &rarr;</a>` : '');
+    out += `<div id="sec-cis" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
       <div class="flex items-center justify-between gap-2 flex-wrap">
-        <h3 class="text-sm font-semibold">Audited GRCh38 Cis-Regulatory Intervals (${cisRows.length} Coordinate Walk${cisRows.length>1?'s':''})</h3>
+        <h3 class="text-sm font-semibold">Audited GRCh38 Splice-Target Windows (${cisRows.length} Coordinate Walk${cisRows.length>1?'s':''})</h3>
         ${jumpBtn}
       </div>
       <div class="overflow-x-auto"><table class="w-full text-left border-collapse text-xs">
         <thead><tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
-          <th class="py-1.5 px-2">Candidate Walk</th><th class="py-1.5 px-2">GRCh38 Coordinate</th><th class="py-1.5 px-2">OTS Splicing Mode</th>
-          <th class="py-1.5 px-2" title="Modeled 2'-O-MOE PO/PS Tm, free energy, and max AlphaGenome AVI Phred">Tm / &Delta;G37 / AVI</th><th class="py-1.5 px-2" title="mRNA = spliced 0mm/1mm/wobble genes; pre = pre-mRNA 0mm/1mm(<=50bp)/wobble/2mm(<=25bp)/1nt-bulge/18nt-subcore">mRNA &amp; Pre-mRNA Hits</th><th class="py-1.5 px-2">Safety Verdict &amp; Browsers</th>
+          <th class="py-1.5 px-2">Candidate Walk</th><th class="py-1.5 px-2">GRCh38 Coordinate</th><th class="py-1.5 px-2">Splicing Mode</th>
+          <th class="py-1.5 px-2" title="Modeled 2'-O-MOE PO/PS Tm, free energy, and max AlphaGenome AVI Phred">Tm / &Delta;G37 / AVI</th><th class="py-1.5 px-2" title="mRNA = spliced 0mm·1mm·wobble genes; pre = pre-mRNA 0mm·1mm(<=50bp)·wobble·2mm(<=25bp)·1nt-bulge·18nt-subcore (+ whole-intron 1mm on gapmers)">mRNA &amp; Pre-mRNA Hits</th><th class="py-1.5 px-2">Safety Verdict &amp; Browsers</th>
         </tr></thead>
         <tbody class="divide-y divide-[var(--card-border)]">${cisRows.map(c => {
           const loP = Math.max(1, Number(c.lo)-250), hiP = Number(c.hi)+250;
@@ -319,40 +474,61 @@ function renderSummaryDomainPanels(r){
           const atlUrl = `https://deepmind.google.com/science/alphagenome/atlas?q=${c.chr}:${loP}-${hiP}&m=locus&lItems=avi,section:RNA_SEQ,section:SPLICE_JUNCTIONS,section:DNASE`;
           const ucscUrl = `https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=${c.chr}:${loP}-${hiP}`;
           const stB = (typeof statusBadge === 'function') ? statusBadge(c.st) : `<span class="font-mono">${esc(humanizeEnum(c.st))}</span>`;
+          const gapNote = (c.is_gap && c.pm1_all > 0) ? ` <span class="text-[var(--warning)]">(+${c.pm1_all} whole-intron 1mm)</span>` : '';
           return `<tr class="align-top">
-            <td class="py-2 px-2 font-mono">${c.lead?'<span class="text-[var(--success)] font-bold">&#9733; Lead</span>':'<span class="text-[var(--muted-foreground)]">Alt</span>'} &middot; <strong>${esc(c.gene)} #${c.rk}</strong></td>
+            <td class="py-2 px-2 font-mono">${c.lead?'<span class="text-[var(--success)] font-bold">&#9733; Lead</span>':'<span class="text-[var(--muted-foreground)]">Alt</span>'} &middot; <strong>${esc(c.gene)} &middot; Walk #${c.rk}</strong></td>
             <td class="py-2 px-2 font-mono">${mkExtA(ensUrl, esc(c.iv))} <span class="text-[var(--muted-foreground)]">(${c.len}bp)</span></td>
             <td class="py-2 px-2">${esc(humanizeEnum(c.mode))}</td>
             <td class="py-2 px-2 font-mono tabular-nums">${c.tm}&deg;C &middot; ${c.dg} &middot; AVI=${c.avi}</td>
-            <td class="py-2 px-2 font-mono tabular-nums" title="mRNA 0mm/1mm/wobble · pre-mRNA 0mm/1mm(<=50bp)/wobble/2mm(<=25bp)/1nt-bulge/18nt-subcore">mRNA ${c.sp} &middot; pre ${c.pm}</td>
+            <td class="py-2 px-2 font-mono tabular-nums" title="mRNA 0mm·1mm·wobble · pre-mRNA 0mm·1mm(<=50bp)·wobble·2mm(<=25bp)·1nt-bulge·18nt-subcore">mRNA ${esc(c.sp).replaceAll('/',' \u00b7 ')} &middot; pre ${esc(c.pm).replaceAll('/',' \u00b7 ')}${gapNote}</td>
             <td class="py-2 px-2 font-mono whitespace-nowrap">${stB} &middot; ${mkExtA(atlUrl, 'Atlas &nearr;')} &middot; ${mkExtA(ucscUrl, 'UCSC &nearr;')}</td>
           </tr>`;
         }).join('')}</tbody>
       </table></div>
-      <div class="text-[var(--muted-foreground)] font-mono text-xs pt-1 border-t border-[var(--card-border)]">Key: mRNA = spliced 0mm/1mm/wobble genes &middot; pre = pre-mRNA 0mm / 1mm(&le;50bp SS) / wobble / 2mm(&le;25bp) / 1-nt bulge / 18-nt sub-core (Coordinate-Only Search Windows, 0 chemically modified synthesis-ready ASO sequences).</div></div>`;
+      <div class="text-[var(--muted-foreground)] font-mono text-xs pt-1 border-t border-[var(--card-border)]">Key: mRNA = spliced 0mm&middot;1mm&middot;wobble genes &middot; pre = pre-mRNA 0mm / 1mm(&le;50bp SS; + whole-intron 1mm on gapmers) / wobble / 2mm(&le;25bp) / 1-nt bulge / 18-nt sub-core (Coordinate-Only Search Windows, 0 chemically modified synthesis-ready ASO sequences).</div></div>`;
   }
-  if(!isFull && location.protocol !== 'about:' && (['C014','C015','C017','C018'].includes(r.id) || /^DN-0[1-9]$/.test(r.id))){
+  if(!isFull && location.protocol !== 'about:' && (['C014','C015','C023','C017','C018'].includes(r.id) || /^DN-0[1-9]$/.test(r.id))){
     out += `<div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex items-center justify-between gap-2 flex-wrap text-xs">
-      <span class="text-[var(--muted-foreground)]">Interactive single-gene sub-node cards &amp; 3-region NYGC RNA-seq profiles are available in the full 6-tab Explorer.</span>
+      <span class="text-[var(--muted-foreground)]">Interactive single-gene subunit cards &amp; 3-region NYGC RNA-seq profiles are available in the full 5-view Explorer.</span>
       <a href="../CARBON_ALS_INTERACTIVE_EXPLORER.html#dossier/${esc(r.id)}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono cursor-pointer">Open in Full Explorer &rarr;</a>
     </div>`;
   }
   const subRows = isFull ? DATA_SUB.filter(x => x.par === r.id) : [];
   if(subRows.length){
-    out += `<div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
+    out += `<div id="sec-subunits" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
       <div class="flex items-center justify-between gap-2 flex-wrap">
-        <h3 class="text-sm font-semibold">Unbundled Single-Gene Sub-Nodes (${subRows.length} Genes &middot; NIH IDG TDL &amp; TSA)</h3>
-        <button type="button" data-jump-subnodes="${esc(r.id)}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs cursor-pointer">Explore Full Cards in Tab 3 &rarr;</button>
+        <h3 class="text-sm font-semibold">Subunit &amp; Selectivity Gene Dissection (${subRows.length} Genes &middot; NIH IDG TDL &amp; TSA)</h3>
+        <span class="font-mono text-xs text-[var(--muted-foreground)]">gnomAD v4 LOEUF/pLI &middot; DepMap Chronos &middot; 3D Pocket &amp; Single-Gene Rationale</span>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 text-xs">${subRows.map(sn => {
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">${subRows.map(sn => {
         const vcol = sn.vraw.startsWith('KEEP')?'text-[var(--warning)] border-[var(--warning)]':(sn.vraw.startsWith('RECLASSIFY')?'text-[var(--primary)] border-[var(--primary)]':'text-[var(--error)] border-[var(--error)]');
-        return `<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1">
-          <div class="flex items-center justify-between gap-1.5 flex-wrap">
-            <span class="font-mono font-bold">${esc(sn.id)} &middot; ${esc(sn.gene)}</span>
-            <div class="flex items-center gap-1 flex-wrap">${tdlBadge(sn.tdl)}${tsaSubBadge(sn.tsa)}<span class="px-1.5 py-0.5 rounded border font-mono font-semibold ${vcol}">${esc(sn.vlbl)}</span></div>
+        const gPills = genePortalPills(sn.gene);
+        return `<div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--card-border)] space-y-2">
+          <div class="flex items-start justify-between gap-2 flex-wrap border-b border-[var(--card-border)] pb-1.5">
+            <div>
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="font-mono font-bold text-sm">${esc(sn.id)} &middot; ${esc(sn.gene)}</span>
+                ${gPills?`<span class="font-mono">${gPills}</span>`:''}
+              </div>
+              <div class="text-[var(--muted-foreground)] mt-0.5">${esc(sn.role)}</div>
+            </div>
+            <div class="flex flex-wrap items-center gap-1">${tdlBadge(sn.tdl)}${tsaSubBadge(sn.tsa)}</div>
           </div>
-          <div class="text-[var(--muted-foreground)]">${esc(sn.role)}</div>
-          <div class="leading-snug">${escLink(sn.gnomad, sn.gene)}</div>
+          <div class="space-y-0.5">
+            <div class="font-mono font-semibold text-[var(--muted-foreground)]">1. Human Genetic Constraint &amp; Essentiality (TSA)</div>
+            <div class="leading-relaxed break-words">${escLink(sn.gnomad, sn.gene)}</div>
+          </div>
+          <div class="space-y-0.5 pt-1 border-t border-[var(--card-border)]">
+            <div class="font-mono font-semibold text-[var(--muted-foreground)]">2. 3D Structural Pocket &amp; Tractability</div>
+            <div class="leading-relaxed break-words">${escLink(sn.drug, sn.gene)}</div>
+          </div>
+          <div class="space-y-0.5 pt-1 border-t border-[var(--card-border)]">
+            <div class="flex items-center justify-between gap-1.5 flex-wrap">
+              <span class="font-mono font-semibold text-[var(--muted-foreground)]">3. Single-Gene Adjudication Rationale</span>
+              <span class="px-1.5 py-0.5 rounded border font-mono font-semibold ${vcol}">${esc(sn.vlbl)}</span>
+            </div>
+            <div class="leading-relaxed break-words">${escLink(sn.vbody, sn.gene)}</div>
+          </div>
         </div>`;
       }).join('')}</div></div>`;
   }
@@ -360,10 +536,25 @@ function renderSummaryDomainPanels(r){
     const gKey = Object.keys(NYGC_GENE_TO_ID).find(g => NYGC_GENE_TO_ID[g] === r.id);
     if(gKey && DATA_NYGC[gKey]){
       const regDefs = [['Spinal_Cord_Cervical','Cervical Cord'],['Spinal_Cord_Lumbar','Lumbar Cord'],['Cortex_Motor','Motor Cortex']];
-      out += `<div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
+      const allGenes = Object.keys(DATA_NYGC);
+      const cmpRows = allGenes.map(g => {
+        const pid = NYGC_GENE_TO_ID[g];
+        const dc = DATA_NYGC[g]['Spinal_Cord_Cervical'], dl = DATA_NYGC[g]['Spinal_Cord_Lumbar'], dm = DATA_NYGC[g]['Cortex_Motor'];
+        const hi = g === gKey ? 'bg-[var(--content)] font-semibold' : '';
+        const dd = (dc.p < 0.05 && dc.sp > 0.25) ? ' <span class="px-1 rounded border border-[var(--warning)] text-[var(--warning)] font-mono text-xs" title="Non-significant in small n=9 ALS-SOD1/FUS; junction RT-ddPCR required">ddPCR</span>' : '';
+        return `<tr class="align-middle ${hi}">
+          <td class="py-1 px-2 font-mono"><button type="button" data-open-dossier="${esc(pid)}" class="text-[var(--link)] hover:underline font-semibold cursor-pointer">${esc(g)} (${esc(pid)})</button></td>
+          <td class="py-1 px-2 font-mono tabular-nums">${dc.b>=0?'+':''}${dc.b.toFixed(3)} <span class="text-[var(--muted-foreground)]">(p=${dc.p<0.001?dc.p.toExponential(1):dc.p.toFixed(3)})</span></td>
+          <td class="py-1 px-2 font-mono tabular-nums whitespace-nowrap">${dc.sp.toFixed(2)}${dd}</td>
+          <td class="py-1 px-2 font-mono tabular-nums">${dc.tail.toFixed(2)}%</td>
+          <td class="py-1 px-2 font-mono tabular-nums">${dl.b>=0?'+':''}${dl.b.toFixed(3)} <span class="text-[var(--muted-foreground)]">(p=${dl.p<0.001?dl.p.toExponential(1):dl.p.toFixed(3)})</span></td>
+          <td class="py-1 px-2 font-mono tabular-nums">${dm.b>=0?'+':''}${dm.b.toFixed(3)} <span class="text-[var(--muted-foreground)]">(p=${dm.p<0.001?dm.p.toExponential(1):dm.p.toFixed(3)})</span></td>
+        </tr>`;
+      }).join('');
+      out += `<div id="sec-nygc" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
         <div class="flex items-center justify-between gap-2 flex-wrap">
-          <h3 class="text-sm font-semibold">3-Region NYGC Postmortem RNA-Seq Profile &mdash; ${esc(gKey)} (${mkExtA('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153960','GSE153960')})</h3>
-          <button type="button" data-switch-tab="analytics" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs cursor-pointer">Compare 9-Gene Panel in Tab 4 &rarr;</button>
+          <h3 class="text-sm font-semibold">3-Region NYGC Postmortem RNA-Seq Profile &mdash; ${esc(gKey)} (${mkExtA('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153960','GSE153960')} &middot; ${mkExtA('https://pubmed.ncbi.nlm.nih.gov/36482247/','PMID:36482247')})</h3>
+          <span class="font-mono text-xs text-[var(--muted-foreground)]">&#9679; [MEASURED] Donor-Level RIN+GC OLS</span>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 text-xs">${regDefs.map(([rk, rlbl]) => {
           const d = DATA_NYGC[gKey][rk], m = DATA_NYGC_META[rk];
@@ -371,9 +562,10 @@ function renderSummaryDomainPanels(r){
           const dotCol = sigNeg ? 'var(--primary)' : (sigPos ? 'var(--warning)' : 'var(--muted-foreground)');
           const ptPct = Math.max(4, Math.min(96, ((Math.max(-0.6, Math.min(0.6, d.b)) + 0.6) / 1.2) * 100));
           const sL = Math.min(50, ptPct), sW = Math.max(1, Math.abs(ptPct - 50));
+          const ddpcrTag = (d.p < 0.05 && d.sp > 0.25) ? ' <span class="px-1 rounded border border-[var(--warning)] text-[var(--warning)] text-xs" title="Non-significant in small n=9 ALS-SOD1/FUS (underpowered for equivalence); junction RT-ddPCR required">ddPCR</span>' : '';
           return `<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1 font-mono tabular-nums">
-            <div class="flex items-center justify-between"><strong>${rlbl}</strong><span class="text-[var(--muted-foreground)]">N=${m.ntot}</span></div>
-            <div>RIN+GC &beta; = <strong>${d.b>=0?'+':''}${d.b.toFixed(3)}</strong> (p=${d.p<0.001?d.p.toExponential(1):d.p.toFixed(3)})</div>
+            <div class="flex items-center justify-between"><strong>${rlbl}</strong><span class="text-[var(--muted-foreground)]">N=${m.ntot} (${m.ntdp} TDP/${m.nctrl} Ctrl/${m.nsod} SOD1)</span></div>
+            <div>RIN+GC &beta; = <strong>${d.b>=0?'+':''}${d.b.toFixed(3)}</strong> (p=${d.p<0.001?d.p.toExponential(1):d.p.toFixed(3)}) &middot; SOD1/FUS p=${d.sp.toFixed(2)}${ddpcrTag}</div>
             <div class="relative w-full h-3 rounded bg-[var(--card)] border border-[var(--card-border)] overflow-hidden">
               <div class="absolute top-0 bottom-0 w-px bg-[var(--foreground)] opacity-40" style="left:50%"></div>
               <div class="absolute" style="left:${sL.toFixed(1)}%;width:${sW.toFixed(1)}%;top:5px;height:2px;background:${dotCol}"></div>
@@ -381,21 +573,49 @@ function renderSummaryDomainPanels(r){
             </div>
             <div class="text-[var(--muted-foreground)]">tSTMN2 &beta;=${d.tb>=0?'+':''}${d.tb.toFixed(2)} (p=${d.tp<0.001?d.tp.toExponential(1):d.tp.toFixed(3)}) &middot; Tail ${d.tail.toFixed(2)}%</div>
           </div>`;
-        }).join('')}</div></div>`;
+        }).join('')}</div>
+        <details class="rounded bg-[var(--background)] border border-[var(--card-border)] px-3 py-2 text-xs">
+          <summary class="cursor-pointer font-mono text-xs text-[var(--link)] flex flex-wrap items-center justify-between gap-2 select-none"><span>Compare All 9 Cryptic-Splicing &amp; APA Candidates Across NYGC Cervical (N=206), Lumbar (N=181) &amp; Motor Cortex (N=120)</span><span class="text-[var(--muted-foreground)]">DN-01 &ndash; DN-09 Cross-Region Table</span></summary>
+          <div class="pt-2 mt-2 border-t border-[var(--card-border)] overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead><tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
+                <th class="py-1 px-2">Gene (ID)</th><th class="py-1 px-2">Cervical &beta; (adj p)</th><th class="py-1 px-2">Cervical SOD1/FUS p</th>
+                <th class="py-1 px-2">Cervical Tail %</th><th class="py-1 px-2">Lumbar &beta; (adj p)</th><th class="py-1 px-2">Motor Cortex &beta; (adj p)</th>
+              </tr></thead>
+              <tbody class="divide-y divide-[var(--card-border)]">${cmpRows}</tbody>
+            </table>
+          </div>
+        </details></div>`;
     }
   }
   return out;
 }
 
-function renderDossierSidebar(){
+function getFilteredDossierList(){
   const qEl = document.getElementById('d-search');
   const q = qEl ? qEl.value.trim().toLowerCase() : '';
+  const activeLensObj = (dossierLens !== 'ALL' && typeof DATA_LENSES !== 'undefined') ? DATA_LENSES.find(l => l.k === dossierLens) : null;
+  return DATA_PORT.filter(r => {
+    if(activeLensObj && !activeLensObj.ids.includes(r.id)) return false;
+    if(dossierSlice === 'T12' && r.tier !== 'TIER_1_ACTIONABLE_NOW' && r.tier !== 'TIER_2_FOCUSED_GATE_FIRST') return false;
+    if(dossierSlice === 'WATCH' && r.tier !== 'TIER_3_EXPLORATORY_DISCOVERY' && r.tier !== 'COMPANION_PROTOCOL_ONLY') return false;
+    if(dossierSlice === 'BIO' && r.tier !== 'BIOMARKER_BENCHMARK_ONLY') return false;
+    if(dossierSlice === 'DROP' && r.tier !== 'DROPPED_FALSIFIED_EXCLUDED') return false;
+    if(!q) return true;
+    const sObj = (typeof DATA_SUM !== 'undefined' && DATA_SUM[r.id]) ? DATA_SUM[r.id] : null;
+    const hTxt = sObj ? ((sObj.hyp || '') + ' ' + (sObj.verdict || '') + ' ' + (sObj.edge_text || '')) : '';
+    const snTxt = (typeof DATA_SUB !== 'undefined') ? DATA_SUB.filter(sn => sn.par === r.id).map(sn => sn.id + ' ' + sn.gene + ' ' + sn.role).join(' ') : '';
+    return (r.id+' '+r.name+' '+r.mod+' '+r.tier+' '+r.sub+' '+hTxt+' '+snTxt).toLowerCase().includes(q);
+  });
+}
+
+function renderDossierSidebar(){
   const sliceDefs = [
     ['ALL', 'All'],
     ['T12', 'T1/2 (8)'],
-    ['WATCH', 'T3+Proto (20)'],
+    ['WATCH', 'T3+Proto (19)'],
     ['BIO', 'Bio (7)'],
-    ['DROP', 'Drop (24)'],
+    ['DROP', 'Drop (18)'],
   ];
   const sBar = document.getElementById('d-slice-bar');
   if(sBar){
@@ -412,15 +632,8 @@ function renderDossierSidebar(){
     }
     dLensSel.value = dossierLens;
   }
-  const activeLensObj = (dossierLens !== 'ALL' && typeof DATA_LENSES !== 'undefined') ? DATA_LENSES.find(l => l.k === dossierLens) : null;
-  const inSlice = r => {
-    if(activeLensObj && !activeLensObj.ids.includes(r.id)) return false;
-    if(dossierSlice === 'T12') return r.tier === 'TIER_1_ACTIONABLE_NOW' || r.tier === 'TIER_2_FOCUSED_GATE_FIRST';
-    if(dossierSlice === 'WATCH') return r.tier === 'TIER_3_EXPLORATORY_DISCOVERY' || r.tier === 'COMPANION_PROTOCOL_ONLY';
-    if(dossierSlice === 'BIO') return r.tier === 'BIOMARKER_BENCHMARK_ONLY';
-    if(dossierSlice === 'DROP') return r.tier === 'DROPPED_FALSIFIED_EXCLUDED';
-    return true;
-  };
+  const dSearchQ = ((document.getElementById('d-search') || {}).value || '').trim().toLowerCase();
+  const SHORT_NAV_NAME = {S06:'SARM1',S07:'Aldesleukin',C001:'UNC13A',C006:'KCNQ2',C002:'STMN2',C007:'IL1RL1 / sST2',C015:'SCFD1 / G2E3',C014:'CHMP7 / CHMP2B',C018:'C1q (C1QA/B/C)',C016:'FBXL5 / IRP2',C020:'Apilimod',C019:'Baricitinib',S02:'CuATSM',C005:'TMS / SDTC PD',S08:'Methylcobalamin',C017:'CHIT1 / GPNMB',S03:'Mycophenolate',S05:'Lonafarnib'};
   const mkBtn = r => {
     const isPilot = Boolean(DATA_MONOGRAPHS[r.id]);
     const on = r.id === dossierId;
@@ -428,8 +641,10 @@ function renderDossierSidebar(){
       : ((r.tier==='TIER_2_FOCUSED_GATE_FIRST' || r.tier==='BIOMARKER_BENCHMARK_ONLY') ? 'var(--primary)'
       : (r.tier==='DROPPED_FALSIFIED_EXCLUDED' ? 'var(--error)' : 'var(--warning)'));
     const cls = on ? 'bg-[var(--content)] border-[var(--primary)] border-l-2 font-semibold text-[var(--foreground)]' : 'bg-[var(--background)] border-[var(--card-border)] hover:bg-[var(--content)]';
-    const shortLbl = r.name.split('(')[0].trim();
-    const tip = `#${r.rk} ${r.id} — ${r.name} [${isPilot ? 'Full Monograph' : 'Summary Dossier'}]`;
+    const subM = (dSearchQ && typeof DATA_SUB !== 'undefined') ? DATA_SUB.filter(sn => sn.par === r.id && !r.name.toLowerCase().includes(sn.gene.toLowerCase()) && (sn.gene+' '+sn.id+' '+sn.role).toLowerCase().includes(dSearchQ)).map(sn => sn.gene) : [];
+    const baseShort = SHORT_NAV_NAME[r.id] || r.name.split('(')[0].trim();
+    const shortLbl = baseShort + (subM.length ? ' (+' + subM.join(',') + ')' : '');
+    const tip = `#${r.rk} ${r.id} — ${r.name} [${isPilot ? 'Full Monograph' : 'Summary Report'}]`;
     return `<button type="button" data-open-dossier="${esc(r.id)}" ${on?'aria-current="true"':''} title="${esc(tip)}" class="w-full text-left px-2 py-1 rounded border ${cls} flex items-center justify-between gap-1.5 text-xs cursor-pointer">
       <span class="min-w-0 flex items-center gap-1.5 pointer-events-none">
         <span class="w-1.5 h-1.5 rounded-full shrink-0" style="background:${dotCol}"></span>
@@ -440,17 +655,13 @@ function renderDossierSidebar(){
       ${isPilot?'<span class="px-1 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono text-xs shrink-0 pointer-events-none" title="Full Translational Monograph">M</span>':''}
     </button>`;
   };
-  const match = r => {
-    const sObj = (typeof DATA_SUM !== 'undefined' && DATA_SUM[r.id]) ? DATA_SUM[r.id] : null;
-    const hTxt = sObj ? ((sObj.hyp || '') + ' ' + (sObj.verdict || '') + ' ' + (sObj.edge_text || '')) : '';
-    return inSlice(r) && (!q || (r.id+' '+r.name+' '+r.mod+' '+r.tier+' '+r.sub+' '+hTxt).toLowerCase().includes(q));
-  };
-  const t1 = DATA_PORT.filter(r => r.tier==='TIER_1_ACTIONABLE_NOW' && match(r));
-  const t2 = DATA_PORT.filter(r => r.tier==='TIER_2_FOCUSED_GATE_FIRST' && match(r));
-  const t3 = DATA_PORT.filter(r => (r.tier==='TIER_3_EXPLORATORY_DISCOVERY' || r.tier==='COMPANION_PROTOCOL_ONLY') && match(r));
-  const bm = DATA_PORT.filter(r => r.tier==='BIOMARKER_BENCHMARK_ONLY' && match(r));
-  const dr = DATA_PORT.filter(r => r.tier==='DROPPED_FALSIFIED_EXCLUDED' && match(r));
-  const totMatched = t1.length + t2.length + t3.length + bm.length + dr.length;
+  const matched = getFilteredDossierList();
+  const t1 = matched.filter(r => r.tier==='TIER_1_ACTIONABLE_NOW');
+  const t2 = matched.filter(r => r.tier==='TIER_2_FOCUSED_GATE_FIRST');
+  const t3 = matched.filter(r => r.tier==='TIER_3_EXPLORATORY_DISCOVERY' || r.tier==='COMPANION_PROTOCOL_ONLY');
+  const bm = matched.filter(r => r.tier==='BIOMARKER_BENCHMARK_ONLY');
+  const dr = matched.filter(r => r.tier==='DROPPED_FALSIFIED_EXCLUDED');
+  const totMatched = matched.length;
   const cntEl = document.getElementById('d-nav-count');
   if(cntEl) cntEl.textContent = `${totMatched} / ${DATA_PORT.length}`;
   let html = '';
@@ -486,11 +697,13 @@ function renderDossierMain(){
   const box = document.getElementById('d-content');
   if(!box) return;
   const r = DATA_PORT.find(x=>x.id===dossierId) || DATA_PORT[0];
-  const allIdx = DATA_PORT.findIndex(x=>x.id===r.id);
   const isFullExplorer = (typeof DATA_SUB !== 'undefined');
+  const filtList = isFullExplorer ? getFilteredDossierList() : [];
+  const navPool = (isFullExplorer && filtList.length >= 2 && filtList.some(x=>x.id===r.id)) ? filtList : DATA_PORT;
+  const poolIdx = navPool.findIndex(x=>x.id===r.id);
   const pIdx = MONOGRAPH_ORDER.indexOf(r.id);
-  const prevId = (!isFullExplorer && pIdx >= 0) ? MONOGRAPH_ORDER[(pIdx - 1 + MONOGRAPH_ORDER.length) % MONOGRAPH_ORDER.length] : DATA_PORT[(allIdx - 1 + DATA_PORT.length) % DATA_PORT.length].id;
-  const nextId = (!isFullExplorer && pIdx >= 0) ? MONOGRAPH_ORDER[(pIdx + 1) % MONOGRAPH_ORDER.length] : DATA_PORT[(allIdx + 1) % DATA_PORT.length].id;
+  const prevId = (!isFullExplorer && pIdx >= 0) ? MONOGRAPH_ORDER[(pIdx - 1 + MONOGRAPH_ORDER.length) % MONOGRAPH_ORDER.length] : navPool[(poolIdx - 1 + navPool.length) % navPool.length].id;
+  const nextId = (!isFullExplorer && pIdx >= 0) ? MONOGRAPH_ORDER[(pIdx + 1) % MONOGRAPH_ORDER.length] : navPool[(poolIdx + 1) % navPool.length].id;
   const prevObj = DATA_PORT.find(x=>x.id===prevId) || r;
   const nextObj = DATA_PORT.find(x=>x.id===nextId) || r;
   const prevLbl = `#${prevObj.rk} ${prevObj.id}`;
@@ -501,11 +714,18 @@ function renderDossierMain(){
 
   const w = DATA_MONOGRAPHS[r.id];
   const s = (typeof DATA_SUM !== 'undefined' && DATA_SUM[r.id]) ? DATA_SUM[r.id] : null;
+  const candUpds = (isFullExplorer && typeof DATA_UPDATES !== 'undefined') ? DATA_UPDATES.filter(u => u.ids.includes(r.id) || u.ids.some(x => x.startsWith(r.id + '-'))) : [];
+  const updPill = candUpds.length
+    ? `<button type="button" data-jump-updates="${esc(r.id)}" class="px-2.5 py-1 rounded border border-[var(--primary)] text-[var(--primary)] font-mono text-xs cursor-pointer" title="View living research updates and revisions for ${esc(r.id)}">&#8634; ${candUpds.length} Update${candUpds.length>1?'s':''} &rarr;</button>`
+    : '';
   const evRows = DATA_EV[r.id] || [];
-  const evTable = evRows.length ? `<div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2">
+  const evFilterBtn = isFullExplorer
+    ? `<button type="button" data-jump-rep-cand="${esc(r.id)}" class="px-2 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs cursor-pointer">Filter All ${evRows.length} in Tab 4 &rarr;</button>`
+    : '';
+  const evTable = evRows.length ? `<div id="sec-ledger" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2">
     <div class="flex items-center justify-between gap-2 flex-wrap">
       <h3 class="text-sm font-semibold">Primary Evidence &amp; FAIR Provenance Ledger (${evRows.length} Atomic Contrasts)</h3>
-      <span class="font-mono text-xs text-[var(--muted-foreground)]">W3C PROV &middot; 4-Level Evidence Design &amp; Source Locator Ledger</span>
+      <div class="flex items-center gap-2 flex-wrap"><span class="font-mono text-xs text-[var(--muted-foreground)]">Script &amp; Checksum Provenance &middot; 4-Level Evidence Design</span>${evFilterBtn}</div>
     </div>
     <div class="text-xs text-[var(--muted-foreground)] font-mono leading-relaxed pb-1 border-b border-[var(--card-border)]">
       <strong class="text-[var(--foreground)]">Design Tiers:</strong> <span class="text-[var(--success)]">Level 1</span> = Human ALS Genetics / Powered RCT &middot; <span class="text-[var(--primary)]">Level 2</span> = Human Cohort (N&ge;15) / PK-PD &middot; <span class="text-[var(--warning)]">Level 3</span> = In Vitro / 3D / Small-N (&lt;15) &middot; <span>Model / Heuristic Prior</span> = Biophysical / Cis-Scan Simulation.
@@ -522,12 +742,12 @@ function renderDossierMain(){
         const rolePill = e.role ? `<span class="px-1.5 py-0.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] font-mono text-xs whitespace-nowrap">${esc(e.role)}</span>` : '';
         const nLine = e.n ? `<div class="font-mono font-semibold text-[var(--foreground)] mt-0.5">n=${esc(e.n)}${e.nsub?` <span class="font-normal text-[var(--muted-foreground)]">(${esc(e.nsub)})</span>`:''}</div>`
           : (e.nsub ? `<div class="font-mono text-[var(--muted-foreground)] mt-0.5">${esc(e.nsub)}</div>` : '');
-        const provTip = `W3C PROV: ${esc(e.eid)} · ${esc(e.run)}${e.sha64 ? ' · sha256:' + esc(e.sha64) : (e.sha ? ' · sha256:' + esc(e.sha) : '')}`;
+        const provTip = `Provenance: ${esc(e.eid)} · ${esc(e.run)}${e.sha64 ? ' · sha256:' + esc(e.sha64) : (e.sha ? ' · sha256:' + esc(e.sha) : '')}`;
         const repHref = '../CARBON_ALS_INTERACTIVE_EXPLORER.html#replication' + (e.run ? '/' + encodeURIComponent(e.run) : '');
         const runChip = e.run
           ? (isFullExplorer
-            ? `<button type="button" data-open-rep-run="${esc(e.run)}" class="text-[var(--link)] hover:underline font-mono text-xs cursor-pointer" title="${provTip}">Verify in Tab 6 &rarr;</button>`
-            : (location.protocol !== 'about:' ? `<a href="${repHref}" class="text-[var(--link)] hover:underline font-mono text-xs" title="${provTip}">Verify in Tab 6 &rarr;</a>` : ''))
+            ? `<button type="button" data-open-rep-run="${esc(e.run)}" class="text-[var(--link)] hover:underline font-mono text-xs cursor-pointer" title="${provTip}">Verify in Tab 4 &rarr;</button>`
+            : (location.protocol !== 'about:' ? `<a href="${repHref}" class="text-[var(--link)] hover:underline font-mono text-xs" title="${provTip}">Verify in Tab 4 &rarr;</a>` : ''))
           : '';
         const shaChip = (isFullExplorer && e.sha64) ? ` &middot; <button type="button" data-copy-sha="${esc(e.sha64)}" class="text-[var(--muted-foreground)] hover:text-[var(--foreground)] font-mono text-xs cursor-pointer" title="Click to copy 64-char SHA-256: ${esc(e.sha64)}">Copy SHA</button>` : '';
         return `<tr class="align-top" title="${provTip}">
@@ -540,6 +760,24 @@ function renderDossierMain(){
         </tr>`;
       }).join('')}</tbody>
     </table></div></div>` : '';
+
+  const hasSubPanel = isFullExplorer && DATA_SUB.some(x => x.par === r.id);
+  const hasNygcPanel = (typeof DATA_NYGC !== 'undefined' && typeof NYGC_GENE_TO_ID !== 'undefined' && Object.values(NYGC_GENE_TO_ID).includes(r.id));
+  const hasCisPanel = (typeof DATA_CIS !== 'undefined' && DATA_CIS.some(c => c.pid === r.id || c.sc === r.id));
+  const jumpSecs = w
+    ? [['sec-overview', 'Overview & Gates'], ['sec-cascade', '4-Step Cascade'], ['sec-evidence-viz', 'Forest & SVG'], ['sec-safety', '5-Axis Safety'], ['sec-5rs', '5Rs Essay']]
+    : [['sec-overview', 'Hypothesis & Verdict'], ['sec-procon', r.dec === 'DROP' ? 'Discovery vs. Falsifier' : 'Evidence Pro / Con']];
+  if(hasSubPanel) jumpSecs.push(['sec-subunits', 'Subunit & Selectivity']);
+  if(hasNygcPanel) jumpSecs.push(['sec-nygc', '3-Region NYGC']);
+  if(hasCisPanel) jumpSecs.push(['sec-cis', 'Splice Walks']);
+  if(evRows.length) jumpSecs.push(['sec-ledger', `Primary Evidence (${evRows.length})`]);
+  const fromPortBtn = (isFullExplorer && typeof dossierFromPortfolio !== 'undefined' && dossierFromPortfolio)
+    ? `<button type="button" data-switch-tab="portfolio" class="px-2 py-0.5 rounded border border-[var(--primary)] text-[var(--primary)] font-mono font-semibold text-xs cursor-pointer">&larr; Triage Table</button>`
+    : '';
+  const secJumpBar = `<div class="flex flex-wrap items-center justify-between gap-1.5 pb-1 border-b border-[var(--card-border)] text-xs font-mono">
+    <div class="flex flex-wrap items-center gap-1">${fromPortBtn}<span class="text-[var(--muted-foreground)] mr-0.5">Sections:</span>${jumpSecs.map(([sid, slbl]) => `<button type="button" data-scroll-sec="${sid}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] cursor-pointer">${esc(slbl)}</button>`).join('')}</div>
+    ${isFullExplorer ? `<button type="button" data-jump-rep-cand="${esc(r.id)}" class="text-[var(--link)] hover:underline cursor-pointer">Verify in Tab 4 &rarr;</button>` : ''}
+  </div>`;
 
   if(!w){
     const isDrop = r.dec === 'DROP';
@@ -557,49 +795,51 @@ function renderDossierMain(){
       : `<div class="mt-0.5"><span class="px-1 rounded border border-[var(--success)] text-[var(--success)] font-mono">&#9679; [MEASURED]</span> <span class="text-[var(--muted-foreground)]">${esc(formatPrior(r.prior))}</span></div>`;
     const gPills = genePortalPills(r.id);
     const rightCol = isDrop
-      ? `<div class="p-3.5 rounded-lg border border-[var(--card-border)] bg-[var(--background)] border-l-4 border-l-[var(--error)] space-y-1.5 text-xs">
+      ? `<div class="p-3.5 rounded-lg border border-[var(--card-border)] bg-[var(--background)] border-l-4 border-l-[var(--error)] space-y-2 text-xs">
           <div class="font-mono font-bold text-[var(--error)]">&#10005; DECISIVE FALSIFYING COUNTEREVIDENCE</div>
-          <p class="leading-relaxed text-[var(--foreground)]">${escLink(s ? s.disproves : humanizeEnum(r.epi), r.id)}</p>
+          ${formatProseParas(s ? s.disproves : humanizeEnum(r.epi), r.id, 'space-y-2')}
         </div>`
-      : `<div class="p-3.5 rounded-lg border border-[var(--card-border)] bg-[var(--background)] border-l-4 border-l-[var(--warning)] space-y-1.5 text-xs">
+      : `<div class="p-3.5 rounded-lg border border-[var(--card-border)] bg-[var(--background)] border-l-4 border-l-[var(--warning)] space-y-2 text-xs">
           <div class="font-mono font-bold text-[var(--warning)]">&#9651; TRANSLATIONAL CAVEATS &amp; NEXT DISCRIMINATING GATE</div>
-          <p class="leading-relaxed text-[var(--foreground)]">${escLink(s ? s.disproves : '', r.id)}</p>
+          ${formatProseParas(s ? s.disproves : '', r.id, 'space-y-2')}
           <div class="pt-1.5 mt-1 border-t border-[var(--card-border)] leading-relaxed"><strong class="font-mono text-[var(--foreground)]">Discriminating Next Test:</strong> ${formatNextTest(r.nxt, r.id)}</div>
         </div>`;
-    box.innerHTML = `<div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-3">
-      <div class="flex items-start justify-between gap-2 flex-wrap border-b border-[var(--card-border)] pb-3">
+    box.innerHTML = `<div id="sec-overview" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-3">
+      <div class="flex items-start justify-between gap-2 flex-wrap border-b border-[var(--card-border)] pb-2.5">
         <div>
-          <div class="flex items-center gap-2 flex-wrap"><span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] font-mono font-bold text-xs" title="Portfolio Actionability Rank #${r.rk}/59 · Pure Biological Evidence Rank #${r.brk}/59">Rank #${r.rk}/59 (Bio #${r.brk}) &middot; ${esc(r.id)}</span> ${decBadge(r.dec)} <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span> ${crowdPill}</div>
+          <div class="flex items-center gap-2 flex-wrap"><span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] font-mono font-bold text-xs" title="Portfolio Actionability Rank #${r.rk}/52 · Pure Biological Evidence Rank #${r.brk}/52">Rank #${r.rk}/52 (Bio #${r.brk}) &middot; ${esc(r.id)}</span> ${decBadge(r.dec)} <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span> ${crowdPill}</div>
           <h2 class="text-base font-bold mt-1.5">${esc(r.name)} &mdash; <span class="font-normal text-[var(--muted-foreground)]">${escLink(s ? s.sub : humanizeEnum(r.sub), r.id)}</span></h2>
           <div class="text-xs font-mono text-[var(--muted-foreground)] mt-0.5">${!isDrop && r.trl !== 'PROTOCOL_COMPANION_NA' ? esc(humanizeEnum(r.trl)) + ' &middot; ' : ''}${esc(humanizeEnum(r.basis))}${gPills?' &middot; '+gPills:''}</div>
         </div>
         <div class="flex items-center gap-1.5 flex-wrap shrink-0">
-          <span class="px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-[var(--muted-foreground)] font-mono text-xs">Summary-of-Findings Dossier</span>
+          ${updPill}
+          <span class="px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-[var(--muted-foreground)] font-mono text-xs">Summary Report</span>
           <button type="button" data-open-dossier="${prevId}" class="inline-block px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs cursor-pointer" title="Previous candidate ([ key)">&larr; ${esc(prevLbl)}</button>
           <button type="button" data-open-dossier="${nextId}" class="inline-block px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs cursor-pointer" title="Next candidate (] key)">${esc(nextLbl)} &rarr;</button>
         </div>
       </div>
+      ${secJumpBar}
       ${renderEdgeRibbon(s, r.id)}
       <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 text-xs">
-        <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--primary)] space-y-1">
+        <div class="p-3.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--primary)] space-y-2">
           <div class="font-mono font-bold text-[var(--primary)]">CANDIDATE &amp; BIOLOGICAL HYPOTHESIS</div>
-          <p class="leading-relaxed text-[var(--foreground)]">${escLink(s ? s.hyp : '', r.id)}</p>
+          ${formatProseParas(s ? s.hyp : '', r.id, 'space-y-2')}
         </div>
-        <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 ${vCol} space-y-1">
+        <div class="p-3.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 ${vCol} space-y-2">
           <div class="font-mono font-bold ${vTxt}">${vHdr}</div>
-          <p class="leading-relaxed text-[var(--foreground)]">${escLink(s ? s.verdict : '', r.id)}</p>
+          ${formatProseParas(s ? s.verdict : '', r.id, 'space-y-2')}
         </div>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5 text-xs">
         <div class="p-2.5 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-0.5"><div class="text-[var(--muted-foreground)] font-mono">Target Modality (TPP)</div><div class="font-medium leading-snug">${escLink(formatModality(r.mod), r.id)}</div></div>
-        <div class="p-2.5 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-0.5"><div class="text-[var(--muted-foreground)] font-mono">Causal vs. Reactive Sign</div><div class="font-medium">${esc(s ? s.causal : humanizeEnum(r.epi))}</div><div class="text-[var(--muted-foreground)]">${esc(humanizeEnum(r.sub))} &middot; Track ${esc(r.trk)}</div></div>
+        <div class="p-2.5 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-0.5"><div class="text-[var(--muted-foreground)] font-mono">Causal vs. Reactive Sign</div><div class="font-medium">${esc(s ? s.causal : humanizeEnum(r.epi))}</div><div class="text-[var(--muted-foreground)]">${esc(humanizeEnum(r.sub))} &middot; ${trackLabel(r.trk)}</div></div>
         <div class="p-2.5 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-0.5"><div class="text-[var(--muted-foreground)] font-mono">Experimental Gate &amp; Prior Basis</div><div class="font-mono">${esc(humanizeEnum(r.gate))}</div>${sumPriorLine}</div>
         <div class="p-2.5 rounded border border-[var(--card-border)] bg-[var(--background)]">${hCell}</div>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-        <div class="p-3.5 rounded-lg border border-[var(--card-border)] bg-[var(--background)] border-l-4 ${isDrop?'border-l-[var(--muted-foreground)]':'border-l-[var(--success)]'} space-y-1.5 text-xs">
+      <div id="sec-procon" class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <div class="p-3.5 rounded-lg border border-[var(--card-border)] bg-[var(--background)] border-l-4 ${isDrop?'border-l-[var(--muted-foreground)]':'border-l-[var(--success)]'} space-y-2 text-xs">
           <div class="font-mono font-bold ${isDrop?'text-[var(--muted-foreground)]':'text-[var(--success)]'}">${isDrop?'ORIGINATING DISCOVERY / PRECLINICAL SIGNAL':'&#10003; SUPPORTING HUMAN &amp; PRECLINICAL EVIDENCE'}</div>
-          <p class="leading-relaxed text-[var(--foreground)]">${escLink(s ? s.proves : '', r.id)}</p>
+          ${formatProseParas(s ? s.proves : '', r.id, 'space-y-2')}
         </div>
         ${rightCol}
       </div>
@@ -607,11 +847,11 @@ function renderDossierMain(){
     return;
   }
 
-  const cisForAtlas = DATA_CIS.filter(c => c.sc===r.id || (r.id==='DN-01'&&c.gene==='ATG4B') || (r.id==='DN-04'&&c.gene==='CELF5'));
+  const cisForAtlas = DATA_CIS.filter(c => c.pid===r.id || c.sc===r.id);
   const atlasBtns = cisForAtlas.map(c => {
     const url = `https://deepmind.google.com/science/alphagenome/atlas?q=${c.chr}:${Math.max(1,Number(c.lo)-250)}-${Number(c.hi)+250}&m=locus&lItems=avi,section:RNA_SEQ,section:SPLICE_JUNCTIONS,section:DNASE`;
-    return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs">${c.lead?'★ ':''}${esc(c.gene)} #${c.rk} Atlas &nearr;</a>`;
-  }).join('') + (isFullExplorer && cisForAtlas.length ? `<button type="button" data-jump-intervals="${esc(r.id)}" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs cursor-pointer">Inspect in Tab 2 &rarr;</button>` : (cisForAtlas.length && location.protocol !== 'about:' ? `<a href="../CARBON_ALS_INTERACTIVE_EXPLORER.html#dossier/${esc(r.id)}" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs">Inspect in Full Explorer &rarr;</a>` : ''));
+    return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs">${c.lead?'★ ':''}${esc(c.gene)} &middot; Walk #${c.rk} Atlas &nearr;</a>`;
+  }).join('') + (isFullExplorer && cisForAtlas.length ? `<button type="button" data-jump-intervals="${esc(r.id)}" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs cursor-pointer">Inspect in Tab 3 &rarr;</button>` : (cisForAtlas.length && location.protocol !== 'about:' ? `<a href="../CARBON_ALS_INTERACTIVE_EXPLORER.html#intervals/${esc(r.id)}" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs">Inspect in Tab 3 &rarr;</a>` : ''));
   const hurdleHtml = r.hurdles && r.hurdles !== 'NONE'
     ? r.hurdles.split(';').map(h=>`<div class="leading-snug">&bull; ${esc(formatHurdle(h))}</div>`).join('')
     : '<div class="text-[var(--muted-foreground)]">None</div>';
@@ -620,62 +860,65 @@ function renderDossierMain(){
   const mHdr = r.dec === 'KEEP_CORE'
     ? 'ADJUDICATION RATIONALE &mdash; KEEP &middot; CORE'
     : 'ADJUDICATION RATIONALE &mdash; KEEP &middot; EXPLORATORY (UNPROVEN &ne; DROP)';
+  const mGPills = genePortalPills(r.id);
 
   box.innerHTML = `
-    <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-3">
-      <div class="flex flex-wrap items-start justify-between gap-2 border-b border-[var(--card-border)] pb-3">
+    <div id="sec-overview" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2.5">
+      <div class="flex flex-wrap items-start justify-between gap-2 border-b border-[var(--card-border)] pb-2.5">
         <div>
           <div class="flex flex-wrap items-center gap-2">
-            <span class="px-2 py-0.5 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-bold text-xs" title="Portfolio Actionability Rank #${r.rk}/59 · Pure Biological Evidence Rank #${r.brk}/59">Rank #${r.rk}/59 (Bio #${r.brk}) &middot; ${esc(r.id)}</span>
+            <span class="px-2 py-0.5 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-bold text-xs" title="Portfolio Actionability Rank #${r.rk}/52 · Pure Biological Evidence Rank #${r.brk}/52">Rank #${r.rk}/52 (Bio #${r.brk}) &middot; ${esc(r.id)}</span>
             ${decBadge(r.dec)}
             <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span>
             ${(r.crowd && !r.crowd.startsWith('N/A')) ? `<span class="px-2 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">${esc(r.crowd)}</span>` : ''}
           </div>
-          <h2 class="text-base font-bold mt-1.5">${esc(r.name)} &mdash; <span class="font-normal text-[var(--muted-foreground)]">${esc(w.subtitle)}</span></h2>
-          <div class="text-xs font-mono text-[var(--muted-foreground)] mt-0.5">${esc(humanizeEnum(r.trl))} &middot; ${esc(humanizeEnum(r.gate))} &middot; ${esc(humanizeEnum(r.basis))}</div>
+          <h2 class="text-base font-bold mt-1">${esc(r.name)} &mdash; <span class="font-normal text-[var(--muted-foreground)]">${esc(w.subtitle)}</span></h2>
+          <div class="text-xs font-mono text-[var(--muted-foreground)] mt-0.5">${esc(humanizeEnum(r.trl))} &middot; ${esc(humanizeEnum(r.gate))} &middot; ${esc(humanizeEnum(r.basis))}${mGPills ? ' &middot; ' + mGPills : ''}</div>
         </div>
         <div class="flex items-center gap-1.5 flex-wrap shrink-0">
+          ${updPill}
           ${(typeof window !== 'undefined' && window.PUBLIC_WEB_EXPORT && isFullExplorer) ? `<a href="./monographs/${esc(r.id)}.html" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs" title="Open lightweight standalone monograph page">Standalone Page &nearr;</a>` : ''}
           <button type="button" data-open-dossier="${prevId}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs cursor-pointer" title="Previous candidate ([ key)">&larr; ${esc(prevLbl)}</button>
           <button type="button" data-open-dossier="${nextId}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs cursor-pointer" title="Next candidate (] key)">${esc(nextLbl)} &rarr;</button>
         </div>
       </div>
+      ${secJumpBar}
       ${renderEdgeRibbon(s, r.id)}
       <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 text-xs">
-        <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--primary)] space-y-1">
+        <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--primary)] space-y-2">
           <div class="font-mono font-bold text-[var(--primary)]">CANDIDATE &amp; BIOLOGICAL HYPOTHESIS</div>
-          <p class="leading-relaxed text-[var(--foreground)]">${escLink(s && s.hyp ? s.hyp : w.subtitle, r.id)}</p>
+          ${formatProseParas(s && s.hyp ? s.hyp : w.subtitle, r.id, 'space-y-2')}
         </div>
-        <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 ${mCol} space-y-1">
+        <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 ${mCol} space-y-2">
           <div class="font-mono font-bold ${mTxt}">${mHdr}</div>
-          <p class="leading-relaxed text-[var(--foreground)]">${escLink(s ? s.verdict : '', r.id)}</p>
+          ${formatProseParas(s ? s.verdict : '', r.id, 'space-y-2')}
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
-        <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--success)] space-y-1.5 text-xs">
+        <div class="p-2.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--success)] space-y-1 text-xs">
           <div class="font-mono font-bold text-[var(--success)]">&#10003; ADVANCE GATE (GO CRITERIA)</div>
           ${formatGateList(w.verdict_box.pass_gate, r.id, false)}
         </div>
-        <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--error)] space-y-1.5 text-xs">
+        <div class="p-2.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--error)] space-y-1 text-xs">
           <div class="font-mono font-bold text-[var(--error)]">&#10005; FALSIFICATION GATE (KILL / NO-GO CRITERIA)</div>
           ${formatGateList(w.verdict_box.kill_gate, r.id, true)}
         </div>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2">
-        ${w.ident.map(([k,v])=>`<div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] text-xs">${esc(k)}</div><div class="font-mono font-semibold text-xs mt-0.5 break-words">${escLink(v, r.id)}</div></div>`).join('')}
+      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-1.5">
+        ${w.ident.map(([k,v])=>`<div class="p-1.5 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] text-xs">${esc(k)}</div><div class="font-mono font-semibold text-xs mt-0.5 break-words">${escLink(v, r.id)}</div></div>`).join('')}
       </div>
-      <div class="flex flex-wrap items-center justify-between gap-2 pt-1">
-        <div class="flex flex-wrap gap-1.5">${w.grades.map(([g,d])=>`<span class="px-2 py-1 rounded bg-[var(--background)] border border-[var(--border)] text-xs"><strong class="text-[var(--primary)]">${esc(g)}:</strong> ${escLink(d, r.id)}</span>`).join('')}</div>
+      <div class="flex flex-wrap items-center justify-between gap-2 pt-0.5">
+        <div class="flex flex-wrap gap-1.5">${w.grades.map(([g,d])=>`<span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] text-xs"><strong class="text-[var(--primary)]">${esc(g)}:</strong> ${escLink(d, r.id)}</span>`).join('')}</div>
         <div class="flex flex-wrap items-center gap-1.5 text-xs"><span class="text-[var(--muted-foreground)]">Related:</span>${w.related.map(x=>{const rp=DATA_PORT.find(q=>q.id===x); const rShort=x==='C005'?'Excitability PD':(rp?rp.name.replace(/^(?:Low-Dose|Ultrahigh-Dose|Stage-Gated)\\s+/i,'').split(/[\\s(/]/)[0]:''); const rTip=rp?`#${rp.rk} ${rp.id} — ${rp.name}`:x; return `<button type="button" data-open-dossier="${esc(x)}" title="${esc(rTip)}" class="px-2 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-[var(--link)] cursor-pointer">${esc(x)}${rShort?' &middot; '+esc(rShort):''} &rarr;</button>`;}).join('')}</div>
       </div>
     </div>
 
-    <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
+    <div id="sec-cascade" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
       <div class="flex items-center justify-between gap-2 flex-wrap"><h3 class="text-sm font-semibold">Pathogenic Mechanism &amp; Modality Rationale</h3><span class="font-mono text-xs text-[var(--muted-foreground)]">Steps 1&ndash;3: Pathogenic Cascade &rarr; Step 4: Intervention</span></div>
       ${renderCausalGrid(w.causal, r.id)}
     </div>
 
-    <div class="grid grid-cols-1 xl:grid-cols-12 gap-3">
+    <div id="sec-evidence-viz" class="grid grid-cols-1 xl:grid-cols-12 gap-3">
       <div class="xl:col-span-6 bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
         <div class="flex items-center justify-between gap-2 flex-wrap"><h3 class="text-sm font-semibold">Multi-Cohort Quantitative Evidence</h3><span class="font-mono text-xs text-[var(--muted-foreground)]">Scale-Separated Tracks &middot; [MEASURED] vs. [MODEL_PRIOR]</span></div>
         ${renderEvidenceMatrix(w.ev_matrix, r.id)}
@@ -688,7 +931,7 @@ function renderDossierMain(){
       </div>
     </div>
 
-    <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-3">
+    <div id="sec-safety" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-3">
       <h3 class="text-sm font-semibold">5-Axis Target Safety Assessment (TSA) &amp; 3D Structural Profile</h3>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 items-start">
         <div class="lg:col-span-8 space-y-2">
@@ -706,17 +949,16 @@ function renderDossierMain(){
       </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+    <div id="sec-5rs" class="grid grid-cols-1 md:grid-cols-2 gap-3">
       ${w.sections.map(([st,body])=>{
         const sp = String(st).split(' — ');
         const hdrHtml = sp.length === 2 ? `<span class="font-mono text-xs text-[var(--primary)]">${esc(sp[0])} &mdash;</span> ${esc(sp[1])}` : esc(st);
-        const paras = String(body).split(/\\n\\n+/).map(p => `<p class="text-xs leading-relaxed text-[var(--foreground)]">${escLink(p, r.id)}</p>`).join('');
-        return `<div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2">
-          <h3 class="text-sm font-semibold">${hdrHtml}</h3>
-          <div class="space-y-2">${paras}</div>
+        return `<div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
+          <h3 class="text-sm font-semibold border-b border-[var(--card-border)] pb-1.5">${hdrHtml}</h3>
+          ${formatProseParas(body, r.id, 'space-y-2.5')}
         </div>`;
       }).join('')}
     </div>
-    ${evTable}`;
+    ${renderSummaryDomainPanels(r)}${evTable}`;
 }
 """

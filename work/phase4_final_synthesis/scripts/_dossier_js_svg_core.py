@@ -8,9 +8,8 @@ const GENE_ENSG = {
   'DN-03':'ENSG00000196090', 'DN-04':'ENSG00000161082', 'DN-05':'ENSG00000106772', 'DN-06':'ENSG00000067057',
   'DN-07':'ENSG00000171853', 'DN-08':'ENSG00000126767', 'DN-09':'ENSG00000170579', 'DN-10':'ENSG00000130226',
   'DN-11':'ENSG00000175497', 'DN-12':'ENSG00000172757', 'DN-13':'ENSG00000069535', 'DN-14':'ENSG00000197405',
-  C016:'ENSG00000118564', C019:'ENSG00000162434', C020:'ENSG00000115020', 'BA9-01':'ENSG00000135439', 'BA9-02':'ENSG00000213983',
-  'BA9-03':'ENSG00000174672', 'BA9-04':'ENSG00000135924', 'BA9-05':'ENSG00000167702', 'BA9-06':'ENSG00000197530',
-  'BA9-07':'ENSG00000196535', 'BA9-08':'ENSG00000101298', 'BA9-09':'ENSG00000204946', 'BA9-10':'ENSG00000042493',
+  C016:'ENSG00000118564', C019:'ENSG00000162434', C020:'ENSG00000115020',
+  C022:'ENSG00000135924', C023:'ENSG00000106636', C024:'ENSG00000125730',
   AGAP2:'ENSG00000135439', AP1G2:'ENSG00000213983', ARHGEF11:'ENSG00000132694', ATG4B:'ENSG00000168397',
   BRSK2:'ENSG00000174672', C1QA:'ENSG00000173372', C1QB:'ENSG00000173369', C1QC:'ENSG00000159189',
   C3:'ENSG00000125730', C4B:'ENSG00000224389', C5AR1:'ENSG00000197405', CAPG:'ENSG00000042493',
@@ -37,7 +36,7 @@ const CHEMBL_COMPOUNDS = new Set([
   'CHEMBL3752910','CHEMBL41355','CHEMBL4297372','CHEMBL4297672','CHEMBL5653589','CHEMBL589',
   'CHEMBL621','CHEMBL744','CHEMBL778','CHEMBL807','CHEMBL83','CHEMBL866'
 ]);
-const ACC_TOKEN_RE = /(?<![A-Za-z0-9])(?:PMID:(\\d{5,9})|(PMC\\d{6,9})|(?:DOI:\\s*)?(10\\.\\d{4,9}\\/[^\\s,;\\]\\u00b7&<>"]+)|(NCT\\d{8})|ISRCTN(\\d{8})|PDB\\s+([0-9][A-Za-z0-9]{3})|(7DJT|9TZY|7ANW|7NAL|7CR2|4KC3|2Z0D|6VN8|1XFD|7K2V|3KYQ|6J74|3EGD|3V5Z|6VCD|4M7N)|(CHEMBL\\d+)|CID:(\\d+)|(ENS[GT]\\d{11})(?:\\.\\d+)?|HGNC:(\\d+)|MGI:(\\d+)|OMIM\\s+(\\d{6})|AF-([A-Z0-9]{6,10})-F\\d+|(O15498|O43526|O60229|O60674|O75396|O95249|P23458|P42779|P46459|P50395|P60568|Q01638|Q13190|Q6SZW1|Q7L622|Q8N6W0|Q8WVM8|Q93045|Q9UKA1|Q9UPW8|Q9Y4P1)|(gnomAD\\s+(?:v4(?:\\.1)?|r4))|(GSE\\d{4,8})|(PXD\\d{5,8})|(PRJNA\\d{5,9})|(syn\\d{6,10})|(rs\\d{3,12}))(?![A-Za-z0-9])/g;
+const ACC_TOKEN_RE = /(?<![A-Za-z0-9])(?:PMID:(\\d{5,9})|(PMC\\d{6,9})|(?:DOI:\\s*)?(10\\.\\d{4,9}\\/[^\\s,;\\]\\u00b7&<>"]+)|(NCT\\d{8})|ISRCTN(\\d{8})|PDB\\s+([0-9][A-Za-z0-9]{3})|(7DJT|9TZY|7ANW|7NAL|7CR2|4KC3|2Z0D|6VN8|1XFD|7K2V|3KYQ|6J74|3EGD|3V5Z|6VCD|4M7N|1PK6)|(CHEMBL\\d+)|CID:(\\d+)|(ENS[GT]\\d{11})(?:\\.\\d+)?|HGNC:(\\d+)|MGI:(\\d+)|OMIM\\s+(\\d{6})|AF-([A-Z0-9]{6,10})-F\\d+|(O15498|O43526|O60229|O60674|O75396|O95249|P02745|P02746|P02747|P23458|P25686|P42779|P46459|P50395|P60568|Q01638|Q13190|Q6SZW1|Q7L622|Q8N6W0|Q8WVM8|Q93045|Q9UKA1|Q9UPW8|Q9Y4P1)|(gnomAD\\s+(?:v4(?:\\.1)?|r4))|(GSE\\d{4,8})|(PXD\\d{5,8})|(PRJNA\\d{5,9})|(syn\\d{6,10})|(rs\\d{3,12}))(?![A-Za-z0-9])/g;
 
 function mkExtA(url, lbl){
   return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-[var(--link)] underline decoration-dotted underline-offset-2 hover:decoration-solid">${lbl}</a>`;
@@ -262,25 +261,29 @@ function renderLocusSsoSvg(candId, sig){
       <text x="${sm.toFixed(1)}" y="100" text-anchor="${sAnchor}" font-size="12.5" font-family="monospace" font-weight="600" fill="var(--warning)">${esc(sp.lbl)}</text>`;
   });
   const zt1 = Math.max(L, mapTop(sig.zoom_lo)), zt2 = Math.min(R, mapTop(sig.zoom_hi));
+  const hasNotes = Boolean(sig.iv_notes);
+  const rowH = hasNotes ? 62 : 44;
   if(cis.length === 0){
     const emptyNote = sig.empty_cis_note || ('Isoform locus: ' + sig.chrom + ':' + sig.zoom_lo + '-' + sig.zoom_hi);
     ssoSvg = `<rect x="${L+10}" y="158" width="${W-20}" height="30" rx="4" fill="var(--background)" stroke="var(--warning)" stroke-width="1.4" stroke-dasharray="4,3"/>
       <text x="230" y="178" text-anchor="middle" font-size="12.5" font-family="monospace" fill="var(--foreground)">${esc(emptyNote)}</text>`;
   } else {
     cis.forEach((c, idx) => {
-      const y = 156 + idx * 44;
+      const y = 156 + idx * rowH;
       const bx1 = Math.max(L, mapBot(Number(c.lo))), bx2 = Math.min(R, mapBot(Number(c.hi)));
       const bCol = c.st==='PASS_CLEAN_GE2MM' ? 'var(--success)' : (c.st.startsWith('WARN') ? 'var(--error)' : 'var(--warning)');
       const stShort = c.st==='PASS_CLEAN_GE2MM' ? 'Clean >=2mm' : (c.st.startsWith('WARN') ? 'Warn CNS Hit' : (c.st.startsWith('FAIL') ? 'Fail 0mm' : 'Caution 1mm/Wob'));
+      const ivNote = (sig.iv_notes && sig.iv_notes[String(c.rk)]) ? sig.iv_notes[String(c.rk)] : '';
       ssoSvg += `<g>
         <rect x="${bx1.toFixed(1)}" y="${y}" width="${Math.max(12, bx2-bx1).toFixed(1)}" height="10" rx="3" fill="${bCol}" ${c.st.startsWith('WARN')?'stroke="var(--foreground)" stroke-dasharray="2,2"':''}/>
         <text x="${L}" y="${y+23}" font-size="12.6" font-family="monospace" font-weight="${c.lead?'700':'500'}" fill="var(--foreground)">${c.lead?'★ ':''}#${c.rk} ${esc(c.iv)}</text>
         <text x="${R}" y="${y+23}" text-anchor="end" font-size="12.5" font-family="monospace" font-weight="600" fill="${bCol}">${esc(stShort)}</text>
         <text x="${L}" y="${y+37}" font-size="12.5" font-family="monospace" fill="var(--muted-foreground)">${c.len}bp · Tm=${c.tm}°C · max AVI=${c.avi}</text>
+        ${ivNote?`<text x="${L}" y="${y+51}" font-size="12.5" font-family="monospace" fill="var(--warning)">&#9656; ${esc(ivNote)}</text>`:''}
       </g>`;
     });
   }
-  const h = cis.length === 0 ? 198 : (160 + cis.length * 44);
+  const h = cis.length === 0 ? 198 : (160 + cis.length * rowH);
   return `<svg viewBox="0 0 460 ${h}" class="w-full h-auto block select-none" role="img" aria-label="GRCh38 locus and steric SSO coordinate map">
     <text x="${L}" y="16" font-size="12.5" font-family="monospace" fill="var(--muted-foreground)">${esc(sig.chrom)}:${sig.win_lo.toLocaleString()}-${sig.win_hi.toLocaleString()} · ${esc(dirTxt)}</text>
     <line x1="${L}" y1="63" x2="${R}" y2="63" stroke="var(--border)" stroke-width="2.2"/>

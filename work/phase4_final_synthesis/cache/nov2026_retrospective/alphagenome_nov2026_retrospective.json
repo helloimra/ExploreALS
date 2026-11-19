@@ -1,0 +1,2064 @@
+{
+  "kcnq2_win3_peak_score": {
+    "label": "KCNQ2_#3_Intron5_peak_AVI20.75",
+    "variant": "chr20:63442302:C>G",
+    "total_scored_tracks": 31048,
+    "max_abs_quantile": 0.999972,
+    "max_abs_splice_quantile": 0.998455,
+    "max_abs_splice_raw": 0.350586,
+    "top_global": [
+      {
+        "biosample_name": "AG09319",
+        "ontology_curie": "CLO:0021754",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -3.383516,
+        "quantile_score": -0.999933
+      },
+      {
+        "biosample_name": "cardiac muscle cell",
+        "ontology_curie": "CL:0000746",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -3.368297,
+        "quantile_score": -0.999915
+      },
+      {
+        "biosample_name": "fibroblast of villous mesenchyme",
+        "ontology_curie": "CL:0002558",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -3.15121,
+        "quantile_score": -0.999902
+      },
+      {
+        "biosample_name": "AG10803",
+        "ontology_curie": "CLO:0021511",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -3.083508,
+        "quantile_score": -0.999933
+      },
+      {
+        "biosample_name": "bronchial epithelial cell",
+        "ontology_curie": "CL:0002328",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -2.981051,
+        "quantile_score": -0.999832
+      },
+      {
+        "biosample_name": "fibroblast of pulmonary artery",
+        "ontology_curie": "CL:0002557",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -2.969997,
+        "quantile_score": -0.999884
+      },
+      {
+        "biosample_name": "BJ",
+        "ontology_curie": "EFO:0002779",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -2.940602,
+        "quantile_score": -0.999876
+      },
+      {
+        "biosample_name": "fibroblast of the aortic adventitia",
+        "ontology_curie": "CL:0002547",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -2.935959,
+        "quantile_score": -0.999925
+      },
+      {
+        "biosample_name": "left ventricle myocardium inferior",
+        "ontology_curie": "NTR:0000493",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -2.902947,
+        "quantile_score": -0.999925
+      },
+      {
+        "biosample_name": "fibroblast of mammary gland",
+        "ontology_curie": "CL:0002555",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -2.896517,
+        "quantile_score": -0.999858
+      },
+      {
+        "biosample_name": "AG04450",
+        "ontology_curie": "EFO:0006270",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -2.882683,
+        "quantile_score": -0.999915
+      },
+      {
+        "biosample_name": "foreskin fibroblast",
+        "ontology_curie": "CL:1001608",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -2.855973,
+        "quantile_score": -0.999876
+      }
+    ],
+    "top_cns_neuronal": [
+      {
+        "biosample_name": "astrocyte of the spinal cord",
+        "ontology_curie": "CL:0002606",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -2.701795,
+        "quantile_score": -0.999892
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -2.409875,
+        "quantile_score": -0.999928
+      },
+      {
+        "biosample_name": "motor neuron",
+        "ontology_curie": "CL:0000100",
+        "gene_name": "None",
+        "output_type": "ATAC",
+        "raw_score": -1.872077,
+        "quantile_score": -0.99988
+      },
+      {
+        "biosample_name": "spinal cord",
+        "ontology_curie": "UBERON:0002240",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -1.838454,
+        "quantile_score": -0.999947
+      },
+      {
+        "biosample_name": "glutamatergic neuron",
+        "ontology_curie": "CL:0000679",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -1.792244,
+        "quantile_score": -0.999941
+      },
+      {
+        "biosample_name": "glutamatergic neuron",
+        "ontology_curie": "CL:0000679",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -1.536459,
+        "quantile_score": -0.999858
+      },
+      {
+        "biosample_name": "astrocyte of the spinal cord",
+        "ontology_curie": "CL:0002606",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -1.535685,
+        "quantile_score": -0.999486
+      },
+      {
+        "biosample_name": "neuronal stem cell",
+        "ontology_curie": "CL:0000047",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -1.348455,
+        "quantile_score": -0.999933
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -1.250064,
+        "quantile_score": -0.999876
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -1.15462,
+        "quantile_score": -0.999939
+      },
+      {
+        "biosample_name": "spinal cord",
+        "ontology_curie": "UBERON:0002240",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.341309,
+        "quantile_score": 0.998107
+      },
+      {
+        "biosample_name": "glutamatergic neuron",
+        "ontology_curie": "CL:0000679",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -0.331843,
+        "quantile_score": -0.999634
+      },
+      {
+        "biosample_name": "neuronal stem cell",
+        "ontology_curie": "CL:0000047",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.324219,
+        "quantile_score": 0.998042
+      },
+      {
+        "biosample_name": "glutamatergic neuron",
+        "ontology_curie": "CL:0000679",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -0.321588,
+        "quantile_score": -0.999721
+      },
+      {
+        "biosample_name": "spinal cord",
+        "ontology_curie": "UBERON:0002240",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": -0.31689,
+        "quantile_score": -0.998761
+      }
+    ],
+    "top_myeloid_microglia": [
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -2.230901,
+        "quantile_score": -0.999923
+      },
+      {
+        "biosample_name": "inflammatory macrophage",
+        "ontology_curie": "CL:0000863",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -2.078686,
+        "quantile_score": -0.999658
+      },
+      {
+        "biosample_name": "suppressor macrophage",
+        "ontology_curie": "CL:0000862",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -2.059699,
+        "quantile_score": -0.999739
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -1.346503,
+        "quantile_score": -0.999255
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": -0.514233,
+        "quantile_score": -0.99658
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": 0.444853,
+        "quantile_score": 0.999566
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -0.414248,
+        "quantile_score": -0.988072
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": -0.382999,
+        "quantile_score": -0.996341
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": -0.301833,
+        "quantile_score": -0.999945
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": -0.298516,
+        "quantile_score": -0.998802
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": 0.297798,
+        "quantile_score": 0.998918
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.207886,
+        "quantile_score": 0.997063
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.190674,
+        "quantile_score": 0.996638
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": 0.185947,
+        "quantile_score": 0.998881
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": -0.162798,
+        "quantile_score": -0.999117
+      }
+    ],
+    "top_splicing": [
+      {
+        "biosample_name": "H1",
+        "ontology_curie": "EFO:0003042",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.350586,
+        "quantile_score": 0.998107
+      },
+      {
+        "biosample_name": "mesendoderm",
+        "ontology_curie": "NTR:0000856",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.344971,
+        "quantile_score": 0.99817
+      },
+      {
+        "biosample_name": "spinal cord",
+        "ontology_curie": "UBERON:0002240",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.341309,
+        "quantile_score": 0.998107
+      },
+      {
+        "biosample_name": "endodermal cell",
+        "ontology_curie": "CL:0000223",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.332764,
+        "quantile_score": 0.998231
+      },
+      {
+        "biosample_name": "endodermal cell",
+        "ontology_curie": "CL:0000223",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.328369,
+        "quantile_score": 0.99817
+      },
+      {
+        "biosample_name": "neuronal stem cell",
+        "ontology_curie": "CL:0000047",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.324219,
+        "quantile_score": 0.998042
+      },
+      {
+        "biosample_name": "right renal pelvis",
+        "ontology_curie": "UBERON:0018116",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.319336,
+        "quantile_score": 0.998042
+      },
+      {
+        "biosample_name": "left renal cortex interstitium",
+        "ontology_curie": "UBERON:0018117",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.315674,
+        "quantile_score": 0.998042
+      },
+      {
+        "biosample_name": "ectodermal cell",
+        "ontology_curie": "CL:0000221",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.314209,
+        "quantile_score": 0.997905
+      },
+      {
+        "biosample_name": "H1",
+        "ontology_curie": "EFO:0003042",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.313477,
+        "quantile_score": 0.997833
+      }
+    ]
+  },
+  "kcnq2_win2_peak_score": {
+    "label": "KCNQ2_#2_Intron4_UG5_peak_AVI8.03",
+    "variant": "chr20:63442566:A>T",
+    "total_scored_tracks": 31415,
+    "max_abs_quantile": 0.99976,
+    "max_abs_splice_quantile": 0.99976,
+    "max_abs_splice_raw": 1.041016,
+    "top_global": [
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 1.041016,
+        "quantile_score": 0.999587
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.993164,
+        "quantile_score": 0.999543
+      },
+      {
+        "biosample_name": "motor neuron",
+        "ontology_curie": "CL:0000100",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.967773,
+        "quantile_score": 0.999543
+      },
+      {
+        "biosample_name": "diencephalon",
+        "ontology_curie": "UBERON:0001894",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.955078,
+        "quantile_score": 0.999614
+      },
+      {
+        "biosample_name": "cerebellar hemisphere",
+        "ontology_curie": "UBERON:0002245",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.954102,
+        "quantile_score": 0.99976
+      },
+      {
+        "biosample_name": "cerebellum",
+        "ontology_curie": "UBERON:0002037",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.935059,
+        "quantile_score": 0.999752
+      },
+      {
+        "biosample_name": "cerebellum",
+        "ontology_curie": "UBERON:0002037",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.922363,
+        "quantile_score": 0.999627
+      },
+      {
+        "biosample_name": "parietal lobe",
+        "ontology_curie": "UBERON:0001872",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.895996,
+        "quantile_score": 0.999558
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.89502,
+        "quantile_score": 0.999696
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.893555,
+        "quantile_score": 0.999696
+      },
+      {
+        "biosample_name": "cerebellum",
+        "ontology_curie": "UBERON:0002037",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.881836,
+        "quantile_score": 0.999543
+      },
+      {
+        "biosample_name": "spinal cord",
+        "ontology_curie": "UBERON:0002240",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.879883,
+        "quantile_score": 0.999528
+      }
+    ],
+    "top_cns_neuronal": [
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 1.041016,
+        "quantile_score": 0.999587
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.993164,
+        "quantile_score": 0.999543
+      },
+      {
+        "biosample_name": "motor neuron",
+        "ontology_curie": "CL:0000100",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.967773,
+        "quantile_score": 0.999543
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.89502,
+        "quantile_score": 0.999696
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.893555,
+        "quantile_score": 0.999696
+      },
+      {
+        "biosample_name": "spinal cord",
+        "ontology_curie": "UBERON:0002240",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.879883,
+        "quantile_score": 0.999528
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.878906,
+        "quantile_score": 0.999573
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.861816,
+        "quantile_score": 0.999685
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.840332,
+        "quantile_score": 0.999663
+      },
+      {
+        "biosample_name": "spinal cord",
+        "ontology_curie": "UBERON:0002240",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.818359,
+        "quantile_score": 0.999477
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.79541,
+        "quantile_score": 0.99964
+      },
+      {
+        "biosample_name": "motor neuron",
+        "ontology_curie": "CL:0000100",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.791016,
+        "quantile_score": 0.999359
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.787109,
+        "quantile_score": 0.999614
+      },
+      {
+        "biosample_name": "glutamatergic neuron",
+        "ontology_curie": "CL:0000679",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.780273,
+        "quantile_score": 0.999614
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.772461,
+        "quantile_score": 0.999477
+      }
+    ],
+    "top_myeloid_microglia": [
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.556152,
+        "quantile_score": 0.999215
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.516602,
+        "quantile_score": 0.999101
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.437012,
+        "quantile_score": 0.998899
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.431641,
+        "quantile_score": 0.998861
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.417725,
+        "quantile_score": 0.998781
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.350342,
+        "quantile_score": 0.998455
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": 0.025971,
+        "quantile_score": 0.871262
+      },
+      {
+        "biosample_name": "suppressor macrophage",
+        "ontology_curie": "CL:0000862",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": 0.018766,
+        "quantile_score": 0.578814
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": 0.01677,
+        "quantile_score": 0.739178
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": 0.015096,
+        "quantile_score": 0.903464
+      },
+      {
+        "biosample_name": "inflammatory macrophage",
+        "ontology_curie": "CL:0000863",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": 0.014172,
+        "quantile_score": 0.468552
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": 0.013539,
+        "quantile_score": 0.68951
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": 0.011143,
+        "quantile_score": 0.371041
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": 0.008281,
+        "quantile_score": 0.68951
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": 0.007879,
+        "quantile_score": 0.578814
+      }
+    ],
+    "top_splicing": [
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 1.041016,
+        "quantile_score": 0.999587
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.993164,
+        "quantile_score": 0.999543
+      },
+      {
+        "biosample_name": "motor neuron",
+        "ontology_curie": "CL:0000100",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.967773,
+        "quantile_score": 0.999543
+      },
+      {
+        "biosample_name": "diencephalon",
+        "ontology_curie": "UBERON:0001894",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.955078,
+        "quantile_score": 0.999614
+      },
+      {
+        "biosample_name": "cerebellar hemisphere",
+        "ontology_curie": "UBERON:0002245",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.954102,
+        "quantile_score": 0.99976
+      },
+      {
+        "biosample_name": "cerebellum",
+        "ontology_curie": "UBERON:0002037",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.935059,
+        "quantile_score": 0.999752
+      },
+      {
+        "biosample_name": "cerebellum",
+        "ontology_curie": "UBERON:0002037",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.922363,
+        "quantile_score": 0.999627
+      },
+      {
+        "biosample_name": "parietal lobe",
+        "ontology_curie": "UBERON:0001872",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.895996,
+        "quantile_score": 0.999558
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.89502,
+        "quantile_score": 0.999696
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "KCNQ2",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.893555,
+        "quantile_score": 0.999696
+      }
+    ]
+  },
+  "kcnq2_win3_predict_splicing": {
+    "label": "KCNQ2_#3_Intron5_WT_ceiling_ISE_screen",
+    "variant": "chr20:63442302:C>G",
+    "exon5_boundary_usage": {
+      "Exon5_5ss_63442406": {
+        "pos_1b": 63442406,
+        "ref_max_usage": 0.94141,
+        "alt_max_usage": 0.94531,
+        "delta_alt_minus_ref": 0.00391
+      },
+      "Exon5_5ss_intron_63442405": {
+        "pos_1b": 63442405,
+        "ref_max_usage": 2e-05,
+        "alt_max_usage": 2e-05,
+        "delta_alt_minus_ref": -0.0
+      },
+      "Exon5_3ss_63442531": {
+        "pos_1b": 63442531,
+        "ref_max_usage": 0.95703,
+        "alt_max_usage": 0.94922,
+        "delta_alt_minus_ref": -0.00781
+      },
+      "Exon5_3ss_intron_63442532": {
+        "pos_1b": 63442532,
+        "ref_max_usage": 2e-05,
+        "alt_max_usage": 2e-05,
+        "delta_alt_minus_ref": 0.0
+      },
+      "Exon4_5ss_63444658": {
+        "pos_1b": 63444658,
+        "ref_max_usage": 1e-05,
+        "alt_max_usage": 1e-05,
+        "delta_alt_minus_ref": 0.0
+      },
+      "Exon6_3ss_63440615": {
+        "pos_1b": 63440615,
+        "ref_max_usage": 1e-05,
+        "alt_max_usage": 1e-05,
+        "delta_alt_minus_ref": 0.0
+      }
+    },
+    "kcnq2_junctions": [
+      {
+        "junction_0b": "63433903-63439597(-)",
+        "ref_score": 0.02762,
+        "alt_score": 0.02757,
+        "delta": -5e-05
+      },
+      {
+        "junction_0b": "63433903-63442405(-)",
+        "ref_score": 0.02808,
+        "alt_score": 0.02913,
+        "delta": 0.00105
+      },
+      {
+        "junction_0b": "63433903-63444658(-)",
+        "ref_score": 0.01028,
+        "alt_score": 0.01135,
+        "delta": 0.00107
+      },
+      {
+        "junction_0b": "63438690-63439597(-)",
+        "ref_score": 0.1364,
+        "alt_score": 0.13626,
+        "delta": -0.00014
+      },
+      {
+        "junction_0b": "63438720-63439597(-)",
+        "ref_score": 2.81503,
+        "alt_score": 2.77508,
+        "delta": -0.03995
+      },
+      {
+        "junction_0b": "63438720-63442405(-)",
+        "ref_score": 0.01595,
+        "alt_score": 0.01891,
+        "delta": 0.00296
+      },
+      {
+        "junction_0b": "63439708-63442405(-)",
+        "ref_score": 5.13214,
+        "alt_score": 4.99429,
+        "delta": -0.13785
+      },
+      {
+        "junction_0b": "63439708-63444658(-)",
+        "ref_score": 0.54781,
+        "alt_score": 0.74078,
+        "delta": 0.19297
+      },
+      {
+        "junction_0b": "63439708-63472167(-)",
+        "ref_score": 0.01071,
+        "alt_score": 0.01156,
+        "delta": 0.00085
+      },
+      {
+        "junction_0b": "63442461-63444658(-)",
+        "ref_score": 0.00803,
+        "alt_score": 0.00878,
+        "delta": 0.00075
+      },
+      {
+        "junction_0b": "63442528-63444658(-)",
+        "ref_score": 0.00578,
+        "alt_score": 0.00594,
+        "delta": 0.00016
+      },
+      {
+        "junction_0b": "63442531-63444658(-)",
+        "ref_score": 4.95734,
+        "alt_score": 4.78238,
+        "delta": -0.17496
+      },
+      {
+        "junction_0b": "63442531-63445237(-)",
+        "ref_score": 0.01792,
+        "alt_score": 0.01768,
+        "delta": -0.00024
+      },
+      {
+        "junction_0b": "63442531-63472167(-)",
+        "ref_score": 0.00948,
+        "alt_score": 0.00895,
+        "delta": -0.00053
+      },
+      {
+        "junction_0b": "63444784-63445237(-)",
+        "ref_score": 0.00645,
+        "alt_score": 0.00641,
+        "delta": -4e-05
+      },
+      {
+        "junction_0b": "63444834-63445237(-)",
+        "ref_score": 4.26764,
+        "alt_score": 4.20529,
+        "delta": -0.06235
+      },
+      {
+        "junction_0b": "63444834-63445293(-)",
+        "ref_score": 0.01226,
+        "alt_score": 0.0125,
+        "delta": 0.00024
+      },
+      {
+        "junction_0b": "63444834-63446746(-)",
+        "ref_score": 0.01561,
+        "alt_score": 0.0149,
+        "delta": -0.00071
+      },
+      {
+        "junction_0b": "63445364-63446746(-)",
+        "ref_score": 3.88625,
+        "alt_score": 3.83722,
+        "delta": -0.04903
+      },
+      {
+        "junction_0b": "63445364-63472167(-)",
+        "ref_score": 0.01239,
+        "alt_score": 0.01168,
+        "delta": -0.00071
+      }
+    ]
+  },
+  "kcnq2_win2_predict_splicing": {
+    "label": "KCNQ2_#2_Intron4_UG5_WT_ceiling_comparator",
+    "variant": "chr20:63442566:A>T",
+    "exon5_boundary_usage": {
+      "Exon5_5ss_63442406": {
+        "pos_1b": 63442406,
+        "ref_max_usage": 0.94141,
+        "alt_max_usage": 0.94531,
+        "delta_alt_minus_ref": 0.00391
+      },
+      "Exon5_5ss_intron_63442405": {
+        "pos_1b": 63442405,
+        "ref_max_usage": 2e-05,
+        "alt_max_usage": 2e-05,
+        "delta_alt_minus_ref": 0.0
+      },
+      "Exon5_3ss_63442531": {
+        "pos_1b": 63442531,
+        "ref_max_usage": 0.95703,
+        "alt_max_usage": 0.96094,
+        "delta_alt_minus_ref": 0.00391
+      },
+      "Exon5_3ss_intron_63442532": {
+        "pos_1b": 63442532,
+        "ref_max_usage": 2e-05,
+        "alt_max_usage": 3e-05,
+        "delta_alt_minus_ref": 0.0
+      },
+      "Exon4_5ss_63444658": {
+        "pos_1b": 63444658,
+        "ref_max_usage": 1e-05,
+        "alt_max_usage": 1e-05,
+        "delta_alt_minus_ref": 0.0
+      },
+      "Exon6_3ss_63440615": {
+        "pos_1b": 63440615,
+        "ref_max_usage": 1e-05,
+        "alt_max_usage": 1e-05,
+        "delta_alt_minus_ref": 0.0
+      }
+    },
+    "kcnq2_junctions": [
+      {
+        "junction_0b": "63433903-63439597(-)",
+        "ref_score": 0.02609,
+        "alt_score": 0.02579,
+        "delta": -0.0003
+      },
+      {
+        "junction_0b": "63433903-63442405(-)",
+        "ref_score": 0.02195,
+        "alt_score": 0.02204,
+        "delta": 9e-05
+      },
+      {
+        "junction_0b": "63433903-63444658(-)",
+        "ref_score": 0.0098,
+        "alt_score": 0.00959,
+        "delta": -0.00021
+      },
+      {
+        "junction_0b": "63438690-63439597(-)",
+        "ref_score": 0.08503,
+        "alt_score": 0.08189,
+        "delta": -0.00314
+      },
+      {
+        "junction_0b": "63438720-63439597(-)",
+        "ref_score": 3.80104,
+        "alt_score": 3.79751,
+        "delta": -0.00353
+      },
+      {
+        "junction_0b": "63438720-63442405(-)",
+        "ref_score": 0.02424,
+        "alt_score": 0.02463,
+        "delta": 0.00039
+      },
+      {
+        "junction_0b": "63439708-63442405(-)",
+        "ref_score": 4.976,
+        "alt_score": 4.98015,
+        "delta": 0.00415
+      },
+      {
+        "junction_0b": "63439708-63444658(-)",
+        "ref_score": 0.44517,
+        "alt_score": 0.39294,
+        "delta": -0.05223
+      },
+      {
+        "junction_0b": "63439708-63472167(-)",
+        "ref_score": 0.01018,
+        "alt_score": 0.00959,
+        "delta": -0.00059
+      },
+      {
+        "junction_0b": "63442461-63444658(-)",
+        "ref_score": 0.0085,
+        "alt_score": 0.00821,
+        "delta": -0.00029
+      },
+      {
+        "junction_0b": "63442528-63444658(-)",
+        "ref_score": 0.00583,
+        "alt_score": 0.00621,
+        "delta": 0.00038
+      },
+      {
+        "junction_0b": "63442531-63444658(-)",
+        "ref_score": 4.88003,
+        "alt_score": 4.89609,
+        "delta": 0.01606
+      },
+      {
+        "junction_0b": "63442531-63445237(-)",
+        "ref_score": 0.01959,
+        "alt_score": 0.01976,
+        "delta": 0.00017
+      },
+      {
+        "junction_0b": "63442531-63472167(-)",
+        "ref_score": 0.01062,
+        "alt_score": 0.01041,
+        "delta": -0.00021
+      },
+      {
+        "junction_0b": "63442564-63444658(-)",
+        "ref_score": 0.00707,
+        "alt_score": 0.00407,
+        "delta": -0.003
+      },
+      {
+        "junction_0b": "63444784-63445237(-)",
+        "ref_score": 0.0057,
+        "alt_score": 0.00556,
+        "delta": -0.00014
+      },
+      {
+        "junction_0b": "63444834-63445237(-)",
+        "ref_score": 4.35567,
+        "alt_score": 4.34511,
+        "delta": -0.01056
+      },
+      {
+        "junction_0b": "63444834-63445293(-)",
+        "ref_score": 0.01548,
+        "alt_score": 0.01515,
+        "delta": -0.00033
+      },
+      {
+        "junction_0b": "63444834-63446746(-)",
+        "ref_score": 0.01371,
+        "alt_score": 0.01366,
+        "delta": -5e-05
+      },
+      {
+        "junction_0b": "63445364-63446746(-)",
+        "ref_score": 3.75379,
+        "alt_score": 3.74571,
+        "delta": -0.00808
+      },
+      {
+        "junction_0b": "63445364-63472167(-)",
+        "ref_score": 0.01672,
+        "alt_score": 0.0165,
+        "delta": -0.00022
+      }
+    ]
+  },
+  "scfd1_rs229143_score": {
+    "label": "SCFD1_rs229143_MN_eQTL_ISL1_promoter",
+    "variant": "chr14:30622552:T>A",
+    "total_scored_tracks": 13974,
+    "max_abs_quantile": 0.999899,
+    "max_abs_splice_quantile": 0.998107,
+    "max_abs_splice_raw": 0.323242,
+    "top_global": [
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.323242,
+        "quantile_score": 0.997682
+      },
+      {
+        "biosample_name": "motor neuron",
+        "ontology_curie": "CL:0000100",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.317627,
+        "quantile_score": 0.997682
+      },
+      {
+        "biosample_name": "parietal lobe",
+        "ontology_curie": "UBERON:0001872",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.316895,
+        "quantile_score": 0.997975
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.316162,
+        "quantile_score": 0.997602
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.315186,
+        "quantile_score": 0.998107
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.312256,
+        "quantile_score": 0.998042
+      },
+      {
+        "biosample_name": "occipital lobe",
+        "ontology_curie": "UBERON:0002021",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.311035,
+        "quantile_score": 0.998042
+      },
+      {
+        "biosample_name": "parietal lobe",
+        "ontology_curie": "UBERON:0001872",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.310303,
+        "quantile_score": 0.997905
+      },
+      {
+        "biosample_name": "motor neuron",
+        "ontology_curie": "CL:0000100",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.306641,
+        "quantile_score": 0.997602
+      },
+      {
+        "biosample_name": "occipital lobe",
+        "ontology_curie": "UBERON:0002021",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.306396,
+        "quantile_score": 0.998042
+      },
+      {
+        "biosample_name": "diencephalon",
+        "ontology_curie": "UBERON:0001894",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.303955,
+        "quantile_score": 0.997905
+      },
+      {
+        "biosample_name": "cerebellum",
+        "ontology_curie": "UBERON:0002037",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.302246,
+        "quantile_score": 0.997833
+      }
+    ],
+    "top_cns_neuronal": [
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.323242,
+        "quantile_score": 0.997682
+      },
+      {
+        "biosample_name": "motor neuron",
+        "ontology_curie": "CL:0000100",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.317627,
+        "quantile_score": 0.997682
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.316162,
+        "quantile_score": 0.997602
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.315186,
+        "quantile_score": 0.998107
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.312256,
+        "quantile_score": 0.998042
+      },
+      {
+        "biosample_name": "motor neuron",
+        "ontology_curie": "CL:0000100",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.306641,
+        "quantile_score": 0.997602
+      },
+      {
+        "biosample_name": "spinal cord",
+        "ontology_curie": "UBERON:0002240",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.2854,
+        "quantile_score": 0.997602
+      },
+      {
+        "biosample_name": "spinal cord",
+        "ontology_curie": "UBERON:0002240",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.281982,
+        "quantile_score": 0.997602
+      },
+      {
+        "biosample_name": "neuronal stem cell",
+        "ontology_curie": "CL:0000047",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.264404,
+        "quantile_score": 0.99752
+      },
+      {
+        "biosample_name": "neuronal stem cell",
+        "ontology_curie": "CL:0000047",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.253174,
+        "quantile_score": 0.997346
+      },
+      {
+        "biosample_name": "spinal cord",
+        "ontology_curie": "UBERON:0002240",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.251953,
+        "quantile_score": 0.997255
+      },
+      {
+        "biosample_name": "spinal cord",
+        "ontology_curie": "UBERON:0002240",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.251465,
+        "quantile_score": 0.997255
+      },
+      {
+        "biosample_name": "glutamatergic neuron",
+        "ontology_curie": "CL:0000679",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.226929,
+        "quantile_score": 0.997682
+      },
+      {
+        "biosample_name": "glutamatergic neuron",
+        "ontology_curie": "CL:0000679",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.215942,
+        "quantile_score": 0.99752
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.15918,
+        "quantile_score": 0.996638
+      }
+    ],
+    "top_myeloid_microglia": [
+      {
+        "biosample_name": "inflammatory macrophage",
+        "ontology_curie": "CL:0000863",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -0.29075,
+        "quantile_score": -0.984903
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -0.244461,
+        "quantile_score": -0.988072
+      },
+      {
+        "biosample_name": "suppressor macrophage",
+        "ontology_curie": "CL:0000862",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -0.218895,
+        "quantile_score": -0.980901
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.217407,
+        "quantile_score": 0.997255
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.210205,
+        "quantile_score": 0.997063
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.195435,
+        "quantile_score": 0.99675
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.184326,
+        "quantile_score": 0.996523
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.155029,
+        "quantile_score": 0.995743
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": -0.151095,
+        "quantile_score": -0.9935
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -0.132565,
+        "quantile_score": -0.946357
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": 0.114059,
+        "quantile_score": 0.993277
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.109924,
+        "quantile_score": 0.994036
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.097107,
+        "quantile_score": 0.993176
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "SCFD1",
+        "output_type": "RNA_SEQ",
+        "raw_score": -0.074438,
+        "quantile_score": -0.999858
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.070862,
+        "quantile_score": 0.990766
+      }
+    ],
+    "top_splicing": [
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.323242,
+        "quantile_score": 0.997682
+      },
+      {
+        "biosample_name": "motor neuron",
+        "ontology_curie": "CL:0000100",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.317627,
+        "quantile_score": 0.997682
+      },
+      {
+        "biosample_name": "parietal lobe",
+        "ontology_curie": "UBERON:0001872",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.316895,
+        "quantile_score": 0.997975
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.316162,
+        "quantile_score": 0.997602
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.315186,
+        "quantile_score": 0.998107
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.312256,
+        "quantile_score": 0.998042
+      },
+      {
+        "biosample_name": "occipital lobe",
+        "ontology_curie": "UBERON:0002021",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.311035,
+        "quantile_score": 0.998042
+      },
+      {
+        "biosample_name": "parietal lobe",
+        "ontology_curie": "UBERON:0001872",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.310303,
+        "quantile_score": 0.997905
+      },
+      {
+        "biosample_name": "motor neuron",
+        "ontology_curie": "CL:0000100",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.306641,
+        "quantile_score": 0.997602
+      },
+      {
+        "biosample_name": "occipital lobe",
+        "ontology_curie": "UBERON:0002021",
+        "gene_name": "SCFD1",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.306396,
+        "quantile_score": 0.998042
+      }
+    ]
+  },
+  "scfd1_rs229195_score": {
+    "label": "SCFD1_G2E3_rs229195_GWAS_lead_iMGL_eQTL",
+    "variant": "chr14:30576390:G>A",
+    "total_scored_tracks": 12865,
+    "max_abs_quantile": 0.986352,
+    "max_abs_splice_quantile": 0.979416,
+    "max_abs_splice_raw": 0.043243,
+    "top_global": [
+      {
+        "biosample_name": "MCF-7",
+        "ontology_curie": "EFO:0001203",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -0.05906,
+        "quantile_score": -0.768407
+      },
+      {
+        "biosample_name": "H1",
+        "ontology_curie": "EFO:0003042",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -0.053124,
+        "quantile_score": -0.739178
+      },
+      {
+        "biosample_name": "GM12878",
+        "ontology_curie": "EFO:0002784",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -0.052331,
+        "quantile_score": -0.849288
+      },
+      {
+        "biosample_name": "mammary epithelial cell",
+        "ontology_curie": "CL:0002327",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -0.04725,
+        "quantile_score": -0.844498
+      },
+      {
+        "biosample_name": "HEK293T",
+        "ontology_curie": "EFO:0001184",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -0.046087,
+        "quantile_score": -0.706871
+      },
+      {
+        "biosample_name": "GM12891",
+        "ontology_curie": "EFO:0002785",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -0.044827,
+        "quantile_score": -0.754166
+      },
+      {
+        "biosample_name": "HeLa-S3",
+        "ontology_curie": "EFO:0002791",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -0.044633,
+        "quantile_score": -0.923063
+      },
+      {
+        "biosample_name": "HeLa-S3",
+        "ontology_curie": "EFO:0002791",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -0.043722,
+        "quantile_score": -0.882976
+      },
+      {
+        "biosample_name": "K562",
+        "ontology_curie": "EFO:0002067",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -0.043264,
+        "quantile_score": -0.715246
+      },
+      {
+        "biosample_name": "motor neuron",
+        "ontology_curie": "CL:0000100",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.043243,
+        "quantile_score": 0.968384
+      },
+      {
+        "biosample_name": "B cell",
+        "ontology_curie": "CL:0000236",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.043213,
+        "quantile_score": 0.979416
+      },
+      {
+        "biosample_name": "PFSK-1",
+        "ontology_curie": "EFO:0005234",
+        "gene_name": "None",
+        "output_type": "CHIP_TF",
+        "raw_score": -0.042332,
+        "quantile_score": -0.754166
+      }
+    ],
+    "top_cns_neuronal": [
+      {
+        "biosample_name": "motor neuron",
+        "ontology_curie": "CL:0000100",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.043243,
+        "quantile_score": 0.968384
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.040436,
+        "quantile_score": 0.953265
+      },
+      {
+        "biosample_name": "spinal cord",
+        "ontology_curie": "UBERON:0002240",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.038055,
+        "quantile_score": 0.96733
+      },
+      {
+        "biosample_name": "spinal cord",
+        "ontology_curie": "UBERON:0002240",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.035645,
+        "quantile_score": 0.954751
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.03421,
+        "quantile_score": 0.953265
+      },
+      {
+        "biosample_name": "neuronal stem cell",
+        "ontology_curie": "CL:0000047",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.0336,
+        "quantile_score": 0.960258
+      },
+      {
+        "biosample_name": "glutamatergic neuron",
+        "ontology_curie": "CL:0000679",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.028915,
+        "quantile_score": 0.96512
+      },
+      {
+        "biosample_name": "neuronal stem cell",
+        "ontology_curie": "CL:0000047",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.028641,
+        "quantile_score": 0.937642
+      },
+      {
+        "biosample_name": "spinal cord",
+        "ontology_curie": "UBERON:0002240",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.02774,
+        "quantile_score": 0.922249
+      },
+      {
+        "biosample_name": "motor neuron",
+        "ontology_curie": "CL:0000100",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.027084,
+        "quantile_score": 0.884203
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.026978,
+        "quantile_score": 0.946842
+      },
+      {
+        "biosample_name": "spinal cord",
+        "ontology_curie": "UBERON:0002240",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.026886,
+        "quantile_score": 0.900452
+      },
+      {
+        "biosample_name": "dorsolateral prefrontal cortex",
+        "ontology_curie": "UBERON:0009834",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.026428,
+        "quantile_score": 0.943327
+      },
+      {
+        "biosample_name": "frontal cortex",
+        "ontology_curie": "UBERON:0001870",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.02594,
+        "quantile_score": 0.900452
+      },
+      {
+        "biosample_name": "C1 segment of cervical spinal cord",
+        "ontology_curie": "UBERON:0006469",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.025528,
+        "quantile_score": 0.946842
+      }
+    ],
+    "top_myeloid_microglia": [
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.035156,
+        "quantile_score": 0.974892
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.033325,
+        "quantile_score": 0.969405
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.026672,
+        "quantile_score": 0.951732
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.024643,
+        "quantile_score": 0.935631
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -0.02252,
+        "quantile_score": -0.768407
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.019272,
+        "quantile_score": 0.887627
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.019241,
+        "quantile_score": 0.880689
+      },
+      {
+        "biosample_name": "suppressor macrophage",
+        "ontology_curie": "CL:0000862",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -0.012244,
+        "quantile_score": -0.555842
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": 0.009646,
+        "quantile_score": 0.768407
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": 0.009389,
+        "quantile_score": 0.567438
+      },
+      {
+        "biosample_name": "inflammatory macrophage",
+        "ontology_curie": "CL:0000863",
+        "gene_name": "None",
+        "output_type": "DNASE",
+        "raw_score": -0.008975,
+        "quantile_score": -0.507261
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": 0.007163,
+        "quantile_score": 0.600902
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": -0.005409,
+        "quantile_score": -0.731397
+      },
+      {
+        "biosample_name": "CD14-positive monocyte",
+        "ontology_curie": "CL:0001054",
+        "gene_name": "G2E3",
+        "output_type": "RNA_SEQ",
+        "raw_score": 0.00497,
+        "quantile_score": 0.474611
+      },
+      {
+        "biosample_name": "common myeloid progenitor, CD34-positive",
+        "ontology_curie": "CL:0001059",
+        "gene_name": "None",
+        "output_type": "CHIP_HISTONE",
+        "raw_score": -0.004586,
+        "quantile_score": -0.589968
+      }
+    ],
+    "top_splicing": [
+      {
+        "biosample_name": "motor neuron",
+        "ontology_curie": "CL:0000100",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.043243,
+        "quantile_score": 0.968384
+      },
+      {
+        "biosample_name": "B cell",
+        "ontology_curie": "CL:0000236",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.043213,
+        "quantile_score": 0.979416
+      },
+      {
+        "biosample_name": "smooth muscle cell of the coronary artery",
+        "ontology_curie": "CL:0002592",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.041962,
+        "quantile_score": 0.978004
+      },
+      {
+        "biosample_name": "smooth muscle cell of the pulmonary artery",
+        "ontology_curie": "CL:0002591",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.041687,
+        "quantile_score": 0.974892
+      },
+      {
+        "biosample_name": "smooth muscle cell of bladder",
+        "ontology_curie": "CL:0002597",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.041626,
+        "quantile_score": 0.974892
+      },
+      {
+        "biosample_name": "pulmonary artery endothelial cell",
+        "ontology_curie": "CL:1001568",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.04126,
+        "quantile_score": 0.975708
+      },
+      {
+        "biosample_name": "fibroblast of lung",
+        "ontology_curie": "CL:0002553",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.041107,
+        "quantile_score": 0.973179
+      },
+      {
+        "biosample_name": "HFFc6",
+        "ontology_curie": "EFO:0009318",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.040985,
+        "quantile_score": 0.975708
+      },
+      {
+        "biosample_name": "aortic smooth muscle cell",
+        "ontology_curie": "CL:0002539",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.040955,
+        "quantile_score": 0.974892
+      },
+      {
+        "biosample_name": "BJ",
+        "ontology_curie": "EFO:0002779",
+        "gene_name": "G2E3",
+        "output_type": "SPLICE_JUNCTIONS",
+        "raw_score": 0.040894,
+        "quantile_score": 0.977263
+      }
+    ]
+  }
+}
