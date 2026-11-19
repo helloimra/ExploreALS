@@ -87,6 +87,10 @@ def main() -> None:
         "4-PDB octamer inter-protomer ARM-TIR latch 3.07-5.47A vs 35.4-66.9A intra-chain, cumulative validated GoF AF=0.000378 [~0.076% carriers] vs benign P332Q AF=0.986%; 0/12 single-gene SARM1 ClinVar P/LP [6 opposite-strand SLC46A1 LoFs]",
         "7ANW/7DJT octamer inter-protomer ARM-TIR latch 3.07-5.47A vs 37.8-65.4A intra-chain, cumulative validated GoF AF=0.000378 [~0.076% carriers] vs benign P332Q AF=0.986%, 97 hom; 0/12 single-gene SARM1 ClinVar P/LP [6 opposite-strand SLC46A1 records]",
     )
+    dm["S06"]["factual_justification"] = dm["S06"]["factual_justification"].replace(
+        "pairing with #2 C006",
+        "pairing with #4 C006",
+    )
     dm["S06"]["discriminating_next_test"] = dm["S06"]["discriminating_next_test"].replace(
         "in d_lock=6.5 GoF heterozygotes",
         "in Binomial hetero-octamer d_lock=6.5 GoF heterozygotes",
