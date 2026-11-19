@@ -500,8 +500,8 @@ def run_selftest(mode: str = "full") -> None:
     assert any("Cannot DROP an UNPROVEN_UNTESTED" in e for e in errs_p4_epi), "Phase 4 self-test failed to block UNPROVEN DROP!"
 
 
-if __name__ == "__main__":
-    ap = argparse.ArgumentParser(description="Verify ExploreALS v1.2 / CarbonALS registries, SHA-64 anchors, & gates.")
+def main() -> None:
+    ap = argparse.ArgumentParser(description="Verify ExploreALS v1.2 registries, 64-char SHA-256 anchors, & gates.")
     ap.add_argument("--mode", choices=("auto", "full", "cached"), default="auto")
     args = ap.parse_args()
     eff_mode = resolve_mode(args.mode)
@@ -517,6 +517,10 @@ if __name__ == "__main__":
     n_stat = len(load_csv("statistical_models_and_contrasts.csv"))
     print(
         f"PASS [{eff_mode}]: All {n_reg} registries, {n_stat}/{n_stat} 64-char SHA-256 contrast anchors, "
-        f"{n_ds} dataset manifest entries, 52-hypothesis/26-interval Phase 4 portfolio, "
-        "Explorer v1.2 + 8 Monographs, biosecurity/provenance gates, and Epistemic Asymmetry self-tests verified (0 errors)."
+        f"{n_ds} dataset manifest entries, 52-hypothesis/26-interval portfolio, "
+        "ExploreALS v1.2 Explorer + 8 Monographs, biosecurity/provenance gates, and self-tests verified (0 errors)."
     )
+
+
+if __name__ == "__main__":
+    main()

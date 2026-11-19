@@ -8,25 +8,30 @@ let dossierSlice = 'ALL';
 let dossierLens = 'ALL';
 
 function trackLabel(t){
-  if(t === 'A') return 'Drug Regimen (Track A)';
-  if(t === 'B') return 'Molecular Target (Track B)';
-  return 'Track ' + esc(t);
+  if(t === 'A') return 'Clinical Drug / Regimen';
+  if(t === 'B') return 'Molecular / Genetic Target';
+  if(t === 'BIOMARKER') return 'Fluid Staging Biomarker';
+  return 'Candidate Modality';
 }
 
 const ENUM_LABELS = {
   TIER_1_ACTIONABLE_NOW: 'Tier 1 · Actionable Now',
-  TIER_2_FOCUSED_GATE_FIRST: 'Tier 2 · Focused Gate First',
+  TIER_2_FOCUSED_GATE_FIRST: 'Tier 2 · Validation Gate',
   TIER_3_EXPLORATORY_DISCOVERY: 'Tier 3 · Exploratory Discovery',
-  COMPANION_PROTOCOL_ONLY: 'Companion PD Protocol',
+  COMPANION_PROTOCOL_ONLY: 'Functional PD Calibrator',
   BIOMARKER_BENCHMARK_ONLY: 'Biomarker / SOC Benchmark',
   DROPPED_FALSIFIED_EXCLUDED: 'Dropped · Falsified',
-  TRL_6_PH2B_SUBGROUP_BIOLOGIC: 'TRL 6 · Ph2b Subgroup Biologic',
-  TRL_5_HUMAN_ALS_PK_PD_PROVEN: 'TRL 5 · Human ALS PK/PD Proven',
-  TRL_4_ACTIVE_PH1_CLASS_OR_NCE: 'TRL 4 · Registered Ph1 / NCE Class',
-  TRL_3_PRECLINICAL_SSO_COORDINATE: 'TRL 3 · Preclinical GRCh38 SSO',
-  TRL_2_PRECLINICAL_MODALITY_DISCOVERY: 'TRL 2 · Preclinical Modality',
-  TRL_1_TARGET_TOOL_PROBE_WATCHLIST: 'TRL 1 · Tool/Probe Watchlist',
-  PROTOCOL_COMPANION_NA: 'Protocol / Benchmark (N/A)',
+  PASS_CLEAN_GE2MM: 'Pass · Clean (>=2 Mismatches)',
+  CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED: 'Caution · Non-Constrained 1-mm / Wobble',
+  WARN_1MM_OR_WOBBLE_CONSTRAINED_NEURONAL: 'Warn · Constrained CNS 1-mm / Bulge',
+  FAIL_EXACT_0MM_OFFTARGET: 'Fail · Exact 0-mm Off-Target',
+  TRL_6_PH2B_SUBGROUP_BIOLOGIC: 'Phase 2b Subgroup Biologic',
+  TRL_5_HUMAN_ALS_PK_PD_PROVEN: 'Human ALS PK/PD Proven',
+  TRL_4_ACTIVE_PH1_CLASS_OR_NCE: 'Active Phase 1 / NCE Class',
+  TRL_3_PRECLINICAL_SSO_COORDINATE: 'Preclinical GRCh38 SSO',
+  TRL_2_PRECLINICAL_MODALITY_DISCOVERY: 'Preclinical Modality',
+  TRL_1_TARGET_TOOL_PROBE_WATCHLIST: 'Target Watchlist / Tool Probe',
+  PROTOCOL_COMPANION_NA: 'Biomarker / Calibrator (N/A)',
   MEASURED_HUMAN_GENETICS_AND_PATHOLOGY: 'Human Genetics + CNS Pathology',
   MEASURED_HUMAN_TDP43_PATHOLOGY_AND_RESCUE: 'Human TDP-43 Pathology + Rescue',
   MEASURED_HUMAN_RCT_SUBGROUP: 'Human ALS RCT Subgroup',
@@ -35,24 +40,24 @@ const ENUM_LABELS = {
   MEASURED_HUMAN_CSF_PROTEOMICS: 'Living Human CSF Proteomics',
   MEASURED_HUMAN_PK_AND_IPSC_SCREEN: 'Human PK / Patient iPSC-MN Screen',
   PROTOCOL_STAGE_GATING_ONLY: 'Clinical Stage-Gating Protocol',
-  TARGETED_PRECLINICAL_VALIDATION_GATE: 'Preclinical Cellular / Tissue Validation Gate',
-  TRANSLATIONAL_BIOMARKER_OR_PH1B_PKPD_GATE: 'Human Biofluid / Phase 1b PK-PD Gate',
-  DE_NOVO_CHEMICAL_OR_BIOLOGIC_DISCOVERY_GATE: 'De Novo Chemical / Biologic Modality Discovery',
+  TARGETED_PRECLINICAL_VALIDATION_GATE: 'Preclinical Cellular / Tissue Validation',
+  TRANSLATIONAL_BIOMARKER_OR_PH1B_PKPD_GATE: 'Human Biofluid / Phase 1b PK-PD Study',
+  DE_NOVO_CHEMICAL_OR_BIOLOGIC_DISCOVERY_GATE: 'Chemical / Biologic Modality Discovery',
   BIOMARKER_ENRICHED_PHASE3_EFFICACY_TRIAL: 'Biomarker-Enriched Phase 3 Survival RCT',
   CLINICAL_PROTOCOL_STANDARDIZATION: 'Clinical Protocol / Calibration Standard',
   NOT_APPLICABLE_FALSIFIED: 'N/A — Scientifically Falsified',
-  CURATED_CLINICAL_33: 'Published Clinical, Genetic & Pathology Set (33)',
-  PHASE3B_DENOVO_19: 'Unbiased Multi-Omic Discovery Set (19)',
-  CANONICAL_24: 'Clinical, Mendelian & GWAS Programs',
-  SCREEN_AND_BLIND_SURVIVORS_9: 'RCT Subgroup & Screen Survivors',
-  F1_CRYPTIC_SPLICE: 'Unbiased · TDP-43 Cryptic Exons',
-  F2_CRYPTIC_APA: "Unbiased · Cryptic APA / 3'Ext",
-  F3_CSF_SPATIAL: 'Unbiased · Living CSF & Spatial',
-  F4_BYE2025_SCREEN: 'Unbiased · Human iPSC-MN Screen',
-  PHASE2_3A_MULTIPLEX_12: 'Core 3-Plex & 14q12 Panel (12)',
-  PHASE3B_DENOVO_14: 'Single-Entity De Novo Leads (14)',
+  GENETICS_MENDELIAN_GWAS: 'Human ALS Genetics — Mendelian & GWAS',
+  TDP43_SPLICING_APA: 'TDP-43 Cryptic Splicing & Polyadenylation',
+  CNS_TISSUE_OMICS: 'Human CNS Spatial, snRNA & Subcellular Omics',
+  CSF_AND_PHYSIOLOGY: 'Living-Patient CSF Proteomics & Physiology',
+  CLINICAL_TRIALS_SUBGROUPS: 'Human ALS Clinical Trials & Subgroups',
+  IPSC_PHENOTYPIC_SCREEN: 'Patient iPSC-MN Phenotypic Screen',
+  CRYPTIC_EXON_SKIP: 'Cryptic Cassette Exon Skipping',
+  CRYPTIC_ALE_PAS_BLOCK: "Cryptic 3'SS / Premature PolyA Blockade",
+  CONSTITUTIVE_EXON_INCLUSION: 'Constitutive Exon Inclusion Rescue',
+  DISTAL_3UTR_EXTENSION: "Distal 3'-UTR Extension Suppression",
   SUPPORTED: 'Supported (Human Genetics + Pathology)',
-  UNPROVEN_UNTESTED: 'Unproven / Untested (Gate Required)',
+  UNPROVEN_UNTESTED: 'Untested / Unresolved (Validation Required)',
   ESTABLISHED_BENCHMARK: 'Established SOC / PD Benchmark',
   FALSIFIED_CLINICAL: 'Falsified · Human ALS RCT Futility',
   FALSIFIED_PK_SAFETY: 'Falsified · CNS PK / Safety Wall',
@@ -62,16 +67,19 @@ const ENUM_LABELS = {
   RECLASSIFY_BENCHMARK_OR_BIOMARKER: 'Benchmark / Biomarker',
   DROP: 'Drop · Falsified',
   SKIP_CRYPTIC_EXON: "Steric 2'-MOE SSO · Cryptic Exon Skip",
+  CRYPTIC_EXON2A_3SS_PAS_BLOCK: "Steric 2'-MOE SSO · Cryptic Exon-2a 3'SS / Premature-PAS Block",
   CRYPTIC_CASSETTE_EXON_SKIP: "Steric 2'-MOE SSO · Cryptic Cassette Skip",
   CRYPTIC_CASSETTE_MAJOR_3SS_AND_SHARED_EXON: "Steric 2'-MOE SSO · Major 3'SS + Exonic",
   CRYPTIC_CASSETTE_DOWNSTREAM_INTRONIC_ISE: "Steric 2'-MOE SSO · Downstream Intronic ISE",
   INCLUDE_CONSTITUTIVE_EXON: "Steric 2'-MOE SSO · Putative Intron-5 Site (ISS vs ISE Gate)",
   INCLUDE_EXON_UPSTREAM_UG: "Steric 2'-MOE SSO · Exon-5 Inclusion (UG)",
   CRYPTIC_ALE_3SS_ACCEPTOR_BLOCK: "Steric 2'-MOE SSO · Cryptic ALE 3'SS Block",
-  CRYPTIC_3EXT_ISOFORM_GAPMER_WINDOW: "Historical 3'Ext Window (Nuclear Gapmer Retired -> Steric PAS SSO)",
-  CORE_3PLEX: 'Core 3-Plex',
-  DEFERRED_4TH_CANDIDATE: 'Excluded 4th Axis',
-  DENOVO_SINGLE_ENTITY: 'De Novo 1-Plex',
+  DISTAL_3UTR_EXT_PAS_WINDOW: "Distal 3'-UTR Extension Window (Steric Distal-PAS SSO or 3'-Ext siRNA; Pol II Readthrough Retires Gapmer)",
+  CRYPTIC_3EXT_ISOFORM_GAPMER_WINDOW: "Distal 3'-UTR Extension Window (Steric PAS SSO Preferred)",
+  MULTIPLEX_CORE: 'Multiplex Core',
+  SINGLE_LOCUS_LEAD: 'Single-Locus Lead',
+  EXPLORATORY_LOCUS: 'Exploratory Locus',
+  EXCLUDED_ALU_REPEAT: 'Excluded (Alu Repeat)',
   NONE_FALSIFIED_CLINICAL: 'None — Falsified in human ALS clinical trials.',
   NONE_FALSIFIED_PK_SAFETY: 'None — Falsified by insurmountable human CNS PK deficit or clinical toxicity.',
   NONE_ARTIFACT_CONFOUNDED: 'None — Assay perturbation sits within basal media noise and contradicts human genetic polarity.',
@@ -105,6 +113,8 @@ const HURDLE_TOK = {
   '1PE':'1 PE', '1DVT':'1 DVT', NCT04082832:'NCT04082832', NCT04313166:'NCT04313166', OLE:'OLE',
   PTDP43:'pTDP-43', '144MG':'144 mg', '53NM':'53 nM', MNS:'MNs', MTD:'MTD', PET:'PET', CUATSM:'CuATSM',
   ICH:'ICH', M3R2:'M3(R2)', FCRN:'FcRn', CD38:'CD38', IMGL:'iMGL', CONQUR:'CONQUR',
+  IL33:'IL-33', CTRL:'control', EXON5:'Exon-5', INTRON5:'Intron-5', POPS:'PO/PS',
+  EXON2A:'Exon-2a', INTRON8:'Intron-8', INTRON4:'Intron-4',
 };
 function humanizeEnum(s){
   if(!s || s === 'NONE') return 'None';
@@ -114,9 +124,9 @@ function humanizeEnum(s){
 function formatHurdle(code){
   if(!code || code === 'NONE') return 'None';
   const pre = String(code)
-    .replace(/21CFR300_50/g, '21CFR300.50')
+    .replace(/FACTORIAL_CONTRIBUTION/g, 'factorial contribution')
     .replace(/ICH_M3R2/g, 'ICH M3(R2)')
-    .replace(/NO_312_23_REF/g, 'no 21 CFR 312.23(b) right-of-reference')
+    .replace(/INDEPENDENT_SINGLE_ENTITY_TOX/g, 'independent single-entity tox qualification')
     .replace(/6_TO_9MG/g, '6–9 mg')
     .replace(/LE_3MG/g, '<=3 mg')
     .replace(/24_TO_48MG/g, '24–48 mg')
@@ -127,7 +137,7 @@ function formatHurdle(code){
     .replace(/GT99_9PCT/g, '>99.9%')
     .replace(/LT0_1PCT/g, '<0.1%')
     .replace(/PLUS0048/g, '+0.048')
-    .replace(/MINUS022_TO_033/g, '-0.22..-0.33')
+    .replace(/MINUS022_TO_033/g, '-0.22 to -0.33')
     .replace(/8_7PCT/g, '8.7%')
     .replace(/LE_3700/g, '<=3,700')
     .replace(/PLI_0_996/g, 'pLI=0.996')
@@ -142,7 +152,7 @@ function formatHurdle(code){
     .replace(/Q48_TO_Q72H/g, 'q48h-q72h');
   const words = pre.split('_').filter(Boolean).map(w => {
     if(HURDLE_TOK[w]) return HURDLE_TOK[w];
-    if(/^(#|<=|>=|<|>|[0-9]|EALS-|pLI=|Chronos=|21CFR|ICH|no 21|Pre-|Post-|ALS-|non-|aa )/.test(w)) return w;
+    if(/^(#|<=|>=|<|>|-0\\.|[0-9]|EALS-|pLI=|Chronos=|factorial|ICH|independent|Pre-|Post-|ALS-|non-|aa )/.test(w)) return w;
     if(/^RS[0-9]+$/.test(w)) return w.toLowerCase();
     return w.toLowerCase();
   });
@@ -390,6 +400,12 @@ function setDossierSlice(sl){
   if(dossierSlice === 'ALL') dossierLens = 'ALL';
   renderDossierSidebar();
 }
+function resetDossierNav(){
+  const sEl = document.getElementById('d-search');
+  if(sEl) sEl.value = '';
+  dossierLens = 'ALL';
+  setDossierSlice('ALL');
+}
 function setDossierLens(lk){
   dossierLens = lk || 'ALL';
   renderDossierSidebar();
@@ -462,13 +478,13 @@ function renderSummaryDomainPanels(r){
       : (location.protocol !== 'about:' ? `<a href="../CARBON_ALS_INTERACTIVE_EXPLORER.html#intervals/${esc(r.id)}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs">Inspect in Tab 3 (Splice Windows) &rarr;</a>` : '');
     out += `<div id="sec-cis" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
       <div class="flex items-center justify-between gap-2 flex-wrap">
-        <h3 class="text-sm font-semibold">Audited GRCh38 Splice-Target Windows (${cisRows.length} Coordinate Walk${cisRows.length>1?'s':''})</h3>
+        <h3 class="text-sm font-semibold">Audited GRCh38 Splice-Target Windows (${cisRows.length} Target Window${cisRows.length>1?'s':''})</h3>
         ${jumpBtn}
       </div>
       <div class="overflow-x-auto"><table class="w-full text-left border-collapse text-xs">
         <thead><tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
-          <th class="py-1.5 px-2">Candidate Walk</th><th class="py-1.5 px-2">GRCh38 Coordinate</th><th class="py-1.5 px-2">Splicing Mode</th>
-          <th class="py-1.5 px-2" title="Modeled 2'-O-MOE PO/PS Tm, free energy, and max AlphaGenome AVI Phred">Tm / &Delta;G37 / AVI</th><th class="py-1.5 px-2" title="mRNA = spliced 0mm·1mm·wobble genes; pre = pre-mRNA 0mm·1mm(<=50bp)·wobble·2mm(<=25bp)·1nt-bulge·18nt-subcore (+ whole-intron 1mm on gapmers)">mRNA &amp; Pre-mRNA Hits</th><th class="py-1.5 px-2">Safety Verdict &amp; Browsers</th>
+          <th class="py-1.5 px-2">Target Window</th><th class="py-1.5 px-2">GRCh38 Coordinate</th><th class="py-1.5 px-2">Cis-Mechanism</th>
+          <th class="py-1.5 px-2" title="Modeled 2'-O-MOE PO/PS Tm, free energy, and max AlphaGenome AVI Phred">Tm / &Delta;G37 / AVI</th><th class="py-1.5 px-2" title="mRNA = spliced 0-mm·1-mm·wobble genes; pre = pre-mRNA 0-mm·1-mm(<=50bp)·wobble·2-mm(<=25bp)·1nt-bulge·18nt-subcore">mRNA &amp; Pre-mRNA Hits</th><th class="py-1.5 px-2">Safety Verdict &amp; Browsers</th>
         </tr></thead>
         <tbody class="divide-y divide-[var(--card-border)]">${cisRows.map(c => {
           const loP = Math.max(1, Number(c.lo)-250), hiP = Number(c.hi)+250;
@@ -476,18 +492,17 @@ function renderSummaryDomainPanels(r){
           const atlUrl = `https://deepmind.google.com/science/alphagenome/atlas?q=${c.chr}:${loP}-${hiP}&m=locus&lItems=avi,section:RNA_SEQ,section:SPLICE_JUNCTIONS,section:DNASE`;
           const ucscUrl = `https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=${c.chr}:${loP}-${hiP}`;
           const stB = (typeof statusBadge === 'function') ? statusBadge(c.st) : `<span class="font-mono">${esc(humanizeEnum(c.st))}</span>`;
-          const gapNote = (c.is_gap && c.pm1_all > 0) ? ` <span class="text-[var(--warning)]">(+${c.pm1_all} whole-intron 1mm)</span>` : '';
           return `<tr class="align-top">
-            <td class="py-2 px-2 font-mono">${c.lead?'<span class="text-[var(--success)] font-bold">&#9733; Lead</span>':'<span class="text-[var(--muted-foreground)]">Alt</span>'} &middot; <strong>${esc(c.gene)} &middot; Walk #${c.rk}</strong></td>
+            <td class="py-2 px-2 font-mono">${c.lead?'<span class="text-[var(--success)] font-bold">&#9733; Lead</span>':'<span class="text-[var(--muted-foreground)]">Alt</span>'} &middot; <strong>${esc(c.gene)} &middot; Window #${c.rk}</strong></td>
             <td class="py-2 px-2 font-mono">${mkExtA(ensUrl, esc(c.iv))} <span class="text-[var(--muted-foreground)]">(${c.len}bp)</span></td>
             <td class="py-2 px-2">${esc(humanizeEnum(c.mode))}</td>
             <td class="py-2 px-2 font-mono tabular-nums">${c.tm}&deg;C &middot; ${c.dg} &middot; AVI=${c.avi}</td>
-            <td class="py-2 px-2 font-mono tabular-nums" title="mRNA 0mm·1mm·wobble · pre-mRNA 0mm·1mm(<=50bp)·wobble·2mm(<=25bp)·1nt-bulge·18nt-subcore">mRNA ${esc(c.sp).replaceAll('/',' \u00b7 ')} &middot; pre ${esc(c.pm).replaceAll('/',' \u00b7 ')}${gapNote}</td>
+            <td class="py-2 px-2 font-mono tabular-nums" title="mRNA 0-mm·1-mm·wobble · pre-mRNA 0-mm·1-mm(<=50bp)·wobble·2-mm(<=25bp)·1nt-bulge·18nt-subcore">mRNA ${esc(c.sp).replaceAll('/',' \u00b7 ')} &middot; pre ${esc(c.pm).replaceAll('/',' \u00b7 ')}</td>
             <td class="py-2 px-2 font-mono whitespace-nowrap">${stB} &middot; ${mkExtA(atlUrl, 'Atlas &nearr;')} &middot; ${mkExtA(ucscUrl, 'UCSC &nearr;')}</td>
           </tr>`;
         }).join('')}</tbody>
       </table></div>
-      <div class="text-[var(--muted-foreground)] font-mono text-xs pt-1 border-t border-[var(--card-border)]">Key: mRNA = spliced 0mm&middot;1mm&middot;wobble genes &middot; pre = pre-mRNA 0mm / 1mm(&le;50bp SS; + whole-intron 1mm on gapmers) / wobble / 2mm(&le;25bp) / 1-nt bulge / 18-nt sub-core (Coordinate-Only Search Windows, 0 chemically modified synthesis-ready ASO sequences).</div></div>`;
+      <div class="text-[var(--muted-foreground)] font-mono text-xs pt-1 border-t border-[var(--card-border)]">Key: mRNA = spliced 0-mm&middot;1-mm&middot;wobble genes &middot; pre = pre-mRNA 0-mm / 1-mm(&le;50bp SS) / wobble / 2-mm(&le;25bp) / 1-nt bulge / 18-nt sub-core (1-based GRCh38 target windows).</div></div>`;
   }
   if(!isFull && location.protocol !== 'about:' && (['EALS-014','EALS-015','EALS-023','EALS-017','EALS-018'].includes(r.id) || /^EALS-0(?:3[4-9]|4[0-2])$/.test(r.id))){
     out += `<div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex items-center justify-between gap-2 flex-wrap text-xs">
@@ -556,8 +571,8 @@ function renderSummaryDomainPanels(r){
       }).join('');
       out += `<div id="sec-nygc" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
         <div class="flex items-center justify-between gap-2 flex-wrap">
-          <h3 class="text-sm font-semibold">3-Region NYGC Postmortem RNA-Seq Profile &mdash; ${esc(gKey)} (${mkExtA('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153960','GSE153960')} &middot; ${mkExtA('https://pubmed.ncbi.nlm.nih.gov/36482247/','PMID:36482247')})</h3>
-          <span class="font-mono text-xs text-[var(--muted-foreground)]">&#9679; [MEASURED] Donor-Level RIN+GC OLS</span>
+          <h3 class="text-sm font-semibold">NYGC 3-Region Postmortem RNA-Seq Profile &mdash; ${esc(gKey)} (${mkExtA('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153960','GSE153960')} &middot; ${mkExtA('https://pubmed.ncbi.nlm.nih.gov/36482247/','PMID:36482247')})</h3>
+          <span class="font-mono text-xs text-[var(--muted-foreground)]">&#9679; Empirical Donor-Level RIN+GC OLS</span>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 text-xs">${regDefs.map(([rk, rlbl]) => {
           const d = DATA_NYGC[gKey][rk], m = DATA_NYGC_META[rk];
@@ -603,8 +618,8 @@ function getFilteredDossierList(){
     const r = DATA_PORT[i];
     if(activeLensObj && !activeLensObj.ids.includes(r.id)) continue;
     if(dossierSlice === 'T12' && r.tier !== 'TIER_1_ACTIONABLE_NOW' && r.tier !== 'TIER_2_FOCUSED_GATE_FIRST') continue;
-    if(dossierSlice === 'WATCH' && r.tier !== 'TIER_3_EXPLORATORY_DISCOVERY' && r.tier !== 'COMPANION_PROTOCOL_ONLY') continue;
-    if(dossierSlice === 'BIO' && r.tier !== 'BIOMARKER_BENCHMARK_ONLY') continue;
+    if(dossierSlice === 'WATCH' && r.tier !== 'TIER_3_EXPLORATORY_DISCOVERY') continue;
+    if(dossierSlice === 'BIO' && r.tier !== 'BIOMARKER_BENCHMARK_ONLY' && r.tier !== 'COMPANION_PROTOCOL_ONLY') continue;
     if(dossierSlice === 'DROP' && r.tier !== 'DROPPED_FALSIFIED_EXCLUDED') continue;
     if(!q){ scored.push({r: r, tier: 9}); continue; }
     const sObj = (typeof DATA_SUM !== 'undefined' && DATA_SUM[r.id]) ? DATA_SUM[r.id] : null;
@@ -621,9 +636,9 @@ function renderDossierSidebar(){
   const sliceDefs = [
     ['ALL', 'All'],
     ['T12', 'T1/2 (8)'],
-    ['WATCH', 'T3+Proto (19)'],
-    ['BIO', 'Bio (7)'],
-    ['DROP', 'Drop (18)'],
+    ['WATCH', 'T3 (18)'],
+    ['BIO', 'Bio & Calib (8)'],
+    ['DROP', 'Falsified (18)'],
   ];
   const sBar = document.getElementById('d-slice-bar');
   if(sBar){
@@ -647,14 +662,14 @@ function renderDossierSidebar(){
     const isPilot = Boolean(DATA_MONOGRAPHS[r.id]);
     const on = r.id === dossierId;
     const dotCol = r.tier==='TIER_1_ACTIONABLE_NOW' ? 'var(--success)'
-      : ((r.tier==='TIER_2_FOCUSED_GATE_FIRST' || r.tier==='BIOMARKER_BENCHMARK_ONLY') ? 'var(--primary)'
+      : ((r.tier==='TIER_2_FOCUSED_GATE_FIRST' || r.tier==='BIOMARKER_BENCHMARK_ONLY' || r.tier==='COMPANION_PROTOCOL_ONLY') ? 'var(--primary)'
       : (r.tier==='DROPPED_FALSIFIED_EXCLUDED' ? 'var(--error)' : 'var(--warning)'));
     const cls = on ? 'bg-[var(--content)] border-[var(--primary)] border-l-2 font-semibold text-[var(--foreground)]' : 'bg-[var(--background)] border-[var(--card-border)] hover:bg-[var(--content)]';
     const mq = dSearchQ ? matchCandidateQuery(r, dSearchQ, '') : {sub: ''};
     const subM = (dSearchLow && typeof DATA_SUB !== 'undefined') ? DATA_SUB.filter(sn => sn.par === r.id && !r.name.toLowerCase().includes(sn.gene.toLowerCase()) && (sn.id === mq.sub || (sn.gene+' '+sn.id+' '+sn.role).toLowerCase().includes(dSearchLow))).map(sn => sn.gene) : [];
     const baseShort = SHORT_NAV_NAME[r.id] || r.name.split('(')[0].trim();
     const shortLbl = baseShort + (subM.length ? ' (+' + subM.join(',') + ')' : '');
-    const tip = `#${r.rk} ${r.name} (${r.id}) [${isPilot ? 'Full Monograph' : 'Summary Report'}]`;
+    const tip = `#${r.rk} ${r.name} (${r.id}) [${isPilot ? 'Full Monograph' : 'Triage Dossier'}]`;
     return `<button type="button" data-open-dossier="${esc(r.id)}" ${on?'aria-current="true"':''} title="${esc(tip)}" class="w-full text-left px-2 py-1 rounded border ${cls} flex items-center justify-between gap-1.5 text-xs cursor-pointer">
       <span class="min-w-0 flex items-center gap-1.5 pointer-events-none">
         <span class="w-1.5 h-1.5 rounded-full shrink-0" style="background:${dotCol}"></span>
@@ -670,30 +685,30 @@ function renderDossierSidebar(){
   const matched = getFilteredDossierList();
   const t1 = matched.filter(r => r.tier==='TIER_1_ACTIONABLE_NOW');
   const t2 = matched.filter(r => r.tier==='TIER_2_FOCUSED_GATE_FIRST');
-  const t3 = matched.filter(r => r.tier==='TIER_3_EXPLORATORY_DISCOVERY' || r.tier==='COMPANION_PROTOCOL_ONLY');
-  const bm = matched.filter(r => r.tier==='BIOMARKER_BENCHMARK_ONLY');
+  const t3 = matched.filter(r => r.tier==='TIER_3_EXPLORATORY_DISCOVERY');
+  const bm = matched.filter(r => r.tier==='BIOMARKER_BENCHMARK_ONLY' || r.tier==='COMPANION_PROTOCOL_ONLY');
   const dr = matched.filter(r => r.tier==='DROPPED_FALSIFIED_EXCLUDED');
   const totMatched = matched.length;
   const cntEl = document.getElementById('d-nav-count');
   if(cntEl) cntEl.textContent = `${totMatched} / ${DATA_PORT.length}`;
   let html = '';
   if(t1.length) html += `<div class="sticky top-0 z-10 bg-[var(--card)] text-[var(--success)] font-mono font-semibold text-xs py-0.5">T1 &middot; Actionable (${t1.length})</div>` + t1.map(mkBtn).join('');
-  if(t2.length) html += `<div class="sticky top-0 z-10 bg-[var(--card)] text-[var(--primary)] font-mono font-semibold text-xs pt-1.5 pb-0.5">T2 &middot; Kill-Gate (${t2.length})</div>` + t2.map(mkBtn).join('');
+  if(t2.length) html += `<div class="sticky top-0 z-10 bg-[var(--card)] text-[var(--primary)] font-mono font-semibold text-xs pt-1.5 pb-0.5">T2 &middot; Validation Gate (${t2.length})</div>` + t2.map(mkBtn).join('');
   if(t3.length) html += `<div class="sticky top-0 z-10 bg-[var(--card)] text-[var(--warning)] font-mono font-semibold text-xs pt-1.5 pb-0.5">T3 &middot; Discovery (${t3.length})</div>` + t3.map(mkBtn).join('');
-  if(bm.length) html += `<div class="sticky top-0 z-10 bg-[var(--card)] text-[var(--primary)] font-mono font-semibold text-xs pt-1.5 pb-0.5">Biomarkers (${bm.length})</div>` + bm.map(mkBtn).join('');
+  if(bm.length) html += `<div class="sticky top-0 z-10 bg-[var(--card)] text-[var(--primary)] font-mono font-semibold text-xs pt-1.5 pb-0.5">Biomarkers &amp; Calibrators (${bm.length})</div>` + bm.map(mkBtn).join('');
   if(dr.length) html += `<div class="sticky top-0 z-10 bg-[var(--card)] text-[var(--error)] font-mono font-semibold text-xs pt-1.5 pb-0.5">Falsified (${dr.length})</div>` + dr.map(mkBtn).join('');
   const nav = document.getElementById('d-nav');
-  if(nav) nav.innerHTML = html || '<div class="text-[var(--muted-foreground)] text-xs py-2">No matching dossiers. <button type="button" data-dossier-slice="ALL" class="text-[var(--link)] underline font-mono cursor-pointer">Show all</button></div>';
+  if(nav) nav.innerHTML = html || '<div class="text-[var(--muted-foreground)] text-xs py-2">No matching dossiers. <button type="button" data-reset-d-nav="1" class="text-[var(--link)] underline font-mono cursor-pointer">Show all</button></div>';
   const mobSel = document.getElementById('d-mobile-select');
   if(mobSel){
     if(!mobSel.options.length){
       const g1 = DATA_PORT.filter(r => r.tier==='TIER_1_ACTIONABLE_NOW');
       const g2 = DATA_PORT.filter(r => r.tier==='TIER_2_FOCUSED_GATE_FIRST');
-      const g3 = DATA_PORT.filter(r => r.tier==='TIER_3_EXPLORATORY_DISCOVERY' || r.tier==='COMPANION_PROTOCOL_ONLY');
-      const gB = DATA_PORT.filter(r => r.tier==='BIOMARKER_BENCHMARK_ONLY');
+      const g3 = DATA_PORT.filter(r => r.tier==='TIER_3_EXPLORATORY_DISCOVERY');
+      const gB = DATA_PORT.filter(r => r.tier==='BIOMARKER_BENCHMARK_ONLY' || r.tier==='COMPANION_PROTOCOL_ONLY');
       const gD = DATA_PORT.filter(r => r.tier==='DROPPED_FALSIFIED_EXCLUDED');
-      const mkOpt = r => `<option value="${esc(r.id)}">#${r.rk} ${esc(r.name.split('(')[0].trim())} (${esc(r.id)}) ${DATA_MONOGRAPHS[r.id]?'[Monograph]':'[Summary]'}</option>`;
-      mobSel.innerHTML = `<optgroup label="Tier 1 · Actionable Leads (${g1.length})">${g1.map(mkOpt).join('')}</optgroup><optgroup label="Tier 2 · Focused Gate (${g2.length})">${g2.map(mkOpt).join('')}</optgroup><optgroup label="Tier 3 & Companion (${g3.length})">${g3.map(mkOpt).join('')}</optgroup><optgroup label="Benchmarks & Fluid Biomarkers (${gB.length})">${gB.map(mkOpt).join('')}</optgroup><optgroup label="Dropped · Scientifically Falsified (${gD.length})">${gD.map(mkOpt).join('')}</optgroup>`;
+      const mkOpt = r => `<option value="${esc(r.id)}">#${r.rk} ${esc(r.name.split('(')[0].trim())} (${esc(r.id)}) ${DATA_MONOGRAPHS[r.id]?'[Monograph]':'[Dossier]'}</option>`;
+      mobSel.innerHTML = `<optgroup label="Tier 1 · Actionable Leads (${g1.length})">${g1.map(mkOpt).join('')}</optgroup><optgroup label="Tier 2 · Validation Gate (${g2.length})">${g2.map(mkOpt).join('')}</optgroup><optgroup label="Tier 3 · Exploratory Discovery (${g3.length})">${g3.map(mkOpt).join('')}</optgroup><optgroup label="Biomarkers & Functional Calibrators (${gB.length})">${gB.map(mkOpt).join('')}</optgroup><optgroup label="Dropped · Scientifically Falsified (${gD.length})">${gD.map(mkOpt).join('')}</optgroup>`;
     }
     mobSel.value = dossierId;
   }
@@ -777,11 +792,11 @@ function renderDossierMain(){
   const hasNygcPanel = (typeof DATA_NYGC !== 'undefined' && typeof NYGC_GENE_TO_ID !== 'undefined' && Object.values(NYGC_GENE_TO_ID).includes(r.id));
   const hasCisPanel = (typeof DATA_CIS !== 'undefined' && DATA_CIS.some(c => c.pid === r.id || c.sc === r.id));
   const jumpSecs = w
-    ? [['sec-overview', 'Overview & Gates'], ['sec-cascade', '4-Step Cascade'], ['sec-evidence-viz', 'Forest & SVG'], ['sec-safety', '5-Axis Safety'], ['sec-5rs', '5Rs Essay']]
+    ? [['sec-overview', 'Overview & Gates'], ['sec-cascade', 'Pathogenic Mechanism'], ['sec-evidence-viz', 'Effect Sizes & Diagrams'], ['sec-safety', 'Safety & 3D Structure'], ['sec-5rs', 'Translational Deep Dive']]
     : [['sec-overview', 'Hypothesis & Verdict'], ['sec-procon', r.dec === 'DROP' ? 'Discovery vs. Falsifier' : 'Evidence Pro / Con']];
   if(hasSubPanel) jumpSecs.push(['sec-subunits', 'Subunit & Selectivity']);
-  if(hasNygcPanel) jumpSecs.push(['sec-nygc', '3-Region NYGC']);
-  if(hasCisPanel) jumpSecs.push(['sec-cis', 'Splice Walks']);
+  if(hasNygcPanel) jumpSecs.push(['sec-nygc', 'NYGC 3-Region RNA']);
+  if(hasCisPanel) jumpSecs.push(['sec-cis', 'Splice Windows']);
   if(evRows.length) jumpSecs.push(['sec-ledger', `Primary Evidence (${evRows.length})`]);
   const fromPortBtn = (isFullExplorer && typeof dossierFromPortfolio !== 'undefined' && dossierFromPortfolio)
     ? `<button type="button" data-switch-tab="portfolio" class="px-2 py-0.5 rounded border border-[var(--primary)] text-[var(--primary)] font-mono font-semibold text-xs cursor-pointer">&larr; Triage Table</button>`
@@ -797,14 +812,14 @@ function renderDossierMain(){
     const vCol = isDrop ? 'border-l-[var(--error)]' : (isBench ? 'border-l-[var(--primary)]' : 'border-l-[var(--warning)]');
     const vTxt = isDrop ? `text-[var(--error)]` : (isBench ? `text-[var(--primary)]` : `text-[var(--warning)]`);
     const vHdr = isDrop ? `ADJUDICATION RATIONALE &mdash; DROP &middot; ${esc(humanizeEnum(r.epi)).toUpperCase()}`
-      : (isBench ? 'ADJUDICATION RATIONALE &mdash; CLINICAL BENCHMARK / FLUID STAGING BIOMARKER' : 'ADJUDICATION RATIONALE &mdash; KEEP &middot; EXPLORATORY (UNPROVEN &ne; DROP)');
+      : (isBench ? 'ADJUDICATION RATIONALE &mdash; CLINICAL BENCHMARK / FLUID STAGING BIOMARKER' : 'ADJUDICATION RATIONALE &mdash; KEEP &middot; EXPLORATORY (UNTESTED &ne; FALSIFIED)');
     const hCell = isDrop
-      ? `<div class="text-[var(--muted-foreground)] font-mono">Positive Falsification Gate</div><div class="font-semibold text-[var(--error)] mt-0.5">${esc(humanizeEnum(r.epi))}</div><div class="text-[var(--muted-foreground)] mt-0.5">Excluded by positive counterevidence under Epistemic Asymmetry.</div>`
-      : `<div class="text-[var(--muted-foreground)] font-mono">Active Hurdles (${r.hcnt})</div><div class="flex flex-wrap gap-1 mt-1">${r.hurdles && r.hurdles !== 'NONE' ? r.hurdles.split(';').map(h=>`<span class="px-1.5 py-0.5 rounded border border-[var(--border)] text-xs">${esc(formatHurdle(h))}</span>`).join('') : '<span class="text-[var(--muted-foreground)]">None (Calibration / Biomarker)</span>'}</div>`;
+      ? `<div class="text-[var(--muted-foreground)] font-mono">Positive Falsification Gate</div><div class="font-semibold text-[var(--error)] mt-0.5">${esc(humanizeEnum(r.epi))}</div><div class="text-[var(--muted-foreground)] mt-0.5">Excluded by positive clinical, PK/safety, or confounding counterevidence.</div>`
+      : `<div class="text-[var(--muted-foreground)] font-mono">Open Validation Steps (${r.hcnt})</div><div class="flex flex-wrap gap-1 mt-1">${r.hurdles && r.hurdles !== 'NONE' ? r.hurdles.split(';').map(h=>`<span class="px-1.5 py-0.5 rounded border border-[var(--border)] text-xs">${esc(formatHurdle(h))}</span>`).join('') : '<span class="text-[var(--muted-foreground)]">None (Calibration / Biomarker)</span>'}</div>`;
     const crowdPill = (r.crowd && !r.crowd.startsWith('N/A')) ? `<span class="px-2 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">${esc(r.crowd)}</span>` : '';
     const sumPriorLine = (r.prior && r.prior !== 'NONE')
-      ? `<div class="mt-0.5"><span class="px-1 rounded border border-[var(--warning)] text-[var(--warning)] font-mono">&#9671; [MODEL_PRIOR]</span> <span class="text-[var(--muted-foreground)]">${esc(formatPrior(r.prior))}</span></div>`
-      : `<div class="mt-0.5"><span class="px-1 rounded border border-[var(--success)] text-[var(--success)] font-mono">&#9679; [MEASURED]</span> <span class="text-[var(--muted-foreground)]">${esc(formatPrior(r.prior))}</span></div>`;
+      ? `<div class="mt-0.5"><span class="px-1 rounded border border-[var(--warning)] text-[var(--warning)] font-mono">&#9671; Modeled Estimate</span> <span class="text-[var(--muted-foreground)]">${esc(formatPrior(r.prior))}</span></div>`
+      : `<div class="mt-0.5"><span class="px-1 rounded border border-[var(--success)] text-[var(--success)] font-mono">&#9679; Empirical Data</span> <span class="text-[var(--muted-foreground)]">${esc(formatPrior(r.prior))}</span></div>`;
     const gPills = genePortalPills(r.id);
     const rightCol = isDrop
       ? `<div class="p-3.5 rounded-lg border border-[var(--card-border)] bg-[var(--background)] border-l-4 border-l-[var(--error)] space-y-2 text-xs">
@@ -812,20 +827,20 @@ function renderDossierMain(){
           ${formatProseParas(s ? s.disproves : humanizeEnum(r.epi), r.id, 'space-y-2')}
         </div>`
       : `<div class="p-3.5 rounded-lg border border-[var(--card-border)] bg-[var(--background)] border-l-4 border-l-[var(--warning)] space-y-2 text-xs">
-          <div class="font-mono font-bold text-[var(--warning)]">&#9651; TRANSLATIONAL CAVEATS &amp; NEXT DISCRIMINATING GATE</div>
+          <div class="font-mono font-bold text-[var(--warning)]">&#9651; TRANSLATIONAL CAVEATS &amp; NEXT DISCRIMINATING TEST</div>
           ${formatProseParas(s ? s.disproves : '', r.id, 'space-y-2')}
           <div class="pt-1.5 mt-1 border-t border-[var(--card-border)] leading-relaxed"><strong class="font-mono text-[var(--foreground)]">Discriminating Next Test:</strong> ${formatNextTest(r.nxt, r.id)}</div>
         </div>`;
     box.innerHTML = `<div id="sec-overview" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-3">
       <div class="flex items-start justify-between gap-2 flex-wrap border-b border-[var(--card-border)] pb-2.5">
         <div>
-          <div class="flex items-center gap-2 flex-wrap"><span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] font-mono font-bold text-xs" title="Portfolio Actionability Rank #${r.rk}/52 · Pure Biological Evidence Rank #${r.brk}/52">Rank #${r.rk}/52 (Bio #${r.brk}) &middot; ${esc(r.id)}</span> ${decBadge(r.dec)} <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span> ${crowdPill}</div>
+          <div class="flex items-center gap-2 flex-wrap"><span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] font-mono font-bold text-xs" title="Translational Priority Rank #${r.rk}/52 · Genetic & Pathology Evidence Rank #${r.brk}/52">Priority #${r.rk}/52 (Evidence #${r.brk}) &middot; ${esc(r.id)}</span> ${decBadge(r.dec)} <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span> ${crowdPill}</div>
           <h2 class="text-base font-bold mt-1.5">${esc(r.name)} &mdash; <span class="font-normal text-[var(--muted-foreground)]">${escLink(s ? s.sub : humanizeEnum(r.sub), r.id)}</span></h2>
           <div class="text-xs font-mono text-[var(--muted-foreground)] mt-0.5">${!isDrop && r.trl !== 'PROTOCOL_COMPANION_NA' ? esc(humanizeEnum(r.trl)) + ' &middot; ' : ''}${esc(humanizeEnum(r.basis))}${gPills?' &middot; '+gPills:''}</div>
         </div>
         <div class="flex items-center gap-1.5 flex-wrap shrink-0">
           ${updPill}
-          <span class="px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-[var(--muted-foreground)] font-mono text-xs">Summary Report</span>
+          <span class="px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-[var(--muted-foreground)] font-mono text-xs">Structured Triage Dossier</span>
           <button type="button" data-open-dossier="${prevId}" class="inline-block px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs cursor-pointer" title="Previous candidate ([ key)">&larr; ${esc(prevLbl)}</button>
           <button type="button" data-open-dossier="${nextId}" class="inline-block px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs cursor-pointer" title="Next candidate (] key)">${esc(nextLbl)} &rarr;</button>
         </div>
@@ -843,9 +858,9 @@ function renderDossierMain(){
         </div>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5 text-xs">
-        <div class="p-2.5 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-0.5"><div class="text-[var(--muted-foreground)] font-mono">Target Modality (TPP)</div><div class="font-medium leading-snug">${escLink(formatModality(r.mod), r.id)}</div></div>
+        <div class="p-2.5 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-0.5"><div class="text-[var(--muted-foreground)] font-mono">Therapeutic Modality</div><div class="font-medium leading-snug">${escLink(formatModality(r.mod), r.id)}</div></div>
         <div class="p-2.5 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-0.5"><div class="text-[var(--muted-foreground)] font-mono">Causal vs. Reactive Sign</div><div class="font-medium">${esc(s ? s.causal : humanizeEnum(r.epi))}</div><div class="text-[var(--muted-foreground)]">${esc(humanizeEnum(r.sub))} &middot; ${trackLabel(r.trk)}</div></div>
-        <div class="p-2.5 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-0.5"><div class="text-[var(--muted-foreground)] font-mono">Experimental Gate &amp; Prior Basis</div><div class="font-mono">${esc(humanizeEnum(r.gate))}</div>${sumPriorLine}</div>
+        <div class="p-2.5 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-0.5"><div class="text-[var(--muted-foreground)] font-mono">Next Validation &amp; Basis</div><div class="font-mono">${esc(humanizeEnum(r.gate))}</div>${sumPriorLine}</div>
         <div class="p-2.5 rounded border border-[var(--card-border)] bg-[var(--background)]">${hCell}</div>
       </div>
       <div id="sec-procon" class="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -862,7 +877,7 @@ function renderDossierMain(){
   const cisForAtlas = DATA_CIS.filter(c => c.pid===r.id || c.sc===r.id);
   const atlasBtns = cisForAtlas.map(c => {
     const url = `https://deepmind.google.com/science/alphagenome/atlas?q=${c.chr}:${Math.max(1,Number(c.lo)-250)}-${Number(c.hi)+250}&m=locus&lItems=avi,section:RNA_SEQ,section:SPLICE_JUNCTIONS,section:DNASE`;
-    return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs">${c.lead?'★ ':''}${esc(c.gene)} &middot; Walk #${c.rk} Atlas &nearr;</a>`;
+    return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs">${c.lead?'★ ':''}${esc(c.gene)} &middot; Window #${c.rk} Atlas &nearr;</a>`;
   }).join('') + (isFullExplorer && cisForAtlas.length ? `<button type="button" data-jump-intervals="${esc(r.id)}" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs cursor-pointer">Inspect in Tab 3 &rarr;</button>` : (cisForAtlas.length && location.protocol !== 'about:' ? `<a href="../CARBON_ALS_INTERACTIVE_EXPLORER.html#intervals/${esc(r.id)}" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs">Inspect in Tab 3 &rarr;</a>` : ''));
   const hurdleHtml = r.hurdles && r.hurdles !== 'NONE'
     ? r.hurdles.split(';').map(h=>`<div class="leading-snug">&bull; ${esc(formatHurdle(h))}</div>`).join('')
@@ -871,7 +886,7 @@ function renderDossierMain(){
   const mTxt = r.dec === 'KEEP_CORE' ? 'text-[var(--success)]' : 'text-[var(--warning)]';
   const mHdr = r.dec === 'KEEP_CORE'
     ? 'ADJUDICATION RATIONALE &mdash; KEEP &middot; CORE'
-    : 'ADJUDICATION RATIONALE &mdash; KEEP &middot; EXPLORATORY (UNPROVEN &ne; DROP)';
+    : 'ADJUDICATION RATIONALE &mdash; KEEP &middot; EXPLORATORY (UNTESTED &ne; FALSIFIED)';
   const mGPills = genePortalPills(r.id);
 
   box.innerHTML = `
@@ -879,7 +894,7 @@ function renderDossierMain(){
       <div class="flex flex-wrap items-start justify-between gap-2 border-b border-[var(--card-border)] pb-2.5">
         <div>
           <div class="flex flex-wrap items-center gap-2">
-            <span class="px-2 py-0.5 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-bold text-xs" title="Portfolio Actionability Rank #${r.rk}/52 · Pure Biological Evidence Rank #${r.brk}/52">Rank #${r.rk}/52 (Bio #${r.brk}) &middot; ${esc(r.id)}</span>
+            <span class="px-2 py-0.5 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-bold text-xs" title="Translational Priority Rank #${r.rk}/52 · Genetic & Pathology Evidence Rank #${r.brk}/52">Priority #${r.rk}/52 (Evidence #${r.brk}) &middot; ${esc(r.id)}</span>
             ${decBadge(r.dec)}
             <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span>
             ${(r.crowd && !r.crowd.startsWith('N/A')) ? `<span class="px-2 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">${esc(r.crowd)}</span>` : ''}
@@ -908,11 +923,11 @@ function renderDossierMain(){
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
         <div class="p-2.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--success)] space-y-1 text-xs">
-          <div class="font-mono font-bold text-[var(--success)]">&#10003; ADVANCE GATE (GO CRITERIA)</div>
+          <div class="font-mono font-bold text-[var(--success)]">&#10003; GO CRITERIA (ADVANCE THRESHOLDS)</div>
           ${formatGateList(w.verdict_box.pass_gate, r.id, false)}
         </div>
         <div class="p-2.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--error)] space-y-1 text-xs">
-          <div class="font-mono font-bold text-[var(--error)]">&#10005; FALSIFICATION GATE (KILL / NO-GO CRITERIA)</div>
+          <div class="font-mono font-bold text-[var(--error)]">&#10005; NO-GO CRITERIA (FALSIFICATION THRESHOLDS)</div>
           ${formatGateList(w.verdict_box.kill_gate, r.id, true)}
         </div>
       </div>
@@ -932,7 +947,7 @@ function renderDossierMain(){
 
     <div id="sec-evidence-viz" class="grid grid-cols-1 xl:grid-cols-12 gap-3">
       <div class="xl:col-span-6 bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
-        <div class="flex items-center justify-between gap-2 flex-wrap"><h3 class="text-sm font-semibold">Multi-Cohort Quantitative Evidence</h3><span class="font-mono text-xs text-[var(--muted-foreground)]">Scale-Separated Tracks &middot; [MEASURED] vs. [MODEL_PRIOR]</span></div>
+        <div class="flex items-center justify-between gap-2 flex-wrap"><h3 class="text-sm font-semibold">Multi-Cohort Quantitative Evidence</h3><span class="font-mono text-xs text-[var(--muted-foreground)]">Scale-Separated Tracks &middot; Empirical Data vs. Modeled Estimates</span></div>
         ${renderEvidenceMatrix(w.ev_matrix, r.id)}
       </div>
       <div class="xl:col-span-6 bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2">
@@ -944,7 +959,7 @@ function renderDossierMain(){
     </div>
 
     <div id="sec-safety" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-3">
-      <h3 class="text-sm font-semibold">5-Axis Target Safety Assessment (TSA) &amp; 3D Structural Profile</h3>
+      <h3 class="text-sm font-semibold">Target Safety Assessment (TSA) &amp; 3D Structural Profile</h3>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 items-start">
         <div class="lg:col-span-8 space-y-2">
           ${w.safety.map(([lbl,st,note])=>`<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1 text-xs">
@@ -955,7 +970,7 @@ function renderDossierMain(){
         <div class="lg:col-span-4 p-3 rounded-lg bg-[var(--background)] border border-[var(--border)] space-y-2 text-xs">
           <div class="font-mono font-bold text-[var(--primary)]">3D Structural &amp; Biophysical Anchor</div>
           <p class="leading-relaxed">${escLink(w.struct_note, r.id)}</p>
-          <div class="border-t border-[var(--card-border)] pt-2"><span class="font-semibold text-[var(--muted-foreground)]">Active Hurdles (${r.hcnt}):</span>
+          <div class="border-t border-[var(--card-border)] pt-2"><span class="font-semibold text-[var(--muted-foreground)]">Open Validation Steps (${r.hcnt}):</span>
           <div class="text-xs mt-1 space-y-1">${hurdleHtml}</div></div>
         </div>
       </div>

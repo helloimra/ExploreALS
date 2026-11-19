@@ -43,14 +43,14 @@ CANDIDATE_EDGES_ACTIVE: dict[str, tuple[str, str]] = {
     "C017": ("BENCHMARK_CALIBRATOR", "Common human CHIT1 null homozygosity (rs3831317) leaves ALS risk/progression unchanged while GPNMB is neuroprotective, refuting inhibition and anchoring an rs3831317-neutral CSF staging panel (sALS-vs-Ctrl AUC=0.82-0.89; Thompson 2019 mimic AUC=0.51-0.92 [0.688 ext])."),
     "DN-10": ("BENCHMARK_CALIBRATOR", "Top downregulated living-CSF protein in Emory DIA (-0.50, FDR=8.2e-9) and C9-FTD cortical synaptosomes (-0.40, p=0.029), driven by C9orf72 somatodendritic Kv4.2 attrition on a catalytically inactive scaffold (PDB 1XFD)."),
     "DN-11": ("BENCHMARK_CALIBRATOR", "Paralogous Kv4 auxiliary subunit reduced in Emory/WashU living CSF (-0.32, FDR=0.044) and BA4 excitatory neurons (-1.34, p=0.0066), tracking C9orf72-weighted dendritic loss rather than sporadic-vs-control TMTpro shift (p=0.99)."),
-    "DN-12": ("BENCHMARK_CALIBRATOR", "Sole upregulated de novo living-CSF protein replicating across Emory DIA, WashU DIA, and N=101 sporadic-vs-control TMTpro (p=2.27e-5); sALS spinal MN Ser3-cofilin hyperphosphorylation triggers TDP-43 pathology (PMID:41804798), motivating CSF pSer3-CFL1:total ratios on a pan-essential gene (Chronos=-1.35)."),
+    "DN-12": ("BENCHMARK_CALIBRATOR", "Sole upregulated screen-nominated living-CSF protein replicating across Emory DIA, WashU DIA, and N=101 sporadic-vs-control TMTpro (p=2.27e-5); sALS spinal MN Ser3-cofilin hyperphosphorylation triggers TDP-43 pathology (PMID:41804798), motivating CSF pSer3-CFL1:total ratios on a pan-essential gene (Chronos=-1.35)."),
 }
 
 LENS_DEFS: list[tuple[str, str]] = [
     ("ALL", "All Lenses · 52"),
     ("ISOFORM_STRUCTURAL", "Structure & Isoform Polarity · 9"),
-    ("DENOVO_RNA", "De Novo Cryptic Splicing & APA · 9"),
-    ("MULTIPLEX_STAGE", "Multiplex & Stage-Gated Core · 5"),
+    ("TDP43_RNA", "TDP-43 Splicing & Polyadenylation · 12"),
+    ("MULTIPLEX_STAGE", "Multiplex & Excitability Core · 5"),
     ("BIOFLUID_SUBTYPE", "Biofluids, Subtypes & Calibrators · 10"),
     ("PK_COMPARTMENT", "PK, Polypharmacology & Compartment · 8"),
     ("FALSIFIED_TRAPS", "Confounding & RCT/PK Falsifications · 18"),
@@ -58,7 +58,7 @@ LENS_DEFS: list[tuple[str, str]] = [
 
 CANDIDATE_LENSES: dict[str, list[str]] = {
     "ISOFORM_STRUCTURAL": ["S06", "C006", "C007", "C022", "DN-01", "DN-04", "DN-05", "C015", "C023"],
-    "DENOVO_RNA": ["DN-01", "DN-02", "DN-03", "DN-04", "DN-05", "DN-06", "DN-07", "DN-08", "DN-09"],
+    "TDP43_RNA": ["C001", "C006", "C002", "DN-01", "DN-02", "DN-03", "DN-04", "DN-05", "DN-06", "DN-07", "DN-08", "DN-09"],
     "MULTIPLEX_STAGE": ["S06", "C006", "C001", "C002", "C005"],
     "BIOFLUID_SUBTYPE": ["S07", "C013", "S08", "C003", "C017", "C019", "S09", "DN-10", "DN-11", "DN-12"],
     "PK_COMPARTMENT": ["C019", "S02", "S09", "C014", "C016", "C018", "C020", "DN-14"],

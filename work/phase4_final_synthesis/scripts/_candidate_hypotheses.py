@@ -208,6 +208,6 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "DN-19": (
         "L-Serine is an obligate substrate of serine palmitoyltransferase that competitively suppresses neurotoxic 1-deoxysphingolipids in HSAN1, whereas SPTLC1/SPTLC2-ALS variants lose ceramide feedback and overproduce canonical C18–C22 sphingolipids (PMID:43025655). "
-        "Crossing the human ALS blood-brain barrier in Phase 1 (NCT01835782) while its open-label Phase 2 study (NCT03580616) ended administratively rather than for clinical futility, the hypothesis requires SPTLC1/2 exclusion and serine-defined lipidomic deconvolution."
+        "Crossing the human ALS blood-brain barrier in Phase 1 (NCT01835782) while its open-label Phase 2 study (NCT03580616) ended for IRB noncompliance, its repurposing hypothesis proposed high-dose oral L-serine supplementation to buffer motor-neuron sphingolipid and redox stress."
     ),
 }

@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import re
 
+from _public_taxonomy import sanitize_public_prose
 from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose
 
 SUBNODE_TDL: dict[str, str] = {
@@ -97,14 +98,14 @@ def project_subnode_v3(s: dict[str, str], clean_ui_fn) -> dict[str, str]:
         "id": legacy_to_accession(s["subnode_id"]),
         "par": legacy_to_accession(s["parent_carbon_id"]),
         "gene": gene,
-        "role": translate_legacy_tokens_in_prose(s["molecular_role"]),
+        "role": sanitize_public_prose(translate_legacy_tokens_in_prose(s["molecular_role"])),
         "tdl": SUBNODE_TDL.get(gene, "Tbio"),
         "tsa": SUBNODE_TSA[gene],
-        "gnomad": translate_legacy_tokens_in_prose(gnomad),
-        "drug": translate_legacy_tokens_in_prose(drug),
+        "gnomad": sanitize_public_prose(translate_legacy_tokens_in_prose(gnomad)),
+        "drug": sanitize_public_prose(translate_legacy_tokens_in_prose(drug)),
         "vraw": vcode,
         "vlbl": vlbl,
-        "vbody": translate_legacy_tokens_in_prose(vbody),
+        "vbody": sanitize_public_prose(translate_legacy_tokens_in_prose(vbody)),
     }
     assert "/100" not in (out["gnomad"] + out["drug"] + out["vbody"]), f"Residual /100 score in {s['subnode_id']}"
     return out

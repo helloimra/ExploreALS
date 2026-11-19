@@ -278,10 +278,10 @@ function renderEvidenceMatrix(ev, geneCtx){
       const glyph = isPrior
         ? `<div class="absolute rotate-45 bg-[var(--background)]" style="left:${ptPct.toFixed(1)}%;top:3.5px;width:9px;height:9px;margin-left:-4.5px;border:2px solid ${col}"></div>`
         : `<div class="absolute rounded-full" style="left:${ptPct.toFixed(1)}%;top:3.5px;width:9px;height:9px;margin-left:-4.5px;background:${col}"></div>`;
-      const survTag = r.tone === 'compensatory_or_survivor' ? '<span class="px-1 rounded border border-[var(--primary)] text-[var(--primary)] font-mono text-xs">[Survivor]</span> ' : '';
-      const pTag = isPrior ? '<span class="px-1 rounded border border-[var(--warning)] text-[var(--warning)] font-mono text-xs">[MODEL_PRIOR]</span> ' : '';
+      const survTag = r.tone === 'compensatory_or_survivor' ? '<span class="px-1 rounded border border-[var(--primary)] text-[var(--primary)] font-mono text-xs" title="Enriched in surviving residual neurons rather than causal pathogenic gain">Residual-Neuron Bias</span> ' : '';
+      const pTag = isPrior ? '<span class="px-1 rounded border border-[var(--warning)] text-[var(--warning)] font-mono text-xs">Modeled</span> ' : '';
       return `<div class="py-1.5 border-b border-[var(--card-border)] last:border-b-0 space-y-1 text-xs">
-        <div class="flex items-baseline justify-between gap-2">
+        <div class="flex flex-wrap items-baseline justify-between gap-x-2 gap-y-0.5">
           <span class="font-medium text-[var(--foreground)] break-words">${escLink(r.lbl, geneCtx)}</span>
           <span class="font-mono whitespace-nowrap shrink-0">${survTag}${pTag}<strong>${esc(r.stat)}</strong> <span class="text-[var(--muted-foreground)]">(${esc(r.p)})</span></span>
         </div>
@@ -305,12 +305,12 @@ function renderEvidenceMatrix(ev, geneCtx){
       <div class="text-[var(--muted-foreground)] leading-snug break-words">${escLink(c.lbl, geneCtx)}</div>
       <div class="flex items-center justify-between gap-1.5 font-mono pt-0.5">
         <span class="font-bold text-[var(--foreground)]">${esc(c.stat)}</span>
-        <span class="${isP?'text-[var(--warning)]':'text-[var(--muted-foreground)]'}">${isP?'[PRIOR] ':''}${esc(c.p)}</span>
+        <span class="${isP?'text-[var(--warning)]':'text-[var(--muted-foreground)]'}">${isP?'Modeled &middot; ':''}${esc(c.p)}</span>
       </div>
     </div>`;
   }).join('');
   const leg = `<div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono text-[var(--muted-foreground)] pb-0.5">
-    <span>&#9679; [MEASURED]</span><span>&#9671; [MODEL_PRIOR]</span><span>&#9500;&#9472;&#9679;&#9472;&#9508; 95% CI (staged)</span><span>&#9472;&#9472;&#9679; Point stem (p/FDR)</span>
+    <span>&#9679; Empirical Data</span><span>&#9671; Modeled Estimate</span><span>&#9500;&#9472;&#9679;&#9472;&#9508; 95% CI (staged)</span><span>&#9472;&#9472;&#9679; Point stem (p/FDR)</span>
   </div>`;
   return `<div class="space-y-2.5">${leg}${groupsHtml}${callouts?`<div class="space-y-1"><div class="font-mono text-xs font-semibold text-[var(--muted-foreground)]">Structural, Correlation &amp; Power Anchors</div><div class="grid grid-cols-1 sm:grid-cols-2 gap-2">${callouts}</div></div>`:''}</div>`;
 }
@@ -368,7 +368,7 @@ function renderLocusSsoSvg(candId, sig){
       const y = 156 + idx * rowH;
       const bx1 = Math.max(L, mapBot(Number(c.lo))), bx2 = Math.min(R, mapBot(Number(c.hi)));
       const bCol = c.st==='PASS_CLEAN_GE2MM' ? 'var(--success)' : (c.st.startsWith('WARN') ? 'var(--error)' : 'var(--warning)');
-      const stShort = c.st==='PASS_CLEAN_GE2MM' ? 'Clean >=2mm' : (c.st.startsWith('WARN') ? 'Warn CNS Hit' : (c.st.startsWith('FAIL') ? 'Fail 0mm' : 'Caution 1mm/Wob'));
+      const stShort = c.st==='PASS_CLEAN_GE2MM' ? 'Clean (>=2mm)' : (c.st.startsWith('WARN') ? 'Warn CNS Hit' : (c.st.startsWith('FAIL') ? 'Fail 0-mm' : 'Caution 1-mm/Wob'));
       const ivNote = (sig.iv_notes && sig.iv_notes[String(c.rk)]) ? sig.iv_notes[String(c.rk)] : '';
       ssoSvg += `<g>
         <rect x="${bx1.toFixed(1)}" y="${y}" width="${Math.max(12, bx2-bx1).toFixed(1)}" height="10" rx="3" fill="${bCol}" ${c.st.startsWith('WARN')?'stroke="var(--foreground)" stroke-dasharray="2,2"':''}/>

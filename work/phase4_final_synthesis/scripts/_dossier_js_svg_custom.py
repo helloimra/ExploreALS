@@ -31,11 +31,11 @@ function renderMwcSarm1Svg(){
   const y1x = mapYA(1.0).toFixed(1), yFlr = mapYB(1.0).toFixed(1), yGoFTop = mapYB(95.2).toFixed(1), yGoFEnd = mapYB(44.9).toFixed(1);
   const xDepCross = mapX(Math.log10(0.47)).toFixed(1), xResCross = mapX(Math.log10(0.066)).toFixed(1);
   return `<svg viewBox="0 0 460 304" class="w-full h-auto block select-none" role="img" aria-label="Modeled 8-protomer SARM1 MWC curves">
-    <text x="12" y="16" font-size="12.8" font-weight="700" fill="var(--foreground)">A. Relative Fold vs Baseline (BEXi Spike vs T-Lock)</text>
-    <text x="${xR}" y="16" text-anchor="end" font-size="12.5" font-family="monospace" fill="var(--warning)">[PRIOR]</text>
-    <line x1="14" y1="30" x2="28" y2="30" stroke="var(--error)" stroke-width="2.2"/><text x="32" y="34" font-size="12.5" fill="var(--error)">8-mer Max (~45x; Emp 2.8x)</text>
-    <line x1="208" y1="30" x2="222" y2="30" stroke="var(--warning)" stroke-width="2" stroke-dasharray="4,2"/><text x="226" y="34" font-size="12.5" fill="var(--warning)">ALS (~5x)</text>
-    <line x1="296" y1="30" x2="310" y2="30" stroke="var(--success)" stroke-width="2.3"/><text x="314" y="34" font-size="12.5" fill="var(--success)">ARM-TIR T-Lock (0 spike)</text>
+    <text x="12" y="16" font-size="12.8" font-weight="700" fill="var(--foreground)">A. Fold vs Baseline (BEXi Spike vs T-Lock)</text>
+    <text x="${xR}" y="16" text-anchor="end" font-size="12.5" font-family="monospace" fill="var(--warning)">Modeled MWC</text>
+    <line x1="12" y1="30" x2="24" y2="30" stroke="var(--error)" stroke-width="2.2"/><text x="28" y="34" font-size="12.5" fill="var(--error)">WT (~45x; Emp 2.8x)</text>
+    <line x1="170" y1="30" x2="182" y2="30" stroke="var(--warning)" stroke-width="2" stroke-dasharray="4,2"/><text x="186" y="34" font-size="12.5" fill="var(--warning)">ALS (~5x)</text>
+    <line x1="262" y1="30" x2="274" y2="30" stroke="var(--success)" stroke-width="2.3"/><text x="278" y="34" font-size="12.5" fill="var(--success)">ARM-TIR T-Lock (0 spike)</text>
     <line x1="${xL}" y1="${yAT}" x2="${xL}" y2="${yAB}" stroke="var(--border)" stroke-width="1.2"/>
     <line x1="${xL}" y1="${yAB}" x2="${xR}" y2="${yAB}" stroke="var(--border)" stroke-width="1.2"/>
     <line x1="${xL}" y1="${y1x}" x2="${xR}" y2="${y1x}" stroke="var(--muted-foreground)" stroke-width="1" stroke-dasharray="3,3"/>

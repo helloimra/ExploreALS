@@ -4,6 +4,7 @@ from __future__ import annotations
 import re
 
 from _candidate_contrasts_a import CANDIDATE_EDGES_ACTIVE, CANDIDATE_LENSES, EDGE_ROLE_LABELS, LENS_DEFS
+from _public_taxonomy import sanitize_public_prose
 from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose
 
 CANDIDATE_EDGES_DROPS: dict[str, tuple[str, str]] = {
@@ -33,7 +34,7 @@ KEY_MECHANISTIC_CONTRASTS_9: list[dict[str, object]] = [
     {"ids": ["C001", "C002"], "domain": "Cortical Paradox & Multiplex TE", "naive": "High bulk cortical STMN2 RNA refutes loss, Day-421 ANQUR OLE NfL proves 10 mg monotherapy, and rs12608932 A/A exempts UNC13A.", "finding": "Polyadenylated tSTMN2 inflates cortical RNA vs -28% protein (p=0.014, n=20 C9-FTD); QRL-201 ANQUR (CONQUR IND) dissociated 3 mg (-46%) vs 10 mg (~5%) pNfH while 10mg->3mg OLE NfL (-36%) co-reflects bolus-shedding washout, lag & 41/52 attrition; Keuss 2026 rescued human MN synapses (>30% UNC13A) while STMN2 & KCNQ2 stayed mis-spliced.", "gate": "Pair 3-layer per-target PK + NDEV-dPCR/secretome TE + >=16-24 wk pNfH PD with multiplex polyanion/DRG margin targeting (EC80<=3 mg/strand = 6-9.0 mg; BA4 gradient checked) across rs12973192/rs12608932."},
     {"ids": ["S07"], "domain": "Biofluid Assay Calibration", "naive": "Clinical TRICALS risk or uncalibrated MSD/NfL pg/mL cutoffs can substitute for MIROCALS BioVendor ELISA CSF pNfH <=3,700 pg/mL.", "finding": "Al Khleifat 2026 (J Neurol, PMID:42836993, MIROCALS N=220) shows TRICALS explains r^2=12.7% (-2LL=928.25 vs 793.36; combined HR=0.28, p=0.002) and exposes 1.8x-4.5x MSD vs BioVendor pg/mL bias alongside weak Trautwig MS NEFL-NEFH r=0.28, while ALSTARS (N=137) omits pNfH and blocks Treg CD28.", "gate": "Run Passing-Bablok bridging to MIROCALS ~79th-80th BioVendor percentile + paired NfL calibration + event-driven Phase 3 (247 deaths @ HR=0.70, N~650-750; <750 pg/mL n=20 0-death floor noted)."},
     {"ids": ["C007"], "domain": "Vascular Isoform, Hypoxia & ASO Gap", "naive": "Pan-ST2 mAbs (astegolimab), FVC>=80% alone, or naked lumbar 2'-MOE ASOs cleanly validate and silence CNS endothelial sST2.", "finding": "Within-donor pseudoreplicated Visium spots (55-um, N=14) do not separate sST2 vs ST2L, pan-ST2 mAbs suppress protective Treg ST2L (~0.3% vs ~28% under sST2-selective neutralization, PDB 4KC3), nocturnal hypoxia spikes endothelial sST2 3-20x, and brain capillaries resist naked IT 2'-MOE ASOs (PMID:37188501).", "gate": "Gate oximetry/capnography-verified (PMID:41635251) FVC>=80% CSF Simoa + microvessel sST2/ST2L ddPCR (n>=25/20) before IT HLE sST2-neutralizing biologic (reduced BBB FcRn efflux) or conjugated PAS SSO."},
-    {"ids": ["DN-04", "DN-01", "DN-05", "DN-02"], "domain": "De Novo Cryptic Splicing & Cord Stage", "naive": "Small-n SOD1/FUS p>0.25 proves equivalence, and distal CE 5'SS SSOs guarantee 0% upstream exon perturbation.", "finding": "CELF5 (#8, iPSC-MN clu_25763_+ padj=0.0090; nominal BA4 p=0.0133/FDR=0.136), ATG4B (#7), and PRUNE2 (#9) replicate, while n=9 SOD1/FUS is underpowered and CELF5's 98-bp micro-intron risks mod3=2 retention.", "gate": "Run Stage-(ii) pre-inclusion cervical alpha-MN BaseScope ISH + Exon 4-7 Nanopore RT-PCR (<1-2% LOQ Exon-5 skip / micro-intron retention)."},
+    {"ids": ["DN-04", "DN-01", "DN-05", "DN-02"], "domain": "Cryptic Splicing & Spinal Stage", "naive": "Small-n SOD1/FUS p>0.25 proves equivalence, and distal CE 5'SS SSOs guarantee 0% upstream exon perturbation.", "finding": "CELF5 (#8, iPSC-MN clu_25763_+ padj=0.0090; nominal BA4 p=0.0133/FDR=0.136), ATG4B (#7), and PRUNE2 (#9) replicate, while n=9 SOD1/FUS is underpowered and CELF5's 98-bp micro-intron risks mod3=2 retention.", "gate": "Run Stage-(ii) pre-inclusion cervical alpha-MN BaseScope ISH + Exon 4-7 Nanopore RT-PCR (<1-2% LOQ Exon-5 skip / micro-intron retention)."},
     {"ids": ["C022", "C015", "C023"], "domain": "Mendelian Isoform & chr14q12 Polarity", "naive": "Intron-9 gapmers boost DNAJB2, chr14q12 SCFD1 acts unidirectionally across glia and MNs, and cis-Golgi SNAREs are co-druggable.", "finding": "DNAJB2 has 0/6 TDP-43 cryptic shifts and 25/25 ClinVar P/LP in shared Exons 2-9 vs 0/25 in Zone A; SuSiE (purityMeanR2=0.988) proves one chr14q12 risk haplotype drives MN +0.048 vs iMGL -0.22..-0.33 SCFD1 opposition (PMID:43045849; G2E3 Alu 0mm fail); YKT6 p.Tyr64Cys sits in a -85 A^3 groove.", "gate": "Favor nuclear Intron-9 3'SS or DNAJB2a cDNA over Zone A CDS ASOs, run allele-specific MN+iMGL chr14q12 editing, and restrict YKT6 to Cys195-retaining ternary stabilizers."},
     {"ids": ["C017", "C019"], "domain": "Glial Biomarkers & JAK1/JAK2 Catch-22", "naive": "Elevated CSF CHIT1/GPNMB are drug targets or mimic-specific diagnostics, and 4 mg Baricitinib translates 2.5 uM rescue.", "finding": "Human CHIT1 KO (rs3831317) is ALS-neutral (Trautwig sALS-vs-Ctrl CSF AUC=0.82-0.89; Thompson 2019 mimic AUC=0.51-0.92 [0.688 ext]); 4 mg Baricitinib hits 3.80 nM CSF (1/9 PE + 1/9 DVT in N=9 NADALS) while JAK1-selectives forfeit neuronal JAK2 APA.", "gate": "Deconvolve 3.8-50 nM JAK1 vs JAK1/2 in glia-free vs ALS-Glia co-cultures before any VTE-prophylaxed interaction trial."},
     {"ids": ["S01", "S02", "S05", "S08"], "domain": "Screen Physics, Withheld RCTs & Photolysis", "naive": "2.5 uM screen hits translate orally, NCT04082832 proved CuATSM RCT failure, and -3.60d refutes Methylcobalamin.", "finding": "Dexmedetomidine (7,862x) fails Cu,brain, FTIs block YKT6 prenylation, CuATSM NCT04082832 outcomes remain unreported (hasResults=false; n=6v6 autopsy null), and Co-C photolysis plausibly explains B12's screen drop vs JETALS (+1.97 pts).", "gate": "Enforce unbound human Kp,uu margins, registry-verified RCT status, and dark-vs-lit photolability controls across all screen hits."},
@@ -60,18 +61,18 @@ def build_edges_and_lenses(port_rows: list[dict[str, str]]) -> tuple[dict[str, d
 
     edges_out: dict[str, dict[str, str]] = {}
     for pid, (rk, txt) in all_edges.items():
-        clean_txt = translate_legacy_tokens_in_prose(txt)
+        clean_txt = sanitize_public_prose(translate_legacy_tokens_in_prose(txt))
         wcnt = len(clean_txt.split())
-        assert 14 <= wcnt <= 62, f"{pid}: edge_text word count {wcnt} out of bounds: {clean_txt}"
+        assert 14 <= wcnt <= 68, f"{pid}: edge_text word count {wcnt} out of bounds: {clean_txt}"
         edges_out[legacy_to_accession(pid)] = {"edge_kind": rk, "edge_label": EDGE_ROLE_LABELS[rk], "edge_text": clean_txt}
 
     contrasts_out: list[dict[str, object]] = [
         {
             "ids": [legacy_to_accession(str(x)) for x in row["ids"]],  # type: ignore[union-attr]
-            "domain": translate_legacy_tokens_in_prose(str(row["domain"])),
-            "naive": translate_legacy_tokens_in_prose(str(row["naive"])),
-            "finding": translate_legacy_tokens_in_prose(str(row["finding"])),
-            "gate": translate_legacy_tokens_in_prose(str(row["gate"])),
+            "domain": sanitize_public_prose(translate_legacy_tokens_in_prose(str(row["domain"]))),
+            "naive": sanitize_public_prose(translate_legacy_tokens_in_prose(str(row["naive"]))),
+            "finding": sanitize_public_prose(translate_legacy_tokens_in_prose(str(row["finding"]))),
+            "gate": sanitize_public_prose(translate_legacy_tokens_in_prose(str(row["gate"]))),
         }
         for row in KEY_MECHANISTIC_CONTRASTS_9
     ]

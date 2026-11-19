@@ -40,6 +40,7 @@ CAUSAL_MAP: dict[str, str] = {
     "HYPOTHESIS_REFUTED_IN_HUMANS": "Refuted in Powered Human ALS RCTs",
     "IATROGENIC_ANTAGONISM_OF_ESSENTIAL_SNARE_PRENYLATION": "Iatrogenic Inhibition of Essential SNARE Prenylation",
     "IN_VITRO_REDOX_BUFFERING_ARTIFACT": "Extracellular Media Thiol-Buffering Artifact",
+    "IN_VITRO_BASAL_MEDIA_NOISE_AND_SPT_WRONG_SIGN": "In Vitro Basal Media Noise & SPTLC1/2 Wrong Sign",
     "SPLIT_BY_SUBNODE": "Sub-Node Split (C3/C4B Dropped · CNS C1q Exploratory)",
     "METABOLIC_HYPOTHESIS_MEDIA_CONFOUNDED_UNPROVEN": "Media-Confounded Serine Metabolic Hypothesis",
     "MICROMOLAR_CAD_PHOSPHOLIPIDOSIS_ARTIFACT": "Micromolar Cationic-Amphiphilic Phospholipidosis Artifact",
@@ -122,11 +123,11 @@ def clean_prose(txt: str) -> str:
     s = re.sub(r"\b(?:ExploreALS|baseline intake)\s+cited\s+corrupt\s+IDs", "Chemical registry verification refuted misattributed IDs", s, flags=re.IGNORECASE)
     s = re.sub(r";\s*true IDs?\s+([A-Za-z0-9/]+),\s*fixing (?:intake|baseline) [^)]*typo", r"; \1", s, flags=re.IGNORECASE)
     s = re.sub(r",?\s*fixing (?:prior |baseline )?intake [^);]*", "", s, flags=re.IGNORECASE)
-    s = re.sub(r"\b(?:prior|baseline)\s+intake\b", "baseline annotation", s, flags=re.IGNORECASE)
-    s = re.sub(r"\bintake\b", "baseline", s, flags=re.IGNORECASE)
-    s = re.sub(r"\bnon-ExploreALS\b", "de novo", s, flags=re.IGNORECASE)
+    s = re.sub(r"\b(?:prior|baseline)\s+intake\b", "prior literature catalog", s, flags=re.IGNORECASE)
+    s = re.sub(r"\bintake\b", "catalog", s, flags=re.IGNORECASE)
+    s = re.sub(r"\bnon-ExploreALS\b", "screen-nominated", s, flags=re.IGNORECASE)
     s = re.sub(r"\bExploreALS\s+composite\s+Tier\s+1A\s*\([^)]*\)\s*", "composite ", s, flags=re.IGNORECASE)
-    s = re.sub(r"\bExploreALS\b", "baseline annotation", s, flags=re.IGNORECASE)
+    s = re.sub(r"\bExploreALS\b", "prior literature catalog", s, flags=re.IGNORECASE)
     s = re.sub(r"\bCarbonALS\b", "ExploreALS", s, flags=re.IGNORECASE)
     s = re.sub(r"\bDS045\b|\bD045\b", "Trautwig 2025 CSF (PMC12082929)", s)
     s = re.sub(r"\bD003\b", "Pineda 2024 (PMID:38521060)", s)
@@ -143,15 +144,17 @@ def clean_prose(txt: str) -> str:
         ("ceiling on small-molecule Kv7 openers, serving both as", "ceiling on small-molecule Kv7 openers. It serves both as"),
         ("relative to ALS-Ox, but extension to sporadic ALS-TE", "relative to ALS-Ox. However, extension to sporadic ALS-TE"),
         ("prenylation pathology, while extreme pan-essentiality", "prenylation pathology. Extreme pan-essentiality"),
-        ("forbid DROP under Epistemic Asymmetry, but C019 is recalibrated", "forbid DROP under Epistemic Asymmetry. However, C019 is recalibrated"),
+        ("forbid DROP under Epistemic Asymmetry, but C019 is recalibrated", "forbid exclusion without testing. However, C019 is recalibrated"),
         ("SICI p=0.009), not a viable chronic drug candidate", "SICI p=0.009). It is not a viable chronic drug candidate"),
-        ("C9/SOD1 carriers), but fail Track B drug-target criteria:", "C9/SOD1 carriers). However, they fail Track B drug-target criteria:"),
+        ("C9/SOD1 carriers), but fail Track B drug-target criteria:", "C9/SOD1 carriers). However, they fail therapeutic target criteria:"),
         ("GC-confounding collapse, corroborated by null blinded", "GC-confounding collapse. This is corroborated by null blinded"),
         ("human NKCC1 IC50), compounded by non-selective inhibition", "human NKCC1 IC50). This deficit is compounded by non-selective inhibition"),
     ):
         s = s.replace(old_seg, new_seg)
+    s = re.sub(r"\bUnder Epistemic Asymmetry,\s*", "", s, flags=re.IGNORECASE)
     s = re.sub(r"\s+([.,;:\)])", r"\1", s)
-    s = translate_legacy_tokens_in_prose(re.sub(r"\s{2,}", " ", s).strip())
+    from _public_taxonomy import sanitize_public_prose
+    s = sanitize_public_prose(translate_legacy_tokens_in_prose(re.sub(r"\s{2,}", " ", s).strip()))
     return (s[0].upper() + s[1:]) if s and s[0].islower() else s
 
 
@@ -167,20 +170,20 @@ def _humanize_causal(raw: str) -> tuple[str, str]:
 
 
 DN_VERDICT_HEADLINES: dict[str, str] = {
-    "DN-01": "Promoted as #1 unbiased TDP-43 cryptic-splicing discovery (Rank #{rk}/52 · Tier 2): convergent human Ribo-seq, C9-FTD homogenate protein loss, and in vivo Atg4b-KO acceleration justify preclinical SSO #2 rescue alongside Stage-(ii) pre-inclusion cervical alpha-MN duplex BaseScope ISH.",
-    "DN-02": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry: robust C9-FTD cortical Kalirin-12/DuET cryptic splicing and clean >=2mm SSO #1 are tempered by zero ALS GWAS loci, low cervical cord expression, and alt-3'SS shunting risk.",
-    "DN-03": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry: multi-cohort Ribo-seq, brain DIA, and living-CSF PTPRT depletion require 1-bp cryptic-junction mapping before steric SSO design.",
-    "DN-04": "Promoted as Tier 2 neuron-specific splicing-factor lead (Rank #{rk}/52): LeafCutter cluster replication in sporadic ALS patient iPSC-MNs (padj=0.0090; nominal BA4 p=0.0133, FDR=0.136) and clean >=2mm 20-bp SSO #1 merit Exon 4–7 Nanopore RT-PCR (<1-2% LOQ Exon-5 skip / 98-bp micro-intron retention) plus Stage-(ii) cervical BaseScope ISH.",
-    "DN-05": "Elevated to #1 of Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry: surviving cervical MN-niche 55-um Visium RNA (-1.23 log2FC, spot-level FDR=0.019, N=18) and C9-FTD synaptosomal PRUNE2 loss (-0.49, p=0.0068) warrant Nanopore RT-PCR and Stage-(ii) cervical BaseScope ISH to resolve microexon vs. cryptic 5'SS polarity.",
-    "DN-06": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry: synaptosomal PFKP depletion and clean >=2mm SSO #1 require metabolic flux gating to rule out pentose-phosphate NADPH/GSH depletion.",
-    "DN-07": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry: pathology-selective TRAPPC12 intronic polyadenylation and sALS iPSC-MN splicing merit isoform-resolved testing despite null bulk cortical DIA.",
-    "DN-08": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry while retiring nuclear RNase-H1 gapmers (which risk Pol II readthrough cleavage of canonical ELK1, PMID:31924448) in favor of steric distal-PAS SSO or cytoplasmic 3'-extension siRNA gating.",
-    "DN-09": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry: pathology-selective DLGAP1 cryptic polyadenylation and cortical synaptosomal scaffold loss require spinal motor-neuron penetrance verification.",
+    "DN-01": "Promoted as #1 transcriptome-wide TDP-43 cryptic-splicing lead (Rank #{rk}/52 · Tier 2): convergent human Ribo-seq, C9-FTD homogenate protein loss, and in vivo Atg4b-KO acceleration justify preclinical SSO #2 rescue alongside early pre-inclusion (partially nuclear-TDP-43-depleted) cervical alpha-MN duplex BaseScope ISH.",
+    "DN-02": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52): robust C9-FTD cortical Kalirin-12/DuET cryptic splicing and clean (>=2 mismatches) SSO #1 are tempered by zero ALS GWAS loci, low cervical cord expression, and alt-3'SS shunting risk.",
+    "DN-03": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52): multi-cohort Ribo-seq, brain DIA, and living-CSF PTPRT depletion require 1-bp cryptic-junction mapping before steric SSO design.",
+    "DN-04": "Promoted as Tier 2 neuron-specific splicing-factor lead (Rank #{rk}/52): LeafCutter cluster replication in sporadic ALS patient iPSC-MNs (padj=0.0090; nominal BA4 p=0.0133, FDR=0.136) and clean (>=2 mismatches) 20-bp SSO #1 merit Exon 4–7 Nanopore RT-PCR (<1-2% LOQ Exon-5 skip / 98-bp micro-intron retention) plus early pre-inclusion cervical alpha-MN BaseScope ISH.",
+    "DN-05": "Elevated to #1 of Tier 3 Exploratory Discovery (Rank #{rk}/52): surviving cervical MN-niche 55-um Visium RNA (-1.23 log2FC, spot-level FDR=0.019, N=18) and C9-FTD synaptosomal PRUNE2 loss (-0.49, p=0.0068) warrant Nanopore RT-PCR and early pre-inclusion cervical alpha-MN BaseScope ISH to resolve microexon vs. cryptic 5'SS polarity.",
+    "DN-06": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52): synaptosomal PFKP depletion and clean (>=2 mismatches) SSO #1 require metabolic flux gating to rule out pentose-phosphate NADPH/GSH depletion.",
+    "DN-07": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52): pathology-selective TRAPPC12 intronic polyadenylation and sALS iPSC-MN splicing merit isoform-resolved testing despite null bulk cortical DIA.",
+    "DN-08": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52) while retiring nuclear RNase-H1 gapmers (which risk Pol II readthrough cleavage of canonical ELK1, PMID:31924448) in favor of steric distal-PAS SSO or cytoplasmic 3'-extension siRNA gating.",
+    "DN-09": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52): pathology-selective DLGAP1 cryptic polyadenylation and cortical synaptosomal scaffold loss require spinal motor-neuron penetrance verification.",
     "DN-10": "Reclassified as a non-therapeutic Somatodendritic Attrition Biomarker (Rank #{rk}/52): living-CSF and synaptosomal DPP6 depletion tracks Kv4.2 membrane loss rather than a catalytically druggable driver.",
     "DN-11": "Reclassified as a non-therapeutic Somatodendritic Attrition Biomarker (Rank #{rk}/52): living-CSF and motor-cortex DPP10 reduction parallels paralogous DPP6 loss without sporadic-vs-control TMTpro specificity.",
     "DN-12": "Reclassified as a non-therapeutic Axonal Release Biomarker (Rank #{rk}/52): cross-platform ALS CSF Cofilin-1 elevation reflects degenerating motor-axon rod release on a pan-essential cytoskeletal gene.",
     "DN-13": "Falsified in randomized human ALS clinical trials (Rank #{rk}/52 · Drop): postmortem MAOB elevation reflects reactive astrogliosis, and selective MAOB inhibition failed four controlled human ALS trials.",
-    "DN-14": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52) under Epistemic Asymmetry: selective C5aR1 antagonism has zero completed ALS efficacy trials despite upstream C5 failures, but C5/C5a-free monocultures make ligand-independent 2.5 uM cyclic-hexapeptide off-target activity the primary null pending C5AR1-KO deconvolution.",
+    "DN-14": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52): selective C5aR1 antagonism has zero completed ALS efficacy trials despite upstream C5 failures, though C5/C5a-free monocultures make ligand-independent 2.5 uM cyclic-hexapeptide off-target activity the primary null pending C5AR1-KO deconvolution.",
     "DN-15": "Falsified in randomized human ALS clinical trials (Rank #{rk}/52 · Drop): modest in vitro iPSC-MN survival rescue is superseded by two negative placebo-controlled human ALS trials at target-engaging CSF exposure.",
     "DN-16": "Falsified in Phase 3 human ALS clinical testing (Rank #{rk}/52 · Drop): LIGHTHOUSE II interim survival futility and a 60–250x unbound human CSF exposure gap refute repurposing dolutegravir/Triumeq.",
     "DN-17": "Falsified by human ALS clinical futility and poor CNS penetration (Rank #{rk}/52 · Drop): in vitro rescue reflects media thiol buffering while high-dose subcutaneous N-acetylcysteine failed human ALS survival testing.",
@@ -241,7 +244,10 @@ def build_summary_dossiers(
             causal_lbl, _ = _humanize_causal(pb["causal_vs_reactive_assessment"])
             sub = clean_prose(pb["mechanism_summary"])
             just = clean_prose(pb["factual_justification"])
-            if pid == "DN-15":
+            if pid == "DN-12":
+                proves, _ = _split_top_level_dn(just)
+                disproves = "Cellularly pan-essential across dividing human lines (DepMap p10 Chronos = -1.3534) with null Bye 2025 Fasudil survival (p = 0.209), precluding therapeutic CFL1 inhibition; bulk CSF total CFL1 requires pre-analytical platelet/PBMC lysis exclusion and longitudinal validation of pSer3-CFL1:total CFL1 ratios for incremental prognostic value beyond pNfH and NfL."
+            elif pid == "DN-15":
                 m15 = re.match(r"^Despite (.+?\)),\s*(.+)$", just)
                 proves = (m15.group(1) + ".") if m15 else just
                 disproves = (m15.group(2)[0].upper() + m15.group(2)[1:]) if m15 else just

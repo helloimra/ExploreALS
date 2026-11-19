@@ -17,6 +17,15 @@ from _candidate_contrasts_b import build_edges_and_lenses  # noqa: E402
 from _explorer_js import EXPLORER_JS_BODY, EXPLORER_JS_TABS234  # noqa: E402
 from _explorer_template import HTML_HEAD_AND_BODY, HTML_TABS_AND_SCRIPT  # noqa: E402
 from _phase4_helpers import CROWDING_CLASS_MAP, biological_evidence_sort_key  # noqa: E402
+from _public_taxonomy import (  # noqa: E402
+    COHORT_DEFS,
+    EVIDENCE_COHORT_BY_EALS,
+    resolve_cis_mechanism,
+    resolve_cis_mode_code,
+    resolve_cis_role,
+    sanitize_public_modality,
+    sanitize_public_prose,
+)
 from _public_web_exporter import export_public_web_bundle  # noqa: E402
 from _render_synthesis_sections import build_exec_and_transition_md, build_roadmaps_and_tables_md  # noqa: E402
 from _subnode_v3_projection import project_subnode_v3  # noqa: E402
@@ -66,8 +75,8 @@ def main() -> None:
         synth_fp.write_text(md_text, encoding="utf-8")
 
     def _clean_ui(txt: str) -> str:
-        txt = re.sub(r"\bnon-ExploreALS\b", "de novo", txt, flags=re.IGNORECASE)
-        txt = re.sub(r"\bExploreALS\b", "baseline annotation", txt, flags=re.IGNORECASE)
+        txt = re.sub(r"\bnon-ExploreALS\b", "screen-nominated", txt, flags=re.IGNORECASE)
+        txt = re.sub(r"\bExploreALS\b", "published catalog", txt, flags=re.IGNORECASE)
         return re.sub(r"\bCarbonALS\b", "ExploreALS", txt, flags=re.IGNORECASE)
 
     bio_sorted = sorted(port_rows, key=biological_evidence_sort_key)
@@ -81,64 +90,72 @@ def main() -> None:
         if r["decision"] == "RECLASSIFY_BENCHMARK_OR_BIOMARKER":
             return "N/A (Benchmark / Biomarker)"
         if r["scientific_actionability_tier"] == "COMPANION_PROTOCOL_ONLY":
-            return "N/A (Companion Protocol)"
-        return "Whitespace (0 ALS Trials)"
+            return "N/A (Functional Calibrator)"
+        return "0 Active ALS Trials"
 
     js_port = []
     for r in port_rows:
         lid = r["portfolio_id"]
         acc_id = r.get("accession_id") or legacy_to_accession(lid)
         sym, syn_list = PRIMARY_SYMBOL_AND_ALIASES[lid]
+        coh_key = EVIDENCE_COHORT_BY_EALS[acc_id]
         js_port.append({
             "rk": int(r["unified_rank"]), "brk": bio_rk_map[lid],
             "id": acc_id, "sym": sym, "syn": syn_list,
-            "o": r["origin_phase"], "sub": r["origin_subcohort"],
+            "o": coh_key, "sub": coh_key,
             "trk": r["track"], "name": r["gene_or_drug"],
-            "mod": translate_legacy_tokens_in_prose(r["primary_modality_specific"]),
+            "mod": sanitize_public_modality(translate_legacy_tokens_in_prose(r["primary_modality_specific"])),
             "epi": r["epistemic_state"], "dec": r["decision"], "tier": r["scientific_actionability_tier"],
             "trl": r["clinical_readiness_trl"], "gate": r["next_gate_experimental_class"],
             "basis": r["primary_evidence_basis"],
             "crowd": _resolve_crowd(r),
             "prior": r["model_prior_dependency"], "hcnt": int(r["unsolved_hurdle_count"]),
-            "hurdles": translate_legacy_tokens_in_prose(r["unsolved_hurdles_structured"]),
+            "hurdles": sanitize_public_prose(
+                translate_legacy_tokens_in_prose(r["unsolved_hurdles_structured"])
+                .replace("21CFR300_50", "FACTORIAL_CONTRIBUTION")
+                .replace("NO_312_23_REF", "INDEPENDENT_SINGLE_ENTITY_TOX")
+                .replace("STAGE_2_", "COMBINATORIAL_")
+            ),
             "iv": r["lead_cis_interval_id"],
             "ivst": r["lead_offtarget_safety_status"],
-            "nxt": r["discriminating_next_test"] if r["discriminating_next_test"].startswith("NONE_") else clean_prose(r["discriminating_next_test"]),
+            "nxt": r["discriminating_next_test"] if r["discriminating_next_test"].startswith("NONE_") else sanitize_public_prose(clean_prose(r["discriminating_next_test"])),
         })
     js_cis = [
         {
-            "ord": int(c["unified_interval_order"]), "o": c["origin_phase"],
+            "ord": int(c["unified_interval_order"]),
+            "o": resolve_cis_mechanism(c["gene_symbol"], c["cis_mechanism_or_mode"]),
             "pid": c.get("accession_id") or legacy_to_accession(c["portfolio_id"]),
             "sc": c.get("subnode_accession_id") or legacy_to_accession(c["subnode_or_cand_id"]),
-            "gene": c["gene_symbol"], "role": c["program_role"], "rk": int(c["rank_within_gene"]), "lead": c["is_promoted_lead"] == "True",
+            "gene": c["gene_symbol"],
+            "role": resolve_cis_role(c.get("accession_id") or legacy_to_accession(c["portfolio_id"]), c["program_role"]),
+            "rk": int(c["rank_within_gene"]), "lead": c["is_promoted_lead"] == "True",
             "iv": c["interval_id"], "chr": c["chrom"], "lo": c["grch38_start"], "hi": c["grch38_end"], "strd": c["strand"],
-            "len": int(c["length_bp"]), "mode": c["cis_mechanism_or_mode"], "gc": c["gc_pct"], "tm": c["tm_phys_pops_c"],
+            "len": int(c["length_bp"]),
+            "mode": resolve_cis_mode_code(c["gene_symbol"], c["cis_mechanism_or_mode"]),
+            "gc": c["gc_pct"], "tm": c["tm_phys_pops_c"],
             "dg": c["dg37_kcal"], "avi": c["max_avi_phred"],
             "sp": f"{c['spliced_0mm_genes']}/{c['spliced_1mm_genes']}/{c['spliced_wobble_only_pc_genes']}",
             "pm": f"{c['premRNA_0mm_sense_genes']}/{c['premRNA_1mm_splice50bp_genes']}/{c['premRNA_wobble_only_splice50bp_pc_genes']}/{c['premRNA_2mm_splice25bp_pc_genes']}/{c['bulge_1nt_steric_pc_genes']}/{c['sub18_core_steric_pc_genes']}",
             "pm1_all": int(c["premRNA_1mm_sense_genes"]),
-            "is_gap": "GAPMER" in c["cis_mechanism_or_mode"],
+            "is_gap": False,
             "flags": (
                 re.sub(r";?\.\.\.\(\+(\d+)_more_in_JSON\)", r"; +\1 additional GENCODE v46 hits", c["flagged_constrained_neuronal_hits"])
                 .replace("sub18_core_nonconstr", "18nt-subcore(non-constrained)")
                 .replace("bulge_1nt", "1nt-bulge")
+                .replace("0mm_deep_intron", "0-mm deep intron")
+                .replace("BA4_", "BA4 ")
             ),
             "st": c["offtarget_safety_status"],
         }
         for c in cis_rows
     ]
     js_sub = [project_subnode_v3(s, _clean_ui) for s in sub_rows]
-    funnel_defs = [
-        ("CANONICAL_24", "Clinical, Mendelian & GWAS Programs"),
-        ("SCREEN_AND_BLIND_SURVIVORS_9", "RCT Subgroup & Screen Survivors"),
-        ("F1_CRYPTIC_SPLICE", "Unbiased · TDP-43 Cryptic Exons"),
-        ("F2_CRYPTIC_APA", "Unbiased · Cryptic APA / 3'Ext"),
-        ("F3_CSF_SPATIAL", "Unbiased · Living CSF & Spatial"),
-        ("F4_BYE2025_SCREEN", "Unbiased · Human iPSC-MN Screen"),
-    ]
     js_funnel = []
-    for sub_k, base_lbl in funnel_defs:
-        srows = [r for r in port_rows if r["origin_subcohort"] == sub_k]
+    for sub_k, base_lbl in COHORT_DEFS:
+        srows = [
+            r for r in port_rows
+            if EVIDENCE_COHORT_BY_EALS[r.get("accession_id") or legacy_to_accession(r["portfolio_id"])] == sub_k
+        ]
         js_funnel.append({
             "sub": sub_k,
             "lbl": f"{base_lbl} ({len(srows)})",
@@ -194,16 +211,14 @@ def main() -> None:
     upd_rows = _read_csv("living_evidence_updates.csv")
     js_updates = [
         {
-            "id": u["update_id"],
             "dt": u["date_iso"],
-            "tag": u["release_tag"],
             "cat": u["update_category"],
             "ids": [legacy_to_accession(x.strip()) for x in u["affected_ids"].split(";") if x.strip()],
-            "imp": translate_legacy_tokens_in_prose(u["decision_impact"]),
-            "hdr": translate_legacy_tokens_in_prose(u["headline"]),
-            "pre": translate_legacy_tokens_in_prose(u["prior_state_or_assumption"]),
-            "post": translate_legacy_tokens_in_prose(u["new_evidence_or_revision"]),
-            "cons": translate_legacy_tokens_in_prose(u["portfolio_and_gate_consequence"]),
+            "imp": sanitize_public_prose(translate_legacy_tokens_in_prose(u["decision_impact"])),
+            "hdr": sanitize_public_prose(translate_legacy_tokens_in_prose(u["headline"])),
+            "pre": sanitize_public_prose(translate_legacy_tokens_in_prose(u["prior_state_or_assumption"])),
+            "post": sanitize_public_prose(translate_legacy_tokens_in_prose(u["new_evidence_or_revision"])),
+            "cons": sanitize_public_prose(translate_legacy_tokens_in_prose(u["portfolio_and_gate_consequence"])),
             "srcs": [x.strip() for x in u["primary_sources"].split(";") if x.strip()],
             "ancs": [x.strip() for x in u["verification_anchor"].split(";") if x.strip()],
         }
@@ -218,8 +233,8 @@ def main() -> None:
         "output_artifacts": "reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md;reports/CARBON_ALS_INTERACTIVE_EXPLORER.html;reports/monographs;reports/github_pages",
         "datasets_used": "DS001_COUNTS;DS001_META;DS001_ONEILL;DS_GENCODE_V46_COMP_GTF;DS_GNOMAD_V41_CONSTRAINT",
         "tools_and_skills_used": "generative_ui;tooluniverse-gene-liability;alphagenome-atlas-website-links;scripts.phase4_gates;uv-python",
-        "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-19T08:45:00Z",
-        "summary": "Programmatically rendered canonical Phase 4 v1.2 synthesis report (SHA-12 locked, 8 Tier 1+2 roadmaps + 9-row Mechanistic Contrasts matrix), standalone 5-view interactive 52-hypothesis ExploreALS v1.2 Explorer (with Tab 4 Replication workbench, 194/194 64-char SHA-256 anchors, 40 open external datasets, 8-cluster cohort overlap & 3 sensitivity sandboxes), 8 Tier 1+2 Monographs, and zero-CDN GitHub Pages bundle (Coordinate-Only Cis-Regulatory Search Windows, 0 chemically modified synthesis-ready ASO sequences).",
+        "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-19T12:45:00Z",
+        "summary": "Programmatically compiled unified 52-hypothesis ExploreALS v1.2 Explorer (with 8 Tier 1+2 Translational Monographs, 9-row Mechanistic Contrasts matrix, Replication & Verification workbench, 194/194 64-char SHA-256 anchors, 40 open external datasets, 8-cluster cohort overlap & 3 sensitivity sandboxes) and zero-CDN GitHub Pages bundle across 26 1-based GRCh38 cis-regulatory target windows.",
     }
     runs = (
         [p4_r2 if r["analysis_run_id"] == "RUN-P4-002" else r for r in runs]
@@ -260,9 +275,9 @@ def main() -> None:
     ])
     st = summary["registry_sha12"]
     sha_stamp = (
-        f"REGISTRY_CONCORDANCE_SHA12: p4_port={st['phase4_unified_portfolio']} p4_cis={st['phase4_unified_cis_intervals']} "
-        f"p3a_ot={st['phase3_sso_offtarget_audit']} p3a_rd={st['phase3_execution_readiness']} "
-        f"p3b_cand={st['phase3b_denovo_candidates']} p3b_sso={st['phase3b_denovo_sso_intervals']}"
+        f"BUILD_PROVENANCE_SHA12: portfolio={st['phase4_unified_portfolio']} intervals={st['phase4_unified_cis_intervals']} "
+        f"offtarget={st['phase3_sso_offtarget_audit']} readiness={st['phase3_execution_readiness']} "
+        f"screen_cands={st['phase3b_denovo_candidates']} screen_ivs={st['phase3b_denovo_sso_intervals']}"
     )
     html_head_stamped = HTML_HEAD_AND_BODY.replace("<!-- __SHA12_STAMP__ -->", f"<!-- {sha_stamp} -->")
     html_text = (

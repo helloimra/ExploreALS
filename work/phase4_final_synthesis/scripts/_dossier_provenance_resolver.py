@@ -307,7 +307,7 @@ def resolve_evidence_row(
             if len(accs) >= 3:
                 break
 
-    src_title = " + ".join(src_names[:2]) if src_names else "Primary Registry Audit"
+    src_title = " + ".join(src_names[:2]) if src_names else "Multi-Cohort Synthesis"
     basis, cert, role = classify_basis_and_tier(row)
     coh = _clean_v0_text(row.get("cohort_and_stratum", ""))
     con = _clean_v0_text(row.get("assay_and_contrast", ""))

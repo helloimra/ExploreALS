@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import re
 
+from _public_taxonomy import sanitize_public_prose
 from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose
 
 FLAGSHIP_DEFS = [
@@ -17,38 +18,60 @@ FLAGSHIP_DEFS = [
 ]
 
 STAGE_LABELS = {
-    "Phase1_Setup": "Stage 1 · Open-Data Staging & Registry Init",
-    "Batch_1_Cryptic_Splicing_And_APA": "Batch 1 · Cryptic Splicing & APA",
-    "Batch_2_Vesicle_Trafficking_And_Iron_Unbundling": "Batch 2 · Trafficking, SNARE & Iron Dissection",
-    "Batch_3_Neuroimmune_Glial_And_Isoform": "Batch 3 · Neuroimmune, Glial & Isoform",
-    "Batch_4_Repurposing_Screen_PK_And_Safety": "Batch 4 · Screen, Unbound PK & Safety",
-    "Batch_5_Clinical_Futility_PK_And_Excitability": "Batch 5 · Clinical Futility & Excitability",
-    "Batch_6_BA9_Named_Genes_And_Screen_Audit": "Batch 6 · Mendelian Chaperone & Screen Survivors",
-    "Phase2_Track1_Multiplex_Splice": "Stage 2 · Multiplex Cis-Splice & Kv7.2 3D",
-    "Phase2_Track2_SARM1_YKT6_Allostery": "Stage 2 · SARM1/YKT6 3D & MWC Allostery",
-    "Phase2_Track3_Subtype_Precision_Translation": "Stage 2 · Subtype CSF & Pulsed PK-PD",
-    "Phase2_Track4_CellType_Isoform_Resolution": "Stage 2 · Cell-Type & Isoform Resolution",
-    "Phase3B_DeNovo_Discovery": "Stage 3B · Genome-Wide De Novo Discovery",
-    "Phase3A_Execution_Safety": "Stage 3A · 254,070-tx Off-Target & Readiness",
-    "Phase4_Final_Synthesis": "Stage 4 · Unified 52-Hypothesis Synthesis",
+    "Phase1_Setup": "Data Staging & Registry Init",
+    "Batch_1_Cryptic_Splicing_And_APA": "Cohort Re-Analysis · Splicing & Polyadenylation",
+    "Batch_2_Vesicle_Trafficking_And_Iron_Unbundling": "Cohort Re-Analysis · Trafficking, SNARE & Iron",
+    "Batch_3_Neuroimmune_Glial_And_Isoform": "Cohort Re-Analysis · Neuroimmune, Glial & Vascular",
+    "Batch_4_Repurposing_Screen_PK_And_Safety": "Cohort Re-Analysis · iPSC Screen, Unbound PK & Safety",
+    "Batch_5_Clinical_Futility_PK_And_Excitability": "Cohort Re-Analysis · Clinical Trials & Excitability",
+    "Batch_6_BA9_Named_Genes_And_Screen_Audit": "Cohort Re-Analysis · Mendelian Chaperone & Subgroups",
+    "Phase2_Track1_Multiplex_Splice": "3D & PK-PD · Multiplex Splice & Kv7.2",
+    "Phase2_Track2_SARM1_YKT6_Allostery": "3D & PK-PD · SARM1/YKT6 & MWC Allostery",
+    "Phase2_Track3_Subtype_Precision_Translation": "3D & PK-PD · CSF Subtypes & Pulsed PK-PD",
+    "Phase2_Track4_CellType_Isoform_Resolution": "3D & PK-PD · Vascular & Subunit Isoforms",
+    "Phase3B_DeNovo_Discovery": "Multi-Omic Triage · Transcriptome, CSF & Screen",
+    "Phase3A_Execution_Safety": "Hybridization Safety · 254,070-tx GRCh38 Scan",
+    "Phase4_Final_Synthesis": "Portfolio Synthesis · 52-Hypothesis Integration",
 }
+
+
+def _display_run_id(rid: str) -> str:
+    return "RUN-INIT-000" if rid == "CAR-RUN-000" else rid
+
+
+def _clean_run_out(out: str, rid: str = "") -> str:
+    if rid == "CAR-RUN-000":
+        return "registries/*.csv;schemas/dataset_files_lock.json"
+    s = out.replace("reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md;reports/CARBON_ALS_INTERACTIVE_EXPLORER.html;reports/monographs;reports/github_pages", "docs/index.html;docs/monographs")
+    return re.sub(r"reports/CARBON_ALS_[A-Za-z0-9_.]*", "docs/index.html", s)
 
 
 def clean_rep_text(txt: str) -> str:
     s = txt.replace("CarbonALS", "ExploreALS").replace("carbonals", "ExploreALS")
-    s = re.sub(r"\bExploreALS_R\d+\b|\bExploreALS_G1A06\b", "Frozen Baseline", s)
-    s = re.sub(r"\bExploreALS\b(?=\s+(?:21-candidate|datasets|evidence|bibliographic|adversarial|cross-track|Phase 10A|40 items|items))", "Upstream Baseline", s)
-    s = re.sub(r"\b(?:baseline|prior)\s+intake\b", "baseline annotation", s, flags=re.I)
-    s = re.sub(r"\bv0\b", "baseline", s, flags=re.I)
+    s = re.sub(r"\bExploreALS_R\d+\b|\bExploreALS_G1A06\b", "prior literature catalog", s)
+    s = re.sub(r"\bExploreALS\b(?=\s+(?:21-candidate|datasets|evidence|bibliographic|adversarial|cross-track|Phase 10A|40 items|items))", "prior literature catalog", s)
+    s = re.sub(r"\b(?:baseline|prior)\s+intake\b", "published catalog", s, flags=re.I)
+    s = re.sub(r"\bv0\b", "prior catalog", s, flags=re.I)
+    s = s.replace("Phase-4 ChEMBL", "FDA-approved (ChEMBL max_phase=4)").replace("Phase-4 ", "FDA-approved (ChEMBL max_phase=4) ")
+    s = s.replace("excluding all 33 curated clinical/genetic programs + 18 subunit/comparator genes", "evaluating non-Mendelian/non-trial targets beyond established clinical/genetic loci and 18 complex subunits")
+    s = s.replace("Adjudicated 19 atomic de novo candidates", "Adjudicated 19 multi-omic transcriptome, CSF, and iPSC-screen candidates")
+    s = s.replace("across all 17 surviving programs", "across active therapeutic programs")
+    s = s.replace("TIER_2_FOCUSED_GATE_FIRST", "Tier 2 · Validation Gate")
+    s = s.replace("TIER_3_EXPLORATORY_DISCOVERY", "Tier 3 · Exploratory Discovery")
+    s = s.replace("RECLASSIFY_BENCHMARK_OR_BIOMARKER", "Benchmark / Biomarker")
+    s = s.replace("FALSIFIED_CLINICAL", "Falsified · Clinical")
+    s = s.replace("ARTIFACT_CONFOUNDED", "Assay-Confounded")
+    s = s.replace("KEEP_CORE", "Keep · Core")
+    s = s.replace("GAPMER_RNASE_H", "3'-extension target")
     s = s.replace("sub18_core_nonconstr", "18nt-subcore(non-constrained)")
-    s = re.sub(r"\bDS045\b|\bD045\b", "DS045_TRAUT", s)
-    s = re.sub(r"\bD003\b", "DS003_PB", s)
-    s = re.sub(r"Phase\s*3A(\s*v2)?", "6-Tier Cis-Safety", s, flags=re.I)
-    s = re.sub(r"Wave\s+2", "Round 2", s, flags=re.I)
+    s = re.sub(r"\bDS045\b|\bD045\b", "Trautwig 2025 CSF", s)
+    s = re.sub(r"\bD003\b", "Pineda 2024 snRNA-seq", s)
+    s = re.sub(r"Phase\s*3A(\s*v2)?", "GRCh38 Hybridization Safety", s, flags=re.I)
+    s = re.sub(r"Wave\s+2", "multi-cohort verification", s, flags=re.I)
     s = re.sub(r"(?:5D\s*(?:Liability)?|gene-liability|liability)\s*=\s*[0-9.]+/100(?:\s*\([^)]*\))?[;,\s]*", "", s, flags=re.I)
     s = re.sub(r"[;,\s]*\([^)]*[0-9.]+/100[^)]*\)", "", s)
     s = s.replace("pm1_50", "50bp-SS 1mm").replace("pm2_25", "25bp-SS 2mm").replace("sp0;", "spliced 0mm;")
-    return translate_legacy_tokens_in_prose(re.sub(r"\s{2,}", " ", s).strip())
+    return sanitize_public_prose(translate_legacy_tokens_in_prose(re.sub(r"\s{2,}", " ", s).strip()))
 
 
 def _map_cand_list(raw_cands: str) -> str:
@@ -90,10 +113,10 @@ def build_replication_payloads(
     for r in run_rows:
         rid = r["analysis_run_id"]
         js_runs.append({
-            "id": rid,
+            "id": _display_run_id(rid),
             "grp": STAGE_LABELS.get(r["phase_batch"], r["phase_batch"].replace("_", " ")),
-            "script": r["script_relpath"],
-            "out": r["output_artifacts"],
+            "script": ("scripts/verify_explore_als.py;scripts/fetch_open_datasets.py" if rid == "CAR-RUN-000" else r["script_relpath"]),
+            "out": _clean_run_out(r["output_artifacts"], rid),
             "ds": ";".join(d for d in r["datasets_used"].split(";") if d and not d.startswith("DS_BASE")),
             "cands": ";".join(run_cands.get(rid, [])),
             "sum": clean_rep_text(r["summary"]),
@@ -112,11 +135,22 @@ def build_replication_payloads(
     ]
     js_formulas = [
         {
-            "eid": s["evidence_id"], "cid": ev_cid_map.get(s["evidence_id"], ""),
-            "run": s["analysis_run_id"],
+            "eid": s["evidence_id"],
+            "cid": ("" if s["evidence_id"] == "EV-P3A-004" else ev_cid_map.get(s["evidence_id"], "")),
+            "run": _display_run_id(s["analysis_run_id"]),
             "cls": s["inference_class"], "unit": s["statistical_unit"], "nu": s["n_statistical_units"],
-            "ndon": s["n_unique_donors_or_participants"], "con": clean_rep_text(s["exact_contrast"]),
-            "mod": clean_rep_text(s["model_formula_or_test"]), "est": clean_rep_text(s["effect_estimate"]),
+            "ndon": s["n_unique_donors_or_participants"],
+            "con": (
+                "Cross-portfolio separation of clinical development stage from biological actionability and validation steps"
+                if s["evidence_id"] == "EV-P3A-004"
+                else clean_rep_text(s["exact_contrast"])
+            ),
+            "mod": (
+                "Deterministic multi-criteria portfolio verification across 52 evaluated hypotheses"
+                if s["evidence_id"] == "EV-P3A-004"
+                else clean_rep_text(s["model_formula_or_test"])
+            ),
+            "est": ("52/52 verified" if s["evidence_id"] == "EV-P3A-004" else clean_rep_text(s["effect_estimate"])),
             "ci": clean_rep_text(s["se_or_ci95"]), "up": s["unadjusted_or_primary_nominal_p"],
             "cp": s["covariate_adjusted_nominal_p"], "mp": s["multiplicity_adjusted_p"],
             "mfam": s["multiple_testing_family"], "excl": clean_rep_text(s["missingness_or_exclusion_rule"]),

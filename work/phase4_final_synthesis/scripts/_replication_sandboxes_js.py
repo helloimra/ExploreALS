@@ -2,7 +2,28 @@
 from __future__ import annotations
 
 REPLICATION_SANDBOXES_JS = r"""
-function renderRepInspector(){
+const REP_ENUM_LABELS = {
+  TIER_A_OPEN_REDISTRIBUTABLE: 'Tier A · Open Redistributable (CC0 / CC-BY)',
+  TIER_B_PUBLISHER_HTTPS_FETCH: 'Tier B · Direct Publisher/EuropePMC HTTPS',
+  TIER_C_DUA_OR_BASELINE: 'Tier C · Registered Synapse Access',
+  STAGED_DATASET: 'Staged Open Dataset',
+  CACHED_API_SNAPSHOT: 'Cached API Snapshot',
+  DETERMINISTIC_MODEL_OUTPUT: 'Deterministic Model Output',
+  PRIMARY_FREQUENTIST_RECOMPUTE: 'Primary Frequentist Recompute',
+  PUBLISHED_SUMMARY_STATISTIC: 'Published Summary Statistic',
+  STRUCTURAL_BIOPHYSICAL_METRIC: '3D Structural / Biophysical Metric',
+  CIS_HYBRIDIZATION_SCAN: 'GRCh38 Hybridization Scan',
+  DETERMINISTIC_SENSITIVITY_MODEL: 'Deterministic Sensitivity Model',
+  CLINICAL_TRIAL_ENDPOINT: 'Clinical Trial Endpoint',
+  SCHEMA_CONCORDANCE_INVARIANT: 'Cross-Portfolio Concordance Check',
+};
+function fmtRepEnum(v){
+  if(!v) return '';
+  if(REP_ENUM_LABELS[v]) return REP_ENUM_LABELS[v];
+  return String(v).toLowerCase().replace(/_/g, ' ').replace(/\b[a-z]/g, m => m.toUpperCase());
+}
+
+function renderRepInspector(isEmpty=false){
   const box = document.getElementById('rep-detail');
   if(!box) return;
   const retBtn = repReturnDossier
@@ -11,6 +32,10 @@ function renderRepInspector(){
       : `<button type="button" data-open-dossier="${esc(repReturnDossier)}" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} Report</button>`)
     : '';
   const retBar = repReturnDossier ? `<div class="p-2 rounded bg-[var(--background)] border border-[var(--primary)] flex items-center justify-between gap-2 text-xs font-mono"><span>Auditing provenance from <strong>${esc(repReturnDossier)}</strong></span>${retBtn}</div>` : '';
+  if(isEmpty){
+    box.innerHTML = retBar + '<div class="p-6 rounded bg-[var(--background)] border border-[var(--card-border)] text-center text-[var(--muted-foreground)] text-xs">No items match active filter. <button type="button" data-reset-rep="1" class="text-[var(--link)] underline font-mono ml-1 cursor-pointer">Reset filters</button></div>';
+    return;
+  }
 
   if(repMode === 'runs'){
     const r = DATA_RUNS.find(x => x.id === selectedRepKey) || DATA_RUNS[0];
@@ -37,7 +62,7 @@ function renderRepInspector(){
     const consRuns = DATA_RUNS.filter(r => r.ds.split(';').includes(d.id)).map(r => `<button type="button" data-open-rep-run="${esc(r.id)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">${esc(r.id)} &rarr;</button>`).join(' ');
     box.innerHTML = `${retBar}
       <div class="flex flex-wrap items-start justify-between gap-2 border-b border-[var(--card-border)] pb-2.5">
-        <div><div class="font-mono font-bold text-sm">${esc(d.id)} &middot; <span class="font-normal text-xs text-[var(--muted-foreground)]">${esc(d.mb)}</span></div><div class="text-[var(--muted-foreground)] text-xs mt-0.5">${esc(d.lic)} &middot; ${esc(d.tier.replace(/_/g,' '))}</div></div>
+        <div><div class="font-mono font-bold text-sm">${esc(d.id)} &middot; <span class="font-normal text-xs text-[var(--muted-foreground)]">${esc(d.mb)}</span></div><div class="text-[var(--muted-foreground)] text-xs mt-0.5">${esc(d.lic)} &middot; ${esc(fmtRepEnum(d.tier))}</div></div>
         <button type="button" data-copy-sha="${esc(d.sha)}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">Copy 64-Char SHA-256</button>
       </div>
       <div class="space-y-2.5 text-xs">
@@ -53,9 +78,12 @@ function renderRepInspector(){
   } else {
     const f = DATA_FORMULAS.find(x => x.eid === selectedRepKey) || DATA_FORMULAS[0];
     if(!f){ box.innerHTML = retBar + '<div class="text-[var(--muted-foreground)]">No matching evidence record.</div>'; return; }
+    const cidHdr = f.cid
+      ? `<button type="button" data-open-dossier="${esc(f.cid)}" class="text-[var(--primary)] hover:underline cursor-pointer">${esc(f.cid)} Dossier &rarr;</button>`
+      : '<span class="text-[var(--muted-foreground)]">Portfolio-Wide Check</span>';
     box.innerHTML = `${retBar}
       <div class="flex flex-wrap items-start justify-between gap-2 border-b border-[var(--card-border)] pb-2.5">
-        <div><div class="font-mono font-bold text-sm">${esc(f.eid)} &middot; <button type="button" data-open-dossier="${esc(f.cid)}" class="text-[var(--primary)] hover:underline cursor-pointer">${esc(f.cid)} Dossier &rarr;</button></div><div class="text-[var(--muted-foreground)] text-xs mt-0.5 font-mono">${esc(f.cls.replace(/_/g,' '))} &middot; ${esc(f.anc)}</div></div>
+        <div><div class="font-mono font-bold text-sm">${esc(f.eid)} &middot; ${cidHdr}</div><div class="text-[var(--muted-foreground)] text-xs mt-0.5 font-mono">${esc(fmtRepEnum(f.cls))} &middot; ${esc(fmtRepEnum(f.anc))}</div></div>
         <button type="button" data-copy-sha="${esc(f.sha)}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">Copy 64-Char SHA-256</button>
       </div>
       <div class="space-y-2 text-xs">
@@ -99,64 +127,65 @@ function rowsToCsv(rows){
 }
 function exportRegistryBlob(which){
   const builders = {
-    updates: ['living_evidence_updates.csv', () => (typeof DATA_UPDATES !== 'undefined' ? DATA_UPDATES : []).map(u => ({
-      update_id:u.id, date_iso:u.dt, release_tag:u.tag, update_category:u.cat,
-      affected_ids:u.ids.join(';'), decision_impact:u.imp, headline:u.hdr,
-      prior_state_or_assumption:u.pre, new_evidence_or_revision:u.post,
-      portfolio_and_gate_consequence:u.cons, primary_sources:u.srcs.join(';'),
-      verification_anchor:u.ancs.join(';')
+    updates: ['exploreals_living_updates.csv', () => (typeof DATA_UPDATES !== 'undefined' ? DATA_UPDATES : []).map(u => ({
+      date_iso:u.dt, category:u.cat, affected_ids:u.ids.join(';'),
+      decision_impact:u.imp, headline:u.hdr,
+      conventional_view:u.pre, multimodal_reanalysis:u.post,
+      portfolio_impact:u.cons, primary_sources:u.srcs.join(';'),
+      verification_anchors:u.ancs.join(';')
     }))],
-    portfolio: ['phase4_unified_portfolio.csv', () => DATA_PORT.map(r => ({
-      unified_rank:r.rk, biological_rank:r.brk, accession_id:r.id, primary_symbol:r.sym,
-      synonyms:(r.syn||[]).join(';'), origin_phase:r.o, origin_subcohort:r.sub, track:r.trk,
-      gene_or_drug:r.name, primary_modality:r.mod, epistemic_state:r.epi, decision:r.dec,
-      scientific_actionability_tier:r.tier, clinical_readiness_trl:r.trl,
-      next_gate_experimental_class:r.gate, primary_evidence_basis:r.basis,
-      clinical_crowding:r.crowd, model_prior_dependency:r.prior,
-      unsolved_hurdle_count:r.hcnt, unsolved_hurdles:r.hurdles,
-      lead_cis_interval_id:r.iv, lead_offtarget_safety_status:r.ivst,
-      discriminating_next_test:r.nxt
+    portfolio: ['exploreals_triage_portfolio.csv', () => DATA_PORT.map(r => ({
+      priority_rank:r.rk, evidence_rank:r.brk, accession_id:r.id, primary_symbol:r.sym,
+      synonyms:(r.syn||[]).join(';'), evidence_source:humanizeEnum(r.sub), modality_type:trackLabel(r.trk),
+      gene_or_drug:r.name, therapeutic_modality:formatModality(r.mod), evidence_state:humanizeEnum(r.epi), decision:humanizeEnum(r.dec),
+      actionability_tier:humanizeEnum(r.tier), development_stage:humanizeEnum(r.trl),
+      next_validation_class:humanizeEnum(r.gate), primary_evidence_basis:humanizeEnum(r.basis),
+      als_trial_landscape:r.crowd, model_dependency:formatPrior(r.prior),
+      open_validation_step_count:r.hcnt,
+      open_validation_steps:(r.hurdles && r.hurdles !== 'NONE') ? r.hurdles.split(';').map(formatHurdle).join('; ') : 'None',
+      lead_cis_interval_id:r.iv, lead_offtarget_safety_status:humanizeEnum(r.ivst),
+      discriminating_next_test:ENUM_LABELS[r.nxt] || r.nxt
     }))],
-    intervals: ['phase4_unified_cis_intervals.csv', () => DATA_CIS.map(c => ({
-      unified_interval_order:c.ord, origin_phase:c.o, accession_id:c.pid, target_accession_id:c.sc,
-      gene_symbol:c.gene, program_role:c.role, rank_within_gene:c.rk, is_promoted_lead:c.lead,
+    intervals: ['exploreals_splice_windows.csv', () => DATA_CIS.map(c => ({
+      interval_order:c.ord, cis_mechanism_group:humanizeEnum(c.o), accession_id:c.pid, target_accession_id:c.sc,
+      gene_symbol:c.gene, locus_role:humanizeEnum(c.role), rank_within_gene:c.rk, is_promoted_lead:c.lead,
       interval_id:c.iv, chrom:c.chr, grch38_start:c.lo, grch38_end:c.hi, strand:c.strd,
-      length_bp:c.len, cis_mechanism_or_mode:c.mode, gc_pct:c.gc, tm_phys_pops_c:c.tm,
+      length_bp:c.len, splicing_mode:humanizeEnum(c.mode), gc_pct:c.gc, tm_phys_pops_c:c.tm,
       dg37_kcal:c.dg, max_avi_phred:c.avi, spliced_0_1_wobble:c.sp, premRNA_6tier:c.pm,
       premRNA_1mm_sense_genes:c.pm1_all, flagged_constrained_neuronal_hits:c.flags,
-      offtarget_safety_status:c.st
+      offtarget_safety_status:humanizeEnum(c.st)
     }))],
-    subnodes: ['subnode_dissection.csv', () => DATA_SUB.map(s => ({
+    subnodes: ['exploreals_subunit_dissection.csv', () => DATA_SUB.map(s => ({
       subunit_accession_id:s.id, parent_accession_id:s.par, gene_symbol:s.gene,
       molecular_role:s.role, idg_tdl:s.tdl, target_safety_class:s.tsa,
       gnomad_essentiality_check:s.gnomad, druggability_check:s.drug,
       verdict_code:s.vraw, verdict_label:s.vlbl, verdict_rationale:s.vbody
     }))],
-    formulas: ['statistical_models_and_contrasts.csv', () => DATA_FORMULAS.map(f => ({
-      evidence_id:f.eid, accession_id:f.cid, analysis_run_id:f.run, inference_class:f.cls,
+    formulas: ['exploreals_statistical_contrasts.csv', () => DATA_FORMULAS.map(f => ({
+      evidence_id:f.eid, accession_id:f.cid || 'PORTFOLIO_WIDE', analysis_run_id:f.run, inference_class:fmtRepEnum(f.cls),
       statistical_unit:f.unit, n_statistical_units:f.nu, n_unique_donors_or_participants:f.ndon,
       exact_contrast:f.con, model_formula_or_test:f.mod, effect_estimate:f.est, se_or_ci95:f.ci,
       unadjusted_or_primary_nominal_p:f.up, covariate_adjusted_nominal_p:f.cp,
       multiplicity_adjusted_p:f.mp, multiple_testing_family:f.mfam,
       missingness_or_exclusion_rule:f.excl, overlap_group_id:f.ovl,
-      anchor_type:f.anc, anchor_relpath:f.arel, sha64:f.sha
+      anchor_type:fmtRepEnum(f.anc), anchor_relpath:f.arel, sha256:f.sha
     }))],
-    datasets: ['datasets_manifest.csv', () => DATA_DATASETS.map(d => ({
+    datasets: ['exploreals_datasets_manifest.csv', () => DATA_DATASETS.map(d => ({
       dataset_id:d.id, domain:d.dom, local_relpath:d.rel, accession_or_doi:d.acc,
       license_or_access:d.lic, size_display:d.mb, sha256:d.sha, relevant_candidates:d.cands,
-      description:d.desc, redistribution_tier:d.tier, canonical_fetch_url:d.url
+      description:d.desc, redistribution_tier:fmtRepEnum(d.tier), canonical_fetch_url:d.url
     }))],
-    runs: ['analysis_runs_and_flagship.csv', () => DATA_RUNS.map(r => ({
-      analysis_run_id:r.id, stage_group:r.grp, script_relpath:r.script, output_artifacts:r.out,
+    runs: ['exploreals_analysis_runs.csv', () => DATA_RUNS.map(r => ({
+      analysis_run_id:r.id, workflow_group:r.grp, script_relpath:r.script, output_artifacts:r.out,
       datasets_used:r.ds, relevant_candidates:r.cands, summary:r.sum, is_flagship:r.flag
     }))],
-    overlap: ['cohort_overlap_map.csv', () => DATA_OVERLAP.map(o => ({
+    overlap: ['exploreals_cohort_overlaps.csv', () => DATA_OVERLAP.map(o => ({
       overlap_group_id:o.id, cluster_name:o.name, datasets_involved:o.ds,
       donor_accounting_rule:o.rule, canonical_model_formula:o.formula
     }))]
   };
   if(which === 'json_all'){
-    const outObj = {version:'1.2.3'};
+    const outObj = {version:'1.2'};
     Object.keys(builders).forEach(k => { outObj[k] = builders[k][1](); });
     downloadBlob('exploreals_v1_2_provenance_bundle.json', 'application/json', JSON.stringify(outObj, null, 2));
     return;

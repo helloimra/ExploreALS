@@ -53,6 +53,20 @@ SITE_LEGACY_ID_OR_ALIAS_RE = re.compile(
     r"FLAGSHIP-(?:C0|S0|DN)|reproduce_(?:C0|S0|DN))",
     re.IGNORECASE,
 )
+SITE_INTERNAL_JARGON_RE = re.compile(
+    r"(Single-Entity\s+De\s+Novo|De\s+Novo\s+1-Plex|De\s+Novo\s+Cryptic|De\s+Novo\s+Chemical|"
+    r"\bde\s+novo\b(?!\s+(?:mutation|mutations|variant|variants|germline|chemical|biologic|sphingolipid|ceramide|guanosine|purine|pyrimidine|nucleotide|synthesis|biosynthesis|lipogenesis|methylation|assembly|design))|"
+    r"\bTrack\s+[AB]\b|src/carbon_als|verify_carbon_als|CARBON_ALS_|CAR-RUN-|"
+    r"Primary\s+Registry\s+Audit|Frozen\s+Baseline|Upstream\s+Baseline|baseline\s+annotation|"
+    r"Round\s+2\s+hardening|21\s*CFR\s*300\.50|21\s*CFR\s*312\.23|21CFR300|"
+    r"\bWhitespace\b(?!-nowrap)|white-space\s+discovery|Crowded\s+1-Plex|Screen\s+Survivors|PREVIOUSLY\s+STATED|"
+    r"\[MODEL_PRIOR\]|,\s*MODEL_PRIOR\]|\[MEASURED\]|\[PRIOR\]|\[Survivor\]|T3\+Proto|"
+    r"Forest\s+&amp;\s+SVG|5Rs\s+Essay|Excluded\s+4th\s+Axis|SHA-64|"
+    r"REGISTRY_CONCORDANCE_SHA12|\(33\s*\+\s*19\)|0\s+chemically\s+modified\s+synthesis-ready|"
+    r"Brettschneider\s+Stage\s+II|\bkill[- ]gates?\b|modeled\s+modeled|(?<!\[);\s*,(?!\])|"
+    r"Dropped\s+PK\s+or\s+Safety\s+Infeasible\s+Regimen|GOVERNANCE\s+GUARDRAIL|scientific\s+taste)",
+    re.IGNORECASE,
+)
 
 
 def verify_phase4_gates(
@@ -215,13 +229,18 @@ def verify_phase4_gates(
             _sha12_variants(reg_dir / "phase3b_denovo_sso_intervals.csv"),
         ]
         stamp_re = re.compile(
+            r"(?:BUILD_PROVENANCE_SHA12: portfolio=([0-9a-f]{12}) intervals=([0-9a-f]{12}) "
+            r"offtarget=([0-9a-f]{12}) readiness=([0-9a-f]{12}) screen_cands=([0-9a-f]{12}) screen_ivs=([0-9a-f]{12})|"
             r"REGISTRY_CONCORDANCE_SHA12: p4_port=([0-9a-f]{12}) p4_cis=([0-9a-f]{12}) "
-            r"p3a_ot=([0-9a-f]{12}) p3a_rd=([0-9a-f]{12}) p3b_cand=([0-9a-f]{12}) p3b_sso=([0-9a-f]{12})"
+            r"p3a_ot=([0-9a-f]{12}) p3a_rd=([0-9a-f]{12}) p3b_cand=([0-9a-f]{12}) p3b_sso=([0-9a-f]{12}))"
         )
 
         def _has_valid_stamp(blob: str) -> bool:
             m_st = stamp_re.search(blob)
-            return bool(m_st and all(m_st.group(idx + 1) in vs for idx, vs in enumerate(stamp_sets)))
+            if not m_st:
+                return False
+            groups = [g for g in m_st.groups() if g is not None]
+            return len(groups) == 6 and all(groups[idx] in vs for idx, vs in enumerate(stamp_sets))
 
         if mode == "full" and synth_md.is_file():
             stxt = synth_md.read_text(encoding="utf-8")
@@ -291,10 +310,9 @@ def verify_phase4_gates(
             for req_str in (
                 "ExploreALS v1.2", "Ricardo Agoga", "helloimra@proton.me", "github.com/helloimra/ExploreALS",
                 "Not Medical Advice", "AI-Assisted Methodology",
-                "Sort: Portfolio Actionability Rank", "Sort: Pure Biological Evidence",
+                "Sort: Translational Priority Rank", "Sort: Genetic &amp; Pathology Evidence",
                 "Human RCT / Genetics", "Human Cohort / PK-PD",
                 "In Vitro or Small-N", "Model / Heuristic Prior", "BioVendor",
-                "0 chemically modified synthesis-ready ASO sequences",
                 "PDB 4M7N", "NIH GTEx (v8 / v10)", "N/A (SOC / PD Benchmark)", "Rank &amp; Triage Key:", "Design Tiers:",
                 "CHEMBL1201438", "ENST00000311734.6", "102343269-102346100(+)", "LOEUF = 1.143",
                 "LOEUF = 0.258", "LOEUF = 0.344", "LOEUF = 0.261", "107 bp upstream of rs12973192",
@@ -304,9 +322,9 @@ def verify_phase4_gates(
                 "const DATA_RUNS =", "const DATA_DATASETS =", "const DATA_FORMULAS =", "const DATA_OVERLAP =",
                 "1. Triage Table (52)", "2. Candidate Reports (52)",
                 "3. Splice Windows (26)", "4. Replication", 'id="rep-dag-box"', 'id="sandbox-drawer"',
-                "Subunit &amp; Selectivity", "194 / 194 (100%) SHA-256",
-                "Monograph &rarr;", "Summary &rarr;", "Summary Report",
-                "Methodology &amp; Decision Guide", "6-Tier GRCh38 Hybridization Screen", "Target Modality (TPP)",
+                "Subunit &amp; Selectivity", "194 / 194 (100%) 64-char SHA-256",
+                "Monograph &rarr;", "Dossier &rarr;", "Structured Triage Dossier",
+                "Methodology &amp; Decision Guide", "6-Tier GRCh38 Hybridization Screen", "Therapeutic Modality",
                 "https://alphafold.ebi.ac.uk/entry/", "https://www.informatics.jax.org/marker/MGI:",
                 "PMID:40354799", "PMID:37267913", "'EALS-016':'ENSG00000118564'", "FLAGSHIP-EALS-030",
                 "resolveCandidateId", "matchCandidateQuery",
@@ -314,13 +332,20 @@ def verify_phase4_gates(
                 "md:grid-cols-[268px_minmax(0,1fr)]",
                 'id="d-aside"', 'id="d-slice-bar"', 'id="d-lens"', 'id="p-lens-bar"', 'id="contrasts-drawer"',
                 'id="tab-btn-home"', 'id="view-home"', "const DATA_UPDATES =", "Living Research Log",
-                "ADVANCE GATE (GO CRITERIA)", "FALSIFICATION GATE (KILL / NO-GO CRITERIA)",
+                "CONVENTIONAL / SINGLE-ASSAY VIEW", "MULTI-MODAL RE-ANALYSIS",
+                "GO CRITERIA (ADVANCE THRESHOLDS)", "NO-GO CRITERIA (FALSIFICATION THRESHOLDS)",
             ):
                 if req_str not in htxt:
                     errors.append(f"Dossier Schema 3.0 missing verified anchor '{req_str}' in {lbl}")
             m_leg = SITE_LEGACY_ID_OR_ALIAS_RE.search(SITE_WORK_PATH_RE.sub("", htxt))
             if m_leg:
                 errors.append(f"{lbl} contains residual legacy candidate ID or alias token '{m_leg.group(0)}'")
+            clean_for_jargon = SITE_WORK_PATH_RE.sub("", htxt)
+            if not is_public_export:
+                clean_for_jargon = clean_for_jargon.replace("CARBON_ALS_INTERACTIVE_EXPLORER.html", "")
+            m_jarg = SITE_INTERNAL_JARGON_RE.search(clean_for_jargon)
+            if m_jarg:
+                errors.append(f"{lbl} contains internal build/process nomenclature '{m_jarg.group(0)}'")
 
         if mode == "full":
             _audit_explorer_html(explorer_html, is_public_export=False)
@@ -352,6 +377,9 @@ def verify_phase4_gates(
                 errors.append(f"{gfp.relative_to(carbon_root).as_posix()} missing SHA-12 stamp or fails zero-CDN guard")
             if "/100" in gtxt or "!important" in gtxt or "wiki" in gtxt.lower() or EXPLORE_LEAK_RE.search(gtxt) or SITE_LEGACY_ID_OR_ALIAS_RE.search(SITE_WORK_PATH_RE.sub("", gtxt)):
                 errors.append(f"{gfp.relative_to(carbon_root).as_posix()} contains /100, !important, residual 'wiki', Explore->, or legacy ID/alias leak")
+            m_gjarg = SITE_INTERNAL_JARGON_RE.search(SITE_WORK_PATH_RE.sub("", gtxt))
+            if m_gjarg:
+                errors.append(f"{gfp.relative_to(carbon_root).as_posix()} contains internal build/process nomenclature '{m_gjarg.group(0)}'")
 
         no_money_paths = [
             reg_dir / "phase3_execution_readiness.csv",
