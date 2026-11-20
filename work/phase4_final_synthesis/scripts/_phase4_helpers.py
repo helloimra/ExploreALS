@@ -37,12 +37,12 @@ EVIDENCE_BASIS_ORDER = {
     "PROTOCOL_STAGE_GATING_ONLY": 7,
 }
 
-# Pure empirical human ALS causal biology order (zero crowding, zero TRL, zero 21 CFR 300.50, zero Tm/dG/AVI priors)
+# Curated editorial biological-evidence priority list across non-dropped entries (human genetics/pathology > multi-omic > CSF > screen)
 BIO_EVIDENCE_PRIORITY: list[str] = [
     "C001", "C002", "S06", "C006", "S07", "DN-01", "C022", "C023", "C015",
     "DN-04", "DN-05", "C014", "C007", "DN-09", "DN-03", "DN-06",
     "DN-07", "DN-02", "DN-08", "S09", "C018", "C016",
-    "C019", "C020", "S02", "DN-14",
+    "C019", "C020", "S02", "DN-14", "DN-17", "DN-19",
     "C005",
     "C013", "S08", "C003", "C017", "DN-10", "DN-11", "DN-12",
 ]
@@ -66,6 +66,8 @@ CROWDING_CLASS_MAP: dict[str, str] = {
     "C019": "Open-Label Ph2 PK (NCT05189106)",
     "C020": "Pulsed Hypothesis (BID Failed)",
     "S02": "Discontinued (Ph2/3 Unreported)",
+    "DN-17": "1 Combo Ph2 (NAC+EH301 NCT07414212)",
+    "DN-19": "0 Controlled sALS Trials",
     "C005": "N/A (Functional Calibrator)",
     "C013": "N/A (SOC / PD Benchmark)",
     "S08": "N/A (SOC / PD Benchmark)",
@@ -78,7 +80,7 @@ CROWDING_CLASS_MAP: dict[str, str] = {
 
 EXPLORE_BENCHMARK_SPECS: dict[str, tuple[str, str, str, str, int, str]] = {
     "C013": ("BENCHMARK_DRUG", "Oral_Riluzole_50mg_BID_NaV1_6_Persistent_INaP_Positive_Benchmark", "CLINICAL_PROTOCOL_STANDARDIZATION", "MEASURED_HUMAN_PK_AND_IPSC_SCREEN", 0, "NONE"),
-    "S08": ("BENCHMARK_DRUG", "Intramuscular_50mg_Methylcobalamin_Early_Onset_LE12m_SOC_Benchmark", "CLINICAL_PROTOCOL_STANDARDIZATION", "MEASURED_HUMAN_RCT_SUBGROUP", 0, "NONE"),
+    "S08": ("BENCHMARK_DRUG", "Intramuscular_50mg_Methylcobalamin_Early_Stage_LE12m_SOC_Benchmark", "CLINICAL_PROTOCOL_STANDARDIZATION", "MEASURED_HUMAN_RCT_SUBGROUP", 0, "NONE"),
     "C003": ("BENCHMARK_DRUG", "Withdrawn_Ezogabine_Kv7_2_7_3_Cortical_TMS_SICI_and_SDTC_PD_Calibrator", "CLINICAL_PROTOCOL_STANDARDIZATION", "MEASURED_HUMAN_PK_AND_IPSC_SCREEN", 0, "NONE"),
     "C017": ("BIOMARKER_CSF", "Living_CSF_rs3831317_Adjusted_CHIT1_GPNMB_CHI3L1_CHI3L2_Staging_and_Glia_Panel", "TRANSLATIONAL_BIOMARKER_OR_PH1B_PKPD_GATE", "MEASURED_HUMAN_CSF_PROTEOMICS", 1, "PROSPECTIVE_LONGITUDINAL_PD_SLOPE_CALIBRATION_UNDER_RS3831317_GENOTYPING"),
 }
@@ -100,9 +102,9 @@ PHASE3A_NEXT_TEST_OVERRIDES: dict[str, str] = {
         "(3) Gate Stage 2 21 CFR 300.50 genotype-stratified 2-plex vs 3-plex uptake/Ca2+/DRG safety (multiplex polyanion/DRG margin target EC80<=3 mg/strand = 6-9.0 mg total vs unvalidated 24-48 mg hazard, noting single-agent Spinraza 12-50 mg PMID:41634391 & Tofersen 100 mg PMID:36129998 precedents) and parallel oral SARM1 T-lock combination (bracketing 1.0x parallel Bliss survival additivity per Krus 2022 PMID:35767949 & Matson & Holzbaur 2026 10.64898/2026.11.07.764673 [PREPRINT] to ~2-7x [med ~3x] NMNAT2-transport-coupled MWC bounds per Beccari 2025 PMID:40392845 [MODEL_PRIOR])."
     ),
     "S07": (
-        "(1) Complete pre-Phase-3 CLSI EP09c (N>=40 paired ALS CSFs spanning the measuring interval) Passing-Bablok analytical bridging from MIROCALS BioVendor ELISA CSF pNfH (~79th percentile, <=3,700 pg/mL: n=173/220 [n=19 <750 LLOQ with 0 deaths + n=154 750-3,700 HR=0.52 p=0.016], pooled HR=0.57 p=0.037 vs >3,700 n=47 [33/90 deaths] HR=1.37 p=0.38; continuous interaction p=0.0011, ALSFRS-R slope interaction F=3.95 p=0.048, PMID:40354799) to automated CLIA immunoassays (Ella/Euroimmun/Simoa/MSD; resolving ~1.8x-4.5x inter-platform calibrator offsets, PMID:31251725, PMID:29054919; cf. MSD ECLIA cited in Al Khleifat et al. 2026 J Neurol PMID:42836993 where TRICALS shares r^2=12.7% with CSF pNfH and nested pNfH x trt dChi2=14.24 vs TRICALS x trt dChi2=4.76), plus paired immunoassay validation before substituting blood NfL or pNfH for CSF pNfH (noting Trautwig 2025 PMC12082929 tryptic CSF MS NEFL-NEFH r=0.278 across n=77 DIA / n=51 overlapping Emory TMT vs clinical immunoassay serum NfL-CSF pNfH rho=0.64-0.71 PMID:38683209 and serum NfL outperforming serum pNfH on ALSFRS-R slope PMID:32385188; post-hoc NX210c SEALS NCT06365216 NfL<=95 pg/mL p=0.062); "
-        "(2) Treat Phase 2/3 ALSTARS (NCT07161999, N=137 enrolled, prospectively stratified across 3 baseline serum NfL tiers on 24-wk ALSFRS-R) as mechanistically distinct because COYA 302 pairs 1 MIU rhIL-2 with 125 mg CTLA4-Ig (q14d synchronous Regimen 2 PMID:38915796 vs q28d staggered Regimen 1; <0.5% BBB entry, CD28 blockade PMID:30683697/PMID:36920087 vs IL-2 STAT5 rescue PMID:42086904; note MIROCALS sustained Day-112 trough Tregs across a 23-d IL-2-free cycle, p<0.0001) without baseline CSF pNfH exclusion or a single-agent IL-2 comparator arm; "
-        "(3) Execute an event-driven biomarker-enriched Phase 3 ALS survival RCT powered for 247 deaths at conservative unadjusted HR=0.70 (80% power; 138 deaths at HR=0.62 [MODEL_PRIOR]; N~650-750 over 36-42 mo variable follow-up or N~850-1,050 at 24 mo, <5% vital-status censoring, accounting for 0 deaths in <750 pg/mL n=19/220 MIROCALS LLOQ floor and pre-specifying complementary TRICALS + log[CSF pNfH] covariates — whereas hypothetical unbridged 1.8x-4.5x lower-reading CSF cutoffs admit 74-99% of >3,700 pg/mL patients and reduce 247-death one-sided superiority power to ~43-50% if HR_high=1.00 or ~14-23% if HR_high=1.37 [MODEL_PRIOR]) with longitudinal Treg TSDR (PMID:17694575), CD56bright NK, and serum sCD25 (PMID:32651161; PMID:22343569) monitoring."
+        "(1) Complete pre-Phase-3 CLSI EP09c (N>=40 paired ALS CSFs spanning the measuring interval) Passing-Bablok analytical bridging from MIROCALS BioVendor ELISA CSF pNfH (~79th percentile, <=3,700 pg/mL visually defined from baseline distribution blinded to survival: n=173/220 [78.6% LP / 173/304 = 56.9% screened; n=19 <750 LLOQ with 0 deaths + n=154 750-3,700 HR=0.52 p=0.016], pooled HR=0.57 p=0.037 vs >3,700 n=47 [33/90 deaths] HR=1.37 p=0.38; unadjusted ITT HR=0.81 p=0.33, continuous interaction p=0.0011, ALSFRS-R slope interaction F=3.95 p=0.048, PMID:40354799) to automated CLIA immunoassays (Ella/Euroimmun/Simoa/MSD; resolving ~1.8x-4.5x inter-platform calibrator offsets, PMID:31251725, PMID:29054919; cf. MSD ECLIA cited in Al Khleifat et al. 2026 J Neurol PMID:42836993 where TRICALS shares r^2=12.7% with CSF pNfH and nested pNfH x trt dChi2=14.24 vs TRICALS x trt dChi2=4.76), plus paired immunoassay validation before substituting blood NfL or pNfH for CSF pNfH (noting Trautwig 2025 PMC12082929 tryptic CSF MS NEFL-NEFH r=0.278 across n=77 DIA / n=51 overlapping Emory TMT vs clinical immunoassay serum NfL-CSF pNfH rho=0.64-0.71 PMID:38683209 and serum NfL outperforming serum pNfH on ALSFRS-R slope PMID:32385188; post-hoc NX210c SEALS NCT06365216 NfL<=95 pg/mL p=0.062); "
+        "(2) Treat Phase 2/3 ALSTARS (NCT07161999, N=137 enrolled, prospectively stratified across 3 baseline serum NfL tiers on 24-wk ALSFRS-R) as mechanistically distinct because COYA 302 pairs 1 MIU rhIL-2 with 125 mg CTLA4-Ig (q14d synchronous Regimen 2 PMID:38915796 vs q28d staggered Regimen 1; <0.5% BBB entry, CD28 blockade PMID:30683697/PMID:36920087 vs IL-2 STAT5 rescue PMID:42086904; note MIROCALS sustained Day-112 trough Tregs p<0.0001 and plasma CCL2 p<0.05 [p<0.0001 at Days 8 & 120] across a 23-d IL-2-free cycle) without baseline CSF pNfH exclusion or a single-agent IL-2 comparator arm; "
+        "(3) Execute an event-driven biomarker-enriched Phase 3 ALS survival RCT powered for 247 deaths at assumed true HR=0.70 (80% two-sided alpha=0.05 superiority power, critical boundary HR_crit=0.779 [50% probability of observed HR<=0.70 at true HR=0.70]; 138 deaths at HR=0.62 [MODEL_PRIOR]; N~650-750 over 36-42 mo variable follow-up or N~850-1,050 at 24 mo, <5% vital-status censoring, accounting for 0 deaths in <750 pg/mL n=19/220 MIROCALS LLOQ floor and pre-specifying complementary TRICALS + log[CSF pNfH] covariates — whereas hypothetical unbridged 1.8x-4.5x lower-reading CSF cutoffs admit 74-99% of >3,700 pg/mL patients and reduce 247-death one-sided superiority power to ~43-50% if HR_high=1.00 or ~14-23% if HR_high=1.37 [MODEL_PRIOR]) with longitudinal Treg TSDR (PMID:17694575), CD56bright NK, and serum sCD25 (PMID:32651161; PMID:22343569) monitoring."
     ),
     "C022": (
         "(1) Quantify cytosolic DNAJB2a vs Intron-9-retaining ER-prenylated DNAJB2b precursor ratios by targeted PRM/RT-ddPCR in sporadic ALS vs control human spinal cord (beyond n=10 C9-FTD frontal cortex; 0/6 TDP-43 cryptic/APA events and 25/25 shared-exon ClinVar P/LP vs 0/25 in Zone A; gating zero-sum ERAD DNAJB2b depletion risk); "
@@ -110,7 +112,7 @@ PHASE3A_NEXT_TEST_OVERRIDES: dict[str, str] = {
     ),
     "C015": (
         "(1) Exclude Alu-derived G2E3 Intron-1 windows from 3-plex SSO (#1 chr14:30563747-30563764(+) & #2 chr14:30563930-30563947(+) FAIL_EXACT_0MM_OFFTARGET; #3 chr14:30563939-30563956(+) WARN_1MM_OR_WOBBLE_CONSTRAINED_NEURONAL ELOC); "
-        "(2) Run bidirectional CRISPRi/CRISPRa and allele-specific prime-editing dissection of chr14q12 SCFD1 vs G2E3 across paired isogenic human iPSC-MNs and LPS-stimulated human iMGL measuring ER-Golgi secretory and lysosomal-enzyme trafficking (given SuSiE purityMeanR2=0.988 & COLOC H4=0.958 proving rs229243-A, cross-ancestry lead rs229195-A [PIP=0.240], rs229194-A, and MN ISL1-peak rs229143-A co-segregate in phase on one risk haplotype driving MN +0.048 vs iMGL -0.22 to -0.33 SCFD1 opposition in Perez-Alcantara 2026 Nat Genet PMID:43045849, with SCFD1 Chronos=-1.26 barring pan-CNS knockdown)."
+        "(2) Run bidirectional CRISPRi/CRISPRa and allele-specific prime-editing dissection of chr14q12 SCFD1 vs G2E3 across paired isogenic human iPSC-MNs and LPS-stimulated human iMGL measuring ER-Golgi secretory and lysosomal-enzyme trafficking (given SuSiE purityMeanR2=0.988 & EUR-vs-xAnc GWAS COLOC H4=0.958 alongside 1000G Phase 3 EUR 96.7% [351/363] vs AFR 72.7% [853/1,173; 320 mixed] 1111 A-haplotype purity across rs229243-A, x-anc lead rs229195-A [PIP=0.240], rs229194-A, and MN ISL1-peak rs229143-A, paired with MN +0.048 vs iMGL -0.22 to -0.33 [PP_H4=0.88-0.89] SCFD1 opposition in Perez-Alcantara 2026 Nat Genet PMID:43045849, with SCFD1 Chronos=-1.26 barring pan-CNS knockdown)."
     ),
     "C023": (
         "(1) Execute allele-split 19F-NMR/DSF ternary pocket-stabilizer screening in rare (<0.1%) YKT6 p.Tyr64Cys knock-in human iPSC-MNs (PDB 3KYQ -85.1 A^3 cavity + 3.46A Cys64-Cys66 disulfide trap), verifying ternary [YKT6-Cys195-farnesyl + fragment] co-occupancy without ejecting endogenous Cys195-farnesyl or blocking PTAR1; "
@@ -122,7 +124,7 @@ PHASE3A_NEXT_TEST_OVERRIDES: dict[str, str] = {
     ),
     "C019": (
         "(1) Resolve the JAK1-vs-neuronal-JAK2 catch-22 at clinically reachable unbound human CSF concentrations (3.8-50 nM; modeled ~9% whole-cell pSTAT occupancy at 4 mg [MODEL_PRIOR] vs 2,500 nM screen) by testing Kp,uu-verified JAK2-sparing selective JAK1 JH1 inhibitors vs Baricitinib comparator and CRISPRi JAK1/JAK2/AAK1 knockdowns across BOTH glia-free sALS iPSC-MNs & reactive ALS-Glia co-cultures; "
-        "(2) Complete bridged pg/mL immunoassay calibration of the rs3831317-neutral high-chitinase CSF glial stratum (Trautwig sALS-vs-Ctrl OOF AUC=0.8188, MGH-adj AUC=0.885; noting living-CSF-to-postmortem cortical ALS-Glia subtype concordance is unproven and distinct from Thompson 2019 PMID:31123140 mimic AUC=0.51-0.92 [0.688 ext]) before any VTE-prophylaxed Phase 2 interaction RCT."
+        "(2) Complete bridged pg/mL immunoassay calibration of the rs3831317-neutral high-chitinase CSF glial stratum (Trautwig Emory leak-free sALS-vs-Ctrl OOF AUC=0.8188; target-site MGH-recalibrated AUC=0.885 [LOO=0.8801; bank-only non-MGH indicator=0.9444]; noting living-CSF-to-postmortem cortical ALS-Glia subtype concordance is unproven and distinct from Thompson 2019 PMID:31123140 mimic AUC=0.51-0.92 [0.688 ext]) before any VTE-prophylaxed Phase 2 interaction RCT."
     ),
     "C020": (
         "(1) Execute a strict 14-day postmitotic human C9orf72 and sALS iPSC-MN ClC-7 vacuole, ATG16L1-catalyzed LC3B CASM, and LRRK2 pRab10-Thr73 washout half-life kill-gate under intermittent q48h-q72h nanomolar Apilimod (resolving the [MODEL_PRIOR] ODE sensitivity where 6.5-8.0 nM unbound Cmax passes ~79% [64/81] in decoupled dead-zone Model 1 vs ~30% [24/81] at matched 10-20h repair and 0% [0/81] at 24-48h postmitotic repair in zero-dead-zone coupled +PI(3)P->LRRK2/CASM Model 2; PMID:42900584; Kuwahara 2026 Life Sci Alliance PMID:42994990, 10.26508/lsa.202603939); "
@@ -179,7 +181,7 @@ def portfolio_sort_key(row: dict[str, str], p3a_rank_map: dict[str, int], dn_idx
     if t_ord == 3:
         h_cnt = int(row["unsolved_hurdle_count"])
         is_screen_rep = 1 if row["primary_evidence_basis"] == "MEASURED_HUMAN_PK_AND_IPSC_SCREEN" else 0
-        is_sub_fdr_screen = 1 if pid in {"DN-14"} else 0
+        is_sub_fdr_screen = 1 if pid in {"DN-14", "DN-17", "DN-19"} else 0
         is_spinal_mn_cryptic = 0 if pid == "DN-05" else 1
         is_cis_target = 0 if row["candidate_type"] in {"GENE_CIS_SPLICE", "GENE_CIS_APA"} else 1
         return (t_ord, is_screen_rep, is_sub_fdr_screen, h_cnt, is_spinal_mn_cryptic, is_cis_target, ev_ord, src_ord, pid)

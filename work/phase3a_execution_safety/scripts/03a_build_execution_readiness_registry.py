@@ -39,7 +39,7 @@ def main() -> None:
 
     c019_gate = (
         f"rs3831317-neutral Emory leak-free sALS vs Ctrl OOF AUC={oof['oof_roc_auc']} (n={oof['n_sals']+oof['n_ctrl']}); "
-        f"MGH-offset-adj external sALS/ALS vs Ctrl AUC={ext_adj['roc_auc']} (n={ext_adj['n_total']}; cross-sectional C9 Symp-vs-Asym AUC={c9_adj['roc_auc']}, n={c9_adj['n_total']}; "
+        f"target-site MGH-recalibrated external ALS vs Ctrl AUC={ext_adj['roc_auc']} (LOO={dec_ext['leave_one_mgh_control_out_target_site_recalibrated_auc']}, n={ext_adj['n_total']}; bank-only non-MGH indicator AUC={dec_ext['bank_only_non_mgh_negative_control_auc']}; cross-sectional C9 Symp-vs-Asym AUC={c9_adj['roc_auc']}, n={c9_adj['n_total']}; "
         f"Oh2023 univariate {oh['n_bridge_proteins_fdr_lt_0_05']}/5 FDR<=0.044); pure MGH Ctrl drift={mgh_d:+.2f}z & sALS-p80 passes {100*p80['emory_sals_pass_at_sals_p80']:.1f}% Emory sALS"
     )
 
@@ -51,7 +51,7 @@ def main() -> None:
          ["HUMAN_PH1B_UNBOUND_CSF_KPUU_TROUGH_CADPR_WASHOUT_AND_ZERO_NFL_REBOUND_FOR_TLOCK",
           "PROSPECTIVE_SEQUENCING_EXCLUSION_OF_LT1PCT_CONSTITUTIVE_ARM_BROKEN_GOF_CARRIERS"],
          "SINGLE_ENTITY_ORAL_TLOCK_PH1B_GENOTYPE_GATED_BEFORE_STAGE2_STMN2_COMBINATION",
-         "PDB 9TZY 3-chain BEXi adduct 17 filament activation (122/122 sub-IC50 spike, ~2.8x WT empirical median PMID:42380237) excluded; benchmarks undisclosed SIR2501 (CTR20253552/NCT07765446/SfN 2026 PSTR091) on Cys311Ala non-covalency + CD38 plasma cADPR ([MODEL_PRIOR] >90-95% ecto-CD38 fluid share caps 90% selective SARM1 drop at ~5-10%) + 48-72h oral washout & WT vs <1% p.L223P ARM-GoF (~30-40% residual NADase ceiling at 100x Kd [MODEL_PRIOR]) sequencing gate",
+         "PDB 9TZY 3-chain BEXi adduct 17 filament activation (122/122 sub-IC50 activation with median 8.6x [IQR 5.1-9.7] IC50/C_act shift, PMID:42380237) excluded; benchmarks undisclosed SIR2501 (CTR20253552/NCT07765446/SfN 2026 PSTR091) on Cys311Ala non-covalency + CD38 plasma cADPR ([MODEL_PRIOR] >90-95% ecto-CD38 fluid share caps 90% selective SARM1 drop at ~5-10%) + 48-72h oral washout & WT vs <1% p.L223P ARM-GoF (~30-40% residual NADase ceiling at 100x Kd [MODEL_PRIOR]) sequencing gate",
          "Intrathecal_SARM1_RNaseH_Gapmer_ASO", "Gapmer_IT_radiculitis_myelitis_and_CSF_pleocytosis_class_risk",
          "Invasive_chronic_lumbar_IT_dosing_with_5_to_10x_rostral_cortical_gradient", "Slow_axonal_SARM1_protein_clearance_delays_acute_NADase_arrest",
          "TIER_1_ACTIONABLE_NOW"),

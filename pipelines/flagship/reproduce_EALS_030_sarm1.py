@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from _flagship_common import ROOT, assert_close, has_raw_dataset, load_csv_by_key, load_json_any, print_audit_report
+from _flagship_common import ROOT, assert_close, assert_equal, has_raw_dataset, load_csv_by_key, load_json_any, print_audit_report
 
 
 def mwc_bexi_8mer(u: float, l0: float) -> float:
@@ -69,18 +69,18 @@ def main() -> None:
         n_chains_obs, loeuf = n_chains_cached, loeuf_cached
 
     checks = [
-        ("Portfolio Actionable Rank & Decision", f"#{port['unified_rank']} ({port['decision']})", "#1 (KEEP_CORE)", "PASS"),
+        assert_equal("Portfolio Actionable Rank & Decision", f"#{port['unified_rank']} ({port['decision']})", "#1 (KEEP_CORE)"),
         assert_close(f"[MEASURED:{src_tag}] PDB 9TZY single BEXi adduct bridged TIR chains", n_chains_obs, 3.0, rtol=1e-6),
         assert_close("[MEASURED] Open Targets (gnomAD) SARM1 LOEUF", float(loeuf), 1.1432, rtol=1e-3),
         assert_close("[MODEL_PRIOR] 8-mer BEXi sub-IC50 washout spike (ALS L=8, ~5x)", bexi_als_peak, 4.7268, rtol=1e-3),
         assert_close("[MODEL_PRIOR] 8-mer BEXi sub-IC50 washout spike (WT L=120, ~45x)", bexi_wt_peak, 44.62, rtol=0.02),
-        ("[MODEL_PRIOR] Allosteric T-Lock washout peak ratio <= 1.0 (0 spike)", tlock_max_ratio <= 1.0, True, "PASS"),
+        assert_equal("[MODEL_PRIOR] Allosteric T-Lock washout peak ratio <= 1.0 (0 spike)", tlock_max_ratio <= 1.0, True),
         assert_close("[MODEL_PRIOR] Default Krus 2022 Bliss independence (0.45 + 0.70)", bliss_survival, 0.835, rtol=1e-6),
     ]
     if (ROOT / "data/pharmacology_structures/phase2_pdb/pdb_00009tzy.cif").is_file():
         from carbon_als.mmcif_parser import load_mmcif_structure
         cif9 = load_mmcif_structure(ROOT / "data/pharmacology_structures/phase2_pdb/pdb_00009tzy.cif")
-        checks.append(("Raw mmCIF PDB 9TZY polymer chains verified", len({a.chain_id for a in cif9.polymer_atoms}) >= 3, True, "PASS"))
+        checks.append(assert_equal("Raw mmCIF PDB 9TZY polymer chains verified", len({a.chain_id for a in cif9.polymer_atoms}) >= 3, True))
 
     print_audit_report(
         "EALS-030", "SARM1 Non-Covalent ARM-TIR T-Lock", checks,

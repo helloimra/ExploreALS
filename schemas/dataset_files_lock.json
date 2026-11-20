@@ -785,8 +785,18 @@
     "local_relpath": "data/transcriptomics/edinburgh_gse290359_pseudobulk",
     "is_dir": true,
     "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
-    "sha256": "eb68888b5ad879fed79162c2b7c4758465e1d8a9094ed7432894b222ace2e6e3",
+    "sha256": "e002a96ec039fc318e51b26617a6703ae18dcc937c921411d904a2360e769650",
     "files": [
+      {
+        "rel": "MANIFEST.tsv",
+        "size_bytes": 9270,
+        "sha256": "aeda69dd0fe89f145762787403dbaeb583ca5ddd5a08f50c41c3d9df4c3813b0"
+      },
+      {
+        "rel": "PROJECT_MANIFEST.tsv",
+        "size_bytes": 11645,
+        "sha256": "2eb32e0ba9436f111c08056ff19d4cbabb6774783b39f04e0770310c2fc199f4"
+      },
       {
         "rel": "celltypes.tsv",
         "size_bytes": 185,
@@ -828,11 +838,6 @@
         "sha256": "9d7454359387ee4e120a20cc709abf47fbfafd100c486ffb476903030c32845e"
       },
       {
-        "rel": "MANIFEST.tsv",
-        "size_bytes": 9270,
-        "sha256": "aeda69dd0fe89f145762787403dbaeb583ca5ddd5a08f50c41c3d9df4c3813b0"
-      },
-      {
         "rel": "nuclei_qc.tsv",
         "size_bytes": 30335,
         "sha256": "90b05e8a42dc295258061238da5102994a3f2f71a051a7311e7ade390bbe7fbe"
@@ -841,11 +846,6 @@
         "rel": "nuclei_qc_fine.tsv",
         "size_bytes": 41385,
         "sha256": "a9e3fa24583940de43c64fdfc0c72690c21c4db6aa0642c1c9193cb1fb3d9963"
-      },
-      {
-        "rel": "PROJECT_MANIFEST.tsv",
-        "size_bytes": 11645,
-        "sha256": "2eb32e0ba9436f111c08056ff19d4cbabb6774783b39f04e0770310c2fc199f4"
       },
       {
         "rel": "pseudobulk/CGND-HRA-02745_BA44.pseudobulk.tsv.gz",
@@ -1492,7 +1492,7 @@
     "local_relpath": "data/genomics_splicing/tdp43_cryptic_sources",
     "is_dir": true,
     "tier": "TIER_B_PUBLISHER_HTTPS_FETCH",
-    "sha256": "9c45fc91bd44af66a50ea6b7e38757a22395eb90a899e1865e9a628d3bcac2bc",
+    "sha256": "5eabe94a79c3b691e3fde86861d72bf633d6d793c8308f4ead43f18f9ecc6563",
     "files": [
       {
         "rel": "Brown2022_41586_2022_4436_MOESM10_ESM.xls",
@@ -1555,11 +1555,6 @@
         "sha256": "8348ca64484944c438d5e02e5ae8d9f52d7c7b4528b46ca28bbec351e32db6c4"
       },
       {
-        "rel": "liu2019_supplement2.md",
-        "size_bytes": 132795,
-        "sha256": "3b79560872ef604dcde6c431471793800ef2e32bfd988a6a806d022d1f294021"
-      },
-      {
         "rel": "Ma2022_41586_2022_4424_MOESM1_ESM.pdf",
         "size_bytes": 896786,
         "sha256": "84c2c3175967b7b9c447494b15b7ca53df7a2d1ef6149cc7ea32d6341f79c8b6"
@@ -1578,11 +1573,6 @@
         "rel": "Ma2022_41586_2022_4424_MOESM7_ESM.xlsx",
         "size_bytes": 11071,
         "sha256": "8f99bb4e99a30250763913e3fcdd3081b1040d2b5d5dd849b7699899b98875d2"
-      },
-      {
-        "rel": "manifest.csv",
-        "size_bytes": 20600,
-        "sha256": "e6821866f1b220a374b08ec769a955a3136bc3adecf27fe5e21b92fc94675893"
       },
       {
         "rel": "Melamed2019_41593_2018_293_MOESM3_ESM.xlsx",
@@ -1608,6 +1598,16 @@
         "rel": "Melamed2019_41593_2018_293_MOESM7_ESM.xlsx",
         "size_bytes": 12575,
         "sha256": "3a688c81bf4b4f59f5a0995c6571974c104b6a46203f11fae23c99af6f2be6ca"
+      },
+      {
+        "rel": "liu2019_supplement2.md",
+        "size_bytes": 132795,
+        "sha256": "3b79560872ef604dcde6c431471793800ef2e32bfd988a6a806d022d1f294021"
+      },
+      {
+        "rel": "manifest.csv",
+        "size_bytes": 20600,
+        "sha256": "e6821866f1b220a374b08ec769a955a3136bc3adecf27fe5e21b92fc94675893"
       },
       {
         "rel": "source_data/Brown2022_41586_2022_4436_MOESM15_ESM.xlsx",
@@ -1749,13 +1749,8 @@
     "local_relpath": "data/genomics_splicing/fujita_oligodendrocyte",
     "is_dir": true,
     "tier": "TIER_C_DUA_OR_BASELINE",
-    "sha256": "04f0a6e65f0106b217c090adc7746df37e884d77d74345dc30cdd26209d22b35",
+    "sha256": "ec1cfeaa4ab512062561cb5091fa810a464362661f2fb3865cb4986207203558",
     "files": [
-      {
-        "rel": "common_variants.GRCh38.tsv",
-        "size_bytes": 429469,
-        "sha256": "2af23f04433027995f135ce84a55eb0924ae5798099d4a09684cddb7562ec1fa"
-      },
       {
         "rel": "MOBP.Oli.all_associations.tsv",
         "size_bytes": 366932,
@@ -1770,6 +1765,11 @@
         "rel": "RPSA.Oli.all_associations.tsv",
         "size_bytes": 366418,
         "sha256": "5d093e9f7f386ad91f3c0aaf2e2a480fe5d6f1eb8004ffb527ad7a0199150147"
+      },
+      {
+        "rel": "common_variants.GRCh38.tsv",
+        "size_bytes": 429469,
+        "sha256": "2af23f04433027995f135ce84a55eb0924ae5798099d4a09684cddb7562ec1fa"
       },
       {
         "rel": "tested_gene_inventory.csv",

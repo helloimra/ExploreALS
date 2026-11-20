@@ -29,7 +29,7 @@ def main() -> None:
 
     ev_map["EV-B1-001"].update({
         "source_id_or_locator": "DS_CRYPTIC:Brown2022_MOESM11;PMID:35197628;DOI:10.1038/s41586-022-04436-3",
-        "notes": "Paired Brown 2022 canonical dPSI=-0.5868 (FDR=1.50e-13), RNA log2FC=-0.2508 (padj=1.14e-5), Ribo-seq log2FC=-0.7811 (padj=0.0296); replicated in Ma 2022 MAJIQ dPSI=0.779; Keuss et al. 2026 (Nature, PMID:43015463, 10.1038/s41586-026-11256-2) show isolated Intron-20 CE deletion (~75% protein rescue; >30% physiological threshold) and 18/21-nt 2'-O-MOE ASOs restore presynaptic UNC13A, mEPSC frequency, evoked AMPA eEPSCs, and MEA network synchrony in human cortical/spinal MNs and hUNC13A mice while postsynaptic mEPSC amplitude reduction remains unrescued (and single-target editing leaves orthogonal STMN2/KCNQ2 pathways unaddressed). [Sample context: i3Neuron TDP-43 KD vs Ctrl replicates (Brown 2022 MOESM11)]",
+        "notes": "Paired Brown 2022 canonical dPSI=-0.5868 (FDR=1.50e-13), RNA log2FC=-0.2508 (padj=1.14e-5), Ribo-seq log2FC=-0.7811 (padj=0.0296); replicated in Ma 2022 MAJIQ dPSI=0.779; in cellular & humanized mouse assays, Keuss et al. 2026 (Nature, PMID:43015463, 10.1038/s41586-026-11256-2) show isolated Intron-20 CE deletion (~75% protein rescue; >30% cellular synaptic threshold) and 18/21-nt 2'-O-MOE ASOs (~35.8% full-length splicing / ~62.2% protein in patient iPSC-MNs, Fig. 3c,f) restore presynaptic UNC13A, mEPSC frequency, evoked AMPA eEPSCs, and MEA network synchrony (noting Fig. 4c-e p=0.052 on one motor-neuron electrophysiology sub-panel, while postsynaptic mEPSC amplitude reduction and orthogonal STMN2/KCNQ2 pathways remain unrescued). [Sample context: i3Neuron TDP-43 KD vs Ctrl replicates (Brown 2022 MOESM11)]",
     })
     ev_map["EV-B1-004"].update({
         "cohort_and_stratum": "Spillman 2026 C9-FTD vs Control frontal cortex homogenate RNA-seq (10 C9-FTD vs 10 Ctrl)",
@@ -62,16 +62,24 @@ def main() -> None:
     ev_map["EV-P2-T4-001"].update({
         "source_id_or_locator": "DS_EDIN_PB;DS_PDB_4KC3;GENCODE_v46;PMID:42551425;PMID:23980170;PMID:41765683",
         "cohort_and_stratum": "UMI-pooled donor-collapsed Edinburgh cortical endothelium (n=28 unique donors at min_nuclei>=10: 21 non-C9 sALS vs 7 Ctrl, XIST/UTY-verified, PMID:42551425) & PDB 4KC3 IL-33-ST2 complex",
-        "effect_estimate": "Endo diff_log2CPM=+3.1067 (p=0.00698; all ALS +2.8427, p=0.0115, n=30; n=7 Ctrl caveat; XIST/UTY swap-immune H5AD); 4KC3 30 ST2 D1-D3 contacts (10 Cys = 5 closed disulfides, Cys327 in 324-SKECF-328 unpaired) -> at perivascular 400pM sST2 (vs ~5pM bulk CSF PMID:37117777), [MODEL_PRIOR] 5nM pan-ST2 suppresses Treg ST2L (3.2%->0.32%) vs 80% RNA suppression (11.8%) or intact-FcRn sweeping (28.2%)",
+        "effect_estimate": "Endo diff_log2CPM=+3.1067 (p=0.00698; all ALS +2.8427, p=0.0115, n=30; n=7 Ctrl caveat; XIST/UTY swap-immune H5AD); 4KC3 (resolved aa 21-317) 30 ST2 D1-D3 contacts (10 Cys = 5 closed disulfides, leaving sequence-deduced Cys327 in 324-SKECF-328 unpaired) -> at perivascular 400pM sST2 (vs ~5pM bulk CSF PMID:37117777), [MODEL_PRIOR] 5nM pan-ST2 suppresses Treg ST2L (3.2%->0.32%) vs 80% RNA suppression (11.8%) or intact-FcRn sweeping (28.2%)",
         "p_value": "0.00698",
         "sample_size_n": "28",
-        "notes": "GENCODE v46 1-based GTF maps soluble sST2 (ENST00000311734.6) to intron-8 polyA exon chr2:102343270-102346100(+) (AATAAA 102346074-102346079(+); Zone 1 PAS #1 chr2:102346045-102346062(+) Clean >=2mm; Zone 2 Exon-8 5'SS 102343400-102343435(+) & nuclear Intron-8 gapmers prohibited; human sST2 324-SKECF-328 carries unpaired 11th extracellular Cys327 plus sole 4/5 C-terminome homolog SLC3A2 -SKEDF across 89,484 transcripts, whereas pan-ST2 astegolimab missed Phase 3 ARNASA p=0.068 PMID:42150581). [Sample context: 28 unique donors at min_nuclei>=10 (21 non-C9 sALS vs 7 Ctrl)]",
+        "notes": "GENCODE v46 1-based GTF maps soluble sST2 (ENST00000311734.6) to intron-8 polyA exon chr2:102343270-102346100(+) (AATAAA 102346074-102346079(+); Zone 1 PAS #1 chr2:102346045-102346062(+) Clean >=2mm; Zone 2 Exon-8 5'SS 102343400-102343435(+) & nuclear Intron-8 gapmers prohibited; PDB 4KC3 resolves aa 21-317 [construct aa 321] with 10/10 D1-D3 Cys paired, so Cys327 in 324-SKECF-328 is sequence-deduced as an odd 11th unpaired thiol [ALS CSF redox state unmeasured] alongside sole 4/5 C-terminome homolog SLC3A2 -SKEDF across 89,484 transcripts, whereas pan-ST2 astegolimab missed Phase 3 ARNASA p=0.068 PMID:42150581). [Sample context: 28 unique donors at min_nuclei>=10 (21 non-C9 sALS vs 7 Ctrl)]",
     })
     ev_map["EV-B3-006"]["sample_size_n"] = ""
     ev_map["EV-B3-007"]["notes"] = (
         ev_map["EV-B3-007"]["notes"].split("; Thompson 2019")[0]
         + "; Thompson 2019 (PMID:31123140) shows standalone CSF chitinase AUC spans 0.51-0.92 (0.688 vs neurological ALS mimics), confirming symptomatic staging/PD utility rather than standalone mimic diagnosis."
     )
+    ev_map["EV-B3-017"]["notes"] = ev_map["EV-B3-017"]["notes"].replace(
+        "WashU & UMilan contributed 63 ALS, 0 Controls",
+        "UMilan contributed 31 ALS / 0 Controls and WashU contributed 26 ALS + 2 Controls + 4 asymptomatic carriers",
+    )
+    ev_map["EV-B3-020"].update({
+        "effect_estimate": "MERIDIAN Week 52 CAFS rank LS mean diff -3.0 (123.0 vs 126.0, 95% CI -19.5 to +13.5); C3 LOEUF=0.552",
+        "notes": "N=249 enrolled / N=247 mITT analyzed: SC pegcetacoplan (1,080 mg BIW, ~43.5 kDa PEGylated peptide, <0.1% intact-BBB entry, Liver C3=1,575.28 TPM sink) missed Week 52 primary CAFS rank score (123.0 [SE 4.71] vs 126.0 [SE 6.89], ANCOVA LS mean diff -3.0, p=0.7205) and all secondary endpoints alongside Phase 3 CHAMPION-ALS ravulizumab (NCT04248465) & Phase 2/3 HEALEY zilucoplan (NCT04436497, PMID:39960672) futility.",
+    })
     ev_map["EV-B3-022"].update({
         "cohort_and_stratum": "Zhang 2026 human cervical spinal cord 55-um multicellular TDP-43+ anterior horn Visium spots (N=14 donors)",
         "assay_and_contrast": "Spot-level spatial differential expression ALS vs HC on C1QB (with C1QA/C1QC/C3/C4B in notes)",
@@ -87,7 +95,11 @@ def main() -> None:
         "epistemic_weight": "MODERATE",
         "notes": "Postmortem neuropathology of 6 oral CuATSM-treated (72 mg/d) ALS trial decedents vs 6 untreated ALS comparators showed no significant reduction in pTDP-43 pathology or motor neuron loss (small observational autopsy series, not randomized clinical efficacy). [Sample context: 6 CuATSM-treated vs 6 untreated ALS postmortem cases]",
     })
-    ev_map["EV-B6-043"]["notes"] = "Constitutively active SARM1 ARM-domain GoF variants enrich in human ALS while gnomAD v4 shows no strong population depletion of heterozygous pLoF variants (LOEUF=1.143; distinct from clinical biallelic KO phenotyping or chronic pharmacological inhibition)."
+    ev_map["EV-B6-043"].update({
+        "cohort_and_stratum": "Human ALS rare-variant cohorts, Open Targets & gnomAD v4.1",
+        "effect_estimate": "OT genetic_score=0.195; Open Targets LoF=60/65.1 (LOEUF=1.143, pLI=2.75e-19; gnomAD v4.1 MANE LOEUF=1.413, 60/52.6)",
+        "notes": "Constitutively active SARM1 ARM-domain GoF variants enrich in human ALS while Open Targets / legacy constraint (LOEUF=1.143, 60/65.1) and gnomAD v4.1 MANE (LOEUF=1.413, 60/52.6) show no population depletion of heterozygous pLoF variants (distinct from clinical biallelic KO phenotyping or chronic pharmacological inhibition).",
+    })
     ev_map["EV-B6-044"].update({
         "epistemic_weight": "MODERATE",
         "notes": "Elevated SARM1 protein in small-sample C9FTD iPSC-neurons (n=3 vs 3, p=0.0268); note Stmn2 depletion acts in a parallel pathway rather than linearly lowering axonal NMNAT2 or activating SARM1 in mouse motor axons (Krus et al. 2022 PMID:35767949); end-stage NYGC Frontal RNA=-0.3066 reflects projection-neuron dropout.",
@@ -95,14 +107,18 @@ def main() -> None:
     ev_map["EV-B6-045"].update({
         "cohort_and_stratum": "Clinical SARM1 programs (LY3873862 NCT05492201 completed N=84 HV + ALS Ph1 NYR NCT07883590; NB-4746 ALS Ph1/2 NCT07369076; SIR2501 ALS Ph1b/2a CTR20253552 + CIPN Ph2 NCT07765446) & 2026 medchem audit",
         "effect_estimate": "3 clinical SARM1 programs (Lilly LY3873862 NCT07883590 [ALS Ph1 NYR; N=84 HV NCT05492201 completed]; Nura/TRICALS NB-4746 NCT07369076; Sironax allosteric SIR2501 CTR20253552/NCT07765446) + preclinical ASHA-624",
-        "notes": "Moderate clinical crowding across 2 orthosteric and 1 allosteric SARM1 programs; PMID:42156967 (PDB 9TZY BEXi adduct 17) and PMID:42380237 (~2.8x WT empirical sub-IC50 spike) warn orthosteric base-exchange scaffolds risk sub-inhibitory SARM1 activation, favoring non-covalent inter-protomer ARM-TIR allosteric T-lock glues (ASHA-624 class; covalent Cys311 PDB 7DJT serves strictly as a structural octamer benchmark).",
+        "notes": "Moderate clinical crowding across 2 orthosteric and 1 allosteric SARM1 programs; PMID:42156967 (PDB 9TZY BEXi adduct 17) and PMID:42380237 (122/122 BEIs across 7 series activate SARM1 below IC50 with median 8.6-fold [IQR 5.1-9.7] IC50/C_act separation) warn orthosteric base-exchange scaffolds risk sub-inhibitory SARM1 activation, favoring non-covalent inter-protomer ARM-TIR allosteric T-lock glues (ASHA-624 class; covalent Cys311 PDB 7DJT serves strictly as a structural octamer benchmark).",
     })
-    ev_map["EV-P2-T2-002"]["notes"] = (
-        "Krus et al. 2022 (PMID:35767949) & Lopez-Erauskin et al. 2024 (PMID:37996528) prove Sarm1-/- does NOT rescue Stmn2-/- neurofilament collapse in vivo, "
-        "establishing parallel biological non-redundancy of STMN2 rescue + non-covalent ARM-TIR SARM1 T-locks (ASHA-624 class; covalent Cys311 PDB 7DJT used strictly as a structural benchmark, and ~2-7x MWC sparing framed as an illustrative sensitivity scenario)."
-    )
+    ev_map["EV-P2-T2-002"].update({
+        "source_id_or_locator": "RUN-P2-T2-002:mwc_8mer_epistasis;PMID:42380237;PMID:35767949;NCT07883590;NCT07369076",
+        "effect_estimate": "[MODEL_PRIOR] Illustrative low-reserve BEXi washout spike ~2.8x (L0=2.5; 8-mer ceiling ~45x WT / ~5x ALS; cf. Leahey 2025 PMID:42380237 empirical 8.6x [IQR 5.1-9.7] IC50/C_act concentration shift across 122 BEIs); T-lock=0 spike (~82% inhib at 0.3x Kd; IC90 ~0.45x Kd); STMN2+SARM1 spans 1.0x parallel plus-end Bliss lower bound to ~2-7x (med ~3x) NMNAT2-epistatic upper bound",
+        "notes": (
+            "Krus et al. 2022 (PMID:35767949) & Lopez-Erauskin et al. 2024 (PMID:37996528) prove Sarm1-/- does NOT rescue Stmn2-/- neurofilament collapse in vivo, "
+            "establishing parallel biological non-redundancy of STMN2 rescue + non-covalent ARM-TIR SARM1 T-locks (ASHA-624 class; covalent Cys311 PDB 7DJT used strictly as a structural benchmark, and ~2.8x low-reserve BEXi spike / ~2-7x MWC sparing framed strictly as uncalibrated illustrative sensitivity scenarios)."
+        ),
+    })
     ev_map["EV-P2-T1-001"]["notes"] = (
-        "Preserves C-terminal helices A-D while excising Trp236 (3.00A NE1-O3 H-bond / 2.97A closest CZ2-O3 contact to retigabine in PDB 7CR2) and inducing soma ER retention / impaired surface trafficking of KCNQ2-DeltaE5 (Joseph et al. 2025 PMID:41174170: ~44% current drop at 1:1 in CHO-KCNQ3; modeled 38.2% [2:2 Kv7.2:Kv7.3] to 61.8% [4:0 Kv7.2] poisoned channels at dPSI=0.2139 [MODEL_PRIOR]), "
+        "Preserves C-terminal helices A-D while excising Trp236 (3.00A NE1-O3 H-bond / 2.97A closest CZ2-O3 contact to retigabine in PDB 7CR2) and inducing soma ER retention / impaired surface trafficking of KCNQ2-DeltaE5 (Joseph et al. 2025 PMID:41174170 Fig. 3h: 117.3 vs 208.6 pA/pF at +40 mV = 56.2% residual current / 43.8% loss at 1:1 in CHO-KCNQ3; modeled 38.2% [2:2 Kv7.2:Kv7.3] to 61.8% [4:0 Kv7.2] poisoned channels at dPSI=0.2139 [MODEL_PRIOR]), "
         "imposing a surface-channel-density ceiling on small-molecule Kv7 pore openers."
     )
     ev_map["EV-B6-046"]["notes"] = (
@@ -110,11 +126,11 @@ def main() -> None:
     )
     ev_map["EV-B6-047"].update({
         "cohort_and_stratum": "MIROCALS BioVendor ELISA Low/Moderate CSF pNfH stratum (750-3700 pg/mL, n=154; <750 pg/mL LLOQ n=19 analyzed separately)",
-        "notes": "MIROCALS SAP pre-specified covariate-adjusted Cox + continuous CSF pNfH x Treatment interaction (adj HR=0.32, 95% CI 0.14-0.73, p=0.0070; interaction p=0.0011; unadjusted ITT HR=0.81, p=0.33), operationalized into 750-3700 pg/mL (HR=0.52, p=0.016, n=154, 57 deaths), <750 pg/mL LLOQ (n=19, 0 deaths; pooled <=3700 pg/mL n=173 HR=0.57, p=0.037), and >3700 pg/mL no demonstrated benefit (HR=1.37, 95% CI 0.68-2.75, p=0.38, n=47, 33/90 [36.7%] deaths; ALSFRS-R slope interaction F=3.95, p=0.048).",
+        "notes": "MIROCALS SAP pre-specified covariate-adjusted Cox + continuous CSF pNfH x Treatment interaction (adj HR=0.32, 95% CI 0.14-0.73, p=0.0070; interaction p=0.0011; primary unadjusted ITT HR=0.81, p=0.33), visually partitioned from baseline CSF pNfH distribution blinded to survival (mmc1.pdf pp. 13, 23) into 750-3700 pg/mL (HR=0.52, p=0.016, n=154, 57 deaths), <750 pg/mL LLOQ (n=19, 0 deaths; pooled <=3700 pg/mL n=173 HR=0.57, p=0.037), and >3700 pg/mL no demonstrated benefit (HR=1.37, 95% CI 0.68-2.75, p=0.38, n=47, 33/90 [36.7%] deaths; ALSFRS-R slope interaction F=3.95, p=0.048; Day-112 trough Tregs p<0.0001 and plasma CCL2 p<0.05 [p<0.0001 at Days 8 & 120; CSF CCL2/pNfH NS at Day 112]).",
     })
     ev_map["EV-B6-051"].update({
         "effect_direction": "photolysis_false_negative_hypothesis",
-        "notes": "Mechanistic chemical photolability hypothesis: routine blue-light live imaging cleaves the photosensitive Co-C bond of methylcobalamin into phototoxic species (-3.60d in Bye 2025, which lacked a dark-shielded control well), reconciling in vitro toxicity with Phase 3 JETALS benefit (+1.97 pts, PMID:35532908).",
+        "notes": "Mechanistic chemical photolability hypothesis: routine blue-light live imaging cleaves the photosensitive Co-C bond of methylcobalamin into phototoxic species (-3.60d in Bye 2025, which lacked a dark-shielded control well), reconciling in vitro toxicity with Phase 3 JETALS early-stage (<=1 yr from onset) benefit (+1.97 pts, PMID:35532908).",
     })
     ev_map["EV-P2-T3-004"].update({
         "source_id_or_locator": "DS045_TRAUT:TMT_ALS51_DIA_ALS79;PMID:40354799;PMID:42836993;PMID:38683209;PMID:32385188;PMID:29054919;NCT07161999",

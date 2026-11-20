@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from _flagship_common import ROOT, assert_close, has_raw_dataset, load_csv_by_key, load_json_any, print_audit_report
+from _flagship_common import ROOT, assert_close, assert_equal, has_raw_dataset, load_csv_by_key, load_json_any, print_audit_report
 
 
 def main() -> None:
@@ -38,18 +38,18 @@ def main() -> None:
     pas_aud = t4["c007_cterminome_and_zone1_pas_modality_audit"]
     z1_lead = pas_aud["isoform_selective_rna_modality_zones_1based_grch38"]["zone_1_top_steric_moe_intervals"][0]
     checks = [
-        ("Portfolio Actionable Rank & Decision", f"#{port['unified_rank']} ({port['decision']})", "#6 (KEEP_EXPLORATORY_UNPROVEN)", "PASS"),
+        assert_equal("Portfolio Actionable Rank & Decision", f"#{port['unified_rank']} ({port['decision']})", "#6 (KEEP_EXPLORATORY_UNPROVEN)"),
         assert_close(f"[MEASURED:{src_tag}] Edinburgh donor-collapsed non-C9 endothelial IL1RL1 dlog2CPM (n=7 Ctrl)", ed_diff, 3.1067, rtol=0.01),
         assert_close(f"[MEASURED:{src_tag}] Edinburgh endothelial Welch two-sided p (n=28: 21 non-C9 vs 7 Ctrl)", ed_p, 0.00698, rtol=0.02),
         assert_close(f"[MEASURED:{src_tag}] Zhang 2026 55-um Visium MN-niche spot log2FC (n=14/18 sections)", zh_spot, 3.76, rtol=0.02),
-        ("[MEASURED] GENCODE v46 1-based soluble sST2 intron-8 polyA exon span", sst2_exon, "chr2:102343270-102346100(+)", "PASS"),
-        ("[MEASURED] PDB 4KC3 10 D1-D3 Cys = 5 disulfides -> Cys327 odd unpaired thiol", f"{cys_aud['n_closed_disulfides']}/{cys_aud['cys327_is_odd_unpaired_thiol']}", "5/True", "PASS"),
-        ("[MEASURED] Zone 1 Intron-8 PAS #1 Clean >=2mm steric window", f"{z1_lead['interval_id']}:{z1_lead['offtarget_status']}", "chr2:102346045-102346062(+):PASS_CLEAN_GE2MM", "PASS"),
+        assert_equal("[MEASURED] GENCODE v46 1-based soluble sST2 intron-8 polyA exon span", sst2_exon, "chr2:102343270-102346100(+)"),
+        assert_equal("[MEASURED] PDB 4KC3 D1-D3 (aa 21-317) 5 closed disulfides; sequence-deduced 11th Cys327", f"{cys_aud['n_closed_disulfides']}/{cys_aud['cys327_is_odd_unpaired_thiol']}", "5/True"),
+        assert_equal("[MEASURED] Zone 1 Intron-8 PAS #1 Clean >=2mm steric window", f"{z1_lead['interval_id']}:{z1_lead['offtarget_status']}", "chr2:102346045-102346062(+):PASS_CLEAN_GE2MM"),
     ]
     if (ROOT / "data/pharmacology_structures/phase2_pdb/pdb_00004kc3.cif").is_file():
         from carbon_als.mmcif_parser import load_mmcif_structure
         st = load_mmcif_structure(ROOT / "data/pharmacology_structures/phase2_pdb/pdb_00004kc3.cif")
-        checks.append(("Raw mmCIF PDB 4KC3 IL-33:ST2 complex loaded", len(st.polymer_atoms) > 1000, True, "PASS"))
+        checks.append(assert_equal("Raw mmCIF PDB 4KC3 IL-33:ST2 complex loaded", len(st.polymer_atoms) > 1000, True))
 
     print_audit_report(
         "EALS-007", "IL1RL1 / sST2 Decoy Suppression", checks,

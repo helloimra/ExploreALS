@@ -43,7 +43,7 @@ function renderRepInspector(isEmpty=false){
     const sLinks = r.script.split(';').filter(Boolean).map(sp => `<a href="https://github.com/helloimra/ExploreALS/blob/main/${esc(sp)}" target="_blank" rel="noopener noreferrer" class="text-[var(--link)] underline decoration-dotted hover:decoration-solid font-mono break-all">${esc(sp)} &nearr;</a>`).join('<br/>');
     const dsChips = r.ds ? r.ds.split(';').filter(Boolean).map(d => `<button type="button" data-open-rep-ds="${esc(d)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">${esc(d)} &rarr;</button>`).join(' ') : '<span class="text-[var(--muted-foreground)] font-mono">Cached API / Portfolio Synthesis</span>';
     const cChips = r.cands ? r.cands.split(';').filter(Boolean).slice(0,18).map(c => `<button type="button" data-open-dossier="${esc(c)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--primary)] cursor-pointer">${esc(c)}</button>`).join(' ') : '';
-    const cmd = `uv run python ${r.script.split(';')[0]}`;
+    const cmd = r.script.split(';').filter(Boolean).map(sp => `uv run python ${sp.trim()}`).join(' && ');
     box.innerHTML = `${retBar}
       <div class="flex flex-wrap items-start justify-between gap-2 border-b border-[var(--card-border)] pb-2.5">
         <div><div class="font-mono font-bold text-sm">${esc(r.id)} <span class="font-normal text-xs text-[var(--success)]">&#10003; Verified</span></div><div class="text-[var(--muted-foreground)] text-xs mt-0.5">${esc(r.grp)}</div></div>
@@ -201,7 +201,7 @@ function initSandboxes(){
     <div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-2">
       <div class="font-mono font-semibold text-[var(--foreground)]">1. KCNQ2 ER Co-Trapping &amp; 2:2 Heteromers (#4 EALS-006)</div>
       <label class="block"><span>RNA Exon-5 Skip (&Delta;PSI): <strong id="sb-k-p-val" class="font-mono">0.214</strong></span><input id="sb-k-p" aria-label="KCNQ2 RNA Exon-5 Skip fraction" type="range" min="0.05" max="0.50" step="0.005" value="0.214" class="w-full mt-0.5"/></label>
-      <label class="block"><span>2:2 Kv7.2:Kv7.3 Heteromer Share (&theta;): <strong id="sb-k-h-val" class="font-mono">0.00 (4:0 Homomer)</strong></span><input id="sb-k-h" aria-label="Kv7.2 to Kv7.3 heteromer share" type="range" min="0" max="1" step="0.05" value="0" class="w-full mt-0.5"/></label>
+      <label class="block"><span>2:2 Kv7.2:Kv7.3 Heteromer Share (&theta;): <strong id="sb-k-h-val" class="font-mono">1.00 (2:2 Heteromer)</strong></span><input id="sb-k-h" aria-label="Kv7.2 to Kv7.3 heteromer share" type="range" min="0" max="1" step="0.05" value="1" class="w-full mt-0.5"/></label>
       <label class="block"><span>Mutant Surface Escape (&alpha;_esc): <strong id="sb-k-a-val" class="font-mono">0.15</strong></span><input id="sb-k-a" aria-label="Mutant subunit surface escape" type="range" min="0" max="1" step="0.05" value="0.15" class="w-full mt-0.5"/></label>
       <div id="sb-k-out" class="p-2 rounded bg-[var(--card)] border border-[var(--border)] font-mono space-y-0.5"></div>
     </div>
@@ -212,7 +212,7 @@ function initSandboxes(){
         <option value="mwc">Mode 2: Hypothetical Indirect L_eff Shift (Unproven in Mice)</option>
       </select>
       <label class="block"><span>Oral Washout Ratio ([I]/Kd): <strong id="sb-s-u-val" class="font-mono">0.20x</strong></span><input id="sb-s-u" aria-label="Inhibitor over Kd washout ratio" aria-valuetext="0.20x Kd" type="range" min="-2.0" max="1.3" step="0.05" value="-0.70" class="w-full mt-0.5"/></label>
-      <label class="block"><span>Allosteric L_eff: <strong id="sb-s-l-val" class="font-mono">2.5 (Leahey Cal.)</strong></span><input id="sb-s-l" aria-label="Baseline SARM1 allosteric L_eff" type="range" min="2.0" max="65.0" step="0.5" value="2.5" class="w-full mt-0.5"/></label>
+      <label class="block"><span>Allosteric L_eff: <strong id="sb-s-l-val" class="font-mono">2.5 (Low-Reserve Prior)</strong></span><input id="sb-s-l" aria-label="Baseline SARM1 allosteric L_eff" type="range" min="2.0" max="65.0" step="0.5" value="2.5" class="w-full mt-0.5"/></label>
       <div id="sb-s-out" class="p-2 rounded bg-[var(--card)] border border-[var(--border)] font-mono space-y-0.5"></div>
     </div>
     <div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-2">
@@ -240,7 +240,7 @@ function updateSandboxes(){
   const ns = (1-th)*Math.pow(1-p+al*p,4) + th*Math.pow(1-p+al*p,2);
   const erTrap = Math.max(0, 1 - ns), surfDead = Math.max(0, ns - im);
   const poisPct = ns > 0 ? (100 * surfDead / ns).toFixed(0) : '0';
-  document.getElementById('sb-k-out').innerHTML = `<div>WT Functional M-Current: <strong class="text-[var(--warning)]">${(100*im).toFixed(1)}%</strong> (${(100*(1-im)).toFixed(1)}% loss)</div><div>ER-Trapped: <strong>${(100*erTrap).toFixed(1)}%</strong> &middot; Surface Pore-Dead: <strong>${(100*surfDead).toFixed(1)}%</strong></div><div class="text-[var(--muted-foreground)]">Surface Kv7: ${(100*ns).toFixed(1)}% (${poisPct}% poisoned; I_M invariant to &alpha;_esc)</div>`;
+  document.getElementById('sb-k-out').innerHTML = `<div>WT Functional M-Current: <strong class="text-[var(--warning)]">${(100*im).toFixed(1)}%</strong> (${(100*(1-im)).toFixed(1)}% loss)</div><div>ER-Trapped: <strong>${(100*erTrap).toFixed(1)}%</strong> &middot; Surface Pore-Dead: <strong>${(100*surfDead).toFixed(1)}%</strong></div><div class="text-[var(--muted-foreground)]">Joseph Fig. 3h (1:1 CHO-KCNQ3): 56.2% I_WT (43.8% loss: 117.3 vs 208.6 pA/pF)</div>`;
 
   const sm = document.getElementById('sb-s-mode').value;
   const suEl = document.getElementById('sb-s-u');
@@ -248,10 +248,12 @@ function updateSandboxes(){
   const l0 = parseFloat(document.getElementById('sb-s-l').value);
   suEl.setAttribute('aria-valuetext', u.toFixed(2) + 'x Kd');
   document.getElementById('sb-s-u-val').textContent = u.toFixed(2) + 'x';
-  document.getElementById('sb-s-l-val').textContent = l0.toFixed(1) + (Math.abs(l0-2.5)<0.3?' (Leahey Cal.)':(l0<=10?' (ALS Prior)':''));
+  document.getElementById('sb-s-l-val').textContent = l0.toFixed(1) + (l0 < 4.0 ? ' (Low-Reserve Prior)' : (l0 <= 10 ? ' (8-mer ALS Prior)' : ' (8-mer WT Ceiling)'));
   const base = 1 / (1 + l0);
-  const zR = Math.pow(1 + 5.154 * u, 6);
-  const aBexi = (zR / (l0 + zR)) / (1 + u);
+  const zR6 = Math.pow(1 + 5.154 * u, 6);
+  const aBexi = l0 < 4.0
+    ? ((zR6 / (l0 + zR6)) / (1 + u))
+    : (Math.pow(1 + u/0.22, 7) / (l0 * Math.pow(1 + 0.05*u, 8) + Math.pow(1 + u/0.22, 8)));
   const aTlock = Math.pow(1 + u/6.5, 8) / (l0*Math.pow(1+u, 8) + Math.pow(1+u/6.5, 8));
   const rB = aBexi / base, rT = aTlock / base;
   const fRatio = ((1 + l0) / (1 + 8)).toFixed(1);
@@ -262,9 +264,11 @@ function updateSandboxes(){
   document.getElementById('sb-m-hr-val').textContent = hr.toFixed(2);
   document.getElementById('sb-m-p0-val').textContent = p0.toFixed(2);
   const dReq = Math.ceil(Math.pow(1.959964+0.841621, 2) / (0.25 * Math.pow(Math.log(hr), 2)));
+  const hrCrit = Math.exp(-1.959964 * 2 / Math.sqrt(dReq));
   const p1 = 1 - Math.pow(1 - p0, hr), pbar = 0.5*(p0 + p1);
   const nRand = 2 * Math.ceil(dReq / (2 * pbar * 0.95));
-  const nScr = Math.ceil(nRand / (173 / 220));
-  document.getElementById('sb-m-out').innerHTML = `<div>Required Deaths (80% pwr, 2s &alpha;=0.05): <strong class="text-[var(--primary)]">${dReq}</strong></div><div>Pooled Event Rate: <strong>${(100*pbar).toFixed(1)}%</strong> &rarr; N_rand = <strong>${nRand}</strong></div><div class="text-[var(--muted-foreground)]">LP Screen (173/220 = 78.6% &le;3,700 pg/mL; &lt;750 n=19 had 0 deaths): N_screen &approx; <strong>${nScr}</strong></div>`;
+  const nScrLp = Math.ceil(nRand / (173 / 220));
+  const nScrInit = Math.ceil(nRand / (173 / 304));
+  document.getElementById('sb-m-out').innerHTML = `<div>Required Deaths (80% pwr, 2s &alpha;=0.05): <strong class="text-[var(--primary)]">${dReq}</strong> (HR_crit=${hrCrit.toFixed(3)})</div><div>Pooled Event Rate: <strong>${(100*pbar).toFixed(1)}%</strong> &rarr; N_rand = <strong>${nRand}</strong></div><div class="text-[var(--muted-foreground)]">LP Yield (173/220 = 78.6%): <strong>${nScrLp}</strong> &middot; Initial Screen (173/304 = 56.9%): <strong>${nScrInit}</strong></div>`;
 }
 """

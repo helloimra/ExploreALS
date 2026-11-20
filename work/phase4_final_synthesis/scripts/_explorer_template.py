@@ -52,15 +52,15 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
       </button>
       <button type="button" data-quick-filter="EXPL" title="Untested preclinical/biofluid triage queue (not therapeutic endorsement)" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
         <div class="text-[var(--muted-foreground)] text-xs">Keep &middot; Exploratory</div>
-        <div class="text-lg font-bold font-mono tabular-nums text-[var(--warning)] mt-0.5">23 <span class="text-xs font-normal text-[var(--muted-foreground)]">(Untested &ne; Falsified)</span></div>
+        <div class="text-lg font-bold font-mono tabular-nums text-[var(--warning)] mt-0.5">25 <span class="text-xs font-normal text-[var(--muted-foreground)]">(Untested &ne; Falsified)</span></div>
       </button>
       <button type="button" data-switch-tab="intervals" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
         <div class="text-[var(--muted-foreground)] text-xs">GRCh38 Splice Windows</div>
         <div class="text-lg font-bold font-mono tabular-nums mt-0.5">26 <span class="text-xs font-normal text-[var(--success)]">(5 Clean, &ge;2 Mismatches)</span></div>
       </button>
-      <button type="button" data-quick-filter="DROP" title="Scientifically falsified by human RCT futility, CNS PK/safety wall, or assay confounding" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
+      <button type="button" data-quick-filter="DROP" title="Scientifically falsified clinical regimen or CNS PK/safety wall" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
         <div class="text-[var(--muted-foreground)] text-xs">Drop &middot; Falsified</div>
-        <div class="text-lg font-bold font-mono tabular-nums text-[var(--error)] mt-0.5">18 <span class="text-xs font-normal text-[var(--muted-foreground)]">(10 Trial &middot; 7 PK/Tox &middot; 1 Confounded)</span></div>
+        <div class="text-lg font-bold font-mono tabular-nums text-[var(--error)] mt-0.5">16 <span class="text-xs font-normal text-[var(--muted-foreground)]">(9 Trial &middot; 7 PK/Tox &middot; 0 Confounded)</span></div>
       </button>
     </div>
 
@@ -70,17 +70,17 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--primary)] text-[var(--primary)] font-mono font-semibold text-xs">START HERE &middot; OVERVIEW &amp; SCOPE</span>
-              <span class="font-mono text-xs text-[var(--muted-foreground)]">Updated Nov 2026 (v1.2)</span>
+              <span class="font-mono text-xs text-[var(--muted-foreground)]">Updated Nov 2026 (v1.2.5)</span>
             </div>
             <h2 class="text-sm font-semibold text-[var(--foreground)]">How 52 ALS Hypotheses Map Across Evidence, Validation Steps &amp; Trial Readouts</h2>
-            <p class="text-xs text-[var(--muted-foreground)] leading-snug">Synthesizes donor-level statistics (<span class="font-mono">8</span> participant-overlap clusters, <span class="font-mono">194</span> checksum-verified statistical contrasts; zero new wet-lab data), unbound human brain PK, and GENCODE v46 off-target scans across four triage verdicts:</p>
+            <p class="text-xs text-[var(--muted-foreground)] leading-snug">Synthesizes donor-level statistics (<span class="font-mono">8</span> participant-overlap clusters, <span class="font-mono">194</span> checksum-anchored statistical contrasts across <span class="font-mono">41</span> unique data/output digests; zero new wet-lab data), unbound human brain PK, and GENCODE v46 off-target scans across four triage verdicts:</p>
             <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--warning)] space-y-1">
               <div class="font-mono font-semibold text-xs text-[var(--foreground)]">Four Evidence &amp; Triage Verdicts (<span class="font-mono">Untested &ne; Falsified</span>)</div>
               <ul class="space-y-0.5 text-xs leading-snug">
                 <li><span class="font-mono font-semibold text-[var(--success)]">Keep &middot; Core (4):</span> Supported by human ALS genetics and/or TDP-43 rescue with a CNS-viable modality.</li>
-                <li><span class="font-mono font-semibold text-[var(--warning)]">Keep &middot; Exploratory (23):</span> Unresolved due to bulk-assay or cohort blind spots &mdash; paired with 1 Go/No-Go test.</li>
+                <li><span class="font-mono font-semibold text-[var(--warning)]">Keep &middot; Exploratory (25):</span> Unresolved due to bulk-assay, dosing, or cohort blind spots &mdash; paired with 1 Go/No-Go test.</li>
                 <li><span class="font-mono font-semibold text-[var(--primary)]">Benchmark / Biomarker (7):</span> Approved standard-of-care comparator or fluid staging panel.</li>
-                <li><span class="font-mono font-semibold text-[var(--error)]">Drop &middot; Falsified (18):</span> Counter-evidenced by human ALS RCT futility (<span class="font-mono">10</span>), brain PK/safety limits (<span class="font-mono">7</span>), or assay confounding (<span class="font-mono">1</span>).</li>
+                <li><span class="font-mono font-semibold text-[var(--error)]">Drop &middot; Falsified (16):</span> Counter-evidenced at the tested regimen/exposure by human ALS RCT futility (<span class="font-mono">9</span>), brain PK/safety limits (<span class="font-mono">7</span>), or assay confounding (<span class="font-mono">0</span>).</li>
               </ul>
             </div>
             <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--success)] space-y-1.5">
@@ -127,7 +127,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
             <div>
               <div class="flex flex-wrap items-center gap-2">
                 <h2 class="text-sm font-semibold text-[var(--foreground)]">Living Research Log</h2>
-                <span id="upd-count" class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono tabular-nums text-xs text-[var(--muted-foreground)]">7 / 7</span>
+                <span id="upd-count" class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono tabular-nums text-xs text-[var(--muted-foreground)]">8 / 8</span>
               </div>
               <p class="text-xs text-[var(--muted-foreground)] mt-0.5 leading-snug">Chronological ledger of post-release clinical trial readouts, newly published studies, and quantitative PK-PD/survival model revisions.</p>
             </div>
@@ -153,10 +153,10 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
         <summary class="cursor-pointer font-semibold text-[var(--foreground)] select-none">Methodology &amp; Decision Guide &mdash; Clinical Regimens, Molecular Targets &amp; Evidence Triage</summary>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2.5 mt-2 border-t border-[var(--card-border)] text-[var(--muted-foreground)] leading-relaxed">
           <div><strong class="text-[var(--foreground)]">1. Clinical Regimens &amp; Molecular Targets:</strong> Evaluates 52 ALS therapeutic &amp; biomarker hypotheses across 6 biological evidence sources (including 18 complex/panel subunits and selectivity comparators) using donor-level statistics (Trautwig Emory TMT n=51 is a nested subset of n=77 DIA; multi-region NYGC/Pineda donors analyzed per-region without pooling) and unbound human CNS PK (Cu,brain / Kp,uu).</div>
-          <div><strong class="text-[var(--foreground)]">2. Untested &ne; Falsified Triage Rule:</strong> Never discards an untested hypothesis due to bulk-assay or unstratified-cohort blind spots. <span class="font-mono text-[var(--warning)]" title="Untested preclinical or biofluid triage queue — prospective Go/No-Go gate required">Keep &middot; Exploratory (23)</span> denotes an untested preclinical/biofluid triage queue (not therapeutic endorsement) paired with prospective Go/No-Go criteria; <span class="font-mono text-[var(--error)]" title="Scientifically falsified by human RCT futility, CNS PK/safety wall, or assay confounding">Drop &middot; Falsified (18)</span> requires positive human RCT futility, insurmountable PK/safety limits, or confounding collapse.</div>
+          <div><strong class="text-[var(--foreground)]">2. Untested &ne; Falsified Triage Rule:</strong> Never discards an untested hypothesis due to bulk-assay, fixed-library-concentration, or unstratified-cohort blind spots. <span class="font-mono text-[var(--warning)]" title="Untested preclinical or biofluid triage queue — prospective Go/No-Go gate required">Keep &middot; Exploratory (25)</span> denotes an untested preclinical/biofluid triage queue (not therapeutic endorsement) paired with prospective Go/No-Go criteria; <span class="font-mono text-[var(--error)]" title="Scientifically falsified clinical regimen or CNS PK/safety wall">Drop &middot; Falsified (16)</span> evaluates specific clinical drug regimens/exposures separately from molecular target pathways and requires positive human RCT futility, insurmountable PK/safety limits, or confounding collapse.</div>
           <div><strong class="text-[var(--foreground)]">3. Combinatorial Portfolio Thesis:</strong> Pairs single-agent-qualified genotype-stratified intrathecal splice rescue (evaluating 2-plex KCNQ2 EALS-006 + STMN2 EALS-002 vs. 3-plex + UNC13A EALS-001 across rs12973192/rs12608932 genotypes at a 6&ndash;9 mg [&le;3 mg/strand] multiplex polyanion/DRG margin target vs. 12&ndash;50 mg nusinersen &amp; 100 mg tofersen; &ge;24&ndash;48 mg flagged as radiculotoxicity hazard) with oral non-covalent SARM1 ARM&ndash;TIR T-lock (EALS-030, 1.0x parallel Bliss floor to ~2&ndash;7x modeled MWC bounds) and biomarker-gated neuroimmune precision (EALS-031 BioVendor-bridged pNfH &le;3,700, oximetry-verified EALS-007 sST2, Tier 3 EALS-019 high-chitinase CSF glial stratum).</div>
         </div>
-        <div class="pt-2 mt-2 border-t border-[var(--card-border)] text-[var(--muted-foreground)] font-mono text-xs">Data &amp; Provenance Standards: Open Targets / NIH IDG TDL &amp; TSA &middot; 6-Tier GRCh38 Hybridization Screen (OSWG-adapted) &middot; Script &amp; Checksum Provenance / FAIR / 4-Level Evidence Design Tiers &middot; 100% open-access published tables/counts (1-based GRCh38 target windows; SantaLucia Tm/&Delta;G37 &amp; AlphaGenome AVI never rank candidates).</div>
+        <div class="pt-2 mt-2 border-t border-[var(--card-border)] text-[var(--muted-foreground)] font-mono text-xs">Data &amp; Provenance Standards: Open Targets / NIH IDG TDL &amp; TSA &middot; 6-Tier GRCh38 Hybridization Screen (OSWG-adapted) &middot; Script &amp; Checksum Provenance / FAIR / 4-Level Evidence Design Tiers &middot; Curated Biological-Evidence Ordering (<span class="text-[var(--foreground)]">Evidence #Rk</span> orders 36 explicitly tiered programs + evidence-band fallbacks; editorial curation order, not clinical win probability) &middot; 100% open-access published tables/counts (1-based GRCh38 target windows; SantaLucia Tm/&Delta;G37 &amp; AlphaGenome AVI never rank candidates).</div>
       </details>
       <details id="contrasts-drawer" class="bg-[var(--card)] border border-[var(--border)] border-l-4 border-l-[var(--primary)] rounded-lg px-4 py-2.5 text-xs">
         <summary class="cursor-pointer font-semibold text-[var(--foreground)] flex flex-wrap items-center justify-between gap-2 select-none">
@@ -192,23 +192,23 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
         <select id="p-dec" aria-label="Filter by triage verdict" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
           <option value="ALL">Triage Verdict: All (52)</option>
           <option value="KEEP_CORE">Keep &middot; Core (4)</option>
-          <option value="KEEP_EXPLORATORY_UNPROVEN">Keep &middot; Exploratory (23)</option>
+          <option value="KEEP_EXPLORATORY_UNPROVEN">Keep &middot; Exploratory (25)</option>
           <option value="RECLASSIFY_BENCHMARK_OR_BIOMARKER">Benchmark / Biomarker (7)</option>
-          <option value="DROP">Drop &middot; All Falsified (18)</option>
-          <option value="DROP_CLIN">&nbsp;&nbsp;&larrhk; Drop: Human RCT Futility (10)</option>
+          <option value="DROP">Drop &middot; All Falsified (16)</option>
+          <option value="DROP_CLIN">&nbsp;&nbsp;&larrhk; Drop: Human RCT Futility (9)</option>
           <option value="DROP_PK">&nbsp;&nbsp;&larrhk; Drop: CNS PK / Safety Wall (7)</option>
-          <option value="DROP_ART">&nbsp;&nbsp;&larrhk; Drop: Assay Confounding (1)</option>
+          <option value="DROP_ART">&nbsp;&nbsp;&larrhk; Drop: Assay Confounding (0)</option>
         </select>
         <select id="p-tier" aria-label="Filter by actionability tier" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
           <option value="ALL">Actionability Tier: All (52)</option>
           <option value="TIER_12">Tier 1 + Tier 2 Leads (8)</option>
           <option value="TIER_1_ACTIONABLE_NOW">Tier 1 &middot; Actionable Now (2)</option>
           <option value="TIER_2_FOCUSED_GATE_FIRST">Tier 2 &middot; Validation Gate (6)</option>
-          <option value="TIER_3_EXPLORATORY_DISCOVERY">Tier 3 &middot; Exploratory Discovery (18)</option>
+          <option value="TIER_3_EXPLORATORY_DISCOVERY">Tier 3 &middot; Exploratory Discovery (20)</option>
           <option value="BIO_AND_CAL">Biomarkers &amp; Calibrators (8)</option>
-          <option value="DROPPED_FALSIFIED_EXCLUDED">Dropped &middot; Falsified (18)</option>
+          <option value="DROPPED_FALSIFIED_EXCLUDED">Dropped &middot; Falsified (16)</option>
         </select>
-        <select id="p-sort" aria-label="Sort portfolio candidates" title="Lexicographic Translational Priority tuple: (1) Actionability Tier, (2) Keep·Core before Exploratory, (3) Primary Evidence Basis, (4) Active ALS Trial Landscape, (5) Fewest Open Validation Steps, (6) Clinical Development Stage. SantaLucia Tm/ΔG37 and AlphaGenome AVI never rank candidates." class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
+        <select id="p-sort" aria-label="Sort portfolio candidates" title="Lexicographic Translational Priority tuple: (1) Actionability Tier, (2) Keep·Core before Exploratory, (3) Primary Evidence Basis, (4) Active ALS Trial Landscape, (5) Fewest Open Validation Steps, (6) Clinical Development Stage. Genetic & Pathology Evidence uses a 36-program curated biological evidence ordering. SantaLucia Tm/ΔG37 and AlphaGenome AVI never rank candidates." class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
           <option value="rank">Sort: Translational Priority Rank</option>
           <option value="bio">Sort: Genetic &amp; Pathology Evidence</option>
           <option value="trl">Sort: Development Stage</option>
@@ -221,7 +221,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           <div id="p-lens-bar" class="flex flex-wrap gap-1.5"></div>
         </div>
         <div class="w-full pt-1.5 border-t border-[var(--card-border)] text-xs text-[var(--muted-foreground)] font-mono leading-relaxed">
-          <strong class="text-[var(--foreground)]">Rank &amp; Triage Key:</strong> Priority #Rk = translational priority (tier &middot; trial landscape &middot; validation steps &middot; stage) &middot; <span class="text-[var(--primary)]">Evidence #Rk</span> = human genetic &amp; CNS pathology strength &middot; <span class="text-[var(--warning)]">Keep&middot;Exploratory (23)</span> = untested triage queue (not endorsement) &middot; Modeled estimates never rank candidates.
+          <strong class="text-[var(--foreground)]">Rank &amp; Triage Key:</strong> Priority #Rk = translational priority (tier &middot; trial landscape &middot; validation steps &middot; stage) &middot; <span class="text-[var(--primary)]">Evidence #Rk</span> = curated human genetic &amp; CNS pathology ordering (36 anchored programs; editorial order, not win probability) &middot; <span class="text-[var(--warning)]">Keep&middot;Exploratory (25)</span> = untested triage queue (not endorsement) &middot; Modeled estimates never rank candidates.
         </div>
       </div>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
@@ -337,7 +337,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
             <span class="font-mono font-semibold text-xs text-[var(--success)]">LEVEL 1 &middot; CACHED GATES (&lt;10s &middot; 0 MB)</span>
             <span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">Offline Ready</span>
           </div>
-          <p class="text-[var(--muted-foreground)] text-xs leading-snug">Clones the &lt;18 MB repository, installs pinned Python 3.12 dependencies (<span class="font-mono">uv.lock</span>), and verifies all 18 CSV schemas, foreign keys, primary citations, decision rules, and 194/194 64-char SHA-256 digests.</p>
+          <p class="text-[var(--muted-foreground)] text-xs leading-snug">Clones the &lt;18 MB repository, installs pinned Python 3.12 dependencies (<span class="font-mono">uv.lock</span>), and verifies all 18 CSV schemas, foreign keys, primary citations, decision rules, and 194 recorded 64-char SHA-256 digests (<span class="font-mono">41</span> unique anchors; <span class="font-mono">64/194</span> bundled in clean checkout, <span class="font-mono">194/194</span> with staged data).</p>
           <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] flex items-center justify-between gap-2 font-mono text-xs">
             <span class="truncate">uv sync --frozen &amp;&amp; uv run python scripts/verify_explore_als.py --mode cached</span>
             <button type="button" data-copy-cmd="git clone https://github.com/helloimra/ExploreALS.git &amp;&amp; cd ExploreALS &amp;&amp; uv sync --frozen &amp;&amp; uv run python scripts/verify_explore_als.py --mode cached" class="px-2 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] shrink-0 cursor-pointer">Copy</button>
@@ -449,7 +449,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
             <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">API Snapshots</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">56 <span class="text-xs font-normal text-[var(--muted-foreground)]">(JSON)</span></div></div>
             <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">Model Outputs</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">8 <span class="text-xs font-normal text-[var(--muted-foreground)]">(ODE/MWC)</span></div></div>
           </div>
-          <p class="text-[var(--muted-foreground)] text-xs leading-snug">Legal redistribution split across <span class="font-mono">674.16 MB</span> (<span class="font-mono">642.93 MiB</span>): <strong class="text-[var(--foreground)]">Tier A</strong> (<span class="font-mono">CC0/CC-BY</span> open release + git maps), <strong class="text-[var(--foreground)]">Tier B</strong> (direct publisher/EuropePMC HTTPS fetch, zero re-hosting of <span class="font-mono">CC BY-NC-ND</span> supplements), and <strong class="text-[var(--foreground)]">Tier C</strong> (<span class="font-mono">SYNAPSE_AUTH_TOKEN</span> registered consortium access). Cis-regulatory target windows report 1-based GRCh38 coordinates only.</p>
+          <p class="text-[var(--muted-foreground)] text-xs leading-snug">All <span class="font-mono">194</span> contrast rows carry 64-char SHA-256 digests across <span class="font-mono">41</span> unique file/directory anchors (<span class="font-mono">64/194</span> bundled in clean git checkout; <span class="font-mono">194/194</span> locally matched when all <span class="font-mono">42</span> resources are staged). Legal redistribution split across <span class="font-mono">674.16 MB</span> (<span class="font-mono">642.93 MiB</span>): <strong class="text-[var(--foreground)]">Tier A</strong> (<span class="font-mono">CC0/CC-BY</span> open release + git maps), <strong class="text-[var(--foreground)]">Tier B</strong> (direct publisher/EuropePMC HTTPS fetch, zero re-hosting of <span class="font-mono">CC BY-NC-ND</span> supplements), and <strong class="text-[var(--foreground)]">Tier C</strong> (<span class="font-mono">SYNAPSE_AUTH_TOKEN</span> registered consortium access). Cis-regulatory target windows report 1-based GRCh38 coordinates only.</p>
         </div>
       </div>
 

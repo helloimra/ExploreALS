@@ -89,7 +89,7 @@ def sha256_path(path: Path, eol_mode: str = "raw") -> str:
                 h.update(chunk)
         return h.hexdigest()
     tree = hashlib.sha256()
-    for fp in sorted(x for x in path.rglob("*") if x.is_file()):
+    for fp in sorted((x for x in path.rglob("*") if x.is_file()), key=lambda x: x.relative_to(path).as_posix()):
         rel = fp.relative_to(path).as_posix()
         tree.update(f"{rel}:{sha256_path(fp, eol_mode=eol_mode)}\n".encode("utf-8"))
     return tree.hexdigest()
@@ -284,6 +284,23 @@ def verify_all(
             errors.append(f"{ev_id}: visium_55um_spot must not equate n_statistical_units with n_unique_donors_or_participants")
         if "/100" in sr["effect_estimate"] or re.search(r"liability\s*=\s*[0-9.]+\s*pct", sr["effect_estimate"], re.I):
             errors.append(f"{ev_id}: retired /100 or liability pct score leaked into statistical_models_and_contrasts.csv")
+        if sr["covariate_adjusted_nominal_p"].strip():
+            cov_blob = f"{sr['model_formula_or_test']} ; {sr['exact_contrast']}"
+            if (
+                "survival days" in sr["model_formula_or_test"].lower()
+                or "z_diff" in sr["effect_metric"].lower()
+                or not re.search(
+                    r"\b(?:ols|cox|adjusted|adj|residualized|center|rin|gc|gc_z|age|sex|pmi|tricals|pnfh)\b", cov_blob, re.I
+                )
+            ):
+                errors.append(f"{ev_id}: covariate_adjusted_nominal_p populated without covariate-adjusted model formula")
+        if sr["multiple_testing_family"] == "NOT_APPLICABLE_NON_FREQUENTIST" and re.search(r"\bols\b", sr["model_formula_or_test"], re.I):
+            errors.append(f"{ev_id}: non-frequentist row carries OLS model_formula_or_test")
+        if sr["anchor_relpath"].endswith("41593_2025_2118_MOESM3_ESM.xlsx") and "survival days" in sr["model_formula_or_test"].lower():
+            if sr["statistical_unit"] != "paired_ipsc_donor_line" or any(
+                k in sr["exact_contrast"].lower() for k in ("deg ", "splicing", "scn8a", "pearson")
+            ):
+                errors.append(f"{ev_id}: copied Bye survival-screen model formula onto non-survival contrast")
         found_anc, got_sha = sha256_anchor(CARBON_ROOT / sr["anchor_relpath"], sr["sha64"])
         must_have_anc = (mode == "full") or (sr["anchor_type"] in {"CACHED_API_SNAPSHOT", "DETERMINISTIC_MODEL_OUTPUT"})
         if not found_anc:
@@ -514,9 +531,15 @@ def main() -> None:
     run_selftest(mode=eff_mode)
     n_ds = len(load_csv("datasets_manifest.csv"))
     n_reg = len(list(REG_DIR.glob("*.csv")))
-    n_stat = len(load_csv("statistical_models_and_contrasts.csv"))
+    stat_all = load_csv("statistical_models_and_contrasts.csv")
+    n_stat = len(stat_all)
+    n_uniq_anc = len({(r["anchor_relpath"], r["sha64"]) for r in stat_all})
+    n_matched_local = sum(
+        1 for r in stat_all if sha256_anchor(CARBON_ROOT / r["anchor_relpath"], r["sha64"]) == (True, r["sha64"])
+    )
     print(
-        f"PASS [{eff_mode}]: All {n_reg} registries, {n_stat}/{n_stat} 64-char SHA-256 contrast anchors, "
+        f"PASS [{eff_mode}]: All {n_reg} registries, {n_stat}/{n_stat} recorded 64-char SHA-256 contrast digests "
+        f"({n_uniq_anc} unique anchors; {n_matched_local}/{n_stat} locally byte/EOL-matched in {eff_mode} mode), "
         f"{n_ds} dataset manifest entries, 52-hypothesis/26-interval portfolio, "
         "ExploreALS v1.2 Explorer + 8 Monographs, biosecurity/provenance gates, and self-tests verified (0 errors)."
     )

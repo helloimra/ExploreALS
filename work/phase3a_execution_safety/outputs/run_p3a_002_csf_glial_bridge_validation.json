@@ -97,7 +97,9 @@
     }
   },
   "deconfounded_and_stratified_external_validation": {
-    "confounding_disclosure": "In DS045 non-Emory samples (n=141), 57/57 symptomatic ALS come from UMilan (31, 0 Ctrl) + WashU (26, 2 Ctrl) with 86.0% (49/57) familial C9orf72/SOD1, while 16/18 Controls come from downward-shifted MGH (0 ALS). Therefore, Emory leak-free sALS OOF, within-WashU, C9 phenoconversion, and MGH-offset-adjusted AUCs are primary over raw pooled external AUC.",
+    "confounding_disclosure": "In DS045 non-Emory samples (n=141), 57/57 symptomatic ALS come from UMilan (31, 0 Ctrl) + WashU (26, 2 Ctrl) with 86.0% (49/57) familial C9orf72/SOD1, while 16/18 Controls come from downward-shifted MGH (0 ALS; only 52/1,026 case-control pairs share a bank, and a protein-free non-MGH indicator achieves AUC=0.9444 vs raw 0.9405). Subtracting MGH's control offset is target-site control recalibration (in-sample AUC=0.8850; leave-one-MGH-control-out AUC=0.8801), NOT frozen zero-calibration external transfer; Emory leak-free sALS OOF and within-WashU/C9 contrasts remain primary.",
+    "bank_only_non_mgh_negative_control_auc": 0.9444,
+    "leave_one_mgh_control_out_target_site_recalibrated_auc": 0.8801,
     "within_washu_same_center_als_vs_non_als": {
       "n_cases": 26,
       "n_controls": 6,

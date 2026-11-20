@@ -83,7 +83,7 @@ def benchmark_atg4b_torres_3j_vs_carbon_intervals(cache_dir: Path, gnomad_map: d
     avi_pos = fetch_avi_positions_only("2", 241668870, 241669005, avi_c)
 
     specs = [
-        ("Torres2024_ASO_3J_16bp_LNA_benchmark", 241668980, 241668995, "Pip8b2_8LNA_mixmer_16nt"),
+        ("Torres2024_ASO_3J_16bp_6LNA_benchmark", 241668980, 241668995, "Unconjugated_6LNA_PS_mixmer_16nt"),
         ("Carbon_ATG4B_Rank1_18bp_2MOE_donor", 241668981, 241668998, "Intrathecal_uniform_2MOE_18nt"),
         ("Carbon_ATG4B_Rank2_18bp_2MOE_exonic_lead", 241668970, 241668987, "Intrathecal_uniform_2MOE_18nt"),
     ]
@@ -94,16 +94,17 @@ def benchmark_atg4b_torres_3j_vs_carbon_intervals(cache_dir: Path, gnomad_map: d
         t_rna = s_dna.replace("T", "U")
         comp = _revcomp_dna(s_dna)
         tm_moe = duplex_tm_moe_physiological(t_rna)
-        tm_lna_est = round(tm_moe + 8 * 3.0, 2) if "8LNA" in chem else None
+        tm_lna_est = round(tm_moe + 6 * 3.0, 2) if "6LNA" in chem else None
         query_gggenome_v2_coords_only(iv_id, s_dna, gg_c)
         queries.append({"interval_id": iv_id, "gene_symbol": "ATG4B", "sense_dna": s_dna})
         meta[iv_id] = {
             "label": label, "interval_id": iv_id, "length_bp": hi - lo + 1, "reference_chemistry": chem,
             "gc_pct": round(100.0 * (comp.count("G") + comp.count("C")) / len(comp), 1),
             "cpg_dinucs": comp.count("CG"), "tdp43_ug_dinucs_in_target_rna": t_rna.count("UG"),
-            "tm_phys_2moe_c": tm_moe, "tm_est_8lna_mixmer_c": tm_lna_est,
+            "tm_phys_2moe_c": tm_moe, "tm_heuristic_6lna_mixmer_c": tm_lna_est,
             "est_1mm_duplex_tm_2moe_c": round(tm_moe - 6.0, 2),
-            "est_1mm_duplex_tm_8lna_c": round(tm_lna_est - 6.0, 2) if tm_lna_est else None,
+            "est_1mm_duplex_tm_6lna_heuristic_c": round(tm_lna_est - 6.0, 2) if tm_lna_est else None,
+            "lna_count_and_tm_note": "Torres et al. 2024 PMC11416411 Table 3 specifies 6 LNA positions (1,4,7,10,13,16) across 15 PS linkages (unconjugated); +3.0 C/LNA is an unmeasured additive heuristic." if tm_lna_est else "Uniform 2'-O-MOE model prior.",
             "gnomad_af_ge_0p001_overlap": any(p in banned_1b for p in range(lo, hi + 1)),
             "max_avi_phred": round(max((avi_pos.get(p, 0.0) for p in range(lo, hi + 1)), default=0.0), 2),
         }
@@ -145,5 +146,5 @@ def benchmark_atg4b_torres_3j_vs_carbon_intervals(cache_dir: Path, gnomad_map: d
                      "bulge_1nt_steric_pc_genes": len(bg_act), "constrained_cns_offtarget_flags": flags})
     return {
         "head_to_head_intervals": rows,
-        "torres2024_pip8b2_kim1_nephrotoxicity_note": "Torres et al. 2024 (PMID:39305312) murine kidney Kim-1 elevation arose from systemic IV administration of cationic cell-penetrating peptide Pip8b2 conjugated to a high-Tm LNA mixmer (proximal-tubule megalin/cubilin uptake); naked intrathecal 2'-O-MOE CSF dosing (~10-100 mg) bypasses systemic Pip8b2 renal accumulation while lowering 1-mm off-target Tm.",
+        "torres2024_pip8b2_kim1_nephrotoxicity_note": "Torres et al. 2024 (PMID:39305312, PMC11416411) evaluated two distinct constructs: (1) unconjugated 16-nt 6-LNA/15-PS mixmer ASO 3J (Table 3, chr2:241668980-241668995(+)), transfected at 5-100 nM with Lipofectamine RNAiMAX in TARDBP-KD HeLa cells (Fig. 6c), and (2) systemic IV 25-nt peptide-conjugated PMO Pip8b2-ATG4B targeting the TDP-43 binding site (10 mg/kg, Fig. 6a,b), which caused transient Day-2 mouse urinary KIM-1 elevation resolving by Day 7. Sequence off-target counts (10/18/5 vs #2 0/0/0) quantify transcriptome sequence hits rather than measured in vivo toxicity; naked intrathecal 2'-O-MOE CSF dosing avoids cationic CPP renal exposure.",
     }

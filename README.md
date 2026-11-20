@@ -16,11 +16,11 @@ Agreement *within* a cluster is treated as cross-platform validation, not indepe
 ## 3-Level Independent Computational Replication Quickstart
 
 ```bash
-# Level 1 (<10s, 0 MB extra data): Verify all 18 CSV schemas, FKs, citations, decision rules & 194/194 64-char SHA-256s
+# Level 1 (<10s, 0 MB extra data): Verify all 18 CSV schemas, FKs, citations, decision rules & 194 recorded 64-char SHA-256s (41 unique anchors; 64/194 bundled in clean checkout)
 uv sync --frozen
 uv run python scripts/verify_explore_als.py --mode cached
 
-# Level 2 (~5s cached / full with staged data/): Run all 8 single-command Flagship Monograph Reproducers
+# Level 2 (~5s cached / full with staged data/): Run all 8 single-command Flagship Monograph Reproducers (executable assertions)
 uv run python scripts/reproduce_all.py --flagship-only
 
 # Stage open datasets (Tier A release bundle + Tier B direct publisher/EuropePMC HTTPS + SHA-256 verification)

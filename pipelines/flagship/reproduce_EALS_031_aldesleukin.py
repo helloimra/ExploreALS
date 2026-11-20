@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from _flagship_common import assert_close, has_raw_dataset, load_csv_by_key, load_json_any, print_audit_report
+from _flagship_common import assert_close, assert_equal, has_raw_dataset, load_csv_by_key, load_json_any, print_audit_report
 
 
 def schoenfeld_ph_trial(hr: float, p0_cum: float, censor: float = 0.05, z_alpha: float = 1.959964, z_beta: float = 0.841621) -> dict[str, int | float]:
@@ -46,12 +46,12 @@ def main() -> None:
     d62 = schoenfeld_ph_trial(0.62, p0_cum=0.41, censor=0.05)
 
     checks = [
-        ("Portfolio Actionable Rank & Decision", f"#{port['unified_rank']} ({port['decision']})", "#2 (KEEP_EXPLORATORY_UNPROVEN)", "PASS"),
-        ("[MEASURED] MIROCALS BioVendor ELISA 750-3,700 pg/mL (n=154/220; <=3,700 n=173)", "0.52" in evs["EV-B6-047"]["effect_estimate"], True, "PASS"),
+        assert_equal("Portfolio Actionable Rank & Decision", f"#{port['unified_rank']} ({port['decision']})", "#2 (KEEP_EXPLORATORY_UNPROVEN)"),
+        assert_equal("[MEASURED] MIROCALS BioVendor ELISA 750-3,700 pg/mL (n=154/220; <=3,700 n=173)", "0.52" in evs["EV-B6-047"]["effect_estimate"], True),
         assert_close(f"[MEASURED:{src_tag}] Trautwig DIA MS NEFL vs NEFH Pearson r (n=77)", r_dia, 0.2779, rtol=0.01),
-        assert_close("[MODEL_PRIOR] Schoenfeld required deaths at HR=0.70 (80% power)", float(d70_var["events"]), 247.0, rtol=1e-6),
-        assert_close("[MODEL_PRIOR] Schoenfeld required deaths at HR=0.62 (80% power)", float(d62["events"]), 138.0, rtol=1e-6),
-        ("Event-driven 36-42m N_rand (P0=0.41) vs Fixed 24m N_rand (P0=0.29)", f"{d70_var['n_rand']} vs {d70_24m['n_rand']}", "724 vs 1034", "PASS"),
+        assert_close("[MODEL_PRIOR] Schoenfeld required deaths at HR=0.70 (80% two-sided superiority power, HR_crit=0.779)", float(d70_var["events"]), 247.0, rtol=1e-6),
+        assert_close("[MODEL_PRIOR] Schoenfeld required deaths at HR=0.62 (80% two-sided superiority power)", float(d62["events"]), 138.0, rtol=1e-6),
+        assert_equal("Event-driven 36-42m N_rand (P0=0.41) vs Fixed 24m N_rand (P0=0.29)", f"{d70_var['n_rand']} vs {d70_24m['n_rand']}", "724 vs 1034"),
     ]
     print_audit_report(
         "EALS-031", "Low-Dose Aldesleukin (MIROCALS BioVendor pNfH Gate)", checks,

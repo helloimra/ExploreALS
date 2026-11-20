@@ -683,11 +683,13 @@
   },
   "nov2026_parallel_and_cd38_sensitivity": {
     "model_status": "EXPLORATORY_MECHANISTIC_SENSITIVITY_SWEEP",
-    "leahey_empirical_wt_6mer_calibration": {
+    "illustrative_low_reserve_washout_prior": {
+      "status": "MODEL_PRIOR_UNFIT",
       "L0": 2.5,
-      "cooperativity_n_eff": 6,
+      "effective_hill_exponent": 6,
       "peak_fold_over_baseline": 2.829,
-      "peak_at_dose_over_Kd": 0.178
+      "peak_at_dose_over_Kd": 0.178,
+      "leahey2025_fig2g_note": "Leahey et al. 2025 (PMID:42380237, PMC13267063 Fig. 2g) reports a median 8.6-fold (IQR 5.1-9.7) IC50 / C_act concentration separation across 122 base-exchange inhibitors (7 chemical series), NOT an activation amplitude fold-change; this L0=2.5 curve is strictly an illustrative [MODEL_PRIOR] low-reserve washout scenario alongside the 8-mer MWC curves."
     },
     "parallel_plus_end_lower_bound_fold": 1.0,
     "parallel_mechanism_note": "Two-branch competing-hazard architecture \u2014 Branch A (SARM1-independent microtubule regeneration): Krus et al. 2022 (PMID:35767949), Beccari et al. 2025 (PMID:40392845), and Matson & Holzbaur 2026 (10.64898/2026.11.07.764673 [PREPRINT]) demonstrate that STMN2 promotes plus-end microtubule dynamicity/catastrophe and suppresses runaway tubulin polymerization; STMN2 loss reduces catastrophe and impairs neurite outgrowth/regeneration independently of SARM1 L_eff (1.00x SARM1 Kd_T potency shift at alpha=0), proving SARM1 inhibition cannot substitute for STMN2 rescue. Branch B (conditional NMNAT2-SARM1 metabolic switch, alpha in [0, 1]): spans alpha=0 (Krus 2022 Stmn2-/- baseline, 1.00x shift) to alpha>0 vesicular co-transport stress (Beccari 2025, 1.73x-7.22x [median 2.98x] Cys311 T-lock floor-dose sparing across n=9 well-separated threshold states).",

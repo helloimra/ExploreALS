@@ -15,7 +15,7 @@ for p in (SCRIPTS_DIR, SCRIPT_DIR):
         sys.path.insert(0, str(p))
 
 from _retrospective_registry_specs import NEW_EVIDENCE_ROWS, RUN_P4_003_ROW  # noqa: E402
-from _retrospective_stat_and_log_specs import NEW_STAT_SPECS, UPD_2026_11_19_01, UPD_2026_11_20_01  # noqa: E402
+from _retrospective_stat_and_log_specs import NEW_STAT_SPECS, UPD_2026_11_19_01, UPD_2026_11_20_01, UPD_2026_11_20_02  # noqa: E402
 from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose  # noqa: E402
 from verify_carbon_als import sha256_anchor  # noqa: E402
 
@@ -101,8 +101,9 @@ def main() -> None:
         elif sr["evidence_id"] == "EV-P2-T4-001":
             sr["n_statistical_units"] = "28"
             sr["exact_contrast"] = "UMI-pooled donor-collapsed Edinburgh cortical endothelium (n=28 unique donors at min_nuclei>=10: 21 non-C9 sALS vs 7 Ctrl, XIST/UTY-verified, PMID:42551425) & PDB 4KC3 IL-33-ST2 complex | Welch two-sample t-test on donor-collapsed endothelial IL1RL1 log2CPM + sST2 vs pan-ST2 Treg ST2L mass-action model"
-            sr["effect_estimate"] = "Endo diff_log2CPM=+3.1067 (p=0.00698; all ALS +2.8427, p=0.0115, n=30; n=7 Ctrl caveat; XIST/UTY swap-immune H5AD); 4KC3 30 ST2 D1-D3 contacts (10 Cys = 5 closed disulfides, Cys327 in 324-SKECF-328 unpaired) -> at perivascular 400pM sST2 (vs ~5pM bulk CSF PMID:37117777), [MODEL_PRIOR] 5nM pan-ST2 suppresses Treg ST2L (3.2%->0.32%) vs 80% RNA suppression (11.8%) or intact-FcRn sweeping (28.2%)"
+            sr["effect_estimate"] = "Endo diff_log2CPM=+3.1067 (p=0.00698; all ALS +2.8427, p=0.0115, n=30; n=7 Ctrl caveat; XIST/UTY swap-immune H5AD); 4KC3 (resolved aa 21-317) 30 ST2 D1-D3 contacts (10 Cys = 5 closed disulfides, leaving sequence-deduced Cys327 in 324-SKECF-328 unpaired) -> at perivascular 400pM sST2 (vs ~5pM bulk CSF PMID:37117777), [MODEL_PRIOR] 5nM pan-ST2 suppresses Treg ST2L (3.2%->0.32%) vs 80% RNA suppression (11.8%) or intact-FcRn sweeping (28.2%)"
             sr["unadjusted_or_primary_nominal_p"] = "0.00698"
+            sr["covariate_adjusted_nominal_p"] = ""
         ok_a, dig_a = sha256_anchor(ROOT / sr["anchor_relpath"])
         if ok_a:
             sr["sha64"] = dig_a
@@ -160,12 +161,11 @@ def main() -> None:
     )
     if "63442302:C>G" not in dm["C006"]["evidence_disproves_hypothesis"]:
         dm["C006"]["evidence_disproves_hypothesis"] += " [MODEL_PRIOR] One-sided WT-context signed AlphaGenome predict_variant shows #3 63442302:C>G increases Exon 4-6 skipping +35.2% (+0.1930) vs #2 Intron-4 UG (-0.0522), flagging a putative Intron-5 ISE hazard requiring empirical microwalk resolution."
-    dm["C015"]["evidence_proves_hypothesis"] = dm["C015"]["evidence_proves_hypothesis"].replace(
-        "co-segregate in phase on one risk haplotype.",
-        "co-segregate in phase on one risk haplotype (gnomAD NFE AF=32.6-32.9%, EAS=60.4-61.3%).",
+    base_c015 = dm["C015"]["evidence_proves_hypothesis"].split(" Open Targets SuSiE-inf")[0].split(".988,")[0].rstrip(".") + "."
+    dm["C015"]["evidence_proves_hypothesis"] = (
+        base_c015
+        + " Open Targets SuSiE-inf (purityMeanR2=0.988, EUR-vs-xAnc GWAS COLOC H4=0.958, PMID:34873335) and phased 1000G Phase 3 chromosomes show rs229243-A, cross-ancestry lead rs229195-A (PIP=0.240), rs229194-A, and rs229143-A have 96.7% (351/363) 1111 A-haplotype purity in EUR vs 72.7% (853/1,173; 320 mixed) in AFR (gnomAD NFE AF=32.6-32.9%, EAS=60.4-61.3%)."
     )
-    if "purityMeanR2=0.988" not in dm["C015"]["evidence_proves_hypothesis"]:
-        dm["C015"]["evidence_proves_hypothesis"] += " Open Targets SuSiE-inf (purityMeanR2=0.988, COLOC H4=0.958, PMID:34873335) proves rs229243-A, cross-ancestry lead rs229195-A (PIP=0.240), rs229194-A, and rs229143-A co-segregate in phase on one risk haplotype (gnomAD NFE AF=32.6-32.9%, EAS=60.4-61.3%)."
     if "PDB 1PK6" not in dm["C018"]["evidence_proves_hypothesis"]:
         dm["C018"]["evidence_proves_hypothesis"] = dm["C018"]["evidence_proves_hypothesis"].replace(
             "10.1016/j.cell.2024.05.058)",
@@ -178,15 +178,15 @@ def main() -> None:
     for sn in sn_rows:
         sid = sn["subnode_id"]
         if sid == "C015-N1":
+            sn["subnode_verdict"] = re.sub(
+                r"SuSiE-proven in-phase risk haplotype \([^)]*\)",
+                "SuSiE chr14q12 credible set (purityMeanR2=0.988, NFE AF=32.6-32.9%, EUR-vs-xAnc GWAS COLOC H4=0.958, PMID:34873335; 1000G EUR 96.7% [351/363] vs AFR 72.7% [853/1,173] 1111 purity; x-anc lead rs229195-A PIP=0.240)",
+                sn["subnode_verdict"],
+            )
             if "purityMeanR2=0.988" not in sn["subnode_verdict"]:
                 sn["subnode_verdict"] = sn["subnode_verdict"].replace(
                     "opposing MN-vs-myeloid eQTL polarity,",
-                    "SuSiE-proven in-phase risk haplotype (purityMeanR2=0.988, NFE AF=32.6-32.9%, COLOC H4=0.958, PMID:34873335; x-anc lead rs229195-A PIP=0.240) driving opposing MN (+0.048) vs myeloid (-0.22..-0.33; AlphaGenome CD14+ q=-0.99986) polarity,",
-                )
-            else:
-                sn["subnode_verdict"] = sn["subnode_verdict"].replace(
-                    "purityMeanR2=0.988, COLOC H4=0.958,",
-                    "purityMeanR2=0.988, NFE AF=32.6-32.9%, COLOC H4=0.958,",
+                    "SuSiE chr14q12 credible set (purityMeanR2=0.988, NFE AF=32.6-32.9%, EUR-vs-xAnc GWAS COLOC H4=0.958, PMID:34873335; 1000G EUR 96.7% vs AFR 72.7% 1111 purity) driving opposing MN (+0.048) vs myeloid (-0.22..-0.33; AlphaGenome CD14+ q=-0.99986) polarity,",
                 )
         elif sid == "C015-N2" and "rs229195-A" not in sn["subnode_verdict"]:
             sn["subnode_verdict"] += " Cross-ancestry GWAS lead rs229195-A (PIP=0.240, AlphaGenome MN G2E3 splice q=0.968) rides in phase with SCFD1 rs229243-A/rs229143-A."
@@ -196,7 +196,7 @@ def main() -> None:
 
     # 6. living_evidence_updates.csv
     u_cols, u_rows = _load("living_evidence_updates.csv")
-    u_rows = [u for u in u_rows if u["update_id"] not in {"UPD-2026-11-19-01", "UPD-2026-11-20-01"}]
+    u_rows = [u for u in u_rows if u["update_id"] not in {"UPD-2026-11-19-01", "UPD-2026-11-20-01", "UPD-2026-11-20-02"}]
     for u in u_rows:
         uid = u["update_id"]
         if uid == "UPD-2026-11-18-05":
@@ -215,7 +215,7 @@ def main() -> None:
         elif uid == "UPD-2026-11-18-02":
             u["headline"] = "MIROCALS Primary Stratum Verification, CLSI EP09c pNfH Assay Bridging & Phase 3 Survival Sizing"
             u["prior_state_or_assumption"] = "Follow-on low-dose IL-2 trial designs frequently treat clinical TRICALS risk scores, shotgun CSF mass spectrometry, or unbridged commercial pNfH/NfL immunoassay cutoffs as interchangeable with MIROCALS's BioVendor ELISA CSF pNfH <=3,700 pg/mL responder stratum."
-            u["new_evidence_or_revision"] = "Primary verification of MIROCALS (NCT03039673, PMID:40354799, N=220, 90 deaths: <750 pg/mL n=19 [0 deaths], 750–3,700 n=154 [57 deaths, HR=0.52; pooled <=3,700 n=173 HR=0.57 p=0.037], >3,700 n=47 [33/90 deaths, HR=1.37 p=0.38; 2.13x death-rate ratio], continuous interaction p=0.0011, ALSFRS-R slope interaction F=3.95 p=0.048, and sustained Day-112 trough Treg expansion p<0.0001) alongside Al Khleifat et al. (2026, J Neurol, PMID:42836993: TRICALS shares r^2 = 12.7% with CSF pNfH; nested pNfH x trt dChi2 = 14.24 vs TRICALS x trt dChi2 = 4.76) separates tryptic CSF MS noise (r = 0.278, PMID:40375307) from clinical immunoassays (serum NfL–CSF pNfH rho = 0.64–0.71, PMID:38683209; serum NfL > serum pNfH on ALSFRS-R slope, PMID:32385188; paired CSF–serum pNfH r = 0.652, PMID:29054919) and notes ~1.8x–4.5x inter-platform pNfH offsets (PMID:31251725; modeled unbridged lower CSF cutoffs reduce 247-death one-sided superiority power from 80% to ~43–50% at HR_high = 1.00 or ~14–23% at HR_high = 1.37), while enrolled N=137 ALSTARS (NCT07161999) stratifies 3 serum NfL tiers on 24-wk ALSFRS-R with dual rhIL-2 + CTLA4-Ig."
+            u["new_evidence_or_revision"] = "Primary verification of MIROCALS (NCT03039673, PMID:40354799, N=220, 90 deaths: <750 pg/mL n=19 [0 deaths], 750–3,700 n=154 [57 deaths, HR=0.52; pooled <=3,700 n=173 HR=0.57 p=0.037], >3,700 n=47 [33/90 deaths, HR=1.37 p=0.38; 2.13x death-rate ratio], continuous interaction p=0.0011, ALSFRS-R slope interaction F=3.95 p=0.048, and sustained Day-112 trough Treg expansion p<0.0001) alongside Al Khleifat et al. (2026, J Neurol, PMID:42836993: TRICALS shares r^2 = 12.7% with CSF pNfH; nested pNfH x trt dChi2 = 14.24 vs TRICALS x trt dChi2 = 4.76) separates tryptic CSF MS noise (r = 0.278, PMID:40375307) from clinical immunoassays (serum NfL–CSF pNfH rho = 0.64–0.71, PMID:38683209; serum NfL > serum pNfH on ALSFRS-R slope, PMID:32385188; paired CSF–serum pNfH r = 0.652, PMID:29054919) and notes ~1.8x–4.5x inter-platform pNfH offsets (PMID:31251725; modeled unbridged lower CSF cutoffs reduce 247-death two-sided superiority power from 80% to ~43–50% at HR_high = 1.00 or ~14–23% at HR_high = 1.37), while enrolled N=137 ALSTARS (NCT07161999) stratifies 3 serum NfL tiers on 24-wk ALSFRS-R with dual rhIL-2 + CTLA4-Ig."
             u["portfolio_and_gate_consequence"] = "Retains EALS-031 (#2/52, Keep · Exploratory, Tier 1) and locks pre-Phase-3 CLSI EP09c split-aliquot Passing-Bablok bridging (N>=40 paired ALS CSFs) to MIROCALS's ~79th BioVendor percentile plus complementary TRICALS + log(CSF pNfH) Cox adjustment across 247 Schoenfeld events (HR = 0.70)."
             u["primary_sources"] = "PMID:42836993;PMID:40354799;PMID:38683209;PMID:32385188;PMID:29054919;PMID:31251725;NCT07161999;NCT03039673"
         elif uid == "UPD-2026-11-18-01":
@@ -224,6 +224,7 @@ def main() -> None:
             u["portfolio_and_gate_consequence"] = u["portfolio_and_gate_consequence"].replace("under Epistemic Asymmetry ", "")
     u_rows.insert(0, dict(UPD_2026_11_19_01))
     u_rows.insert(0, dict(UPD_2026_11_20_01))
+    u_rows.insert(0, dict(UPD_2026_11_20_02))
     def _map_anchor_tok(tok: str) -> str:
         t = tok.strip()
         if t.startswith("FLAGSHIP-") and not t.startswith("FLAGSHIP-EALS-"):

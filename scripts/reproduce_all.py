@@ -52,8 +52,7 @@ def main() -> None:
     if args.cached_gates:
         mode = "cached" if is_public_export else ("full" if (ROOT / "data" / "transcriptomics" / "nygc_d001" / "NYGC_counts.txt.gz").is_file() else "cached")
         _run_py("scripts/verify_explore_als.py", ["--mode", mode])
-        if (ROOT / "data" / "transcriptomics" / "nygc_d001" / "NYGC_counts.txt.gz").is_file():
-            _run_py("scripts/test_shared_loaders.py")
+        _run_py("scripts/test_shared_loaders.py")
 
     if args.flagship_only:
         flagships = sorted((ROOT / "pipelines" / "flagship").glob("reproduce_*.py"))

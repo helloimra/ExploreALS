@@ -72,11 +72,19 @@ def main() -> None:
         pct = float(np.searchsorted(pc_gc_vals, val, side="right") / len(pc_gc_vals) * 100.0)
         gc_summary[g] = {"ensembl_id": str(sub.iloc[0][col_ens]), "gc_pct": val, "pc_gc_percentile": round(pct, 2)}
 
-    # 2. Historical BA9 bundle 14 test pairs
-    b5_dir = resolve_dataset_path("DS_BA9_BUNDLE")
-    b5_vals = pd.read_csv(b5_dir / "work" / "dl23e_values" / "coordinator" / "values.tsv", sep="\t")
-    ct_col, gene_col = resolve_col(b5_vals, "cell_type"), resolve_col(b5_vals, "gene")
-    test_pairs = list(b5_vals[[ct_col, gene_col]].itertuples(index=False, name=None))
+    # 2. Historical BA9 14 test pairs (embedded so RUN-B6-001 needs zero unmanifested legacy directory)
+    historical_ba9_14_pairs = [
+        ("L2_L3", "BRSK2"), ("Oligo", "MYO18A"), ("L5", "KIFC2"), ("L3_L5", "BRSK2"),
+        ("Oligo", "DNAJB2"), ("L4_L6", "KIFC2"), ("L4_L5", "KIFC2"), ("L4_L5", "BRSK2"),
+        ("L2_L3", "AP1G2"), ("L2_L3", "ZNF783"), ("L3_L5", "KIFC2"), ("L2_L3", "AGAP2"),
+        ("L2_L3", "SNPH"), ("L2_L3", "MIB2"),
+    ]
+    opt_b5_tsv = ROOT / "data" / "transcriptomics" / "ba9_bundle_v5" / "work" / "dl23e_values" / "coordinator" / "values.tsv"
+    if opt_b5_tsv.is_file():
+        b5_vals = pd.read_csv(opt_b5_tsv, sep="\t")
+        ct_col, gene_col = resolve_col(b5_vals, "cell_type"), resolve_col(b5_vals, "gene")
+        assert list(b5_vals[[ct_col, gene_col]].itertuples(index=False, name=None)) == historical_ba9_14_pairs
+    test_pairs = list(historical_ba9_14_pairs)
     test_pairs.extend([("Micro", "CAPG"), ("L2_L3", "CAPG"), ("L2_L3", "SARM1"), ("L3_L5", "SARM1"), ("Oligo", "SARM1")])
 
     # 3. D003 BA9 and BA4 (M1) donor-level pseudobulk + donor GC-bias index

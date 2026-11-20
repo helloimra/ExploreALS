@@ -131,7 +131,7 @@
   },
   "celf5_afdb_and_3nmr_rrm2_truncation": {
     "afdb_id": "AF-Q8N6W0-F1-v6",
-    "pdb_homolog_id": "3NMR (PMID:20947024, CELF1 RRM1-RRM2:UGUU)",
+    "pdb_homolog_id": "3NMR (PMID:20947024, CELF1 RRM1-RRM2:UGUU homolog projection; no experimental CELF5 RRM2 structure)",
     "plddt_rrm1_46_121": 91.75,
     "plddt_rrm2_retained_134_201": 90.92,
     "plddt_rrm2_excised_beta4_202_214": 85.54,
@@ -151,30 +151,30 @@
     "mapped_3nmr_pro201_equivalent": 174,
     "total_3nmr_rrm2_uguu_rna_contact_residues_le_4p0A": 17,
     "excised_beta4_and_cterm_uguu_contact_residues_lost": 6,
-    "structural_mechanism_verdict": "Truncation after Pro201 excises beta4 (202-214), severing anti-parallel beta4-beta1 backbone H-bonds and C-terminal UGUU RNA-clamp contacts while leaving RRM1 (46-121; 0 inter-domain contacts) decoupled across a flexible linker: primary loss-of-function + unfolded RRM2(134-201)+29aa chaperone/granule burden rather than high-affinity competitive RNA dominant-negativity."
+    "structural_mechanism_verdict": "Truncation after Pro201 excises beta4 (202-214) in AF-Q8N6W0-F1, severing anti-parallel beta4-beta1 backbone H-bonds and projected C-terminal UGUU RNA-clamp contacts (mapped from CELF1 homolog PDB 3NMR) while leaving RRM1 (46-121; 0 inter-domain contacts) decoupled across a flexible linker: primary loss-of-function + unfolded RRM2(134-201)+29aa chaperone/granule burden rather than high-affinity competitive RNA dominant-negativity."
   },
-  "celf5_frechet_hoeffding_phasing_and_ejc_audit": {
+  "celf5_local_lsv_nmd_and_ejc_audit": {
     "n_brown2022_junction_rows": 9,
     "ce_108bp_dpsi": 0.3471,
+    "ce_108bp_kd_e_psi": 0.367,
+    "canonical_3278110_3281199_kd_e_psi_donor_vs_acceptor_lsv": [
+      0.546,
+      0.633
+    ],
     "adjacent_98bp_microintron_3278111_3278208_psi_wt_to_kd": [
       0.028,
       0.182
     ],
-    "intron1_retention_dpsi": 0.122,
-    "frechet_hoeffding_aberrant_transcript_bounds": {
-      "cis_coupled_lower_aberrant_pct": 34.7,
-      "independent_assortment_aberrant_pct": 42.7,
-      "mutually_exclusive_upper_aberrant_pct": 46.9,
-      "canonical_wt_mrna_bounds_pct": [
-        53.1,
-        65.3
-      ],
-      "single_locus_ce_sso_canonical_ceiling_bounds_pct": [
-        87.8,
-        100.0
-      ]
-    },
+    "upstream_novel_acceptor_3225618_3244124_dpsi": 0.1218,
+    "upstream_novel_acceptor_3225618_3244124_kd_e_psi": 0.149,
+    "local_lsv_phasing_note": "Brown 2022 MOESM11 quantifies local MAJIQ LSVs with distinct denominators (canonical junction 3278110-3281199 KD E[PSI]=0.546 in donor LSV vs 0.633 in acceptor LSV; upstream 3225618-3244124 is annotated novel_acceptor with blank ir_start/ir_end, not intron-1 retention) and is measured in NMD-competent i3Neurons; whole-transcript phasing bounds cannot be algebraically summed from unphased local LSVs and require long-read ONT/Iso-Seq.",
+    "zeng2025_nmd_inhibition_cryptic_psi_pct": [
+      24.8,
+      44.6
+    ],
+    "zeng2025_nmd_inhibition_fdr": 0.0235,
     "empirical_brown2022_rnaseq_log2fc": -0.8872,
+    "empirical_residual_rnaseq_pct": 54.1,
     "empirical_brown2022_riboseq_log2fc": -1.3749,
     "empirical_residual_translation_pct": 38.6,
     "ejc_nmd_minigene_trap": {
@@ -182,10 +182,11 @@
       "first_inframe_ptc_codon_1b": 30,
       "first_inframe_ptc_end_nt_in_ce": 90,
       "dist_ptc_to_ce_exon6_junction_nt": 18,
+      "dist_ptc_to_exon6_exon7_junction_nt": 165,
       "canonical_ejc_nmd_threshold_nt": 50,
       "triggers_nmd_from_ce_exon6_junction_alone": 0,
       "downstream_constitutive_ejcs_in_mane_exon6_to_13": 7,
-      "assay_mandate": "A 3-exon Exon5-CE-Exon6 splicing minigene places the PTC only 18 nt (<50-55 nt) upstream of the terminal splice junction and artificially evades EJC-NMD; validation requires endogenous multi-exon (Exon 4-7+) long-read ONT/Iso-Seq phasing + UPF1/CHX NMD rescue."
+      "assay_mandate": "On MANE NM_021938.4, the cryptic PTC ends 18 nt (<50-55 nt EJC threshold, PMID:9671053) upstream of CE-Exon6 and 165 nt upstream of Exon6-Exon7: a 3-exon Exon5-CE-Exon6 minigene can measure primary splice-site %PSI choice, but evades canonical EJC-dependent NMD; NMD/stability and isoform-phasing validation require endogenous multi-exon transcripts (consistent with Zeng et al. 2025 PMID:40672339 [PREPRINT] PMC12265704 showing NMD inhibition raises cryptic CELF5 PSI from 24.8% to 44.6%, FDR=0.0235) + Exon 1-7+ ONT/Iso-Seq."
     }
   },
   "celf5_nygc_multiregion": {
@@ -201,35 +202,35 @@
       "mwu_p_tdp_vs_ctrl": 0.0016693082783529227,
       "adj_beta_tdp_vs_ctrl": -0.402,
       "adj_t_tdp_vs_ctrl": -2.4036,
-      "adj_p_tdp_vs_ctrl": 0.01717881547433806,
+      "adj_p_tdp_vs_ctrl": 0.017178815474337927,
       "unadj_diff_tdp_vs_sod1fus": 0.0559,
       "welch_p_tdp_vs_sod1fus": 0.8217702719687865,
       "adj_beta_tdp_vs_sod1fus": -0.05,
-      "adj_p_tdp_vs_sod1fus": 0.8634699746262656,
+      "adj_p_tdp_vs_sod1fus": 0.8634699746262651,
       "within_tdp_spearman_tSTMN2_rho": 0.1017,
       "within_tdp_spearman_tSTMN2_p": 0.19765005589324544,
       "within_tdp_mn_adj_log2_tSTMN2_beta": -1.3932,
       "within_tdp_mn_adj_log2_tSTMN2_t": -5.9133,
-      "within_tdp_mn_adj_log2_tSTMN2_p": 2.02481784723956e-08,
+      "within_tdp_mn_adj_log2_tSTMN2_p": 2.024817847239618e-08,
       "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 1.9,
       "oneill_motor_subtypes": {
         "ALS-Ox": {
           "n": 104,
           "mean_log2cpm": 2.1307,
           "adj_beta_vs_ctrl": -0.4186,
-          "adj_p_vs_ctrl": 0.03209170939760403
+          "adj_p_vs_ctrl": 0.032091709397603835
         },
         "ALS-Glia": {
           "n": 9,
           "mean_log2cpm": 1.7256,
           "adj_beta_vs_ctrl": -0.7373,
-          "adj_p_vs_ctrl": 0.06965079534276157
+          "adj_p_vs_ctrl": 0.06965079534276102
         },
         "ALS-TE": {
           "n": 22,
           "mean_log2cpm": 2.6206,
           "adj_beta_vs_ctrl": -0.1418,
-          "adj_p_vs_ctrl": 0.5539728587756175
+          "adj_p_vs_ctrl": 0.5539728587756142
         }
       },
       "oneill_kruskal_3subtype_p": 0.004731477893478275
@@ -246,35 +247,35 @@
       "mwu_p_tdp_vs_ctrl": 0.7948731244216383,
       "adj_beta_tdp_vs_ctrl": 0.1909,
       "adj_t_tdp_vs_ctrl": 0.9021,
-      "adj_p_tdp_vs_ctrl": 0.3682940264910506,
+      "adj_p_tdp_vs_ctrl": 0.3682940264910533,
       "unadj_diff_tdp_vs_sod1fus": 0.2845,
       "welch_p_tdp_vs_sod1fus": 0.1434136156276577,
       "adj_beta_tdp_vs_sod1fus": 0.1386,
-      "adj_p_tdp_vs_sod1fus": 0.7152558356092308,
+      "adj_p_tdp_vs_sod1fus": 0.715255835609233,
       "within_tdp_spearman_tSTMN2_rho": 0.225,
       "within_tdp_spearman_tSTMN2_p": 0.0073078295343532735,
       "within_tdp_mn_adj_log2_tSTMN2_beta": -1.194,
       "within_tdp_mn_adj_log2_tSTMN2_t": -7.2713,
-      "within_tdp_mn_adj_log2_tSTMN2_p": 2.5373877069343883e-11,
+      "within_tdp_mn_adj_log2_tSTMN2_p": 2.537387706934432e-11,
       "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 0.14,
       "oneill_motor_subtypes": {
         "ALS-Ox": {
           "n": 90,
           "mean_log2cpm": 2.7033,
           "adj_beta_vs_ctrl": 0.1241,
-          "adj_p_vs_ctrl": 0.6311596935734455
+          "adj_p_vs_ctrl": 0.6311596935734493
         },
         "ALS-Glia": {
           "n": 8,
           "mean_log2cpm": 2.465,
           "adj_beta_vs_ctrl": -0.2345,
-          "adj_p_vs_ctrl": 0.562640372016322
+          "adj_p_vs_ctrl": 0.5626403720163138
         },
         "ALS-TE": {
           "n": 21,
           "mean_log2cpm": 2.9681,
           "adj_beta_vs_ctrl": 0.0807,
-          "adj_p_vs_ctrl": 0.7440856626817602
+          "adj_p_vs_ctrl": 0.7440856626817623
         }
       },
       "oneill_kruskal_3subtype_p": 0.3390216385173942
@@ -291,35 +292,35 @@
       "mwu_p_tdp_vs_ctrl": 0.1775791018474936,
       "adj_beta_tdp_vs_ctrl": 0.0806,
       "adj_t_tdp_vs_ctrl": 0.5537,
-      "adj_p_tdp_vs_ctrl": 0.5808835821373852,
+      "adj_p_tdp_vs_ctrl": 0.5808835821373843,
       "unadj_diff_tdp_vs_sod1fus": -0.3351,
       "welch_p_tdp_vs_sod1fus": 0.24098815943933097,
       "adj_beta_tdp_vs_sod1fus": -0.2888,
-      "adj_p_tdp_vs_sod1fus": 0.15917743128411277,
+      "adj_p_tdp_vs_sod1fus": 0.1591774312841114,
       "within_tdp_spearman_tSTMN2_rho": -0.1452,
       "within_tdp_spearman_tSTMN2_p": 0.15815613599563358,
       "within_tdp_mn_adj_log2_tSTMN2_beta": -0.5877,
       "within_tdp_mn_adj_log2_tSTMN2_t": -1.4892,
-      "within_tdp_mn_adj_log2_tSTMN2_p": 0.13988435038232705,
+      "within_tdp_mn_adj_log2_tSTMN2_p": 0.1398843503823226,
       "within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal": 14.88,
       "oneill_motor_subtypes": {
         "ALS-Ox": {
           "n": 74,
           "mean_log2cpm": 5.8415,
           "adj_beta_vs_ctrl": 0.2107,
-          "adj_p_vs_ctrl": 0.15069773215170615
+          "adj_p_vs_ctrl": 0.1506977321517069
         },
         "ALS-Glia": {
           "n": 7,
           "mean_log2cpm": 5.2612,
           "adj_beta_vs_ctrl": -0.6358,
-          "adj_p_vs_ctrl": 0.04881476137465276
+          "adj_p_vs_ctrl": 0.04881476137465291
         },
         "ALS-TE": {
           "n": 9,
           "mean_log2cpm": 5.6545,
           "adj_beta_vs_ctrl": -0.21,
-          "adj_p_vs_ctrl": 0.45910709515238113
+          "adj_p_vs_ctrl": 0.45910709515237885
         }
       },
       "oneill_kruskal_3subtype_p": 0.021558749161351726
@@ -329,130 +330,130 @@
     "ATG4B": {
       "Spinal_Cord_Cervical": {
         "adj_beta_tdp_vs_ctrl": -0.1642,
-        "adj_p_tdp_vs_ctrl": 0.0010093685098749668,
-        "adj_p_tdp_vs_sod1fus": 0.27032603176821546,
+        "adj_p_tdp_vs_ctrl": 0.0010093685098749646,
+        "adj_p_tdp_vs_sod1fus": 0.27032603176821707,
         "mn_adj_tSTMN2_beta": -0.5638,
-        "mn_adj_tSTMN2_p": 2.1648700491384953e-06,
+        "mn_adj_tSTMN2_p": 2.16487004913873e-06,
         "mn_adj_neuronal_tail_pct": 6.2
       },
       "Spinal_Cord_Lumbar": {
         "adj_beta_tdp_vs_ctrl": -0.0314,
-        "adj_p_tdp_vs_ctrl": 0.6018474659977613,
-        "adj_p_tdp_vs_sod1fus": 0.35676116558726284,
+        "adj_p_tdp_vs_ctrl": 0.601847465997746,
+        "adj_p_tdp_vs_sod1fus": 0.3567611655872648,
         "mn_adj_tSTMN2_beta": -0.3688,
-        "mn_adj_tSTMN2_p": 2.7365686381927806e-05,
+        "mn_adj_tSTMN2_p": 2.7365686381928097e-05,
         "mn_adj_neuronal_tail_pct": 4.93
       },
       "Cortex_Motor": {
         "adj_beta_tdp_vs_ctrl": 0.0978,
-        "adj_p_tdp_vs_ctrl": 0.07501011241637941,
-        "adj_p_tdp_vs_sod1fus": 0.31499912394322355,
+        "adj_p_tdp_vs_ctrl": 0.07501011241637955,
+        "adj_p_tdp_vs_sod1fus": 0.3149991239432201,
         "mn_adj_tSTMN2_beta": 0.1729,
-        "mn_adj_tSTMN2_p": 0.31646786787145476,
+        "mn_adj_tSTMN2_p": 0.31646786787148573,
         "mn_adj_neuronal_tail_pct": 85.6
       }
     },
     "KALRN": {
       "Spinal_Cord_Cervical": {
         "adj_beta_tdp_vs_ctrl": 0.041,
-        "adj_p_tdp_vs_ctrl": 0.5373504895146535,
-        "adj_p_tdp_vs_sod1fus": 0.27312012954190645,
+        "adj_p_tdp_vs_ctrl": 0.5373504895146521,
+        "adj_p_tdp_vs_sod1fus": 0.2731201295419026,
         "mn_adj_tSTMN2_beta": -0.5456,
-        "mn_adj_tSTMN2_p": 0.00039872275813154757,
+        "mn_adj_tSTMN2_p": 0.00039872275813154936,
         "mn_adj_neuronal_tail_pct": 17.05
       },
       "Spinal_Cord_Lumbar": {
         "adj_beta_tdp_vs_ctrl": 0.0846,
-        "adj_p_tdp_vs_ctrl": 0.29978757593961264,
-        "adj_p_tdp_vs_sod1fus": 0.6361092990330369,
+        "adj_p_tdp_vs_ctrl": 0.2997875759396119,
+        "adj_p_tdp_vs_sod1fus": 0.6361092990330467,
         "mn_adj_tSTMN2_beta": -0.3791,
-        "mn_adj_tSTMN2_p": 0.00018719082927180447,
+        "mn_adj_tSTMN2_p": 0.00018719082927180078,
         "mn_adj_neuronal_tail_pct": 7.06
       },
       "Cortex_Motor": {
         "adj_beta_tdp_vs_ctrl": 0.0666,
-        "adj_p_tdp_vs_ctrl": 0.5343263006216193,
-        "adj_p_tdp_vs_sod1fus": 0.16675582600443412,
+        "adj_p_tdp_vs_ctrl": 0.5343263006216207,
+        "adj_p_tdp_vs_sod1fus": 0.16675582600443203,
         "mn_adj_tSTMN2_beta": -0.2034,
-        "mn_adj_tSTMN2_p": 0.34955085444113304,
+        "mn_adj_tSTMN2_p": 0.34955085444113965,
         "mn_adj_neuronal_tail_pct": 29.23
       }
     },
     "PTPRT": {
       "Spinal_Cord_Cervical": {
         "adj_beta_tdp_vs_ctrl": -0.4079,
-        "adj_p_tdp_vs_ctrl": 0.1010367950578346,
-        "adj_p_tdp_vs_sod1fus": 0.5027065037487911,
+        "adj_p_tdp_vs_ctrl": 0.10103679505783426,
+        "adj_p_tdp_vs_sod1fus": 0.5027065037487902,
         "mn_adj_tSTMN2_beta": -1.0609,
-        "mn_adj_tSTMN2_p": 0.001435446393210309,
+        "mn_adj_tSTMN2_p": 0.001435446393210297,
         "mn_adj_neuronal_tail_pct": 22.54
       },
       "Spinal_Cord_Lumbar": {
         "adj_beta_tdp_vs_ctrl": 0.2222,
-        "adj_p_tdp_vs_ctrl": 0.4130714848731141,
-        "adj_p_tdp_vs_sod1fus": 0.43527772187287495,
+        "adj_p_tdp_vs_ctrl": 0.41307148487311396,
+        "adj_p_tdp_vs_sod1fus": 0.435277721872877,
         "mn_adj_tSTMN2_beta": -1.1989,
-        "mn_adj_tSTMN2_p": 2.7564842518678186e-09,
+        "mn_adj_tSTMN2_p": 2.7564842518679245e-09,
         "mn_adj_neuronal_tail_pct": 0.69
       },
       "Cortex_Motor": {
         "adj_beta_tdp_vs_ctrl": 0.326,
-        "adj_p_tdp_vs_ctrl": 0.012137840744723221,
-        "adj_p_tdp_vs_sod1fus": 0.5498579750688158,
+        "adj_p_tdp_vs_ctrl": 0.012137840744723051,
+        "adj_p_tdp_vs_sod1fus": 0.5498579750688104,
         "mn_adj_tSTMN2_beta": 0.3375,
-        "mn_adj_tSTMN2_p": 0.14658825940480777,
+        "mn_adj_tSTMN2_p": 0.1465882594047992,
         "mn_adj_neuronal_tail_pct": 92.33
       }
     },
     "CELF5": {
       "Spinal_Cord_Cervical": {
         "adj_beta_tdp_vs_ctrl": -0.402,
-        "adj_p_tdp_vs_ctrl": 0.01717881547433806,
-        "adj_p_tdp_vs_sod1fus": 0.8634699746262656,
+        "adj_p_tdp_vs_ctrl": 0.017178815474337927,
+        "adj_p_tdp_vs_sod1fus": 0.8634699746262651,
         "mn_adj_tSTMN2_beta": -1.3932,
-        "mn_adj_tSTMN2_p": 2.02481784723956e-08,
+        "mn_adj_tSTMN2_p": 2.024817847239618e-08,
         "mn_adj_neuronal_tail_pct": 1.9
       },
       "Spinal_Cord_Lumbar": {
         "adj_beta_tdp_vs_ctrl": 0.1909,
-        "adj_p_tdp_vs_ctrl": 0.3682940264910506,
-        "adj_p_tdp_vs_sod1fus": 0.7152558356092308,
+        "adj_p_tdp_vs_ctrl": 0.3682940264910533,
+        "adj_p_tdp_vs_sod1fus": 0.715255835609233,
         "mn_adj_tSTMN2_beta": -1.194,
-        "mn_adj_tSTMN2_p": 2.5373877069343883e-11,
+        "mn_adj_tSTMN2_p": 2.537387706934432e-11,
         "mn_adj_neuronal_tail_pct": 0.14
       },
       "Cortex_Motor": {
         "adj_beta_tdp_vs_ctrl": 0.0806,
-        "adj_p_tdp_vs_ctrl": 0.5808835821373852,
-        "adj_p_tdp_vs_sod1fus": 0.15917743128411277,
+        "adj_p_tdp_vs_ctrl": 0.5808835821373843,
+        "adj_p_tdp_vs_sod1fus": 0.1591774312841114,
         "mn_adj_tSTMN2_beta": -0.5877,
-        "mn_adj_tSTMN2_p": 0.13988435038232705,
+        "mn_adj_tSTMN2_p": 0.1398843503823226,
         "mn_adj_neuronal_tail_pct": 14.88
       }
     },
     "PRUNE2": {
       "Spinal_Cord_Cervical": {
         "adj_beta_tdp_vs_ctrl": -0.2625,
-        "adj_p_tdp_vs_ctrl": 0.0004814436649645131,
-        "adj_p_tdp_vs_sod1fus": 0.5135020370119027,
+        "adj_p_tdp_vs_ctrl": 0.00048144366496452194,
+        "adj_p_tdp_vs_sod1fus": 0.5135020370118935,
         "mn_adj_tSTMN2_beta": -0.5885,
-        "mn_adj_tSTMN2_p": 0.0010539273997615013,
+        "mn_adj_tSTMN2_p": 0.001053927399761478,
         "mn_adj_neuronal_tail_pct": 21.35
       },
       "Spinal_Cord_Lumbar": {
         "adj_beta_tdp_vs_ctrl": -0.376,
-        "adj_p_tdp_vs_ctrl": 0.00020568774464926328,
-        "adj_p_tdp_vs_sod1fus": 0.07887299171406269,
+        "adj_p_tdp_vs_ctrl": 0.00020568774464926938,
+        "adj_p_tdp_vs_sod1fus": 0.0788729917140662,
         "mn_adj_tSTMN2_beta": -0.2015,
-        "mn_adj_tSTMN2_p": 0.10617065392537016,
+        "mn_adj_tSTMN2_p": 0.10617065392536826,
         "mn_adj_neuronal_tail_pct": 34.76
       },
       "Cortex_Motor": {
         "adj_beta_tdp_vs_ctrl": 0.1452,
-        "adj_p_tdp_vs_ctrl": 0.12573259275136298,
-        "adj_p_tdp_vs_sod1fus": 0.1959204453755328,
+        "adj_p_tdp_vs_ctrl": 0.12573259275136275,
+        "adj_p_tdp_vs_sod1fus": 0.1959204453755356,
         "mn_adj_tSTMN2_beta": 0.0875,
-        "mn_adj_tSTMN2_p": 0.7805902930466914,
+        "mn_adj_tSTMN2_p": 0.7805902930466748,
         "mn_adj_neuronal_tail_pct": 68.15
       }
     },
@@ -460,103 +461,103 @@
       "Spinal_Cord_Cervical": {
         "adj_beta_tdp_vs_ctrl": 0.4223,
         "adj_p_tdp_vs_ctrl": 1.4524120538680805e-06,
-        "adj_p_tdp_vs_sod1fus": 0.851568018573862,
+        "adj_p_tdp_vs_sod1fus": 0.8515680185738592,
         "mn_adj_tSTMN2_beta": -0.2179,
-        "mn_adj_tSTMN2_p": 0.27534604035099686,
+        "mn_adj_tSTMN2_p": 0.2753460403510007,
         "mn_adj_neuronal_tail_pct": 55.25
       },
       "Spinal_Cord_Lumbar": {
         "adj_beta_tdp_vs_ctrl": 0.3221,
-        "adj_p_tdp_vs_ctrl": 0.006007560770387175,
-        "adj_p_tdp_vs_sod1fus": 0.6631421775628878,
+        "adj_p_tdp_vs_ctrl": 0.006007560770387148,
+        "adj_p_tdp_vs_sod1fus": 0.6631421775628838,
         "mn_adj_tSTMN2_beta": -0.3971,
-        "mn_adj_tSTMN2_p": 0.00430112747698453,
+        "mn_adj_tSTMN2_p": 0.004301127476984452,
         "mn_adj_neuronal_tail_pct": 14.51
       },
       "Cortex_Motor": {
         "adj_beta_tdp_vs_ctrl": 0.2319,
-        "adj_p_tdp_vs_ctrl": 0.037249491833503616,
-        "adj_p_tdp_vs_sod1fus": 0.4017817211140731,
+        "adj_p_tdp_vs_ctrl": 0.037249491833502235,
+        "adj_p_tdp_vs_sod1fus": 0.40178172111407134,
         "mn_adj_tSTMN2_beta": 0.2272,
-        "mn_adj_tSTMN2_p": 0.35206845955246535,
+        "mn_adj_tSTMN2_p": 0.35206845955247584,
         "mn_adj_neuronal_tail_pct": 84.16
       }
     },
     "TRAPPC12": {
       "Spinal_Cord_Cervical": {
         "adj_beta_tdp_vs_ctrl": -0.0913,
-        "adj_p_tdp_vs_ctrl": 0.07136435461142819,
-        "adj_p_tdp_vs_sod1fus": 0.6014032981051551,
+        "adj_p_tdp_vs_ctrl": 0.0713643546114281,
+        "adj_p_tdp_vs_sod1fus": 0.6014032981051569,
         "mn_adj_tSTMN2_beta": -0.3356,
-        "mn_adj_tSTMN2_p": 0.0077146742933755265,
+        "mn_adj_tSTMN2_p": 0.007714674293376223,
         "mn_adj_neuronal_tail_pct": 31.14
       },
       "Spinal_Cord_Lumbar": {
         "adj_beta_tdp_vs_ctrl": -0.0153,
-        "adj_p_tdp_vs_ctrl": 0.7994712697519348,
-        "adj_p_tdp_vs_sod1fus": 0.48791288774050157,
+        "adj_p_tdp_vs_ctrl": 0.799471269751917,
+        "adj_p_tdp_vs_sod1fus": 0.48791288774050384,
         "mn_adj_tSTMN2_beta": -0.1778,
-        "mn_adj_tSTMN2_p": 0.04938337069193154,
+        "mn_adj_tSTMN2_p": 0.04938337069193163,
         "mn_adj_neuronal_tail_pct": 28.3
       },
       "Cortex_Motor": {
         "adj_beta_tdp_vs_ctrl": 0.0615,
-        "adj_p_tdp_vs_ctrl": 0.2512476114149889,
-        "adj_p_tdp_vs_sod1fus": 0.6995884506890674,
+        "adj_p_tdp_vs_ctrl": 0.251247611414991,
+        "adj_p_tdp_vs_sod1fus": 0.6995884506890611,
         "mn_adj_tSTMN2_beta": 0.2187,
-        "mn_adj_tSTMN2_p": 0.2378220449769058,
+        "mn_adj_tSTMN2_p": 0.23782204497693327,
         "mn_adj_neuronal_tail_pct": 88.71
       }
     },
     "ELK1": {
       "Spinal_Cord_Cervical": {
         "adj_beta_tdp_vs_ctrl": 0.0595,
-        "adj_p_tdp_vs_ctrl": 0.20802889980101963,
-        "adj_p_tdp_vs_sod1fus": 0.17679810222841708,
+        "adj_p_tdp_vs_ctrl": 0.20802889980102005,
+        "adj_p_tdp_vs_sod1fus": 0.17679810222841694,
         "mn_adj_tSTMN2_beta": -0.2553,
-        "mn_adj_tSTMN2_p": 0.02231330872013485,
+        "mn_adj_tSTMN2_p": 0.02231330872013538,
         "mn_adj_neuronal_tail_pct": 36.55
       },
       "Spinal_Cord_Lumbar": {
         "adj_beta_tdp_vs_ctrl": 0.2362,
-        "adj_p_tdp_vs_ctrl": 0.0002298961446865313,
-        "adj_p_tdp_vs_sod1fus": 0.3763382126568893,
+        "adj_p_tdp_vs_ctrl": 0.00022989614468653646,
+        "adj_p_tdp_vs_sod1fus": 0.3763382126568967,
         "mn_adj_tSTMN2_beta": -0.2791,
-        "mn_adj_tSTMN2_p": 0.0009121199473905243,
+        "mn_adj_tSTMN2_p": 0.0009121199473905079,
         "mn_adj_neuronal_tail_pct": 10.07
       },
       "Cortex_Motor": {
         "adj_beta_tdp_vs_ctrl": 0.1524,
-        "adj_p_tdp_vs_ctrl": 0.32120651724409927,
-        "adj_p_tdp_vs_sod1fus": 0.6014989009777163,
+        "adj_p_tdp_vs_ctrl": 0.32120651724409965,
+        "adj_p_tdp_vs_sod1fus": 0.6014989009777136,
         "mn_adj_tSTMN2_beta": 0.5446,
-        "mn_adj_tSTMN2_p": 0.33467969672190895,
+        "mn_adj_tSTMN2_p": 0.33467969672191605,
         "mn_adj_neuronal_tail_pct": 84.92
       }
     },
     "DLGAP1": {
       "Spinal_Cord_Cervical": {
         "adj_beta_tdp_vs_ctrl": 0.1237,
-        "adj_p_tdp_vs_ctrl": 0.11951075381690507,
-        "adj_p_tdp_vs_sod1fus": 0.29095619639415893,
+        "adj_p_tdp_vs_ctrl": 0.11951075381690568,
+        "adj_p_tdp_vs_sod1fus": 0.2909561963941562,
         "mn_adj_tSTMN2_beta": -0.4524,
-        "mn_adj_tSTMN2_p": 0.009114503351300445,
+        "mn_adj_tSTMN2_p": 0.00911450335130041,
         "mn_adj_neuronal_tail_pct": 31.89
       },
       "Spinal_Cord_Lumbar": {
         "adj_beta_tdp_vs_ctrl": 0.2284,
-        "adj_p_tdp_vs_ctrl": 0.036772158844696236,
-        "adj_p_tdp_vs_sod1fus": 0.5253321515460344,
+        "adj_p_tdp_vs_ctrl": 0.03677215884469584,
+        "adj_p_tdp_vs_sod1fus": 0.52533215154604,
         "mn_adj_tSTMN2_beta": -0.4534,
-        "mn_adj_tSTMN2_p": 0.00038410737729196467,
+        "mn_adj_tSTMN2_p": 0.00038410737729195355,
         "mn_adj_neuronal_tail_pct": 8.35
       },
       "Cortex_Motor": {
         "adj_beta_tdp_vs_ctrl": 0.117,
-        "adj_p_tdp_vs_ctrl": 0.4231095444070708,
-        "adj_p_tdp_vs_sod1fus": 0.2785537219745645,
+        "adj_p_tdp_vs_ctrl": 0.4231095444070697,
+        "adj_p_tdp_vs_sod1fus": 0.27855372197456346,
         "mn_adj_tSTMN2_beta": -0.4447,
-        "mn_adj_tSTMN2_p": 0.017211081899507614,
+        "mn_adj_tSTMN2_p": 0.017211081899509494,
         "mn_adj_neuronal_tail_pct": 2.63
       }
     }

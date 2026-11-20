@@ -216,11 +216,13 @@ def summarize_nov2026_sarm1_sensitivity(mwc_grid: dict) -> dict:
     emp_pk = int(np.argmax(emp_bexi_rel))
     return {
         "model_status": "EXPLORATORY_MECHANISTIC_SENSITIVITY_SWEEP",
-        "leahey_empirical_wt_6mer_calibration": {
+        "illustrative_low_reserve_washout_prior": {
+            "status": "MODEL_PRIOR_UNFIT",
             "L0": 2.5,
-            "cooperativity_n_eff": 6,
+            "effective_hill_exponent": 6,
             "peak_fold_over_baseline": round(float(emp_bexi_rel[emp_pk]), 3),
             "peak_at_dose_over_Kd": round(float(doses[emp_pk]), 3),
+            "leahey2025_fig2g_note": "Leahey et al. 2025 (PMID:42380237, PMC13267063 Fig. 2g) reports a median 8.6-fold (IQR 5.1-9.7) IC50 / C_act concentration separation across 122 base-exchange inhibitors (7 chemical series), NOT an activation amplitude fold-change; this L0=2.5 curve is strictly an illustrative [MODEL_PRIOR] low-reserve washout scenario alongside the 8-mer MWC curves.",
         },
         "parallel_plus_end_lower_bound_fold": 1.0,
         "parallel_mechanism_note": (

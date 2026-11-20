@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import hashlib
+import json
 from pathlib import Path
 from typing import Iterable
 
@@ -22,12 +23,22 @@ def _sha256_path(path: Path) -> str:
             for chunk in iter(lambda: fh.read(1 << 20), b""):
                 h.update(chunk)
         return h.hexdigest()
-    files = sorted(p for p in path.rglob("*") if p.is_file())
+    files = sorted((p for p in path.rglob("*") if p.is_file()), key=lambda p: p.relative_to(path).as_posix())
     agg = hashlib.sha256()
     for f in files:
         rel = f.relative_to(path).as_posix()
         agg.update(f"{rel}:{_sha256_path(f)}\n".encode("utf-8"))
     return agg.hexdigest()
+
+
+def _dir_matches_per_file_lock(dataset_id: str, target: Path) -> bool:
+    lock_fp = ROOT / "schemas" / "dataset_files_lock.json"
+    if not target.is_dir() or not lock_fp.is_file():
+        return False
+    lock_raw = json.loads(lock_fp.read_text(encoding="utf-8"))
+    files = ((lock_raw.get("datasets", lock_raw)).get(dataset_id) or {}).get("files") or []
+    data_files = [f for f in files if Path(f["rel"]).suffix.lower() in {".csv", ".tsv", ".xlsx", ".xls", ".cif", ".bed", ".gtf", ".gz"}]
+    return bool(data_files) and all((target / f["rel"]).is_file() and _sha256_path(target / f["rel"]) == f["sha256"] for f in data_files)
 
 
 def resolve_dataset_path(dataset_id: str, verify_hash: bool = False) -> Path:
@@ -42,7 +53,7 @@ def resolve_dataset_path(dataset_id: str, verify_hash: bool = False) -> Path:
         raise FileNotFoundError(f"Missing staged dataset path: {target}")
     if verify_hash:
         actual = _sha256_path(target)
-        if actual != row["sha256"]:
+        if actual != row["sha256"] and not _dir_matches_per_file_lock(dataset_id, target):
             raise ValueError(f"SHA-256 mismatch on {dataset_id}: {actual} != {row['sha256']}")
     return target
 

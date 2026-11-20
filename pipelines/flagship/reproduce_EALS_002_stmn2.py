@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from _flagship_common import assert_close, has_raw_dataset, load_csv_by_key, load_csv_rows, load_json_any, print_audit_report
+from _flagship_common import assert_close, assert_equal, has_raw_dataset, load_csv_by_key, load_csv_rows, load_json_any, print_audit_report
 
 
 def main() -> None:
@@ -31,11 +31,11 @@ def main() -> None:
     lead2 = ot_rows["chr8:79616829-79616846(+)"]
 
     checks = [
-        ("Portfolio Actionable Rank & Biological Rank #2", f"Act #{port['unified_rank']} ({port['decision']})", "Act #5 (KEEP_CORE)", "PASS"),
+        assert_equal("Portfolio Actionable Rank & Biological Rank #2", f"Act #{port['unified_rank']} ({port['decision']})", "Act #5 (KEEP_CORE)"),
         assert_close(f"[MEASURED:{src_tag}] Brown 2022 STMN2 Exon-2a cryptic junction dPSI", dpsi_obs, 0.4820, rtol=1e-3),
         assert_close(f"[MEASURED:{src_tag}] Spillman C9-FTD homogenate STMN2 log2FC (p=0.014, padj=0.113)", hom_obs, -0.4825, rtol=1e-3),
         assert_close("[MEASURED] Derived cortical STMN2 protein change % (2^log2FC - 1)", pct_loss, -28.43, rtol=0.01),
-        ("Promoted Lead #2 Clean >=2mm Off-Target Status", lead2["offtarget_safety_status"], "PASS_CLEAN_GE2MM", "PASS"),
+        assert_equal("Promoted Lead #2 Clean >=2mm Off-Target Status", lead2["offtarget_safety_status"], "PASS_CLEAN_GE2MM"),
     ]
     print_audit_report(
         "EALS-002", "STMN2 Cryptic-Exon-2a Steric SSO", checks,

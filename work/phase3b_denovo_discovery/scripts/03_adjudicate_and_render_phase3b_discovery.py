@@ -81,7 +81,7 @@ def main() -> None:
             "datasets_used": "DS_CRYPTIC;DS_BRYCE_APA;DS029_SPILL;DS045_TRAUT;DS031_ZHANG;DS005_BYE;DS_GENCODE_V46_TX;DS_PDB_2Z0D;DS_PDB_1XFD;DS001_COUNTS;DS001_META",
             "tools_and_skills_used": "scripts.phase3b_gates;scripts.provenance_gates;uv-python",
             "reproduced_verified": "yes", "run_timestamp_utc": ts,
-            "summary": "Adjudicated 19 atomic de novo candidates (2 TIER_2_FOCUSED_GATE_FIRST [ATG4B, CELF5], 8 TIER_3_EXPLORATORY_DISCOVERY [incl. KALRN], 3 RECLASSIFY_BENCHMARK_OR_BIOMARKER, 6 DROP [5 FALSIFIED_CLINICAL + 1 ARTIFACT_CONFOUNDED DN-19]; 0 KEEP_CORE) and 27 single-contrast evidence rows integrating Round 2 hardening + RUN-P3B-004 deep dives.",
+            "summary": "Adjudicated 19 atomic de novo candidates (2 TIER_2_FOCUSED_GATE_FIRST [ATG4B, CELF5], 10 TIER_3_EXPLORATORY_DISCOVERY [incl. KALRN, PMX 205, Acetylcysteine, L-Serine], 3 RECLASSIFY_BENCHMARK_OR_BIOMARKER, 4 DROP [4 FALSIFIED_CLINICAL]; 0 KEEP_CORE) and 27 single-contrast evidence rows integrating Round 2 hardening + RUN-P3B-004 deep dives.",
         },
         {
             "analysis_run_id": "RUN-P3B-004", "phase_batch": "Phase3B_DeNovo_Discovery",

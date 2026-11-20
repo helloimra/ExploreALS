@@ -661,7 +661,22 @@
     "eur_purity_min_r2": 0.8545,
     "eur_credible_set_n": 59,
     "coloc_h4_cross_ancestry_gcst90027163": 0.958006,
+    "coloc_h4_eur_vs_cross_ancestry_gwas_gcst90027163": 0.958006,
     "coloc_h4_ftd_gcst90428108": 0.936544,
+    "coloc_scope_note": "COLOC H4=0.958006 quantifies EUR ALS GWAS (GCST90027164) vs cross-ancestry ALS GWAS (GCST90027163) colocalization (not MN-vs-microglia eQTL coloc; iMGL SCFD1 PP_H4=0.88-0.89 is from Perez-Alcantara 2026 PMID:43045849).",
+    "phased_1000g_phase3_4snp_haplotype_counts": {
+      "snps": [
+        "rs229243",
+        "rs229195",
+        "rs229194",
+        "rs229143"
+      ],
+      "eur_1111_of_any_A_chromosomes": "351/363 (96.7%)",
+      "eur_mixed_of_total_chromosomes": "12/1006",
+      "afr_1111_of_any_A_chromosomes": "853/1173 (72.7%)",
+      "afr_mixed_of_total_chromosomes": "320/1322",
+      "all_mixed_of_total_chromosomes": "382/5008"
+    },
     "in_phase_als_risk_alleles": {
       "rs229243": {
         "grch38_variant": "chr14:30614542:C>A",

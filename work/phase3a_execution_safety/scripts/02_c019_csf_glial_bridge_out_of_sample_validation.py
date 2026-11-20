@@ -68,9 +68,18 @@ def main() -> None:
     em_c_cal = em_sc_cal[em_df["status"] == "Control"]
     mgh_offset_cal = float(mgh_c_cal.mean() - em_c_cal.mean())
 
-    # Center-offset-adjusted external scores (subtracting MGH's baseline control drift from MGH samples only)
+    # Target-site-recalibrated external scores (in-sample MGH control offset vs leave-one-MGH-control-out check)
     ext_sc_center_adj = ext_sc_cal.copy()
     ext_sc_center_adj.loc[ext_df["bank"] == "MGH"] = ext_sc_center_adj.loc[ext_df["bank"] == "MGH"] - mgh_offset_cal
+    ext_sc_loo_mgh = ext_sc_cal.copy()
+    for idx_m in mgh_c_cal.index:
+        loo_off = float(mgh_c_cal.drop(index=idx_m).mean() - em_c_cal.mean())
+        ext_sc_loo_mgh.loc[idx_m] = float(ext_sc_cal.loc[idx_m]) - loo_off
+    ext_case_ctrl_mask = ext_df["status"].isin(["sALS", "C9orf72", "SOD1", "Control"])
+    y_ext_cc = ext_df.loc[ext_case_ctrl_mask, "status"].isin(["sALS", "C9orf72", "SOD1"]).astype(int).to_numpy()
+    bank_non_mgh_sc = (ext_df.loc[ext_case_ctrl_mask, "bank"] != "MGH").astype(float).to_numpy()
+    bank_only_auc = round(roc_auc_mw(y_ext_cc, bank_non_mgh_sc), 4)
+    loo_mgh_auc = round(roc_auc_mw(y_ext_cc, ext_sc_loo_mgh.loc[ext_case_ctrl_mask].to_numpy()), 4)
 
     # Leak-free 5-fold stratified OOF inside single-center Emory DIA (42 sALS vs 54 Control, n=96)
     em_sub = em_df[em_df["status"].isin(["sALS", "Control"])].copy()
@@ -130,7 +139,9 @@ def main() -> None:
             "c9_asymptomatic_vs_ctrl": eval_contrast(em_sc_cal, em_df["status"] == "C9orf72-Asymptomatic", em_df["status"] == "Control", em_z95),
         },
         "deconfounded_and_stratified_external_validation": {
-            "confounding_disclosure": "In DS045 non-Emory samples (n=141), 57/57 symptomatic ALS come from UMilan (31, 0 Ctrl) + WashU (26, 2 Ctrl) with 86.0% (49/57) familial C9orf72/SOD1, while 16/18 Controls come from downward-shifted MGH (0 ALS). Therefore, Emory leak-free sALS OOF, within-WashU, C9 phenoconversion, and MGH-offset-adjusted AUCs are primary over raw pooled external AUC.",
+            "confounding_disclosure": "In DS045 non-Emory samples (n=141), 57/57 symptomatic ALS come from UMilan (31, 0 Ctrl) + WashU (26, 2 Ctrl) with 86.0% (49/57) familial C9orf72/SOD1, while 16/18 Controls come from downward-shifted MGH (0 ALS; only 52/1,026 case-control pairs share a bank, and a protein-free non-MGH indicator achieves AUC=0.9444 vs raw 0.9405). Subtracting MGH's control offset is target-site control recalibration (in-sample AUC=0.8850; leave-one-MGH-control-out AUC=0.8801), NOT frozen zero-calibration external transfer; Emory leak-free sALS OOF and within-WashU/C9 contrasts remain primary.",
+            "bank_only_non_mgh_negative_control_auc": bank_only_auc,
+            "leave_one_mgh_control_out_target_site_recalibrated_auc": loo_mgh_auc,
             "within_washu_same_center_als_vs_non_als": eval_contrast(ext_sc_cal[wu_df_mask], ext_df.loc[wu_df_mask, "status"].isin(["sALS", "C9orf72", "SOD1"]), ~ext_df.loc[wu_df_mask, "status"].isin(["sALS", "C9orf72", "SOD1"]), em_z95),
             "within_washu_same_center_c9_symp_vs_c9_asym": eval_contrast(ext_sc_cal[wu_df_mask], ext_df.loc[wu_df_mask, "status"] == "C9orf72", ext_df.loc[wu_df_mask, "status"] == "C9orf72-Asymptomatic", em_z95),
             "within_mgh_same_center_asym_vs_ctrl_specificity": eval_contrast(ext_sc_cal[mgh_df_mask], ext_df.loc[mgh_df_mask, "status"].str.contains("Asymptomatic"), ext_df.loc[mgh_df_mask, "status"] == "Control", em_z95),

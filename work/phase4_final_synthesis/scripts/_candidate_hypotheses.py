@@ -128,7 +128,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "S08": (
         "Methylcobalamin (CHEMBL4297672) is the active coenzyme form of vitamin B12 required by methionine synthase to remethylate neurotoxic homocysteine and sustain neuronal transmethylation. "
-        "Validated in the Phase 3 JETALS trial (NCT03548311, PMID:35532908) and approved in Japan for early-onset (<=12 months) ALS, it serves as an early-window clinical standard-of-care benchmark whose negative live-imaging screen readout highlights plausible Co-C photolability artifact risk."
+        "Validated in the Phase 3 JETALS trial (NCT03548311, PMID:35532908) and approved in Japan for early-stage (<=12 months from symptom onset) ALS, it serves as an early-window clinical standard-of-care benchmark whose negative live-imaging screen readout highlights plausible Co-C photolability artifact risk."
     ),
     "S09": (
         "Censavudine (TPN-101, CHEMBL124363) is an oral nucleoside reverse transcriptase inhibitor of endogenous LINE-1 retrotransposons, which become derepressed upon nuclear TDP-43 loss in the ~13.5% cortical ALS-TE molecular subtype. "
@@ -199,15 +199,15 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
         "Nominated from nominal in vitro iPSC motor neuron survival screening, its hypothesis proposed antiretroviral suppression of retroelement neurotoxicity in unstratified ALS."
     ),
     "DN-17": (
-        "Acetylcysteine (N-acetylcysteine) is a systemic thiol-donor prodrug of intracellular glutathione and a direct scavenger of extracellular reactive oxygen species. "
-        "Re-emerging as a nominal survival hit in 2.5 uM sporadic ALS iPSC motor neuron screening, its hypothesis proposed systemic thiol replenishment to counteract motor neuron oxidative stress (PMID:7763202)."
+        "Acetylcysteine (N-acetylcysteine) is a thiol-donor prodrug of intracellular glutathione and a scavenger of reactive oxygen species that reaches micromolar human CSF levels at high doses (70 mg/kg oral BID, PMID:25765302). "
+        "Following an underpowered 50 mg/kg/d subcutaneous ALS survival trial (HR=0.74 [0.41–1.33], PMID:7763202) and sub-FDR 2.5 uM iPSC motor neuron survival screening, this exploratory hypothesis tests whether high-dose CNS-penetrant NAC restores neuronal glutathione beyond extracellular media thiol buffering."
     ),
     "DN-18": (
         "Coenzyme Q10 (ubiquinone) is an inner-mitochondrial-membrane electron carrier between Complexes I/II and Complex III that also acts as a lipid-soluble antioxidant. "
         "Nominated from marginal survival extension in sporadic ALS iPSC motor neuron screening, its hypothesis proposed high-dose oral supplementation to rescue motor neuron bioenergetics and lipid peroxidation (NCT00243932, PMID:19743457)."
     ),
     "DN-19": (
-        "L-Serine is an obligate substrate of serine palmitoyltransferase that competitively suppresses neurotoxic 1-deoxysphingolipids in HSAN1, whereas SPTLC1/SPTLC2-ALS variants lose ceramide feedback and overproduce canonical C18–C22 sphingolipids (PMID:43025655). "
-        "Crossing the human ALS blood-brain barrier in Phase 1 (NCT01835782) while its open-label Phase 2 study (NCT03580616) ended for IRB noncompliance, its repurposing hypothesis proposed high-dose oral L-serine supplementation to buffer motor-neuron sphingolipid and redox stress."
+        "L-Serine is an obligate substrate of serine palmitoyltransferase proposed to competitively suppress neurotoxic 1-deoxysphingolipids in sporadic ALS, while strictly contraindicated in <0.5% monogenic SPTLC1/SPTLC2 gain-of-function ALS where ORMDL feedback loss drives canonical C18–C22 ceramide overproduction (PMID:34059824; PMID:43025655). "
+        "Because fixed 2.5 uM library screening adds only +0.625% atop ~400 uM basal media L-serine and zero randomized placebo-controlled sporadic ALS trials have completed (NCT01835782; NCT03580616), this exploratory hypothesis tests physiological low-serine dose-response and genetically gated systemic supplementation."
     ),
 }

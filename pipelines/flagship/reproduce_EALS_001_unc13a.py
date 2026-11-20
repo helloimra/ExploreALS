@@ -5,7 +5,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from _flagship_common import assert_close, has_raw_dataset, load_csv_by_key, load_csv_rows, load_json_any, print_audit_report
+from _flagship_common import assert_close, assert_equal, has_raw_dataset, load_csv_by_key, load_csv_rows, load_json_any, print_audit_report
 
 
 def main() -> None:
@@ -30,10 +30,10 @@ def main() -> None:
     lead2 = ot_rows["chr19:17642537-17642554(-)"]
 
     checks = [
-        ("Portfolio Actionable Rank & Biological Rank #1", f"Act #{port['unified_rank']} ({port['decision']})", "Act #3 (KEEP_CORE)", "PASS"),
+        assert_equal("Portfolio Actionable Rank & Biological Rank #1", f"Act #{port['unified_rank']} ({port['decision']})", "Act #3 (KEEP_CORE)"),
         assert_close(f"[MEASURED:{src_tag}] Brown 2022 UNC13A cryptic junction dPSI", ce_inc, 0.4632, rtol=1e-3),
         assert_close(f"[MEASURED:{src_tag}] Spillman 2026 C9-FTD synaptosome UNC13A log2FC", syn_lfc, -0.2496, rtol=1e-3),
-        ("Promoted Lead #2 Clean >=2mm Off-Target Status", lead2["offtarget_safety_status"], "PASS_CLEAN_GE2MM", "PASS"),
+        assert_equal("Promoted Lead #2 Clean >=2mm Off-Target Status", lead2["offtarget_safety_status"], "PASS_CLEAN_GE2MM"),
         assert_close("Promoted Lead #2 sp0+sp1+pm1_50+bulge+sub18 hits", float(int(lead2["spliced_0mm_genes"]) + int(lead2["spliced_1mm_genes"]) + int(lead2["premRNA_1mm_splice50bp_genes"]) + int(lead2["bulge_1nt_steric_pc_genes"]) + int(lead2["sub18_core_steric_pc_genes"])), 0.0, rtol=1e-6),
     ]
     print_audit_report(

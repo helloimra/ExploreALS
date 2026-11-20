@@ -142,9 +142,20 @@ def main() -> None:
     ext_main = json.loads((ROOT / "work" / "phase3b_denovo_discovery" / "cache" / "external_priors_and_structures.json").read_text(encoding="utf-8"))
     d4 = json.loads((ROOT / "work" / "phase3b_denovo_discovery" / "outputs" / "run_p3b_004_targeted_deep_dive.json").read_text(encoding="utf-8"))
 
-    gtex = fetch_gtex_v8_celf5()
-    ot = fetch_opentargets_celf5()
-    gtf_info = inspect_celf5_mane_gtf()
+    prev = json.loads(CACHE_FP.read_text(encoding="utf-8")) if CACHE_FP.is_file() and "--refresh-api" not in sys.argv else {}
+    prev_liab = prev.get("gene_liability_profile") or {}
+    gtex = prev.get("gtex_v8_median_tpm") or fetch_gtex_v8_celf5()
+    if prev_liab.get("ot_genetic_constraint") is not None:
+        ot = {
+            "ot_genetic_constraint": prev_liab["ot_genetic_constraint"],
+            "n_safety_liabilities": prev_liab["n_ot_safety_liabilities"],
+            "n_mouse_phenotypes": prev_liab["n_mouse_ko_phenotypes"],
+            "mouse_phenotype_labels": prev_liab["mouse_ko_phenotype_labels"],
+            "als_ot_genetic_association_score": prev_liab["als_ot_genetic_association_score"],
+        }
+    else:
+        ot = fetch_opentargets_celf5()
+    gtf_info = prev.get("mane_isoform_and_ce_audit") or inspect_celf5_mane_gtf()
     gm = gnomad_map.get("CELF5", {})
     dm = ext_main["opentargets_depmap"]["CELF5"]
     cns_vals = {k: v for k, v in gtex.items() if k != "gencode_id" and k.startswith("Brain_")}
@@ -187,7 +198,7 @@ def main() -> None:
         "gtex_v8_median_tpm": gtex,
         "mane_isoform_and_ce_audit": gtf_info,
         "celf5_afdb_and_3nmr_rrm2_truncation": d4.get("celf5_afdb_and_3nmr_rrm2_truncation"),
-        "celf5_frechet_hoeffding_phasing_and_ejc_audit": d4.get("celf5_frechet_hoeffding_phasing_and_ejc_audit"),
+        "celf5_local_lsv_nmd_and_ejc_audit": d4.get("celf5_local_lsv_nmd_and_ejc_audit"),
         "celf5_nygc_multiregion": panel_nygc["CELF5"],
         "phase3b_f1_f2_nygc_panel_summary": {
             g: {

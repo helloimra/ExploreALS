@@ -11,7 +11,7 @@ function renderMwcSarm1Svg(){
   const mapYB = pct => yBB - ((Math.log10(Math.max(0.15, Math.min(100, pct))) - Math.log10(0.15)) / (Math.log10(100) - Math.log10(0.15))) * HB;
   const cGlue = 0.22, dLock = 6.5, binom8 = [1, 8, 28, 56, 70, 56, 28, 8, 1];
   const bexiRel = (u, L) => (Math.pow(1 + u/cGlue, 7) / (L * Math.pow(1 + 0.05*u, 8) + Math.pow(1 + u/cGlue, 8))) * (1 + L);
-  const leaheyEmpRel = u => { const z = Math.pow(1 + 5.154*u, 6); return 3.5 * (z / (2.5 + z)) / (1 + u); };
+  const lowResPriorRel = u => { const z = Math.pow(1 + 5.154*u, 6); return 3.5 * (z / (2.5 + z)) / (1 + u); };
   const tlockAbs = (u, L) => Math.pow(1 + u/dLock, 8) / (L * Math.pow(1 + u, 8) + Math.pow(1 + u/dLock, 8));
   const heteroOctGoF = u => {
     const r = (1 + u) / (1 + u / dLock);
@@ -23,7 +23,7 @@ function renderMwcSarm1Svg(){
   for(let i=0; i<=80; i++){
     const lg = -2.0 + (i/80)*3.0, u = Math.pow(10, lg), xp = mapX(lg).toFixed(1);
     ptsH.push(`${xp},${mapYA(bexiRel(u, 120)).toFixed(1)}`);
-    ptsEmp.push(`${xp},${mapYA(leaheyEmpRel(u)).toFixed(1)}`);
+    ptsEmp.push(`${xp},${mapYA(lowResPriorRel(u)).toFixed(1)}`);
     ptsA.push(`${xp},${mapYA(bexiRel(u, 8)).toFixed(1)}`);
     ptsTL.push(`${xp},${mapYA(tlockAbs(u, 8)*(1+8)).toFixed(1)}`);
     ptsDep.push(`${xp},${mapYB(100*tlockAbs(u, 8)).toFixed(1)}`);
@@ -32,11 +32,11 @@ function renderMwcSarm1Svg(){
   }
   const y1x = mapYA(1.0).toFixed(1), yFlr = mapYB(1.0).toFixed(1), yGoFTop = mapYB(95.2).toFixed(1), yGoFEnd = mapYB(44.9).toFixed(1);
   const xDepCross = mapX(Math.log10(0.47)).toFixed(1), xResCross = mapX(Math.log10(0.066)).toFixed(1);
-  return `<svg viewBox="0 0 460 306" class="w-full h-auto block select-none" role="img" aria-label="Modeled 8-protomer SARM1 MWC and Leahey empirical calibration curves">
-    <text x="12" y="16" font-size="12.6" font-weight="700" fill="var(--foreground)">A. Fold vs Baseline: BEXi Spike (Emp 2.8x / 8-mer) vs T-Lock</text>
+  return `<svg viewBox="0 0 460 306" class="w-full h-auto block select-none" role="img" aria-label="Modeled 8-protomer SARM1 MWC and low-reserve washout sensitivity curves">
+    <text x="12" y="16" font-size="12.6" font-weight="700" fill="var(--foreground)">A. Modeled Fold vs Base: BEXi Spike (2.8x / 8-mer) vs T-Lock</text>
     <text x="${xR}" y="16" text-anchor="end" font-size="12.4" font-family="monospace" fill="var(--warning)">Sensitivity</text>
     <line x1="12" y1="31" x2="23" y2="31" stroke="var(--error)" stroke-width="1.8" stroke-dasharray="2,2"/><text x="26" y="35" font-size="12.2" fill="var(--error)">8-mer (~45x)</text>
-    <line x1="112" y1="31" x2="124" y2="31" stroke="var(--primary)" stroke-width="2.1"/><text x="127" y="35" font-size="12.2" fill="var(--primary)">Emp WT (2.8x)</text>
+    <line x1="112" y1="31" x2="124" y2="31" stroke="var(--primary)" stroke-width="2.1"/><text x="127" y="35" font-size="12.2" fill="var(--primary)">Low-Res (2.8x)</text>
     <line x1="226" y1="31" x2="238" y2="31" stroke="var(--warning)" stroke-width="2" stroke-dasharray="4,2"/><text x="241" y="35" font-size="12.2" fill="var(--warning)">ALS (~5x)</text>
     <line x1="314" y1="31" x2="326" y2="31" stroke="var(--success)" stroke-width="2.3"/><text x="329" y="35" font-size="12.2" fill="var(--success)">T-Lock (&le;1x)</text>
     <line x1="${xL}" y1="${yAT}" x2="${xL}" y2="${yAB}" stroke="var(--border)" stroke-width="1.2"/>

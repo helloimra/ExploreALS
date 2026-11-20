@@ -79,21 +79,18 @@ def audit_celf5_3d_rrm2_and_phasing(p_3nmr: Path, p_af: Path, cache_dir: Path) -
     rrm2_rna_all = {(s, comp) for (c, s, comp), al in rg3.items() if c == p_ch and best_start <= s <= best_start + 80 for a in al for ra in rna_atoms if float(np.linalg.norm(a.coord - ra.coord)) <= 4.0}
     rrm2_rna_excised = {(s, comp) for (s, comp) in rrm2_rna_all if s > trunc_cut_3nmr}
 
-    # Exact Brown 2022 junctions & Frechet-Hoeffding bounds + 18-nt EJC minigene gap
+    # Exact Brown 2022 local LSV junctions (distinct LSV denominators), Zeng 2025 NMD rescue, & 18-nt EJC minigene rule
     br = load_brown2022_splicing(["CELF5"])
     jdf = br["junctions_df"]
     jdf = jdf[jdf["gene_name"] == "CELF5"]
     ribo_fc = float(br["riboseq_df"].loc[br["riboseq_df"]["gene_name"] == "CELF5", "log2FoldChange"].iloc[0])
     rnaseq_fc = float(br["rnaseq_df"].loc[br["rnaseq_df"]["gene_name"] == "CELF5", "log2FoldChange"].iloc[0])
-    p_ce, p_micro_wt, p_micro_kd, p_ir1 = 0.3471, 0.028, 0.182, 0.122
-    fh_min_aberrant = round(max(p_ce, p_ir1), 4)
-    fh_indep_aberrant = round(1.0 - (1.0 - p_ce) * (1.0 - p_ir1), 4)
-    fh_max_aberrant = round(min(1.0, p_ce + p_ir1), 4)
+    p_ce, p_micro_wt, p_micro_kd, p_up_na = 0.3471, 0.028, 0.182, 0.1218
 
     return {
         "celf5_afdb_and_3nmr_rrm2_truncation": {
             "afdb_id": "AF-Q8N6W0-F1-v6",
-            "pdb_homolog_id": "3NMR (PMID:20947024, CELF1 RRM1-RRM2:UGUU)",
+            "pdb_homolog_id": "3NMR (PMID:20947024, CELF1 RRM1-RRM2:UGUU homolog projection; no experimental CELF5 RRM2 structure)",
             "plddt_rrm1_46_121": mean_plddt(46, 121),
             "plddt_rrm2_retained_134_201": mean_plddt(134, 201),
             "plddt_rrm2_excised_beta4_202_214": mean_plddt(202, 214),
@@ -106,21 +103,21 @@ def audit_celf5_3d_rrm2_and_phasing(p_3nmr: Path, p_af: Path, cache_dir: Path) -
             "mapped_3nmr_pro201_equivalent": trunc_cut_3nmr,
             "total_3nmr_rrm2_uguu_rna_contact_residues_le_4p0A": len(rrm2_rna_all),
             "excised_beta4_and_cterm_uguu_contact_residues_lost": len(rrm2_rna_excised),
-            "structural_mechanism_verdict": "Truncation after Pro201 excises beta4 (202-214), severing anti-parallel beta4-beta1 backbone H-bonds and C-terminal UGUU RNA-clamp contacts while leaving RRM1 (46-121; 0 inter-domain contacts) decoupled across a flexible linker: primary loss-of-function + unfolded RRM2(134-201)+29aa chaperone/granule burden rather than high-affinity competitive RNA dominant-negativity.",
+            "structural_mechanism_verdict": "Truncation after Pro201 excises beta4 (202-214) in AF-Q8N6W0-F1, severing anti-parallel beta4-beta1 backbone H-bonds and projected C-terminal UGUU RNA-clamp contacts (mapped from CELF1 homolog PDB 3NMR) while leaving RRM1 (46-121; 0 inter-domain contacts) decoupled across a flexible linker: primary loss-of-function + unfolded RRM2(134-201)+29aa chaperone/granule burden rather than high-affinity competitive RNA dominant-negativity.",
         },
-        "celf5_frechet_hoeffding_phasing_and_ejc_audit": {
+        "celf5_local_lsv_nmd_and_ejc_audit": {
             "n_brown2022_junction_rows": int(len(jdf)),
             "ce_108bp_dpsi": p_ce,
+            "ce_108bp_kd_e_psi": 0.367,
+            "canonical_3278110_3281199_kd_e_psi_donor_vs_acceptor_lsv": [0.546, 0.633],
             "adjacent_98bp_microintron_3278111_3278208_psi_wt_to_kd": [p_micro_wt, p_micro_kd],
-            "intron1_retention_dpsi": p_ir1,
-            "frechet_hoeffding_aberrant_transcript_bounds": {
-                "cis_coupled_lower_aberrant_pct": round(100.0 * fh_min_aberrant, 1),
-                "independent_assortment_aberrant_pct": round(100.0 * fh_indep_aberrant, 1),
-                "mutually_exclusive_upper_aberrant_pct": round(100.0 * fh_max_aberrant, 1),
-                "canonical_wt_mrna_bounds_pct": [round(100.0 * (1.0 - fh_max_aberrant), 1), round(100.0 * (1.0 - fh_min_aberrant), 1)],
-                "single_locus_ce_sso_canonical_ceiling_bounds_pct": [round(100.0 * (1.0 - p_ir1), 1), 100.0],
-            },
+            "upstream_novel_acceptor_3225618_3244124_dpsi": p_up_na,
+            "upstream_novel_acceptor_3225618_3244124_kd_e_psi": 0.149,
+            "local_lsv_phasing_note": "Brown 2022 MOESM11 quantifies local MAJIQ LSVs with distinct denominators (canonical junction 3278110-3281199 KD E[PSI]=0.546 in donor LSV vs 0.633 in acceptor LSV; upstream 3225618-3244124 is annotated novel_acceptor with blank ir_start/ir_end, not intron-1 retention) and is measured in NMD-competent i3Neurons; whole-transcript phasing bounds cannot be algebraically summed from unphased local LSVs and require long-read ONT/Iso-Seq.",
+            "zeng2025_nmd_inhibition_cryptic_psi_pct": [24.8, 44.6],
+            "zeng2025_nmd_inhibition_fdr": 0.0235,
             "empirical_brown2022_rnaseq_log2fc": round(rnaseq_fc, 4),
+            "empirical_residual_rnaseq_pct": round(100.0 * (2.0 ** rnaseq_fc), 1),
             "empirical_brown2022_riboseq_log2fc": round(ribo_fc, 4),
             "empirical_residual_translation_pct": round(100.0 * (2.0 ** ribo_fc), 1),
             "ejc_nmd_minigene_trap": {
@@ -128,10 +125,11 @@ def audit_celf5_3d_rrm2_and_phasing(p_3nmr: Path, p_af: Path, cache_dir: Path) -
                 "first_inframe_ptc_codon_1b": 30,
                 "first_inframe_ptc_end_nt_in_ce": 90,
                 "dist_ptc_to_ce_exon6_junction_nt": 18,
+                "dist_ptc_to_exon6_exon7_junction_nt": 165,
                 "canonical_ejc_nmd_threshold_nt": 50,
                 "triggers_nmd_from_ce_exon6_junction_alone": False,
                 "downstream_constitutive_ejcs_in_mane_exon6_to_13": 7,
-                "assay_mandate": "A 3-exon Exon5-CE-Exon6 splicing minigene places the PTC only 18 nt (<50-55 nt) upstream of the terminal splice junction and artificially evades EJC-NMD; validation requires endogenous multi-exon (Exon 4-7+) long-read ONT/Iso-Seq phasing + UPF1/CHX NMD rescue.",
+                "assay_mandate": "On MANE NM_021938.4, the cryptic PTC ends 18 nt (<50-55 nt EJC threshold, PMID:9671053) upstream of CE-Exon6 and 165 nt upstream of Exon6-Exon7: a 3-exon Exon5-CE-Exon6 minigene can measure primary splice-site %PSI choice, but evades canonical EJC-dependent NMD; NMD/stability and isoform-phasing validation require endogenous multi-exon transcripts (consistent with Zeng et al. 2025 PMID:40672339 [PREPRINT] PMC12265704 showing NMD inhibition raises cryptic CELF5 PSI from 24.8% to 44.6%, FDR=0.0235) + Exon 1-7+ ONT/Iso-Seq.",
             },
         },
     }

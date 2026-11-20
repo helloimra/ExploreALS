@@ -100,7 +100,7 @@ function renderReplicationWorkbench(){
       return `<tr data-rep-select="${esc(r.id)}" tabindex="0" aria-selected="${sel?'true':'false'}" class="cursor-pointer hover:bg-[var(--background)] ${sel?'bg-[var(--content)] border-l-4 border-l-[var(--primary)]':''}">
         <td class="py-1.5 px-2.5 font-mono font-semibold whitespace-nowrap">${esc(r.id)}</td>
         <td class="py-1.5 px-2">${badge}<span class="text-[var(--muted-foreground)]">${esc(r.grp)}</span></td>
-        <td class="py-1.5 px-2 font-mono text-xs break-words">${esc(r.script.split(';')[0].split('/').slice(-1)[0])}</td>
+        <td class="py-1.5 px-2 font-mono text-xs break-words">${esc(r.script.split(';')[0].split('/').slice(-1)[0])}${r.script.includes(';') ? ' (+' + (r.script.split(';').filter(Boolean).length - 1) + ')' : ''}</td>
         <td class="py-1.5 px-2 font-mono text-xs text-[var(--muted-foreground)] whitespace-nowrap">${r.ds ? r.ds.split(';').length + ' DS' : 'Snapshot'}</td>
       </tr>`;
     }).join('') : emptyRow;

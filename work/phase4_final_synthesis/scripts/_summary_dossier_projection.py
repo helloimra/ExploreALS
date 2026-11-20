@@ -35,10 +35,12 @@ CAUSAL_MAP: dict[str, str] = {
     "DOWNSTREAM_EXCITOTOXIC_HYPOTHESIS_REFUTED_IN_HUMANS": "Downstream Excitotoxic Hypothesis (Refuted in Human ALS RCTs)",
     "DOWNSTREAM_REDOX_CLINICALLY_FUTILE": "Downstream Redox Buffering (Clinically Futile)",
     "DUAL_NEURONAL_TDP43_JAK2_APA_AND_SUBTYPE_GLIAL_INFLAMMATION": "Dual Neuronal JAK2 APA vs. Subtype Glial JAK1 Catch-22",
-    "EARLY_WINDOW_HOMOCYSTEINE_METHYLATION_RESCUE": "Early-Onset (<=12m) Methylation Rescue Benchmark",
+    "EARLY_WINDOW_HOMOCYSTEINE_METHYLATION_RESCUE": "Early-Stage (<=12m) Methylation Rescue Benchmark",
     "ENDOLYSOSOMAL_POLYGP_CLEARANCE_VS_CONTINUOUS_VACUOLATION_TOXICITY": "Endolysosomal Clearance vs. Continuous Vacuolation Toxicity",
     "HYPOTHESIS_REFUTED_IN_HUMANS": "Refuted in Powered Human ALS RCTs",
     "IATROGENIC_ANTAGONISM_OF_ESSENTIAL_SNARE_PRENYLATION": "Iatrogenic Inhibition of Essential SNARE Prenylation",
+    "AMBIGUOUS_EXTRACELLULAR_BUFFERING_VS_GSH_RESTORATION": "Extracellular Media Thiol Buffering vs. High-Dose CNS GSH Rescue",
+    "UNPROVEN_DEOXYSPL_CLEARANCE_WITH_MONOGENIC_SPT_CONTRAINDICATION": "Unproven 1-Deoxysphingolipid Hypothesis (Monogenic SPTLC1/2 Contraindicated)",
     "IN_VITRO_REDOX_BUFFERING_ARTIFACT": "Extracellular Media Thiol-Buffering Artifact",
     "IN_VITRO_BASAL_MEDIA_NOISE_AND_SPT_WRONG_SIGN": "In Vitro Basal Media Noise & SPTLC1/2 Wrong Sign",
     "SPLIT_BY_SUBNODE": "Sub-Node Split (C3/C4B Dropped · CNS C1q Exploratory)",
@@ -173,7 +175,7 @@ DN_VERDICT_HEADLINES: dict[str, str] = {
     "DN-01": "Promoted as #1 transcriptome-wide TDP-43 cryptic-splicing lead (Rank #{rk}/52 · Tier 2): convergent human Ribo-seq, C9-FTD homogenate protein loss, and in vivo Atg4b-KO acceleration justify preclinical SSO #2 rescue alongside early pre-inclusion (partially nuclear-TDP-43-depleted) cervical alpha-MN duplex BaseScope ISH.",
     "DN-02": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52): robust C9-FTD cortical Kalirin-12/DuET cryptic splicing and clean (>=2 mismatches) SSO #1 are tempered by zero ALS GWAS loci, low cervical cord expression, and alt-3'SS shunting risk.",
     "DN-03": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52): multi-cohort Ribo-seq, brain DIA, and living-CSF PTPRT depletion require 1-bp cryptic-junction mapping before steric SSO design.",
-    "DN-04": "Promoted as Tier 2 neuron-specific splicing-factor lead (Rank #{rk}/52): LeafCutter cluster replication in sporadic ALS patient iPSC-MNs (padj=0.0090; nominal BA4 p=0.0133, FDR=0.136) and clean (>=2 mismatches) 20-bp SSO #1 merit Exon 4–7 Nanopore RT-PCR (<1-2% LOQ Exon-5 skip / 98-bp micro-intron retention) plus early pre-inclusion cervical alpha-MN BaseScope ISH.",
+    "DN-04": "Promoted as Tier 2 neuron-specific splicing-factor lead (Rank #{rk}/52): LeafCutter cluster splicing in sporadic ALS patient iPSC-MNs (clu_25763_+ padj=0.0090, cluster-level pending junction RT-PCR; nominal BA4 p=0.0133, FDR=0.136), Zeng 2025 NMD-inhibition rescue (24.8%->44.6%, FDR=0.0235), and clean (>=2 mismatches) 20-bp SSO #1 merit endogenous Exon 1–7+ Nanopore phasing (<1-2% LOQ Exon-5 skip / <=WT ~2.8% micro-intron retention) plus early pre-inclusion cervical alpha-MN BaseScope ISH.",
     "DN-05": "Elevated to #1 of Tier 3 Exploratory Discovery (Rank #{rk}/52): surviving cervical MN-niche 55-um Visium RNA (-1.23 log2FC, spot-level FDR=0.019, N=18) and C9-FTD synaptosomal PRUNE2 loss (-0.49, p=0.0068) warrant Nanopore RT-PCR and early pre-inclusion cervical alpha-MN BaseScope ISH to resolve microexon vs. cryptic 5'SS polarity.",
     "DN-06": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52): synaptosomal PFKP depletion and clean (>=2 mismatches) SSO #1 require metabolic flux gating to rule out pentose-phosphate NADPH/GSH depletion.",
     "DN-07": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52): pathology-selective TRAPPC12 intronic polyadenylation and sALS iPSC-MN splicing merit isoform-resolved testing despite null bulk cortical DIA.",
@@ -185,10 +187,10 @@ DN_VERDICT_HEADLINES: dict[str, str] = {
     "DN-13": "Falsified in randomized human ALS clinical trials (Rank #{rk}/52 · Drop): postmortem MAOB elevation reflects reactive astrogliosis, and selective MAOB inhibition failed four controlled human ALS trials.",
     "DN-14": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52): selective C5aR1 antagonism has zero completed ALS efficacy trials despite upstream C5 failures, though C5/C5a-free monocultures make ligand-independent 2.5 uM cyclic-hexapeptide off-target activity the primary null pending C5AR1-KO deconvolution.",
     "DN-15": "Falsified in randomized human ALS clinical trials (Rank #{rk}/52 · Drop): modest in vitro iPSC-MN survival rescue is superseded by two negative placebo-controlled human ALS trials at target-engaging CSF exposure.",
-    "DN-16": "Falsified in Phase 3 human ALS clinical testing (Rank #{rk}/52 · Drop): LIGHTHOUSE II interim survival futility and a 60–250x unbound human CSF exposure gap refute repurposing dolutegravir/Triumeq.",
-    "DN-17": "Falsified by human ALS clinical futility and poor CNS penetration (Rank #{rk}/52 · Drop): in vitro rescue reflects media thiol buffering while high-dose subcutaneous N-acetylcysteine failed human ALS survival testing.",
-    "DN-18": "Falsified in randomized human ALS clinical testing (Rank #{rk}/52 · Drop): marginal in vitro antioxidant survival gain failed to translate in the multicenter Phase II QALS trial at 2,700 mg/day.",
-    "DN-19": "Excluded as a media-confounded in vitro screen call (Rank #{rk}/52 · Drop): the +0.625% survival perturbation sits within basal media noise (~400 uM L-serine in BrainPhys/DMEM-F12, failing BH-FDR at FDR=0.1707), single-arm NCT03580616 terminated for IRB noncompliance without efficacy data, and exogenous L-serine is contraindicated in ORMDL-insensitive SPTLC1/2-ALS GoF variants (PMID:34059824; PMID:43025655).",
+    "DN-16": "Falsified in Phase 3 human ALS clinical testing (Rank #{rk}/52 · Drop): LIGHTHOUSE II interim survival futility (announced 5 Apr 2025; registry completion 30 Jun 2025) and a 60–250x unbound human CSF exposure gap refute repurposing dolutegravir/Triumeq.",
+    "DN-17": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52): sub-FDR 2.5 uM survival (+0.95d, FDR=0.094) may reflect extracellular thiol buffering and NCT07414212 co-doses low-dose 600 mg/d oral NAC with 1,800 mg/d EH301, yet Louwerse 1995 (50 mg/kg/d SC, N=110: HR=0.74 [0.41–1.33]) was underpowered and 70 mg/kg oral BID NAC reaches 9.26 uM human CSF (PMID:25765302), gating high-dose CNS GSH target engagement.",
+    "DN-18": "Falsified in randomized human ALS clinical testing (Rank #{rk}/52 · Drop): sub-FDR in vitro survival (+0.74d, FDR=0.183) failed to translate in Phase II QALS at 2,700 mg/day (NCT00243932, N=185: Stage 2 primary bias-adjusted futility p=0.14, prespecified death-score sensitivity p=0.025 < 0.10, post-hoc slope p=0.097, null secondary outcomes, and 1,800–2,700 mg/d GI absorption plateau).",
+    "DN-19": "Retained in Tier 3 Exploratory Discovery (Rank #{rk}/52): adding 2.5 uM L-serine shifts ~400 uM basal BrainPhys/DMEM-F12 media serine concentration by only +0.625% (survival +0.71d, p=0.0419, FDR=0.1707), zero controlled sporadic ALS RCTs have completed (NCT01835782; NCT03580616), and <0.5% monogenic SPTLC1/SPTLC2 GoF ALS requires mandatory genetic exclusion (PMID:34059824; PMID:43025655).",
 }
 
 DN_TOP_SPLIT_RE = re.compile(
@@ -252,16 +254,17 @@ def build_summary_dossiers(
                 proves = (m15.group(1) + ".") if m15 else just
                 disproves = (m15.group(2)[0].upper() + m15.group(2)[1:]) if m15 else just
             elif pid == "DN-16":
-                p1, p2 = just.split(", while ", 1)
-                proves = p2[0].upper() + p2[1:]
-                disproves = p1 + "."
+                proves = "Phase 2a Lighthouse open-label safety/tolerability in HERV-K+ ALS and O'Neill 2025 retrotransposon-active ALS-TE subtype stratification (41/303 = 13.5% motor ALS)."
+                disproves = "Phase 3 Lighthouse II (NCT05193994, N=419, Triumeq) stopped early at pre-planned interim analysis for lack of clinical efficacy (stop announced 2025-04-05; ClinicalTrials.gov completion 2025-06-30), and non-CNS NRTIs cannot match LINE-1-selective brain-penetrant censavudine (EALS-033)."
+            elif pid == "DN-17":
+                proves = "Bye 2025 iPSC-MN screen Rank #12/107 at 2.5 uM (+0.9458d across 15 sALS lines, nominal p=0.02013, Wilcoxon p=0.00671), underpowered subcutaneous NAC survival signals in Louwerse et al. 1995 (PMID:7763202, 50 mg/kg/d SC, N=110: overall HR=0.74 [95% CI 0.41-1.33], p=0.31; limb-onset HR=0.50 [0.24-1.04], p=0.06), and high-dose oral NAC human CSF penetration (70 mg/kg BID -> 9.26 +/- 1.62 uM CSF NAC, p<0.001, Katz et al. 2015 PMID:25765302)."
+                disproves = "Misses 107-drug screen FDR (q_BH=0.09364) where 2.5 uM reactive thiol can buffer extracellular media cystine/ROS, while low-dose oral NAC (600 mg/d effervescent NAC co-administered with 1,800 mg/d EH301 [1,500 mg NR + 300 mg PTER] + riluzole in Phase 2 NCT07414212, N=90; 5.83x lower mass than 3,500 mg/d SC at 70 kg) undergoes ~90-94% first-pass gut/hepatic deacetylation."
             elif pid == "DN-18":
-                p1, p2 = just.split(" failed to translate ", 1)
-                proves = p1 + " in sALS patient iPSC-MNs."
-                disproves = "Failed to translate " + p2
+                proves = "Bye 2025 iPSC-MN screen Rank #19/107 at 2.5 uM (+0.7430d across 16 sALS lines, nominal p=0.04951) and mitochondrial Complex I-III electron-transport rationale."
+                disproves = "Missed 107-drug screen FDR (q_BH=0.1827) and failed to warrant Phase III in randomized Phase II QALS (NCT00243932, PMID:19743457, PMC2854625 Table 3, N=185, 2,700 mg/d): Stage 2 primary bias-adjusted one-sided futility test gave p=0.14 (>0.10; mean decline 8.80 vs 9.44; 0.51 was an LTF sensitivity CI bound), prespecified death-penalized sensitivity crossed futility (p=0.025 < 0.10; post-hoc slope p=0.097), all secondary endpoints (FVC, QoL, fatigue) were null, and oral GI absorption saturated between 1,800 and 2,700 mg/d (Table 1; PMID:16344537)."
             elif pid == "DN-19":
-                proves = "Bye 2025 iPSC-MN screen Rank #20/107 at 2.5 uM (+0.7117d survival shift across 16 sALS lines, nominal p=0.0419) and uncontrolled Phase 1 safety-only tolerability (NCT01835782 N=20, PMID:27589995)."
-                disproves = "2.5 uM adds only +0.625% (<1%) atop ~400 uM basal BrainPhys/DMEM-F12 L-serine and fails 107-drug FDR (FDR=0.1707), single-arm NCT03580616 (N=43) terminated for IRB noncompliance without efficacy readout, and ALS-linked SPTLC1/SPTLC2 GoF variants overproduce canonical C18-C22 sphingolipids where exogenous L-serine is contraindicated (PMID:34059824; PMID:43025655; intrathecal SPTLC1 ASO LTX-002 NCT07660614)."
+                proves = "Bye 2025 iPSC-MN screen Rank #20/107 at 2.5 uM (+0.7117d survival shift across 16 sALS lines, unadjusted paired p=0.04190) and uncontrolled 6-month Phase 1 safety-only tolerability up to 15 g BID (30 g/d) oral dosing (NCT01835782 N=20, PMID:27589995)."
+                disproves = "Fixed 2.5 uM library addition increases L-serine molar concentration by only +0.625% atop ~400 uM basal BrainPhys/DMEM-F12 L-serine and misses 107-drug FDR (q_BH=0.17067), zero controlled sporadic ALS efficacy RCTs have completed (single-arm NCT03580616 N=43 terminated for IRB noncompliance), and rare (<0.5% monogenic) SPTLC1/SPTLC2 GoF variants overproduce canonical C18-C22 sphingolipids where exogenous L-serine is contraindicated (PMID:34059824; PMID:43025655; intrathecal SPTLC1 ASO LTX-002 NCT07660614)."
             else:
                 proves, disproves = _split_top_level_dn(just)
             verdict = DN_VERDICT_HEADLINES[pid].format(rk=r["unified_rank"])

@@ -54,7 +54,17 @@ from carbon_als.skill_cli import (  # noqa: E402
 )
 
 
+def _has_ds(dataset_id: str) -> bool:
+    try:
+        return resolve_dataset_path(dataset_id, verify_hash=False).exists()
+    except (FileNotFoundError, KeyError):
+        return False
+
+
 def main() -> None:
+    is_pub = (ROOT / "docs" / "index.html").is_file() and not (ROOT / "reports" / "candidates").is_dir()
+    eff_mode = "cached" if is_pub else "full"
+
     # 1. Anti-pseudoreplication guard blocks duplicate donors
     try:
         assert_unique_donors(["Donor1", "Donor2", "Donor1"], "unit_test")
@@ -69,20 +79,23 @@ def main() -> None:
     except ValueError:
         pass
 
-    # 3. Brown 2022 loader verifies multiplex splice targets
-    b22 = load_brown2022_splicing(["KCNQ2", "UNC13A", "STMN2", "G2E3"])
-    assert b22["splicing_modality"] == "RNA_SPLICING_MAJIQ" and len(b22["junctions_df"]) >= 4
+    # 3. Brown 2022 loader verifies multiplex splice targets (when DS_CRYPTIC staged)
+    if _has_ds("DS_CRYPTIC"):
+        b22 = load_brown2022_splicing(["KCNQ2", "UNC13A", "STMN2", "G2E3"])
+        assert b22["splicing_modality"] == "RNA_SPLICING_MAJIQ" and len(b22["junctions_df"]) >= 4
 
-    # 4. Bye 2025 loader verifies bit-exact Riluzole #1 (+3.959 d)
-    bye = load_bye2025_screen()
-    assert len(bye) == 107 and bye.iloc[0]["drug"] == "Riluzole"
-    assert abs(float(bye.iloc[0]["mean_paired_dmso_days"]) - 3.959) < 0.002
+    # 4. Bye 2025 loader verifies bit-exact Riluzole #1 (+3.959 d) (when DS005_BYE staged)
+    if _has_ds("DS005_BYE"):
+        bye = load_bye2025_screen()
+        assert len(bye) == 107 and bye.iloc[0]["drug"] == "Riluzole"
+        assert abs(float(bye.iloc[0]["mean_paired_dmso_days"]) - 3.959) < 0.002
 
     # 5. Spillman 2026 loader separates Synaptosome vs Homogenate DIA protein from MOESM2 RNA-seq
-    sp = load_spillman2026_fractions(["TFRC", "G2E3", "CHMP2B"])
-    assert sp["TFRC"]["synaptosome_protein"]["modality"] == "PROTEOMICS_DIA"
-    assert sp["G2E3"].get("synaptosome_protein") is None
-    assert sp["G2E3"]["homogenate_rnaseq"]["modality"] == "RNASEQ_DESEQ2"
+    if _has_ds("DS029_SPILL"):
+        sp = load_spillman2026_fractions(["TFRC", "G2E3", "CHMP2B"])
+        assert sp["TFRC"]["synaptosome_protein"]["modality"] == "PROTEOMICS_DIA"
+        assert sp["G2E3"].get("synaptosome_protein") is None
+        assert sp["G2E3"]["homogenate_rnaseq"]["modality"] == "RNASEQ_DESEQ2"
 
     # 6. 1-based closed exon coordinate guard blocks 0-based BED start offset
     assert assert_1based_exon_coords(63442406, 63442531, 63442406, 63442531, "KCNQ2_Ex5") == 126
@@ -100,11 +113,13 @@ def main() -> None:
         assert "FTP_OR_INSECURE_URL_BLOCKED" in str(exc)
 
     # 8. Quote-safe mmCIF parser captures polymeric covalent HETATM VI3 at SARM1 seq=311 in 7DJT + quoted O4' in 9TZY
-    s_7djt = load_mmcif_structure(ROOT / "data/pharmacology_structures/phase2_pdb/pdb_00007djt.cif")
-    mod_311 = [a for a in s_7djt.modified_polymer_atoms if a.chain_id == "A" and a.seq_id == 311]
-    assert mod_311 and mod_311[0].comp_id == "VI3", "Failed to capture covalent Cys311 HETATM VI3 in 7DJT!"
-    s_9tzy = load_mmcif_structure(ROOT / "data/pharmacology_structures/phase2_pdb/pdb_00009tzy.cif")
-    assert any(a.comp_id == "A1JZ0" for a in s_9tzy.ligand_atoms), "Failed to capture BEXi adduct A1JZ0 in 9TZY!"
+    s_7djt = None
+    if _has_ds("DS_PDB_7DJT") and _has_ds("DS_PDB_9TZY"):
+        s_7djt = load_mmcif_structure(ROOT / "data/pharmacology_structures/phase2_pdb/pdb_00007djt.cif")
+        mod_311 = [a for a in s_7djt.modified_polymer_atoms if a.chain_id == "A" and a.seq_id == 311]
+        assert mod_311 and mod_311[0].comp_id == "VI3", "Failed to capture covalent Cys311 HETATM VI3 in 7DJT!"
+        s_9tzy = load_mmcif_structure(ROOT / "data/pharmacology_structures/phase2_pdb/pdb_00009tzy.cif")
+        assert any(a.comp_id == "A1JZ0" for a in s_9tzy.ligand_atoms), "Failed to capture BEXi adduct A1JZ0 in 9TZY!"
     import tempfile
     with tempfile.NamedTemporaryFile("w", suffix=".cif", delete=False, encoding="utf-8") as tf:
         tf.write(
@@ -153,9 +168,10 @@ def main() -> None:
     assert pulsed["end_vacuolation_stress_index"] < cont["end_vacuolation_stress_index"]
 
     # 13. ParsedMMCIF.residue_groups() groups chain/residue atoms (including modified covalent Cys311 VI3 when requested)
-    rg_std = s_7djt.residue_groups(chain_id="A", include_modified=False)
-    rg_mod = s_7djt.residue_groups(chain_id="A", include_modified=True)
-    assert ("A", 311, "VI3") not in rg_std and ("A", 311, "VI3") in rg_mod
+    if s_7djt is not None:
+        rg_std = s_7djt.residue_groups(chain_id="A", include_modified=False)
+        rg_mod = s_7djt.residue_groups(chain_id="A", include_modified=True)
+        assert ("A", 311, "VI3") not in rg_std and ("A", 311, "VI3") in rg_mod
 
     # 14. run_skill_cli_to_file(use_cache=True) serves valid cached JSON without spawning a child uv process
     with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False, encoding="utf-8") as cf:
@@ -174,24 +190,27 @@ def main() -> None:
     assert sw_bid["killgate_pass_rate"] == 0.0 and sw_bid["end_vac_median"] > 0.40
 
     # 16. v0.4.0 O'Neill pure-FTD guard, Zhang 2026 spatial loader, Edinburgh & Pineda donor-aware snRNA loaders
-    on_motor = load_oneill2025_subtypes(exclude_pure_ftd=True)
-    on_pooled = load_oneill2025_subtypes(exclude_pure_ftd=False)
-    assert on_motor["n_non_discordant_cases"] == 303 and on_motor["subtype_counts"]["ALS-TE"] == 41
-    assert on_pooled["subtype_counts"]["ALS-TE"] == 66  # 41 motor ALS/ALS+FTD + 25 pure FTD
-    zh = load_zhang2026_spatial(["IL1RL1", "C1QA", "C1QB", "C1QC"])
-    assert zh["modality"] == "SPATIAL_VISIUM_PSEUDOBULK" and not zh["tdp43_niche_df"].empty
-    ed = load_edinburgh_pseudobulk("Endothelial", ["IL1RL1", "IL33"], region="donor_collapsed")
-    assert ed["modality"] == "SNRNA_PSEUDOBULK_LOG2CPM" and len(ed["donor_df"]) >= 25
-    ed_nc9 = load_edinburgh_pseudobulk("Excitatory neuron", ["ELK1"], region="donor_collapsed", exclude_c9=True)
-    assert len(ed_nc9["donor_df"]) == 32 and "SD006/17" not in set(ed_nc9["donor_df"]["donor_id"]), "Donor-level C9 exclusion failed on SD006/17!"
-    pi = load_pineda2024_pseudobulk("BA4", "Excitatory", ["CHMP7", "CHMP2B", "FBXL5"])
-    assert pi["modality"] == "SNRNA_PSEUDOBULK_LOG2CPM" and len(pi["donor_df"]) == 32
+    if _has_ds("DS001_ONEILL"):
+        on_motor = load_oneill2025_subtypes(exclude_pure_ftd=True)
+        on_pooled = load_oneill2025_subtypes(exclude_pure_ftd=False)
+        assert on_motor["n_non_discordant_cases"] == 303 and on_motor["subtype_counts"]["ALS-TE"] == 41
+        assert on_pooled["subtype_counts"]["ALS-TE"] == 66  # 41 motor ALS/ALS+FTD + 25 pure FTD
+    if _has_ds("DS031_ZHANG"):
+        zh = load_zhang2026_spatial(["IL1RL1", "C1QA", "C1QB", "C1QC"])
+        assert zh["modality"] == "SPATIAL_VISIUM_PSEUDOBULK" and not zh["tdp43_niche_df"].empty
+    if _has_ds("DS_EDIN_PB"):
+        ed = load_edinburgh_pseudobulk("Endothelial", ["IL1RL1", "IL33"], region="donor_collapsed")
+        assert ed["modality"] == "SNRNA_PSEUDOBULK_LOG2CPM" and len(ed["donor_df"]) >= 25
+        ed_nc9 = load_edinburgh_pseudobulk("Excitatory neuron", ["ELK1"], region="donor_collapsed", exclude_c9=True)
+        assert len(ed_nc9["donor_df"]) == 32 and "SD006/17" not in set(ed_nc9["donor_df"]["donor_id"]), "Donor-level C9 exclusion failed on SD006/17!"
+    if _has_ds("DS003_PB"):
+        pi = load_pineda2024_pseudobulk("BA4", "Excitatory", ["CHMP7", "CHMP2B", "FBXL5"])
+        assert pi["modality"] == "SNRNA_PSEUDOBULK_LOG2CPM" and len(pi["donor_df"]) == 32
 
     # 17. v0.4.1 Directory SHA-256 tree verification passes on multi-file staged directories (DS_CRYPTIC, DS029_SPILL, DS_PDB)
-    p_cryp = resolve_dataset_path("DS_CRYPTIC", verify_hash=True)
-    p_sp29 = resolve_dataset_path("DS029_SPILL", verify_hash=True)
-    p_pdb1 = resolve_dataset_path("DS_PDB", verify_hash=True)
-    assert p_cryp.is_dir() and p_sp29.is_dir() and p_pdb1.is_dir()
+    for dsid_dir in ("DS_CRYPTIC", "DS029_SPILL", "DS_PDB", "DS_ELIG_BED"):
+        if _has_ds(dsid_dir):
+            assert resolve_dataset_path(dsid_dir, verify_hash=True).is_dir()
 
     # 18. v0.4.1 parse_json_ignoring_banner() strips non-JSON license/notice headers from stdout payloads
     raw_banner = "[NOTICE] AlphaGenome research-only terms apply.\nWarning: cached schema\n  {\"avi_phred\": 5.67, \"ok\": [1, 2]}\n"
@@ -244,18 +263,20 @@ def main() -> None:
     assert RAW_OLIGO_SEQ_RE.search("raw oligo " + ("acgt" * 4 + "ac") + " leak") is not None
 
     # 24. Phase 3B zero-overlap, atomic single-entity, and Epistemic Asymmetry gate
+    if str(ROOT / "scripts") not in sys.path:
+        sys.path.insert(0, str(ROOT / "scripts"))
     from phase3b_gates import verify_phase3b_gates
     from verify_carbon_als import load_csv
-    p3b_ok = verify_phase3b_gates(ROOT, load_csv("candidate_intake_ledger.csv"), load_csv("subnode_dissection.csv"), load_csv("analysis_runs.csv"), load_csv)
+    p3b_ok = verify_phase3b_gates(ROOT, load_csv("candidate_intake_ledger.csv"), load_csv("subnode_dissection.csv"), load_csv("analysis_runs.csv"), load_csv, mode=eff_mode)
     assert p3b_ok == [], f"Unexpected Phase 3B gate errors: {p3b_ok}"
     bad_bundle = [dict(r) for r in load_csv("phase3b_denovo_candidates.csv")]
     bad_bundle[0]["gene_or_drug"] = "DPP6;DPP10"
-    errs_b = verify_phase3b_gates(ROOT, load_csv("candidate_intake_ledger.csv"), load_csv("subnode_dissection.csv"), load_csv("analysis_runs.csv"), load_csv, cand_override=bad_bundle)
+    errs_b = verify_phase3b_gates(ROOT, load_csv("candidate_intake_ledger.csv"), load_csv("subnode_dissection.csv"), load_csv("analysis_runs.csv"), load_csv, cand_override=bad_bundle, mode=eff_mode)
     assert any("non-atomic gene_or_drug" in e for e in errs_b)
 
     # Test 25: Phase 4 52-hypothesis & 26-interval cross-phase portfolio gate
     from phase4_gates import verify_phase4_gates
-    errs_p4 = verify_phase4_gates(ROOT, load_csv("candidate_decisions.csv"), {r["analysis_run_id"] for r in load_csv("analysis_runs.csv")}, load_csv)
+    errs_p4 = verify_phase4_gates(ROOT, load_csv("candidate_decisions.csv"), {r["analysis_run_id"] for r in load_csv("analysis_runs.csv")}, load_csv, mode=eff_mode)
     assert not errs_p4, f"Unexpected Phase 4 gate errors: {errs_p4}"
     p4_rows = load_csv("phase4_unified_portfolio.csv")
     cis4_rows = load_csv("phase4_unified_cis_intervals.csv")
@@ -303,7 +324,24 @@ def main() -> None:
         "LINKED_TO_EALS-005_TMS; EALS-043–EALS-045; EALS-017.1–EALS-017.4; 01_c019_als_glia.py"
     )
 
-    print("PASS: All 27 v0.5.5 shared-loader, EALS accession/fuzzy-alias, directory-SHA256, mmCIF, skill-CLI, splice-Tm/bystander, MWC/PKPD/CASM/CD38, off-target/bulge/EEJ, Phase 3B, Phase 4 portfolio, and biosecurity tests verified (0 errors).")
+    # Test 28: Flagship VerifiedCheck blocks mismatched assert_equal / assert_close and bans raw un-asserted tuples
+    if str(ROOT / "pipelines" / "flagship") not in sys.path:
+        sys.path.insert(0, str(ROOT / "pipelines" / "flagship"))
+    from _flagship_common import assert_close, assert_equal, print_audit_report
+    ok_chk = assert_equal("unit_eq", "PASS_CLEAN_GE2MM", "PASS_CLEAN_GE2MM")
+    assert ok_chk.status == "PASS"
+    for bad_fn in (
+        lambda: assert_equal("corrupt_eq", "WARN", "PASS_CLEAN_GE2MM"),
+        lambda: assert_close("corrupt_num", 0.51, 0.14, rtol=1e-4),
+        lambda: print_audit_report("TEST", "raw_tuple", [("unasserted", "A", "B", "PASS")], "note"),  # type: ignore[list-item]
+    ):
+        try:
+            bad_fn()
+            raise AssertionError("Expected flagship guard to fail on corrupted or un-asserted check!")
+        except AssertionError as exc:
+            assert "[FAIL]" in str(exc)
+
+    print("PASS: All 28 v0.5.6 shared-loader, flagship-VerifiedCheck, EALS accession/fuzzy-alias, directory-SHA256, mmCIF, skill-CLI, splice-Tm/bystander, MWC/PKPD/CASM/CD38, off-target/bulge/EEJ, Phase 3B, Phase 4 portfolio, and biosecurity tests verified (0 errors).")
 
 
 if __name__ == "__main__":

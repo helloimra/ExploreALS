@@ -8,7 +8,14 @@ import json
 import math
 from pathlib import Path
 import sys
-from typing import Any
+from typing import Any, NamedTuple
+
+
+class VerifiedCheck(NamedTuple):
+    label: str
+    observed: Any
+    expected: Any
+    status: str
 
 ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT / "src") not in sys.path:
@@ -51,16 +58,25 @@ def sha256_short(relpath: str) -> str:
     return h.hexdigest()[:12]
 
 
-def assert_close(label: str, observed: float, expected: float, rtol: float = 1e-4, atol: float = 1e-4) -> tuple[str, float, float, str]:
+def assert_close(label: str, observed: float, expected: float, rtol: float = 1e-4, atol: float = 1e-4) -> VerifiedCheck:
     ok = math.isclose(observed, expected, rel_tol=rtol, abs_tol=atol)
     if not ok:
         raise AssertionError(f"[FAIL] {label}: observed={observed} != expected={expected}")
-    return (label, observed, expected, "PASS")
+    return VerifiedCheck(label, observed, expected, "PASS")
 
 
-def print_audit_report(cand_id: str, title: str, checks: list[tuple[str, Any, Any, str]], priors_note: str) -> None:
+def assert_equal(label: str, observed: Any, expected: Any) -> VerifiedCheck:
+    if observed != expected or type(observed) is not type(expected):
+        raise AssertionError(f"[FAIL] {label}: observed={observed!r} != expected={expected!r}")
+    return VerifiedCheck(label, observed, expected, "PASS")
+
+
+def print_audit_report(cand_id: str, title: str, checks: list[VerifiedCheck], priors_note: str) -> None:
     print(f"=== ExploreALS v1.2 Flagship Monograph Audit: {cand_id} ({title}) ===")
-    for label, obs, exp, status in checks:
+    for chk in checks:
+        if not isinstance(chk, VerifiedCheck) or chk.status != "PASS":
+            raise AssertionError(f"[FAIL] Unverified flagship check tuple in {cand_id}: {chk!r}")
+        label, obs, exp, status = chk
         o_s = f"{obs:.6g}" if isinstance(obs, float) else str(obs)
         e_s = f"{exp:.6g}" if isinstance(exp, float) else str(exp)
         print(f"  [{status}] {label}: observed={o_s} | expected={e_s}")

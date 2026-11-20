@@ -636,9 +636,9 @@ function renderDossierSidebar(){
   const sliceDefs = [
     ['ALL', 'All'],
     ['T12', 'T1/2 (8)'],
-    ['WATCH', 'T3 (18)'],
+    ['WATCH', 'T3 (20)'],
     ['BIO', 'Bio & Calib (8)'],
-    ['DROP', 'Falsified (18)'],
+    ['DROP', 'Falsified (16)'],
   ];
   const sBar = document.getElementById('d-slice-bar');
   if(sBar){
