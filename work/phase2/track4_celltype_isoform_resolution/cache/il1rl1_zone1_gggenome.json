@@ -1,0 +1,5712 @@
+{
+  "chr2:102346045-102346062(+)": {
+    "schema_v": 2,
+    "max_mm_queried": 2,
+    "gapped_1edit_queried": true,
+    "ungapped_hits": [
+      {
+        "chrom": "chr1",
+        "grch38_start": 77700892,
+        "grch38_end": 77700909,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 87078445,
+        "grch38_end": 87078462,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 90111223,
+        "grch38_end": 90111240,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 197028323,
+        "grch38_end": 197028340,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 58802956,
+        "grch38_end": 58802973,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 102346045,
+        "grch38_end": 102346062,
+        "strand": "+",
+        "total_mismatches": 0,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 123143951,
+        "grch38_end": 123143968,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 208861849,
+        "grch38_end": 208861866,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 29793725,
+        "grch38_end": 29793742,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 94302254,
+        "grch38_end": 94302271,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 120147969,
+        "grch38_end": 120147986,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 181875126,
+        "grch38_end": 181875143,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 35108217,
+        "grch38_end": 35108234,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 37300189,
+        "grch38_end": 37300206,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 90163988,
+        "grch38_end": 90164005,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 129196454,
+        "grch38_end": 129196471,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 156440330,
+        "grch38_end": 156440347,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 157639688,
+        "grch38_end": 157639705,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 22239197,
+        "grch38_end": 22239214,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 54285252,
+        "grch38_end": 54285269,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 92846939,
+        "grch38_end": 92846956,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 125979260,
+        "grch38_end": 125979277,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 14682443,
+        "grch38_end": 14682460,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 42600036,
+        "grch38_end": 42600053,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 142557890,
+        "grch38_end": 142557907,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 129109781,
+        "grch38_end": 129109798,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 21866276,
+        "grch38_end": 21866293,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 67221974,
+        "grch38_end": 67221991,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 97104210,
+        "grch38_end": 97104227,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 103352519,
+        "grch38_end": 103352536,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 120619332,
+        "grch38_end": 120619349,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 2619003,
+        "grch38_end": 2619020,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 16532447,
+        "grch38_end": 16532464,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 59350605,
+        "grch38_end": 59350622,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 41797027,
+        "grch38_end": 41797044,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 63575067,
+        "grch38_end": 63575084,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 113363647,
+        "grch38_end": 113363664,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 87830182,
+        "grch38_end": 87830199,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 2,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 115801951,
+        "grch38_end": 115801968,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 121560193,
+        "grch38_end": 121560210,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 22888830,
+        "grch38_end": 22888847,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 92201441,
+        "grch38_end": 92201458,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 106799248,
+        "grch38_end": 106799265,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr14",
+        "grch38_start": 92839003,
+        "grch38_end": 92839020,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 26287374,
+        "grch38_end": 26287391,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 82344238,
+        "grch38_end": 82344255,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 84432584,
+        "grch38_end": 84432601,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 84511384,
+        "grch38_end": 84511401,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 64323101,
+        "grch38_end": 64323118,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 5713890,
+        "grch38_end": 5713907,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 50931877,
+        "grch38_end": 50931894,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr19",
+        "grch38_start": 19681098,
+        "grch38_end": 19681115,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 31234233,
+        "grch38_end": 31234250,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 101927294,
+        "grch38_end": 101927311,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 38269715,
+        "grch38_end": 38269732,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 50035853,
+        "grch38_end": 50035870,
+        "strand": "-",
+        "total_mismatches": 1,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 111109110,
+        "grch38_end": 111109127,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 117745560,
+        "grch38_end": 117745577,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 235999747,
+        "grch38_end": 235999764,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 244878165,
+        "grch38_end": 244878182,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 33512150,
+        "grch38_end": 33512167,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 38714523,
+        "grch38_end": 38714540,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 61591288,
+        "grch38_end": 61591305,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 214486404,
+        "grch38_end": 214486421,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 214607301,
+        "grch38_end": 214607318,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 232924912,
+        "grch38_end": 232924929,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 183846618,
+        "grch38_end": 183846635,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 32481841,
+        "grch38_end": 32481858,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 123749394,
+        "grch38_end": 123749411,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 158971997,
+        "grch38_end": 158972014,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 7514230,
+        "grch38_end": 7514247,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 38652249,
+        "grch38_end": 38652266,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 52227940,
+        "grch38_end": 52227957,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 62101062,
+        "grch38_end": 62101079,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 104777268,
+        "grch38_end": 104777285,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 152242332,
+        "grch38_end": 152242349,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 102193965,
+        "grch38_end": 102193982,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 139736724,
+        "grch38_end": 139736741,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 25414737,
+        "grch38_end": 25414754,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 126694406,
+        "grch38_end": 126694423,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 141087513,
+        "grch38_end": 141087530,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 26195765,
+        "grch38_end": 26195782,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 56520021,
+        "grch38_end": 56520038,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 76611180,
+        "grch38_end": 76611197,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 39145181,
+        "grch38_end": 39145198,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 41965459,
+        "grch38_end": 41965476,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 60833598,
+        "grch38_end": 60833615,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 61109156,
+        "grch38_end": 61109173,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 78093282,
+        "grch38_end": 78093299,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 12754990,
+        "grch38_end": 12755007,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 45464222,
+        "grch38_end": 45464239,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 65400417,
+        "grch38_end": 65400434,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 102744715,
+        "grch38_end": 102744732,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 106386989,
+        "grch38_end": 106387006,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 45532081,
+        "grch38_end": 45532098,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 50144563,
+        "grch38_end": 50144580,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 85716660,
+        "grch38_end": 85716677,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 105817004,
+        "grch38_end": 105817021,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 107742966,
+        "grch38_end": 107742983,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 4307448,
+        "grch38_end": 4307465,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 9236836,
+        "grch38_end": 9236853,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 51884288,
+        "grch38_end": 51884305,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 64265972,
+        "grch38_end": 64265989,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 72748786,
+        "grch38_end": 72748803,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 81544610,
+        "grch38_end": 81544627,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 85547813,
+        "grch38_end": 85547830,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 127715186,
+        "grch38_end": 127715203,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 19841750,
+        "grch38_end": 19841767,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr14",
+        "grch38_start": 28441190,
+        "grch38_end": 28441207,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr14",
+        "grch38_start": 31236404,
+        "grch38_end": 31236421,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr14",
+        "grch38_start": 61929869,
+        "grch38_end": 61929886,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr14",
+        "grch38_start": 82191960,
+        "grch38_end": 82191977,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 34731095,
+        "grch38_end": 34731112,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 52363122,
+        "grch38_end": 52363139,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 82434935,
+        "grch38_end": 82434952,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 82524952,
+        "grch38_end": 82524969,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 84241115,
+        "grch38_end": 84241132,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 84355180,
+        "grch38_end": 84355197,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 85245705,
+        "grch38_end": 85245722,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 52562278,
+        "grch38_end": 52562295,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 89765067,
+        "grch38_end": 89765084,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 15328212,
+        "grch38_end": 15328229,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 52320727,
+        "grch38_end": 52320744,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr19",
+        "grch38_start": 53020437,
+        "grch38_end": 53020454,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr22",
+        "grch38_start": 42299019,
+        "grch38_end": 42299036,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr22",
+        "grch38_start": 48103664,
+        "grch38_end": 48103681,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 4003566,
+        "grch38_end": 4003583,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 22295764,
+        "grch38_end": 22295781,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 145686838,
+        "grch38_end": 145686855,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      }
+    ],
+    "bulge_1nt_hits": [
+      {
+        "chrom": "chr7",
+        "grch38_start": 98994965,
+        "grch38_end": 98994983,
+        "strand": "+",
+        "bulge_type": "RNA_BULGE_1NT"
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 105488765,
+        "grch38_end": 105488783,
+        "strand": "+",
+        "bulge_type": "RNA_BULGE_1NT"
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 90719880,
+        "grch38_end": 90719896,
+        "strand": "-",
+        "bulge_type": "SSO_BULGE_1NT"
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 60437657,
+        "grch38_end": 60437673,
+        "strand": "-",
+        "bulge_type": "SSO_BULGE_1NT"
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 73041243,
+        "grch38_end": 73041259,
+        "strand": "-",
+        "bulge_type": "SSO_BULGE_1NT"
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 28909468,
+        "grch38_end": 28909484,
+        "strand": "-",
+        "bulge_type": "SSO_BULGE_1NT"
+      }
+    ],
+    "sub18_core_0destab_hits": []
+  },
+  "chr2:102346052-102346069(+)": {
+    "schema_v": 2,
+    "max_mm_queried": 2,
+    "gapped_1edit_queried": true,
+    "ungapped_hits": [
+      {
+        "chrom": "chr1",
+        "grch38_start": 15532503,
+        "grch38_end": 15532520,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 20415630,
+        "grch38_end": 20415647,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 25018270,
+        "grch38_end": 25018287,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 35556216,
+        "grch38_end": 35556233,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 36504135,
+        "grch38_end": 36504152,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 46522364,
+        "grch38_end": 46522381,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 47679540,
+        "grch38_end": 47679557,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 47952612,
+        "grch38_end": 47952629,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 62267939,
+        "grch38_end": 62267956,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 64752600,
+        "grch38_end": 64752617,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 69618391,
+        "grch38_end": 69618408,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 76907787,
+        "grch38_end": 76907804,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 107773321,
+        "grch38_end": 107773338,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 153479654,
+        "grch38_end": 153479671,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 166348775,
+        "grch38_end": 166348792,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 168876789,
+        "grch38_end": 168876806,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 169630863,
+        "grch38_end": 169630880,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 173734778,
+        "grch38_end": 173734795,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 176434127,
+        "grch38_end": 176434144,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 177599217,
+        "grch38_end": 177599234,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 189577806,
+        "grch38_end": 189577823,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 199610435,
+        "grch38_end": 199610452,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 219973294,
+        "grch38_end": 219973311,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 233714623,
+        "grch38_end": 233714640,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 12040061,
+        "grch38_end": 12040078,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 20660756,
+        "grch38_end": 20660773,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 30987845,
+        "grch38_end": 30987862,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 35778884,
+        "grch38_end": 35778901,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 45154078,
+        "grch38_end": 45154095,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 81789318,
+        "grch38_end": 81789335,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 87897237,
+        "grch38_end": 87897254,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 89907386,
+        "grch38_end": 89907403,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 95151595,
+        "grch38_end": 95151612,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 102167918,
+        "grch38_end": 102167935,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 102346052,
+        "grch38_end": 102346069,
+        "strand": "+",
+        "total_mismatches": 0,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 121346686,
+        "grch38_end": 121346703,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 121871123,
+        "grch38_end": 121871140,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 133019128,
+        "grch38_end": 133019145,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 2,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 146855303,
+        "grch38_end": 146855320,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 150239948,
+        "grch38_end": 150239965,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 151025070,
+        "grch38_end": 151025087,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 158902067,
+        "grch38_end": 158902084,
+        "strand": "+",
+        "total_mismatches": 1,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 175795546,
+        "grch38_end": 175795563,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 183095997,
+        "grch38_end": 183096014,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 187132422,
+        "grch38_end": 187132439,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 198795148,
+        "grch38_end": 198795165,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 3762143,
+        "grch38_end": 3762160,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 4418712,
+        "grch38_end": 4418729,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 12970072,
+        "grch38_end": 12970089,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 37523510,
+        "grch38_end": 37523527,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 56540702,
+        "grch38_end": 56540719,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 57008791,
+        "grch38_end": 57008808,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 59634160,
+        "grch38_end": 59634177,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 62145661,
+        "grch38_end": 62145678,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 77334720,
+        "grch38_end": 77334737,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 97687277,
+        "grch38_end": 97687294,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 102175663,
+        "grch38_end": 102175680,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 104733419,
+        "grch38_end": 104733436,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 108694189,
+        "grch38_end": 108694206,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 130280446,
+        "grch38_end": 130280463,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 157088619,
+        "grch38_end": 157088636,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 177151687,
+        "grch38_end": 177151704,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 184644710,
+        "grch38_end": 184644727,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 2106773,
+        "grch38_end": 2106790,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 3400913,
+        "grch38_end": 3400930,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 4696313,
+        "grch38_end": 4696330,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 25323243,
+        "grch38_end": 25323260,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 27208517,
+        "grch38_end": 27208534,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 37094503,
+        "grch38_end": 37094520,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 37968189,
+        "grch38_end": 37968206,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 38601566,
+        "grch38_end": 38601583,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 61938609,
+        "grch38_end": 61938626,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 76762698,
+        "grch38_end": 76762715,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 95899762,
+        "grch38_end": 95899779,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 101420084,
+        "grch38_end": 101420101,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 109627477,
+        "grch38_end": 109627494,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 119113643,
+        "grch38_end": 119113660,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 143721185,
+        "grch38_end": 143721202,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 151040108,
+        "grch38_end": 151040125,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 151966333,
+        "grch38_end": 151966350,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 152032702,
+        "grch38_end": 152032719,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 158155711,
+        "grch38_end": 158155728,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 179810632,
+        "grch38_end": 179810649,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 184964444,
+        "grch38_end": 184964461,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 3376976,
+        "grch38_end": 3376993,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 2,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 4467189,
+        "grch38_end": 4467206,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 20312100,
+        "grch38_end": 20312117,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 23223891,
+        "grch38_end": 23223908,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 37005867,
+        "grch38_end": 37005884,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 53566414,
+        "grch38_end": 53566431,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 78809041,
+        "grch38_end": 78809058,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 92848220,
+        "grch38_end": 92848237,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 100634290,
+        "grch38_end": 100634307,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 102578128,
+        "grch38_end": 102578145,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 120716466,
+        "grch38_end": 120716483,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 130132596,
+        "grch38_end": 130132613,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 144942878,
+        "grch38_end": 144942895,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 148908395,
+        "grch38_end": 148908412,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 149828674,
+        "grch38_end": 149828691,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 157395349,
+        "grch38_end": 157395366,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 173516012,
+        "grch38_end": 173516029,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 176675783,
+        "grch38_end": 176675800,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 1643395,
+        "grch38_end": 1643412,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 9243991,
+        "grch38_end": 9244008,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 19591901,
+        "grch38_end": 19591918,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 30934957,
+        "grch38_end": 30934974,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 39431053,
+        "grch38_end": 39431070,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 42476192,
+        "grch38_end": 42476209,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 48514047,
+        "grch38_end": 48514064,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 49664786,
+        "grch38_end": 49664803,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 54548084,
+        "grch38_end": 54548101,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 65889137,
+        "grch38_end": 65889154,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 87286966,
+        "grch38_end": 87286983,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 2,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 94026545,
+        "grch38_end": 94026562,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 94889121,
+        "grch38_end": 94889138,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 99877101,
+        "grch38_end": 99877118,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 117890724,
+        "grch38_end": 117890741,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 121440485,
+        "grch38_end": 121440502,
+        "strand": "+",
+        "total_mismatches": 1,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 136103890,
+        "grch38_end": 136103907,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 148067283,
+        "grch38_end": 148067300,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 164271812,
+        "grch38_end": 164271829,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 164848324,
+        "grch38_end": 164848341,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 2567011,
+        "grch38_end": 2567028,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 2,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 11625103,
+        "grch38_end": 11625120,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 17489689,
+        "grch38_end": 17489706,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 24175828,
+        "grch38_end": 24175845,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 28147423,
+        "grch38_end": 28147440,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 69693161,
+        "grch38_end": 69693178,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 80727882,
+        "grch38_end": 80727899,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 96969105,
+        "grch38_end": 96969122,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 113222490,
+        "grch38_end": 113222507,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 113408318,
+        "grch38_end": 113408335,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 134894601,
+        "grch38_end": 134894618,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 147141439,
+        "grch38_end": 147141456,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 6093554,
+        "grch38_end": 6093571,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 10185682,
+        "grch38_end": 10185699,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 10309258,
+        "grch38_end": 10309275,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 19907590,
+        "grch38_end": 19907607,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 37895824,
+        "grch38_end": 37895841,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 73073279,
+        "grch38_end": 73073296,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 102632051,
+        "grch38_end": 102632068,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 132442276,
+        "grch38_end": 132442293,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 142299819,
+        "grch38_end": 142299836,
+        "strand": "+",
+        "total_mismatches": 1,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 1018156,
+        "grch38_end": 1018173,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 26405754,
+        "grch38_end": 26405771,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 34374124,
+        "grch38_end": 34374141,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 88268142,
+        "grch38_end": 88268159,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 104263401,
+        "grch38_end": 104263418,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 122268593,
+        "grch38_end": 122268610,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 123237723,
+        "grch38_end": 123237740,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 13209080,
+        "grch38_end": 13209097,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 2,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 31071647,
+        "grch38_end": 31071664,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 58464385,
+        "grch38_end": 58464402,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 83521566,
+        "grch38_end": 83521583,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 125127819,
+        "grch38_end": 125127836,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 125798271,
+        "grch38_end": 125798288,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 14723105,
+        "grch38_end": 14723122,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 17968026,
+        "grch38_end": 17968043,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 42309107,
+        "grch38_end": 42309124,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 75272411,
+        "grch38_end": 75272428,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 75424519,
+        "grch38_end": 75424536,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 102684809,
+        "grch38_end": 102684826,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 107311617,
+        "grch38_end": 107311634,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 115439391,
+        "grch38_end": 115439408,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 117415646,
+        "grch38_end": 117415663,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 127801426,
+        "grch38_end": 127801443,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 134385088,
+        "grch38_end": 134385105,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 16711564,
+        "grch38_end": 16711581,
+        "strand": "+",
+        "total_mismatches": 0,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 17308771,
+        "grch38_end": 17308788,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 28317001,
+        "grch38_end": 28317018,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 110959411,
+        "grch38_end": 110959428,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 111366244,
+        "grch38_end": 111366261,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 19622483,
+        "grch38_end": 19622500,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 48329330,
+        "grch38_end": 48329347,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 59059526,
+        "grch38_end": 59059543,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 59177792,
+        "grch38_end": 59177809,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 65434356,
+        "grch38_end": 65434373,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 77883672,
+        "grch38_end": 77883689,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 87025195,
+        "grch38_end": 87025212,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 98524943,
+        "grch38_end": 98524960,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 106484392,
+        "grch38_end": 106484409,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 112073817,
+        "grch38_end": 112073834,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr14",
+        "grch38_start": 40618764,
+        "grch38_end": 40618781,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr14",
+        "grch38_start": 52873906,
+        "grch38_end": 52873923,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr14",
+        "grch38_start": 71439164,
+        "grch38_end": 71439181,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr14",
+        "grch38_start": 98648403,
+        "grch38_end": 98648420,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 26127100,
+        "grch38_end": 26127117,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 69731447,
+        "grch38_end": 69731464,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 79576799,
+        "grch38_end": 79576816,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 87152179,
+        "grch38_end": 87152196,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 26681891,
+        "grch38_end": 26681908,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 55425894,
+        "grch38_end": 55425911,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 61669395,
+        "grch38_end": 61669412,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 66829481,
+        "grch38_end": 66829498,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 37803110,
+        "grch38_end": 37803127,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 44071253,
+        "grch38_end": 44071270,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 54284274,
+        "grch38_end": 54284291,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 57852652,
+        "grch38_end": 57852669,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 58790057,
+        "grch38_end": 58790074,
+        "strand": "+",
+        "total_mismatches": 1,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 62747516,
+        "grch38_end": 62747533,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 67892156,
+        "grch38_end": 67892173,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 42512083,
+        "grch38_end": 42512100,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 44693262,
+        "grch38_end": 44693279,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 48080562,
+        "grch38_end": 48080579,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 59966210,
+        "grch38_end": 59966227,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 61293125,
+        "grch38_end": 61293142,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 65591482,
+        "grch38_end": 65591499,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 73610547,
+        "grch38_end": 73610564,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 76166824,
+        "grch38_end": 76166841,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 76540854,
+        "grch38_end": 76540871,
+        "strand": "+",
+        "total_mismatches": 1,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 78647311,
+        "grch38_end": 78647328,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr19",
+        "grch38_start": 36057496,
+        "grch38_end": 36057513,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr19",
+        "grch38_start": 40281649,
+        "grch38_end": 40281666,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr19",
+        "grch38_start": 46449331,
+        "grch38_end": 46449348,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr19",
+        "grch38_start": 53098064,
+        "grch38_end": 53098081,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr19",
+        "grch38_start": 57167110,
+        "grch38_end": 57167127,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr20",
+        "grch38_start": 29351144,
+        "grch38_end": 29351161,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr20",
+        "grch38_start": 29788775,
+        "grch38_end": 29788792,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr20",
+        "grch38_start": 34558005,
+        "grch38_end": 34558022,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr20",
+        "grch38_start": 36122786,
+        "grch38_end": 36122803,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr20",
+        "grch38_start": 56216937,
+        "grch38_end": 56216954,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr21",
+        "grch38_start": 21678413,
+        "grch38_end": 21678430,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr21",
+        "grch38_start": 32862186,
+        "grch38_end": 32862203,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr21",
+        "grch38_start": 35391542,
+        "grch38_end": 35391559,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr21",
+        "grch38_start": 36073803,
+        "grch38_end": 36073820,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr21",
+        "grch38_start": 38536522,
+        "grch38_end": 38536539,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr21",
+        "grch38_start": 38618833,
+        "grch38_end": 38618850,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr21",
+        "grch38_start": 39994603,
+        "grch38_end": 39994620,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr22",
+        "grch38_start": 11309293,
+        "grch38_end": 11309310,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 8594120,
+        "grch38_end": 8594137,
+        "strand": "+",
+        "total_mismatches": 1,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 34862074,
+        "grch38_end": 34862091,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 43018305,
+        "grch38_end": 43018322,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 64968150,
+        "grch38_end": 64968167,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 66796742,
+        "grch38_end": 66796759,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 69838155,
+        "grch38_end": 69838172,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 71349642,
+        "grch38_end": 71349659,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 76923741,
+        "grch38_end": 76923758,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 106901759,
+        "grch38_end": 106901776,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 112284382,
+        "grch38_end": 112284399,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 154599981,
+        "grch38_end": 154599998,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chrY",
+        "grch38_start": 14426717,
+        "grch38_end": 14426734,
+        "strand": "+",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrY",
+        "grch38_start": 14619265,
+        "grch38_end": 14619282,
+        "strand": "+",
+        "total_mismatches": 1,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 5666538,
+        "grch38_end": 5666555,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 34733931,
+        "grch38_end": 34733948,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 44170444,
+        "grch38_end": 44170461,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 51876104,
+        "grch38_end": 51876121,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 58062257,
+        "grch38_end": 58062274,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 89844310,
+        "grch38_end": 89844327,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 90799075,
+        "grch38_end": 90799092,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 172457100,
+        "grch38_end": 172457117,
+        "strand": "-",
+        "total_mismatches": 1,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 187965544,
+        "grch38_end": 187965561,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 194819142,
+        "grch38_end": 194819159,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 205095814,
+        "grch38_end": 205095831,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 207862166,
+        "grch38_end": 207862183,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 220459099,
+        "grch38_end": 220459116,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 221131336,
+        "grch38_end": 221131353,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 231834043,
+        "grch38_end": 231834060,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 236885529,
+        "grch38_end": 236885546,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 244424406,
+        "grch38_end": 244424423,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 244783966,
+        "grch38_end": 244783983,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 246821449,
+        "grch38_end": 246821466,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 17959984,
+        "grch38_end": 17960001,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 26395545,
+        "grch38_end": 26395562,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 35696025,
+        "grch38_end": 35696042,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 68067217,
+        "grch38_end": 68067234,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 69997979,
+        "grch38_end": 69997996,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 70617004,
+        "grch38_end": 70617021,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 2,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 72153874,
+        "grch38_end": 72153891,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 72306255,
+        "grch38_end": 72306272,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 78075237,
+        "grch38_end": 78075254,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 87282151,
+        "grch38_end": 87282168,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 89275143,
+        "grch38_end": 89275160,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 117443024,
+        "grch38_end": 117443041,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 123480493,
+        "grch38_end": 123480510,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 124625070,
+        "grch38_end": 124625087,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 131177450,
+        "grch38_end": 131177467,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 158126735,
+        "grch38_end": 158126752,
+        "strand": "-",
+        "total_mismatches": 1,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 176315755,
+        "grch38_end": 176315772,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 185893022,
+        "grch38_end": 185893039,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 235050894,
+        "grch38_end": 235050911,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 37639807,
+        "grch38_end": 37639824,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 75974097,
+        "grch38_end": 75974114,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 94412242,
+        "grch38_end": 94412259,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 96855479,
+        "grch38_end": 96855496,
+        "strand": "-",
+        "total_mismatches": 1,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 130052583,
+        "grch38_end": 130052600,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 130984029,
+        "grch38_end": 130984046,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 136416497,
+        "grch38_end": 136416514,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 165293281,
+        "grch38_end": 165293298,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 184424924,
+        "grch38_end": 184424941,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 8572330,
+        "grch38_end": 8572347,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 15562714,
+        "grch38_end": 15562731,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 26609381,
+        "grch38_end": 26609398,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 47938729,
+        "grch38_end": 47938746,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 56881506,
+        "grch38_end": 56881523,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 57930209,
+        "grch38_end": 57930226,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 62263617,
+        "grch38_end": 62263634,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 2,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 73739534,
+        "grch38_end": 73739551,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 82813112,
+        "grch38_end": 82813129,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 88553401,
+        "grch38_end": 88553418,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 114668249,
+        "grch38_end": 114668266,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 126899331,
+        "grch38_end": 126899348,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 139364937,
+        "grch38_end": 139364954,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 159917584,
+        "grch38_end": 159917601,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 185733160,
+        "grch38_end": 185733177,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 186615207,
+        "grch38_end": 186615224,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 19771564,
+        "grch38_end": 19771581,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 24461688,
+        "grch38_end": 24461705,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 27742871,
+        "grch38_end": 27742888,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 63101405,
+        "grch38_end": 63101422,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 72921432,
+        "grch38_end": 72921449,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 74426355,
+        "grch38_end": 74426372,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 116704923,
+        "grch38_end": 116704940,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 117557643,
+        "grch38_end": 117557660,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 137558748,
+        "grch38_end": 137558765,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 139897342,
+        "grch38_end": 139897359,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 140562717,
+        "grch38_end": 140562734,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 143181608,
+        "grch38_end": 143181625,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 151889405,
+        "grch38_end": 151889422,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 157249588,
+        "grch38_end": 157249605,
+        "strand": "-",
+        "total_mismatches": 1,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 168371119,
+        "grch38_end": 168371136,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 172672083,
+        "grch38_end": 172672100,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr5",
+        "grch38_start": 175193084,
+        "grch38_end": 175193101,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 3572456,
+        "grch38_end": 3572473,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 31171731,
+        "grch38_end": 31171748,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 54848440,
+        "grch38_end": 54848457,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 77455510,
+        "grch38_end": 77455527,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 91837925,
+        "grch38_end": 91837942,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 94576868,
+        "grch38_end": 94576885,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 104847267,
+        "grch38_end": 104847284,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 128031130,
+        "grch38_end": 128031147,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 135234388,
+        "grch38_end": 135234405,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 141426965,
+        "grch38_end": 141426982,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 156197994,
+        "grch38_end": 156198011,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr6",
+        "grch38_start": 165914498,
+        "grch38_end": 165914515,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 54651,
+        "grch38_end": 54668,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 27218600,
+        "grch38_end": 27218617,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 36268838,
+        "grch38_end": 36268855,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 88673033,
+        "grch38_end": 88673050,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 123784459,
+        "grch38_end": 123784476,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 131817856,
+        "grch38_end": 131817873,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 136953659,
+        "grch38_end": 136953676,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 144127183,
+        "grch38_end": 144127200,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 154969159,
+        "grch38_end": 154969176,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 1650672,
+        "grch38_end": 1650689,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 1650722,
+        "grch38_end": 1650739,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 1650822,
+        "grch38_end": 1650839,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 1650872,
+        "grch38_end": 1650889,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 1650922,
+        "grch38_end": 1650939,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 9942617,
+        "grch38_end": 9942634,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 23519647,
+        "grch38_end": 23519664,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 52312144,
+        "grch38_end": 52312161,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 54852612,
+        "grch38_end": 54852629,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 63634110,
+        "grch38_end": 63634127,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 68550635,
+        "grch38_end": 68550652,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 104532859,
+        "grch38_end": 104532876,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 118221932,
+        "grch38_end": 118221949,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 119177108,
+        "grch38_end": 119177125,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 127942551,
+        "grch38_end": 127942568,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 138282295,
+        "grch38_end": 138282312,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 141768079,
+        "grch38_end": 141768096,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 141807095,
+        "grch38_end": 141807112,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 2428827,
+        "grch38_end": 2428844,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 10350579,
+        "grch38_end": 10350596,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 25902234,
+        "grch38_end": 25902251,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 98093451,
+        "grch38_end": 98093468,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 101032912,
+        "grch38_end": 101032929,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 103282213,
+        "grch38_end": 103282230,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 111468278,
+        "grch38_end": 111468295,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr9",
+        "grch38_start": 123032285,
+        "grch38_end": 123032302,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 10561432,
+        "grch38_end": 10561449,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 19939760,
+        "grch38_end": 19939777,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 35111155,
+        "grch38_end": 35111172,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 50882863,
+        "grch38_end": 50882880,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 54508249,
+        "grch38_end": 54508266,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 58145864,
+        "grch38_end": 58145881,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 78995758,
+        "grch38_end": 78995775,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 84663724,
+        "grch38_end": 84663741,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 103000908,
+        "grch38_end": 103000925,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 109193130,
+        "grch38_end": 109193147,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 122921341,
+        "grch38_end": 122921358,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 125265615,
+        "grch38_end": 125265632,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 126976064,
+        "grch38_end": 126976081,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 9047210,
+        "grch38_end": 9047227,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 2,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 20974148,
+        "grch38_end": 20974165,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 33706144,
+        "grch38_end": 33706161,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 41595934,
+        "grch38_end": 41595951,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 62903250,
+        "grch38_end": 62903267,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 69203853,
+        "grch38_end": 69203870,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 72652675,
+        "grch38_end": 72652692,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 72767403,
+        "grch38_end": 72767420,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 77801465,
+        "grch38_end": 77801482,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 94909482,
+        "grch38_end": 94909499,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 98444970,
+        "grch38_end": 98444987,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 102155047,
+        "grch38_end": 102155064,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr11",
+        "grch38_start": 113084898,
+        "grch38_end": 113084915,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 2140363,
+        "grch38_end": 2140380,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 21599260,
+        "grch38_end": 21599277,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 30939449,
+        "grch38_end": 30939466,
+        "strand": "-",
+        "total_mismatches": 1,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 43371395,
+        "grch38_end": 43371412,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 44116722,
+        "grch38_end": 44116739,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 46382674,
+        "grch38_end": 46382691,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 51558240,
+        "grch38_end": 51558257,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 52576001,
+        "grch38_end": 52576018,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 55832770,
+        "grch38_end": 55832787,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 85086700,
+        "grch38_end": 85086717,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 109670262,
+        "grch38_end": 109670279,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 110071542,
+        "grch38_end": 110071559,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 115515540,
+        "grch38_end": 115515557,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 121523102,
+        "grch38_end": 121523119,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 131447964,
+        "grch38_end": 131447981,
+        "strand": "-",
+        "total_mismatches": 1,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr12",
+        "grch38_start": 132180702,
+        "grch38_end": 132180719,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 21067166,
+        "grch38_end": 21067183,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 23307135,
+        "grch38_end": 23307152,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 32228599,
+        "grch38_end": 32228616,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 45595018,
+        "grch38_end": 45595035,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 70745933,
+        "grch38_end": 70745950,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 79353157,
+        "grch38_end": 79353174,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 85092205,
+        "grch38_end": 85092222,
+        "strand": "-",
+        "total_mismatches": 1,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 90012994,
+        "grch38_end": 90013011,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 100362306,
+        "grch38_end": 100362323,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 2,
+        "destabilizing_mismatches": 0
+      },
+      {
+        "chrom": "chr13",
+        "grch38_start": 110944027,
+        "grch38_end": 110944044,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr14",
+        "grch38_start": 24092090,
+        "grch38_end": 24092107,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr14",
+        "grch38_start": 25511803,
+        "grch38_end": 25511820,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr14",
+        "grch38_start": 74131938,
+        "grch38_end": 74131955,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr14",
+        "grch38_start": 89145938,
+        "grch38_end": 89145955,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 22889120,
+        "grch38_end": 22889137,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 54937193,
+        "grch38_end": 54937210,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 58743514,
+        "grch38_end": 58743531,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 74850776,
+        "grch38_end": 74850793,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 76377212,
+        "grch38_end": 76377229,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr15",
+        "grch38_start": 77119326,
+        "grch38_end": 77119343,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 6075956,
+        "grch38_end": 6075973,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 6133746,
+        "grch38_end": 6133763,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 20345999,
+        "grch38_end": 20346016,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 27026400,
+        "grch38_end": 27026417,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 50998838,
+        "grch38_end": 50998855,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 51463138,
+        "grch38_end": 51463155,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 51573225,
+        "grch38_end": 51573242,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 55377440,
+        "grch38_end": 55377457,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 58174504,
+        "grch38_end": 58174521,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 60767891,
+        "grch38_end": 60767908,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 67531647,
+        "grch38_end": 67531664,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 78010950,
+        "grch38_end": 78010967,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr16",
+        "grch38_start": 88420456,
+        "grch38_end": 88420473,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 4782061,
+        "grch38_end": 4782078,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 5611469,
+        "grch38_end": 5611486,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 9991060,
+        "grch38_end": 9991077,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 32264699,
+        "grch38_end": 32264716,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 33679980,
+        "grch38_end": 33679997,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 46730085,
+        "grch38_end": 46730102,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 46730166,
+        "grch38_end": 46730183,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 50169919,
+        "grch38_end": 50169936,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 65576787,
+        "grch38_end": 65576804,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 70688185,
+        "grch38_end": 70688202,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr17",
+        "grch38_start": 73895728,
+        "grch38_end": 73895745,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 22251936,
+        "grch38_end": 22251953,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 40165596,
+        "grch38_end": 40165613,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 44760155,
+        "grch38_end": 44760172,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr18",
+        "grch38_start": 45461196,
+        "grch38_end": 45461213,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr19",
+        "grch38_start": 30603230,
+        "grch38_end": 30603247,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr19",
+        "grch38_start": 33677997,
+        "grch38_end": 33678014,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr19",
+        "grch38_start": 43759281,
+        "grch38_end": 43759298,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr19",
+        "grch38_start": 44680803,
+        "grch38_end": 44680820,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr19",
+        "grch38_start": 50319018,
+        "grch38_end": 50319035,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr19",
+        "grch38_start": 54253616,
+        "grch38_end": 54253633,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr20",
+        "grch38_start": 827717,
+        "grch38_end": 827734,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr20",
+        "grch38_start": 11287718,
+        "grch38_end": 11287735,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr20",
+        "grch38_start": 42019045,
+        "grch38_end": 42019062,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr20",
+        "grch38_start": 50268013,
+        "grch38_end": 50268030,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr20",
+        "grch38_start": 60426861,
+        "grch38_end": 60426878,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr20",
+        "grch38_start": 62360733,
+        "grch38_end": 62360750,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr21",
+        "grch38_start": 22108984,
+        "grch38_end": 22109001,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr21",
+        "grch38_start": 28439581,
+        "grch38_end": 28439598,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chr21",
+        "grch38_start": 30421955,
+        "grch38_end": 30421972,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr22",
+        "grch38_start": 30934888,
+        "grch38_end": 30934905,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chr22",
+        "grch38_start": 46948717,
+        "grch38_end": 46948734,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 9068248,
+        "grch38_end": 9068265,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 10616764,
+        "grch38_end": 10616781,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 15513126,
+        "grch38_end": 15513143,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 1,
+        "destabilizing_mismatches": 1
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 16021167,
+        "grch38_end": 16021184,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 26341401,
+        "grch38_end": 26341418,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 31941115,
+        "grch38_end": 31941132,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 71416852,
+        "grch38_end": 71416869,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 120770827,
+        "grch38_end": 120770844,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 121342345,
+        "grch38_end": 121342362,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 139300629,
+        "grch38_end": 139300646,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 144141313,
+        "grch38_end": 144141330,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 152871186,
+        "grch38_end": 152871203,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrY",
+        "grch38_start": 10145214,
+        "grch38_end": 10145231,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      },
+      {
+        "chrom": "chrY",
+        "grch38_start": 19901760,
+        "grch38_end": 19901777,
+        "strand": "-",
+        "total_mismatches": 2,
+        "gu_wobble_pairs": 0,
+        "destabilizing_mismatches": 2
+      }
+    ],
+    "bulge_1nt_hits": [
+      {
+        "chrom": "chr1",
+        "grch38_start": 157694332,
+        "grch38_end": 157694350,
+        "strand": "+",
+        "bulge_type": "RNA_BULGE_1NT"
+      },
+      {
+        "chrom": "chr1",
+        "grch38_start": 189577805,
+        "grch38_end": 189577823,
+        "strand": "+",
+        "bulge_type": "RNA_BULGE_1NT"
+      },
+      {
+        "chrom": "chr4",
+        "grch38_start": 182245557,
+        "grch38_end": 182245573,
+        "strand": "+",
+        "bulge_type": "SSO_BULGE_1NT"
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 18178210,
+        "grch38_end": 18178226,
+        "strand": "+",
+        "bulge_type": "SSO_BULGE_1NT"
+      },
+      {
+        "chrom": "chr2",
+        "grch38_start": 174217447,
+        "grch38_end": 174217463,
+        "strand": "-",
+        "bulge_type": "SSO_BULGE_1NT"
+      },
+      {
+        "chrom": "chr3",
+        "grch38_start": 181636662,
+        "grch38_end": 181636678,
+        "strand": "-",
+        "bulge_type": "SSO_BULGE_1NT"
+      },
+      {
+        "chrom": "chr7",
+        "grch38_start": 55325687,
+        "grch38_end": 55325703,
+        "strand": "-",
+        "bulge_type": "SSO_BULGE_1NT"
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 52312144,
+        "grch38_end": 52312160,
+        "strand": "-",
+        "bulge_type": "SSO_BULGE_1NT"
+      },
+      {
+        "chrom": "chr8",
+        "grch38_start": 129227983,
+        "grch38_end": 129228001,
+        "strand": "-",
+        "bulge_type": "RNA_BULGE_1NT"
+      },
+      {
+        "chrom": "chr10",
+        "grch38_start": 58145864,
+        "grch38_end": 58145880,
+        "strand": "-",
+        "bulge_type": "SSO_BULGE_1NT"
+      },
+      {
+        "chrom": "chrX",
+        "grch38_start": 31941115,
+        "grch38_end": 31941131,
+        "strand": "-",
+        "bulge_type": "SSO_BULGE_1NT"
+      }
+    ],
+    "sub18_core_0destab_hits": []
+  }
+}

@@ -12,10 +12,17 @@ from scipy import optimize, stats
 
 ROOT = Path(__file__).resolve().parents[4]
 SRC = ROOT / "src"
-for p in (ROOT, SRC):
+SCRIPT_DIR = Path(__file__).resolve().parent
+for p in (ROOT, SRC, SCRIPT_DIR):
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
 
+from _il1rl1_pas_cterm_helper import (  # noqa: E402
+    SEQ_GUARD_RE,
+    audit_4kc3_disulfides_and_cys327,
+    scan_gencode_v46_skecf_cterminome_and_zone1_pas,
+)
+from _offtarget_helpers import sanitize_for_strict_json  # noqa: E402
 from carbon_als.loaders import (  # noqa: E402
     load_edinburgh_pseudobulk,
     load_pineda2024_pseudobulk,
@@ -88,6 +95,7 @@ def analyze_4kc3_interface() -> dict[str, Any]:
         },
         "sst2_unique_cterm_divergence_after_ectodomain_seq": seqs[-1],
         "top_closest_contacts": sorted(contacts, key=lambda x: x["min_dist_to_il33_A"])[:12],
+        "cys327_and_disulfide_audit": audit_4kc3_disulfides_and_cys327(cif, st2_c),
     }
 
 
@@ -99,16 +107,20 @@ def parse_il1rl1_gtf() -> dict[str, Any]:
     for tx in records:
         exons = tx.get("exons", [])
         n_ex = int(tx.get("num_exons", len(exons)))
+        # AlphaGenome gtf_IL1RL1.json stores 0-based BED start and 1-based end (width == end - start_0b);
+        # convert start -> start + 1 to match official 1-based closed GENCODE v46 GTF coordinates!
+        s0 = int(exons[0]["start"]) + 1 if exons and int(exons[0].get("width", 0)) == int(exons[0]["end"]) - int(exons[0]["start"]) + 1 else int(exons[0]["start"]) if exons else 0
+        sn = int(exons[-1]["start"]) + 1 if exons and int(exons[-1].get("width", 0)) == int(exons[-1]["end"]) - int(exons[-1]["start"]) + 1 else int(exons[-1]["start"]) if exons else 0
         entry = {
             "transcript_id": tx.get("transcript_id"),
             "is_mane_select": bool(tx.get("is_mane_select", False)),
             "chromosome": tx.get("chromosome", "chr2"),
             "strand": tx.get("strand", "+"),
-            "start_1b": int(tx.get("start", 0)),
+            "start_1b": s0 if exons else int(tx.get("start", 0)) + 1,
             "end_1b": int(tx.get("end", 0)),
             "num_exons": n_ex,
-            "first_exon_1b": f"{tx.get('chromosome','chr2')}:{exons[0]['start']}-{exons[0]['end']}" if exons else "",
-            "last_exon_1b": f"{tx.get('chromosome','chr2')}:{exons[-1]['start']}-{exons[-1]['end']}" if exons else "",
+            "first_exon_1b": f"{tx.get('chromosome','chr2')}:{s0}-{exons[0]['end']}" if exons else "",
+            "last_exon_1b": f"{tx.get('chromosome','chr2')}:{sn}-{exons[-1]['end']}" if exons else "",
         }
         (st2l_txs if n_ex >= 11 else sst2_txs).append(entry)
     return {"st2l_transmembrane_transcripts": st2l_txs, "sst2_soluble_short_transcripts": sst2_txs}
@@ -177,6 +189,8 @@ def main() -> None:
     als_untr = solve_il33_st2_mass_action(15.0, 400.0, 10.0, drug_nm=0.0)
     pan_st2 = solve_il33_st2_mass_action(15.0, 400.0, 10.0, drug_nm=5.0, kd_drug_sst2_pm=50.0, kd_drug_st2l_pm=50.0)
     sel_sst2 = solve_il33_st2_mass_action(15.0, 400.0, 10.0, drug_nm=5.0, kd_drug_sst2_pm=50.0, kd_drug_st2l_pm=None)
+    rna_80pct = solve_il33_st2_mass_action(15.0, 80.0, 10.0, drug_nm=0.0)
+    pas_cterm = scan_gencode_v46_skecf_cterminome_and_zone1_pas(CACHE)
 
     avi_snps = json.loads((CACHE / "avi_il1rl1_snps.json").read_text(encoding="utf-8")) if (CACHE / "avi_il1rl1_snps.json").is_file() else []
     atlas_links = json.loads((CACHE / "il1rl1_atlas_links.json").read_text(encoding="utf-8")) if (CACHE / "il1rl1_atlas_links.json").is_file() else {}
@@ -190,12 +204,15 @@ def main() -> None:
         "c007_gencode_v46_isoform_coordinates_1based_grch38": parse_il1rl1_gtf(),
         "c007_alphagenome_snps_and_atlas_links": {"avi_records": avi_snps, "atlas_links": atlas_links},
         "c007_pdb_4kc3_structural_epitope": analyze_4kc3_interface(),
+        "c007_cterminome_and_zone1_pas_modality_audit": pas_cterm,
         "c007_il33_decoy_sink_mass_action": {
             "bulk_csf_baseline_5pM_sST2": bulk_csf,
             "perivascular_baseline_35pM_sST2": healthy,
             "perivascular_als_endothelial_surge_400pM_sST2": als_untr,
             "pan_st2_d1d2_blocker_astegolimab_5nM": pan_st2,
+            "neurovascular_rna_80pct_sst2_suppression_to_80pM": rna_80pct,
             "isoform_selective_sst2_sweeping_mAb_5nM": sel_sst2,
+            "biologic_fcrn_note": "Catalytic pH-dependent sweeping requires intact pH-6.0 FcRn salvage (never FcRn-attenuated IHH, which causes 1:1 stoichiometric lysosomal co-degradation); demoted to backup behind intrathecal neurovascular RNA suppression due to Cys327 thiol adduct heterogeneity.",
         },
         "c007_and_c018_zhang2026_cervical_spatial": {
             "mn_niche_6d": zh["mn_niche_df"].to_dict(orient="records"),
@@ -203,7 +220,9 @@ def main() -> None:
         },
         "c018_cns_vs_systemic_c1q_pk_model": model_c1q_cns_vs_systemic_pk(),
     }
-    (OUT_DIR / "run_p2_t4_001_c007_il1rl1_and_c018_c1q.json").write_text(json.dumps(out, indent=2), encoding="utf-8")
+    txt = json.dumps(sanitize_for_strict_json(out), indent=2, allow_nan=False)
+    assert not SEQ_GUARD_RE.search(txt), "Biosecurity sequence guard failed on RUN-P2-T4-001!"
+    (OUT_DIR / "run_p2_t4_001_c007_il1rl1_and_c018_c1q.json").write_text(txt, encoding="utf-8")
     print("SAVED run_p2_t4_001_c007_il1rl1_and_c018_c1q.json")
 
 

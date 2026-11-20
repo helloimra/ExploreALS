@@ -11,7 +11,7 @@ function renderRepDag(){
   const box = document.getElementById('rep-dag-box');
   if(!box) return;
   const nodes = [
-    {x:6,  y:12, w:148, h:46, title:'1. Open Datasets (40)', sub:'673 MB · SHA-256',     act:"datasets|ALL"},
+    {x:6,  y:12, w:148, h:46, title:'1. Open Datasets (42)', sub:'674 MB · SHA-256',     act:"datasets|ALL"},
     {x:172,y:12, w:148, h:46, title:'2. Cohort Loaders',     sub:'12 Cohort Parsers',    act:"runs|COHORT"},
     {x:338,y:12, w:148, h:46, title:'3. Analysis Pipeline',  sub:'8 Lead + 50 Runs',     act:"runs|ALL"},
     {x:78, y:96, w:162, h:46, title:'4. 194 Contrasts',      sub:'100% SHA-256 + OLS',   act:"evidence|ALL"},

@@ -47,7 +47,7 @@ def main() -> None:
 
     checks = [
         ("Portfolio Actionable Rank & Decision", f"#{port['unified_rank']} ({port['decision']})", "#2 (KEEP_EXPLORATORY_UNPROVEN)", "PASS"),
-        ("[MEASURED] MIROCALS BioVendor ELISA 750-3,700 pg/mL (n=154/220)", "0.52" in evs["EV-B6-047"]["effect_estimate"], True, "PASS"),
+        ("[MEASURED] MIROCALS BioVendor ELISA 750-3,700 pg/mL (n=154/220; <=3,700 n=173)", "0.52" in evs["EV-B6-047"]["effect_estimate"], True, "PASS"),
         assert_close(f"[MEASURED:{src_tag}] Trautwig DIA MS NEFL vs NEFH Pearson r (n=77)", r_dia, 0.2779, rtol=0.01),
         assert_close("[MODEL_PRIOR] Schoenfeld required deaths at HR=0.70 (80% power)", float(d70_var["events"]), 247.0, rtol=1e-6),
         assert_close("[MODEL_PRIOR] Schoenfeld required deaths at HR=0.62 (80% power)", float(d62["events"]), 138.0, rtol=1e-6),
@@ -55,7 +55,7 @@ def main() -> None:
     ]
     print_audit_report(
         "EALS-031", "Low-Dose Aldesleukin (MIROCALS BioVendor pNfH Gate)", checks,
-        "MIROCALS HRs & Trautwig MS NEFL/NEFH r=0.278 (n=51 Emory TMT nested in n=77 DIA) are [MEASURED]; BioVendor-to-CLIA pNfH calibration & Schoenfeld Phase 3 sizing are [MODEL_PRIOR] / prospective Stage-0 gates.",
+        "MIROCALS HRs (n=19 <750, n=154 750-3,700, n=47 >3,700) & Trautwig tryptic CSF MS NEFL/NEFH r=0.278 (n=51 Emory TMT nested in n=77 DIA) are [MEASURED]; CLSI EP09c BioVendor-to-CLIA pNfH calibration & Schoenfeld Phase 3 sizing are [MODEL_PRIOR] / prospective pre-Phase-3 gates.",
     )
 
 

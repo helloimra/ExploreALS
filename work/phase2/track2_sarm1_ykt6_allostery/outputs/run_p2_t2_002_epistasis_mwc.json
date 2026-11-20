@@ -460,7 +460,7 @@
       "Cys311_allost_IC90_rel_in_Kd_units": 0.447,
       "Cys311_allost_dose_to_reach_lt_1pct_max_NADase_in_Kd_units": 0.003
     },
-    "als_axon_STMN2_depleted_25pct_NMNAT2": {
+    "als_axon_transport_stressed_NMNAT2_depleted": {
       "L_eff_T_over_R": 8.0,
       "baseline_fractional_NADase": 0.11111,
       "BEXi_peak_fold_over_baseline": 4.724,
@@ -682,8 +682,41 @@
     ]
   },
   "nov2026_parallel_and_cd38_sensitivity": {
+    "model_status": "EXPLORATORY_MECHANISTIC_SENSITIVITY_SWEEP",
+    "leahey_empirical_wt_6mer_calibration": {
+      "L0": 2.5,
+      "cooperativity_n_eff": 6,
+      "peak_fold_over_baseline": 2.829,
+      "peak_at_dose_over_Kd": 0.178
+    },
     "parallel_plus_end_lower_bound_fold": 1.0,
-    "parallel_mechanism_note": "Matson & Holzbaur 2026 (10.64898/2026.11.07.764673 [PREPRINT]) + Krus 2022 (PMID:35767949): STMN2 rescue suppresses microtubule plus-end catastrophe independently of L_eff (1.00x SARM1 Kd_T potency shift, yielding orthogonal Bliss survival additivity).",
+    "parallel_mechanism_note": "Two-branch competing-hazard architecture \u2014 Branch A (SARM1-independent microtubule regeneration): Krus et al. 2022 (PMID:35767949), Beccari et al. 2025 (PMID:40392845), and Matson & Holzbaur 2026 (10.64898/2026.11.07.764673 [PREPRINT]) demonstrate that STMN2 promotes plus-end microtubule dynamicity/catastrophe and suppresses runaway tubulin polymerization; STMN2 loss reduces catastrophe and impairs neurite outgrowth/regeneration independently of SARM1 L_eff (1.00x SARM1 Kd_T potency shift at alpha=0), proving SARM1 inhibition cannot substitute for STMN2 rescue. Branch B (conditional NMNAT2-SARM1 metabolic switch, alpha in [0, 1]): spans alpha=0 (Krus 2022 Stmn2-/- baseline, 1.00x shift) to alpha>0 vesicular co-transport stress (Beccari 2025, 1.73x-7.22x [median 2.98x] Cys311 T-lock floor-dose sparing across n=9 well-separated threshold states).",
+    "two_branch_competing_hazard_architecture": {
+      "branch_a_sarm1_independent_regeneration": {
+        "alpha_coupling": 0.0,
+        "sarm1_kd_potency_shift_fold": 1.0,
+        "sarm1_inhibition_replaces_stmn2_rescue": false,
+        "anchors": [
+          "PMID:35767949",
+          "PMID:40392845",
+          "10.64898/2026.11.07.764673"
+        ]
+      },
+      "branch_b_conditional_nmnat2_sarm1_switch": {
+        "alpha_coupling_range": [
+          0.0,
+          1.0
+        ],
+        "well_separated_dose_sparing_range_fold": [
+          1.73,
+          7.22
+        ],
+        "well_separated_median_fold": 2.98,
+        "anchors": [
+          "PMID:40392845"
+        ]
+      }
+    },
     "well_separated_epistatic_n": 9,
     "well_separated_epistatic_min_fold": 1.73,
     "well_separated_epistatic_median_fold": 2.98,

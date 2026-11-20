@@ -31,11 +31,13 @@ def load_gnomad_v41_constraint_map(tsv_path: Path) -> dict[str, dict[str, float 
     with tsv_path.open(encoding="utf-8", newline="") as fh:
         for row in csv.DictReader(fh, delimiter="\t"):
             g = row.get("gene", "").strip()
+            tx = row.get("transcript", "").strip()
             is_mane = row.get("mane_select", "").lower() == "true"
             is_canon = row.get("canonical", "").lower() == "true"
             if not g or not (is_mane or is_canon):
                 continue
-            prio = 0 if is_mane else 1
+            # Prioritize Ensembl ENST* MANE Select (0) and ENST* canonical (1) over duplicate RefSeq NM_* rows (2/3)
+            prio = (0 if is_mane else 1) if tx.startswith("ENST") else (2 if is_mane else 3)
             pli_s, loeuf_s = row.get("lof.pLI", ""), row.get("lof.oe_ci.upper", "")
             pli = round(float(pli_s), 4) if pli_s and pli_s != "NA" else None
             loeuf = round(float(loeuf_s), 4) if loeuf_s and loeuf_s != "NA" else None

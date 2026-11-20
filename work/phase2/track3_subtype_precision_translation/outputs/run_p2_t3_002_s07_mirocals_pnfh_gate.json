@@ -1,5 +1,6 @@
 {
   "analysis_run_id": "RUN-P2-T3-002",
+  "proteomic_transformation_note": "Bottom-up tryptic CSF MS total NEFH/NEFL abundance (TMT log2-transformed; Emory n=51 overlaps 4-center DIA expansion n=259 in Trautwig et al. 2025 PMC12082929).",
   "tmt_emory_symptomatic_als": {
     "nefh_detected": true,
     "n_als_evaluated": 51,
@@ -17,6 +18,8 @@
       "pct_true_high_nefh_missed_by_nefl": 60.0
     },
     "elapsed_duration_by_stratum": {
+      "n_low80_evaluable": 40,
+      "n_high20_evaluable": 9,
       "median_elapsed_yr_low80": 1.0,
       "median_elapsed_yr_high20": 1.0,
       "mwu_p": 0.12073512339944495
@@ -161,6 +164,8 @@
       "pct_true_high_nefh_missed_by_nefl": 71.43
     },
     "elapsed_duration_by_stratum": {
+      "n_low80_evaluable": 28,
+      "n_high20_evaluable": 7,
       "median_elapsed_yr_low80": 1.0,
       "median_elapsed_yr_high20": 1.0,
       "mwu_p": 0.8431790443488283
@@ -666,85 +671,104 @@
       "screened_lp_patients_needed_at_70pct_pass": 1638
     }
   ],
-  "nov2026_platform_offset_and_tricals_cox_sensitivity": {
-    "mirocals_lognormal_fit": {
-      "mu_ln": 7.6136,
-      "sigma_ln": 0.7441,
-      "tricals_pnfh_r2": 0.127
+  "mirocals_primary_and_platform_bridging_sensitivity": {
+    "mirocals_lancet_2025_counts": {
+      "n_total": 220,
+      "deaths_total": 90,
+      "n_lloq_lt750": 19,
+      "deaths_lloq_lt750": 0,
+      "n_low_750_3700": 154,
+      "deaths_low_750_3700": 57,
+      "hr_low_750_3700": 0.52,
+      "p_low_750_3700": 0.016,
+      "n_pooled_le3700": 173,
+      "deaths_pooled_le3700": 57,
+      "hr_pooled_le3700": 0.57,
+      "p_pooled_le3700": 0.037,
+      "n_high_gt3700": 47,
+      "deaths_high_gt3700": 33,
+      "hr_high_gt3700": 1.37,
+      "p_high_gt3700": 0.38,
+      "obs_death_share_gt3700_pct": 36.67,
+      "obs_death_rate_ratio_gt3700_vs_le3700": 2.131,
+      "cox_interaction_hr_per_pgml": 1.0003,
+      "cox_interaction_p": 0.0011,
+      "alsfrsr_slope_interaction_f_1_216": 3.95,
+      "alsfrsr_slope_interaction_p": 0.048
     },
-    "unbridged_3700_platform_offset_grid": [
+    "al_khleifat_2026_nested_lrt": {
+      "tricals_pnfh_r": 0.357,
+      "tricals_pnfh_r2": 0.127,
+      "dchi2_add_pnfh_to_tricals": 44.39,
+      "dchi2_pnfh_x_trt": 14.24,
+      "dchi2_tricals_x_trt": 4.76,
+      "lrt_p_tricals_x_trt": 0.029,
+      "wald_p_tricals_x_trt": 0.025
+    },
+    "mirocals_lognormal_fit": {
+      "mu_ln": 7.6288,
+      "sigma_ln": 0.7398
+    },
+    "hypothetical_unbridged_3700_platform_offset_sensitivity": [
       {
         "platform_scenario": "unbridged_assay_4p5x_higher",
         "assay_vs_biovendor_slope_k": 4.5,
         "effective_biovendor_cutoff_pg_ml": 822.2,
-        "apparent_lp_eligible_fraction": 0.1128,
-        "true_low_pnfh_responders_captured_pct": 14.27,
-        "top_quintile_nonresponders_admitted_pct": 0.0,
-        "diluted_event_weighted_hr_if_true_low_0p70": 0.7,
-        "power_at_247_deaths_pct": 80.03
+        "apparent_lp_eligible_fraction": 0.1076,
+        "eligible_le3700_captured_pct": 13.69,
+        "gt3700_stratum_admitted_pct": 0.0,
+        "diluted_hr_if_true_low_0p70_and_hi_null_1p00": 0.7,
+        "one_sided_sup_power_247_deaths_hi_null_pct": 80.03,
+        "diluted_hr_if_true_low_0p70_and_hi_1p37": 0.7,
+        "one_sided_sup_power_247_deaths_hi_1p37_pct": 80.03
       },
       {
         "platform_scenario": "unbridged_assay_1p8x_higher",
         "assay_vs_biovendor_slope_k": 1.8,
         "effective_biovendor_cutoff_pg_ml": 2055.6,
-        "apparent_lp_eligible_fraction": 0.5079,
-        "true_low_pnfh_responders_captured_pct": 64.21,
-        "top_quintile_nonresponders_admitted_pct": 0.0,
-        "diluted_event_weighted_hr_if_true_low_0p70": 0.7,
-        "power_at_247_deaths_pct": 80.03
+        "apparent_lp_eligible_fraction": 0.4997,
+        "eligible_le3700_captured_pct": 63.55,
+        "gt3700_stratum_admitted_pct": 0.0,
+        "diluted_hr_if_true_low_0p70_and_hi_null_1p00": 0.7,
+        "one_sided_sup_power_247_deaths_hi_null_pct": 80.03,
+        "diluted_hr_if_true_low_0p70_and_hi_1p37": 0.7,
+        "one_sided_sup_power_247_deaths_hi_1p37_pct": 80.03
       },
       {
-        "platform_scenario": "calibrated_biovendor_or_p80_bridged",
+        "platform_scenario": "calibrated_biovendor_or_p79_bridged",
         "assay_vs_biovendor_slope_k": 1.0,
         "effective_biovendor_cutoff_pg_ml": 3700.0,
-        "apparent_lp_eligible_fraction": 0.7909,
-        "true_low_pnfh_responders_captured_pct": 100.0,
-        "top_quintile_nonresponders_admitted_pct": 0.0,
-        "diluted_event_weighted_hr_if_true_low_0p70": 0.7,
-        "power_at_247_deaths_pct": 80.03
+        "apparent_lp_eligible_fraction": 0.7864,
+        "eligible_le3700_captured_pct": 100.0,
+        "gt3700_stratum_admitted_pct": 0.0,
+        "diluted_hr_if_true_low_0p70_and_hi_null_1p00": 0.7,
+        "one_sided_sup_power_247_deaths_hi_null_pct": 80.03,
+        "diluted_hr_if_true_low_0p70_and_hi_1p37": 0.7,
+        "one_sided_sup_power_247_deaths_hi_1p37_pct": 80.03
       },
       {
         "platform_scenario": "unbridged_assay_1p8x_lower_eg_MSD",
         "assay_vs_biovendor_slope_k": 0.5556,
         "effective_biovendor_cutoff_pg_ml": 6660.0,
-        "apparent_lp_eligible_fraction": 0.9451,
-        "true_low_pnfh_responders_captured_pct": 100.0,
-        "top_quintile_nonresponders_admitted_pct": 73.76,
-        "diluted_event_weighted_hr_if_true_low_0p70": 0.9056,
-        "power_at_247_deaths_pct": 11.88
+        "apparent_lp_eligible_fraction": 0.9439,
+        "eligible_le3700_captured_pct": 100.0,
+        "gt3700_stratum_admitted_pct": 73.74,
+        "diluted_hr_if_true_low_0p70_and_hi_null_1p00": 0.7788,
+        "one_sided_sup_power_247_deaths_hi_null_pct": 50.17,
+        "diluted_hr_if_true_low_0p70_and_hi_1p37": 0.8558,
+        "one_sided_sup_power_247_deaths_hi_1p37_pct": 23.09
       },
       {
         "platform_scenario": "unbridged_assay_4p5x_lower",
         "assay_vs_biovendor_slope_k": 0.2222,
         "effective_biovendor_cutoff_pg_ml": 16650.0,
         "apparent_lp_eligible_fraction": 0.9977,
-        "true_low_pnfh_responders_captured_pct": 100.0,
-        "top_quintile_nonresponders_admitted_pct": 98.89,
-        "diluted_event_weighted_hr_if_true_low_0p70": 0.95,
-        "power_at_247_deaths_pct": 5.98
-      }
-    ],
-    "tricals_covariate_cox_deattenuation_grid": [
-      {
-        "cox_model": "unadjusted_marginal_logrank",
-        "log_hr_multiplier": 1.0,
-        "effective_conditional_hr_from_0p70": 0.7,
-        "required_deaths_80pct_power": 247,
-        "power_at_preserved_247_deaths_pct": 80.03
-      },
-      {
-        "cox_model": "conservative_half_deattenuation",
-        "log_hr_multiplier": 1.06,
-        "effective_conditional_hr_from_0p70": 0.6852,
-        "required_deaths_80pct_power": 220,
-        "power_at_preserved_247_deaths_pct": 84.4
-      },
-      {
-        "cox_model": "mirocals_observed_tricals_log_hr_ratio_1p1172",
-        "log_hr_multiplier": 1.1172,
-        "effective_conditional_hr_from_0p70": 0.6713,
-        "required_deaths_80pct_power": 198,
-        "power_at_preserved_247_deaths_pct": 87.93
+        "eligible_le3700_captured_pct": 100.0,
+        "gt3700_stratum_admitted_pct": 98.9,
+        "diluted_hr_if_true_low_0p70_and_hi_null_1p00": 0.7971,
+        "one_sided_sup_power_247_deaths_hi_null_pct": 42.95,
+        "diluted_hr_if_true_low_0p70_and_hi_1p37": 0.8939,
+        "one_sided_sup_power_247_deaths_hi_1p37_pct": 14.04
       }
     ]
   }

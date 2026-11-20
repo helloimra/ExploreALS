@@ -278,8 +278,8 @@ def verify_phase4_gates(
             if "0 synthetic oligo designs" in htxt.lower() or re.search(r"liability\s*=\s*[0-9.]+\s*pct", htxt, re.I):
                 errors.append(f"{lbl} contains retired '0 synthetic oligo designs' or 'liability=...pct' phrasing")
             for banned in (
-                "CHEMBL1201587", "ENST00000404917", "L_eff 65 -> 8", "LOEUF = 1.413", "LOEUF=0.295",
-                "LOEUF=0.389", "LOEUF=0.250", "96 bp upstream of rs12973192",
+                "CHEMBL1201587", "ENST00000404917", "L_eff 65 -> 8", "v4.0 TSV", "gnomAD v4.0", "FcRn-attenuated",
+                "96 bp upstream of rs12973192",
                 "Responsive Step Cards", "Native Wrap", "Honest Multi-Cohort", "Explore -> Carbon",
                 "CarbonALS", "Candidate Wiki", "(9 v3)", "Queued for Wave 2", "WAVE 2 REGISTRY",
                 "Stream A", "Stream B", "5D liability=", "gene-liability=", "/100",
@@ -314,7 +314,7 @@ def verify_phase4_gates(
                 "Human RCT / Genetics", "Human Cohort / PK-PD",
                 "In Vitro or Small-N", "Model / Heuristic Prior", "BioVendor",
                 "PDB 4M7N", "NIH GTEx (v8 / v10)", "N/A (SOC / PD Benchmark)", "Rank &amp; Triage Key:", "Design Tiers:",
-                "CHEMBL1201438", "ENST00000311734.6", "102343269-102346100(+)", "LOEUF = 1.143",
+                "CHEMBL1201438", "ENST00000311734.6", "102343270-102346100(+)", "LOEUF = 1.143",
                 "LOEUF = 0.258", "LOEUF = 0.344", "LOEUF = 0.261", "107 bp upstream of rs12973192",
                 "Primary Evidence &amp; FAIR Provenance Ledger", "Right Target", "Right Modality & Exposure",
                 "const DATA_NYGC_META =", "const DATA_FUNNEL =", "const DATA_DROPS =", "const DATA_SUM =",

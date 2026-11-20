@@ -67,7 +67,7 @@ const ENUM_LABELS = {
   RECLASSIFY_BENCHMARK_OR_BIOMARKER: 'Benchmark / Biomarker',
   DROP: 'Drop · Falsified',
   SKIP_CRYPTIC_EXON: "Steric 2'-MOE SSO · Cryptic Exon Skip",
-  CRYPTIC_EXON2A_3SS_PAS_BLOCK: "Steric 2'-MOE SSO · Cryptic Exon-2a 3'SS / Premature-PAS Block",
+  CRYPTIC_EXON2A_3SS_PAS_BLOCK: "Steric 2'-MOE SSO · Proximal Exon-2a (+8..+25) Epistatic 3'SS / PAS Suppression",
   CRYPTIC_CASSETTE_EXON_SKIP: "Steric 2'-MOE SSO · Cryptic Cassette Skip",
   CRYPTIC_CASSETTE_MAJOR_3SS_AND_SHARED_EXON: "Steric 2'-MOE SSO · Major 3'SS + Exonic",
   CRYPTIC_CASSETTE_DOWNSTREAM_INTRONIC_ISE: "Steric 2'-MOE SSO · Downstream Intronic ISE",
@@ -148,7 +148,7 @@ function formatHurdle(code){
     .replace(/PRE_PH3/g, 'Pre-Ph3')
     .replace(/POST_QRL201/g, 'Post-QRL-201')
     .replace(/ALS_GLIA/g, 'ALS-Glia')
-    .replace(/AA320_328/g, 'aa 320-328')
+    .replace(/AA324_328/g, 'aa 324-328 SKECF')
     .replace(/Q48_TO_Q72H/g, 'q48h-q72h');
   const words = pre.split('_').filter(Boolean).map(w => {
     if(HURDLE_TOK[w]) return HURDLE_TOK[w];
@@ -171,8 +171,7 @@ function formatPrior(code){
     .replace(/Tm_dG37_AVI_2Z0D_contacts/g, 'SantaLucia Tm, ΔG37, AlphaGenome AVI & PDB 2Z0D contacts')
     .replace(/Tm_dG37_AVI_composite_score/g, 'SantaLucia Tm, ΔG37 & AlphaGenome AVI composite score')
     .replace(/79_to_30_to_0pct/g, '~79% -> ~30% -> 0%')
-    .replace(/80_to_6_to_12pct/g, '80% -> ~6–12%')
-    .replace(/84_to_88pct/g, '~84–88%')
+    .replace(/Operationalized_MIROCALS_p79_bridging_Schoenfeld_HR070_and_platform_offset_sensitivity/g, 'Operationalized MIROCALS ~79th-pct CLSI EP09c bridging, Schoenfeld HR = 0.70 & platform-offset sensitivity')
     .replace(/30_to_40pct/g, '~30–40%')
     .replace(/45_to_50pct/g, '~45–50%')
     .replace(/Post_hoc/g, 'Post-hoc')
@@ -202,10 +201,11 @@ function formatModality(s){
     .replace(/ECM_Anchored/g, 'ECM-Anchored').replace(/Anti_C1q/g, 'Anti-C1q')
     .replace(/Allele_Specific/g, 'Allele-Specific').replace(/Neuron_Selective/g, 'Neuron-Selective')
     .replace(/Non_Covalent/g, 'Non-Covalent').replace(/Non_Orthosteric/g, 'Non-Orthosteric').replace(/Non_Chelating/g, 'Non-Chelating')
-    .replace(/CTail_aa320_328/g, 'C-Tail (aa 320–328)').replace(/Intron8/g, 'Intron-8').replace(/Intron9/g, 'Intron-9')
+    .replace(/CTail_aa324_328/g, 'C-Tail (aa 324–328 SKECF)').replace(/Intron8/g, 'Intron-8').replace(/Intron9/g, 'Intron-9')
     .replace(/ERAD_Sparing/g, 'ERAD-Sparing')
     .replace(/Early_Onset_LE12m/g, 'Early-Onset (<=12m)').replace(/Q48_to_Q72h/g, 'q48h–q72h')
     .replace(/LINE1_RT/g, 'LINE-1 RT').replace(/TPN101/g, 'TPN-101').replace(/JAK2_Sparing/g, 'JAK2-Sparing')
+    .replace(/ldIL2/g, 'ld-IL-2').replace(/CTLA4Ig/g, 'CTLA4-Ig').replace(/IL2/g, 'IL-2').replace(/ALSFRSR/g, 'ALSFRS-R').replace(/N137/g, 'N=137').replace(/24wk/g, '24-wk')
     .replace(/Brain_Penetrant/g, 'Brain-Penetrant').replace(/Low_Dose/g, 'Low-Dose')
     .replace(/_/g, ' ');
 }

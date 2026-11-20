@@ -148,10 +148,10 @@ def analyze_pineda_excitatory() -> dict:
 
 def simulate_8mer_mwc_epistasis() -> dict:
     """8-protomer MWC SARM1 octamer comparing orthosteric BEXi (3-chain TIR glue) vs Cys311 allosteric T-lock + STMN2 rescue."""
-    # L_eff = [T]/[R] equilibrium constant without drug: drops sharply as axonal NMNAT2 falls (STMN2 loss) or in ALS ARM-GoF
+    # L_eff = [T]/[R] equilibrium constant without drug: exploratory sensitivity states across axonal NMNAT2 depletion & ARM-GoF
     states = {
         "healthy_axon_100pct_NMNAT2": 120.0,
-        "als_axon_STMN2_depleted_25pct_NMNAT2": 8.0,
+        "als_axon_transport_stressed_NMNAT2_depleted": 8.0,
         "als_axon_parallel_plus_end_STMN2_rescue_no_NMNAT2_shift": 8.0,
         "als_axon_plus_Track1_STMN2_rescue_80pct_NMNAT2": 65.0,
         "als_axon_SARM1_ARM_GoF_plus_STMN2_loss": 2.2,
@@ -210,9 +210,43 @@ def summarize_nov2026_sarm1_sensitivity(mwc_grid: dict) -> dict:
         if r["absolute_threshold_dose_sparing_fold"] is not None
         and float(r["baseline_rescued_nadase"]) >= 1.5 * float(r["nadase_catastrophe_floor"])
     ]
+    doses = np.logspace(-2.5, 2.0, 91)
+    z_emp = (1.0 + 5.154 * doses) ** 6
+    emp_bexi_rel = 3.5 * (z_emp / (2.5 + z_emp)) / (1.0 + doses)
+    emp_pk = int(np.argmax(emp_bexi_rel))
     return {
+        "model_status": "EXPLORATORY_MECHANISTIC_SENSITIVITY_SWEEP",
+        "leahey_empirical_wt_6mer_calibration": {
+            "L0": 2.5,
+            "cooperativity_n_eff": 6,
+            "peak_fold_over_baseline": round(float(emp_bexi_rel[emp_pk]), 3),
+            "peak_at_dose_over_Kd": round(float(doses[emp_pk]), 3),
+        },
         "parallel_plus_end_lower_bound_fold": 1.0,
-        "parallel_mechanism_note": "Matson & Holzbaur 2026 (10.64898/2026.11.07.764673 [PREPRINT]) + Krus 2022 (PMID:35767949): STMN2 rescue suppresses microtubule plus-end catastrophe independently of L_eff (1.00x SARM1 Kd_T potency shift, yielding orthogonal Bliss survival additivity).",
+        "parallel_mechanism_note": (
+            "Two-branch competing-hazard architecture — Branch A (SARM1-independent microtubule regeneration): "
+            "Krus et al. 2022 (PMID:35767949), Beccari et al. 2025 (PMID:40392845), and Matson & Holzbaur 2026 "
+            "(10.64898/2026.11.07.764673 [PREPRINT]) demonstrate that STMN2 promotes plus-end microtubule dynamicity/"
+            "catastrophe and suppresses runaway tubulin polymerization; STMN2 loss reduces catastrophe and impairs "
+            "neurite outgrowth/regeneration independently of SARM1 L_eff (1.00x SARM1 Kd_T potency shift at alpha=0), "
+            "proving SARM1 inhibition cannot substitute for STMN2 rescue. Branch B (conditional NMNAT2-SARM1 metabolic "
+            f"switch, alpha in [0, 1]): spans alpha=0 (Krus 2022 Stmn2-/- baseline, 1.00x shift) to alpha>0 vesicular "
+            f"co-transport stress (Beccari 2025, {np.min(well_sep):.2f}x-{np.max(well_sep):.2f}x [median {np.median(well_sep):.2f}x] Cys311 T-lock floor-dose sparing across n={len(well_sep)} well-separated threshold states)."
+        ),
+        "two_branch_competing_hazard_architecture": {
+            "branch_a_sarm1_independent_regeneration": {
+                "alpha_coupling": 0.0,
+                "sarm1_kd_potency_shift_fold": 1.0,
+                "sarm1_inhibition_replaces_stmn2_rescue": False,
+                "anchors": ["PMID:35767949", "PMID:40392845", "10.64898/2026.11.07.764673"],
+            },
+            "branch_b_conditional_nmnat2_sarm1_switch": {
+                "alpha_coupling_range": [0.0, 1.0],
+                "well_separated_dose_sparing_range_fold": [round(float(np.min(well_sep)), 2), round(float(np.max(well_sep)), 2)],
+                "well_separated_median_fold": round(float(np.median(well_sep)), 2),
+                "anchors": ["PMID:40392845"],
+            },
+        },
         "well_separated_epistatic_n": len(well_sep),
         "well_separated_epistatic_min_fold": round(float(np.min(well_sep)), 2),
         "well_separated_epistatic_median_fold": round(float(np.median(well_sep)), 2),

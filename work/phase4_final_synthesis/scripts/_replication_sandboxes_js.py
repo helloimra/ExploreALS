@@ -264,7 +264,7 @@ function updateSandboxes(){
   const dReq = Math.ceil(Math.pow(1.959964+0.841621, 2) / (0.25 * Math.pow(Math.log(hr), 2)));
   const p1 = 1 - Math.pow(1 - p0, hr), pbar = 0.5*(p0 + p1);
   const nRand = 2 * Math.ceil(dReq / (2 * pbar * 0.95));
-  const nScr = Math.ceil(nRand / 0.79);
-  document.getElementById('sb-m-out').innerHTML = `<div>Required Deaths (80% pwr, 2s &alpha;=0.05): <strong class="text-[var(--primary)]">${dReq}</strong></div><div>Pooled Event Rate: <strong>${(100*pbar).toFixed(1)}%</strong> &rarr; N_rand = <strong>${nRand}</strong></div><div class="text-[var(--muted-foreground)]">LP Screen (~79% &le;3,700 pg/mL; &lt;750 n=20 had 0 deaths): N_screen &approx; <strong>${nScr}</strong></div>`;
+  const nScr = Math.ceil(nRand / (173 / 220));
+  document.getElementById('sb-m-out').innerHTML = `<div>Required Deaths (80% pwr, 2s &alpha;=0.05): <strong class="text-[var(--primary)]">${dReq}</strong></div><div>Pooled Event Rate: <strong>${(100*pbar).toFixed(1)}%</strong> &rarr; N_rand = <strong>${nRand}</strong></div><div class="text-[var(--muted-foreground)]">LP Screen (173/220 = 78.6% &le;3,700 pg/mL; &lt;750 n=19 had 0 deaths): N_screen &approx; <strong>${nScr}</strong></div>`;
 }
 """

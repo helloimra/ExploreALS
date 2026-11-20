@@ -28,13 +28,13 @@ NEW_EVIDENCE_ROWS: list[dict[str, str]] = [
     {
         "evidence_id": "EV-P4-002", "carbon_id": "C001", "subnode_id": "", "analysis_run_id": "RUN-P4-003",
         "source_type": "MAJIQ_INTRON31_RETENTION_CEILING_RECOMPUTE",
-        "source_id_or_locator": "DS_CRYPTIC:Brown2022_MOESM11;PMID:35197628;PMID:43015463;10.1038/s41586-026-11256-2",
+        "source_id_or_locator": "DS_CRYPTIC:Brown2022_MOESM11;PMID:35197628;DOI:10.1038/s41586-022-04436-3;PMID:43015463;10.1038/s41586-026-11256-2",
         "cohort_and_stratum": "Brown et al. 2022 human i3Neuron TDP-43 CRISPRi KD vs Control MAJIQ splicing (LSV ENSG00000130477.15:s:17629240-17629323)",
         "assay_and_contrast": "MAJIQ differential intron-31 retention (chr19:17628338..17629239) & canonical Exon 31-32 junction splicing",
         "effect_direction": "PERSISTENT_INTRON31_RETENTION_CAPS_INTRON20_SOLO_ASO_MRNA",
-        "effect_estimate": "Intron-31 retention PSI 0.097->0.444 (dPSI=+0.3543); canonical Exon 31-32 PSI 0.791->0.461 (dPSI=-0.3337, FDR=9.47e-12); [MODEL_PRIOR] ~46.1-55.6% standalone Intron-20 ASO mRNA ceiling under severe TDP-43 KD (>30% Keuss 2026 synaptic rescue threshold)",
+        "effect_estimate": "Intron-31 retention PSI 0.097->0.444 (dPSI=+0.3543); canonical Exon 31-32 PSI 0.791->0.461 (dPSI=-0.3337, FDR=9.47e-12); [MODEL_PRIOR] ~58.3-61.6% Control-normalized WT mRNA ceiling (46.1-55.6% raw KD PSI; >30% Keuss 2026 synaptic rescue threshold)",
         "p_value": "", "fdr_or_adjusted_p": "1.822e-15", "sample_size_n": "", "epistemic_weight": "HIGH",
-        "notes": "Missed by junction-only LeafCutter filters (de_novo_junctions=0); under multiplicative LSV independence in severe TDP-43 loss, persistent Intron-31 detention explains why standalone Intron-20 cryptic-exon blockade restores ~55-75% rather than 100% Munc13-1 while comfortably exceeding the >30% human neuronal AMPA eEPSC/MEA rescue threshold in Keuss et al. 2026 (PMID:43015463).",
+        "notes": "Missed by junction-only LeafCutter filters (de_novo_junctions=0); normalizing KD splicing to Control WT baseline (Exon 31-32 0.791, non-IR 0.903) yields ~58.3-61.6% WT full-length mRNA ceiling, explaining why standalone Intron-20 cryptic-exon deletion restores ~75% rather than 100% Munc13-1 while comfortably exceeding the >30% human neuronal AMPA eEPSC/MEA rescue threshold in Keuss et al. 2026 (PMID:43015463).",
     },
     {
         "evidence_id": "EV-P4-003", "carbon_id": "C022", "subnode_id": "", "analysis_run_id": "RUN-P4-003",
@@ -56,7 +56,7 @@ NEW_EVIDENCE_ROWS: list[dict[str, str]] = [
         "effect_direction": "MODEL_PRIOR_INTRON5_ISE_WRONG_SIGN_SKIPPING_HAZARD_FLAGGED",
         "effect_estimate": "[MODEL_PRIOR] #3 63442302:C>G increases Exon 4-6 skip +0.1930 (0.5478->0.7408, +35.23%) & lowers Exon 4-5/5-6 (-0.1750/-0.1379; MN ATAC q=-0.99988) vs #2 63442566:A>T lowering Exon 4-6 skip -0.0522 (MN splice q=0.99954)",
         "p_value": "", "fdr_or_adjusted_p": "", "sample_size_n": "", "epistemic_weight": "MODERATE",
-        "notes": "One-sided WT-context DNA substitution proxy (does not model 18-nt steric pre-mRNA masking under TDP-43 loss): flags that #3 spans a putative intronic enhancer/chromatin element whose steric occlusion could worsen Exon-5 skipping if it acts as an ISE rather than ISS (also verified Joseph 2025 PMID:41174170 main-text chr20:63442265..63442532 strings are RIP-qPCR/CRISPR primers while smASOs reside in Supp Table 4).",
+        "notes": "One-sided WT-context DNA substitution proxy (does not model 18-nt steric pre-mRNA masking under TDP-43 loss): flags that #3 spans a putative intronic enhancer/chromatin element whose steric occlusion could worsen Exon-5 skipping if it acts as an ISE rather than ISS (also verified Joseph 2025 PMID:41174170 oligos aligning to chr20:63442265..63442532 are Supp Table RIP-qPCR/CRISPR primers while smASOs reside in Supp Table 4).",
     },
     {
         "evidence_id": "EV-P4-005", "carbon_id": "C015", "subnode_id": "C015-N1", "analysis_run_id": "RUN-P4-003",

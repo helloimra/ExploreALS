@@ -20,7 +20,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
             <h1 class="text-base font-semibold text-[var(--foreground)]">ALS Therapeutic &amp; Genetic Target Triage, Candidate Reports &amp; Replication Explorer</h1>
           </div>
           <div id="hdr-sub">
-            <p class="text-[var(--muted-foreground)] text-xs mt-1">Independent computational triage of 52 ALS therapeutic &amp; biomarker hypotheses across 40 open human &amp; preclinical datasets (Mendelian/GWAS genetics, TDP-43 cryptic splicing &amp; polyadenylation, spatial/snRNA/subcellular omics, CSF proteomics, clinical trial subgroups &amp; patient iPSC-MN screens) &middot; 18 complex/panel subunits &middot; 26 1-based GRCh38 cis-regulatory target windows</p>
+            <p class="text-[var(--muted-foreground)] text-xs mt-1">Independent computational triage of 52 ALS therapeutic &amp; biomarker hypotheses across 42 open human &amp; preclinical datasets (Mendelian/GWAS genetics, TDP-43 cryptic splicing &amp; polyadenylation, spatial/snRNA/subcellular omics, CSF proteomics, clinical trial subgroups &amp; patient iPSC-MN screens) &middot; 18 complex/panel subunits &middot; 26 1-based GRCh38 cis-regulatory target windows</p>
             <p class="text-[var(--muted-foreground)] text-xs mt-1">Curated by <strong class="text-[var(--foreground)]">Ricardo Agoga</strong> &middot; <a href="mailto:helloimra@proton.me" class="text-[var(--link)] underline decoration-dotted underline-offset-2 hover:decoration-solid font-mono">helloimra@proton.me</a> &middot; <a href="https://github.com/helloimra/ExploreALS" target="_blank" rel="noopener noreferrer" class="text-[var(--link)] underline decoration-dotted underline-offset-2 hover:decoration-solid font-mono">github.com/helloimra/ExploreALS &nearr;</a> &middot; <span class="font-mono text-[var(--warning)]">Preclinical Research Only (Not Medical Advice)</span></p>
           </div>
         </div>
@@ -111,7 +111,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
                 <span class="font-mono text-[var(--link)] shrink-0">&rarr;</span>
               </button>
               <button type="button" data-switch-tab="replication" class="w-full text-left px-2.5 py-1.5 rounded bg-[var(--background)] border border-[var(--border)] hover:border-[var(--primary)] flex items-center justify-between gap-2 cursor-pointer transition">
-                <div><div class="font-mono font-semibold text-xs text-[var(--foreground)]">4. Reproduce Any Contrast &amp; Run PK-PD Sliders</div><div class="text-xs text-[var(--muted-foreground)]">40 open datasets, 58 Python pipelines &amp; 3 sensitivity sandboxes</div></div>
+                <div><div class="font-mono font-semibold text-xs text-[var(--foreground)]">4. Reproduce Any Contrast &amp; Run PK-PD Sliders</div><div class="text-xs text-[var(--muted-foreground)]">42 open datasets, 58 Python pipelines &amp; 3 sensitivity sandboxes</div></div>
                 <span class="font-mono text-[var(--link)] shrink-0">&rarr;</span>
               </button>
               <button type="button" data-home-contrasts="1" class="w-full text-left px-2.5 py-1.5 rounded border border-dashed border-[var(--border)] hover:border-[var(--primary)] flex items-center justify-between gap-2 text-xs cursor-pointer transition">
@@ -127,7 +127,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
             <div>
               <div class="flex flex-wrap items-center gap-2">
                 <h2 class="text-sm font-semibold text-[var(--foreground)]">Living Research Log</h2>
-                <span id="upd-count" class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono tabular-nums text-xs text-[var(--muted-foreground)]">6 / 6</span>
+                <span id="upd-count" class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono tabular-nums text-xs text-[var(--muted-foreground)]">7 / 7</span>
               </div>
               <p class="text-xs text-[var(--muted-foreground)] mt-0.5 leading-snug">Chronological ledger of post-release clinical trial readouts, newly published studies, and quantitative PK-PD/survival model revisions.</p>
             </div>
@@ -348,7 +348,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
             <span class="font-mono font-semibold text-xs text-[var(--primary)]">LEVEL 2 &middot; 8 FLAGSHIP &amp; RAW COHORTS</span>
             <span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">rtol = 1e-4</span>
           </div>
-          <p class="text-[var(--muted-foreground)] text-xs leading-snug">Runs the 8 single-command Tier 1+2 monograph reproducers immediately, or fetches the 40 external open datasets (<span class="font-mono">673.4 MB</span>) with 64-char SHA-256 verification to rerun donor-level OLS and 254,070-tx scans.</p>
+          <p class="text-[var(--muted-foreground)] text-xs leading-snug">Runs the 8 single-command Tier 1+2 monograph reproducers immediately, or fetches the 40 external open datasets (<span class="font-mono">674.2 MB</span> across 42 SHA-256-locked resources) to rerun donor-level OLS and 254,070-tx scans.</p>
           <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] flex items-center justify-between gap-2 font-mono text-xs">
             <span class="truncate">uv run python scripts/reproduce_all.py --flagship-only</span>
             <button type="button" data-copy-cmd="uv run python scripts/reproduce_all.py --flagship-only" class="px-2 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] shrink-0 cursor-pointer">Copy</button>
@@ -432,7 +432,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
             <button type="button" data-dl-reg="intervals" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; Splice Windows (26 CSV)</button>
             <button type="button" data-dl-reg="subnodes" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; Subunit Cards (18 CSV)</button>
             <button type="button" data-dl-reg="formulas" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; 194 Evidence &amp; Formulas (CSV)</button>
-            <button type="button" data-dl-reg="datasets" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; 40 Datasets SHA-256 (CSV)</button>
+            <button type="button" data-dl-reg="datasets" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; 42 Datasets SHA-256 (CSV)</button>
             <button type="button" data-dl-reg="runs" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; 50 Runs + 8 Flagship (CSV)</button>
             <button type="button" data-dl-reg="overlap" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; 8 Cohort Overlaps (CSV)</button>
             <button type="button" data-dl-reg="updates" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; Living Updates (CSV)</button>
@@ -445,11 +445,11 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
             <span class="font-mono text-xs text-[var(--success)]">194 / 194 (100%) 64-char SHA-256</span>
           </div>
           <div class="grid grid-cols-3 gap-2 font-mono text-xs">
-            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">Staged Datasets</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">130 <span class="text-xs font-normal text-[var(--muted-foreground)]">(40 DS)</span></div></div>
+            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">Staged Datasets</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">130 <span class="text-xs font-normal text-[var(--muted-foreground)]">(42 DS)</span></div></div>
             <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">API Snapshots</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">56 <span class="text-xs font-normal text-[var(--muted-foreground)]">(JSON)</span></div></div>
             <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">Model Outputs</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">8 <span class="text-xs font-normal text-[var(--muted-foreground)]">(ODE/MWC)</span></div></div>
           </div>
-          <p class="text-[var(--muted-foreground)] text-xs leading-snug">Legal redistribution split across <span class="font-mono">673.36 MB</span> (<span class="font-mono">642.17 MiB</span>): <strong class="text-[var(--foreground)]">Tier A</strong> (<span class="font-mono">CC0/CC-BY</span> open release + git maps), <strong class="text-[var(--foreground)]">Tier B</strong> (direct publisher/EuropePMC HTTPS fetch, zero re-hosting of <span class="font-mono">CC BY-NC-ND</span> supplements), and <strong class="text-[var(--foreground)]">Tier C</strong> (<span class="font-mono">SYNAPSE_AUTH_TOKEN</span> registered consortium access). Cis-regulatory target windows report 1-based GRCh38 coordinates only.</p>
+          <p class="text-[var(--muted-foreground)] text-xs leading-snug">Legal redistribution split across <span class="font-mono">674.16 MB</span> (<span class="font-mono">642.93 MiB</span>): <strong class="text-[var(--foreground)]">Tier A</strong> (<span class="font-mono">CC0/CC-BY</span> open release + git maps), <strong class="text-[var(--foreground)]">Tier B</strong> (direct publisher/EuropePMC HTTPS fetch, zero re-hosting of <span class="font-mono">CC BY-NC-ND</span> supplements), and <strong class="text-[var(--foreground)]">Tier C</strong> (<span class="font-mono">SYNAPSE_AUTH_TOKEN</span> registered consortium access). Cis-regulatory target windows report 1-based GRCh38 coordinates only.</p>
         </div>
       </div>
 
@@ -472,7 +472,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
         <div class="space-y-1">
           <div class="font-mono font-semibold text-[var(--warning)]">Preclinical Research Notice &amp; AI-Assisted Workflow Disclosure</div>
           <p><strong class="text-[var(--foreground)]">Not Medical Advice:</strong> ExploreALS v1.2 is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing herein constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.</p>
-          <p><strong class="text-[var(--foreground)]">AI-Assisted Methodology:</strong> Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 40 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (PubMed, Europe PMC, ClinicalTrials.gov). Quantitative contrasts and accessions are programmatically audited and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors — always verify against linked primary sources before experimental use.</p>
+          <p><strong class="text-[var(--foreground)]">AI-Assisted Methodology:</strong> Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 42 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (PubMed, Europe PMC, ClinicalTrials.gov). Quantitative contrasts and accessions are programmatically audited and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors — always verify against linked primary sources before experimental use.</p>
         </div>
       </div>
     </section>

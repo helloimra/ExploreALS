@@ -91,11 +91,11 @@ def sanitize_public_modality(raw_mod: str) -> str:
             .replace("Neuron_Selective", "Neuron-Selective").replace("Non_Covalent", "Non-Covalent")
             .replace("Non_Orthosteric", "Non-Orthosteric").replace("Non_Chelating", "Non-Chelating")
             .replace("KV7_2_7_3", "Kv7.2/7.3").replace("Kv7_2_7_3", "Kv7.2/7.3").replace("NaV1_6", "NaV1.6")
-            .replace("CTail_aa320_328", "C-Tail (aa 320-328)").replace("Early_Onset_LE12m", "Early-Onset (<=12m)")
+            .replace("CTail_aa324_328", "C-Tail (aa 324-328 SKECF)").replace("CTail_aa320_328", "C-Tail (aa 324-328 SKECF)").replace("Early_Onset_LE12m", "Early-Onset (<=12m)")
             .replace("LE12m", "<=12m").replace("3Plex", "3-Plex").replace("Exon5", "Exon-5")
             .replace("Exon2a", "Exon-2a").replace("Intron20", "Intron-20").replace("Intron8", "Intron-8")
             .replace("Intron9", "Intron-9").replace("ERAD_Sparing", "ERAD-Sparing")
-            .replace("aa320_328", "aa 320-328").replace("Q48_to_Q72h", "q48h-q72h")
+            .replace("aa324_328", "aa 324-328").replace("aa320_328", "aa 324-328").replace("Q48_to_Q72h", "q48h-q72h")
             .replace("LINE1_RT", "LINE-1 RT").replace("TPN101", "TPN-101").replace("JAK2_Sparing", "JAK2-Sparing")
             .replace("Brain_Penetrant", "Brain-Penetrant").replace("Low_Dose", "Low-Dose").replace("IL2", "IL-2")
             .replace("_", " ")
@@ -109,8 +109,17 @@ def sanitize_public_prose(txt: str) -> str:
         return s
     s = s.replace("[MEASURED] vs [MODEL_PRIOR] tags", "empirical vs. modeled-estimate tags")
     s = s.replace(", MODEL_PRIOR]", ", modeled estimate]")
+    s = re.sub(r"\[MODEL_PRIOR:\s*([^\]]+)\]", r"(modeled estimate: \1)", s)
     s = re.sub(r"\b(the|a|an)\s+\[MODEL_PRIOR\]\s+", r"\1 modeled ", s, flags=re.I)
-    s = re.sub(r"^\[MODEL_PRIOR\]\s+([A-Z])", lambda m: "Modeled: " + m.group(1).lower(), s)
+    s = re.sub(
+        r"^\[MODEL_PRIOR\]\s+([A-Za-z0-9\-]+)",
+        lambda m: "Modeled: " + (
+            m.group(1)
+            if m.group(1).startswith(("Schoenfeld", "SantaLucia", "Binomial", "MWC", "PDB", "CLSI", "ICH", "ALS", "CSF", "NHP"))
+            else m.group(1)[0].lower() + m.group(1)[1:]
+        ),
+        s,
+    )
     s = re.sub(r"^\[(?:MEASURED|MODEL_PRIOR|PRIOR)\]\s*", "", s)
     s = s.replace(" [MEASURED]", "").replace("[MEASURED] ", "").replace("[MEASURED]", "empirically measured")
     s = s.replace(" [MODEL_PRIOR]", " (modeled estimate)").replace("[MODEL_PRIOR] ", "modeled ")
@@ -143,8 +152,16 @@ def sanitize_public_prose(txt: str) -> str:
     s = s.replace("Evaluated in Stage 2 under", "Evaluated combinatorially under")
     s = s.replace("and Stage 2 rs12973192", "and combinatorial rs12973192")
     s = re.sub(r"\bStage\s+1-gated\b", "Single-agent-qualified", s)
-    s = re.sub(r"\bStage\s+1\b(?=\s+(?:single-entity|dense|ICH|NHP|\(>=50))", "Preclinical", s)
-    s = re.sub(r"\bStage\s+2\b(?=\s+(?:factorial|genotype-stratified|evaluates|multiplex|co-dosing))", "Combinatorial", s)
+    s = re.sub(
+        r"\bStage\s+1\b(?=\s+(?:single-entity|dense|ICH|NHP|\(>=50))",
+        lambda m: "Preclinical" if m.start() == 0 or s[max(0, m.start() - 2) : m.start()].strip() in {".", ":", ";", "—"} or s[m.start() - 1] == "\n" else "preclinical",
+        s,
+    )
+    s = re.sub(
+        r"\bStage\s+2\b(?=\s+(?:factorial|genotype-stratified|testing|evaluates|multiplex|co-dosing))",
+        lambda m: "Combinatorial" if m.start() == 0 or s[max(0, m.start() - 2) : m.start()].strip() in {".", ":", ";", "—"} or s[m.start() - 1] == "\n" else "combinatorial",
+        s,
+    )
     s = s.replace("Combinatorial factorial combination testing", "combinatorial factorial testing")
     s = re.sub(r"\bBio\s+#([1-9])\b", r"Evidence #\1", s)
     s = re.sub(r"\bunder\s+Epistemic\s+Asymmetry\b:?", "", s, flags=re.I)

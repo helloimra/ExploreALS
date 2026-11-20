@@ -4,7 +4,7 @@ from __future__ import annotations
 CANDIDATE_HYPOTHESES: dict[str, str] = {
     "C001": (
         "UNC13A (ENSG00000130477) encodes presynaptic Munc13-1, an essential synaptic vesicle-priming protein required for neurotransmitter release at motor synapses. "
-        "Nuclear TDP-43 depletion — potentiated by human ALS GWAS risk alleles rs12608932 and rs12973192 — unmasks a frameshifting intron 20–21 cryptic exon whose steric splice correction restores human cortical/spinal motor neuron synaptic transmission and network synchrony (>30% protein threshold; DOI:10.1038/s41586-026-11256-2) while leaving STMN2 and KCNQ2 mis-splicing unaddressed, anchoring a multiplexed splice-rescue regimen."
+        "Nuclear TDP-43 depletion — potentiated by human ALS GWAS risk alleles rs12608932 and rs12973192 — unmasks a frameshifting intron 20–21 cryptic exon whose steric splice correction restores human cortical/spinal motor neuron synaptic transmission and network synchrony (>30% protein threshold; DOI:10.1038/s41586-026-11256-2) orthogonally to STMN2 and KCNQ2 mis-splicing, anchoring a multiplexed splice-rescue regimen."
     ),
     "C002": (
         "STMN2 (ENSG00000104435) encodes stathmin-2, a dynamic microtubule-regulating phosphoprotein indispensable for motor axon outgrowth, repair, and neuromuscular junction maintenance. "
@@ -136,7 +136,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "DN-01": (
         "ATG4B (ENSG00000168397) encodes the primary mammalian cysteine protease (PDB 2Z0D) that primes pro-LC3B and recycles lipidated LC3-II to sustain neuronal autophagosome biogenesis. "
-        "Nuclear TDP-43 depletion unmasks a frame-truncating cryptic exon after Glu319 that deletes the C-terminal LC3-interacting region and depletes cortical ATG4B protein; intrathecal steric splice-switching aims to restore autophagic proteostasis in motor neurons."
+        "Nuclear TDP-43 depletion unmasks a frame-truncating cryptic exon after Val319 that deletes the C-terminal LC3-interacting region and depletes CNS ATG4B protein; intrathecal steric splice-switching aims to restore autophagic proteostasis in motor neurons."
     ),
     "DN-02": (
         "KALRN (ENSG00000160145) encodes Kalirin, a dual-RhoGEF synaptic scaffold whose full-length Kalirin-12/DuET isoforms carry a C-terminal serine/threonine kinase domain regulating dendritic spine stability. "

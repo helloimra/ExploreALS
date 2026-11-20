@@ -21,7 +21,7 @@ PRIMARY_SYMBOL_AND_ALIASES: dict[str, tuple[str, list[str]]] = {
     "C003": ("Ezogabine", ["ezogabine", "retigabine"]),
     "C004": ("Ceftriaxone", ["ceftriaxone", "eaat2", "slc1a2"]),
     "C005": ("TMS-SICI / NPTX2 Protocol", ["nptx2", "sici", "sdtc", "tms-sici", "excitability-protocol"]),
-    "C006": ("KCNQ2", ["kcnq2", "kv7.2", "kv72", "qrl-101", "qrl101", "xen1101"]),
+    "C006": ("KCNQ2", ["kcnq2", "kv7.2", "kv72", "qrl-101", "qrl101"]),
     "C007": ("IL1RL1 / sST2", ["il1rl1", "sst2", "st2", "st2l", "il-33", "il33", "astegolimab"]),
     "C008": ("Memantine", ["memantine"]),
     "C009": ("Trazodone", ["trazodone"]),

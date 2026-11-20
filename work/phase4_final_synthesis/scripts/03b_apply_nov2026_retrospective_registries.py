@@ -15,7 +15,7 @@ for p in (SCRIPTS_DIR, SCRIPT_DIR):
         sys.path.insert(0, str(p))
 
 from _retrospective_registry_specs import NEW_EVIDENCE_ROWS, RUN_P4_003_ROW  # noqa: E402
-from _retrospective_stat_and_log_specs import NEW_STAT_SPECS, UPD_2026_11_19_01  # noqa: E402
+from _retrospective_stat_and_log_specs import NEW_STAT_SPECS, UPD_2026_11_19_01, UPD_2026_11_20_01  # noqa: E402
 from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose  # noqa: E402
 from verify_carbon_als import sha256_anchor  # noqa: E402
 
@@ -51,6 +51,15 @@ def main() -> None:
     for r in r_rows:
         if r["analysis_run_id"] == "RUN-P4-002":
             r["summary"] = r["summary"].replace("188/188", "194/194")
+        elif r["analysis_run_id"] == "RUN-P2-T3-002":
+            r["run_timestamp_utc"] = "2026-11-20T00:05:00Z"
+            r["summary"] = (
+                "Living-CSF dissection of tryptic MS total NEFH vs NEFL across Emory TMT (n=51 nested subset) and "
+                "4-center DIA (n=77/79; r=0.278 vs clinical immunoassay rho=0.64-0.71, motivating CLSI EP09c N>=40 "
+                "BioVendor-to-CLIA pNfH & paired NfL immunoassay calibration) alongside exact MIROCALS Fig. 2 strata "
+                "(<750 n=19, 750-3,700 n=154, >3,700 n=47; 2.131x death-rate ratio), platform-offset power sensitivity, "
+                "and Schoenfeld Phase 3 sizing (247 events at HR=0.70; 138 at HR=0.62)."
+            )
     _save("analysis_runs.csv", r_cols, r_rows)
 
     # 2. evidence_ledger.csv
@@ -72,6 +81,31 @@ def main() -> None:
         row["sha64"] = digest if ok else prev_sha.get(row["evidence_id"], ds_cryptic_sha)
         built_stats.append(row)
     s_rows = [r for r in s_rows if r["evidence_id"] not in new_eids] + built_stats
+    for sr in s_rows:
+        if sr["evidence_id"] == "EV-B6-046":
+            sr["unadjusted_or_primary_nominal_p"] = "0.33000"
+            sr["covariate_adjusted_nominal_p"] = ""
+        elif sr["evidence_id"] == "EV-B6-047":
+            sr["exact_contrast"] = "MIROCALS BioVendor ELISA Low/Moderate CSF pNfH stratum (750-3700 pg/mL, n=154; <750 pg/mL LLOQ n=19 analyzed separately) | 21-mo mortality hazard ratio & Treg/CCL2 PD"
+        elif sr["evidence_id"] == "EV-P2-T3-004":
+            sr["exact_contrast"] = "Trautwig 2025 living symptomatic ALS CSF (4-center DIA n=77 paired NEFH+NEFL; replicated in Emory TMT n=51) | Pearson correlation & p80 discordance of tryptic MS CSF NEFL vs NEFH + CLSI EP09c platform-offset sensitivity & Schoenfeld event sizing"
+            sr["model_formula_or_test"] = "Two-sided bivariate Pearson r & 80th-percentile 2x2 contingency + Schoenfeld survival power sensitivity"
+            sr["effect_estimate"] = "DIA r=0.2779 (31.17% p80 discordance, 75.0% [12/16] top-quintile MS NEFH missed; overlapping Emory TMT n=51 misses 60.0% [6/10]); HR=0.70 needs 247 deaths at 80% power (138 at HR=0.62 [MODEL_PRIOR])"
+            sr["unadjusted_or_primary_nominal_p"] = "0.01441"
+            sr["covariate_adjusted_nominal_p"] = ""
+        elif sr["evidence_id"] == "EV-B1-004":
+            sr["effect_estimate"] = "6/10 C9-FTD (mean PSI=2.30%, 26 CE reads) vs 0/10 Control"
+        elif sr["evidence_id"] == "EV-B6-045":
+            sr["exact_contrast"] = "Clinical SARM1 programs (LY3873862 NCT05492201 completed N=84 HV + ALS Ph1 NYR NCT07883590; NB-4746 ALS Ph1/2 NCT07369076; SIR2501 ALS Ph1b/2a CTR20253552 + CIPN Ph2 NCT07765446) & 2026 medchem audit | Clinical crowding & orthosteric vs allosteric pharmacology"
+            sr["effect_estimate"] = "3 clinical SARM1 programs (Lilly LY3873862 NCT07883590 [ALS Ph1 NYR; N=84 HV NCT05492201 completed]; Nura/TRICALS NB-4746 NCT07369076; Sironax allosteric SIR2501 CTR20253552/NCT07765446) + preclinical ASHA-624"
+        elif sr["evidence_id"] == "EV-P2-T4-001":
+            sr["n_statistical_units"] = "28"
+            sr["exact_contrast"] = "UMI-pooled donor-collapsed Edinburgh cortical endothelium (n=28 unique donors at min_nuclei>=10: 21 non-C9 sALS vs 7 Ctrl, XIST/UTY-verified, PMID:42551425) & PDB 4KC3 IL-33-ST2 complex | Welch two-sample t-test on donor-collapsed endothelial IL1RL1 log2CPM + sST2 vs pan-ST2 Treg ST2L mass-action model"
+            sr["effect_estimate"] = "Endo diff_log2CPM=+3.1067 (p=0.00698; all ALS +2.8427, p=0.0115, n=30; n=7 Ctrl caveat; XIST/UTY swap-immune H5AD); 4KC3 30 ST2 D1-D3 contacts (10 Cys = 5 closed disulfides, Cys327 in 324-SKECF-328 unpaired) -> at perivascular 400pM sST2 (vs ~5pM bulk CSF PMID:37117777), [MODEL_PRIOR] 5nM pan-ST2 suppresses Treg ST2L (3.2%->0.32%) vs 80% RNA suppression (11.8%) or intact-FcRn sweeping (28.2%)"
+            sr["unadjusted_or_primary_nominal_p"] = "0.00698"
+        ok_a, dig_a = sha256_anchor(ROOT / sr["anchor_relpath"])
+        if ok_a:
+            sr["sha64"] = dig_a
     _save("statistical_models_and_contrasts.csv", s_cols, s_rows)
 
     # 4. candidate_decisions.csv
@@ -162,30 +196,34 @@ def main() -> None:
 
     # 6. living_evidence_updates.csv
     u_cols, u_rows = _load("living_evidence_updates.csv")
-    u_rows = [u for u in u_rows if u["update_id"] != "UPD-2026-11-19-01"]
+    u_rows = [u for u in u_rows if u["update_id"] not in {"UPD-2026-11-19-01", "UPD-2026-11-20-01"}]
     for u in u_rows:
         uid = u["update_id"]
         if uid == "UPD-2026-11-18-05":
             u["decision_impact"] = "KCNQ2 (EALS-006) Gated on Intron-5 Microwalk (#4/52); Multiplex Margin Set at 6–9 mg"
             u["prior_state_or_assumption"] = "(1) QRL-201 / STMN2 (EALS-002): headline ANQUR ALSFRS-R or Day-421 OLE plasma NfL summaries do not separate 3 mg vs. 10 mg CSF pNfH dose dissociation, 10 mg->3 mg washout kinetics, or post-hoc baseline-NfL tertile exclusion; (2) KCNQ2 (EALS-006) & Multiplex Dosing: conservation-ranked intronic windows around KCNQ2 Exon 5 lack wet-lab ISS vs. ISE polarity proof, and extrapolating single-agent ASO doses (12–100 mg) to 2-plex/3-plex combinations risks cumulative 24–48 mg polyanion DRG radiculotoxicity."
-            u["new_evidence_or_revision"] = "(1) Phase 1 ANQUR (NCT05633459): N=52 DRF at 3 mg/10 mg vs placebo and N=41 3 mg OLE showed Day-197 CSF pNfH -46% at 3 mg vs ~5% at 10 mg, while Day-253 10 mg ALSFRS-R slowing relied on post-hoc exclusion of the top baseline-NfL fast-progressor tertile; (2) Pivotal CONQUR, KCNQ2 & Benchmarks: US FDA cleared the pivotal CONQUR IND on 16 Nov 2026 (planned H1 2027), while single-agent intrathecal ASO benchmarks nusinersen (12–50 mg, DEVOTE PMID:41634391), tofersen (100 mg, VALOR PMID:36129998), and tominersen (PMID:31059641) motivate gating KCNQ2 Exon-5 polarity before <=3 mg/strand (6–9 mg) multiplex dosing."
+            u["new_evidence_or_revision"] = "(1) Phase 1 ANQUR (NCT05633459, N=69 total: completed N=17 MAD + N=52 DRF at 3 mg/10 mg vs placebo, plus ongoing N=41 3 mg OLE) showed Day-197 CSF pNfH -46% vs baseline at 3 mg vs ~5% at 10 mg, while Day-253 10 mg ALSFRS-R 50% slowing vs placebo relied on post-hoc exclusion of the top baseline-NfL fast-progressor tertile; (2) Pivotal CONQUR, KCNQ2 & Benchmarks: US FDA cleared the pivotal CONQUR IND on 16 Nov 2026 (planned H1 2027), while single-agent intrathecal ASO benchmarks nusinersen (12–50 mg, DEVOTE PMID:41634391), tofersen (100 mg, VALOR PMID:36129998), and tominersen (PMID:31059641) motivate gating KCNQ2 Exon-5 polarity before <=3 mg/strand (6–9 mg) multiplex dosing."
             u["portfolio_and_gate_consequence"] = u["portfolio_and_gate_consequence"].replace("Tier 2 · Focused Gate First", "Tier 2 · Validation Gate")
         elif uid == "UPD-2026-11-18-04":
             u["prior_state_or_assumption"] = "Preclinical UNC13A (EALS-001) steric-ASO validation rested on iPSC motor-neuron splicing and Munc13-1 protein recovery (Brown 2022 PMID:35197628; Ma 2022 PMID:35197626) without defining the quantitative human protein threshold required to rescue evoked synaptic transmission."
-            u["new_evidence_or_revision"] = "Keuss et al. (2026, Nature, PMID:43015463, DOI:10.1038/s41586-026-11256-2) demonstrated that restoring >30% human UNC13A protein via Intron-20 cryptic-exon deletion or 2'-O-MOE ASOs rescues miniature and evoked AMPA EPSCs and MEA network synchrony across human cortical and spinal motor neurons. Isolated UNC13A rescue left STMN2 polyadenylation, KCNQ2 Exon-5 skipping, and ~10% postsynaptic mEPSC amplitude unrescued, confirming orthogonal compartment complementarity."
+            u["new_evidence_or_revision"] = "Keuss et al. (2026, Nature, PMID:43015463, DOI:10.1038/s41586-026-11256-2) demonstrated that restoring >30% human UNC13A protein via Intron-20 cryptic-exon deletion (~75% protein rescue) or 2'-O-MOE ASOs rescues miniature and evoked AMPA EPSCs and MEA network synchrony across human cortical and spinal motor neurons. Postsynaptic mEPSC amplitude reduction remained unrescued, and single-target UNC13A rescue leaves orthogonal STMN2 polyadenylation and KCNQ2 Exon-5 skipping unaddressed."
             u["primary_sources"] = _append_ev(u["primary_sources"], "PMID:43015463")
         elif uid == "UPD-2026-11-18-03":
             u["prior_state_or_assumption"] = "Combination models of STMN2 rescue plus SARM1 inhibition often assume indirect NMNAT2 epistasis and interpret bulk plasma cADPR drops as direct axonal SARM1 target engagement without bounding rare ARM-GoF residual NADase activity or ecto-CD38 fluid background."
-            u["new_evidence_or_revision"] = u["new_evidence_or_revision"].replace("Gilley 2021 PMID:34991663", "Gilley 2021 PMID:34796871; Bloom 2022 PMID:34991663").replace("[MODEL_PRIOR] bounds", "modeled bounds")
+            u["new_evidence_or_revision"] = "Evaluated clinical allosteric SIR2501 (NCT07765446 CIPN Ph2) and reversible orthosteric NB-4746 (NCT07369076) across three modeled bounds: (1) 1.0x parallel Bliss survival additivity (Krus 2022 PMID:35767949; Matson & Holzbaur 2026 DOI:10.64898/2026.11.07.764673) to ~2–7x (med ~3x) NMNAT2-transport-coupled MWC dose-sparing (Beccari 2025 PMID:40392845); (2) ~30–40% residual NADase ceiling at 100x Kd in rare ARM-broken GoF heterozygotes (Gilley 2021 PMID:34796871; Bloom 2022 PMID:34991663); (3) modeled ~5–10% selective cell-free fluid cADPR drop under >90–95% ecto-CD38 fluid background vs ~45–50% implied CD38 inhibition if cell-free plasma cADPR drops -50% (cf. tissue cADPR PMID:32087251; PDB 9TZY BEXi adduct 17 PMID:42156967)."
             u["primary_sources"] = _append_ev(u["primary_sources"], "PMID:34796871")
         elif uid == "UPD-2026-11-18-02":
-            u["prior_state_or_assumption"] = "Follow-on low-dose IL-2 trial designs frequently substitute clinical TRICALS risk scores or unbridged commercial ECLIA/Simoa neurofilament cutoffs for MIROCALS's BioVendor ELISA CSF pNfH <=3,700 pg/mL responder stratum."
-            u["new_evidence_or_revision"] = "Al Khleifat et al. (2026, J Neurol, PMID:42836993) showed inside MIROCALS (NCT03039673, PMID:40354799, N=220) that clinical TRICALS risk explains only r^2 = 12.7% of log(CSF pNfH) (-2LL = 928.25 vs 793.36) and surfaced 1.8x–4.5x MSD ECLIA vs BioVendor ELISA pg/mL bias alongside fully enrolled N=137 ALSTARS (NCT07161999, which omits CSF pNfH gating and blocks Treg CD28): (1) modeled unbridged lower-reading bias dilutes 247-death Phase 3 power (80% at HR = 0.70) toward ~6–12%; (2) pre-specified TRICALS + log(CSF pNfH) Cox adjustment raises power to ~84–88% (noting <750 pg/mL n=20/220 had 0 deaths)."
+            u["headline"] = "MIROCALS Primary Stratum Verification, CLSI EP09c pNfH Assay Bridging & Phase 3 Survival Sizing"
+            u["prior_state_or_assumption"] = "Follow-on low-dose IL-2 trial designs frequently treat clinical TRICALS risk scores, shotgun CSF mass spectrometry, or unbridged commercial pNfH/NfL immunoassay cutoffs as interchangeable with MIROCALS's BioVendor ELISA CSF pNfH <=3,700 pg/mL responder stratum."
+            u["new_evidence_or_revision"] = "Primary verification of MIROCALS (NCT03039673, PMID:40354799, N=220, 90 deaths: <750 pg/mL n=19 [0 deaths], 750–3,700 n=154 [57 deaths, HR=0.52; pooled <=3,700 n=173 HR=0.57 p=0.037], >3,700 n=47 [33/90 deaths, HR=1.37 p=0.38; 2.13x death-rate ratio], continuous interaction p=0.0011, ALSFRS-R slope interaction F=3.95 p=0.048, and sustained Day-112 trough Treg expansion p<0.0001) alongside Al Khleifat et al. (2026, J Neurol, PMID:42836993: TRICALS shares r^2 = 12.7% with CSF pNfH; nested pNfH x trt dChi2 = 14.24 vs TRICALS x trt dChi2 = 4.76) separates tryptic CSF MS noise (r = 0.278, PMID:40375307) from clinical immunoassays (serum NfL–CSF pNfH rho = 0.64–0.71, PMID:38683209; serum NfL > serum pNfH on ALSFRS-R slope, PMID:32385188; paired CSF–serum pNfH r = 0.652, PMID:29054919) and notes ~1.8x–4.5x inter-platform pNfH offsets (PMID:31251725; modeled unbridged lower CSF cutoffs reduce 247-death one-sided superiority power from 80% to ~43–50% at HR_high = 1.00 or ~14–23% at HR_high = 1.37), while enrolled N=137 ALSTARS (NCT07161999) stratifies 3 serum NfL tiers on 24-wk ALSFRS-R with dual rhIL-2 + CTLA4-Ig."
+            u["portfolio_and_gate_consequence"] = "Retains EALS-031 (#2/52, Keep · Exploratory, Tier 1) and locks pre-Phase-3 CLSI EP09c split-aliquot Passing-Bablok bridging (N>=40 paired ALS CSFs) to MIROCALS's ~79th BioVendor percentile plus complementary TRICALS + log(CSF pNfH) Cox adjustment across 247 Schoenfeld events (HR = 0.70)."
+            u["primary_sources"] = "PMID:42836993;PMID:40354799;PMID:38683209;PMID:32385188;PMID:29054919;PMID:31251725;NCT07161999;NCT03039673"
         elif uid == "UPD-2026-11-18-01":
             u["prior_state_or_assumption"] = "Intermittent pulsed PIKfyve inhibition (EALS-020) models typically assume an occupancy dead-zone before endolysosomal vacuolation onset (~79% parameter-grid pass rate) without accounting for immediate +PI(3)P-driven LRRK2/CASM stress coupling."
             u["new_evidence_or_revision"] = "Kuwahara et al. (2026, Life Sci Alliance, PMID:42994990) demonstrated direct, threshold-free PIKfyve -> +PI(3)P -> LRRK2 Rab10-pThr73 / ATG16L1 CASM recruitment alongside Drosophila C9orf72 secreted DPR data (DOI:10.64898/2026.11.09.765393). In modeled pulsed q48h–q72h turnover simulations (>=55% substrate clearance and end-of-cycle stress <=0.05), removing the occupancy dead-zone cuts grid survival from ~79% (64/81) to ~30% (24/81) at matched 10–20 h repair and 0% (0/81) at slower 24–48 h postmitotic CASM washout."
             u["portfolio_and_gate_consequence"] = u["portfolio_and_gate_consequence"].replace("under Epistemic Asymmetry ", "")
     u_rows.insert(0, dict(UPD_2026_11_19_01))
+    u_rows.insert(0, dict(UPD_2026_11_20_01))
     def _map_anchor_tok(tok: str) -> str:
         t = tok.strip()
         if t.startswith("FLAGSHIP-") and not t.startswith("FLAGSHIP-EALS-"):

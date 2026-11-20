@@ -44,6 +44,8 @@ DIRECT_SINGLE_FILE_HTTPS: dict[str, str] = {
     "DS_PDB_4KC3": "https://files.rcsb.org/download/4KC3.cif",
     "DS_PDB_2Z0D": "https://files.rcsb.org/download/2Z0D.cif",
     "DS_PDB_1XFD": "https://files.rcsb.org/download/1XFD.cif",
+    "DS_PDB_3NMR": "https://files.rcsb.org/download/3NMR.cif",
+    "DS_AF_Q8N6W0": "https://alphafold.ebi.ac.uk/files/AF-Q8N6W0-F1-model_v6.cif",
 }
 
 
@@ -79,7 +81,7 @@ def _extract_tar_safe(tar_path: Path, target_root: Path) -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser(description="Fetch and SHA-256 verify ExploreALS v1.2 open datasets.")
-    ap.add_argument("--list", action="store_true", help="Print 40-dataset legal tier & status summary.")
+    ap.add_argument("--list", action="store_true", help="Print 42-dataset legal tier & status summary.")
     ap.add_argument("--verify-existing", action="store_true", help="Verify SHA-256 of all currently staged datasets.")
     ap.add_argument("--source", choices=["release", "upstream"], default="release")
     ap.add_argument("--with-synapse", action="store_true", help="Fetch Synapse cohorts using SYNAPSE_AUTH_TOKEN.")

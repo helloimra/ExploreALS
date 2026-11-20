@@ -314,24 +314,24 @@
   },
   "c007_edinburgh_non_c9_endothelial": {
     "IL1RL1": {
-      "n_case": 22,
+      "n_case": 21,
       "n_ctrl": 7,
-      "mean_case_log2cpm": 5.426,
+      "mean_case_log2cpm": 5.4267,
       "mean_ctrl_log2cpm": 2.32,
-      "diff_log2cpm": 3.106,
-      "t_welch": 3.1517,
-      "p_welch": 0.006406462872165044,
-      "p_mwu": 0.01523227690701979
+      "diff_log2cpm": 3.1067,
+      "t_welch": 3.0887,
+      "p_welch": 0.006978138991389123,
+      "p_mwu": 0.019238823825096948
     },
     "IL33": {
-      "n_case": 22,
+      "n_case": 21,
       "n_ctrl": 7,
-      "mean_case_log2cpm": 0.8132,
+      "mean_case_log2cpm": 0.8519,
       "mean_ctrl_log2cpm": 0.569,
-      "diff_log2cpm": 0.2442,
-      "t_welch": 0.3773,
-      "p_welch": 0.7139674965669303,
-      "p_mwu": 0.6107084874076629
+      "diff_log2cpm": 0.2829,
+      "t_welch": 0.4332,
+      "p_welch": 0.6740027167764883,
+      "p_mwu": 0.5768263762468624
     }
   },
   "c007_within_donor_astro_il33_vs_endo_il1rl1_als": {
@@ -379,9 +379,9 @@
         "mean_case_log2cpm": 0.0,
         "mean_ctrl_log2cpm": 0.0,
         "diff_log2cpm": 0.0,
-        "t_welch": NaN,
-        "p_welch": NaN,
-        "p_mwu": NaN
+        "t_welch": null,
+        "p_welch": null,
+        "p_mwu": null
       },
       "IL33": {
         "n_case": 15,
@@ -412,11 +412,11 @@
         "is_mane_select": true,
         "chromosome": "chr2",
         "strand": "+",
-        "start_1b": 102311562,
+        "start_1b": 102311563,
         "end_1b": 102352037,
         "num_exons": 11,
-        "first_exon_1b": "chr2:102311562-102311623",
-        "last_exon_1b": "chr2:102351535-102352037"
+        "first_exon_1b": "chr2:102311563-102311623",
+        "last_exon_1b": "chr2:102351536-102352037"
       }
     ],
     "sst2_soluble_short_transcripts": [
@@ -425,44 +425,44 @@
         "is_mane_select": false,
         "chromosome": "chr2",
         "strand": "+",
-        "start_1b": 102337147,
+        "start_1b": 102337148,
         "end_1b": 102346100,
         "num_exons": 8,
-        "first_exon_1b": "chr2:102337147-102337337",
-        "last_exon_1b": "chr2:102343269-102346100"
+        "first_exon_1b": "chr2:102337148-102337337",
+        "last_exon_1b": "chr2:102343270-102346100"
       },
       {
         "transcript_id": "ENST00000404917.6",
         "is_mane_select": false,
         "chromosome": "chr2",
         "strand": "+",
-        "start_1b": 102311501,
+        "start_1b": 102311502,
         "end_1b": 102346099,
         "num_exons": 7,
-        "first_exon_1b": "chr2:102311501-102311623",
-        "last_exon_1b": "chr2:102343269-102346099"
+        "first_exon_1b": "chr2:102311502-102311623",
+        "last_exon_1b": "chr2:102343270-102346099"
       },
       {
         "transcript_id": "ENST00000409584.5",
         "is_mane_select": false,
         "chromosome": "chr2",
         "strand": "+",
-        "start_1b": 102337257,
+        "start_1b": 102337258,
         "end_1b": 102344951,
         "num_exons": 8,
-        "first_exon_1b": "chr2:102337257-102337337",
-        "last_exon_1b": "chr2:102343269-102344951"
+        "first_exon_1b": "chr2:102337258-102337337",
+        "last_exon_1b": "chr2:102343270-102344951"
       },
       {
         "transcript_id": "ENST00000447231.5",
         "is_mane_select": false,
         "chromosome": "chr2",
         "strand": "+",
-        "start_1b": 102311567,
+        "start_1b": 102311568,
         "end_1b": 102338891,
         "num_exons": 5,
-        "first_exon_1b": "chr2:102311567-102311623",
-        "last_exon_1b": "chr2:102338836-102338891"
+        "first_exon_1b": "chr2:102311568-102311623",
+        "last_exon_1b": "chr2:102338837-102338891"
       }
     ]
   },
@@ -744,7 +744,112 @@
         "domain": "D1_orthosteric",
         "min_dist_to_il33_A": 3.12
       }
-    ]
+    ],
+    "cys327_and_disulfide_audit": {
+      "n_d1_d3_ectodomain_cysteines": 10,
+      "d1_d3_cysteine_residues": [
+        36,
+        87,
+        111,
+        133,
+        151,
+        181,
+        235,
+        238,
+        282,
+        303
+      ],
+      "n_closed_disulfides": 5,
+      "disulfide_bridges": [
+        {
+          "cys_pair": "Cys36-Cys87",
+          "sg_sg_dist_A": 2.046
+        },
+        {
+          "cys_pair": "Cys111-Cys151",
+          "sg_sg_dist_A": 2.035
+        },
+        {
+          "cys_pair": "Cys133-Cys181",
+          "sg_sg_dist_A": 2.047
+        },
+        {
+          "cys_pair": "Cys235-Cys303",
+          "sg_sg_dist_A": 2.033
+        },
+        {
+          "cys_pair": "Cys238-Cys282",
+          "sg_sg_dist_A": 2.034
+        }
+      ],
+      "unpaired_cysteines_in_d1_d3": [],
+      "sst2_cterm_unique_pentapeptide": "324-SKECF-328",
+      "sst2_shared_hinge_prefix": "320-GKS (shared with ST2L 320-GKSL)",
+      "cys327_ordinal_extracellular_cys": 11,
+      "cys327_is_odd_unpaired_thiol": true,
+      "expected_oxidizing_biofluid_proteoforms": [
+        "S-cysteinylated (+119 Da)",
+        "S-glutathionylated (+305 Da)",
+        "Cys327-Cys327 homodimer"
+      ]
+    }
+  },
+  "c007_cterminome_and_zone1_pas_modality_audit": {
+    "gencode_v46_cterminome_audit": {
+      "n_protein_coding_transcripts_scanned": 89484,
+      "exact_SKECF_cterm_genes": [
+        "IL1RL1"
+      ],
+      "offtarget_KECF_cterm_genes": [],
+      "offtarget_4of5_SKECF_cterm_genes": [
+        "SLC3A2(-SKEDF)"
+      ]
+    },
+    "isoform_selective_rna_modality_zones_1based_grch38": {
+      "primary_lead_modality": "Low-dose intrathecal CD98hc/SLC3A2 or monovalent TfR1 neurovascular-shuttled cytoplasmic sST2 3'-UTR siRNA (chr2:102343416-102346100(+)) OR uniform 2'-O-MOE Zone 1 Intron-8 PAS/DSE steric SSO",
+      "nuclear_rnaseh_intron8_gapmer_prohibited": true,
+      "nuclear_gapmer_hazard_reason": "Nuclear RNase H1 cleavage anywhere inside Intron 8 (chr2:102343416-102346100(+)) destroys nascent full-length ST2L pre-mRNA co-transcriptionally prior to Exon 8->9 splicing.",
+      "zone_1_safe_intron8_pas_dse_steric_window": "chr2:102346035-102346125(+)",
+      "zone_1_pas_hexamer_coords_1b": [
+        "chr2:102346074-102346079(+)"
+      ],
+      "zone_1_gnomad_r4_total_variants": 67,
+      "zone_1_gnomad_af_ge_0p001_positions": [],
+      "zone_1_top_steric_moe_intervals": [
+        {
+          "rank": 1,
+          "interval_id": "chr2:102346045-102346062(+)",
+          "length_bp": 18,
+          "gc_pct": 44.4,
+          "tm_phys_pops_c": 53.55,
+          "cpg_dinucs": 0,
+          "max_avi_phred": 0.0,
+          "spliced_0mm_genes": 0,
+          "spliced_1mm_genes": 0,
+          "premRNA_0mm_splice50bp_genes": 0,
+          "premRNA_1mm_splice50bp_genes": 0,
+          "bulge_1nt_steric_pc_genes": 0,
+          "offtarget_status": "PASS_CLEAN_GE2MM"
+        },
+        {
+          "rank": 2,
+          "interval_id": "chr2:102346052-102346069(+)",
+          "length_bp": 18,
+          "gc_pct": 44.4,
+          "tm_phys_pops_c": 54.61,
+          "cpg_dinucs": 0,
+          "max_avi_phred": 0.0,
+          "spliced_0mm_genes": 0,
+          "spliced_1mm_genes": 0,
+          "premRNA_0mm_splice50bp_genes": 0,
+          "premRNA_1mm_splice50bp_genes": 1,
+          "bulge_1nt_steric_pc_genes": 0,
+          "offtarget_status": "CAUTION_1MM_OR_BULGE"
+        }
+      ],
+      "zone_2_do_not_mask_exon8_5ss_window": "chr2:102343400-102343435(+)",
+      "zone_2_hazard_reason": "Covers canonical Exon-8 5' splice donor (chr2:102343415(+)); steric masking blocks Exon 8->9 splicing and depletes protective transmembrane ST2L (catastrophic sign inversion)."
+    }
   },
   "c007_il33_decoy_sink_mass_action": {
     "bulk_csf_baseline_5pM_sST2": {
@@ -771,12 +876,19 @@
       "active_treg_st2l_il33_pM": 0.0324,
       "treg_st2l_fractional_signaling_pct": 0.32
     },
+    "neurovascular_rna_80pct_sst2_suppression_to_80pM": {
+      "free_il33_pM": 3.7458,
+      "sst2_sequestered_il33_pM": 10.0742,
+      "active_treg_st2l_il33_pM": 1.1799,
+      "treg_st2l_fractional_signaling_pct": 11.8
+    },
     "isoform_selective_sst2_sweeping_mAb_5nM": {
       "free_il33_pM": 11.0016,
       "sst2_sequestered_il33_pM": 1.1775,
       "active_treg_st2l_il33_pM": 2.8208,
       "treg_st2l_fractional_signaling_pct": 28.21
-    }
+    },
+    "biologic_fcrn_note": "Catalytic pH-dependent sweeping requires intact pH-6.0 FcRn salvage (never FcRn-attenuated IHH, which causes 1:1 stoichiometric lysosomal co-degradation); demoted to backup behind intrathecal neurovascular RNA suppression due to Cys327 thiol adduct heterogeneity."
   },
   "c007_and_c018_zhang2026_cervical_spatial": {
     "mn_niche_6d": [

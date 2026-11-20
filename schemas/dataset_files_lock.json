@@ -2298,5 +2298,31 @@
         "sha256": "a88d58a5a8e3099ade26b30ae6dfafb3c1a63db25b3db7a89b392c474748529f"
       }
     ]
+  },
+  "DS_PDB_3NMR": {
+    "local_relpath": "data/pharmacology_structures/phase3b_pdb/pdb_00003nmr.cif",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "22d04f2517404c8bdfd5912ed2a0febcc853c82db70e5cc73bcd57cd5769f183",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 370140,
+        "sha256": "22d04f2517404c8bdfd5912ed2a0febcc853c82db70e5cc73bcd57cd5769f183"
+      }
+    ]
+  },
+  "DS_AF_Q8N6W0": {
+    "local_relpath": "data/pharmacology_structures/phase3b_pdb/AF-Q8N6W0-F1-model_v6.cif",
+    "is_dir": false,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "c16792834559f19034da1f7adedeed082bc2fa77c6682f5d80b3a2ad82ef79aa",
+    "files": [
+      {
+        "rel": ".",
+        "size_bytes": 434125,
+        "sha256": "c16792834559f19034da1f7adedeed082bc2fa77c6682f5d80b3a2ad82ef79aa"
+      }
+    ]
   }
 }

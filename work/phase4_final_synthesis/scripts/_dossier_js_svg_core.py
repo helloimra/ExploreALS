@@ -36,7 +36,7 @@ const CHEMBL_COMPOUNDS = new Set([
   'CHEMBL3752910','CHEMBL41355','CHEMBL4297372','CHEMBL4297672','CHEMBL5653589','CHEMBL589',
   'CHEMBL621','CHEMBL744','CHEMBL778','CHEMBL807','CHEMBL83','CHEMBL866'
 ]);
-const ACC_TOKEN_RE = /(?<![A-Za-z0-9])(?:PMID:(\\d{5,9})|(PMC\\d{6,9})|(?:DOI:\\s*)?(10\\.\\d{4,9}\\/[^\\s,;\\]\\u00b7&<>"]+)|(NCT\\d{8})|ISRCTN(\\d{8})|PDB\\s+([0-9][A-Za-z0-9]{3})|(7DJT|9TZY|7ANW|7NAL|7CR2|4KC3|2Z0D|6VN8|1XFD|7K2V|3KYQ|6J74|3EGD|3V5Z|6VCD|4M7N|1PK6)|(CHEMBL\\d+)|CID:(\\d+)|(ENS[GT]\\d{11})(?:\\.\\d+)?|HGNC:(\\d+)|MGI:(\\d+)|OMIM\\s+(\\d{6})|AF-([A-Z0-9]{6,10})-F\\d+|(O15498|O43526|O60229|O60674|O75396|O95249|P02745|P02746|P02747|P23458|P25686|P42779|P46459|P50395|P60568|Q01638|Q13190|Q6SZW1|Q7L622|Q8N6W0|Q8WVM8|Q93045|Q9UKA1|Q9UPW8|Q9Y4P1)|(gnomAD\\s+(?:v4(?:\\.1)?|r4))|(GSE\\d{4,8})|(PXD\\d{5,8})|(PRJNA\\d{5,9})|(syn\\d{6,10})|(rs\\d{3,12}))(?![A-Za-z0-9])/g;
+const ACC_TOKEN_RE = /(?<![A-Za-z0-9])(?:PMID:(\\d{5,9})|(PMC\\d{6,9})|(?:DOI:\\s*)?(10\\.\\d{4,9}\\/[^\\s,;\\]\\u00b7&<>"]+)|(NCT\\d{8})|ISRCTN(\\d{8})|PDB\\s+([0-9][A-Za-z0-9]{3})|(7DJT|9TZY|7ANW|7NAL|7CR2|4KC3|2Z0D|3NMR|2DNH|6VN8|1XFD|7K2V|3KYQ|6J74|3EGD|3V5Z|6VCD|4M7N|1PK6)|(CHEMBL\\d+)|CID:(\\d+)|(ENS[GT]\\d{11})(?:\\.\\d+)?|HGNC:(\\d+)|MGI:(\\d+)|OMIM\\s+(\\d{6})|AF-([A-Z0-9]{6,10})-F\\d+|(O15498|O43526|O60229|O60674|O75396|O95249|P02745|P02746|P02747|P23458|P25686|P42779|P46459|P50395|P60568|Q01638|Q13190|Q6SZW1|Q7L622|Q8N6W0|Q8WVM8|Q93045|Q9UKA1|Q9UPW8|Q9Y4P1)|(gnomAD\\s+(?:v4(?:\\.1)?|r4))|(GSE\\d{4,8})|(PXD\\d{5,8})|(PRJNA\\d{5,9})|(syn\\d{6,10})|(rs\\d{3,12}))(?![A-Za-z0-9])/g;
 
 function mkExtA(url, lbl){
   return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-[var(--link)] underline decoration-dotted underline-offset-2 hover:decoration-solid">${lbl}</a>`;
@@ -338,34 +338,48 @@ function renderLocusSsoSvg(candId, sig){
     }
   });
   const snpItems = (sig.snps||[]).map(sn => ({...sn, sx: Math.max(L+14, Math.min(R-14, mapTop(sn.pos)))})).sort((a,b)=>a.sx-b.sx);
+  const spanItems = sig.spans || [];
+  const bothTop = snpItems.length > 0 && spanItems.length > 0;
+  const offY = bothTop ? 16 : 0;
   const closePair = snpItems.length === 2 && Math.abs(snpItems[1].sx - snpItems[0].sx) < 95;
+  spanItems.forEach(sp => {
+    const sx1 = Math.max(L+6, mapTop(sp.lo)), sx2 = Math.min(R-6, mapTop(sp.hi)), sm = (sx1 + sx2)/2;
+    const sAnchor = sm < 115 ? 'start' : (sm > 345 ? 'end' : 'middle');
+    const spY = bothTop ? 79 : 81;
+    const spTxtY = bothTop ? 96 : 100;
+    snpSvg += `<line x1="${sx1.toFixed(1)}" y1="${spY}" x2="${sx2.toFixed(1)}" y2="${spY}" stroke="var(--warning)" stroke-width="2"/>
+      <line x1="${sx1.toFixed(1)}" y1="${spY-5}" x2="${sx1.toFixed(1)}" y2="${spY+5}" stroke="var(--warning)" stroke-width="1.5"/>
+      <line x1="${sx2.toFixed(1)}" y1="${spY-5}" x2="${sx2.toFixed(1)}" y2="${spY+5}" stroke="var(--warning)" stroke-width="1.5"/>
+      <text x="${sm.toFixed(1)}" y="${spTxtY}" text-anchor="${sAnchor}" font-size="12.4" font-family="monospace" font-weight="600" fill="var(--warning)">${esc(sp.lbl)}</text>`;
+  });
   snpItems.forEach((sn, idx) => {
     const sx = sn.sx;
     const sAnchor = closePair ? (idx === 0 ? 'end' : 'start') : (sx < 115 ? 'start' : (sx > 345 ? 'end' : 'middle'));
     const tx = closePair ? (idx === 0 ? sx - 5 : sx + 5) : sx;
-    const ty = closePair ? 100 : (99 + (idx%2)*14);
-    snpSvg += `<line x1="${sx.toFixed(1)}" y1="71" x2="${sx.toFixed(1)}" y2="83" stroke="var(--warning)" stroke-width="1.5"/>
-      <circle cx="${sx.toFixed(1)}" cy="85" r="3.2" fill="var(--warning)"/>
-      <text x="${tx.toFixed(1)}" y="${ty}" text-anchor="${sAnchor}" font-size="12.5" font-family="monospace" fill="var(--muted-foreground)">${esc(sn.lbl)}</text>`;
+    const tickEnd = bothTop ? 99 : 83;
+    const dotY = bothTop ? 101 : 85;
+    const ty = bothTop ? (115 + (idx%2)*14) : (closePair ? 100 : (99 + (idx%2)*14));
+    snpSvg += `<line x1="${sx.toFixed(1)}" y1="71" x2="${sx.toFixed(1)}" y2="${tickEnd}" stroke="var(--warning)" stroke-width="1.5"/>
+      <circle cx="${sx.toFixed(1)}" cy="${dotY}" r="3.2" fill="var(--warning)"/>
+      <text x="${tx.toFixed(1)}" y="${ty}" text-anchor="${sAnchor}" font-size="12.4" font-family="monospace" fill="var(--muted-foreground)">${esc(sn.lbl)}</text>`;
   });
-  (sig.spans||[]).forEach(sp => {
-    const sx1 = Math.max(L+6, mapTop(sp.lo)), sx2 = Math.min(R-6, mapTop(sp.hi)), sm = (sx1 + sx2)/2;
-    const sAnchor = sm < 115 ? 'start' : (sm > 345 ? 'end' : 'middle');
-    snpSvg += `<line x1="${sx1.toFixed(1)}" y1="81" x2="${sx2.toFixed(1)}" y2="81" stroke="var(--warning)" stroke-width="2"/>
-      <line x1="${sx1.toFixed(1)}" y1="76" x2="${sx1.toFixed(1)}" y2="86" stroke="var(--warning)" stroke-width="1.5"/>
-      <line x1="${sx2.toFixed(1)}" y1="76" x2="${sx2.toFixed(1)}" y2="86" stroke="var(--warning)" stroke-width="1.5"/>
-      <text x="${sm.toFixed(1)}" y="100" text-anchor="${sAnchor}" font-size="12.5" font-family="monospace" font-weight="600" fill="var(--warning)">${esc(sp.lbl)}</text>`;
-  });
+  if(offY > 0){
+    zoomExSvg = zoomExSvg.replace(/y="136"/g, `y="${136 + offY}"`);
+  }
   const zt1 = Math.max(L, mapTop(sig.zoom_lo)), zt2 = Math.min(R, mapTop(sig.zoom_hi));
   const hasNotes = Boolean(sig.iv_notes);
   const rowH = hasNotes ? 62 : 44;
-  if(cis.length === 0){
+  const zSpans = sig.zoom_spans || [];
+  const startRowY = 156 + offY;
+  let baseRowY = startRowY;
+  if(cis.length === 0 && zSpans.length === 0){
     const emptyNote = sig.empty_cis_note || ('Isoform locus: ' + sig.chrom + ':' + sig.zoom_lo + '-' + sig.zoom_hi);
-    ssoSvg = `<rect x="${L+10}" y="158" width="${W-20}" height="30" rx="4" fill="var(--background)" stroke="var(--warning)" stroke-width="1.4" stroke-dasharray="4,3"/>
-      <text x="230" y="178" text-anchor="middle" font-size="12.5" font-family="monospace" fill="var(--foreground)">${esc(emptyNote)}</text>`;
+    ssoSvg = `<rect x="${L+10}" y="${startRowY+2}" width="${W-20}" height="30" rx="4" fill="var(--background)" stroke="var(--warning)" stroke-width="1.4" stroke-dasharray="4,3"/>
+      <text x="230" y="${startRowY+22}" text-anchor="middle" font-size="12.5" font-family="monospace" fill="var(--foreground)">${esc(emptyNote)}</text>`;
+    baseRowY = startRowY + 42;
   } else {
     cis.forEach((c, idx) => {
-      const y = 156 + idx * rowH;
+      const y = startRowY + idx * rowH;
       const bx1 = Math.max(L, mapBot(Number(c.lo))), bx2 = Math.min(R, mapBot(Number(c.hi)));
       const bCol = c.st==='PASS_CLEAN_GE2MM' ? 'var(--success)' : (c.st.startsWith('WARN') ? 'var(--error)' : 'var(--warning)');
       const stShort = c.st==='PASS_CLEAN_GE2MM' ? 'Clean (>=2mm)' : (c.st.startsWith('WARN') ? 'Warn CNS Hit' : (c.st.startsWith('FAIL') ? 'Fail 0-mm' : 'Caution 1-mm/Wob'));
@@ -375,18 +389,30 @@ function renderLocusSsoSvg(candId, sig){
         <text x="${L}" y="${y+23}" font-size="12.6" font-family="monospace" font-weight="${c.lead?'700':'500'}" fill="var(--foreground)">${c.lead?'★ ':''}#${c.rk} ${esc(c.iv)}</text>
         <text x="${R}" y="${y+23}" text-anchor="end" font-size="12.5" font-family="monospace" font-weight="600" fill="${bCol}">${esc(stShort)}</text>
         <text x="${L}" y="${y+37}" font-size="12.5" font-family="monospace" fill="var(--muted-foreground)">${c.len}bp · Tm=${c.tm}°C · max AVI=${c.avi}</text>
-        ${ivNote?`<text x="${L}" y="${y+51}" font-size="12.5" font-family="monospace" fill="var(--warning)">&#9656; ${esc(ivNote)}</text>`:''}
+        ${ivNote?`<text x="${L}" y="${y+51}" font-size="12.3" fill="var(--warning)">&#9656; ${esc(ivNote)}</text>`:''}
       </g>`;
     });
+    baseRowY = startRowY + cis.length * rowH;
+    zSpans.forEach((zs, zIdx) => {
+      const zy = baseRowY + zIdx * 50;
+      const zx1 = Math.max(L, mapBot(Number(zs.lo))), zx2 = Math.min(R, mapBot(Number(zs.hi)));
+      const zCol = zs.tone==='clean' ? 'var(--success)' : (zs.tone==='hazard' ? 'var(--error)' : 'var(--warning)');
+      ssoSvg += `<g>
+        <rect x="${zx1.toFixed(1)}" y="${zy}" width="${Math.max(12, zx2-zx1).toFixed(1)}" height="9" rx="2.5" fill="${zCol}" fill-opacity="0.78" stroke="${zCol}" stroke-dasharray="3,2"/>
+        <text x="${L}" y="${zy+22}" font-size="12.4" font-weight="600" fill="${zCol}">${esc(zs.lbl)}</text>
+        <text x="${L}" y="${zy+37}" font-size="12.2" font-family="monospace" fill="var(--muted-foreground)">${esc(zs.sub || '')}</text>
+      </g>`;
+    });
+    baseRowY += zSpans.length * 50;
   }
-  const h = cis.length === 0 ? 198 : (160 + cis.length * rowH);
+  const h = baseRowY + 6;
   return `<svg viewBox="0 0 460 ${h}" class="w-full h-auto block select-none" role="img" aria-label="GRCh38 locus and steric SSO coordinate map">
     <text x="${L}" y="16" font-size="12.5" font-family="monospace" fill="var(--muted-foreground)">${esc(sig.chrom)}:${sig.win_lo.toLocaleString()}-${sig.win_hi.toLocaleString()} · ${esc(dirTxt)}</text>
     <line x1="${L}" y1="63" x2="${R}" y2="63" stroke="var(--border)" stroke-width="2.2"/>
     ${exSvg}${snpSvg}
-    <polygon points="${zt1.toFixed(1)},71 ${zt2.toFixed(1)},71 ${R},132 ${L},132" fill="var(--primary)" fill-opacity="0.06" stroke="var(--border)" stroke-dasharray="3,3"/>
-    <text x="${L}" y="127" font-size="12.5" font-family="monospace" fill="var(--primary)">Zoom: ${esc(sig.chrom)}:${sig.zoom_lo.toLocaleString()}-${sig.zoom_hi.toLocaleString()} (1-based GRCh38)</text>
-    <line x1="${L}" y1="142" x2="${R}" y2="142" stroke="var(--foreground)" stroke-opacity="0.35" stroke-width="1.5"/>
+    <polygon points="${zt1.toFixed(1)},71 ${zt2.toFixed(1)},71 ${R},${132+offY} ${L},${132+offY}" fill="var(--primary)" fill-opacity="0.06" stroke="var(--border)" stroke-dasharray="3,3"/>
+    <text x="${L}" y="${127+offY}" font-size="12.5" font-family="monospace" fill="var(--primary)">Zoom: ${esc(sig.chrom)}:${sig.zoom_lo.toLocaleString()}-${sig.zoom_hi.toLocaleString()} (1-based GRCh38)</text>
+    <line x1="${L}" y1="${142+offY}" x2="${R}" y2="${142+offY}" stroke="var(--foreground)" stroke-opacity="0.35" stroke-width="1.5"/>
     ${zoomExSvg}${ssoSvg}
   </svg>`;
 }

@@ -26,6 +26,8 @@ def main() -> None:
     else:
         sp_lfc = sp_cached
     lead2 = sso["chr2:241668970-241668987(+)"]
+    bench_3j = {x["interval_id"]: x for x in dd["atg4b_torres2024_3j_head_to_head_benchmark"]["head_to_head_intervals"]}
+    b_3j = bench_3j["chr2:241668980-241668995(+)"]
 
     checks = [
         ("Portfolio Actionable Rank & Promoted Lead #2", f"#{port['unified_rank']} ({port['lead_cis_interval_id']})", "#7 (chr2:241668970-241668987(+))", "PASS"),
@@ -33,6 +35,7 @@ def main() -> None:
         assert_close("[MEASURED] NYGC Cervical RIN+GC OLS beta (p=0.0010, n=197)", float(ny_c["adj_beta_tdp_vs_ctrl"]), -0.1642, rtol=1e-3),
         assert_close("[MEASURED] PDB 2Z0D deleted C-tail contacts to LC3B (<=4.5 A)", float(atg_3d["lc3b_patch_heavy_atom_contacts_le_4p5A"]), 27.0, rtol=1e-6),
         ("Promoted Lead #2 sp1=0, pm1_50=0, pm2_25=2 (CAUTION)", f"{lead2['spliced_1mm_genes']}/{lead2['premRNA_1mm_splice50bp_genes']}/{lead2['premRNA_2mm_splice25bp_pc_genes']}", "0/0/2", "PASS"),
+        ("Torres 2024 ASO 3J (16bp LNA) sp1/pm1_50/pLI>=0.96 flags vs #2 (0/0/0)", f"{b_3j['spliced_1mm_genes']}/{b_3j['premRNA_1mm_splice50bp_genes']}/{len(b_3j['constrained_cns_offtarget_flags'])}", "10/18/5", "PASS"),
     ]
     if (ROOT / "data/pharmacology_structures/phase3b_pdb/pdb_00002z0d.cif").is_file():
         from carbon_als.mmcif_parser import load_mmcif_structure

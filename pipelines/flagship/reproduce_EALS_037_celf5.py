@@ -36,17 +36,22 @@ def main() -> None:
         loeuf = loeuf_cached
     lead1 = sso["chr19:3278299-3278318(+)"]
 
+    rrm2 = celf["celf5_afdb_and_3nmr_rrm2_truncation"]
+    ph = celf["celf5_frechet_hoeffding_phasing_and_ejc_audit"]
+    fh_b = ph["frechet_hoeffding_aberrant_transcript_bounds"]["canonical_wt_mrna_bounds_pct"]
     checks = [
         ("Portfolio Actionable Rank & Clean Lead #1", f"#{port['unified_rank']} ({port['lead_cis_interval_id']})", "#8 (chr19:3278299-3278318(+))", "PASS"),
         assert_close("[MEASURED] NYGC Cervical RIN+GC OLS beta (p=0.0172)", float(ny_c["adj_beta_tdp_vs_ctrl"]), -0.4020, rtol=1e-3),
         assert_close("[MEASURED] Cervical mn_neur_z-residualized tSTMN2 neuronal tail %", float(ny_c["within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal"]), 1.90, rtol=0.02),
         assert_close("[MEASURED] Lumbar mn_neur_z-residualized tSTMN2 neuronal tail %", float(ny_l["within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal"]), 0.14, rtol=0.05),
-        assert_close(f"[MEASURED:{src_tag}] gnomAD v4.1 CELF5 LOEUF (pLI=1.00)", loeuf, 0.248, rtol=0.01),
+        assert_close(f"[MEASURED:{src_tag}] gnomAD v4.1 MANE CELF5 LOEUF (pLI=1.00; Open Targets=0.216)", loeuf, 0.248, rtol=0.01),
+        ("[MEASURED] AF-Q8N6W0/3NMR RRM2 beta4 severed H-bonds & 18-nt EJC gap", f"{rrm2['severed_beta4_beta1_backbone_hbonds_le_3p5A']}/{ph['ejc_nmd_minigene_trap']['dist_ptc_to_ce_exon6_junction_nt']}nt", "5/18nt", "PASS"),
+        ("[MODEL_PRIOR] Frechet-Hoeffding CE+IR1 baseline canonical mRNA bounds %", f"{fh_b[0]}-{fh_b[1]}", "53.1-65.3", "PASS"),
         ("Lead #1 Clean >=2mm Off-Target Status", lead1["offtarget_safety_status"], "PASS_CLEAN_GE2MM", "PASS"),
     ]
     print_audit_report(
         "EALS-037", "CELF5 Cryptic-Exon Steric SSO", checks,
-        "Brown CE/Ribo-seq, Bye LeafCutter cluster padj=0.00904, nominal Pineda BA4_Exc (p=0.0133, FDR=0.1357), & NYGC cervical loss are [MEASURED]; Nanopore <1-2% LOQ Exon-5 / 98-bp micro-intron sparing & spinal protein rescue are prospective kill-gates.",
+        "Brown CE/Ribo-seq, Bye LeafCutter cluster padj=0.00904 (PMID:41286450, N=77 without bulk nuclear TDP-43 loss), nominal Pineda BA4_Exc (p=0.0133, FDR=0.1357), & NYGC cervical loss are [MEASURED]; Nanopore Exon-5 / 98-bp micro-intron non-elevation above ~2.8% WT baseline & spinal protein rescue are prospective kill-gates.",
     )
 
 

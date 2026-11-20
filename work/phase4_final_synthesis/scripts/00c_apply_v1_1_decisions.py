@@ -68,20 +68,20 @@ def main() -> None:
         dm[cid]["updated_at"] = TS
     dm["C001"].update({
         "evidence_proves_hypothesis": (
-            "Germline GWAS risk + sQTL + 100% TDP-43-pathology cryptic exon specificity (Ma 2022 61/860 vs 0/246; Spillman 2026 6/10 C9FTD vs 0/10 Ctrl, p=0.0108) "
-            "+ GC/cell-composition-adjusted NYGC mRNA depletion across all 4 CNS regions (Motor -0.1976 p=0.0105, Frontal -0.1565 p=0.00187, Cervical -0.2912 p=0.00330, Lumbar -0.3554 p=7.38e-4; O'Neill 2025 ALS-Glia Cortical n=64 [5 ALS-Glia vs 59 Ctrl]: beta=-0.8266, p=8.62e-4) "
-            "+ gnomAD extreme LoF intolerance (pLI=1.000, LOEUF=0.344) + published human electrophysiological rescue (Keuss et al. 2026 Nature, 10.1038/s41586-026-11256-2: isolated Intron-20 CE deletion [~75% protein rescue; >30% synaptic threshold] and 18/21-nt 2'-O-MOE ASOs restore presynaptic UNC13A, mEPSC frequency [~80% recovery], evoked AMPA eEPSCs, and MEA network synchrony across human cortical/spinal MNs and hUNC13A mice) prove UNC13A loss causally drives TDP-43 presynaptic failure."
+            "Germline GWAS risk (van Rheenen 2021 PMID:34873335 cross-ancestry P=3.0e-25; Open Targets P=4.04e-25 across 6 catalog studies) + sQTL + 100% TDP-43-pathology cryptic exon specificity (Ma 2022 61/860 vs 0/246; Spillman 2026 PMID:42789089 6/10 C9-FTD homogenate vs 0/10 Ctrl, p=0.0108) "
+            "+ GC/cell-composition-adjusted NYGC mRNA depletion across all 4 CNS regions (Motor -0.1976 p=0.0105, Frontal -0.1565 p=0.00187, Cervical -0.2912 p=0.00330, Lumbar -0.3554 p=7.38e-4; O'Neill 2025 PMID:40067829 ALS-Glia Cortical n=64 [5 ALS-Glia vs 59 Ctrl]: beta=-0.8266, p=8.62e-4) "
+            "+ gnomAD v4.1 extreme LoF intolerance (pLI=1.000, LOEUF=0.344) + published human electrophysiological rescue (Keuss et al. 2026 Nature PMID:43015463, 10.1038/s41586-026-11256-2: isolated Intron-20 CE deletion [~75% protein rescue; >30% synaptic threshold] and 18/21-nt 2'-O-MOE ASOs restore presynaptic UNC13A, mEPSC frequency, evoked AMPA eEPSCs, and MEA network synchrony across human cortical/spinal MNs and hUNC13A mice) prove UNC13A loss causally drives TDP-43 presynaptic failure."
         ),
         "evidence_disproves_hypothesis": (
-            "Does NOT disprove biological validity, but deprioritizes standalone me-too single-target ASO monotherapy (crowded by 4 recruiting Phase 1/2 trials on LY4256984 and TRCN-1023, neither yet with completed Phase 2/3 clinical efficacy proof; external ASOs including Keuss 2026 validate target biology rather than ExploreALS's un-synthesized #2 window), "
-            "confirms isolated UNC13A CE rescue leaves STMN2 polyadenylation, KCNQ2 Exon-5 skipping, Intron-31 retention, and ~10% postsynaptic mEPSC amplitude unrescued (Keuss et al. 2026, 10.1038/s41586-026-11256-2; Guo et al. 2026), "
-            "notes risk alleles rs12608932-C/rs12973192-G potentiate magnitude while TDP-43 loss still mis-splices and ASOs rescue both reference and risk alleles (motivating genotype-stratified 2-plex vs 3-plex testing rather than excluding A/A homozygotes), "
-            "and confirms soluble CSF UNC13A protein is undetectable (DS045=0 peptides) while lumbar CSF EV junction RNA sits near late-cycle RT-qPCR (Cq>35) / Poisson-limited 20,000-partition RT-ddPCR (<3-10 copies/mL CSF) (PMID:38158550; PMID:38278991)."
+            "Does NOT disprove biological validity, but deprioritizes standalone me-too single-target ASO monotherapy (crowded by 2 active clinical-stage assets across 4 registry protocols — Lilly LY4256984/QRL-204 parent Ph1 NCT07100119 + substudy NCT07571174 + OLMP NCT07571200 and Trace TRCN-1023 Ph1/2 NCT07674667 + China IIT LAUNCH ALS, plus preclinical AS-241 & UCL tU7 snRNA PMID:41394711 — neither yet with completed Phase 2/3 efficacy proof), "
+            "confirms single-target UNC13A CE rescue leaves orthogonal STMN2 polyadenylation, KCNQ2 Exon-5 skipping, Intron-31 retention, and postsynaptic mEPSC amplitude reduction unrescued (Keuss et al. 2026 PMID:43015463; Guo et al. 2026 PMID:42234776), "
+            "notes risk alleles rs12608932-C/rs12973192-G potentiate mis-splicing magnitude while severe TDP-43 loss still mis-splices A/A homozygotes (motivating genotype-stratified 2-plex vs 3-plex testing rather than excluding A/A patients), "
+            "and confirms soluble CSF UNC13A protein is undetectable (DS045=0 peptides) while unfractionated lumbar CSF EV junction RNA sits in a low-copy Poisson-limited late-Cq regime (requiring ISEV reproducibility controls PMID:38158550 and cryptic-peptide/secretome orthogonalization PMID:38278991)."
         ),
         "factual_justification": (
             "Unlike Riluzole or Methylcobalamin, UNC13A has not yet completed Phase 2/3 human clinical efficacy proof, possesses genome-wide human ALS causal GWAS/sQTL genetics directly inside its cryptic exon (rs12608932/rs12973192; EV-B1-001..EV-B1-005), "
-            "and has direct human cortical and spinal motor-neuron electrophysiological rescue proof (Keuss et al. 2026 Nature, 10.1038/s41586-026-11256-2: >30% protein threshold restores presynaptic vesicle release and network synchrony while leaving STMN2 and KCNQ2 unrescued). "
-            "Standalone me-too single-target ASOs (LY4256984, TRCN-1023) are clinically crowded and deprioritized; UNC13A is retained in KEEP_CORE as an orthogonal presynaptic multiplex splice-rescue anchor (evaluating 2-plex vs 3-plex stratified by rs12973192/rs12608932 genotype under 21 CFR 300.50 rather than excluding A/A patients)."
+            "and has direct human cortical and spinal motor-neuron electrophysiological rescue proof (Keuss et al. 2026 Nature PMID:43015463: >30% protein threshold restores presynaptic vesicle release and network synchrony while leaving orthogonal STMN2 and KCNQ2 pathways unaddressed). "
+            "Standalone me-too single-target ASOs (LY4256984 across 3 Ph1 protocols, TRCN-1023 Ph1/2) are clinically crowded and deprioritized; UNC13A is retained in KEEP_CORE as an orthogonal presynaptic multiplex splice-rescue anchor (evaluating 2-plex vs 3-plex stratified by rs12973192/rs12608932 genotype under 21 CFR 300.50 rather than excluding A/A patients)."
         ),
         "updated_at": TS,
     })
@@ -94,13 +94,23 @@ def main() -> None:
         "(-0.4825 log2FC, p=0.0140) frontal protein loss",
         "(-0.4825 log2FC, p=0.0140, FDR=0.11, n=20 C9-FTD) frontal protein loss",
     )
+    for k in ("evidence_proves_hypothesis", "factual_justification", "discriminating_next_test"):
+        dm["C002"][k] = (
+            dm["C002"][k]
+            .replace("microtubule catastrophe restraint", "plus-end microtubule dynamicity/catastrophe")
+            .replace("microtubule-catastrophe/NMJ rescue", "plus-end microtubule-dynamicity/catastrophe & NMJ rescue")
+        )
+    dm["C005"]["discriminating_next_test"] = dm["C005"]["discriminating_next_test"].replace(
+        "(<=5.5 ms)", "(<=5.5% RMT at 1-7 ms ISI, PMID:42592079)"
+    )
+    dm["C005"]["updated_at"] = TS
+
     dm["C007"]["evidence_proves_hypothesis"] = dm["C007"]["evidence_proves_hypothesis"].replace(
         "Zhang 2026 spatial anterior horn MN-niche upregulation (+3.7606 log2FC, bh_fdr=1.85e-09)",
-        "Zhang 2026 cervical 55-um multicellular MN-niche Visium spot gene-level IL1RL1 upregulation (+3.7606 log2FC, spot-level bh_fdr=1.85e-09 across N=14 donors)",
+        "Zhang 2026 cervical 55-um multicellular MN-niche Visium spot gene-level IL1RL1 upregulation (+3.7606 log2FC, spot-level bh_fdr=1.85e-09 across N=14 donors / 18 sections)",
     )
-    dm["C007"]["discriminating_next_test"] = dm["C007"]["discriminating_next_test"].replace(
-        "early normoxic (FVC >= 80%, non-NIV)",
-        "verified normoxic (supine/upright FVC >= 80% PLUS normal overnight oximetry/capnography, PMID:41635251, non-NIV)",
+    dm["C007"]["discriminating_next_test"] = (
+        "Execute paired living-patient CSF/plasma Simoa sST2 & free IL-33 (n>=80, explicitly comparing verified normoxic [supine/upright FVC >= 80% PLUS normal overnight oximetry/capnography, PMID:41635251, non-NIV] sALS vs nocturnal-hypoxic/NIV ALS to deconfound 3-20x pulmonary/ventilatory mechanical strain, PMID:30562096, PMID:40402026) + ventilation-matched isolated CNS microvessel/pericyte (PMID:41857656) sST2/ST2L ddPCR (n>=25 sALS vs n>=20 Ctrl; GENCODE v46 1-based sST2 chr2:102343270-102346100(+) vs ST2L Exon 11 chr2:102351536-102352037(+)) + human iPSC neurovascular-microglial tri-culture + ALS CSF causal-vs-compensatory BBB-brake sign testing (PMID:37117777), before generating primary low-dose intrathecal neurovascular-shuttled (CD98hc/SLC3A2 PMID:37598178/PMID:39979268 or monovalent TfR1 PMID:39141703) cytoplasmic sST2 3'-UTR siRNA (PMID:35654979) or uniform 2'-O-MOE Zone 1 Intron-8 PAS/DSE steric SSO (chr2:102346035-102346125(+); Clean >=2mm #1 chr2:102346045-102346062(+); nuclear RNase H1 Intron-8 gapmers & Zone 2 Exon-8 5'SS chr2:102343400-102343435(+) prohibited) vs backup intact-FcRn pH-dependent sST2 aa 324-328 SKECF sweeping mAb (gated on unpaired Cys327 IP-MS thiol-adduct profiling & SLC3A2 -SKEDF counter-screening)."
     )
     dm["C007"]["updated_at"] = TS
 
@@ -131,25 +141,25 @@ def main() -> None:
     )
     dm["S06"]["factual_justification"] = (
         "Core Track B target backed by human ALS rare GoF genetics, parallel axonal protection alongside STMN2 (Krus et al. 2022 PMID:35767949), "
-        "elevated patient iPSC neuronal protein (+0.675, p=0.0268, n=6), and low heterozygous pLoF constraint (LOEUF=1.143); despite clinical activity (LY3873862 NCT07883590 [Not Yet Recruiting], NB-4746 NCT07369076), "
-        "CNS-penetrant non-covalent intramolecular ARM-TIR T-lock glues (ASHA-624 class; covalent Cys311 PDB 7DJT as structural benchmark) avoid biphasic base-exchange activation."
+        "elevated C9-FTD iPSC neuronal protein (+0.675, p=0.0268, n=6, PMID:42789089), and low heterozygous pLoF constraint (LOEUF=1.143); despite clinical activity across 3 programs (LY3873862 NCT07883590 [ALS Ph1 Not Yet Recruiting; HV NCT05492201 N=84 completed], NB-4746 NCT07369076, SIR2501 CTR20253552/NCT07765446), "
+        "CNS-penetrant non-covalent inter-protomer ARM-TIR T-lock glues (ASHA-624 class; covalent Cys311 PDB 7DJT as structural benchmark) avoid biphasic base-exchange activation."
     )
-    dm["S06"]["discriminating_next_test"] = dm["S06"]["discriminating_next_test"].replace(
-        "3-chain TIR-gluing BEXi prodrugs", "3-chain TIR-gluing base-exchange inhibitor (BEXi) prodrugs"
-    ).replace(
-        "(~2-7x modeled threshold sparing)", "(evaluating Bliss/Loewe additivity vs illustrative ~2-7x MWC sensitivity scenario)"
-    ).replace(
-        "(rejecting glial/immune CD38-dominated bulk CSF cADPR, PMID:32087251/PMID:16750163)",
-        "(given mouse Cd38-/- evidence of non-neuronal CD38 background in bulk cADPR, PMID:32087251/PMID:16750163)",
+    dm["S06"]["discriminating_next_test"] = (
+        dm["S06"]["discriminating_next_test"]
+        .replace("3-chain TIR-gluing BEXi prodrugs", "3-chain TIR-gluing base-exchange inhibitor (BEXi) prodrugs")
+        .replace("(~2-7x modeled threshold sparing)", "(evaluating Bliss/Loewe additivity vs illustrative ~2-7x MWC sensitivity scenario)")
+        .replace("(rejecting glial/immune CD38-dominated bulk CSF cADPR, PMID:32087251/PMID:16750163)", "(given mouse Cd38-/- evidence of non-neuronal CD38 background in bulk cADPR, PMID:32087251/PMID:16750163)")
+        .replace("intramolecular ARM-TIR", "inter-protomer ARM-TIR")
+        .replace("parallel plus-end Bliss", "parallel microtubule-remodeling Bliss")
     )
     dm["S06"]["updated_at"] = TS
 
     dm["S07"].update({
-        "evidence_proves_hypothesis": "In MIROCALS Phase 2b (NCT03039673, PMID:40354799, Lancet May 2025, N=220; CHEMBL1201438), SAP-prespecified covariate-adjusted Cox + continuous log(BioVendor ELISA CSF pNfH)xTreatment modeling was positive (adj HR=0.32, 95% CI 0.14-0.73, p=0.007), with 48% 21-mo mortality hazard reduction in the 750-3,700 pg/mL stratum (n=154, HR=0.52, 95% CI 0.30-0.89, p=0.016; <750 pg/mL LLOQ n=20 had 0 deaths) alongside FOXP3+ Treg expansion and CCL2 reduction.",
-        "evidence_disproves_hypothesis": "Primary unadjusted ITT log-rank test missed significance (HR=0.81, 95% CI 0.54-1.22, p=0.33; >3,700 pg/mL n=46 non-significant futility HR=1.37, 95% CI 0.68-2.75, p=0.38), IL2/IL2RA has 0 human ALS genetics, EMA/MHRA/UK MND CSG declined approval pending Phase 3 proof, ALS FOXP3+ Tregs risk TSDR methylation drift + NK/eosinophil/sCD25 sinks, and zero prospective Phase 3 trials gated on calibrated CSF pNfH <=3,700 pg/mL have completed.",
-        "factual_justification": "Under Epistemic Asymmetry, covariate-adjusted survival benefit (HR=0.32, p=0.007) and 750-3,700 pg/mL BioVendor ELISA stratum benefit (HR=0.52, p=0.016, n=154) inside an unadjusted-ITT-null Phase 2b trial (MIROCALS PMID:40354799, HR=0.81, p=0.33) with zero IL2/IL2RA ALS genetics require prospective biomarker-gated Phase 3 confirmation.",
-        "discriminating_next_test": "Complete Stage-0 paired analytical bridging from MIROCALS BioVendor ELISA CSF pNfH to automated CLIA immunoassays (Ella/Euroimmun/Simoa) plus paired NfL vs pNfH immunoassay calibration on banked ALS CSF (motivated by weak tryptic MS NEFL vs NEFH correlation r=0.278 in Trautwig 2025 PMC12082929 across n=77 DIA / n=51 overlapping Emory TMT; note active ALSTARS NCT07161999 lacks a CSF pNfH gate), then execute an event-driven Phase 3 RCT powered for 247 deaths at conservative HR=0.70 (138 at HR=0.62; requiring N~650-750 over 36-42 mo variable follow-up or N~850-1,050 at 24 mo, <5% vital-status censoring) enrolling calibrated CSF pNfH <=3,700 pg/mL with longitudinal Treg TSDR (PMID:17694575), CD56bright NK, and sCD25 (PMID:22343569) monitoring.",
-        "updated_at": TS,
+        "evidence_proves_hypothesis": "In MIROCALS Phase 2b (NCT03039673, PMID:40354799, Lancet May 2025, N=220, 90 deaths; CHEMBL1201438), SAP-prespecified covariate-adjusted Cox + continuous CSF pNfH x Treatment modeling was positive (adj HR=0.32, 95% CI 0.14-0.73, p=0.0070; interaction HR=1.0003/pg/mL, p=0.0011; secondary ALSFRS-R slope interaction F=3.95, p=0.048), with 48% 21-mo mortality hazard reduction in the 750-3,700 pg/mL BioVendor ELISA stratum (n=154, 57 deaths, HR=0.52, 95% CI 0.30-0.89, p=0.016; <750 pg/mL LLOQ n=19 had 0 deaths; pooled <=3,700 pg/mL n=173 HR=0.57, 95% CI 0.33-0.97, p=0.037) alongside sustained Day-112 trough FOXP3+ Treg expansion (p<0.0001) and plasma CCL2 reduction; Al Khleifat et al. 2026 (PMID:42836993, PMC13642438, J Neurol 273:643) showed inside MIROCALS (N=220) that clinical TRICALS risk shares only r^2=12.7% (r=0.357) of variance with CSF pNfH and contributes less treatment-interaction information (nested dChi2=4.76, LRT p=0.029 / Wald p=0.025 vs dChi2=14.24 for pNfH x treatment; adding pNfH to TRICALS dChi2=44.39; combined model reference HR=0.28, 95% CI 0.12-0.63, p=0.002).",
+        "evidence_disproves_hypothesis": "Primary unadjusted ITT log-rank test missed significance (HR=0.81, 95% CI 0.54-1.22, p=0.33; >3,700 pg/mL n=47 [33/90 deaths] showed no demonstrated benefit HR=1.37, 95% CI 0.68-2.75, p=0.38), IL2/IL2RA has 0 human ALS genetics, EMA/MHRA/UK MND CSG declined approval pending Phase 3 proof, commercial pNfH immunoassays exhibit ~1.8x-4.5x inter-platform pg/mL calibrator offsets (PMID:31251725; PMID:29054919; cf. BioVendor ELISA in PMID:40354799 vs MSD ECLIA cited in PMID:42836993), Phase 2/3 ALSTARS (NCT07161999, N=137 enrolled, prospectively stratified across 3 baseline serum NfL tiers on 24-wk ALSFRS-R) tests dual-biologic COYA 302 (1 MIU rhIL-2 + 125 mg CTLA4-Ig q14d vs q28d; <0.5% BBB entry, CD28 blockade PMID:30683697/PMID:36920087 vs IL-2 STAT5 rescue PMID:42086904) without baseline CSF pNfH exclusion or a single-agent IL-2 arm, ALS FOXP3+ Tregs risk TSDR methylation drift + NK/eosinophil/sCD25 sinks, and zero prospective Phase 3 trials gated on calibrated CSF pNfH <=3,700 pg/mL have completed.",
+        "factual_justification": "Under Epistemic Asymmetry, covariate-adjusted survival benefit (HR=0.32, p=0.0070) and <=3,700 pg/mL BioVendor ELISA benefit (750-3,700 HR=0.52, p=0.016, n=154; pooled <=3,700 HR=0.57, p=0.037, n=173) inside an unadjusted-ITT-null Phase 2b trial (MIROCALS PMID:40354799, HR=0.81, p=0.33) with zero IL2/IL2RA ALS genetics require prospective biomarker-gated Phase 3 confirmation.",
+        "discriminating_next_test": "Complete pre-Phase-3 CLSI EP09c (N>=40 paired ALS CSFs spanning the measuring interval) Passing-Bablok analytical bridging from MIROCALS BioVendor ELISA CSF pNfH (~79th percentile, <=3,700 pg/mL: n=173/220) to automated CLIA immunoassays (Ella/Euroimmun/Simoa/MSD; resolving ~1.8x-4.5x inter-platform calibrator offsets, PMID:31251725, PMID:29054919; cf. Al Khleifat 2026 PMID:42836993 where TRICALS shares r^2=12.7% with CSF pNfH and nested pNfH x trt dChi2=14.24 vs TRICALS x trt dChi2=4.76), plus paired immunoassay validation before substituting blood NfL or pNfH for CSF pNfH (noting Trautwig 2025 PMC12082929 tryptic CSF MS NEFL-NEFH r=0.278 across n=77 DIA / n=51 overlapping Emory TMT vs clinical immunoassay serum NfL-CSF pNfH rho=0.64-0.71 PMID:38683209 and serum NfL outperforming serum pNfH on ALSFRS-R slope PMID:32385188; post-hoc NX210c SEALS NCT06365216 NfL<=95 pg/mL p=0.062; note enrolled N=137 ALSTARS NCT07161999 stratifies 3 serum NfL tiers on 24-wk ALSFRS-R with dual-biologic rhIL-2 + CTLA4-Ig and no single-agent IL-2 arm, so ALSTARS cannot directly falsify single-agent S07), then execute an event-driven Phase 3 RCT powered for 247 deaths at conservative unadjusted HR=0.70 (80.0% power; 138 deaths at HR=0.62 [MODEL_PRIOR]; N~650-750 over 36-42 mo variable follow-up or N~850-1,050 at 24 mo, <5% vital-status censoring, accounting for 0 deaths in <750 pg/mL n=19/220 MIROCALS LLOQ floor and pre-specifying complementary TRICALS + log[CSF pNfH] covariates — whereas hypothetical unbridged 1.8x-4.5x lower CSF cutoffs admit 74-99% of >3,700 pg/mL patients and reduce 247-death one-sided superiority power to ~43-50% if HR_high=1.00 or ~14-23% if HR_high=1.37 [MODEL_PRIOR]) enrolling calibrated ~79th-percentile CSF pNfH <=3,700 pg/mL with longitudinal Treg TSDR (PMID:17694575), CD56bright NK, and serum sCD25 (PMID:32651161; PMID:22343569) monitoring.",
+        "updated_at": "2026-11-20T00:10:00Z",
     })
 
     dm["S08"]["evidence_disproves_hypothesis"] = (

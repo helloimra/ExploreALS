@@ -45,6 +45,8 @@ DATASET_TIER_SPECS: dict[str, tuple[str, str, str | None, str | None]] = {
     "DS_GNOMAD_V41_CONSTRAINT": ("TIER_A_OPEN_REDISTRIBUTABLE", "https://storage.googleapis.com/gcp-public-data--gnomad/release/4.1/constraint/gnomad.v4.1.constraint_metrics.tsv", None, None),
     "DS_PDB_2Z0D": ("TIER_A_OPEN_REDISTRIBUTABLE", "https://files.rcsb.org/download/2Z0D.cif", None, None),
     "DS_PDB_1XFD": ("TIER_A_OPEN_REDISTRIBUTABLE", "https://files.rcsb.org/download/1XFD.cif", None, None),
+    "DS_PDB_3NMR": ("TIER_A_OPEN_REDISTRIBUTABLE", "https://files.rcsb.org/download/3NMR.cif", None, None),
+    "DS_AF_Q8N6W0": ("TIER_A_OPEN_REDISTRIBUTABLE", "https://alphafold.ebi.ac.uk/files/AF-Q8N6W0-F1-model_v6.cif", None, None),
 }
 
 COHORT_OVERLAP_CLUSTERS: list[dict[str, str]] = [

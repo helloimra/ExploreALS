@@ -130,6 +130,8 @@ def inspect_celf5_mane_gtf() -> dict:
         "cryptic_exon_len_mod3": ce_len % 3,
         "flanking_mane_exons_1b": [f"chr19:{s}-{e}(+)" for s, e in exons if e < 3278209][-1:] + [f"chr19:{s}-{e}(+)" for s, e in exons if s > 3278316][:1],
         "inframe_ptc_codon_indices_1b": ptc_1b,
+        "dist_first_ptc_end_to_ce_3prime_junction_nt": (ce_len - 3 * ptc_1b[0]) if ptc_1b else None,
+        "downstream_constitutive_exon_junctions_after_ce": max(0, sum(1 for s, _ in exons if s > 3278316) - 1),
         "upstream_intron_len_bp": up_intron_len,
     }
 
@@ -184,6 +186,8 @@ def main() -> None:
         },
         "gtex_v8_median_tpm": gtex,
         "mane_isoform_and_ce_audit": gtf_info,
+        "celf5_afdb_and_3nmr_rrm2_truncation": d4.get("celf5_afdb_and_3nmr_rrm2_truncation"),
+        "celf5_frechet_hoeffding_phasing_and_ejc_audit": d4.get("celf5_frechet_hoeffding_phasing_and_ejc_audit"),
         "celf5_nygc_multiregion": panel_nygc["CELF5"],
         "phase3b_f1_f2_nygc_panel_summary": {
             g: {

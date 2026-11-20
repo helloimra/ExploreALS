@@ -14,6 +14,11 @@ for p in (SRC, SCRIPT_DIR, P3A_SCRIPTS):
     if str(p) not in sys.path:
         sys.path.insert(0, str(p))
 
+from _atg4b_3j_and_celf5_3d_phasing import (  # noqa: E402
+    benchmark_atg4b_torres_3j_vs_carbon_intervals,
+    stage_celf5_3nmr_and_afdb_structures,
+)
+from _celf5_3d_and_phasing_helper import audit_celf5_3d_rrm2_and_phasing  # noqa: E402
 from _deep_dive_helpers import load_elk1_st7_regulons, run_elk1_regulon_sign_test, run_isoform_structure_and_liability_audits  # noqa: E402
 from _deep_dive_nygc import analyze_nygc_multiregion  # noqa: E402
 from _funnel_helpers import clean_json  # noqa: E402
@@ -69,6 +74,9 @@ def main() -> None:
     elk1_res = run_elk1_regulon_sign_test(nygc_tstats)
     iso_struct_liab = run_isoform_structure_and_liability_audits(ext_main, ext_dd, gnomad_map)
     ag_rs = _summarize_alphagenome_rs2173852(ext_dd["alphagenome"]["kalrn_rs2173852"])
+    p_3nmr, p_af_celf5 = stage_celf5_3nmr_and_afdb_structures()
+    atg4b_3j_bench = benchmark_atg4b_torres_3j_vs_carbon_intervals(CACHE_DIR, gnomad_map)
+    celf5_3d_phasing = audit_celf5_3d_rrm2_and_phasing(p_3nmr, p_af_celf5, CACHE_DIR)
 
     out = clean_json({
         "analysis_run_id": "RUN-P3B-004",
@@ -80,6 +88,8 @@ def main() -> None:
         "prune2_intron_alphagenome_peaks": ext_dd["alphagenome"]["prune2_intron"]["top_internal_splice_peaks"][:5],
         "ptprt_intron_alphagenome_peaks": ext_dd["alphagenome"]["ptprt_intron"]["top_internal_splice_peaks"][:5],
         **iso_struct_liab,
+        "atg4b_torres2024_3j_head_to_head_benchmark": atg4b_3j_bench,
+        **celf5_3d_phasing,
         "nygc_multiregion_donor_analysis": nygc_res,
         "elk1_st7_regulon_sign_test": elk1_res,
     })
