@@ -63,7 +63,7 @@ SITE_INTERNAL_JARGON_RE = re.compile(
     r"\[MODEL_PRIOR\]|,\s*MODEL_PRIOR\]|\[MEASURED\]|\[PRIOR\]|\[Survivor\]|T3\+Proto|"
     r"Forest\s+&amp;\s+SVG|5Rs\s+Essay|Excluded\s+4th\s+Axis|SHA-64|"
     r"REGISTRY_CONCORDANCE_SHA12|\(33\s*\+\s*19\)|0\s+chemically\s+modified\s+synthesis-ready|"
-    r"Brettschneider\s+Stage\s+II|\bkill[- ]gates?\b|modeled\s+modeled|(?<!\[);\s*,(?!\])|"
+    r"Brettschneider\s+Stage\s+II|\bkill[- ]gates?\b|\bWave\s+(?:[A-D]|[1-9])\b|wave_[a-d]_|modeled\s+modeled|(?<!\[);\s*,(?!\])|"
     r"Dropped\s+PK\s+or\s+Safety\s+Infeasible\s+Regimen|GOVERNANCE\s+GUARDRAIL|scientific\s+taste)",
     re.IGNORECASE,
 )

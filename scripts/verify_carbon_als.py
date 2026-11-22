@@ -456,7 +456,13 @@ def verify_all(
                 errors.append(f"{uid}: biosecurity oligomer sequence guard failed in living_evidence_updates.csv")
             if CAPITAL_DOLLAR_LEAK_RE.search(joined_txt):
                 errors.append(f"{uid}: financial/capital token leaked in living_evidence_updates.csv")
-            if "/100" in joined_txt or "CarbonALS" in joined_txt or "ExploreALS v1.0" in joined_txt or "ExploreALS v1.1" in joined_txt:
+            if (
+                "/100" in joined_txt
+                or "CarbonALS" in joined_txt
+                or "ExploreALS v1.0" in joined_txt
+                or "ExploreALS v1.1" in joined_txt
+                or re.search(r"\bwave\b", joined_txt, re.IGNORECASE)
+            ):
                 errors.append(f"{uid}: banned nomenclature leaked in living_evidence_updates.csv")
         if sort_keys != sorted(sort_keys, reverse=True):
             errors.append("living_evidence_updates.csv must be sorted reverse-chronologically by (date_iso, update_id)")

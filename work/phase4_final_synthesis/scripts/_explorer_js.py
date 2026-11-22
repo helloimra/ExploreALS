@@ -138,17 +138,25 @@ function renderUpdatesLog(){
   if(cntEl) cntEl.textContent = `${rows.length} / ${DATA_UPDATES.length}`;
   feed.innerHTML = rows.length ? rows.map(u => {
     const gCtx = u.ids.find(x => x !== 'PORTFOLIO_WIDE' && !x.includes('.')) || 'EALS-030';
-    const idPills = u.ids.map(aid => {
+    const makeIdPill = aid => {
       if(aid === 'PORTFOLIO_WIDE') return '<span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">All 52 Hypotheses</span>';
       if(aid.includes('.')){
         const sn = DATA_SUB.find(x => x.id === aid);
-        const parId = aid.split('.')[0];
         return `<button type="button" data-open-dossier="${esc(aid)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono font-semibold text-xs text-[var(--link)] cursor-pointer">${sn ? esc(sn.gene) + ' &middot; ' : ''}${esc(aid)} &rarr;</button>`;
       }
       const cp = DATA_PORT.find(x => x.id === aid);
       const shortNm = cp ? (cp.sym || cp.name.replace(/^(?:Low-Dose|Ultrahigh-Dose|Stage-Gated)\\s+/i,'').split(/[\\s(/]/)[0]) : '';
       return `<button type="button" data-open-dossier="${esc(aid)}" title="${cp ? esc('#' + cp.rk + ' ' + cp.name + ' (' + cp.id + ')') : esc(aid)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono font-semibold text-xs text-[var(--link)] cursor-pointer">${cp ? '#' + cp.rk + ' ' : ''}${shortNm ? esc(shortNm) + ' &middot; ' : ''}${esc(aid)} &rarr;</button>`;
-    }).join(' ');
+    };
+    const orderedIds = q ? [...u.ids].sort((a, b) => {
+      const ca = DATA_PORT.find(x => x.id === a), cb = DATA_PORT.find(x => x.id === b);
+      const ma = queryMatchesIdOrText([a], q, a + ' ' + (ca ? ca.name + ' ' + (ca.sym || '') : '')) ? 0 : 1;
+      const mb = queryMatchesIdOrText([b], q, b + ' ' + (cb ? cb.name + ' ' + (cb.sym || '') : '')) ? 0 : 1;
+      return ma - mb;
+    }) : u.ids;
+    const idPills = orderedIds.length > 12
+      ? orderedIds.slice(0, 10).map(makeIdPill).join(' ') + `<details class="w-full mt-0.5"><summary class="cursor-pointer font-mono text-xs text-[var(--link)] select-none">Show all ${orderedIds.length} audited programs (+${orderedIds.length - 10} more)</summary><div class="flex flex-wrap items-center gap-1 mt-1.5">${orderedIds.slice(10).map(makeIdPill).join(' ')}</div></details>`
+      : orderedIds.map(makeIdPill).join(' ');
     const ancPills = u.ancs.map(anc => {
       const attr = anc.startsWith('EV-') ? `data-open-rep-ev="${esc(anc)}"` : `data-open-rep-run="${esc(anc)}"`;
       return `<button type="button" ${attr} class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer" title="Inspect statistical model &amp; code in Tab 4">${esc(anc)} &rarr;</button>`;
