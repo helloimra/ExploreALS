@@ -312,6 +312,8 @@ def verify_phase4_gates(
                 "assert_contrast_pair enforced", "in HERV-K+ ALS", "slowing vs historical controls",
                 "Updated Nov 2026 (v1.2.6)", "Updated Nov 2026 (v1.2.8)", "Updated Nov 2026 (v1.2.9)", "199 / 199", "199 Evidence", "Phase 3 RAS-ALS",
                 "Ryberg et al. 2003 J Neurochem", "deaths 49/175", "8.94x",
+                "RESTORE-ALS", "sST2 intervention has ever been tested,",
+                "Sarm1-/- lowered plasma pNfH", "Sarm1-/- lowered pNfH",
             ):
                 if banned in htxt:
                     errors.append(f"Dossier Schema 3.0 regression in {lbl}: found banned string '{banned}'")

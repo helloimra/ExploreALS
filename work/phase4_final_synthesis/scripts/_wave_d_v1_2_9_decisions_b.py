@@ -79,8 +79,8 @@ def apply_wave_d_decision_patches_b(dm: dict[str, dict[str, str]]) -> None:
 
     dm["S05"].update({
         "evidence_disproves_hypothesis": (
-            "Falsified on three independent axes (0/107 in Bye 2025 screen): (1) Directional paradox: human GGTase-III (PTAR1/RABGGTB, PDB 6J74 PMID:32128853) strictly requires prior FTase Cys195 farnesylation to geranylgeranylate YKT6 Cys194 (pan-essential DepMap Chronos=-1.5425), "
-            "so FTIs block YKT6 maturation and worsen TDP-43-driven YKT6 APA (padj=4.57e-40) + PTAR1 170-bp Exon-2 frameshifting skip (chr9:69750781-69750950(-), mod_3=2, dPSI=+0.1563, FDR=3.26e-6); "
+            "Falsified on three independent axes (0/107 in Bye 2025 screen): (1) Directional paradox: although sub-stoichiometric FTI (LNK-754) relieved alpha-synuclein-trapped closed YKT6 in PD models (Cuddy et al. 2019 PMID:31648898), human GGTase-III (PTAR1/RABGGTB, PDB 6J74 PMID:32128853; Sakata et al. 2021 PMID:33035318) strictly requires prior FTase Cys195 farnesylation to geranylgeranylate YKT6 Cys194 for Golgi/lysosomal trafficking (pan-essential DepMap Chronos=-1.5425), "
+            "so in TDP-43-depleted ALS neurons already suffering YKT6 APA (padj=4.57e-40) + PTAR1 170-bp Exon-2 frameshift skipping (chr9:69750781-69750950(-), mod_3=2, dPSI=+0.1563, FDR=3.26e-6), FTIs worsen YKT6 diprenylation failure; "
             "(2) Unbound CNS PK deficit: Lonafarnib (NDA213969, MW 638.82, PPB>=99%) achieves Cmax,u<=42.2 nM at 150 mg/m2 BID and [MODEL_PRIOR] Cu,brain ~2.1-8.4 nM vs 70-500 nM cellular IC50 (Tipifarnib [MODEL_PRIOR] Cu,brain ~2-13 nM vs 2-75 nM sensitive-substrate IC50); "
             "(3) ALS-hostile human toxicity: Zokinvy Table 4 (N=63) records 90% vomiting, 81% diarrhea, 37% weight loss (prognostically lethal in ALS), 35% myelosuppression, +19 ms QTcF, and strong CYP3A autoinhibition, while Tipifarnib causes Grade 3/4 myelosuppression and neuropathy."
         ),

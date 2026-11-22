@@ -36,14 +36,14 @@ const CHEMBL_COMPOUNDS = new Set([
   'CHEMBL3752910','CHEMBL3989871','CHEMBL41355','CHEMBL4297372','CHEMBL4297643','CHEMBL4297672','CHEMBL5653589','CHEMBL589',
   'CHEMBL621','CHEMBL744','CHEMBL778','CHEMBL807','CHEMBL83','CHEMBL866'
 ]);
-const ACC_TOKEN_RE = /(?<![A-Za-z0-9])(?:PMID:(\\d{5,9})|(PMC\\d{6,9})|(?:DOI:\\s*)?(10\\.\\d{4,9}\\/[^\\s,;\\]\\u00b7&<>"]+)|(NCT\\d{8})|(ACTRN\\d{14})|ISRCTN(\\d{8})|PDB\\s+([0-9][A-Za-z0-9]{3})|(7DJT|9TZY|7ANW|7NAL|7CR2|4KC3|2Z0D|3NMR|2DNH|6VN8|1XFD|7K2V|3KYQ|6J74|3EGD|3V5Z|6VCD|6C1R|1MQS|1Y9J|1PK6|5O33|2OOQ|5YPO|6TNQ|1DUX|4XYJ)|(CHEMBL\\d+)|CID:(\\d+)|(ENS[GT]\\d{11})(?:\\.\\d+)?|HGNC:(\\d+)|MGI:(\\d+)|OMIM\\s+(\\d{6})|AF-([A-Z0-9]{6,10})-F\\d+|(O14490|O14522|O15498|O43526|O60229|O60674|O75396|O95249|P02745|P02746|P02747|P19419|P23458|P25686|P42779|P46459|P50395|P60568|Q01638|Q01813|Q13190|Q6SZW1|Q7L622|Q8N6W0|Q8WUY3|Q8WVM8|Q8WVT3|Q93045|Q9UKA1|Q9UPW8|Q9Y4P1)|(gnomAD\\s+(?:v4(?:\\.1)?|r4|v2\\.1\\.1))|(GSE\\d{4,8})|(PXD\\d{5,8})|(PRJNA\\d{5,9})|(syn\\d{6,10})|(rs\\d{3,12}))(?![A-Za-z0-9])/g;
+const ACC_TOKEN_RE = /(?<![A-Za-z0-9])(?:PMID:(\\d{5,9})|(PMC\\d{6,9})|(?:DOI:\\s*)?(10\\.\\d{4,9}\\/[^\\s,;\\]\\u00b7&<>"]+)|(NCT\\d{8})|(ACTRN\\d{14})|ISRCTN(\\d{8})|((?:WO20\\d{8}|US\\d{7,11})(?:[A-Z]\\d?)?)|PDB\\s+([0-9][A-Za-z0-9]{3})|(7DJT|9TZY|7ANW|7NAL|7CR2|4KC3|2Z0D|3NMR|2DNH|6VN8|1XFD|7K2V|3KYQ|6J74|3EGD|3V5Z|6VCD|6C1R|1MQS|1Y9J|1PK6|5O33|2OOQ|5YPO|6TNQ|1DUX|4XYJ)|(CHEMBL\\d+)|CID:(\\d+)|(ENS[GT]\\d{11})(?:\\.\\d+)?|HGNC:(\\d+)|MGI:(\\d+)|OMIM\\s+(\\d{6})|AF-([A-Z0-9]{6,10})-F\\d+|(O14490|O14522|O15498|O43526|O60229|O60674|O75396|O95249|P02745|P02746|P02747|P19419|P23458|P25686|P42779|P46459|P50395|P60568|Q01638|Q01813|Q13190|Q6SZW1|Q7L622|Q8N6W0|Q8WUY3|Q8WVM8|Q8WVT3|Q93045|Q9UKA1|Q9UPW8|Q9Y4P1)|(gnomAD\\s+(?:v4(?:\\.1)?|r4|v2\\.1\\.1))|(GSE\\d{4,8})|(PXD\\d{5,8})|(PRJNA\\d{5,9})|(syn\\d{6,10})|(rs\\d{3,12}))(?![A-Za-z0-9])/g;
 
 function mkExtA(url, lbl){
   return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-[var(--link)] underline decoration-dotted underline-offset-2 hover:decoration-solid">${lbl}</a>`;
 }
 function linkifyAcc(escapedStr, geneCtx){
   if(!escapedStr) return '';
-  return String(escapedStr).replace(ACC_TOKEN_RE, (full, pmid, pmc, doi, nct, actrn, isrctn, pdbPref, pdbBare, chembl, cid, ens, hgnc, mgi, omim, af, uniprot, gnomad, gse, pxd, prjna, syn, rsid) => {
+  return String(escapedStr).replace(ACC_TOKEN_RE, (full, pmid, pmc, doi, nct, actrn, isrctn, pat, pdbPref, pdbBare, chembl, cid, ens, hgnc, mgi, omim, af, uniprot, gnomad, gse, pxd, prjna, syn, rsid) => {
     if(pmid) return mkExtA('https://pubmed.ncbi.nlm.nih.gov/' + pmid + '/', full);
     if(pmc) return mkExtA('https://pmc.ncbi.nlm.nih.gov/articles/' + pmc + '/', full);
     if(doi){
@@ -62,6 +62,7 @@ function linkifyAcc(escapedStr, geneCtx){
     if(nct) return mkExtA('https://clinicaltrials.gov/study/' + nct, full);
     if(actrn) return mkExtA('https://www.anzctr.org.au/TrialSearch.aspx?searchTxt=' + actrn, full);
     if(isrctn) return mkExtA('https://www.isrctn.com/ISRCTN' + isrctn, full);
+    if(pat) return mkExtA('https://patents.google.com/patent/' + pat, full);
     if(pdbPref || pdbBare) return mkExtA('https://www.rcsb.org/structure/' + (pdbPref || pdbBare), full);
     if(chembl){
       if(chembl === 'CHEMBL1741221') return mkExtA('https://www.ebi.ac.uk/chembl/explore/target/' + chembl, full);

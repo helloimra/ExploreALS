@@ -6,7 +6,6 @@
     "10.1038/s41586-026-08912-4",
     "10.1038/s41586-026-10912-3",
     "10.1038/s41588-026-02189-3",
-    "NCT05695521",
     "NCT05868837",
     "NCT06069687",
     "NCT06123456",
@@ -798,8 +797,8 @@
       "pmid": "37238921",
       "title": "Discovery of Biomarkers for Amyotrophic Lateral Sclerosis from Human Cerebrospinal Fluid Using Mass-Spectrometry-Based Proteomics.",
       "pubdate": "2023 Apr 23",
-      "source": "Biomedicines",
-      "first_author": "Oh S"
+      "first_author": "Oh S",
+      "journal": "Biomedicines"
     },
     "37267913": {
       "first_author": "Morimoto S",
@@ -1267,8 +1266,8 @@
       "pmid": "31566909",
       "title": "Plasma Proteome Profiling to detect and avoid sample-related biases in biomarker studies.",
       "pubdate": "2019 Nov 7",
-      "source": "EMBO Mol Med",
-      "first_author": "Geyer PE"
+      "first_author": "Geyer PE",
+      "journal": "EMBO Mol Med"
     },
     "18326497": {
       "first_author": "Lee SG",
@@ -1407,6 +1406,132 @@
       "pubdate": "2021 Jul 30",
       "journal": "Science",
       "title": "Drug-induced phospholipidosis confounds drug repurposing for SARS-CoV-2."
+    },
+    "35863521": {
+      "title": "Sarm1 knockout modifies biomarkers of neurodegeneration and spinal cord circuitry but not disease progression in the mSOD1(G93A) mouse model of ALS.",
+      "pubdate": "2022 Oct 1",
+      "first_author": "Collins JM",
+      "journal": "Neurobiol Dis"
+    },
+    "31661035": {
+      "title": "Sarm1 deletion suppresses TDP-43-linked motor neuron degeneration and cortical spine loss.",
+      "pubdate": "2019 Oct 28",
+      "first_author": "White MA",
+      "journal": "Acta Neuropathol Commun"
+    },
+    "38124145": {
+      "title": "Genetic ablation of Sarm1 attenuates expression and mislocalization of phosphorylated TDP-43 after mouse repetitive traumatic brain injury.",
+      "pubdate": "2023 Dec 20",
+      "first_author": "Dogan EO",
+      "journal": "Acta Neuropathol Commun"
+    },
+    "39791335": {
+      "title": "Genetic Ablation of Sarm1 Mitigates Disease Acceleration after Traumatic Brain Injury in the SOD1(G93A) Transgenic Mouse Model of Amyotrophic Lateral Sclerosis.",
+      "pubdate": "2025 May",
+      "first_author": "Dogan EO",
+      "journal": "Ann Neurol"
+    },
+    "35994671": {
+      "title": "Selective inhibitors of SARM1 targeting an allosteric cysteine in the autoregulatory ARM domain.",
+      "pubdate": "2022 Aug 30",
+      "first_author": "Feldman HC",
+      "journal": "Proc Natl Acad Sci U S A"
+    },
+    "36736291": {
+      "title": "SYF2 suppression mitigates neurodegeneration in models of diverse forms of ALS.",
+      "pubdate": "2023 Feb 2",
+      "first_author": "Linares GR",
+      "journal": "Cell Stem Cell"
+    },
+    "42446992": {
+      "title": "Repurposing trazodone for Alzheimer's disease to modulate soluble ST2 levels and alleviate Alzheimer's pathology.",
+      "pubdate": "2026 Jul 21",
+      "first_author": "Wong DYK",
+      "journal": "Proc Natl Acad Sci U S A"
+    },
+    "30705990": {
+      "title": "Long-term interleukin-33 treatment delays disease onset and alleviates astrocytic activation in a transgenic mouse model of amyotrophic lateral sclerosis.",
+      "pubdate": "2019 Jun",
+      "first_author": "Korhonen P",
+      "journal": "IBRO Rep"
+    },
+    "41256508": {
+      "title": "Integrative multiomic analysis links TDP-43-driven splicing defects to cascading proteomic disruption of ALS/FTD pathways.",
+      "pubdate": "2025 Nov 1",
+      "first_author": "Kozareva V",
+      "journal": "bioRxiv"
+    },
+    "24023695": {
+      "title": "Molecular chaperone mediated late-stage neuroprotection in the SOD1(G93A) mouse model of amyotrophic lateral sclerosis.",
+      "pubdate": "2013",
+      "first_author": "Novoselov SS",
+      "journal": "PLoS One"
+    },
+    "37905864": {
+      "title": "SCFD1 in amyotrophic lateral sclerosis: reconciling a genetic association with in vivo functional analysis.",
+      "pubdate": "2024 Jun 1",
+      "first_author": "Cauchi RJ",
+      "journal": "Neural Regen Res"
+    },
+    "31648898": {
+      "title": "Stress-Induced Cellular Clearance Is Mediated by the SNARE Protein ykt6 and Disrupted by α-Synuclein.",
+      "pubdate": "2019 Dec 4",
+      "first_author": "Cuddy LK",
+      "journal": "Neuron"
+    },
+    "22003390": {
+      "title": "Iron insufficiency compromises motor neurons and their mitochondrial function in Irp2-null mice.",
+      "pubdate": "2011",
+      "first_author": "Jeong SY",
+      "journal": "PLoS One"
+    },
+    "29400714": {
+      "title": "Haploinsufficiency leads to neurodegeneration in C9ORF72 ALS/FTD human induced motor neurons.",
+      "pubdate": "2018 Mar",
+      "first_author": "Shi Y",
+      "journal": "Nat Med"
+    },
+    "34233951": {
+      "title": "Genome-encoded cytoplasmic double-stranded RNAs, found in C9ORF72 ALS-FTD brain, propagate neuronal loss.",
+      "pubdate": "2021 Jul 7",
+      "first_author": "Rodriguez S",
+      "journal": "Sci Transl Med"
+    },
+    "41832177": {
+      "title": "TYK2 mediates neuroinflammation in Alzheimer's disease brains with TDP-43 pathology.",
+      "pubdate": "2026 Mar 14",
+      "first_author": "König LE",
+      "journal": "Nat Commun"
+    },
+    "31655003": {
+      "title": "Cu(II) (atsm) inhibits ferroptosis: Implications for treatment of neurodegenerative disease.",
+      "pubdate": "2020 Feb",
+      "first_author": "Southon A",
+      "journal": "Br J Pharmacol"
+    },
+    "41777232": {
+      "title": "ALSUntangled #82: N-acetylcysteine.",
+      "pubdate": "2026 Aug",
+      "first_author": "Yerraguntla S",
+      "journal": "Amyotroph Lateral Scler Frontotemporal Degener"
+    },
+    "38183652": {
+      "first_author": "Guise AJ",
+      "journal": "Cell Rep",
+      "pubdate": "2024 Jan 23",
+      "title": "TDP-43-stratified single-cell proteomics of postmortem human spinal motor neurons reveals protein dynamics in amyotrophic lateral sclerosis."
+    },
+    "33035318": {
+      "first_author": "Sakata N",
+      "journal": "J Biochem",
+      "pubdate": "2021 Apr 18",
+      "title": "Double prenylation of SNARE protein Ykt6 is required for lysosomal hydrolase trafficking."
+    },
+    "41573891": {
+      "first_author": "Gomberg TA",
+      "journal": "bioRxiv",
+      "pubdate": "2025 Dec 3",
+      "title": "Dual-targeting snRNA gene therapy rescues STMN2 and UNC13A splicing in TDP-43 proteinopathies."
     }
   },
   "ncts": {
@@ -2079,6 +2204,38 @@
       "conditions": [
         "Brain and Central Nervous System Tumors"
       ]
+    },
+    "NCT04220190": {
+      "title": "RAPA-501 Therapy for ALS",
+      "status": "RECRUITING"
+    },
+    "NCT05695521": {
+      "title": "Regulatory T Cells for Amyotrophic Lateral Sclerosis",
+      "status": "ACTIVE_NOT_RECRUITING"
+    },
+    "NCT04055623": {
+      "title": "T-regulatory Cells in ALS",
+      "status": "COMPLETED"
+    },
+    "NCT03359538": {
+      "title": "Rapamycin Treatment for ALS",
+      "status": "COMPLETED"
+    },
+    "NCT04297683": {
+      "title": "HEALEY ALS Platform Trial - Master Protocol",
+      "status": "ACTIVE_NOT_RECRUITING"
+    },
+    "NCT06510816": {
+      "title": "A Study Investigating the Efficacy and Safety of Intravitreal (IVT) Injections of Vonaprument (Formerly ANX007) in Participants With Dry Age-Related Macular Degeneration (AMD) With Geographic Atrophy (GA)",
+      "status": "ACTIVE_NOT_RECRUITING"
+    },
+    "NCT05521269": {
+      "title": "Dose Study of ANX1502 in Healthy Volunteers",
+      "status": "COMPLETED"
+    },
+    "NCT06976268": {
+      "title": "A Study to Determine if BHV-8000 is Effective, Safe and Tolerable as a Treatment for Adults Living With Early Parkinson's Disease",
+      "status": "RECRUITING"
     }
   },
   "dois": {

@@ -59,23 +59,24 @@ BIO_EVIDENCE_PRIORITY: list[str] = [
 ]
 
 CROWDING_CLASS_MAP: dict[str, str] = {
-    "S06": "3 Ph1/2 Trials (2 Orthosteric · 1 Allosteric SIR2501)",
-    "C006": "0 ASO Trials (2 Kv7 Openers)",
-    "S07": "Ph3 Stratum Open (pNfH-Gated)",
-    "C001": "2 Clinical Assets (4 Registry Protocols)",
-    "C002": "Pivotal IND + Ph1/2 Active",
-    "C007": "0 CNS Trials",
-    "DN-01": "0 Active ALS Trials",
-    "DN-04": "0 Active ALS Trials",
+    "S06": "4 Ph1/2 Trials (incl. NB-9402 HV) + ASHA-624 Preclinical",
+    "C006": "0 ASO Trials (WO2022266468A1 · 2 Kv7 Openers)",
+    "S07": "ILTOO ILT-101 Licensed (WO2021176044A1) · COYA 302 Ph2/3",
+    "C001": "2 Clinical ASOs (4 Protocols) + Dual AAV-U7",
+    "C002": "Pivotal CONQUR IND + Ph1/2 + Dual AAV-U7",
+    "C007": "0 ALS Trials (AD sST2 Patent US20240376452A1)",
+    "DN-01": "0 Active ALS Trials (Preclinical ASO 3J)",
+    "DN-04": "0 Active ALS Trials (U7 Patent WO2023237638A1)",
+    "DN-02": "Stanford S25-325 / Trace Preclinical ASO (0 Trials)",
     "DN-05": "0 Active ALS Trials",
     "C022": "0 Active ALS Trials",
     "C015": "0 Clinical Ligands",
     "C023": "0 Clinical Ligands",
-    "C014": "0 Clinical Ligands",
+    "C014": "IND-Enabling CHMP7 ASO (Ionis/JHU WO2022072787A1)",
     "S09": "HEALEY Ph2/3 Selected (Ph2a C9 NCT04993755)",
-    "C018": "CNS IT Open (IV C3 Failed)",
-    "C019": "Open-Label Ph2 PK (NCT05189106)",
-    "C020": "Pulsed Hypothesis (QD/BID Failed)",
+    "C018": "IV C1q Ph2a NCT04569435 · Ph3 Ocular Fab ANX007",
+    "C019": "Open-Label Ph2 (NCT05189106) · BHV-8000 TYK2/JAK1",
+    "C020": "QD/BID Failed · AS-202 PIKFYVE ASO (Pulsed Untested)",
     "S02": "Discontinued (Ph2/3 Unreported)",
     "DN-14": "Ph1a/1b SC Completed (ACTRN12622000927729)",
     "DN-17": "1 Combo Ph2 (NAC+EH301 NCT07414212)",
@@ -116,11 +117,11 @@ PHASE3A_NEXT_TEST_OVERRIDES: dict[str, str] = {
     "S07": (
         "(1) Complete pre-Phase-3 CLSI EP09c (N>=40 paired ALS CSFs spanning the measuring interval) Passing-Bablok analytical bridging from MIROCALS BioVendor ELISA CSF pNfH (~79th percentile, <=3,700 pg/mL visually defined from baseline distribution blinded to survival: n=173/220 [78.6% LP / 173/304 = 56.9% screened; n=19 <750 LLOQ with 0 deaths + n=154 750-3,700 HR=0.52 p=0.016], pooled HR=0.57 p=0.037 vs >3,700 n=47 [33/90 deaths] HR=1.37 p=0.38; unadjusted ITT HR=0.81 p=0.33, continuous interaction p=0.0011, ALSFRS-R slope interaction F=3.95 p=0.048, PMID:40354799) to automated CLIA immunoassays (Ella/Euroimmun/Simoa/MSD; resolving ~1.8x-4.5x inter-platform calibrator offsets, PMID:31251725, PMID:29054919; cf. MSD ECLIA cited in Al Khleifat et al. 2026 J Neurol PMID:42836993 where TRICALS shares r^2=12.7% with CSF pNfH and nested pNfH x trt dChi2=14.24 vs TRICALS x trt dChi2=4.76), plus paired immunoassay validation before substituting blood NfL or pNfH for CSF pNfH (noting Trautwig 2025 PMC12082929 tryptic CSF MS NEFL-NEFH r=0.278 across n=77 DIA / n=51 overlapping Emory TMT vs clinical immunoassay serum NfL-CSF pNfH rho=0.64-0.71 PMID:38683209 and serum NfL outperforming serum pNfH on ALSFRS-R slope PMID:32385188; post-hoc NX210c SEALS NCT06365216 NfL<=95 pg/mL p=0.062); "
         "(2) Treat Phase 2/3 ALSTARS (NCT07161999, N=137 enrolled, prospectively stratified across 3 baseline serum NfL tiers on 24-wk ALSFRS-R) as mechanistically distinct because COYA 302 pairs 1 MIU rhIL-2 with 125 mg CTLA4-Ig (q14d synchronous Regimen 2 PMID:38915796 vs q28d staggered Regimen 1; <0.5% BBB entry, CD28 blockade PMID:30683697/PMID:36920087 vs IL-2 STAT5 rescue PMID:42086904; note MIROCALS sustained Day-112 trough Tregs p<0.0001 and plasma CCL2 p<0.05 [p<0.0001 at Days 8 & 120] across a 23-d IL-2-free cycle) without baseline CSF pNfH exclusion or a single-agent IL-2 comparator arm; "
-        "(3) Execute an event-driven biomarker-enriched Phase 3 ALS survival RCT powered for 247 deaths at assumed true HR=0.70 (80% two-sided alpha=0.05 superiority power, critical boundary HR_crit=0.779 [50% probability of observed HR<=0.70 at true HR=0.70]; 138 deaths at HR=0.62 [MODEL_PRIOR]; N~650-750 over 36-42 mo variable follow-up or N~850-1,050 at 24 mo, <5% vital-status censoring, accounting for 0 deaths in <750 pg/mL n=19/220 MIROCALS LLOQ floor and pre-specifying complementary TRICALS + log[CSF pNfH] covariates — whereas hypothetical unbridged 1.8x-4.5x lower-reading CSF cutoffs admit 74-99% of >3,700 pg/mL patients and reduce 247-death one-sided superiority power to ~43-50% if HR_high=1.00 or ~14-23% if HR_high=1.37 [MODEL_PRIOR]) with longitudinal Treg TSDR (PMID:17694575), CD56bright NK, and serum sCD25 (PMID:32651161; PMID:22343569) monitoring."
+        "(3) Execute an event-driven biomarker-enriched Phase 3 ALS survival RCT powered for 247 deaths at assumed true HR=0.70 (80% two-sided alpha=0.05 superiority power, critical boundary HR_crit=0.779 [50% probability of observed HR<=0.70 at true HR=0.70]; 138 deaths at HR=0.62 [MODEL_PRIOR]; N~650-750 over 36-42 mo variable follow-up or N~850-1,050 at 24 mo, <5% vital-status censoring, accounting for 0 deaths in <750 pg/mL n=19/220 MIROCALS LLOQ floor and pre-specifying complementary TRICALS + log[CSF pNfH] covariates — whereas hypothetical unbridged 1.8x-4.5x lower-reading CSF cutoffs admit 74-99% of >3,700 pg/mL patients and reduce 247-death two-sided alpha=0.05 [one-sided alpha=0.025] directional superiority power to ~43-50% if HR_high=1.00 or ~14-23% if HR_high=1.37 [MODEL_PRIOR]) with longitudinal Treg TSDR (PMID:17694575), CD56bright NK, and serum sCD25 (PMID:32651161; PMID:22343569) monitoring."
     ),
     "C022": (
         "(1) Quantify cytosolic DNAJB2a vs Intron-9-retaining ER-prenylated DNAJB2b precursor ratios by targeted PRM/RT-ddPCR in sporadic ALS vs control human spinal cord (beyond n=10 C9-FTD frontal cortex; 0/6 TDP-43 cryptic/APA events and 25/25 shared-exon ClinVar P/LP vs 0/25 in Zone A; gating zero-sum ERAD DNAJB2b depletion risk); "
-        "(2) Benchmark intrathecal pan-CNS/oligodendrocyte-tropic AAV-DNAJB2a cDNA replacement (ENST00000392086.8, 277 aa, cellular HSJ1a precedent PMID:26936937; rodent Ly6a CAP-B10 caveat) directly against an internal Intron-9 2'-O-MOE ISS/IPA-competition microwalk restricted to chr2:219284988-219285939(+) (sparing 5'SS, Zone A CDS, and BP/PPT/3'SS chr2:219285940-219285986(+) whose blockade would force DNAJB2b) with mature DNAJB2b 3'-UTR stability and BiP/HSPA5 + CHOP/DDIT3 ER-stress counter-screens in sALS iPSC-MN/oligo co-cultures."
+        "(2) Benchmark intrathecal pan-CNS/oligodendrocyte-tropic AAV-DNAJB2a cDNA replacement (ENST00000392086.8, 277 aa, in vivo hHSJ1a SOD1G93A MN/force rescue without lifespan extension PMID:24023695 & cellular TDP-43 clearance PMID:26936937; rodent Ly6a CAP-B10 caveat) directly against an internal Intron-9 2'-O-MOE ISS/IPA-competition microwalk restricted to chr2:219284988-219285939(+) (sparing 5'SS, Zone A CDS, and BP/PPT/3'SS chr2:219285940-219285986(+) whose blockade would force DNAJB2b) with mature DNAJB2b 3'-UTR stability and BiP/HSPA5 + CHOP/DDIT3 ER-stress counter-screens in sALS iPSC-MN/oligo co-cultures."
     ),
     "C015": (
         "(1) Exclude Alu-derived G2E3 Intron-1 windows from 3-plex SSO (#1 chr14:30563747-30563764(+) & #2 chr14:30563930-30563947(+) FAIL_EXACT_0MM_OFFTARGET; #3 chr14:30563939-30563956(+) WARN_1MM_OR_WOBBLE_CONSTRAINED_NEURONAL ELOC); "
