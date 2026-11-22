@@ -363,7 +363,7 @@ function renderPortfolio(){
     return `<tr tabindex="0" data-select-cand="${esc(r.id)}" aria-selected="${r.id===selectedId?'true':'false'}" class="cursor-pointer focus:bg-[var(--content)] ${active}">
       <td class="py-2 px-2 font-mono tabular-nums whitespace-nowrap text-[var(--muted-foreground)]" title="Translational Priority #${r.rk} · Genetic & Pathology Evidence #${r.brk}"><div>${rkPrimary}</div>${rkSecondary}</td>
       <td class="py-2 px-1.5 font-mono text-xs text-[var(--muted-foreground)] whitespace-nowrap" title="ExploreALS Accession ${esc(r.id)}">${esc(r.id)}</td>
-      <td class="py-2 px-2"><div class="font-medium flex flex-wrap items-center gap-1"><span>${esc(r.name)}</span>${metaChips}</div><div class="text-[var(--muted-foreground)] text-xs">${esc(humanizeEnum(r.sub))} &middot; ${trackLabel(r.trk)}</div></td>
+      <td class="py-2 px-2"><div class="flex flex-wrap items-center gap-1"><strong class="font-bold text-[var(--foreground)]">${esc(r.name)}</strong>${metaChips}</div><div class="text-[var(--muted-foreground)] text-xs">${esc(humanizeEnum(r.sub))} &middot; ${trackLabel(r.trk)}</div></td>
       <td class="hidden xl:table-cell py-2 px-2 text-xs text-[var(--muted-foreground)] max-w-[220px] break-words" title="${esc(formatModality(r.mod))}">${esc(shortMod(r.mod))}</td>
       <td class="py-2 px-1.5">${decBadge(r.dec, r.id)}</td>
       <td class="hidden lg:table-cell py-2 px-1.5 text-xs whitespace-nowrap">${esc(shortTier(r.tier))}</td>
