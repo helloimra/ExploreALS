@@ -15,6 +15,7 @@ if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 from _phase4_helpers import (  # noqa: E402
+    DROP_MODEL_PRIOR_MAP,
     EXPLORE_BENCHMARK_SPECS,
     PHASE3A_NEXT_TEST_OVERRIDES,
     PROMOTED_LEADS,
@@ -161,7 +162,8 @@ def main() -> None:
                 "gene_or_drug": d["name"], "candidate_type": ctype, "primary_modality_specific": pmod,
                 "epistemic_state": epi, "decision": dec, "scientific_actionability_tier": "BIOMARKER_BENCHMARK_ONLY",
                 "clinical_readiness_trl": "PROTOCOL_COMPANION_NA", "next_gate_experimental_class": gclass,
-                "primary_evidence_basis": ebasis, "model_prior_dependency": "NONE",
+                "primary_evidence_basis": ebasis,
+                "model_prior_dependency": DROP_MODEL_PRIOR_MAP.get(cid, "NONE"),
                 "unsolved_hurdle_count": str(hcnt), "unsolved_hurdles_structured": hstr,
                 "lead_cis_interval_id": "NONE", "lead_offtarget_safety_status": "NONE",
                 "key_quantitative_anchor": f"[MEASURED] {d['factual_justification']}", "discriminating_next_test": nxt,
@@ -175,7 +177,8 @@ def main() -> None:
                 "candidate_type": classify_explore_type(cid, it, dec), "primary_modality_specific": pmod,
                 "epistemic_state": epi, "decision": dec, "scientific_actionability_tier": "DROPPED_FALSIFIED_EXCLUDED",
                 "clinical_readiness_trl": "PROTOCOL_COMPANION_NA", "next_gate_experimental_class": "NOT_APPLICABLE_FALSIFIED",
-                "primary_evidence_basis": ebasis, "model_prior_dependency": "NONE",
+                "primary_evidence_basis": ebasis,
+                "model_prior_dependency": DROP_MODEL_PRIOR_MAP.get(cid, "NONE"),
                 "unsolved_hurdle_count": "0", "unsolved_hurdles_structured": "NONE",
                 "lead_cis_interval_id": "NONE", "lead_offtarget_safety_status": "NONE",
                 "key_quantitative_anchor": f"[MEASURED] {d['factual_justification']}",

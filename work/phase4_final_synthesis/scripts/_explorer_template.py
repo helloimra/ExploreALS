@@ -70,16 +70,16 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--primary)] text-[var(--primary)] font-mono font-semibold text-xs">START HERE &middot; OVERVIEW &amp; SCOPE</span>
-              <span class="font-mono text-xs text-[var(--muted-foreground)]">Updated Nov 2026 (v1.2.5)</span>
+              <span class="font-mono text-xs text-[var(--muted-foreground)]">Updated Nov 2026 (v1.2.9)</span>
             </div>
             <h2 class="text-sm font-semibold text-[var(--foreground)]">How 52 ALS Hypotheses Map Across Evidence, Validation Steps &amp; Trial Readouts</h2>
-            <p class="text-xs text-[var(--muted-foreground)] leading-snug">Synthesizes donor-level statistics (<span class="font-mono">8</span> participant-overlap clusters, <span class="font-mono">194</span> checksum-anchored statistical contrasts across <span class="font-mono">41</span> unique data/output digests; zero new wet-lab data), unbound human brain PK, and GENCODE v46 off-target scans across four triage verdicts:</p>
+            <p class="text-xs text-[var(--muted-foreground)] leading-snug">Synthesizes donor-level statistics (<span class="font-mono">8</span> participant-overlap clusters, <span class="font-mono">202</span> checksum-anchored statistical contrasts across <span class="font-mono">46</span> unique data/output digests; zero new wet-lab data), unbound human brain PK, and GENCODE v46 off-target scans across four triage verdicts:</p>
             <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--warning)] space-y-1">
               <div class="font-mono font-semibold text-xs text-[var(--foreground)]">Four Evidence &amp; Triage Verdicts (<span class="font-mono">Untested &ne; Falsified</span>)</div>
               <ul class="space-y-0.5 text-xs leading-snug">
                 <li><span class="font-mono font-semibold text-[var(--success)]">Keep &middot; Core (4):</span> Supported by human ALS genetics and/or TDP-43 rescue with a CNS-viable modality.</li>
                 <li><span class="font-mono font-semibold text-[var(--warning)]">Keep &middot; Exploratory (25):</span> Unresolved due to bulk-assay, dosing, or cohort blind spots &mdash; paired with 1 Go/No-Go test.</li>
-                <li><span class="font-mono font-semibold text-[var(--primary)]">Benchmark / Biomarker (7):</span> Approved standard-of-care comparator or fluid staging panel.</li>
+                <li><span class="font-mono font-semibold text-[var(--primary)]">Benchmark / Biomarker (7):</span> Approved SOC comparator (2), withdrawn PD calibrator (1), validated CSF staging panel (1), or candidate CSF marker (3).</li>
                 <li><span class="font-mono font-semibold text-[var(--error)]">Drop &middot; Falsified (16):</span> Counter-evidenced at the tested regimen/exposure by human ALS RCT futility (<span class="font-mono">9</span>), brain PK/safety limits (<span class="font-mono">7</span>), or assay confounding (<span class="font-mono">0</span>).</li>
               </ul>
             </div>
@@ -127,7 +127,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
             <div>
               <div class="flex flex-wrap items-center gap-2">
                 <h2 class="text-sm font-semibold text-[var(--foreground)]">Living Research Log</h2>
-                <span id="upd-count" class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono tabular-nums text-xs text-[var(--muted-foreground)]">8 / 8</span>
+                <span id="upd-count" class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono tabular-nums text-xs text-[var(--muted-foreground)]">12 / 12</span>
               </div>
               <p class="text-xs text-[var(--muted-foreground)] mt-0.5 leading-snug">Chronological ledger of post-release clinical trial readouts, newly published studies, and quantitative PK-PD/survival model revisions.</p>
             </div>
@@ -183,11 +183,11 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
         <select id="p-origin" aria-label="Filter by biological evidence source" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
           <option value="ALL">Evidence Source: All (52)</option>
           <option value="GENETICS_MENDELIAN_GWAS">Human ALS Genetics &mdash; Mendelian &amp; GWAS (5)</option>
-          <option value="TDP43_SPLICING_APA">TDP-43 Cryptic Splicing &amp; Polyadenylation (11)</option>
+          <option value="TDP43_SPLICING_APA">TDP-43 Cryptic Splicing &amp; Polyadenylation (12)</option>
           <option value="CNS_TISSUE_OMICS">Human CNS Spatial, snRNA &amp; Subcellular Omics (5)</option>
-          <option value="CSF_AND_PHYSIOLOGY">Living-Patient CSF Proteomics &amp; Physiology (5)</option>
+          <option value="CSF_AND_PHYSIOLOGY">Living-Patient CSF Proteomics &amp; Physiology (6)</option>
           <option value="CLINICAL_TRIALS_SUBGROUPS">Human ALS Clinical Trials &amp; Subgroups (13)</option>
-          <option value="IPSC_PHENOTYPIC_SCREEN">Patient iPSC-MN Phenotypic Screen (13)</option>
+          <option value="IPSC_PHENOTYPIC_SCREEN">Patient iPSC-MN Phenotypic Screen (11)</option>
         </select>
         <select id="p-dec" aria-label="Filter by triage verdict" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
           <option value="ALL">Triage Verdict: All (52)</option>
@@ -337,7 +337,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
             <span class="font-mono font-semibold text-xs text-[var(--success)]">LEVEL 1 &middot; CACHED GATES (&lt;10s &middot; 0 MB)</span>
             <span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">Offline Ready</span>
           </div>
-          <p class="text-[var(--muted-foreground)] text-xs leading-snug">Clones the &lt;18 MB repository, installs pinned Python 3.12 dependencies (<span class="font-mono">uv.lock</span>), and verifies all 18 CSV schemas, foreign keys, primary citations, decision rules, and 194 recorded 64-char SHA-256 digests (<span class="font-mono">41</span> unique anchors; <span class="font-mono">64/194</span> bundled in clean checkout, <span class="font-mono">194/194</span> with staged data).</p>
+          <p class="text-[var(--muted-foreground)] text-xs leading-snug">Clones the &lt;18 MB repository, installs pinned Python 3.12 dependencies (<span class="font-mono">uv.lock</span>), and verifies all 18 CSV schemas, foreign keys, primary citations, decision rules, and 202 recorded 64-char SHA-256 digests (<span class="font-mono">46</span> unique anchors; <span class="font-mono">65/202</span> bundled in clean checkout, <span class="font-mono">202/202</span> with staged data).</p>
           <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] flex items-center justify-between gap-2 font-mono text-xs">
             <span class="truncate">uv sync --frozen &amp;&amp; uv run python scripts/verify_explore_als.py --mode cached</span>
             <button type="button" data-copy-cmd="git clone https://github.com/helloimra/ExploreALS.git &amp;&amp; cd ExploreALS &amp;&amp; uv sync --frozen &amp;&amp; uv run python scripts/verify_explore_als.py --mode cached" class="px-2 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] shrink-0 cursor-pointer">Copy</button>
@@ -400,7 +400,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
         <div class="flex flex-wrap gap-1.5" role="group" aria-label="Replication Workbench Mode">
           <button type="button" data-rep-mode="runs" class="rep-mode-btn px-2.5 py-1.5 rounded border font-mono text-xs cursor-pointer">8 Flagship + 50 Runs (58)</button>
           <button type="button" data-rep-mode="datasets" class="rep-mode-btn px-2.5 py-1.5 rounded border font-mono text-xs cursor-pointer">Staged Datasets (40)</button>
-          <button type="button" data-rep-mode="evidence" class="rep-mode-btn px-2.5 py-1.5 rounded border font-mono text-xs cursor-pointer">194 Evidence SHA-256 &amp; Formulas</button>
+          <button type="button" data-rep-mode="evidence" class="rep-mode-btn px-2.5 py-1.5 rounded border font-mono text-xs cursor-pointer">202 Evidence SHA-256 &amp; Formulas</button>
         </div>
         <input id="rep-search" aria-label="Search replication workbench" type="text" placeholder="Search Run ID, DS ID, candidate, formula, SHA-256, script..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs flex-1 min-w-[200px] text-[var(--foreground)]" />
         <select id="rep-filter" aria-label="Filter replication workbench" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]"></select>
@@ -431,7 +431,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
             <button type="button" data-dl-reg="portfolio" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; Portfolio (52 CSV)</button>
             <button type="button" data-dl-reg="intervals" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; Splice Windows (26 CSV)</button>
             <button type="button" data-dl-reg="subnodes" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; Subunit Cards (18 CSV)</button>
-            <button type="button" data-dl-reg="formulas" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; 194 Evidence &amp; Formulas (CSV)</button>
+            <button type="button" data-dl-reg="formulas" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; 202 Evidence &amp; Formulas (CSV)</button>
             <button type="button" data-dl-reg="datasets" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; 42 Datasets SHA-256 (CSV)</button>
             <button type="button" data-dl-reg="runs" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; 50 Runs + 8 Flagship (CSV)</button>
             <button type="button" data-dl-reg="overlap" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; 8 Cohort Overlaps (CSV)</button>
@@ -442,14 +442,14 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
         <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2">
           <div class="flex items-center justify-between gap-2 flex-wrap">
             <h3 class="text-sm font-semibold">Cryptographic Hash Coverage &amp; Open-Access Redistribution</h3>
-            <span class="font-mono text-xs text-[var(--success)]">194 / 194 (100%) 64-char SHA-256</span>
+            <span class="font-mono text-xs text-[var(--success)]">202 / 202 (100%) 64-char SHA-256</span>
           </div>
           <div class="grid grid-cols-3 gap-2 font-mono text-xs">
-            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">Staged Datasets</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">130 <span class="text-xs font-normal text-[var(--muted-foreground)]">(42 DS)</span></div></div>
-            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">API Snapshots</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">56 <span class="text-xs font-normal text-[var(--muted-foreground)]">(JSON)</span></div></div>
+            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">Staged Datasets</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">137 <span class="text-xs font-normal text-[var(--muted-foreground)]">(42 DS)</span></div></div>
+            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">API Snapshots</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">57 <span class="text-xs font-normal text-[var(--muted-foreground)]">(JSON)</span></div></div>
             <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">Model Outputs</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">8 <span class="text-xs font-normal text-[var(--muted-foreground)]">(ODE/MWC)</span></div></div>
           </div>
-          <p class="text-[var(--muted-foreground)] text-xs leading-snug">All <span class="font-mono">194</span> contrast rows carry 64-char SHA-256 digests across <span class="font-mono">41</span> unique file/directory anchors (<span class="font-mono">64/194</span> bundled in clean git checkout; <span class="font-mono">194/194</span> locally matched when all <span class="font-mono">42</span> resources are staged). Legal redistribution split across <span class="font-mono">674.16 MB</span> (<span class="font-mono">642.93 MiB</span>): <strong class="text-[var(--foreground)]">Tier A</strong> (<span class="font-mono">CC0/CC-BY</span> open release + git maps), <strong class="text-[var(--foreground)]">Tier B</strong> (direct publisher/EuropePMC HTTPS fetch, zero re-hosting of <span class="font-mono">CC BY-NC-ND</span> supplements), and <strong class="text-[var(--foreground)]">Tier C</strong> (<span class="font-mono">SYNAPSE_AUTH_TOKEN</span> registered consortium access). Cis-regulatory target windows report 1-based GRCh38 coordinates only.</p>
+          <p class="text-[var(--muted-foreground)] text-xs leading-snug">All <span class="font-mono">202</span> contrast rows carry 64-char SHA-256 digests across <span class="font-mono">46</span> unique file/directory anchors (<span class="font-mono">65/202</span> bundled in clean git checkout; <span class="font-mono">202/202</span> locally matched when all <span class="font-mono">42</span> resources are staged). Legal redistribution split across <span class="font-mono">674.16 MB</span> (<span class="font-mono">642.93 MiB</span>): <strong class="text-[var(--foreground)]">Tier A</strong> (<span class="font-mono">CC0/CC-BY</span> open release + git maps), <strong class="text-[var(--foreground)]">Tier B</strong> (direct publisher/EuropePMC HTTPS fetch, zero re-hosting of <span class="font-mono">CC BY-NC-ND</span> supplements), and <strong class="text-[var(--foreground)]">Tier C</strong> (<span class="font-mono">SYNAPSE_AUTH_TOKEN</span> registered consortium access). Cis-regulatory target windows report 1-based GRCh38 coordinates only.</p>
         </div>
       </div>
 

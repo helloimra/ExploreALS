@@ -137,15 +137,22 @@ def analyze_dnajb2_and_c1q_structures(cache_dir: Path) -> dict[str, Any]:
         for c1, c2 in (("A", "B"), ("A", "C"), ("B", "C"))
     }
     c1q_af: dict[str, dict[str, Any]] = {}
-    for gsym, uni, clr_hi in (("C1QA", "P02745", 109), ("C1QB", "P02746", 114), ("C1QC", "P02747", 112)):
+    for gsym, uni, clr_lo, clr_hi in (
+        ("C1QA", "P02745", 23, 109),
+        ("C1QB", "P02746", 28, 114),
+        ("C1QC", "P02747", 29, 112),
+    ):
         af_st = load_mmcif_structure(cache_dir / f"afdb_{uni}" / f"AF-{uni}-F1-model_v6.cif")
         ca = [a for a in af_st.polymer_atoms if a.atom_name == "CA" and a.seq_id]
-        clr = [a for a in ca if 28 <= (a.seq_id or 0) <= clr_hi]
+        clr = [a for a in ca if clr_lo <= (a.seq_id or 0) <= clr_hi]
+        clr_to_114 = [a for a in ca if clr_lo <= (a.seq_id or 0) <= 114]
         hd = [a for a in ca if (a.seq_id or 0) > clr_hi]
         c1q_af[gsym] = {
             "uniprot": uni,
+            "mature_clr_bounds_1b": f"{clr_lo}-{clr_hi}",
             "clr_mean_plddt": round(float(np.mean([a.b_iso_or_plddt for a in clr])), 2),
             "clr_cationic_arg_lys_count": sum(1 for a in clr if a.comp_id in {"ARG", "LYS"}),
+            "clr_to_aa114_arg_lys_count": sum(1 for a in clr_to_114 if a.comp_id in {"ARG", "LYS"}),
             "gc1q_head_mean_plddt": round(float(np.mean([a.b_iso_or_plddt for a in hd])), 2),
         }
     return {
@@ -166,5 +173,6 @@ def analyze_dnajb2_and_c1q_structures(cache_dir: Path) -> dict[str, Any]:
             "pdb_1pk6_inter_subunit_residue_pairs_le_4p5A": {**pairs_4p5, "total": sum(pairs_4p5.values())},
             "afdb_clr_stalk_vs_gc1q_head": c1q_af,
             "total_clr_stalk_cationic_arg_lys": sum(x["clr_cationic_arg_lys_count"] for x in c1q_af.values()),
+            "total_clr_stalk_to_aa114_arg_lys": sum(x["clr_to_aa114_arg_lys_count"] for x in c1q_af.values()),
         },
     }

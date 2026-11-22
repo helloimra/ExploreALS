@@ -1,0 +1,100 @@
+{
+  "schema": "ExploreALS_v1.2.9_Wave_D_Primary_Clinical_PK_Audit",
+  "retrieved_utc": "2026-11-22T01:10:00Z",
+  "ev_p3b_030_maob_trials": {
+    "double_blind_placebo_controlled_rcts": [
+      {
+        "nct": "NCT01879241",
+        "pmid": "29934198",
+        "study": "RAS-ALS (Ludolph et al. 2018 Lancet Neurol)",
+        "regimen": "Rasagiline 1 mg/d PO + riluzole vs placebo + riluzole (18 mo)",
+        "n_randomized": 252,
+        "n_itt": 251,
+        "arms": "126 rasagiline vs 125 placebo",
+        "primary_survival_prob": "0.43 vs 0.53 (HR=0.91, p=0.31; primary log-rank null)",
+        "follow_ups": [
+          "PMID:37975796 (Witzel 2024 null longitudinal NfL)",
+          "PMID:38240416 (Schuster 2024 null MAOB SNP interaction)"
+        ]
+      },
+      {
+        "nct": "NCT01786603",
+        "pmid": "30192007",
+        "study": "Statland et al. 2019 Muscle Nerve",
+        "regimen": "Rasagiline 2 mg/d PO vs placebo (3:1, 12 mo)",
+        "n_randomized": 80,
+        "arms": "60 rasagiline vs 20 concurrent placebo (+177 historical placebo)",
+        "outcome": "ALSFRS-R slope -1.00 vs -1.26 pts/mo (non-significant vs concurrent & historical controls)"
+      },
+      {
+        "pmid": "9443715",
+        "study": "Lange et al. 1998 Arch Neurol",
+        "regimen": "Selegiline 10 mg/d PO vs placebo (6 mo)",
+        "n_randomized": 133,
+        "arms": "67 selegiline vs 66 placebo",
+        "outcome": "Appel ALS total score rate +3.4 vs +3.5 pts/mo (non-significant)"
+      }
+    ],
+    "open_label_unblinded_trials": [
+      {
+        "pmid": "8195821",
+        "study": "Mazzini et al. 1994 Ital J Neurol Sci",
+        "design": "Open-label unblinded randomized vs untreated control (no placebo)",
+        "n_randomized": 111,
+        "arms": "53 selegiline 10 mg/d vs 58 untreated",
+        "outcome": "No significant clinical progression difference"
+      }
+    ],
+    "human_brain_pet_occupancy": {
+      "pmid": "16204711",
+      "tracer": "[11C]-L-deprenyl-D2",
+      "occupancy": ">85-90% irreversible human brain MAOB saturation at 0.5-2 mg/d"
+    }
+  },
+  "ev_p3b_031_lamotrigine_and_nav_class": {
+    "ryberg_2003_crossover_pk_pd": {
+      "pmid": "12807386",
+      "design": "Randomized double-blind placebo-controlled crossover with paired lumbar punctures",
+      "regimen": "Lamotrigine 300 mg/d PO",
+      "n_participants": 30,
+      "measured_unbound_csf_uM": "7-15 uM (3-6x above Bye 2025 2.5 uM screen)",
+      "csf_pd_outcome": "Null reduction in living-ALS CSF glutamate, aspartate, and branched-chain amino acids; 0/4 clinical scales improved"
+    },
+    "eisen_1993_parallel_rct": {
+      "pmid": "7906190",
+      "regimen": "Lamotrigine 100 mg/d PO vs placebo (18 mo)",
+      "n_randomized": 67,
+      "deaths_observed": "12 total (6 vs 6; underpowered standalone survival count)"
+    },
+    "oral_nav_class_als_rcts": [
+      {
+        "drug": "Mexiletine",
+        "pmid": "26911633",
+        "n": 60,
+        "outcome": "300/600 mg/d null on 12-wk ALSFRS-R decline"
+      },
+      {
+        "drug": "Flecainide",
+        "pmid": "26844270",
+        "n": 54,
+        "outcome": "FANS 32-wk RCT null on primary axonal excitability & ALSFRS-R"
+      }
+    ]
+  },
+  "ev_p3b_032_coq10_qals_rct": {
+    "nct": "NCT00243932",
+    "pmid": "19743457",
+    "pmcid": "PMC2854625",
+    "study": "QALS Phase II two-stage adaptive futility RCT (Kaufmann et al. 2009 Ann Neurol Table 3)",
+    "n_total": 185,
+    "stage1_dose_selection": "n=35 at 1,800 mg/d vs n=35 at 2,700 mg/d (2,700 mg/d selected)",
+    "stage2_futility_comparison": {
+      "n_analyzed": 150,
+      "arms": "75 CoQ10 2,700 mg/d vs 75 placebo over 9 months",
+      "primary_alsfrsr_9mo_decline": "8.80 (SD 7.34) vs 9.44 (SD 8.82); bias-adjusted diff -1.25, 1-sided 90% CI upper <0.22, p=0.14",
+      "month9_deaths_imputation_artifact": "5 deaths on CoQ10 vs 1 death on placebo at Month 9 coded as 0 decline (5 vs 3 by Month 10)",
+      "prespecified_death_score_16_sensitivity": "8.52 vs 8.37 decline, p=0.025 < 0.10 prespecified futility threshold (13/17 death scores 4-16 futile; linear slope p=0.097)",
+      "gi_absorption_ceiling": "Table 2 & Ferrante et al. 2005 PMID:16344537 show plasma CoQ10 plateau (~7-9 uM) between 1,800 and 2,700 mg/d"
+    }
+  }
+}

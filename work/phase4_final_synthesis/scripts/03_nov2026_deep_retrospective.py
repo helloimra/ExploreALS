@@ -26,7 +26,7 @@ OUT_FP = ROOT / "work" / "phase4_final_synthesis" / "outputs" / "run_p4_003_nov2
 
 
 def _compute_staged_splicing_and_sarm1() -> dict[str, Any]:
-    br = load_brown2022_splicing(genes=["UNC13A", "DNAJB2"])
+    br = load_brown2022_splicing(genes=["UNC13A", "DNAJB2", "PTAR1"])
     jdf, rdf, bdf = br["junctions_df"], br["rnaseq_df"], br["riboseq_df"]
     u_j = jdf[jdf[resolve_col(jdf, "gene_name")] == "UNC13A"].copy()
     ce_row = u_j[u_j["paste_into_igv_exon"].astype(str).str.contains("17642414-17642591", na=False)].sort_values("FDR").iloc[0]
@@ -36,6 +36,10 @@ def _compute_staged_splicing_and_sarm1() -> dict[str, Any]:
 
     d_rna = rdf[rdf[resolve_col(rdf, "gene_name")] == "DNAJB2"].iloc[0]
     d_ribo = bdf[bdf[resolve_col(bdf, "gene_name")] == "DNAJB2"].iloc[0]
+    p_j = jdf[jdf[resolve_col(jdf, "gene_name")] == "PTAR1"].copy()
+    p_skip = p_j[p_j["junc_cat"] == "novel_exon_skip"].iloc[0]
+    p_rna = rdf[rdf[resolve_col(rdf, "gene_name")] == "PTAR1"].iloc[0]
+    p_ribo = bdf[bdf[resolve_col(bdf, "gene_name")] == "PTAR1"].iloc[0]
     pdb_map = {
         k: resolve_dataset_path(f"DS_PDB_{k}", verify_hash=True)
         for k in ("7ANW", "7DJT", "7NAL", "9TZY")
@@ -71,6 +75,22 @@ def _compute_staged_splicing_and_sarm1() -> dict[str, Any]:
             "brown2022_i3neuron_rnaseq_padj": round(float(d_rna["padj"]), 6),
             "brown2022_i3neuron_riboseq_log2fc": round(float(d_ribo["log2FoldChange"]), 5),
             "brown2022_i3neuron_riboseq_padj": round(float(d_ribo["padj"]), 6),
+        },
+        "c023_ptar1_majiq_exon_skip": {
+            "dataset_id": "DS_CRYPTIC",
+            "lsv_id": str(p_skip["lsv_id"]),
+            "skipped_exon_1b": "chr9:69750781-69750950(-)",
+            "skipped_exon_length_bp": 170,
+            "skipped_exon_mod3": 2,
+            "skip_junction_1b": f"chr9:{int(p_skip['junc_start'])}-{int(p_skip['junc_end'])}(-)",
+            "control_psi": round(float(p_skip["control_e_psi"]), 5),
+            "tdp_kd_psi": round(float(p_skip["tdp_kd_e_psi"]), 5),
+            "delta_psi": round(float(p_skip["deltaPSI"]), 5),
+            "fdr": float(f"{float(p_skip['FDR']):.6e}"),
+            "brown2022_i3neuron_rnaseq_log2fc": round(float(p_rna["log2FoldChange"]), 5),
+            "brown2022_i3neuron_rnaseq_padj": round(float(p_rna["padj"]), 6),
+            "brown2022_i3neuron_riboseq_log2fc": round(float(p_ribo["log2FoldChange"]), 5),
+            "brown2022_i3neuron_riboseq_padj": round(float(p_ribo["padj"]), 6),
         },
     }
 

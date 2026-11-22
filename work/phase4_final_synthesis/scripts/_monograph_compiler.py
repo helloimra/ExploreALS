@@ -87,7 +87,18 @@ def compile_monograph_bundle(
         assert not re.search(r"\bD003\b|\bD045\b|\bDS045\b|Phase\s*3A|intake|typo", res_blob, re.I), (
             f"{cid} {row['evidence_id']}: internal code leaked in resolved row: {res_blob}"
         )
+        if resolved.get("ds"):
+            exp_sha12 = ds_map[resolved["ds"]]["sha256"][:12]
+            assert resolved["sha"] == exp_sha12, (
+                f"{cid} {row['evidence_id']}: ds={resolved['ds']} sha12 {resolved['sha']} != {exp_sha12}"
+            )
         ev_by_id[cid].append(resolved)
+        if row["evidence_id"] == "EV-P2-T3-006" and "EALS-033" in ev_by_id:
+            ev_by_id["EALS-033"].append(resolved)
+        elif row["evidence_id"] == "EV-B5-010" and "EALS-008" in ev_by_id:
+            ev_by_id["EALS-008"].append(resolved)
+        elif row["evidence_id"] in {"EV-B2-007", "EV-B2-008"} and "EALS-029" in ev_by_id:
+            ev_by_id["EALS-029"].append(resolved)
     return mono_map, ev_by_id
 
 

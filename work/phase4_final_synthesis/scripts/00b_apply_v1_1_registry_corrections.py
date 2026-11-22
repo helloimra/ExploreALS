@@ -3,8 +3,18 @@ from __future__ import annotations
 
 import csv
 from pathlib import Path
+import sys
 
 ROOT = Path(__file__).resolve().parents[3]
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from _wave_b_v1_2_7_ev_sub import apply_wave_b_ev_and_sub_patches  # noqa: E402
+from _wave_b_v1_2_7_ev_sub_b import apply_wave_b_ev_and_sub_part_b  # noqa: E402
+from _wave_c_v1_2_8_evidence_subnodes import apply_wave_c_ev_and_sub_patches  # noqa: E402
+from _wave_d_v1_2_9_evidence_a import apply_wave_d_evidence_part_a  # noqa: E402
+from _wave_d_v1_2_9_evidence_b import apply_wave_d_evidence_part_b  # noqa: E402
 REG_DIR = ROOT / "registries"
 TS = "2026-11-16T09:15:00Z"
 
@@ -76,9 +86,13 @@ def main() -> None:
         "WashU & UMilan contributed 63 ALS, 0 Controls",
         "UMilan contributed 31 ALS / 0 Controls and WashU contributed 26 ALS + 2 Controls + 4 asymptomatic carriers",
     )
+    ev_map["EV-B2-014"].update({
+        "assay_and_contrast": "MAJIQ TDP-43-dependent frameshifting 170-bp Exon-2 skip in PTAR1 (GGTase-III alpha)",
+        "effect_estimate": "PTAR1 novel_exon_skip group E(PSI) 0.156->0.369 (MAJIQ shrunk dPSI=+0.1563, 170-bp Exon 2 chr9:69750781-69750950(-) mod_3=2; canonical dPSI=-0.1563, p_d_psi_0.10=0.6995)",
+    })
     ev_map["EV-B3-020"].update({
         "effect_estimate": "MERIDIAN Week 52 CAFS rank LS mean diff -3.0 (123.0 vs 126.0, 95% CI -19.5 to +13.5); C3 LOEUF=0.552",
-        "notes": "N=249 enrolled / N=247 mITT analyzed: SC pegcetacoplan (1,080 mg BIW, ~43.5 kDa PEGylated peptide, <0.1% intact-BBB entry, Liver C3=1,575.28 TPM sink) missed Week 52 primary CAFS rank score (123.0 [SE 4.71] vs 126.0 [SE 6.89], ANCOVA LS mean diff -3.0, p=0.7205) and all secondary endpoints alongside Phase 3 CHAMPION-ALS ravulizumab (NCT04248465) & Phase 2/3 HEALEY zilucoplan (NCT04436497, PMID:39960672) futility.",
+        "notes": "N=249 enrolled / N=247 mITT analyzed: SC pegcetacoplan (1,080 mg BIW, ~43.5 kDa PEGylated peptide, <0.1% intact-BBB entry, Liver C3=1,575.28 TPM sink) missed Week 52 primary CAFS rank score (123.0 [SE 4.71] vs 126.0 [SE 6.89], ANCOVA LS mean diff -3.0, p=0.7205) and all secondary endpoints alongside Phase 3 CHAMPION-ALS ravulizumab (NCT04248465, PMID:37695623) & Phase 2/3 HEALEY zilucoplan (NCT04436497, PMID:39960672) futility.",
     })
     ev_map["EV-B3-022"].update({
         "cohort_and_stratum": "Zhang 2026 human cervical spinal cord 55-um multicellular TDP-43+ anterior horn Visium spots (N=14 donors)",
@@ -139,27 +153,24 @@ def main() -> None:
         "effect_estimate": "DIA r=0.2779 (31.17% p80 discordance, 75.0% [12/16] top-quintile MS NEFH missed; overlapping Emory TMT n=51 misses 60.0% [6/10]); HR=0.70 needs 247 deaths at 80% power (138 at HR=0.62 [MODEL_PRIOR])",
         "notes": "Trautwig 2025 measures tryptic CSF MS total NEFH/NEFL abundance (where KSP phosphorylation attenuates tryptic correlation vs clinical immunoassay serum NfL-CSF pNfH rho=0.64-0.71 PMID:38683209, paired CSF-serum pNfH r=0.652 PMID:29054919, and serum NfL outperforming serum pNfH on ALSFRS-R slope PMID:32385188); commercial pNfH platforms span ~1.8x-4.5x calibrator offsets (PMID:31251725; cf. BioVendor ELISA in PMID:40354799 vs MSD ECLIA in PMID:42836993), where hypothetical unbridged 1.8x-4.5x higher CSF cutoffs over-exclude 36.5-86.3% of <=3,700 pg/mL eligibles while lower cutoffs admit 73.7-98.9% of >3,700 pg/mL patients (2.13x observed death-rate ratio: 33/47 vs 57/173), reducing 247-death one-sided superiority power from 80.0% to ~43.0-50.2% if HR_high=1.00 or ~14.0-23.1% if HR_high=1.37 [MODEL_PRIOR] and motivating CLSI EP09c (N>=40) split-aliquot Passing-Bablok bridging. [Sample context: 77 paired DIA ALS donors; technical cross-platform check in 51 overlapping Emory TMT ALS donors]",
     })
-    _save("evidence_ledger.csv", ev_cols, ev_rows)
-
-    # 2. subnode_dissection.csv
+    # 2. subnode_dissection.csv + Wave B v1.2.7 patches
+    it_cols, it_rows = _load("candidate_intake_ledger.csv")
     sn_cols, sn_rows = _load("subnode_dissection.csv")
     for s in sn_rows:
         if s["subnode_id"] == "C015-N2":
-            s["druggability_check"] = (
-                "PDB 4M7N (catalytically inactive human G2E3 HECT-like domain crystal structure) + AF-Q7L622-F1 (mean pLDDT=85.60); "
-                "0 ChEMBL bioactivities; catalytically active PHD/RING domains lack chemical matter."
-            )
             s["subnode_verdict"] = s["subnode_verdict"].replace(
                 "+ favorable DepMap non-essentiality (Chronos=-0.018)",
                 "(dividing cancer-line DepMap Chronos=-0.018 despite human LoF constraint LOEUF=0.50 & mouse blastocyst lethality)",
             )
-        elif s["subnode_id"] in {"C015-N3", "C023-N1"}:
-            s["druggability_check"] = (
-                "PDB 3KYQ (2.44A) shows Tyr64 (pLDDT=94.81) makes direct 3.46A contact to lipid DPV201 inside the cytosolic Longin prenyl-binding groove (4.29A from Cys66) "
-                "that regulates Cys195-farnesyl / Cys194-geranylgeranyl membrane-opening switches (PMID:32128853); 0 ligands, with risk of sterically ejecting Cys195-farnesyl or freezing closed cytosolic YKT6 in >99.9% WT sALS."
-            )
+    apply_wave_b_ev_and_sub_patches(it_rows, ev_map, sn_rows)
+    apply_wave_b_ev_and_sub_part_b(ev_map, sn_rows)
+    apply_wave_c_ev_and_sub_patches(it_rows, ev_map, sn_rows)
+    apply_wave_d_evidence_part_a(it_rows, ev_map)
+    apply_wave_d_evidence_part_b(ev_map)
+    _save("candidate_intake_ledger.csv", it_cols, it_rows)
+    _save("evidence_ledger.csv", ev_cols, ev_rows)
     _save("subnode_dissection.csv", sn_cols, sn_rows)
-    print("Stage 2A (evidence_ledger + subnode_dissection) OK")
+    print("Stage 2A (candidate_intake_ledger + evidence_ledger + subnode_dissection) OK")
 
 
 if __name__ == "__main__":

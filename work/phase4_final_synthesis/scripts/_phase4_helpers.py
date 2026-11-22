@@ -34,14 +34,25 @@ EVIDENCE_BASIS_ORDER = {
     "MEASURED_HUMAN_SPATIAL_OR_SNRNA": 4,
     "MEASURED_HUMAN_CSF_PROTEOMICS": 5,
     "MEASURED_HUMAN_PK_AND_IPSC_SCREEN": 6,
+    "MEASURED_HUMAN_PK_AND_SAFETY": 6,
     "PROTOCOL_STAGE_GATING_ONLY": 7,
+}
+
+DROP_MODEL_PRIOR_MAP: dict[str, str] = {
+    "C013": "COARSE_PRIOR_ONLY:Pgp_BCRP_effluxed_Kpuu_le_1_unbound_human_CNS_peak_15_to_30nM_from_NDA020599_Cu_plasma_22.2_to_29.6nM",
+    "C009": "COARSE_PRIOR_ONLY:Modeled_Kpuu_0.65_on_FDA_fup_0.05_to_0.11",
+    "C011": "COARSE_PRIOR_ONLY:OAT3_MRP4_efflux_Kpuu_lt_0.05_on_NDA016273_fup",
+    "C021": "COARSE_PRIOR_ONLY:Modeled_fup_and_Kpuu_beyond_measured_35.2_to_61.0nM_total_plasma_Cmax",
+    "S03": "COARSE_PRIOR_ONLY:Anionic_MPA_efflux_Kpuu_on_NDA050722_fup_0.03",
+    "S04": "COARSE_PRIOR_ONLY:Passive_Kpuu_le_1_and_CAD_lysosomal_partitioning_on_NDA021807_fup",
+    "S05": "COARSE_PRIOR_ONLY:Pgp_attenuated_Kpuu_on_NDA213969_fup_le_0.01",
 }
 
 # Curated editorial biological-evidence priority list across non-dropped entries (human genetics/pathology > multi-omic > CSF > screen)
 BIO_EVIDENCE_PRIORITY: list[str] = [
     "C001", "C002", "S06", "C006", "S07", "DN-01", "C022", "C023", "C015",
-    "DN-04", "DN-05", "C014", "C007", "DN-09", "DN-03", "DN-06",
-    "DN-07", "DN-02", "DN-08", "S09", "C018", "C016",
+    "DN-04", "DN-05", "C014", "C007", "DN-02", "DN-03", "DN-09",
+    "DN-08", "DN-07", "DN-06", "S09", "C018", "C016",
     "C019", "C020", "S02", "DN-14", "DN-17", "DN-19",
     "C005",
     "C013", "S08", "C003", "C017", "DN-10", "DN-11", "DN-12",
@@ -61,26 +72,27 @@ CROWDING_CLASS_MAP: dict[str, str] = {
     "C015": "0 Clinical Ligands",
     "C023": "0 Clinical Ligands",
     "C014": "0 Clinical Ligands",
-    "S09": "1 Ph2a C9 Trial (NCT04993755)",
+    "S09": "HEALEY Ph2/3 Selected (Ph2a C9 NCT04993755)",
     "C018": "CNS IT Open (IV C3 Failed)",
     "C019": "Open-Label Ph2 PK (NCT05189106)",
-    "C020": "Pulsed Hypothesis (BID Failed)",
+    "C020": "Pulsed Hypothesis (QD/BID Failed)",
     "S02": "Discontinued (Ph2/3 Unreported)",
+    "DN-14": "Ph1a/1b SC Completed (ACTRN12622000927729)",
     "DN-17": "1 Combo Ph2 (NAC+EH301 NCT07414212)",
     "DN-19": "0 Controlled sALS Trials",
     "C005": "N/A (Functional Calibrator)",
     "C013": "N/A (SOC / PD Benchmark)",
     "S08": "N/A (SOC / PD Benchmark)",
-    "C003": "N/A (SOC / PD Benchmark)",
-    "C017": "N/A (Fluid Biomarker)",
-    "DN-10": "N/A (Fluid Biomarker)",
-    "DN-11": "N/A (Fluid Biomarker)",
-    "DN-12": "N/A (Fluid Biomarker)",
+    "C003": "Withdrawn (QRL-101 6 Ph1s Active)",
+    "C017": "N/A (Validated CSF Staging Panel)",
+    "DN-10": "N/A (Candidate CSF Marker)",
+    "DN-11": "N/A (Candidate CSF Marker)",
+    "DN-12": "N/A (Candidate CSF Marker)",
 }
 
 EXPLORE_BENCHMARK_SPECS: dict[str, tuple[str, str, str, str, int, str]] = {
     "C013": ("BENCHMARK_DRUG", "Oral_Riluzole_50mg_BID_NaV1_6_Persistent_INaP_Positive_Benchmark", "CLINICAL_PROTOCOL_STANDARDIZATION", "MEASURED_HUMAN_PK_AND_IPSC_SCREEN", 0, "NONE"),
-    "S08": ("BENCHMARK_DRUG", "Intramuscular_50mg_Methylcobalamin_Early_Stage_LE12m_SOC_Benchmark", "CLINICAL_PROTOCOL_STANDARDIZATION", "MEASURED_HUMAN_RCT_SUBGROUP", 0, "NONE"),
+    "S08": ("BENCHMARK_DRUG", "Intramuscular_50mg_Methylcobalamin_Rozebalamin_Japan_MHLW_SOC_Benchmark", "CLINICAL_PROTOCOL_STANDARDIZATION", "MEASURED_HUMAN_RCT_SUBGROUP", 0, "NONE"),
     "C003": ("BENCHMARK_DRUG", "Withdrawn_Ezogabine_Kv7_2_7_3_Cortical_TMS_SICI_and_SDTC_PD_Calibrator", "CLINICAL_PROTOCOL_STANDARDIZATION", "MEASURED_HUMAN_PK_AND_IPSC_SCREEN", 0, "NONE"),
     "C017": ("BIOMARKER_CSF", "Living_CSF_rs3831317_Adjusted_CHIT1_GPNMB_CHI3L1_CHI3L2_Staging_and_Glia_Panel", "TRANSLATIONAL_BIOMARKER_OR_PH1B_PKPD_GATE", "MEASURED_HUMAN_CSF_PROTEOMICS", 1, "PROSPECTIVE_LONGITUDINAL_PD_SLOPE_CALIBRATION_UNDER_RS3831317_GENOTYPING"),
 }
@@ -108,27 +120,27 @@ PHASE3A_NEXT_TEST_OVERRIDES: dict[str, str] = {
     ),
     "C022": (
         "(1) Quantify cytosolic DNAJB2a vs Intron-9-retaining ER-prenylated DNAJB2b precursor ratios by targeted PRM/RT-ddPCR in sporadic ALS vs control human spinal cord (beyond n=10 C9-FTD frontal cortex; 0/6 TDP-43 cryptic/APA events and 25/25 shared-exon ClinVar P/LP vs 0/25 in Zone A; gating zero-sum ERAD DNAJB2b depletion risk); "
-        "(2) Benchmark exogenous cytosolic DNAJB2a CAP-B10 AAV/mRNA replacement (ENST00000392086.8, 277 aa, Exon 10 chr2:219285987-219286898(+)) directly against a nuclear Intron-9 3'SS/branchpoint (chr2:219285880..219285986) vs full 1,151-bp Intron 9 chr2:219284836-219285986(+) 2'-O-MOE SSO microwalk (avoiding cytoplasmic DNAJB2b Zone A CDS ribosome-arrest decay) with BiP/HSPA5 + CHOP/DDIT3 ER-stress counter-screens in sALS iPSC-MN/oligo co-cultures."
+        "(2) Benchmark intrathecal pan-CNS/oligodendrocyte-tropic AAV-DNAJB2a cDNA replacement (ENST00000392086.8, 277 aa, cellular HSJ1a precedent PMID:26936937; rodent Ly6a CAP-B10 caveat) directly against an internal Intron-9 2'-O-MOE ISS/IPA-competition microwalk restricted to chr2:219284988-219285939(+) (sparing 5'SS, Zone A CDS, and BP/PPT/3'SS chr2:219285940-219285986(+) whose blockade would force DNAJB2b) with mature DNAJB2b 3'-UTR stability and BiP/HSPA5 + CHOP/DDIT3 ER-stress counter-screens in sALS iPSC-MN/oligo co-cultures."
     ),
     "C015": (
         "(1) Exclude Alu-derived G2E3 Intron-1 windows from 3-plex SSO (#1 chr14:30563747-30563764(+) & #2 chr14:30563930-30563947(+) FAIL_EXACT_0MM_OFFTARGET; #3 chr14:30563939-30563956(+) WARN_1MM_OR_WOBBLE_CONSTRAINED_NEURONAL ELOC); "
         "(2) Run bidirectional CRISPRi/CRISPRa and allele-specific prime-editing dissection of chr14q12 SCFD1 vs G2E3 across paired isogenic human iPSC-MNs and LPS-stimulated human iMGL measuring ER-Golgi secretory and lysosomal-enzyme trafficking (given SuSiE purityMeanR2=0.988 & EUR-vs-xAnc GWAS COLOC H4=0.958 alongside 1000G Phase 3 EUR 96.7% [351/363] vs AFR 72.7% [853/1,173; 320 mixed] 1111 A-haplotype purity across rs229243-A, x-anc lead rs229195-A [PIP=0.240], rs229194-A, and MN ISL1-peak rs229143-A, paired with MN +0.048 vs iMGL -0.22 to -0.33 [PP_H4=0.88-0.89] SCFD1 opposition in Perez-Alcantara 2026 Nat Genet PMID:43045849, with SCFD1 Chronos=-1.26 barring pan-CNS knockdown)."
     ),
     "C023": (
-        "(1) Execute allele-split 19F-NMR/DSF ternary pocket-stabilizer screening in rare (<0.1%) YKT6 p.Tyr64Cys knock-in human iPSC-MNs (PDB 3KYQ -85.1 A^3 cavity + 3.46A Cys64-Cys66 disulfide trap), verifying ternary [YKT6-Cys195-farnesyl + fragment] co-occupancy without ejecting endogenous Cys195-farnesyl or blocking PTAR1; "
-        "(2) In >99.9% WT YKT6 sALS, test exterior Longin exosite stabilizers or PTAR1 exon-skipping rescue while counter-screening cis-Golgi SNARE assembly (STX5/GOSR1/SEC22B/NSF)."
+        "(1) Execute allele-split 19F-NMR/DSF ternary pocket-stabilizer screening in rare (<0.1% ALS; gnomAD NFE AF=0.071%) YKT6 p.Tyr64Cys (rs138273846, chr7:44206388:A>G, AVI=24.53) knock-in human iPSC-MNs (rat DPC-bound PDB 3KYQ +85.1 A^3 cavity expansion + 3.46A Cys64-Cys66 disulfide trap PMID:20159557 vs human open PDB 6J74 PMID:32128853), verifying ternary [YKT6-Cys195-farnesyl + fragment] co-occupancy without ejecting endogenous Cys195-farnesyl or blocking PTAR1; "
+        "(2) In >99.9% WT YKT6 sALS, test exterior Longin exosite stabilizers or PTAR1 170-bp Exon-2 skipping rescue (chr9:69750781-69750950(-)) while counter-screening cis-Golgi SNARE assembly (STX5/GOSR1/SEC22B/NSF)."
     ),
     "C018": (
-        "(1) Engineer ECM-anchored half-life-extended intrathecal anti-gC1q Fab/nanobody (PDB 1PK6 1.85A globular head PMID:12960167) vs intrathecal microglial C1QA/B ASO/di-siRNA (depleting both gC1q opsonin head and AFDB aa 28-114 cationic CLR stalk [26 Arg/Lys residues]; rejecting IV BBB-shuttled IgG due to 180 nM serum C1q sink and unmodified q4w IT Fab due to modeled <0.001 nM Day-28 CSF trough [MODEL_PRIOR]); "
+        "(1) Engineer ECM-anchored half-life-extended intrathecal anti-gC1q Fab/nanobody (PDB 1PK6 1.85A globular head PMID:12960167) vs intrathecal microglial C1QA/B ASO/di-siRNA (depleting both gC1q opsonin head and AFDB mature cationic CLR stalk [C1QA 23-109, C1QB 28-114, C1QC 29-112: 27 mature Arg/Lys residues; 30 up to aa 114]; rejecting IV ANX005 & IV BBB-shuttled IgG due to peripheral 180 nM serum C1q sink ablation [10.7% autoimmune SAEs in HD NCT04514367 PMID:41787606] and unmodified q4w IT Fab due to modeled <0.001 nM Day-28 CSF trough [MODEL_PRIOR]); "
         "(2) Gate head-to-head on classical C3d/iC3b synaptic opsonization, preserved cholinergic C-bouton (SLC18A3/SLC5A7; Lobsiger 2013 PMID:24170856), and CLR-dependent neuronal RNP/polysome translation profiling (Scott-Hewitt 2024 PMID:38942014)."
     ),
     "C019": (
         "(1) Resolve the JAK1-vs-neuronal-JAK2 catch-22 at clinically reachable unbound human CSF concentrations (3.8-50 nM; modeled ~9% whole-cell pSTAT occupancy at 4 mg [MODEL_PRIOR] vs 2,500 nM screen) by testing Kp,uu-verified JAK2-sparing selective JAK1 JH1 inhibitors vs Baricitinib comparator and CRISPRi JAK1/JAK2/AAK1 knockdowns across BOTH glia-free sALS iPSC-MNs & reactive ALS-Glia co-cultures; "
-        "(2) Complete bridged pg/mL immunoassay calibration of the rs3831317-neutral high-chitinase CSF glial stratum (Trautwig Emory leak-free sALS-vs-Ctrl OOF AUC=0.8188; target-site MGH-recalibrated AUC=0.885 [LOO=0.8801; bank-only non-MGH indicator=0.9444]; noting living-CSF-to-postmortem cortical ALS-Glia subtype concordance is unproven and distinct from Thompson 2019 PMID:31123140 mimic AUC=0.51-0.92 [0.688 ext]) before any VTE-prophylaxed Phase 2 interaction RCT."
+        "(2) Complete bridged pg/mL immunoassay calibration of the rs3831317-neutral high-chitinase CSF glial stratum (Trautwig Emory leak-free sALS-vs-Ctrl OOF AUC=0.8188; target-site MGH-recalibrated AUC=0.885 [LOO=0.8801; bank-only non-MGH indicator=0.9444]; noting living-CSF-to-postmortem cortical ALS-Glia subtype concordance is unproven and distinct from healthy-control AUC<=0.92 in Thompson 2019 PMID:31123140 vs neurological-mimic AUC=0.688 in Steinacker 2018 PMID:29142138) before any VTE-prophylaxed Phase 2 interaction RCT."
     ),
     "C020": (
-        "(1) Execute a strict 14-day postmitotic human C9orf72 and sALS iPSC-MN ClC-7 vacuole, ATG16L1-catalyzed LC3B CASM, and LRRK2 pRab10-Thr73 washout half-life kill-gate under intermittent q48h-q72h nanomolar Apilimod (resolving the [MODEL_PRIOR] ODE sensitivity where 6.5-8.0 nM unbound Cmax passes ~79% [64/81] in decoupled dead-zone Model 1 vs ~30% [24/81] at matched 10-20h repair and 0% [0/81] at 24-48h postmitotic repair in zero-dead-zone coupled +PI(3)P->LRRK2/CASM Model 2; PMID:42900584; Kuwahara 2026 Life Sci Alliance PMID:42994990, 10.26508/lsa.202603939); "
-        "(2) Pair intracellular vs conditioned-media secreted poly(GP)/pTDP-43 mass-balance (PMID:27732842; Drosophila C9orf72 model 10.64898/2026.11.09.765393 [PREPRINT]) and microfluidic fast axonal transport kymography with <5% ClC-7 vacuolation, baseline CASM + pRab10-Thr73 washout (tau <24 h), and zero NfL/GFAP surge before any pulsed Phase 1b."
+        "(1) Execute a strict 14-day postmitotic human C9orf72 and sALS iPSC-MN ClC-7 vacuole, ATG16L1-catalyzed LC3B CASM, and LRRK2 pRab10-Thr73 washout half-life falsification gate under intermittent q48h-q72h nanomolar Apilimod (CHEMBL4297643; resolving the [MODEL_PRIOR] ODE sensitivity where 6.5-8.0 nM unbound Cmax passes ~79% [64/81] in decoupled dead-zone Model 1 vs ~30% [24/81] at matched 10-20h repair and 0% [0/81] at 24-48h postmitotic repair in zero-dead-zone coupled +PI(3)P->LRRK2/CASM Model 2; PMID:42900584; Kuwahara 2026 Life Sci Alliance PMID:42994990, 10.26508/lsa.202603939); "
+        "(2) Pair intracellular vs conditioned-media secreted poly(GP)/pTDP-43 mass-balance (PMID:27732842; Drosophila C9orf72 model 10.64898/2026.11.09.765393 [PREPRINT]), nanomolar-to-2.5 uM potency bridging, and microfluidic fast axonal transport kymography with <5% ClC-7 vacuolation, baseline CASM + pRab10-Thr73 washout (tau <24 h), and zero NfL/GFAP surge before any pulsed Phase 1b."
     ),
 }
 
@@ -156,6 +168,8 @@ def classify_explore_drop_basis(cid: str, intake_row: dict[str, str], epi: str) 
         return (f"Dropped_Confounded_Postmortem_Transcriptomic_Target_{intake_row['name']}", "MEASURED_HUMAN_SPATIAL_OR_SNRNA")
     if cid in {"C004", "C008", "C009", "C012", "C024"}:
         return (f"Dropped_Failed_Human_ALS_Clinical_Regimen_{intake_row['name'].split()[0]}", "MEASURED_HUMAN_RCT_SUBGROUP")
+    if cid in {"C011", "S05"}:
+        return (f"Dropped_PK_or_Safety_Infeasible_Regimen_{intake_row['name'].split()[0]}", "MEASURED_HUMAN_PK_AND_SAFETY")
     return (f"Dropped_PK_or_Safety_Infeasible_Regimen_{intake_row['name'].split()[0]}", "MEASURED_HUMAN_PK_AND_IPSC_SCREEN")
 
 
@@ -182,9 +196,16 @@ def portfolio_sort_key(row: dict[str, str], p3a_rank_map: dict[str, int], dn_idx
         h_cnt = int(row["unsolved_hurdle_count"])
         is_screen_rep = 1 if row["primary_evidence_basis"] == "MEASURED_HUMAN_PK_AND_IPSC_SCREEN" else 0
         is_sub_fdr_screen = 1 if pid in {"DN-14", "DN-17", "DN-19"} else 0
-        is_spinal_mn_cryptic = 0 if pid == "DN-05" else 1
         is_cis_target = 0 if row["candidate_type"] in {"GENE_CIS_SPLICE", "GENE_CIS_APA"} else 1
-        return (t_ord, is_screen_rep, is_sub_fdr_screen, h_cnt, is_spinal_mn_cryptic, is_cis_target, ev_ord, src_ord, pid)
+        if is_screen_rep == 0 and is_cis_target == 0:
+            is_spinal_mn_cryptic = 0 if pid == "DN-05" else 1
+            is_mendelian_cis = 0 if pid == "C022" else 1
+            cis_watchlist_order = {"DN-02": 1, "DN-03": 2, "DN-09": 3, "DN-08": 4, "DN-07": 5, "DN-06": 6}.get(pid, 9)
+            return (t_ord, 0, 0, 0, is_spinal_mn_cryptic, is_mendelian_cis, h_cnt, cis_watchlist_order, pid)
+        if is_sub_fdr_screen:
+            sub_fdr_order = {"DN-14": 1, "DN-17": 2, "DN-19": 3}[pid]
+            return (t_ord, is_screen_rep, is_sub_fdr_screen, 1, sub_fdr_order, h_cnt, ev_ord, src_ord, pid)
+        return (t_ord, is_screen_rep, is_sub_fdr_screen, 1, h_cnt, ev_ord, src_ord, 0, pid)
     if t_ord == 4:
         return (t_ord, 0, 0, 0, 0, 0, 0, pid)
     if t_ord == 5:

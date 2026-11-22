@@ -762,12 +762,12 @@
     }
   },
   "registry_sha12": {
-    "candidate_accessions": "d6b96277052e",
-    "phase4_unified_portfolio": "6a8a2887a3e5",
+    "candidate_accessions": "c969dd984f1e",
+    "phase4_unified_portfolio": "f0ed9695c5ef",
     "phase4_unified_cis_intervals": "bb4f7dd9f1c9",
     "phase3_sso_offtarget_audit": "038dea57c22d",
-    "phase3_execution_readiness": "d35527d9a72c",
-    "phase3b_denovo_candidates": "3f8b244d19dd",
+    "phase3_execution_readiness": "0b7f251321c7",
+    "phase3b_denovo_candidates": "ad455fe2db22",
     "phase3b_denovo_sso_intervals": "f46fb8103ef2"
   }
 }

@@ -15,9 +15,15 @@ for p in (SCRIPTS_DIR, SCRIPT_DIR):
         sys.path.insert(0, str(p))
 
 from _retrospective_registry_specs import NEW_EVIDENCE_ROWS, RUN_P4_003_ROW  # noqa: E402
-from _retrospective_stat_and_log_specs import NEW_STAT_SPECS, UPD_2026_11_19_01, UPD_2026_11_20_01, UPD_2026_11_20_02  # noqa: E402
+from _retrospective_stat_and_log_specs import NEW_STAT_SPECS, UPD_2026_11_19_01, UPD_2026_11_20_01, UPD_2026_11_20_02, UPD_2026_11_21_01  # noqa: E402
+from _retrospective_wave_b_specs import UPD_2026_11_21_02, WAVE_B_NEW_EVIDENCE_ROWS, WAVE_B_NEW_STAT_SPECS  # noqa: E402
+from _retrospective_wave_c_specs import UPD_2026_11_21_03, WAVE_C_NEW_EVIDENCE_ROWS, WAVE_C_NEW_STAT_SPECS  # noqa: E402
+from _retrospective_wave_d_specs import UPD_2026_11_22_01  # noqa: E402
 from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose  # noqa: E402
 from verify_carbon_als import sha256_anchor  # noqa: E402
+
+ALL_NEW_EVIDENCE_ROWS = [*NEW_EVIDENCE_ROWS, *WAVE_B_NEW_EVIDENCE_ROWS, *WAVE_C_NEW_EVIDENCE_ROWS]
+ALL_NEW_STAT_SPECS = [*NEW_STAT_SPECS, *WAVE_B_NEW_STAT_SPECS, *WAVE_C_NEW_STAT_SPECS]
 
 TS = "2026-11-19T03:56:00Z"
 
@@ -50,7 +56,7 @@ def main() -> None:
     r_rows.insert(idx_p4, dict(RUN_P4_003_ROW))
     for r in r_rows:
         if r["analysis_run_id"] == "RUN-P4-002":
-            r["summary"] = r["summary"].replace("188/188", "194/194")
+            r["summary"] = r["summary"].replace("188/188", "202/202").replace("194/194", "202/202").replace("197/197", "202/202").replace("199/199", "202/202")
         elif r["analysis_run_id"] == "RUN-P2-T3-002":
             r["run_timestamp_utc"] = "2026-11-20T00:05:00Z"
             r["summary"] = (
@@ -64,8 +70,8 @@ def main() -> None:
 
     # 2. evidence_ledger.csv
     e_cols, e_rows = _load("evidence_ledger.csv")
-    new_eids = {r["evidence_id"] for r in NEW_EVIDENCE_ROWS}
-    e_rows = [r for r in e_rows if r["evidence_id"] not in new_eids] + [dict(r) for r in NEW_EVIDENCE_ROWS]
+    new_eids = {r["evidence_id"] for r in ALL_NEW_EVIDENCE_ROWS}
+    e_rows = [r for r in e_rows if r["evidence_id"] not in new_eids] + [dict(r) for r in ALL_NEW_EVIDENCE_ROWS]
     _save("evidence_ledger.csv", e_cols, e_rows)
 
     # 3. statistical_models_and_contrasts.csv (preserve staged sha64 in cached mode if data/ absent)
@@ -75,7 +81,7 @@ def main() -> None:
         d["sha256"] for d in _load("datasets_manifest.csv")[1] if d["dataset_id"] == "DS_CRYPTIC"
     )
     built_stats: list[dict[str, str]] = []
-    for sp in NEW_STAT_SPECS:
+    for sp in ALL_NEW_STAT_SPECS:
         row = dict(sp)
         ok, digest = sha256_anchor(ROOT / row["anchor_relpath"])
         row["sha64"] = digest if ok else prev_sha.get(row["evidence_id"], ds_cryptic_sha)
@@ -112,9 +118,20 @@ def main() -> None:
     # 4. candidate_decisions.csv
     d_cols, d_rows = _load("candidate_decisions.csv")
     dm = {r["carbon_id"]: r for r in d_rows}
-    for cid, eid in (("S06", "EV-P4-001"), ("C001", "EV-P4-002"), ("C022", "EV-P4-003"), ("C006", "EV-P4-004"), ("C015", "EV-P4-005"), ("C018", "EV-P4-006")):
+    for cid, eid in (
+        ("S06", "EV-P4-001"),
+        ("C001", "EV-P4-002"),
+        ("C022", "EV-P4-003"),
+        ("C006", "EV-P4-004"),
+        ("C015", "EV-P4-005"),
+        ("C015", "EV-P4-007"),
+        ("C018", "EV-P4-006"),
+        ("C023", "EV-P4-008"),
+        ("C013", "EV-P4-009"),
+    ):
         dm[cid]["supporting_evidence_ids"] = _append_ev(dm[cid]["supporting_evidence_ids"], eid)
-        dm[cid]["updated_at"] = TS
+        if not dm[cid]["updated_at"] or dm[cid]["updated_at"] < TS:
+            dm[cid]["updated_at"] = TS
 
     dm["S06"]["evidence_proves_hypothesis"] = dm["S06"]["evidence_proves_hypothesis"].replace(
         "(Gilley 2021; Bloom 2022; OT genetic_score=0.195)",
@@ -169,7 +186,7 @@ def main() -> None:
     if "PDB 1PK6" not in dm["C018"]["evidence_proves_hypothesis"]:
         dm["C018"]["evidence_proves_hypothesis"] = dm["C018"]["evidence_proves_hypothesis"].replace(
             "10.1016/j.cell.2024.05.058)",
-            "PMID:38942014, 10.1016/j.cell.2024.05.058; PDB 1PK6 1.85A gC1q head PMID:12960167 vs AFDB CLR stalk aa 28-114 26 Arg/Lys basic motif distinguishes anti-gC1q Fab from C1QA/B ASO)",
+            "PMID:38942014, 10.1016/j.cell.2024.05.058; PDB 1PK6 1.85A gC1q head PMID:12960167 vs AFDB mature CLR stalk C1QA 23-109 / C1QB 28-114 / C1QC 29-112 27 Arg/Lys basic motif distinguishes anti-gC1q Fab from C1QA/B ASO)",
         )
     _save("candidate_decisions.csv", d_cols, d_rows)
 
@@ -179,24 +196,33 @@ def main() -> None:
         sid = sn["subnode_id"]
         if sid == "C015-N1":
             sn["subnode_verdict"] = re.sub(
-                r"SuSiE-proven in-phase risk haplotype \([^)]*\)",
-                "SuSiE chr14q12 credible set (purityMeanR2=0.988, NFE AF=32.6-32.9%, EUR-vs-xAnc GWAS COLOC H4=0.958, PMID:34873335; 1000G EUR 96.7% [351/363] vs AFR 72.7% [853/1,173] 1111 purity; x-anc lead rs229195-A PIP=0.240)",
-                sn["subnode_verdict"],
+                r"(?:\[MODEL_PRIOR\]\s*)+",
+                "[MODEL_PRIOR] ",
+                re.sub(
+                    r"SuSiE-proven in-phase risk haplotype \([^)]*\)",
+                    "SuSiE chr14q12 credible set (purityMeanR2=0.988, NFE AF=32.6-32.9%, EUR-vs-xAnc GWAS COLOC H4=0.958, PMID:34873335; 1000G EUR 96.7% [351/363] vs AFR 72.7% [853/1,173] 1111 purity; x-anc lead rs229195-A PIP=0.240)",
+                    sn["subnode_verdict"],
+                ).replace("AlphaGenome CD14+ q=-0.99986", "[MODEL_PRIOR] AlphaGenome CD14+ q=-0.99986"),
             )
             if "purityMeanR2=0.988" not in sn["subnode_verdict"]:
                 sn["subnode_verdict"] = sn["subnode_verdict"].replace(
                     "opposing MN-vs-myeloid eQTL polarity,",
-                    "SuSiE chr14q12 credible set (purityMeanR2=0.988, NFE AF=32.6-32.9%, EUR-vs-xAnc GWAS COLOC H4=0.958, PMID:34873335; 1000G EUR 96.7% vs AFR 72.7% 1111 purity) driving opposing MN (+0.048) vs myeloid (-0.22..-0.33; AlphaGenome CD14+ q=-0.99986) polarity,",
+                    "SuSiE chr14q12 credible set (purityMeanR2=0.988, NFE AF=32.6-32.9%, EUR-vs-xAnc GWAS COLOC H4=0.958, PMID:34873335; 1000G EUR 96.7% vs AFR 72.7% 1111 purity) driving opposing MN (+0.048) vs myeloid (-0.22..-0.33; [MODEL_PRIOR] AlphaGenome CD14+ q=-0.99986) polarity,",
                 )
-        elif sid == "C015-N2" and "rs229195-A" not in sn["subnode_verdict"]:
-            sn["subnode_verdict"] += " Cross-ancestry GWAS lead rs229195-A (PIP=0.240, AlphaGenome MN G2E3 splice q=0.968) rides in phase with SCFD1 rs229243-A/rs229143-A."
+        elif sid == "C015-N2":
+            if "rs229195-A" not in sn["subnode_verdict"]:
+                sn["subnode_verdict"] += " Cross-ancestry GWAS lead rs229195-A (PIP=0.240, [MODEL_PRIOR] AlphaGenome MN G2E3 splice q=0.968) rides in phase with SCFD1 rs229243-A/rs229143-A."
+            else:
+                sn["subnode_verdict"] = sn["subnode_verdict"].replace(
+                    "AlphaGenome MN G2E3 splice q=0.968", "[MODEL_PRIOR] AlphaGenome MN G2E3 splice q=0.968"
+                ).replace("[MODEL_PRIOR] [MODEL_PRIOR]", "[MODEL_PRIOR]")
         elif sid in {"C018-N1", "C018-N2", "C018-N3"} and "PDB 1PK6" not in sn["druggability_check"]:
-            sn["druggability_check"] += " PDB 1PK6 (1.85A gC1q head, 187 inter-chain pairs <=4.5A, PMID:12960167) vs AF-P02745-F1/AF-P02746-F1/AF-P02747-F1 cationic CLR stalk (aa 28-114, 26 Arg/Lys basic residues required for neuronal RNP uptake, PMID:38942014) splits anti-gC1q Fab (head-only) from C1QA/B ASO (head+stalk)."
+            sn["druggability_check"] += " PDB 1PK6 (1.85A gC1q head, 187 inter-chain pairs <=4.5A, PMID:12960167) vs AF-P02745-F1/AF-P02746-F1/AF-P02747-F1 mature cationic CLR stalk (C1QA aa 23-109, C1QB aa 28-114, C1QC aa 29-112: 27 mature Arg/Lys basic residues per heterotrimer [30 up to aa 114] required for neuronal RNP uptake, PMID:38942014) splits anti-gC1q Fab (head-only) from C1QA/B ASO (head+stalk)."
     _save("subnode_dissection.csv", sn_cols, sn_rows)
 
     # 6. living_evidence_updates.csv
     u_cols, u_rows = _load("living_evidence_updates.csv")
-    u_rows = [u for u in u_rows if u["update_id"] not in {"UPD-2026-11-19-01", "UPD-2026-11-20-01", "UPD-2026-11-20-02"}]
+    u_rows = [u for u in u_rows if u["update_id"] not in {"UPD-2026-11-19-01", "UPD-2026-11-20-01", "UPD-2026-11-20-02", "UPD-2026-11-21-01", "UPD-2026-11-21-02", "UPD-2026-11-21-03", "UPD-2026-11-22-01"}]
     for u in u_rows:
         uid = u["update_id"]
         if uid == "UPD-2026-11-18-05":
@@ -225,6 +251,10 @@ def main() -> None:
     u_rows.insert(0, dict(UPD_2026_11_19_01))
     u_rows.insert(0, dict(UPD_2026_11_20_01))
     u_rows.insert(0, dict(UPD_2026_11_20_02))
+    u_rows.insert(0, dict(UPD_2026_11_21_01))
+    u_rows.insert(0, dict(UPD_2026_11_21_02))
+    u_rows.insert(0, dict(UPD_2026_11_21_03))
+    u_rows.insert(0, dict(UPD_2026_11_22_01))
     def _map_anchor_tok(tok: str) -> str:
         t = tok.strip()
         if t.startswith("FLAGSHIP-") and not t.startswith("FLAGSHIP-EALS-"):

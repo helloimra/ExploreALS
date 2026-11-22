@@ -14,7 +14,7 @@ function renderRepDag(){
     {x:6,  y:12, w:148, h:46, title:'1. Open Datasets (42)', sub:'674 MB · SHA-256',     act:"datasets|ALL"},
     {x:172,y:12, w:148, h:46, title:'2. Cohort Loaders',     sub:'12 Cohort Parsers',    act:"runs|COHORT"},
     {x:338,y:12, w:148, h:46, title:'3. Analysis Pipeline',  sub:'8 Lead + 50 Runs',     act:"runs|ALL"},
-    {x:78, y:96, w:162, h:46, title:'4. 194 Contrasts',      sub:'100% SHA-256 + OLS',   act:"evidence|ALL"},
+    {x:78, y:96, w:162, h:46, title:'4. 202 Contrasts',      sub:'100% SHA-256 + OLS',   act:"evidence|ALL"},
     {x:260,y:96, w:164, h:46, title:'5. Verification Suite', sub:'Citations + Off-Tgt',  act:"runs|SYNTH"}
   ];
   const rects = nodes.map(n => `
@@ -57,7 +57,7 @@ function populateRepFilterOptions(){
   } else if(repMode === 'datasets'){
     sel.innerHTML = '<option value="ALL">Legal Tier: All (40)</option><option value="TIER_A_OPEN_REDISTRIBUTABLE">Tier A &middot; Open Redistributable (CC0 / CC-BY)</option><option value="TIER_B_PUBLISHER_HTTPS_FETCH">Tier B &middot; Direct Publisher/EuropePMC HTTPS</option><option value="TIER_C_DUA_OR_BASELINE">Tier C &middot; Registered Synapse Access</option>';
   } else {
-    sel.innerHTML = '<option value="ALL">Anchor Type: All (194)</option><option value="STAGED_DATASET">Staged Open Dataset (130)</option><option value="CACHED_API_SNAPSHOT">Cached API Snapshot (56)</option><option value="DETERMINISTIC_MODEL_OUTPUT">Deterministic Model Output (8)</option>';
+    sel.innerHTML = '<option value="ALL">Anchor Type: All (202)</option><option value="STAGED_DATASET">Staged Open Dataset (137)</option><option value="CACHED_API_SNAPSHOT">Cached API Snapshot (57)</option><option value="DETERMINISTIC_MODEL_OUTPUT">Deterministic Model Output (8)</option>';
   }
 }
 

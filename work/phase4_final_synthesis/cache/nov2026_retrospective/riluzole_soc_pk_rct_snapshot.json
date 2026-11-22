@@ -1,0 +1,52 @@
+{
+  "candidate_id": "C013",
+  "accession_id": "EALS-013",
+  "drug_name": "Riluzole",
+  "molecular_weight_g_mol": 234.2,
+  "approved_regimen": "50 mg oral BID (100 mg/day); FDA NDA 020599 (1995-12-12) & EMA Rilutek SmPC",
+  "pivotal_als_survival_rcts": [
+    {
+      "pmid": "PMID:8302340",
+      "citation": "Bensimon et al. 1994 NEJM 330(9):585-591",
+      "design": "Multicenter double-blind placebo-controlled randomized trial (100 mg/d oral riluzole vs placebo)",
+      "sample_size_n": 155,
+      "day_365_survival_pct_riluzole": 74.0,
+      "day_365_survival_pct_placebo": 58.0,
+      "stratified_logrank_p": 0.014,
+      "unstratified_end_of_study_p": 0.046
+    },
+    {
+      "pmid": "PMID:8676624",
+      "citation": "Lacomblez et al. 1996 Lancet 347(9013):1425-1431",
+      "design": "International double-blind dose-ranging randomized controlled trial (50, 100, 200 mg/d oral riluzole vs placebo)",
+      "sample_size_n": 959,
+      "month_18_adjusted_cox_rr_100mg_vs_placebo": 0.65,
+      "ci95_100mg": [0.50, 0.85],
+      "p_100mg_vs_placebo": 0.002,
+      "overall_dose_response_p": 0.003
+    }
+  ],
+  "human_pk_and_unbound_cns_margin": {
+    "fda_nda_020599_mean_total_plasma_cmax_ng_ml": 173.0,
+    "fda_nda_020599_sd_total_plasma_cmax_ng_ml": 72.0,
+    "mean_total_plasma_cmax_nm": 738.7,
+    "groeneveld_2001_serum_tdm": {
+      "pmid": "PMID:11677002",
+      "companion_pk_pd_pmid": "PMID:17898704",
+      "matrix": "human ALS patient serum (NOT CSF)",
+      "notes": "Demonstrated marked inter-individual CYP1A2-driven serum exposure variability without direct human CSF unbound concentration measurement."
+    },
+    "plasma_protein_binding_pct_range": [96.0, 97.0],
+    "fu_plasma_range": [0.03, 0.04],
+    "cmax_unbound_plasma_nm_range": [22.2, 29.6],
+    "efflux_transporters": ["ABCB1 (P-gp)", "ABCG2 (BCRP)"],
+    "model_prior_kpuu_brain": "<= 1.0",
+    "model_prior_unbound_human_cns_peak_nm_range": [15.0, 30.0],
+    "model_prior_unbound_human_cns_upper_bound_nm": 50.0,
+    "bye_2025_screen_concentration_nm": 2500.0,
+    "screen_over_cmax_unbound_plasma_fold_range": [84.5, 112.6],
+    "screen_over_model_prior_unbound_cns_fold_range": [83.3, 166.7],
+    "nav1_6_persistent_ina_ic50_um_range": [0.3, 2.0],
+    "glur_kainate_glutamate_release_ic50_um_range": [10.0, 50.0]
+  }
+}

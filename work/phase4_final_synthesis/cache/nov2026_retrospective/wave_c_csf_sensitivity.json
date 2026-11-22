@@ -1,0 +1,87 @@
+{
+  "dataset_id": "DS045_TRAUT",
+  "cohort": "Trautwig 2025 Emory single-center CSF DIA-MS (sALS vs Control)",
+  "cfl1_contamination_and_covariate_ols": {
+    "unadjusted": {
+      "n": 95,
+      "beta_als": 0.3582,
+      "p_als": 3.887134093354601e-05,
+      "r2": 0.1672
+    },
+    "adj_age_sex": {
+      "n": 95,
+      "beta_als": 0.3575,
+      "p_als": 0.00011110055861859305,
+      "r2": 0.1699
+    },
+    "adj_rbc_HBB_CA1_PRDX2": {
+      "n": 91,
+      "beta_als": 0.3404,
+      "p_als": 0.0001355354073656658,
+      "r2": 0.2185
+    },
+    "adj_age_sex_rbc_HBB_CA1_PRDX2": {
+      "n": 91,
+      "beta_als": 0.3392,
+      "p_als": 0.0002465429683247371,
+      "r2": 0.2403
+    },
+    "adj_platelet_PFN1_TLN1_ACTB": {
+      "n": 92,
+      "beta_als": 0.2946,
+      "p_als": 0.0002536184660238549,
+      "r2": 0.4001
+    }
+  },
+  "emory_dia_age_sex_ols_by_gene": {
+    "DPP6": {
+      "n": 96,
+      "beta_unadj": -0.502,
+      "p_unadj": 2.6120791949329805e-11,
+      "beta_adj_age_sex": -0.4911,
+      "p_adj_age_sex": 3.5466854111759017e-10
+    },
+    "DPP10": {
+      "n": 95,
+      "beta_unadj": -0.3161,
+      "p_unadj": 0.00037435092227158356,
+      "beta_adj_age_sex": -0.247,
+      "p_adj_age_sex": 0.006166812919344001
+    },
+    "CFL1": {
+      "n": 95,
+      "beta_unadj": 0.3582,
+      "p_unadj": 3.887134093354601e-05,
+      "beta_adj_age_sex": 0.3575,
+      "p_adj_age_sex": 0.00011110055861859305
+    },
+    "CHIT1": {
+      "n": 89,
+      "beta_unadj": 2.1973,
+      "p_unadj": 1.1129281037370395e-12,
+      "beta_adj_age_sex": 2.0111,
+      "p_adj_age_sex": 4.3255237826003714e-11
+    },
+    "GPNMB": {
+      "n": 95,
+      "beta_unadj": 0.3437,
+      "p_unadj": 0.0003658999485037411,
+      "beta_adj_age_sex": 0.3483,
+      "p_adj_age_sex": 0.0006227047771409147
+    },
+    "CHI3L1": {
+      "n": 96,
+      "beta_unadj": 0.4697,
+      "p_unadj": 0.0017500732128064198,
+      "beta_adj_age_sex": 0.566,
+      "p_adj_age_sex": 0.00030766882392337406
+    },
+    "CHI3L2": {
+      "n": 96,
+      "beta_unadj": 0.7829,
+      "p_unadj": 4.498151103511109e-09,
+      "beta_adj_age_sex": 0.7606,
+      "p_adj_age_sex": 5.4325020406212515e-08
+    }
+  }
+}

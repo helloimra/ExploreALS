@@ -1,0 +1,31 @@
+[
+  {
+    "variant": "chr7:44206388:A>G",
+    "rsid": "rs138273846",
+    "hgvs_c": "ENST00000223369.9:c.191A>G",
+    "hgvs_p": "p.Tyr64Cys",
+    "chromosome": "chr7",
+    "position": 44206388,
+    "ref": "A",
+    "alt": "G",
+    "avi_phred": 24.53433806814086,
+    "avi_raw": 1.0403119325637817,
+    "avi_quantile": 0.003520190715789795,
+    "top_percentile": 0.3520190715789795,
+    "top_modality": "AlphaMissense",
+    "fi_ALPHAMISSENSE": 0.4721722900867462,
+    "fi_CACTUS_241_WAY": 0.3756013810634613,
+    "fi_PHASTCONS_470_WAY": 0.1986948847770691,
+    "fi_MERGED_SPLICING": 0.014438370242714882,
+    "gnomad_v4_1_exome_ac": 878,
+    "gnomad_v4_1_exome_an": 1461734,
+    "gnomad_v4_1_genome_ac": 104,
+    "gnomad_v4_1_genome_an": 152174,
+    "gnomad_v4_1_joint_ac": 982,
+    "gnomad_v4_1_joint_an": 1613908,
+    "gnomad_v4_1_joint_af": 0.00060846095,
+    "gnomad_v4_1_nhomalt": 0,
+    "gnomad_v4_1_nfe_exome_af": 0.000709554,
+    "gnomad_v4_1_asj_exome_af": 0.000918344
+  }
+]

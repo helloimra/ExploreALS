@@ -39,6 +39,7 @@ const ENUM_LABELS = {
   MEASURED_HUMAN_SPATIAL_OR_SNRNA: 'Human Spatial / snRNA-seq',
   MEASURED_HUMAN_CSF_PROTEOMICS: 'Living Human CSF Proteomics',
   MEASURED_HUMAN_PK_AND_IPSC_SCREEN: 'Human PK / Patient iPSC-MN Screen',
+  MEASURED_HUMAN_PK_AND_SAFETY: 'Human PK / Regulatory Safety',
   PROTOCOL_STAGE_GATING_ONLY: 'Clinical Stage-Gating Protocol',
   TARGETED_PRECLINICAL_VALIDATION_GATE: 'Preclinical Cellular / Tissue Validation',
   TRANSLATIONAL_BIOMARKER_OR_PH1B_PKPD_GATE: 'Human Biofluid / Phase 1b PK-PD Study',
@@ -74,8 +75,8 @@ const ENUM_LABELS = {
   INCLUDE_CONSTITUTIVE_EXON: "Steric 2'-MOE SSO · Putative Intron-5 Site (ISS vs ISE Gate)",
   INCLUDE_EXON_UPSTREAM_UG: "Steric 2'-MOE SSO · Exon-5 Inclusion (UG)",
   CRYPTIC_ALE_3SS_ACCEPTOR_BLOCK: "Steric 2'-MOE SSO · Cryptic ALE 3'SS Block",
-  DISTAL_3UTR_EXT_PAS_WINDOW: "Distal 3'-UTR Extension Window (Steric Distal-PAS SSO or 3'-Ext siRNA; Pol II Readthrough Retires Gapmer)",
-  CRYPTIC_3EXT_ISOFORM_GAPMER_WINDOW: "Distal 3'-UTR Extension Window (Steric PAS SSO Preferred)",
+  DISTAL_3UTR_EXT_PAS_WINDOW: "Distal 3'-UTR Extension Window (Steric Distal-PAS SSO or 3'-Ext siRNA)",
+  CRYPTIC_3EXT_ISOFORM_GAPMER_WINDOW: "Exploratory 3'-Ext RNase-H Gapmer ASO Window (vs. Steric PAS / 3'-Ext siRNA Gate)",
   MULTIPLEX_CORE: 'Multiplex Core',
   SINGLE_LOCUS_LEAD: 'Single-Locus Lead',
   EXPLORATORY_LOCUS: 'Exploratory Locus',
@@ -115,6 +116,12 @@ const HURDLE_TOK = {
   ICH:'ICH', M3R2:'M3(R2)', FCRN:'FcRn', CD38:'CD38', IMGL:'iMGL', CONQUR:'CONQUR',
   IL33:'IL-33', CTRL:'control', EXON5:'Exon-5', INTRON5:'Intron-5', POPS:'PO/PS',
   EXON2A:'Exon-2a', INTRON8:'Intron-8', INTRON4:'Intron-4',
+  IPA:'IPA', '3UTR':"3'-UTR", '952BP':'952-bp', N3:'n=3', HEALEY:'HEALEY', N42:'N=42', N55:'N=55',
+  QD:'QD', BID:'BID', DPR:'DPR', ALSTDP:'ALS-TDP', RMT:'RMT', EP09C:'EP09c', CLSI:'CLSI', TT:'TT',
+  '3V5Z':'3V5Z', '6C1R':'6C1R', SITE2:'Site-2', NCT03293069:'NCT03293069', NCT04993755:'NCT04993755',
+  ACTRN12622000927729:'ACTRN12622000927729', PMX205:'PMX 205', RS138273846:'rs138273846',
+  MS2:'MS2', TMTPRO:'TMTpro', PSER3:'pSer3', CFL1:'CFL1', DPP6:'DPP6', DPP10:'DPP10',
+  RBC:'RBC', WBC:'WBC', LP:'LP', QC:'QC', RS3831317:'rs3831317', AD:'AD',
 };
 function humanizeEnum(s){
   if(!s || s === 'NONE') return 'None';
@@ -129,9 +136,16 @@ function formatHurdle(code){
     .replace(/INDEPENDENT_SINGLE_ENTITY_TOX/g, 'independent single-entity tox qualification')
     .replace(/6_TO_9MG/g, '6–9 mg')
     .replace(/LE_3MG/g, '<=3 mg')
+    .replace(/LE_5_5PCT/g, '<=5.5%')
     .replace(/24_TO_48MG/g, '24–48 mg')
     .replace(/PH2_3/g, 'Ph2/3')
+    .replace(/PH1A_1B/g, 'Ph1a/1b')
     .replace(/6VS6/g, '6 vs 6')
+    .replace(/5VS4/g, '5 vs 4')
+    .replace(/1VS2/g, '1 vs 2')
+    .replace(/FE_O_FE/g, '[Fe-O-Fe]')
+    .replace(/TPN101_TP/g, 'TPN-101-TP')
+    .replace(/FAIRPARK_II/g, 'FAIRPARK-II')
     .replace(/PMID_37317638/g, 'PMID:37317638')
     .replace(/KP_UU/g, 'Kp,uu')
     .replace(/GT99_9PCT/g, '>99.9%')
@@ -152,7 +166,7 @@ function formatHurdle(code){
     .replace(/Q48_TO_Q72H/g, 'q48h-q72h');
   const words = pre.split('_').filter(Boolean).map(w => {
     if(HURDLE_TOK[w]) return HURDLE_TOK[w];
-    if(/^(#|<=|>=|<|>|-0\\.|[0-9]|EALS-|pLI=|Chronos=|factorial|ICH|independent|Pre-|Post-|ALS-|non-|aa )/.test(w)) return w;
+    if(/^(#|<=|>=|<|>|-0\\.|[0-9]|EALS-|pLI=|Chronos=|factorial|ICH|independent|Pre-|Post-|ALS-|non-|aa |\\[Fe)/.test(w)) return w;
     if(/^RS[0-9]+$/.test(w)) return w.toLowerCase();
     return w.toLowerCase();
   });
@@ -163,6 +177,13 @@ function formatPrior(code){
   if(!code || code === 'NONE') return 'None — Direct empirical data only';
   return String(code)
     .replace(/^COARSE_PRIOR_ONLY:/, '')
+    .replace(/Pgp_BCRP_effluxed_Kpuu_le_1_unbound_human_CNS_peak_15_to_30nM_from_NDA020599_Cu_plasma_22\\.2_to_29\\.6nM/g, 'P-gp/BCRP-effluxed Kp,uu <= 1.0 unbound human CNS peak (~15–30 nM, <=50 nM) from NDA 020599 Cu,plasma (22.2–29.6 nM)')
+    .replace(/Modeled_Kpuu_0\\.65_on_FDA_fup_0\\.05_to_0\\.11/g, 'Modeled Kp,uu ~ 0.65 on FDA fu,p = 0.05–0.11 (~120–280 nM Cu,brain vs 20–40 uM ISR)')
+    .replace(/OAT3_MRP4_efflux_Kpuu_lt_0\\.05_on_NDA016273_fup/g, 'OAT3/MRP4 anionic BBB efflux (Kp,uu < 0.05) on NDA 016273 fu,p (~1–5 nM Cu,CNS)')
+    .replace(/Modeled_fup_and_Kpuu_beyond_measured_35\\.2_to_61\\.0nM_total_plasma_Cmax/g, 'Modeled fu,p & Kp,uu (~5–20 nM Cu,brain) beyond measured 35.2–61.0 nM total plasma Cmax')
+    .replace(/Anionic_MPA_efflux_Kpuu_on_NDA050722_fup_0\\.03/g, 'OAT3/MRP anionic MPA efflux Kp,uu on NDA 050722 fu,p = 0.03 (~15–55 nM Cu,brain)')
+    .replace(/Passive_Kpuu_le_1_and_CAD_lysosomal_partitioning_on_NDA021807_fup/g, 'Passive Kp,uu <= 1.0 & CAD lipid partitioning on NDA 021807 fu,p (~3–15 nM combined free CNS)')
+    .replace(/Pgp_attenuated_Kpuu_on_NDA213969_fup_le_0\\.01/g, 'P-gp-attenuated Kp,uu on NDA 213969 fu,p <= 0.01 (~2–13 nM Cu,brain)')
     .replace(/8mer_MWC_1x_parallel_Bliss_to_2_to_7x_epistatic_bounds/g, '8-mer MWC (1.0x parallel Bliss to ~2–7x epistatic bounds)')
     .replace(/1x_parallel_Bliss_to_2_to_7x_MWC_SARM1_bounds/g, '1.0x parallel Bliss to ~2–7x MWC SARM1 bounds')
     .replace(/Bifurcated_PKPD_ODE_79_to_30_to_0pct_coupled_PI3P_LRRK2_CASM/g, 'Bifurcated PK/PD ODE (~79% dead-zone -> ~30% matched -> 0% slow coupled +PI(3)P->LRRK2/CASM)')
@@ -179,6 +200,7 @@ function formatPrior(code){
     .replace(/35_to_50pct/g, '35–50%')
     .replace(/2_to_7x/g, '~2–7x')
     .replace(/minus85A3/g, '-85 Å³')
+    .replace(/plus85A3/g, '+85 Å³')
     .replace(/tau_ge_72h/g, 'τ ≥ 72h')
     .replace(/3700pg/g, '3,700 pg/mL')
     .replace(/HR062/g, 'HR = 0.62')
@@ -811,8 +833,12 @@ function renderDossierMain(){
     const isBench = r.dec === 'RECLASSIFY_BENCHMARK_OR_BIOMARKER';
     const vCol = isDrop ? 'border-l-[var(--error)]' : (isBench ? 'border-l-[var(--primary)]' : 'border-l-[var(--warning)]');
     const vTxt = isDrop ? `text-[var(--error)]` : (isBench ? `text-[var(--primary)]` : `text-[var(--warning)]`);
+    const benchHdr = (r.id==='EALS-013'||r.id==='EALS-032') ? 'ADJUDICATION RATIONALE &mdash; APPROVED SOC &amp; ASSAY BENCHMARK'
+      : (r.id==='EALS-003' ? 'ADJUDICATION RATIONALE &mdash; WITHDRAWN HUMAN PD CALIBRATOR'
+      : (r.id==='EALS-017' ? 'ADJUDICATION RATIONALE &mdash; VALIDATED LIVING-CSF STAGING PANEL'
+      : 'ADJUDICATION RATIONALE &mdash; CANDIDATE CSF MARKER (PRE-VALIDATION)'));
     const vHdr = isDrop ? `ADJUDICATION RATIONALE &mdash; DROP &middot; ${esc(humanizeEnum(r.epi)).toUpperCase()}`
-      : (isBench ? 'ADJUDICATION RATIONALE &mdash; CLINICAL BENCHMARK / FLUID STAGING BIOMARKER' : 'ADJUDICATION RATIONALE &mdash; KEEP &middot; EXPLORATORY (UNTESTED &ne; FALSIFIED)');
+      : (isBench ? benchHdr : 'ADJUDICATION RATIONALE &mdash; KEEP &middot; EXPLORATORY (UNTESTED &ne; FALSIFIED)');
     const hCell = isDrop
       ? `<div class="text-[var(--muted-foreground)] font-mono">Positive Falsification Gate</div><div class="font-semibold text-[var(--error)] mt-0.5">${esc(humanizeEnum(r.epi))}</div><div class="text-[var(--muted-foreground)] mt-0.5">Excluded by positive clinical, PK/safety, or confounding counterevidence.</div>`
       : `<div class="text-[var(--muted-foreground)] font-mono">Open Validation Steps (${r.hcnt})</div><div class="flex flex-wrap gap-1 mt-1">${r.hurdles && r.hurdles !== 'NONE' ? r.hurdles.split(';').map(h=>`<span class="px-1.5 py-0.5 rounded border border-[var(--border)] text-xs">${esc(formatHurdle(h))}</span>`).join('') : '<span class="text-[var(--muted-foreground)]">None (Calibration / Biomarker)</span>'}</div>`;
@@ -833,12 +859,12 @@ function renderDossierMain(){
         </div>`;
     box.innerHTML = `<div id="sec-overview" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-3">
       <div class="flex items-start justify-between gap-2 flex-wrap border-b border-[var(--card-border)] pb-2.5">
-        <div>
-          <div class="flex items-center gap-2 flex-wrap"><span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] font-mono font-bold text-xs" title="Translational Priority Rank #${r.rk}/52 · Genetic & Pathology Evidence Rank #${r.brk}/52">Priority #${r.rk}/52 (Evidence #${r.brk}) &middot; ${esc(r.id)}</span> ${decBadge(r.dec)} <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span> ${crowdPill}</div>
-          <h2 class="text-base font-bold mt-1.5">${esc(r.name)} &mdash; <span class="font-normal text-[var(--muted-foreground)]">${escLink(s ? s.sub : humanizeEnum(r.sub), r.id)}</span></h2>
+        <div class="min-w-0">
+          <div class="flex items-center gap-2 flex-wrap"><span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] font-mono font-bold text-xs" title="Translational Priority Rank #${r.rk}/52 · Genetic & Pathology Evidence Rank #${r.brk}/52">Priority #${r.rk}/52 (Evidence #${r.brk}) &middot; ${esc(r.id)}</span> ${decBadge(r.dec, r.id)} <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span> ${crowdPill}</div>
+          <h2 class="text-base font-bold mt-1.5 break-words">${esc(r.name)} &mdash; <span class="font-normal text-[var(--muted-foreground)]">${escLink(s ? s.sub : humanizeEnum(r.sub), r.id)}</span></h2>
           <div class="text-xs font-mono text-[var(--muted-foreground)] mt-0.5">${!isDrop && r.trl !== 'PROTOCOL_COMPANION_NA' ? esc(humanizeEnum(r.trl)) + ' &middot; ' : ''}${esc(humanizeEnum(r.basis))}${gPills?' &middot; '+gPills:''}</div>
         </div>
-        <div class="flex items-center gap-1.5 flex-wrap shrink-0">
+        <div class="flex items-center gap-1.5 flex-wrap min-w-0">
           ${updPill}
           <span class="px-2 py-1 rounded border border-[var(--border)] bg-[var(--background)] text-[var(--muted-foreground)] font-mono text-xs">Structured Triage Dossier</span>
           <button type="button" data-open-dossier="${prevId}" class="inline-block px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs cursor-pointer" title="Previous candidate ([ key)">&larr; ${esc(prevLbl)}</button>
@@ -892,17 +918,17 @@ function renderDossierMain(){
   box.innerHTML = `
     <div id="sec-overview" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2.5">
       <div class="flex flex-wrap items-start justify-between gap-2 border-b border-[var(--card-border)] pb-2.5">
-        <div>
+        <div class="min-w-0">
           <div class="flex flex-wrap items-center gap-2">
             <span class="px-2 py-0.5 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-bold text-xs" title="Translational Priority Rank #${r.rk}/52 · Genetic & Pathology Evidence Rank #${r.brk}/52">Priority #${r.rk}/52 (Evidence #${r.brk}) &middot; ${esc(r.id)}</span>
-            ${decBadge(r.dec)}
+            ${decBadge(r.dec, r.id)}
             <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span>
             ${(r.crowd && !r.crowd.startsWith('N/A')) ? `<span class="px-2 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">${esc(r.crowd)}</span>` : ''}
           </div>
-          <h2 class="text-base font-bold mt-1">${esc(r.name)} &mdash; <span class="font-normal text-[var(--muted-foreground)]">${esc(w.subtitle)}</span></h2>
+          <h2 class="text-base font-bold mt-1 break-words">${esc(r.name)} &mdash; <span class="font-normal text-[var(--muted-foreground)]">${esc(w.subtitle)}</span></h2>
           <div class="text-xs font-mono text-[var(--muted-foreground)] mt-0.5">${esc(humanizeEnum(r.trl))} &middot; ${esc(humanizeEnum(r.gate))} &middot; ${esc(humanizeEnum(r.basis))}${mGPills ? ' &middot; ' + mGPills : ''}</div>
         </div>
-        <div class="flex items-center gap-1.5 flex-wrap shrink-0">
+        <div class="flex items-center gap-1.5 flex-wrap min-w-0">
           ${updPill}
           ${(typeof window !== 'undefined' && window.PUBLIC_WEB_EXPORT && isFullExplorer) ? `<a href="./monographs/${esc(r.id)}.html" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs" title="Open lightweight standalone monograph page">Standalone Page &nearr;</a>` : ''}
           <button type="button" data-open-dossier="${prevId}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs cursor-pointer" title="Previous candidate ([ key)">&larr; ${esc(prevLbl)}</button>

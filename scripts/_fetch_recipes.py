@@ -8,7 +8,7 @@ SPRINGER_MELAMED = "https://media.springernature.com/original/springer-static/es
 
 DIRECT_SINGLE_FILE_HTTPS: dict[str, str] = {
     "DS045_TRAUT": "https://static-content.springer.com/esm/art%3A10.1186%2Fs13024-025-00838-9/MediaObjects/13024_2025_838_MOESM1_ESM.xlsx",
-    "DS031_ZHANG": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41593-026-02300-x/MediaObjects/41593_2026_2300_MOESM8_ESM.xlsx",
+    "DS031_ZHANG": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41593-026-02300-5/MediaObjects/41593_2026_2300_MOESM8_ESM.xlsx",
     "DS_ZENG_APA": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41593-025-02049-3/MediaObjects/41593_2025_2049_MOESM3_ESM.xlsx",
     "DS_BRYCE_APA": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41593-025-02050-w/MediaObjects/41593_2025_2050_MOESM3_ESM.xlsx",
     "DS005_BYE": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41593-025-02118-7/MediaObjects/41593_2025_2118_MOESM3_ESM.xlsx",

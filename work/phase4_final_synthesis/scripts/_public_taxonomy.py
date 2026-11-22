@@ -37,9 +37,9 @@ EVIDENCE_COHORT_BY_EALS: dict[str, str] = {
     "EALS-049": "CLINICAL_TRIALS_SUBGROUPS",
     "EALS-047": "IPSC_PHENOTYPIC_SCREEN", "EALS-008": "IPSC_PHENOTYPIC_SCREEN",
     "EALS-009": "IPSC_PHENOTYPIC_SCREEN", "EALS-010": "IPSC_PHENOTYPIC_SCREEN",
-    "EALS-011": "IPSC_PHENOTYPIC_SCREEN", "EALS-025": "IPSC_PHENOTYPIC_SCREEN",
+    "EALS-011": "CSF_AND_PHYSIOLOGY", "EALS-025": "IPSC_PHENOTYPIC_SCREEN",
     "EALS-027": "IPSC_PHENOTYPIC_SCREEN", "EALS-028": "IPSC_PHENOTYPIC_SCREEN",
-    "EALS-029": "IPSC_PHENOTYPIC_SCREEN", "EALS-048": "IPSC_PHENOTYPIC_SCREEN",
+    "EALS-029": "TDP43_SPLICING_APA", "EALS-048": "IPSC_PHENOTYPIC_SCREEN",
     "EALS-050": "IPSC_PHENOTYPIC_SCREEN", "EALS-051": "IPSC_PHENOTYPIC_SCREEN",
     "EALS-052": "IPSC_PHENOTYPIC_SCREEN",
 }
@@ -68,15 +68,11 @@ def resolve_cis_role(acc_id: str, raw_role: str) -> str:
 def resolve_cis_mode_code(gene: str, raw_mode: str) -> str:
     if gene == "STMN2":
         return "CRYPTIC_EXON2A_3SS_PAS_BLOCK"
-    if gene == "ELK1":
-        return "DISTAL_3UTR_EXT_PAS_WINDOW"
     return raw_mode
 
 
 def sanitize_public_modality(raw_mod: str) -> str:
     s = str(raw_mod or "").strip()
-    if "RNase-H gapmer" in s and "chrX:47631681" in s:
-        return "Watchlist cytoplasmic 3'-extension siRNA (#1 chrX:47631681-47631698(-)) or steric distal-PAS-blocking SSO across ELK1 3'-UTR extension chrX:47631618-47635519(-)"
     if "_" in s and " " not in s.split("(")[0]:
         s = (
             s.replace("Dropped_Failed_Human_ALS_Clinical_Regimen_", "Failed ALS clinical regimen: ")
@@ -174,7 +170,7 @@ def sanitize_public_prose(txt: str) -> str:
     s = s.replace("(ese_motifs=0)", "(0 disrupted ESE motifs)")
     s = re.sub(r"(?:\bmodeled\s+)?Tm_phys~64C", "modeled Tm ~64C", s)
     s = re.sub(r"(modeled\s+Tm\s*~[0-9]+C)\s*\(modeled\s+estimate\)", r"\1", s)
-    s = s.replace("Exon_up-chr9:76641980-76641790-Exon_dn", "flanking canonical exons (chr9:76641790-76641980)")
+    s = s.replace("Exon_up-chr9:76641980-76641790-Exon_dn", "flanking canonical Exon 11 (chr9:76644739-76644909(-)) and Exon 12 (chr9:76638186-76638288(-))")
     s = s.replace("load_brown2022_splicing(verify_hash=True)", "Checksum-verified Brown 2022 MAJIQ junction table")
     s = re.sub(r"\bClean\s*>=2mm\b", "Clean (>=2 mismatches)", s)
     s = re.sub(r"\bclean\s*>=2mm\b", "clean (>=2 mismatches)", s)

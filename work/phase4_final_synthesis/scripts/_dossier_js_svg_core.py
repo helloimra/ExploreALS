@@ -11,7 +11,7 @@ const GENE_ENSG = {
   'EALS-016':'ENSG00000118564', 'EALS-019':'ENSG00000162434', 'EALS-020':'ENSG00000115020',
   'EALS-022':'ENSG00000135924', 'EALS-023':'ENSG00000106636', 'EALS-024':'ENSG00000125730',
   AGAP2:'ENSG00000135439', AP1G2:'ENSG00000213983', ARHGEF11:'ENSG00000132694', ATG4B:'ENSG00000168397',
-  BRSK2:'ENSG00000174672', C1QA:'ENSG00000173372', C1QB:'ENSG00000173369', C1QC:'ENSG00000159189',
+  BMPR1A:'ENSG00000107779', BRSK2:'ENSG00000174672', C1QA:'ENSG00000173372', C1QB:'ENSG00000173369', C1QC:'ENSG00000159189',
   C3:'ENSG00000125730', C4B:'ENSG00000224389', C5AR1:'ENSG00000197405', CAPG:'ENSG00000042493',
   CELF5:'ENSG00000161082', CFL1:'ENSG00000172757', CHI3L1:'ENSG00000133048', CHI3L2:'ENSG00000064886',
   CHIT1:'ENSG00000133063', CHMP2B:'ENSG00000083937', CHMP7:'ENSG00000147457', CLK3:'ENSG00000179335',
@@ -25,25 +25,25 @@ const GENE_ENSG = {
   KCNQ3:'ENSG00000184156', KIFC2:'ENSG00000167702', MAOB:'ENSG00000069535', MIB2:'ENSG00000197530',
   MYO18A:'ENSG00000196535', MYOCD:'ENSG00000141052', NSF:'ENSG00000073969', PAFAH1B1:'ENSG00000007168',
   PFKP:'ENSG00000067057', PIKFYVE:'ENSG00000115020', PPA2:'ENSG00000138777', PRUNE2:'ENSG00000106772',
-  PTCH1:'ENSG00000185920', PTPRT:'ENSG00000196090', SARM1:'ENSG00000004139', SCFD1:'ENSG00000092108',
+  PTAR1:'ENSG00000188647', PTCH1:'ENSG00000185920', PTPRT:'ENSG00000196090', SARM1:'ENSG00000004139', SCFD1:'ENSG00000092108',
   SEC22B:'ENSG00000265808', SLC12A5:'ENSG00000124140', SNPH:'ENSG00000101298', SRPK2:'ENSG00000135250',
-  STMN2:'ENSG00000104435', STX5:'ENSG00000162236', TENM2:'ENSG00000145934', TRAPPC12:'ENSG00000171853',
+  STMN2:'ENSG00000104435', STX5:'ENSG00000162236', TENM2:'ENSG00000145934', TFRC:'ENSG00000072274', TRAPPC12:'ENSG00000171853',
   UNC13A:'ENSG00000130477', YKT6:'ENSG00000106636', ZNF783:'ENSG00000204946'
 };
 const CHEMBL_COMPOUNDS = new Set([
   'CHEMBL1200798','CHEMBL1201438','CHEMBL1214124','CHEMBL124363','CHEMBL1456','CHEMBL161',
   'CHEMBL2105759','CHEMBL2365743','CHEMBL289228','CHEMBL298734','CHEMBL35','CHEMBL3545058',
-  'CHEMBL3752910','CHEMBL41355','CHEMBL4297372','CHEMBL4297672','CHEMBL5653589','CHEMBL589',
+  'CHEMBL3752910','CHEMBL3989871','CHEMBL41355','CHEMBL4297372','CHEMBL4297643','CHEMBL4297672','CHEMBL5653589','CHEMBL589',
   'CHEMBL621','CHEMBL744','CHEMBL778','CHEMBL807','CHEMBL83','CHEMBL866'
 ]);
-const ACC_TOKEN_RE = /(?<![A-Za-z0-9])(?:PMID:(\\d{5,9})|(PMC\\d{6,9})|(?:DOI:\\s*)?(10\\.\\d{4,9}\\/[^\\s,;\\]\\u00b7&<>"]+)|(NCT\\d{8})|ISRCTN(\\d{8})|PDB\\s+([0-9][A-Za-z0-9]{3})|(7DJT|9TZY|7ANW|7NAL|7CR2|4KC3|2Z0D|3NMR|2DNH|6VN8|1XFD|7K2V|3KYQ|6J74|3EGD|3V5Z|6VCD|4M7N|1PK6)|(CHEMBL\\d+)|CID:(\\d+)|(ENS[GT]\\d{11})(?:\\.\\d+)?|HGNC:(\\d+)|MGI:(\\d+)|OMIM\\s+(\\d{6})|AF-([A-Z0-9]{6,10})-F\\d+|(O15498|O43526|O60229|O60674|O75396|O95249|P02745|P02746|P02747|P23458|P25686|P42779|P46459|P50395|P60568|Q01638|Q13190|Q6SZW1|Q7L622|Q8N6W0|Q8WVM8|Q93045|Q9UKA1|Q9UPW8|Q9Y4P1)|(gnomAD\\s+(?:v4(?:\\.1)?|r4))|(GSE\\d{4,8})|(PXD\\d{5,8})|(PRJNA\\d{5,9})|(syn\\d{6,10})|(rs\\d{3,12}))(?![A-Za-z0-9])/g;
+const ACC_TOKEN_RE = /(?<![A-Za-z0-9])(?:PMID:(\\d{5,9})|(PMC\\d{6,9})|(?:DOI:\\s*)?(10\\.\\d{4,9}\\/[^\\s,;\\]\\u00b7&<>"]+)|(NCT\\d{8})|(ACTRN\\d{14})|ISRCTN(\\d{8})|PDB\\s+([0-9][A-Za-z0-9]{3})|(7DJT|9TZY|7ANW|7NAL|7CR2|4KC3|2Z0D|3NMR|2DNH|6VN8|1XFD|7K2V|3KYQ|6J74|3EGD|3V5Z|6VCD|6C1R|1MQS|1Y9J|1PK6|5O33|2OOQ|5YPO|6TNQ|1DUX|4XYJ)|(CHEMBL\\d+)|CID:(\\d+)|(ENS[GT]\\d{11})(?:\\.\\d+)?|HGNC:(\\d+)|MGI:(\\d+)|OMIM\\s+(\\d{6})|AF-([A-Z0-9]{6,10})-F\\d+|(O14490|O14522|O15498|O43526|O60229|O60674|O75396|O95249|P02745|P02746|P02747|P19419|P23458|P25686|P42779|P46459|P50395|P60568|Q01638|Q01813|Q13190|Q6SZW1|Q7L622|Q8N6W0|Q8WUY3|Q8WVM8|Q8WVT3|Q93045|Q9UKA1|Q9UPW8|Q9Y4P1)|(gnomAD\\s+(?:v4(?:\\.1)?|r4|v2\\.1\\.1))|(GSE\\d{4,8})|(PXD\\d{5,8})|(PRJNA\\d{5,9})|(syn\\d{6,10})|(rs\\d{3,12}))(?![A-Za-z0-9])/g;
 
 function mkExtA(url, lbl){
   return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-[var(--link)] underline decoration-dotted underline-offset-2 hover:decoration-solid">${lbl}</a>`;
 }
 function linkifyAcc(escapedStr, geneCtx){
   if(!escapedStr) return '';
-  return String(escapedStr).replace(ACC_TOKEN_RE, (full, pmid, pmc, doi, nct, isrctn, pdbPref, pdbBare, chembl, cid, ens, hgnc, mgi, omim, af, uniprot, gnomad, gse, pxd, prjna, syn, rsid) => {
+  return String(escapedStr).replace(ACC_TOKEN_RE, (full, pmid, pmc, doi, nct, actrn, isrctn, pdbPref, pdbBare, chembl, cid, ens, hgnc, mgi, omim, af, uniprot, gnomad, gse, pxd, prjna, syn, rsid) => {
     if(pmid) return mkExtA('https://pubmed.ncbi.nlm.nih.gov/' + pmid + '/', full);
     if(pmc) return mkExtA('https://pmc.ncbi.nlm.nih.gov/articles/' + pmc + '/', full);
     if(doi){
@@ -60,6 +60,7 @@ function linkifyAcc(escapedStr, geneCtx){
       return mkExtA('https://doi.org/' + clean, vis) + trail;
     }
     if(nct) return mkExtA('https://clinicaltrials.gov/study/' + nct, full);
+    if(actrn) return mkExtA('https://www.anzctr.org.au/TrialSearch.aspx?searchTxt=' + actrn, full);
     if(isrctn) return mkExtA('https://www.isrctn.com/ISRCTN' + isrctn, full);
     if(pdbPref || pdbBare) return mkExtA('https://www.rcsb.org/structure/' + (pdbPref || pdbBare), full);
     if(chembl){
@@ -233,7 +234,7 @@ function renderEvidenceMatrix(ev, geneCtx){
   const meta = {
     log2fc: {hdr:'Effect Size: log2FC / \u0394log2CPM (-3.0 to +4.0, null = 0.0)', ticks:'<span>-3.0</span><span>0.0</span><span>+4.0</span>'},
     dpsi:   {hdr:'Cryptic / Isoform Junction Shift (\u0394PSI: 0.00 to 1.00)', ticks:'<span>0.00</span><span>0.50</span><span>1.00</span>'},
-    hr:     {hdr:'Survival Hazard Ratio (Log Scale: 0.25 to 2.00, null HR = 1.00)', ticks:'<span>0.25 (Benefit)</span><span>HR=1.0</span><span>2.00</span>'},
+    hr:     {hdr:'Survival Hazard Ratio (Log Scale: 0.12 to 3.00, null HR = 1.00)', ticks:'<span>0.12 (Benefit)</span><span>HR=1.0</span><span>3.00</span>'},
     auc:    {hdr:'Biomarker / Pathway Discrimination (ROC-AUC: 0.50 null to 1.00)', ticks:'<span>0.50 (Null)</span><span>0.75</span><span>1.00</span>'},
   };
   const mapVal = (k, v) => {
@@ -241,8 +242,8 @@ function renderEvidenceMatrix(ev, geneCtx){
     if(k === 'log2fc') return Math.max(1, Math.min(99, ((Math.max(-3.0, Math.min(4.0, num)) + 3.0) / 7.0) * 100));
     if(k === 'dpsi') return Math.max(1, Math.min(99, Math.max(0.0, Math.min(1.0, num)) * 100));
     if(k === 'hr'){
-      const cHr = Math.max(0.25, Math.min(2.0, num));
-      return Math.max(1, Math.min(99, ((Math.log(cHr) - Math.log(0.25)) / (Math.log(2.0) - Math.log(0.25))) * 100));
+      const cHr = Math.max(0.12, Math.min(3.0, num));
+      return Math.max(1, Math.min(99, ((Math.log(cHr) - Math.log(0.12)) / (Math.log(3.0) - Math.log(0.12))) * 100));
     }
     return Math.max(1, Math.min(99, ((Math.max(0.5, Math.min(1.0, num)) - 0.5) / 0.5) * 100));
   };
@@ -326,51 +327,61 @@ function renderLocusSsoSvg(candId, sig){
     const x1 = Math.max(L, mapTop(ex.lo)), x2 = Math.min(R, mapTop(ex.hi)), xm = (x1 + x2) / 2;
     const col = ex.kind==='ce' ? 'var(--error)' : (ex.kind==='skip' ? 'var(--warning)' : 'var(--primary)');
     const dash = ex.kind==='ce' ? 'stroke-dasharray="3,2"' : '';
-    const ly = idx === 1 ? 33 : 49;
-    const anchor = xm < 120 ? 'start' : (xm > 320 ? 'end' : 'middle');
-    const tx = anchor==='start' ? Math.max(L, x1) : (anchor==='end' ? Math.min(R, x2) : xm);
-    exSvg += `<rect x="${x1.toFixed(1)}" y="55" width="${Math.max(7, x2-x1).toFixed(1)}" height="16" rx="3" fill="${col}" stroke="var(--foreground)" stroke-opacity="0.25" ${dash}/>
-      ${idx===1?`<line x1="${xm.toFixed(1)}" y1="36" x2="${xm.toFixed(1)}" y2="55" stroke="${col}" stroke-width="1.1" stroke-dasharray="2,2"/>`:''}
-      <text x="${tx.toFixed(1)}" y="${ly}" text-anchor="${anchor}" font-size="12.6" font-weight="600" fill="${idx===1?col:'var(--foreground)'}">${esc(ex.lbl)}</text>`;
-    if(ex.hi >= sig.zoom_lo && ex.lo <= sig.zoom_hi){
-      const zx1 = Math.max(L, mapBot(Math.max(ex.lo, sig.zoom_lo))), zx2 = Math.min(R, mapBot(Math.min(ex.hi, sig.zoom_hi)));
-      zoomExSvg += `<rect x="${zx1.toFixed(1)}" y="136" width="${Math.max(5, zx2-zx1).toFixed(1)}" height="12" rx="2" fill="${col}" fill-opacity="0.35" stroke="${col}" stroke-width="1.1"/>`;
-    }
+    const ly = idx === 1 ? 54 : 34;
+    const anchor = idx === 0 ? 'start' : (idx === 2 ? 'end' : (xm < 130 ? 'start' : (xm > 330 ? 'end' : 'middle')));
+    const tx = anchor==='start' ? Math.max(L, idx===0 ? L : x1) : (anchor==='end' ? Math.min(R, idx===2 ? R : x2) : xm);
+    exSvg += `<rect x="${x1.toFixed(1)}" y="61" width="${Math.max(7, x2-x1).toFixed(1)}" height="16" rx="3" fill="${col}" stroke="var(--foreground)" stroke-opacity="0.25" ${dash}/>
+      <text x="${tx.toFixed(1)}" y="${ly}" text-anchor="${anchor}" font-size="12.4" font-weight="600" fill="${idx===1?col:'var(--foreground)'}">${esc(ex.lbl)}</text>`;
   });
   const snpItems = (sig.snps||[]).map(sn => ({...sn, sx: Math.max(L+14, Math.min(R-14, mapTop(sn.pos)))})).sort((a,b)=>a.sx-b.sx);
   const spanItems = sig.spans || [];
   const bothTop = snpItems.length > 0 && spanItems.length > 0;
-  const offY = bothTop ? 16 : 0;
-  const closePair = snpItems.length === 2 && Math.abs(snpItems[1].sx - snpItems[0].sx) < 95;
+  const spanOff = bothTop ? 22 : 0;
   spanItems.forEach(sp => {
     const sx1 = Math.max(L+6, mapTop(sp.lo)), sx2 = Math.min(R-6, mapTop(sp.hi)), sm = (sx1 + sx2)/2;
-    const sAnchor = sm < 115 ? 'start' : (sm > 345 ? 'end' : 'middle');
-    const spY = bothTop ? 79 : 81;
-    const spTxtY = bothTop ? 96 : 100;
+    const sAnchor = sm < 130 ? 'start' : (sm > 330 ? 'end' : 'middle');
+    const spY = 86;
+    const spTxtY = 103;
     snpSvg += `<line x1="${sx1.toFixed(1)}" y1="${spY}" x2="${sx2.toFixed(1)}" y2="${spY}" stroke="var(--warning)" stroke-width="2"/>
       <line x1="${sx1.toFixed(1)}" y1="${spY-5}" x2="${sx1.toFixed(1)}" y2="${spY+5}" stroke="var(--warning)" stroke-width="1.5"/>
       <line x1="${sx2.toFixed(1)}" y1="${spY-5}" x2="${sx2.toFixed(1)}" y2="${spY+5}" stroke="var(--warning)" stroke-width="1.5"/>
-      <text x="${sm.toFixed(1)}" y="${spTxtY}" text-anchor="${sAnchor}" font-size="12.4" font-family="monospace" font-weight="600" fill="var(--warning)">${esc(sp.lbl)}</text>`;
+      <text x="${sm.toFixed(1)}" y="${spTxtY}" text-anchor="${sAnchor}" font-size="12.3" font-family="monospace" font-weight="600" fill="var(--warning)">${esc(sp.lbl)}</text>`;
   });
-  snpItems.forEach((sn, idx) => {
+  let maxSnpY = bothTop ? 103 : (spanItems.length > 0 ? 103 : 86);
+  const rowRightBySlot = [-999, -999, -999];
+  snpItems.forEach((sn) => {
     const sx = sn.sx;
-    const sAnchor = closePair ? (idx === 0 ? 'end' : 'start') : (sx < 115 ? 'start' : (sx > 345 ? 'end' : 'middle'));
-    const tx = closePair ? (idx === 0 ? sx - 5 : sx + 5) : sx;
-    const tickEnd = bothTop ? 99 : 83;
-    const dotY = bothTop ? 101 : 85;
-    const ty = bothTop ? (115 + (idx%2)*14) : (closePair ? 100 : (99 + (idx%2)*14));
-    snpSvg += `<line x1="${sx.toFixed(1)}" y1="71" x2="${sx.toFixed(1)}" y2="${tickEnd}" stroke="var(--warning)" stroke-width="1.5"/>
+    const estW = Math.max(84, sn.lbl.length * 7.6);
+    const sAnchor = sx < 155 ? 'start' : (sx > 305 ? 'end' : 'middle');
+    const tx = sAnchor === 'start' ? Math.max(L, sx - 6) : (sAnchor === 'end' ? Math.min(R, sx + 6) : sx);
+    const estL = sAnchor === 'start' ? tx : (sAnchor === 'end' ? tx - estW : tx - estW / 2);
+    const estR = estL + estW;
+    let slot = 0;
+    while(slot < 2 && estL < rowRightBySlot[slot] + 10) slot++;
+    rowRightBySlot[slot] = Math.max(rowRightBySlot[slot], estR);
+    const tickEnd = 89 + spanOff;
+    const dotY = 91 + spanOff;
+    const ty = 106 + spanOff + slot * 17;
+    if(ty > maxSnpY) maxSnpY = ty;
+    snpSvg += `<line x1="${sx.toFixed(1)}" y1="77" x2="${sx.toFixed(1)}" y2="${tickEnd}" stroke="var(--warning)" stroke-width="1.5"/>
       <circle cx="${sx.toFixed(1)}" cy="${dotY}" r="3.2" fill="var(--warning)"/>
-      <text x="${tx.toFixed(1)}" y="${ty}" text-anchor="${sAnchor}" font-size="12.4" font-family="monospace" fill="var(--muted-foreground)">${esc(sn.lbl)}</text>`;
+      <text x="${tx.toFixed(1)}" y="${ty}" text-anchor="${sAnchor}" font-size="12.2" font-family="monospace" fill="var(--muted-foreground)">${esc(sn.lbl)}</text>`;
   });
-  if(offY > 0){
-    zoomExSvg = zoomExSvg.replace(/y="136"/g, `y="${136 + offY}"`);
-  }
+  const zoomLblY = Math.max(134, maxSnpY + 20);
+  const zoomPolyY = zoomLblY + 6;
+  const zoomAxisY = zoomPolyY + 10;
+  sig.exons.forEach((ex) => {
+    const col = ex.kind==='ce' ? 'var(--error)' : (ex.kind==='skip' ? 'var(--warning)' : 'var(--primary)');
+    if(ex.hi >= sig.zoom_lo && ex.lo <= sig.zoom_hi){
+      const zx1 = Math.max(L, mapBot(Math.max(ex.lo, sig.zoom_lo))), zx2 = Math.min(R, mapBot(Math.min(ex.hi, sig.zoom_hi)));
+      zoomExSvg += `<rect x="${zx1.toFixed(1)}" y="${zoomAxisY-6}" width="${Math.max(5, zx2-zx1).toFixed(1)}" height="12" rx="2" fill="${col}" fill-opacity="0.35" stroke="${col}" stroke-width="1.1"/>`;
+    }
+  });
   const zt1 = Math.max(L, mapTop(sig.zoom_lo)), zt2 = Math.min(R, mapTop(sig.zoom_hi));
   const hasNotes = Boolean(sig.iv_notes);
-  const rowH = hasNotes ? 62 : 44;
+  const rowH = hasNotes ? 68 : 48;
   const zSpans = sig.zoom_spans || [];
-  const startRowY = 156 + offY;
+  const startRowY = zoomAxisY + 14;
   let baseRowY = startRowY;
   if(cis.length === 0 && zSpans.length === 0){
     const emptyNote = sig.empty_cis_note || ('Isoform locus: ' + sig.chrom + ':' + sig.zoom_lo + '-' + sig.zoom_hi);
@@ -386,33 +397,33 @@ function renderLocusSsoSvg(candId, sig){
       const ivNote = (sig.iv_notes && sig.iv_notes[String(c.rk)]) ? sig.iv_notes[String(c.rk)] : '';
       ssoSvg += `<g>
         <rect x="${bx1.toFixed(1)}" y="${y}" width="${Math.max(12, bx2-bx1).toFixed(1)}" height="10" rx="3" fill="${bCol}" ${c.st.startsWith('WARN')?'stroke="var(--foreground)" stroke-dasharray="2,2"':''}/>
-        <text x="${L}" y="${y+23}" font-size="12.6" font-family="monospace" font-weight="${c.lead?'700':'500'}" fill="var(--foreground)">${c.lead?'★ ':''}#${c.rk} ${esc(c.iv)}</text>
-        <text x="${R}" y="${y+23}" text-anchor="end" font-size="12.5" font-family="monospace" font-weight="600" fill="${bCol}">${esc(stShort)}</text>
-        <text x="${L}" y="${y+37}" font-size="12.5" font-family="monospace" fill="var(--muted-foreground)">${c.len}bp · Tm=${c.tm}°C · max AVI=${c.avi}</text>
-        ${ivNote?`<text x="${L}" y="${y+51}" font-size="12.3" fill="var(--warning)">&#9656; ${esc(ivNote)}</text>`:''}
+        <text x="${L}" y="${y+23}" font-size="12.5" font-family="monospace" font-weight="${c.lead?'700':'500'}" fill="var(--foreground)">${c.lead?'★ ':''}#${c.rk} ${esc(c.iv)}</text>
+        <text x="${R}" y="${y+23}" text-anchor="end" font-size="12.4" font-family="monospace" font-weight="600" fill="${bCol}">${esc(stShort)}</text>
+        <text x="${L}" y="${y+39}" font-size="12.3" font-family="monospace" fill="var(--muted-foreground)">${c.len}bp · Tm=${c.tm}°C · max AVI=${c.avi}</text>
+        ${ivNote?`<text x="${L}" y="${y+56}" font-size="12.2" fill="var(--warning)">&#9656; ${esc(ivNote)}</text>`:''}
       </g>`;
     });
     baseRowY = startRowY + cis.length * rowH;
     zSpans.forEach((zs, zIdx) => {
-      const zy = baseRowY + zIdx * 50;
+      const zy = baseRowY + zIdx * 54;
       const zx1 = Math.max(L, mapBot(Number(zs.lo))), zx2 = Math.min(R, mapBot(Number(zs.hi)));
       const zCol = zs.tone==='clean' ? 'var(--success)' : (zs.tone==='hazard' ? 'var(--error)' : 'var(--warning)');
       ssoSvg += `<g>
         <rect x="${zx1.toFixed(1)}" y="${zy}" width="${Math.max(12, zx2-zx1).toFixed(1)}" height="9" rx="2.5" fill="${zCol}" fill-opacity="0.78" stroke="${zCol}" stroke-dasharray="3,2"/>
-        <text x="${L}" y="${zy+22}" font-size="12.4" font-weight="600" fill="${zCol}">${esc(zs.lbl)}</text>
-        <text x="${L}" y="${zy+37}" font-size="12.2" font-family="monospace" fill="var(--muted-foreground)">${esc(zs.sub || '')}</text>
+        <text x="${L}" y="${zy+23}" font-size="12.4" font-weight="600" fill="${zCol}">${esc(zs.lbl)}</text>
+        <text x="${L}" y="${zy+40}" font-size="12.2" font-family="monospace" fill="var(--muted-foreground)">${esc(zs.sub || '')}</text>
       </g>`;
     });
-    baseRowY += zSpans.length * 50;
+    baseRowY += zSpans.length * 54;
   }
-  const h = baseRowY + 6;
+  const h = baseRowY + 8;
   return `<svg viewBox="0 0 460 ${h}" class="w-full h-auto block select-none" role="img" aria-label="GRCh38 locus and steric SSO coordinate map">
-    <text x="${L}" y="16" font-size="12.5" font-family="monospace" fill="var(--muted-foreground)">${esc(sig.chrom)}:${sig.win_lo.toLocaleString()}-${sig.win_hi.toLocaleString()} · ${esc(dirTxt)}</text>
-    <line x1="${L}" y1="63" x2="${R}" y2="63" stroke="var(--border)" stroke-width="2.2"/>
+    <text x="${L}" y="15" font-size="12.5" font-family="monospace" fill="var(--muted-foreground)">${esc(sig.chrom)}:${sig.win_lo.toLocaleString()}-${sig.win_hi.toLocaleString()} · ${esc(dirTxt)}</text>
+    <line x1="${L}" y1="69" x2="${R}" y2="69" stroke="var(--border)" stroke-width="2.2"/>
     ${exSvg}${snpSvg}
-    <polygon points="${zt1.toFixed(1)},71 ${zt2.toFixed(1)},71 ${R},${132+offY} ${L},${132+offY}" fill="var(--primary)" fill-opacity="0.06" stroke="var(--border)" stroke-dasharray="3,3"/>
-    <text x="${L}" y="${127+offY}" font-size="12.5" font-family="monospace" fill="var(--primary)">Zoom: ${esc(sig.chrom)}:${sig.zoom_lo.toLocaleString()}-${sig.zoom_hi.toLocaleString()} (1-based GRCh38)</text>
-    <line x1="${L}" y1="${142+offY}" x2="${R}" y2="${142+offY}" stroke="var(--foreground)" stroke-opacity="0.35" stroke-width="1.5"/>
+    <polygon points="${zt1.toFixed(1)},77 ${zt2.toFixed(1)},77 ${R},${zoomPolyY} ${L},${zoomPolyY}" fill="var(--primary)" fill-opacity="0.06" stroke="var(--border)" stroke-dasharray="3,3"/>
+    <text x="${L}" y="${zoomLblY}" font-size="12.4" font-family="monospace" fill="var(--primary)">Zoom: ${esc(sig.chrom)}:${sig.zoom_lo.toLocaleString()}-${sig.zoom_hi.toLocaleString()} (1-based GRCh38)</text>
+    <line x1="${L}" y1="${zoomAxisY}" x2="${R}" y2="${zoomAxisY}" stroke="var(--foreground)" stroke-opacity="0.35" stroke-width="1.5"/>
     ${zoomExSvg}${ssoSvg}
   </svg>`;
 }

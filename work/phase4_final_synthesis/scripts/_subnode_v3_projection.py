@@ -58,7 +58,7 @@ COLONLESS_VERDICT_PROSE: dict[str, str] = {
         "Retained as primary EALS-014 nuclear-envelope surveillance subunit requiring titrated <=35–50% knockdown or selective SUN1-CHMP7 nuclear-import blockade."
     ),
     "KEEP_EXPLORATORY_UNPROVEN_SECONDARY_SUBUNIT": (
-        "Evaluated separately from CHMP7 due to neuronal ANXA11 membrane-repair and autophagy requirements; gated on head-to-head single vs. dual partial knockdown under NE rupture challenge."
+        "Evaluated separately with CHMP7 retained as sole primary target: pan-allele CHMP2B knockdown carries high neuronal ANXA11 membrane-repair and autophagy liability, restricting any exploratory comparator to 1-based Exon-6 3'-UTR (sparing c.532-1G)."
     ),
 }
 

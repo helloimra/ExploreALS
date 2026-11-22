@@ -3,8 +3,18 @@ from __future__ import annotations
 
 import csv
 from pathlib import Path
+import sys
 
 ROOT = Path(__file__).resolve().parents[3]
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from _wave_b_v1_2_7_decisions import apply_wave_b_decision_patches  # noqa: E402
+from _wave_b_v1_2_7_decisions_b import apply_wave_b_decision_patches_b  # noqa: E402
+from _wave_c_v1_2_8_decisions import apply_wave_c_decision_patches  # noqa: E402
+from _wave_d_v1_2_9_decisions_a import apply_wave_d_decision_patches_a  # noqa: E402
+from _wave_d_v1_2_9_decisions_b import apply_wave_d_decision_patches_b  # noqa: E402
 REG_DIR = ROOT / "registries"
 TS = "2026-11-16T09:15:00Z"
 
@@ -180,6 +190,12 @@ def main() -> None:
         "factual_justification": "Directly falsified in a 249-patient randomized placebo-controlled Phase 2 ALS trial: subcutaneous C3 inhibitor pegcetacoplan (MERIDIAN NCT04579666 posted results, N=249 enrolled / N=247 mITT: Week 52 primary CAFS rank LS mean diff -3.0, p=0.7205) missed primary and all secondary endpoints and terminated for futility alongside Phase 3 ravulizumab (NCT04248465) and Phase 2/3 HEALEY zilucoplan (NCT04436497, PMID:39960672).",
         "updated_at": TS,
     })
+
+    apply_wave_b_decision_patches(dm)
+    apply_wave_b_decision_patches_b(dm)
+    apply_wave_c_decision_patches(dm)
+    apply_wave_d_decision_patches_a(dm)
+    apply_wave_d_decision_patches_b(dm)
 
     with fp.open("w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=cols, lineterminator="\r\n")

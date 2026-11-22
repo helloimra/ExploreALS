@@ -199,10 +199,16 @@ function jumpToUpdates(query, updateHash=true){
 }
 
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
-function decBadge(d){
+function decBadge(d, id=''){
   if(d==='KEEP_CORE') return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--success)] border border-[var(--success)] text-xs whitespace-nowrap" title="Causal human ALS genetics and/or human TDP-43 pathology + functional rescue">Keep &middot; Core</span>';
   if(d==='KEEP_EXPLORATORY_UNPROVEN') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--warning)] border border-[var(--warning)] text-xs whitespace-nowrap" title="Untested preclinical/biofluid triage queue — prospective Go/No-Go gate required">Keep &middot; Exploratory</span>';
-  if(d==='RECLASSIFY_BENCHMARK_OR_BIOMARKER') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Approved SOC drug, PD calibrator, or fluid staging biomarker">Benchmark</span>';
+  if(d==='RECLASSIFY_BENCHMARK_OR_BIOMARKER'){
+    if(id==='EALS-013'||id==='EALS-032') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Approved clinical ALS standard-of-care & in vitro screen calibration benchmark">SOC Benchmark</span>';
+    if(id==='EALS-003') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Commercially withdrawn drug retained strictly as a human physiological Kv7.2/7.3 PD ruler">Withdrawn PD Calibrator</span>';
+    if(id==='EALS-017') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Multi-cohort validated CSF symptomatic staging & microglial/lysosomal PD panel (rs3831317-genotyped)">CSF Staging Panel</span>';
+    if(id==='EALS-043'||id==='EALS-044'||id==='EALS-045') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Pre-validation untargeted CSF proteomic candidate marker requiring targeted PRM / immunoassay bridging">Candidate CSF Marker</span>';
+    return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Approved SOC drug, PD calibrator, or fluid staging biomarker">Benchmark</span>';
+  }
   return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap" title="Scientifically falsified by human RCT futility, CNS PK/safety wall, or assay confounding">Drop &middot; Falsified</span>';
 }
 function statusBadge(st){
@@ -351,7 +357,7 @@ function renderPortfolio(){
       <td class="py-2 px-1.5 font-mono text-xs text-[var(--muted-foreground)] whitespace-nowrap" title="ExploreALS Accession ${esc(r.id)}">${esc(r.id)}</td>
       <td class="py-2 px-2"><div class="font-medium flex flex-wrap items-center gap-1"><span>${esc(r.name)}</span>${metaChips}</div><div class="text-[var(--muted-foreground)] text-xs">${esc(humanizeEnum(r.sub))} &middot; ${trackLabel(r.trk)}</div></td>
       <td class="hidden xl:table-cell py-2 px-2 text-xs text-[var(--muted-foreground)] max-w-[220px] break-words" title="${esc(formatModality(r.mod))}">${esc(shortMod(r.mod))}</td>
-      <td class="py-2 px-1.5">${decBadge(r.dec)}</td>
+      <td class="py-2 px-1.5">${decBadge(r.dec, r.id)}</td>
       <td class="hidden lg:table-cell py-2 px-1.5 text-xs whitespace-nowrap">${esc(shortTier(r.tier))}</td>
       <td class="hidden sm:table-cell py-2 px-1.5 font-mono text-xs whitespace-nowrap">${esc(shortTrl(r.trl))}</td>
       <td class="hidden sm:table-cell py-2 px-1.5 font-mono tabular-nums text-right">${r.hcnt}</td>
@@ -483,7 +489,7 @@ function renderDetail(selHidden=false){
   document.getElementById('p-detail').innerHTML = `${hiddenBanner}
     <div class="space-y-1.5 border-b border-[var(--card-border)] pb-2">
       <div class="flex items-center justify-between gap-1.5 flex-wrap">
-        <div class="flex items-center gap-1.5 flex-wrap"><span class="font-mono font-bold text-sm" title="Translational Priority Rank #${r.rk} · Genetic & Pathology Evidence Rank #${r.brk}">#${r.rk} <span class="font-normal text-xs text-[var(--muted-foreground)]">(Evid #${r.brk})</span> &middot; <span class="text-[var(--muted-foreground)] font-normal">${esc(r.id)}</span></span> ${decBadge(r.dec)} ${crowdChip}</div>
+        <div class="flex items-center gap-1.5 flex-wrap"><span class="font-mono font-bold text-sm" title="Translational Priority Rank #${r.rk} · Genetic & Pathology Evidence Rank #${r.brk}">#${r.rk} <span class="font-normal text-xs text-[var(--muted-foreground)]">(Evid #${r.brk})</span> &middot; <span class="text-[var(--muted-foreground)] font-normal">${esc(r.id)}</span></span> ${decBadge(r.dec, r.id)} ${crowdChip}</div>
         <div class="flex items-center gap-1 shrink-0">${updDetailBtn}${pubMonoLink}</div>
       </div>
       <div class="text-sm font-semibold leading-snug">${esc(r.name)}</div>

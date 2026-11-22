@@ -28,7 +28,7 @@ DS_LABELS: dict[str, tuple[str, list[str]]] = {
     "DS_CONS2026": ("2026 ALS Multiome Consortia", ["PMC12919128", "PMC12982666"]),
     "DS031_ZHANG": ("Zhang et al. 2026 Spatial", ["PMID:42135512", "GSE288365"]),
     "DS_CRYPTIC": ("Brown & Ma 2022 Cryptic Atlas", ["PMID:35197628", "PMID:35197626"]),
-    "DS_ZENG_APA": ("Zeng et al. 2025 TDP-43 APA", ["DOI:10.1038/s41593-025-02049-3"]),
+    "DS_ZENG_APA": ("Zeng et al. 2025 TDP-43 APA", ["PMID:41120750", "DOI:10.1038/s41593-025-02049-3"]),
     "DS_BRYCE_APA": ("Bryce-Smith et al. 2025 APA/CE", ["PMID:41120751"]),
     "DS026_FUJITA": ("Fujita et al. ROSMAP eQTL", ["syn52335732"]),
     "DS045_TRAUT": ("Trautwig et al. 2025 CSF", ["PMC12082929", "PMID:40375307"]),
@@ -46,7 +46,7 @@ DS_LABELS: dict[str, tuple[str, list[str]]] = {
 }
 
 SPLIT_RE = re.compile(r"[;|]|\+(?=(?:OpenTargets|AlphaGenome|ChEMBL|gnomAD|DS_|OpenFDA|CT\.gov))")
-INLINE_ACC_RE = re.compile(r"(?:PMID:\d+|PMC\d+|NCT\d{8}|CHEMBL\d+|CID:\d+|ENS[GT]\d{11}(?:\.\d+)?|GSE\d+|PXD\d+|PRJNA\d+|syn\d+|AF-[A-Z0-9]+-F1|10\.\d{4,9}/[^\s,;)\]]+)")
+INLINE_ACC_RE = re.compile(r"(?:PMID:\d+|PMC\d+|NCT\d{8}|NDA\d{5,6}|UMIN\d{9}|ISRCTN\d{8}|ACTRN\d{14}|jRCT[A-Za-z0-9]+|CHEMBL\d+|CID:\d+|ENS[GT]\d{11}(?:\.\d+)?|GSE\d+|PXD\d+|PRJNA\d+|syn\d+|AF-[A-Z0-9]+-F1|10\.\d{4,9}/[^\s,;)\]]+)")
 PDB_TOK_RE = re.compile(r"(?:pdb_0000([0-9a-z]{4})\.cif|DS_PDB[_:]([0-9A-Za-z]{4}))", re.IGNORECASE)
 VS_COUNTS_RE = re.compile(r"\b\d+\s+[A-Za-z0-9\-/+ ]{1,24}\s+vs\.?\s+\d+", re.IGNORECASE)
 SAMPLE_CTX_RE = re.compile(r"\[Sample context:\s*([^\]]+)\]", re.IGNORECASE)
@@ -67,7 +67,7 @@ MODEL_EIDS = {
     "EV-P3A-001", "EV-P3A-002", "EV-P3A-004", "EV-P3B-002", "EV-P3B-004",
 }
 LEVEL1_GENETICS_EIDS = {"EV-B2-001", "EV-B2-004", "EV-B2-006", "EV-B3-008", "EV-B6-012", "EV-B6-043"}
-LEVEL1_SOC_EIDS = {"EV-B4-007", "EV-B6-050"}
+LEVEL1_SOC_EIDS = {"EV-P4-009", "EV-B6-050", "EV-B5-006", "EV-B5-014", "EV-B5-015", "EV-B5-024", "EV-B3-020", "EV-P3B-022", "EV-P3B-030", "EV-P3B-031", "EV-P3B-032"}
 
 
 def classify_basis_and_tier(row: dict[str, str]) -> tuple[str, str, str]:
@@ -79,11 +79,13 @@ def classify_basis_and_tier(row: dict[str, str]) -> tuple[str, str, str]:
     n_raw = row.get("sample_size_n", "").strip()
     n_int = int(n_raw) if n_raw.isdigit() else None
 
-    if "mwc" in st or "ode" in st or "model" in st or "mass_action" in st or "simulation" in st:
+    if eid == "EV-P2-T4-004":
+        basis = "Human snRNA / Spatial Recompute"
+    elif "mwc" in st or "ode" in st or "model" in st or "mass_action" in st or "simulation" in st:
         basis = "Biophysical / PK-PD Model"
     elif "rct" in st or "phase3" in st or "phase2_3" in st:
         basis = "Human Phase 2b/3 RCT"
-    elif "phase2" in st or "clinical_trial" in st or "csf_pk_pd" in st:
+    elif "phase2" in st or "clinical_trial" in st or "csf_pk_pd" in st or "landscape" in st:
         basis = "Human Clinical Trial / PK-PD"
     elif "structural" in st or "3d" in st or "cif" in st:
         basis = "3D Cryo-EM / Crystal Audit"
@@ -91,7 +93,7 @@ def classify_basis_and_tier(row: dict[str, str]) -> tuple[str, str, str]:
         basis = "Human Genetics / QTL"
     elif "alphagenome" in st or "bulge_subcore" in st or "multiplex_design" in st or "offtarget" in st or "triage" in st:
         basis = "GRCh38 Cis / AlphaGenome Scan"
-    elif "chembl" in st or "openfda" in st or "pk" in st or "chemical" in st:
+    elif "chembl" in st or "openfda" in st or "pk" in st or "chemical" in st or "toxicity" in st or "safety" in st:
         basis = "Pharmacology / Safety Audit"
     elif "screen" in st:
         basis = "Patient iPSC-MN Drug Screen"
@@ -124,11 +126,11 @@ def classify_basis_and_tier(row: dict[str, str]) -> tuple[str, str, str]:
         "ds005_bye" in loc
         or "i3neuron" in coh
         or ("ipsc" in coh and "aals" not in loc and "594" not in coh)
-        or "ds_pdb" in loc
+        or ("ds_pdb" in loc and "ds045_traut" not in loc)
         or "structural" in st
-        or ("depmap" in loc and "omim" not in coh and "gnomad" not in loc)
+        or ("depmap" in loc and "omim" not in coh and "gnomad" not in loc and "ds045_traut" not in loc)
         or ("kinobead" in coh or eid in {"EV-B2-003", "EV-B4-019"})
-        or (n_int is not None and n_int < 15)
+        or (n_int is not None and n_int < 15 and "landscape" not in st)
     ):
         design_tier = "Level 3 · In Vitro or Small-N"
     # 4. Level 2: Human Cohorts (N >= 15), Clinical PK/Safety Labels, & Population Reference
@@ -333,11 +335,14 @@ def resolve_evidence_row(
     sha64 = srec.get("sha64", "")
     if sha64:
         sha12 = sha64[:12]
+    if srec:
+        rel_to_ds = {d["local_relpath"]: k for k, d in ds_map.items() if not k.startswith("DS_BASE")}
+        primary_ds = rel_to_ds.get(srec.get("anchor_relpath", ""), "") if srec.get("anchor_type") == "STAGED_DATASET" else ""
     anchor_kind = srec.get("anchor_type", "STAGED_DATASET" if primary_ds else "CACHED_API_SNAPSHOT")
     prov_tag = f"SHA-256:{sha12}" if sha12 else _classify_nonfile_prov(row)
 
     return {
-        "src": src_title, "accs": " · ".join(accs[:4]), "basis": basis, "cert": cert, "role": role,
+        "src": src_title, "accs": " · ".join(accs[:6]), "basis": basis, "cert": cert, "role": role,
         "coh": coh, "con": con, "est": est, "pf": pf, "n": n_val, "nsub": n_sub,
         "gene": gene_sym, "eid": eid, "run": row["analysis_run_id"],
         "ds": primary_ds, "anchor": anchor_kind, "sha": sha12, "sha64": sha64, "prov": prov_tag,

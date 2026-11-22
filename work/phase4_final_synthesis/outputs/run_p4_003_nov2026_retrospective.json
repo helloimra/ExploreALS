@@ -548,6 +548,22 @@
     "brown2022_i3neuron_riboseq_log2fc": 0.16601,
     "brown2022_i3neuron_riboseq_padj": 0.998666
   },
+  "c023_ptar1_majiq_exon_skip": {
+    "dataset_id": "DS_CRYPTIC",
+    "lsv_id": "ENSG00000188647.13:t:69741516-69741858",
+    "skipped_exon_1b": "chr9:69750781-69750950(-)",
+    "skipped_exon_length_bp": 170,
+    "skipped_exon_mod3": 2,
+    "skip_junction_1b": "chr9:69741858-69759853(-)",
+    "control_psi": 0.156,
+    "tdp_kd_psi": 0.369,
+    "delta_psi": 0.15626,
+    "fdr": 3.255679e-06,
+    "brown2022_i3neuron_rnaseq_log2fc": 0.17909,
+    "brown2022_i3neuron_rnaseq_padj": 0.143604,
+    "brown2022_i3neuron_riboseq_log2fc": -0.01559,
+    "brown2022_i3neuron_riboseq_padj": 0.998666
+  },
   "dnajb2_af_p25686_and_clinvar": {
     "global_mean_plddt": 67.38,
     "pae_rigid_domains": [
@@ -574,24 +590,31 @@
     "afdb_clr_stalk_vs_gc1q_head": {
       "C1QA": {
         "uniprot": "P02745",
-        "clr_mean_plddt": 68.1,
-        "clr_cationic_arg_lys_count": 13,
+        "mature_clr_bounds_1b": "23-109",
+        "clr_mean_plddt": 67.48,
+        "clr_cationic_arg_lys_count": 14,
+        "clr_to_aa114_arg_lys_count": 16,
         "gc1q_head_mean_plddt": 96.37
       },
       "C1QB": {
         "uniprot": "P02746",
+        "mature_clr_bounds_1b": "28-114",
         "clr_mean_plddt": 62.04,
         "clr_cationic_arg_lys_count": 7,
+        "clr_to_aa114_arg_lys_count": 7,
         "gc1q_head_mean_plddt": 93.07
       },
       "C1QC": {
         "uniprot": "P02747",
-        "clr_mean_plddt": 65.82,
+        "mature_clr_bounds_1b": "29-112",
+        "clr_mean_plddt": 66.06,
         "clr_cationic_arg_lys_count": 6,
+        "clr_to_aa114_arg_lys_count": 7,
         "gc1q_head_mean_plddt": 94.92
       }
     },
-    "total_clr_stalk_cationic_arg_lys": 26
+    "total_clr_stalk_cationic_arg_lys": 27,
+    "total_clr_stalk_to_aa114_arg_lys": 30
   },
   "s06_hetero_octamer_gof_mwc_prior": {
     "l_wt": 8.0,

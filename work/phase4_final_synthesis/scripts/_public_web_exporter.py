@@ -93,7 +93,7 @@ Agreement *within* a cluster is treated as cross-platform validation, not indepe
 ## 3-Level Independent Computational Replication Quickstart
 
 ```bash
-# Level 1 (<10s, 0 MB extra data): Verify all 18 CSV schemas, FKs, citations, decision rules & 194 recorded 64-char SHA-256s (41 unique anchors; 64/194 bundled in clean checkout)
+# Level 1 (<10s, 0 MB extra data): Verify all 18 CSV schemas, FKs, citations, decision rules & 202 recorded 64-char SHA-256s (46 unique anchors; 65/202 bundled in clean checkout)
 uv sync --frozen
 uv run python scripts/verify_explore_als.py --mode cached
 
@@ -115,7 +115,7 @@ uv run python scripts/build_explorer.py --public-docs-only
 ## Licensing, Disclaimers & Open-Data Provenance
 - **Dual Software & Data License:** Python source code (`src/`, `scripts/`, `pipelines/`, `work/**/*.py`) is licensed under the **MIT License** ([LICENSE](./LICENSE)); original curated registries (`registries/*.csv`), schemas, and monographs are licensed under **CC BY 4.0** ([LICENSE-DATA.md](./LICENSE-DATA.md)). Non-`CC-BY` publisher supplements (`Tier B`) are never re-hosted and are fetched directly from canonical publisher HTTPS endpoints.
 - **Preclinical Research Only — Not Medical Advice:** `ExploreALS v1.2` is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing in this repository or explorer constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.
-- **AI-Assisted Workflow Disclosure:** Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 42 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (`PubMed`, `Europe PMC`, `ClinicalTrials.gov`). Quantitative contrasts (`194/194` 64-char SHA-256 anchored) are programmatically audited and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors — always verify against linked primary sources before experimental use.
+- **AI-Assisted Workflow Disclosure:** Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 42 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (`PubMed`, `Europe PMC`, `ClinicalTrials.gov`). Quantitative contrasts (`202/202` 64-char SHA-256 anchored) are programmatically audited and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors — always verify against linked primary sources before experimental use.
 - **Data & Tool Attributions:** Google DeepMind AlphaGenome (`v1` API & Atlas `AVI`; non-commercial research use only), NIH GTEx (`v8 / v10`), Open Targets (`v4`), gnomAD (`v4.1`), Ensembl/GENCODE (`v46`), ChEMBL (`v34`), UniProt, RCSB PDB, and ClinicalTrials.gov.
 """
 

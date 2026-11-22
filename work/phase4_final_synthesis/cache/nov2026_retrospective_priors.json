@@ -546,5 +546,21 @@
     "brown2022_i3neuron_rnaseq_padj": 0.283432,
     "brown2022_i3neuron_riboseq_log2fc": 0.16601,
     "brown2022_i3neuron_riboseq_padj": 0.998666
+  },
+  "c023_ptar1_majiq_exon_skip": {
+    "dataset_id": "DS_CRYPTIC",
+    "lsv_id": "ENSG00000188647.13:t:69741516-69741858",
+    "skipped_exon_1b": "chr9:69750781-69750950(-)",
+    "skipped_exon_length_bp": 170,
+    "skipped_exon_mod3": 2,
+    "skip_junction_1b": "chr9:69741858-69759853(-)",
+    "control_psi": 0.156,
+    "tdp_kd_psi": 0.369,
+    "delta_psi": 0.15626,
+    "fdr": 3.255679e-06,
+    "brown2022_i3neuron_rnaseq_log2fc": 0.17909,
+    "brown2022_i3neuron_rnaseq_padj": 0.143604,
+    "brown2022_i3neuron_riboseq_log2fc": -0.01559,
+    "brown2022_i3neuron_riboseq_padj": 0.998666
   }
 }
