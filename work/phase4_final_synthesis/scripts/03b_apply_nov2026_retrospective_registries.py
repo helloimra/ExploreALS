@@ -15,7 +15,7 @@ for p in (SCRIPTS_DIR, SCRIPT_DIR):
         sys.path.insert(0, str(p))
 
 from _retrospective_registry_specs import NEW_EVIDENCE_ROWS, RUN_P4_003_ROW  # noqa: E402
-from _retrospective_stat_and_log_specs import NEW_STAT_SPECS, UPD_2026_11_19_01, UPD_2026_11_20_01, UPD_2026_11_20_02  # noqa: E402
+from _retrospective_stat_and_log_specs import NEW_STAT_SPECS, UPD_2026_11_19_01  # noqa: E402
 from _retrospective_wave_b_specs import WAVE_B_NEW_EVIDENCE_ROWS, WAVE_B_NEW_STAT_SPECS  # noqa: E402
 from _retrospective_wave_c_specs import WAVE_C_NEW_EVIDENCE_ROWS, WAVE_C_NEW_STAT_SPECS  # noqa: E402
 from _retrospective_wave_d_specs import UPD_2026_11_22_01  # noqa: E402
@@ -249,8 +249,6 @@ def main() -> None:
             u["new_evidence_or_revision"] = "Kuwahara et al. (2026, Life Sci Alliance, PMID:42994990) demonstrated direct, threshold-free PIKfyve -> +PI(3)P -> LRRK2 Rab10-pThr73 / ATG16L1 CASM recruitment alongside Drosophila C9orf72 secreted DPR data (DOI:10.64898/2026.11.09.765393). In modeled pulsed q48h–q72h turnover simulations (>=55% substrate clearance and end-of-cycle stress <=0.05), removing the occupancy dead-zone cuts grid survival from ~79% (64/81) to ~30% (24/81) at matched 10–20 h repair and 0% (0/81) at slower 24–48 h postmitotic CASM washout."
             u["portfolio_and_gate_consequence"] = u["portfolio_and_gate_consequence"].replace("under Epistemic Asymmetry ", "").replace("kill-gate", "validation gate")
     u_rows.insert(0, dict(UPD_2026_11_19_01))
-    u_rows.insert(0, dict(UPD_2026_11_20_01))
-    u_rows.insert(0, dict(UPD_2026_11_20_02))
     u_rows.insert(0, dict(UPD_2026_11_22_01))
     def _map_anchor_tok(tok: str) -> str:
         t = tok.strip()

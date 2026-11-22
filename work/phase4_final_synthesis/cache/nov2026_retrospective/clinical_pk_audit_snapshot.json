@@ -1,5 +1,5 @@
 {
-  "schema": "ExploreALS_v1.2.9_Primary_Clinical_PK_Audit",
+  "schema": "ExploreALS_v1.2.4_Primary_Clinical_PK_Audit",
   "retrieved_utc": "2026-11-22T01:10:00Z",
   "ev_p3b_030_maob_trials": {
     "double_blind_placebo_controlled_rcts": [

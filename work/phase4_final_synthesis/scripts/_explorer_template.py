@@ -70,7 +70,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--primary)] text-[var(--primary)] font-mono font-semibold text-xs">START HERE &middot; OVERVIEW &amp; SCOPE</span>
-              <span class="font-mono text-xs text-[var(--muted-foreground)]">Updated Nov 2026 (v1.2.9)</span>
+              <span class="font-mono text-xs text-[var(--muted-foreground)]">Updated Nov 2026 (v1.2.4)</span>
             </div>
             <h2 class="text-sm font-semibold text-[var(--foreground)]">How 52 ALS Hypotheses Map Across Evidence, Validation Steps &amp; Trial Readouts</h2>
             <p class="text-xs text-[var(--muted-foreground)] leading-snug">Synthesizes donor-level statistics (<span class="font-mono">8</span> participant-overlap clusters, <span class="font-mono">202</span> checksum-anchored statistical contrasts across <span class="font-mono">46</span> unique data/output digests; zero new wet-lab data), unbound human brain PK, and GENCODE v46 off-target scans across four triage verdicts:</p>
@@ -127,7 +127,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
             <div>
               <div class="flex flex-wrap items-center gap-2">
                 <h2 class="text-sm font-semibold text-[var(--foreground)]">Living Research Log</h2>
-                <span id="upd-count" class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono tabular-nums text-xs text-[var(--muted-foreground)]">9 / 9</span>
+                <span id="upd-count" class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono tabular-nums text-xs text-[var(--muted-foreground)]">7 / 7</span>
               </div>
               <p class="text-xs text-[var(--muted-foreground)] mt-0.5 leading-snug">Chronological ledger of post-release clinical trial readouts, newly published studies, and quantitative PK-PD/survival model revisions.</p>
             </div>

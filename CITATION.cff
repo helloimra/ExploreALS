@@ -2,7 +2,7 @@ cff-version: 1.2.0
 title: "ExploreALS: Unified ALS Therapeutic & Genetic Target Portfolio Explorer and Computational Replication Package"
 message: "If you use ExploreALS software, registries, or interactive analyses, please cite it using this metadata."
 type: software
-version: "1.2.9"
+version: "1.2.4"
 date-released: "2026-11-22"
 authors:
   - family-names: Agoga

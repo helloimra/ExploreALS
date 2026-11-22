@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.2.9",
+  "schema_version": "1.2.4",
   "description": "Deterministic live-verified bibliographic & trial registry lock enforced by scripts/verify_carbon_als.py",
   "banned_mismatched_ids": [
     "10.1016/j.stem.2018.12.005",
