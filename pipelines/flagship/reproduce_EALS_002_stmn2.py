@@ -35,7 +35,7 @@ def main() -> None:
         assert_close(f"[MEASURED:{src_tag}] Brown 2022 STMN2 Exon-2a cryptic junction dPSI", dpsi_obs, 0.4820, rtol=1e-3),
         assert_close(f"[MEASURED:{src_tag}] Spillman C9-FTD homogenate STMN2 log2FC (p=0.014, padj=0.113)", hom_obs, -0.4825, rtol=1e-3),
         assert_close("[MEASURED] Derived cortical STMN2 protein change % (2^log2FC - 1)", pct_loss, -28.43, rtol=0.01),
-        assert_equal("Promoted Lead #2 Clean >=2mm Off-Target Status", lead2["offtarget_safety_status"], "PASS_CLEAN_GE2MM"),
+        assert_equal("Promoted Lead #2 Harmonized Off-Target Status (0<=1mm/wob/blg; pm2_25=2 -> CAUTION)", f"{lead2['offtarget_safety_status']}:{lead2['premRNA_2mm_splice25bp_pc_genes']}", "CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED:2"),
     ]
     print_audit_report(
         "EALS-002", "STMN2 Cryptic-Exon-2a Steric SSO", checks,

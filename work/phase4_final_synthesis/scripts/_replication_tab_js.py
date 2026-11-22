@@ -57,7 +57,7 @@ function populateRepFilterOptions(){
   } else if(repMode === 'datasets'){
     sel.innerHTML = '<option value="ALL">Legal Tier: All (40)</option><option value="TIER_A_OPEN_REDISTRIBUTABLE">Tier A &middot; Open Redistributable (CC0 / CC-BY)</option><option value="TIER_B_PUBLISHER_HTTPS_FETCH">Tier B &middot; Direct Publisher/EuropePMC HTTPS</option><option value="TIER_C_DUA_OR_BASELINE">Tier C &middot; Registered Synapse Access</option>';
   } else {
-    sel.innerHTML = '<option value="ALL">Anchor Type: All (202)</option><option value="STAGED_DATASET">Staged Open Dataset (137)</option><option value="CACHED_API_SNAPSHOT">Cached API Snapshot (57)</option><option value="DETERMINISTIC_MODEL_OUTPUT">Deterministic Model Output (8)</option>';
+    sel.innerHTML = '<option value="ALL">Anchor Type: All (202)</option><option value="STAGED_DATASET">Staged Open Dataset (139)</option><option value="CACHED_API_SNAPSHOT">Cached API Snapshot (56)</option><option value="DETERMINISTIC_MODEL_OUTPUT">Deterministic Model Output (7)</option>';
   }
 }
 

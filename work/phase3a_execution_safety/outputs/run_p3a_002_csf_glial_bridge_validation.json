@@ -231,7 +231,7 @@
     }
   },
   "independent_external_study_oh2023_pmc10215566": {
-    "scope": "UNIVARIATE_5_OF_5_INDIVIDUAL_PROTEIN_REPLICATION_NO_DONOR_MATRIX",
+    "scope": "UNIVARIATE_5_OF_5_DISCOVERY_MS_AND_4_OF_5_PRM_VALIDATION_40_OF_61_OVERLAP",
     "n_als_discovery": 20,
     "n_hc_discovery": 20,
     "n_total_discovery": 40,
@@ -239,13 +239,14 @@
     "n_hc_total_table1": 31,
     "n_total_table1": 61,
     "n_bridge_proteins_fdr_lt_0_05": 5,
+    "n_bridge_proteins_prm_validated": 4,
     "proteins": {
       "CHI3L2": {
         "log2_als_vs_hc": 2.527697,
         "discovery_p_raw_text": "2.01 \u00d7 10\u22128",
         "discovery_q": 0.0,
-        "prm_detectability": "Validated_PRM_Table2",
-        "prm_validation_q": "<0.05"
+        "prm_detectability": "UNREPORTED_BLANK_IN_TABLE2",
+        "prm_validation_q": ""
       },
       "CHIT1": {
         "log2_als_vs_hc": 3.99428,

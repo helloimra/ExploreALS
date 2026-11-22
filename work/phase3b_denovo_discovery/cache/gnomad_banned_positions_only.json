@@ -72,5 +72,17 @@
   "chr18:4147642-4147692": {
     "total_gnomad_r4_variants": 14,
     "banned_positions_af_ge_0p001": []
+  },
+  "chr20:42099264-42099314": {
+    "total_gnomad_r4_variants": 10,
+    "banned_positions_af_ge_0p001": []
+  },
+  "chr20:42099255-42099281": {
+    "total_gnomad_r4_variants": 6,
+    "banned_positions_af_ge_0p001": []
+  },
+  "chr20:42099288-42099310": {
+    "total_gnomad_r4_variants": 5,
+    "banned_positions_af_ge_0p001": []
   }
 }

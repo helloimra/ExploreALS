@@ -9,12 +9,12 @@ from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_i
 FLAGSHIP_DEFS = [
     ("FLAGSHIP-EALS-030", "Monograph #1 · SARM1 (EALS-030)", "pipelines/flagship/reproduce_EALS_030_sarm1.py", "DS_PDB_9TZY;DS_PDB_7DJT;DS_PDB_7ANW", "EALS-030;EALS-002", "Verifies PDB 9TZY 3-chain BEXi filament gluing, gnomAD LOEUF=1.1432, illustrative low-reserve BEXi washout spike (Leahey 2025 8.6x IC50/C_act concentration shift across 122 BEIs) vs theoretical 8-mer ceiling and monotonic T-Lock, and default Krus 2022 Bliss additivity."),
     ("FLAGSHIP-EALS-031", "Monograph #2 · Aldesleukin (EALS-031)", "pipelines/flagship/reproduce_EALS_031_aldesleukin.py", "DS045_TRAUT", "EALS-031", "Verifies MIROCALS BioVendor ELISA <=3,700 pg/mL strata (n=173/220 LP; 173/304 screened), Trautwig tryptic CSF MS NEFL vs NEFH r=0.278 (n=51 Emory TMT nested in n=77 DIA), and proportional-hazards Schoenfeld Ph3 sizing (247 events at HR=0.70, HR_crit=0.779)."),
-    ("FLAGSHIP-EALS-001", "Monograph #3 · UNC13A (EALS-001)", "pipelines/flagship/reproduce_EALS_001_unc13a.py", "DS_CRYPTIC;DS029_SPILL;DS_GENCODE_V46_TX", "EALS-001", "Verifies Brown UNC13A cryptic junction dPSI, Spillman synaptosome Munc13-1 loss, rs12973192/rs12608932 genotype-stratified rules, and promoted Clean >=2mm Lead #2 chr19:17642537-17642554(-)."),
+    ("FLAGSHIP-EALS-001", "Monograph #3 · UNC13A (EALS-001)", "pipelines/flagship/reproduce_EALS_001_unc13a.py", "DS_CRYPTIC;DS029_SPILL;DS_GENCODE_V46_TX", "EALS-001", "Verifies Brown UNC13A cryptic junction dPSI, Spillman synaptosome Munc13-1 loss, rs12973192/rs12608932 genotype-stratified rules, and promoted zero-<=1mm Caution (25bp-SS 2mm=4) Lead #2 chr19:17642537-17642554(-)."),
     ("FLAGSHIP-EALS-006", "Monograph #4 · KCNQ2 (EALS-006)", "pipelines/flagship/reproduce_EALS_006_kcnq2.py", "DS_CRYPTIC;DS_PDB_7CR2;DS_GENCODE_V46_TX", "EALS-006;EALS-003;EALS-005", "Verifies Exon-5 126-bp (42-aa) in-frame skipping, PDB 7CR2 Trp236 2.97A retigabine H-bond, post-assembly ER co-trapping across 4:0 vs 2:2 Kv7.2:Kv7.3 channels, and Lead #3 off-target hygiene."),
-    ("FLAGSHIP-EALS-002", "Monograph #5 · STMN2 (EALS-002)", "pipelines/flagship/reproduce_EALS_002_stmn2.py", "DS_CRYPTIC;DS029_SPILL;DS_GENCODE_V46_TX", "EALS-002;EALS-030", "Verifies STMN2 Exon-2a cryptic junction dPSI=+0.482, Spillman C9-FTD homogenate -0.4825 log2FC (-28.4%, p=0.014, FDR=0.113), and promoted Clean >=2mm Lead #2 chr8:79616829-79616846(+)."),
-    ("FLAGSHIP-EALS-007", "Monograph #6 · IL1RL1 (EALS-007)", "pipelines/flagship/reproduce_EALS_007_il1rl1.py", "DS_EDIN_PB;DS031_ZHANG;DS_PDB_4KC3;DS_GENCODE_V46_TX", "EALS-007", "Verifies Edinburgh UMI-pooled endothelial +3.107 log2CPM (p=0.00698, n=28: 21v7 Ctrl, PMID:42551425), Zhang 55-um Visium +3.76 (N=14/18 sections), PDB 4KC3 D1-D3 (aa 21-317) 5 closed disulfides + sequence-deduced 11th Cys327, and Zone 1 PAS #1 chr2:102346045-102346062(+) Clean >=2mm."),
-    ("FLAGSHIP-EALS-034", "Monograph #7 · ATG4B (EALS-034)", "pipelines/flagship/reproduce_EALS_034_atg4b.py", "DS029_SPILL;DS001_COUNTS;DS_PDB_2Z0D;DS_GENCODE_V46_TX", "EALS-034", "Verifies Spillman C9-FTD homogenate ATG4B -0.4905 log2FC (p=0.0227, FDR=0.148, PMID:42789089), NYGC cervical RIN+GC OLS beta=-0.1642, PDB 2Z0D Val319 27 LC3B contacts, and Lead #2 chr2:241668970-241668987(+) vs Torres 16-nt 6-LNA ASO 3J (sp1 10->0, pm1_50 18->0, pLI flags 5->0, 1-mm heuristic Tm=74.09C)."),
-    ("FLAGSHIP-EALS-037", "Monograph #8 · CELF5 (EALS-037)", "pipelines/flagship/reproduce_EALS_037_celf5.py", "DS001_COUNTS;DS005_BYE;DS_GENCODE_V46_TX;DS_PDB_3NMR;DS_AF_Q8N6W0", "EALS-037", "Verifies NYGC cervical RIN+GC beta=-0.4020, #1 neuronal-mass-adjusted tSTMN2 coupling (1.90% cervical / 0.14% lumbar tail), gnomAD v4.1 MANE LOEUF=0.248 (Open Targets=0.216), AF-Q8N6W0 / CELF1 homolog PDB 3NMR RRM2 beta4 truncation + 18-nt NMD EJC gap, Brown Ribo-seq 38.6% residual & Zeng 2025 NMD-inhibited CE PSI 44.6%, and Clean >=2mm Lead #1 chr19:3278299-3278318(+)."),
+    ("FLAGSHIP-EALS-002", "Monograph #5 · STMN2 (EALS-002)", "pipelines/flagship/reproduce_EALS_002_stmn2.py", "DS_CRYPTIC;DS029_SPILL;DS_GENCODE_V46_TX", "EALS-002;EALS-030", "Verifies STMN2 Exon-2a cryptic junction dPSI=+0.482, Spillman C9-FTD homogenate -0.4825 log2FC (-28.4%, p=0.014, FDR=0.113), and promoted zero-<=1mm Caution (25bp-SS 2mm=2) Lead #2 chr8:79616829-79616846(+)."),
+    ("FLAGSHIP-EALS-007", "Monograph #6 · IL1RL1 (EALS-007)", "pipelines/flagship/reproduce_EALS_007_il1rl1.py", "DS_EDIN_PB;DS031_ZHANG;DS_PDB_4KC3;DS_GENCODE_V46_TX", "EALS-007", "Verifies Edinburgh UMI-pooled endothelial +3.107 log2CPM (p=0.00698, n=28: 21v7 Ctrl, PMID:42551425), Zhang 55-um Visium +3.76 (N=14/18 sections), PDB 4KC3 D1-D3 (aa 21-317) 5 closed disulfides + sequence-deduced 11th Cys327, and Zone 1 PAS #1 chr2:102346045-102346062(+) (mRNA/50bp-SS 0/0; Caution on 25bp-SS 2mm=1)."),
+    ("FLAGSHIP-EALS-034", "Monograph #7 · ATG4B (EALS-034)", "pipelines/flagship/reproduce_EALS_034_atg4b.py", "DS029_SPILL;DS001_COUNTS;DS_PDB_2Z0D;DS_GENCODE_V46_TX", "EALS-034", "Verifies Spillman C9-FTD homogenate ATG4B -0.4905 log2FC (p=0.0227, FDR=0.148, PMID:42789089), NYGC cervical RIN+GC OLS beta=-0.1642, PDB 2Z0D Val319 27 LC3B contacts, and Lead #2 chr2:241668970-241668987(+) vs Torres 16-nt 6-LNA ASO 3J (sp1 10->0, 50bp-SS 1mm 18->0, pLI flags 5->0, 1-mm heuristic Tm=74.09C)."),
+    ("FLAGSHIP-EALS-037", "Monograph #8 · CELF5 (EALS-037)", "pipelines/flagship/reproduce_EALS_037_celf5.py", "DS001_COUNTS;DS005_BYE;DS_GENCODE_V46_TX;DS_PDB_3NMR;DS_AF_Q8N6W0", "EALS-037", "Verifies NYGC cervical RIN+GC beta=-0.4020, #1 neuronal-mass-adjusted tSTMN2 coupling (1.90% cervical / 0.14% lumbar tail), gnomAD v4.1 MANE LOEUF=0.248 (Open Targets=0.216), conditional 108-nt CE model (AF-Q8N6W0 / CELF1 homolog PDB 3NMR RRM2 beta4 truncation + 18-nt NMD EJC gap), Brown Ribo-seq 38.6% residual & Zeng 2025 NMD-inhibited CE PSI 44.6%, and Clean >=2mm Lead #1 chr19:3278299-3278318(+)."),
 ]
 
 STAGE_LABELS = {
@@ -141,16 +141,16 @@ def build_replication_payloads(
             "cls": s["inference_class"], "unit": s["statistical_unit"], "nu": s["n_statistical_units"],
             "ndon": s["n_unique_donors_or_participants"],
             "con": (
-                "Cross-portfolio separation of clinical development stage from biological actionability and validation steps"
+                "Execution-readiness separation of clinical development stage from biological actionability across 17 active curated programs"
                 if s["evidence_id"] == "EV-P3A-004"
                 else clean_rep_text(s["exact_contrast"])
             ),
             "mod": (
-                "Deterministic multi-criteria portfolio verification across 52 evaluated hypotheses"
+                "Deterministic multi-criteria execution-readiness triage across 17 curated active programs"
                 if s["evidence_id"] == "EV-P3A-004"
                 else clean_rep_text(s["model_formula_or_test"])
             ),
-            "est": ("52/52 verified" if s["evidence_id"] == "EV-P3A-004" else clean_rep_text(s["effect_estimate"])),
+            "est": ("17/17 execution-readiness programs verified" if s["evidence_id"] == "EV-P3A-004" else clean_rep_text(s["effect_estimate"])),
             "ci": clean_rep_text(s["se_or_ci95"]), "up": s["unadjusted_or_primary_nominal_p"],
             "cp": s["covariate_adjusted_nominal_p"], "mp": s["multiplicity_adjusted_p"],
             "mfam": s["multiple_testing_family"], "excl": clean_rep_text(s["missingness_or_exclusion_rule"]),

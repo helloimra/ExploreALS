@@ -46,7 +46,7 @@ EVIDENCE_COHORT_BY_EALS: dict[str, str] = {
 
 
 def resolve_cis_mechanism(gene: str, raw_mode: str) -> str:
-    if gene in {"STMN2", "TRAPPC12", "DLGAP1"} or "ALE" in raw_mode:
+    if gene in {"STMN2", "TRAPPC12", "DLGAP1", "PTPRT"} or "ALE" in raw_mode or "A3SS" in raw_mode:
         return "CRYPTIC_ALE_PAS_BLOCK"
     if gene == "KCNQ2" or raw_mode.startswith("INCLUDE_"):
         return "CONSTITUTIVE_EXON_INCLUSION"
@@ -174,6 +174,8 @@ def sanitize_public_prose(txt: str) -> str:
     s = s.replace("load_brown2022_splicing(verify_hash=True)", "Checksum-verified Brown 2022 MAJIQ junction table")
     s = re.sub(r"\bClean\s*>=2mm\b", "Clean (>=2 mismatches)", s)
     s = re.sub(r"\bclean\s*>=2mm\b", "clean (>=2 mismatches)", s)
+    s = re.sub(r"\bpm2_25\b", "25bp-SS 2mm", s)
+    s = re.sub(r"\bpm1_50\b", "50bp-SS 1mm", s)
     s = re.sub(r"\b(?:Audit of\s+)?baseline annotation\b", "Published catalog check:", s, flags=re.I)
     s = re.sub(r"\b(?:Frozen|Upstream)\s+Baseline\b", "prior literature catalog", s, flags=re.I)
     s = s.replace("integrating Round 2 hardening", "with multi-cohort verification")

@@ -36,7 +36,7 @@ const CHEMBL_COMPOUNDS = new Set([
   'CHEMBL3752910','CHEMBL3989871','CHEMBL41355','CHEMBL4297372','CHEMBL4297643','CHEMBL4297672','CHEMBL5653589','CHEMBL589',
   'CHEMBL621','CHEMBL744','CHEMBL778','CHEMBL807','CHEMBL83','CHEMBL866'
 ]);
-const ACC_TOKEN_RE = /(?<![A-Za-z0-9])(?:PMID:(\\d{5,9})|(PMC\\d{6,9})|(?:DOI:\\s*)?(10\\.\\d{4,9}\\/[^\\s,;\\]\\u00b7&<>"]+)|(NCT\\d{8})|(ACTRN\\d{14})|ISRCTN(\\d{8})|((?:WO20\\d{8}|US\\d{7,11})(?:[A-Z]\\d?)?)|PDB\\s+([0-9][A-Za-z0-9]{3})|(7DJT|9TZY|7ANW|7NAL|7CR2|4KC3|2Z0D|3NMR|2DNH|6VN8|1XFD|7K2V|3KYQ|6J74|3EGD|3V5Z|6VCD|6C1R|1MQS|1Y9J|1PK6|5O33|2OOQ|5YPO|6TNQ|1DUX|4XYJ)|(CHEMBL\\d+)|CID:(\\d+)|(ENS[GT]\\d{11})(?:\\.\\d+)?|HGNC:(\\d+)|MGI:(\\d+)|OMIM\\s+(\\d{6})|AF-([A-Z0-9]{6,10})-F\\d+|(O14490|O14522|O15498|O43526|O60229|O60674|O75396|O95249|P02745|P02746|P02747|P19419|P23458|P25686|P42779|P46459|P50395|P60568|Q01638|Q01813|Q13190|Q6SZW1|Q7L622|Q8N6W0|Q8WUY3|Q8WVM8|Q8WVT3|Q93045|Q9UKA1|Q9UPW8|Q9Y4P1)|(gnomAD\\s+(?:v4(?:\\.1)?|r4|v2\\.1\\.1))|(GSE\\d{4,8})|(PXD\\d{5,8})|(PRJNA\\d{5,9})|(syn\\d{6,10})|(rs\\d{3,12}))(?![A-Za-z0-9])/g;
+const ACC_TOKEN_RE = /(?<![A-Za-z0-9])(?:PMID:(\\d{5,9})|(PMC\\d{6,9})|(?:DOI:\\s*)?(10\\.\\d{4,9}\\/[^\\s,;\\]\\u00b7&<>"]+)|(NCT\\d{8})|(ACTRN\\d{14})|ISRCTN(\\d{8})|((?:WO20\\d{8}|US\\d{7,11}|CA\\d{7})(?:[A-Z]\\d?)?)|PDB\\s+([0-9][A-Za-z0-9]{3})|(7DJT|9TZY|7ANW|7NAL|7CR2|4KC3|2Z0D|3NMR|2DNH|6VN8|1XFD|7K2V|3KYQ|6J74|3EGD|3V5Z|6VCD|6C1R|1MQS|1Y9J|1PK6|5O33|2OOQ|5YPO|6TNQ|1DUX|4XYJ)|(CHEMBL\\d+)|CID:(\\d+)|(ENS[GT]\\d{11})(?:\\.\\d+)?|HGNC:(\\d+)|MGI:(\\d+)|OMIM\\s+(\\d{6})|AF-([A-Z0-9]{6,10})-F\\d+|((?:O14490|O14522|O15498|O43526|O60229|O60674|O75396|O95249|P02745|P02746|P02747|P19419|P23458|P23528|P25686|P27338|P42658|P42779|P46459|P50395|P60568|Q01638|Q01813|Q13190|Q6SZW1|Q7L622|Q8N608|Q8N6W0|Q8WUY3|Q8WVM8|Q8WVT3|Q93045|Q9UKA1|Q9UPW8|Q9Y4P1)(?:-\\d+)?)|(gnomAD\\s+(?:v4(?:\\.1)?|r4|v2\\.1\\.1))|(GSE\\d{4,8})|(PXD\\d{5,8})|(PRJNA\\d{5,9})|(syn\\d{6,10})|(rs\\d{3,12}))(?![A-Za-z0-9])/g;
 
 function mkExtA(url, lbl){
   return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-[var(--link)] underline decoration-dotted underline-offset-2 hover:decoration-solid">${lbl}</a>`;
@@ -78,7 +78,7 @@ function linkifyAcc(escapedStr, geneCtx){
     if(mgi) return mkExtA('https://www.informatics.jax.org/marker/MGI:' + mgi, full);
     if(omim) return mkExtA('https://www.omim.org/entry/' + omim, full);
     if(af) return mkExtA('https://alphafold.ebi.ac.uk/entry/' + af, full);
-    if(uniprot) return mkExtA('https://www.uniprot.org/uniprotkb/' + uniprot + '/entry', full);
+    if(uniprot) return mkExtA('https://www.uniprot.org/uniprotkb/' + uniprot.split('-')[0] + '/entry', full);
     if(gnomad){
       const gid = GENE_ENSG[geneCtx] || '';
       const gUrl = gid ? ('https://gnomad.broadinstitute.org/gene/' + gid + '?dataset=gnomad_r4') : 'https://gnomad.broadinstitute.org/';
@@ -394,7 +394,8 @@ function renderLocusSsoSvg(candId, sig){
       const y = startRowY + idx * rowH;
       const bx1 = Math.max(L, mapBot(Number(c.lo))), bx2 = Math.min(R, mapBot(Number(c.hi)));
       const bCol = c.st==='PASS_CLEAN_GE2MM' ? 'var(--success)' : (c.st.startsWith('WARN') ? 'var(--error)' : 'var(--warning)');
-      const stShort = c.st==='PASS_CLEAN_GE2MM' ? 'Clean (>=2mm)' : (c.st.startsWith('WARN') ? 'Warn CNS Hit' : (c.st.startsWith('FAIL') ? 'Fail 0-mm' : 'Caution 1-mm/Wob'));
+      const is2mmOnly = c.st.startsWith('CAUTION') && c.sp === '0/0/0' && String(c.pm || '').startsWith('0/0/0/') && String(c.pm || '').endsWith('/0/0');
+      const stShort = c.st==='PASS_CLEAN_GE2MM' ? 'Clean (>=2mm)' : (c.st.startsWith('WARN') ? 'Warn CNS Hit' : (c.st.startsWith('FAIL') ? 'Fail 0-mm' : (is2mmOnly ? 'Caution (25bp 2-mm)' : 'Caution 1-mm/Wob')));
       const ivNote = (sig.iv_notes && sig.iv_notes[String(c.rk)]) ? sig.iv_notes[String(c.rk)] : '';
       ssoSvg += `<g>
         <rect x="${bx1.toFixed(1)}" y="${y}" width="${Math.max(12, bx2-bx1).toFixed(1)}" height="10" rx="3" fill="${bCol}" ${c.st.startsWith('WARN')?'stroke="var(--foreground)" stroke-dasharray="2,2"':''}/>

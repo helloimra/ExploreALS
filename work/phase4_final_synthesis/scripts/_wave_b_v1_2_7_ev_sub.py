@@ -69,26 +69,26 @@ def apply_wave_b_ev_and_sub_patches(
     ev_map["EV-B6-052"].update({
         "source_id_or_locator": "CT.gov:NCT04993755;NCT04993768;ChEMBL:CHEMBL124363",
         "cohort_and_stratum": "Phase 2a mixed C9orf72-ALS + FTD RCT (N=42 safety; C9-ALS VC subgroup, TPN-101 400 mg/d PO) & HEALEY Ph2/3 selection",
-        "effect_estimate": "Mixed N=42 ALS+FTD favorable safety; C9-ALS subgroup 24w VC -8.4% vs -16.5% pbo & lower CSF IL-6/NfL; selected May 2025 for HEALEY ALS Ph2/3 Platform Trial",
-        "notes": "Oral nucleoside LINE-1 RT inhibitor (MW 248.24; also completed PSP Ph2a NCT04993768 N=42 & studied in AGS) selected May 2025 for the Phase 2/3 HEALEY ALS Platform Trial; NCT04993755 remains unpublished in peer-reviewed form, pooled ALS+FTD in N=42, enrolled 0 sporadic ALS-TE patients, and requires intracellular TPN-101-TP triphosphorylation (post-mitotic MN vs proliferating glial kinase efficiency unmeasured).",
+        "effect_estimate": "Mixed N=42 ALS+FTD favorable safety; C9-ALS subgroup 24w VC -8.4% vs -16.5% pbo (randomized ALSFRS-R -7.2 vs -6.7) & lower CSF IL-6/NfL; selected May 2025 for HEALEY Ph2/3",
+        "notes": "Oral nucleoside LINE-1 RT inhibitor (MW 248.24; also completed PSP Ph2a NCT04993768 N=42 & studied in AGS) selected May 2025 for the Phase 2/3 HEALEY ALS Platform Trial; NCT04993755 remains unpublished in peer-reviewed form, pooled ALS+FTD in N=42 (24-wk randomized ALSFRS-R -7.2 vs -6.7), enrolled 0 sporadic ALS-TE patients, and requires intracellular TPN-101-TP triphosphorylation (post-mitotic MN vs proliferating glial kinase efficiency unmeasured).",
     })
     ev_map["EV-B6-053"]["notes"] = (
-        "Dropped from 19.74% (15/76 Tam 2019) to 11.30% (26/230 expansion) = 13.40% (41/306 all cortical motor-ALS donors; 13.53% = 41/303 excluding 3 multi-region discordant donors; 11.52% in non-C9 sALS; 11.24% across 587 libraries in TableS1B)."
+        "Dropped from 19.74% (15/76 Tam 2019) to 11.30% (26/230 expansion) = 13.40% (41/306 all cortical motor-ALS donors; 13.53% = 41/303 excluding 3 multi-region discordant donors; 11.52% [22/191] in C9-neg ALS+ALS/FTD and 11.60% [21/181] in C9-neg ALS; 11.24% across 587 libraries in TableS1B; 0/331 spinal donors under O'Neill's separate 2-class Glia-cord/Ox-cord classifier)."
     )
 
     # C018 (C1q)
     for eid_c18 in ("EV-B3-014", "EV-B3-015", "EV-B3-016", "EV-B3-018"):
         ev_map[eid_c18]["notes"] = ev_map[eid_c18]["notes"].replace(
             "WashU & UMilan contributed 63 ALS, 0 Controls",
-            "UMilan contributed 31 ALS / 0 Controls and WashU contributed 26 ALS + 2 Controls + 4 asymptomatic carriers",
+            "UMilan contributed 31 ALS / 0 Controls and WashU contributed 26 ALS + 2 ordinary Controls + 4 asymptomatic carriers (reconciled via MGH/WashU specimen codes 100 vs 741)",
         )
     ev_map["EV-B3-021"].update({
         "source_id_or_locator": "NCT04569435;NCT04514367;PMID:41787606;PMID:38942014;10.1016/j.cell.2024.05.058;PMID:24170856",
-        "notes": "In HD Phase 2 NCT04514367 (N=28, PMC13307253, PMID:41787606), IV ANX005 (75-100 mg/kg) achieved 0.2-0.25% CSF:serum penetration that saturated baseline CSF C1q, yet peripheral 180 nM serum C1q ablation caused 3/28 (10.7%) autoimmune SAE withdrawals (SLE, hemolytic anemia, pneumonitis; open-label ALS NCT04569435 N=17 remains unpublished); systemic IV IgG, IV BBB shuttles, and unmodified q4w IT Fab (~12h CSF t1/2) are rejected in favor of ECM-anchored HLE IT anti-gC1q Fab/nanobody or microglial C1QA/B ASO/di-siRNA gated on Scott-Hewitt 2024 RNP and Lobsiger 2013 C-bouton safety.",
+        "notes": "In HD Phase 2 NCT04514367 (N=28, PMC13307253, PMID:41787606), IV ANX005 (75-100 mg/kg) achieved 0.2-0.25% CSF:serum penetration that saturated baseline CSF C1q, yet peripheral serum C1q sink ablation (proposed ~180 nM sink [MODEL_PRIOR]) caused 3/28 (10.7%) treatment-related AE withdrawals and 2/28 (7.1%) drug-related SAEs (abstract: lupus + idiopathic autoimmune hemolytic anemia; Results/Table 2: SLE + non-infectious pneumonitis; open-label ALS Phase 2a NCT04569435 [N=24 enrolled] sponsor press releases reported 13 12-wk and 7 24-wk completers with CSF C1q/C3d engagement without peer-reviewed publication); systemic IV IgG, IV BBB shuttles, and unmodified q4w IT Fab (~12h CSF t1/2) are rejected in favor of ECM-anchored HLE IT anti-gC1q Fab/nanobody or microglial C1QA/B ASO/di-siRNA gated on Scott-Hewitt 2024 RNP and Lobsiger 2013 C-bouton safety.",
     })
     ev_map["EV-P2-T4-002"].update({
         "source_id_or_locator": "DS031_ZHANG:6d_MN_ALS_vs._HC;NCT04514367;PMID:41787606;PMID:24170856",
-        "cohort_and_stratum": "Zhang 2026 human cervical anterior-horn surviving MN Visium spots (N=14 donors) & 2-compartment human CSF turnover PK",
-        "effect_estimate": "6d_MN C1QC avg_log2FC=+2.3735 (C1S +1.7520, C1QB +1.6245 [BH=3.49e-6], C1QA +1.4870 [BH=2.76e-4]; VAChT intact); IV TfR-IgG depletes 99.99% of 180nM serum C1q & unmodified q4w IT 48kDa Fab washes out (t1/2~12h -> <0.001nM) vs IT pump/ECM-anchored HLE Fab [MODEL_PRIOR]",
-        "notes": "PMC13307253 (PMID:41787606, HD NCT04514367 N=28) proved IV ANX005 saturates low-abundance CSF C1q at 0.2-0.25% CSF:serum penetration but fails clinically via peripheral 180 nM C1q sink ablation (3/28 = 10.7% autoimmune SAEs), while ~4x/day human CSF bulk flow clears unmodified q4w 48 kDa IT Fab (intravitreal glaucoma ANX007 is non-CNS), motivating ECM-anchored HLE IT Fab/nanobody or IT microglial C1QA/B ASO/di-siRNA.",
+        "cohort_and_stratum": "Zhang 2026 human cervical anterior-horn surviving MN Visium spots (N=14 donors, Seurat MAST) & 2-compartment human CSF turnover PK",
+        "effect_estimate": "6d_MN C1QC avg_log2FC=+2.3735 (C1S +1.7520, C1QB +1.6245 [BH=3.49e-6], C1QA +1.4870 [BH=2.76e-4]; VAChT intact); IV TfR-IgG depletes 99.99% of proposed 180nM serum C1q & unmodified q4w IT 48kDa Fab washes out (t1/2~12h -> <0.001nM) vs IT pump/ECM-anchored HLE Fab [MODEL_PRIOR]",
+        "notes": "PMC13307253 (PMID:41787606, HD NCT04514367 N=28) proved IV ANX005 saturates low-abundance CSF C1q at 0.2-0.25% CSF:serum penetration but fails clinically via peripheral serum C1q sink ablation (3/28 treatment-related AE withdrawals, 2/28 drug-related SAEs), while ~4x/day human CSF bulk flow clears unmodified q4w 48 kDa IT Fab (intravitreal glaucoma ANX007 is non-CNS), motivating ECM-anchored HLE IT Fab/nanobody or IT microglial C1QA/B ASO/di-siRNA.",
     })

@@ -56,13 +56,13 @@ def build_deep_dive_evidence_rows(dd: dict[str, Any], sso: dict[str, Any], ev_fn
         ),
         ev_fn(
             "EV-P3B-026", "DN-03", "RUN-P3B-004", "PRIMARY_RECOMPUTE",
-            "DS001_COUNTS;DS001_META;DS_GENCODE_V46_COMP_GTF;AlphaGenome_v1",
+            "DS001_COUNTS;DS001_META;DS_GENCODE_V46_COMP_GTF;AlphaGenome_v1;DOI:10.1186/s44477-025-00013-w",
             f"NYGC GSE153960 cervical spinal cord donors ({ny_c['PTPRT']['n_als_tdp']} ALS-TDP vs {ny_c['PTPRT']['n_ctrl']} Control, RIN+GC adjusted)",
             "Donor-level RIN+GC OLS (log2(CPM+1) ~ group + RIN + gc_score) on PTPRT + GENCODE v46 & AlphaGenome Intron 26 splice-site audit",
-            "BULK_ATTENUATED_UNMAPPED_INTRON_GATE",
+            "BULK_ATTENUATED_NEWTON2026_3SS_PHASING_GATE",
             f"adj_beta={ny_c['PTPRT']['adj_beta_tdp_vs_ctrl']:.4f} (unadj diff={ny_c['PTPRT']['unadj_diff_tdp_vs_ctrl']:.4f}, Welch p={ny_c['PTPRT']['welch_p_tdp_vs_ctrl']:.4f})",
             f"{ny_c['PTPRT']['adj_p_tdp_vs_ctrl']:.5f}", "", str(ny_c["PTPRT"]["n_als_tdp"] + ny_c["PTPRT"]["n_ctrl"]), "MODERATE",
-            f"Lumbar cord is null (adj_p={ny_l['PTPRT']['adj_p_tdp_vs_ctrl']:.4f}, n=173) while motor cortex shifts +{ny_m['PTPRT']['adj_beta_tdp_vs_ctrl']:.4f} (adj_p={ny_m['PTPRT']['adj_p_tdp_vs_ctrl']:.4f}, n=114). Inside 1-based closed Intron 26 chr20:42098553-42102123(-) (3,571 bp; Ma 2022 exon-anchored span chr20:42098552-42102124(-)), GENCODE v46 has 0 internal exons and AlphaGenome shows only weak internal peaks (max {pt_pk['track']} {pt_pk['pos_1b']} prob={pt_pk['prob']:.4f}) with 0 published 2022-2026 1-bp junctions; 0 SSO intervals emitted pending RT-PCR.",
+            f"Lumbar cord is null (adj_p={ny_l['PTPRT']['adj_p_tdp_vs_ctrl']:.4f}, n=173) while motor cortex shifts +{ny_m['PTPRT']['adj_beta_tdp_vs_ctrl']:.4f} (adj_p={ny_m['PTPRT']['adj_p_tdp_vs_ctrl']:.4f}, n=114). Inside 1-based closed Intron 26 chr20:42098553-42102123(-) (3,571 bp; Ma 2022 exon-anchored span chr20:42098552-42102124(-)), GENCODE v46 has 0 internal exons while AlphaGenome's top internal acceptor peak ({pt_pk['track']} {pt_pk['pos_1b']} prob={pt_pk['prob']:.4f}) matches Newton et al. 2026's published alternative 3'SS chr20:42099289-42102124(-) (DOI:10.1186/s44477-025-00013-w MOESM1 rows 42-43, MOESM3-4: 9/15 ALS vs 1/8 CTL motor cortex, 1/10 vs 1/10 lumbar cord qPCR); 0 SSO intervals emitted pending downstream 5'SS/full-transcript phasing & spinal MN cellular resolution.",
         ),
         ev_fn(
             "EV-P3B-027", "DN-08", "RUN-P3B-004", "PRIMARY_RECOMPUTE",

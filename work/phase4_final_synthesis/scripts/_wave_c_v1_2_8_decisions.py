@@ -44,7 +44,7 @@ def apply_wave_c_decision_patches(dm: dict[str, dict[str, str]]) -> None:
             "and iPSC-screen Co-C photolability calibration benchmark."
         ),
         "discriminating_next_test": (
-            "Account for concomitant 50 mg IM mecobalamin use when stratifying Japanese/East-Asian ALS trial cohorts (<=12m onset), and pair dark-shielded vs ~450-488 nm blue-light-irradiated + hydroxocobalamin controls in live-imaging iPSC-MN screens."
+            "Account for concomitant 50 mg IM mecobalamin use when stratifying Japanese ALS trial cohorts (<=12m onset; noting Rozebalamin efficacy is not yet confirmed outside Japan or in non-Japanese East-Asian cohorts), and pair dark-shielded vs ~450-488 nm blue-light-irradiated + hydroxocobalamin controls in live-imaging iPSC-MN screens."
         ),
         "updated_at": TS_WAVE_C,
     })
@@ -56,12 +56,12 @@ def apply_wave_c_decision_patches(dm: dict[str, dict[str, str]]) -> None:
             "(ratio 1.53 [95% CI 1.12-2.09], p=0.009; Joseph et al. 2025 Nat Neurosci PMID:41174170 linked baseline hyperexcitability to faster progression) and Kovalchuk 2018 (N=18, PMID:29672831) proved acute axonal SDTC engagement at Cu,p ~0.22-0.67 uM."
         ),
         "evidence_disproves_hypothesis": (
-            "Specific chemical entity voluntarily withdrawn globally by marketing authorization holder in June 2017 (NDA022345 Discontinued; EMA withdrawal alongside FDA boxed warning for quinone-dimer retinal maculopathy and blue-grey tissue pigmentation), "
+            "Specific chemical entity voluntarily discontinued commercially by marketing authorization holder in June 2017 with EU marketing authorization withdrawn July 19, 2018 (NDA022345 Discontinued; EMA withdrawal alongside FDA boxed warning for quinone-dimer retinal maculopathy and blue-grey tissue pigmentation), "
             "caused 30.4% (600 mg) and 26.3% (900 mg) permanent AE dropout vs 0% placebo in NCT02450552 (exploratory unpowered 10-wk ALSFRS-R/SVC/HHD non-significant), failed Bye 2025 BrainPhys FDR (+0.779d, q=0.1890), "
             "and is superseded in ALS by non-pigmenting QRL-101 (6 completed Ph1s incl. N=12 ALS NCT06714396 & N=24 HV NCT06681441 where SDTC engaged while TMS-EMG MEP missed; XEN1101 & BHV-7000 have 0 ALS trials, with Sept 2026 FDA partial hold on BHV-7000 epilepsy)."
         ),
         "factual_justification": (
-            "Reclassified as a Withdrawn Human Pharmacodynamic Calibrator (NCT02450552 Weeks 6/8 TMS SICI^-1 ratio=1.53, p=0.009 over 10-wk active treatment, PMID:33226425): June 2017 global withdrawal (NDA022345), "
+            "Reclassified as a Withdrawn Human Pharmacodynamic Calibrator (NCT02450552 Weeks 6/8 TMS SICI^-1 ratio=1.53, p=0.009 over 10-wk active treatment, PMID:33226425): June 2017 commercial discontinuation and July 19, 2018 EU withdrawal (NDA022345), "
             "26.3-30.4% permanent ALS AE discontinuation, and sub-FDR BrainPhys survival (+0.779d, q=0.189) preclude chronic clinical development while anchoring Kv7.2/7.3 physiological gating for QRL-101 and EALS-006 KCNQ2 splice rescue."
         ),
         "discriminating_next_test": (

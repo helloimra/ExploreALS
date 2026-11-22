@@ -72,7 +72,7 @@ def main() -> None:
             "datasets_used": "DS_GENCODE_V46_TX;DS_GENCODE_V46_COMP_GTF;DS_GNOMAD_V41_CONSTRAINT;DS003_PB;DS_EDIN_PB;DS031_ZHANG",
             "tools_and_skills_used": "carbon_als.splice_design;carbon_als.offtarget_scanner;alphagenome-variant-impact-score;alphagenome-atlas-website-links;ensembl-database;gnomad-database;DBCLS_GGGenome_hg38;uv-python",
             "reproduced_verified": "yes", "run_timestamp_utc": ts,
-            "summary": "Coordinate-only GRCh38 steric-SSO & GAPMER_RNASE_H 3'Ext design + live AlphaGenome AVI + gnomAD r4 (catching KALRN rs2173852 AF=17.61%) + Phase 3A v2 254,070-transcript & intronic pre-mRNA off-target audit across 14 intervals (0 oligomer sequences).",
+            "summary": "Coordinate-only GRCh38 steric-SSO & GAPMER_RNASE_H 3'Ext design + live AlphaGenome AVI + gnomAD r4 (catching KALRN rs2173852 AF=17.61%) + Phase 3A v2 254,070-transcript & intronic pre-mRNA off-target audit across 16 intervals (incl. PTPRT Newton 2026 chr20:42099289(-) A3SS #1/#2; 0 oligomer sequences).",
         },
         {
             "analysis_run_id": "RUN-P3B-003", "phase_batch": "Phase3B_DeNovo_Discovery",

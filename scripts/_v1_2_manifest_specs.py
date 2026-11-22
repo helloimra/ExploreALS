@@ -79,7 +79,7 @@ COHORT_OVERLAP_CLUSTERS: list[dict[str, str]] = [
         "cluster_name": "Trautwig 2025 Living-Patient Multi-Center CSF Proteomics (PMC12082929)",
         "datasets_involved": "DS045_TRAUT;DS045_XML;DS046_OH_XML",
         "overlap_mechanism": "OVERLAPPING_EMORY_PARTICIPANTS_ACROSS_TMT_AND_DIA_PLUS_ASYMMETRIC_CENTER_CONTROLS",
-        "donor_accounting_and_anti_pseudoreplication_rule": "Emory Set 1 TMTpro (N=101) shares n=51 ALS participants with 4-Center Set 2 DIA-MS (N=259: Emory 118, MGH 78, WashU 32, UMilan 31) -> classified as OVERLAPPING_PLATFORM_VALIDATION, not independent cohort replication. Because UMilan (31 ALS / 0 Ctrl) and WashU (26 ALS / 2 Ctrl + 4 asym) lack balanced controls and MGH controls show -0.50z center offset, primary discovery is anchored within Emory (n=96) or center-adjusted OLS, with Oh 2023 (PMC10215566, NEALS/UCSF) serving as independent external CSF cohort.",
+        "donor_accounting_and_anti_pseudoreplication_rule": "Emory Set 1 TMTpro (N=101) shares n=51 ALS participants with 4-Center Set 2 DIA-MS (workbook N=259: Emory 118, MGH 78, WashU 32, UMilan 31; specimen-code prefix 100 vs 741 / Batch b06-b08 vs b01 reconciles workbook MGH=78/WashU=32 with paper prose MGH=84/WashU=26) -> classified as OVERLAPPING_PLATFORM_VALIDATION, not independent cohort replication. Because UMilan (31 ALS / 0 Ctrl) and WashU (26 ALS / 2 ordinary Ctrl + 4 asymptomatic carriers) lack balanced controls and MGH controls show -0.50z center offset, primary discovery is anchored within Emory (n=96) or center-adjusted OLS, with Oh 2023 (PMC10215566, NEALS/UCSF; 40/61 discovery overlap, 5/5 discovery & 4/5 targeted PRM) serving as independent external CSF cohort.",
         "canonical_model_formula": "Within-Emory Welch/OOF-CV & 4-Center OLS: log2_intensity ~ status + center + age + sex (assert_contrast_pair)",
     },
     {
@@ -100,18 +100,18 @@ COHORT_OVERLAP_CLUSTERS: list[dict[str, str]] = [
     },
     {
         "overlap_group_id": "OVL_ANSWERALS_IPSC",
-        "cluster_name": "AnswerALS Patient iPSC-MN Screen & Multi-Omic Biobank",
+        "cluster_name": "Patient iPSC-MN Screen & Multi-Omic Biobanks (ID-MND Bye 2025 & Answer ALS)",
         "datasets_involved": "DS005_BYE;DS_CONS2026:Tsitkov_AALS594",
-        "overlap_mechanism": "SHARED_SALS_DONOR_IPSC_LINES_ACROSS_107_DRUGS_AND_RNASEQ",
-        "donor_accounting_and_anti_pseudoreplication_rule": "In Bye 2025 (DS005_BYE), all 107 compounds are screened at 2.5 uM across the same 15-16 sALS patient iPSC-MN lines (paired within-donor Drug minus DMSO difference + exact Wilcoxon + leave-one-donor-out sensitivity + 107-drug BH-FDR), which also provide baseline sALS vs Ctrl iPSC-MN RNA-seq/LeafCutter splicing and draw from the broader AnswerALS repository profiled in Tsitkov 2026 (N=594).",
-        "canonical_model_formula": "Paired 1-sample t & exact Wilcoxon on within-donor (Drug - DMSO) survival days (n=15-16 lines, BH-FDR m=107)",
+        "overlap_mechanism": "SHARED_IDMND_DONOR_IPSC_LINES_ACROSS_107_DRUGS_AND_SEPARATE_ANSWERALS_BIOBANK",
+        "donor_accounting_and_anti_pseudoreplication_rule": "In the Australian ID-MND study (Bye 2025, DS005_BYE), all 107 compounds are screened at 2.5 uM across the same 15-16 sALS patient iPSC-MN lines (paired within-donor Drug minus DMSO difference + exact Wilcoxon + leave-one-donor-out sensitivity + 107-drug BH-FDR), whereas Bye Table 6 LeafCutter splicing compares 65 sALS vs 12 Control unpaired Day-49 ID-MND lines (N=77, sex-adjusted LRT); the US Answer ALS multi-omic repository profiled in Tsitkov 2026 (N=594) is tracked separately without pooling.",
+        "canonical_model_formula": "Paired 1-sample t & exact Wilcoxon on within-donor (Drug - DMSO) survival days (n=15-16 ID-MND lines, BH-FDR m=107)",
     },
     {
         "overlap_group_id": "OVL_PAIRED_AND_NESTED_TISSUE",
         "cluster_name": "Within-Donor Regional Pairing (GSE67196) & Nested Spatial Visium Spots (GSE288365)",
         "datasets_involved": "DS014_PRUD;DS031_ZHANG",
         "overlap_mechanism": "WITHIN_DONOR_PAIRED_REGIONS_AND_SPOT_WITHIN_DONOR_SPATIAL_NESTING",
-        "donor_accounting_and_anti_pseudoreplication_rule": "Prudencio 2015 (DS014_PRUD, GSE67196) pairs Frontal Cortex and Cerebellum within the same N=15 donors (paired Frontal minus Cerebellar difference). Zhang 2026 (DS031_ZHANG, GSE288365) tests 55-um multicellular Visium spots nested across N=14-18 cervical spinal cord donors: spot-level BH-FDR p-values are explicitly tagged visium_55um_spot with true donor N alongside so spot counts are never misread as independent human subjects.",
-        "canonical_model_formula": "Paired within-donor OLS (DS014 N=15) & Wilcoxon/MAST spot-level DE nested in N=14-18 donors (DS031 MOESM8)",
+        "donor_accounting_and_anti_pseudoreplication_rule": "Prudencio 2015 (DS014_PRUD, GSE67196) pairs Frontal Cortex and Cerebellum within the same N=15 donors (paired Frontal minus Cerebellar difference). Zhang 2026 (DS031_ZHANG, GSE288365) tests 55-um multicellular Visium spots nested across N=14-18 cervical spinal cord donors via MAST with cellular detection rate covariate: spot-level BH-FDR p-values are explicitly tagged visium_55um_spot with true donor N alongside so spot counts are never misread as independent human subjects.",
+        "canonical_model_formula": "Paired within-donor OLS (DS014 N=15) & MAST spot-level DE with cellular detection rate nested in N=14-18 donors (DS031 MOESM8)",
     },
 ]

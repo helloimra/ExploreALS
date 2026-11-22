@@ -28,7 +28,7 @@ const DETAIL_GATE_SHORT = {
   'EALS-006:kill': 'Zero Exon-5 inclusion gain or wrong-sign ISE exacerbation (#3), WT TDP-43 cis-eviction (#1), >30% multiplex escape loss, or acute PS-oligo Ca2+/DRG neurotox.',
   'EALS-002:go': 'STMN2 #2 SSO + sub-IC80 non-covalent SARM1 T-lock shows additive/synergistic axon outgrowth & NAD+ preservation + NHP cervical/BA4 rescue at <=3 mg/strand.',
   'EALS-002:kill': 'Redundant functional ceiling with SARM1 T-lock alone, >30% multiplex endosomal-escape competition loss, or acute human neuron Ca2+-oscillation/DRG neurotox.',
-  'EALS-007:go': 'Oximetry-verified normoxic living-CSF Simoa sST2/IL-33 + microvessel sST2/ST2L ddPCR confirms pre-hypoxic decoy excess before IT HLE sST2 biologic or PAS SSO.',
+  'EALS-007:go': 'Oximetry-verified normoxic living-CSF Simoa sST2/IL-33 + microvessel sST2/ST2L ddPCR + BBB-brake sign gate confirms decoy excess before IT shuttled sST2 siRNA or PAS SSO.',
   'EALS-007:kill': 'Living-CSF sST2 elevation restricted to nocturnal-hypoxic/NIV ALS, protective ST2L dominance in microvessels, capillary delivery failure, or Treg ST2L loss.',
   'EALS-034:go': 'SSO #2 vs #1 in graded TDP-43-CRISPRi human iPSC-MNs restores full-length ATG4B & LC3ylation + cervical alpha-MN BaseScope ISH confirms early pre-inclusion penetrance.',
   'EALS-034:kill': 'Negligible cryptic exon PSI (<2%) in early pre-inclusion cervical sALS alpha-MNs, acute Ca2+/DRG neurotox, or failure to restore endogenous LC3B-I recycling.',
@@ -221,7 +221,7 @@ function decBadge(d, id=''){
 }
 function statusBadge(st){
   if(st==='PASS_CLEAN_GE2MM') return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--success)] border border-[var(--success)] text-xs whitespace-nowrap" title="Zero 0-mm, 1-mm, wobble, bulge, or 18-nt sub-core off-target hits on constrained CNS genes">Pass &middot; Clean (&ge;2mm)</span>';
-  if(st.startsWith('CAUTION')) return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--warning)] border border-[var(--warning)] text-xs whitespace-nowrap" title="1-mm, wobble, or 25bp-SS 2-mm hit on non-constrained genes — empirical microwalk required">Caution &middot; 1-mm/Wob</span>';
+  if(st.startsWith('CAUTION')) return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--warning)] border border-[var(--warning)] text-xs whitespace-nowrap" title="Non-constrained 1-mm, wobble, or 25bp-SS 2-mm hit (zero constrained CNS pLI >= 0.9 hits) — empirical microwalk required">Caution &middot; 1-mm/Wob/2-mm</span>';
   if(st.startsWith('WARN')) return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap" title="1-mm, wobble, or 1-nt bulge hit on a LoF-intolerant (pLI >= 0.9) CNS gene">Warn &middot; CNS Hit</span>';
   if(st.startsWith('FAIL')) return '<span class="px-1.5 py-0.5 rounded font-mono font-bold text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap" title="Exact 0-mismatch off-target hybridization hit across GENCODE v46">Fail &middot; 0-mm</span>';
   return '<span class="text-[var(--muted-foreground)] font-mono text-xs">None</span>';

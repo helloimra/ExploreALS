@@ -28,7 +28,7 @@ THEME_HEAD_INIT = (
     '  <meta name="color-scheme" content="light dark" />\n'
     '  <meta name="author" content="Ricardo Agoga" />\n'
     '  <meta name="description" content="ExploreALS v1.2 — Unified 52-Hypothesis ALS Therapeutic &amp; Biomarker Triage, '
-    '18 Subunit Dissections, 26 GRCh38 Cis-Regulatory Target Windows, and Open Computational Replication Package." />\n'
+    '18 Subunit Dissections, 28 GRCh38 Cis-Regulatory Target Windows, and Open Computational Replication Package." />\n'
     "  <script>window.PUBLIC_WEB_EXPORT=true;(function(){try{var t=localStorage.getItem('exploreals-theme');"
     "if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(_e){}})();</script>"
 )
@@ -81,14 +81,14 @@ GITHUB_README_MD = """# ExploreALS v1.2 — Unified ALS Therapeutic & Genetic Ta
 **Author:** Ricardo Agoga · [helloimra@proton.me](mailto:helloimra@proton.me) · [github.com/helloimra/ExploreALS](https://github.com/helloimra/ExploreALS)
 
 ## Overview
-`ExploreALS v1.2` is an independent computational triage resource evaluating **52 ALS therapeutic and biomarker hypotheses** (`EALS-001`–`EALS-052` across Mendelian/GWAS genetics, TDP-43 cryptic splicing & polyadenylation, human CNS spatial/snRNA/subcellular omics, living-patient CSF proteomics & physiology, clinical trial subgroups, and patient iPSC-MN phenotypic screening), **18 subunit & selectivity dissections** (`EALS-014.1`–`EALS-023.6` across 5 multi-gene loci/complexes: `EALS-014`, `EALS-015`, `EALS-017`, `EALS-018`, `EALS-023`), and **26 1-based GRCh38 Cis-Regulatory Target Windows** evaluated against `254,070` GENCODE v46 transcripts.
+`ExploreALS v1.2` is an independent computational triage resource evaluating **52 ALS therapeutic and biomarker hypotheses** (`EALS-001`–`EALS-052` across Mendelian/GWAS genetics, TDP-43 cryptic splicing & polyadenylation, human CNS spatial/snRNA/subcellular omics, living-patient CSF proteomics & physiology, clinical trial subgroups, and patient iPSC-MN phenotypic screening), **18 subunit & selectivity dissections** (`EALS-014.1`–`EALS-023.6` across 5 multi-gene loci/complexes: `EALS-014`, `EALS-015`, `EALS-017`, `EALS-018`, `EALS-023`), and **28 1-based GRCh38 Cis-Regulatory Target Windows** evaluated against `254,070` GENCODE v46 transcripts.
 
-**Evidence base:** `42` open-access biomedical datasets & reference maps (`40` external accessions + `2` repo-bundled reference maps: `21` human tissue/CSF/iPSC/in-vitro cohort & assay files, `15` 3D structures, `6` genome/feature references; published tables/counts, zero new wet-lab data). The cohort data resolves into **`8` independent donor-overlap clusters** ([`cohort_overlap_map.csv`](registries/cohort_overlap_map.csv)):
+**Evidence base:** `42` open-access biomedical datasets & reference maps (`40` external accessions + `2` repo-bundled reference maps: `21` human tissue/CSF/iPSC/in-vitro cohort & assay files, `15` 3D structures, `6` genome/feature references; published tables/counts, zero new wet-lab data). The cohort data resolves into **`8` participant-overlap and donor-accounting groups** ([`cohort_overlap_map.csv`](registries/cohort_overlap_map.csv)):
 - **Postmortem tissue:** NYGC ALS Consortium (`GSE153960`, incl. Tam 2019, O'Neill 2025, Ma 2022 and Bryce-Smith 2025 reanalyses) · Pineda 2024 BA4/BA9 snRNA-seq · Edinburgh `GSE290359` snRNA-seq · Prudencio 2015 paired regions + Zhang 2026 spinal-cord spatial · Spillman 2026 C9-FTD subcellular-fraction DIA
-- **Living-patient biofluids:** Trautwig 2025 multi-center CSF proteomics (+ Oh 2023 external CSF cohort)
-- **Patient-derived and in-vitro models:** Bye 2025 / AnswerALS sALS iPSC-MN drug screen · TDP-43 knockdown neuron series (Brown 2022, Zeng 2025, Bryce-Smith 2025)
+- **Living-patient biofluids:** Trautwig 2025 multi-center CSF proteomics (+ Oh 2023 CSF cohort, 40/61 donor overlap)
+- **Patient-derived and in-vitro models:** Australian ID-MND (`Bye 2025`) sALS iPSC-MN drug screen & Day-49 splicing + US Answer ALS (`N=594`) iPSC-MN eQTLs · TDP-43 knockdown neuron series (Brown 2022, Zeng 2025, Bryce-Smith 2025)
 
-Agreement *within* a cluster is treated as cross-platform validation, not independent replication.
+Agreement *within* a group is treated as cross-platform or multi-assay validation, not independent donor replication.
 
 ## 3-Level Independent Computational Replication Quickstart
 

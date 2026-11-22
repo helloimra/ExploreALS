@@ -101,13 +101,18 @@ def verify_phase3a_gates(
             errors.append(f"Invalid offtarget_safety_status '{st}' on {r['interval_id']}")
         if int(r["spliced_0mm_genes"]) > 0 and st != "FAIL_EXACT_0MM_OFFTARGET":
             errors.append(f"Bidirectional status violation on {r['interval_id']}: spliced_0mm_genes={r['spliced_0mm_genes']} requires FAIL_EXACT_0MM_OFFTARGET")
+        if int(r["gggenome_max_mm_queried"]) < 2 and r["premRNA_2mm_splice25bp_pc_genes"] != "NA":
+            errors.append(f"{r['interval_id']}: gggenome_max_mm_queried={r['gggenome_max_mm_queried']} < 2 must record premRNA_2mm_splice25bp_pc_genes='NA' (got '{r['premRNA_2mm_splice25bp_pc_genes']}')")
+        if int(r["gggenome_max_mm_queried"]) >= 2 and r["premRNA_2mm_splice25bp_pc_genes"] == "NA":
+            errors.append(f"{r['interval_id']}: gggenome_max_mm_queried>=2 cannot leave premRNA_2mm_splice25bp_pc_genes='NA'")
         if st == "PASS_CLEAN_GE2MM":
             for zcol in (
                 "spliced_0mm_genes", "spliced_1mm_genes", "spliced_wobble_only_pc_genes",
                 "premRNA_0mm_sense_genes", "premRNA_1mm_splice50bp_genes",
-                "premRNA_wobble_only_splice50bp_pc_genes", "bulge_1nt_steric_pc_genes", "sub18_core_steric_pc_genes",
+                "premRNA_wobble_only_splice50bp_pc_genes", "premRNA_2mm_splice25bp_pc_genes",
+                "bulge_1nt_steric_pc_genes", "sub18_core_steric_pc_genes",
             ):
-                if int(r[zcol]) != 0:
+                if r[zcol] == "NA" or int(r[zcol]) != 0:
                     errors.append(f"PASS_CLEAN_GE2MM violation on {r['interval_id']}: {zcol}={r[zcol]} != 0")
         if r["analysis_run_id"] not in run_ids:
             errors.append(f"Off-target row {r['interval_id']} references unknown run {r['analysis_run_id']}")

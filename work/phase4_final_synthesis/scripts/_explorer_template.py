@@ -20,7 +20,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
             <h1 class="text-base font-semibold text-[var(--foreground)]">ALS Therapeutic &amp; Genetic Target Triage, Candidate Reports &amp; Replication Explorer</h1>
           </div>
           <div id="hdr-sub">
-            <p class="text-[var(--muted-foreground)] text-xs mt-1">Independent computational triage of 52 ALS therapeutic &amp; biomarker hypotheses across 42 open human &amp; preclinical datasets (Mendelian/GWAS genetics, TDP-43 cryptic splicing &amp; polyadenylation, spatial/snRNA/subcellular omics, CSF proteomics, clinical trial subgroups &amp; patient iPSC-MN screens) &middot; 18 complex/panel subunits &middot; 26 1-based GRCh38 cis-regulatory target windows</p>
+            <p class="text-[var(--muted-foreground)] text-xs mt-1">Independent computational triage of 52 ALS therapeutic &amp; biomarker hypotheses across 42 open human &amp; preclinical datasets (Mendelian/GWAS genetics, TDP-43 cryptic splicing &amp; polyadenylation, spatial/snRNA/subcellular omics, CSF proteomics, clinical trial subgroups &amp; patient iPSC-MN screens) &middot; 18 complex/panel subunits &middot; 28 1-based GRCh38 cis-regulatory target windows</p>
             <p class="text-[var(--muted-foreground)] text-xs mt-1">Curated by <strong class="text-[var(--foreground)]">Ricardo Agoga</strong> &middot; <a href="mailto:helloimra@proton.me" class="text-[var(--link)] underline decoration-dotted underline-offset-2 hover:decoration-solid font-mono">helloimra@proton.me</a> &middot; <a href="https://github.com/helloimra/ExploreALS" target="_blank" rel="noopener noreferrer" class="text-[var(--link)] underline decoration-dotted underline-offset-2 hover:decoration-solid font-mono">github.com/helloimra/ExploreALS &nearr;</a> &middot; <span class="font-mono text-[var(--warning)]">Preclinical Research Only (Not Medical Advice)</span></p>
           </div>
         </div>
@@ -31,7 +31,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           <button id="tab-btn-home" type="button" role="tab" aria-selected="true" aria-controls="view-home" data-tab="home" class="tab-btn col-span-2 flex items-center gap-1.5 px-2.5 py-1.5 rounded border border-[var(--border)] font-medium text-xs cursor-pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/></svg><span>Home &middot; Updates</span></button>
           <button id="tab-btn-portfolio" type="button" role="tab" aria-selected="false" aria-controls="view-portfolio" data-tab="portfolio" class="tab-btn px-2.5 py-1.5 rounded border border-[var(--border)] font-medium text-xs cursor-pointer">1. Triage Table (52)</button>
           <button id="tab-btn-dossiers" type="button" role="tab" aria-selected="false" aria-controls="view-dossiers" data-tab="dossiers" class="tab-btn px-2.5 py-1.5 rounded border border-[var(--border)] font-medium text-xs cursor-pointer">2. Candidate Reports (52)</button>
-          <button id="tab-btn-intervals" type="button" role="tab" aria-selected="false" aria-controls="view-intervals" data-tab="intervals" class="tab-btn px-2.5 py-1.5 rounded border border-[var(--border)] font-medium text-xs cursor-pointer">3. Splice Windows (26)</button>
+          <button id="tab-btn-intervals" type="button" role="tab" aria-selected="false" aria-controls="view-intervals" data-tab="intervals" class="tab-btn px-2.5 py-1.5 rounded border border-[var(--border)] font-medium text-xs cursor-pointer">3. Splice Windows (28)</button>
           <button id="tab-btn-replication" type="button" role="tab" aria-selected="false" aria-controls="view-replication" data-tab="replication" class="tab-btn px-2.5 py-1.5 rounded border border-[var(--border)] font-medium text-xs cursor-pointer">4. Replication</button>
         </div>
       </div>
@@ -56,7 +56,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
       </button>
       <button type="button" data-switch-tab="intervals" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
         <div class="text-[var(--muted-foreground)] text-xs">GRCh38 Splice Windows</div>
-        <div class="text-lg font-bold font-mono tabular-nums mt-0.5">26 <span class="text-xs font-normal text-[var(--success)]">(5 Clean, &ge;2 Mismatches)</span></div>
+        <div class="text-lg font-bold font-mono tabular-nums mt-0.5">28 <span class="text-xs font-normal text-[var(--success)]">(4 Clean, &ge;2 Mismatches)</span></div>
       </button>
       <button type="button" data-quick-filter="DROP" title="Scientifically falsified clinical regimen or CNS PK/safety wall" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
         <div class="text-[var(--muted-foreground)] text-xs">Drop &middot; Falsified</div>
@@ -73,7 +73,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
               <span class="font-mono text-xs text-[var(--muted-foreground)]">Updated Nov 2026 (v1.2.4)</span>
             </div>
             <h2 class="text-sm font-semibold text-[var(--foreground)]">How 52 ALS Hypotheses Map Across Evidence, Validation Steps &amp; Trial Readouts</h2>
-            <p class="text-xs text-[var(--muted-foreground)] leading-snug">Synthesizes donor-level statistics (<span class="font-mono">8</span> participant-overlap clusters, <span class="font-mono">202</span> checksum-anchored statistical contrasts across <span class="font-mono">46</span> unique data/output digests; zero new wet-lab data), unbound human brain PK, and GENCODE v46 off-target scans across four triage verdicts:</p>
+            <p class="text-xs text-[var(--muted-foreground)] leading-snug">Synthesizes donor-level statistics (<span class="font-mono">8</span> participant-overlap and donor-accounting groups, <span class="font-mono">202</span> checksum-anchored statistical contrasts across <span class="font-mono">46</span> unique data/output digests; zero new wet-lab data), unbound human brain PK, and GENCODE v46 off-target scans across four triage verdicts:</p>
             <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--warning)] space-y-1">
               <div class="font-mono font-semibold text-xs text-[var(--foreground)]">Four Evidence &amp; Triage Verdicts (<span class="font-mono">Untested &ne; Falsified</span>)</div>
               <ul class="space-y-0.5 text-xs leading-snug">
@@ -107,7 +107,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
                 <span class="font-mono text-[var(--link)] shrink-0">&rarr;</span>
               </button>
               <button type="button" data-switch-tab="intervals" class="w-full text-left px-2.5 py-1.5 rounded bg-[var(--background)] border border-[var(--border)] hover:border-[var(--primary)] flex items-center justify-between gap-2 cursor-pointer transition">
-                <div><div class="font-mono font-semibold text-xs text-[var(--foreground)]">3. Inspect the 26 GRCh38 Splice Windows</div><div class="text-xs text-[var(--muted-foreground)]">Target coordinates, SantaLucia Tm &amp; 254,070-transcript off-target scan</div></div>
+                <div><div class="font-mono font-semibold text-xs text-[var(--foreground)]">3. Inspect the 28 GRCh38 Splice Windows</div><div class="text-xs text-[var(--muted-foreground)]">Target coordinates, SantaLucia Tm &amp; 254,070-transcript off-target scan</div></div>
                 <span class="font-mono text-[var(--link)] shrink-0">&rarr;</span>
               </button>
               <button type="button" data-switch-tab="replication" class="w-full text-left px-2.5 py-1.5 rounded bg-[var(--background)] border border-[var(--border)] hover:border-[var(--primary)] flex items-center justify-between gap-2 cursor-pointer transition">
@@ -208,7 +208,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           <option value="BIO_AND_CAL">Biomarkers &amp; Calibrators (8)</option>
           <option value="DROPPED_FALSIFIED_EXCLUDED">Dropped &middot; Falsified (16)</option>
         </select>
-        <select id="p-sort" aria-label="Sort portfolio candidates" title="Lexicographic Translational Priority tuple: (1) Actionability Tier, (2) Keep·Core before Exploratory, (3) Primary Evidence Basis, (4) Active ALS Trial Landscape, (5) Fewest Open Validation Steps, (6) Clinical Development Stage. Genetic & Pathology Evidence uses a 36-program curated biological evidence ordering. SantaLucia Tm/ΔG37 and AlphaGenome AVI never rank candidates." class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
+        <select id="p-sort" aria-label="Sort portfolio candidates" title="Lexicographic Translational Priority tuple: (1) Actionability Tier, (2) Keep·Core before Exploratory, (3) Within-tier sub-rules (Tier 3 genetic/spatial anchors ahead of screen-only candidates; benchmark sub-roles; human RCT futility ahead of PK/safety exclusions), (4) Active ALS Trial Landscape &amp; Open Validation Steps, (5) Clinical Development Stage. Genetic &amp; Pathology Evidence uses a 36-program curated biological evidence ordering. SantaLucia Tm/ΔG37 and AlphaGenome AVI never rank candidates." class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
           <option value="rank">Sort: Translational Priority Rank</option>
           <option value="bio">Sort: Genetic &amp; Pathology Evidence</option>
           <option value="trl">Sort: Development Stage</option>
@@ -255,31 +255,31 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
         <div class="flex flex-wrap items-center gap-2">
           <input id="iv-search" aria-label="Search GRCh38 intervals" type="text" placeholder="Filter gene, ID, coordinate..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs min-w-[180px] text-[var(--foreground)]" />
           <select id="iv-status" aria-label="Filter by off-target safety status" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
-            <option value="ALL">Off-Target Verdict: All (26)</option>
-            <option value="PASS_CLEAN_GE2MM">Pass &middot; Clean (&ge;2 Mismatches) (5)</option>
-            <option value="CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED">Caution &middot; Non-Constrained 1-mm / Wobble (14)</option>
+            <option value="ALL">Off-Target Verdict: All (28)</option>
+            <option value="PASS_CLEAN_GE2MM">Pass &middot; Clean (&ge;2 Mismatches) (4)</option>
+            <option value="CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED">Caution &middot; Non-Constrained 1-mm / Wobble / 2-mm (17)</option>
             <option value="WARN_1MM_OR_WOBBLE_CONSTRAINED_NEURONAL">Warn &middot; Constrained CNS 1-mm / Bulge (5)</option>
             <option value="FAIL_EXACT_0MM_OFFTARGET">Fail &middot; Exact 0-mm Off-Target (2)</option>
           </select>
           <select id="iv-origin" aria-label="Filter by cis-regulatory mechanism" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
-            <option value="ALL">Cis-Mechanism: All (26)</option>
+            <option value="ALL">Cis-Mechanism: All (28)</option>
             <option value="CRYPTIC_EXON_SKIP">Cryptic Cassette Exon Skipping (14)</option>
-            <option value="CRYPTIC_ALE_PAS_BLOCK">Cryptic 3&apos;SS / Premature PolyA Blockade (7)</option>
+            <option value="CRYPTIC_ALE_PAS_BLOCK">Cryptic 3&apos;SS / Premature PolyA Blockade (9)</option>
             <option value="CONSTITUTIVE_EXON_INCLUSION">Constitutive Exon Inclusion Rescue (3)</option>
             <option value="DISTAL_3UTR_EXTENSION">Distal 3&apos;-UTR Extension Suppression (2)</option>
           </select>
           <label class="flex items-center gap-1.5 text-xs text-[var(--foreground)] cursor-pointer">
-            <input id="iv-leads" type="checkbox" class="accent-[var(--primary)]" /> Promoted Leads Only (10)
+            <input id="iv-leads" type="checkbox" class="accent-[var(--primary)]" /> Promoted Leads Only (11)
           </label>
           <button type="button" data-reset-intervals="1" class="px-2.5 py-1.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] text-xs cursor-pointer">Reset</button>
-          <span id="iv-count" class="font-mono tabular-nums text-[var(--muted-foreground)] text-xs ml-auto">26 / 26</span>
+          <span id="iv-count" class="font-mono tabular-nums text-[var(--muted-foreground)] text-xs ml-auto">28 / 28</span>
         </div>
         <div class="text-xs text-[var(--muted-foreground)] border-t border-[var(--card-border)] pt-2 leading-relaxed">
           <strong class="font-mono text-[var(--foreground)]">6-Tier GRCh38 Hybridization Screen (OSWG-adapted &middot; 1-Based Closed Target Windows):</strong>
           Sequence-clean locus anchors for empirical 1-nt microwalks + human neuron <span class="font-mono">Ca2+</span>-oscillation, <span class="font-mono">TLR9</span> &amp; primary <span class="font-mono">DRG</span> screens (GENCODE v46 reference cleanliness does not exclude phosphorothioate protein-binding toxicity) &middot;
           modeled SantaLucia <span class="font-mono">2'-O-MOE PO/PS Tm / &Delta;G37</span> + <span class="font-mono">AlphaGenome AVI Phred</span> (DNA-variant conservation/splicing score, not steric ASO potency certification) &middot;
           <span class="font-mono">mRNA (0&middot;1&middot;wob)</span> = GENCODE v46 spliced mRNA (&le;200bp of splice junction) 0-mm / 1-mm / G:U wobble-only genes &middot;
-          <span class="font-mono">Pre-mRNA (0&middot;1&middot;wob&middot;2&middot;blg&middot;18c)</span> = sense 0-mm / 1-mm (&le;50bp SS) / wobble (&le;50bp) / 2-mm (&le;25bp) / 1-nt bulge / 18-nt sub-core.
+          <span class="font-mono">Pre-mRNA (0&middot;1&middot;wob&middot;2&middot;blg&middot;18c)</span> = sense 0-mm / 1-mm (&le;50bp SS) / wobble (&le;50bp) / 2-mm (&le;25bp) / 1-nt bulge / 18-nt sub-core (harmonized Pass &middot; Clean requires 0 hits across all mRNA, &le;50bp-SS, &le;25bp 2-mm, bulge &amp; 18-nt sub-core tiers across all 28 windows; G2E3 #1 saturates GGGenome max_mm=1 and records 2-mm = NA).
         </div>
       </div>
       <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-x-auto">
@@ -378,7 +378,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
         </div>
         <div class="lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2">
           <div class="flex items-center justify-between gap-2 flex-wrap">
-            <h2 class="text-sm font-semibold">Cohort Participant Overlap &amp; Donor-Level Regression Rules (8 Clusters)</h2>
+            <h2 class="text-sm font-semibold">Cohort Participant Overlap &amp; Donor-Accounting Rules (8 Groups)</h2>
             <span class="font-mono text-xs text-[var(--muted-foreground)]">Anti-Pseudoreplication Contract</span>
           </div>
           <div class="max-h-[290px] overflow-y-auto overflow-x-auto">
@@ -429,7 +429,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
           <p class="text-[var(--muted-foreground)] text-xs leading-snug">Generate byte-clean CSV or JSON exports directly from the verified embedded payload (works offline on <span class="font-mono">file://</span> and matches curated tables in GitHub):</p>
           <div class="flex flex-wrap gap-1.5">
             <button type="button" data-dl-reg="portfolio" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; Portfolio (52 CSV)</button>
-            <button type="button" data-dl-reg="intervals" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; Splice Windows (26 CSV)</button>
+            <button type="button" data-dl-reg="intervals" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; Splice Windows (28 CSV)</button>
             <button type="button" data-dl-reg="subnodes" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; Subunit Cards (18 CSV)</button>
             <button type="button" data-dl-reg="formulas" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; 202 Evidence &amp; Formulas (CSV)</button>
             <button type="button" data-dl-reg="datasets" class="px-2.5 py-1.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">&darr; 42 Datasets SHA-256 (CSV)</button>
@@ -445,9 +445,9 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
             <span class="font-mono text-xs text-[var(--success)]">202 / 202 (100%) 64-char SHA-256</span>
           </div>
           <div class="grid grid-cols-3 gap-2 font-mono text-xs">
-            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">Staged Datasets</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">137 <span class="text-xs font-normal text-[var(--muted-foreground)]">(42 DS)</span></div></div>
-            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">API Snapshots</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">57 <span class="text-xs font-normal text-[var(--muted-foreground)]">(JSON)</span></div></div>
-            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">Model Outputs</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">8 <span class="text-xs font-normal text-[var(--muted-foreground)]">(ODE/MWC)</span></div></div>
+            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">Staged Datasets</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">139 <span class="text-xs font-normal text-[var(--muted-foreground)]">(42 DS)</span></div></div>
+            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">API Snapshots</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">56 <span class="text-xs font-normal text-[var(--muted-foreground)]">(JSON)</span></div></div>
+            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">Model Outputs</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">7 <span class="text-xs font-normal text-[var(--muted-foreground)]">(ODE/MWC)</span></div></div>
           </div>
           <p class="text-[var(--muted-foreground)] text-xs leading-snug">All <span class="font-mono">202</span> contrast rows carry 64-char SHA-256 digests across <span class="font-mono">46</span> unique file/directory anchors (<span class="font-mono">65/202</span> bundled in clean git checkout; <span class="font-mono">202/202</span> locally matched when all <span class="font-mono">42</span> resources are staged). Legal redistribution split across <span class="font-mono">674.16 MB</span> (<span class="font-mono">642.93 MiB</span>): <strong class="text-[var(--foreground)]">Tier A</strong> (<span class="font-mono">CC0/CC-BY</span> open release + git maps), <strong class="text-[var(--foreground)]">Tier B</strong> (direct publisher/EuropePMC HTTPS fetch, zero re-hosting of <span class="font-mono">CC BY-NC-ND</span> supplements), and <strong class="text-[var(--foreground)]">Tier C</strong> (<span class="font-mono">SYNAPSE_AUTH_TOKEN</span> registered consortium access). Cis-regulatory target windows report 1-based GRCh38 coordinates only.</p>
         </div>

@@ -76,10 +76,10 @@ function renderMwcSarm1Svg(){
 
 function renderIl2StratSvg(){
   const hrs = [
-    {lbl:'Adj Cox (N=220)', hr:0.32, lo:0.14, hi:0.73, col:'var(--primary)'},
-    {lbl:'750-3.7k (n=154)', hr:0.52, lo:0.30, hi:0.89, col:'var(--success)'},
-    {lbl:'&le;3.7k (n=173)', hr:0.57, lo:0.33, hi:0.97, col:'var(--success)'},
     {lbl:'Unadj ITT (N=220)', hr:0.81, lo:0.54, hi:1.22, col:'var(--muted-foreground)'},
+    {lbl:'&le;3.7k (n=173)', hr:0.57, lo:0.33, hi:0.97, col:'var(--success)'},
+    {lbl:'750-3.7k (n=154)', hr:0.52, lo:0.30, hi:0.89, col:'var(--success)'},
+    {lbl:'pNfH=0 Ref (N=220)', hr:0.32, lo:0.14, hi:0.73, col:'var(--primary)'},
     {lbl:'&gt;3.7k (n=47, NS)', hr:1.37, lo:0.68, hi:2.75, col:'var(--warning)'},
   ];
   const xMap = v => 126 + ((Math.log10(v) - Math.log10(0.12)) / (Math.log10(3.0) - Math.log10(0.12))) * 104;

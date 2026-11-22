@@ -69,7 +69,7 @@ def apply_wave_c_ev_and_sub_patches(
     ev_map["EV-B5-003"].update({
         "source_id_or_locator": "OpenFDA:NDA022345;CHEMBL41355;CID:121892",
         "assay_and_contrast": "Unbound plasma PK (MW 303.34, fup~0.20) & regulatory marketing status",
-        "notes": "Voluntarily withdrawn globally by marketing authorization holder in June 2017 (FDA NDA022345 Discontinued; EMA holder withdrawal alongside 2013 FDA boxed warning / EMA pigmentary restrictions for quinone-dimer retinal maculopathy and mucocutaneous blue-grey discoloration).",
+        "notes": "Voluntarily discontinued commercially by marketing authorization holder in June 2017 with EU marketing authorization withdrawn July 19, 2018 (FDA NDA022345 Discontinued; EMA holder withdrawal alongside 2013 FDA boxed warning / EMA pigmentary restrictions for quinone-dimer retinal maculopathy and mucocutaneous blue-grey discoloration).",
     })
     ev_map["EV-B5-004"].update({
         "source_id_or_locator": "NCT05667779;NCT06532396;NCT06681441;NCT06714396;NCT06877624;NCT07421778;NCT05614063;NCT05716100;NCT05667142;NCT06419582;NCT06419608;NCT06309966;NCT06132893",
@@ -80,11 +80,11 @@ def apply_wave_c_ev_and_sub_patches(
     })
 
     # C017 (CHIT1 / GPNMB / CHI3L1-2): purge WashU+UMilan=63 error, fix PMID:31892365 -> Steinacker 2021 PMID:33576252, add GPNMB primary papers
-    bank_note = "4-center DIA total N=259 (Emory 118 [42 sALS + 14 C9 + 8 SOD1 + 54 Ctrl], MGH 78 [16 Ctrl + 62 asym], WashU 32 [26 ALS + 2 Ctrl + 4 asym], UMilan 31 [31 ALS, 0 non-ALS]; Table 2 lists 0 WashU non-ALS)"
+    bank_note = "4-center DIA total N=259 (Emory 118 [42 sALS + 14 C9 + 8 SOD1 + 54 Ctrl], MGH 78 [16 Ctrl + 62 asym], WashU 32 [26 ALS + 2 ordinary Ctrl + 4 asym; reconciled via MGH/WashU specimen codes 100 vs 741], UMilan 31 [31 ALS, 0 non-ALS]; Table 2 lists 0 WashU non-ALS)"
     ev_map["EV-B3-007"]["notes"] = (
         f"{bank_note}; Emory TMT (N=101: 35 Sporadic vs 44 Ctrl) diff=+0.8716 (p=6.89e-05, q=0.00806); Center+Age+Sex OLS (n=114) beta=+1.9954 (p=3.29e-12); "
         "Center+Batch+Age+Sex OLS (n=114) beta=+1.7955 (p=2.51e-08); Emory DIA Age+Sex OLS (n=89) beta=+2.0111 (p=4.33e-11); C9-Asym (n=59 vs 72) diff=+0.1827 (p=0.2937, q=0.6605); "
-        "Sym vs Asym (n=115 vs 72) diff=+2.0657 (p=1.15e-14); SOD1-Asym p=0.8819; Oh 2023 (DS046_OH_XML, PMID:37238921) log2FC=+3.9943 (p=1.88e-5, q<1e-6; longitudinal CSF progression modeling in Vu et al. 2023 PMID:37646115); "
+        "Sym vs Asym (n=115 vs 72) diff=+2.0657 (p=1.15e-14); SOD1-Asym p=0.8819; Oh 2023 (DS046_OH_XML, PMID:37238921: 5/5 core markers replicated in discovery MS & 4/5 in targeted PRM [CHI3L2 blank, 40/61 cohort overlap]) log2FC=+3.9943 (p=1.88e-5, q<1e-6; longitudinal CSF progression modeling in Vu et al. 2023 PMID:37646115); "
         "CSF chitinases achieve AUC up to 0.92 vs healthy controls (Thompson 2019 PMID:31123140) vs ~0.688-0.84 against neurological ALS mimics (Steinacker 2018 PMID:29142138), confirming symptomatic staging/PD utility rather than standalone mimic exclusion."
     )
     ev_map["EV-B3-008"].update({

@@ -274,13 +274,13 @@ def main() -> None:
     errs_b = verify_phase3b_gates(ROOT, load_csv("candidate_intake_ledger.csv"), load_csv("subnode_dissection.csv"), load_csv("analysis_runs.csv"), load_csv, cand_override=bad_bundle, mode=eff_mode)
     assert any("non-atomic gene_or_drug" in e for e in errs_b)
 
-    # Test 25: Phase 4 52-hypothesis & 26-interval cross-phase portfolio gate
+    # Test 25: Phase 4 52-hypothesis & 28-interval cross-phase portfolio gate
     from phase4_gates import verify_phase4_gates
     errs_p4 = verify_phase4_gates(ROOT, load_csv("candidate_decisions.csv"), {r["analysis_run_id"] for r in load_csv("analysis_runs.csv")}, load_csv, mode=eff_mode)
     assert not errs_p4, f"Unexpected Phase 4 gate errors: {errs_p4}"
     p4_rows = load_csv("phase4_unified_portfolio.csv")
     cis4_rows = load_csv("phase4_unified_cis_intervals.csv")
-    assert len(p4_rows) == 52 and len(cis4_rows) == 26, f"Expected 52 portfolio & 26 cis rows, got {len(p4_rows)} & {len(cis4_rows)}"
+    assert len(p4_rows) == 52 and len(cis4_rows) == 28, f"Expected 52 portfolio & 28 cis rows, got {len(p4_rows)} & {len(cis4_rows)}"
 
     # Test 26: Coupled zero-dead-zone +PI(3)P->LRRK2/CASM turnover ODE, finite-d_lock hetero-octamer & CD38 cADPR bound
     casm_q48 = sweep_coupled_pikfyve_casm_sensitivity([float(h) for h in range(0, 336, 48)], 336.0, 6.5, 4.5, 1.5)

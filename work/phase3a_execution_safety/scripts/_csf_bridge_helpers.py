@@ -108,16 +108,22 @@ def extract_oh2023_header_resolved(xml_path: Path) -> dict[str, Any]:
     rep: dict[str, dict[str, str | float]] = {}
     for row in t2_b:
         if len(row) > prm_q_idx and row[g_idx] in BRIDGE_SYMS:
+            det_txt = row[det_idx].strip()
+            prm_ok = det_txt.lower().startswith("detect")
             rep[row[g_idx]] = {
                 "log2_als_vs_hc": float(row[fc_idx].replace("−", "-")),
                 "discovery_p_raw_text": row[p_idx], "discovery_q": float(row[disc_q_idx]),
-                "prm_detectability": row[det_idx] or ("Validated_PRM_Table2" if row[prm_q_idx] else ""),
-                "prm_validation_q": row[prm_q_idx],
+                "prm_detectability": det_txt if prm_ok else "UNREPORTED_BLANK_IN_TABLE2",
+                "prm_validation_q": row[prm_q_idx].strip() if prm_ok else "",
             }
     assert len(rep) == 5, f"Expected 5/5 bridge proteins in Oh 2023 Table 2, got {len(rep)}"
+    n_disc_sig = sum(1 for v in rep.values() if float(v["discovery_q"]) <= 0.05)
+    n_prm_sig = sum(1 for v in rep.values() if bool(v["prm_validation_q"]))
     return {
-        "scope": "UNIVARIATE_5_OF_5_INDIVIDUAL_PROTEIN_REPLICATION_NO_DONOR_MATRIX",
+        "scope": "UNIVARIATE_5_OF_5_DISCOVERY_MS_AND_4_OF_5_PRM_VALIDATION_40_OF_61_OVERLAP",
         "n_als_discovery": als_disc, "n_hc_discovery": hc_disc, "n_total_discovery": als_disc + hc_disc,
         "n_als_total_table1": als_tot, "n_hc_total_table1": hc_tot, "n_total_table1": als_tot + hc_tot,
-        "n_bridge_proteins_fdr_lt_0_05": len(rep), "proteins": rep,
+        "n_bridge_proteins_fdr_lt_0_05": n_disc_sig,
+        "n_bridge_proteins_prm_validated": n_prm_sig,
+        "proteins": rep,
     }

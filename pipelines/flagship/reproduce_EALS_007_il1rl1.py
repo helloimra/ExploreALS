@@ -44,7 +44,7 @@ def main() -> None:
         assert_close(f"[MEASURED:{src_tag}] Zhang 2026 55-um Visium MN-niche spot log2FC (n=14/18 sections)", zh_spot, 3.76, rtol=0.02),
         assert_equal("[MEASURED] GENCODE v46 1-based soluble sST2 intron-8 polyA exon span", sst2_exon, "chr2:102343270-102346100(+)"),
         assert_equal("[MEASURED] PDB 4KC3 D1-D3 (aa 21-317) 5 closed disulfides; sequence-deduced 11th Cys327", f"{cys_aud['n_closed_disulfides']}/{cys_aud['cys327_is_odd_unpaired_thiol']}", "5/True"),
-        assert_equal("[MEASURED] Zone 1 Intron-8 PAS #1 Clean >=2mm steric window", f"{z1_lead['interval_id']}:{z1_lead['offtarget_status']}", "chr2:102346045-102346062(+):PASS_CLEAN_GE2MM"),
+        assert_equal("[MEASURED] Zone 1 Intron-8 PAS #1 steric window (mRNA/50bp-SS 0/0; 25bp-SS 2mm=1)", f"{z1_lead['interval_id']}:{z1_lead['offtarget_status']}", "chr2:102346045-102346062(+):PASS_CLEAN_GE2MM"),
     ]
     if (ROOT / "data/pharmacology_structures/phase2_pdb/pdb_00004kc3.cif").is_file():
         from carbon_als.mmcif_parser import load_mmcif_structure

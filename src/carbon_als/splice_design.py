@@ -125,11 +125,12 @@ def score_target_intervals(
             max_avi = max((avi_map.get(p, 0.0) for p in t_coords), default=0.0)
 
             g_min, g_max = min(t_coords), max(t_coords)
-            in_exonic, boundary_dist = False, 999
+            in_exonic, straddles_boundary, boundary_dist = False, False, 999
             if feature_bounds_1b is not None:
                 f_lo, f_hi = min(feature_bounds_1b), max(feature_bounds_1b)
                 in_exonic = not (g_max < f_lo or g_min > f_hi)
-                boundary_dist = min(abs(g_min - f_lo), abs(g_max - f_lo), abs(g_min - f_hi), abs(g_max - f_hi))
+                straddles_boundary = (g_min <= f_lo <= g_max) or (g_min <= f_hi <= g_max)
+                boundary_dist = 0 if straddles_boundary else min(abs(g_min - f_lo), abs(g_max - f_lo), abs(g_min - f_hi), abs(g_max - f_hi))
 
             wt_sponge_flag = bool(mode == "INCLUDE_EXON_UPSTREAM_UG" and ug_tracts >= 6)
             if mode == "INCLUDE_CONSTITUTIVE_EXON":

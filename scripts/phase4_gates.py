@@ -125,9 +125,9 @@ def verify_phase4_gates(
     exp_ivs = set(ot3a_map) | set(sso3b_map)
     got_ivs = [r["interval_id"] for r in cis_rows]
     if len(got_ivs) != len(set(got_ivs)) or set(got_ivs) != exp_ivs:
-        errors.append(f"phase4_unified_cis_intervals.csv interval_id set ({len(got_ivs)}) != union of 12 Phase 3A + 14 Phase 3B ({len(exp_ivs)})")
+        errors.append(f"phase4_unified_cis_intervals.csv interval_id set ({len(got_ivs)}) != union of 12 Phase 3A + 16 Phase 3B ({len(exp_ivs)})")
     if sorted(int(r["unified_interval_order"]) for r in cis_rows) != list(range(1, len(cis_rows) + 1)):
-        errors.append("phase4_unified_cis_intervals.csv unified_interval_order is not contiguous 1..26")
+        errors.append("phase4_unified_cis_intervals.csv unified_interval_order is not contiguous 1..28")
 
     leads_from_cis: dict[str, tuple[str, str]] = {}
     for c in cis_rows:
@@ -335,7 +335,7 @@ def verify_phase4_gates(
                 "const DATA_LENSES =", "const DATA_CONTRASTS =",
                 "const DATA_RUNS =", "const DATA_DATASETS =", "const DATA_FORMULAS =", "const DATA_OVERLAP =",
                 "1. Triage Table (52)", "2. Candidate Reports (52)",
-                "3. Splice Windows (26)", "4. Replication", 'id="rep-dag-box"', 'id="sandbox-drawer"',
+                "3. Splice Windows (28)", "4. Replication", 'id="rep-dag-box"', 'id="sandbox-drawer"',
                 "Subunit &amp; Selectivity", "202 / 202 (100%) 64-char SHA-256",
                 "Monograph &rarr;", "Dossier &rarr;", "Structured Triage Dossier",
                 "Methodology &amp; Decision Guide", "6-Tier GRCh38 Hybridization Screen", "Therapeutic Modality",

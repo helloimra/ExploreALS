@@ -52,7 +52,8 @@
     "PMID:9378775",
     "PMID:34614145",
     "PMID:34301856",
-    "PMID:33745109"
+    "PMID:33745109",
+    "PMID:38324634"
   ],
   "pmids": {
     "7478269": {
@@ -1532,6 +1533,42 @@
       "journal": "bioRxiv",
       "pubdate": "2025 Dec 3",
       "title": "Dual-targeting snRNA gene therapy rescues STMN2 and UNC13A splicing in TDP-43 proteinopathies."
+    },
+    "12039935": {
+      "first_author": "Crul M",
+      "pubdate": "2002 Jun 1",
+      "journal": "J Clin Oncol",
+      "title": "Phase I clinical and pharmacologic study of chronic oral administration of the farnesyl protein transferase inhibitor R115777 in advanced cancer."
+    },
+    "29764981": {
+      "first_author": "Fratta P",
+      "pubdate": "2018 Jun 1",
+      "journal": "EMBO J",
+      "title": "Mice with endogenous TDP-43 mutations exhibit gain of splicing function and characteristics of amyotrophic lateral sclerosis."
+    },
+    "30918111": {
+      "first_author": "Hernandez I",
+      "pubdate": "2019 Mar 27",
+      "journal": "Sci Transl Med",
+      "title": "A farnesyltransferase inhibitor activates lysosomes and reduces tau pathology in mice with tauopathy."
+    },
+    "33964142": {
+      "first_author": "Bosanac T",
+      "pubdate": "2021 Nov 29",
+      "journal": "Brain",
+      "title": "Pharmacological SARM1 inhibition protects axon structure and function in paclitaxel-induced peripheral neuropathy."
+    },
+    "38277467": {
+      "first_author": "Seddighi S",
+      "pubdate": "2024 Feb 14",
+      "journal": "Sci Transl Med",
+      "title": "Mis-spliced transcripts generate de novo proteins in TDP-43-related ALS/FTD."
+    },
+    "42698373": {
+      "first_author": "Pan L",
+      "pubdate": "2026 Sep",
+      "journal": "Eur J Neurol",
+      "title": "Protein Biomarkers in Risk and Prognosis of Amyotrophic Lateral Sclerosis."
     }
   },
   "ncts": {
@@ -2392,6 +2429,34 @@
     },
     "10.1038/s41746-026-03225-w": {
       "title": "Data-driven identification of repurposable drugs for ALS",
+      "type": "journal-article"
+    },
+    "10.1002/mds.70229": {
+      "title": "An Open-Label Phase 1b Study of the Safety, Pharmacokinetics, Pharmacodynamics, and Clinical Activity of ANX005 in Patients with Huntington's Disease.",
+      "type": "journal-article"
+    },
+    "10.1016/j.imbio.2025.153003": {
+      "title": "Targeting C5a inflammation in ALS: Ex vivo findings from PMX205 phase Ib trial",
+      "type": "journal-article"
+    },
+    "10.1093/brain/awab184": {
+      "title": "Pharmacological SARM1 inhibition protects axon structure and function in paclitaxel-induced peripheral neuropathy",
+      "type": "journal-article"
+    },
+    "10.1126/scitranslmed.adg7162": {
+      "title": "Mis-spliced transcripts generate de novo proteins in TDP-43-related ALS/FTD",
+      "type": "journal-article"
+    },
+    "10.1186/s44477-025-00013-w": {
+      "title": "Divergent TDP43-regulated and TDP43-independent cryptic splicing in the cortex and spinal cord",
+      "type": "journal-article"
+    },
+    "10.15252/embj.201798684": {
+      "title": "Mice with endogenous TDP-43 mutations exhibit gain of splicing function and characteristics of amyotrophic lateral sclerosis",
+      "type": "journal-article"
+    },
+    "10.1007/s00401-025-02901-7": {
+      "title": "Analysis of the splicing landscape of the frontal cortex in FTLD-TDP reveals subtype specific patterns and cryptic splicing",
       "type": "journal-article"
     }
   }

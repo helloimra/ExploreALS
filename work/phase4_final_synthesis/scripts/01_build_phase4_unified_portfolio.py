@@ -103,7 +103,7 @@ def build_cis_intervals() -> tuple[list[dict[str, str]], dict[str, dict[str, str
         is_lead = PROMOTED_LEADS.get(pid) == (rk, iv_id)
         acc_id = legacy_to_accession(pid)
         row = {
-            "unified_interval_order": str(len(cis_rows) + 1), "origin_phase": "PHASE3B_DENOVO_14",
+            "unified_interval_order": str(len(cis_rows) + 1), "origin_phase": "PHASE3B_DENOVO_16",
             "accession_id": acc_id, "subnode_accession_id": acc_id,
             "portfolio_id": pid, "subnode_or_cand_id": pid, "gene_symbol": s["gene_symbol"],
             "program_role": "DENOVO_SINGLE_ENTITY", "rank_within_gene": str(rk), "is_promoted_lead": str(is_lead),
@@ -205,7 +205,7 @@ def main() -> None:
                 "sharpest neuronal-mass-residualized mn_neur_z tSTMN2 neuronal tail in panel (cervical beta=-1.3932, "
                 "p=2.02e-8 [1.90% tail]; lumbar beta=-1.1940, p=2.54e-11 [0.14% tail]); CNS-restricted GTEx v8 (BA9=43.06, Cerebellum=60.18, Cervical=1.91 vs "
                 "max non-CNS Testis=6.97 TPM), dividing-line DepMap Chronos=-0.1304 (0% <-1.0; unliganded Tbio target with 0 prior clinical drugs), and gnomAD v4.1 pLI=1.00/LOEUF=0.248 "
-                f"across {ce_m['upstream_intron_len_bp']}-bp upstream micro-intron (108-bp CE mod3=0 carries in-frame PTC at codon {ce_m['inframe_ptc_codon_indices_1b']})."
+                f"across {ce_m['upstream_intron_len_bp']}-bp upstream micro-intron (conditional 108-bp CE mod3=0 carries in-frame PTC at codon {ce_m['inframe_ptc_codon_indices_1b']})."
             )
             nxt = (
                 f"{c['discriminating_next_test']} "
@@ -275,7 +275,7 @@ def main() -> None:
         "datasets_used": "DS001_COUNTS;DS001_META;DS001_ONEILL;DS_GENCODE_V46_COMP_GTF;DS_GNOMAD_V41_CONSTRAINT",
         "tools_and_skills_used": "gtex-database;opentargets-database;gnomad-database;tooluniverse-gene-liability;scripts.phase4_gates;uv-python",
         "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-15T01:05:00Z",
-        "summary": "Unified all 52 ALS hypotheses (33 curated clinical/genetic/pathology programs + 19 systematic multi-omic screen nominations), 18 subunit/comparator dissections, and 26 coordinate-only GRCh38 cis-regulatory intervals under pure scientific actionability & causal evidence basis with CELF5 NYGC/GTEx/liability profile and Phase 3A dossier sync.",
+        "summary": "Unified all 52 ALS hypotheses (33 curated clinical/genetic/pathology programs + 19 systematic multi-omic screen nominations), 18 subunit/comparator dissections, and 28 coordinate-only GRCh38 cis-regulatory intervals under pure scientific actionability & causal evidence basis with CELF5 NYGC/GTEx/liability profile and Phase 3A dossier sync.",
     }
     runs = (
         [p4_run if r["analysis_run_id"] == "RUN-P4-001" else r for r in runs]

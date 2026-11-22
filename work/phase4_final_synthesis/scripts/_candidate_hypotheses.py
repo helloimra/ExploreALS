@@ -124,7 +124,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "S07": (
         "Aldesleukin (CHEMBL1201438) is recombinant human interleukin-2 administered subcutaneously at low doses to selectively expand immunosuppressive CD4+CD25+FOXP3+ regulatory T cells (Tregs) via high-affinity IL2RA receptors without activating effector T cells. "
-        "Following the MIROCALS Phase 2b trial (NCT03039673, PMID:40354799) — which missed unadjusted overall survival (p=0.33) but showed positive SAP-prespecified covariate-adjusted survival (HR=0.32, p=0.007) and a 48% mortality hazard reduction in the 750–3,700 pg/mL BioVendor ELISA CSF pNfH stratum — S07 tests prospective calibrated biomarker-gated Treg immunomodulation."
+        "Following the MIROCALS Phase 2b trial (NCT03039673, PMID:40354799) — which missed unadjusted overall survival (HR=0.81, p=0.33) while showing SAP-prespecified covariate-adjusted conditional survival (HR=0.32 at reference pNfH=0, p=0.007; interaction p=0.0011) and a 48% mortality hazard reduction in the 750–3,700 pg/mL BioVendor ELISA CSF pNfH stratum — S07 tests prospective calibrated biomarker-gated Treg immunomodulation."
     ),
     "S08": (
         "Methylcobalamin (CHEMBL4297672) is the active coenzyme form of vitamin B12 required by methionine synthase to remethylate neurotoxic homocysteine and sustain neuronal transmethylation. "
@@ -144,11 +144,11 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "DN-03": (
         "PTPRT (ENSG00000196090) encodes a CNS-restricted receptor protein tyrosine phosphatase that stabilizes trans-synaptic Neuroligin/Fyn adhesion complexes (PMID:19816407) while dephosphorylating STAT3 Tyr705 (PMID:17360477). "
-        "Multi-cohort screening revealed severe Ribo-seq and C9-FTD cortical homogenate protein depletion (alongside null synaptosomal DIA and FDR-non-significant CSF ectodomain trends); this hypothesis tests fine-mapping its 3.57-kb Intron-26 cryptic junction and resolving synaptic adhesion vs. neurotrophic pSTAT3 polarity."
+        "Multi-cohort screening revealed severe Ribo-seq and C9-FTD cortical homogenate protein depletion (alongside null synaptosomal DIA and FDR-non-significant CSF ectodomain trends); this hypothesis tests validating its published Intron-26 cryptic exon (chr20:42099289-42102124(-), DOI:10.1186/s44477-025-00013-w) and resolving synaptic adhesion vs. neurotrophic pSTAT3 polarity."
     ),
     "DN-04": (
         "CELF5 (ENSG00000161082) encodes a brain- and motor-system-restricted CUGBP Elav-like RNA-binding factor that regulates neuron-specific alternative splicing. "
-        "Depletion of nuclear TDP-43 induces inclusion of a 108-bp nonsense-mediated-decay cryptic exon (replicated at LeafCutter cluster clu_25763_+ in sporadic ALS patient iPSC motor neurons); intrathecal steric splice-switching aims to prevent secondary RNA-processing collapse downstream of TDP-43 loss."
+        "Depletion of nuclear TDP-43 induces inclusion of a conditional 108-bp nonsense-mediated-decay cryptic exon (replicated at LeafCutter cluster clu_25763_+ in Australian ID-MND sporadic ALS patient iPSC motor neurons); intrathecal steric splice-switching aims to prevent secondary RNA-processing collapse downstream of TDP-43 loss."
     ),
     "DN-05": (
         "PRUNE2 (ENSG00000106772) encodes a large BNIP2-homology neuronal protein whose C-terminal BCH domain is homologous to RhoA-inhibiting BNIP2-XL in cell-line models (PMID:18445682). "
@@ -156,7 +156,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "DN-06": (
         "PFKP (ENSG00000067057) encodes the platelet isoform of phosphofructokinase-1, a glycolytic gatekeeper partitioning neuronal glucose between ATP generation and the antioxidant pentose phosphate pathway (PPP, PMID:19448625). "
-        "Because its TDP-43-regulated exon is an endogenous GENCODE NMD poison exon (ENSE00004576209) with >10% inclusion in control human motor cortex and spinal cord (PMID:41332610), steric blockade tests whether rescuing synaptic PFKP aids bioenergetics without bystander PPP NADPH/glutathione depletion."
+        "Because its TDP-43-regulated exon is an endogenous GENCODE NMD poison exon (ENSE00004576209) with >10% inclusion in control human motor cortex and spinal cord (PMID:41332610 [PREPRINT]), steric blockade tests whether rescuing synaptic PFKP aids bioenergetics without bystander PPP NADPH/glutathione depletion."
     ),
     "DN-07": (
         "TRAPPC12 (ENSG00000171853) encodes an outer subunit of the TRAPPIII tethering complex involved in ER-to-Golgi transport and autophagosome assembly (recessive PEBAS OMIM 617669) upstream of YKT6. "
@@ -175,7 +175,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
         "Identified as the top downregulated untargeted protein in Emory ALS CSF DIA proteomics alongside cortical synaptosome depletion (with MS2-TMTpro omnibus discordance pending PRM bridging), it serves as a pre-validation candidate fluid marker of somatodendritic attrition."
     ),
     "DN-11": (
-        "DPP10 (ENSG00000175497) encodes a catalytically inactive neuronal Kv4 potassium-channel auxiliary subunit paralogous to DPP6 (UniProt Q8N608: Ser->Gly651 in GKGYGG; LOEUF=0.378) that governs somatodendritic A-type current gating. "
+        "DPP10 (ENSG00000175497) encodes a catalytically inactive neuronal Kv4 potassium-channel auxiliary subunit paralogous to DPP6 (UniProt Q8N608-3: Ser->Gly651 in GKGYGG [canonical Q8N608 Gly657]; LOEUF=0.378) that governs somatodendritic A-type current gating. "
         "Co-depleted with DPP6 in Emory ALS CSF DIA proteomics and primary motor cortex excitatory neurons (with MS2-TMTpro omnibus and WashU non-parametric caveats), it serves as a pre-validation candidate fluid marker of somatodendritic attrition."
     ),
     "DN-12": (
@@ -187,8 +187,8 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
         "Nominated from postmortem spinal spatial transcriptomic and cortical homogenate increases, its therapeutic hypothesis proposed irreversible MAO-B inhibition (rasagiline/selegiline class, NCT01879241) to curb glial oxidative stress in ALS."
     ),
     "DN-14": (
-        "PMX 205 (ALS-205, PubChem CID:6918845; completed subcutaneous Phase 1a/1b ACTRN12622000927729) is a cyclic hexapeptide orthosteric intrahelical Site-2 antagonist of the complement C5a receptor C5aR1 (ENSG00000197405; analog PMX-53 resolved in PDB 6C1R, PMID:29867214, distinct from extrahelical allosteric avacopan CHEMBL3989871). "
-        "Identified as a sub-FDR survival candidate (#9/107, q=0.070 in C5/C5a-free monocultures) without a completed human C5aR1 ALS efficacy trial, this exploratory hypothesis tests whether selective C5aR1 blockade acts on-target in MN-microglia co-cultures despite negative upstream C5/C3 ALS trials (PMID:39960672)."
+        "PMX 205 (ALS-205, PubChem CID:6918845; completed subcutaneous Phase 1a/1b ACTRN12622000927729 incl. N=8 ALS single-dose Ph1b) is a cyclic hexapeptide orthosteric intrahelical Site-2 antagonist of the complement C5a receptor C5aR1 (ENSG00000197405; analog PMX-53 resolved in PDB 6C1R, PMID:29867214, distinct from extrahelical allosteric avacopan CHEMBL3989871). "
+        "Identified as a sub-FDR survival candidate (#9/107, q=0.070 in monocultures without exogenous C5/C5a) without a completed human C5aR1 ALS efficacy trial, this exploratory hypothesis tests whether selective C5aR1 blockade acts on-target in MN-microglia co-cultures despite negative upstream C5/C3 ALS trials (PMID:39960672)."
     ),
     "DN-15": (
         "Lamotrigine is an oral phenyltriazine voltage-gated Na+ channel blocker that stabilizes presynaptic membranes and inhibits pathological glutamate release. "

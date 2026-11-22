@@ -154,7 +154,7 @@ def verify_phase3b_gates(
         if (s["flagged_constrained_neuronal_hits"] != "NONE" and st not in {"WARN_1MM_OR_WOBBLE_CONSTRAINED_NEURONAL", "FAIL_EXACT_0MM_OFFTARGET"}) or (st == "WARN_1MM_OR_WOBBLE_CONSTRAINED_NEURONAL" and s["flagged_constrained_neuronal_hits"] == "NONE"):
             errors.append(f"Bidirectional WARN/flagged violation on {iv_id}: st={st} flags={s['flagged_constrained_neuronal_hits']}")
         is_gap = "GAPMER" in s["cis_mechanism_class"]
-        any_risk = any(int(s[zc]) != 0 for zc in zcols) or (is_gap and int(s["premRNA_1mm_sense_genes"]) != 0)
+        any_risk = any((s[zc] == "NA" or int(s[zc]) != 0) for zc in zcols) or (is_gap and int(s["premRNA_1mm_sense_genes"]) != 0)
         if (st == "PASS_CLEAN_GE2MM" and any_risk) or (st != "PASS_CLEAN_GE2MM" and not any_risk and s["flagged_constrained_neuronal_hits"] == "NONE"):
             errors.append(f"Bidirectional PASS_CLEAN_GE2MM violation on {iv_id}: st={st}")
         if not s["alphagenome_atlas_url"].startswith("https://deepmind.google.com/science/alphagenome/atlas?"):

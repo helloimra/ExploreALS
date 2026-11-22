@@ -132,16 +132,16 @@
     }
   },
   "unified_cis_intervals_summary": {
-    "total_intervals": 26,
+    "total_intervals": 28,
     "by_origin": {
       "PHASE2_3A_MULTIPLEX_12": 12,
-      "PHASE3B_DENOVO_14": 14
+      "PHASE3B_DENOVO_16": 16
     },
     "by_offtarget_safety_status": {
-      "CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED": 14,
+      "CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED": 17,
       "WARN_1MM_OR_WOBBLE_CONSTRAINED_NEURONAL": 5,
-      "PASS_CLEAN_GE2MM": 5,
-      "FAIL_EXACT_0MM_OFFTARGET": 2
+      "FAIL_EXACT_0MM_OFFTARGET": 2,
+      "PASS_CLEAN_GE2MM": 4
     },
     "promoted_leads_10": {
       "C006": {
@@ -152,12 +152,12 @@
       "C001": {
         "interval_id": "chr19:17642537-17642554(-)",
         "gene_symbol": "UNC13A",
-        "status": "PASS_CLEAN_GE2MM"
+        "status": "CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED"
       },
       "C002": {
         "interval_id": "chr8:79616829-79616846(+)",
         "gene_symbol": "STMN2",
-        "status": "PASS_CLEAN_GE2MM"
+        "status": "CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED"
       },
       "DN-01": {
         "interval_id": "chr2:241668970-241668987(+)",
@@ -167,6 +167,11 @@
       "DN-02": {
         "interval_id": "chr3:124701092-124701109(+)",
         "gene_symbol": "KALRN",
+        "status": "PASS_CLEAN_GE2MM"
+      },
+      "DN-03": {
+        "interval_id": "chr20:42099262-42099281(-)",
+        "gene_symbol": "PTPRT",
         "status": "PASS_CLEAN_GE2MM"
       },
       "DN-04": {
@@ -763,11 +768,11 @@
   },
   "registry_sha12": {
     "candidate_accessions": "c969dd984f1e",
-    "phase4_unified_portfolio": "b9794be59753",
-    "phase4_unified_cis_intervals": "bb4f7dd9f1c9",
-    "phase3_sso_offtarget_audit": "038dea57c22d",
-    "phase3_execution_readiness": "b34f537c0940",
-    "phase3b_denovo_candidates": "c1e86a641cdd",
-    "phase3b_denovo_sso_intervals": "f46fb8103ef2"
+    "phase4_unified_portfolio": "fb1afa79316f",
+    "phase4_unified_cis_intervals": "d411b593d372",
+    "phase3_sso_offtarget_audit": "84fbbcd5b9e2",
+    "phase3_execution_readiness": "68a493f89c57",
+    "phase3b_denovo_candidates": "22ab73a151b6",
+    "phase3b_denovo_sso_intervals": "d7477c8657b0"
   }
 }

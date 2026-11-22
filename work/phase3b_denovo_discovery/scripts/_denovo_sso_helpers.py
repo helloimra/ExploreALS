@@ -25,6 +25,8 @@ DENOVO_CIS_SPECS: list[tuple[str, str, str, int, int, str, tuple[int, int], str,
     ("DN-01", "ATG4B", "2", 241668870, 241669005, "+", (241668875, 241668985), "SKIP_CRYPTIC_EXON", "CRYPTIC_CASSETTE_EXON_SKIP", 2, (241668875, 241668985)),
     ("DN-02", "KALRN", "3", 124701256, 124701282, "+", (124701255, 124701255), "SKIP_CRYPTIC_EXON", "CRYPTIC_CASSETTE_DOWNSTREAM_INTRONIC_ISE", 1, (124700977, 124701255)),
     ("DN-02", "KALRN", "3", 124701075, 124701115, "+", (124701093, 124701093), "SKIP_CRYPTIC_EXON", "CRYPTIC_CASSETTE_MAJOR_3SS_AND_SHARED_EXON", 1, (124700977, 124701255)),
+    ("DN-03", "PTPRT", "20", 42099255, 42099281, "-", (42098553, 42099289), "SKIP_CRYPTIC_EXON", "CRYPTIC_A3SS_PROXIMAL_EXON_BLOCK", 1, (42098552, 42102124)),
+    ("DN-03", "PTPRT", "20", 42099288, 42099310, "-", (42099289, 42099289), "SKIP_CRYPTIC_EXON", "CRYPTIC_A3SS_ACCEPTOR_BLOCK", 1, (42098552, 42102124)),
     ("DN-04", "CELF5", "19", 3278180, 3278345, "+", (3278209, 3278316), "SKIP_CRYPTIC_EXON", "CRYPTIC_CASSETTE_EXON_SKIP", 2, (3278209, 3278316)),
     ("DN-06", "PFKP", "10", 3099530, 3099845, "+", (3099557, 3099819), "SKIP_CRYPTIC_EXON", "CRYPTIC_CASSETTE_EXON_SKIP", 2, (3099557, 3099819)),
     ("DN-07", "TRAPPC12", "2", 3457770, 3457820, "+", (3457795, 3457795), "SKIP_CRYPTIC_EXON", "CRYPTIC_ALE_3SS_ACCEPTOR_BLOCK", 2, (3457795, 3458181)),
@@ -65,6 +67,26 @@ def audit_atg4b_ce_ptc_in_ram() -> dict[str, Any]:
     ptc_1b = [idx + 1 for idx, c in enumerate(codons) if c in ("TAA", "TAG", "TGA")]
     del seq, codons
     return {"ce_coords": "chr2:241668875-241668985(+)", "ce_len_bp": 111, "upstream_exon10_end": 241668685, "upstream_phase": 0, "inframe_ptc_codon_indices_1b": ptc_1b}
+
+
+def audit_ptprt_a3ss_ptc_in_ram() -> dict[str, Any]:
+    seq_plus = fetch_ensembl_dna_transient("20", 42098553, 42099289)
+    seq_5to3 = _revcomp_dna(seq_plus)
+    codons = [seq_5to3[i : i + 3] for i in range(0, len(seq_5to3) - 2, 3)]
+    ptc_1b = [idx + 1 for idx, c in enumerate(codons) if c in ("TAA", "TAG", "TGA")]
+    first_ptc_dist_to_eej = (len(seq_5to3) - 3 * ptc_1b[0]) + (42098552 - 42098421 + 1)
+    del seq_plus, seq_5to3, codons
+    return {
+        "a3ss_extension_coords": "chr20:42098553-42099289(-)",
+        "cryptic_acceptor_1b": 42099289,
+        "canonical_acceptor_1b": 42098552,
+        "upstream_exon26_donor_1b": 42102124,
+        "upstream_phase": 0,
+        "extension_len_bp": 737,
+        "extension_len_mod3": 737 % 3,
+        "first_5_inframe_ptc_codon_indices_1b": ptc_1b[:5],
+        "first_ptc_dist_to_downstream_eej_nt": first_ptc_dist_to_eej,
+    }
 
 
 def fetch_avi_positions_only(chrom_num: str, s1: int, e1: int, avi_cache: dict[str, Any]) -> dict[int, float]:

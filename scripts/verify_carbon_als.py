@@ -546,7 +546,7 @@ def main() -> None:
     print(
         f"PASS [{eff_mode}]: All {n_reg} registries, {n_stat}/{n_stat} recorded 64-char SHA-256 contrast digests "
         f"({n_uniq_anc} unique anchors; {n_matched_local}/{n_stat} locally byte/EOL-matched in {eff_mode} mode), "
-        f"{n_ds} dataset manifest entries, 52-hypothesis/26-interval portfolio, "
+        f"{n_ds} dataset manifest entries, 52-hypothesis/28-interval portfolio, "
         "ExploreALS v1.2 Explorer + 8 Monographs, biosecurity/provenance gates, and self-tests verified (0 errors)."
     )
 

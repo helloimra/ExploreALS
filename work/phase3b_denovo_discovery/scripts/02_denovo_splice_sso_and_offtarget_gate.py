@@ -19,6 +19,7 @@ for p in (SRC, SCRIPT_DIR, P3A_SCRIPTS):
 from _denovo_sso_helpers import (  # noqa: E402
     DENOVO_CIS_SPECS,
     audit_atg4b_ce_ptc_in_ram,
+    audit_ptprt_a3ss_ptc_in_ram,
     build_alphagenome_locus_url,
     fetch_avi_positions_only,
     fetch_ensembl_dna_transient,
@@ -53,6 +54,7 @@ def main() -> None:
     avi_cache = json.loads(avi_fp.read_text(encoding="utf-8")) if avi_fp.is_file() else {}
 
     atg4b_ptc = audit_atg4b_ce_ptc_in_ram()
+    ptprt_ptc = audit_ptprt_a3ss_ptc_in_ram()
     selected_ivs, transient_queries, rank_counter = [], [], {}
     for dn_id, gene, cnum, w_s, w_e, strand, fbounds, smode, mech, n_picks, atlas_b in DENOVO_CIS_SPECS:
         chrom = f"chr{cnum}"
@@ -143,6 +145,8 @@ def main() -> None:
             status = "CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED"
         else:
             status = "PASS_CLEAN_GE2MM"
+        max_mm_q = int(gg_cache[iv_id]["max_mm_queried"])
+        pm2_cell: int | str = len(pm_2_ss) if max_mm_q >= 2 else "NA"
         csv_rows.append({
             "denovo_id": r["denovo_id"], "gene_symbol": r["gene_symbol"], "rank_within_gene": r["rank_within_gene"],
             "interval_id": iv_id, "chrom": r["chrom"], "grch38_start": r["grch38_start"], "grch38_end": r["grch38_end"],
@@ -151,11 +155,11 @@ def main() -> None:
             "cpg_dinucs": r["cpg_dinucs"], "max_self_stem_bp": r["max_self_stem_bp"], "ese_motifs": r["ese_motifs"],
             "mean_avi_phred": r["mean_avi_phred"], "max_avi_phred": r["max_avi_phred"],
             "boundary_dist_bp": r["boundary_dist_bp"], "composite_score": r["composite_score"],
-            "gggenome_max_mm_queried": gg_cache[iv_id]["max_mm_queried"],
+            "gggenome_max_mm_queried": max_mm_q,
             "spliced_0mm_genes": len(sp_0), "spliced_1mm_genes": len(sp_1), "spliced_2mm_pc_genes": len(sp_2_pc),
             "spliced_wobble_only_pc_genes": len(sp_wob0), "premRNA_0mm_sense_genes": len(pm_0), "premRNA_1mm_sense_genes": len(pm_1),
             "premRNA_1mm_splice50bp_genes": len(pm_1_ss), "premRNA_wobble_only_splice50bp_pc_genes": len(pm_wob0),
-            "premRNA_2mm_splice25bp_pc_genes": len(pm_2_ss), "bulge_1nt_steric_pc_genes": len(bg_pc), "sub18_core_steric_pc_genes": len(s18_pc),
+            "premRNA_2mm_splice25bp_pc_genes": pm2_cell, "bulge_1nt_steric_pc_genes": len(bg_pc), "sub18_core_steric_pc_genes": len(s18_pc),
             "flagged_constrained_neuronal_hits": ";".join(flagged[:6]) if flagged else "NONE",
             "offtarget_safety_status": status, "alphagenome_atlas_url": r["alphagenome_atlas_url"], "analysis_run_id": "RUN-P3B-002",
         })
@@ -172,7 +176,7 @@ def main() -> None:
         w = csv.DictWriter(fh, fieldnames=list(csv_rows[0].keys()))
         w.writeheader()
         w.writerows(csv_rows)
-    out_txt = json.dumps(sanitize_for_strict_json({"analysis_run_id": "RUN-P3B-002", "n_transcripts_scanned": n_tx, "atg4b_ce_reading_frame_audit": atg4b_ptc, "intervals": csv_rows}), indent=2, allow_nan=False)
+    out_txt = json.dumps(sanitize_for_strict_json({"analysis_run_id": "RUN-P3B-002", "n_transcripts_scanned": n_tx, "atg4b_ce_reading_frame_audit": atg4b_ptc, "ptprt_a3ss_reading_frame_audit": ptprt_ptc, "intervals": csv_rows}), indent=2, allow_nan=False)
     assert not SEQ_GUARD_RE.search(out_txt) and not SEQ_GUARD_RE.search(CSV_FP.read_text(encoding="utf-8")), "Biosecurity sequence leak!"
     OUT_FP.write_text(out_txt, encoding="utf-8")
     for row in csv_rows:

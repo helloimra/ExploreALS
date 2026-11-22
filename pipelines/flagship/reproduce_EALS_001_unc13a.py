@@ -33,7 +33,7 @@ def main() -> None:
         assert_equal("Portfolio Actionable Rank & Biological Rank #1", f"Act #{port['unified_rank']} ({port['decision']})", "Act #3 (KEEP_CORE)"),
         assert_close(f"[MEASURED:{src_tag}] Brown 2022 UNC13A cryptic junction dPSI", ce_inc, 0.4632, rtol=1e-3),
         assert_close(f"[MEASURED:{src_tag}] Spillman 2026 C9-FTD synaptosome UNC13A log2FC", syn_lfc, -0.2496, rtol=1e-3),
-        assert_equal("Promoted Lead #2 Clean >=2mm Off-Target Status", lead2["offtarget_safety_status"], "PASS_CLEAN_GE2MM"),
+        assert_equal("Promoted Lead #2 Harmonized Off-Target Status (pm2_25=4 -> CAUTION)", f"{lead2['offtarget_safety_status']}:{lead2['premRNA_2mm_splice25bp_pc_genes']}", "CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED:4"),
         assert_close("Promoted Lead #2 sp0+sp1+pm1_50+bulge+sub18 hits", float(int(lead2["spliced_0mm_genes"]) + int(lead2["spliced_1mm_genes"]) + int(lead2["premRNA_1mm_splice50bp_genes"]) + int(lead2["bulge_1nt_steric_pc_genes"]) + int(lead2["sub18_core_steric_pc_genes"])), 0.0, rtol=1e-6),
     ]
     print_audit_report(

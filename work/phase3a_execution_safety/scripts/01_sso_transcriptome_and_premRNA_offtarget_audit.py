@@ -185,19 +185,21 @@ def main() -> None:
             status = "FAIL_EXACT_0MM_OFFTARGET"
         elif flagged_sorted:
             status = "WARN_1MM_OR_WOBBLE_CONSTRAINED_NEURONAL"
-        elif sp_1 or pm_1_prox or sp_wobble0_pc or pm_wob0_prox_pc or bulge_steric_pc or sub18_steric_pc or pm_0:
+        elif sp_1 or pm_1_prox or sp_wobble0_pc or pm_wob0_prox_pc or pm_2_prox_pc or bulge_steric_pc or sub18_steric_pc or pm_0:
             status = "CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED"
         else:
             status = "PASS_CLEAN_GE2MM"
 
+        max_mm_q = int(raw_hg38[iv_id]["gggenome_max_mm_queried"])
+        pm2_cell: int | str = len(pm_2_prox_pc) if max_mm_q >= 2 else "NA"
         aux_notes = deep_pm0 + inert_notes
         flag_cell = (";".join(flagged_sorted[:5]) + (f";...(+{len(flagged_sorted)-5}_more_in_JSON)" if len(flagged_sorted) > 5 else "")) if flagged_sorted else (";".join(aux_notes[:3]) if aux_notes and status == "CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED" else "NONE")
         csv_rows.append({
             "candidate_id": r["candidate_id"], "gene_symbol": r["gene_symbol"], "rank_within_gene": r["rank_within_gene"], "interval_id": iv_id,
-            "length_bp": r["length_bp"], "tm_phys_pops_c": r["tm_phys_pops_c"], "gggenome_max_mm_queried": raw_hg38[iv_id]["gggenome_max_mm_queried"],
+            "length_bp": r["length_bp"], "tm_phys_pops_c": r["tm_phys_pops_c"], "gggenome_max_mm_queried": max_mm_q,
             "spliced_0mm_genes": len(sp_0), "spliced_1mm_genes": len(sp_1), "spliced_2mm_pc_genes": len(sp_2_pc), "spliced_wobble_only_pc_genes": len(sp_wobble0_pc),
             "premRNA_0mm_sense_genes": len(pm_0), "premRNA_1mm_sense_genes": len(pm_1_any), "premRNA_1mm_splice50bp_genes": len(pm_1_prox),
-            "premRNA_wobble_only_splice50bp_pc_genes": len(pm_wob0_prox_pc), "premRNA_2mm_splice25bp_pc_genes": len(pm_2_prox_pc),
+            "premRNA_wobble_only_splice50bp_pc_genes": len(pm_wob0_prox_pc), "premRNA_2mm_splice25bp_pc_genes": pm2_cell,
             "bulge_1nt_steric_pc_genes": len(bulge_steric_pc), "sub18_core_steric_pc_genes": len(sub18_steric_pc),
             "flagged_constrained_neuronal_hits": flag_cell, "offtarget_safety_status": status, "analysis_run_id": "RUN-P3A-001",
         })

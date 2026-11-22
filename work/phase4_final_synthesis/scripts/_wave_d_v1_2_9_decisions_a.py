@@ -31,13 +31,13 @@ def apply_wave_d_decision_patches_a(dm: dict[str, dict[str, str]]) -> None:
         ),
         "evidence_disproves_hypothesis": (
             "Failed Phase 3 MND-SMART Stage 2 comparison (NCT04302870, Pal et al. 2024 Lancet Neurol PMID:39307154: n=355 ALSFRS-R analyzed [175 memantine 20 mg/d vs 180 placebo] of 369 2-arm randomized [183 vs 186] within N=554 3-arm Cycle 1; ALSFRS-R -0.650 vs -0.655 pts/mo, p=0.36; ITT deaths 49/183 vs 48/186, HR=0.92 p=0.71), "
-            "double-dose Phase 2b TAME at 40 mg/d (NCT02118727, Bhai et al. 2025 Muscle Nerve PMID:39511965, N=99 randomized / N=89 analyzed over 36-wk active + 4-wk washout: null ALSFRS-R p=0.69 & blood/CSF NfL/pNfH/tau), "
+            "double-dose Phase 2b TAME at 40 mg/d (NCT02118727, Bhai et al. 2025 Muscle Nerve PMID:39511965, N=99 enrolled / N=89 randomized / N=52 completing treatment over 36-wk active + 4-wk washout: null ALSFRS-R p=0.69 & blood/CSF NfL/pNfH/tau), "
             "and MEDALS (NCT00353665, PMID:20565333, N=63), while human ALS M1 corticospinal & cervical neurons already downregulate GRIN1 (log2FC=-0.737, p=0.00167)."
         ),
         "factual_justification": (
             "Target-engaged human clinical futility across Phase 3 MND-SMART (NCT04302870, PMID:39307154: n=355 2-arm Stage 2 comparison, p=0.36, survival HR=0.92), "
-            "double-dose 40 mg/d Phase 2b TAME (Bhai et al. 2025 PMID:39511965, N=99 randomized / N=89 analyzed, null ALSFRS-R & neurofilaments), and MEDALS (N=63) at NMDA-engaging human CSF levels (~0.25-1.2 uM) "
-            "refutes symptomatic pan-NMDA pore blockade and diagnoses 2.5 uM monoculture iPSC-MN rescue as a media-excitotoxicity artifact (preserving early NPTX2/TT-SICI-gated KCNQ2 splice rescue)."
+            "double-dose 40 mg/d Phase 2b TAME (Bhai et al. 2025 PMID:39511965, N=99 enrolled / N=89 randomized / N=52 completing treatment, null ALSFRS-R & neurofilaments), and MEDALS (N=63) at NMDA-engaging human CSF levels (~0.25-1.2 uM) "
+            "refutes symptomatic pan-NMDA pore blockade (whereas 2.5 uM monoculture iPSC-MN rescue plausibly reflects an untested culture-media excitotoxicity mechanism; preserving early NPTX2/TT-SICI-gated KCNQ2 splice rescue)."
         ),
         "updated_at": TS_WAVE_D,
     })
@@ -46,7 +46,7 @@ def apply_wave_d_decision_patches_a(dm: dict[str, dict[str, str]]) -> None:
         "causal_vs_reactive_assessment": "OFF_TARGET_MONOAMINERGIC_SEDATION_WITH_CLASS_ISR_FAILURE: Dose-limiting 5-HT2A/alpha1A sedation, anorectic mCPP metabolite & selective eIF2B class futility/NfL rise",
         "evidence_proves_hypothesis": (
             "Ranked #4/107 in Bye 2025 at 2.5 uM (+1.8458d across 15 sALS iPSC-MN lines, 13/15 > DMSO, p=0.00150, q=0.01610, PMID:41286450) "
-            "following 20-40 uM cellular ISR translational-restoration screening in Halliday et al. 2017 (Brain PMID:28430857)."
+            "following 20-40 uM cellular ISR translational-restoration screening and murine prion/tauopathy neuroprotection in Halliday et al. 2017 (Brain PMID:28430857)."
         ),
         "evidence_disproves_hypothesis": (
             "Failed Phase 3 MND-SMART Stage 2 comparison (NCT04302870, Pal et al. 2024 PMID:39307154: n=355 analyzed [175 trazodone 200 mg/d vs 180 placebo] of N=371 2-arm randomized; adjusted ALSFRS-R diff +0.065 pts/mo [95% CI -0.095, +0.226], p=0.24; deaths 52/185 vs 48/186, HR=0.95; AEs 90% vs 77%); "
@@ -68,28 +68,28 @@ def apply_wave_d_decision_patches_a(dm: dict[str, dict[str, str]]) -> None:
         "evidence_disproves_hypothesis": (
             "Japanese multicenter Phase 2 RCT NCT03019419 (Aizawa et al. 2022 J Neurol PMID:34191081, N=66 randomized 1:1:1 / N=65 ITT treated: 22 placebo, 22 at 4 mg/d, 21 at 8 mg/d) "
             "showed 8 mg/d significantly WORSENED 48-wk MMRM ALSFRS-R decline vs placebo by -8.4 pts (-17.4 vs -9.0, Table 2 95% CI -15.0 to -1.8, p=0.0145; bulbar -2.7, p=0.0206; 4 mg/d -13.4, p=0.1476; LOCF p=0.5519 under 67% [14/21] 8 mg/d dropout) "
-            "with higher SAEs (p=0.0483) and 33% (8 mg/d) & 64% (4 mg/d, 14/22) vs 82% (18/22) placebo completion; corroborated by AE/progression terminations (NCT03377309 N=6; NCT03020797 N=12), prior pan-AMPA talampanel futility (PMID:19961264, N=59), NDA202834 Boxed Warning, and null Bye 2025 survival (+0.113d, p=0.7610)."
+            "with higher SAEs (p=0.0483) and 33% (8 mg/d) & 64% (4 mg/d, 14/22) vs 82% (18/22) placebo completion; corroborated by NCT03377309 (N=6 halted due to adverse events) and NCT03020797 (N=12 terminated for low enrollment & disease-progression dropouts), prior pan-AMPA talampanel Phase 2 (PMID:19961264, N=59: nonsignificant slowing trend with poorer tolerability), NDA202834 Boxed Warning, and null Bye 2025 survival (+0.113d, p=0.7610)."
         ),
         "factual_justification": (
             "Direct randomized human ALS clinical harm and CNS intolerability at TMS-confirmed motor-cortex target engagement: Phase 2 RCT NCT03019419 (Aizawa et al. 2022 PMID:34191081, N=65 ITT / 66 randomized) "
-            "demonstrated significant 48-wk ALSFRS-R worsening at 8 mg/d (-8.4 pts, p=0.0145; bulbar p=0.0206), higher SAEs (p=0.0483), and 67% dropout (33% [8 mg] & 64% [4 mg] vs 82% placebo completion), corroborated by NCT03377309/NCT03020797 terminations, talampanel futility (PMID:19961264), and null sALS iPSC-MN survival (+0.113d, q=0.857; scoped to non-selective pan-AMPA blockade, preserving upstream ADAR2/GRIA2 Q607R RNA-editing rescue)."
+            "demonstrated significant 48-wk ALSFRS-R worsening at 8 mg/d (-8.4 pts, p=0.0145; bulbar p=0.0206), higher SAEs (p=0.0483), and 67% dropout (33% [8 mg] & 64% [4 mg] vs 82% placebo completion), corroborated by NCT03377309 AE halt & NCT03020797 low-enrollment/progression stop, talampanel Phase 2 (PMID:19961264: nonsignificant slowing trend with poorer tolerability), and null sALS iPSC-MN survival (+0.113d, q=0.857; scoped to non-selective pan-AMPA blockade, preserving upstream ADAR2/GRIA2 Q607R RNA-editing rescue)."
         ),
         "updated_at": TS_WAVE_D,
     })
 
     dm["C024"].update({
         "evidence_proves_hypothesis": (
-            "Focal C3 transcript elevation occurs within Zhang 2026 TDP-43+ cervical anterior-horn 55-um multicellular Visium spots (+1.2920, within-donor pseudoreplicated spot bh_fdr=5.82e-23 across N=14 donors, PMID:42135512), "
+            "Focal C3 transcript elevation occurs within Zhang 2026 TDP-43+ cervical anterior-horn 55-um multicellular Visium spots (+1.2920, within-donor pseudoreplicated Seurat MAST spot bh_fdr=5.82e-23 across N=14 donors, PMID:42135512), "
             "motivating clinical testing of systemic C3 complement inhibition."
         ),
         "evidence_disproves_hypothesis": (
             "Randomized, double-blind, placebo-controlled Phase 2 MERIDIAN trial (NCT04579666 posted results, N=249 started [169 vs 80] / N=247 mITT [168 pegcetacoplan 1,080 mg SC BIW vs 79 placebo]) "
             "missed Week 52 primary CAFS rank (123.0 [SE 4.71] vs 126.0 [SE 6.89]; ANCOVA LS mean diff -3.0, 95% CI -19.5 to +13.5, p=0.7205) and all secondary endpoints (ALSFRS-R p=0.6447, %SVC -6.6% p=0.0949, HHD p=0.0935, ALSAQ-40 +6.5 pts worse QoL p=0.0069) and terminated for futility, "
-            "echoing systemic terminal C5 failures (Phase 3 CHAMPION-ALS ravulizumab NCT04248465 PMID:37695623; Phase 2/3 HEALEY zilucoplan NCT04436497 PMID:39960672), while living-CSF C3 fails proteome-wide FDR (DIA q=0.0708; TMT p=0.6225) and ~43.5 kDa PEGylated pegcetacoplan has <0.1% intact-BBB entry against hepatic C3 synthesis (GTEx Liver=1,575 TPM)."
+            "echoing systemic terminal C5 failures (Phase 3 CHAMPION-ALS ravulizumab NCT04248465 PMID:37695623; Phase 2/3 HEALEY zilucoplan NCT04436497 PMID:39960672), while living-CSF C3 fails proteome-wide FDR (DIA q=0.0708; TMT p=0.6225) and ~43.5 kDa PEGylated pegcetacoplan has unmeasured human CSF PK (limited intact-BBB entry expected against hepatic C3 synthesis, GTEx Liver=1,575 TPM)."
         ),
         "factual_justification": (
             "Directly falsified in a 249-patient randomized placebo-controlled Phase 2 ALS trial: subcutaneous systemic C3 inhibitor pegcetacoplan (MERIDIAN NCT04579666, N=249 started / N=247 mITT [168 vs 79]: Week 52 CAFS LS mean diff -3.0, p=0.7205; ALSFRS-R p=0.6447) "
-            "missed primary and all secondary endpoints alongside Phase 3 ravulizumab (NCT04248465, PMID:37695623) and Phase 2/3 HEALEY zilucoplan (NCT04436497, PMID:39960672; strictly scoped to <0.1%-BBB systemic C3/C5 biologics, preserving CNS-compartmentalized intrathecal C1q blockade, PMID:42492371)."
+            "missed primary and all secondary endpoints alongside Phase 3 ravulizumab (NCT04248465, PMID:37695623) and Phase 2/3 HEALEY zilucoplan (NCT04436497, PMID:39960672; strictly scoped to systemic C3/C5 regimens with unmeasured/limited CNS entry, preserving CNS-compartmentalized intrathecal C1q blockade, PMID:42492371)."
         ),
         "updated_at": TS_WAVE_D,
     })
@@ -97,17 +97,17 @@ def apply_wave_d_decision_patches_a(dm: dict[str, dict[str, str]]) -> None:
     dm["C010"].update({
         "evidence_proves_hypothesis": (
             "Nominated from iPSC-MN phenotypic screening (Fujimori et al. 2018 Nat Med PMID:30127392) and open-label extension observations in single-center Phase 1/2a ROPALS "
-            "(UMIN000034954, Morimoto et al. 2023 PMID:37267913, N=20), with 1-10 uM D2R-independent SREBP2/cholesterol and phenolic antioxidant effects in vitro (PMID:40826812)."
+            "(UMIN000034954, Morimoto et al. 2023 PMID:37267913, N=20; noting Fig. S5 reported 0.1-10 nM partial phenotype reduction in mutant FUS/TDP-43 lines alongside 1-10 uM D2R-independent SREBP2/cholesterol and phenolic antioxidant effects in sALS lines, PMID:40826812)."
         ),
         "evidence_disproves_hypothesis": (
-            "At 16 mg/d ER MTD (76.9% GI AEs blocking dose escalation, Table S3), measured human ALS Week-24 CSF ropinirole (17,884 pg/mL = 68.68 nM on free-base MW 260.38; engages DRD2/3 Ki 2.9-7.2 nM) "
-            "sits 14.6-145.6x below 1-10 uM D2R-independent SREBP2/antioxidant rescue (PMID:37267913, PMID:40826812) while human spinal cord lacks DRD3 (0% >=1 CPM; Lumbar DRD2 RIN+GC OLS beta=-0.0651, p=0.4320, N=223); "
+            "At 16 mg/d ER MTD (76.9% GI AEs blocking dose escalation, Table S3), human ALS Week-24 CSF ropinirole (Table S3 mean 17,884 pg/mL = 68.68 nM on free-base MW 260.38 vs ~18 nM stated in Morimoto 2023 Discussion; engages DRD2/3 Ki 2.9-7.2 nM) "
+            "sits 14.6-556x below 1-10 uM D2R-independent SREBP2/antioxidant sALS rescue (PMID:37267913, PMID:40826812; despite 0.1-10 nM mutant FUS/TDP-43 Fig. S5 activity) while human spinal cord lacks DRD3 (0% >=1 CPM; Lumbar DRD2 RIN+GC OLS beta=-0.0651, p=0.4320, N=223); "
             "Bye 2025 showed FDR-significant survival harm across 15 sALS iPSC-MN lines (-0.688d, 12/15 negative, p=0.00292, q=0.0209), cortical BA9 discovery RNA collapsed after GC adjustment, blinded 24-wk ROPALS ALSFRS-R was null (+1.46, 95% CI -3.15 to 6.07, p=0.761, N=20), "
-            "and UK Phase 2a EXPERTS-ALS (ISRCTN15525855) closed the 16 mg/d ropinirole arm on Oct 6, 2026 for blood-NfL biomarker futility."
+            "and UK Phase 2a EXPERTS-ALS biomarker screen (ISRCTN15525855, 42 dosed / 22 Wk18 analyzed; distinct from a Phase 3 efficacy RCT) closed the 16 mg/d ropinirole arm on Oct 6, 2026 for blood-NfL biomarker futility."
         ),
         "factual_justification": (
-            "Insurmountable 14.6-145.6x measured human ALS CSF exposure deficit at GI-limited 16 mg/d MTD (68.68 nM CSF vs 1-10 uM non-D2 rescue, PMID:37267913, PMID:40826812, with absent spinal DRD3 & Lumbar DRD2 beta=-0.0651, p=0.4320) "
-            "plus FDR-significant survival harm across 15 sALS iPSC-MN lines (-0.688d, q=0.0209) and postmortem GC collapse, corroborated by null blinded 24-wk ROPALS (p=0.761, N=20) and Oct 2026 UK Phase 2a EXPERTS-ALS blood-NfL futility stop (ISRCTN15525855)."
+            "Insurmountable 14.6-556x human ALS CSF exposure deficit at GI-limited 16 mg/d MTD (Table S3 68.68 nM / Discussion ~18 nM CSF vs 1-10 uM non-D2 sALS rescue, PMID:37267913, PMID:40826812, with absent spinal DRD3 & Lumbar DRD2 beta=-0.0651, p=0.4320, despite 0.1-10 nM mutant FUS/TDP-43 Fig. S5 activity) "
+            "plus FDR-significant survival harm across 15 sALS iPSC-MN lines (-0.688d, q=0.0209) and postmortem GC collapse, corroborated by null blinded 24-wk ROPALS (p=0.761, N=20) and Oct 2026 UK Phase 2a EXPERTS-ALS blood-NfL biomarker futility stop (ISRCTN15525855)."
         ),
         "updated_at": TS_WAVE_D,
     })

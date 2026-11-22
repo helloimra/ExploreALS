@@ -39,23 +39,23 @@ def apply_wave_d_evidence_part_a(
     ev_map["EV-B5-015"].update({
         "source_type": "CLINICAL_TRIAL_PHASE2_3_RCT",
         "source_id_or_locator": "NCT02118727;PMID:39511965;PMC11632565;NCT00353665;PMID:20565333;NCT00409721;NCT01020331",
-        "cohort_and_stratum": "US TAME Phase 2b RCT (Bhai et al. 2025: N=99 randomized / N=89 mITT, 40 mg/d x 36 wk + 4-wk washout) & MEDALS Phase 2/3 RCT (N=63, 20 mg/d x 12 mo)",
+        "cohort_and_stratum": "US TAME Phase 2b RCT (Bhai et al. 2025: N=99 enrolled / N=89 randomized / N=52 completing treatment, 40 mg/d x 36 wk + 4-wk washout) & MEDALS Phase 2/3 RCT (N=63, 20 mg/d x 12 mo)",
         "effect_estimate": "TAME 40 mg/d (2x AD dose) ALSFRS-R slope p=0.69 & CSF/blood NfL/pNfH/tau null; MEDALS 20 mg/d 12-mo ALSFRS/survival null",
-        "notes": "Bhai et al. 2025 Muscle Nerve PMID:39511965 (PMC11632565, NCT02118727: 99 randomized 2:1, 89 analyzed across 36-wk active 40 mg/d + 4-wk washout) and de Carvalho et al. 2010 PMID:20565333 (NCT00353665, N=63), plus NCT00409721 (N=42) & NCT01020331 (N=20), all showed no functional or biomarker benefit.",
+        "notes": "Bhai et al. 2025 Muscle Nerve PMID:39511965 (PMC11632565, NCT02118727: 99 enrolled, 89 randomized 2:1, 52 completing treatment across 36-wk active 40 mg/d + 4-wk washout) and de Carvalho et al. 2010 PMID:20565333 (NCT00353665, N=63), plus NCT00409721 (N=42) & NCT01020331 (N=20), all showed no functional or biomarker benefit.",
     })
     ev_map["EV-B5-016"].update({
         "source_id_or_locator": "PMID:7478269;OpenFDA:NDA021487;CHEMBL807",
         "effect_estimate": "Human CSF/serum ratio 0.52 -> Cu,CSF ~0.25-0.60 uM (20 mg/d) to ~0.5-1.2 uM (40 mg/d) vs human NMDA Ki=0.54-1.0 uM",
     })
 
-    # C009 (Trazodone): Halliday 2017 20/40 uM + mCPP metabolite + MND-SMART Stage 2 n=355 + live NCT05842941 (DRR=1.05, log-NfL +0.081) & NCT05740813 Dose 1+2
+    # C009 (Trazodone): Halliday 2017 20/40 uM + mouse prion/tau + mCPP metabolite + MND-SMART Stage 2 n=355 + live NCT05842941 & NCT05740813
     ev_map["EV-B4-001"].update({
         "notes": "Exact Wilcoxon p=2.44e-4; LODO max p=0.00347; occurs at 2.5 uM ([MODEL_PRIOR] ~9-21x above modeled human unbound brain Cmax ~120-280 nM).",
     })
     ev_map["EV-B4-002"].update({
         "source_id_or_locator": "CHEMBL621;CHEMBL1200798;OpenFDA:Trazodone;PMID:28430857",
         "effect_estimate": "Cu,plasma ~187-430 nM; [MODEL_PRIOR] Cu,brain ~120-280 nM (fu,p=0.05-0.11, Kp,uu=0.65): 9-21x below 2.5 uM screen; 71-330x below Halliday 2017 20-40 uM ISR assays",
-        "notes": "Exceeds 5-HT2A IC50 (17 nM) & alpha1A Ki (47 nM) by 6-16x (driving dose-limiting somnolence & orthostasis) and generates CNS-penetrant CYP3A4 metabolite mCPP (5-HT2C/2B agonist driving anorexia/nausea without ISR rescue); Halliday et al. 2017 Brain PMID:28430857 tested trazodone at 20 uM (CHO reporter) and 40 uM (cellular ISR rescue).",
+        "notes": "Exceeds 5-HT2A IC50 (17 nM) & alpha1A Ki (47 nM) by 6-16x (driving dose-limiting somnolence & orthostasis) and generates CNS-penetrant CYP3A4 metabolite mCPP (5-HT2C/2B agonist driving anorexia/nausea without ISR rescue); Halliday et al. 2017 Brain PMID:28430857 tested trazodone at 20 uM (CHO reporter) and 40 uM (cellular ISR rescue) alongside mouse prion/tauopathy dosing.",
     })
     ev_map["EV-B4-003"].update({
         "cohort_and_stratum": "MND-SMART Phase 3 adaptive RCT trazodone comparison (n=355 Stage 2 analyzed [175 vs 180]; N=371 2-arm randomized [185 trazodone 200 mg/d vs 186 placebo])",
@@ -85,7 +85,7 @@ def apply_wave_d_evidence_part_a(
     })
     ev_map["EV-B5-025"].update({
         "source_id_or_locator": "NCT03793868;NCT03377309;NCT03020797;PMID:19961264;CHEMBL1214124;OpenFDA:NDA202834",
-        "notes": "US ALS trials NCT03377309 (N=6 halted due to adverse events) and NCT03020797 (N=12 terminated for low enrollment & progression dropouts) plus Phase 2 talampanel futility (Pascuzzi et al. 2010 PMID:19961264, N=59) reinforce class intolerability/futility; NDA202834 carries Boxed Warning for serious psychiatric reactions.",
+        "notes": "US ALS trials NCT03377309 (N=6 halted due to adverse events) and NCT03020797 (N=12 terminated for low enrollment & progression dropouts) plus Phase 2 talampanel (Pascuzzi et al. 2010 PMID:19961264, N=59: nonsignificant slowing trend with poorer tolerability) reinforce class intolerability/lack of efficacy; NDA202834 carries Boxed Warning for serious psychiatric reactions.",
     })
 
     # C024 (Pegcetacoplan): exact arm Ns (169 vs 80 started; 168 vs 79 mITT), secondary p-values, unglue LOEUF from est, Majumder 2026 PMID:42492371
@@ -94,12 +94,14 @@ def apply_wave_d_evidence_part_a(
         "source_id_or_locator": "NCT04579666;NCT04248465;NCT04436497;PMID:37695623;PMID:39960672;PMID:42492371",
         "cohort_and_stratum": "Phase 2 MERIDIAN SC pegcetacoplan RCT in ALS (N=249 started [169 vs 80]; N=247 mITT [168 pegcetacoplan 1,080 mg BIW vs 79 placebo])",
         "effect_estimate": "MERIDIAN Week 52 CAFS rank ANCOVA LS mean diff -3.0 (123.0 [SE 4.71] vs 126.0 [SE 6.89], 95% CI -19.5 to +13.5)",
-        "notes": "Posted NCT04579666 results (N=249 safety [169 vs 80]; N=247 mITT [168 vs 79]): missed Week 52 CAFS (p=0.7205), ALSFRS-R (p=0.6447), %SVC (-6.6%, p=0.0949), HHD (p=0.0935), and ALSAQ-40 (+6.5 pts worse QoL, p=0.0069), alongside Phase 3 CHAMPION-ALS ravulizumab (NCT04248465, PMID:37695623) & Phase 2/3 HEALEY zilucoplan (NCT04436497, PMID:39960672) futility; ~43.5 kDa PEGylated peptide has <0.1% intact-BBB entry vs hepatic C3 sink (GTEx Liver=1,575 TPM; legacy gnomAD v2.1.1 C3 LOEUF=0.552; CNS-targeted C3/C1q distinction noted in PMID:42492371).",
+        "notes": "Posted NCT04579666 results (N=249 safety [169 vs 80]; N=247 mITT [168 vs 79]): missed Week 52 CAFS (p=0.7205), ALSFRS-R (p=0.6447), %SVC (-6.6%, p=0.0949), HHD (p=0.0935), and ALSAQ-40 (+6.5 pts worse QoL, p=0.0069), alongside Phase 3 CHAMPION-ALS ravulizumab (NCT04248465, PMID:37695623) & Phase 2/3 HEALEY zilucoplan (NCT04436497, PMID:39960672) futility; ~43.5 kDa PEGylated peptide has unmeasured human CSF PK with limited intact-BBB entry expected vs hepatic C3 sink (GTEx Liver=1,575 TPM; legacy gnomAD v2.1.1 C3 LOEUF=0.552; CNS-targeted C3/C1q distinction noted in PMID:42492371).",
     })
 
-    # C010 (Ropinirole): EV-B5-019 exact NYGC Lumbar DRD2 OLS beta=-0.0651, unbundle Pineda PMID:38521060, UMIN/ISRCTN locators
+    # C010 (Ropinirole): EV-B5-018 Table S3 vs Discussion CSF & Fig. S5 context, EV-B5-019 exact NYGC Lumbar DRD2 OLS beta=-0.0651, EV-B5-020 EXPERTS-ALS Phase 2a screen
     ev_map["EV-B5-018"].update({
         "source_id_or_locator": "DS_ROPALS:TableS3_PK_Table1_AE;UMIN000034954;PMID:37267913;PMID:40826812;CHEMBL589",
+        "effect_estimate": "Wk24 CSF Table S3 mean 17,884 pg/mL = 68.68 nM (Discussion ~18 nM) at 16 mg/d ER MTD vs 1-10 uM non-D2 sALS rescue (Fig. S5 0.1-10 nM in mutant FUS/TDP-43)",
+        "notes": "Morimoto et al. 2023 PMID:37267913 Table S3 reports Week-24 CSF mean 17,884 pg/mL = 68.68 nM on free-base MW 260.38 (whereas the paper's Discussion states ~18 nM), sitting 14.6-556x below 1-10 uM D2R-independent SREBP2/antioxidant sALS rescue (PMID:40826812; while noting Fig. S5 reported 0.1-10 nM partial phenotype reduction in mutant FUS/TDP-43 lines) with 76.9% GI AEs capping dose at 16 mg/d.",
     })
     ev_map["EV-B5-019"].update({
         "source_id_or_locator": "DS001_COUNTS:Spinal_Cord_Lumbar:DRD2_DRD3;DS_GC_REF",
@@ -110,7 +112,7 @@ def apply_wave_d_evidence_part_a(
     })
     ev_map["EV-B5-020"].update({
         "source_id_or_locator": "UMIN000034954;PMID:37267913;ISRCTN15525855",
-        "effect_estimate": "ROPALS 24-wk DB ALSFRS-R diff +1.46 pts (95% CI -3.15 to 6.07, p=0.761 null)",
+        "effect_estimate": "ROPALS 24-wk DB ALSFRS-R diff +1.46 pts (95% CI -3.15 to 6.07, p=0.761 null); Ph2a EXPERTS-ALS blood-NfL futility stop",
         "p_value": "0.7610",
-        "notes": "Morimoto et al. 2023 PMID:37267913 (UMIN000034954, N=20 3:1): 24-wk double-blind primary ALSFRS-R p=0.761; corroborated by UK multicenter Phase 2a EXPERTS-ALS platform trial (ISRCTN15525855, 16 mg/d ER), which closed the ropinirole arm on Oct 6, 2026 (announced Oct 12-14, 2026) for blood-NfL biomarker futility.",
+        "notes": "Morimoto et al. 2023 PMID:37267913 (UMIN000034954, N=20 3:1): 24-wk double-blind primary ALSFRS-R p=0.761; corroborated by UK multicenter Phase 2a EXPERTS-ALS biomarker platform screen (ISRCTN15525855, 16 mg/d ER, 42 dosed / 22 Wk18 analyzed; biomarker screen, distinct from a Phase 3 efficacy RCT), which closed the ropinirole arm on Oct 6, 2026 (announced Oct 12-14, 2026) for blood-NfL biomarker futility.",
     })
