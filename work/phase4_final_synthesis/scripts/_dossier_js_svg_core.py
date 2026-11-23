@@ -36,14 +36,14 @@ const CHEMBL_COMPOUNDS = new Set([
   'CHEMBL3752910','CHEMBL3989871','CHEMBL41355','CHEMBL4297372','CHEMBL4297643','CHEMBL4297672','CHEMBL5653589','CHEMBL589',
   'CHEMBL621','CHEMBL744','CHEMBL778','CHEMBL807','CHEMBL83','CHEMBL866'
 ]);
-const ACC_TOKEN_RE = /(?<![A-Za-z0-9])(?:PMID:(\\d{5,9})|(PMC\\d{6,9})|(?:DOI:\\s*)?(10\\.\\d{4,9}\\/[^\\s,;\\]\\u00b7&<>"]+)|(NCT\\d{8})|(ACTRN\\d{14})|ISRCTN(\\d{8})|((?:WO20\\d{8}|US\\d{7,11}|CA\\d{7})(?:[A-Z]\\d?)?)|PDB\\s+([0-9][A-Za-z0-9]{3})|(7DJT|9TZY|7ANW|7NAL|7CR2|4KC3|2Z0D|3NMR|2DNH|6VN8|1XFD|7K2V|3KYQ|6J74|3EGD|3V5Z|6VCD|6C1R|1MQS|1Y9J|1PK6|5O33|2OOQ|5YPO|6TNQ|1DUX|4XYJ)|(CHEMBL\\d+)|CID:(\\d+)|(ENS[GT]\\d{11})(?:\\.\\d+)?|HGNC:(\\d+)|MGI:(\\d+)|OMIM\\s+(\\d{6})|AF-([A-Z0-9]{6,10})-F\\d+|((?:O14490|O14522|O15498|O43526|O60229|O60674|O75396|O95249|P02745|P02746|P02747|P19419|P23458|P23528|P25686|P27338|P42658|P42779|P46459|P50395|P60568|Q01638|Q01813|Q13190|Q6SZW1|Q7L622|Q8N608|Q8N6W0|Q8WUY3|Q8WVM8|Q8WVT3|Q93045|Q9UKA1|Q9UPW8|Q9Y4P1)(?:-\\d+)?)|(gnomAD\\s+(?:v4(?:\\.1)?|r4|v2\\.1\\.1))|(GSE\\d{4,8})|(PXD\\d{5,8})|(PRJNA\\d{5,9})|(syn\\d{6,10})|(rs\\d{3,12}))(?![A-Za-z0-9])/g;
+const ACC_TOKEN_RE = /(?<![A-Za-z0-9])(?:PMID:(\\d{5,9})|(PMC\\d{6,9})|(?:DOI:\\s*)?(10\\.\\d{4,9}\\/[^\\s,;\\]\\u00b7&<>"]+)|(NCT\\d{8})|(AAN2026-\\d{6})|(ACTRN\\d{14})|ISRCTN(\\d{8})|((?:WO20\\d{8}|US\\d{7,11}|CA\\d{7})(?:[A-Z]\\d?)?)|PDB\\s+([0-9][A-Za-z0-9]{3})|(7DJT|9TZY|7ANW|7NAL|7CR2|4KC3|2Z0D|3NMR|2DNH|6VN8|1XFD|7K2V|3KYQ|6J74|3EGD|3V5Z|6VCD|6C1R|1MQS|1Y9J|1PK6|5O33|2OOQ|5YPO|6TNQ|1DUX|4XYJ)|(CHEMBL\\d+)|CID:(\\d+)|(ENS[GT]\\d{11})(?:\\.\\d+)?|HGNC:(\\d+)|MGI:(\\d+)|OMIM\\s+(\\d{6})|AF-([A-Z0-9]{6,10})-F\\d+|((?:O14490|O14522|O15498|O43526|O60229|O60674|O75396|O95249|P02745|P02746|P02747|P19419|P23458|P23528|P25686|P27338|P42658|P42779|P46459|P50395|P60568|Q01638|Q01813|Q13190|Q6SZW1|Q7L622|Q8N608|Q8N6W0|Q8WUY3|Q8WVM8|Q8WVT3|Q93045|Q9UKA1|Q9UPW8|Q9Y4P1)(?:-\\d+)?)|(gnomAD\\s+(?:v4(?:\\.1)?|r4|v2\\.1\\.1))|(GSE\\d{4,8}|GSM\\d{6,8})|(PXD\\d{5,8})|(PRJNA\\d{5,9})|(syn\\d{6,10})|(rs\\d{3,12}))(?![A-Za-z0-9])/g;
 
 function mkExtA(url, lbl){
   return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-[var(--link)] underline decoration-dotted underline-offset-2 hover:decoration-solid">${lbl}</a>`;
 }
 function linkifyAcc(escapedStr, geneCtx){
   if(!escapedStr) return '';
-  return String(escapedStr).replace(ACC_TOKEN_RE, (full, pmid, pmc, doi, nct, actrn, isrctn, pat, pdbPref, pdbBare, chembl, cid, ens, hgnc, mgi, omim, af, uniprot, gnomad, gse, pxd, prjna, syn, rsid) => {
+  return String(escapedStr).replace(ACC_TOKEN_RE, (full, pmid, pmc, doi, nct, aan, actrn, isrctn, pat, pdbPref, pdbBare, chembl, cid, ens, hgnc, mgi, omim, af, uniprot, gnomad, gse, pxd, prjna, syn, rsid) => {
     if(pmid) return mkExtA('https://pubmed.ncbi.nlm.nih.gov/' + pmid + '/', full);
     if(pmc) return mkExtA('https://pmc.ncbi.nlm.nih.gov/articles/' + pmc + '/', full);
     if(doi){
@@ -60,6 +60,7 @@ function linkifyAcc(escapedStr, geneCtx){
       return mkExtA('https://doi.org/' + clean, vis) + trail;
     }
     if(nct) return mkExtA('https://clinicaltrials.gov/study/' + nct, full);
+    if(aan) return mkExtA('https://index.mirasmart.com/AAN2026/PDFfiles/' + aan + '.html', full);
     if(actrn) return mkExtA('https://www.anzctr.org.au/TrialSearch.aspx?searchTxt=' + actrn, full);
     if(isrctn) return mkExtA('https://www.isrctn.com/ISRCTN' + isrctn, full);
     if(pat) return mkExtA('https://patents.google.com/patent/' + pat, full);
@@ -317,6 +318,29 @@ function renderEvidenceMatrix(ev, geneCtx){
   return `<div class="space-y-2.5">${leg}${groupsHtml}${callouts?`<div class="space-y-1"><div class="font-mono text-xs font-semibold text-[var(--muted-foreground)]">Structural, Correlation &amp; Power Anchors</div><div class="grid grid-cols-1 sm:grid-cols-2 gap-2">${callouts}</div></div>`:''}</div>`;
 }
 
+function cautionSummary(c){
+  if(!c) return {short: 'Caution (non-CNS hit)', badge: 'Caution &middot; Non-CNS Hit', tip: 'Non-constrained reference hybridization match (zero constrained CNS pLI >= 0.9 hits) — empirical microwalk required'};
+  const sp = String(c.sp || '').split('/').map(x => parseInt(x, 10) || 0);
+  const pm = String(c.pm || '').split('/').map(x => parseInt(x, 10) || 0);
+  const s1 = sp[1] || 0, sWob = sp[2] || 0;
+  const p0 = pm[0] || 0, p1s50 = pm[1] || 0, pWob50 = pm[2] || 0, p2s25 = pm[3] || 0, pBulge = pm[4] || 0, pSub18 = pm[5] || 0;
+  const flg = (c.flags && c.flags !== 'NONE') ? (' (' + esc(c.flags) + ')') : '';
+  const pmAll = (c.pm1_all != null) ? (c.pm1_all + ' unrestricted sense pre-mRNA 1-mm gene(s)') : '';
+  const svgToks = [], bdgToks = [], tipParts = [];
+  if(p0 > 0){ svgToks.push('intron 0-mm'); bdgToks.push('Intron 0-mm (' + p0 + ')'); tipParts.push(p0 + ' deep-intronic sense pre-mRNA 0-mm match(es)' + flg); }
+  if(s1 > 0 || p1s50 > 0){ svgToks.push('1-mm'); bdgToks.push('1-mm'); tipParts.push((s1 ? (s1 + ' spliced 1-mm') : '') + (s1 && p1s50 ? ' + ' : '') + (p1s50 ? (p1s50 + ' <=50bp-SS 1-mm') : '') + (p0 === 0 ? flg : '')); }
+  if(sWob > 0 || pWob50 > 0){ svgToks.push('wobble'); bdgToks.push('Wobble'); tipParts.push((sWob ? (sWob + ' spliced G:U wobble') : '') + (sWob && pWob50 ? ' + ' : '') + (pWob50 ? (pWob50 + ' <=50bp-SS wobble') : '')); }
+  if(p2s25 > 0){ svgToks.push(svgToks.length ? '2-mm' : '25bp 2-mm'); bdgToks.push('25bp 2-mm (' + p2s25 + ')'); tipParts.push(p2s25 + ' non-constrained <=25bp-SS 2-mm hit(s)'); }
+  if(pBulge > 0){ svgToks.push('bulge'); bdgToks.push('1-nt Bulge (' + pBulge + ')'); tipParts.push(pBulge + ' non-constrained 1-nt bulge hit(s)'); }
+  if(pSub18 > 0){ svgToks.push(svgToks.length ? 'sub-core' : '18-nt sub-core'); bdgToks.push('18-nt Sub-Core (' + pSub18 + ')'); tipParts.push(pSub18 + ' non-constrained 18-nt sub-core match(es)' + (p0 === 0 && s1 === 0 && p1s50 === 0 ? flg : '')); }
+  let shortBody = svgToks.join(' + ');
+  if(shortBody.length > 15) shortBody = svgToks.map(t => t.replace('intron 0-mm','intron 0mm').replace('wobble','wob').replace('sub-core','sub18').replace('2-mm','2mm').replace('1-mm','1mm')).join('+');
+  const short = shortBody ? ('Caution (' + shortBody + ')') : 'Caution (non-CNS hit)';
+  const badge = bdgToks.length ? ('Caution &middot; ' + bdgToks.slice(0, 2).join(' + ')) : 'Caution &middot; Non-CNS Hit';
+  const tip = (tipParts.length ? tipParts.join('; ') : 'Non-constrained reference match') + ' (zero constrained CNS pLI >= 0.9 hits' + (pmAll ? '; ' + pmAll : '') + ') — empirical microwalk required';
+  return {short, badge, tip};
+}
+
 function renderLocusSsoSvg(candId, sig){
   const cis = DATA_CIS.filter(c => c.sc === candId || c.pid === candId).sort((a,b)=>(b.lead-a.lead)||(a.rk-b.rk));
   const L = 14, R = 446, W = R - L;
@@ -394,11 +418,10 @@ function renderLocusSsoSvg(candId, sig){
       const y = startRowY + idx * rowH;
       const bx1 = Math.max(L, mapBot(Number(c.lo))), bx2 = Math.min(R, mapBot(Number(c.hi)));
       const bCol = c.st==='PASS_CLEAN_GE2MM' ? 'var(--success)' : (c.st.startsWith('WARN') ? 'var(--error)' : 'var(--warning)');
-      const is2mmOnly = c.st.startsWith('CAUTION') && c.sp === '0/0/0' && String(c.pm || '').startsWith('0/0/0/') && String(c.pm || '').endsWith('/0/0');
-      const isSub18Only = c.st.startsWith('CAUTION') && c.sp === '0/0/0' && String(c.pm || '').startsWith('0/0/0/0/0/') && String(c.pm || '') !== '0/0/0/0/0/0';
-      const stShort = c.st==='PASS_CLEAN_GE2MM' ? 'Clean (>=2mm)' : (c.st.startsWith('WARN') ? 'Warn CNS Hit' : (c.st.startsWith('FAIL') ? 'Fail 0-mm' : (is2mmOnly ? 'Caution (25bp 2-mm)' : (isSub18Only ? 'Caution (18-nt sub-core)' : 'Caution 1-mm/Wob'))));
+      const cs = c.st.startsWith('CAUTION') ? cautionSummary(c) : null;
+      const stShort = c.st==='PASS_CLEAN_GE2MM' ? 'Clean (>=2mm)' : (c.st.startsWith('WARN') ? 'Warn CNS Hit' : (c.st.startsWith('FAIL') ? 'Fail 0-mm' : cs.short));
       const ivNote = (sig.iv_notes && sig.iv_notes[String(c.rk)]) ? sig.iv_notes[String(c.rk)] : '';
-      ssoSvg += `<g>
+      ssoSvg += `<g>${cs?`<title>${cs.tip}</title>`:''}
         <rect x="${bx1.toFixed(1)}" y="${y}" width="${Math.max(12, bx2-bx1).toFixed(1)}" height="10" rx="3" fill="${bCol}" ${c.st.startsWith('WARN')?'stroke="var(--foreground)" stroke-dasharray="2,2"':''}/>
         <text x="${L}" y="${y+23}" font-size="12.5" font-family="monospace" font-weight="${c.lead?'700':'500'}" fill="var(--foreground)">${c.lead?'★ ':''}#${c.rk} ${esc(c.iv)}</text>
         <text x="${R}" y="${y+23}" text-anchor="end" font-size="12.4" font-family="monospace" font-weight="600" fill="${bCol}">${esc(stShort)}</text>

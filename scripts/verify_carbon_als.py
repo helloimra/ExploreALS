@@ -308,6 +308,28 @@ def verify_all(
                 errors.append(f"{ev_id}: missing anchor_relpath '{sr['anchor_relpath']}'")
         elif got_sha != sr["sha64"]:
             errors.append(f"{ev_id}: sha64 mismatch on '{sr['anchor_relpath']}' ({got_sha[:12]} != {sr['sha64'][:12]})")
+    stat_by_eid = {r["evidence_id"]: r for r in stat_rows}
+    curated_stat_guards = {
+        "EV-P2-T3-004": ("PRIMARY_FREQUENTIST_RECOMPUTE", "unique_human_donor", "Pearson r"),
+        "EV-P4-001": ("STRUCTURAL_OR_MECHANISTIC_MODEL_PRIOR", "cryoem_octamer_and_gnomad_variant_set", "Cryo-EM"),
+        "EV-P4-002": ("PRIMARY_FREQUENTIST_RECOMPUTE", "in_vitro_perturbation_replicate", "parsing_voila_delta.R"),
+        "EV-P4-003": ("PRIMARY_FREQUENTIST_RECOMPUTE", "in_vitro_perturbation_replicate", "ClinVar"),
+        "EV-P4-004": ("STRUCTURAL_OR_MECHANISTIC_MODEL_PRIOR", "genomic_cis_variant", "AlphaGenome"),
+        "EV-P4-005": ("PUBLISHED_TRIAL_OR_GENETIC_INFERENCE", "gwas_credible_set_variant", "59-variant"),
+        "EV-P4-006": ("STRUCTURAL_OR_MECHANISTIC_MODEL_PRIOR", "heterotrimeric_protein_complex", "Crystal PDB 1PK6"),
+        "EV-P4-007": ("PUBLISHED_TRIAL_OR_GENETIC_INFERENCE", "unique_human_donor", "Colocalization"),
+        "EV-P4-008": ("PRIMARY_FREQUENTIST_RECOMPUTE", "in_vitro_perturbation_replicate", "parsing_voila_delta.R"),
+        "EV-P4-009": ("PUBLISHED_TRIAL_OR_GENETIC_INFERENCE", "human_trial_or_genetic_participant", "Unadjusted 18-mo survival relative risk"),
+    }
+    for g_eid, (exp_ic, exp_unit, exp_kw) in curated_stat_guards.items():
+        if g_eid in stat_by_eid:
+            gsr = stat_by_eid[g_eid]
+            if gsr["inference_class"] != exp_ic or gsr["statistical_unit"] != exp_unit or exp_kw not in gsr["model_formula_or_test"]:
+                errors.append(f"{g_eid}: curated statistical record overwritten ({gsr['inference_class']} / {gsr['statistical_unit']} / {gsr['model_formula_or_test'][:48]})")
+    if "EV-P4-009" in stat_by_eid:
+        r09 = stat_by_eid["EV-P4-009"]
+        if r09["unadjusted_or_primary_nominal_p"] != "0.0760" or r09["covariate_adjusted_nominal_p"] != "0.00200":
+            errors.append(f"EV-P4-009: riluzole must record unadjusted p=0.0760 and covariate-adjusted p=0.00200 (got {r09['unadjusted_or_primary_nominal_p']} / {r09['covariate_adjusted_nominal_p']})")
 
     intake_ids = {r["carbon_id"] for r in intake}
     if len(intake_ids) != len(intake):

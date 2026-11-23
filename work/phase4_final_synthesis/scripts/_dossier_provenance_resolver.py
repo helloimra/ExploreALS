@@ -46,8 +46,8 @@ DS_LABELS: dict[str, tuple[str, list[str]]] = {
 }
 
 SPLIT_RE = re.compile(r"[;|]|\+(?=(?:OpenTargets|AlphaGenome|ChEMBL|gnomAD|DS_|OpenFDA|CT\.gov))")
-INLINE_ACC_RE = re.compile(r"(?:PMID:\d+|PMC\d+|NCT\d{8}|NDA\d{5,6}|UMIN\d{9}|ISRCTN\d{8}|ACTRN\d{14}|jRCT[A-Za-z0-9]+|CHEMBL\d+|CID:\d+|ENS[GT]\d{11}(?:\.\d+)?|GSE\d+|PXD\d+|PRJNA\d+|syn\d+|AF-[A-Z0-9]+-F1|10\.\d{4,9}/[^\s,;)\]]+)")
-PDB_TOK_RE = re.compile(r"(?:pdb_0000([0-9a-z]{4})\.cif|DS_PDB[_:]([0-9A-Za-z]{4}))", re.IGNORECASE)
+INLINE_ACC_RE = re.compile(r"(?:PMID:\d+|PMC\d+|NCT\d{8}|AAN2026-\d{6}|NDA\d{5,6}|UMIN\d{9}|ISRCTN\d{8}|ACTRN\d{14}|jRCT[A-Za-z0-9]+|CHEMBL\d+|CID:\d+|US\d{7,11}[A-Z]\d?|ENS[GT]\d{11}(?:\.\d+)?|GSE\d+|GSM\d{6,8}|PXD\d+|PRJNA\d+|syn\d+|AF-[A-Z0-9]+-F1|10\.\d{4,9}/[^\s,;)\]]+)")
+PDB_TOK_RE = re.compile(r"(?:pdb_0000([0-9a-z]{4})\.cif|DS_PDB[_:]([0-9A-Za-z]{4})|PDB:([0-9A-Za-z]{4}))", re.IGNORECASE)
 VS_COUNTS_RE = re.compile(r"\b\d+\s+[A-Za-z0-9\-/+ ]{1,24}\s+vs\.?\s+\d+", re.IGNORECASE)
 SAMPLE_CTX_RE = re.compile(r"\[Sample context:\s*([^\]]+)\]", re.IGNORECASE)
 PAREN_VS_RE = re.compile(r"\((\d+\s+[^()]{1,40}?\s+vs\.?\s+\d+\s+[^()]{1,40}?)\)")
@@ -65,6 +65,7 @@ MODEL_EIDS = {
     "EV-B1-005", "EV-B1-010", "EV-B1-015", "EV-B2-002", "EV-B3-006",
     "EV-P2-T1-001", "EV-P2-T1-002", "EV-P2-T1-003", "EV-P2-T2-002", "EV-P2-T2-004",
     "EV-P3A-001", "EV-P3A-002", "EV-P3A-004", "EV-P3B-002", "EV-P3B-004",
+    "EV-P4-001", "EV-P4-006",
 }
 LEVEL1_GENETICS_EIDS = {"EV-B2-001", "EV-B2-004", "EV-B2-006", "EV-B3-008", "EV-B6-012", "EV-B6-043"}
 LEVEL1_SOC_EIDS = {"EV-P4-009", "EV-B6-050", "EV-B5-006", "EV-B5-014", "EV-B5-015", "EV-B5-024", "EV-B3-020", "EV-P3B-022", "EV-P3B-030", "EV-P3B-031", "EV-P3B-032"}
@@ -87,7 +88,9 @@ def classify_basis_and_tier(row: dict[str, str]) -> tuple[str, str, str]:
         basis = "Human Phase 2b/3 RCT"
     elif "phase2" in st or "clinical_trial" in st or "csf_pk_pd" in st or "landscape" in st:
         basis = "Human Clinical Trial / PK-PD"
-    elif "structural" in st or "3d" in st or "cif" in st:
+    elif eid in {"EV-P4-001", "EV-P4-006"}:
+        basis = "3D Structure / Model Synthesis"
+    elif "structural" in st or "3d" in st or "cif" in st or "crystal" in st:
         basis = "3D Cryo-EM / Crystal Audit"
     elif "qtl" in st or "rare_variant" in st or "genetics" in st:
         basis = "Human Genetics / QTL"
@@ -233,7 +236,7 @@ def resolve_evidence_row(
             accs.append(a)
 
     for m_pdb in PDB_TOK_RE.finditer(loc):
-        pcode = (m_pdb.group(1) or m_pdb.group(2) or "").upper()
+        pcode = (m_pdb.group(1) or m_pdb.group(2) or m_pdb.group(3) or "").upper()
         if pcode:
             _add_acc(f"PDB {pcode}")
             pdb_ds = f"DS_PDB_{pcode}"
@@ -245,6 +248,8 @@ def resolve_evidence_row(
                 primary_ds = "DS_PDB"
 
     for tok in tokens:
+        if tok.lower().startswith("aan2026-") and "AAN 2026 Investigator Abstract" not in src_names:
+            src_names.append("AAN 2026 Investigator Abstract")
         matched_sub = False
         for pref, lbl, ov_accs in SUBKEY_OVERRIDES:
             if tok.startswith(pref):

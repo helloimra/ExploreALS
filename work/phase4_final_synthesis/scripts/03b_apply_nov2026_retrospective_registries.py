@@ -94,6 +94,8 @@ def main() -> None:
         elif sr["evidence_id"] == "EV-B6-047":
             sr["exact_contrast"] = "MIROCALS BioVendor ELISA Low/Moderate CSF pNfH stratum (750-3700 pg/mL, n=154; <750 pg/mL LLOQ n=19 analyzed separately) | 21-mo mortality hazard ratio & Treg/CCL2 PD"
         elif sr["evidence_id"] == "EV-P2-T3-004":
+            sr["inference_class"] = "PRIMARY_FREQUENTIST_RECOMPUTE"
+            sr["statistical_unit"] = "unique_human_donor"
             sr["exact_contrast"] = "Trautwig 2025 living symptomatic ALS CSF (4-center DIA n=77 paired NEFH+NEFL; replicated in Emory TMT n=51) | Pearson correlation & p80 discordance of tryptic MS CSF NEFL vs NEFH + CLSI EP09c platform-offset sensitivity & Schoenfeld event sizing"
             sr["model_formula_or_test"] = "Two-sided bivariate Pearson r & 80th-percentile 2x2 contingency + Schoenfeld survival power sensitivity"
             sr["effect_estimate"] = "DIA r=0.2779 (31.17% p80 discordance, 75.0% [12/16] top-quintile MS NEFH missed; overlapping Emory TMT n=51 misses 60.0% [6/10]); HR=0.70 needs 247 deaths at 80% power (138 at HR=0.62 [MODEL_PRIOR])"
@@ -186,7 +188,7 @@ def main() -> None:
     if "PDB 1PK6" not in dm["C018"]["evidence_proves_hypothesis"]:
         dm["C018"]["evidence_proves_hypothesis"] = dm["C018"]["evidence_proves_hypothesis"].replace(
             "10.1016/j.cell.2024.05.058)",
-            "PMID:38942014, 10.1016/j.cell.2024.05.058; PDB 1PK6 1.85A gC1q head PMID:12960167 vs AFDB mature CLR stalk C1QA 23-109 / C1QB 28-114 / C1QC 29-112 27 Arg/Lys basic motif distinguishes anti-gC1q Fab from C1QA/B ASO)",
+            "PMID:38942014, 10.1016/j.cell.2024.05.058; crystal PDB 1PK6 1.85A gC1q head PMID:12960167 vs AFDB predicted mature CLR stalk [project sequence count: 27 mature Arg/Lys across C1QA 23-109 / C1QB 28-114 / C1QC 29-112, residue-level necessity untested] distinguishes anti-gC1q Fab from C1QA/B ASO)",
         )
     _save("candidate_decisions.csv", d_cols, d_rows)
 
@@ -209,7 +211,7 @@ def main() -> None:
                     "AlphaGenome MN G2E3 splice q=0.968", "[MODEL_PRIOR] AlphaGenome MN G2E3 splice q=0.968"
                 ).replace("[MODEL_PRIOR] [MODEL_PRIOR]", "[MODEL_PRIOR]")
         elif sid in {"C018-N1", "C018-N2", "C018-N3"} and "PDB 1PK6" not in sn["druggability_check"]:
-            sn["druggability_check"] += " PDB 1PK6 (1.85A gC1q head, 187 inter-chain pairs <=4.5A, PMID:12960167) vs AF-P02745-F1/AF-P02746-F1/AF-P02747-F1 mature cationic CLR stalk (C1QA aa 23-109, C1QB aa 28-114, C1QC aa 29-112: 27 mature Arg/Lys basic residues per heterotrimer [30 up to aa 114] required for neuronal RNP uptake, PMID:38942014) splits anti-gC1q Fab (head-only) from C1QA/B ASO (head+stalk)."
+            sn["druggability_check"] += " Crystal PDB 1PK6 (1.85A gC1q head, 187 inter-chain pairs <=4.5A, PMID:12960167) vs AF-P02745-F1/AF-P02746-F1/AF-P02747-F1 predicted mature CLR stalk (collagen-like domain required for neuronal RNP uptake/LLPS in PMID:38942014 Figs. 3 & 6; project sequence count: 27 mature Arg/Lys residues across C1QA 23-109, C1QB 28-114, C1QC 29-112 [30 up to aa 114], residue-level necessity untested) splits anti-gC1q Fab (head-only) from C1QA/B ASO (head+stalk)."
     _save("subnode_dissection.csv", sn_cols, sn_rows)
 
     # 6. living_evidence_updates.csv
@@ -239,7 +241,7 @@ def main() -> None:
         elif uid == "UPD-2026-11-18-01":
             u["prior_state_or_assumption"] = "Intermittent pulsed PIKfyve inhibition (EALS-020) models typically assume an occupancy dead-zone before endolysosomal vacuolation onset (~79% parameter-grid pass rate) without accounting for immediate +PI(3)P-driven LRRK2/CASM stress coupling."
             u["new_evidence_or_revision"] = "Kuwahara et al. (2026, Life Sci Alliance, PMID:42994990) demonstrated direct, threshold-free PIKfyve -> +PI(3)P -> LRRK2 Rab10-pThr73 / ATG16L1 CASM recruitment alongside Drosophila C9orf72 secreted DPR data (DOI:10.64898/2026.11.09.765393). In modeled pulsed q48h–q72h turnover simulations (>=55% substrate clearance and end-of-cycle stress <=0.05), removing the occupancy dead-zone cuts grid survival from ~79% (64/81) to ~30% (24/81) at matched 10–20 h repair and 0% (0/81) at slower 24–48 h postmitotic CASM washout."
-            u["portfolio_and_gate_consequence"] = "Retains EALS-020 (#23/52, Keep · Exploratory) (125 mg BID AIT-101 NCT05163886 recorded 0 drug-related SAEs, Wk-12 CSF apilimod 1.63 ng/mL [3.89 nM free-base eq across n=9/10 randomized treated], Babu Table 3 shared-baseline mixed-model plasma sGPNMB ratio 2.31 [p<0.001] vs CSF sGPNMB ratio 0.92 [p=0.352; both separately labeled 2-sided t-test on CT.gov], and exploratory small-sample Wk-12 plasma & OLE CSF NfL rises without powered clinical efficacy testing, while continuous QD VRG50635 NCT06215755 [54 enrolled, 50 treated] recorded treatment-related SAEs in 8/50 [16.0%] treated participants and exploratory GFAP/NfL rises and terminated for lack of Phase 2 risk-benefit; the two clinical programs do not define a single class-wide toxicity threshold, and pulsed q48h–q72h remains clinically untested) behind a 14-day human iPSC-MN CASM/vacuole washout and intracellular + secreted DPR mass-balance validation gate."
+            u["portfolio_and_gate_consequence"] = "Retains EALS-020 (#23/52, Keep · Exploratory) (125 mg BID AIT-101 NCT05163886 recorded 0 drug-related SAEs, Wk-12 CSF apilimod 1.63 ng/mL [3.89 nM free-base eq across n=9/10 randomized treated], Babu Table 3 shared-baseline mixed-model plasma sGPNMB ratio 2.31 [p<0.001] vs CSF sGPNMB ratio 0.92 [p=0.352; both separately labeled 2-sided t-test on CT.gov], and exploratory small-sample Wk-12 plasma & OLE CSF NfL rises without powered clinical efficacy testing, while continuous QD VRG50635 NCT06215755 [54 enrolled, 50 treated] recorded investigator-reported treatment-related SAEs in 8/50 [16.0%] treated participants and exploratory GFAP/NfL rises [AAN2026-003396] and terminated for lack of Phase 2 risk-benefit; the two clinical programs do not define a single class-wide toxicity threshold, and pulsed q48h–q72h remains clinically untested) behind a 14-day human iPSC-MN CASM/vacuole washout and intracellular + secreted DPR mass-balance validation gate."
     u_rows.insert(0, dict(UPD_2026_11_19_01))
     u_rows.insert(0, dict(UPD_2026_11_22_01))
     def _map_anchor_tok(tok: str) -> str:

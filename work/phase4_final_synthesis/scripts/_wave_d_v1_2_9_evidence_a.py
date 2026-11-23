@@ -99,9 +99,11 @@ def apply_wave_d_evidence_part_a(
 
     # C010 (Ropinirole): EV-B5-018 Table S3 vs Discussion CSF & Fig. S5 context, EV-B5-019 exact NYGC Lumbar DRD2 OLS beta=-0.0651, EV-B5-020 EXPERTS-ALS Phase 2a screen
     ev_map["EV-B5-018"].update({
-        "source_id_or_locator": "DS_ROPALS:TableS3_PK_Table1_AE;UMIN000034954;PMID:37267913;PMID:40826812;CHEMBL589",
-        "effect_estimate": "Wk24 CSF Table S3 mean 17,884 pg/mL = 68.68 nM (Discussion ~18 nM) at 16 mg/d ER protocol max (0 AE dose reductions/discontinuations) vs 1 uM sALS SREBP2 & 10 uM engineered TARDBP M337V MEA rescue (Fig. S5 0.1-10 nM in mutant FUS/TDP-43)",
-        "notes": "Morimoto et al. 2023 PMID:37267913 Table S3 reports Week-24 CSF mean 17,884 pg/mL = 68.68 nM on free-base MW 260.38 (whereas the paper's Discussion states ~18 nM) at the 16 mg/d ER protocol maximum (Supplementary Table 1 mmc2.xlsx records 0 AE-related dose reductions, interruptions, or discontinuations despite 76.9% GI AEs, so a GI-limited MTD is not established), sitting 14.6-55.6x below 1 uM sALS SREBP2/cholesterol assays (PMID:37267913) and 146-556x below 10 uM D2R-independent MEA electrophysiology/ROS/cell-death rescue in engineered TARDBP M337V/+ iPSC-MNs (PMID:40826812, DOI:10.1111/jnc.70183; cannot establish a minimum for sALS cells, while Fig. S5 reported 0.1-10 nM partial phenotype reduction in mutant FUS/TDP-43 lines).",
+        "source_id_or_locator": "DS_ROPALS:TableS3_PK_Table1_AE;UMIN000034954;PMID:37267913;PMID:30127392;PMID:40826812;GSM6383812;US12678423B2;CHEMBL589",
+        "assay_and_contrast": "MW-normalized CSF/plasma molar PK (MW 260.38) vs D2/D3 Ki & assay-specific in vitro precedents",
+        "effect_direction": "LOW_NM_D2_ONLY_CONDITIONAL_GAP_VS_ASSAY_SPECIFIC_PRECEDENTS",
+        "effect_estimate": "Wk24 CSF Table S3 mean 17,884 pg/mL = 68.68 nM (Discussion ~18 nM) at 16 mg/d ER protocol max (0 AE dose reductions/discontinuations); conditional 14.6-55.6x vs 1 uM neurite/caspase precedent & 146-556x vs 10 uM TARDBP M337V Fig. 3F MEA (sALS Fig. 6A SREBP2 & Figs. 3A-D doses unspecified; Fig. S5 0.1-10 nM in mutant FUS/TDP-43)",
+        "notes": "Morimoto et al. 2023 PMID:37267913 Table S3 reports Week-24 CSF mean 17,884 pg/mL = 68.68 nM on free-base MW 260.38 (Discussion ~18 nM) at the 16 mg/d ER protocol maximum (Supplementary Table 1 mmc2.xlsx records 0 AE-related dose reductions, interruptions, or discontinuations despite 76.9% GI AEs); conditional comparison against 1 uM documented in separate neurite/caspase assays (PMID:30127392; US12678423B2 Examples III-1/III-2, whereas Morimoto 2023 Fig. 6A / GSM6383812 sALS SREBP2 RNA-seq specifies ropinirole vs vehicle without an assay concentration) and 10 uM documented for Fig. 3F MEA electrophysiology in engineered TARDBP M337V/+ iPSC-MNs (Asano et al. 2025 PMID:40826812, DOI:10.1111/jnc.70183; Figs. 3A-D ROS/SYTOX concentrations unspecified; minimum sALS rescue concentration unestablished; Fig. S5 0.1-10 nM in mutant FUS/TDP-43).",
     })
     ev_map["EV-B5-019"].update({
         "source_id_or_locator": "DS001_COUNTS:Spinal_Cord_Lumbar:DRD2_DRD3;DS_GC_REF",
@@ -112,8 +114,9 @@ def apply_wave_d_evidence_part_a(
     })
     ev_map["EV-B5-020"].update({
         "source_id_or_locator": "UMIN000034954;PMID:37267913;ISRCTN15525855",
-        "assay_and_contrast": "Wk 21-24 ALSFRS-R score difference (Authors' Table D1) & 24-wk blinded comparison",
-        "effect_estimate": "ROPALS Wk 21-24 ALSFRS-R diff +1.46 pts (95% CI -3.15 to 6.07, Authors' Table D1 p=0.533 [DB-period 21-24w +0.38, p=0.915; main-text 24-wk DB comparison p=0.761]); Ph2a EXPERTS-ALS blood-NfL futility stop",
+        "assay_and_contrast": "Wk 21-24 ALSFRS-R score difference (Main Fig. 3A & Authors' Table D1) & restricted DB-period / Table S4 slope-ratio comparisons",
+        "effect_estimate": "ROPALS Wk 21-24 ALSFRS-R diff +1.46 pts (95% CI -3.15 to 6.07, Main Fig. 3A / Authors' Table D1 p=0.533, FDR=0.8661; restricted DB-period 21-24w +0.38, p=0.915; Table S4 24-wk DB/run-in 4-wk change-ratio LS diff -0.212, 95% CI -1.577 to 1.153); Ph2a EXPERTS-ALS blood-NfL futility stop",
         "p_value": "0.5330",
-        "notes": "Morimoto et al. 2023 PMID:37267913 (UMIN000034954, N=20 3:1): Authors' Table D1 Entire-period Wk 21-24 ALSFRS-R difference is +1.46 pts (95% CI -3.15 to 6.07, p=0.533, FDR=0.866; DB-period Wk 21-24 row +0.38 pts, 95% CI -6.97 to 7.72, p=0.915; main-text 24-wk DB change-ratio comparison p=0.761); corroborated by UK multicenter Phase 2a EXPERTS-ALS biomarker platform screen (ISRCTN15525855, 16 mg/d ER protocol max, 42 dosed / 22 Wk18 analyzed; biomarker screen, distinct from a Phase 3 efficacy RCT), which closed the ropinirole arm on Oct 6, 2026 (announced Oct 12-14, 2026) for blood-NfL biomarker futility.",
+        "fdr_or_adjusted_p": "0.8661",
+        "notes": "Morimoto et al. 2023 PMID:37267913 (UMIN000034954, N=20 3:1): Main Fig. 3A and Authors' Table D1 Entire-period Wk 21-24 ALSFRS-R difference is +1.46 pts (95% CI -3.15 to 6.07, p=0.533, FDR=0.8661; restricted DB-period Wk 21-24 row +0.38 pts, 95% CI -6.97 to 7.72, p=0.915; Supplementary Table 4 mmc5.xlsx DB/run-in 4-wk change ratio 1.042 vs 1.254, LS diff -0.212, 95% CI -1.577 to 1.153); corroborated by UK multicenter Phase 2a EXPERTS-ALS biomarker platform screen (ISRCTN15525855, 16 mg/d ER protocol max, 42 dosed / 22 Wk18 analyzed; biomarker screen, distinct from a Phase 3 efficacy RCT), which closed the ropinirole arm on Oct 6, 2026 (announced Oct 12-14, 2026) for blood-NfL biomarker futility.",
     })
