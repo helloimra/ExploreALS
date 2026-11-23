@@ -310,7 +310,7 @@ def verify_phase4_gates(
                 "WashU & UMilan contributed 63 ALS", "CSF ~115 nM", "PMID:31892365",
                 "Lykke et al.", "Renshaw", "7,862", "7861.6", "Cu_CNS=0.318",
                 "assert_contrast_pair enforced", "in HERV-K+ ALS", "slowing vs historical controls",
-                "Updated Nov 2026 (v1.2.6)", "Updated Nov 2026 (v1.2.8)", "Updated Nov 2026 (v1.2.9)", "199 / 199", "199 Evidence", "Phase 3 RAS-ALS",
+                "Updated Nov 2026 (v1.2.4)", "Updated Nov 2026 (v1.2.6)", "Updated Nov 2026 (v1.2.8)", "Updated Nov 2026 (v1.2.9)", "ExploreALS v1.2", "199 / 199", "199 Evidence", "Phase 3 RAS-ALS",
                 "Ryberg et al. 2003 J Neurochem", "deaths 49/175", "8.94x",
                 "RESTORE-ALS", "sST2 intervention has ever been tested,",
                 "Sarm1-/- lowered plasma pNfH", "Sarm1-/- lowered pNfH",
@@ -318,13 +318,13 @@ def verify_phase4_gates(
                 if banned in htxt:
                     errors.append(f"Dossier Schema 3.0 regression in {lbl}: found banned string '{banned}'")
             for req_str in (
-                "ExploreALS v1.2", "Ricardo Agoga", "helloimra@proton.me", "github.com/helloimra/ExploreALS",
+                "ExploreALS v1.3", "Ricardo Agoga", "helloimra@proton.me", "github.com/helloimra/ExploreALS",
                 "Not Medical Advice", "AI-Assisted Methodology",
                 "Sort: Translational Priority Rank", "Sort: Genetic &amp; Pathology Evidence",
                 "Human RCT / Genetics", "Human Cohort / PK-PD",
                 "In Vitro or Small-N", "Model / Heuristic Prior", "BioVendor",
                 "AF-Q7L622-F1", "NIH GTEx (v8 / v10)", "N/A (SOC / PD Benchmark)", "Rank &amp; Triage Key:", "Design Tiers:",
-                "Updated Nov 2026 (v1.2.4)", "202 / 202",
+                "Updated Nov 2026 (v1.3.0)", "202 / 202", "UPD-2026-11-23-01",
                 "TDP-43 Cryptic Splicing &amp; Polyadenylation (12)",
                 "Living-Patient CSF Proteomics &amp; Physiology (6)",
                 "Patient iPSC-MN Phenotypic Screen (11)",

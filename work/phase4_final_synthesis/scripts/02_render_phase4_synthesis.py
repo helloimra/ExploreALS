@@ -211,7 +211,9 @@ def main() -> None:
     upd_rows = _read_csv("living_evidence_updates.csv")
     js_updates = [
         {
+            "id": u["update_id"],
             "dt": u["date_iso"],
+            "tag": u["release_tag"],
             "cat": u["update_category"],
             "ids": [legacy_to_accession(x.strip()) for x in u["affected_ids"].split(";") if x.strip()],
             "imp": sanitize_public_prose(translate_legacy_tokens_in_prose(u["decision_impact"])),
@@ -234,7 +236,7 @@ def main() -> None:
         "datasets_used": "DS001_COUNTS;DS001_META;DS001_ONEILL;DS_GENCODE_V46_COMP_GTF;DS_GNOMAD_V41_CONSTRAINT",
         "tools_and_skills_used": "generative_ui;tooluniverse-gene-liability;alphagenome-atlas-website-links;scripts.phase4_gates;uv-python",
         "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-19T12:45:00Z",
-        "summary": f"Programmatically compiled unified 52-hypothesis ExploreALS v1.2 Explorer (with 8 Tier 1+2 Translational Monographs, 9-row Mechanistic Contrasts matrix, Replication & Verification workbench, {len(stat_rows)}/{len(stat_rows)} 64-char SHA-256 anchors, 42 SHA-256-locked open datasets [40 external + 2 bundled], 8-group cohort overlap & donor accounting & 3 sensitivity sandboxes) and zero-CDN GitHub Pages bundle across 28 1-based GRCh38 cis-regulatory target windows.",
+        "summary": f"Programmatically compiled unified 52-hypothesis ExploreALS v1.3 Explorer (with 8 Tier 1+2 Translational Monographs, 9-row Mechanistic Contrasts matrix, Replication & Verification workbench, {len(stat_rows)}/{len(stat_rows)} 64-char SHA-256 anchors, 42 SHA-256-locked open datasets [40 external + 2 bundled], 8-group cohort overlap & donor accounting & 3 sensitivity sandboxes) and zero-CDN GitHub Pages bundle across 28 1-based GRCh38 cis-regulatory target windows.",
     }
     runs = (
         [p4_r2 if r["analysis_run_id"] == "RUN-P4-002" else r for r in runs]

@@ -131,7 +131,7 @@ function renderUpdatesLog(){
       const sn = DATA_SUB.find(x => x.id === aid);
       return (cp ? cp.name + ' ' + (cp.sym || '') : '') + ' ' + (sn ? sn.gene : '');
     }).join(' ');
-    const hay = [u.dt, u.cat, u.ids.join(' '), cNames, u.imp, u.hdr, u.pre, u.post, u.cons, u.srcs.join(' '), u.ancs.join(' ')].join(' ');
+    const hay = [u.id || '', u.tag || '', u.dt, u.cat, u.ids.join(' '), cNames, u.imp, u.hdr, u.pre, u.post, u.cons, u.srcs.join(' '), u.ancs.join(' ')].join(' ');
     return queryMatchesIdOrText(u.ids, q, hay);
   });
   const cntEl = document.getElementById('upd-count');
@@ -155,7 +155,7 @@ function renderUpdatesLog(){
       return ma - mb;
     }) : u.ids;
     const idPills = orderedIds.length > 12
-      ? orderedIds.slice(0, 10).map(makeIdPill).join(' ') + `<details class="w-full mt-0.5"><summary class="cursor-pointer font-mono text-xs text-[var(--link)] select-none">Show all ${orderedIds.length} audited programs (+${orderedIds.length - 10} more)</summary><div class="flex flex-wrap items-center gap-1 mt-1.5">${orderedIds.slice(10).map(makeIdPill).join(' ')}</div></details>`
+      ? orderedIds.slice(0, 10).map(makeIdPill).join(' ') + `<details class="w-full mt-0.5"><summary class="cursor-pointer font-mono text-xs text-[var(--link)] select-none">Show all ${orderedIds.length} affected programs (+${orderedIds.length - 10} more)</summary><div class="flex flex-wrap items-center gap-1 mt-1.5">${orderedIds.slice(10).map(makeIdPill).join(' ')}</div></details>`
       : orderedIds.map(makeIdPill).join(' ');
     const ancPills = u.ancs.map(anc => {
       const attr = anc.startsWith('EV-') ? `data-open-rep-ev="${esc(anc)}"` : `data-open-rep-run="${esc(anc)}"`;
@@ -166,7 +166,7 @@ function renderUpdatesLog(){
       <div class="flex flex-wrap items-center justify-between gap-1.5">
         <div class="flex flex-wrap items-center gap-1.5">
           ${updCatBadge(u.cat)}
-          <span class="font-mono text-xs text-[var(--muted-foreground)]">${esc(u.dt)}</span>
+          <span class="font-mono text-xs text-[var(--muted-foreground)]">${esc(u.dt)}${u.tag ? ' &middot; ' + esc(u.tag) : ''}${u.id ? ' &middot; ' + esc(u.id) : ''}</span>
         </div>
         <span class="font-mono text-xs text-[var(--muted-foreground)]">${esc(u.imp)}</span>
       </div>

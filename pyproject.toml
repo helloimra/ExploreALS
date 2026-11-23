@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 [project]
 name = "carbon-als"
 version = "0.2.0"
-description = "ExploreALS v1.2: Open-Source Computational Replication Package for Causal & Epistemically Calibrated ALS Discovery"
+description = "ExploreALS v1.3: Open-Source Computational Replication Package for Causal & Epistemically Calibrated ALS Discovery"
 readme = "README.md"
 requires-python = ">=3.12"
 license = { text = "MIT" }

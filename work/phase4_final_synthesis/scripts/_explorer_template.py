@@ -6,7 +6,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ExploreALS v1.2 — ALS Target Triage, Splice Windows &amp; Replication Explorer</title>
+  <title>ExploreALS v1.3 — ALS Target Triage, Splice Windows &amp; Replication Explorer</title>
   <style>:where(.hidden){display:none}table{border-collapse:collapse;width:100%}th,td{padding:6px 8px;vertical-align:top}</style>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
 </head>
@@ -16,7 +16,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
       <div class="flex flex-wrap items-start justify-between gap-2">
         <div class="flex-1 min-w-[200px]">
           <div class="flex items-center gap-2 flex-wrap">
-            <span class="px-2 py-0.5 rounded font-mono font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] text-xs">ExploreALS v1.2</span>
+            <span class="px-2 py-0.5 rounded font-mono font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] text-xs">ExploreALS v1.3</span>
             <h1 class="text-base font-semibold text-[var(--foreground)]">ALS Therapeutic &amp; Genetic Target Triage, Candidate Reports &amp; Replication Explorer</h1>
           </div>
           <div id="hdr-sub">
@@ -70,7 +70,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--primary)] text-[var(--primary)] font-mono font-semibold text-xs">START HERE &middot; OVERVIEW &amp; SCOPE</span>
-              <span class="font-mono text-xs text-[var(--muted-foreground)]">Updated Nov 2026 (v1.2.4)</span>
+              <span class="font-mono text-xs text-[var(--muted-foreground)]">Updated Nov 2026 (v1.3.0)</span>
             </div>
             <h2 class="text-sm font-semibold text-[var(--foreground)]">How 52 ALS Hypotheses Map Across Evidence, Validation Steps &amp; Trial Readouts</h2>
             <p class="text-xs text-[var(--muted-foreground)] leading-snug">Synthesizes donor-level statistics (<span class="font-mono">8</span> participant-overlap and donor-accounting groups, <span class="font-mono">202</span> checksum-anchored statistical contrasts across <span class="font-mono">46</span> unique data/output digests; zero new wet-lab data), unbound human brain PK, and GENCODE v46 off-target scans across four triage verdicts:</p>
@@ -127,7 +127,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
             <div>
               <div class="flex flex-wrap items-center gap-2">
                 <h2 class="text-sm font-semibold text-[var(--foreground)]">Living Research Log</h2>
-                <span id="upd-count" class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono tabular-nums text-xs text-[var(--muted-foreground)]">7 / 7</span>
+                <span id="upd-count" class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono tabular-nums text-xs text-[var(--muted-foreground)]">8 / 8</span>
               </div>
               <p class="text-xs text-[var(--muted-foreground)] mt-0.5 leading-snug">Chronological ledger of post-release clinical trial readouts, newly published studies, and quantitative PK-PD/survival model revisions.</p>
             </div>
@@ -467,11 +467,11 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
         <div class="space-y-1">
           <div class="font-mono font-semibold text-[var(--foreground)]">Author, Correspondence &amp; Open-Science Attribution</div>
           <p>Curated by <strong class="text-[var(--foreground)]">Ricardo Agoga</strong> &middot; Correspondence, inquiries &amp; error reporting: <a href="mailto:helloimra@proton.me" class="text-[var(--link)] underline decoration-dotted underline-offset-2 hover:decoration-solid font-mono">helloimra@proton.me</a> &middot; Repository: <a href="https://github.com/helloimra/ExploreALS" target="_blank" rel="noopener noreferrer" class="text-[var(--link)] underline decoration-dotted underline-offset-2 hover:decoration-solid font-mono">github.com/helloimra/ExploreALS &nearr;</a>.</p>
-          <p>Primary data &amp; tool attributions: Google DeepMind AlphaGenome (v1 API &amp; Atlas AVI; non-commercial research use only), NIH GTEx (v8 / v10), Open Targets (v4), gnomAD (v4.1), Ensembl/GENCODE (v46), ChEMBL (v34), UniProt, RCSB PDB, and ClinicalTrials.gov.</p>
+          <p>Primary data &amp; tool attributions: Google DeepMind AlphaGenome (v1 API &amp; Atlas AVI; non-commercial research use only), NIH GTEx (v8 / v10), Open Targets (v4), gnomAD (v4.1 / v4.1.1), Ensembl/GENCODE (v46), ChEMBL (v34), UniProt, RCSB PDB, and ClinicalTrials.gov.</p>
         </div>
         <div class="space-y-1">
           <div class="font-mono font-semibold text-[var(--warning)]">Preclinical Research Notice &amp; AI-Assisted Workflow Disclosure</div>
-          <p><strong class="text-[var(--foreground)]">Not Medical Advice:</strong> ExploreALS v1.2 is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing herein constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.</p>
+          <p><strong class="text-[var(--foreground)]">Not Medical Advice:</strong> ExploreALS v1.3 is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing herein constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.</p>
           <p><strong class="text-[var(--foreground)]">AI-Assisted Methodology:</strong> Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 42 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (PubMed, Europe PMC, ClinicalTrials.gov). Quantitative contrasts and accessions are programmatically audited and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors — always verify against linked primary sources before experimental use.</p>
         </div>
       </div>

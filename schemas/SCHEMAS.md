@@ -1,6 +1,6 @@
-# ExploreALS v1.2.4 Registry & Provenance Lock Schemas
+# ExploreALS v1.3.0 Registry & Provenance Lock Schemas
 
-`ExploreALS v1.2.4` stores its relational data across **`18` normalized, schema-verified CSV ledgers** under `registries/` and **`2` deterministic JSON lock manifests** (`dataset_files_lock.json` and `verified_citations_lock.json`) shipped under `schemas/`, validated end-to-end by `scripts/verify_carbon_als.py`.
+`ExploreALS v1.3.0` stores its relational data across **`18` normalized, schema-verified CSV ledgers** under `registries/` and **`2` deterministic JSON lock manifests** (`dataset_files_lock.json` and `verified_citations_lock.json`) shipped under `schemas/`, validated end-to-end by `scripts/verify_carbon_als.py`.
 
 ## 1. `registries/candidate_intake_ledger.csv`
 Tracks all `33` published clinical, Mendelian/GWAS, and neuropathological ALS programs across two intake cohorts:
@@ -107,7 +107,7 @@ Explicit participant-sharing and nested-sampling matrix across all `8` empirical
 `overlap_group_id,cluster_name,datasets_involved,overlap_mechanism,donor_accounting_and_anti_pseudoreplication_rule,canonical_model_formula`
 
 ## 17. `registries/living_evidence_updates.csv`
-Chronological living-evidence, clinical-trial readout, and structural/genomic model-revision ledger (`7` rows: `UPD-2026-11-18-01` through `UPD-2026-11-22-01`), tracking explicit before/after revisions (`prior_state_or_assumption` vs `new_evidence_or_revision`), portfolio & gate consequences, verified primary identifiers, and reproducible verification anchors.
+Chronological living-evidence, clinical-trial readout, and structural/genomic model-revision ledger (`8` rows: `UPD-2026-11-18-01` through `UPD-2026-11-23-01`), tracking explicit before/after revisions (`prior_state_or_assumption` vs `new_evidence_or_revision`), portfolio & gate consequences, verified primary identifiers, and reproducible verification anchors.
 
 **Columns:**
 `update_id,date_iso,release_tag,update_category,affected_ids,decision_impact,headline,prior_state_or_assumption,new_evidence_or_revision,portfolio_and_gate_consequence,primary_sources,verification_anchor`

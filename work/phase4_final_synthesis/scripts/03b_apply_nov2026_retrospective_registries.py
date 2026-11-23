@@ -19,6 +19,7 @@ from _retrospective_stat_and_log_specs import NEW_STAT_SPECS, UPD_2026_11_19_01 
 from _retrospective_wave_b_specs import WAVE_B_NEW_EVIDENCE_ROWS, WAVE_B_NEW_STAT_SPECS  # noqa: E402
 from _retrospective_wave_c_specs import WAVE_C_NEW_EVIDENCE_ROWS, WAVE_C_NEW_STAT_SPECS  # noqa: E402
 from _retrospective_wave_d_specs import UPD_2026_11_22_01  # noqa: E402
+from _retrospective_v1_3_specs import UPD_2026_11_23_01  # noqa: E402
 from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose  # noqa: E402
 from verify_carbon_als import sha256_anchor  # noqa: E402
 
@@ -227,7 +228,7 @@ def main() -> None:
 
     # 6. living_evidence_updates.csv
     u_cols, u_rows = _load("living_evidence_updates.csv")
-    u_rows = [u for u in u_rows if u["update_id"] not in {"UPD-2026-11-19-01", "UPD-2026-11-20-01", "UPD-2026-11-20-02", "UPD-2026-11-21-01", "UPD-2026-11-21-02", "UPD-2026-11-21-03", "UPD-2026-11-22-01"}]
+    u_rows = [u for u in u_rows if u["update_id"] not in {"UPD-2026-11-19-01", "UPD-2026-11-20-01", "UPD-2026-11-20-02", "UPD-2026-11-21-01", "UPD-2026-11-21-02", "UPD-2026-11-21-03", "UPD-2026-11-22-01", "UPD-2026-11-23-01"}]
     for u in u_rows:
         uid = u["update_id"]
         if uid == "UPD-2026-11-18-05":
@@ -255,6 +256,7 @@ def main() -> None:
             u["portfolio_and_gate_consequence"] = "Retains EALS-020 (#23/52, Keep · Exploratory) (125 mg BID AIT-101 NCT05163886 recorded 0 drug-related SAEs, Wk-12 CSF apilimod 1.63 ng/mL [3.89 nM free-base eq across n=9/10 randomized treated], Babu Table 3 shared-baseline mixed-model plasma sGPNMB ratio 2.31 [p<0.001] vs CSF sGPNMB ratio 0.92 [p=0.352; both separately labeled 2-sided t-test on CT.gov], and exploratory small-sample Wk-12 plasma & OLE CSF NfL rises without powered clinical efficacy testing, while continuous QD VRG50635 NCT06215755 [54 enrolled, 50 treated] recorded investigator-reported treatment-related SAEs in 8/50 [16.0%] treated participants and exploratory GFAP/NfL rises [AAN2026-003396] and terminated for lack of Phase 2 risk-benefit; the two clinical programs do not define a single class-wide toxicity threshold, and pulsed q48h–q72h remains clinically untested) behind a 14-day human iPSC-MN CASM/vacuole washout and intracellular + secreted DPR mass-balance validation gate."
     u_rows.insert(0, dict(UPD_2026_11_19_01))
     u_rows.insert(0, dict(UPD_2026_11_22_01))
+    u_rows.insert(0, dict(UPD_2026_11_23_01))
     def _map_anchor_tok(tok: str) -> str:
         t = tok.strip()
         if t.startswith("FLAGSHIP-") and not t.startswith("FLAGSHIP-EALS-"):
