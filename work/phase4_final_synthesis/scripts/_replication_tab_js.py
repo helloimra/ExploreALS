@@ -79,29 +79,35 @@ function formatRepMult(f){
   return `mult_p=${f.mp}`;
 }
 
+function hasPositiveRep3D(f){
+  const arel = String(f.arel || '');
+  if(/\.(?:cif|pdb)(?:\.gz)?$/i.test(arel) || /(?:^|\/)(?:pdb|afdb|phase2_pdb|phase3b_pdb)(?:\/|$)/i.test(arel)) return true;
+  const meta = String(f.con || '') + ' ' + String(f.mod || '') + ' ' + String(f.est || '');
+  return /\bPDB[:\s_]+[0-9][A-Za-z0-9]{3}\b/.test(meta) || /\bAF-[A-Z0-9]{6,10}-F\d+\b/.test(meta) || /\b(?:cryo-em|x-ray\s+crystal|alphafold)\b/i.test(meta);
+}
+
 function formatRepPDisp(f){
   const parts = [f.up ? `p=${f.up}` : '', f.cp ? `cov_adj_p=${f.cp}` : '', formatRepMult(f)].filter(Boolean);
   if(parts.length) return parts.join(' · ');
   const mf = String(f.mfam || '');
   if(f.cls === 'PRIMARY_BAYESIAN_SPLICING_RECOMPUTE' || /majiq\s+bayesian/i.test(mf)) return 'N/A (Bayesian MAJIQ)';
   if(f.cls === 'STRUCTURAL_OR_MECHANISTIC_MODEL_PRIOR'){
-    const sBlob = String(f.mod || '') + ' ' + String(f.arel || '');
-    return /pdb|cif|cryo-em|crystal/i.test(sBlob) ? 'N/A (3D / Model)' : 'N/A (Model Prior)';
+    return hasPositiveRep3D(f) ? 'N/A (3D / Model)' : 'N/A (Model Prior)';
   }
   if(f.cls === 'DETERMINISTIC_MODEL_PRIOR') return 'N/A (Model / Scan)';
   if(f.cls === 'POPULATION_REFERENCE_METRIC') return 'N/A (Ref Metric)';
   if(f.cls === 'DESCRIPTIVE_PK_OR_3D_MEASUREMENT'){
-    const dBlob = String(f.mod || '') + ' ' + String(f.arel || '') + ' ' + String(f.est || '');
-    if(/pdb|cif|af-|3d|heavy-atom|protomer|hinge|pocket-cavity|exon-5.*pore/i.test(dBlob)){
-      if(/unbound\s+csf|cmax|occupancy/i.test(dBlob)) return 'N/A (3D / PK)';
-      if(/binomial|poisoned/i.test(dBlob)) return 'N/A (3D / Model)';
+    const dBlob = String(f.con || '') + ' ' + String(f.mod || '') + ' ' + String(f.est || '');
+    if(hasPositiveRep3D(f)){
+      if(/\b(?:unbound\s+csf|cu,csf|cmax|occupancy)\b/i.test(dBlob)) return 'N/A (3D / PK)';
+      if(/\b(?:binomial|heterotetramer|poisoned)\b/i.test(dBlob)) return 'N/A (3D / Model)';
       return 'N/A (3D Structure)';
     }
-    if(/unbound|plasma\s+pk|csf.*ec50|csf\s+concentration|chembl\d+\s+binding/i.test(dBlob)) return 'N/A (PK / Binding)';
-    if(/alphagenome|lof\s+constraint|depmap/i.test(dBlob)) return 'N/A (Ref Metric)';
-    return 'N/A (Descriptive)';
+    if(/\b(?:unbound|cu,plasma|cu,csf|cu,brain|cu,cns|fup\b|plasma\s+pk|csf\s+ceftriaxone|csf\/serum|csf.*ec50|csf\s+concentration|chembl\d+\s+binding|kinobead|nanobret|talke\s+1997|lumbar\s+csf)\b/i.test(dBlob)) return 'N/A (PK / Binding)';
+    if(/\b(?:alphagenome|avi_phred|lof\s+constraint|loeuf|depmap)\b/i.test(dBlob)) return 'N/A (Ref Metric)';
+    return 'See contrast details';
   }
-  return 'N/A (Descriptive)';
+  return 'See contrast details';
 }
 
 function renderReplicationWorkbench(){
