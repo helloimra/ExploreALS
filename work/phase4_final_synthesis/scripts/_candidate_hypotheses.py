@@ -19,8 +19,8 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
         "Its ALS hypothesis proposed that elevating perisynaptic glutamate clearance would prevent excitotoxic motor neuron degeneration."
     ),
     "C005": (
-        "Motor neuron excitability in ALS follows a biphasic trajectory: early intrinsic hyperexcitability driven by TDP-43-mediated KCNQ2 loss transitions into late symptomatic synaptic attrition and hypoexcitability. "
-        "This companion protocol pairs paradigm-locked threshold-tracking cortical TMS (TT-SICI <=5.5% RMT, PMID:42592079), axonal threshold tracking (SDTC), and CLSI EP09c-bridged living-CSF NPTX2 to stage-gate KCNQ2 interventions prior to synaptic collapse."
+        "Motor neuron excitability in ALS is hypothesized to follow a biphasic trajectory in which early intrinsic hyperexcitability associated with TDP-43-mediated KCNQ2 loss transitions toward late symptomatic synaptic attrition and hypoexcitability. "
+        "This companion protocol tests pairing paradigm-locked threshold-tracking cortical TMS (TT-SICI <=5.5% RMT, PMID:42592079), axonal threshold tracking (SDTC), and CLSI EP09c-bridged living-CSF NPTX2 as prospective stage-gating markers for KCNQ2 interventions."
     ),
     "C006": (
         "KCNQ2 (ENSG00000075043) encodes the pore-forming Kv7.2 voltage-gated potassium channel subunit that generates the stabilizing M-current in motor neurons. "
@@ -56,10 +56,10 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "C014": (
         "CHMP7 (ENSG00000147457) and CHMP2B (ENSG00000083937) are ESCRT-III nuclear-envelope surveillance factors that remodel damaged nuclear pore complexes. "
-        "In sporadic and C9orf72 ALS, aberrant SUN1-facilitated nuclear retention of CHMP7 (modulated by CHMP2B) initiates nucleoporin stripping upstream of nuclear TDP-43 loss; this subunit-resolved hypothesis tests whether selective nuclear-import blockade rescues pore integrity without ablating essential membrane repair."
+        "In sporadic and C9orf72 ALS, aberrant SUN1-facilitated nuclear retention of CHMP7 initiates nucleoporin stripping upstream of nuclear TDP-43 loss (with partial CHMP2B knockdown mitigating ESCRT-III NPC defects in Keeley et al. 2024 PMID:39709457); this subunit-resolved hypothesis tests selective nuclear-import blockade without ablating essential membrane repair."
     ),
     "C015": (
-        "SCFD1 (ENSG00000092108) and G2E3 (ENSG00000092140) span the genome-wide significant human ALS chr14q12 GWAS locus, pairing opposing motor-neuron (+0.048) vs primary/iPSC-microglial (-0.22 to -0.33, PP_H4=0.88–0.89) SCFD1 eQTL colocalization with G2E3 exon-2 sQTLs and TDP-43-regulated Intron-1 cryptic polyadenylation. "
+        "SCFD1 (ENSG00000092108) and G2E3 (ENSG00000092140) span the genome-wide significant human ALS chr14q12 GWAS locus, pairing provisional opposite-direction motor-neuron (+0.048) vs primary/iPSC-microglial (-0.22 to -0.33, PP_H4=0.88–0.89) SCFD1 eQTL signals and Brain Catalog G2E3/SCFD1 SMR associations (PMID:36243988) with TDP-43-regulated G2E3 Intron-1 cryptic polyadenylation. "
         "Because G2E3's Alu-derived cryptic exon fails 0-mismatch transcriptome hybridization safety and SCFD1 is pan-essential, this hypothesis gates bidirectional motor-neuron and microglial secretory effector dissection."
     ),
     "C016": (
@@ -67,8 +67,8 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
         "Because TDP-43 loss induces 3'-UTR lengthening across FBXL5 and IREB2 while postmortem neuronal TFRC/IREB2 are depleted and glial FBXL5 rises, this bidirectional sensor-probe hypothesis resolves functional neuronal iron starvation vs. overload before any lead chemistry."
     ),
     "C017": (
-        "CHIT1 (ENSG00000133063), GPNMB (ENSG00000136235), CHI3L1, and CHI3L2 form a coordinated microglial/astroglial chitinase and endolysosomal glycoprotein signature elevated in symptomatic ALS relative to asymptomatic carriers and controls. "
-        "Human genetic null homozygosity (CHIT1 rs3831317) and protective lysosomal sign analysis (GPNMB) establish this four-protein suite as a living-CSF symptomatic staging, ALS-Glia stratification, and pharmacodynamic biomarker panel rather than an inhibition target."
+        "CHIT1 (ENSG00000133063), GPNMB (ENSG00000136235), CHI3L1, and CHI3L2 form a replicated microglial/astroglial chitinase and endolysosomal glycoprotein signature elevated in symptomatic ALS relative to controls across living-CSF proteomics cohorts. "
+        "Human genetic null homozygosity (CHIT1 rs3831317) and protective lysosomal sign analysis (GPNMB) position this four-protein suite as a candidate living-CSF symptomatic staging, ALS-Glia enrichment, and microglial/lysosomal pharmacodynamic panel (pending context-of-use cutoff calibration) rather than an inhibition target."
     ),
     "C018": (
         "Complement C1q (encoded by microglial C1QA/C1QB/C1QC, ENSG00000173372) initiates classical synaptic pruning and undergoes C3-independent neuronal uptake into ribonucleoprotein complexes. "
@@ -88,7 +88,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "C022": (
         "DNAJB2 (ENSG00000135924, HSJ1) encodes a neuronal Hsp40 co-chaperone with two alternatively spliced isoforms: cytosolic DNAJB2a (ENST00000392086), which clears misfolded ubiquitylated TDP-43, and intron-9-retaining ER-prenylated DNAJB2b, with recessive human loss-of-function mutations (OMIM 614881) causing distal motor neuropathy and juvenile ALS. "
-        "Backed by concordant human cortical oligodendrocyte, cervical spinal cord, and synaptosomal protein loss, this hypothesis benchmarks AAV-DNAJB2a cDNA augmentation against internal intron-9 ISS/IPA competition (chr2:219284988-219285939(+), sparing the 3' splice site and mature DNAJB2b ERAD)."
+        "Backed by human cortical oligodendrocyte, cervical spinal cord, and C9-FTD cortical homogenate DIA loss (with a nominal synaptosomal trend), this hypothesis benchmarks AAV-DNAJB2a cDNA augmentation against internal intron-9 ISS/IPA competition (chr2:219284988-219285939(+), sparing the 3' splice site and mature DNAJB2b ERAD)."
     ),
     "C023": (
         "YKT6 (ENSG00000106636) encodes an autoinhibited Longin R-SNARE required for ER-to-Golgi and autophagosome membrane fusion that harbors an exome-wide rare human ALS missense risk variant (p.Tyr64Cys, rs138273846, PMID:41917433) inside its Longin groove (modeled in rat DPC-bound PDB 3KYQ, PMID:20159557) alongside TDP-43 3'-UTR lengthening and PTAR1 Exon-2 skipping. "
@@ -144,11 +144,11 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "DN-03": (
         "PTPRT (ENSG00000196090) encodes a CNS-restricted receptor protein tyrosine phosphatase that stabilizes trans-synaptic Neuroligin/Fyn adhesion complexes (PMID:19816407) while dephosphorylating STAT3 Tyr705 (PMID:17360477). "
-        "Multi-cohort screening revealed severe Ribo-seq and C9-FTD cortical homogenate protein depletion (alongside null synaptosomal DIA and FDR-non-significant CSF ectodomain trends); this hypothesis tests validating its published Intron-26 cryptic exon (chr20:42099289-42102124(-), DOI:10.1186/s44477-025-00013-w) and resolving synaptic adhesion vs. neurotrophic pSTAT3 polarity."
+        "Multi-cohort screening revealed Ribo-seq and C9-FTD cortical homogenate protein depletion (alongside null synaptosomal DIA and FDR-non-significant CSF ectodomain trends); this hypothesis tests cellular origin and synaptic-adhesion vs. pSTAT3 treatment polarity at its published 737-base Intron-26 5'-extended exon (chr20:42098553-42099289(-), predicted codon-10 TAA NMD candidate, DOI:10.1186/s44477-025-00013-w)."
     ),
     "DN-04": (
         "CELF5 (ENSG00000161082) encodes a brain- and motor-system-restricted CUGBP Elav-like RNA-binding factor that regulates neuron-specific alternative splicing. "
-        "Depletion of nuclear TDP-43 induces inclusion of a conditional 108-bp nonsense-mediated-decay cryptic exon (replicated at LeafCutter cluster clu_25763_+ in Australian ID-MND sporadic ALS patient iPSC motor neurons); intrathecal steric splice-switching aims to prevent secondary RNA-processing collapse downstream of TDP-43 loss."
+        "Depletion of nuclear TDP-43 induces inclusion of a conditional 108-bp nonsense-mediated-decay cryptic exon (with splicing differing at overlapping LeafCutter cluster clu_25763_+ in Australian ID-MND sporadic ALS patient iPSC motor neurons); intrathecal steric splice-switching aims to prevent secondary RNA-processing collapse downstream of TDP-43 loss."
     ),
     "DN-05": (
         "PRUNE2 (ENSG00000106772) encodes a large BNIP2-homology neuronal protein whose C-terminal BCH domain is homologous to RhoA-inhibiting BNIP2-XL in cell-line models (PMID:18445682). "
@@ -160,7 +160,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "DN-07": (
         "TRAPPC12 (ENSG00000171853) encodes an outer subunit of the TRAPPIII tethering complex involved in ER-to-Golgi transport and autophagosome assembly (recessive PEBAS OMIM 617669) upstream of YKT6. "
-        "Nuclear TDP-43 depletion increases usage of a GENCODE-annotated, non-selective intronic alternative last exon (82.9% TDP+ vs. 34.0% non-TDP baseline, PMID:41120751) that truncates TRAPPC12 translation; steric 3'-splice-site blockade tests restoring full-length trafficking."
+        "Cluster- and gene-level TDP-43 depletion signals occur near a GENCODE-annotated, non-selective intronic alternative last exon (82.9% TDP+ vs. 34.0% non-TDP baseline, PMID:41120751; isoform-resolved full-length protein loss unverified); steric 3'-splice-site blockade tests whether selective full-length trafficking rescue is achievable."
     ),
     "DN-08": (
         "ELK1 (ENSG00000126767, non-PAR Xp11.23) encodes an ERK-responsive ETS transcription factor with compartment-dependent polarity: nuclear SRF co-activation supports neuronal survival, whereas dendritic ELK1 translation promotes apoptosis. "
@@ -168,19 +168,19 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "DN-09": (
         "DLGAP1 (ENSG00000170579, GKAP) encodes a core postsynaptic density scaffold linking glutamate receptor-associated PSD-95 complexes to Shank cytoskeleton assemblies. "
-        "TDP-43 cryptic-polyadenylation discovery identified a pathology-selective 5'-UTR Intron-2 alternative last exon (17/926 TDP+ vs. 0/750 non-TDP NYGC libraries, PMID:41120751) paired with cortical homogenate and synaptosomal DLGAP1 loss; steric 3'-splice-site blockade tests rescuing distal-promoter scaffold expression."
+        "TDP-43 cryptic-polyadenylation discovery identified a pathology-selective 5'-UTR Intron-2 alternative last exon (17/926 TDP+ vs. 0/750 non-TDP NYGC libraries, PMID:41120751) paired with C9-FTLD bulk reduction and inconclusive C9-FTD O14490-6 isoform-group DIA trends; steric 3'-splice-site blockade tests rescuing distal-promoter scaffold expression."
     ),
     "DN-10": (
         "DPP6 (ENSG00000130226) encodes a catalytically inactive S9B dipeptidyl-peptidase homolog (PDB 1XFD 3.00A homodimer: Ser->Asp712 in GKDYGG, PMID:15476821) that assembles with somatodendritic Kv4.2 A-type potassium channels to regulate dendritic excitability. "
         "Identified as the top downregulated untargeted protein in Emory ALS CSF DIA proteomics alongside cortical synaptosome depletion (with MS2-TMTpro omnibus discordance pending PRM bridging), it serves as a pre-validation candidate fluid marker of somatodendritic attrition."
     ),
     "DN-11": (
-        "DPP10 (ENSG00000175497) encodes a catalytically inactive neuronal Kv4 potassium-channel auxiliary subunit paralogous to DPP6 (UniProt Q8N608-3: Ser->Gly651 in GKGYGG [canonical Q8N608 Gly657]; LOEUF=0.378) that governs somatodendritic A-type current gating. "
+        "DPP10 (ENSG00000175497) encodes a catalytically inactive neuronal Kv4 potassium-channel auxiliary subunit paralogous to DPP6 (canonical UniProt Q8N608: Ser->Gly651 in GKGYGG [796 aa]; isoform Q8N608-3: Gly655 [800 aa]; LOEUF=0.378) that governs somatodendritic A-type current gating. "
         "Co-depleted with DPP6 in Emory ALS CSF DIA proteomics and primary motor cortex excitatory neurons (with MS2-TMTpro omnibus and WashU non-parametric caveats), it serves as a pre-validation candidate fluid marker of somatodendritic attrition."
     ),
     "DN-12": (
-        "CFL1 (ENSG00000172757) encodes cofilin-1, a pan-essential actin-severing protein whose LIMK1-driven Ser3 hyperphosphorylation (inactivation) triggers TDP-43 aggregation in sporadic ALS spinal motor neurons (Jagaraj et al. 2026, PMID:41804798 — opposite in phospho-polarity to dephospho-cofilin rods). "
-        "Consistently elevated as unmodified pan-CFL1 across living ALS CSF DIA and TMTpro cohorts (surviving erythrocyte/platelet lysis OLS controls) while cellularly pan-essential, CFL1 serves as a pre-validation candidate fluid cytoskeletal injury marker requiring pSer3-vs-total isoform assay bridging."
+        "CFL1 (ENSG00000172757) encodes cofilin-1, a pan-essential actin-severing protein showing LIMK1-associated Ser3 hyperphosphorylation (inactivation) in postmortem sporadic ALS spinal motor neurons and TDP-43 aggregation in experimental models (Jagaraj et al. 2026, PMID:41804798 — opposite in phospho-polarity to dephospho-cofilin rods). "
+        "Consistently elevated as unmodified pan-CFL1 across living ALS CSF DIA (and corroborated in overlapping Emory TMTpro, surviving erythrocyte/platelet lysis OLS controls) while cellularly pan-essential, CFL1 serves as a pre-validation candidate fluid cytoskeletal injury marker requiring pSer3-vs-total isoform assay bridging."
     ),
     "DN-13": (
         "MAOB (ENSG00000069535) encodes outer-mitochondrial-membrane monoamine oxidase B, an H2O2-generating flavoprotein predominantly expressed in astrocytes. "
@@ -207,7 +207,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
         "Nominated from marginal survival extension in sporadic ALS iPSC motor neuron screening, its hypothesis proposed high-dose oral supplementation to rescue motor neuron bioenergetics and lipid peroxidation (NCT00243932, PMID:19743457)."
     ),
     "DN-19": (
-        "L-Serine is an obligate substrate of serine palmitoyltransferase proposed to competitively suppress neurotoxic 1-deoxysphingolipids in sporadic ALS, while strictly contraindicated in <0.5% monogenic SPTLC1/SPTLC2 gain-of-function ALS where ORMDL feedback loss drives canonical C18–C22 ceramide overproduction (PMID:34059824; PMID:43025655). "
-        "Because fixed 2.5 uM library screening adds only +0.625% atop ~400 uM basal media L-serine and zero randomized placebo-controlled sporadic ALS trials have completed (NCT01835782; NCT03580616), this exploratory hypothesis tests physiological low-serine dose-response and genetically gated systemic supplementation."
+        "L-Serine is an obligate substrate of serine palmitoyltransferase proposed to competitively suppress neurotoxic 1-deoxysphingolipids in sporadic ALS, whereas specific gain-of-function SPTLC1/SPTLC2 ALS variants impair ORMDL feedback and motivate a proposed prospective genetic/sphingolipid screening safeguard (PMID:34059824; PMID:43025655). "
+        "Because fixed 2.5 uM library screening adds only +0.625% atop ~400 uM basal media L-serine and zero randomized placebo-controlled sporadic ALS trials have completed (NCT01835782; NCT03580616), this exploratory hypothesis tests physiological low-serine dose-response and biomarker-monitored supplementation."
     ),
 }

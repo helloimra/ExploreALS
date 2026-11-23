@@ -207,10 +207,25 @@ def main() -> None:
         pi = load_pineda2024_pseudobulk("BA4", "Excitatory", ["CHMP7", "CHMP2B", "FBXL5"])
         assert pi["modality"] == "SNRNA_PSEUDOBULK_LOG2CPM" and len(pi["donor_df"]) == 32
 
-    # 17. v0.4.1 Directory SHA-256 tree verification passes on multi-file staged directories (DS_CRYPTIC, DS029_SPILL, DS_PDB)
+    # 17. v0.4.1 Directory SHA-256 tree verification passes on multi-file staged directories (including LF-checked-out DS_ELIG_BED) & rejects content edits
     for dsid_dir in ("DS_CRYPTIC", "DS029_SPILL", "DS_PDB", "DS_ELIG_BED"):
         if _has_ds(dsid_dir):
             assert resolve_dataset_path(dsid_dir, verify_hash=True).is_dir()
+    if _has_ds("DS_ELIG_BED"):
+        from scripts.phase1_batches.batch_runner_utils import _dir_matches_per_file_lock
+        import shutil as _shutil
+        elig_src = resolve_dataset_path("DS_ELIG_BED", verify_hash=False)
+        exp_elig_sha = "79f79fd2e783104681064fc3a1350ccb2eb6e41da0435f165b0aec26a875f21a"
+        with tempfile.TemporaryDirectory() as td_elig:
+            lf_copy = Path(td_elig) / "elig_lf"
+            _shutil.copytree(elig_src, lf_copy)
+            for fp_e in lf_copy.rglob("*"):
+                if fp_e.is_file():
+                    fp_e.write_bytes(fp_e.read_bytes().replace(b"\r\n", b"\n"))
+            assert _dir_matches_per_file_lock("DS_ELIG_BED", lf_copy, exp_elig_sha), "LF-normalized DS_ELIG_BED checkout failed per-file lock!"
+            tampered = lf_copy / "package.json"
+            tampered.write_bytes(tampered.read_bytes() + b" ")
+            assert not _dir_matches_per_file_lock("DS_ELIG_BED", lf_copy, exp_elig_sha), "Tampered DS_ELIG_BED content was not rejected!"
 
     # 18. v0.4.1 parse_json_ignoring_banner() strips non-JSON license/notice headers from stdout payloads
     raw_banner = "[NOTICE] AlphaGenome research-only terms apply.\nWarning: cached schema\n  {\"avi_phred\": 5.67, \"ok\": [1, 2]}\n"

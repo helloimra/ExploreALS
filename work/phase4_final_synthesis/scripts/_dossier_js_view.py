@@ -124,6 +124,7 @@ const HURDLE_TOK = {
   ACTRN12622000927729:'ACTRN12622000927729', PMX205:'PMX 205', RS138273846:'rs138273846',
   MS2:'MS2', TMTPRO:'TMTpro', PSER3:'pSer3', CFL1:'CFL1', DPP6:'DPP6', DPP10:'DPP10',
   RBC:'RBC', WBC:'WBC', LP:'LP', QC:'QC', RS3831317:'rs3831317', AD:'AD',
+  SPHINGOLIPID:'sphingolipid', SCREENING:'screening', SAFEGUARD:'safeguard', SPTLC1:'SPTLC1', SPTLC2:'SPTLC2',
 };
 function humanizeEnum(s){
   if(!s || s === 'NONE') return 'None';
@@ -405,6 +406,18 @@ function formatProseParas(raw, ctx, gapCls='space-y-2', toneCls='text-[var(--for
   }
   return `<div class="${gapCls} leading-relaxed text-xs ${toneCls}">${htmlBlocks.join('')}</div>`;
 }
+function statusBadge(st, c=null){
+  if(st==='PASS_CLEAN_GE2MM') return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--success)] border border-[var(--success)] text-xs whitespace-nowrap" title="Zero 0-mm, 1-mm, wobble, bulge, or 18-nt sub-core off-target hits on constrained CNS genes">Pass &middot; Clean (&ge;2mm)</span>';
+  if(String(st||'').startsWith('CAUTION')){
+    const pts = c && c.sp === '0/0/0' ? String(c.pm || '').split('/') : [];
+    const m25 = (pts.length === 6 && pts[0]==='0' && pts[1]==='0' && pts[2]==='0' && /^[1-9][0-9]*$/.test(pts[3]) && pts[4]==='0' && pts[5]==='0') ? [null, pts[3]] : null;
+    if(m25) return `<span class="px-1.5 py-0.5 rounded font-mono text-[var(--warning)] border border-[var(--warning)] text-xs whitespace-nowrap" title="Zero 0-mm, 1-mm, wobble, 1-nt bulge, or 18-nt sub-core reference hits; ${m25[1]} non-constrained 25bp-SS 2-mm hit(s) — empirical microwalk required">Caution &middot; 25bp 2-mm (${m25[1]})</span>`;
+    return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--warning)] border border-[var(--warning)] text-xs whitespace-nowrap" title="Non-constrained 1-mm, wobble, or 25bp-SS 2-mm hit (zero constrained CNS pLI >= 0.9 hits) — empirical microwalk required">Caution &middot; 1-mm/Wob/2-mm</span>';
+  }
+  if(String(st||'').startsWith('WARN')) return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap" title="1-mm, wobble, or 1-nt bulge hit on a LoF-intolerant (pLI >= 0.9) CNS gene">Warn &middot; CNS Hit</span>';
+  if(String(st||'').startsWith('FAIL')) return '<span class="px-1.5 py-0.5 rounded font-mono font-bold text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap" title="Exact 0-mismatch off-target hybridization hit across GENCODE v46">Fail &middot; 0-mm</span>';
+  return '<span class="text-[var(--muted-foreground)] font-mono text-xs">None</span>';
+}
 function riskStateBadge(st){
   if(st==='LOW') return '<span class="px-2 py-0.5 rounded font-mono font-semibold text-[var(--success)] border border-[var(--success)] text-xs shrink-0">&#10003; LOW / DE-RISKED</span>';
   if(st==='MITIGATED') return '<span class="px-2 py-0.5 rounded font-mono font-semibold text-[var(--primary)] border border-[var(--primary)] text-xs shrink-0">&#9670; MITIGATED BY ROUTE / SELECTIVITY</span>';
@@ -515,7 +528,7 @@ function renderSummaryDomainPanels(r){
           const ensUrl = `https://www.ensembl.org/Homo_sapiens/Location/View?r=${c.chr.replace('chr','')}:${c.lo}-${c.hi}`;
           const atlUrl = `https://deepmind.google.com/science/alphagenome/atlas?q=${c.chr}:${loP}-${hiP}&m=locus&lItems=avi,section:RNA_SEQ,section:SPLICE_JUNCTIONS,section:DNASE`;
           const ucscUrl = `https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=${c.chr}:${loP}-${hiP}`;
-          const stB = (typeof statusBadge === 'function') ? statusBadge(c.st) : `<span class="font-mono">${esc(humanizeEnum(c.st))}</span>`;
+          const stB = (typeof statusBadge === 'function') ? statusBadge(c.st, c) : `<span class="font-mono">${esc(humanizeEnum(c.st))}</span>`;
           return `<tr class="align-top">
             <td class="py-2 px-2 font-mono">${c.lead?'<span class="text-[var(--success)] font-bold">&#9733; Lead</span>':'<span class="text-[var(--muted-foreground)]">Alt</span>'} &middot; <strong>${esc(c.gene)} &middot; Window #${c.rk}</strong></td>
             <td class="py-2 px-2 font-mono">${mkExtA(ensUrl, esc(c.iv))} <span class="text-[var(--muted-foreground)]">(${c.len}bp)</span></td>
@@ -837,7 +850,7 @@ function renderDossierMain(){
     const vTxt = isDrop ? `text-[var(--error)]` : (isBench ? `text-[var(--primary)]` : `text-[var(--warning)]`);
     const benchHdr = (r.id==='EALS-013'||r.id==='EALS-032') ? 'ADJUDICATION RATIONALE &mdash; APPROVED SOC &amp; ASSAY BENCHMARK'
       : (r.id==='EALS-003' ? 'ADJUDICATION RATIONALE &mdash; WITHDRAWN HUMAN PD CALIBRATOR'
-      : (r.id==='EALS-017' ? 'ADJUDICATION RATIONALE &mdash; VALIDATED LIVING-CSF STAGING PANEL'
+      : (r.id==='EALS-017' ? 'ADJUDICATION RATIONALE &mdash; REPLICATED LIVING-CSF STAGING &amp; PD PANEL'
       : 'ADJUDICATION RATIONALE &mdash; CANDIDATE CSF MARKER (PRE-VALIDATION)'));
     const vHdr = isDrop ? `ADJUDICATION RATIONALE &mdash; DROP &middot; ${esc(humanizeEnum(r.epi)).toUpperCase()}`
       : (isBench ? benchHdr : 'ADJUDICATION RATIONALE &mdash; KEEP &middot; EXPLORATORY (UNTESTED &ne; FALSIFIED)');

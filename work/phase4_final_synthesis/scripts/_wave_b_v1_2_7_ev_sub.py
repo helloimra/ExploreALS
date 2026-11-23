@@ -17,7 +17,7 @@ def apply_wave_b_ev_and_sub_patches(
         "effect_estimate": "-0.3818",
         "p_value": "0.00813",
         "fdr_or_adjusted_p": "0.2236",
-        "notes": "Official Spillman 2026 MOESM1 Synapt_FRCTX DIA matrix (10 C9-FTD vs 10 Ctrl, PMID:42789089; supersedes -0.5114 pooled raw-pivot estimate; paired Homogenate DIA -0.4470, p=3.05e-4, BH-FDR=0.0182 in EV-P2-T4-005); concordant loss in Spillman iPSC neurons (log2FC=-1.1153, p=0.0455, n=6) & NYGC Cervical SC RNA (beta=-0.2933, p=5.21e-5, n=86: 48 non-mutation sALS vs 38 Ctrl); Trautwig CSF TMT null (p=0.779, N=101).",
+        "notes": "Official Spillman 2026 MOESM1 Synapt_FRCTX DIA matrix (10 C9-FTD vs 10 Ctrl, PMID:42789089; nominal p=0.00813, inconclusive after multiplicity at BH-FDR=0.2236; P25686 group does not separate DNAJB2a from DNAJB2b; paired Homogenate DIA -0.4470, p=3.05e-4, BH-FDR=0.0182 in EV-P2-T4-005); concordant loss in Spillman iPSC neurons (log2FC=-1.1153, p=0.0455, n=6) & NYGC Cervical SC RNA (beta=-0.2933, p=5.21e-5, n=86: 48 non-mutation sALS vs 38 Ctrl); Trautwig CSF TMT null (p=0.779, N=101).",
     })
     ev_map["EV-B6-012"].update({
         "source_type": "HUMAN_GENETICS",
@@ -37,7 +37,7 @@ def apply_wave_b_ev_and_sub_patches(
         "rs229143 maps to CL:0000100 motor neuron SCFD1 RNA-seq/splicing (fi=0.0394); gnomAD v4.1 MANE ENST00000458591 LOEUF=0.809, pLI=0.232 (7/16.2 LoF; Open Targets legacy v2.1.1 LOEUF=0.472, pLI=0.996); Spillman MOESM1 cortex DIA protein null (Homog log2FC=-0.0156, p=0.9313; Synapt +0.0265, p=0.7966, n=10 vs 10). [Sample context: 1,258 DepMap CRISPR screens; GRCh38 AlphaGenome locus scan]"
     )
     ev_map["EV-B2-004"]["notes"] = (
-        "Colocalizes at chr14q12 ALS GWAS and converges with Brown 2022 TDP-43 KD Intron-1 cryptic ALE (chr14:30559272-30563746, dPSI=+0.4044, FDR=2.90e-21, replicated across 5/5 KD studies in Bryce-Smith Table 2); AlphaGenome rs229190 AVI_Phred=7.61; DepMap isEssential=False (mean Chronos=-0.0184, 0.0% <-1.0 across 1,258 lines); gnomAD v4.1 MANE ENST00000206595 LOEUF=0.600, pLI=0.888 (2/10.5 LoF; Open Targets legacy LOEUF=0.500)."
+        "Colocalizes at chr14q12 ALS GWAS (including adult prefrontal cortex G2E3 eQTL/sQTL PP4=0.99 alongside SCFD1 colocalizations in Brain Catalog, Pan et al. 2023 Nucleic Acids Res PMID:36243988, DOI:10.1093/nar/gkac895) and converges with Brown 2022 TDP-43 KD Intron-1 cryptic ALE (chr14:30559272-30563746, dPSI=+0.4044, FDR=2.90e-21, replicated across 5/5 KD studies in Bryce-Smith Table 2); AlphaGenome rs229190 AVI_Phred=7.61; DepMap isEssential=False (mean Chronos=-0.0184, 0.0% <-1.0 across 1,258 lines); gnomAD v4.1 MANE ENST00000206595 LOEUF=0.600, pLI=0.888 (2/10.5 LoF; Open Targets legacy LOEUF=0.500)."
     )
 
     # C014 (CHMP7 / CHMP2B)
@@ -54,7 +54,7 @@ def apply_wave_b_ev_and_sub_patches(
         "source_id_or_locator": "DS_GNOMAD_V41_CONSTRAINT;DepMap;PMID:39709457;PMID:42349418;PMID:42975030",
         "cohort_and_stratum": "CHMP2B (ENSG00000083937) across 1,258 DepMap CRISPR screens, gnomAD v4.1 & 2024-2026 literature",
         "effect_estimate": "DepMap mean Chronos=+0.0259 (isEssential=False); gnomAD v4.1 MANE ENST00000263780.9 LOEUF=1.503 (10/11.2 LoF; Open Targets v2.1.1 LOEUF=1.054)",
-        "notes": "Keeley et al. 2024 (PMID:39709457) shows endogenous WT CHMP2B promotes nuclear CHMP7 accumulation in sALS iPSC-MNs and partial CHMP2B KD mitigates NPC/TDP-43 injury, balanced against sequential ANXA11->CHMP2B membrane repair (Heffner et al. 2026 PMID:42349418 [Extrapolation: plasma-membrane laser injury to nuclear envelope]) and neuronal autophagic maturation, flagging pan-allele CHMP2B KD as high liability. [Sample context: 1,258 DepMap CRISPR screens; gnomAD v4.1 GRCh38]",
+        "notes": "Keeley et al. 2024 (PMID:39709457) shows endogenous WT CHMP2B promotes nuclear CHMP7 accumulation in sALS iPSC-MNs and partial CHMP2B knockdown rescues nuclear CHMP7 accumulation, POM121 nucleoporin reduction, and downstream TDP-43 mis-splicing in human sALS iPSC-MNs (separate published intervention alongside CHMP7 ASO), balanced against sequential ANXA11->CHMP2B membrane repair (Heffner et al. 2026 PMID:42349418 [Extrapolation: plasma-membrane laser injury to nuclear envelope]) and neuronal autophagic maturation, flagging pan-allele CHMP2B KD as high liability. [Sample context: 1,258 DepMap CRISPR screens; gnomAD v4.1 GRCh38]",
     })
     ev_map["EV-P2-T4-003"].update({
         "cohort_and_stratum": "Spillman 2026 within-C9FTD iPSC-neuron pellet vs homogenate DIA (n=3 C9FTD lines; Ctrl n=3 & Pineda BA4 n=32 comparators)",
@@ -73,22 +73,30 @@ def apply_wave_b_ev_and_sub_patches(
         "notes": "Oral nucleoside LINE-1 RT inhibitor (MW 248.24; also completed PSP Ph2a NCT04993768 N=42 & studied in AGS) selected May 2025 for the Phase 2/3 HEALEY ALS Platform Trial; NCT04993755 remains unpublished in peer-reviewed form, pooled ALS+FTD in N=42 (24-wk randomized ALSFRS-R -7.2 vs -6.7), enrolled 0 sporadic ALS-TE patients, and requires intracellular TPN-101-TP triphosphorylation (post-mitotic MN vs proliferating glial kinase efficiency unmeasured).",
     })
     ev_map["EV-B6-053"]["notes"] = (
-        "Dropped from 19.74% (15/76 Tam 2019) to 11.30% (26/230 expansion) = 13.40% (41/306 all cortical motor-ALS donors; 13.53% = 41/303 excluding 3 multi-region discordant donors; 11.52% [22/191] in C9-neg ALS+ALS/FTD and 11.60% [21/181] in C9-neg ALS; 11.24% across 587 libraries in TableS1B; 0/331 spinal donors under O'Neill's separate 2-class Glia-cord/Ox-cord classifier)."
+        "Dropped from 19.74% (15/76 Tam 2019) to 11.30% (26/230 expansion) = 13.40% (41/306 all cortical motor-ALS donors; 13.53% = 41/303 excluding 3 multi-region discordant donors; 11.52% [22/191] in C9-neg ALS+ALS/FTD and 11.60% [21/181] in C9-neg ALS; 11.24% across 587 libraries in TableS1B; spinal cord ALS-TE prevalence not estimable because O'Neill's separate 2-class spinal classifier [N=331] assigned only Glia-cord or Ox-cord)."
     )
+    if "EV-B6-054" in ev_map:
+        ev_map["EV-B6-054"].update({
+            "effect_estimate": "Spinal ALS-TE prevalence not estimable (O'Neill 2-class spinal classifier N=331 assigns only Glia-cord or Ox-cord)",
+            "notes": "O'Neill et al. 2025 (DS001_ONEILL) applied a two-class spinal cord classifier (Glia-cord vs Ox-cord across N=331 spinal donors) that includes no retrotransposon ALS-TE category, so spinal ALS-TE prevalence is not estimable from that model rather than observed at 0%.",
+        })
 
     # C018 (C1q)
     for eid_c18 in ("EV-B3-014", "EV-B3-015", "EV-B3-016", "EV-B3-018"):
         ev_map[eid_c18]["notes"] = ev_map[eid_c18]["notes"].replace(
             "WashU & UMilan contributed 63 ALS, 0 Controls",
-            "UMilan contributed 31 ALS / 0 Controls and WashU contributed 26 ALS + 2 ordinary Controls + 4 asymptomatic carriers (reconciled via MGH/WashU specimen codes 100 vs 741)",
+            "UMilan contributed 31 ALS / 0 Controls and WashU contributed 26 ALS code 100 + 6 comparators code 741 (2 ordinary Controls + 4 asymptomatic carriers; unresolved Table 2 26/84 vs MOESM1 32/78 bank count)",
+        ).replace(
+            "(reconciled via MGH/WashU specimen codes 100 vs 741)",
+            "(code 100 vs 741; unresolved Table 2 26/84 vs MOESM1 32/78 bank count)",
         )
     ev_map["EV-B3-021"].update({
-        "source_id_or_locator": "NCT04569435;NCT04514367;PMID:41787606;PMID:38942014;10.1016/j.cell.2024.05.058;PMID:24170856",
-        "notes": "In HD Phase 2 NCT04514367 (N=28, PMC13307253, PMID:41787606), IV ANX005 (75-100 mg/kg) achieved 0.2-0.25% CSF:serum penetration that saturated baseline CSF C1q, yet peripheral serum C1q sink ablation (proposed ~180 nM sink [MODEL_PRIOR]) caused 3/28 (10.7%) treatment-related AE withdrawals and 2/28 (7.1%) drug-related SAEs (abstract: lupus + idiopathic autoimmune hemolytic anemia; Results/Table 2: SLE + non-infectious pneumonitis; open-label ALS Phase 2a NCT04569435 [N=24 enrolled] sponsor press releases reported 13 12-wk and 7 24-wk completers with CSF C1q/C3d engagement without peer-reviewed publication); systemic IV IgG, IV BBB shuttles, and unmodified q4w IT Fab (~12h CSF t1/2) are rejected in favor of ECM-anchored HLE IT anti-gC1q Fab/nanobody or microglial C1QA/B ASO/di-siRNA gated on Scott-Hewitt 2024 RNP and Lobsiger 2013 C-bouton safety.",
+        "source_id_or_locator": "NCT04569435;NCT04514367;PMID:41787606;PMID:38942014;10.1016/j.cell.2024.05.058;PMID:24170856;PMID:23946404",
+        "notes": "In HD Phase 2 NCT04514367 (N=28, PMC13307253, PMID:41787606), IV ANX005 (75-100 mg/kg) achieved 0.2-0.25% CSF:serum penetration that saturated baseline CSF C1q, yet recorded 3/28 (10.7%) treatment-related AE withdrawals and 2/28 (7.1%) drug-related SAEs (abstract: lupus + idiopathic autoimmune hemolytic anemia; Results/Table 2: SLE + non-infectious pneumonitis; hypothesized to reflect peripheral ~180 nM serum C1q sink depletion [MODEL_PRIOR]; open-label ALS Phase 2a NCT04569435 [N=24 enrolled; 13 12-wk & 7 24-wk completers] unreviewed sponsor SEC 10-K / PR disclosures reported CSF C1q/C3d engagement plus less ALSFRS-R decline and blood NfL stabilization in an exploratory early/high-complement subgroup); systemic IV IgG, IV BBB shuttles, and unmodified q4w IT Fab (~12h CSF t1/2) are rejected in favor of ECM-anchored HLE IT anti-gC1q Fab/nanobody or microglial C1QA/B ASO/di-siRNA gated on Scott-Hewitt 2024 RNP, Stephan 2013 aging C1q (PMID:23946404), and Lobsiger 2013 C-bouton safety.",
     })
     ev_map["EV-P2-T4-002"].update({
         "source_id_or_locator": "DS031_ZHANG:6d_MN_ALS_vs._HC;NCT04514367;PMID:41787606;PMID:24170856",
         "cohort_and_stratum": "Zhang 2026 human cervical anterior-horn surviving MN Visium spots (N=14 donors, Seurat MAST) & 2-compartment human CSF turnover PK",
-        "effect_estimate": "6d_MN C1QC avg_log2FC=+2.3735 (C1S +1.7520, C1QB +1.6245 [BH=3.49e-6], C1QA +1.4870 [BH=2.76e-4]; VAChT intact); IV TfR-IgG depletes 99.99% of proposed 180nM serum C1q & unmodified q4w IT 48kDa Fab washes out (t1/2~12h -> <0.001nM) vs IT pump/ECM-anchored HLE Fab [MODEL_PRIOR]",
-        "notes": "PMC13307253 (PMID:41787606, HD NCT04514367 N=28) proved IV ANX005 saturates low-abundance CSF C1q at 0.2-0.25% CSF:serum penetration but fails clinically via peripheral serum C1q sink ablation (3/28 treatment-related AE withdrawals, 2/28 drug-related SAEs), while ~4x/day human CSF bulk flow clears unmodified q4w 48 kDa IT Fab (intravitreal glaucoma ANX007 is non-CNS), motivating ECM-anchored HLE IT Fab/nanobody or IT microglial C1QA/B ASO/di-siRNA.",
+        "effect_estimate": "6d_MN C1QC avg_log2FC=+2.3735 (C1S +1.7520, C1QB +1.6245 [BH=3.49e-6], C1QA +1.4870 [BH=2.76e-4]; VAChT intact); IV TfR-IgG depletes 99.99% of hypothesized 180nM serum C1q & unmodified q4w IT 48kDa Fab washes out (t1/2~12h -> <0.001nM) vs IT pump/ECM-anchored HLE Fab [MODEL_PRIOR]",
+        "notes": "PMC13307253 (PMID:41787606, HD NCT04514367 N=28) proved IV ANX005 saturates low-abundance CSF C1q at 0.2-0.25% CSF:serum penetration while recording 3/28 treatment-related AE withdrawals and 2/28 drug-related SAEs (hypothesized to reflect peripheral ~180 nM serum C1q sink depletion [MODEL_PRIOR]), and ~4x/day human CSF bulk flow clears unmodified q4w 48 kDa IT Fab (intravitreal glaucoma ANX007 is non-CNS), motivating ECM-anchored HLE IT Fab/nanobody or IT microglial C1QA/B ASO/di-siRNA.",
     })

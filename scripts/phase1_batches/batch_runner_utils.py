@@ -16,6 +16,9 @@ ROOT = Path(__file__).resolve().parents[2]
 REG_DIR = ROOT / "registries"
 
 
+TEXT_EXTS = {".csv", ".tsv", ".json", ".bed", ".txt", ".xml", ".md", ".cif", ".gtf"}
+
+
 def _sha256_path(path: Path) -> str:
     if path.is_file():
         h = hashlib.sha256()
@@ -31,14 +34,41 @@ def _sha256_path(path: Path) -> str:
     return agg.hexdigest()
 
 
-def _dir_matches_per_file_lock(dataset_id: str, target: Path) -> bool:
+def _file_matches_sha256(fp: Path, expected: str) -> bool:
+    """Verify exact file content against expected SHA-256, permitting LF/CRLF equivalence on text files."""
+    if not fp.is_file():
+        return False
+    if _sha256_path(fp) == expected:
+        return True
+    if fp.suffix.lower() in TEXT_EXTS:
+        raw = fp.read_bytes()
+        lf = raw.replace(b"\r\n", b"\n")
+        if hashlib.sha256(lf).hexdigest() == expected:
+            return True
+        if hashlib.sha256(lf.replace(b"\n", b"\r\n")).hexdigest() == expected:
+            return True
+    return False
+
+
+def _dir_matches_per_file_lock(dataset_id: str, target: Path, expected_dir_sha: str) -> bool:
+    """Verify exact directory file roster, per-file content hashes (EOL-equivalent for text), and aggregate digest."""
     lock_fp = ROOT / "schemas" / "dataset_files_lock.json"
     if not target.is_dir() or not lock_fp.is_file():
         return False
     lock_raw = json.loads(lock_fp.read_text(encoding="utf-8"))
     files = ((lock_raw.get("datasets", lock_raw)).get(dataset_id) or {}).get("files") or []
-    data_files = [f for f in files if Path(f["rel"]).suffix.lower() in {".csv", ".tsv", ".xlsx", ".xls", ".cif", ".bed", ".gtf", ".gz"}]
-    return bool(data_files) and all((target / f["rel"]).is_file() and _sha256_path(target / f["rel"]) == f["sha256"] for f in data_files)
+    if not files:
+        return False
+    actual_rels = sorted(p.relative_to(target).as_posix() for p in target.rglob("*") if p.is_file())
+    locked_sorted = sorted(files, key=lambda f: f["rel"])
+    if actual_rels != [f["rel"] for f in locked_sorted]:
+        return False
+    if not all(_file_matches_sha256(target / f["rel"], f["sha256"]) for f in locked_sorted):
+        return False
+    agg = hashlib.sha256()
+    for f in locked_sorted:
+        agg.update(f"{f['rel']}:{f['sha256']}\n".encode("utf-8"))
+    return agg.hexdigest() == expected_dir_sha
 
 
 def resolve_dataset_path(dataset_id: str, verify_hash: bool = False) -> Path:
@@ -52,9 +82,14 @@ def resolve_dataset_path(dataset_id: str, verify_hash: bool = False) -> Path:
     if not target.exists():
         raise FileNotFoundError(f"Missing staged dataset path: {target}")
     if verify_hash:
-        actual = _sha256_path(target)
-        if actual != row["sha256"] and not _dir_matches_per_file_lock(dataset_id, target):
-            raise ValueError(f"SHA-256 mismatch on {dataset_id}: {actual} != {row['sha256']}")
+        expected = str(row["sha256"])
+        if target.is_file():
+            if not _file_matches_sha256(target, expected):
+                raise ValueError(f"SHA-256 mismatch on {dataset_id}: {_sha256_path(target)} != {expected}")
+        else:
+            actual = _sha256_path(target)
+            if actual != expected and not _dir_matches_per_file_lock(dataset_id, target, expected):
+                raise ValueError(f"SHA-256 mismatch on {dataset_id}: {actual} != {expected}")
     return target
 
 

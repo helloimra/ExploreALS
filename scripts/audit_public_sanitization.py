@@ -105,8 +105,9 @@ def _run_selftest() -> None:
 
 def main() -> None:
     _run_selftest()
+    default_target = ROOT / "reports" / "github_pages" if (ROOT / "reports" / "github_pages").is_dir() else ROOT
     ap = argparse.ArgumentParser(description="Audit exported public repository for host leaks & oligomer strings.")
-    ap.add_argument("--target", default=str(ROOT / "reports" / "github_pages"), help="Directory to scan.")
+    ap.add_argument("--target", default=str(default_target), help="Directory to scan.")
     args = ap.parse_args()
     target = Path(args.target).resolve()
     errs = audit_directory(target)

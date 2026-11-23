@@ -213,15 +213,20 @@ function decBadge(d, id=''){
   if(d==='RECLASSIFY_BENCHMARK_OR_BIOMARKER'){
     if(id==='EALS-013'||id==='EALS-032') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Approved clinical ALS standard-of-care & in vitro screen calibration benchmark">SOC Benchmark</span>';
     if(id==='EALS-003') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Commercially withdrawn drug retained strictly as a human physiological Kv7.2/7.3 PD ruler">Withdrawn PD Calibrator</span>';
-    if(id==='EALS-017') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Multi-cohort validated CSF symptomatic staging & microglial/lysosomal PD panel (rs3831317-genotyped)">CSF Staging Panel</span>';
+    if(id==='EALS-017') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Multi-cohort replicated CSF symptomatic staging & microglial/lysosomal PD candidate panel (rs3831317-genotyped)">CSF Staging Panel</span>';
     if(id==='EALS-043'||id==='EALS-044'||id==='EALS-045') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Pre-validation untargeted CSF proteomic candidate marker requiring targeted PRM / immunoassay bridging">Candidate CSF Marker</span>';
     return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Approved SOC drug, PD calibrator, or fluid staging biomarker">Benchmark</span>';
   }
   return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap" title="Scientifically falsified by human RCT futility, CNS PK/safety wall, or assay confounding">Drop &middot; Falsified</span>';
 }
-function statusBadge(st){
+function statusBadge(st, c=null){
   if(st==='PASS_CLEAN_GE2MM') return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--success)] border border-[var(--success)] text-xs whitespace-nowrap" title="Zero 0-mm, 1-mm, wobble, bulge, or 18-nt sub-core off-target hits on constrained CNS genes">Pass &middot; Clean (&ge;2mm)</span>';
-  if(st.startsWith('CAUTION')) return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--warning)] border border-[var(--warning)] text-xs whitespace-nowrap" title="Non-constrained 1-mm, wobble, or 25bp-SS 2-mm hit (zero constrained CNS pLI >= 0.9 hits) — empirical microwalk required">Caution &middot; 1-mm/Wob/2-mm</span>';
+  if(st.startsWith('CAUTION')){
+    const pts = c && c.sp === '0/0/0' ? String(c.pm || '').split('/') : [];
+    const m25 = (pts.length === 6 && pts[0]==='0' && pts[1]==='0' && pts[2]==='0' && /^[1-9][0-9]*$/.test(pts[3]) && pts[4]==='0' && pts[5]==='0') ? [null, pts[3]] : null;
+    if(m25) return `<span class="px-1.5 py-0.5 rounded font-mono text-[var(--warning)] border border-[var(--warning)] text-xs whitespace-nowrap" title="Zero 0-mm, 1-mm, wobble, 1-nt bulge, or 18-nt sub-core reference hits; ${m25[1]} non-constrained 25bp-SS 2-mm hit(s) — empirical microwalk required">Caution &middot; 25bp 2-mm (${m25[1]})</span>`;
+    return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--warning)] border border-[var(--warning)] text-xs whitespace-nowrap" title="Non-constrained 1-mm, wobble, or 25bp-SS 2-mm hit (zero constrained CNS pLI >= 0.9 hits) — empirical microwalk required">Caution &middot; 1-mm/Wob/2-mm</span>';
+  }
   if(st.startsWith('WARN')) return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap" title="1-mm, wobble, or 1-nt bulge hit on a LoF-intolerant (pLI >= 0.9) CNS gene">Warn &middot; CNS Hit</span>';
   if(st.startsWith('FAIL')) return '<span class="px-1.5 py-0.5 rounded font-mono font-bold text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap" title="Exact 0-mismatch off-target hybridization hit across GENCODE v46">Fail &middot; 0-mm</span>';
   return '<span class="text-[var(--muted-foreground)] font-mono text-xs">None</span>';
@@ -446,7 +451,7 @@ function renderDetail(selHidden=false){
     cisBox = `<div class="p-2 rounded border border-[var(--border)] bg-[var(--background)] space-y-1">
       <div class="flex items-center justify-between gap-1.5 flex-wrap">
         <span class="font-mono font-semibold text-[var(--foreground)]">${r.iv!=='NONE'?'Lead Window':'Target Window'} (${leadCis.len}bp &middot; ${leadCis.tm}&deg;C)</span>
-        ${statusBadge(leadCis.st)}
+        ${statusBadge(leadCis.st, leadCis)}
       </div>
       <div class="font-mono flex flex-wrap items-center justify-between gap-1.5">
         <span>${mkExtA(ensUrl, esc(leadCis.iv))} &middot; ${mkExtA(atlUrl, 'Atlas &nearr;')} &middot; ${mkExtA(ucscUrl, 'UCSC &nearr;')}</span>
@@ -612,7 +617,7 @@ function renderIntervals(){
       <td class="py-2 px-2 font-mono tabular-nums whitespace-nowrap">${esc(c.sp).replaceAll('/',' \u00b7 ')}</td>
       <td class="py-2 px-2 font-mono tabular-nums whitespace-nowrap"><div>${esc(c.pm).replaceAll('/',' \u00b7 ')}</div></td>
       <td class="py-2 px-2 font-mono text-xs max-w-[260px] break-words">${linkifyCisFlags(c.flags)}</td>
-      <td class="py-2 px-2 border-r border-[var(--card-border)]">${statusBadge(c.st)}</td>
+      <td class="py-2 px-2 border-r border-[var(--card-border)]">${statusBadge(c.st, c)}</td>
       <td class="py-2 px-2 font-mono whitespace-nowrap"><div>${mkExtA(atlUrl, 'Atlas &nearr;')}</div><div class="mt-0.5">${mkExtA(ucscUrl, 'UCSC &nearr;')}</div></td>
     </tr>`;
   }).join('') : `<tr><td colspan="12" class="py-6 px-4 text-center text-[var(--muted-foreground)]">No GRCh38 intervals match active filters. <button type="button" data-reset-intervals="1" class="text-[var(--link)] underline font-mono ml-1 cursor-pointer">Reset filters</button></td></tr>`;

@@ -247,7 +247,7 @@ def main() -> None:
         elif uid == "UPD-2026-11-18-01":
             u["prior_state_or_assumption"] = "Intermittent pulsed PIKfyve inhibition (EALS-020) models typically assume an occupancy dead-zone before endolysosomal vacuolation onset (~79% parameter-grid pass rate) without accounting for immediate +PI(3)P-driven LRRK2/CASM stress coupling."
             u["new_evidence_or_revision"] = "Kuwahara et al. (2026, Life Sci Alliance, PMID:42994990) demonstrated direct, threshold-free PIKfyve -> +PI(3)P -> LRRK2 Rab10-pThr73 / ATG16L1 CASM recruitment alongside Drosophila C9orf72 secreted DPR data (DOI:10.64898/2026.11.09.765393). In modeled pulsed q48h–q72h turnover simulations (>=55% substrate clearance and end-of-cycle stress <=0.05), removing the occupancy dead-zone cuts grid survival from ~79% (64/81) to ~30% (24/81) at matched 10–20 h repair and 0% (0/81) at slower 24–48 h postmitotic CASM washout."
-            u["portfolio_and_gate_consequence"] = u["portfolio_and_gate_consequence"].replace("under Epistemic Asymmetry ", "").replace("kill-gate", "validation gate")
+            u["portfolio_and_gate_consequence"] = "Retains EALS-020 (#23/52, Keep · Exploratory) (125 mg BID AIT-101 NCT05163886 showed Wk-12 plasma & OLE CSF NfL rises without powered clinical efficacy testing, while continuous QD VRG50635 NCT06215755 terminated for lack of Phase 2 risk-benefit; pulsed q48h–q72h remains clinically untested) behind a 14-day human iPSC-MN CASM washout and intracellular + secreted DPR mass-balance validation gate."
     u_rows.insert(0, dict(UPD_2026_11_19_01))
     u_rows.insert(0, dict(UPD_2026_11_22_01))
     def _map_anchor_tok(tok: str) -> str:

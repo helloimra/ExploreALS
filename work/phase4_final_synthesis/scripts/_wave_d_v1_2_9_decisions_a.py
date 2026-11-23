@@ -6,7 +6,7 @@ TS_WAVE_D = "2026-11-22T01:20:00Z"
 
 def apply_wave_d_decision_patches_a(dm: dict[str, dict[str, str]]) -> None:
     dm["C004"].update({
-        "causal_vs_reactive_assessment": "NON_CAUSAL_RODENT_PROMOTER_ARTIFACT: Human in vivo EAAT2 transcriptional induction unvalidated (CHEMBL161 HTS EC50 >10 uM despite fetal astrocyte reporter activity in Lee et al. 2008 PMID:18326497) while endogenous human ALS astrocytic SLC1A2 mRNA is intact",
+        "causal_vs_reactive_assessment": "NON_CAUSAL_RODENT_PROMOTER_ARTIFACT: Human in vivo EAAT2 transcriptional induction unvalidated (CHEMBL161 HTS EC50 >10 uM despite fetal astrocyte reporter activity in Lee et al. 2008 PMID:18326497) while analyzed human ALS astrocytic/spinal cohorts show no statistically detected SLC1A2 mRNA reduction",
         "evidence_proves_hypothesis": (
             "Stage 1/2 human ALS PK (NCT00349622, PMID:23613806, PMID:24771634, N=66) confirmed 2-4 g/d IV ceftriaxone sustained ~2-6 uM CSF (>1.0 uM rodent target), "
             "and Lee et al. 2008 (PMID:18326497) reported NF-kappaB-mediated EAAT2 promoter activation in cultured human fetal astrocytes."
@@ -14,11 +14,11 @@ def apply_wave_d_decision_patches_a(dm: dict[str, dict[str, str]]) -> None:
         "evidence_disproves_hypothesis": (
             "Phase 3 Stage 3 RCT NCT00349622 (Cudkowicz et al. 2014 Lancet Neurol PMID:25297012, N=514 randomized [341 vs 173] / N=513 analyzed [340 at 4 g/d IV + ursodiol vs 173 placebo]) "
             "was stopped early by DSMB for futility on co-primary ALSFRS-R slope (+0.09 u/mo, -1.22 vs -1.31, p=0.2370) and survival (HR=0.90 [0.71-1.15], p=0.4146) while causing hepatobiliary AEs in 211/340 (62%) vs 19/173 (11%) (p<0.0001) and biliary SAEs in 41/340 (12.1%) vs 0/173 (0%); "
-            "CHEMBL161 HTS records human EAAT2 EC50 >10 uM, Bye 2025 survival was null (+0.274d, p=0.2568, q=0.4657), and human M1 astrocyte (p=0.9086) and NYGC spinal SLC1A2 mRNA (p=0.61-0.72) show zero transcriptional deficit."
+            "CHEMBL161 HTS records human EAAT2 EC50 >10 uM, Bye 2025 survival was null (+0.274d, p=0.2568, q=0.4657), and analyzed human M1 astrocyte (p=0.9086) and NYGC spinal SLC1A2 mRNA cohorts (p=0.61-0.72) show no statistically detected transcriptional reduction."
         ),
         "factual_justification": (
             "Falsified in a definitive 513-patient Phase 3 ALS RCT (NCT00349622, PMID:25297012: ALSFRS-R p=0.2370, survival HR=0.90 p=0.4146, 12.1% vs 0% biliary SAEs) despite achieving ~2-6 uM human CSF exposure (PMID:24771634), "
-            "corroborated by CHEMBL161 human EAAT2 EC50 >10 uM, null sALS iPSC-MN survival (+0.274d, p=0.2568), and intact endogenous human ALS astrocytic SLC1A2 mRNA (scoped strictly to IV ceftriaxone; distinct from direct catalytic EAAT2 transport/trafficking enhancers)."
+            "corroborated by CHEMBL161 human EAAT2 EC50 >10 uM, null sALS iPSC-MN survival (+0.274d, p=0.2568), and no statistically detected SLC1A2 mRNA reduction in analyzed human ALS astrocyte/spinal cohorts (scoped strictly to IV ceftriaxone; distinct from direct catalytic EAAT2 transport/trafficking enhancers)."
         ),
         "updated_at": TS_WAVE_D,
     })
@@ -27,7 +27,7 @@ def apply_wave_d_decision_patches_a(dm: dict[str, dict[str, str]]) -> None:
         "supporting_evidence_ids": "EV-B5-010;EV-B5-013;EV-B5-014;EV-B5-015;EV-B5-016",
         "evidence_proves_hypothesis": (
             "Ranked #3/107 in Bye 2025 at 2.5 uM (+3.246d across 15 sALS iPSC-MN lines, 14/15 positive, p=2.59e-6, q=5.54e-5, PMID:41286450) "
-            "and achieves physiological human NMDA receptor engagement in human CSF (~0.25-0.60 uM at 20 mg/d to ~0.5-1.2 uM at 40 mg/d vs human NMDA Ki=0.54-1.0 uM, PMID:7478269, NDA021487)."
+            "and reaches pharmacologically plausible human CSF concentrations (~0.25-0.60 uM at 20 mg/d to ~0.5-1.2 uM at 40 mg/d vs in vitro human NMDA Ki=0.54-1.0 uM, PMID:7478269, NDA021487; direct in vivo ALS patient receptor occupancy unmeasured)."
         ),
         "evidence_disproves_hypothesis": (
             "Failed Phase 3 MND-SMART Stage 2 comparison (NCT04302870, Pal et al. 2024 Lancet Neurol PMID:39307154: n=355 ALSFRS-R analyzed [175 memantine 20 mg/d vs 180 placebo] of 369 2-arm randomized [183 vs 186] within N=554 3-arm Cycle 1; ALSFRS-R -0.650 vs -0.655 pts/mo, p=0.36; ITT deaths 49/183 vs 48/186, HR=0.92 p=0.71), "
@@ -35,15 +35,15 @@ def apply_wave_d_decision_patches_a(dm: dict[str, dict[str, str]]) -> None:
             "and MEDALS (NCT00353665, PMID:20565333, N=63), while human ALS M1 corticospinal & cervical neurons already downregulate GRIN1 (log2FC=-0.737, p=0.00167)."
         ),
         "factual_justification": (
-            "Target-engaged human clinical futility across Phase 3 MND-SMART (NCT04302870, PMID:39307154: n=355 2-arm Stage 2 comparison, p=0.36, survival HR=0.92), "
-            "double-dose 40 mg/d Phase 2b TAME (Bhai et al. 2025 PMID:39511965, N=99 enrolled / N=89 randomized / N=52 completing treatment, null ALSFRS-R & neurofilaments), and MEDALS (N=63) at NMDA-engaging human CSF levels (~0.25-1.2 uM) "
-            "refutes symptomatic pan-NMDA pore blockade (whereas 2.5 uM monoculture iPSC-MN rescue plausibly reflects an untested culture-media excitotoxicity mechanism; preserving early NPTX2/TT-SICI-gated KCNQ2 splice rescue)."
+            "Consistent human clinical futility across Phase 3 MND-SMART (NCT04302870, PMID:39307154: n=355 2-arm Stage 2 comparison, p=0.36, survival HR=0.92), "
+            "double-dose 40 mg/d Phase 2b TAME (Bhai et al. 2025 PMID:39511965, N=99 enrolled / N=89 randomized / N=52 completing treatment, null ALSFRS-R & neurofilaments), and MEDALS (N=63) at pharmacologically plausible CSF levels (~0.25-1.2 uM vs in vitro NMDA Ki 0.54-1.0 uM; direct patient receptor occupancy unmeasured) "
+            "refutes the tested oral memantine regimens (whereas 2.5 uM monoculture iPSC-MN rescue plausibly reflects an untested culture-media excitotoxicity mechanism; preserving early NPTX2/TT-SICI-gated KCNQ2 splice rescue)."
         ),
         "updated_at": TS_WAVE_D,
     })
 
     dm["C009"].update({
-        "causal_vs_reactive_assessment": "OFF_TARGET_MONOAMINERGIC_SEDATION_WITH_CLASS_ISR_FAILURE: Dose-limiting 5-HT2A/alpha1A sedation, anorectic mCPP metabolite & selective eIF2B class futility/NfL rise",
+        "causal_vs_reactive_assessment": "OFF_TARGET_MONOAMINERGIC_SEDATION_WITH_CLASS_ISR_FAILURE: Dose-limiting 5-HT2A/alpha1A sedation, anorectic mCPP metabolite & negative outcomes with tested selective eIF2B activators ABBV-CLS-7262/DNL343",
         "evidence_proves_hypothesis": (
             "Ranked #4/107 in Bye 2025 at 2.5 uM (+1.8458d across 15 sALS iPSC-MN lines, 13/15 > DMSO, p=0.00150, q=0.01610, PMID:41286450) "
             "following 20-40 uM cellular ISR translational-restoration screening and murine prion/tauopathy neuroprotection in Halliday et al. 2017 (Brain PMID:28430857)."
@@ -51,16 +51,17 @@ def apply_wave_d_decision_patches_a(dm: dict[str, dict[str, str]]) -> None:
         "evidence_disproves_hypothesis": (
             "Failed Phase 3 MND-SMART Stage 2 comparison (NCT04302870, Pal et al. 2024 PMID:39307154: n=355 analyzed [175 trazodone 200 mg/d vs 180 placebo] of N=371 2-arm randomized; adjusted ALSFRS-R diff +0.065 pts/mo [95% CI -0.095, +0.226], p=0.24; deaths 52/185 vs 48/186, HR=0.95; AEs 90% vs 77%); "
             "at 200 mg/d, Cu,plasma (~187-430 nM) and [MODEL_PRIOR] Cu,brain (~120-280 nM at Kp,uu=0.65) sit 9-21x below 2.5 uM, 71-330x below Halliday 2017's 20-40 uM ISR assays, and 23-160x below Wong et al. 2026's 10-30 uM hCMEC/D3 endothelial sST2 suppression concentrations (PMID:42446992: -35% protein / 0% mRNA at 10 uM, 0 human CSF measurements; leaving >=70% CNS sST2 depletion EALS-007 untested unless archived MND-SMART CSF shows >=50% sST2 drop) while exceeding 5-HT2A/alpha1A Ki (17-47 nM) by 6-16x and generating anorectic 5-HT2C agonist mCPP; "
-            "moreover, selective brain-penetrant eIF2B activators failed Phase 2/3 HEALEY Regimen F (ABBV-CLS-7262 NCT05740813: Dose 1 DRR=1.06, Serum NfL GMR=1.092 p=0.0253; Dose 2 DRR=0.96 [0.753, 1.220]) and Regimen G (DNL343 NCT05842941, N=249 randomized [N=325 shared-placebo efficacy cohort]: DRR=1.05 [0.84, 1.31], Pr<1=0.37, log-NfL +0.081 p=0.03)."
+            "moreover, two tested selective brain-penetrant eIF2B activators were negative in Phase 2/3 HEALEY Regimen F (ABBV-CLS-7262 NCT05740813: Dose 1 DRR=1.06, Serum NfL GMR=1.092 p=0.0253; Dose 2 DRR=0.96 [0.753, 1.220], Serum NfL p=0.1364) and Regimen G (DNL343 NCT05842941, N=249 randomized [N=325 shared-placebo efficacy cohort]: DRR=1.05 [0.84, 1.31], Pr<1=0.37, log-NfL +0.081 p=0.03)."
         ),
         "factual_justification": (
-            "Directly falsified in Phase 3 MND-SMART (NCT04302870, PMID:39307154: n=355 Stage 2 analyzed / N=371 randomized, p=0.24, HR=0.95), reinforced by a 71-330x [MODEL_PRIOR] unbound brain PK deficit vs 20-40 uM ISR rescue (PMID:28430857) "
-            "gated by 5-HT2A/alpha1A sedation + mCPP anorexia, and class-wide Phase 2/3 ALS futility with ~8-9% NfL elevation under selective eIF2B activators ABBV-CLS-7262 (NCT05740813) and DNL343 (NCT05842941; preserving selective DNAJB2a and ATG4B proteostasis rescue)."
+            "Directly falsified as a 200 mg/d oral regimen in Phase 3 MND-SMART (NCT04302870, PMID:39307154: n=355 Stage 2 analyzed / N=371 randomized, p=0.24, HR=0.95), reinforced by a 71-330x [MODEL_PRIOR] unbound brain PK deficit vs 20-40 uM ISR rescue (PMID:28430857; trazodone CNS ISR engagement unmeasured) "
+            "gated by 5-HT2A/alpha1A sedation + mCPP anorexia, alongside negative Phase 2/3 outcomes and ~8-9% blood NfL increases observed with the named selective eIF2B activators ABBV-CLS-7262 (Dose 1 p=0.0253; Dose 2 p=0.1364, NCT05740813) and DNL343 (p=0.03, NCT05842941) at their tested regimens (preserving selective DNAJB2a and ATG4B proteostasis rescue)."
         ),
         "updated_at": TS_WAVE_D,
     })
 
     dm["C012"].update({
+        "causal_vs_reactive_assessment": "DELETERIOUS_HIGH_DOSE_PERAMPANEL_SIGNAL: High-dose 8 mg/d perampanel worsened ALSFRS-R decline (-8.4 pts, p=0.0145, 67% dropout; 4 mg/d -13.4 vs -9.0 pts, p=0.1476; talampanel nonsignificant trend)",
         "evidence_proves_hypothesis": (
             "Potent CNS-penetrant non-competitive AMPA receptor (GRIA1-4) antagonist (human GRIA1 IC50=243-623 nM, CHEMBL1214124) "
             "that confirmed human ALS motor-cortex TMS motor-threshold target engagement in single-ascending-dose trial NCT03793868 (N=22)."
@@ -71,8 +72,8 @@ def apply_wave_d_decision_patches_a(dm: dict[str, dict[str, str]]) -> None:
             "with higher SAEs (p=0.0483) and 33% (8 mg/d) & 64% (4 mg/d, 14/22) vs 82% (18/22) placebo completion; corroborated by NCT03377309 (N=6 halted due to adverse events) and NCT03020797 (N=12 terminated for low enrollment & disease-progression dropouts), prior pan-AMPA talampanel Phase 2 (PMID:19961264, N=59: nonsignificant slowing trend with poorer tolerability), NDA202834 Boxed Warning, and null Bye 2025 survival (+0.113d, p=0.7610)."
         ),
         "factual_justification": (
-            "Direct randomized human ALS clinical harm and CNS intolerability at TMS-confirmed motor-cortex target engagement: Phase 2 RCT NCT03019419 (Aizawa et al. 2022 PMID:34191081, N=65 ITT / 66 randomized) "
-            "demonstrated significant 48-wk ALSFRS-R worsening at 8 mg/d (-8.4 pts, p=0.0145; bulbar p=0.0206), higher SAEs (p=0.0483), and 67% dropout (33% [8 mg] & 64% [4 mg] vs 82% placebo completion), corroborated by NCT03377309 AE halt & NCT03020797 low-enrollment/progression stop, talampanel Phase 2 (PMID:19961264: nonsignificant slowing trend with poorer tolerability), and null sALS iPSC-MN survival (+0.113d, q=0.857; scoped to non-selective pan-AMPA blockade, preserving upstream ADAR2/GRIA2 Q607R RNA-editing rescue)."
+            "Randomized human ALS clinical worsening and CNS intolerability with high-dose oral perampanel at TMS-confirmed motor-cortex target engagement: Phase 2 RCT NCT03019419 (Aizawa et al. 2022 PMID:34191081, N=65 ITT / 66 randomized) "
+            "demonstrated significant 48-wk ALSFRS-R worsening at 8 mg/d (-8.4 pts, p=0.0145; bulbar p=0.0206; 4 mg/d p=0.1476), higher SAEs (p=0.0483), and 67% dropout (33% [8 mg] & 64% [4 mg] vs 82% placebo completion), corroborated by NCT03377309 AE halt & NCT03020797 low-enrollment/progression stop, talampanel Phase 2 (PMID:19961264: nonsignificant slowing trend with poorer tolerability), and null sALS iPSC-MN survival (+0.113d, q=0.857; scoped to studied oral perampanel / unstratified AMPA antagonist regimens, preserving upstream ADAR2/GRIA2 Q607R RNA-editing rescue)."
         ),
         "updated_at": TS_WAVE_D,
     })
@@ -101,13 +102,13 @@ def apply_wave_d_decision_patches_a(dm: dict[str, dict[str, str]]) -> None:
         ),
         "evidence_disproves_hypothesis": (
             "At 16 mg/d ER MTD (76.9% GI AEs blocking dose escalation, Table S3), human ALS Week-24 CSF ropinirole (Table S3 mean 17,884 pg/mL = 68.68 nM on free-base MW 260.38 vs ~18 nM stated in Morimoto 2023 Discussion; engages DRD2/3 Ki 2.9-7.2 nM) "
-            "sits 14.6-556x below 1-10 uM D2R-independent SREBP2/antioxidant sALS rescue (PMID:37267913, PMID:40826812; despite 0.1-10 nM mutant FUS/TDP-43 Fig. S5 activity) while human spinal cord lacks DRD3 (0% >=1 CPM; Lumbar DRD2 RIN+GC OLS beta=-0.0651, p=0.4320, N=223); "
+            "sits 14.6-556x below nominal 1-10 uM D2R-independent SREBP2/antioxidant sALS assay concentrations (PMID:37267913, PMID:40826812; despite 0.1-10 nM mutant FUS/TDP-43 Fig. S5 activity) while human spinal cord lacks DRD3 (0% >=1 CPM; Lumbar DRD2 RIN+GC OLS beta=-0.0651, p=0.4320, N=223); "
             "Bye 2025 showed FDR-significant survival harm across 15 sALS iPSC-MN lines (-0.688d, 12/15 negative, p=0.00292, q=0.0209), cortical BA9 discovery RNA collapsed after GC adjustment, blinded 24-wk ROPALS ALSFRS-R was null (+1.46, 95% CI -3.15 to 6.07, p=0.761, N=20), "
             "and UK Phase 2a EXPERTS-ALS biomarker screen (ISRCTN15525855, 42 dosed / 22 Wk18 analyzed; distinct from a Phase 3 efficacy RCT) closed the 16 mg/d ropinirole arm on Oct 6, 2026 for blood-NfL biomarker futility."
         ),
         "factual_justification": (
-            "Insurmountable 14.6-556x human ALS CSF exposure deficit at GI-limited 16 mg/d MTD (Table S3 68.68 nM / Discussion ~18 nM CSF vs 1-10 uM non-D2 sALS rescue, PMID:37267913, PMID:40826812, with absent spinal DRD3 & Lumbar DRD2 beta=-0.0651, p=0.4320, despite 0.1-10 nM mutant FUS/TDP-43 Fig. S5 activity) "
-            "plus FDR-significant survival harm across 15 sALS iPSC-MN lines (-0.688d, q=0.0209) and postmortem GC collapse, corroborated by null blinded 24-wk ROPALS (p=0.761, N=20) and Oct 2026 UK Phase 2a EXPERTS-ALS blood-NfL biomarker futility stop (ISRCTN15525855)."
+            "Substantial 14.6-556x assay-concentration gap at GI-limited 16 mg/d MTD (Table S3 mean 68.68 nM / Discussion ~18 nM CSF vs nominal 1-10 uM non-D2 sALS assay concentrations, PMID:37267913, PMID:40826812, with absent spinal DRD3 & Lumbar DRD2 beta=-0.0651, p=0.4320, despite 0.1-10 nM mutant FUS/TDP-43 Fig. S5 activity) "
+            "plus FDR-significant survival harm across 15 sALS iPSC-MN lines (-0.688d, q=0.0209) and postmortem GC collapse, corroborated by null blinded 24-wk ROPALS (p=0.761, N=20) and Oct 2026 UK Phase 2a EXPERTS-ALS blood-NfL biomarker futility stop (ISRCTN15525855; single-agent clinical efficacy RCT uncompleted)."
         ),
         "updated_at": TS_WAVE_D,
     })

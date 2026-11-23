@@ -37,9 +37,9 @@ def apply_wave_d_evidence_part_b(ev_map: dict[str, dict[str, str]]) -> None:
         "source_id_or_locator": "OpenFDA:NDA021038;OpenFDA:NDA215390;PMID:9356115;PMID:9249114;ChEMBL:CHEMBL778",
         "cohort_and_stratum": "Human IV ICU sedation PK (NDA021038 Precedex 0.2-0.7 ug/kg/h) & Talke et al. 1997 paired human lumbar CSF PK (PMID:9356115)",
         "assay_and_contrast": "Measured human unbound plasma & lumbar CSF concentration vs 2,500 nM screen & ADRA2A Ki",
-        "effect_direction": "SEVERE_6700_TO_10000X_MEASURED_HUMAN_CNS_GAP",
-        "effect_estimate": "Cu,plasma=0.09-0.37 nM (NDA021038 fu=0.06) & measured human lumbar CSF ~0.20-0.35 nM (Talke 1997 PMID:9356115) vs 2,500 nM screen (~6,700-10,000x gap)",
-        "notes": "FDA NDA021038 (Precedex, MW 200.28 g/mol, 94% bound -> fu=0.06) and Talke et al. 1997 Anesth Analg (PMID:9356115: human lumbar CSF ~4% +/- 1% of total plasma = ~0.25 nM; companion lumbar CSF pressure study PMID:9249114) directly establish a ~6,700-10,000x human CNS gap without relying on a modeled Kpuu guess; sublingual Igalmi (NDA215390, 120-180 ug) causes 23% somnolence & 18% orthostasis at Cu,p ~0.18 nM.",
+        "effect_direction": "SEVERE_7143_TO_12500X_MEASURED_HUMAN_CSF_GAP",
+        "effect_estimate": "Measured human lumbar total CSF ~0.20-0.35 nM (Talke 1997 PMID:9356115: ~7,143-12,500x below nominal 2,500 nM screen); [MODEL_PRIOR] NDA021038 ~94%-bound fu~0.06 Cu,plasma=0.09-0.37 nM (~6,757-27,778x gap)",
+        "notes": "Talke et al. 1997 Anesth Analg (PMID:9356115: human lumbar total CSF ~4% +/- 1% of total plasma = ~0.20-0.35 nM, ~7,143-12,500x below nominal 2,500 nM screen; companion lumbar CSF pressure study PMID:9249114) directly establishes nanomolar human CSF exposure alongside [MODEL_PRIOR] FDA NDA021038 (Precedex, MW 200.28 g/mol, ~94% bound -> fu~0.06) unbound plasma 0.09-0.37 nM (~6,757-27,778x below nominal screen, noting nominal screen dose does not define a minimum effective concentration); sublingual Igalmi (NDA215390, 120-180 ug) causes 23% somnolence & 18% orthostasis at Cu,p ~0.18 nM.",
     })
     ev_map["EV-B6-033"].update({
         "source_type": "CLINICAL_SAFETY_LABEL_AND_CLASS_AUDIT",

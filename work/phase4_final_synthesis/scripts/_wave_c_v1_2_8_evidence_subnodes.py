@@ -79,13 +79,13 @@ def apply_wave_c_ev_and_sub_patches(
         "notes": "All 6 ALS-program Phase 1 trials (NCT05667779, NCT06532396, NCT06681441, NCT06714396, NCT06877624, NCT07421778) belong to QurAlis QRL-101 (where ~50% > ezogabine cross-study SDTC decrease came from N=24 healthy-volunteer NCT06681441, whose cortical TMS-EMG MEP co-primary missed); Xenon azetukalner/XEN1101 (positive Ph3 X-TOLE2 NCT05614063; active Ph3 NCT05716100/NCT05667142) and Biohaven BHV-7000 (failed 2025 Ph2/3 mania NCT06419582 & MDD NCT06419608; Sept 2026 FDA partial clinical hold on focal epilepsy NCT06309966/NCT06132893) have 0 ALS trials.",
     })
 
-    # C017 (CHIT1 / GPNMB / CHI3L1-2): purge WashU+UMilan=63 error, fix PMID:31892365 -> Steinacker 2021 PMID:33576252, add GPNMB primary papers
-    bank_note = "4-center DIA total N=259 (Emory 118 [42 sALS + 14 C9 + 8 SOD1 + 54 Ctrl], MGH 78 [16 Ctrl + 62 asym], WashU 32 [26 ALS + 2 ordinary Ctrl + 4 asym; reconciled via MGH/WashU specimen codes 100 vs 741], UMilan 31 [31 ALS, 0 non-ALS]; Table 2 lists 0 WashU non-ALS)"
+    # C017 (CHIT1 / GPNMB / CHI3L1-2): purge WashU+UMilan=63 error, fix PMID:31892365 -> Steinacker 2021 PMID:33576252, add GPNMB primary papers & WashU 2-ordinary-Ctrl results
+    bank_note = "4-center DIA total N=259 (Emory 118 [42 sALS + 14 C9 + 8 SOD1 + 54 Ctrl], MGH 78 all code 701 [16 Ctrl + 62 asym], WashU 32 [26 ALS code 100 + 6 comparators code 741: 2 ordinary Ctrl + 4 asym], UMilan 31 [31 ALS, 0 non-ALS]; unresolved Table 2 [WashU=26/0, MGH=0/84] vs MOESM1 Sheet 2 [32/78] bank discrepancy confounds WashU case/comparator status with code 100 vs 741)"
     ev_map["EV-B3-007"]["notes"] = (
-        f"{bank_note}; Emory TMT (N=101: 35 Sporadic vs 44 Ctrl) diff=+0.8716 (p=6.89e-05, q=0.00806); Center+Age+Sex OLS (n=114) beta=+1.9954 (p=3.29e-12); "
+        f"{bank_note}; WashU 26 ALS vs 2 ordinary Ctrl +1.972 (Welch p=0.2534, n=25v2; vs 6 comp +1.615, p=0.0300); Emory TMT (N=101: 35 Sporadic vs 44 Ctrl) diff=+0.8716 (p=6.89e-05, q=0.00806); Center+Age+Sex OLS (n=114) beta=+1.9954 (p=3.29e-12); "
         "Center+Batch+Age+Sex OLS (n=114) beta=+1.7955 (p=2.51e-08); Emory DIA Age+Sex OLS (n=89) beta=+2.0111 (p=4.33e-11); C9-Asym (n=59 vs 72) diff=+0.1827 (p=0.2937, q=0.6605); "
         "Sym vs Asym (n=115 vs 72) diff=+2.0657 (p=1.15e-14); SOD1-Asym p=0.8819; Oh 2023 (DS046_OH_XML, PMID:37238921: 5/5 core markers replicated in discovery MS & 4/5 in targeted PRM [CHI3L2 blank, 40/61 cohort overlap]) log2FC=+3.9943 (p=1.88e-5, q<1e-6; longitudinal CSF progression modeling in Vu et al. 2023 PMID:37646115); "
-        "CSF chitinases achieve AUC up to 0.92 vs healthy controls (Thompson 2019 PMID:31123140) vs ~0.688-0.84 against neurological ALS mimics (Steinacker 2018 PMID:29142138), confirming symptomatic staging/PD utility rather than standalone mimic exclusion."
+        "CSF chitinases achieve AUC up to 0.92 vs healthy controls (Thompson 2019 PMID:31123140) vs ~0.688-0.84 against neurological ALS mimics (Steinacker 2018 PMID:29142138), supporting symptomatic staging/PD biomarker utility while requiring prospective intended-use calibration before deploying a fixed 4-protein composite decision rule."
     )
     ev_map["EV-B3-008"].update({
         "source_id_or_locator": "DS_GNOMAD_V41_CONSTRAINT:ENST00000367229;PMID:33576252;PMID:25563799;PMID:34873335;NCT06205121",
@@ -93,7 +93,7 @@ def apply_wave_c_ev_and_sub_patches(
         "notes": "Provenance verified: rs3831317 (chr1:203217822) is the canonical CHIT1 Exon-10 24-bp null duplication (not chr8 rs10955890); Steinacker et al. 2021 PMID:33576252 demonstrated 9% (6/65) homozygous null carriage in ALS patients with undetectable CSF CHIT1 yet typical ALS onset and progression (consistent with Pagliardini 2015 PMID:25563799 & Project MinE GWAS null PMID:34873335; OATD-01 NCT06205121 is in pulmonary sarcoidosis only), refuting CHIT1 inhibition as a causal ALS therapy while mandating rs3831317 genotyping for CSF CHIT1 assay interpretation.",
     })
     ev_map["EV-B3-009"]["notes"] = (
-        f"{bank_note}; Emory TMT (N=101: 35 Sporadic vs 44 Ctrl) diff=+0.1814 (p=0.0142, q=0.3438); Center+Age+Sex OLS (n=120) beta=+0.3550 (p=3.14e-04); "
+        f"{bank_note}; WashU 26 ALS vs 2 ordinary Ctrl +0.126 (Welch p=0.4982, n=26v2; vs 6 comp +0.161, p=0.4944); Emory TMT (N=101: 35 Sporadic vs 44 Ctrl) diff=+0.1814 (p=0.0142, q=0.3438); Center+Age+Sex OLS (n=120) beta=+0.3550 (p=3.14e-04); "
         "Center+Batch+Age+Sex OLS (n=120) beta=+0.3328 (p=0.00480); Emory DIA Age+Sex OLS (n=95) beta=+0.3483 (p=6.23e-04); C9-Asym (n=59 vs 72) diff=-0.0357 (p=0.6087, q=0.8678); "
         "Sym vs Asym diff=+0.4841 (p=1.70e-07); SOD1-Asym p=0.3127; Oh 2023 (PMID:37238921) log2FC=+1.0694 (p=8.06e-5, q=0.0244); also elevated in AD CSF (PMID:36384809)."
     )
@@ -102,12 +102,12 @@ def apply_wave_c_ev_and_sub_patches(
         "notes": "Tanaka et al. 2012 PMID:22891158 and Nagahara et al. 2017 PMID:27935101 (plus Ono 2016 PMID:26988030) demonstrated that GPNMB rescues motor neurons from mutant SOD1-G93A and TDP-43 toxicity via ERK1/2 and PI3K/Akt signaling while anti-GPNMB neutralization worsens death; Diaz-Ortiz et al. 2022 Science PMID:35981040 linked chr7p15 PD risk rs199347 (#1 L2G=0.492) to GPNMB, and VRG50635 ALS Phase 1b PMID:41708347 uses CSF GPNMB as a clinical PIKfyve target-engagement biomarker — confirming GPNMB inhibition inverts the protective sign.",
     })
     ev_map["EV-B3-012"]["notes"] = (
-        f"{bank_note}; Emory TMT (N=101: 35 Sporadic vs 44 Ctrl) diff=+0.3579 (p=5.15e-05, q=0.00687); Center+Age+Sex OLS (n=122) beta=+0.6473 (p=1.09e-05); "
+        f"{bank_note}; WashU 26 ALS vs 2 ordinary Ctrl +1.709 (Welch p<1e-4, n=26v2; vs 6 comp +1.372, p=7.2e-4); Emory TMT (N=101: 35 Sporadic vs 44 Ctrl) diff=+0.3579 (p=5.15e-05, q=0.00687); Center+Age+Sex OLS (n=122) beta=+0.6473 (p=1.09e-05); "
         "Center+Batch+Age+Sex OLS (n=122) beta=+0.6754 (p=2.27e-05); Emory DIA Age+Sex OLS (n=96) beta=+0.5660 (p=3.08e-04); C9-Asym (n=59 vs 72) diff=-0.0037 (p=0.9676, q=0.9945); "
         "Oh 2023 (PMID:37238921) log2FC=+1.1379 (q=0.044); Edinburgh Astrocyte (N=34) OLS_beta=+2.4065 (p=0.0180); NYGC Cervical M2 beta=+1.5285 (p=3.19e-07) collapses in M3 (n=198) to beta=+0.0876 (p=0.7517)."
     )
     ev_map["EV-B3-013"]["notes"] = (
-        f"{bank_note}; Emory TMT (N=101: 35 Sporadic vs 44 Ctrl) diff=+0.4328 (p=1.09e-05, q=0.00281); Center+Age+Sex OLS (n=122) beta=+0.8007 (p=1.96e-09); "
+        f"{bank_note}; WashU 26 ALS vs 2 ordinary Ctrl +0.918 (Welch p<1e-4, n=26v2; vs 6 comp +0.934, p=5.3e-4); Emory TMT (N=101: 35 Sporadic vs 44 Ctrl) diff=+0.4328 (p=1.09e-05, q=0.00281); Center+Age+Sex OLS (n=122) beta=+0.8007 (p=1.96e-09); "
         "Center+Batch+Age+Sex OLS (n=122) beta=+0.6666 (p=6.99e-06); Emory DIA Age+Sex OLS (n=96) beta=+0.7606 (p=5.43e-08); C9-Asym (n=59 vs 72) diff=+0.0491 (p=0.5189, q=0.8217); "
         "Oh 2023 (PMID:37238921) log2FC=+2.5277 (p=2.01e-8, q<1e-6); NYGC Cervical M2 beta=+1.7171 (p=3.13e-10) attenuates in M3 (n=198) to beta=+0.3345 (p=0.1769); pseudochitinase lacking murine ortholog."
     )
