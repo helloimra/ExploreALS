@@ -18,7 +18,7 @@ CAUSAL_MAP: dict[str, str] = {
     "CAUSAL_AXONAL_MAINTENANCE_LOSS": "Causal Axonal Maintenance Loss",
     "CAUSAL_EXCITABILITY_MODULATOR_PARTIAL_ENGAGEMENT": "Intrinsic Motor Excitability Modulator",
     "CAUSAL_GENETIC_AND_MECHANISTIC_DRIVER": "Human-Genetics-Anchored Causal Driver",
-    "OPPOSING_MN_VS_MICROGLIAL_14Q12_COLOCALIZATION": "Provisional Opposite-Sign MN vs. Microglial chr14q12 eQTLs",
+    "OPPOSITE_SIGN_MN_EQTL_GWAS_OVERLAP_VS_MICROGLIAL_COLOCALIZATION": "Opposite-Sign MN eQTL–GWAS Overlap vs. Microglial Colocalization (Treatment Direction Open)",
     "CAUSAL_RARE_CODING_SNARE_PRENYL_SWITCH_DEFECT": "Rare-Coding Longin R-SNARE Prenyl-Switch Defect",
     "AMBIGUOUS_SYNAPTIC_OPSONIN_VS_PROTECTIVE_CBOUTON_HOMEOSTASIS": "Synaptic C1q Opsonin vs. Protective C-Bouton Balance",
     "CAUSAL_LOSS_OF_FUNCTION": "Causal TDP-43 Loss-of-Function Effector",

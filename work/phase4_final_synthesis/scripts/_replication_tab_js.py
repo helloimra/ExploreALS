@@ -71,6 +71,39 @@ function setRepMode(mode, keepFilter=false){
   renderReplicationWorkbench();
 }
 
+function formatRepMult(f){
+  if(!f.mp) return '';
+  const mf = String(f.mfam || '');
+  if(/bonferroni/i.test(mf)) return `Bonf_p=${f.mp}`;
+  if(/fdr/i.test(mf)) return `FDR=${f.mp}`;
+  return `mult_p=${f.mp}`;
+}
+
+function formatRepPDisp(f){
+  const parts = [f.up ? `p=${f.up}` : '', f.cp ? `cov_adj_p=${f.cp}` : '', formatRepMult(f)].filter(Boolean);
+  if(parts.length) return parts.join(' · ');
+  const mf = String(f.mfam || '');
+  if(f.cls === 'PRIMARY_BAYESIAN_SPLICING_RECOMPUTE' || /majiq\s+bayesian/i.test(mf)) return 'N/A (Bayesian MAJIQ)';
+  if(f.cls === 'STRUCTURAL_OR_MECHANISTIC_MODEL_PRIOR'){
+    const sBlob = String(f.mod || '') + ' ' + String(f.arel || '');
+    return /pdb|cif|cryo-em|crystal/i.test(sBlob) ? 'N/A (3D / Model)' : 'N/A (Model Prior)';
+  }
+  if(f.cls === 'DETERMINISTIC_MODEL_PRIOR') return 'N/A (Model / Scan)';
+  if(f.cls === 'POPULATION_REFERENCE_METRIC') return 'N/A (Ref Metric)';
+  if(f.cls === 'DESCRIPTIVE_PK_OR_3D_MEASUREMENT'){
+    const dBlob = String(f.mod || '') + ' ' + String(f.arel || '') + ' ' + String(f.est || '');
+    if(/pdb|cif|af-|3d|heavy-atom|protomer|hinge|pocket-cavity|exon-5.*pore/i.test(dBlob)){
+      if(/unbound\s+csf|cmax|occupancy/i.test(dBlob)) return 'N/A (3D / PK)';
+      if(/binomial|poisoned/i.test(dBlob)) return 'N/A (3D / Model)';
+      return 'N/A (3D Structure)';
+    }
+    if(/unbound|plasma\s+pk|csf.*ec50|csf\s+concentration|chembl\d+\s+binding/i.test(dBlob)) return 'N/A (PK / Binding)';
+    if(/alphagenome|lof\s+constraint|depmap/i.test(dBlob)) return 'N/A (Ref Metric)';
+    return 'N/A (Descriptive)';
+  }
+  return 'N/A (Descriptive)';
+}
+
 function renderReplicationWorkbench(){
   if(typeof DATA_RUNS === 'undefined') return;
   const q = ((document.getElementById('rep-search')||{}).value||'').trim();
@@ -137,7 +170,7 @@ function renderReplicationWorkbench(){
     const emptyEvRow = '<tr><td colspan="4" class="py-6 px-4 text-center text-[var(--muted-foreground)]">No matching evidence contrasts. <button type="button" data-reset-rep="1" class="text-[var(--link)] underline font-mono ml-1 cursor-pointer">Reset filters</button></td></tr>';
     tb.innerHTML = items.length ? items.map(f => {
       const sel = f.eid === selectedRepKey;
-      const pDisp = [f.up?`p=${f.up}`:'', f.cp?`adj_p=${f.cp}`:'', f.mp?`FDR=${f.mp}`:''].filter(Boolean).join(' · ') || 'Ref/3D';
+      const pDisp = formatRepPDisp(f);
       return `<tr data-rep-select="${esc(f.eid)}" tabindex="0" aria-selected="${sel?'true':'false'}" class="cursor-pointer hover:bg-[var(--background)] ${sel?'bg-[var(--content)] border-l-4 border-l-[var(--primary)]':''}">
         <td class="py-1.5 px-2.5 font-mono font-semibold whitespace-nowrap">${esc(f.eid)}</td>
         <td class="py-1.5 px-2 font-mono text-xs whitespace-nowrap"><span class="text-[var(--primary)]">${esc(f.cid || 'Portfolio')}</span> &middot; ${esc(f.run)}</td>
