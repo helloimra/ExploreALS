@@ -67,7 +67,7 @@ def main() -> None:
         "assay_and_contrast": "MAJIQ novel_exon_skip in-frame Exon-5 skipping junction (chr20:63439708-63444659, MOESM11 line 4527)",
         "effect_estimate": "deltaPSI=+0.2139 (0.000 -> 0.236; source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=4.153e-24, p_d_psi_0_10=0.999994, junc_cat=novel_exon_skip, MOESM11 line 4527)",
         "fdr_or_adjusted_p": "",
-        "notes": "Brown 2022 MOESM11 line 4527 MAJIQ novel_exon_skip output (source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=4.15270e-24, p_d_psi_0_10=0.999994, stored separately from frequentist adjusted p-values; paired canonical dPSI=-0.2230, source MAJIQ 'FDR'=0); separately detected in postmortem C9orf72 ALS/FTD FACS-sorted TDP-43-depleted neuronal-nuclear fractions in Ma et al. 2022 MOESM5 (Supp. Table 1, worksheet 1, row 29: MAJIQ dPSI=0.451, LeafCutter dPSI=0.243, LeafCutter cluster BH-FDR=1.45e-5, PMID:35197626, GSE126543 N=7; 6 of 7 coverage-passing datasets reused in Joseph et al. 2025 Fig. 1b/2j-k, detecting Exon 4-6 splicing in the pooled TDP-43-low fraction from 6/6 people); separate Brown MOESM12/13 DESeq2 whole-gene RNA log2FC=+0.0779 (BH-FDR padj=0.2286) and Ribo-seq +0.2350 (BH-FDR padj=0.9828) show no statistically significant whole-gene reduction (which alone cannot establish isoform-specific NMD escape), whereas dedicated characterization in Joseph et al. 2025 (Nat Neurosci PMID:41174170, DOI:10.1038/s41593-025-02096-w) directly demonstrates translated, ER-retained KCNQ2-DeltaE5 protein. [Sample context: i3Neuron TDP-43 KD vs Ctrl replicates (Brown 2022 MOESM11)]",
+        "notes": "Brown 2022 MOESM11 line 4527 MAJIQ novel_exon_skip output (source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=4.15270e-24, p_d_psi_0_10=0.999994, stored separately from frequentist adjusted p-values; paired canonical dPSI=-0.2230, source MAJIQ 'FDR'=0); separately detected in postmortem C9orf72 ALS/FTD FACS-sorted TDP-43-depleted neuronal-nuclear fractions in Ma et al. 2022 MOESM5 (Supp. Table 1, worksheet 1, row 29: MAJIQ dPSI=0.451, LeafCutter dPSI=0.243, LeafCutter cluster BH-FDR=1.45e-5, PMID:35197626, GSE126543 N=7; 6 of 7 coverage-passing datasets reused in Joseph et al. 2025 Fig. 2j-k [whereas Fig. 1b intersects published differential-splicing gene lists], detecting Exon 4-6 splicing in the pooled TDP-43-low fraction from 6/6 people); separate Brown MOESM12/13 DESeq2 whole-gene RNA log2FC=+0.0779 (BH-FDR padj=0.2286) and Ribo-seq +0.2350 (BH-FDR padj=0.9828) show no statistically significant whole-gene reduction (which alone cannot establish isoform-specific NMD escape), whereas dedicated characterization in Joseph et al. 2025 (Nat Neurosci PMID:41174170, DOI:10.1038/s41593-025-02096-w) directly demonstrates translated, ER-retained KCNQ2-DeltaE5 protein. [Sample context: i3Neuron TDP-43 KD vs Ctrl replicates (Brown 2022 MOESM11)]",
     })
     ev_map["EV-B1-014"].update({
         "cohort_and_stratum": "Spillman 2026 C9-FTD vs Control frontal cortex synaptosome DIA proteomics (10 C9-FTD vs 9 Ctrl)",
@@ -146,8 +146,8 @@ def main() -> None:
     })
     ev_map["EV-B6-043"].update({
         "cohort_and_stratum": "Human ALS rare-variant cohorts, Open Targets & gnomAD v4.1",
-        "effect_estimate": "OT genetic_score=0.195; Open Targets LoF=60/65.1 (LOEUF=1.143, pLI=2.75e-19; gnomAD v4.1 MANE LOEUF=1.413, 60/52.6)",
-        "notes": "Constitutively active SARM1 ARM-domain GoF variants enrich in human ALS while Open Targets / gnomAD v4.1.1 constraint (LOEUF=1.143, 60/65.1) and gnomAD v4.1 MANE (LOEUF=1.413, 60/52.6) show no population depletion of heterozygous pLoF variants (distinct from clinical biallelic KO phenotyping or chronic pharmacological inhibition).",
+        "effect_estimate": "OT genetic_score=0.195; Open Targets / gnomAD v4.1.1 LoF=60/65.1 (LOEUF=1.143, pLI=2.75e-19); gnomAD v4.1 MANE LoF=60/52.6 (LOEUF=1.413, pLI=2.28e-23)",
+        "notes": "Constitutively active SARM1 ARM-domain GoF variants enrich in human ALS while Open Targets / gnomAD v4.1.1 constraint (LOEUF=1.143, pLI=2.75e-19, 60/65.1) and gnomAD v4.1 MANE (ENST00000585482.6: LOEUF=1.413, pLI=2.28e-23, 60/52.6) show no population depletion of heterozygous pLoF variants (distinct from clinical biallelic KO phenotyping or chronic pharmacological inhibition).",
     })
     ev_map["EV-B6-044"].update({
         "epistemic_weight": "MODERATE",
@@ -167,7 +167,7 @@ def main() -> None:
         ),
     })
     ev_map["EV-P2-T1-001"].update({
-        "effect_estimate": "42/42 in-frame aa resolved (mod3=0): 26 inter-subunit contacts <=5A + Trp236-retigabine 2.97A H-bond excised; modeled 38.2% (2:2 heteromer) to 61.8% (4:0 homomer) channels poisoned at dPSI=0.2139",
+        "effect_estimate": "42/42 in-frame aa resolved (mod3=0): 26 inter-subunit contacts <=5A + Trp236-retigabine contacts excised (2.97A closest CZ2-O3 contact; 3.00A NE1-O3 H-bond); modeled 38.2% (2:2 heteromer) to 61.8% (4:0 homomer) channels poisoned at dPSI=0.2139",
         "notes": (
             "Preserves C-terminal helices A-D while excising Trp236 (3.00A NE1-O3 H-bond / 2.97A closest CZ2-O3 contact to retigabine in PDB 7CR2) and inducing soma ER retention / impaired surface trafficking of KCNQ2-DeltaE5 (Joseph et al. 2025 PMID:41174170 Fig. 3h: 117.3 vs 208.6 pA/pF at +40 mV = 56.2% residual current / 43.8% loss at 1:1 in CHO-KCNQ3; smKCNQ2 naming & Exon-5 splice-rescue ASO series claimed in WO2023102548A1 [SEQ IDs 758/759, 465, 460] & WO2024206195A1; modeled 38.2% [2:2 Kv7.2:Kv7.3] to 61.8% [4:0 Kv7.2] poisoned channels at dPSI=0.2139 [MODEL_PRIOR]), "
             "imposing a surface-channel-density ceiling on small-molecule Kv7 pore openers."

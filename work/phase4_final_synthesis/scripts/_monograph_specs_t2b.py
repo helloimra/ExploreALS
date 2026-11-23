@@ -60,7 +60,7 @@ MONOGRAPH_SPECS_T2B: dict[str, dict] = {
             ],
         },
         "safety": [
-            ("Het-pLoF Constraint & KO Context", "LOW", "gnomAD v4.1 MANE pLI = 3.35e-4, LOEUF = 0.851 (29/46.5 LoF; Open Targets / gnomAD v4.1.1 LOEUF = 0.699; Atg4b-/- mice otoconia defects PMID:20577052 & accelerated SOD1 ALS PMID:39305312)"),
+            ("Het-pLoF Constraint & KO Context", "LOW", "gnomAD v4.1 MANE pLI = 2.08e-6, LOEUF = 0.851 (29/46.5 LoF; Open Targets / gnomAD v4.1.1 pLI = 3.35e-4, LOEUF = 0.699; Atg4b-/- mice otoconia defects PMID:20577052 & accelerated SOD1 ALS PMID:39305312)"),
             ("Dividing-Line Paralog Buffering", "LOW", "DepMap median Chronos = -0.031 in dividing lines (ATG4A/C/D buffer mitosis, but do not prevent CNS LC3ylation pathology)"),
             ("Proposed IT 2'-MOE vs IV Pip8b2-PMO", "GATE", "GTEx Cervical = 30.3 / BA9 = 41.8 TPM; naked IT 2'-MOE is proposed to mitigate systemic IV cationic Pip8b2-ATG4B 25-nt peptide-PMO transient Day-2 murine urinary KIM-1 exposure (PMID:39305312), requiring empirical IT safety testing"),
             ("Head-to-Head vs ASO 3J Sequence Scan", "GATE", "Promoted #2 CAUTION (sequence scan: mRNA 1mm=0, 50bp-SS 1mm=0, 25bp-SS 2mm=2, 0 pLI flags vs 16-nt 6-LNA ASO 3J mRNA 1mm=10 [CLN6/DOCK3], 50bp-SS 0mm=1, 50bp-SS 1mm=18, 5 pLI flags); empirical PS protein-binding/DRG screens required (PMID:31036929; PMID:39460376)"),

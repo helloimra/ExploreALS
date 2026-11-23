@@ -33,15 +33,16 @@ def apply_wave_d_evidence_part_b(ev_map: dict[str, dict[str, str]]) -> None:
         "notes": "Documents negative reconstituted PPP1R15A-PP1c holophosphatase biochemical tests and disputed target interpretation (Crespillo-Casado et al. 2017/2018 PMID:28447936, PMID:29618508, alongside early 10-50 nM rat motor-neuron mutant SOD1 culture reports), Abgueguen et al. 2026 PMID:43036320 GluN2B NMDA negative allosteric modulation (~1-5 uM, converging on failed C008 NMDA blockade), Ding et al. 2026 PMID:42790826 PHB2 interaction, and Vieira et al. 2024 PMID:38359044 in vivo SOD1-G93A failure.",
     })
 
-    # S01 (Dexmedetomidine): Talke 1997 PMID:9356115 CSF PK vs PMID:9249114 CSF pressure
+    # S01 (Dexmedetomidine): Talke 1997 PMID:9356115 CSF PK (N=8 postoperative women) vs PMID:9249114 CSF pressure
     ev_map["EV-B6-032"].update({
-        "source_type": "HUMAN_CSF_AND_PLASMA_PK_AUDIT",
-        "source_id_or_locator": "OpenFDA:NDA021038;OpenFDA:NDA215390;PMID:9356115;PMID:9249114;ChEMBL:CHEMBL778",
-        "cohort_and_stratum": "Human IV ICU sedation PK (NDA021038 Precedex 0.2-0.7 ug/kg/h) & Talke et al. 1997 paired human total plasma and lumbar CSF PK (PMID:9356115)",
-        "assay_and_contrast": "Measured human total plasma & lumbar CSF plus calculated free plasma (assuming 94% binding) vs 2,500 nM screen & ADRA2A Ki",
-        "effect_direction": "SEVERE_7143_TO_12500X_MEASURED_HUMAN_CSF_GAP",
-        "effect_estimate": "Measured human lumbar total CSF ~0.20-0.35 nM (~4% of measured total plasma, Talke 1997 PMID:9356115: ~7,143-12,500x below nominal 2,500 nM screen); estimated unbound plasma 0.09-0.37 nM, assuming 94% binding [MODEL_PRIOR, NDA021038: ~6,757-27,778x gap]",
-        "notes": "Talke et al. 1997 Anesth Analg (PMID:9356115: measured human lumbar total CSF ~4% +/- 1% of measured total plasma = ~0.20-0.35 nM, ~7,143-12,500x below nominal 2,500 nM screen; companion lumbar CSF pressure study PMID:9249114) directly establishes nanomolar human CSF exposure alongside FDA NDA021038 (Precedex, MW 200.28 g/mol) estimated unbound plasma 0.09-0.37 nM, assuming 94% binding [fu~0.06, MODEL_PRIOR] (~6,757-27,778x below nominal screen, noting nominal screen dose does not define a minimum effective concentration); sublingual Igalmi (NDA215390, 120-180 ug) causes 23% somnolence & 18% orthostasis at estimated Cu,p ~0.18 nM.",
+        "source_type": "HUMAN_CSF_AND_PLASMA_PK_REVIEW",
+        "source_id_or_locator": "PMID:9356115;PMID:9249114;OpenFDA:NDA021038;OpenFDA:NDA215390;ChEMBL:CHEMBL778",
+        "cohort_and_stratum": "Talke et al. 1997 paired human plasma & lumbar CSF PK in N=8 postoperative women after transsphenoidal pituitary surgery (PMID:9356115) + FDA NDA021038 Precedex ICU PK (0.2-0.7 ug/kg/h)",
+        "assay_and_contrast": "Measured human lumbar CSF/plasma ratio (4% +/- 1%) & NDA021038 plasma PK, with calculated molar CSF & calculated unbound plasma (94% binding) vs 2,500 nM screen",
+        "effect_direction": "SEVERE_GT7300X_HUMAN_CSF_AND_FREE_PLASMA_GAP",
+        "effect_estimate": "Measured lumbar CSF/plasma ratio = 4% (SD 1%) in N=8 women (Talke 1997 PMID:9356115) -> calculated molar CSF ~0.09-0.26 nM in study (~0.21-0.34 nM projected at NDA021038 0.70 ug/kg/h mean Css=1.37 ng/mL; >7,300x below 2,500 nM); calculated NDA021038 unbound plasma 0.081-0.41 nM (0.090-0.37 nM on target Css, 94% binding fu=0.06; ~6,098-30,864x gap)",
+        "sample_size_n": "8",
+        "notes": "Talke et al. 1997 Anesth Analg (PMID:9356115: N=8 postoperative women after transsphenoidal pituitary surgery given a 60-min IV CCIP targeting Cp=600 pg/mL [3.00 nM free-base MW 200.28 g/mol, observed Cp -2% to +74%]; directly measured post-infusion lumbar CSF = 4% +/- 1% of plasma [barely > LLOQ], yielding calculated ~0.09-0.26 nM in study [~0.12 nM at 600 pg/mL target; ~0.21-0.34 nM when projected onto NDA021038 Table 10 0.70 ug/kg/h measured mean Css=1.37 ng/mL], >7,300x below nominal 2,500 nM screen; companion lumbar CSF pressure study PMID:9249114) alongside FDA NDA021038 (Precedex Sec. 12.3 Table 10, 0.2-0.7 ug/kg/h measured mean total Css=0.27-1.37 ng/mL [target 0.30-1.25 ng/mL], 94% protein binding [fu=0.06]) calculated unbound plasma 0.081-0.41 nM (0.090-0.37 nM on target Css; ~6,098-30,864x below nominal screen, noting nominal screen dose does not define a minimum effective concentration); sublingual Igalmi (NDA215390, 120-180 ug) causes 23% somnolence & 18% orthostasis at calculated Cu,p ~0.18 nM.",
     })
     ev_map["EV-B6-033"].update({
         "source_type": "CLINICAL_SAFETY_LABEL_AND_CLASS_AUDIT",

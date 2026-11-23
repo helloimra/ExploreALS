@@ -207,7 +207,7 @@ MONOGRAPH_SPECS_T2A: dict[str, dict] = {
             ],
         },
         "safety": [
-            ("Het-pLoF Population Constraint", "LOW", "gnomAD v4.1 MANE pLI = 4.86e-7, LOEUF = 1.063 (20/27.4 LoF; Open Targets / gnomAD v4.1.1 LOEUF = 0.845, 32/50.9 — does not certify Treg ST2L blockade)"),
+            ("Het-pLoF Population Constraint", "LOW", "gnomAD v4.1 MANE pLI = 8.59e-6, LOEUF = 1.063 (20/27.4 LoF; Open Targets / gnomAD v4.1.1 pLI = 4.86e-7, LOEUF = 0.845, 32/50.9 — does not certify Treg ST2L blockade)"),
             ("Nuclear Gapmer Ban & Zone 2 Guard", "GATE", "Must resolve Secreted Decoy sST2 vs. Membrane ST2L first; nuclear RNase H1 Intron-8 gapmers & Zone 2 Exon-8 5'SS masking (102343400-102343435(+)) are banned to protect nascent ST2L"),
             ("Capillary Shuttle & Lung Sink", "GATE", "Mortberg 2023 (PMID:37188501) shows naked IT 2'-MOE misses brain capillaries; low-dose IT CD98hc/TfR1-shuttled cytoplasmic sST2 siRNA or Zone 1 PAS 2'-MOE SSO bypasses the 140.08 TPM GTEx Lung IV sink (PMID:37598178; PMID:39141703)"),
             ("Cys327 Thiol & SLC3A2 Counter-Screen", "GATE", "Backup intact-FcRn sweeping mAb on 324-SKECF-328 faces unpaired Cys327 thiol adducts (+119/+305 Da, dimers) & sole 4/5 human C-terminome match SLC3A2 (-SKEDF)"),

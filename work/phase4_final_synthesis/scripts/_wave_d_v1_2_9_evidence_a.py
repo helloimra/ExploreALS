@@ -31,20 +31,20 @@ def apply_wave_d_evidence_part_a(
         "source_type": "CLINICAL_TRIAL_PHASE3_RCT",
         "source_id_or_locator": "NCT04302870;PMID:39307154",
         "cohort_and_stratum": "UK MND-SMART Phase 3 adaptive platform RCT Stage 2 comparison (n=355 analyzed: 175 memantine 20 mg/d vs 180 placebo; 369 2-arm randomized within N=554 3-arm Cycle 1)",
-        "assay_and_contrast": "Monthly ALSFRS-R rate of change & overall survival (Pal et al. 2024 Lancet Neurol Table 2 & Fig. 4)",
-        "effect_estimate": "ALSFRS-R -0.650 vs -0.655 pts/mo (Table 2 adj diff +0.033/mo, 1-sided 90% CI lower bound -0.085); deaths 49/183 vs 48/186 (HR=0.92, p=0.71)",
+        "assay_and_contrast": "Monthly ALSFRS-R rate of change & descriptive survival follow-up (Pal et al. 2024 Lancet Neurol Table 2, Fig. 4 & Appendix Table S3)",
+        "effect_estimate": "ALSFRS-R -0.650 vs -0.655 pts/mo (Table 2 adj diff +0.033/mo, 1-sided 90% CI lower limit -0.085, 1-sided p=0.36); 49 vs 48 follow-up deaths across Stage 2 n=175 vs 180 (Table S3; no interim survival HR/p prespecified, Fig. 4)",
         "sample_size_n": "355",
-        "notes": "Isolates the 2-arm memantine vs contemporaneous placebo Stage 2 analysis set (n=355 ALSFRS-R analyzed [175 vs 180] of 369 randomized [183 vs 186]; excluding 185 trazodone-arm patients from the 554-patient 3-arm Cycle 1 total, Pal et al. 2024 PMID:39307154 Table 2, Fig. 4 & Appendix p. 4).",
+        "notes": "Isolates the 2-arm memantine vs contemporaneous placebo Stage 2 analysis set (n=355 ALSFRS-R analyzed [175 vs 180] of 369 randomized [183 vs 186]; excluding 185 trazodone-arm patients from the 554-patient 3-arm Cycle 1 total, Pal et al. 2024 PMID:39307154 Table 2, Fig. 4 & Appendix Table S3 p. 4 [PDF p. 5], where 49 memantine [median follow-up 392.0 d] vs 48 placebo [384.5 d] deaths = 9.2% vs 9.1% of N=530 and Fig. 4 explicitly notes survival HRs/CIs were not prespecified at interim analysis).",
     })
     ev_map["EV-B5-015"].update({
         "source_type": "CLINICAL_TRIAL_PHASE2_3_RCT",
-        "source_id_or_locator": "NCT02118727;PMID:39511965;PMC11632565;NCT00353665;PMID:20565333;NCT00409721;NCT01020331",
-        "cohort_and_stratum": "US TAME Phase 2b RCT (Bhai et al. 2025 [epub Nov 2024]: n=83 ALSFRS-R LME analyzed [54 memantine 40 mg/d vs 29 placebo] of N=89 randomized / N=99 enrolled / N=52 completing 36-wk active treatment; plus MEDALS N=63 in notes)",
+        "source_id_or_locator": "NCT02118727;PMID:39511965;PMC11632565;NCT00353665;PMID:20565333;NCT01020331;PMID:20839903;NCT00409721;10.3109/17482968.2011.615513",
+        "cohort_and_stratum": "US TAME Phase 2b RCT (Bhai et al. 2025 [epub Nov 2024]: n=83 ALSFRS-R LME analyzed [54 memantine 40 mg/d vs 29 placebo] of N=89 randomized / N=99 enrolled / N=52 completing assigned treatment [32 memantine, 20 placebo, Fig. 1]; plus MEDALS N=63 in notes)",
         "assay_and_contrast": "Linear mixed-effects weekly ALSFRS-R slope difference (Bhai et al. Table 2) & Table 3 blood NfL/pNF-H/TNF-alpha/Chit-1",
-        "effect_estimate": "TAME 40 mg/d weekly ALSFRS-R slope diff=-0.005 pts/wk (SE=0.067, p=0.94 unadjusted; duration-adj -0.007 p=0.92; duration+FVC-adj -0.021 p=0.77); Table 3 blood NfL p=0.28, pNF-H p=0.99, TNF-alpha p=0.22, Chit-1 p=0.79 (0 CSF/tau in TAME)",
+        "effect_estimate": "TAME 40 mg/d weekly ALSFRS-R slope diff=-0.005 pts/wk (0.067, labeled SD in Table 2; p=0.94 unadjusted; duration-adj -0.007 [0.067] p=0.92; duration+FVC-adj -0.021 [0.074] p=0.77); Table 3 (SE) blood NfL p=0.28, pNF-H p=0.99, TNF-alpha p=0.22, Chit-1 p=0.79 (blood tau prespecified NOT_POSTED on NCT02118727; no CSF or tau results reported)",
         "p_value": "0.94",
         "sample_size_n": "83",
-        "notes": "Bhai et al. 2025 [epub Nov 2024] Muscle Nerve PMID:39511965 (PMC11632565 Table 2 & Table 3, NCT02118727: 99 enrolled, 89 randomized 2:1 [58 vs 31], 83 evaluable in LME ALSFRS-R slope [54 vs 29; 6 single-visit exclusions], 52 completing 36-wk active 40 mg/d treatment within a 40-wk window; blood NfL/pNF-H/TNF-alpha/Chit-1 only, with 0 CSF or tau measurements in TAME) and de Carvalho et al. 2010 PMID:20565333 (MEDALS NCT00353665, N=63: 12-mo 40-pt ALSFRS Table II p=0.53 ITT / p=0.46 PP, deaths 4/32 vs 3/31 p=0.29, PEG p=0.69) were both negative; earlier open-label single-arm pilot NCT01020331 (Levine et al. 2010, N=20, which also used acronym TAME and reported exploratory CSF tau change) and non-placebo dose comparison NCT00409721 (5 vs 10 mg BID, N=24 enrolled / 42 target) lacked randomized placebo controls.",
+        "notes": "Bhai et al. 2025 [epub Nov 2024] Muscle Nerve PMID:39511965 (PMC11632565 Fig. 1, Table 2 & Table 3, NCT02118727: 99 enrolled, 89 randomized 2:1 [58 vs 31], 83 evaluable in LME ALSFRS-R slope [54 vs 29; 6 single-visit exclusions], 52 completing assigned 36-wk treatment [32 on 40 mg/d memantine, 20 on placebo, Fig. 1; +1 memantine participant completing study follow-up off drug = 33 vs 20 on NCT02118727]; Table 2 prints uncertainty values 0.067, 0.067, 0.074 under an SD header whereas Table 3 prints SE; NCT02118727 prespecified blood tau, pNFH & pNFH/C3 ratio [NOT_POSTED, 0 CSF endpoints planned] and the published randomized report gave blood NfL/pNF-H/TNF-alpha/Chit-1 with no CSF or tau results) and de Carvalho et al. 2010 PMID:20565333 (MEDALS NCT00353665, N=63: 12-mo 40-pt ALSFRS Table II p=0.53 ITT / p=0.46 PP, deaths 4/32 vs 3/31 p=0.29, PEG p=0.69) were negative placebo-controlled RCTs alongside MND-SMART, whereas two exploratory studies lacked placebo arms: open-label single-arm pilot NCT01020331 (Levine et al. 2010 PMID:20839903, N=20, which also used acronym TAME and reported exploratory CSF tau change) and active-dose comparison NCT00409721 (Chan et al. 2011 DOI:10.3109/17482968.2011.615513, 10 vs 20 mg/d [5 vs 10 mg BID], N=24 enrolled / 42 target).",
     })
     ev_map["EV-B5-016"].update({
         "source_id_or_locator": "PMID:7478269;OpenFDA:NDA021487;CHEMBL807",
@@ -62,9 +62,10 @@ def apply_wave_d_evidence_part_a(
     })
     ev_map["EV-B4-003"].update({
         "cohort_and_stratum": "MND-SMART Phase 3 adaptive RCT trazodone comparison (n=355 Stage 2 analyzed [175 vs 180]; N=371 2-arm randomized [185 trazodone 200 mg/d vs 186 placebo])",
-        "effect_estimate": "ALSFRS-R -0.625 vs -0.655 pts/mo (adjusted diff +0.065, 95% CI -0.095 to +0.226); deaths 52/185 vs 48/186 (HR=0.95); AEs 90% vs 77%",
+        "assay_and_contrast": "ALSFRS-R monthly slope & descriptive survival follow-up (Pal et al. 2024 Lancet Neurol Table 2, Fig. 4 & Appendix Table S3)",
+        "effect_estimate": "ALSFRS-R -0.625 vs -0.655 pts/mo (Table 2 adj diff +0.065, 1-sided 90% CI lower limit -0.051, 1-sided p=0.24); 52 vs 48 follow-up deaths across Stage 2 n=175 vs 180 (Table S3; no interim survival HR prespecified, Fig. 4); AEs 90% vs 77%",
         "sample_size_n": "355",
-        "notes": "Pal et al. 2024 Lancet Neurol PMID:39307154 Table 2/3: stopped at Stage 2 interim futility boundary (n=355 analyzed across 175 trazodone vs 180 contemporaneous placebo out of 371 randomized in the two arms).",
+        "notes": "Pal et al. 2024 Lancet Neurol PMID:39307154 Table 2, Table 3, Fig. 4 & Appendix Table S3: stopped at Stage 2 interim futility boundary (n=355 analyzed across 175 trazodone vs 180 contemporaneous placebo out of 371 randomized in the two arms; 52 trazodone [median follow-up 408.0 d] vs 48 placebo [384.5 d] deaths = 9.8% vs 9.1% of N=530 in Appendix Table S3, with formal survival HR/CI not prespecified at interim analysis in Fig. 4).",
     })
     ev_map["EV-B4-004"].update({
         "source_type": "CLINICAL_TRIAL_BIOMARKER_AUDIT",

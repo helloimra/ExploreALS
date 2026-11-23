@@ -53,7 +53,7 @@ def main() -> None:
         assert_equal("Portfolio Actionable Rank & Promoted Lead", f"#{port['unified_rank']} ({port['lead_cis_interval_id']})", "#4 (chr20:63442302-63442319(-))"),
         assert_close(f"[MEASURED:{src_tag}] Brown 2022 i3Neuron KCNQ2 Exon-4-Exon-6 skip dPSI", i3n_dpsi, 0.2139, rtol=1e-3),
         assert_close("[MEASURED] Exon 5 in-frame length (bp = 42 aa Glu231-Leu272)", float(63442531 - 63442406 + 1), 126.0, rtol=1e-6),
-        assert_close(f"[MEASURED:{src_tag}] PDB 7CR2 Retigabine-to-Trp236 H-bond (A)", trp_dist, 2.97, rtol=0.02),
+        assert_close(f"[MEASURED:{src_tag}] PDB 7CR2 Retigabine-to-Trp236 closest CZ2-O3 contact (A)", trp_dist, 2.97, rtol=0.02),
         assert_close("[MODEL_PRIOR] 4:0 Nodal Kv7.2 homomer M-current loss % (q=0.2139)", hom_m4["im_loss_pct"], 61.81, rtol=1e-3),
         assert_close("[MODEL_PRIOR] 2:2 AIS Kv7.2:Kv7.3 heteromer M-current loss % (q=0.2139)", het_m2["im_loss_pct"], 38.20, rtol=1e-3),
         assert_equal("Lead #3 Off-Target Status (sp0=0, sp1=0, bulge=0)", lead3["offtarget_safety_status"], "CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED"),
