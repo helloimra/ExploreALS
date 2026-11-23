@@ -210,7 +210,7 @@ function renderCausalGrid(c, geneCtx){
     const bdr = isLast ? 'border-[var(--success)] border-2' : 'border-[var(--border)]';
     const badge = isLast ? 'bg-[var(--success)] text-[var(--primary-foreground)]' : 'bg-[var(--content)] text-[var(--foreground)] border border-[var(--border)]';
     const stepTag = isLast ? '4 &middot; INTERVENTION' : `STEP ${i+1} &rarr;`;
-    return `<div class="p-3 rounded-lg bg-[var(--background)] border ${bdr} flex flex-col justify-between space-y-1.5 text-xs">
+    return `<div class="p-3.5 rounded-lg bg-[var(--background)] border ${bdr} flex flex-col space-y-1.5 text-xs">
       <div class="space-y-1">
         <div class="flex items-center justify-between gap-1.5">
           <span class="px-1.5 py-0.5 rounded font-mono font-bold text-xs ${badge}">${stepTag}</span>
@@ -226,8 +226,8 @@ function renderCausalGrid(c, geneCtx){
   const icon = kind === 'HAZARD' ? '&#9888;' : (kind === 'RATIONALE' ? '&#9670;' : '&#9651;');
   return `<div class="space-y-2.5">
     <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5">${cards}</div>
-    <div class="p-3 rounded-lg bg-[var(--background)] border ${boxCls} space-y-1 text-xs">
-      <div class="font-mono font-bold ${hdrCls}">${icon} ${esc(c.trap_title)}</div>
+    <div class="p-3.5 rounded-lg bg-[var(--background)] border ${boxCls} space-y-1.5 text-xs">
+      <div class="font-mono font-bold leading-snug ${hdrCls}">${icon} ${esc(c.trap_title)}</div>
       <p class="text-[var(--foreground)] leading-relaxed break-words">${escLink(c.trap_desc, geneCtx)}</p>
     </div>
   </div>`;
@@ -305,8 +305,8 @@ function renderEvidenceMatrix(ev, geneCtx){
   const callouts = (ev.callouts || []).map(c => {
     const isP = c.tag === 'MODEL_PRIOR';
     const bdr = isP ? 'border-dashed border-[var(--warning)]' : 'border-[var(--card-border)]';
-    return `<div class="p-2 rounded bg-[var(--background)] border ${bdr} flex flex-col justify-between gap-0.5 text-xs">
-      <div class="text-[var(--muted-foreground)] leading-snug break-words">${escLink(c.lbl, geneCtx)}</div>
+    return `<div class="p-2.5 rounded bg-[var(--background)] border ${bdr} flex flex-col justify-between gap-1 text-xs">
+      <div class="text-[var(--muted-foreground)] leading-relaxed break-words">${escLink(c.lbl, geneCtx)}</div>
       <div class="flex items-center justify-between gap-1.5 font-mono pt-0.5">
         <span class="font-bold text-[var(--foreground)]">${esc(c.stat)}</span>
         <span class="${isP?'text-[var(--warning)]':'text-[var(--muted-foreground)]'}">${isP?'Modeled &middot; ':''}${esc(c.p)}</span>
@@ -316,7 +316,7 @@ function renderEvidenceMatrix(ev, geneCtx){
   const leg = `<div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono text-[var(--muted-foreground)] pb-0.5">
     <span>&#9679; Empirical Data</span><span>&#9671; Modeled Estimate</span><span>&#9500;&#9472;&#9679;&#9472;&#9508; 95% CI (staged)</span><span>&#9472;&#9472;&#9679; Point stem (p/FDR)</span>
   </div>`;
-  return `<div class="space-y-2.5">${leg}${groupsHtml}${callouts?`<div class="space-y-1"><div class="font-mono text-xs font-semibold text-[var(--muted-foreground)]">Structural, Correlation &amp; Power Anchors</div><div class="grid grid-cols-1 sm:grid-cols-2 gap-2">${callouts}</div></div>`:''}</div>`;
+  return `<div class="space-y-2.5">${leg}${groupsHtml}${callouts?`<div class="space-y-1.5"><div class="font-mono text-xs font-semibold text-[var(--muted-foreground)]">Biophysical, Correlation &amp; Power Metrics</div><div class="grid grid-cols-1 sm:grid-cols-2 gap-2">${callouts}</div></div>`:''}</div>`;
 }
 
 function cautionSummary(c){

@@ -46,7 +46,7 @@ function renderRepInspector(isEmpty=false){
   if(repMode === 'runs'){
     const r = DATA_RUNS.find(x => x.id === selectedRepKey) || DATA_RUNS[0];
     if(!r){ box.innerHTML = retBar + '<div class="text-[var(--muted-foreground)]">No matching run.</div>'; return; }
-    const sLinks = r.script.split(';').filter(Boolean).map(sp => `<a href="https://github.com/helloimra/ExploreALS/blob/main/${esc(sp)}" target="_blank" rel="noopener noreferrer" class="text-[var(--link)] underline decoration-dotted hover:decoration-solid font-mono break-all">${esc(sp)} &nearr;</a>`).join('<br/>');
+    const sLinks = r.script.split(';').filter(Boolean).map(sp => `<div><a href="https://github.com/helloimra/ExploreALS/blob/main/${esc(sp)}" target="_blank" rel="noopener noreferrer" class="text-[var(--link)] underline decoration-dotted hover:decoration-solid font-mono break-all">${esc(sp)} &nearr;</a></div>`).join('');
     const dsChips = r.ds ? r.ds.split(';').filter(Boolean).map(d => `<button type="button" data-open-rep-ds="${esc(d)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">${esc(d)} &rarr;</button>`).join(' ') : '<span class="text-[var(--muted-foreground)] font-mono">Cached API / Portfolio Synthesis</span>';
     const cChips = r.cands ? r.cands.split(';').filter(Boolean).slice(0,18).map(c => `<button type="button" data-open-dossier="${esc(c)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--primary)] cursor-pointer">${esc(c)}</button>`).join(' ') : '';
     const cmd = r.script.split(';').filter(Boolean).map(sp => `uv run python ${sp.trim()}`).join(' && ');
@@ -56,10 +56,10 @@ function renderRepInspector(isEmpty=false){
         <button type="button" data-copy-cmd="${esc(cmd)}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">Copy Run Cmd</button>
       </div>
       <div class="space-y-2.5 text-xs">
-        <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono mb-0.5">Repository Script Path(s)</div>${sLinks}</div>
-        <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono mb-1">Staged Input Datasets (Click to Inspect SHA-256)</div><div class="flex flex-wrap gap-1">${dsChips}</div></div>
-        <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono mb-0.5">Verified Output Artifact(s)</div><div class="font-mono break-words">${esc(r.out)}</div></div>
-        <div><div class="font-semibold text-[var(--foreground)] mb-0.5">Computational Scope &amp; Statistical Method:</div><p class="text-[var(--muted-foreground)] leading-relaxed">${esc(r.sum)}</p></div>
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono mb-1">Repository Script Path(s)</div><div class="space-y-1 leading-normal">${sLinks}</div></div>
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono mb-1">Staged Input Datasets (Click to Inspect SHA-256)</div><div class="flex flex-wrap gap-1">${dsChips}</div></div>
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono mb-0.5">Verified Output Artifact(s)</div><div class="font-mono break-words leading-normal">${esc(r.out)}</div></div>
+        <div><div class="font-semibold text-[var(--foreground)] mb-1">Computational Scope &amp; Statistical Method:</div>${formatProseParas(r.sum, '', 'space-y-1.5', 'text-[var(--muted-foreground)]')}</div>
         ${cChips ? `<div class="border-t border-[var(--card-border)] pt-2"><div class="text-[var(--muted-foreground)] font-mono mb-1">Backed Candidate Dossiers:</div><div class="flex flex-wrap gap-1">${cChips}</div></div>` : ''}
       </div>`;
   } else if(repMode === 'datasets'){
@@ -72,13 +72,13 @@ function renderRepInspector(isEmpty=false){
         <button type="button" data-copy-sha="${esc(d.sha)}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">Copy 64-Char SHA-256</button>
       </div>
       <div class="space-y-2.5 text-xs">
-        <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono mb-0.5">Full 64-Character SHA-256 Digest</div><div class="font-mono break-words text-[var(--foreground)]">${esc(d.sha)}</div></div>
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono mb-0.5">Full 64-Character SHA-256 Digest</div><div class="font-mono break-words text-[var(--foreground)]">${esc(d.sha)}</div></div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono">Local Staging Path</div><div class="font-mono break-words mt-0.5">${esc(d.rel)}</div></div>
-          <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono">Primary Accession / DOI</div><div class="font-mono break-words mt-0.5">${escLink(d.acc, '')}</div></div>
+          <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono">Local Staging Path</div><div class="font-mono break-words mt-0.5">${esc(d.rel)}</div></div>
+          <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono">Primary Accession / DOI</div><div class="font-mono break-words mt-0.5 leading-normal">${escLink(d.acc, '')}</div></div>
         </div>
-        <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono mb-0.5">Canonical Retrieval URL / Fetcher Rule</div><div class="font-mono break-words text-[var(--muted-foreground)]">${esc(d.url)}</div></div>
-        <div><div class="font-semibold mb-0.5">Cohort Description:</div><p class="text-[var(--muted-foreground)] leading-relaxed">${esc(d.desc)}</p></div>
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono mb-0.5">Canonical Retrieval URL / Fetcher Rule</div><div class="font-mono break-words text-[var(--muted-foreground)] leading-normal">${esc(d.url)}</div></div>
+        <div><div class="font-semibold mb-1">Cohort Description:</div>${formatProseParas(d.desc, '', 'space-y-1.5', 'text-[var(--muted-foreground)]')}</div>
         ${consRuns ? `<div class="border-t border-[var(--card-border)] pt-2"><div class="text-[var(--muted-foreground)] font-mono mb-1">Consuming Analysis Runs:</div><div class="flex flex-wrap gap-1">${consRuns}</div></div>` : ''}
       </div>`;
   } else {
@@ -93,14 +93,14 @@ function renderRepInspector(isEmpty=false){
         <button type="button" data-copy-sha="${esc(f.sha)}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">Copy 64-Char SHA-256</button>
       </div>
       <div class="space-y-2 text-xs">
-        <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono mb-0.5">Exact Cohort &amp; Adjusted Contrast</div><div class="leading-snug">${esc(f.con)}</div></div>
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono mb-0.5">Exact Cohort &amp; Adjusted Contrast</div><div class="leading-relaxed">${esc(f.con)}</div></div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-          <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono">Statistical Unit &amp; True Donor N</div><div class="font-mono mt-0.5">${esc(f.unit)} (units=${esc(f.nu||'—')} &middot; donors=${esc(f.ndon||'—')})</div></div>
-          <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono">Effect &amp; Precision</div><div class="font-mono mt-0.5 break-words">${esc(f.est)}${f.ci?` (${esc(f.ci)})`:''}</div></div>
+          <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono">Statistical Unit &amp; True Donor N</div><div class="font-mono mt-0.5">${esc(f.unit)} (units=${esc(f.nu||'—')} &middot; donors=${esc(f.ndon||'—')})</div></div>
+          <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono">Effect &amp; Precision</div><div class="font-mono mt-0.5 break-words leading-normal">${esc(f.est)}${f.ci?` (${esc(f.ci)})`:''}</div></div>
         </div>
-        <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono mb-0.5">Model Equation / Statistical Test &amp; Exclusion Rule</div><div class="font-mono text-[var(--foreground)] break-words">${esc(f.mod)}</div><div class="text-[var(--muted-foreground)] mt-0.5">Rule: ${esc(f.excl)} &middot; Overlap: <span class="font-mono">${esc(f.ovl)}</span></div></div>
-        <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] font-mono"><span class="text-[var(--muted-foreground)]">Covariate vs Multiplicity Split:</span> unadj_p=${esc(f.up||'—')} &middot; cov_adj_p=${esc(f.cp||'—')} &middot; mult_adj_p=${esc(f.mp||'—')} (${esc(f.mfam)})</div>
-        <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] font-mono break-words"><span class="text-[var(--muted-foreground)]">Anchor (<button type="button" data-open-rep-run="${esc(f.run)}" class="text-[var(--link)] hover:underline cursor-pointer">${esc(f.run)}</button>):</span> ${esc(f.arel)}<div class="text-[var(--muted-foreground)] mt-0.5">${esc(f.sha)}</div></div>
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] font-mono mb-0.5">Model Equation / Statistical Test &amp; Exclusion Rule</div><div class="font-mono text-[var(--foreground)] break-words leading-relaxed">${esc(f.mod)}</div><div class="text-[var(--muted-foreground)] mt-1 leading-relaxed">Rule: ${esc(f.excl)} &middot; Overlap: <span class="font-mono">${esc(f.ovl)}</span></div></div>
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] font-mono leading-relaxed"><span class="text-[var(--muted-foreground)]">Covariate vs Multiplicity Split:</span> unadj_p=${esc(f.up||'—')} &middot; cov_adj_p=${esc(f.cp||'—')} &middot; mult_adj_p=${esc(f.mp||'—')} (${esc(f.mfam)})</div>
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] font-mono break-words leading-normal"><span class="text-[var(--muted-foreground)]">Source File (<button type="button" data-open-rep-run="${esc(f.run)}" class="text-[var(--link)] hover:underline cursor-pointer">${esc(f.run)}</button>):</span> ${esc(f.arel)}<div class="text-[var(--muted-foreground)] mt-0.5">${esc(f.sha)}</div></div>
       </div>`;
   }
 }
@@ -191,9 +191,9 @@ function exportRegistryBlob(which){
     }))]
   };
   if(which === 'json_all'){
-    const outObj = {version:'1.2'};
+    const outObj = {version:'1.3'};
     Object.keys(builders).forEach(k => { outObj[k] = builders[k][1](); });
-    downloadBlob('exploreals_v1_2_provenance_bundle.json', 'application/json', JSON.stringify(outObj, null, 2));
+    downloadBlob('exploreals_v1_3_provenance_bundle.json', 'application/json', JSON.stringify(outObj, null, 2));
     return;
   }
   const hit = builders[which];

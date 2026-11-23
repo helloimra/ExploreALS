@@ -93,6 +93,9 @@ def sanitize_public_modality(raw_mod: str) -> str:
             .replace("Intron9", "Intron-9").replace("ERAD_Sparing", "ERAD-Sparing")
             .replace("aa324_328", "aa 324-328").replace("aa320_328", "aa 324-328").replace("Q48_to_Q72h", "q48h-q72h")
             .replace("LINE1_RT", "LINE-1 RT").replace("TPN101", "TPN-101").replace("JAK2_Sparing", "JAK2-Sparing")
+            .replace("Inter_Protomer", "Inter-Protomer").replace("Neurovascular_Shuttled", "Neurovascular-Shuttled")
+            .replace("3UTR", "3'-UTR").replace("Zone1", "Zone 1").replace("ISS_IPA", "ISS/IPA")
+            .replace("CRISPRi_CRISPRa", "CRISPRi/CRISPRa").replace("SUN1_CHMP7", "SUN1-CHMP7")
             .replace("Brain_Penetrant", "Brain-Penetrant").replace("Low_Dose", "Low-Dose").replace("IL2", "IL-2")
             .replace("_", " ")
         )
@@ -167,6 +170,7 @@ def sanitize_public_prose(txt: str) -> str:
         return s
     s = s.replace("[MEASURED] vs [MODEL_PRIOR] tags", "empirical vs. modeled-estimate tags")
     s = s.replace(", MODEL_PRIOR]", ", modeled estimate]")
+    s = re.sub(r",\s*\[MODEL_PRIOR:\s*([^\]]+)\]\s+(?=sits\b)", r", modeled unbound CNS exposure (\1) ", s)
     s = re.sub(r"\[MODEL_PRIOR:\s*([^\]]+)\]", r"(modeled estimate: \1)", s)
     s = re.sub(r"\b(the|a|an)\s+\[MODEL_PRIOR\]\s+", r"\1 modeled ", s, flags=re.I)
     s = re.sub(
@@ -180,22 +184,26 @@ def sanitize_public_prose(txt: str) -> str:
     )
     s = re.sub(r"^\[(?:MEASURED|MODEL_PRIOR|PRIOR)\]\s*", "", s)
     s = s.replace(" [MEASURED]", "").replace("[MEASURED] ", "").replace("[MEASURED]", "empirically measured")
-    s = s.replace(" [MODEL_PRIOR]", " (modeled estimate)").replace("[MODEL_PRIOR] ", "modeled ")
+    s = re.sub(r"([,;:\(]\s*)\[MODEL_PRIOR\]\s+", r"\1modeled ", s)
+    s = re.sub(r"\blow\s+\[MODEL_PRIOR\]\s+", "low modeled ", s, flags=re.I)
+    s = s.replace("[MODEL_PRIOR] ", "modeled ").replace(" [MODEL_PRIOR]", " (modeled estimate)")
     s = s.replace("[MODEL_PRIOR]", "modeled estimate")
     s = s.replace("[PRIOR] ", "Modeled: ").replace(" [PREPRINT]", " (preprint)").replace("[PREPRINT]", "preprint")
     s = re.sub(
         r"([;,])?\s*(?:zero|no)\s+21\s*CFR\s*312\.23\(b\)\s*(?:external\s+)?right[- ]of[- ]reference(?:\s+to\s+[A-Za-z0-9/\-]+)?",
-        lambda m: (m.group(1) or ",") + " independent single-entity toxicology qualification",
+        lambda m: (m.group(1) or ",") + " standalone single-agent toxicology qualification",
         s,
         flags=re.I,
     )
-    s = re.sub(r"\(\s*[;,]?\s*independent single-entity toxicology qualification\s*\)", "(independent single-entity toxicology qualification)", s)
+    s = re.sub(r"\(\s*[;,]?\s*standalone single-agent toxicology qualification\s*\)", "(standalone single-agent toxicology qualification)", s)
     s = re.sub(r"ICH\s+M3\(R2\)\s*/\s*21\s*CFR\s*312\.23\(b\)", "ICH M3(R2)", s, flags=re.I)
     s = re.sub(r"\b21\s*CFR\s*312\.23(?:\(b\))?\b\s*", "", s, flags=re.I)
+    s = re.sub(r"\bStage\s+2\s+21\s*CFR\s*300\.50\s+genotype-stratified\b", "factorial, genotype-stratified", s, flags=re.I)
+    s = re.sub(r"\b21\s*CFR\s*300\.50\s+genotype-stratified\b", "factorial, genotype-stratified", s, flags=re.I)
     s = re.sub(r"FDA co-development guidance\s*/\s*21\s*CFR\s*300\.50\s+factorial contribution principles", "factorial combination-contribution principles", s, flags=re.I)
     s = re.sub(r"\b21\s*CFR\s*300\.50\b(?!\s+(?:factorial|principles|design|contribution))", "factorial combination-contribution principles", s, flags=re.I)
     s = re.sub(r"\b21\s*CFR\s*300\.50\b\s*", "factorial ", s, flags=re.I)
-    s = re.sub(r"\bsponsor-owned\s+ICH\s+M3\(R2\)", "ICH M3(R2)", s, flags=re.I)
+    s = re.sub(r"\bsponsor-owned\s+ICH\s+M3\(R2\)", "dedicated single-agent ICH M3(R2)", s, flags=re.I)
     s = re.sub(r"\bin\s+Track\s+A/B\s+trials\b", "in clinical and target-directed ALS trials", s, flags=re.I)
     s = re.sub(r"\bCore\s+Track\s+B\s+target\b", "Core molecular target", s, flags=re.I)
     s = re.sub(r"\bas\s+Track\s+A\s+positive\s+clinical\b", "as established positive clinical", s, flags=re.I)
@@ -216,11 +224,13 @@ def sanitize_public_prose(txt: str) -> str:
         s,
     )
     s = re.sub(
-        r"\bStage\s+2\b(?=\s+(?:factorial|genotype-stratified|testing|evaluates|multiplex|co-dosing))",
+        r"\bStage\s+2\b(?=\s+(?:factorial|genotype-stratified|testing|evaluates|multiplex|co-dosing|splice))",
         lambda m: "Combinatorial" if m.start() == 0 or s[max(0, m.start() - 2) : m.start()].strip() in {".", ":", ";", "—"} or s[m.start() - 1] == "\n" else "combinatorial",
         s,
     )
-    s = s.replace("Combinatorial factorial combination testing", "combinatorial factorial testing")
+    s = re.sub(r"\bcombinatorial\s+factorial\s+combination-contribution\s+principles\s+genotype-stratified\b", "factorial, genotype-stratified", s, flags=re.I)
+    s = s.replace("Combinatorial factorial combination testing", "Factorial combination testing")
+    s = re.sub(r"\bcombinatorial\s+factorial\b", "factorial combination", s, flags=re.I)
     s = re.sub(r"\bBio\s+#([1-9])\b", r"Evidence #\1", s)
     s = re.sub(r"\bunder\s+Epistemic\s+Asymmetry\b:?", "", s, flags=re.I)
     s = re.sub(r"\b(?:the\s+)?Epistemic\s+Asymmetry(?:\s+Rule)?\b", "the Untested != Falsified triage rule", s, flags=re.I)
@@ -266,8 +276,24 @@ def sanitize_public_prose(txt: str) -> str:
     s = re.sub(r"\bunbiased\s+(?=(?:TDP-43\s+)?cryptic-splicing\s+discovery)", "transcriptome-wide ", s, flags=re.I)
     s = re.sub(r",\s*0 chemically modified synthesis-ready ASO sequences", "", s)
     s = re.sub(r"\(0 chemically modified synthesis-ready ASO sequences\)", "(1-based GRCh38 target coordinates)", s)
+    s = s.replace("selective=False:", "non-selective:")
+    s = s.replace("hasResults=false", "no posted ClinicalTrials.gov results")
+    s = s.replace("purityMeanR2=", "mean LD R2=")
+    s = s.replace("boundary_dist_bp=0", "0 bp from splice boundary").replace("boundary_dist_bp=40", "40 bp from splice boundary")
+    s = re.sub(r"\bBA4_Exc\b", "BA4 excitatory neurons", s)
+    s = re.sub(r"\bL5_Exc\b", "L5 excitatory neurons", s)
+    s = re.sub(r"\bliving-CSF\b", "antemortem CSF", s)
+    s = re.sub(r"\bLiving-CSF\b", "Antemortem CSF", s)
+    s = re.sub(r"\bdeconfound\b", "control for confounding from", s, flags=re.I)
+    s = s.replace("epistatically suppressing", "co-transcriptionally suppressing")
+    s = s.replace("NMNAT2-epistatic", "NMNAT2-coupled")
+    s = s.replace("ARM-TIR T-lock glues (ASHA-624 class;", "ARM-TIR octamer stabilizers (PDB 7ANW/7DJT structural class; benchmarking preclinical ASHA-624 and")
+    s = s.replace("orthogonally to STMN2", "independently of STMN2")
+    s = s.replace("multiplex polyanion/DRG margin", "total intrathecal ASO dose")
     s = deaudit_prose(s)
-    s = re.sub(r"\s{2,}", " ", s).strip()
+    s = re.sub(r"[ \t]{2,}", " ", s)
+    s = re.sub(r" *\n *", "\n", s)
+    s = re.sub(r"\n{3,}", "\n\n", s).strip()
     return (s[0].upper() + s[1:]) if s and s[0].islower() and txt and txt[0].isupper() else s
 
 

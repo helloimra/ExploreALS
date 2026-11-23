@@ -44,7 +44,7 @@ VERDICT_LABELS: dict[str, str] = {
     "KEEP_EXPLORATORY_UNPROVEN_PRIMARY_SUBNODE": "Keep · Exploratory (Primary Subunit)",
     "KEEP_EXPLORATORY_UNPROVEN_SECONDARY_SUBUNIT": "Keep · Exploratory (Secondary Subunit)",
     "RECLASSIFY_BENCHMARK_OR_BIOMARKER": "Reclassify · Fluid Biomarker",
-    "RECLASSIFY_BENCHMARK_OR_BIOMARKER (WRONG SIGN FOR INHIBITION)": "Reclassify · Biomarker (Neuroprotective Sign)",
+    "RECLASSIFY_BENCHMARK_OR_BIOMARKER (WRONG SIGN FOR INHIBITION)": "Reclassify · Biomarker (Neuroprotective Role)",
     "EXCLUDE_SELECTIVITY_PARALOG": "Counter-Screen · Non-Causal Paralog",
     "EXCLUDE_PAN_ESSENTIAL_SNARE": "Counter-Screen · Pan-Essential cis-SNARE",
     "EXCLUDE_INFRAME_NONCRYPTIC": "Counter-Screen · In-Frame Splice Isoform",

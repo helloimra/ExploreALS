@@ -15,12 +15,12 @@ function trackLabel(t){
 }
 
 const ENUM_LABELS = {
-  TIER_1_ACTIONABLE_NOW: 'Tier 1 · Actionable Now',
+  TIER_1_ACTIONABLE_NOW: 'Tier 1 · Translational Lead',
   TIER_2_FOCUSED_GATE_FIRST: 'Tier 2 · Validation Gate',
   TIER_3_EXPLORATORY_DISCOVERY: 'Tier 3 · Exploratory Discovery',
-  COMPANION_PROTOCOL_ONLY: 'Functional PD Calibrator',
+  COMPANION_PROTOCOL_ONLY: 'Clinical PD Protocol',
   BIOMARKER_BENCHMARK_ONLY: 'Biomarker / SOC Benchmark',
-  DROPPED_FALSIFIED_EXCLUDED: 'Dropped · Falsified',
+  DROPPED_FALSIFIED_EXCLUDED: 'Drop · Excluded Regimens',
   PASS_CLEAN_GE2MM: 'Pass · Clean (>=2 Mismatches)',
   CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED: 'Caution · Non-Constrained 1-mm / Wobble / 25bp 2-mm',
   WARN_1MM_OR_WOBBLE_CONSTRAINED_NEURONAL: 'Warn · Constrained CNS 1-mm / Bulge',
@@ -31,13 +31,13 @@ const ENUM_LABELS = {
   TRL_3_PRECLINICAL_SSO_COORDINATE: 'Preclinical GRCh38 SSO',
   TRL_2_PRECLINICAL_MODALITY_DISCOVERY: 'Preclinical Modality',
   TRL_1_TARGET_TOOL_PROBE_WATCHLIST: 'Target Watchlist / Tool Probe',
-  PROTOCOL_COMPANION_NA: 'Biomarker / Calibrator (N/A)',
+  PROTOCOL_COMPANION_NA: 'Biomarker / PD Reference (N/A)',
   MEASURED_HUMAN_GENETICS_AND_PATHOLOGY: 'Human Genetics + CNS Pathology',
   MEASURED_HUMAN_TDP43_PATHOLOGY_AND_RESCUE: 'Human TDP-43 Pathology + Rescue',
   MEASURED_HUMAN_RCT_SUBGROUP: 'Human ALS RCT Subgroup',
   MEASURED_C9FTD_FRACTION_PROTEOMICS: 'Human C9-FTD Fraction Proteomics',
   MEASURED_HUMAN_SPATIAL_OR_SNRNA: 'Human Spatial / snRNA-seq',
-  MEASURED_HUMAN_CSF_PROTEOMICS: 'Living Human CSF Proteomics',
+  MEASURED_HUMAN_CSF_PROTEOMICS: 'Antemortem Human CSF Proteomics',
   MEASURED_HUMAN_PK_AND_IPSC_SCREEN: 'Human PK / Patient iPSC-MN Screen',
   MEASURED_HUMAN_PK_AND_SAFETY: 'Human PK / Regulatory Safety',
   PROTOCOL_STAGE_GATING_ONLY: 'Clinical Stage-Gating Protocol',
@@ -46,11 +46,11 @@ const ENUM_LABELS = {
   DE_NOVO_CHEMICAL_OR_BIOLOGIC_DISCOVERY_GATE: 'Chemical / Biologic Modality Discovery',
   BIOMARKER_ENRICHED_PHASE3_EFFICACY_TRIAL: 'Biomarker-Enriched Phase 3 Survival RCT',
   CLINICAL_PROTOCOL_STANDARDIZATION: 'Clinical Protocol / Calibration Standard',
-  NOT_APPLICABLE_FALSIFIED: 'N/A — Scientifically Falsified',
+  NOT_APPLICABLE_FALSIFIED: 'N/A — Deprioritized (Negative Clinical or PK Evidence)',
   GENETICS_MENDELIAN_GWAS: 'Human ALS Genetics — Mendelian & GWAS',
   TDP43_SPLICING_APA: 'TDP-43 Cryptic Splicing & Polyadenylation',
   CNS_TISSUE_OMICS: 'Human CNS Spatial, snRNA & Subcellular Omics',
-  CSF_AND_PHYSIOLOGY: 'Living-Patient CSF Proteomics & Physiology',
+  CSF_AND_PHYSIOLOGY: 'Antemortem CSF Proteomics & Physiology',
   CLINICAL_TRIALS_SUBGROUPS: 'Human ALS Clinical Trials & Subgroups',
   IPSC_PHENOTYPIC_SCREEN: 'Patient iPSC-MN Phenotypic Screen',
   CRYPTIC_EXON_SKIP: 'Cryptic Cassette Exon Skipping',
@@ -59,33 +59,33 @@ const ENUM_LABELS = {
   DISTAL_3UTR_EXTENSION: "Distal 3'-UTR Extension Suppression",
   SUPPORTED: 'Supported (Human Genetics + Pathology)',
   UNPROVEN_UNTESTED: 'Untested / Unresolved (Validation Required)',
-  ESTABLISHED_BENCHMARK: 'Established SOC / PD Benchmark',
-  FALSIFIED_CLINICAL: 'Falsified · Human ALS RCT Futility',
-  FALSIFIED_PK_SAFETY: 'Falsified · CNS PK / Safety Wall',
-  ARTIFACT_CONFOUNDED: 'Falsified · Assay Confounding',
+  ESTABLISHED_BENCHMARK: 'Reference Benchmark / Biomarker',
+  FALSIFIED_CLINICAL: 'Excluded · Human ALS RCT Futility',
+  FALSIFIED_PK_SAFETY: 'Excluded · CNS Exposure / Safety Limit',
+  ARTIFACT_CONFOUNDED: 'Excluded · Assay Confounding',
   KEEP_CORE: 'Keep · Core',
   KEEP_EXPLORATORY_UNPROVEN: 'Keep · Exploratory',
   RECLASSIFY_BENCHMARK_OR_BIOMARKER: 'Benchmark / Biomarker',
   DROP: 'Drop · Falsified',
   SKIP_CRYPTIC_EXON: "Steric 2'-MOE SSO · Cryptic Exon Skip",
-  CRYPTIC_EXON2A_3SS_PAS_BLOCK: "Steric 2'-MOE SSO · Proximal Exon-2a (+8..+25) Epistatic 3'SS / PAS Suppression",
+  CRYPTIC_EXON2A_3SS_PAS_BLOCK: "Steric 2'-MOE SSO · Proximal Exon-2a (+8..+25) Coupled 3'SS & Premature PolyA Blockade",
   CRYPTIC_CASSETTE_EXON_SKIP: "Steric 2'-MOE SSO · Cryptic Cassette Skip",
   CRYPTIC_CASSETTE_MAJOR_3SS_AND_SHARED_EXON: "Steric 2'-MOE SSO · Major 3'SS + Exonic",
   CRYPTIC_CASSETTE_DOWNSTREAM_INTRONIC_ISE: "Steric 2'-MOE SSO · Downstream Intronic ISE",
-  INCLUDE_CONSTITUTIVE_EXON: "Steric 2'-MOE SSO · Putative Intron-5 Site (ISS vs ISE Gate)",
+  INCLUDE_CONSTITUTIVE_EXON: "Steric 2'-MOE SSO · Putative Intron-5 Site (ISS vs ISE Check)",
   INCLUDE_EXON_UPSTREAM_UG: "Steric 2'-MOE SSO · Exon-5 Inclusion (UG)",
   CRYPTIC_ALE_3SS_ACCEPTOR_BLOCK: "Steric 2'-MOE SSO · Cryptic ALE 3'SS Block",
   CRYPTIC_A3SS_PROXIMAL_EXON_BLOCK: "Steric 2'-MOE SSO · Cryptic A3SS Exonic Block (+8..+27)",
   CRYPTIC_A3SS_ACCEPTOR_BLOCK: "Steric 2'-MOE SSO · Cryptic A3SS Acceptor Block",
   DISTAL_3UTR_EXT_PAS_WINDOW: "Distal 3'-UTR Extension Window (Steric Distal-PAS SSO or 3'-Ext siRNA)",
-  CRYPTIC_3EXT_ISOFORM_GAPMER_WINDOW: "Exploratory 3'-Ext RNase-H Gapmer ASO Window (vs. Steric PAS / 3'-Ext siRNA Gate)",
+  CRYPTIC_3EXT_ISOFORM_GAPMER_WINDOW: "Exploratory 3'-Ext RNase-H Gapmer ASO Window (vs. Steric PAS / 3'-Ext siRNA Check)",
   MULTIPLEX_CORE: 'Multiplex Core',
   SINGLE_LOCUS_LEAD: 'Single-Locus Lead',
   EXPLORATORY_LOCUS: 'Exploratory Locus',
   EXCLUDED_ALU_REPEAT: 'Excluded (Alu Repeat)',
-  NONE_FALSIFIED_CLINICAL: 'None — Falsified in human ALS clinical trials.',
-  NONE_FALSIFIED_PK_SAFETY: 'None — Falsified by insurmountable human CNS PK deficit or clinical toxicity.',
-  NONE_ARTIFACT_CONFOUNDED: 'None — Assay perturbation sits within basal media noise and contradicts human genetic polarity.',
+  NONE_FALSIFIED_CLINICAL: 'None — Deprioritized following negative human ALS clinical trial outcomes.',
+  NONE_FALSIFIED_PK_SAFETY: 'None — Deprioritized due to inadequate unbound human CNS exposure or dose-limiting toxicity.',
+  NONE_ARTIFACT_CONFOUNDED: 'None — Assay perturbation sits within basal media noise and opposes human genetic directionality.',
 };
 const HURDLE_TOK = {
   SSO:'SSO', ASO:'ASO', IT:'IT', IV:'IV', SC:'SC', GLP:'GLP', CSF:'CSF', CNS:'CNS', BBB:'BBB', PD:'PD', PK:'PK',
@@ -108,7 +108,7 @@ const HURDLE_TOK = {
   '1PLEX':'1-plex', '2PLEX':'2-plex', '3PLEX':'3-plex', PLI1:'pLI=1.0', '14Q12':'14q12', N6:'n=6', N7:'n=7', P80:'p80',
   ELLA:'Ella', EUROIMMUN:'Euroimmun', GFAP:'GFAP', ER:'ER', EV:'EV', NHP:'NHP', EC50:'EC50', MRNA:'mRNA',
   SNRNA:'snRNA', C9:'C9', SALS:'sALS', C9FTD:'C9-FTD', BYE2025:'Bye 2025', JAK1:'JAK1', JAK2:'JAK2',
-  APA:'APA', CATCH22:'catch-22', ISE:'ISE', ISS:'ISS', BIP:'BiP', CHOP:'CHOP', ERAD:'ERAD', PRM:'PRM',
+  APA:'APA', CATCH22:'trade-off', ISE:'ISE', ISS:'ISS', BIP:'BiP', CHOP:'CHOP', ERAD:'ERAD', PRM:'PRM',
   CGAS:'cGAS', STING:'STING', L1HS:'L1HS', IL6:'IL-6', '1151BP':'1,151-bp', N25:'n>=25', N20:'n>=20',
   '48MG':'48 mg', VTE:'VTE', AAK1:'AAK1', AA:'A/A', ANQUR:'ANQUR', FVC:'FVC', GE80:'>=80%', SIMOA:'Simoa',
   '2OMOE':"2'-MOE", POLII:'Pol II', ELK1:'ELK1', FDR:'FDR', MW:'MW', WASHU:'WashU', MWU:'MWU',
@@ -134,9 +134,13 @@ function humanizeEnum(s){
 function formatHurdle(code){
   if(!code || code === 'NONE') return 'None';
   const pre = String(code)
+    .replace(/SPONSOR_OWNED_ICH_M3R2_SINGLE_ENTITY_GLP_TOX_AND_NHP_CERVICAL_BA4_BIODISTRIBUTION_INDEPENDENT_SINGLE_ENTITY_TOX/g, 'Single-agent_ICH_M3R2_GLP_IT_toxicology_and_NHP_cervical_BA4_biodistribution')
+    .replace(/PROVISIONAL_POSSIBLE_OPPOSITE_SIGN/g, 'Opposite-direction')
+    .replace(/OPPOSITE_SIGN/g, 'opposite-direction')
+    .replace(/SPONSOR_OWNED_/g, 'Single-agent_')
     .replace(/FACTORIAL_CONTRIBUTION/g, 'factorial contribution')
     .replace(/ICH_M3R2/g, 'ICH M3(R2)')
-    .replace(/INDEPENDENT_SINGLE_ENTITY_TOX/g, 'independent single-entity tox qualification')
+    .replace(/INDEPENDENT_SINGLE_ENTITY_TOX/g, 'standalone single-agent tox qualification')
     .replace(/6_TO_9MG/g, '6–9 mg')
     .replace(/LE_3MG/g, '<=3 mg')
     .replace(/LE_5_5PCT/g, '<=5.5%')
@@ -186,7 +190,7 @@ function formatPrior(code){
     .replace(/Anionic_MPA_efflux_Kpuu_on_NDA050722_fup_0\\.03/g, 'OAT3/MRP anionic MPA efflux Kp,uu on NDA 050722 fu,p = 0.03 (~15–55 nM Cu,brain)')
     .replace(/Passive_Kpuu_le_1_and_CAD_lysosomal_partitioning_on_NDA021807_fup/g, 'Passive Kp,uu <= 1.0 & CAD lipid partitioning on NDA 021807 fu,p (~3–15 nM combined free CNS)')
     .replace(/Pgp_attenuated_Kpuu_on_NDA213969_fup_le_0\\.01/g, 'P-gp-attenuated Kp,uu on NDA 213969 fu,p <= 0.01 (~2–13 nM Cu,brain)')
-    .replace(/8mer_MWC_1x_parallel_Bliss_to_2_to_7x_epistatic_bounds/g, '8-mer MWC (1.0x parallel Bliss to ~2–7x epistatic bounds)')
+    .replace(/8mer_MWC_1x_parallel_Bliss_to_2_to_7x_epistatic_bounds/g, '8-mer MWC (1.0x parallel Bliss to ~2–7x NMNAT2-coupled bounds)')
     .replace(/1x_parallel_Bliss_to_2_to_7x_MWC_SARM1_bounds/g, '1.0x parallel Bliss to ~2–7x MWC SARM1 bounds')
     .replace(/Bifurcated_PKPD_ODE_79_to_30_to_0pct_coupled_PI3P_LRRK2_CASM/g, 'Bifurcated PK/PD ODE (~79% dead-zone -> ~30% matched -> 0% slow coupled +PI(3)P->LRRK2/CASM)')
     .replace(/Bifurcated_PKPD_ODE_79pct_osmotic_deadzone_vs_0pct_coupled_PI3P_LRRK2_CASM/g, 'Bifurcated PK/PD ODE (~79% osmotic dead-zone vs ~30%/0% coupled +PI(3)P->LRRK2/CASM)')
@@ -262,28 +266,38 @@ function splitTopClauses(raw, sepRe){
 }
 function capClause(c){
   if(!c) return '';
-  return (/^[a-z]/.test(c) && !/^(?:pLI|q48|rs\\d|tSTMN2|sST2|sALS|iPSC|cADPR|mRNA|snRNA)/.test(c)) ? (c[0].toUpperCase() + c.slice(1)) : c;
+  return (/^[a-z]/.test(c) && !/^(?:pLI|q48|rs\\d|tSTMN2|sST2|sALS|iPSC|i3Neuron|iNeuron|iMGL|cADPR|mRNA|snRNA|dPSI|ddPCR|dPCR|qPCR|eQTL|sQTL|pNfH|hSOD1|hUNC13A|rASO|rhIL)/.test(c)) ? (c[0].toUpperCase() + c.slice(1)) : c;
 }
 function formatGateList(rawStr, ctx, isKill){
-  const sep = isKill
-    ? /,?\\s+OR\\s+|,\\s+(?=inadequate\\s+cervical|acute\\s+human|acute\\s+neuron|flat\\s+ventilation|failure\\s+to\\s+engage|collapse\\s+of\\s+ex\\s+vivo|steric\\s+cis-eviction|>[0-9]+%\\s+2-plex)/
-    : /\\s+\\+\\s+|,?\\s+AND\\s+(?!(?:TDP-43-intact|0%\\s+98-bp|across\\s+48))|,\\s+(?=establishes\\s+NHP)|,\\s+and\\s+(?=Stage\\s+2|passes\\s+genotype|confirms\\s+penetrance)/;
-  const clauses = splitTopClauses(rawStr, sep);
-  if(clauses.length <= 1) return `<p class="leading-relaxed text-[var(--foreground)]">${escLink(rawStr, ctx)}</p>`;
-  return `<ul class="space-y-1.5">${clauses.map((c, idx) => {
-    const linked = escLink(capClause(c), ctx).replace(/^(Stage\\s+[12]\\b[^(:<]{0,28})/, m => '<strong>' + m + '</strong>');
+  const raw = String(rawStr || '').trim();
+  if(!raw) return '';
+  let clauses = [];
+  if(raw.includes('\\n')){
+    clauses = raw.split(/\\n+/).map(x => x.replace(/^\\s*(?:[-*]|\\([0-9]+\\)|[0-9]+[.)])\\s*/, '').trim()).filter(Boolean);
+  } else {
+    const sep = isKill
+      ? /,?\\s+OR\\s+|,\\s+or\\s+(?=(?:any|zero|null|failure|primary|grade|confirmed|unacceptable|persistent|lack|no\\b|inability|worsening|emergence|drop|significant|absence|loss|steric|inadequate|acute|flat|collapse)\\b)|,\\s+(?=inadequate\\s+cervical|acute\\s+human|acute\\s+neuron|flat\\s+ventilation|failure\\s+to\\s+engage|collapse\\s+of\\s+ex\\s+vivo|steric\\s+cis-eviction|>[0-9]+%\\s+2-plex)/
+      : /\\s+\\+\\s+(?=(?:Stage\\s+[12]|prospective|dedicated|single-agent|companion|CLSI|NHP|human\\s+iPSC-neuron|6–9|<=3\\s+mg|oximetry|endogenous|factorial)\\b)|,\\s+followed\\s+by\\s+|,?\\s+AND\\s+(?!(?:TDP-43-intact|0%\\s+98-bp|across\\s+48))|,\\s+(?=establishes\\s+NHP)|,\\s+and\\s+(?=Stage\\s+2|factorial|passes\\s+genotype|confirms\\s+penetrance)/;
+    clauses = splitTopClauses(raw, sep);
+  }
+  if(clauses.length <= 1) return `<p class="leading-relaxed text-[var(--foreground)]">${formatBulletBody(raw, ctx)}</p>`;
+  return `<ul class="space-y-2">${clauses.map((c, idx) => {
+    const linked = formatBulletBody(c, ctx).replace(/^(Stage\\s+[12]\\b[^(:<]{0,28})/, m => '<strong>' + m + '</strong>');
     const mark = isKill
       ? '<span class="font-mono font-bold text-[var(--error)] shrink-0">&bull;</span>'
       : `<span class="font-mono font-bold text-[var(--success)] shrink-0">${idx+1}.</span>`;
-    return `<li class="flex items-baseline gap-1.5 leading-snug text-[var(--foreground)]">${mark}<span class="min-w-0 break-words">${linked}</span></li>`;
+    return `<li class="flex items-baseline gap-2 leading-relaxed text-[var(--foreground)]">${mark}<span class="min-w-0 break-words">${linked}</span></li>`;
   }).join('')}</ul>`;
 }
 function formatNextTest(s, ctx){
   if(!s) return '';
   if(ENUM_LABELS[s]) return `<span class="text-[var(--muted-foreground)] italic">${esc(ENUM_LABELS[s])}</span>`;
-  const clauses = splitTopClauses(s, /;\\s+|,\\s+(?:then|followed by)\\s+|\\s+(?=\\([123]\\)\\s)/);
-  if(clauses.length <= 1) return escLink(s, ctx);
-  return `<ul class="list-disc pl-4 space-y-1 mt-1 leading-snug">${clauses.map(c => `<li class="break-words">${escLink(capClause(c), ctx)}</li>`).join('')}</ul>`;
+  const raw = String(s).trim();
+  const clauses = raw.includes('\\n')
+    ? raw.split(/\\n+/).map(x => x.replace(/^\\s*(?:[-*]|\\([0-9]+\\)|[0-9]+[.)])\\s*/, '').trim()).filter(Boolean)
+    : splitTopClauses(raw, /;\\s+|,\\s+(?:then|followed by|before\\s+(?:any|advancing|initiating|executing|committing)|pairing\\s+|and\\s+testing\\s+)|\\s+\\+\\s+(?=(?:Stage\\s+[12]|dedicated|single-agent|companion|CLSI|NHP|factorial)\\b)|\\s+(?=\\([1234]\\)\\s)/);
+  if(clauses.length <= 1) return `<span class="leading-relaxed">${formatBulletBody(raw, ctx)}</span>`;
+  return `<ul class="list-disc pl-4 space-y-1.5 mt-1.5 leading-relaxed">${clauses.map(c => `<li class="break-words">${formatBulletBody(c, ctx)}</li>`).join('')}</ul>`;
 }
 function ensurePeriod(c){
   const t = String(c || '').trim();
@@ -300,11 +314,18 @@ function topDepths(s){
   }
   return dp;
 }
+function renderBoldMarkup(linked){
+  return String(linked || '').replace(/\\*\\*([^<>\\*]{1,80})\\*\\*/g, (_m, g1) => '<strong class="font-semibold text-[var(--foreground)]">' + g1 + '</strong>');
+}
 function formatBulletBody(rawBody, ctx){
-  const body = ensurePeriod(capClause(rawBody));
-  const linked = escLink(body, ctx);
-  const cm = /^([^:<()]{2,34}:)\\s+([\\s\\S]+)$/.exec(linked);
-  return cm ? `<strong class="font-semibold text-[var(--foreground)]">${cm[1]}</strong> ${cm[2]}` : linked;
+  const stripped = String(rawBody || '').replace(/^\\*\\*([^:\\*]{2,64}:)\\*\\*\\s*/, (_m, g1) => g1 + ' ').trim();
+  const body = ensurePeriod(capClause(stripped));
+  const linked = renderBoldMarkup(escLink(body, ctx));
+  const cm = /^([^:<]{2,62}:)\\s+([\\s\\S]+)$/.exec(linked);
+  if(cm && (cm[1].match(/\\(/g)||[]).length === (cm[1].match(/\\)/g)||[]).length){
+    return `<strong class="font-semibold text-[var(--foreground)]">${cm[1]}</strong> ${cm[2]}`;
+  }
+  return linked;
 }
 function formatProseParas(raw, ctx, gapCls='space-y-2', toneCls='text-[var(--foreground)]'){
   const txt = String(raw || '').trim();
@@ -313,14 +334,45 @@ function formatProseParas(raw, ctx, gapCls='space-y-2', toneCls='text-[var(--for
   for(const blk of txt.split(/\\n\\n+/)){
     const b = blk.trim();
     if(!b) continue;
+    if(/(?:^|\\n)\\s*-\\s+/.test(b)){
+      const lines = b.split(/\\n+/).map(x => x.trim()).filter(Boolean);
+      const introLines = [];
+      const bulletLines = [];
+      for(const ln of lines){
+        if(/^[-*]\\s+/.test(ln)) bulletLines.push(ln.replace(/^[-*]\\s+/, '').trim());
+        else if(!bulletLines.length) introLines.push(ln);
+        else bulletLines[bulletLines.length - 1] += ' ' + ln;
+      }
+      if(introLines.length){
+        htmlBlocks.push(`<p class="break-words">${renderBoldMarkup(escLink(introLines.join(' '), ctx))}</p>`);
+      }
+      if(bulletLines.length){
+        htmlBlocks.push(`<ul class="space-y-1.5 pl-0.5">${bulletLines.map(bl => `<li class="flex items-baseline gap-2"><span class="font-mono font-bold text-[var(--primary)] shrink-0">&rsaquo;</span><span class="min-w-0 break-words">${formatBulletBody(bl, ctx)}</span></li>`).join('')}</ul>`);
+      }
+      continue;
+    }
+    const renderEnumItem = it => {
+      const m = /^\\(([0-9]+)\\)\\s*(.+)$/.exec(it.trim());
+      const num = m ? m[1] : '&bull;';
+      const rawBody = m ? m[2] : it;
+      if(rawBody.length >= 360){
+        const dpB = topDepths(rawBody);
+        let hdrColon = -1;
+        for(let k = 8; k <= Math.min(92, rawBody.length - 40); k++){
+          if(rawBody[k] === ':' && dpB[k] === 0 && rawBody[k + 1] === ' '){ hdrColon = k; break; }
+        }
+        const hdr = hdrColon > 0 ? rawBody.slice(0, hdrColon + 1).trim() : '';
+        const remB = hdrColon > 0 ? rawBody.slice(hdrColon + 1).trim() : rawBody;
+        const subs = splitTopClauses(remB, /;\\s+/);
+        if(subs.length >= 2){
+          return `<li class="flex items-baseline gap-2"><span class="font-mono font-semibold text-[var(--primary)] shrink-0">(${num})</span><div class="min-w-0 break-words">${hdr ? `<strong class="font-semibold text-[var(--foreground)]">${escLink(hdr, ctx)}</strong>` : ''}<ul class="list-disc pl-4 space-y-1 mt-1">${subs.map(sb => `<li class="break-words">${formatBulletBody(sb, ctx)}</li>`).join('')}</ul></div></li>`;
+        }
+      }
+      return `<li class="flex items-baseline gap-2"><span class="font-mono font-semibold text-[var(--primary)] shrink-0">(${num})</span><span class="min-w-0 break-words">${formatBulletBody(rawBody, ctx)}</span></li>`;
+    };
     if(/^\\(1\\)\\s/.test(b) && b.includes('(2) ')){
       const items = splitTopClauses(b, /[;,]\\s+(?:and\\s+)?(?=\\([2-9]\\)\\s)/);
-      htmlBlocks.push(`<ul class="space-y-1.5 pl-0.5">${items.map(it => {
-        const m = /^\\(([0-9]+)\\)\\s*(.+)$/.exec(it.trim());
-        const num = m ? m[1] : '&bull;';
-        const rawBody = m ? m[2] : it;
-        return `<li class="flex items-baseline gap-1.5"><span class="font-mono font-semibold text-[var(--primary)] shrink-0">(${num})</span><span class="min-w-0 break-words">${formatBulletBody(rawBody, ctx)}</span></li>`;
-      }).join('')}</ul>`);
+      htmlBlocks.push(`<ul class="space-y-2 pl-0.5">${items.map(renderEnumItem).join('')}</ul>`);
       continue;
     }
     const dp0 = topDepths(b);
@@ -346,14 +398,9 @@ function formatProseParas(raw, ctx, gapCls='space-y-2', toneCls='text-[var(--for
           }
         }
       }
-      htmlBlocks.push(`<p class="break-words">${escLink(intro, ctx)}</p>`);
-      htmlBlocks.push(`<ul class="space-y-1.5 pl-1">${items.map(it => {
-        const m = /^\\(([0-9]+)\\)\\s*(.+)$/.exec(it.trim());
-        const num = m ? m[1] : '&bull;';
-        const rawBody = m ? m[2] : it;
-        return `<li class="flex items-baseline gap-1.5"><span class="font-mono font-semibold text-[var(--primary)] shrink-0">(${num})</span><span class="min-w-0 break-words">${formatBulletBody(rawBody, ctx)}</span></li>`;
-      }).join('')}</ul>`);
-      if(postNote) htmlBlocks.push(`<p class="break-words">${escLink(postNote, ctx)}</p>`);
+      htmlBlocks.push(`<p class="break-words">${renderBoldMarkup(escLink(intro, ctx))}</p>`);
+      htmlBlocks.push(`<ul class="space-y-2 pl-1">${items.map(renderEnumItem).join('')}</ul>`);
+      if(postNote) htmlBlocks.push(`<p class="break-words">${renderBoldMarkup(escLink(postNote, ctx))}</p>`);
       continue;
     }
     const sents = [];
@@ -361,10 +408,10 @@ function formatProseParas(raw, ctx, gapCls='space-y-2', toneCls='text-[var(--for
     for(let i = 0; i < b.length; i++){
       if(b[i] === '.' && dp0[i] === 0){
         const rem = b.slice(i + 1);
-        const m = /^(\\s+)(?=[A-Z0-9#])/.exec(rem);
+        const m = /^(\\s+)(?=[A-Z0-9#*])/.exec(rem);
         if(m && !/\\b(?:et\\s+al|vs|v|e\\.g|i\\.e|incl|cf|esp|Fig|Figs|Suppl|Ext|Ref|Refs|Eq|Tab|No|ca|approx|Dr|St|Prof|[A-Z])$/.test(b.slice(0, i))){
           const seg = b.slice(last, i + 1).trim();
-          if(seg.length >= 65 && rem.trim().length >= 65){
+          if(seg.length >= 55 && rem.trim().length >= 55){
             sents.push(seg);
             last = i + 1 + m[1].length;
           }
@@ -373,33 +420,45 @@ function formatProseParas(raw, ctx, gapCls='space-y-2', toneCls='text-[var(--for
     }
     if(b.slice(last).trim()) sents.push(b.slice(last).trim());
     for(const st of sents){
-      const semis = st.length >= 220 ? splitTopClauses(st, /;\\s+/) : [st];
+      const semis = st.length >= 175 ? splitTopClauses(st, /;\\s+/) : [st];
       const merged = [];
       for(let idx = 0; idx < semis.length; idx++){
         const sm = semis[idx].trim();
-        if(merged.length && (merged[merged.length - 1].length < 80 || sm.length < 80)){
+        if(merged.length && (merged[merged.length - 1].length < 55 || sm.length < 55)){
           merged[merged.length - 1] = merged[merged.length - 1].replace(/\\.+$/, '') + '; ' + sm;
         } else {
           merged.push(idx > 0 ? capClause(sm) : sm);
         }
       }
-      for(let idx = 0; idx < merged.length; idx++){
-        const p = idx < merged.length - 1 ? ensurePeriod(merged[idx]) : merged[idx];
-        if(p.length >= 240){
-          const dpP = topDepths(p);
-          let cIdx = -1;
-          for(let k = 24; k <= Math.min(310, p.length - 80); k++){
-            if(p[k] === ':' && dpP[k] === 0 && p[k + 1] === ' ' && !/\\b(?:DOI|PMID|CID|OMIM|HGNC|MGI|HR|OR)$/i.test(p.slice(0, k))){ cIdx = k; break; }
+      const fine = [];
+      for(const seg of merged){
+        if(seg.length >= 260){
+          const subCl = splitTopClauses(seg, /\\s+—\\s+(?=(?:plus|whereas|while|leaving|requiring|supporting|confirming|yet)\\b)|,\\s+(?=whereas\\b|while\\b|alongside\\b|yet\\b|converging\\s+with\\b|complemented\\s+by\\b|corroborated\\s+by\\b|supported\\s+by\\b|accompanied\\s+by\\b|paired\\s+with\\b|in\\s+comparator\\b|and\\s+specific\\s+rare\\b|and\\s+FDA\\b|leaving\\b|motivating\\b|requiring\\b|confirming\\b|establishing\\b)/);
+          let cur = '';
+          for(const sc of subCl){
+            if(!cur) cur = sc;
+            else if(cur.length >= 95 && sc.length >= 95){ fine.push(ensurePeriod(cur)); cur = capClause(sc); }
+            else cur = cur.replace(/\\.+$/, '') + ', ' + sc;
           }
-          if(cIdx > 0){
-            const lead = p.slice(0, cIdx + 1).trim();
-            const tail = p.slice(cIdx + 1).trim();
-            htmlBlocks.push(`<p class="font-medium break-words">${escLink(lead, ctx)}</p>`);
-            htmlBlocks.push(`<p class="break-words">${escLink(capClause(tail), ctx)}</p>`);
-            continue;
-          }
+          if(cur) fine.push(cur);
+        } else {
+          fine.push(seg);
         }
-        htmlBlocks.push(`<p class="break-words">${escLink(p, ctx)}</p>`);
+      }
+      for(let idx = 0; idx < fine.length; idx++){
+        const p = idx < fine.length - 1 ? ensurePeriod(fine[idx]) : fine[idx];
+        const dpP = topDepths(p);
+        let cIdx = -1;
+        for(let k = 8; k <= Math.min(64, p.length - 40); k++){
+          if(p[k] === ':' && dpP[k] === 0 && p[k + 1] === ' ' && !/\\b(?:DOI|PMID|CID|OMIM|HGNC|MGI|HR|OR)$/i.test(p.slice(0, k))){ cIdx = k; break; }
+        }
+        if(cIdx > 0){
+          const lead = p.slice(0, cIdx + 1).replace(/^\\*\\*|\\*\\*$/g, '').trim();
+          const tail = p.slice(cIdx + 1).trim();
+          htmlBlocks.push(`<p class="break-words"><strong class="font-semibold text-[var(--foreground)]">${escLink(lead, ctx)}</strong> ${renderBoldMarkup(escLink(tail, ctx))}</p>`);
+          continue;
+        }
+        htmlBlocks.push(`<p class="break-words">${renderBoldMarkup(escLink(p, ctx))}</p>`);
       }
     }
   }
@@ -416,15 +475,15 @@ function statusBadge(st, c=null){
   return '<span class="text-[var(--muted-foreground)] font-mono text-xs">None</span>';
 }
 function riskStateBadge(st){
-  if(st==='LOW') return '<span class="px-2 py-0.5 rounded font-mono font-semibold text-[var(--success)] border border-[var(--success)] text-xs shrink-0">&#10003; LOW / DE-RISKED</span>';
+  if(st==='LOW') return '<span class="px-2 py-0.5 rounded font-mono font-semibold text-[var(--success)] border border-[var(--success)] text-xs shrink-0">&#10003; LOW CONCERN</span>';
   if(st==='MITIGATED') return '<span class="px-2 py-0.5 rounded font-mono font-semibold text-[var(--primary)] border border-[var(--primary)] text-xs shrink-0">&#9670; MITIGATED BY ROUTE / SELECTIVITY</span>';
-  if(st==='GATE') return '<span class="px-2 py-0.5 rounded font-mono font-semibold text-[var(--warning)] border border-[var(--warning)] text-xs shrink-0">&#9651; PRECLINICAL GATE REQUIRED</span>';
+  if(st==='GATE') return '<span class="px-2 py-0.5 rounded font-mono font-semibold text-[var(--warning)] border border-[var(--warning)] text-xs shrink-0">&#9651; VALIDATION REQUIRED</span>';
   return '<span class="px-2 py-0.5 rounded font-mono font-bold text-[var(--error)] border border-[var(--error)] text-xs shrink-0">&#9888; CLINICAL / PK LIMITATION</span>';
 }
 function certBadge(cert){
-  const c = String(cert || 'Level 2 · Human Cohort / PK-PD');
-  const col = c.startsWith('Level 1') ? 'text-[var(--success)] border-[var(--success)]'
-    : (c.startsWith('Level 2') ? 'text-[var(--primary)] border-[var(--primary)]'
+  const c = String(cert || 'Human Cohort / PK-PD');
+  const col = (c.includes('Human RCT') || c.startsWith('Level 1')) ? 'text-[var(--success)] border-[var(--success)]'
+    : ((c.includes('Human Cohort') || c.startsWith('Level 2')) ? 'text-[var(--primary)] border-[var(--primary)]'
     : (c.startsWith('Model') ? 'text-[var(--muted-foreground)] border-dashed border-[var(--border)]' : 'text-[var(--warning)] border-[var(--warning)]'));
   return `<span class="inline-block px-1.5 py-0.5 rounded border font-mono text-xs whitespace-nowrap ${col}">${esc(c)}</span>`;
 }
@@ -453,9 +512,9 @@ function renderEdgeRibbon(s, cid, compact=false){
       ? 'text-[var(--warning)] border-[var(--warning)]'
       : 'text-[var(--primary)] border-[var(--primary)]');
   const rawTxt = (compact && typeof firstGateSummary === 'function') ? firstGateSummary(s.edge_text, 175) : s.edge_text;
-  return `<div class="${compact?'p-2':'p-2.5'} rounded-lg bg-[var(--content)] border border-[var(--card-border)] space-y-1 text-xs">
+  return `<div class="${compact?'p-2.5':'p-3.5'} rounded-lg bg-[var(--content)] border border-[var(--card-border)] space-y-1.5 text-xs">
     <div><span class="inline-block px-1.5 py-0.5 rounded border font-mono font-semibold ${pillCls}">${esc(s.edge_label)}</span></div>
-    <div class="leading-snug text-[var(--foreground)]">${escLink(rawTxt, cid)}</div>
+    <div class="leading-relaxed text-[var(--foreground)]">${escLink(rawTxt, cid)}</div>
   </div>`;
 }
 function toggleDossierRail(){
@@ -554,32 +613,32 @@ function renderSummaryDomainPanels(r){
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">${subRows.map(sn => {
         const vcol = sn.vraw.startsWith('KEEP')?'text-[var(--warning)] border-[var(--warning)]':(sn.vraw.startsWith('RECLASSIFY')?'text-[var(--primary)] border-[var(--primary)]':'text-[var(--error)] border-[var(--error)]');
         const gPills = genePortalPills(sn.gene);
-        return `<div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--card-border)] space-y-2">
-          <div class="flex items-start justify-between gap-2 flex-wrap border-b border-[var(--card-border)] pb-1.5">
+        return `<div class="p-3.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] space-y-2.5">
+          <div class="flex items-start justify-between gap-2 flex-wrap border-b border-[var(--card-border)] pb-2">
             <div>
               <div class="flex items-center gap-1.5 flex-wrap" title="ExploreALS Subunit ${esc(sn.id)}">
                 <span class="font-mono font-bold text-sm">${esc(sn.gene)}</span>
                 <span class="font-mono text-xs text-[var(--muted-foreground)]">${esc(sn.id)}</span>
                 ${gPills?`<span class="font-mono">${gPills}</span>`:''}
               </div>
-              <div class="text-[var(--muted-foreground)] mt-0.5">${esc(sn.role)}</div>
+              <div class="text-[var(--muted-foreground)] mt-0.5 leading-normal">${esc(sn.role)}</div>
             </div>
             <div class="flex flex-wrap items-center gap-1">${tdlBadge(sn.tdl)}${tsaSubBadge(sn.tsa)}</div>
           </div>
-          <div class="space-y-0.5">
+          <div class="space-y-1.5">
             <div class="font-mono font-semibold text-[var(--muted-foreground)]">1. Human Genetic Constraint &amp; Essentiality (TSA)</div>
-            <div class="leading-relaxed break-words">${escLink(sn.gnomad, sn.gene)}</div>
+            ${formatProseParas(sn.gnomad, sn.gene, 'space-y-1.5')}
           </div>
-          <div class="space-y-0.5 pt-1 border-t border-[var(--card-border)]">
+          <div class="space-y-1.5 pt-2 border-t border-[var(--card-border)]">
             <div class="font-mono font-semibold text-[var(--muted-foreground)]">2. 3D Structural Pocket &amp; Tractability</div>
-            <div class="leading-relaxed break-words">${escLink(sn.drug, sn.gene)}</div>
+            ${formatProseParas(sn.drug, sn.gene, 'space-y-1.5')}
           </div>
-          <div class="space-y-0.5 pt-1 border-t border-[var(--card-border)]">
+          <div class="space-y-1.5 pt-2 border-t border-[var(--card-border)]">
             <div class="flex items-center justify-between gap-1.5 flex-wrap">
               <span class="font-mono font-semibold text-[var(--muted-foreground)]">3. Single-Gene Adjudication Rationale</span>
               <span class="px-1.5 py-0.5 rounded border font-mono font-semibold ${vcol}">${esc(sn.vlbl)}</span>
             </div>
-            <div class="leading-relaxed break-words">${escLink(sn.vbody, sn.gene)}</div>
+            ${formatProseParas(sn.vbody, sn.gene, 'space-y-1.5')}
           </div>
         </div>`;
       }).join('')}</div></div>`;
@@ -785,15 +844,15 @@ function renderDossierMain(){
     : '';
   const evTable = evRows.length ? `<div id="sec-ledger" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2">
     <div class="flex items-center justify-between gap-2 flex-wrap">
-      <h3 class="text-sm font-semibold">Primary Evidence &amp; FAIR Provenance Ledger (${evRows.length} Atomic Contrasts)</h3>
-      <div class="flex items-center gap-2 flex-wrap"><span class="font-mono text-xs text-[var(--muted-foreground)]">Script &amp; Checksum Provenance &middot; 4-Level Evidence Design</span>${evFilterBtn}</div>
+      <h3 class="text-sm font-semibold">Primary Evidence &amp; Reproducibility Table (${evRows.length} Verified Records)</h3>
+      <div class="flex items-center gap-2 flex-wrap"><span class="font-mono text-xs text-[var(--muted-foreground)]">Linked Scripts &amp; SHA-256 Checksums &middot; Study-Type Categories</span>${evFilterBtn}</div>
     </div>
     <div class="text-xs text-[var(--muted-foreground)] font-mono leading-relaxed pb-1 border-b border-[var(--card-border)]">
-      <strong class="text-[var(--foreground)]">Design Tiers:</strong> <span class="text-[var(--success)]">Level 1</span> = Human ALS Genetics / Powered RCT &middot; <span class="text-[var(--primary)]">Level 2</span> = Human Cohort (N&ge;15) / PK-PD &middot; <span class="text-[var(--warning)]">Level 3</span> = In Vitro / 3D / Small-N (&lt;15) &middot; <span>Model / Heuristic Prior</span> = Biophysical / Cis-Scan Simulation.
+      <strong class="text-[var(--foreground)]">Study Categories:</strong> <span class="text-[var(--success)]">Human RCT / Genetics</span> = Powered Phase 2&ndash;3 RCT or Human ALS Genetics &middot; <span class="text-[var(--primary)]">Human Cohort / PK-PD</span> = Human Tissue/CSF Cohort (N&ge;15) or Clinical PK-PD &middot; <span class="text-[var(--warning)]">In Vitro / 3D or Small-N</span> = Cellular Assay, 3D Structure, or N&lt;15 &middot; <span>Model / Heuristic Prior</span> = Biophysical or Cis-Scan Simulation.
     </div>
     <div class="overflow-x-auto"><table class="w-full text-left border-collapse text-xs">
       <thead><tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
-        <th class="py-1.5 px-2">Primary Source &amp; Accessions</th><th class="py-1.5 px-2">Basis &amp; Evidence Design Tier</th>
+        <th class="py-1.5 px-2">Primary Source &amp; Accessions</th><th class="py-1.5 px-2">Evidence Basis &amp; Study Category</th>
         <th class="py-1.5 px-2">Cohort &amp; Case/Control N</th><th class="py-1.5 px-2">Assay &amp; Adjusted Contrast</th>
         <th class="py-1.5 px-2">Effect Estimate</th><th class="py-1.5 px-2">p / Adjusted FDR</th>
       </tr></thead>
@@ -827,7 +886,7 @@ function renderDossierMain(){
   const hasCisPanel = (typeof DATA_CIS !== 'undefined' && DATA_CIS.some(c => c.pid === r.id || c.sc === r.id));
   const jumpSecs = w
     ? [['sec-overview', 'Overview & Gates'], ['sec-cascade', 'Pathogenic Mechanism'], ['sec-evidence-viz', 'Effect Sizes & Diagrams'], ['sec-safety', 'Safety & 3D Structure'], ['sec-5rs', 'Translational Deep Dive']]
-    : [['sec-overview', 'Hypothesis & Verdict'], ['sec-procon', r.dec === 'DROP' ? 'Discovery vs. Falsifier' : 'Evidence Pro / Con']];
+    : [['sec-overview', 'Hypothesis & Verdict'], ['sec-procon', r.dec === 'DROP' ? 'Originating Signal vs. Negative Evidence' : 'Evidence Pro / Con']];
   if(hasSubPanel) jumpSecs.push(['sec-subunits', 'Subunit & Selectivity']);
   if(hasNygcPanel) jumpSecs.push(['sec-nygc', 'NYGC 3-Region RNA']);
   if(hasCisPanel) jumpSecs.push(['sec-cis', 'Splice Windows']);
@@ -846,28 +905,28 @@ function renderDossierMain(){
     const vCol = isDrop ? 'border-l-[var(--error)]' : (isBench ? 'border-l-[var(--primary)]' : 'border-l-[var(--warning)]');
     const vTxt = isDrop ? `text-[var(--error)]` : (isBench ? `text-[var(--primary)]` : `text-[var(--warning)]`);
     const benchHdr = (r.id==='EALS-013'||r.id==='EALS-032') ? 'ADJUDICATION RATIONALE &mdash; APPROVED SOC &amp; ASSAY BENCHMARK'
-      : (r.id==='EALS-003' ? 'ADJUDICATION RATIONALE &mdash; WITHDRAWN HUMAN PD CALIBRATOR'
-      : (r.id==='EALS-017' ? 'ADJUDICATION RATIONALE &mdash; REPLICATED LIVING-CSF STAGING &amp; PD PANEL'
+      : (r.id==='EALS-003' ? 'ADJUDICATION RATIONALE &mdash; WITHDRAWN HUMAN KV7 PD REFERENCE'
+      : (r.id==='EALS-017' ? 'ADJUDICATION RATIONALE &mdash; CANDIDATE CLINICAL-CSF STAGING &amp; PD PANEL'
       : 'ADJUDICATION RATIONALE &mdash; CANDIDATE CSF MARKER (PRE-VALIDATION)'));
     const vHdr = isDrop ? `ADJUDICATION RATIONALE &mdash; DROP &middot; ${esc(humanizeEnum(r.epi)).toUpperCase()}`
       : (isBench ? benchHdr : 'ADJUDICATION RATIONALE &mdash; KEEP &middot; EXPLORATORY (UNTESTED &ne; FALSIFIED)');
     const hCell = isDrop
-      ? `<div class="text-[var(--muted-foreground)] font-mono">Positive Falsification Gate</div><div class="font-semibold text-[var(--error)] mt-0.5">${esc(humanizeEnum(r.epi))}</div><div class="text-[var(--muted-foreground)] mt-0.5">Excluded by positive clinical, PK/safety, or confounding counterevidence.</div>`
-      : `<div class="text-[var(--muted-foreground)] font-mono">Open Validation Steps (${r.hcnt})</div><div class="flex flex-wrap gap-1 mt-1">${r.hurdles && r.hurdles !== 'NONE' ? r.hurdles.split(';').map(h=>`<span class="px-1.5 py-0.5 rounded border border-[var(--border)] text-xs">${esc(formatHurdle(h))}</span>`).join('') : '<span class="text-[var(--muted-foreground)]">None (Calibration / Biomarker)</span>'}</div>`;
+      ? `<div class="text-[var(--muted-foreground)] font-mono">Basis for Exclusion</div><div class="font-semibold text-[var(--error)] mt-0.5">${esc(humanizeEnum(r.epi))}</div><div class="text-[var(--muted-foreground)] mt-0.5 leading-relaxed">Deprioritized based on clinical trial futility, CNS exposure/safety limits, or assay confounding.</div>`
+      : `<div class="text-[var(--muted-foreground)] font-mono">Open Validation Steps (${r.hcnt})</div><div class="flex flex-wrap gap-1 mt-1">${r.hurdles && r.hurdles !== 'NONE' ? r.hurdles.split(';').map(h=>`<span class="px-1.5 py-0.5 rounded border border-[var(--border)] text-xs leading-normal">${esc(formatHurdle(h))}</span>`).join('') : '<span class="text-[var(--muted-foreground)]">None (Reference / Biomarker)</span>'}</div>`;
     const crowdPill = (r.crowd && !r.crowd.startsWith('N/A')) ? `<span class="px-2 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">${esc(r.crowd)}</span>` : '';
     const sumPriorLine = (r.prior && r.prior !== 'NONE')
-      ? `<div class="mt-0.5"><span class="px-1 rounded border border-[var(--warning)] text-[var(--warning)] font-mono">&#9671; Modeled Estimate</span> <span class="text-[var(--muted-foreground)]">${esc(formatPrior(r.prior))}</span></div>`
-      : `<div class="mt-0.5"><span class="px-1 rounded border border-[var(--success)] text-[var(--success)] font-mono">&#9679; Empirical Data</span> <span class="text-[var(--muted-foreground)]">${esc(formatPrior(r.prior))}</span></div>`;
+      ? `<div class="mt-1 leading-relaxed"><span class="px-1 rounded border border-[var(--warning)] text-[var(--warning)] font-mono">&#9671; Modeled Estimate</span> <span class="text-[var(--muted-foreground)]">${esc(formatPrior(r.prior))}</span></div>`
+      : `<div class="mt-1 leading-relaxed"><span class="px-1 rounded border border-[var(--success)] text-[var(--success)] font-mono">&#9679; Empirical Data</span> <span class="text-[var(--muted-foreground)]">${esc(formatPrior(r.prior))}</span></div>`;
     const gPills = genePortalPills(r.id);
     const rightCol = isDrop
       ? `<div class="p-3.5 rounded-lg border border-[var(--card-border)] bg-[var(--background)] border-l-4 border-l-[var(--error)] space-y-2 text-xs">
-          <div class="font-mono font-bold text-[var(--error)]">&#10005; DECISIVE FALSIFYING COUNTEREVIDENCE</div>
+          <div class="font-mono font-bold text-[var(--error)]">&#10005; NEGATIVE CLINICAL OR PHARMACOKINETIC EVIDENCE</div>
           ${formatProseParas(s ? s.disproves : humanizeEnum(r.epi), r.id, 'space-y-2')}
         </div>`
       : `<div class="p-3.5 rounded-lg border border-[var(--card-border)] bg-[var(--background)] border-l-4 border-l-[var(--warning)] space-y-2 text-xs">
           <div class="font-mono font-bold text-[var(--warning)]">&#9651; TRANSLATIONAL CAVEATS &amp; NEXT DISCRIMINATING TEST</div>
           ${formatProseParas(s ? s.disproves : '', r.id, 'space-y-2')}
-          <div class="pt-1.5 mt-1 border-t border-[var(--card-border)] leading-relaxed"><strong class="font-mono text-[var(--foreground)]">Discriminating Next Test:</strong> ${formatNextTest(r.nxt, r.id)}</div>
+          <div class="pt-2 mt-2 border-t border-[var(--card-border)] leading-relaxed"><strong class="font-mono text-[var(--foreground)]">Discriminating Next Test:</strong> ${formatNextTest(r.nxt, r.id)}</div>
         </div>`;
     box.innerHTML = `<div id="sec-overview" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-3">
       <div class="flex items-start justify-between gap-2 flex-wrap border-b border-[var(--card-border)] pb-2.5">
@@ -896,10 +955,10 @@ function renderDossierMain(){
         </div>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-2.5 text-xs">
-        <div class="p-2.5 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-0.5"><div class="text-[var(--muted-foreground)] font-mono">Therapeutic Modality</div><div class="font-medium leading-snug">${escLink(formatModality(r.mod), r.id)}</div></div>
-        <div class="p-2.5 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-0.5"><div class="text-[var(--muted-foreground)] font-mono">Causal vs. Reactive Sign</div><div class="font-medium">${esc(s ? s.causal : humanizeEnum(r.epi))}</div><div class="text-[var(--muted-foreground)]">${esc(humanizeEnum(r.sub))} &middot; ${trackLabel(r.trk)}</div></div>
-        <div class="p-2.5 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-0.5"><div class="text-[var(--muted-foreground)] font-mono">Next Validation &amp; Basis</div><div class="font-mono">${esc(humanizeEnum(r.gate))}</div>${sumPriorLine}</div>
-        <div class="p-2.5 rounded border border-[var(--card-border)] bg-[var(--background)]">${hCell}</div>
+        <div class="p-3 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-1 leading-normal"><div class="text-[var(--muted-foreground)] font-mono">Therapeutic Modality</div><div class="font-medium leading-relaxed">${escLink(formatModality(r.mod), r.id)}</div></div>
+        <div class="p-3 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-1 leading-normal"><div class="text-[var(--muted-foreground)] font-mono">Causal Role &amp; Directionality</div><div class="font-medium leading-relaxed">${esc(s ? s.causal : humanizeEnum(r.epi))}</div><div class="text-[var(--muted-foreground)]">${esc(humanizeEnum(r.sub))} &middot; ${trackLabel(r.trk)}</div></div>
+        <div class="p-3 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-1 leading-normal"><div class="text-[var(--muted-foreground)] font-mono">Next Validation &amp; Basis</div><div class="font-mono">${esc(humanizeEnum(r.gate))}</div>${sumPriorLine}</div>
+        <div class="p-3 rounded border border-[var(--card-border)] bg-[var(--background)] space-y-1 leading-normal">${hCell}</div>
       </div>
       <div id="sec-procon" class="grid grid-cols-1 md:grid-cols-2 gap-3">
         <div class="p-3.5 rounded-lg border border-[var(--card-border)] bg-[var(--background)] border-l-4 ${isDrop?'border-l-[var(--muted-foreground)]':'border-l-[var(--success)]'} space-y-2 text-xs">
@@ -918,7 +977,7 @@ function renderDossierMain(){
     return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs">${c.lead?'★ ':''}${esc(c.gene)} &middot; Window #${c.rk} Atlas &nearr;</a>`;
   }).join('') + (isFullExplorer && cisForAtlas.length ? `<button type="button" data-jump-intervals="${esc(r.id)}" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs cursor-pointer">Inspect in Tab 3 &rarr;</button>` : (cisForAtlas.length && location.protocol !== 'about:' ? `<a href="../CARBON_ALS_INTERACTIVE_EXPLORER.html#intervals/${esc(r.id)}" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs">Inspect in Tab 3 &rarr;</a>` : ''));
   const hurdleHtml = r.hurdles && r.hurdles !== 'NONE'
-    ? r.hurdles.split(';').map(h=>`<div class="leading-snug">&bull; ${esc(formatHurdle(h))}</div>`).join('')
+    ? r.hurdles.split(';').map(h=>`<div class="leading-relaxed">&bull; ${esc(formatHurdle(h))}</div>`).join('')
     : '<div class="text-[var(--muted-foreground)]">None</div>';
   const mCol = r.dec === 'KEEP_CORE' ? 'border-l-[var(--success)]' : 'border-l-[var(--warning)]';
   const mTxt = r.dec === 'KEEP_CORE' ? 'text-[var(--success)]' : 'text-[var(--warning)]';
@@ -928,7 +987,7 @@ function renderDossierMain(){
   const mGPills = genePortalPills(r.id);
 
   box.innerHTML = `
-    <div id="sec-overview" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2.5">
+    <div id="sec-overview" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-3">
       <div class="flex flex-wrap items-start justify-between gap-2 border-b border-[var(--card-border)] pb-2.5">
         <div class="min-w-0">
           <div class="flex flex-wrap items-center gap-2">
@@ -950,30 +1009,30 @@ function renderDossierMain(){
       ${secJumpBar}
       ${renderEdgeRibbon(s, r.id)}
       <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 text-xs">
-        <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--primary)] space-y-2">
+        <div class="p-3.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--primary)] space-y-2">
           <div class="font-mono font-bold text-[var(--primary)]">CANDIDATE &amp; BIOLOGICAL HYPOTHESIS</div>
           ${formatProseParas(s && s.hyp ? s.hyp : w.subtitle, r.id, 'space-y-2')}
         </div>
-        <div class="p-3 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 ${mCol} space-y-2">
+        <div class="p-3.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 ${mCol} space-y-2">
           <div class="font-mono font-bold ${mTxt}">${mHdr}</div>
           ${formatProseParas(s ? s.verdict : '', r.id, 'space-y-2')}
         </div>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
-        <div class="p-2.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--success)] space-y-1 text-xs">
+        <div class="p-3.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--success)] space-y-2 text-xs">
           <div class="font-mono font-bold text-[var(--success)]">&#10003; GO CRITERIA (ADVANCE THRESHOLDS)</div>
           ${formatGateList(w.verdict_box.pass_gate, r.id, false)}
         </div>
-        <div class="p-2.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--error)] space-y-1 text-xs">
-          <div class="font-mono font-bold text-[var(--error)]">&#10005; NO-GO CRITERIA (FALSIFICATION THRESHOLDS)</div>
+        <div class="p-3.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--error)] space-y-2 text-xs">
+          <div class="font-mono font-bold text-[var(--error)]">&#10005; NO-GO CRITERIA (STOPPING THRESHOLDS)</div>
           ${formatGateList(w.verdict_box.kill_gate, r.id, true)}
         </div>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-1.5">
-        ${w.ident.map(([k,v])=>`<div class="p-1.5 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] text-xs">${esc(k)}</div><div class="font-mono font-semibold text-xs mt-0.5 break-words">${escLink(v, r.id)}</div></div>`).join('')}
+      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-2">
+        ${w.ident.map(([k,v])=>`<div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] leading-normal"><div class="text-[var(--muted-foreground)] text-xs">${esc(k)}</div><div class="font-mono font-semibold text-xs mt-0.5 break-words">${escLink(v, r.id)}</div></div>`).join('')}
       </div>
-      <div class="flex flex-wrap items-center justify-between gap-2 pt-0.5">
-        <div class="flex flex-wrap gap-1.5">${w.grades.map(([g,d])=>`<span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] text-xs"><strong class="text-[var(--primary)]">${esc(g)}:</strong> ${escLink(d, r.id)}</span>`).join('')}</div>
+      <div class="space-y-2 pt-0.5">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2">${w.grades.map(([g,d])=>`<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--border)] text-xs leading-relaxed"><strong class="text-[var(--primary)]">${esc(g)}:</strong> ${escLink(d, r.id)}</div>`).join('')}</div>
         <div class="flex flex-wrap items-center gap-1.5 text-xs"><span class="text-[var(--muted-foreground)]">Related:</span>${w.related.map(x=>{const rp=DATA_PORT.find(q=>q.id===x); const rShort=x==='EALS-005'?'Excitability PD':(rp?(rp.sym || rp.name.split(/[\\s(/]/)[0]):''); const rTip=rp?`#${rp.rk} ${rp.name} (${rp.id})`:x; return `<button type="button" data-open-dossier="${esc(x)}" title="${esc(rTip)}" class="px-2 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-[var(--link)] cursor-pointer">${rp?'#'+rp.rk+' ':''}${esc(rShort || x)} &middot; ${esc(x)} &rarr;</button>`;}).join('')}</div>
       </div>
     </div>
@@ -999,17 +1058,17 @@ function renderDossierMain(){
     <div id="sec-safety" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-3">
       <h3 class="text-sm font-semibold">Target Safety Assessment (TSA) &amp; 3D Structural Profile</h3>
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-3 items-start">
-        <div class="lg:col-span-8 space-y-2">
-          ${w.safety.map(([lbl,st,note])=>`<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1 text-xs">
+        <div class="lg:col-span-8 space-y-2.5">
+          ${w.safety.map(([lbl,st,note])=>`<div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1.5 text-xs">
             <div class="flex flex-wrap items-center justify-between gap-2"><span class="font-semibold text-[var(--foreground)]">${esc(lbl)}</span>${riskStateBadge(st)}</div>
             <div class="text-[var(--muted-foreground)] leading-relaxed">${escLink(note, r.id)}</div>
           </div>`).join('')}
         </div>
-        <div class="lg:col-span-4 p-3 rounded-lg bg-[var(--background)] border border-[var(--border)] space-y-2 text-xs">
-          <div class="font-mono font-bold text-[var(--primary)]">3D Structural &amp; Biophysical Anchor</div>
+        <div class="lg:col-span-4 p-3.5 rounded-lg bg-[var(--background)] border border-[var(--border)] space-y-2.5 text-xs">
+          <div class="font-mono font-bold text-[var(--primary)]">3D Structure &amp; Biophysical Profile</div>
           <p class="leading-relaxed">${escLink(w.struct_note, r.id)}</p>
-          <div class="border-t border-[var(--card-border)] pt-2"><span class="font-semibold text-[var(--muted-foreground)]">Open Validation Steps (${r.hcnt}):</span>
-          <div class="text-xs mt-1 space-y-1">${hurdleHtml}</div></div>
+          <div class="border-t border-[var(--card-border)] pt-2.5"><span class="font-semibold text-[var(--muted-foreground)]">Open Validation Steps (${r.hcnt}):</span>
+          <div class="text-xs mt-1.5 space-y-1.5">${hurdleHtml}</div></div>
         </div>
       </div>
     </div>

@@ -176,20 +176,20 @@ function renderUpdatesLog(){
         <div class="font-mono font-semibold text-xs text-[var(--foreground)]">NET PORTFOLIO &amp; VALIDATION IMPACT</div>
         ${formatProseParas(u.cons, gCtx, 'space-y-1.5', 'text-[var(--muted-foreground)]')}
       </div>
-      <details${openDet} class="rounded bg-[var(--card)] border border-[var(--card-border)] px-2.5 py-2">
-        <summary class="cursor-pointer font-mono text-xs text-[var(--link)] flex flex-wrap items-center justify-between gap-2 select-none"><span>Compare Conventional / Single-Assay View vs. Multi-Modal Re-Analysis &amp; Primary Sources</span><span class="text-[var(--muted-foreground)]">${u.srcs.length} Source${u.srcs.length===1?'':'s'} &middot; ${u.ancs.length} Anchor${u.ancs.length===1?'':'s'}</span></summary>
+      <details${openDet} class="rounded bg-[var(--card)] border border-[var(--card-border)] px-3 py-2.5">
+        <summary class="cursor-pointer font-mono text-xs text-[var(--link)] flex flex-wrap items-center justify-between gap-2 select-none"><span>Compare Conventional / Single-Assay View vs. Multi-Modal Re-Analysis &amp; Primary Sources</span><span class="text-[var(--muted-foreground)]">${u.srcs.length} Source${u.srcs.length===1?'':'s'} &middot; ${u.ancs.length} Record${u.ancs.length===1?'':'s'}</span></summary>
         <div class="pt-2.5 mt-2 border-t border-[var(--card-border)] space-y-2.5">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5">
-            <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1.5">
+            <div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1.5">
               <div class="font-mono font-semibold text-xs text-[var(--muted-foreground)] border-b border-[var(--card-border)] pb-1">CONVENTIONAL / SINGLE-ASSAY VIEW</div>
               ${formatProseParas(u.pre, gCtx, 'space-y-2', 'text-[var(--muted-foreground)]')}
             </div>
-            <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1.5">
+            <div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1.5">
               <div class="font-mono font-semibold text-xs text-[var(--foreground)] border-b border-[var(--card-border)] pb-1">&rarr; MULTI-MODAL RE-ANALYSIS</div>
               ${formatProseParas(u.post, gCtx, 'space-y-2', 'text-[var(--foreground)]')}
             </div>
           </div>
-          <div class="flex flex-wrap items-center justify-between gap-2 font-mono text-xs">
+          <div class="flex flex-wrap items-center justify-between gap-2 font-mono text-xs leading-relaxed">
             <div class="break-words"><span class="text-[var(--muted-foreground)]">Primary Sources:</span> ${escLink(u.srcs.join(' \u00b7 '), gCtx)}</div>
             <div class="flex flex-wrap items-center gap-1"><span class="text-[var(--muted-foreground)]">Verify:</span> ${ancPills}</div>
           </div>
@@ -209,15 +209,15 @@ function jumpToUpdates(query, updateHash=true){
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function decBadge(d, id=''){
   if(d==='KEEP_CORE') return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--success)] border border-[var(--success)] text-xs whitespace-nowrap" title="Causal human ALS genetics and/or human TDP-43 pathology + functional rescue">Keep &middot; Core</span>';
-  if(d==='KEEP_EXPLORATORY_UNPROVEN') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--warning)] border border-[var(--warning)] text-xs whitespace-nowrap" title="Untested preclinical/biofluid triage queue — prospective Go/No-Go gate required">Keep &middot; Exploratory</span>';
+  if(d==='KEEP_EXPLORATORY_UNPROVEN') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--warning)] border border-[var(--warning)] text-xs whitespace-nowrap" title="Untested preclinical/biofluid triage queue — prospective Go/No-Go test required">Keep &middot; Exploratory</span>';
   if(d==='RECLASSIFY_BENCHMARK_OR_BIOMARKER'){
     if(id==='EALS-013'||id==='EALS-032') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Approved clinical ALS standard-of-care & in vitro screen calibration benchmark">SOC Benchmark</span>';
-    if(id==='EALS-003') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Commercially withdrawn drug retained strictly as a human physiological Kv7.2/7.3 PD ruler">Withdrawn PD Calibrator</span>';
+    if(id==='EALS-003') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Commercially withdrawn drug retained strictly as a human physiological Kv7.2/7.3 pharmacodynamic reference">Clinical PD Reference</span>';
     if(id==='EALS-017') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Individually associated symptomatic-ALS CSF proteins; fixed 4-protein panel & proposed staging/PD uses are candidates for validation (rs3831317-genotyped)">Candidate CSF Panel</span>';
     if(id==='EALS-043'||id==='EALS-044'||id==='EALS-045') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Pre-validation untargeted CSF proteomic candidate marker requiring targeted PRM / immunoassay bridging">Candidate CSF Marker</span>';
-    return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Approved SOC drug, PD calibrator, or fluid staging biomarker">Benchmark</span>';
+    return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Approved SOC drug, clinical PD reference, or fluid staging biomarker">Benchmark</span>';
   }
-  return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap" title="Scientifically falsified by human RCT futility, CNS PK/safety wall, or assay confounding">Drop &middot; Falsified</span>';
+  return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap" title="Deprioritized based on human RCT futility, CNS exposure/safety limits, or assay confounding">Drop &middot; Falsified</span>';
 }
 function statusBadge(st, c=null){
   if(st==='PASS_CLEAN_GE2MM') return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--success)] border border-[var(--success)] text-xs whitespace-nowrap" title="Zero 0-mm, 1-mm, wobble, bulge, or 18-nt sub-core off-target hits on constrained CNS genes">Pass &middot; Clean (&ge;2mm)</span>';
@@ -235,11 +235,11 @@ function tdlBadge(tdl){
 }
 function tsaSubBadge(tsa){
   if(tsa==='LOW_CONSTRAINT') return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--success)] border border-[var(--success)] text-xs whitespace-nowrap" title="Low heterozygous pLoF constraint in gnomAD v4; distinct from biallelic recessive phenotypes">&#10003; Low Het-pLoF Constraint</span>';
-  if(tsa==='SELECTIVITY_GATE') return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--warning)] border border-[var(--warning)] text-xs whitespace-nowrap">&#9651; Selectivity / Sign Gate</span>';
+  if(tsa==='SELECTIVITY_GATE') return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--warning)] border border-[var(--warning)] text-xs whitespace-nowrap">&#9651; Selectivity / Directionality</span>';
   if(tsa==='SYSTEMIC_IMMUNE') return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap">&#9888; Systemic Sepsis / SLE Risk</span>';
   return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap">&#9888; Pan-Essential / Lethal</span>';
 }
-function shortTier(t){return t.replace('TIER_1_ACTIONABLE_NOW','T1 Actionable').replace('TIER_2_FOCUSED_GATE_FIRST','T2 Validation').replace('TIER_3_EXPLORATORY_DISCOVERY','T3 Discovery').replace('COMPANION_PROTOCOL_ONLY','Calibrator').replace('BIOMARKER_BENCHMARK_ONLY','Biomarker/SOC').replace('DROPPED_FALSIFIED_EXCLUDED','Falsified');}
+function shortTier(t){return t.replace('TIER_1_ACTIONABLE_NOW','T1 Lead').replace('TIER_2_FOCUSED_GATE_FIRST','T2 Validation').replace('TIER_3_EXPLORATORY_DISCOVERY','T3 Discovery').replace('COMPANION_PROTOCOL_ONLY','PD Protocol').replace('BIOMARKER_BENCHMARK_ONLY','Biomarker/SOC').replace('DROPPED_FALSIFIED_EXCLUDED','Excluded');}
 const SHORT_STAGE_MAP = {TRL_6_PH2B_SUBGROUP_BIOLOGIC:'Ph2b Subgrp',TRL_5_HUMAN_ALS_PK_PD_PROVEN:'ALS PK/PD',TRL_4_ACTIVE_PH1_CLASS_OR_NCE:'Ph1 / NCE',TRL_3_PRECLINICAL_SSO_COORDINATE:'Preclin SSO',TRL_2_PRECLINICAL_MODALITY_DISCOVERY:'Preclin Mod',TRL_1_TARGET_TOOL_PROBE_WATCHLIST:'Probe/Watch',PROTOCOL_COMPANION_NA:'N/A'};
 function shortTrl(t){return SHORT_STAGE_MAP[t] || 'N/A';}
 
@@ -296,9 +296,9 @@ function renderContrastsTable(){
     return `<tr class="align-top hover:bg-[var(--content)]">
       <td class="py-2 px-2"><div class="flex flex-wrap gap-1">${idBtns}</div></td>
       <td class="py-2 px-2 font-semibold whitespace-nowrap">${esc(row.domain)}</td>
-      <td class="py-2 px-2 text-[var(--muted-foreground)] leading-snug">${escLink(row.naive, ctx)}</td>
-      <td class="py-2 px-2 leading-snug">${escLink(row.finding, ctx)}</td>
-      <td class="py-2 px-2 text-[var(--muted-foreground)] leading-snug">${escLink(row.gate, ctx)}</td>
+      <td class="py-2 px-2 text-[var(--muted-foreground)] leading-relaxed">${escLink(row.naive, ctx)}</td>
+      <td class="py-2 px-2 leading-relaxed">${escLink(row.finding, ctx)}</td>
+      <td class="py-2 px-2 text-[var(--muted-foreground)] leading-relaxed">${escLink(row.gate, ctx)}</td>
     </tr>`;
   }).join('');
 }
@@ -400,29 +400,30 @@ function stripLongParensJs(s, maxP=24){
 
 function renderExpandableGate(candId, mode, titleHtml, borderCls, rawStr){
   if(!rawStr) return '';
-  if(ENUM_LABELS[rawStr]) return `<div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] ${borderCls} leading-snug break-words">${titleHtml} ${esc(ENUM_LABELS[rawStr])}</div>`;
+  if(ENUM_LABELS[rawStr]) return `<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] ${borderCls} leading-relaxed break-words">${titleHtml} ${esc(ENUM_LABELS[rawStr])}</div>`;
   const key = candId + ':' + mode;
   const isOpen = Boolean(expandedDetailGates[key]);
   const preset = DETAIL_GATE_SHORT[key];
   let shortTxt = preset || '';
   if(!shortTxt){
-    const sep = /;\\s+|,\\s+(?:then|followed by|echoing|matching)\\s+|\\s+(?=\\([2-9]\\)\\s)|\\.\\s+(?=[A-Z])/;
-    const cls = (typeof splitTopClauses === 'function') ? splitTopClauses(rawStr, sep) : [String(rawStr)];
-    const c0 = String(cls[0] || rawStr).replace(/^\\(1\\)\\s*/, '').trim();
+    const cleanRaw = String(rawStr).replace(/^\\s*(?:[-*]|\\([0-9]+\\)|[0-9]+[.)])\\s*/, '');
+    const sep = /\\n+|;\\s+|,\\s+(?:then|followed by|echoing|matching)\\s+|\\s+(?=\\([2-9]\\)\\s)|\\.\\s+(?=[A-Z])/;
+    const cls = (typeof splitTopClauses === 'function') ? splitTopClauses(cleanRaw, sep) : [cleanRaw];
+    const c0 = String(cls[0] || cleanRaw).replace(/^\\s*(?:[-*]|\\([0-9]+\\)|[0-9]+[.)])\\s*/, '').trim();
     shortTxt = c0.length > 165 ? stripLongParensJs(c0, 24) : c0;
     if(typeof ensurePeriod === 'function' && typeof capClause === 'function') shortTxt = ensurePeriod(capClause(shortTxt));
   }
   const hasMore = Boolean(preset) || (rawStr.trim().length > shortTxt.length + 18);
   if(!hasMore){
-    return `<div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] ${borderCls} leading-snug break-words">${titleHtml} ${escLink(shortTxt, candId)}</div>`;
+    return `<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] ${borderCls} leading-relaxed break-words">${titleHtml} ${escLink(shortTxt, candId)}</div>`;
   }
   if(!isOpen){
-    return `<div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] ${borderCls} leading-snug break-words">${titleHtml} ${escLink(shortTxt, candId)} <button type="button" data-toggle-detail-gate="${esc(key)}" class="text-[var(--link)] hover:underline font-mono text-xs ml-1 cursor-pointer whitespace-nowrap">Read more &darr;</button></div>`;
+    return `<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] ${borderCls} leading-relaxed break-words">${titleHtml} ${escLink(shortTxt, candId)} <button type="button" data-toggle-detail-gate="${esc(key)}" class="text-[var(--link)] hover:underline font-mono text-xs ml-1 cursor-pointer whitespace-nowrap">Read more &darr;</button></div>`;
   }
   const fullHtml = (mode === 'go' || mode === 'kill')
     ? formatGateList(rawStr, candId, mode === 'kill')
-    : formatProseParas(rawStr, candId, 'space-y-1.5');
-  return `<div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] ${borderCls} space-y-1.5 leading-snug break-words"><div>${titleHtml}</div>${fullHtml}<button type="button" data-toggle-detail-gate="${esc(key)}" class="text-[var(--link)] hover:underline font-mono text-xs cursor-pointer">Show less &uarr;</button></div>`;
+    : formatProseParas(rawStr, candId, 'space-y-2');
+  return `<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] ${borderCls} space-y-2 leading-relaxed break-words"><div>${titleHtml}</div>${fullHtml}<button type="button" data-toggle-detail-gate="${esc(key)}" class="text-[var(--link)] hover:underline font-mono text-xs cursor-pointer">Show less &uarr;</button></div>`;
 }
 
 function renderDetail(selHidden=false){
@@ -467,13 +468,13 @@ function renderDetail(selHidden=false){
   if(isDrop){
     gateSnap = renderExpandableGate(r.id, 'drop', `<strong class="font-mono text-[var(--error)]">&#10005; ${esc(humanizeEnum(r.epi))}:</strong>`, 'border-l-4 border-l-[var(--error)]', s ? s.disproves : humanizeEnum(r.epi));
   } else if(w){
-    gateSnap = `<div class="space-y-1">
+    gateSnap = `<div class="space-y-2">
       <div><span class="text-[var(--muted-foreground)] font-semibold">Open Validation Steps (${r.hcnt}):</span>${hurdles}</div>
       ${renderExpandableGate(r.id, 'go', '<strong class="font-mono text-[var(--success)]">&#10003; Go Criteria:</strong>', 'border-l-4 border-l-[var(--success)]', w.verdict_box.pass_gate)}
       ${renderExpandableGate(r.id, 'kill', '<strong class="font-mono text-[var(--error)]">&#10005; No-Go Criteria:</strong>', 'border-l-4 border-l-[var(--error)]', w.verdict_box.kill_gate)}
     </div>`;
   } else {
-    gateSnap = `<div class="space-y-1">
+    gateSnap = `<div class="space-y-2">
       <div><span class="text-[var(--muted-foreground)] font-semibold">Open Validation Steps (${r.hcnt}):</span>${hurdles}</div>
       ${r.nxt && r.nxt !== 'NONE' && !r.nxt.startsWith('NONE_') ? renderExpandableGate(r.id, 'next', '<strong class="font-mono text-[var(--warning)]">&#9651; Next Test:</strong>', 'border-l-4 border-l-[var(--warning)]', r.nxt) : ''}
     </div>`;
@@ -482,7 +483,7 @@ function renderDetail(selHidden=false){
   if(w){
     secLinks.push(['sec-cascade', 'Pathogenic Mechanism'], ['sec-evidence-viz', 'Effect Sizes & Diagrams'], ['sec-safety', 'Safety & 3D Structure'], ['sec-5rs', 'Translational Deep Dive']);
   } else {
-    secLinks.push(['sec-overview', 'Hypothesis & Verdict'], ['sec-procon', isDrop ? 'Discovery vs. Falsifier' : 'Evidence Pro / Con']);
+    secLinks.push(['sec-overview', 'Hypothesis & Verdict'], ['sec-procon', isDrop ? 'Originating Signal vs. Negative Evidence' : 'Evidence Pro / Con']);
   }
   if(candSub.length) secLinks.push(['sec-subunits', `Subunit & Selectivity (${candSub.length})`]);
   if(hasNygc) secLinks.push(['sec-nygc', 'NYGC 3-Region RNA']);
@@ -509,25 +510,25 @@ function renderDetail(selHidden=false){
         <button type="button" data-open-dossier="${esc(r.id)}" class="px-2.5 py-1 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-semibold text-xs cursor-pointer">${w?'Open Full Monograph &rarr;':`Open Full Dossier (${evRows.length}) &rarr;`}</button>
       </div>
     </div>
-    <div class="space-y-1.5 text-xs">
+    <div class="space-y-2 text-xs">
       ${typeof renderEdgeRibbon === 'function' ? renderEdgeRibbon(s, r.id, true) : ''}
-      <div class="grid grid-cols-1 xl:grid-cols-2 gap-1.5">
-        <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-0.5 xl:col-span-2">
+      <div class="grid grid-cols-1 xl:grid-cols-2 gap-2">
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1 xl:col-span-2">
           <div class="text-[var(--muted-foreground)] font-mono">Therapeutic Modality</div>
-          <div class="font-medium leading-snug break-words">${escLink(formatModality(r.mod), r.id)}</div>
+          <div class="font-medium leading-relaxed break-words">${escLink(formatModality(r.mod), r.id)}</div>
         </div>
-        <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-0.5">
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1">
           <div class="text-[var(--muted-foreground)] font-mono">Development Stage &amp; Next Step</div>
           <div class="font-mono font-semibold">${esc(humanizeEnum(r.trl))}</div>
-          <div class="text-[var(--muted-foreground)] leading-snug">${esc(humanizeEnum(r.gate))}</div>
+          <div class="text-[var(--muted-foreground)] leading-relaxed">${esc(humanizeEnum(r.gate))}</div>
         </div>
-        <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-0.5">
-          <div class="text-[var(--muted-foreground)] font-mono">Causal Sign &amp; State</div>
-          <div class="font-medium leading-snug">${esc(s ? s.causal : humanizeEnum(r.epi))}</div>
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1">
+          <div class="text-[var(--muted-foreground)] font-mono">Causal Role &amp; Directionality</div>
+          <div class="font-medium leading-relaxed">${esc(s ? s.causal : humanizeEnum(r.epi))}</div>
         </div>
-        <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-0.5 xl:col-span-2">
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1 xl:col-span-2">
           <div class="text-[var(--muted-foreground)] font-mono">Evidence Basis &amp; Modeling</div>
-          <div class="leading-snug">${esc(humanizeEnum(r.basis))}</div>
+          <div class="leading-relaxed">${esc(humanizeEnum(r.basis))}</div>
           <div class="pt-0.5">${priorTag}</div>
         </div>
       </div>

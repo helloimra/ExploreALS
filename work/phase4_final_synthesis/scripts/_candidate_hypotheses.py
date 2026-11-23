@@ -4,7 +4,7 @@ from __future__ import annotations
 CANDIDATE_HYPOTHESES: dict[str, str] = {
     "C001": (
         "UNC13A (ENSG00000130477) encodes presynaptic Munc13-1, an essential synaptic vesicle-priming protein required for neurotransmitter release at motor synapses. "
-        "Nuclear TDP-43 depletion — potentiated by human ALS GWAS risk alleles rs12608932 and rs12973192 — unmasks a frameshifting intron 20–21 cryptic exon whose steric splice correction restores human cortical/spinal motor neuron synaptic transmission and network synchrony (>30% protein threshold; DOI:10.1038/s41586-026-11256-2) orthogonally to STMN2 and KCNQ2 mis-splicing, anchoring a multiplexed splice-rescue regimen."
+        "Nuclear TDP-43 depletion — potentiated by human ALS GWAS risk alleles rs12608932 and rs12973192 — unmasks a frameshifting intron 20–21 cryptic exon whose steric splice correction restores human cortical/spinal motor neuron synaptic transmission and network synchrony (>30% protein threshold; DOI:10.1038/s41586-026-11256-2) independently of STMN2 and KCNQ2 mis-splicing, supporting a multiplexed splice-rescue regimen."
     ),
     "C002": (
         "STMN2 (ENSG00000104435) encodes stathmin-2, a dynamic microtubule-regulating phosphoprotein indispensable for motor axon outgrowth, repair, and neuromuscular junction maintenance. "
@@ -59,16 +59,16 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
         "In sporadic and C9orf72 ALS, aberrant SUN1-facilitated nuclear retention of CHMP7 initiates nucleoporin stripping upstream of nuclear TDP-43 loss (with partial CHMP2B knockdown mitigating ESCRT-III NPC defects in Keeley et al. 2024 PMID:39709457); this subunit-resolved hypothesis tests selective nuclear-import blockade without ablating essential membrane repair."
     ),
     "C015": (
-        "SCFD1 (ENSG00000092108) and G2E3 (ENSG00000092140) span the genome-wide significant human ALS chr14q12 GWAS locus, where the same rs229143-A allele shows opposite SCFD1 expression associations across iPSC motor-neuron eQTL-GWAS locus overlap (+0.0476, Bonferroni adj p=1.93e-32 in Tsitkov 2026 [PREPRINT]; motif-suggested ISL1 footprint) and nonproliferating iPSC-microglial formal colocalization (-0.2955 untreated, -0.2164 IFN-gamma, -0.3107 LPS across published cohorts n=189/188/188 [inferred nominal fit n=186/185/185]; shared rs229194-A/rs229195-A -0.2920/-0.2237/-0.3061; COLOC PP.H4=0.8764–0.8899, PMID:43045849) alongside Brain Catalog G2E3/SCFD1 colocalizations (PMID:36243988) and TDP-43-regulated G2E3 Intron-1 cryptic polyadenylation (slopes not directly compared across expression scales; beneficial sALS treatment direction remains open). "
-        "Because G2E3's Alu-derived cryptic exon fails 0-mismatch transcriptome hybridization safety and SCFD1 is pan-essential, this hypothesis gates bidirectional motor-neuron and microglial secretory effector dissection."
+        "SCFD1 (ENSG00000092108) and G2E3 (ENSG00000092140) span the genome-wide significant human ALS chr14q12 GWAS locus, where risk allele rs229143-A shows opposite-direction SCFD1 expression associations between iPSC motor-neuron eQTLs (PMC12919128) and stimulated/resting iPSC-microglia colocalization (PMID:43045849; Brain Catalog PMID:36243988) alongside TDP-43-regulated G2E3 Intron-1 cryptic polyadenylation. "
+        "Because G2E3's Alu-derived cryptic exon fails 0-mismatch transcriptome alignment safety, SCFD1 is cellularly pan-essential, and net sporadic ALS treatment direction remains open, this hypothesis tests allele-specific motor-neuron and microglial secretory dissection."
     ),
     "C016": (
         "FBXL5 (ENSG00000118564) is a dual-cofactor iron- and oxygen-sensing SCF E3 ubiquitin ligase subunit (PDB 3V5Z / PDB 6VCD, PMID:32126207) that recruits iron-regulatory protein IRP2 (IREB2) when cytosolic iron is replete. "
         "Because TDP-43 loss induces 3'-UTR lengthening across FBXL5 and IREB2 while postmortem neuronal TFRC/IREB2 are depleted and glial FBXL5 rises, this bidirectional sensor-probe hypothesis resolves functional neuronal iron starvation vs. overload before any lead chemistry."
     ),
     "C017": (
-        "CHIT1 (ENSG00000133063), GPNMB (ENSG00000136235), CHI3L1, and CHI3L2 are microglial/astroglial chitinase and endolysosomal glycoproteins showing individual symptomatic-ALS vs control associations across living-CSF proteomics and case-control studies. "
-        "Human genetic null homozygosity (CHIT1 rs3831317) and protective lysosomal sign analysis (GPNMB) position this fixed four-protein panel and its proposed symptomatic staging, ALS-Glia enrichment, and treatment-response uses as candidates for prospective validation rather than inhibition targets."
+        "CHIT1 (ENSG00000133063), GPNMB (ENSG00000136235), CHI3L1, and CHI3L2 are microglial/astroglial chitinase and endolysosomal glycoproteins showing individual symptomatic-ALS vs control associations across antemortem CSF proteomics and case-control studies. "
+        "Human genetic null homozygosity (CHIT1 rs3831317) and protective lysosomal function (GPNMB) position this fixed four-protein panel and its proposed symptomatic staging, ALS-Glia enrichment, and treatment-response uses as candidates for prospective validation rather than inhibition targets."
     ),
     "C018": (
         "Complement C1q (encoded by microglial C1QA/C1QB/C1QC, ENSG00000173372) initiates classical synaptic pruning and undergoes C3-independent neuronal uptake into ribonucleoprotein complexes. "
@@ -144,7 +144,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "DN-03": (
         "PTPRT (ENSG00000196090) encodes a CNS-restricted receptor protein tyrosine phosphatase that stabilizes trans-synaptic Neuroligin/Fyn adhesion complexes (PMID:19816407) while dephosphorylating STAT3 Tyr705 (PMID:17360477). "
-        "Multi-cohort screening revealed Ribo-seq and C9-FTD cortical homogenate protein depletion (alongside null synaptosomal DIA and FDR-non-significant CSF ectodomain trends); this hypothesis tests cellular origin and synaptic-adhesion vs. pSTAT3 treatment polarity at its published 737-base Intron-26 5'-extended exon (chr20:42098553-42099289(-), predicted codon-10 TAA NMD candidate, DOI:10.1186/s44477-025-00013-w)."
+        "Multi-cohort screening revealed Ribo-seq and C9-FTD cortical homogenate protein depletion (alongside null synaptosomal DIA and FDR-non-significant CSF ectodomain trends); this hypothesis tests cellular origin and net functional balance (synaptic adhesion vs. pSTAT3 dephosphorylation) at its published 737-base Intron-26 5'-extended exon (chr20:42098553-42099289(-), predicted codon-10 TAA NMD candidate, DOI:10.1186/s44477-025-00013-w)."
     ),
     "DN-04": (
         "CELF5 (ENSG00000161082) encodes a brain- and motor-system-restricted CUGBP Elav-like RNA-binding factor that regulates neuron-specific alternative splicing. "
@@ -163,8 +163,8 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
         "Gene-level TDP-43 Ribo-seq loss and an unlocalized sALS iPSC-MN TRAPPC12 splice cluster (chr2:clu_29117_+, Table 6 row 280; coordinates unreported) accompany a GENCODE-annotated, non-selective intronic alternative last exon (82.9% TDP+ vs. 34.0% non-TDP baseline, PMID:41120751; exact-event link and isoform-resolved full-length protein loss unverified); steric 3'-splice-site blockade tests whether selective full-length trafficking rescue is achievable."
     ),
     "DN-08": (
-        "ELK1 (ENSG00000126767, non-PAR Xp11.23) encodes an ERK-responsive ETS transcription factor with compartment-dependent polarity: nuclear SRF co-activation supports neuronal survival, whereas dendritic ELK1 translation promotes apoptosis. "
-        "TDP-43 loss derepresses a 3.90-kb terminal 3'-UTR extension that increases neuronal ELK1 protein (PMID:41120751); this exploratory hypothesis benchmarks 3'-extension-selective RNase-H gapmer window #1 against steric distal-PAS blockade and cytoplasmic 3'-extension siRNA (with mandatory Exon 1–6 counter-screens) to resolve polarity."
+        "ELK1 (ENSG00000126767, non-PAR Xp11.23) encodes an ERK-responsive ETS transcription factor with compartment-dependent roles: nuclear SRF co-activation supports neuronal survival, whereas dendritic ELK1 translation promotes apoptosis. "
+        "TDP-43 loss derepresses a 3.90-kb terminal 3'-UTR extension that increases neuronal ELK1 protein (PMID:41120751); this exploratory hypothesis benchmarks 3'-extension-selective RNase-H gapmer window #1 against steric distal-PAS blockade and cytoplasmic 3'-extension siRNA (with mandatory Exon 1–6 counter-screens) to resolve net functional direction."
     ),
     "DN-09": (
         "DLGAP1 (ENSG00000170579, GKAP) encodes a core postsynaptic density scaffold linking glutamate receptor-associated PSD-95 complexes to Shank cytoskeleton assemblies. "
@@ -179,8 +179,8 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
         "Co-depleted with DPP6 in Emory ALS CSF DIA proteomics and primary motor cortex excitatory neurons (with MS2-TMTpro omnibus and WashU non-parametric caveats), it serves as a pre-validation candidate fluid marker of somatodendritic attrition."
     ),
     "DN-12": (
-        "CFL1 (ENSG00000172757) encodes cofilin-1, a pan-essential actin-severing protein showing LIMK1-associated Ser3 hyperphosphorylation (inactivation) in postmortem sporadic ALS spinal motor neurons and TDP-43 aggregation in experimental models (Jagaraj et al. 2026, PMID:41804798 — opposite in phospho-polarity to dephospho-cofilin rods). "
-        "Consistently elevated as unmodified pan-CFL1 across living ALS CSF DIA (and corroborated in overlapping Emory TMTpro, surviving erythrocyte/platelet lysis OLS controls) while cellularly pan-essential, CFL1 serves as a pre-validation candidate fluid cytoskeletal injury marker requiring pSer3-vs-total isoform assay bridging."
+        "CFL1 (ENSG00000172757) encodes cofilin-1, a pan-essential actin-severing protein showing LIMK1-associated Ser3 hyperphosphorylation (inactivation) in postmortem sporadic ALS spinal motor neurons and TDP-43 aggregation in experimental models (Jagaraj et al. 2026, PMID:41804798 — opposite in phosphorylation state to dephosphorylated cofilin rods). "
+        "Consistently elevated as unmodified pan-CFL1 across antemortem ALS CSF DIA (and corroborated in overlapping Emory TMTpro, surviving erythrocyte/platelet lysis OLS controls) while cellularly pan-essential, CFL1 serves as a pre-validation candidate fluid cytoskeletal injury marker requiring pSer3-vs-total isoform assay bridging."
     ),
     "DN-13": (
         "MAOB (ENSG00000069535) encodes outer-mitochondrial-membrane monoamine oxidase B, an H2O2-generating flavoprotein predominantly expressed in astrocytes. "

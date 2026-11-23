@@ -130,14 +130,14 @@ def classify_basis_and_tier(row: dict[str, str]) -> tuple[str, str, str]:
         or any(k in st for k in ("mwc", "ode", "simulation", "mass_action", "alphagenome", "multiplex_design", "offtarget", "bulge_subcore", "triage"))
     ):
         design_tier = "Model / Heuristic Prior"
-    # 2. Level 1: Reported Human ALS RCTs (n>=20, excluding unreported EV-B6-035) or Causal Human ALS Genetics / SOC
+    # 2. Reported Human ALS RCTs (n>=20, excluding unreported EV-B6-035) or Causal Human ALS Genetics / SOC
     elif eid != "EV-B6-035" and (
         eid in LEVEL1_GENETICS_EIDS
         or eid in LEVEL1_SOC_EIDS
         or (("rct" in st or "phase3" in st or "phase2_3" in st or "rct" in coh) and (n_int is None or n_int >= 20) and "open-label" not in coh and "single-group" not in coh)
     ):
-        design_tier = "Level 1 · Human RCT / Genetics"
-    # 3. Level 3: In Vitro / Structural Assays OR Small-N Human Studies (N < 15)
+        design_tier = "Human RCT / Genetics"
+    # 3. In Vitro / Structural Assays OR Small-N Human Studies (N < 15)
     elif (
         "ds005_bye" in loc
         or "i3neuron" in coh
@@ -148,10 +148,10 @@ def classify_basis_and_tier(row: dict[str, str]) -> tuple[str, str, str]:
         or ("kinobead" in coh or eid in {"EV-B2-003", "EV-B4-019"})
         or (n_int is not None and n_int < 15 and "landscape" not in st)
     ):
-        design_tier = "Level 3 · In Vitro or Small-N"
-    # 4. Level 2: Human Cohorts (N >= 15), Clinical PK/Safety Labels, & Population Reference
+        design_tier = "In Vitro / 3D or Small-N"
+    # 4. Human Cohorts (N >= 15), Clinical PK/Safety Labels, & Population Reference
     else:
-        design_tier = "Level 2 · Human Cohort / PK-PD"
+        design_tier = "Human Cohort / PK-PD"
 
     role_map = {
         "ESTABLISHED_SOC": "SOC Benchmark",

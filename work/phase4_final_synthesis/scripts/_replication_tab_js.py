@@ -14,7 +14,7 @@ function renderRepDag(){
     {x:6,  y:12, w:148, h:46, title:'1. Open Datasets (42)', sub:'674 MB · SHA-256',     act:"datasets|ALL"},
     {x:172,y:12, w:148, h:46, title:'2. Cohort Loaders',     sub:'12 Cohort Parsers',    act:"runs|COHORT"},
     {x:338,y:12, w:148, h:46, title:'3. Analysis Pipeline',  sub:'8 Lead + 50 Runs',     act:"runs|ALL"},
-    {x:78, y:96, w:162, h:46, title:'4. 202 Contrasts',      sub:'100% SHA-256 + OLS',   act:"evidence|ALL"},
+    {x:78, y:96, w:162, h:46, title:'4. 202 Records',        sub:'100% SHA-256 + OLS',   act:"evidence|ALL"},
     {x:260,y:96, w:164, h:46, title:'5. Verification Suite', sub:'Citations + Off-Tgt',  act:"runs|SYNTH"}
   ];
   const rects = nodes.map(n => `
@@ -23,7 +23,7 @@ function renderRepDag(){
       <text x="${n.x+n.w/2}" y="${n.y+20}" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--foreground)">${n.title}</text>
       <text x="${n.x+n.w/2}" y="${n.y+37}" text-anchor="middle" font-size="12.5" font-family="monospace" fill="var(--muted-foreground)">${n.sub}</text>
     </g>`).join('');
-  box.innerHTML = `<svg viewBox="0 0 492 154" class="w-full h-auto" role="img" aria-label="5-stage script and checksum computational provenance DAG">
+  box.innerHTML = `<svg viewBox="0 0 492 154" class="w-full h-auto" role="img" aria-label="5-stage computational provenance workflow">
     <defs><marker id="dag-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 7 4 L 0 7 z" fill="var(--muted-foreground)"/></marker></defs>
     <line x1="154" y1="35" x2="169" y2="35" stroke="var(--muted-foreground)" stroke-width="1.5" marker-end="url(#dag-arr)"/>
     <line x1="320" y1="35" x2="335" y2="35" stroke="var(--muted-foreground)" stroke-width="1.5" marker-end="url(#dag-arr)"/>
@@ -42,9 +42,9 @@ function renderRepOverlap(){
       return `<button type="button" data-open-rep-ds="${esc(base)}" class="text-[var(--link)] hover:underline font-mono text-xs cursor-pointer mr-1">${esc(d)}</button>`;
     }).join('');
     return `<tr class="align-top">
-      <td class="py-1.5 px-2"><div class="font-semibold text-[var(--foreground)]">${esc(o.name)}</div><div class="mt-0.5">${dsPills}</div></td>
-      <td class="py-1.5 px-2 text-[var(--muted-foreground)] leading-snug">${esc(o.rule)}</td>
-      <td class="py-1.5 px-2 font-mono text-xs text-[var(--foreground)] leading-snug">${esc(o.formula)}</td>
+      <td class="py-2 px-2"><div class="font-semibold text-[var(--foreground)]">${esc(o.name)}</div><div class="mt-0.5">${dsPills}</div></td>
+      <td class="py-2 px-2 text-[var(--muted-foreground)] leading-relaxed">${esc(o.rule)}</td>
+      <td class="py-2 px-2 font-mono text-xs text-[var(--foreground)] leading-relaxed">${esc(o.formula)}</td>
     </tr>`;
   }).join('');
 }
@@ -53,11 +53,11 @@ function populateRepFilterOptions(){
   const sel = document.getElementById('rep-filter');
   if(!sel) return;
   if(repMode === 'runs'){
-    sel.innerHTML = '<option value="ALL">Workflow: All (58)</option><option value="FLAGSHIP">8 Flagship Monograph Reproducers</option><option value="COHORT">Cohort Re-Analysis &middot; Splicing, snRNA &amp; Proteomics</option><option value="BIOPHYS">3D Biophysics, Isoforms &amp; PK-PD</option><option value="SYNTH">Multi-Omic Triage, Hybridization &amp; Synthesis</option>';
+    sel.innerHTML = '<option value="ALL">Workflow: All (58)</option><option value="FLAGSHIP">8 Flagship Monograph Reproducers</option><option value="COHORT">Cohort Re-Analysis &middot; Splicing, snRNA &amp; Proteomics</option><option value="BIOPHYS">3D Biophysics, Isoforms &amp; PK-PD</option><option value="SYNTH">Multi-Omic Triage, Alignment &amp; Synthesis</option>';
   } else if(repMode === 'datasets'){
     sel.innerHTML = '<option value="ALL">Legal Tier: All (40)</option><option value="TIER_A_OPEN_REDISTRIBUTABLE">Tier A &middot; Open Redistributable (CC0 / CC-BY)</option><option value="TIER_B_PUBLISHER_HTTPS_FETCH">Tier B &middot; Direct Publisher/EuropePMC HTTPS</option><option value="TIER_C_DUA_OR_BASELINE">Tier C &middot; Registered Synapse Access</option>';
   } else {
-    sel.innerHTML = '<option value="ALL">Anchor Type: All (202)</option><option value="STAGED_DATASET">Staged Open Dataset (139)</option><option value="CACHED_API_SNAPSHOT">Cached API Snapshot (56)</option><option value="DETERMINISTIC_MODEL_OUTPUT">Deterministic Model Output (7)</option>';
+    sel.innerHTML = '<option value="ALL">Source Type: All (202)</option><option value="STAGED_DATASET">Staged Open Dataset (139)</option><option value="CACHED_API_SNAPSHOT">Cached API Snapshot (56)</option><option value="DETERMINISTIC_MODEL_OUTPUT">Deterministic Model Output (7)</option>';
   }
 }
 

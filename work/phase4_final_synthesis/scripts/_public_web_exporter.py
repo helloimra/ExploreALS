@@ -18,7 +18,7 @@ TAILWIND_LIKE_RE = re.compile(
     r"space-y-(?:0\.5|1|1\.5|2|2\.5|3|3\.5)|rounded(?:-(?:sm|lg|full))?|border(?:-(?:2|t|r|b|b-0|l-2|l-4|dashed|collapse))?|"
     r"(?:bg|text|border|border-l|divide|accent|ring)-\[var\(--[a-z-]+\)\]|divide-y|"
     r"font-(?:mono|normal|medium|semibold|bold)|italic|text-(?:xs|sm|base|lg|left|center|right)|"
-    r"leading-(?:snug|relaxed)|tabular-nums|align-(?:top|middle)|underline|decoration-(?:dotted|solid)|underline-offset-2|"
+    r"leading-(?:snug|normal|relaxed)|tabular-nums|align-(?:top|middle)|underline|decoration-(?:dotted|solid)|underline-offset-2|"
     r"opacity-\d+|shadow-sm|ring-2|outline-none|transition|rotate-45|cursor-(?:pointer|help)|select-none|pointer-events-none"
     r")$"
 )
@@ -81,11 +81,11 @@ GITHUB_README_MD = """# ExploreALS v1.3 — Unified ALS Therapeutic & Genetic Ta
 **Author:** Ricardo Agoga · [helloimra@proton.me](mailto:helloimra@proton.me) · [github.com/helloimra/ExploreALS](https://github.com/helloimra/ExploreALS)
 
 ## Overview
-`ExploreALS v1.3` is an independent computational triage resource evaluating **52 ALS therapeutic and biomarker hypotheses** (`EALS-001`–`EALS-052` across Mendelian/GWAS genetics, TDP-43 cryptic splicing & polyadenylation, human CNS spatial/snRNA/subcellular omics, living-patient CSF proteomics & physiology, clinical trial subgroups, and patient iPSC-MN phenotypic screening), **18 subunit & selectivity dissections** (`EALS-014.1`–`EALS-023.6` across 5 multi-gene loci/complexes: `EALS-014`, `EALS-015`, `EALS-017`, `EALS-018`, `EALS-023`), and **28 1-based GRCh38 Cis-Regulatory Target Windows** evaluated against `254,070` GENCODE v46 transcripts.
+`ExploreALS v1.3` is an independent computational triage resource evaluating **52 ALS therapeutic and biomarker hypotheses** (`EALS-001`–`EALS-052` across Mendelian/GWAS genetics, TDP-43 cryptic splicing & polyadenylation, human CNS spatial/snRNA/subcellular omics, antemortem CSF proteomics & physiology, clinical trial subgroups, and patient iPSC-MN phenotypic screening), **18 subunit & selectivity dissections** (`EALS-014.1`–`EALS-023.6` across 5 multi-gene loci/complexes: `EALS-014`, `EALS-015`, `EALS-017`, `EALS-018`, `EALS-023`), and **28 1-based GRCh38 Cis-Regulatory Target Windows** evaluated against `254,070` GENCODE v46 transcripts.
 
 **Evidence base:** `42` open-access biomedical datasets & reference maps (`40` external accessions + `2` repo-bundled reference maps: `21` human tissue/CSF/iPSC/in-vitro cohort & assay files, `15` 3D structures, `6` genome/feature references; published tables/counts, zero new wet-lab data). The cohort data resolves into **`8` participant-overlap and donor-accounting groups** ([`cohort_overlap_map.csv`](registries/cohort_overlap_map.csv)):
 - **Postmortem tissue:** NYGC ALS Consortium (`GSE153960`, incl. Tam 2019, O'Neill 2025, Ma 2022 and Bryce-Smith 2025 reanalyses) · Pineda 2024 BA4/BA9 snRNA-seq · Edinburgh `GSE290359` snRNA-seq · Prudencio 2015 paired regions + Zhang 2026 spinal-cord spatial · Spillman 2026 C9-FTD subcellular-fraction DIA
-- **Living-patient biofluids:** Trautwig 2025 multi-center CSF proteomics (+ Oh 2023 CSF cohort, 40/61 donor overlap)
+- **Antemortem biofluids:** Trautwig 2025 multi-center CSF proteomics (+ Oh 2023 CSF cohort, 40/61 donor overlap)
 - **Patient-derived and in-vitro models:** Australian ID-MND (`Bye 2025`) sALS iPSC-MN drug screen & Day-49 splicing + US Answer ALS (`N=594`) iPSC-MN eQTLs · TDP-43 knockdown neuron series (Brown 2022, Zeng 2025, Bryce-Smith 2025)
 
 Agreement *within* a group is treated as cross-platform or multi-assay validation, not independent donor replication.
@@ -93,7 +93,7 @@ Agreement *within* a group is treated as cross-platform or multi-assay validatio
 ## 3-Level Independent Computational Replication Quickstart
 
 ```bash
-# Level 1 (<10s, 0 MB extra data): Verify all 18 CSV schemas, FKs, citations, decision rules & 202 recorded 64-char SHA-256s (46 unique anchors; 65/202 bundled in clean checkout)
+# Level 1 (<10s, 0 MB extra data): Verify all 18 CSV schemas, FKs, citations, decision rules & 202 recorded 64-char SHA-256s (46 unique source files; 65/202 bundled in clean checkout)
 uv sync --frozen
 uv run python scripts/verify_explore_als.py --mode cached
 
@@ -109,8 +109,8 @@ uv run python scripts/build_explorer.py --public-docs-only
 ```
 
 ### Standalone Tier 1 & Tier 2 Translational Monographs
-- **Tier 1 (`Actionable Now`):** [#1 SARM1 · EALS-030](https://helloimra.github.io/ExploreALS/monographs/EALS-030.html) · [#2 Aldesleukin · EALS-031](https://helloimra.github.io/ExploreALS/monographs/EALS-031.html)
-- **Tier 2 (`Validation Gate`):** [#3 UNC13A · EALS-001](https://helloimra.github.io/ExploreALS/monographs/EALS-001.html) · [#4 KCNQ2 · EALS-006](https://helloimra.github.io/ExploreALS/monographs/EALS-006.html) · [#5 STMN2 · EALS-002](https://helloimra.github.io/ExploreALS/monographs/EALS-002.html) · [#6 IL1RL1 / sST2 · EALS-007](https://helloimra.github.io/ExploreALS/monographs/EALS-007.html) · [#7 ATG4B · EALS-034](https://helloimra.github.io/ExploreALS/monographs/EALS-034.html) · [#8 CELF5 · EALS-037](https://helloimra.github.io/ExploreALS/monographs/EALS-037.html)
+- **Tier 1 (`Translational Lead`):** [#1 SARM1 · EALS-030](https://helloimra.github.io/ExploreALS/monographs/EALS-030.html) · [#2 Aldesleukin · EALS-031](https://helloimra.github.io/ExploreALS/monographs/EALS-031.html)
+- **Tier 2 (`Preclinical / PD Validation`):** [#3 UNC13A · EALS-001](https://helloimra.github.io/ExploreALS/monographs/EALS-001.html) · [#4 KCNQ2 · EALS-006](https://helloimra.github.io/ExploreALS/monographs/EALS-006.html) · [#5 STMN2 · EALS-002](https://helloimra.github.io/ExploreALS/monographs/EALS-002.html) · [#6 IL1RL1 / sST2 · EALS-007](https://helloimra.github.io/ExploreALS/monographs/EALS-007.html) · [#7 ATG4B · EALS-034](https://helloimra.github.io/ExploreALS/monographs/EALS-034.html) · [#8 CELF5 · EALS-037](https://helloimra.github.io/ExploreALS/monographs/EALS-037.html)
 
 ## Licensing, Disclaimers & Open-Data Provenance
 - **Dual Software & Data License:** Python source code (`src/`, `scripts/`, `pipelines/`, `work/**/*.py`) is licensed under the **MIT License** ([LICENSE](./LICENSE)); original curated registries (`registries/*.csv`), schemas, and monographs are licensed under **CC BY 4.0** ([LICENSE-DATA.md](./LICENSE-DATA.md)). Non-`CC-BY` publisher supplements (`Tier B`) are never re-hosted and are fetched directly from canonical publisher HTTPS endpoints.

@@ -167,8 +167,8 @@ def main() -> None:
     assert sum(x["c"] + x["e"] + x["b"] + x["d"] for x in js_funnel) == len(port_rows), "Funnel count mismatch!"
     drop_defs = [
         ("FALSIFIED_CLINICAL", "Human ALS RCT Futility / Harm", "Adequately powered Ph2/3 futility or class failure"),
-        ("FALSIFIED_PK_SAFETY", "Unbound CNS PK / Safety Wall", "Cu,brain << IC50/EC50 or severe clinical toxicity"),
-        ("ARTIFACT_CONFOUNDED", "Assay / Media Confounding", "Within basal media noise & opposes genetic polarity"),
+        ("FALSIFIED_PK_SAFETY", "Unbound CNS Exposure / Safety Limit", "Cu,brain << IC50/EC50 or dose-limiting clinical toxicity"),
+        ("ARTIFACT_CONFOUNDED", "Assay / Media Confounding", "Within basal media noise & opposes genetic direction"),
     ]
     js_drops = [
         {
