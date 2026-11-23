@@ -67,8 +67,8 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
         "Because TDP-43 loss induces 3'-UTR lengthening across FBXL5 and IREB2 while postmortem neuronal TFRC/IREB2 are depleted and glial FBXL5 rises, this bidirectional sensor-probe hypothesis resolves functional neuronal iron starvation vs. overload before any lead chemistry."
     ),
     "C017": (
-        "CHIT1 (ENSG00000133063), GPNMB (ENSG00000136235), CHI3L1, and CHI3L2 form a replicated microglial/astroglial chitinase and endolysosomal glycoprotein signature elevated in symptomatic ALS relative to controls across living-CSF proteomics cohorts. "
-        "Human genetic null homozygosity (CHIT1 rs3831317) and protective lysosomal sign analysis (GPNMB) position this four-protein suite as a candidate living-CSF symptomatic staging, ALS-Glia enrichment, and microglial/lysosomal pharmacodynamic panel (pending context-of-use cutoff calibration) rather than an inhibition target."
+        "CHIT1 (ENSG00000133063), GPNMB (ENSG00000136235), CHI3L1, and CHI3L2 are microglial/astroglial chitinase and endolysosomal glycoproteins showing individual symptomatic-ALS vs control associations across living-CSF proteomics and case-control studies. "
+        "Human genetic null homozygosity (CHIT1 rs3831317) and protective lysosomal sign analysis (GPNMB) position this fixed four-protein panel and its proposed symptomatic staging, ALS-Glia enrichment, and treatment-response uses as candidates for prospective validation rather than inhibition targets."
     ),
     "C018": (
         "Complement C1q (encoded by microglial C1QA/C1QB/C1QC, ENSG00000173372) initiates classical synaptic pruning and undergoes C3-independent neuronal uptake into ribonucleoprotein complexes. "
@@ -148,7 +148,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "DN-04": (
         "CELF5 (ENSG00000161082) encodes a brain- and motor-system-restricted CUGBP Elav-like RNA-binding factor that regulates neuron-specific alternative splicing. "
-        "Depletion of nuclear TDP-43 induces inclusion of a conditional 108-bp nonsense-mediated-decay cryptic exon (with splicing differing at overlapping LeafCutter cluster clu_25763_+ in Australian ID-MND sporadic ALS patient iPSC motor neurons); intrathecal steric splice-switching aims to prevent secondary RNA-processing collapse downstream of TDP-43 loss."
+        "Depletion of nuclear TDP-43 induces inclusion of a conditional 108-bp nonsense-mediated-decay cryptic exon (with differential CELF5 splicing also reported at LeafCutter cluster chr19:clu_25763_+ [Table 6 row 228] in Australian ID-MND sporadic ALS patient iPSC motor neurons, where unreported cluster coordinates leave overlap with this specific junction unresolved); intrathecal steric splice-switching aims to prevent secondary RNA-processing collapse downstream of TDP-43 loss."
     ),
     "DN-05": (
         "PRUNE2 (ENSG00000106772) encodes a large BNIP2-homology neuronal protein whose C-terminal BCH domain is homologous to RhoA-inhibiting BNIP2-XL in cell-line models (PMID:18445682). "
@@ -160,7 +160,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "DN-07": (
         "TRAPPC12 (ENSG00000171853) encodes an outer subunit of the TRAPPIII tethering complex involved in ER-to-Golgi transport and autophagosome assembly (recessive PEBAS OMIM 617669) upstream of YKT6. "
-        "Cluster- and gene-level TDP-43 depletion signals occur near a GENCODE-annotated, non-selective intronic alternative last exon (82.9% TDP+ vs. 34.0% non-TDP baseline, PMID:41120751; isoform-resolved full-length protein loss unverified); steric 3'-splice-site blockade tests whether selective full-length trafficking rescue is achievable."
+        "Gene-level TDP-43 Ribo-seq loss and an unlocalized sALS iPSC-MN TRAPPC12 splice cluster (chr2:clu_29117_+, Table 6 row 280; coordinates unreported) accompany a GENCODE-annotated, non-selective intronic alternative last exon (82.9% TDP+ vs. 34.0% non-TDP baseline, PMID:41120751; exact-event link and isoform-resolved full-length protein loss unverified); steric 3'-splice-site blockade tests whether selective full-length trafficking rescue is achievable."
     ),
     "DN-08": (
         "ELK1 (ENSG00000126767, non-PAR Xp11.23) encodes an ERK-responsive ETS transcription factor with compartment-dependent polarity: nuclear SRF co-activation supports neuronal survival, whereas dendritic ELK1 translation promotes apoptosis. "

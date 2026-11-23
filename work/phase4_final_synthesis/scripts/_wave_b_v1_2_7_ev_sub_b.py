@@ -66,14 +66,14 @@ def apply_wave_b_ev_and_sub_part_b(
     })
     ev_map["EV-B4-014"].update({
         "source_id_or_locator": "NCT05163886;PMID:38606777;CHEMBL4297643",
-        "effect_estimate": "Wk12 1h plasma 283.13 ng/mL (676.5 nM free-base eq, n=9/10; Wk24 OG000 315.40 ng/mL, n=5), CSF 3.89 nM (n=10, Kp,uu~0.72); Wk12 CSF poly(GP) -73% paper (-74.4% CT.gov), plasma sGPNMB >2.5x paper (2.31x vs pbo, p<0.001; CSF sGPNMB 2-sided t-test p=0.352 NS), CSF NfL -5.0%; Wk12 Plasma NfL median +39% (n=9) & Wk24 OLE CSF NfL mean +50% (n=4)",
-        "notes": "AIT-101 dimesylate 125 mg BID (MW 610.70 Da; free base CHEMBL4297643 MW 418.49 Da; Babu et al. 2024 Brain PMID:38606777): published Wk12 randomized CSF poly(GP) fell 73% (-74.4% posted CT.gov) with >2.5x plasma sGPNMB rise (2.31-fold between-group, 2-sided t-test p<0.001), no notable Wk12 CSF sGPNMB group difference (posted CT.gov 2-sided t-test p=0.352), and -5.0% CSF NfL, whereas Wk12 plasma NfL (median +39% [+39.2% CT.gov], n=9) and Wk24 continuous OLE CSF NfL (mean +50% [+49.7%], n=4) rose.",
+        "effect_estimate": "Wk12 1h plasma 283.13 ng/mL (676.5 nM free-base eq, n=9/10; Wk24 OG000 315.40 ng/mL, n=5), CSF 3.89 nM (n=10, Kp,uu~0.72); Wk12 CSF poly(GP) -73% paper (-74.4% CT.gov); Babu Table 3 shared-baseline mixed-model plasma sGPNMB ratio 2.31 (95% CI 1.56-3.41, p<0.001) & CSF sGPNMB ratio 0.92 (90% CI 0.80-1.07, p=0.352 NS; both separately labeled 2-sided t-test on CT.gov); Wk12 CSF NfL -5.0%, Plasma NfL median +39% (n=9) & Wk24 OLE CSF NfL mean +50% (n=4)",
+        "notes": "AIT-101 dimesylate 125 mg BID (MW 610.70 Da; free base CHEMBL4297643 MW 418.49 Da; Babu et al. 2024 Brain PMID:38606777): published Wk12 randomized CSF poly(GP) fell 73% (-74.4% posted CT.gov) with Babu Table 3 shared-baseline repeated-measures mixed-model plasma sGPNMB ratio 2.31 (95% CI 1.56-3.41, p<0.001) and CSF sGPNMB ratio 0.92 (90% CI 0.80-1.07, p=0.352 NS; CT.gov NCT05163886 separately labels both analyses a 2-sided t-test), 0 drug-related SAEs, and -5.0% Wk12 CSF NfL, alongside exploratory Wk12 plasma NfL (median +39% [+39.2% CT.gov], n=9) and Wk24 OLE CSF NfL (mean +50% [+49.7%], n=4) rises.",
     })
     ev_map["EV-B4-015"].update({
         "source_id_or_locator": "NCT06286475;NCT06215755;PMID:41708347;PMC12916242;DS_GNOMAD_V41_CONSTRAINT",
         "cohort_and_stratum": "VRG50635 HV Ph1 studies (NL81735.056.22 PMID:41708347 & NCT06286475 N=22) + ALS Ph1b (NCT06215755, 400-800 mg QD, N=54)",
-        "effect_estimate": "VRG50635 NL81735.056.22 MAD 2/6 (33%) drug-related encephalopathy/renal SAEs (NCT06286475 N=22 completed) & ALS 400-800 mg QD N=54 terminated for lack of risk-benefit data supporting Ph2 (NfL+GFAP surge, 8/54 [14.8%] drug SAEs); PIKFYVE gnomAD v4.1 MANE LOEUF=0.523",
-        "notes": "Chronic daily PIKfyve blockade across separate clinical programs (continuous QD VRG50635 in NCT06215755 [terminated for lack of risk-benefit data supporting Phase 2] / PMID:41708347 vs continuous BID AIT-101 in NCT05163886 / PMID:38606777) hits an endolysosomal toxicity wall; requires a strict pulsed nanomolar (2-15 nM) zero-vacuolation/zero-NfL falsification gate.",
+        "effect_estimate": "VRG50635 NL81735.056.22 MAD 2/6 (33%) drug-related encephalopathy/renal SAEs (NCT06286475 N=22 completed) & ALS 400-800 mg QD N=54 terminated for lack of risk-benefit data supporting Ph2 (exploratory NfL+GFAP rises, 8/54 [14.8%] drug SAEs); PIKFYVE gnomAD v4.1 MANE LOEUF=0.523",
+        "notes": "Separates preclinical PIKFYVE neuronal vacuolation (LOEUF=0.523, MGI vacuoles), continuous QD VRG50635 human AEs/SAEs (2/6 HV MAD drug SAEs PMID:41708347; 8/54 ALS drug SAEs + exploratory NfL/GFAP rises in terminated NCT06215755), and continuous BID AIT-101 (0 drug SAEs, exploratory small-n Wk12 plasma & Wk24 OLE CSF NfL rises in NCT05163886 / PMID:38606777) without asserting a single class-wide clinical toxicity threshold; motivates a pulsed nanomolar (2-15 nM) iPSC-MN washout gate.",
     })
     ev_map["EV-P2-T3-005"]["notes"] = (
         "Continuous QD/BID fails both models (0/81 pass, end_vac=0.5394); Clegg 2026 (PMID:42900584: -PI(3,5)P2->ClC-7 hyperactivation driving osmotic vacuolation + Rab/LRRK2 hyperactivation) & Kuwahara 2026 (PMID:42994990: stoichiometric +PI(3)P->direct LRRK2/Rab12/29 + ATG16L1 CASM conjugation; Drosophila C9orf72 DPR secretion in 10.64898/2026.11.09.765393 [PREPRINT]) lower [MODEL_PRIOR] q48h/q72h ODE pass rates from ~79% to ~30% at matched 10-20h repair and 0% at tau=24-48h."
@@ -125,6 +125,11 @@ def apply_wave_b_ev_and_sub_part_b(
     for s in sn_rows:
         sid = s["subnode_id"]
         if sid == "C015-N1":
+            s["key_risk_or_taste_question"] = (
+                "Strongest common-variant human ALS genetic anchor in C015 and sole chr14q12 microglial ALS GWAS colocalization "
+                "(PP_H4=0.876-0.890 across untreated/IFN/LPS, 0 G2E3 eQTLs; sole ALS hit shared with primary microglia alongside cytokine-dependent LPS C9orf72 PP_H4=0.918 & IFN ERGIC1 0.786 inside LPS enrichment P=5.8e-4; Perez-Alcantara 2026 Nat Genet PMID:43045849, 10.1038/s41588-026-02843-0), "
+                "with possible opposite-sign MN (+0.048) vs iMGL (-0.22 to -0.33) eQTL associations across separate studies (unproven whether the reference haplotype drives opposite cell-type effects), null NeuroKO phagocytosis KO (FDR=0.928), DepMap pan-essentiality, and promiscuous Eph kinase probe NVP-BHG712."
+            )
             s["gnomad_essentiality_check"] = "gnomAD v4.1 MANE ENST00000458591 LOEUF=0.809, pLI=0.232 (7/16.2 LoF; Open Targets v2.1.1 LOEUF=0.472, pLI=0.996); DepMap isEssential=True (mean Chronos=-1.2619, 79.9% <-1.0, n=1,258); IMPC MGI:6383384 hom lethal"
             s["druggability_check"] = "0 human SCFD1 PDB structures: AF-Q8WVM8-F1 (mean pLDDT=84.58) + Rattus norvegicus N-term PDB 1Y9J & yeast Sly1p:Sed5p SM-fold PDB 1MQS (PMID:12426383 [Homology-Inferred]; downstream COPII SEC23A/24A/22B is PDB 3EGD); CHEMBL3752910 (Kd=171 nM) is a promiscuous EPHA3 inhibitor (0.3 nM)."
         elif sid == "C015-N2":

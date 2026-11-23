@@ -100,8 +100,8 @@ def apply_wave_d_evidence_part_a(
     # C010 (Ropinirole): EV-B5-018 Table S3 vs Discussion CSF & Fig. S5 context, EV-B5-019 exact NYGC Lumbar DRD2 OLS beta=-0.0651, EV-B5-020 EXPERTS-ALS Phase 2a screen
     ev_map["EV-B5-018"].update({
         "source_id_or_locator": "DS_ROPALS:TableS3_PK_Table1_AE;UMIN000034954;PMID:37267913;PMID:40826812;CHEMBL589",
-        "effect_estimate": "Wk24 CSF Table S3 mean 17,884 pg/mL = 68.68 nM (Discussion ~18 nM) at 16 mg/d ER MTD vs 1-10 uM non-D2 sALS rescue (Fig. S5 0.1-10 nM in mutant FUS/TDP-43)",
-        "notes": "Morimoto et al. 2023 PMID:37267913 Table S3 reports Week-24 CSF mean 17,884 pg/mL = 68.68 nM on free-base MW 260.38 (whereas the paper's Discussion states ~18 nM), sitting 14.6-556x below 1-10 uM D2R-independent SREBP2/antioxidant sALS rescue (PMID:40826812; while noting Fig. S5 reported 0.1-10 nM partial phenotype reduction in mutant FUS/TDP-43 lines) with 76.9% GI AEs capping dose at 16 mg/d.",
+        "effect_estimate": "Wk24 CSF Table S3 mean 17,884 pg/mL = 68.68 nM (Discussion ~18 nM) at 16 mg/d ER MTD vs 1-10 uM concentrations tested in non-D2 sALS models (Fig. S5 0.1-10 nM in mutant FUS/TDP-43)",
+        "notes": "Morimoto et al. 2023 PMID:37267913 Table S3 reports Week-24 CSF mean 17,884 pg/mL = 68.68 nM on free-base MW 260.38 (whereas the paper's Discussion states ~18 nM), sitting 14.6-556x below the 1-10 uM concentrations tested for D2R-independent SREBP2/antioxidant effects in sALS models (PMID:40826812; minimum rescue concentration unestablished, while Fig. S5 reported 0.1-10 nM partial phenotype reduction in mutant FUS/TDP-43 lines) with 76.9% GI AEs capping dose at 16 mg/d.",
     })
     ev_map["EV-B5-019"].update({
         "source_id_or_locator": "DS001_COUNTS:Spinal_Cord_Lumbar:DRD2_DRD3;DS_GC_REF",

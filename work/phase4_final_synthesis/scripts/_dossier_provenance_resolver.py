@@ -186,7 +186,7 @@ def _clean_v0_text(txt: str) -> str:
     txt = re.sub(r"\bDS045\b|\bD045\b", "Trautwig 2025 CSF (PMC12082929)", txt)
     txt = re.sub(r"\bD003\b", "Pineda 2024 (PMID:38521060)", txt)
     for k, v in (
-        ("PASS_CLEAN_GE2MM", "Clean >=2mm"), ("CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED", "Caution (1mm/wobble)"),
+        ("PASS_CLEAN_GE2MM", "Clean >=2mm"), ("CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED", "Caution (non-constrained 1mm/wobble or 25bp-SS 2mm)"),
         ("WARN_1MM_OR_WOBBLE_CONSTRAINED_NEURONAL", "Warn (CNS hit)"), ("FAIL_EXACT_0MM_OFFTARGET", "Fail (exact 0mm)"),
         ("TIER_3_EXPLORATORY_DISCOVERY", "Tier 3 Exploratory Discovery"), ("TIER_3_HIGH_RISK_WATCHLIST", "Tier 3 Exploratory Discovery"),
         ("Bryce-Smith 2025 ST6", "Bryce-Smith 2025"), ("Bryce-Smith ST6", "Bryce-Smith 2025"), ("Bryce-Smith ST7", "Bryce-Smith 2025"),

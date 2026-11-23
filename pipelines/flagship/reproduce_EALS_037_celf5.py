@@ -44,14 +44,14 @@ def main() -> None:
         assert_close("[MEASURED] Cervical mn_neur_z-residualized tSTMN2 neuronal tail %", float(ny_c["within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal"]), 1.90, rtol=0.02),
         assert_close("[MEASURED] Lumbar mn_neur_z-residualized tSTMN2 neuronal tail %", float(ny_l["within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal"]), 0.14, rtol=0.05),
         assert_close(f"[MEASURED:{src_tag}] gnomAD v4.1 MANE CELF5 LOEUF (pLI=1.00; Open Targets=0.216)", loeuf, 0.248, rtol=0.01),
-        assert_equal("[MEASURED] AF-Q8N6W0 / CELF1 homolog 3NMR RRM2 beta4 H-bonds & 18-nt NMD EJC gap", f"{rrm2['severed_beta4_beta1_backbone_hbonds_le_3p5A']}/{ph['ejc_nmd_minigene_trap']['dist_ptc_to_ce_exon6_junction_nt']}nt", "5/18nt"),
+        assert_equal("[STRUCTURALLY_INFERRED / SEQUENCE_CALCULATED] AF-Q8N6W0 / CELF1 3NMR RRM2 beta4 contacts & 108-nt transcript 18-nt EJC distance", f"{rrm2['severed_beta4_beta1_backbone_hbonds_le_3p5A']}/{ph['ejc_nmd_minigene_trap']['dist_ptc_to_ce_exon6_junction_nt']}nt", "5/18nt"),
         assert_close("[MEASURED] Brown 2022 i3Neuron Ribo-seq residual translation %", float(ph["empirical_residual_translation_pct"]), 38.6, rtol=1e-2),
         assert_close("[MEASURED] Zeng 2025 (PMID:40672339 preprint) NMD-inhibited CELF5 CE PSI % (FDR=0.0235)", float(ph["zeng2025_nmd_inhibition_cryptic_psi_pct"][1]), 44.6, rtol=1e-2),
         assert_equal("Lead #1 Clean >=2mm Off-Target Status", lead1["offtarget_safety_status"], "PASS_CLEAN_GE2MM"),
     ]
     print_audit_report(
         "EALS-037", "CELF5 Cryptic-Exon Steric SSO", checks,
-        "Brown local LSVs (CE +0.3471; upstream novel_acceptor +0.1218) / Ribo-seq (38.6% residual), Zeng 2025 NMD rescue (24.8%->44.6%, FDR=0.0235, PMID:40672339 bioRxiv preprint), Bye LeafCutter cluster clu_25763_+ padj=0.00904 (PMID:41286450, N=77 without bulk nuclear TDP-43 loss; junction RT-PCR required), & NYGC cervical loss are [MEASURED]; Exon 1-7+ Nanopore phasing & spinal protein rescue are prospective gates.",
+        "Observed RNA/protein evidence — Brown local LSVs (CE +0.3471; upstream novel_acceptor +0.1218) / Ribo-seq (38.6% residual), Seddighi 2024 cryptic-peptide MS & Western blot (PMID:38277467), Zeng 2025 NMD rescue (24.8%->44.6%, FDR=0.0235, PMID:40672339), Bye Table 6 row 228 CELF5 cluster clu_25763_+ padj=0.00904 (PMID:41286450, N=77; coordinates unreported, overlap with this junction unresolved), & NYGC cervical RNA loss — are [MEASURED], while 5 AF-Q8N6W0/3NMR RRM2 contacts are structurally inferred and the 18-nt EJC distance is calculated for the conditional 108-nt transcript; Exon 1-7+ Nanopore phasing & spinal protein rescue are prospective gates.",
     )
 
 

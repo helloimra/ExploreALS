@@ -10,7 +10,7 @@ def apply_wave_d_evidence_part_b(ev_map: dict[str, dict[str, str]]) -> None:
         "assay_and_contrast": "Unbound plasma & OAT3/MRP4-effluxed CNS exposure vs human hNKCC1A/B, KCC2 & CA1/CA2 potency",
         "effect_direction": "SEVERE_1000_TO_5800X_CNS_EXPOSURE_DEFICIT",
         "effect_estimate": "fup=0.01-0.09 -> Cu,plasma ~30-150 nM; [MODEL_PRIOR] OAT3/MRP4-effluxed Cu,CNS <1-5 nM vs human hNKCC1A IC50=5.15 uM & hNKCC1B=5.82 uM (>1,000-5,800x gap)",
-        "notes": "Hampel et al. 2018 Sci Rep PMID:29959396 Table 1 establishes human oocyte 86Rb+ hNKCC1A IC50=5.15 uM (4.34-13.7) and hNKCC1B=5.82 uM (4.73-7.27) (~18-23 uM in native cells, Table 2), alongside non-selective KCC2 blockade (IC50 ~10-25 uM) and sulfonamide CA2/CA1 inhibition (Ki ~65-200 nM); nominated from observational PRO-ACT (18 vs 90 matched patients: ALSFRS-R p=0.02, FVC p=0.024) and Medicare claims (OR=0.75) in Saez-Atienzar et al. 2026 (10.1038/s41746-026-03225-w), with 0 ALS RCTs conducted and untested (not in 107-drug library) in Bye 2025.",
+        "notes": "Hampel et al. 2018 Sci Rep PMID:29959396 Table 1 establishes human oocyte 86Rb+ hNKCC1A IC50=5.15 uM (4.34-13.7) and hNKCC1B=5.82 uM (4.73-7.27) (~18-23 uM in native cells, Table 2), alongside non-selective KCC2 blockade (IC50 ~10-25 uM) and sulfonamide CA2/CA1 inhibition (Ki ~65-200 nM); nominated from observational PRO-ACT (18 vs 90 matched patients: ALSFRS-R slope p=0.02 [Fig. S2], survival p=0.024 [Fig. S3]) and separate observational Medicare claims (ALS incidence OR=0.75, p=4.99e-10 [Table S5]) in Saez-Atienzar et al. 2026 (10.1038/s41746-026-03225-w), with 0 ALS RCTs conducted and untested (not in 107-drug library) in Bye 2025.",
     })
     ev_map["EV-B5-022"].update({
         "source_id_or_locator": "DS001_COUNTS:Spinal_Cord_Cervical:SLC12A5;PMID:24835171;PMC4221825;PMID:41286450",
@@ -19,27 +19,29 @@ def apply_wave_d_evidence_part_b(ev_map: dict[str, dict[str, str]]) -> None:
 
     # C021 (Icerguastat): 41-71x total plasma gap + modeled ~5-20 nM Cu,brain, both 5/34 total & 2/34 possibly related fatal TEAEs, 88.2% sporadic bulbar, 10-50 nM rat SOD1 context
     ev_map["EV-B4-017"].update({
-        "notes": "Wilcoxon signed-rank p=0.00336; LODO max p=0.00466; tested solely at 2.5 uM (41x above ALS 61.0 nM & 71x above HV 35.2 nM total plasma Cmax, and [MODEL_PRIOR] ~125-500x above unbound brain).",
+        "notes": "Wilcoxon signed-rank p=0.00336; LODO max p=0.00466; tested solely at 2.5 uM (41x above ALS 61.0 nM & 71x above HV 35.2 nM group total plasma Cmax under the studied regimens, and [MODEL_PRIOR] ~125-500x above unbound brain).",
     })
     ev_map["EV-B4-018"].update({
-        "effect_estimate": "ALS total plasma GeoMean Cmax=12.0 ng/mL (61.0 nM; HV Ph1 6.92 ng/mL = 35.2 nM, 41-71x below 2.5 uM; [MODEL_PRIOR] Cu,brain ~5-20 nM = 125-500x gap); fatal TEAEs 5/34 (14.7%) vs 2/17 (11.8%) total & 2/34 (5.9% vs 0%) possibly drug-related; falls 8/34 (23.5% vs 0%); GDF15 flat; ITT ALSFRS-R -0.33 (p=0.923)",
+        "effect_estimate": "Studied oral regimen group total plasma GeoMean Cmax=12.0 ng/mL in ALS (61.0 nM at 25 mg BID; HV Ph1 6.92 ng/mL = 35.2 nM; oral bioavailability & CNS ceiling unresolved; 41-71x below 2.5 uM; [MODEL_PRIOR] Cu,brain ~5-20 nM = 125-500x gap); fatal TEAEs 5/34 (14.7%) vs 2/17 (11.8%) total & 2/34 (5.9% vs 0%) possibly drug-related; falls 8/34 (23.5% vs 0%); GDF15 flat; ITT ALSFRS-R -0.33 (p=0.923)",
         "notes": "Posted NCT05508074 tables (N=51 bulbar-onset ALS, 88.2% sporadic) record 5/34 vs 2/17 all-cause fatal TEAEs including 2/34 (5.9% vs 0%) investigator-assessed possibly drug-related sudden/cardiac fatal TEAEs (1 cardiac arrest, 1 cardiorespiratory arrest), null Plasma NfL ratio 1.04 [0.89, 1.21] (p=0.609), and attrition-selected Per-Protocol n=40/51 slope claims (11/34 vs 3/17 non-completers); note physiological plasma GDF15 (~704 pg/mL) is posted under CT.gov's umbrella 'ng/mL' table header alongside MCP1/FGF21.",
     })
     ev_map["EV-B4-019"].update({
         "source_id_or_locator": "PMID:28447936;PMID:29618508;PMID:43036320;PMID:42790826;PMID:38359044;DS_ZENG_APA:3endseq_S4;OpenTargets:PPP1R15A_PPP1R15B",
-        "effect_estimate": "Crespillo-Casado 2017/2018 refuted direct PPP1R15A-PP1 inhibition; uM GluN2B NAM (Abgueguen 2026) & PHB2 (Ding 2026) require 1-5 uM; SOD1-G93A null (Vieira 2024); Zeng 2025 PPP1R15A dPAS=+0.0558 (padj=6.42e-8); gnomAD v4.1 LOEUF PPP1R15A=1.142 vs PPP1R15B=0.776",
-        "notes": "Separates Crespillo-Casado et al. 2017/2018 (PMID:28447936, PMID:29618508) holophosphatase refutation (despite early 10-50 nM rat motor-neuron mutant SOD1 culture reports), Abgueguen et al. 2026 PMID:43036320 GluN2B NMDA negative allosteric modulation (~1-5 uM, converging on failed C008 NMDA blockade), Ding et al. 2026 PMID:42790826 PHB2 interaction, and Vieira et al. 2024 PMID:38359044 in vivo SOD1-G93A failure.",
+        "assay_and_contrast": "Negative reconstituted PPP1R15A-PP1c holophosphatase tests & disputed target interpretation vs uM GluN2B/PHB2 activity & constraint",
+        "effect_direction": "DISPUTED_PPP1R15A_BIOCHEMISTRY_AND_UM_OFFTARGET_ACTIVITY",
+        "effect_estimate": "Negative reconstituted PPP1R15A-PP1c inhibition tests & disputed target interpretation (Crespillo-Casado 2017/2018); cellular GluN2B NAM (Abgueguen 2026) & PHB2 (Ding 2026) reported at 1-5 uM; SOD1-G93A null (Vieira 2024); Zeng 2025 PPP1R15A dPAS=+0.0558 (padj=6.42e-8); gnomAD v4.1 LOEUF PPP1R15A=1.142 vs PPP1R15B=0.776",
+        "notes": "Documents negative reconstituted PPP1R15A-PP1c holophosphatase biochemical tests and disputed target interpretation (Crespillo-Casado et al. 2017/2018 PMID:28447936, PMID:29618508, alongside early 10-50 nM rat motor-neuron mutant SOD1 culture reports), Abgueguen et al. 2026 PMID:43036320 GluN2B NMDA negative allosteric modulation (~1-5 uM, converging on failed C008 NMDA blockade), Ding et al. 2026 PMID:42790826 PHB2 interaction, and Vieira et al. 2024 PMID:38359044 in vivo SOD1-G93A failure.",
     })
 
     # S01 (Dexmedetomidine): Talke 1997 PMID:9356115 CSF PK vs PMID:9249114 CSF pressure
     ev_map["EV-B6-032"].update({
         "source_type": "HUMAN_CSF_AND_PLASMA_PK_AUDIT",
         "source_id_or_locator": "OpenFDA:NDA021038;OpenFDA:NDA215390;PMID:9356115;PMID:9249114;ChEMBL:CHEMBL778",
-        "cohort_and_stratum": "Human IV ICU sedation PK (NDA021038 Precedex 0.2-0.7 ug/kg/h) & Talke et al. 1997 paired human lumbar CSF PK (PMID:9356115)",
-        "assay_and_contrast": "Measured human unbound plasma & lumbar CSF concentration vs 2,500 nM screen & ADRA2A Ki",
+        "cohort_and_stratum": "Human IV ICU sedation PK (NDA021038 Precedex 0.2-0.7 ug/kg/h) & Talke et al. 1997 paired human total plasma and lumbar CSF PK (PMID:9356115)",
+        "assay_and_contrast": "Measured human total plasma & lumbar CSF plus calculated free plasma (assuming 94% binding) vs 2,500 nM screen & ADRA2A Ki",
         "effect_direction": "SEVERE_7143_TO_12500X_MEASURED_HUMAN_CSF_GAP",
-        "effect_estimate": "Measured human lumbar total CSF ~0.20-0.35 nM (Talke 1997 PMID:9356115: ~7,143-12,500x below nominal 2,500 nM screen); [MODEL_PRIOR] NDA021038 ~94%-bound fu~0.06 Cu,plasma=0.09-0.37 nM (~6,757-27,778x gap)",
-        "notes": "Talke et al. 1997 Anesth Analg (PMID:9356115: human lumbar total CSF ~4% +/- 1% of total plasma = ~0.20-0.35 nM, ~7,143-12,500x below nominal 2,500 nM screen; companion lumbar CSF pressure study PMID:9249114) directly establishes nanomolar human CSF exposure alongside [MODEL_PRIOR] FDA NDA021038 (Precedex, MW 200.28 g/mol, ~94% bound -> fu~0.06) unbound plasma 0.09-0.37 nM (~6,757-27,778x below nominal screen, noting nominal screen dose does not define a minimum effective concentration); sublingual Igalmi (NDA215390, 120-180 ug) causes 23% somnolence & 18% orthostasis at Cu,p ~0.18 nM.",
+        "effect_estimate": "Measured human lumbar total CSF ~0.20-0.35 nM (~4% of measured total plasma, Talke 1997 PMID:9356115: ~7,143-12,500x below nominal 2,500 nM screen); estimated unbound plasma 0.09-0.37 nM, assuming 94% binding [MODEL_PRIOR, NDA021038: ~6,757-27,778x gap]",
+        "notes": "Talke et al. 1997 Anesth Analg (PMID:9356115: measured human lumbar total CSF ~4% +/- 1% of measured total plasma = ~0.20-0.35 nM, ~7,143-12,500x below nominal 2,500 nM screen; companion lumbar CSF pressure study PMID:9249114) directly establishes nanomolar human CSF exposure alongside FDA NDA021038 (Precedex, MW 200.28 g/mol) estimated unbound plasma 0.09-0.37 nM, assuming 94% binding [fu~0.06, MODEL_PRIOR] (~6,757-27,778x below nominal screen, noting nominal screen dose does not define a minimum effective concentration); sublingual Igalmi (NDA215390, 120-180 ug) causes 23% somnolence & 18% orthostasis at estimated Cu,p ~0.18 nM.",
     })
     ev_map["EV-B6-033"].update({
         "source_type": "CLINICAL_SAFETY_LABEL_AND_CLASS_AUDIT",

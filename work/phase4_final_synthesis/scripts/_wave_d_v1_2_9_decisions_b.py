@@ -7,7 +7,7 @@ TS_WAVE_D = "2026-11-22T01:20:00Z"
 def apply_wave_d_decision_patches_b(dm: dict[str, dict[str, str]]) -> None:
     dm["C011"].update({
         "evidence_proves_hypothesis": (
-            "Nominated from observational healthcare-claims & PRO-ACT analyses in Saez-Atienzar et al. 2026 (DOI:10.1038/s41746-026-03225-w: PRO-ACT 18 vs 90 matched patients showed slower ALSFRS-R decline p=0.02 and FVC decline p=0.024; Medicare case-control OR=0.75) alongside 100 uM mouse midbrain slice experiments "
+            "Nominated from observational healthcare-claims & PRO-ACT analyses in Saez-Atienzar et al. 2026 (DOI:10.1038/s41746-026-03225-w: observational PRO-ACT comparison of 18 vs 90 matched patients reported slower ALSFRS-R slope decline p=0.02 [Fig. S2] and improved survival p=0.024 [Fig. S3]; separate observational Medicare case-control ALS incidence OR=0.75, p=4.99e-10 [Table S5]) alongside 100 uM mouse midbrain slice experiments "
             "proposing NKCC1 (SLC12A2) inhibition to lower neuronal intracellular [Cl-]; untested (not in 107-drug library) in Bye 2025 iPSC-MN screen and 0 ALS RCTs conducted."
         ),
         "evidence_disproves_hypothesis": (
@@ -17,22 +17,22 @@ def apply_wave_d_decision_patches_b(dm: dict[str, dict[str, str]]) -> None:
             "inhibits CA2/CA1 at Ki ~65-200 nM, reduced human soleus D1 Ia presynaptic (p=0.037) and sural cutaneous inhibition (p=0.034) in Klomjai et al. 2014 (PMID:24835171, PMC4221825), and carries Boxed Warning diuretic/electrolyte dehydration toxicity."
         ),
         "factual_justification": (
-            "Excluded on modeled human unbound CNS exposure and KCC2/CA non-selectivity (clinical ALS efficacy untested across 0 ALS RCTs, despite observational PRO-ACT 18 vs 90 p=0.02 & Medicare OR=0.75 signals in DOI:10.1038/s41746-026-03225-w): >1,000-5,800x [MODEL_PRIOR] human unbound CNS exposure deficit (<1-5 nM OAT3/MRP4-effluxed CNS & 30-150 nM Cu,plasma vs human hNKCC1A/B IC50=5.15-5.82 uM in Hampel et al. 2018 PMID:29959396 Table 1) "
+            "Excluded on modeled human unbound CNS exposure and KCC2/CA non-selectivity (clinical ALS efficacy untested across 0 ALS RCTs, alongside observational PRO-ACT 18 vs 90 ALSFRS-R slope p=0.02 [Fig. S2] & survival p=0.024 [Fig. S3] and separate Medicare ALS incidence OR=0.75 [Table S5] signals in DOI:10.1038/s41746-026-03225-w): >1,000-5,800x [MODEL_PRIOR] human unbound CNS exposure deficit (<1-5 nM OAT3/MRP4-effluxed CNS & 30-150 nM Cu,plasma vs human hNKCC1A/B IC50=5.15-5.82 uM in Hampel et al. 2018 PMID:29959396 Table 1) "
             "bounded by NDA016273 loop-diuretic dehydration/hypokalemia, compounded by counterproductive KCC2/CA1-2 co-inhibition and reduced human spinal D1 Ia presynaptic & sural cutaneous inhibition (Klomjai et al. 2014 PMID:24835171; scoped strictly to systemic furosemide, preserving brain-penetrant NKCC1-sparing KCC2 enhancers)."
         ),
         "updated_at": TS_WAVE_D,
     })
 
     dm["C021"].update({
-        "causal_vs_reactive_assessment": "DISPUTED_PPP1R15A_TARGET_WITH_SEVERE_PK_AND_SAFETY_LIMITATIONS: Biochemical PPP1R15A-PP1c dispute, 41-71x total plasma Cmax deficit at 25 mg BID, and Phase 2 fatal TEAE/fall imbalance",
+        "causal_vs_reactive_assessment": "DISPUTED_PPP1R15A_TARGET_WITH_SEVERE_PK_AND_SAFETY_LIMITATIONS: Negative reconstituted PPP1R15A-PP1c tests & disputed target interpretation, 41-71x group plasma Cmax gap under studied 25 mg BID / HV regimens, and Phase 2 fatal TEAE/fall imbalance",
         "evidence_disproves_hypothesis": (
             "Chemical registry audit refuted misattributed IDs (verified Sephin1=CHEMBL2365743 / CID:9561611, free-base MW 196.64, acetate MW 256.69); "
-            "direct PPP1R15A-PP1c holophosphatase inhibition was biochemically disputed (Crespillo-Casado et al. 2017/2018 PMID:28447936, PMID:29618508; while early rat motor-neuron mutant SOD1 cultures reported 10-50 nM rescue, characterized human cellular mechanisms reflect 1-5 uM GluN2B NAM [Abgueguen et al. 2026 PMID:43036320] & PHB2 [Ding et al. 2026 PMID:42790826], failing SOD1-G93A mice in Vieira et al. 2024 PMID:38359044); "
-            "in Phase 2 NCT05508074 (N=51 bulbar-onset ALS [88.2% sporadic], 25 mg BID + riluzole), extreme apparent oral clearance (CL/F=580 L/h; HV Ph1 736-1,388 L/h) capped measured ALS total plasma GeoMean Cmax at 12.0 ng/mL = 61.0 nM (HV Ph1 6.92 ng/mL = 35.2 nM — already 41-71x below 2.5 uM in total plasma; [MODEL_PRIOR] Cu,brain ~5-20 nM = 125-500x gap) "
+            "reconstituted biochemical assays reported negative direct PPP1R15A-PP1c holophosphatase inhibition with disputed primary target interpretation (Crespillo-Casado et al. 2017/2018 PMID:28447936, PMID:29618508; while early rat motor-neuron mutant SOD1 cultures reported 10-50 nM rescue, characterized human cellular effects include 1-5 uM GluN2B NAM [Abgueguen et al. 2026 PMID:43036320] & PHB2 [Ding et al. 2026 PMID:42790826], failing SOD1-G93A mice in Vieira et al. 2024 PMID:38359044); "
+            "in Phase 2 NCT05508074 (N=51 bulbar-onset ALS [88.2% sporadic], 25 mg BID + riluzole; CL/F=580 L/h in ALS, 736-1,388 L/h in HV Ph1; absolute oral bioavailability and CNS exposure ceiling unresolved), group total plasma GeoMean Cmax under the studied oral regimens was 12.0 ng/mL = 61.0 nM in ALS and 6.92 ng/mL = 35.2 nM in HV Ph1 (41-71x below 2.5 uM in total plasma; [MODEL_PRIOR] Cu,brain ~5-20 nM = 125-500x gap) "
             "with flat plasma GDF15 (~704 pg/mL posted under CT.gov ng/mL header), null ITT ALSFRS-R (-0.33, p=0.923; N=51 size limits clinical efficacy precision) & NfL ratio 1.04 (p=0.609), and 5/34 (14.7%) vs 2/17 (11.8%) total fatal TEAEs including 2/34 (5.9% vs 0%) investigator-assessed possibly drug-related sudden/cardiac fatal TEAEs and 8/34 (23.5% vs 0%) falls."
         ),
         "factual_justification": (
-            "Excluded on severe human PK exposure limits, disputed primary target biochemistry, and Phase 2 safety signals: extreme oral clearance (CL/F=580 L/h in ALS, 736-1,388 L/h in HV Ph1) caps measured total plasma Cmax at 61.0 nM in ALS and 35.2 nM in HV (41-71x below nominal 2.5 uM even before protein binding; [MODEL_PRIOR] Cu,brain ~5-20 nM = 125-500x below 2.5 uM & 1-5 uM GluN2B/PHB2 activity, PMID:28447936, PMID:43036320) "
+            "Excluded on low human plasma exposure under studied oral regimens, disputed primary target biochemistry, and Phase 2 safety signals: under the studied oral regimens (25 mg BID ALS CL/F=580 L/h; HV Ph1 CL/F=736-1,388 L/h; absolute oral bioavailability and a CNS exposure ceiling remain unresolved), group total plasma GeoMean Cmax was 61.0 nM in ALS and 35.2 nM in HV (41-71x below nominal 2.5 uM even before protein binding; [MODEL_PRIOR] Cu,brain ~5-20 nM = 125-500x below 2.5 uM & 1-5 uM GluN2B/PHB2 activity, PMID:28447936, PMID:43036320) "
             "with flat human GDF15 and null ITT ALSFRS-R (p=0.923) / NfL (p=0.609) in bulbar-onset Phase 2 NCT05508074 (N=51, 88.2% sporadic; trial size limits standalone efficacy precision), while 25 mg BID recorded 2/34 (5.9% vs 0%) possibly drug-related sudden/cardiac fatal TEAEs (5/34 vs 2/17 all-cause) and 23.5% falls."
         ),
         "updated_at": TS_WAVE_D,
@@ -40,12 +40,12 @@ def apply_wave_d_decision_patches_b(dm: dict[str, dict[str, str]]) -> None:
 
     dm["S01"].update({
         "evidence_disproves_hypothesis": (
-            "Talke et al. 1997 paired human lumbar CSF PK (PMID:9356115: ~0.20-0.35 nM total CSF = ~4% of total plasma; ~7,143-12,500x below the nominal 2,500 nM screen; companion CSF pressure study PMID:9249114) "
-            "and FDA NDA021038 (Precedex IV ICU infusion 0.2-0.7 ug/kg/h, MW 200.28, [MODEL_PRIOR] ~94% bound [fu~0.06] -> Cu,plasma=0.09-0.37 nM, ~6,757-27,778x below 2,500 nM; sublingual Igalmi NDA215390 23% somnolence / 18% orthostasis at Cu,p ~0.18 nM) show tolerated human CNS exposure sits >7,000x below the nominal 2.5 uM screen dose (minimum effective iPSC-MN concentration unmeasured) "
+            "Talke et al. 1997 paired human total plasma and lumbar CSF PK (PMID:9356115: measured ~0.20-0.35 nM total lumbar CSF = ~4% of measured total plasma; ~7,143-12,500x below the nominal 2,500 nM screen; companion CSF pressure study PMID:9249114) "
+            "and FDA NDA021038 (Precedex IV ICU infusion 0.2-0.7 ug/kg/h, MW 200.28: estimated unbound plasma 0.09-0.37 nM, assuming 94% binding [fu~0.06, MODEL_PRIOR], ~6,757-27,778x below 2,500 nM; sublingual Igalmi NDA215390 23% somnolence / 18% orthostasis at estimated Cu,p ~0.18 nM) show tolerated human CNS exposure sits >7,000x below the nominal 2.5 uM screen dose (minimum effective iPSC-MN concentration unmeasured) "
             "and is gated by ADRA2A locus coeruleus unconsciousness, hypotension (25-54%), and sinus bradycardia/arrest (Ki ~1-2 nM; ADRA2A/B/C non-DE in Bye RNA-seq; oral alpha-2 agonist guanabenz had >30% ALS AE dropout in Phase 2 ProMISe, PMID:33905493)."
         ),
         "factual_justification": (
-            "Despite genuine 2.5 uM iPSC-MN rescue (+1.399d, q=0.0303; minimum effective screen concentration unmeasured), directly measured human lumbar CSF (~0.20-0.35 nM, ~7,143-12,500x below nominal 2.5 uM, Talke et al. 1997 PMID:9356115; companion CSF pressure PMID:9249114) and [MODEL_PRIOR] ~94%-bound unbound plasma (0.09-0.37 nM, ~6,757-27,778x below 2.5 uM, NDA021038) "
+            "Despite genuine 2.5 uM iPSC-MN rescue (+1.399d, q=0.0303; minimum effective screen concentration unmeasured), directly measured human lumbar CSF (~0.20-0.35 nM, ~4% of measured total plasma, ~7,143-12,500x below nominal 2.5 uM, Talke et al. 1997 PMID:9356115; companion CSF pressure PMID:9249114) and estimated unbound plasma 0.09-0.37 nM, assuming 94% binding [MODEL_PRIOR] (~6,757-27,778x below 2.5 uM, NDA021038), "
             "are capped by dose-limiting central alpha-2A sedation, hypotension, and bradycardia (corroborated by >30% oral alpha-2 intolerability in ALS ProMISe, PMID:33905493)."
         ),
         "updated_at": TS_WAVE_D,

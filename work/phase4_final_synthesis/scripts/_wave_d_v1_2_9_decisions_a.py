@@ -24,6 +24,9 @@ def apply_wave_d_decision_patches_a(dm: dict[str, dict[str, str]]) -> None:
     })
 
     dm["C008"].update({
+        "causal_vs_reactive_assessment": (
+            "DOWNSTREAM_EXCITOTOXIC_HYPOTHESIS_REFUTED_IN_HUMANS (tested 20-40 mg/d oral memantine regimens null across MND-SMART, TAME, and MEDALS; symptomatic human M1 L2-L6 neurons downregulate GRIN1, p=1.2e-5 to 0.0017; these memantine trials do not settle the broader downstream excitotoxicity hypothesis)"
+        ),
         "supporting_evidence_ids": "EV-B5-010;EV-B5-013;EV-B5-014;EV-B5-015;EV-B5-016",
         "evidence_proves_hypothesis": (
             "Ranked #3/107 in Bye 2025 at 2.5 uM (+3.246d across 15 sALS iPSC-MN lines, 14/15 positive, p=2.59e-6, q=5.54e-5, PMID:41286450) "
@@ -96,19 +99,22 @@ def apply_wave_d_decision_patches_a(dm: dict[str, dict[str, str]]) -> None:
     })
 
     dm["C010"].update({
+        "causal_vs_reactive_assessment": (
+            "NON_CAUSAL_PLEIOTROPIC_MISMATCH (human spinal cord lacks DRD3 and has trace DRD2, while 1-10 uM concentrations tested for non-D2 SREBP2/ROS effects in sALS models sit 14.6-556x above human CSF; minimum rescue concentration unestablished)"
+        ),
         "evidence_proves_hypothesis": (
             "Nominated from iPSC-MN phenotypic screening (Fujimori et al. 2018 Nat Med PMID:30127392) and open-label extension observations in single-center Phase 1/2a ROPALS "
-            "(UMIN000034954, Morimoto et al. 2023 PMID:37267913, N=20; noting Fig. S5 reported 0.1-10 nM partial phenotype reduction in mutant FUS/TDP-43 lines alongside 1-10 uM D2R-independent SREBP2/cholesterol and phenolic antioxidant effects in sALS lines, PMID:40826812)."
+            "(UMIN000034954, Morimoto et al. 2023 PMID:37267913, N=20; noting Fig. S5 reported 0.1-10 nM partial phenotype reduction in mutant FUS/TDP-43 lines alongside 1-10 uM D2R-independent SREBP2/cholesterol and phenolic antioxidant effects tested in sALS lines, PMID:40826812)."
         ),
         "evidence_disproves_hypothesis": (
             "At 16 mg/d ER MTD (76.9% GI AEs blocking dose escalation, Table S3), human ALS Week-24 CSF ropinirole (Table S3 mean 17,884 pg/mL = 68.68 nM on free-base MW 260.38 vs ~18 nM stated in Morimoto 2023 Discussion; engages DRD2/3 Ki 2.9-7.2 nM) "
-            "sits 14.6-556x below nominal 1-10 uM D2R-independent SREBP2/antioxidant sALS assay concentrations (PMID:37267913, PMID:40826812; despite 0.1-10 nM mutant FUS/TDP-43 Fig. S5 activity) while human spinal cord lacks DRD3 (0% >=1 CPM; Lumbar DRD2 RIN+GC OLS beta=-0.0651, p=0.4320, N=223); "
-            "Bye 2025 showed FDR-significant survival harm across 15 sALS iPSC-MN lines (-0.688d, 12/15 negative, p=0.00292, q=0.0209), cortical BA9 discovery RNA collapsed after GC adjustment, blinded 24-wk ROPALS ALSFRS-R was null (+1.46, 95% CI -3.15 to 6.07, p=0.761, N=20), "
+            "sits 14.6-556x below the 1-10 uM concentrations tested for D2R-independent SREBP2/antioxidant effects in sALS iPSC-MN models (PMID:37267913, PMID:40826812; minimum concentration required for rescue unestablished, while Fig. S5 reported 0.1-10 nM activity in mutant FUS/TDP-43 lines) while human spinal cord lacks DRD3 (0% >=1 CPM; Lumbar DRD2 RIN+GC OLS beta=-0.0651, p=0.4320, N=223); "
+            "Bye 2025 showed FDR-significant survival harm across 15 sALS iPSC-MN lines (-0.688d, 12/15 negative, p=0.00292, q=0.0209), cortical BA9 discovery RNA collapsed after GC adjustment, completed randomized 24-wk blinded ROPALS ALSFRS-R was null (+1.46, 95% CI -3.15 to 6.07, p=0.761, N=20), "
             "and UK Phase 2a EXPERTS-ALS biomarker screen (ISRCTN15525855, 42 dosed / 22 Wk18 analyzed; distinct from a Phase 3 efficacy RCT) closed the 16 mg/d ropinirole arm on Oct 6, 2026 for blood-NfL biomarker futility."
         ),
         "factual_justification": (
-            "Substantial 14.6-556x assay-concentration gap at GI-limited 16 mg/d MTD (Table S3 mean 68.68 nM / Discussion ~18 nM CSF vs nominal 1-10 uM non-D2 sALS assay concentrations, PMID:37267913, PMID:40826812, with absent spinal DRD3 & Lumbar DRD2 beta=-0.0651, p=0.4320, despite 0.1-10 nM mutant FUS/TDP-43 Fig. S5 activity) "
-            "plus FDR-significant survival harm across 15 sALS iPSC-MN lines (-0.688d, q=0.0209) and postmortem GC collapse, corroborated by null blinded 24-wk ROPALS (p=0.761, N=20) and Oct 2026 UK Phase 2a EXPERTS-ALS blood-NfL biomarker futility stop (ISRCTN15525855; single-agent clinical efficacy RCT uncompleted)."
+            "Substantial 14.6-556x comparison against concentrations tested in non-D2 sALS models at GI-limited 16 mg/d MTD (Table S3 mean 68.68 nM / Discussion ~18 nM CSF vs 1-10 uM tested for non-D2 SREBP2/ROS effects in sALS models, PMID:37267913, PMID:40826812; minimum rescue concentration unestablished, with absent spinal DRD3 & Lumbar DRD2 beta=-0.0651, p=0.4320, despite 0.1-10 nM mutant FUS/TDP-43 Fig. S5 activity) "
+            "plus FDR-significant survival harm across 15 sALS iPSC-MN lines (-0.688d, q=0.0209) and postmortem GC collapse, corroborated by null completed 24-wk randomized ROPALS comparison (p=0.761, N=20) and Oct 2026 UK Phase 2a EXPERTS-ALS blood-NfL biomarker futility stop (ISRCTN15525855; definitive powered clinical efficacy confirmation remains outstanding)."
         ),
         "updated_at": TS_WAVE_D,
     })

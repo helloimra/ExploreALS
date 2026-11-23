@@ -195,20 +195,12 @@ def main() -> None:
     for sn in sn_rows:
         sid = sn["subnode_id"]
         if sid == "C015-N1":
-            sn["subnode_verdict"] = re.sub(
-                r"(?:\[MODEL_PRIOR\]\s*)+",
-                "[MODEL_PRIOR] ",
-                re.sub(
-                    r"SuSiE-proven in-phase risk haplotype \([^)]*\)",
-                    "SuSiE chr14q12 credible set (purityMeanR2=0.988, NFE AF=32.6-32.9%, EUR-vs-xAnc GWAS COLOC H4=0.958, PMID:34873335; 1000G EUR 96.7% [351/363] vs AFR 72.7% [853/1,173] 1111 purity; x-anc lead rs229195-A PIP=0.240)",
-                    sn["subnode_verdict"],
-                ).replace("AlphaGenome CD14+ q=-0.99986", "[MODEL_PRIOR] AlphaGenome CD14+ q=-0.99986"),
+            sn["subnode_verdict"] = (
+                "KEEP_EXPLORATORY_UNPROVEN: Dual chr14q12 ALS GWAS colocalization in motor neurons (rs229143-A AF=0.329 ISL1 footprint +0.048, AVI Phred=10.27; GTEx BA9 +0.269) "
+                "AND pooled N=261 human iMGL (sole chr14q12 colocalization PP_H4=0.876-0.890 at rs229194-A/rs229195-A AF=0.337 with 0 G2E3 signal & sole ALS hit shared with primary microglia, iMGL SCFD1 -0.224 to -0.333 with null NeuroKO phagocytosis KO FDR=0.928; PMID:43045849); "
+                "SuSiE chr14q12 credible set (purityMeanR2=0.988, NFE AF=32.6-32.9%, EUR-vs-xAnc GWAS COLOC H4=0.958, PMID:34873335; 1000G EUR 96.7% [351/363] vs AFR 72.7% [853/1,173] 1111 purity; x-anc lead rs229195-A PIP=0.240) shows possible opposite effect signs in MN (+0.048) vs myeloid (-0.22..-0.33; [MODEL_PRIOR] AlphaGenome CD14+ q=-0.99986) analyses across separate studies (whether the reference haplotype drives opposite cell-type effects remains unproven), "
+                "alongside zero TDP-43 splicing shift, null Spillman MOESM1 cortex DIA protein (Homog p=0.931, Synapt p=0.797), DepMap Chronos=-1.26 pan-essentiality, and zero selective ligands requiring bidirectional MN + LPS-iMGL ER-Golgi secretory CRISPRi/CRISPRa."
             )
-            if "purityMeanR2=0.988" not in sn["subnode_verdict"]:
-                sn["subnode_verdict"] = sn["subnode_verdict"].replace(
-                    "opposing MN-vs-myeloid eQTL polarity,",
-                    "SuSiE chr14q12 credible set (purityMeanR2=0.988, NFE AF=32.6-32.9%, EUR-vs-xAnc GWAS COLOC H4=0.958, PMID:34873335; 1000G EUR 96.7% vs AFR 72.7% 1111 purity) driving opposing MN (+0.048) vs myeloid (-0.22..-0.33; [MODEL_PRIOR] AlphaGenome CD14+ q=-0.99986) polarity,",
-                )
         elif sid == "C015-N2":
             if "rs229195-A" not in sn["subnode_verdict"]:
                 sn["subnode_verdict"] += " Cross-ancestry GWAS lead rs229195-A (PIP=0.240, [MODEL_PRIOR] AlphaGenome MN G2E3 splice q=0.968) rides in phase with SCFD1 rs229243-A/rs229143-A."
@@ -247,7 +239,7 @@ def main() -> None:
         elif uid == "UPD-2026-11-18-01":
             u["prior_state_or_assumption"] = "Intermittent pulsed PIKfyve inhibition (EALS-020) models typically assume an occupancy dead-zone before endolysosomal vacuolation onset (~79% parameter-grid pass rate) without accounting for immediate +PI(3)P-driven LRRK2/CASM stress coupling."
             u["new_evidence_or_revision"] = "Kuwahara et al. (2026, Life Sci Alliance, PMID:42994990) demonstrated direct, threshold-free PIKfyve -> +PI(3)P -> LRRK2 Rab10-pThr73 / ATG16L1 CASM recruitment alongside Drosophila C9orf72 secreted DPR data (DOI:10.64898/2026.11.09.765393). In modeled pulsed q48h–q72h turnover simulations (>=55% substrate clearance and end-of-cycle stress <=0.05), removing the occupancy dead-zone cuts grid survival from ~79% (64/81) to ~30% (24/81) at matched 10–20 h repair and 0% (0/81) at slower 24–48 h postmitotic CASM washout."
-            u["portfolio_and_gate_consequence"] = "Retains EALS-020 (#23/52, Keep · Exploratory) (125 mg BID AIT-101 NCT05163886 showed Wk-12 plasma & OLE CSF NfL rises without powered clinical efficacy testing, while continuous QD VRG50635 NCT06215755 terminated for lack of Phase 2 risk-benefit; pulsed q48h–q72h remains clinically untested) behind a 14-day human iPSC-MN CASM washout and intracellular + secreted DPR mass-balance validation gate."
+            u["portfolio_and_gate_consequence"] = "Retains EALS-020 (#23/52, Keep · Exploratory) (125 mg BID AIT-101 NCT05163886 recorded 0 drug-related SAEs, Babu Table 3 shared-baseline mixed-model plasma sGPNMB ratio 2.31 [p<0.001] vs CSF sGPNMB ratio 0.92 [p=0.352; both separately labeled 2-sided t-test on CT.gov], and exploratory small-sample Wk-12 plasma & OLE CSF NfL rises without powered clinical efficacy testing, while continuous QD VRG50635 NCT06215755 recorded 8/54 drug SAEs and exploratory GFAP/NfL rises and terminated for lack of Phase 2 risk-benefit; the two clinical programs do not define a single class-wide toxicity threshold, and pulsed q48h–q72h remains clinically untested) behind a 14-day human iPSC-MN CASM/vacuole washout and intracellular + secreted DPR mass-balance validation gate."
     u_rows.insert(0, dict(UPD_2026_11_19_01))
     u_rows.insert(0, dict(UPD_2026_11_22_01))
     def _map_anchor_tok(tok: str) -> str:

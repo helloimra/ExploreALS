@@ -1,6 +1,6 @@
 {
   "analysis_run_id": "RUN-P3B-003",
-  "sha_stamp": "REGISTRY_CONCORDANCE_SHA12: denovo_cands=eae766480ee5 denovo_sso=d7477c8657b0 denovo_ev=c8a9ca2f3bd5",
+  "sha_stamp": "REGISTRY_CONCORDANCE_SHA12: denovo_cands=17ae3ec72fdd denovo_sso=d7477c8657b0 denovo_ev=b6c8023da916",
   "n_candidates": 19,
   "n_sso_intervals": 16,
   "n_evidence": 32
