@@ -237,7 +237,7 @@
       "title": "A randomized, placebo-controlled trial of memantine for functional disability in amyotrophic lateral sclerosis."
     },
     "20577052": {
-      "first_author": "Mari\u00f1o G",
+      "first_author": "Mariño G",
       "pubdate": "2010 Jul",
       "journal": "J Clin Invest",
       "title": "Autophagy is essential for mouse sense of balance."
@@ -414,7 +414,7 @@
       "first_author": "Crespillo-Casado A",
       "pubdate": "2017 Apr 27",
       "journal": "Elife",
-      "title": "PPP1R15A-mediated dephosphorylation of eIF2\u03b1 is unaffected by Sephin1 or Guanabenz."
+      "title": "PPP1R15A-mediated dephosphorylation of eIF2α is unaffected by Sephin1 or Guanabenz."
     },
     "28456721": {
       "first_author": "Kanamitsu K",
@@ -726,7 +726,7 @@
       "first_author": "Diaz-Ortiz ME",
       "pubdate": "2022 Aug 19",
       "journal": "Science",
-      "title": "GPNMB confers risk for Parkinson's disease through interaction with \u03b1-synuclein."
+      "title": "GPNMB confers risk for Parkinson's disease through interaction with α-synuclein."
     },
     "36129998": {
       "first_author": "Miller TM",
@@ -780,13 +780,13 @@
       "first_author": "Jiang Y",
       "pubdate": "2022 Jul",
       "journal": "Nat Aging",
-      "title": "An IL1RL1 genetic variant lowers soluble ST2 levels and the risk effects of APOE-\u03b54 in female patients with Alzheimer's disease."
+      "title": "An IL1RL1 genetic variant lowers soluble ST2 levels and the risk effects of APOE-ε4 in female patients with Alzheimer's disease."
     },
     "37124168": {
       "first_author": "Sun Y",
       "pubdate": "2023 Jun",
       "journal": "Ophthalmol Sci",
-      "title": "Safety and Target Engagement of Complement C1q Inhibitor ANX007 in Neurodegenerative Eye\u00a0Disease: Results from Phase I Studies in Glaucoma."
+      "title": "Safety and Target Engagement of Complement C1q Inhibitor ANX007 in Neurodegenerative Eye Disease: Results from Phase I Studies in Glaucoma."
     },
     "37188501": {
       "first_author": "Mortberg MA",
@@ -844,7 +844,7 @@
       "title": "Efficacy and Safety of Ravulizumab, a Complement C5 Inhibitor, in Adults With Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial."
     },
     "37996528": {
-      "first_author": "L\u00f3pez-Erauskin J",
+      "first_author": "López-Erauskin J",
       "pubdate": "2024 Jan",
       "journal": "Nat Neurosci",
       "title": "Stathmin-2 loss leads to neurofilament-dependent axonal collapse driving motor and sensory denervation."
@@ -1168,7 +1168,7 @@
       "title": "Safety and efficacy of astegolimab for COPD with frequent exacerbations regardless of baseline blood eosinophil counts (ALIENTO and ARNASA): randomised, double-blind, placebo-controlled, phase 2b and 3 trials."
     },
     "42156967": {
-      "first_author": "Lundb\u00e4ck T",
+      "first_author": "Lundbäck T",
       "pubdate": "2026 May 19",
       "journal": "Commun Chem",
       "title": "The rise and fall of SARM1 base-exchange inhibitors."
@@ -1213,7 +1213,7 @@
       "first_author": "Ding XS",
       "pubdate": "2026 Dec",
       "journal": "Biochem Pharmacol",
-      "title": "Sephin1 directly targets PHB2 to activate PINK1-PRKN-dependent mitophagy and alleviate \u03b1-synuclein neurotoxicity in Parkinson's disease models."
+      "title": "Sephin1 directly targets PHB2 to activate PINK1-PRKN-dependent mitophagy and alleviate α-synuclein neurotoxicity in Parkinson's disease models."
     },
     "42836993": {
       "first_author": "Al Khleifat A",
@@ -1280,7 +1280,7 @@
       "first_author": "Halliday M",
       "pubdate": "2017 Jun 1",
       "journal": "Brain",
-      "title": "Repurposed drugs targeting eIF2\u03b1-P-mediated translational repression prevent neurodegeneration in mice."
+      "title": "Repurposed drugs targeting eIF2α-P-mediated translational repression prevent neurodegeneration in mice."
     },
     "24835171": {
       "first_author": "Klomjai W",
@@ -1340,7 +1340,7 @@
       "first_author": "Crespillo-Casado A",
       "pubdate": "2018 May 18",
       "journal": "J Biol Chem",
-      "title": "A Sephin1-insensitive tripartite holophosphatase dephosphorylates translation initiation factor 2\u03b1."
+      "title": "A Sephin1-insensitive tripartite holophosphatase dephosphorylates translation initiation factor 2α."
     },
     "43036320": {
       "first_author": "Abgueguen E",
@@ -1475,7 +1475,7 @@
       "journal": "Neural Regen Res"
     },
     "31648898": {
-      "title": "Stress-Induced Cellular Clearance Is Mediated by the SNARE Protein ykt6 and Disrupted by \u03b1-Synuclein.",
+      "title": "Stress-Induced Cellular Clearance Is Mediated by the SNARE Protein ykt6 and Disrupted by α-Synuclein.",
       "pubdate": "2019 Dec 4",
       "first_author": "Cuddy LK",
       "journal": "Neuron"
@@ -1501,7 +1501,7 @@
     "41832177": {
       "title": "TYK2 mediates neuroinflammation in Alzheimer's disease brains with TDP-43 pathology.",
       "pubdate": "2026 Mar 14",
-      "first_author": "K\u00f6nig LE",
+      "first_author": "König LE",
       "journal": "Nat Commun"
     },
     "31655003": {
@@ -2288,6 +2288,14 @@
     }
   },
   "dois": {
+    "10.1002/mds.70229": {
+      "title": "An Open-Label Phase 1b Study of the Safety, Pharmacokinetics, Pharmacodynamics, and Clinical Activity of ANX005 in Patients with Huntington's Disease.",
+      "type": "journal-article"
+    },
+    "10.1007/s00401-025-02901-7": {
+      "title": "Analysis of the splicing landscape of the frontal cortex in FTLD-TDP reveals subtype specific patterns and cryptic splicing",
+      "type": "journal-article"
+    },
     "10.1007/s00401-026-03084-5": {
       "title": "Integrative synaptosome multi-omics reveals disrupted synapse organization and localized cryptic transcripts in C9ORF72-frontotemporal dementia",
       "type": "journal-article"
@@ -2308,6 +2316,10 @@
       "title": "ALS molecular subtypes are a combination of cellular and pathological features learned by deep multiomics classifiers",
       "type": "journal-article"
     },
+    "10.1016/j.imbio.2025.153003": {
+      "title": "Targeting C5a inflammation in ALS: Ex vivo findings from PMX205 phase Ib trial",
+      "type": "journal-article"
+    },
     "10.1016/j.jlr.2026.101187": {
       "title": "Sphingolipid remodeling in SPT-related neuropathies",
       "type": "journal-article"
@@ -2325,11 +2337,11 @@
       "type": "journal-article"
     },
     "10.1038/emboj.2009.80": {
-      "title": "The structure of Atg4B\u2013LC3 complex reveals the mechanism of LC3 processing and delipidation during autophagy",
+      "title": "The structure of Atg4B–LC3 complex reveals the mechanism of LC3 processing and delipidation during autophagy",
       "type": "journal-article"
     },
     "10.1038/s41586-022-04424-7": {
-      "title": "TDP-43 represses cryptic exon inclusion in the FTD\u2013ALS gene UNC13A",
+      "title": "TDP-43 represses cryptic exon inclusion in the FTD–ALS gene UNC13A",
       "type": "journal-article"
     },
     "10.1038/s41586-022-04436-3": {
@@ -2376,10 +2388,22 @@
       "title": "Integrated single-cell and spatial transcriptomic profiling in ALS uncovers peripheral-to-central immune infiltration and reprogramming",
       "type": "journal-article"
     },
+    "10.1038/s41746-026-03225-w": {
+      "title": "Data-driven identification of repurposable drugs for ALS",
+      "type": "journal-article"
+    },
     "10.1074/jbc.M307764200": {
       "title": "The crystal structure of the globular head of complement protein C1q provides a basis for its versatile recognition properties.",
       "journal": "J Biol Chem",
       "year": "2003"
+    },
+    "10.1093/brain/awab184": {
+      "title": "Pharmacological SARM1 inhibition protects axon structure and function in paclitaxel-induced peripheral neuropathy",
+      "type": "journal-article"
+    },
+    "10.1093/nar/gkac895": {
+      "title": "Brain Catalog: a comprehensive resource for the genetic landscape of brain-related traits",
+      "type": "journal-article"
     },
     "10.1101/2025.07.09.664014": {
       "title": "Nonsense-mediated decay masks cryptic splicing events caused by TDP-43 loss.",
@@ -2389,8 +2413,16 @@
       "title": "Integrative multiomic analysis links TDP-43-driven splicing defects to cascading proteomic disruption of ALS/FTD pathways",
       "type": "posted-content"
     },
+    "10.1111/jnc.70183": {
+      "title": "Ropinirole Functions Through a Dopamine Receptor D2-Independent Mechanism to Ameliorate Amyotrophic Lateral Sclerosis Phenotypes in TARDBP-Mutant iPSC-Derived Motor Neurons",
+      "type": "journal-article"
+    },
     "10.1111/nan.12919": {
       "title": "Treatment with the copper compound CuATSM has no significant effect on motor neuronal pathology in patients with ALS",
+      "type": "journal-article"
+    },
+    "10.1126/scitranslmed.adg7162": {
+      "title": "Mis-spliced transcripts generate de novo proteins in TDP-43-related ALS/FTD",
       "type": "journal-article"
     },
     "10.1126/scitranslmed.aeb8517": {
@@ -2406,12 +2438,20 @@
       "journal": "Mol Neurodegener",
       "year": "2022"
     },
+    "10.1186/s44477-025-00013-w": {
+      "title": "Divergent TDP43-regulated and TDP43-independent cryptic splicing in the cortex and spinal cord",
+      "type": "journal-article"
+    },
     "10.1200/JCO.2026.44.16_suppl.12148": {
       "title": "SARM1 inhibition to prevent chemotherapy-induced peripheral neuropathy: Translational and early clinical evaluation of SIR2501.",
       "type": "journal-article"
     },
     "10.1371/journal.pone.0061177": {
       "title": "Design and Initial Results of a Multi-Phase Randomized Trial of Ceftriaxone in Amyotrophic Lateral Sclerosis",
+      "type": "journal-article"
+    },
+    "10.15252/embj.201798684": {
+      "title": "Mice with endogenous TDP-43 mutations exhibit gain of splicing function and characteristics of amyotrophic lateral sclerosis",
       "type": "journal-article"
     },
     "10.26508/lsa.202603939": {
@@ -2438,42 +2478,6 @@
       "title": "Enrichment of SARM1 alleles encoding variants with constitutively hyperactive NADase in patients with ALS and other motor nerve disorders.",
       "journal": "Elife",
       "year": "2021"
-    },
-    "10.1038/s41746-026-03225-w": {
-      "title": "Data-driven identification of repurposable drugs for ALS",
-      "type": "journal-article"
-    },
-    "10.1002/mds.70229": {
-      "title": "An Open-Label Phase 1b Study of the Safety, Pharmacokinetics, Pharmacodynamics, and Clinical Activity of ANX005 in Patients with Huntington's Disease.",
-      "type": "journal-article"
-    },
-    "10.1016/j.imbio.2025.153003": {
-      "title": "Targeting C5a inflammation in ALS: Ex vivo findings from PMX205 phase Ib trial",
-      "type": "journal-article"
-    },
-    "10.1093/brain/awab184": {
-      "title": "Pharmacological SARM1 inhibition protects axon structure and function in paclitaxel-induced peripheral neuropathy",
-      "type": "journal-article"
-    },
-    "10.1126/scitranslmed.adg7162": {
-      "title": "Mis-spliced transcripts generate de novo proteins in TDP-43-related ALS/FTD",
-      "type": "journal-article"
-    },
-    "10.1186/s44477-025-00013-w": {
-      "title": "Divergent TDP43-regulated and TDP43-independent cryptic splicing in the cortex and spinal cord",
-      "type": "journal-article"
-    },
-    "10.15252/embj.201798684": {
-      "title": "Mice with endogenous TDP-43 mutations exhibit gain of splicing function and characteristics of amyotrophic lateral sclerosis",
-      "type": "journal-article"
-    },
-    "10.1007/s00401-025-02901-7": {
-      "title": "Analysis of the splicing landscape of the frontal cortex in FTLD-TDP reveals subtype specific patterns and cryptic splicing",
-      "type": "journal-article"
-    },
-    "10.1093/nar/gkac895": {
-      "title": "Brain Catalog: a comprehensive resource for the genetic landscape of brain-related traits",
-      "type": "journal-article"
     }
   }
 }

@@ -395,7 +395,8 @@ function renderLocusSsoSvg(candId, sig){
       const bx1 = Math.max(L, mapBot(Number(c.lo))), bx2 = Math.min(R, mapBot(Number(c.hi)));
       const bCol = c.st==='PASS_CLEAN_GE2MM' ? 'var(--success)' : (c.st.startsWith('WARN') ? 'var(--error)' : 'var(--warning)');
       const is2mmOnly = c.st.startsWith('CAUTION') && c.sp === '0/0/0' && String(c.pm || '').startsWith('0/0/0/') && String(c.pm || '').endsWith('/0/0');
-      const stShort = c.st==='PASS_CLEAN_GE2MM' ? 'Clean (>=2mm)' : (c.st.startsWith('WARN') ? 'Warn CNS Hit' : (c.st.startsWith('FAIL') ? 'Fail 0-mm' : (is2mmOnly ? 'Caution (25bp 2-mm)' : 'Caution 1-mm/Wob')));
+      const isSub18Only = c.st.startsWith('CAUTION') && c.sp === '0/0/0' && String(c.pm || '').startsWith('0/0/0/0/0/') && String(c.pm || '') !== '0/0/0/0/0/0';
+      const stShort = c.st==='PASS_CLEAN_GE2MM' ? 'Clean (>=2mm)' : (c.st.startsWith('WARN') ? 'Warn CNS Hit' : (c.st.startsWith('FAIL') ? 'Fail 0-mm' : (is2mmOnly ? 'Caution (25bp 2-mm)' : (isSub18Only ? 'Caution (18-nt sub-core)' : 'Caution 1-mm/Wob'))));
       const ivNote = (sig.iv_notes && sig.iv_notes[String(c.rk)]) ? sig.iv_notes[String(c.rk)] : '';
       ssoSvg += `<g>
         <rect x="${bx1.toFixed(1)}" y="${y}" width="${Math.max(12, bx2-bx1).toFixed(1)}" height="10" rx="3" fill="${bCol}" ${c.st.startsWith('WARN')?'stroke="var(--foreground)" stroke-dasharray="2,2"':''}/>

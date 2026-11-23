@@ -80,7 +80,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "C020": (
         "Apilimod (CHEMBL4297643; clinical dimesylate salt AIT-101) is a potent lipid kinase inhibitor of endolysosomal PIKfyve (ENSG00000115020), which synthesizes PI(3,5)P2 to regulate autophagosome-lysosome fusion and unconventional secretory clearance. "
-        "Because continuous QD/BID PIKfyve inhibition triggers neuronal ClC-7 vacuolation, +PI(3)P–LRRK2/CASM stress, and clinical NfL/GFAP surges despite lowering C9orf72 CSF poly(GP), this hypothesis tests whether intermittent pulsed dosing can uncouple net intracellular clearance from vacuolar toxicity."
+        "Because continuous PIKfyve inhibition triggers neuronal ClC-7 vacuolation and +PI(3)P–LRRK2/CASM stress in preclinical models, while separate continuous clinical regimens reported exploratory blood or CSF NfL/GFAP increases alongside C9orf72 CSF poly(GP) reduction, this hypothesis tests whether intermittent pulsed dosing can uncouple net intracellular clearance from endolysosomal stress."
     ),
     "C021": (
         "Icerguastat (Sephin1, CHEMBL2365743) is a chlorobenzylidene aminoguanidine small molecule originally proposed to prolong protective eIF2alpha phosphorylation by selectively inhibiting the stress-inducible phosphatase cofactor PPP1R15A (GADD34). "

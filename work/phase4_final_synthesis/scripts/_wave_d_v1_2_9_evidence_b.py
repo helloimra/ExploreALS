@@ -19,10 +19,10 @@ def apply_wave_d_evidence_part_b(ev_map: dict[str, dict[str, str]]) -> None:
 
     # C021 (Icerguastat): 41-71x total plasma gap + modeled ~5-20 nM Cu,brain, both 5/34 total & 2/34 possibly related fatal TEAEs, 88.2% sporadic bulbar, 10-50 nM rat SOD1 context
     ev_map["EV-B4-017"].update({
-        "notes": "Wilcoxon signed-rank p=0.00336; LODO max p=0.00466; tested solely at 2.5 uM (41x above ALS 61.0 nM & 71x above HV 35.2 nM group total plasma Cmax under the studied regimens, and [MODEL_PRIOR] ~125-500x above unbound brain).",
+        "notes": "Wilcoxon signed-rank p=0.00336; LODO max p=0.00466; tested solely at 2.5 uM (41x above ALS geometric mean 61.0 nM & 71x above HV 50 mg MAD Dose-2 arithmetic mean 35.2 nM [n=6] total plasma Cmax under the studied regimens, and [MODEL_PRIOR] ~125-500x above unbound brain).",
     })
     ev_map["EV-B4-018"].update({
-        "effect_estimate": "Studied oral regimen group total plasma GeoMean Cmax=12.0 ng/mL in ALS (61.0 nM at 25 mg BID; HV Ph1 6.92 ng/mL = 35.2 nM; oral bioavailability & CNS ceiling unresolved; 41-71x below 2.5 uM; [MODEL_PRIOR] Cu,brain ~5-20 nM = 125-500x gap); fatal TEAEs 5/34 (14.7%) vs 2/17 (11.8%) total & 2/34 (5.9% vs 0%) possibly drug-related; falls 8/34 (23.5% vs 0%); GDF15 flat; ITT ALSFRS-R -0.33 (p=0.923)",
+        "effect_estimate": "Studied oral regimen total plasma Cmax: geometric mean 12.0 ng/mL (61.0 nM at 25 mg BID) in ALS (NCT05508074) & arithmetic mean 6.92 ng/mL (35.2 nM, 50 mg MAD Dose 2, n=6) in HV Ph1 (NCT03610334; oral bioavailability & CNS ceiling unresolved; 41-71x below 2.5 uM; [MODEL_PRIOR] Cu,brain ~5-20 nM = 125-500x gap); fatal TEAEs 5/34 (14.7%) vs 2/17 (11.8%) total & 2/34 (5.9% vs 0%) possibly drug-related; falls 8/34 (23.5% vs 0%); GDF15 flat; ITT ALSFRS-R -0.33 (p=0.923)",
         "notes": "Posted NCT05508074 tables (N=51 bulbar-onset ALS, 88.2% sporadic) record 5/34 vs 2/17 all-cause fatal TEAEs including 2/34 (5.9% vs 0%) investigator-assessed possibly drug-related sudden/cardiac fatal TEAEs (1 cardiac arrest, 1 cardiorespiratory arrest), null Plasma NfL ratio 1.04 [0.89, 1.21] (p=0.609), and attrition-selected Per-Protocol n=40/51 slope claims (11/34 vs 3/17 non-completers); note physiological plasma GDF15 (~704 pg/mL) is posted under CT.gov's umbrella 'ng/mL' table header alongside MCP1/FGF21.",
     })
     ev_map["EV-B4-019"].update({
