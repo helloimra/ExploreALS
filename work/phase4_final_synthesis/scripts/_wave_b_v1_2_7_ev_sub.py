@@ -10,6 +10,15 @@ def apply_wave_b_ev_and_sub_patches(
     for it in intake_rows:
         if it["carbon_id"] == "C015":
             it["staged_dataset_ids"] = "DS_BRYCE_APA;DS_CONS2026;DS_AFDB;DS029_SPILL;DS_GENCODE_V46_TX;DS_GNOMAD_V41_CONSTRAINT"
+            it["carbon_taste_critique"] = (
+                "Human chr14q12 ALS GWAS locus pairs motor-neuron SCFD1 eQTL-GWAS overlap at rs229143-A (+0.0476, Table S8 adj p=1.93e-32; Tsitkov 2026 preprint) "
+                "against opposite-sign nonproliferating iMGL SCFD1 expression (-0.2955 untreated, -0.2164 IFN-gamma, -0.3107 LPS) and formal microglial colocalization (PP.H4=0.8764-0.8899, PMID:43045849) "
+                "alongside G2E3 exon-2 sQTL (rs229190, Fig. 3A adj p<6e-32; Table S9 row 306 adj p=5.29e-35) and Alu-derived Intron-1 cryptic ALE."
+            )
+            it["planned_reanalysis_assays"] = (
+                "Dissect SCFD1 vs G2E3 across AnswerALS MN eQTL/sQTL-GWAS overlap vs formal iMGL colocalization, Bryce-Smith 2025 cryptic ALE, "
+                "GENCODE v46 6-tier Alu off-target scan, gnomAD/DepMap constraint, and ChEMBL Kinobead selectivity."
+            )
 
     # C022 (DNAJB2)
     ev_map["EV-B6-011"].update({
@@ -31,17 +40,22 @@ def apply_wave_b_ev_and_sub_patches(
     # C015 (SCFD1 / G2E3)
     ev_map["EV-B2-001"].update({
         "source_id_or_locator": "DS_CONS2026:Tsitkov2026_AALS594_eQTL_rs229143;OpenTargets_v4:GCST90027164;PMID:43045849",
-        "assay_and_contrast": "SCFD1 cis-eQTL & motif-suggested ISL1 chromatin footprint at rs229143 (chr14:30622552:T>A)",
-        "effect_estimate": "rs229143-A MN beta=+0.04762 (+0.048+/-0.003 in Fig. 3A, Table S8 adj p=1.93e-32; vs iMGL rs229143-A beta=-0.2955 untreated, -0.2164 IFN-gamma, -0.3107 LPS)",
+        "cohort_and_stratum": "Answer ALS N=594 iPSC-MNs (Tsitkov et al. 2026 [PREPRINT] PMC12919128)",
+        "assay_and_contrast": "SCFD1 cis-eQTL & motif-suggested ISL1 chromatin footprint at rs229143 (chr14:30622552:T>A; Table S8 eQTL-GWAS intersection & Fig. 3A)",
+        "effect_estimate": "rs229143-A MN beta=+0.04762 (+0.048+/-0.003 in Fig. 3A, Table S8 Bonferroni adj p=1.93e-32 [<2e-32]; vs iMGL rs229143-A beta=-0.2955 untreated, -0.2164 IFN-gamma, -0.3107 LPS)",
         "fdr_or_adjusted_p": "1.93e-32",
-        "notes": "Answer ALS N=594 human iPSC-derived motor-neuron cis-eQTL (Tsitkov et al. PMC12919128 [PREPRINT], Fig. 3A & Table S8): normalized SCFD1 expression increases from TT to TA to AA at rs229143-A (chr14:30622552:T>A; Table S8 slope +0.04762, adj p=1.93e-32; Fig. 3A +0.048 +/- 0.003, adj p<2e-32; GTEx BA9 nes=+0.269), overlapping an ATAC chromatin footprint whose motif suggests ISL1 (TF identity unproven; Table S8 lists the ALS GWAS p-value without a signed GWAS allele, whereas allele-coded van Rheenen 2021 GCST90027164 assigns ALS risk beta=+0.0212 to rs229143-A, gnomAD NFE AF=0.329). In Perez-Alcantara et al. 2026 nonproliferating human iMGLs (PMID:43045849, Zenodo 21471267; 261 initial lines from 254 donors -> 194 cell-count QC -> n=189 untreated, n=188 IFN-gamma & n=188 LPS donors, separated in EV-P4-007), the very same rs229143-A allele is associated with lower normalized SCFD1 expression across all three conditions (untreated beta=-0.2955, p=1.40e-23, AF=0.3441; IFN-gamma beta=-0.2164, p=1.72e-12, AF=0.3486; LPS beta=-0.3107, p=3.19e-12, AF=0.3459), supporting opposite expression associations for the same allele across the two studies (slopes not directly compared across different expression scales; causal cell-type interaction, opposing effects within individual donors, TF identity, and beneficial sporadic-ALS treatment direction remain open).",
+        "notes": "Answer ALS N=594 human iPSC-derived motor-neuron cis-eQTL (Tsitkov et al. 2026 [PREPRINT] PMC12919128, Fig. 3A & Table S8 eQTL-GWAS intersection table): normalized SCFD1 expression increases from TT to TA to AA at rs229143-A (chr14:30622552:T>A; Table S8 slope +0.04762, Bonferroni-adjusted p=1.93e-32; Fig. 3A +0.048 +/- 0.003, adj p<2e-32; GTEx BA9 nes=+0.269), overlapping an ATAC chromatin footprint whose motif suggests ISL1 (TF identity unproven; Table S8 reports LD overlap / ALS GWAS p-value without formal colocalization or a signed GWAS allele, whereas allele-coded van Rheenen 2021 GCST90027164 assigns ALS risk beta=+0.0212 to rs229143-A, gnomAD NFE AF=0.329). In Perez-Alcantara et al. 2026 nonproliferating human iMGLs (PMID:43045849, Zenodo 21471267; 261 initial lines from 254 donors -> 194 cell-count QC -> published post-QC cohorts n=189 untreated, n=188 IFN-gamma & n=188 LPS donors [inferred nominal SCFD1 fit n=186, 185 & 185], separated with formal COLOC PP.H4=0.8764-0.8899 in EV-P4-007), the very same rs229143-A allele is associated with lower normalized SCFD1 expression across all three conditions (untreated beta=-0.2955, p=1.40e-23, AF=0.3441; IFN-gamma beta=-0.2164, p=1.72e-12, AF=0.3486; LPS beta=-0.3107, p=3.19e-12, AF=0.3459), supporting opposite expression associations for the same allele across the two studies (slopes not directly compared across different expression scales; causal cell-type interaction, opposing effects within individual donors, TF identity, and beneficial sporadic-ALS treatment direction remain open).",
     })
     ev_map["EV-B2-002"]["notes"] = (
         "rs229143 maps to CL:0000100 motor neuron SCFD1 RNA-seq/splicing (fi=0.0394); gnomAD v4.1 MANE ENST00000458591 LOEUF=0.809, pLI=0.232 (7/16.2 LoF; Open Targets legacy v2.1.1 LOEUF=0.472, pLI=0.996); Spillman MOESM1 cortex DIA protein null (Homog log2FC=-0.0156, p=0.9313; Synapt +0.0265, p=0.7966, n=10 vs 10). [Sample context: 1,258 DepMap CRISPR screens; GRCh38 AlphaGenome locus scan]"
     )
-    ev_map["EV-B2-004"]["notes"] = (
-        "Colocalizes at chr14q12 ALS GWAS (including adult prefrontal cortex G2E3 eQTL/sQTL PP4=0.99 alongside SCFD1 colocalizations in Brain Catalog, Pan et al. 2023 Nucleic Acids Res PMID:36243988, DOI:10.1093/nar/gkac895) and converges with Brown 2022 TDP-43 KD Intron-1 cryptic ALE (chr14:30559272-30563746, dPSI=+0.4044, FDR=2.90e-21, replicated across 5/5 KD studies in Bryce-Smith Table 2); AlphaGenome rs229190 AVI_Phred=7.61; DepMap isEssential=False (mean Chronos=-0.0184, 0.0% <-1.0 across 1,258 lines); gnomAD v4.1 MANE ENST00000206595 LOEUF=0.600, pLI=0.888 (2/10.5 LoF; Open Targets legacy LOEUF=0.500)."
-    )
+    ev_map["EV-B2-004"].update({
+        "cohort_and_stratum": "Answer ALS N=594 iPSC-MNs (Tsitkov et al. 2026 [PREPRINT] PMC12919128)",
+        "assay_and_contrast": "G2E3 exon-2 skipping sQTL rs229190 (chr14:30570881:T>C; Table S9 row 306 junction 14:30559272:30586718:clu_15670_+ & Fig. 3A)",
+        "effect_estimate": "Table S9 row 306 slope=-0.02948 (nominal p=2.65e-42, Bonferroni adj p=5.29e-35; Fig. 3A exon-2 PSI -0.029+/-0.002, adj p<6e-32)",
+        "fdr_or_adjusted_p": "5.29e-35",
+        "notes": "Tsitkov et al. 2026 [PREPRINT] (PMC12919128) reports sQTL-GWAS locus overlap at rs229190 (Table S9 row 306 LeafCutter exon-2 skipping junction 14:30559272:30586718:clu_15670_+ slope=-0.02948, pval_nominal=2.65e-42, Bonferroni new_p_adj=5.29e-35, AF=0.3628; Fig. 3A plotted exon-2 PSI -0.029+/-0.002, adj p<6e-32), alongside separate formal adult prefrontal cortex G2E3 eQTL/sQTL colocalization (PP4=0.99 alongside SCFD1 in Brain Catalog, Pan et al. 2023 Nucleic Acids Res PMID:36243988, DOI:10.1093/nar/gkac895) and Brown 2022 TDP-43 KD Intron-1 cryptic ALE (chr14:30559272-30563746, dPSI=+0.4044, source MAJIQ 'FDR'=2.90e-21, replicated across 5/5 KD studies in Bryce-Smith Table 2); AlphaGenome rs229190 AVI_Phred=7.61; DepMap isEssential=False (mean Chronos=-0.0184, 0.0% <-1.0 across 1,258 lines); gnomAD v4.1 MANE ENST00000206595 LOEUF=0.600, pLI=0.888 (2/10.5 LoF; Open Targets legacy LOEUF=0.500).",
+    })
 
     # C014 (CHMP7 / CHMP2B)
     ev_map["EV-B1-018"]["notes"] = (

@@ -8,7 +8,7 @@ SUBKEY_OVERRIDES: list[tuple[str, str, list[str]]] = [
     ("DS_CRYPTIC:Ma2022", "Ma et al. 2022 (Nature)", ["PMID:35197626"]),
     ("DS_CRYPTIC:Klim2019", "Klim et al. 2019 (Cell Stem Cell)", ["PMID:30643292"]),
     ("DS_CRYPTIC:Melamed2019", "Melamed et al. 2019 (Nat Neurosci)", ["PMID:30643298"]),
-    ("DS_CONS2026:Tsitkov", "Tsitkov et al. 2026 (Answer ALS)", ["PMC12919128"]),
+    ("DS_CONS2026:Tsitkov", "Tsitkov et al. 2026 Preprint (Answer ALS)", ["PMC12919128"]),
     ("DS_CONS2026:Grozdanov", "Grozdanov/Lee et al. 2026 (M1 Multiome)", ["PMC12982666"]),
     ("DS_CONS2026:Lee", "Grozdanov/Lee et al. 2026 (M1 Multiome)", ["PMC12982666"]),
     ("DS_CONS2026:Zhang", "Zhang et al. 2026 (Spatial)", ["PMC13337491"]),
@@ -351,7 +351,8 @@ def resolve_evidence_row(
 
     eid = row["evidence_id"]
     p_str = f"p={row['p_value']}" if row.get("p_value") else ""
-    f_str = f"FDR={row['fdr_or_adjusted_p']}" if row.get("fdr_or_adjusted_p") else ""
+    adj_lbl = "adj p" if eid in {"EV-B2-001", "EV-B2-004"} else "FDR"
+    f_str = f"{adj_lbl}={row['fdr_or_adjusted_p']}" if row.get("fdr_or_adjusted_p") else ""
     pf = MAJIQ_NONFREQ_PF.get(eid) or " · ".join(x for x in (p_str, f_str) if x)
     srec = (stat_map or {}).get(eid, {})
     sha64 = srec.get("sha64", "")

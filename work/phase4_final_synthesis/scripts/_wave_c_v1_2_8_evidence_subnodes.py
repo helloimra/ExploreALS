@@ -21,15 +21,15 @@ def apply_wave_c_ev_and_sub_patches(
     })
     ev_map["EV-B4-007"].update({
         "source_type": "MAJIQ_SCN8A_SPLICING_RECOMPUTE",
-        "source_id_or_locator": "DS_CRYPTIC:Brown2022_MOESM11;PMID:35197628;PMID:34425903",
+        "source_id_or_locator": "DS_CRYPTIC:Brown2022_MOESM11_MOESM12_MOESM13;PMID:35197628;PMID:34425903;PMID:38771640;DOI:10.1172/jci.insight.177530",
         "cohort_and_stratum": "Brown et al. 2022 human i3Neuron TDP-43 CRISPRi KD vs Control MAJIQ splicing",
         "assay_and_contrast": "MAJIQ differential splicing of annotated mutually exclusive SCN8A (NaV1.6) Domain I S3-S4 Exon 5N (MOESM11 line 210) vs Exon 5A (MOESM11 line 211)",
-        "effect_direction": "NEONATAL_5N_TO_ADULT_5A_HYPERPOLARIZING_SWITCH",
-        "effect_estimate": "SCN8A Exon 5N (chr12:51688758-51688849, MOESM11 line 210) PSI 0.578->0.330 (dPSI=-0.2019, source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=1.95e-06, p_d_psi_0_10=0.8435) vs Exon 5A (chr12:51689005-51689096, MOESM11 line 211) PSI 0.422->0.670 (dPSI=+0.2019, source MAJIQ 'FDR'=1.95e-06, p_d_psi_0_10=0.8435; 0 cryptic junctions)",
+        "effect_direction": "NEONATAL_5N_TO_ADULT_5A_SPLICE_SWITCH",
+        "effect_estimate": "SCN8A Exon 5N (chr12:51688758-51688849, MOESM11 line 210) PSI 0.578->0.330 (dPSI=-0.2019, source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=1.95e-06, p_d_psi_0_10=0.8435) vs Exon 5A (chr12:51689005-51689096, MOESM11 line 211) PSI 0.422->0.670 (dPSI=+0.2019, source MAJIQ 'FDR'=1.95e-06, p_d_psi_0_10=0.8435; 0 cryptic junctions); gene-level RNA log2FC=-0.0601 (padj=0.4934) & Ribo +0.1075 (padj=0.9987) NS",
         "p_value": "",
         "fdr_or_adjusted_p": "",
         "sample_size_n": "",
-        "notes": "Brown 2022 MOESM11 contains 0 cryptic junctions in SCN8A; instead, TDP-43 depletion accelerates switching from neonatal Exon 5N (MOESM11 line 210: PSI 0.578->0.330, dPSI=-0.2019, source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=1.94673e-06, p_d_psi_0_10=0.84348) to adult Exon 5A (MOESM11 line 211: PSI 0.422->0.670, dPSI=+0.2019, source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=1.94664e-06, p_d_psi_0_10=0.84348; stored separately from frequentist MOESM12/13 DESeq2 total RNA-seq log2FC=-0.431, BH-FDR=4.85e-4 & Ribo-seq log2FC=-0.692, BH-FDR=0.0155), shifting human NaV1.6 voltage-dependent activation hyperpolarizing and enhancing persistent/resurgent Na+ current (Liang et al. 2021 PMID:34425903).",
+        "notes": "Brown 2022 MOESM11 contains 0 cryptic junctions in SCN8A; instead, TDP-43 depletion shifts mutually exclusive splicing from neonatal Exon 5N (MOESM11 line 210: PSI 0.578->0.330, dPSI=-0.2019, source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=1.94673e-06, p_d_psi_0_10=0.84348) toward adult Exon 5A (MOESM11 line 211: PSI 0.422->0.670, dPSI=+0.2019, source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=1.94664e-06, p_d_psi_0_10=0.84348), whereas separate whole-gene DESeq2 total RNA-seq (MOESM12 line 9820, ENSG00000196876: log2FC=-0.06007, nominal p=0.28855, BH-FDR padj=0.49335) and ribosome profiling (MOESM13 line 12022, ENSG00000196876.15 / ENST00000354534.10: log2FC=+0.10750, nominal p=0.80017, BH-FDR padj=0.99867) show no significant abundance or translation change. Liang et al. 2021 (PMID:34425903) characterized developmental 5N-to-5A isoform expression, while direct electrophysiology in Vanoye et al. 2024 (PMID:38771640, DOI:10.1172/jci.insight.177530) found only a small activation difference between wild-type NaV1.6-5N and NaV1.6-5A and explicitly did not measure resurgent current, so whether this splice shift increases persistent or resurgent Na+ current or alters riluzole response in ALS motor neurons remains open (separate from riluzole's clinical trial evidence in EV-P4-009).",
     })
 
     # S08 (Methylcobalamin / Rozebalamin): exact JETALS FAS=129 (126 completers, p=0.012), Kaji 2019 PMID:30636701 FAS=370, MHLW label

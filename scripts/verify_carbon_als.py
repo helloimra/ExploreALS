@@ -313,6 +313,8 @@ def verify_all(
     curated_stat_guards = {
         "EV-B1-001": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
         "EV-B1-011": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
+        "EV-B2-001": ("PUBLISHED_TRIAL_OR_GENETIC_INFERENCE", "unique_human_donor", "Tsitkov"),
+        "EV-B2-004": ("PUBLISHED_TRIAL_OR_GENETIC_INFERENCE", "unique_human_donor", "Table S9"),
         "EV-B2-011": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
         "EV-B2-014": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
         "EV-P2-T3-004": ("PRIMARY_FREQUENTIST_RECOMPUTE", "unique_human_donor", "Pearson r"),
@@ -323,7 +325,7 @@ def verify_all(
         "EV-P4-004": ("STRUCTURAL_OR_MECHANISTIC_MODEL_PRIOR", "genomic_cis_variant", "AlphaGenome"),
         "EV-P4-005": ("PUBLISHED_TRIAL_OR_GENETIC_INFERENCE", "gwas_credible_set_variant", "59-variant"),
         "EV-P4-006": ("STRUCTURAL_OR_MECHANISTIC_MODEL_PRIOR", "c1q_heterotrimer_subunit_chain", "1 heterotrimer / 3 chains"),
-        "EV-P4-007": ("PUBLISHED_TRIAL_OR_GENETIC_INFERENCE", "unique_human_donor", "n=189 untreated"),
+        "EV-P4-007": ("PUBLISHED_TRIAL_OR_GENETIC_INFERENCE", "unique_human_donor", "n=189"),
         "EV-P4-008": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
         "EV-P4-009": ("PUBLISHED_TRIAL_OR_GENETIC_INFERENCE", "human_trial_or_genetic_participant", "Unadjusted 18-mo survival relative risk"),
     }
@@ -332,6 +334,9 @@ def verify_all(
             gsr = stat_by_eid[g_eid]
             if gsr["inference_class"] != exp_ic or gsr["statistical_unit"] != exp_unit or exp_kw not in gsr["model_formula_or_test"]:
                 errors.append(f"{g_eid}: curated statistical record overwritten ({gsr['inference_class']} / {gsr['statistical_unit']} / {gsr['model_formula_or_test'][:48]})")
+    for qtl_eid in ("EV-B2-001", "EV-B2-004"):
+        if qtl_eid in stat_by_eid and ("Bonferroni" not in stat_by_eid[qtl_eid]["multiple_testing_family"] or "BH-FDR" in stat_by_eid[qtl_eid]["multiple_testing_family"]):
+            errors.append(f"{qtl_eid}: Answer ALS QTL record must use study-adjusted Bonferroni family, not BH-FDR")
     all_majiq_eids = ("EV-B1-001", "EV-B1-011", "EV-B2-011", "EV-B2-014", "EV-B4-007", "EV-P4-002", "EV-P4-008")
     for maj_eid in all_majiq_eids:
         if maj_eid in stat_by_eid:
@@ -347,12 +352,26 @@ def verify_all(
             errors.append("EV-B1-001: UNC13A MOESM11 line 983 must be classified as novel_acceptor, not cryptic donor")
         if "EV-B1-006" in ev_by_eid and ("LeafCutter" in ev_by_eid["EV-B1-006"]["notes"] or "line 4857" not in ev_by_eid["EV-B1-006"]["notes"]):
             errors.append("EV-B1-006: STMN2 exon-2a note must cite Brown 2022 MOESM11 line 4857 MAJIQ, not LeafCutter")
-        if "EV-B4-007" in ev_by_eid and ("line 210" not in ev_by_eid["EV-B4-007"]["notes"] or "line 211" not in ev_by_eid["EV-B4-007"]["notes"]):
-            errors.append("EV-B4-007: SCN8A note must cite MOESM11 line 210 (-0.2019) and line 211 (+0.2019)")
-        if "EV-B2-001" in ev_by_eid and ("N=261" in json.dumps(ev_by_eid["EV-B2-001"]) or "-0.2955" not in ev_by_eid["EV-B2-001"]["notes"]):
-            errors.append("EV-B2-001: SCFD1 companion note must avoid pooled N=261 wording and report same-variant rs229143-A iMGL slopes")
+        if "EV-B1-011" in ev_by_eid and ("confirm 126-bp" in ev_by_eid["EV-B1-011"]["notes"] or "PMID:41174170" not in ev_by_eid["EV-B1-011"]["notes"]):
+            errors.append("EV-B1-011: KCNQ2 note must credit Joseph et al. 2025 (PMID:41174170) for translated KCNQ2-DeltaE5 protein")
+        if "EV-B4-007" in ev_by_eid:
+            n407 = json.dumps(ev_by_eid["EV-B4-007"])
+            if any(bad in n407 for bad in ("-0.431", "-0.692", "0.000485", "4.85e-4")) or "line 9820" not in n407 or "line 12022" not in n407 or "PMID:38771640" not in n407:
+                errors.append("EV-B4-007: SCN8A note must cite MOESM12 line 9820 (-0.06007, padj=0.49335) & MOESM13 line 12022 (+0.10750, padj=0.99867) and Vanoye 2024 (PMID:38771640)")
+        if "EV-B2-001" in ev_by_eid and ("N=261" in json.dumps(ev_by_eid["EV-B2-001"]) or "-0.2955" not in ev_by_eid["EV-B2-001"]["notes"] or "[PREPRINT]" not in ev_by_eid["EV-B2-001"]["cohort_and_stratum"]):
+            errors.append("EV-B2-001: SCFD1 record must identify Tsitkov 2026 [PREPRINT], avoid pooled N=261, and report same-variant rs229143-A iMGL slopes")
+        if "EV-P3A-002" in ev_by_eid and ("max_mm=0" in ev_by_eid["EV-P3A-002"]["notes"] or "95,283" not in ev_by_eid["EV-P3A-002"]["notes"]):
+            errors.append("EV-P3A-002: G2E3 #1 note must report completed 1-mm off-target counts (max_mm=1, 95,283 loci) and NA 2-mm")
+        if "EV-P4-007" in ev_by_eid and ("186" not in ev_by_eid["EV-P4-007"]["notes"] or "Zenodo:21471267" not in ev_by_eid["EV-P4-007"]["source_id_or_locator"]):
+            errors.append("EV-P4-007: SCFD1 iMGL record must distinguish published 189/188/188 cohorts from inferred 186/185/185 fit counts and retain Zenodo:21471267 locator")
         if "EV-P4-001" in ev_by_eid and "NMN/1AD-activated" in json.dumps(ev_by_eid["EV-P4-001"]):
             errors.append("EV-P4-001: SARM1 7NAL must describe NMN-bound ARM-SAM ring from an NMN/1AD-incubated preparation")
+    ds_desc_map = {d["dataset_id"]: d["description"] for d in datasets}
+    if any(
+        (dsid in ds_desc_map and req not in ds_desc_map[dsid])
+        for dsid, req in (("DS_PDB_7ANW", "2.68A"), ("DS_PDB_7DJT", "H8L"), ("DS_PDB_4KC3", "3.27A"), ("DS_PDB_2Z0D", "1.90A"))
+    ):
+        errors.append("datasets_manifest.csv: PDB descriptions must match deposited resolutions/ligands (7ANW 2.68A, 7DJT VI3+H8L, 4KC3 3.27A, 2Z0D 1.90A)")
     if mode == "full" and all(k in stat_by_eid for k in all_majiq_eids):
         moesm11_fp = CARBON_ROOT / "data" / "genomics_splicing" / "tdp43_cryptic_sources" / "Brown2022_41586_2022_4436_MOESM11_ESM.csv"
         if moesm11_fp.is_file():

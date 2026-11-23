@@ -29,7 +29,7 @@ Canonical Phase 1–4 adjudication table (`33` rows: `4 KEEP_CORE`, `13 KEEP_EXP
 - **Hard Invariant:** If `decision == "DROP"`, `epistemic_state` MUST be one of `{FALSIFIED_CLINICAL, FALSIFIED_PK_SAFETY, ARTIFACT_CONFOUNDED}` and `factual_justification` + `supporting_evidence_ids` MUST be non-empty. `epistemic_state == "UNPROVEN_UNTESTED"` is strictly forbidden from mapping to `DROP`.
 
 ## 4. `registries/datasets_manifest.csv`
-Tracks all `42` biomedical datasets, 3D structures, and genome reference maps (`40` external accessions + `2` repo-bundled reference maps) with 64-character SHA-256 digests, partitioned across **`28` `TIER_A_OPEN_REDISTRIBUTABLE`, `12` `TIER_B_PUBLISHER_HTTPS_FETCH`, and `2` `TIER_C_DUA_OR_BASELINE`** (registered-access Synapse entries `DS003_PB` `syn51105515` and `DS026_FUJITA` `syn52335732`), with canonical fetch URLs or access instructions (`schemas/dataset_files_lock.json`).
+Tracks all `42` biomedical datasets, 3D structures, and genome reference maps (`40` external accessions + `2` repo-bundled reference maps) with 64-character SHA-256 digests, partitioned across **`28` `TIER_A_OPEN_REDISTRIBUTABLE`, `12` `TIER_B_PUBLISHER_HTTPS_FETCH`, and `2` `TIER_C_DUA_OR_BASELINE`** (registered-access Synapse entries `DS003_PB` `syn51105515` and `DS026_FUJITA` `syn52335732`), storing canonical fetch URLs and access instructions in `canonical_fetch_url_or_instructions` (paired with per-file relative paths, redistribution tiers, byte sizes, and SHA-256 hashes in `schemas/dataset_files_lock.json`).
 
 **Columns:**
 `dataset_id,domain,local_relpath,upstream_explore_relpath,accession_or_doi,license_or_access,size_bytes,sha256,relevant_candidates,description,redistribution_tier,canonical_fetch_url_or_instructions`
