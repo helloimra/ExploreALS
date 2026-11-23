@@ -99,6 +99,68 @@ def sanitize_public_modality(raw_mod: str) -> str:
     return sanitize_public_prose(s)
 
 
+_AUDIT_FILE_TOK_RE = re.compile(r"[A-Za-z0-9_/-]*audit[A-Za-z0-9_.-]*\.(?:py|csv|json|bed|gz)", re.I)
+
+
+def deaudit_prose(txt: str) -> str:
+    s = str(txt or "")
+    if "audit" not in s.lower():
+        return s
+    protected: list[str] = []
+
+    def _stash(m: re.Match[str]) -> str:
+        protected.append(m.group(0))
+        return f"__AUDPATH_{len(protected) - 1}__"
+
+    s = _AUDIT_FILE_TOK_RE.sub(_stash, s)
+    s = re.sub(r"\boff-target\s+safety\s+audit\b", "off-target safety screen", s, flags=re.I)
+    s = re.sub(r"\boff-target\s+hybridization\s+audit\b", "off-target hybridization screen", s, flags=re.I)
+    s = re.sub(r"\boff-target\s+audit\b", "off-target hybridization screen", s, flags=re.I)
+    s = re.sub(r"\bhybridization\s+audit\b", "hybridization screen", s, flags=re.I)
+    s = re.sub(r"\bAudit\s+of\s+(published\s+catalog|baseline\s+intake|baseline\s+annotation)\b", r"Verification of \1", s)
+    s = re.sub(r"\baudit\s+of\s+(published\s+catalog|baseline\s+intake|baseline\s+annotation)\b", r"verification of \1", s)
+    s = re.sub(r"\bindependent\s+statistical\s+audit\b", "independent statistical review", s, flags=re.I)
+    s = re.sub(r"\bChemical\s+registry\s+audit\b", "Chemical registry verification", s)
+    s = re.sub(r"\bchemical\s+registry\s+audit\b", "chemical registry verification", s)
+    s = re.sub(r"\bLive\s+API\s+audit\b", "Live API verification", s)
+    s = re.sub(r"\blive\s+API\s+audit\b", "live API verification", s)
+    s = re.sub(r"\bcysteine\s+auditing\b", "cysteine mapping", s, flags=re.I)
+    s = re.sub(r"\bprogrammatically\s+audited\b", "programmatically verified", s, flags=re.I)
+    s = re.sub(
+        r"\b(clinical\s+trial|clinical\s+safety|sponsor\s+clinical|registry|CT\.gov|prior-art|literature|EuropePMC|medchem|safety|trajectory)\s+audits\b",
+        r"\1 reviews",
+        s,
+        flags=re.I,
+    )
+    s = re.sub(
+        r"\b(clinical\s+trial|clinical\s+safety|sponsor\s+clinical|registry|CT\.gov|prior-art|literature|EuropePMC|medchem|safety|trajectory)\s+audit\b",
+        r"\1 review",
+        s,
+        flags=re.I,
+    )
+    s = re.sub(r"\b(primer|contrast-inversion)\s+audit\b", r"\1 check", s, flags=re.I)
+    s = re.sub(
+        r"\b(contact|splice-site|exon|null\s+allele|promiscuity|pseudobulk|OLS|protein|Bridge)\s+audit\b",
+        r"\1 analysis",
+        s,
+        flags=re.I,
+    )
+    s = re.sub(r"(^|[.;:]\s+)Audit\s+(?=[A-Z0-9])", r"\1Evaluate ", s)
+    s = re.sub(r"\band\s+audit\s+(?=[A-Za-z0-9])", "and evaluate ", s)
+    s = re.sub(r";\s+audit\s+(?=[A-Za-z0-9])", "; evaluate ", s)
+    s = re.sub(r"\bAudited\b", "Verified", s)
+    s = re.sub(r"\baudited\b", "verified", s)
+    s = re.sub(r"\bAuditing\b", "Inspecting", s)
+    s = re.sub(r"\bauditing\b", "inspecting", s)
+    s = re.sub(r"\bAudits\b", "Reviews", s)
+    s = re.sub(r"\baudits\b", "reviews", s)
+    s = re.sub(r"\bAudit\b", "Analysis", s)
+    s = re.sub(r"\baudit\b", "analysis", s)
+    for idx, orig in enumerate(protected):
+        s = s.replace(f"__AUDPATH_{idx}__", orig)
+    return s
+
+
 def sanitize_public_prose(txt: str) -> str:
     s = str(txt or "")
     if not s:
@@ -204,6 +266,7 @@ def sanitize_public_prose(txt: str) -> str:
     s = re.sub(r"\bunbiased\s+(?=(?:TDP-43\s+)?cryptic-splicing\s+discovery)", "transcriptome-wide ", s, flags=re.I)
     s = re.sub(r",\s*0 chemically modified synthesis-ready ASO sequences", "", s)
     s = re.sub(r"\(0 chemically modified synthesis-ready ASO sequences\)", "(1-based GRCh38 target coordinates)", s)
+    s = deaudit_prose(s)
     s = re.sub(r"\s{2,}", " ", s).strip()
     return (s[0].upper() + s[1:]) if s and s[0].islower() and txt and txt[0].isupper() else s
 

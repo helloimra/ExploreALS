@@ -10,6 +10,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
+from _public_taxonomy import deaudit_prose  # noqa: E402
 from _wave_b_v1_2_7_ev_sub import apply_wave_b_ev_and_sub_patches  # noqa: E402
 from _wave_b_v1_2_7_ev_sub_b import apply_wave_b_ev_and_sub_part_b  # noqa: E402
 from _wave_c_v1_2_8_evidence_subnodes import apply_wave_c_ev_and_sub_patches  # noqa: E402
@@ -204,6 +205,15 @@ def main() -> None:
     apply_wave_c_ev_and_sub_patches(it_rows, ev_map, sn_rows)
     apply_wave_d_evidence_part_a(it_rows, ev_map)
     apply_wave_d_evidence_part_b(ev_map)
+    for ir in it_rows:
+        for ik in ("carbon_taste_critique", "planned_reanalysis_assays"):
+            ir[ik] = deaudit_prose(ir[ik])
+    for er in ev_rows:
+        for ek in ("cohort_and_stratum", "assay_and_contrast", "effect_estimate", "notes"):
+            er[ek] = deaudit_prose(er[ek])
+    for sr in sn_rows:
+        for sk in ("explore_bundled_claim", "key_risk_or_taste_question", "gnomad_essentiality_check", "druggability_check", "subnode_verdict"):
+            sr[sk] = deaudit_prose(sr[sk])
     _save("candidate_intake_ledger.csv", it_cols, it_rows)
     _save("evidence_ledger.csv", ev_cols, ev_rows)
     _save("subnode_dissection.csv", sn_cols, sn_rows)

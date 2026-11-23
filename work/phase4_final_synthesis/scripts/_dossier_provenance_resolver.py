@@ -104,13 +104,13 @@ def classify_basis_and_tier(row: dict[str, str]) -> tuple[str, str, str]:
     elif eid in {"EV-P4-001", "EV-P4-006"}:
         basis = "3D Structure / Model Synthesis"
     elif "structural" in st or "3d" in st or "cif" in st or "crystal" in st:
-        basis = "3D Cryo-EM / Crystal Audit"
+        basis = "3D Cryo-EM / Crystal Structure"
     elif "qtl" in st or "rare_variant" in st or "genetics" in st:
         basis = "Human Genetics / QTL"
     elif "alphagenome" in st or "bulge_subcore" in st or "multiplex_design" in st or "offtarget" in st or "triage" in st:
         basis = "GRCh38 Cis / AlphaGenome Scan"
     elif "chembl" in st or "openfda" in st or "pk" in st or "chemical" in st or "toxicity" in st or "safety" in st:
-        basis = "Pharmacology / Safety Audit"
+        basis = "Pharmacology & Safety Analysis"
     elif "screen" in st:
         basis = "Patient iPSC-MN Drug Screen"
     elif "csf" in st or "proteom" in st or "pellet" in st or "fraction" in st:
@@ -120,7 +120,7 @@ def classify_basis_and_tier(row: dict[str, str]) -> tuple[str, str, str]:
     elif "splicing" in st or "apa" in st or "riboseq" in st or "rnaseq" in st or "transcriptom" in st or "subtype" in st:
         basis = "Human RNA / Splicing Recompute"
     elif "api" in st:
-        basis = "Multi-Database API Audit"
+        basis = "Multi-Database API Analysis"
     else:
         basis = "Primary Cohort Recompute"
 
@@ -185,7 +185,7 @@ def _classify_nonfile_prov(row: dict[str, str]) -> str:
         return "EXT_API:Genomics_Ref"
     if any(k in low for k in ("pmid:", "pmc", "europepmc", "doi:")):
         return "EXT_LIT:PubMed_PMC"
-    return "EXT_API:Primary_Audit"
+    return "EXT_API:Primary_Source"
 
 
 def _clean_v0_text(txt: str) -> str:

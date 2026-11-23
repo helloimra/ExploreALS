@@ -19,6 +19,7 @@ from _retrospective_stat_and_log_specs import NEW_STAT_SPECS, UPD_2026_11_19_01 
 from _retrospective_wave_b_specs import WAVE_B_NEW_EVIDENCE_ROWS, WAVE_B_NEW_STAT_SPECS  # noqa: E402
 from _retrospective_wave_c_specs import WAVE_C_NEW_EVIDENCE_ROWS, WAVE_C_NEW_STAT_SPECS  # noqa: E402
 from _retrospective_wave_d_specs import UPD_2026_11_22_01  # noqa: E402
+from _public_taxonomy import deaudit_prose  # noqa: E402
 from _retrospective_v1_3_specs import UPD_2026_11_23_01  # noqa: E402
 from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose  # noqa: E402
 from verify_carbon_als import sha256_anchor  # noqa: E402
@@ -67,12 +68,16 @@ def main() -> None:
                 "(<750 n=19, 750-3,700 n=154, >3,700 n=47; 2.131x death-rate ratio), platform-offset power sensitivity, "
                 "and Schoenfeld Phase 3 sizing (247 events at HR=0.70; 138 at HR=0.62)."
             )
+        r["summary"] = deaudit_prose(r["summary"])
     _save("analysis_runs.csv", r_cols, r_rows)
 
     # 2. evidence_ledger.csv
     e_cols, e_rows = _load("evidence_ledger.csv")
     new_eids = {r["evidence_id"] for r in ALL_NEW_EVIDENCE_ROWS}
     e_rows = [r for r in e_rows if r["evidence_id"] not in new_eids] + [dict(r) for r in ALL_NEW_EVIDENCE_ROWS]
+    for er in e_rows:
+        for ek in ("cohort_and_stratum", "assay_and_contrast", "effect_estimate", "notes"):
+            er[ek] = deaudit_prose(er[ek])
     _save("evidence_ledger.csv", e_cols, e_rows)
 
     # 3. statistical_models_and_contrasts.csv (preserve staged sha64 in cached mode if data/ absent)
@@ -113,6 +118,8 @@ def main() -> None:
             sr["effect_estimate"] = "Endo diff_log2CPM=+3.1067 (p=0.00698; all ALS +2.8427, p=0.0115, n=30; n=7 Ctrl caveat; Pineda BA4 vascular +0.075 p=0.918; XIST/UTY swap-immune H5AD); 4KC3 (resolved aa 21-317) 30 ST2 D1-D3 contacts (10 Cys = 5 closed disulfides, leaving sequence-deduced Cys327 in 324-SKECF-328 unpaired) -> at perivascular 400pM sST2 (vs ~5pM bulk CSF PMID:37117777), [MODEL_PRIOR] 5nM pan-ST2 suppresses Treg ST2L (3.2%->0.32%) vs 80% RNA suppression (11.8%) or intact-FcRn sweeping (28.2%)"
             sr["unadjusted_or_primary_nominal_p"] = "0.00698"
             sr["covariate_adjusted_nominal_p"] = ""
+        for sk in ("exact_contrast", "model_formula_or_test", "effect_metric", "effect_estimate", "missingness_or_exclusion_rule"):
+            sr[sk] = deaudit_prose(sr[sk])
         ok_a, dig_a = sha256_anchor(ROOT / sr["anchor_relpath"])
         if ok_a:
             sr["sha64"] = dig_a
@@ -273,7 +280,7 @@ def main() -> None:
             _map_anchor_tok(tok) for tok in u["verification_anchor"].split(";") if tok.strip()
         )
         for pk in ("decision_impact", "headline", "prior_state_or_assumption", "new_evidence_or_revision", "portfolio_and_gate_consequence"):
-            u[pk] = translate_legacy_tokens_in_prose(u[pk])
+            u[pk] = deaudit_prose(translate_legacy_tokens_in_prose(u[pk]))
     u_rows.sort(key=lambda x: (x["date_iso"], x["update_id"]), reverse=True)
     _save("living_evidence_updates.csv", u_cols, u_rows)
     print(f"RUN-P4-003 registries updated: {len(r_rows)} runs, {len(e_rows)} evidence, {len(s_rows)} SHA-64 contrasts, {len(u_rows)} living updates.")

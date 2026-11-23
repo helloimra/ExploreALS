@@ -172,7 +172,7 @@ def build_roadmaps_and_tables_md(
         "",
         "## 4. Subunit & Pathway Gene Dissection Ledger (`18` Subunits Across `EALS-014`, `EALS-015`, `EALS-023`, `EALS-017`, `EALS-018`)",
         "",
-        "*Scope Note:* Multi-subunit complexes, genetic loci, and biofluid panels (`EALS-014 CHMP7/CHMP2B`, `EALS-015 chr14q12 SCFD1/G2E3`, `EALS-023 YKT6` + `5` cis-Golgi SNARE selectivity comparators, `EALS-017` `4`-protein CSF panel, and `EALS-018` `C1QA/B/C` + `C4B` RCCX comparator; systemic `C3` / pegcetacoplan is evaluated independently as `EALS-024`) are audited at the individual gene level below.",
+        "*Scope Note:* Multi-subunit complexes, genetic loci, and biofluid panels (`EALS-014 CHMP7/CHMP2B`, `EALS-015 chr14q12 SCFD1/G2E3`, `EALS-023 YKT6` + `5` cis-Golgi SNARE selectivity comparators, `EALS-017` `4`-protein CSF panel, and `EALS-018` `C1QA/B/C` + `C4B` RCCX comparator; systemic `C3` / pegcetacoplan is evaluated independently as `EALS-024`) are evaluated at the individual gene level below.",
         "",
         "| Sub-Node | Parent | Gene | Molecular Role | Human Constraint & Essentiality (`gnomAD v4` / `DepMap`) | Single-Gene Verdict |",
         "| :--- | :---: | :--- | :--- | :--- | :--- |",

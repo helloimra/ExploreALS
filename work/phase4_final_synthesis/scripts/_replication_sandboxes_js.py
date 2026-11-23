@@ -37,7 +37,7 @@ function renderRepInspector(isEmpty=false){
       ? `<button type="button" data-switch-tab="portfolio" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} in Triage Table</button>`
       : `<button type="button" data-open-dossier="${esc(repReturnDossier)}" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} Report</button>`)
     : '';
-  const retBar = repReturnDossier ? `<div class="p-2 rounded bg-[var(--background)] border border-[var(--primary)] flex items-center justify-between gap-2 text-xs font-mono"><span>Auditing provenance from <strong>${esc(repReturnDossier)}</strong></span>${retBtn}</div>` : '';
+  const retBar = repReturnDossier ? `<div class="p-2 rounded bg-[var(--background)] border border-[var(--primary)] flex items-center justify-between gap-2 text-xs font-mono"><span>Inspecting provenance from <strong>${esc(repReturnDossier)}</strong></span>${retBtn}</div>` : '';
   if(isEmpty){
     box.innerHTML = retBar + '<div class="p-6 rounded bg-[var(--background)] border border-[var(--card-border)] text-center text-[var(--muted-foreground)] text-xs">No items match active filter. <button type="button" data-reset-rep="1" class="text-[var(--link)] underline font-mono ml-1 cursor-pointer">Reset filters</button></div>';
     return;

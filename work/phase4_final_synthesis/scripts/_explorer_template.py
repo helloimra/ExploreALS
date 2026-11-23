@@ -288,7 +288,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
             <tr class="border-b border-[var(--card-border)] bg-[var(--background)] text-[var(--muted-foreground)] font-mono">
               <th colspan="5" class="py-1.5 px-2.5 border-r border-[var(--card-border)]">1. Target Locus, Role &amp; Splicing Mechanism</th>
               <th colspan="2" class="py-1.5 px-2 border-r border-[var(--card-border)]">2. Thermodynamics &amp; AVI</th>
-              <th colspan="4" class="py-1.5 px-2 border-r border-[var(--card-border)]">3. GENCODE v46 Off-Target Hybridization Audit (254,070 tx)</th>
+              <th colspan="4" class="py-1.5 px-2 border-r border-[var(--card-border)]">3. GENCODE v46 Off-Target Hybridization Screen (254,070 tx)</th>
               <th colspan="1" class="py-1.5 px-2">4. Browsers</th>
             </tr>
             <tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
@@ -472,7 +472,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
         <div class="space-y-1">
           <div class="font-mono font-semibold text-[var(--warning)]">Preclinical Research Notice &amp; AI-Assisted Workflow Disclosure</div>
           <p><strong class="text-[var(--foreground)]">Not Medical Advice:</strong> ExploreALS v1.3 is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing herein constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.</p>
-          <p><strong class="text-[var(--foreground)]">AI-Assisted Methodology:</strong> Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 42 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (PubMed, Europe PMC, ClinicalTrials.gov). Quantitative contrasts and accessions are programmatically audited and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors — always verify against linked primary sources before experimental use.</p>
+          <p><strong class="text-[var(--foreground)]">AI-Assisted Methodology:</strong> Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 42 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (PubMed, Europe PMC, ClinicalTrials.gov). Quantitative contrasts and accessions are programmatically verified and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors — always verify against linked primary sources before experimental use.</p>
         </div>
       </div>
     </section>

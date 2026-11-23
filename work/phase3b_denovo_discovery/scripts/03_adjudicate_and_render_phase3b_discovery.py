@@ -72,7 +72,7 @@ def main() -> None:
             "datasets_used": "DS_GENCODE_V46_TX;DS_GENCODE_V46_COMP_GTF;DS_GNOMAD_V41_CONSTRAINT;DS003_PB;DS_EDIN_PB;DS031_ZHANG",
             "tools_and_skills_used": "carbon_als.splice_design;carbon_als.offtarget_scanner;alphagenome-variant-impact-score;alphagenome-atlas-website-links;ensembl-database;gnomad-database;DBCLS_GGGenome_hg38;uv-python",
             "reproduced_verified": "yes", "run_timestamp_utc": ts,
-            "summary": "Coordinate-only GRCh38 steric-SSO & GAPMER_RNASE_H 3'Ext design + live AlphaGenome AVI + gnomAD r4 (catching KALRN rs2173852 AF=17.61%) + Phase 3A v2 254,070-transcript & intronic pre-mRNA off-target audit across 16 intervals (incl. PTPRT Newton 2026 chr20:42099289(-) A3SS #1/#2; 0 oligomer sequences).",
+            "summary": "Coordinate-only GRCh38 steric-SSO & GAPMER_RNASE_H 3'Ext design + live AlphaGenome AVI + gnomAD r4 (catching KALRN rs2173852 AF=17.61%) + Phase 3A v2 254,070-transcript & intronic pre-mRNA off-target hybridization screen across 16 intervals (incl. PTPRT Newton 2026 chr20:42099289(-) A3SS #1/#2; 0 oligomer sequences).",
         },
         {
             "analysis_run_id": "RUN-P3B-003", "phase_batch": "Phase3B_DeNovo_Discovery",
@@ -90,7 +90,7 @@ def main() -> None:
             "datasets_used": "DS001_COUNTS;DS001_META;DS001_ONEILL;DS_GENCODE_V46_COMP_GTF;DS_GNOMAD_V41_CONSTRAINT;DS_BRYCE_APA;DS003_PB;DS_EDIN_PB;DS031_ZHANG;DS_GC_REF;DS_PDB_2Z0D",
             "tools_and_skills_used": "alphagenome-single-variant-analysis;opentargets-database;gtex-database;chembl-database;uniprot-database;literature-search-openalex;tooluniverse-gene-liability;biomolecular-structure-viewer;uv-python",
             "reproduced_verified": "yes", "run_timestamp_utc": ts,
-            "summary": "Targeted deep dive: KALRN MANE KALRN-226 Intron-53 / Kalirin-12/DuET isoform fix + AlphaGenome-predicted rs2173852 76.18x 5'SS collapse + Open Targets v4 0-ALS-GWAS check; NYGC neuronal-mass-residualized mn_neur_z tSTMN2 benchmark + ALS-SOD1/FUS negative control; ATG4B PDB 2Z0D/ChEMBL audit; PRUNE2 Exon 11-12 / 9-bp & 34-bp exon audit; ELK1 6-cohort ST7 ChIP-Atlas HeLa null.",
+            "summary": "Targeted deep dive: KALRN MANE KALRN-226 Intron-53 / Kalirin-12/DuET isoform fix + AlphaGenome-predicted rs2173852 76.18x 5'SS collapse + Open Targets v4 0-ALS-GWAS check; NYGC neuronal-mass-residualized mn_neur_z tSTMN2 benchmark + ALS-SOD1/FUS negative control; ATG4B PDB 2Z0D/ChEMBL analysis; PRUNE2 Exon 11-12 / 9-bp & 34-bp exon analysis; ELK1 6-cohort ST7 ChIP-Atlas HeLa null.",
         },
     ]
     runs_fp = REG_DIR / "analysis_runs.csv"

@@ -512,7 +512,7 @@ function renderSummaryDomainPanels(r){
       : (location.protocol !== 'about:' ? `<a href="../CARBON_ALS_INTERACTIVE_EXPLORER.html#intervals/${esc(r.id)}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] font-mono text-xs">Inspect in Tab 3 (Splice Windows) &rarr;</a>` : '');
     out += `<div id="sec-cis" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
       <div class="flex items-center justify-between gap-2 flex-wrap">
-        <h3 class="text-sm font-semibold">Audited GRCh38 Splice-Target Windows (${cisRows.length} Target Window${cisRows.length>1?'s':''})</h3>
+        <h3 class="text-sm font-semibold">GRCh38 Splice-Target Windows (${cisRows.length} Target Window${cisRows.length>1?'s':''})</h3>
         ${jumpBtn}
       </div>
       <div class="overflow-x-auto"><table class="w-full text-left border-collapse text-xs">

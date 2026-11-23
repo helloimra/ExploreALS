@@ -10,6 +10,7 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
+from _public_taxonomy import deaudit_prose  # noqa: E402
 from _wave_b_v1_2_7_decisions import apply_wave_b_decision_patches  # noqa: E402
 from _wave_b_v1_2_7_decisions_b import apply_wave_b_decision_patches_b  # noqa: E402
 from _wave_c_v1_2_8_decisions import apply_wave_c_decision_patches  # noqa: E402
@@ -238,6 +239,9 @@ def main() -> None:
     apply_wave_c_decision_patches(dm)
     apply_wave_d_decision_patches_a(dm)
     apply_wave_d_decision_patches_b(dm)
+    for r in rows:
+        for dk in ("technical_accuracy_of_explore_claim", "causal_vs_reactive_assessment", "evidence_proves_hypothesis", "evidence_disproves_hypothesis", "factual_justification", "discriminating_next_test"):
+            r[dk] = deaudit_prose(r[dk])
 
     with fp.open("w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=cols, lineterminator="\r\n")

@@ -53,7 +53,7 @@ Coordinate-only (`GRCh38` 1-based closed, zero synthetic oligomer sequences) cis
 `candidate_id,gene_symbol,multiplex_tier,rank_within_gene,interval_id,chrom,grch38_start,grch38_end,strand,length_bp,mode,gc_pct,tm_moe_c,tm_phys_pops_c,dg37_kcal,cpg_dinucs,max_self_stem_bp,iss_motifs,ese_motifs,tdp43_ug_dinucs,wt_bystander_sponge_flag,mean_avi_phred,max_avi_phred,boundary_dist_bp,composite_score,analysis_run_id`
 
 ## 8. `registries/phase3_sso_offtarget_audit.csv`
-Exhaustive human spliced-transcriptome (`DS_GENCODE_V46_TX` x `DS_GENCODE_V46_COMP_GTF` exon-exon junction & `CDS` coordinates) and genome-wide nascent pre-mRNA (`GGGenome hg38` ungapped `0–2 mm` + `1-nt` bulge + `18-bp` sub-core x internal splice boundaries x 7-lineage CNS expression x `DS_GNOMAD_V41_CONSTRAINT`) off-target audit across all `12` Phase 2 splice intervals.
+Exhaustive human spliced-transcriptome (`DS_GENCODE_V46_TX` x `DS_GENCODE_V46_COMP_GTF` exon-exon junction & `CDS` coordinates) and genome-wide nascent pre-mRNA (`GGGenome hg38` ungapped `0–2 mm` + `1-nt` bulge + `18-bp` sub-core x internal splice boundaries x 7-lineage CNS expression x `DS_GNOMAD_V41_CONSTRAINT`) off-target hybridization screen across all `12` Phase 2 splice intervals.
 
 **Columns:**
 `candidate_id,gene_symbol,rank_within_gene,interval_id,length_bp,tm_phys_pops_c,gggenome_max_mm_queried,spliced_0mm_genes,spliced_1mm_genes,spliced_2mm_pc_genes,spliced_wobble_only_pc_genes,premRNA_0mm_sense_genes,premRNA_1mm_sense_genes,premRNA_1mm_splice50bp_genes,premRNA_wobble_only_splice50bp_pc_genes,premRNA_2mm_splice25bp_pc_genes,bulge_1nt_steric_pc_genes,sub18_core_steric_pc_genes,flagged_constrained_neuronal_hits,offtarget_safety_status,analysis_run_id`
@@ -71,7 +71,7 @@ Systematic multi-omic discovery candidates (`DN-01`–`DN-19`, strictly `1` atom
 `denovo_id,discovery_funnel,gene_or_drug,candidate_type,primary_modality_specific,mechanism_summary,causal_vs_reactive_assessment,epistemic_state,decision,clinical_readiness_trl,next_gate_experimental_class,primary_evidence_basis,model_prior_dependency,unsolved_hurdle_count,unsolved_hurdles_structured,scientific_actionability_tier,factual_justification,discriminating_next_test,supporting_denovo_evidence_ids,analysis_run_id`
 
 ## 11. `registries/phase3b_denovo_sso_intervals.csv`
-Coordinate-only (`GRCh38` 1-based closed, zero raw oligomer nucleotide sequences) de novo steric-SSO / `3'Ext` search windows (`16` rows) paired upfront with the `254,070`-transcript `GENCODE v46` and `GGGenome hg38` nascent pre-mRNA off-target safety audit and AlphaGenome Atlas locus links.
+Coordinate-only (`GRCh38` 1-based closed, zero raw oligomer nucleotide sequences) de novo steric-SSO / `3'Ext` search windows (`16` rows) paired upfront with the `254,070`-transcript `GENCODE v46` and `GGGenome hg38` nascent pre-mRNA off-target safety screen and AlphaGenome Atlas locus links.
 
 **Columns:**
 `denovo_id,gene_symbol,rank_within_gene,interval_id,chrom,grch38_start,grch38_end,strand,length_bp,cis_mechanism_class,gc_pct,tm_phys_pops_c,dg37_kcal,cpg_dinucs,max_self_stem_bp,ese_motifs,mean_avi_phred,max_avi_phred,boundary_dist_bp,composite_score,gggenome_max_mm_queried,spliced_0mm_genes,spliced_1mm_genes,spliced_2mm_pc_genes,spliced_wobble_only_pc_genes,premRNA_0mm_sense_genes,premRNA_1mm_sense_genes,premRNA_1mm_splice50bp_genes,premRNA_wobble_only_splice50bp_pc_genes,premRNA_2mm_splice25bp_pc_genes,bulge_1nt_steric_pc_genes,sub18_core_steric_pc_genes,flagged_constrained_neuronal_hits,offtarget_safety_status,alphagenome_atlas_url,analysis_run_id`
