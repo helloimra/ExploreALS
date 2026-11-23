@@ -137,10 +137,16 @@ def main() -> None:
 
     dm["S06"]["evidence_proves_hypothesis"] = dm["S06"]["evidence_proves_hypothesis"].replace(
         "(Gilley 2021; Bloom 2022; OT genetic_score=0.195)",
-        "(Gilley 2021 PMID:34796871; Bloom 2022 PMID:34991663; 7ANW/7DJT octamer inter-protomer ARM-TIR latch 3.07-5.47A vs 37.8-65.4A intra-chain, cumulative validated GoF AF=0.000378 [~0.076% carriers] vs benign P332Q AF=0.986%, 97 hom; 0/12 single-gene SARM1 ClinVar P/LP [6 opposite-strand SLC46A1 records])",
+        "(Gilley 2021 PMID:34796871; Bloom 2022 PMID:34991663; near-full-length autoinhibited 7ANW/7DJT octamer inter-protomer ARM-TIR latch 3.07-5.47A vs 37.8-65.4A intra-chain, cumulative validated GoF AF=0.000378 [~0.076% carriers] vs benign P332Q AF=0.986%, 97 hom; 0/12 single-gene SARM1 ClinVar P/LP [6 opposite-strand SLC46A1 records])",
     ).replace(
         "4-PDB octamer inter-protomer ARM-TIR latch 3.07-5.47A vs 35.4-66.9A intra-chain, cumulative validated GoF AF=0.000378 [~0.076% carriers] vs benign P332Q AF=0.986%; 0/12 single-gene SARM1 ClinVar P/LP [6 opposite-strand SLC46A1 LoFs]",
-        "7ANW/7DJT octamer inter-protomer ARM-TIR latch 3.07-5.47A vs 37.8-65.4A intra-chain, cumulative validated GoF AF=0.000378 [~0.076% carriers] vs benign P332Q AF=0.986%, 97 hom; 0/12 single-gene SARM1 ClinVar P/LP [6 opposite-strand SLC46A1 records]",
+        "near-full-length autoinhibited 7ANW/7DJT octamer inter-protomer ARM-TIR latch 3.07-5.47A vs 37.8-65.4A intra-chain, cumulative validated GoF AF=0.000378 [~0.076% carriers] vs benign P332Q AF=0.986%, 97 hom; 0/12 single-gene SARM1 ClinVar P/LP [6 opposite-strand SLC46A1 records]",
+    ).replace(
+        "7ANW/7DJT octamer inter-protomer ARM-TIR latch",
+        "near-full-length autoinhibited 7ANW/7DJT octamer inter-protomer ARM-TIR latch",
+    ).replace(
+        "near-full-length autoinhibited near-full-length autoinhibited",
+        "near-full-length autoinhibited",
     )
     dm["S06"]["factual_justification"] = dm["S06"]["factual_justification"].replace(
         "pairing with #2 C006",
@@ -203,10 +209,10 @@ def main() -> None:
         sid = sn["subnode_id"]
         if sid == "C015-N1":
             sn["subnode_verdict"] = (
-                "KEEP_EXPLORATORY_UNPROVEN: Dual chr14q12 ALS GWAS colocalization in motor neurons (rs229143-A AF=0.329 ISL1 footprint +0.048, AVI Phred=10.27; GTEx BA9 +0.269) "
-                "AND human iMGLs (261 initial lines from 254 donors -> n=189 untreated, n=188 IFN-gamma & n=188 LPS eQTL donors: sole chr14q12 colocalization PP.H4=0.8764-0.8899 at rs229194-A/rs229195-A AF=0.337 with 0 G2E3 signal & sole ALS hit shared with primary microglia, iMGL SCFD1 -0.224 to -0.333, targeted 251-gene NeuroKO phagocytosis score=-0.07562, FDR=0.9284 null; PMID:43045849); "
-                "SuSiE chr14q12 credible set (purityMeanR2=0.988, NFE AF=32.6-32.9%, EUR-vs-xAnc GWAS COLOC H4=0.958, PMID:34873335; 1000G EUR 96.7% [351/363] vs AFR 72.7% [853/1,173] 1111 purity; x-anc lead rs229195-A PIP=0.240) shows possible opposite effect signs in MN (+0.048) vs myeloid (-0.22..-0.33; [MODEL_PRIOR] AlphaGenome CD14+ q=-0.99986) analyses across separate studies (whether the reference haplotype drives opposite cell-type effects remains unproven), "
-                "alongside zero TDP-43 splicing shift, null Spillman MOESM1 cortex DIA protein (Homog p=0.931, Synapt p=0.797), DepMap Chronos=-1.26 pan-essentiality, and zero selective ligands requiring bidirectional MN + LPS-iMGL ER-Golgi secretory CRISPRi/CRISPRa."
+                "KEEP_EXPLORATORY_UNPROVEN: Dual chr14q12 ALS GWAS colocalization in motor neurons (rs229143-A Table S8 beta=+0.04762, adj p=1.93e-32 [Fig. 3A +0.048+/-0.003, p<2e-32], motif-suggested ISL1 footprint, AVI Phred=10.27; van Rheenen GCST90027164 ALS risk beta=+0.0212, gnomAD NFE AF=0.329; GTEx BA9 +0.269) "
+                "AND human iMGLs (261 initial lines from 254 donors -> n=189 untreated, n=188 IFN-gamma & n=188 LPS eQTL donors: sole chr14q12 colocalization PP.H4=0.8764-0.8899 with 0 G2E3 signal & sole ALS hit shared with primary microglia; same rs229143-A allele beta=-0.2955 untreated [AF=0.3441], -0.2164 IFN-gamma [AF=0.3486], -0.3107 LPS [AF=0.3459], shared rs229194-A/rs229195-A -0.2920/-0.2237/-0.3061 [AF=0.3387-0.3432; Table S4 LPS lead 14_30590763_G_A -0.3328], targeted 251-gene NeuroKO phagocytosis score=-0.07562, FDR=0.9284 null; PMID:43045849, Zenodo 21471267); "
+                "SuSiE chr14q12 credible set (purityMeanR2=0.988, NFE AF=32.6-32.9%, EUR-vs-xAnc GWAS COLOC H4=0.958, PMID:34873335; 1000G EUR 96.7% [351/363] vs AFR 72.7% [853/1,173] 1111 purity; x-anc lead rs229195-A PIP=0.240) supports opposite expression signs for the same rs229143-A allele across MN and iMGL studies ([MODEL_PRIOR] AlphaGenome CD14+ q=-0.99986; slopes not compared across scales, and causal cell-type interaction, within-donor opposition, TF identity & beneficial sALS treatment direction remain open), "
+                "alongside zero TDP-43 splicing shift, null Spillman MOESM1 cortex DIA protein (Homog p=0.931, Synapt p=0.797), DepMap Chronos=-1.26 pan-essentiality, and zero selective ligands requiring bidirectional MN + iMGL ER-Golgi secretory CRISPRi/CRISPRa."
             )
         elif sid == "C015-N2":
             if "rs229195-A" not in sn["subnode_verdict"]:

@@ -70,9 +70,13 @@ MODEL_EIDS = {
 LEVEL1_GENETICS_EIDS = {"EV-B2-001", "EV-B2-004", "EV-B2-006", "EV-B3-008", "EV-B6-012", "EV-B6-043", "EV-P4-005", "EV-P4-007"}
 LEVEL1_SOC_EIDS = {"EV-P4-009", "EV-B6-050", "EV-B5-006", "EV-B5-014", "EV-B5-015", "EV-B5-024", "EV-B3-020", "EV-P3B-022", "EV-P3B-030", "EV-P3B-031", "EV-P3B-032"}
 MAJIQ_NONFREQ_PF: dict[str, str] = {
+    "EV-B1-001": "MAJIQ 'FDR' (p_d_psi_0.05)=2.310e-19",
+    "EV-B1-011": "MAJIQ 'FDR' (p_d_psi_0.05)=4.153e-24",
+    "EV-B2-011": "MAJIQ 'FDR' (p_d_psi_0.05)=3.272e-06",
+    "EV-B2-014": "MAJIQ 'FDR' (p_d_psi_0.05)=3.256e-06",
+    "EV-B4-007": "MAJIQ 'FDR' (p_d_psi_0.05)=1.95e-06",
     "EV-P4-002": "MAJIQ 'FDR' (p_d_psi_0.05)=1.822e-15",
     "EV-P4-008": "MAJIQ 'FDR' (p_d_psi_0.05)=3.256e-06",
-    "EV-B4-007": "MAJIQ 'FDR' (p_d_psi_0.05)=1.95e-06",
 }
 
 

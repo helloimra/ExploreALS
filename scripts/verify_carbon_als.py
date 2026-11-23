@@ -311,9 +311,13 @@ def verify_all(
     stat_by_eid = {r["evidence_id"]: r for r in stat_rows}
     ev_by_eid = {r["evidence_id"]: r for r in evidence}
     curated_stat_guards = {
+        "EV-B1-001": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
+        "EV-B1-011": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
+        "EV-B2-011": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
+        "EV-B2-014": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
         "EV-P2-T3-004": ("PRIMARY_FREQUENTIST_RECOMPUTE", "unique_human_donor", "Pearson r"),
         "EV-B4-007": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
-        "EV-P4-001": ("STRUCTURAL_OR_MECHANISTIC_MODEL_PRIOR", "cryoem_octamer_and_gnomad_variant_set", "7NAL ARM-SAM"),
+        "EV-P4-001": ("STRUCTURAL_OR_MECHANISTIC_MODEL_PRIOR", "cryoem_structure_entry_and_gnomad_variant_set", "NMN-bound ARM-SAM"),
         "EV-P4-002": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
         "EV-P4-003": ("PRIMARY_FREQUENTIST_RECOMPUTE", "in_vitro_perturbation_replicate", "ClinVar"),
         "EV-P4-004": ("STRUCTURAL_OR_MECHANISTIC_MODEL_PRIOR", "genomic_cis_variant", "AlphaGenome"),
@@ -328,22 +332,49 @@ def verify_all(
             gsr = stat_by_eid[g_eid]
             if gsr["inference_class"] != exp_ic or gsr["statistical_unit"] != exp_unit or exp_kw not in gsr["model_formula_or_test"]:
                 errors.append(f"{g_eid}: curated statistical record overwritten ({gsr['inference_class']} / {gsr['statistical_unit']} / {gsr['model_formula_or_test'][:48]})")
-    for maj_eid in ("EV-B4-007", "EV-P4-002", "EV-P4-008"):
+    all_majiq_eids = ("EV-B1-001", "EV-B1-011", "EV-B2-011", "EV-B2-014", "EV-B4-007", "EV-P4-002", "EV-P4-008")
+    for maj_eid in all_majiq_eids:
         if maj_eid in stat_by_eid:
             msr = stat_by_eid[maj_eid]
             if msr["multiplicity_adjusted_p"].strip() or "1 - P(|dPSI|" in json.dumps(msr) or "1-P(|dPSI|" in json.dumps(msr):
                 errors.append(f"{maj_eid}: MAJIQ Bayesian p_d_psi_0_05 output must not use 0.10 complement formula or populate frequentist multiplicity_adjusted_p")
+            if "p_d_psi_0_05_per_lsv_junction" not in msr["multiple_testing_family"] or "Transcriptome-wide BH-FDR" in msr["multiple_testing_family"] or "LeafCutter" in msr["multiple_testing_family"]:
+                errors.append(f"{maj_eid}: MAJIQ Bayesian p_d_psi_0_05 output must use MAJIQ non-frequentist multiple_testing_family")
         if evidence_override is None and maj_eid in ev_by_eid and ev_by_eid[maj_eid]["fdr_or_adjusted_p"].strip():
             errors.append(f"{maj_eid}: MAJIQ Bayesian p_d_psi_0_05 output must be stored separately from frequentist fdr_or_adjusted_p")
-    if mode == "full" and all(k in stat_by_eid for k in ("EV-B4-007", "EV-P4-002", "EV-P4-008")):
+    if evidence_override is None:
+        if "EV-B1-001" in ev_by_eid and ("cryptic donor" in json.dumps(ev_by_eid["EV-B1-001"]).lower() or "novel_acceptor" not in json.dumps(ev_by_eid["EV-B1-001"])):
+            errors.append("EV-B1-001: UNC13A MOESM11 line 983 must be classified as novel_acceptor, not cryptic donor")
+        if "EV-B1-006" in ev_by_eid and ("LeafCutter" in ev_by_eid["EV-B1-006"]["notes"] or "line 4857" not in ev_by_eid["EV-B1-006"]["notes"]):
+            errors.append("EV-B1-006: STMN2 exon-2a note must cite Brown 2022 MOESM11 line 4857 MAJIQ, not LeafCutter")
+        if "EV-B4-007" in ev_by_eid and ("line 210" not in ev_by_eid["EV-B4-007"]["notes"] or "line 211" not in ev_by_eid["EV-B4-007"]["notes"]):
+            errors.append("EV-B4-007: SCN8A note must cite MOESM11 line 210 (-0.2019) and line 211 (+0.2019)")
+        if "EV-B2-001" in ev_by_eid and ("N=261" in json.dumps(ev_by_eid["EV-B2-001"]) or "-0.2955" not in ev_by_eid["EV-B2-001"]["notes"]):
+            errors.append("EV-B2-001: SCFD1 companion note must avoid pooled N=261 wording and report same-variant rs229143-A iMGL slopes")
+        if "EV-P4-001" in ev_by_eid and "NMN/1AD-activated" in json.dumps(ev_by_eid["EV-P4-001"]):
+            errors.append("EV-P4-001: SARM1 7NAL must describe NMN-bound ARM-SAM ring from an NMN/1AD-incubated preparation")
+    if mode == "full" and all(k in stat_by_eid for k in all_majiq_eids):
         moesm11_fp = CARBON_ROOT / "data" / "genomics_splicing" / "tdp43_cryptic_sources" / "Brown2022_41586_2022_4436_MOESM11_ESM.csv"
         if moesm11_fp.is_file():
             with moesm11_fp.open(encoding="utf-8") as mf:
                 m_rows = list(csv.DictReader(mf))
-            for maj_eid, fline, exp_tok in (("EV-B4-007", 210, "1.95e-06"), ("EV-P4-002", 981, "1.822e-15"), ("EV-P4-008", 4145, "3.256e-06")):
+            for maj_eid, fline, exp_tok in (
+                ("EV-B1-001", 983, "2.310e-19"),
+                ("EV-B1-011", 4527, "4.153e-24"),
+                ("EV-B2-011", 5690, "3.272e-06"),
+                ("EV-B2-014", 4145, "3.256e-06"),
+                ("EV-B4-007", 210, "1.95e-06"),
+                ("EV-P4-002", 981, "1.822e-15"),
+                ("EV-P4-008", 4145, "3.256e-06"),
+            ):
                 raw_fdr = float(m_rows[fline - 2]["FDR"])
                 if abs(raw_fdr - float(exp_tok)) / max(raw_fdr, 1e-30) > 0.01 or exp_tok not in stat_by_eid[maj_eid]["effect_estimate"]:
                     errors.append(f"{maj_eid}: MOESM11 line {fline} FDR concordance check failed ({raw_fdr} vs {exp_tok})")
+    schemas_md_fp = CARBON_ROOT / "schemas" / "SCHEMAS.md"
+    if schemas_md_fp.is_file():
+        sm_txt = schemas_md_fp.read_text(encoding="utf-8")
+        if "public_release_manifest.json" in sm_txt or "reports/github_pages" in sm_txt or "TIER_C_DUA_OR_BASELINE" not in sm_txt:
+            errors.append("schemas/SCHEMAS.md: must list 2 shipped JSON lock manifests, include TIER_C_DUA_OR_BASELINE, and omit public_release_manifest.json / reports/github_pages")
     if "EV-P4-006" in stat_by_eid and stat_by_eid["EV-P4-006"]["n_statistical_units"] != "3":
         errors.append(f"EV-P4-006: C1q c1q_heterotrimer_subunit_chain count must be 3 (got {stat_by_eid['EV-P4-006']['n_statistical_units']})")
     if "EV-P4-007" in stat_by_eid:

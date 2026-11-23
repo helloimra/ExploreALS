@@ -154,7 +154,6 @@ function formatHurdle(code){
     .replace(/GT99_9PCT/g, '>99.9%')
     .replace(/LT0_1PCT/g, '<0.1%')
     .replace(/PLUS0048/g, '+0.048')
-    .replace(/MINUS022_TO_033/g, '-0.22 to -0.33')
     .replace(/8_7PCT/g, '8.7%')
     .replace(/LE_3700/g, '<=3,700')
     .replace(/PLI_0_996/g, 'pLI=0.996')
@@ -180,7 +179,7 @@ function formatPrior(code){
   if(!code || code === 'NONE') return 'None — Direct empirical data only';
   return String(code)
     .replace(/^COARSE_PRIOR_ONLY:/, '')
-    .replace(/Pgp_BCRP_effluxed_Kpuu_le_1_unbound_human_CNS_peak_15_to_30nM_from_NDA020599_Cu_plasma_22\\.2_to_29\\.6nM/g, 'P-gp/BCRP-effluxed Kp,uu <= 1.0 unbound human CNS peak (~15–30 nM, <=50 nM) from NDA 020599 Cu,plasma (22.2–29.6 nM)')
+    .replace(/Pgp_BCRP_effluxed_Kpuu_le_1_unbound_human_CNS_peak_15_to_30nM_from_NDA020599_Cu_plasma_22\\.2_to_29\\.6nM/g, 'P-gp/BCRP-effluxed Kp,uu <= 1.0 unbound human CNS peak (~15–30 nM, <=50 nM) from NDA 020599 estimated Cu,plasma (22.2–29.6 nM)')
     .replace(/Modeled_Kpuu_0\\.65_on_FDA_fup_0\\.05_to_0\\.11/g, 'Modeled Kp,uu ~ 0.65 on FDA fu,p = 0.05–0.11 (~120–280 nM Cu,brain vs 20–40 uM ISR)')
     .replace(/OAT3_MRP4_efflux_Kpuu_lt_0\\.05_on_NDA016273_fup/g, 'OAT3/MRP4 anionic BBB efflux (Kp,uu < 0.05) on NDA 016273 fu,p (~1–5 nM Cu,CNS)')
     .replace(/Modeled_fup_and_Kpuu_beyond_measured_35\\.2_to_61\\.0nM_total_plasma_Cmax/g, 'Modeled fu,p & Kp,uu (~5–20 nM Cu,brain) beyond measured 35.2–61.0 nM total plasma Cmax')

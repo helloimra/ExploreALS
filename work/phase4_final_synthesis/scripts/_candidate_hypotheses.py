@@ -59,7 +59,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
         "In sporadic and C9orf72 ALS, aberrant SUN1-facilitated nuclear retention of CHMP7 initiates nucleoporin stripping upstream of nuclear TDP-43 loss (with partial CHMP2B knockdown mitigating ESCRT-III NPC defects in Keeley et al. 2024 PMID:39709457); this subunit-resolved hypothesis tests selective nuclear-import blockade without ablating essential membrane repair."
     ),
     "C015": (
-        "SCFD1 (ENSG00000092108) and G2E3 (ENSG00000092140) span the genome-wide significant human ALS chr14q12 GWAS locus, pairing provisional opposite-direction motor-neuron (+0.048) vs primary/iPSC-microglial (-0.22 to -0.33, PP_H4=0.88–0.89) SCFD1 eQTL signals and Brain Catalog G2E3/SCFD1 SMR associations (PMID:36243988) with TDP-43-regulated G2E3 Intron-1 cryptic polyadenylation. "
+        "SCFD1 (ENSG00000092108) and G2E3 (ENSG00000092140) span the genome-wide significant human ALS chr14q12 GWAS locus, where the same rs229143-A allele shows opposite SCFD1 expression associations across iPSC motor-neuron (+0.0476, adj p=1.93e-32; motif-suggested ISL1 footprint) and nonproliferating iPSC-microglial (-0.2955 untreated, -0.2164 IFN-gamma, -0.3107 LPS; shared rs229194-A/rs229195-A -0.2920/-0.2237/-0.3061; COLOC PP.H4=0.8764–0.8899) studies alongside Brain Catalog G2E3/SCFD1 SMR signals (PMID:36243988) and TDP-43-regulated G2E3 Intron-1 cryptic polyadenylation (slopes not directly compared across expression scales; beneficial sALS treatment direction remains open). "
         "Because G2E3's Alu-derived cryptic exon fails 0-mismatch transcriptome hybridization safety and SCFD1 is pan-essential, this hypothesis gates bidirectional motor-neuron and microglial secretory effector dissection."
     ),
     "C016": (

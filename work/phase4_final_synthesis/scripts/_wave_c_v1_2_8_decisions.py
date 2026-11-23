@@ -14,12 +14,12 @@ def apply_wave_c_decision_patches(dm: dict[str, dict[str, str]]) -> None:
         ),
         "evidence_disproves_hypothesis": (
             "Established background standard-of-care reference rather than a novel discovery asset; at 50 mg oral BID (FDA NDA 020599 mean total plasma Cmax ~173 ng/mL = 739 nM, 96-97% protein-bound -> "
-            "Cmax,u,plasma = 22.2-29.6 nM; Groeneveld et al. 2001 PMID:11677002 measured serum rather than CSF), [MODEL_PRIOR] P-gp/BCRP-limited unbound human CNS peak is ~15-30 nM (<=50 nM), "
+            "estimated unbound plasma peak Cmax,u,plasma = 22.2-29.6 nM; Groeneveld et al. 2001 PMID:11677002 measured serum rather than CSF), [MODEL_PRIOR] P-gp/BCRP-limited unbound human CNS peak is ~15-30 nM (<=50 nM), "
             "which is ~85-113x below Bye 2025's 2.5 uM screen (~83-167x vs unbound CNS) and achieves fractional NaV1.6 I_NaP inhibition (IC50 ~0.3-2.0 uM) well below 10-50 uM GluR blockade."
         ),
         "factual_justification": (
             "Reclassified as an Approved Standard-of-Care (SOC) survival and iPSC-MN phenotypic/transcriptomic positive-control benchmark (Bensimon 1994 PMID:8302340; Lacomblez 1996 PMID:8676624; "
-            "Rank #1/107 in Bye 2025 at supraphysiological 2.5 uM vs ~22-30 nM unbound clinical plasma Cmax / [MODEL_PRIOR] ~15-30 nM unbound human CNS)."
+            "Rank #1/107 in Bye 2025 at supraphysiological 2.5 uM vs ~22-30 nM estimated unbound clinical plasma Cmax / [MODEL_PRIOR] ~15-30 nM unbound human CNS)."
         ),
         "discriminating_next_test": (
             "Deploy as mandatory physiological BrainPhys positive control (paired at clinical unbound 30 nM vs 2.5 uM to separate sub-micromolar NaV1.6 I_NaP / SK channel effects from micromolar polypharmacology) "

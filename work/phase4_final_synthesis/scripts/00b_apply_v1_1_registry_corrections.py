@@ -38,9 +38,18 @@ def main() -> None:
     ev_map = {r["evidence_id"]: r for r in ev_rows}
 
     ev_map["EV-B1-001"].update({
+        "source_type": "MAJIQ_UNC13A_CRYPTIC_SPLICING_RECOMPUTE",
         "source_id_or_locator": "DS_CRYPTIC:Brown2022_MOESM11;PMID:35197628;DOI:10.1038/s41586-022-04436-3",
-        "notes": "Paired Brown 2022 canonical dPSI=-0.5868 (FDR=1.50e-13), RNA log2FC=-0.2508 (padj=1.14e-5), Ribo-seq log2FC=-0.7811 (padj=0.0296); replicated in Ma 2022 MAJIQ dPSI=0.779; in cellular & humanized mouse assays, Keuss et al. 2026 (Nature, PMID:43015463, 10.1038/s41586-026-11256-2; preceded by Chi et al. 2024 Les Turner 14th Annual ALS Research Symposium Poster 24 and patent filings CA3213590A1 [ASO-121/132] & US20240301415A1 [1616106]) show isolated Intron-20 CE deletion (~75% protein rescue; >30% cellular synaptic threshold) and 18/21-nt 2'-O-MOE ASOs (~35.8% full-length splicing / ~62.2% protein in patient iPSC-MNs, Fig. 3c,f) restore presynaptic UNC13A, mEPSC frequency, evoked AMPA eEPSCs, and MEA network synchrony (noting Fig. 4c-e p=0.052 on one motor-neuron electrophysiology sub-panel, while postsynaptic mEPSC amplitude reduction and orthogonal STMN2/KCNQ2 pathways remain unrescued). [Sample context: i3Neuron TDP-43 KD vs Ctrl replicates (Brown 2022 MOESM11)]",
+        "cohort_and_stratum": "Brown et al. 2022 human i3Neuron TDP-43 CRISPRi KD vs Control MAJIQ splicing (LSV ENSG00000130477.15:s:17642845-17642960)",
+        "assay_and_contrast": "MAJIQ novel_acceptor cryptic junction (chr19:17642541-17642845, MOESM11 line 983)",
+        "effect_estimate": "deltaPSI=+0.4632 (0.001 -> 0.476; source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=2.310e-19, p_d_psi_0_10=1.000, junc_cat=novel_acceptor, MOESM11 line 983)",
+        "fdr_or_adjusted_p": "",
+        "notes": "Brown 2022 MOESM11 line 983 classifies chr19:17642541-17642845 as junc_cat=novel_acceptor (source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=2.31000e-19, p_d_psi_0_10=1.000, stored separately from frequentist adjusted p-values; paired canonical dPSI=-0.5868, source MAJIQ 'FDR'=1.50e-13); separate MOESM12/13 DESeq2 gene RNA log2FC=-0.2508 (BH-FDR padj=1.14e-5) and Ribo-seq log2FC=-0.7811 (BH-FDR padj=0.0296); replicated separately in Ma 2022 MAJIQ dPSI=0.779; in cellular & humanized mouse assays, Keuss et al. 2026 (Nature, PMID:43015463, 10.1038/s41586-026-11256-2; preceded by Chi et al. 2024 Les Turner 14th Annual ALS Research Symposium Poster 24 and patent filings CA3213590A1 [ASO-121/132] & US20240301415A1 [1616106]) show isolated Intron-20 CE deletion (~75% protein rescue; >30% cellular synaptic threshold) and 18/21-nt 2'-O-MOE ASOs (~35.8% full-length splicing / ~62.2% protein in patient iPSC-MNs, Fig. 3c,f) restore presynaptic UNC13A, mEPSC frequency, evoked AMPA eEPSCs, and MEA network synchrony (noting Fig. 4c-e p=0.052 on one motor-neuron electrophysiology sub-panel, while postsynaptic mEPSC amplitude reduction and orthogonal STMN2/KCNQ2 pathways remain unrescued). [Sample context: i3Neuron TDP-43 KD vs Ctrl replicates (Brown 2022 MOESM11)]",
     })
+    ev_map["EV-B1-006"]["notes"] = (
+        "Paired Brown 2022 MOESM11 line 4857 MAJIQ novel_acceptor exon-2a dPSI=+0.4820 (0.000 -> 0.495, source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=3.02e-18, p_d_psi_0_10=1.000; distinct from this row's primary MOESM13 DESeq2 Ribo-seq BH-FDR=1.57e-173); "
+        "Zeng 2025 intronic PAS chr8:79617048:+ dPAS=+0.4564 (padj=0); Bryce-Smith 2025 NYGC 100% specificity: 383/926 (41.36%) TDP-path vs 0/750 non-path across 1,676 libraries (10/10 KD cohorts sig). [Sample context: i3Neuron TDP-43 KD vs Ctrl Ribo-seq replicates (Brown 2022 MOESM13)]"
+    )
     ev_map["EV-B1-004"].update({
         "cohort_and_stratum": "Spillman 2026 C9-FTD vs Control frontal cortex homogenate RNA-seq (10 C9-FTD vs 10 Ctrl)",
         "effect_estimate": "6/10 C9-FTD (mean PSI=2.30%, 26 CE reads) vs 0/10 Control",
@@ -50,7 +59,15 @@ def main() -> None:
         "cohort_and_stratum": "Spillman 2026 C9-FTD vs Control frontal cortex homogenate DIA proteomics (10 C9-FTD vs 10 Ctrl)",
         "notes": "Paired Spillman MOESM5 CE junctions detected in 10/10 C9-FTD (mean PSI=7.71%, 77 reads) vs 0/10 Ctrl (Fisher p=1.08e-5, PMID:42789089); homogenate DIA nominal p=0.0140, padj=0.113; Trautwig 2025 DIA CSF undetected.",
     })
-    ev_map["EV-B1-011"]["source_id_or_locator"] = "DS_CRYPTIC:Brown2022_MOESM11;PMID:35197628;DOI:10.1038/s41586-022-04436-3"
+    ev_map["EV-B1-011"].update({
+        "source_type": "MAJIQ_KCNQ2_EXON5_SKIP_SPLICING_RECOMPUTE",
+        "source_id_or_locator": "DS_CRYPTIC:Brown2022_MOESM11;PMID:35197628;DOI:10.1038/s41586-022-04436-3",
+        "cohort_and_stratum": "Brown et al. 2022 human i3Neuron TDP-43 CRISPRi KD vs Control MAJIQ splicing (LSV ENSG00000075043.18:s:63444659-63444834)",
+        "assay_and_contrast": "MAJIQ novel_exon_skip in-frame Exon-5 skipping junction (chr20:63439708-63444659, MOESM11 line 4527)",
+        "effect_estimate": "deltaPSI=+0.2139 (0.000 -> 0.236; source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=4.153e-24, p_d_psi_0_10=0.999994, junc_cat=novel_exon_skip, MOESM11 line 4527)",
+        "fdr_or_adjusted_p": "",
+        "notes": "Brown 2022 MOESM11 line 4527 MAJIQ novel_exon_skip output (source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=4.15270e-24, p_d_psi_0_10=0.999994, stored separately from frequentist adjusted p-values; paired canonical dPSI=-0.2230, source MAJIQ 'FDR'=0); separately replicated in Ma et al. 2022 MOESM5 (MAJIQ dPSI=0.451, LeafCutter dPSI=0.243, LeafCutter cluster BH-FDR=1.45e-5, PMID:35197626); separate Brown MOESM12/13 DESeq2 whole-gene RNA log2FC=+0.0779 (BH-FDR padj=0.2286) and Ribo-seq +0.2350 (BH-FDR padj=0.9828) confirm 126-bp in-frame KCNQ2-DeltaE5 evades NMD. [Sample context: i3Neuron TDP-43 KD vs Ctrl replicates (Brown 2022 MOESM11)]",
+    })
     ev_map["EV-B1-014"].update({
         "cohort_and_stratum": "Spillman 2026 C9-FTD vs Control frontal cortex synaptosome DIA proteomics (10 C9-FTD vs 9 Ctrl)",
         "effect_direction": "STABLE_HOMOGENATE_ER_RETAINED_CSF_ABSENT",
@@ -86,9 +103,23 @@ def main() -> None:
         "WashU & UMilan contributed 63 ALS, 0 Controls",
         "UMilan contributed 31 ALS / 0 Controls and WashU contributed 26 ALS code 100 + 6 comparators code 741 (2 Controls + 4 asymptomatic carriers; unresolved Table 2 26/84 vs MOESM1 32/78 bank count)",
     )
+    ev_map["EV-B2-011"].update({
+        "source_type": "MAJIQ_GOSR1_SPLICING_RECOMPUTE",
+        "source_id_or_locator": "DS_CRYPTIC:Brown2022_MOESM11;PMID:35197628;DOI:10.1038/s41586-022-04436-3",
+        "cohort_and_stratum": "Brown et al. 2022 human i3Neuron TDP-43 CRISPRi KD vs Control MAJIQ splicing (LSV ENSG00000108587.15:s:30480856-30481342)",
+        "assay_and_contrast": "MAJIQ splicing of annotated 6-bp in-frame GOSR1 a5ss junction (chr17:30481263-30484214, MOESM11 line 5690)",
+        "effect_estimate": "GOSR1 a5ss PSI 0.410->0.537 (dPSI=+0.1142, source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=3.272e-06, p_d_psi_0_10=0.5825, mod_3=0, junc_cat=annotated, cryptic_junction=False, MOESM11 line 5690)",
+        "fdr_or_adjusted_p": "",
+        "notes": "Mislabeled alt-3'ss in baseline intake; Brown 2022 MOESM11 line 5690 MAJIQ output (3.27157e-06 is MAJIQ's per-junction p_d_psi_0_05_per_lsv_junction output renamed 'FDR' in parsing_voila_delta.R alongside p_d_psi_0_10=0.5825, stored separately from frequentist adjusted p-values) shows an annotated 2-codon donor shift with null separate Brown MOESM12 DESeq2 KD RNA-seq (log2FC=+0.0187, p=0.7301, BH-FDR padj=0.8538) & MOESM13 Ribo-seq (p=0.1383, BH-FDR padj=0.8796), null Trautwig Set 2 DIA CSF sALS vs Ctrl (diff=-0.1852, p=0.3550, n=122), and null Spillman MOESM1 cortex DIA protein (Homog log2FC=-0.4811, p=0.1055, padj=0.3394, n=7 vs 9; Synapt -0.1794, p=0.3022, n=9 vs 10); DepMap Chronos=-0.1430. [Sample context: i3Neuron TDP-43 KD vs Ctrl replicates (Brown 2022 MOESM11)]",
+    })
     ev_map["EV-B2-014"].update({
-        "assay_and_contrast": "MAJIQ TDP-43-dependent frameshifting 170-bp Exon-2 skip in PTAR1 (GGTase-III alpha)",
-        "effect_estimate": "PTAR1 novel_exon_skip group E(PSI) 0.156->0.369 (MAJIQ shrunk dPSI=+0.1563, 170-bp Exon 2 chr9:69750781-69750950(-) mod_3=2; canonical dPSI=-0.1563, p_d_psi_0.10=0.6995)",
+        "source_type": "MAJIQ_PTAR1_EXON2_SKIP_SPLICING_RECOMPUTE",
+        "source_id_or_locator": "DS_CRYPTIC:Brown2022_MOESM11;DS_GENCODE_V46_COMP_GTF:ENST00000340434.5;PMID:35197628",
+        "cohort_and_stratum": "Brown et al. 2022 human i3Neuron TDP-43 CRISPRi KD vs Control MAJIQ splicing (LSV ENSG00000188647.13:t:69741516-69741858)",
+        "assay_and_contrast": "MAJIQ novel_exon_skip (chr9:69741858-69759853(-)) skipping 170-bp Exon 2 (chr9:69750781-69750950(-), mod_3=2) of GGTase-III subunit PTAR1 (MOESM11 line 4145)",
+        "effect_estimate": "PTAR1 Exon-2 skip group E(PSI) 0.156->0.369 (raw diff +0.213; MAJIQ shrunk dPSI=+0.1563, source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=3.256e-06, p_d_psi_0_10=0.6995, MOESM11 line 4145; 170 bp mod_3=2 frameshift; canonical dPSI=-0.1563)",
+        "fdr_or_adjusted_p": "",
+        "notes": "Same Brown 2022 MOESM11 line 4145 MAJIQ junction evaluated on EALS-023 (EV-P4-008), where 3.25568e-06 is MAJIQ's per-junction p_d_psi_0_05_per_lsv_junction output renamed 'FDR' via setnames in parsing_voila_delta.R alongside p_d_psi_0_10=0.699459 (stored separately from frequentist MOESM12/13 DESeq2 gene BH-FDR padj=0.1436/0.9987): GGTase-III (PTAR1/RABGGTB, PDB 6J74 PMID:32128853) requires prior FTase Cys195 farnesylation to geranylgeranylate YKT6 Cys194, so FTIs are predicted to impair YKT6 diprenylation atop TDP-43 YKT6 APA + PTAR1 Exon-2 skipping. [Sample context: i3Neuron TDP-43 KD vs Ctrl replicates (Brown 2022 MOESM11)]",
     })
     ev_map["EV-B3-020"].update({
         "effect_estimate": "MERIDIAN Week 52 CAFS rank LS mean diff -3.0 (123.0 vs 126.0, 95% CI -19.5 to +13.5); C3 LOEUF=0.552",

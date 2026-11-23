@@ -1,6 +1,6 @@
 # ExploreALS v1.2.4 Registry & Provenance Lock Schemas
 
-`ExploreALS v1.2.4` stores its relational data across **`18` normalized, schema-verified CSV ledgers** under `registries/` and **`3` deterministic JSON lock manifests** (`dataset_files_lock.json`, `verified_citations_lock.json`, and `public_release_manifest.json`) under `schemas/`, validated end-to-end by `scripts/verify_carbon_als.py`.
+`ExploreALS v1.2.4` stores its relational data across **`18` normalized, schema-verified CSV ledgers** under `registries/` and **`2` deterministic JSON lock manifests** (`dataset_files_lock.json` and `verified_citations_lock.json`) shipped under `schemas/`, validated end-to-end by `scripts/verify_carbon_als.py`.
 
 ## 1. `registries/candidate_intake_ledger.csv`
 Tracks all `33` published clinical, Mendelian/GWAS, and neuropathological ALS programs across two intake cohorts:
@@ -29,7 +29,7 @@ Canonical Phase 1–4 adjudication table (`33` rows: `4 KEEP_CORE`, `13 KEEP_EXP
 - **Hard Invariant:** If `decision == "DROP"`, `epistemic_state` MUST be one of `{FALSIFIED_CLINICAL, FALSIFIED_PK_SAFETY, ARTIFACT_CONFOUNDED}` and `factual_justification` + `supporting_evidence_ids` MUST be non-empty. `epistemic_state == "UNPROVEN_UNTESTED"` is strictly forbidden from mapping to `DROP`.
 
 ## 4. `registries/datasets_manifest.csv`
-Tracks all `42` open-access biomedical datasets, 3D structures, and genome reference maps (`40` external accessions + `2` repo-bundled reference maps) with 64-character SHA-256 digests, redistribution tiers (`TIER_A_OPEN_REDISTRIBUTABLE`, `TIER_B_PUBLISHER_HTTPS_FETCH`), and canonical fetch URLs (`schemas/dataset_files_lock.json`).
+Tracks all `42` biomedical datasets, 3D structures, and genome reference maps (`40` external accessions + `2` repo-bundled reference maps) with 64-character SHA-256 digests, partitioned across **`28` `TIER_A_OPEN_REDISTRIBUTABLE`, `12` `TIER_B_PUBLISHER_HTTPS_FETCH`, and `2` `TIER_C_DUA_OR_BASELINE`** (registered-access Synapse entries `DS003_PB` `syn51105515` and `DS026_FUJITA` `syn52335732`), with canonical fetch URLs or access instructions (`schemas/dataset_files_lock.json`).
 
 **Columns:**
 `dataset_id,domain,local_relpath,upstream_explore_relpath,accession_or_doi,license_or_access,size_bytes,sha256,relevant_candidates,description,redistribution_tier,canonical_fetch_url_or_instructions`
@@ -121,4 +121,3 @@ Canonical immutable ExploreALS accession & fuzzy-alias master ledger (`70` rows 
 ## 19. JSON Lock Manifests (`schemas/*.json`)
 - **`schemas/dataset_files_lock.json`**: Per-file byte sizes and 64-character SHA-256 checksums across all `42` `datasets_manifest.csv` entries (supporting cross-platform `LF`/`CRLF` text normalization on directory-level reference bundles).
 - **`schemas/verified_citations_lock.json`**: Live-verified metadata lock across `PMID`, `NCT`, `DOI`, and international trial identifiers (`CTR`, `ANZCTR`), preventing unverified bibliographic or clinical-registry citations across registries and rendered HTML/Markdown reports.
-- **`schemas/public_release_manifest.json`**: Deterministic export manifest tracking exported code, registry, schema, and open-dataset tarball digests for `reports/github_pages/`.

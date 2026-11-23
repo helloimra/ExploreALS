@@ -23,13 +23,13 @@ def apply_wave_c_ev_and_sub_patches(
         "source_type": "MAJIQ_SCN8A_SPLICING_RECOMPUTE",
         "source_id_or_locator": "DS_CRYPTIC:Brown2022_MOESM11;PMID:35197628;PMID:34425903",
         "cohort_and_stratum": "Brown et al. 2022 human i3Neuron TDP-43 CRISPRi KD vs Control MAJIQ splicing",
-        "assay_and_contrast": "MAJIQ differential splicing of annotated mutually exclusive SCN8A (NaV1.6) Domain I S3-S4 Exon 5N vs Exon 5A (MOESM11 line 210)",
+        "assay_and_contrast": "MAJIQ differential splicing of annotated mutually exclusive SCN8A (NaV1.6) Domain I S3-S4 Exon 5N (MOESM11 line 210) vs Exon 5A (MOESM11 line 211)",
         "effect_direction": "NEONATAL_5N_TO_ADULT_5A_HYPERPOLARIZING_SWITCH",
-        "effect_estimate": "SCN8A Exon 5N (chr12:51688758-51688849) PSI 0.578->0.330 (dPSI=-0.2019, source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=1.95e-06, p_d_psi_0_10=0.8435, MOESM11 line 210) vs Exon 5A (chr12:51689005-51689096) PSI 0.422->0.670 (dPSI=+0.2019; 0 cryptic junctions)",
+        "effect_estimate": "SCN8A Exon 5N (chr12:51688758-51688849, MOESM11 line 210) PSI 0.578->0.330 (dPSI=-0.2019, source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=1.95e-06, p_d_psi_0_10=0.8435) vs Exon 5A (chr12:51689005-51689096, MOESM11 line 211) PSI 0.422->0.670 (dPSI=+0.2019, source MAJIQ 'FDR'=1.95e-06, p_d_psi_0_10=0.8435; 0 cryptic junctions)",
         "p_value": "",
         "fdr_or_adjusted_p": "",
         "sample_size_n": "",
-        "notes": "Brown 2022 MOESM11 contains 0 cryptic junctions in SCN8A; instead, TDP-43 depletion accelerates switching from neonatal Exon 5N to adult Exon 5A (dPSI=+0.2019; MOESM11 line 210 source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=1.94673e-06, p_d_psi_0_10_per_lsv_junction=0.84348, stored separately from frequentist MOESM12/13 DESeq2 total RNA-seq log2FC=-0.431, BH-FDR=4.85e-4 & Ribo-seq log2FC=-0.692, BH-FDR=0.0155), shifting human NaV1.6 voltage-dependent activation hyperpolarizing and enhancing persistent/resurgent Na+ current (Liang et al. 2021 PMID:34425903).",
+        "notes": "Brown 2022 MOESM11 contains 0 cryptic junctions in SCN8A; instead, TDP-43 depletion accelerates switching from neonatal Exon 5N (MOESM11 line 210: PSI 0.578->0.330, dPSI=-0.2019, source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=1.94673e-06, p_d_psi_0_10=0.84348) to adult Exon 5A (MOESM11 line 211: PSI 0.422->0.670, dPSI=+0.2019, source MAJIQ 'FDR' [p_d_psi_0_05_per_lsv_junction]=1.94664e-06, p_d_psi_0_10=0.84348; stored separately from frequentist MOESM12/13 DESeq2 total RNA-seq log2FC=-0.431, BH-FDR=4.85e-4 & Ribo-seq log2FC=-0.692, BH-FDR=0.0155), shifting human NaV1.6 voltage-dependent activation hyperpolarizing and enhancing persistent/resurgent Na+ current (Liang et al. 2021 PMID:34425903).",
     })
 
     # S08 (Methylcobalamin / Rozebalamin): exact JETALS FAS=129 (126 completers, p=0.012), Kaji 2019 PMID:30636701 FAS=370, MHLW label
