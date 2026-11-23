@@ -28,12 +28,12 @@ MONOGRAPH_SPECS_T2A: dict[str, dict] = {
                 ("Promoted Steric SSO (#2 Lead)", "chr19:17642537-17642554(-) masks 128-bp cryptic 3'SS; genotype-stratified multiplex"),
             ],
             "trap_title": "ASSAY, INTRON-31 CEILING & GENOTYPE CAUTION — Read-Length Bias, ~58–62% WT Cap & A/A Susceptibility",
-            "trap_desc": "In NYGC GSE153960, 100bp NovaSeq misses UNC13A CE 3.89x vs 125bp HiSeq (p=3.38e-4). Under severe TDP-43 KD & LSV independence [MODEL_PRIOR], downstream Intron-31 retention (dPSI=+0.354, FDR=1.82e-15; Exon 31–32 PSI 0.791->0.461) caps Intron-20-only ASO mRNA near 46.1–55.6% raw PSI (~58.3–61.6% of WT baseline — above Keuss 2026's >30% in vitro cellular rescue boundary, PMID:43015463; cf. ~25% STMN2 boundary in Baughn 2023 PMID:36927019, both preclinical model-specific benchmarks rather than validated human clinical thresholds), while A/A (~43% NFE) informs stratification rather than exclusion.",
+            "trap_desc": "In NYGC GSE153960, 100bp NovaSeq misses UNC13A CE 3.89x vs 125bp HiSeq (p=3.38e-4). Under severe TDP-43 KD & LSV independence [MODEL_PRIOR], downstream Intron-31 retention (dPSI=+0.354, source MAJIQ 'FDR' [p_d_psi_0.05]=1.82e-15; Exon 31–32 PSI 0.791->0.461) caps Intron-20-only ASO mRNA near 46.1–55.6% raw PSI (~58.3–61.6% of WT baseline — above Keuss 2026's >30% in vitro cellular rescue boundary, PMID:43015463; cf. ~25% STMN2 boundary in Baughn 2023 PMID:36927019, both preclinical model-specific benchmarks rather than validated human clinical thresholds), while A/A (~43% NFE) informs stratification rather than exclusion.",
         },
         "ev_matrix": {
             "tracks": [
                 {"kind": "dpsi", "tone": "disease_gain", "lbl": "Brown i3Neuron Intron-20 CE junction (PMID:35197628)", "val": 0.463, "stat": "dPSI = +0.463", "p": "FDR=2.31e-19", "tag": "MEASURED"},
-                {"kind": "dpsi", "tone": "disease_gain", "lbl": "Brown i3Neuron Intron-31 retention (PSI 0.097 -> 0.444, PMID:35197628)", "val": 0.354, "stat": "dPSI = +0.354", "p": "FDR=1.82e-15", "tag": "MEASURED"},
+                {"kind": "dpsi", "tone": "disease_gain", "lbl": "Brown i3Neuron Intron-31 retention (PSI 0.097 -> 0.444, PMID:35197628)", "val": 0.354, "stat": "dPSI = +0.354", "p": "MAJIQ 'FDR'=1.82e-15", "tag": "MEASURED"},
                 {"kind": "log2fc", "tone": "disease_loss", "lbl": "Brown i3Neuron Ribo-seq UNC13A (PMID:35197628)", "val": -0.781, "stat": "-0.781 log2FC", "p": "padj=0.0296", "tag": "MEASURED"},
                 {"kind": "log2fc", "tone": "disease_loss", "lbl": "NYGC Lumbar Cord GC+cell OLS (n=92, GSE153960)", "val": -0.355, "ci": [-0.554, -0.157], "stat": "-0.355 log2FC", "p": "p=7.38e-4", "tag": "MEASURED"},
                 {"kind": "log2fc", "tone": "disease_loss", "lbl": "Spillman C9-FTD Synaptosome DIA (n=20, PMID:42789089)", "val": -0.250, "stat": "-0.250 log2FC", "p": "p=0.0502", "tag": "MEASURED"},

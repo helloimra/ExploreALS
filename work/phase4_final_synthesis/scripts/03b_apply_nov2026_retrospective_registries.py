@@ -162,7 +162,12 @@ def main() -> None:
     if "dPSI=+0.3543" not in dm["C001"]["evidence_disproves_hypothesis"]:
         dm["C001"]["evidence_disproves_hypothesis"] = dm["C001"]["evidence_disproves_hypothesis"].replace(
             "Intron-31 retention,",
-            "Intron-31 retention (Brown MAJIQ PSI 0.097->0.444, dPSI=+0.3543, FDR=1.82e-15, implying a [MODEL_PRIOR] ~46.1-55.6% standalone Intron-20 ASO mRNA ceiling under severe TDP-43 KD above Keuss 2026's >30% synaptic threshold),",
+            "Intron-31 retention (Brown MAJIQ PSI 0.097->0.444, dPSI=+0.3543, source MAJIQ 'FDR' [p_d_psi_0.05]=1.82e-15, implying a [MODEL_PRIOR] ~46.1-55.6% standalone Intron-20 ASO mRNA ceiling under severe TDP-43 KD above Keuss 2026's >30% synaptic threshold),",
+        )
+    else:
+        dm["C001"]["evidence_disproves_hypothesis"] = dm["C001"]["evidence_disproves_hypothesis"].replace(
+            "dPSI=+0.3543, FDR=1.82e-15,",
+            "dPSI=+0.3543, source MAJIQ 'FDR' [p_d_psi_0.05]=1.82e-15,",
         )
     dm["C022"]["evidence_proves_hypothesis"] = dm["C022"]["evidence_proves_hypothesis"].replace(
         "55 ClinVar P/LP alleles,",
@@ -199,7 +204,7 @@ def main() -> None:
         if sid == "C015-N1":
             sn["subnode_verdict"] = (
                 "KEEP_EXPLORATORY_UNPROVEN: Dual chr14q12 ALS GWAS colocalization in motor neurons (rs229143-A AF=0.329 ISL1 footprint +0.048, AVI Phred=10.27; GTEx BA9 +0.269) "
-                "AND pooled N=261 human iMGL (sole chr14q12 colocalization PP_H4=0.876-0.890 at rs229194-A/rs229195-A AF=0.337 with 0 G2E3 signal & sole ALS hit shared with primary microglia, iMGL SCFD1 -0.224 to -0.333 with null NeuroKO phagocytosis KO FDR=0.928; PMID:43045849); "
+                "AND human iMGLs (261 initial lines from 254 donors -> n=189 untreated, n=188 IFN-gamma & n=188 LPS eQTL donors: sole chr14q12 colocalization PP.H4=0.8764-0.8899 at rs229194-A/rs229195-A AF=0.337 with 0 G2E3 signal & sole ALS hit shared with primary microglia, iMGL SCFD1 -0.224 to -0.333, targeted 251-gene NeuroKO phagocytosis score=-0.07562, FDR=0.9284 null; PMID:43045849); "
                 "SuSiE chr14q12 credible set (purityMeanR2=0.988, NFE AF=32.6-32.9%, EUR-vs-xAnc GWAS COLOC H4=0.958, PMID:34873335; 1000G EUR 96.7% [351/363] vs AFR 72.7% [853/1,173] 1111 purity; x-anc lead rs229195-A PIP=0.240) shows possible opposite effect signs in MN (+0.048) vs myeloid (-0.22..-0.33; [MODEL_PRIOR] AlphaGenome CD14+ q=-0.99986) analyses across separate studies (whether the reference haplotype drives opposite cell-type effects remains unproven), "
                 "alongside zero TDP-43 splicing shift, null Spillman MOESM1 cortex DIA protein (Homog p=0.931, Synapt p=0.797), DepMap Chronos=-1.26 pan-essentiality, and zero selective ligands requiring bidirectional MN + LPS-iMGL ER-Golgi secretory CRISPRi/CRISPRa."
             )

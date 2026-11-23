@@ -67,8 +67,13 @@ MODEL_EIDS = {
     "EV-P3A-001", "EV-P3A-002", "EV-P3A-004", "EV-P3B-002", "EV-P3B-004",
     "EV-P4-001", "EV-P4-006",
 }
-LEVEL1_GENETICS_EIDS = {"EV-B2-001", "EV-B2-004", "EV-B2-006", "EV-B3-008", "EV-B6-012", "EV-B6-043"}
+LEVEL1_GENETICS_EIDS = {"EV-B2-001", "EV-B2-004", "EV-B2-006", "EV-B3-008", "EV-B6-012", "EV-B6-043", "EV-P4-005", "EV-P4-007"}
 LEVEL1_SOC_EIDS = {"EV-P4-009", "EV-B6-050", "EV-B5-006", "EV-B5-014", "EV-B5-015", "EV-B5-024", "EV-B3-020", "EV-P3B-022", "EV-P3B-030", "EV-P3B-031", "EV-P3B-032"}
+MAJIQ_NONFREQ_PF: dict[str, str] = {
+    "EV-P4-002": "MAJIQ 'FDR' (p_d_psi_0.05)=1.822e-15",
+    "EV-P4-008": "MAJIQ 'FDR' (p_d_psi_0.05)=3.256e-06",
+    "EV-B4-007": "MAJIQ 'FDR' (p_d_psi_0.05)=1.95e-06",
+}
 
 
 def classify_basis_and_tier(row: dict[str, str]) -> tuple[str, str, str]:
@@ -82,6 +87,10 @@ def classify_basis_and_tier(row: dict[str, str]) -> tuple[str, str, str]:
 
     if eid == "EV-P2-T4-004":
         basis = "Human snRNA / Spatial Recompute"
+    elif eid == "EV-P4-005":
+        basis = "Human GWAS Fine-Mapping + Model Prior"
+    elif eid in MAJIQ_NONFREQ_PF:
+        basis = "Human RNA / Splicing Recompute"
     elif "mwc" in st or "ode" in st or "model" in st or "mass_action" in st or "simulation" in st:
         basis = "Biophysical / PK-PD Model"
     elif "rct" in st or "phase3" in st or "phase2_3" in st:
@@ -112,7 +121,7 @@ def classify_basis_and_tier(row: dict[str, str]) -> tuple[str, str, str]:
         basis = "Primary Cohort Recompute"
 
     # 1. Model / Heuristic Prior
-    if (
+    if eid != "EV-P4-005" and (
         eid in MODEL_EIDS
         or any(k in st for k in ("mwc", "ode", "simulation", "mass_action", "alphagenome", "multiplex_design", "offtarget", "bulge_subcore", "triage"))
     ):
@@ -315,6 +324,10 @@ def resolve_evidence_row(
                 break
 
     src_title = " + ".join(src_names[:2]) if src_names else "Multi-Cohort Synthesis"
+    if row.get("evidence_id") == "EV-P4-005":
+        src_title = "van Rheenen 2021 ALS GWAS SuSiE + AlphaGenome v1"
+    elif row.get("evidence_id") == "EV-P4-007":
+        src_title = "Pérez-Alcántara et al. 2026 (Nat Genet)"
     basis, cert, role = classify_basis_and_tier(row)
     coh = _clean_v0_text(row.get("cohort_and_stratum", ""))
     con = _clean_v0_text(row.get("assay_and_contrast", ""))
@@ -332,10 +345,10 @@ def resolve_evidence_row(
             if pv:
                 n_sub = _clean_v0_text(pv.group(1))
 
+    eid = row["evidence_id"]
     p_str = f"p={row['p_value']}" if row.get("p_value") else ""
     f_str = f"FDR={row['fdr_or_adjusted_p']}" if row.get("fdr_or_adjusted_p") else ""
-    pf = " · ".join(x for x in (p_str, f_str) if x)
-    eid = row["evidence_id"]
+    pf = MAJIQ_NONFREQ_PF.get(eid) or " · ".join(x for x in (p_str, f_str) if x)
     srec = (stat_map or {}).get(eid, {})
     sha64 = srec.get("sha64", "")
     if sha64:

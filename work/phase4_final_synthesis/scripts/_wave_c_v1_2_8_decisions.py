@@ -8,9 +8,9 @@ def apply_wave_c_decision_patches(dm: dict[str, dict[str, str]]) -> None:
     dm["C013"].update({
         "evidence_proves_hypothesis": (
             "FDA/EMA-approved ALS survival standard of care (Bensimon et al. 1994 NEJM PMID:8302340 N=155, 12-mo survival 74% vs 58%, p=0.014; "
-            "Lacomblez et al. 1996 Lancet PMID:8676624 N=959, 100 mg/d 18-mo tracheostomy-free survival 56.8% [134/236] vs 50.4% [122/242] placebo: unadjusted RR=0.79, p=0.076; prognostic-covariate-adjusted Cox RR=0.65 [95% CI 0.50-0.85], p=0.002) and Rank #1/107 hit in Bye 2025 "
+            "Lacomblez et al. 1996 Lancet PMID:8676624, n=478 randomized in 100 mg/d [236] vs placebo [242] within N=959 across 4 arms, 18-mo tracheostomy-free survival 56.8% [134/236] vs 50.4% [122/242]: unadjusted RR=0.79, p=0.076; prognostic-covariate-adjusted Cox RR=0.65 [95% CI 0.50-0.85], p=0.002) and Rank #1/107 hit in Bye 2025 "
             "(+3.959d, 16/16 [100%] sALS lines > DMSO, p=1.24e-12, q=1.32e-10, PMID:41286450), reversing 10/10 overlapping sALS DEGs (Spearman r=-0.952, p=2.28e-5; KCNN1 +1.32 log2FC, padj=0.00247) "
-            "and 45/45 GO sets in mature BrainPhys Stage 4 firing media, where TDP-43 loss accelerates SCN8A neonatal Exon 5N -> adult Exon 5A switching (dPSI=+0.2019, FDR=1.95e-6, 0 cryptic junctions; PMID:35197628, PMID:34425903)."
+            "and 45/45 GO sets in mature BrainPhys Stage 4 firing media, where TDP-43 loss accelerates SCN8A neonatal Exon 5N -> adult Exon 5A switching (dPSI=+0.2019, source MAJIQ 'FDR' [p_d_psi_0.05]=1.95e-6, 0 cryptic junctions; PMID:35197628, PMID:34425903)."
         ),
         "evidence_disproves_hypothesis": (
             "Established background standard-of-care reference rather than a novel discovery asset; at 50 mg oral BID (FDA NDA 020599 mean total plasma Cmax ~173 ng/mL = 739 nM, 96-97% protein-bound -> "

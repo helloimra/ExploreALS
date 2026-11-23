@@ -309,16 +309,18 @@ def verify_all(
         elif got_sha != sr["sha64"]:
             errors.append(f"{ev_id}: sha64 mismatch on '{sr['anchor_relpath']}' ({got_sha[:12]} != {sr['sha64'][:12]})")
     stat_by_eid = {r["evidence_id"]: r for r in stat_rows}
+    ev_by_eid = {r["evidence_id"]: r for r in evidence}
     curated_stat_guards = {
         "EV-P2-T3-004": ("PRIMARY_FREQUENTIST_RECOMPUTE", "unique_human_donor", "Pearson r"),
-        "EV-P4-001": ("STRUCTURAL_OR_MECHANISTIC_MODEL_PRIOR", "cryoem_octamer_and_gnomad_variant_set", "Cryo-EM"),
-        "EV-P4-002": ("PRIMARY_FREQUENTIST_RECOMPUTE", "in_vitro_perturbation_replicate", "parsing_voila_delta.R"),
+        "EV-B4-007": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
+        "EV-P4-001": ("STRUCTURAL_OR_MECHANISTIC_MODEL_PRIOR", "cryoem_octamer_and_gnomad_variant_set", "7NAL ARM-SAM"),
+        "EV-P4-002": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
         "EV-P4-003": ("PRIMARY_FREQUENTIST_RECOMPUTE", "in_vitro_perturbation_replicate", "ClinVar"),
         "EV-P4-004": ("STRUCTURAL_OR_MECHANISTIC_MODEL_PRIOR", "genomic_cis_variant", "AlphaGenome"),
         "EV-P4-005": ("PUBLISHED_TRIAL_OR_GENETIC_INFERENCE", "gwas_credible_set_variant", "59-variant"),
-        "EV-P4-006": ("STRUCTURAL_OR_MECHANISTIC_MODEL_PRIOR", "heterotrimeric_protein_complex", "Crystal PDB 1PK6"),
-        "EV-P4-007": ("PUBLISHED_TRIAL_OR_GENETIC_INFERENCE", "unique_human_donor", "Colocalization"),
-        "EV-P4-008": ("PRIMARY_FREQUENTIST_RECOMPUTE", "in_vitro_perturbation_replicate", "parsing_voila_delta.R"),
+        "EV-P4-006": ("STRUCTURAL_OR_MECHANISTIC_MODEL_PRIOR", "c1q_heterotrimer_subunit_chain", "1 heterotrimer / 3 chains"),
+        "EV-P4-007": ("PUBLISHED_TRIAL_OR_GENETIC_INFERENCE", "unique_human_donor", "n=189 untreated"),
+        "EV-P4-008": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
         "EV-P4-009": ("PUBLISHED_TRIAL_OR_GENETIC_INFERENCE", "human_trial_or_genetic_participant", "Unadjusted 18-mo survival relative risk"),
     }
     for g_eid, (exp_ic, exp_unit, exp_kw) in curated_stat_guards.items():
@@ -326,10 +328,32 @@ def verify_all(
             gsr = stat_by_eid[g_eid]
             if gsr["inference_class"] != exp_ic or gsr["statistical_unit"] != exp_unit or exp_kw not in gsr["model_formula_or_test"]:
                 errors.append(f"{g_eid}: curated statistical record overwritten ({gsr['inference_class']} / {gsr['statistical_unit']} / {gsr['model_formula_or_test'][:48]})")
+    for maj_eid in ("EV-B4-007", "EV-P4-002", "EV-P4-008"):
+        if maj_eid in stat_by_eid:
+            msr = stat_by_eid[maj_eid]
+            if msr["multiplicity_adjusted_p"].strip() or "1 - P(|dPSI|" in json.dumps(msr) or "1-P(|dPSI|" in json.dumps(msr):
+                errors.append(f"{maj_eid}: MAJIQ Bayesian p_d_psi_0_05 output must not use 0.10 complement formula or populate frequentist multiplicity_adjusted_p")
+        if evidence_override is None and maj_eid in ev_by_eid and ev_by_eid[maj_eid]["fdr_or_adjusted_p"].strip():
+            errors.append(f"{maj_eid}: MAJIQ Bayesian p_d_psi_0_05 output must be stored separately from frequentist fdr_or_adjusted_p")
+    if mode == "full" and all(k in stat_by_eid for k in ("EV-B4-007", "EV-P4-002", "EV-P4-008")):
+        moesm11_fp = CARBON_ROOT / "data" / "genomics_splicing" / "tdp43_cryptic_sources" / "Brown2022_41586_2022_4436_MOESM11_ESM.csv"
+        if moesm11_fp.is_file():
+            with moesm11_fp.open(encoding="utf-8") as mf:
+                m_rows = list(csv.DictReader(mf))
+            for maj_eid, fline, exp_tok in (("EV-B4-007", 210, "1.95e-06"), ("EV-P4-002", 981, "1.822e-15"), ("EV-P4-008", 4145, "3.256e-06")):
+                raw_fdr = float(m_rows[fline - 2]["FDR"])
+                if abs(raw_fdr - float(exp_tok)) / max(raw_fdr, 1e-30) > 0.01 or exp_tok not in stat_by_eid[maj_eid]["effect_estimate"]:
+                    errors.append(f"{maj_eid}: MOESM11 line {fline} FDR concordance check failed ({raw_fdr} vs {exp_tok})")
+    if "EV-P4-006" in stat_by_eid and stat_by_eid["EV-P4-006"]["n_statistical_units"] != "3":
+        errors.append(f"EV-P4-006: C1q c1q_heterotrimer_subunit_chain count must be 3 (got {stat_by_eid['EV-P4-006']['n_statistical_units']})")
+    if "EV-P4-007" in stat_by_eid:
+        r07 = stat_by_eid["EV-P4-007"]
+        if r07["n_statistical_units"] != "189" or r07["n_unique_donors_or_participants"] != "189" or "genome-wide" in r07["multiple_testing_family"].lower() or "251-gene" not in r07["multiple_testing_family"]:
+            errors.append(f"EV-P4-007: SCFD1 must record n=189 untreated eQTL donor count and targeted 251-gene NeuroKO screen")
     if "EV-P4-009" in stat_by_eid:
         r09 = stat_by_eid["EV-P4-009"]
-        if r09["unadjusted_or_primary_nominal_p"] != "0.0760" or r09["covariate_adjusted_nominal_p"] != "0.00200":
-            errors.append(f"EV-P4-009: riluzole must record unadjusted p=0.0760 and covariate-adjusted p=0.00200 (got {r09['unadjusted_or_primary_nominal_p']} / {r09['covariate_adjusted_nominal_p']})")
+        if r09["unadjusted_or_primary_nominal_p"] != "0.0760" or r09["covariate_adjusted_nominal_p"] != "0.00200" or r09["n_statistical_units"] != "478" or r09["n_unique_donors_or_participants"] != "478":
+            errors.append(f"EV-P4-009: riluzole must record n=478 (236+242), unadjusted p=0.0760, and covariate-adjusted p=0.00200")
 
     intake_ids = {r["carbon_id"] for r in intake}
     if len(intake_ids) != len(intake):
