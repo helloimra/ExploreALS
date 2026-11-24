@@ -5,6 +5,7 @@ import re
 
 from _candidate_contrasts_b import build_edges_and_lenses
 from _candidate_hypotheses import CANDIDATE_HYPOTHESES
+from _dossier_card_splits_b import structure_dossier_card
 from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose
 
 CAUSAL_MAP: dict[str, str] = {
@@ -309,6 +310,9 @@ def build_summary_dossiers(
             verdict = DN_VERDICT_HEADLINES[pid].format(rk=r["unified_rank"])
 
         acc_id = r.get("accession_id") or legacy_to_accession(pid)
+        verdict = structure_dossier_card(acc_id, "verdict", verdict)
+        proves = structure_dossier_card(acc_id, "proves", proves)
+        disproves = structure_dossier_card(acc_id, "disproves", disproves)
         item = {
             "hyp": hyp,
             "sub": sub,

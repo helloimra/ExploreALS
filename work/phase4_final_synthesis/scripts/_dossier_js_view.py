@@ -318,14 +318,13 @@ function renderBoldMarkup(linked){
   return String(linked || '').replace(/\\*\\*([^<>\\*]{1,80})\\*\\*/g, (_m, g1) => '<strong class="font-semibold text-[var(--foreground)]">' + g1 + '</strong>');
 }
 function formatBulletBody(rawBody, ctx){
-  const stripped = String(rawBody || '').replace(/^\\*\\*([^:\\*]{2,64}:)\\*\\*\\s*/, (_m, g1) => g1 + ' ').trim();
+  const stripped = String(rawBody || '').replace(/^\\*\\*([^:\\*]{2,80}:)\\*\\*\\s*/, (_m, g1) => g1 + ' ').trim();
   const body = ensurePeriod(capClause(stripped));
-  const linked = renderBoldMarkup(escLink(body, ctx));
-  const cm = /^([^:<]{2,62}:)\\s+([\\s\\S]+)$/.exec(linked);
-  if(cm && (cm[1].match(/\\(/g)||[]).length === (cm[1].match(/\\)/g)||[]).length){
-    return `<strong class="font-semibold text-[var(--foreground)]">${cm[1]}</strong> ${cm[2]}`;
+  const cm = /^([^:]{2,78}:)\\s+([\\s\\S]+)$/.exec(body);
+  if(cm && (cm[1].match(/\\(/g)||[]).length === (cm[1].match(/\\)/g)||[]).length && !/\\b(?:PMID|DOI|CID|OMIM|HGNC|MGI|NCT)$/i.test(cm[1].slice(0, -1))){
+    return `<strong class="font-semibold text-[var(--foreground)]">${renderBoldMarkup(escLink(cm[1], ctx))}</strong> ${renderBoldMarkup(escLink(cm[2], ctx))}`;
   }
-  return linked;
+  return renderBoldMarkup(escLink(body, ctx));
 }
 function formatProseParas(raw, ctx, gapCls='space-y-2', toneCls='text-[var(--foreground)]'){
   const txt = String(raw || '').trim();

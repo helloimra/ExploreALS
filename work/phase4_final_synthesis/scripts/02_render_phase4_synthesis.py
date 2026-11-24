@@ -29,6 +29,7 @@ from _public_taxonomy import (  # noqa: E402
 from _public_web_exporter import export_public_web_bundle  # noqa: E402
 from _render_synthesis_sections import build_exec_and_transition_md, build_roadmaps_and_tables_md  # noqa: E402
 from _subnode_v3_projection import project_subnode_v3  # noqa: E402
+from _dossier_card_splits_b import structure_dossier_card  # noqa: E402
 from _summary_dossier_projection import build_summary_dossiers, clean_prose  # noqa: E402
 from _monograph_compiler import compile_monograph_bundle, write_standalone_monographs  # noqa: E402
 from _dossier_js_svg_core import DOSSIER_JS_SVG_CORE  # noqa: E402
@@ -118,7 +119,11 @@ def main() -> None:
             ),
             "iv": r["lead_cis_interval_id"],
             "ivst": r["lead_offtarget_safety_status"],
-            "nxt": r["discriminating_next_test"] if r["discriminating_next_test"].startswith("NONE_") else sanitize_public_prose(clean_prose(r["discriminating_next_test"])),
+            "nxt": (
+                r["discriminating_next_test"]
+                if r["discriminating_next_test"].startswith("NONE_")
+                else structure_dossier_card(acc_id, "nxt", sanitize_public_prose(clean_prose(r["discriminating_next_test"])))
+            ),
         })
     js_cis = [
         {
