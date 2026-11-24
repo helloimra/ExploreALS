@@ -114,6 +114,61 @@ CARD_SPLITS_B: dict[tuple[str, str], list[tuple[str, str]]] = {
         ("Excluded on modeled human unbound CNS exposure", "- Unbound CNS Exposure Deficit vs. Observational Claims: Excluded on modeled human unbound CNS exposure"),
         ("Table 1) bounded by NDA016273", "Table 1).\n- KCC2/CA Co-Inhibition & Loop-Diuretic Toxicity: Bounded by NDA016273"),
     ],
+    ("EALS-011", "proves"): [
+        ("Nominated from observational healthcare-claims", "- Observational Claims & PRO-ACT Signals: Nominated from observational healthcare-claims"),
+        ("[Table S5]) alongside 100 uM mouse midbrain", "[Table S5]).\n- Preclinical Slice Rationale & Untested Screen Status: Paired with 100 uM mouse midbrain"),
+    ],
+    ("EALS-011", "disproves"): [
+        ("At oral 40 mg (NDA016273 Lasix", "- Active BBB Efflux & >1,000-Fold Unbound CNS Deficit: At oral 40 mg (NDA016273 Lasix"),
+        ("34-190x too low) — while furosemide non-selectively inhibits", "34-190x too low).\n- Non-Selective KCC2 & Carbonic Anhydrase Co-Inhibition: Furosemide non-selectively inhibits"),
+        ("Ki ~65-200 nM, reduced human soleus", "Ki ~65-200 nM.\n- Human Spinal Inhibition Loss & Loop-Diuretic Toxicity: Reduced human soleus"),
+    ],
+    ("EALS-017", "verdict"): [
+        ("Individual sub-nodes (EALS-017.1–EALS-017.4)", "- Symptomatic CSF Associations & Validation Scope: Individual sub-nodes (EALS-017.1–EALS-017.4)"),
+        ("prospective validation), while failing therapeutic target criteria:", "prospective validation).\n- Why Inhibiting This Axis Fails Target Criteria:"),
+    ],
+    ("EALS-043", "disproves"): [
+        ("~82%-overlapping Emory Set 1", "- Null Overlapping MS2-TMTpro Omnibus ANOVA: ~82%-overlapping Emory Set 1"),
+        ("p=0.0673); PDB 1XFD (", "p=0.0673).\n- Non-Catalytic 3D Scaffold, Constraint & Null GWAS: PDB 1XFD ("),
+    ],
+    ("EALS-044", "disproves"): [
+        ("~82%-overlapping Emory Set 1", "- Null Overlapping MS2-TMTpro Omnibus ANOVA: ~82%-overlapping Emory Set 1"),
+        ("p=0.0569); canonical UniProt Q8N608", "p=0.0569).\n- Non-Catalytic Sequence Substitution & Strong LoF Constraint: Canonical UniProt Q8N608"),
+    ],
+    ("EALS-004", "verdict"): [
+        ("Falsified in a definitive 513-patient", "- Phase 3 ALSFRS-R & Survival Futility: Falsified in a definitive 513-patient"),
+        ("PMID:24771634), corroborated by CHEMBL161", "PMID:24771634).\n- Weak Human EAAT2 Potency & Absent Astrocyte Deficit: Corroborated by CHEMBL161"),
+    ],
+    ("EALS-004", "proves"): [
+        ("Stage 1/2 human ALS PK", "- Stage 1/2 Human ALS CSF Pharmacokinetics: Stage 1/2 human ALS PK"),
+        ("rodent target), and Lee et al. 2008", "rodent target).\n- Cultured Fetal Astrocyte EAAT2 Assay: Lee et al. 2008"),
+    ],
+    ("EALS-008", "proves"): [
+        ("Ranked #3/107 in Bye 2025", "- Patient iPSC-MN Phenotypic Screen (#3/107): Ranked #3/107 in Bye 2025"),
+        ("PMID:41286450) and reaches pharmacologically", "PMID:41286450).\n- Plausible Human CSF Exposure (Occupancy Unmeasured): Reaches pharmacologically"),
+    ],
+    ("EALS-009", "verdict"): [
+        ("Directly falsified as a 200 mg/d oral regimen", "- Phase 3 MND-SMART Futility: Directly falsified as a 200 mg/d oral regimen"),
+        ("not prespecified in Fig. 4), reinforced by a 71-330x", "not prespecified in Fig. 4).\n- Unbound Brain Exposure Deficit & Sedative Toxicity: Reinforced by a 71-330x"),
+        ("mCPP anorexia, alongside negative Phase 2/3 outcomes", "mCPP anorexia.\n- Negative Selective eIF2B Trials (ABBV-CLS-7262 & DNL343): Negative Phase 2/3 outcomes"),
+    ],
+    ("EALS-009", "proves"): [
+        ("Ranked #4/107 in Bye 2025", "- Patient iPSC-MN Phenotypic Screen (#4/107): Ranked #4/107 in Bye 2025"),
+        ("PMID:41286450) following 20-40 uM cellular ISR", "PMID:41286450).\n- Micromolar Cellular ISR & Murine Prion Precedent: Followed 20-40 uM cellular ISR"),
+    ],
+    ("EALS-012", "verdict"): [
+        ("Randomized human ALS clinical worsening", "- Phase 2 ALSFRS-R Worsening & High Dropout: Randomized human ALS clinical worsening"),
+        ("placebo completion), corroborated by NCT03377309", "placebo completion).\n- Terminated Companion Trials & AMPA Scope Boundary: Corroborated by NCT03377309"),
+    ],
+    ("EALS-046", "proves"): [
+        ("Zhang MN Visium (+1.1839", "- Cervical Spatial & Cortical Homogenate Elevation: Zhang MN Visium (+1.1839"),
+        ("PMID:42789089) are consistent with reactive astrocyte expansion alongside any per-cell glial regulation (glia-free", "PMID:42789089) are consistent with reactive astrocyte expansion alongside any per-cell glial regulation.\n- Low / Discordant Neuronal snRNA: Glia-free"),
+        ("p=0.0195).", "p=0.0195."),
+    ],
+    ("EALS-049", "proves"): [
+        ("Open-label Phase 2a LIGHTHOUSE safety/tolerability", "- Open-Label Phase 2a LIGHTHOUSE Safety: Open-label Phase 2a LIGHTHOUSE safety/tolerability"),
+        ("35 completers), Bye 2025 nominal 2.5 uM", "35 completers).\n- Nominal Screen Readout & Cortical ALS-TE Biology: Bye 2025 nominal 2.5 uM"),
+    ],
     ("EALS-021", "verdict"): [
         ("Excluded on low human plasma exposure", "- Low Human Plasma Exposure & Unresolved Bioavailability: Excluded on low human plasma exposure"),
         ("protein binding; modeled Cu,brain", "protein binding).\n- Modeled Brain Exposure Gap & Target Biochemistry: Modeled Cu,brain"),

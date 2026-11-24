@@ -17,25 +17,6 @@ let historyInitialized = false;
 let lastSelHidden = false;
 const expandedDetailGates = {};
 
-const DETAIL_GATE_SHORT = {
-  'EALS-030:go': 'Monotonic NADase & axonal cADPR suppression from 0.01x–10x IC50 across 48–72 h simulated oral CNS washout in WT, Cys311Ala, and p.L223P ARM-GoF motor axons.',
-  'EALS-030:kill': 'Any bell-shaped sub-IC50 axonal cADPR or washout CSF pNfH/NfL spike (0.05x–0.30x Kd), Cys311 covalent liability, off-target CD38 inhibition, or CSF Kpuu <0.20.',
-  'EALS-031:go': 'Pre-trial Passing-Bablok BioVendor-to-CLIA CSF pNfH bridging + event-driven Phase 3 (247 deaths @ HR=0.70) achieving OS HR <=0.70 (p<0.05) with Treg TSDR stability.',
-  'EALS-031:kill': 'Null overall survival in prospectively gated low/moderate CSF pNfH (<=3,700 pg/mL) Phase 3 cohort, BioVendor-to-CLIA bridging failure, or Treg TSDR loss.',
-  'EALS-001:go': 'Preclinical single-entity UNC13A #2 ICH M3(R2) GLP IT tox + NHP cervical/BA4 EC80 splice rescue + combinatorial genotype-stratified 2-plex vs 3-plex testing (6–9 mg).',
-  'EALS-001:kill': 'Multiplex uptake/endosomal-escape loss >30% vs 1-plex, inadequate cervical/BA4 splice rescue, acute Ca2+-oscillation/DRG neurotox, or unrescued Munc13-1 priming.',
-  'EALS-006:go': 'Preclinical >=50-oligo Intron-4/Exon-5/Intron-5 microwalk across TDP-43-CRISPRi & WT human neurons/DRGs suppresses Exon-5 skip >=60% without ISE worsening or WT cis-eviction.',
-  'EALS-006:kill': 'Zero Exon-5 inclusion gain or wrong-sign ISE exacerbation (#3), WT TDP-43 cis-eviction (#1), >30% multiplex escape loss, or acute PS-oligo Ca2+/DRG neurotox.',
-  'EALS-002:go': 'STMN2 #2 SSO + sub-IC80 non-covalent SARM1 T-lock shows additive/synergistic axon outgrowth & NAD+ preservation + NHP cervical/BA4 rescue at <=3 mg/strand.',
-  'EALS-002:kill': 'Redundant functional ceiling with SARM1 T-lock alone, >30% multiplex endosomal-escape competition loss, or acute human neuron Ca2+-oscillation/DRG neurotox.',
-  'EALS-007:go': 'Oximetry-verified normoxic living-CSF Simoa sST2/IL-33 + microvessel sST2/ST2L ddPCR + BBB-brake sign gate confirms decoy excess before IT shuttled sST2 siRNA or PAS SSO.',
-  'EALS-007:kill': 'Living-CSF sST2 elevation restricted to nocturnal-hypoxic/NIV ALS, protective ST2L dominance in microvessels, capillary delivery failure, or Treg ST2L loss.',
-  'EALS-034:go': 'SSO #2 vs #1 in graded TDP-43-CRISPRi human iPSC-MNs restores full-length ATG4B & LC3ylation + cervical alpha-MN BaseScope ISH confirms early pre-inclusion penetrance.',
-  'EALS-034:kill': 'Negligible cryptic exon PSI (<2%) in early pre-inclusion cervical sALS alpha-MNs, acute Ca2+/DRG neurotox, or failure to restore endogenous LC3B-I recycling.',
-  'EALS-037:go': 'SSO #1 vs #2 in Bye sALS iPSC-MNs suppresses cryptic junction >=70% while preserving canonical Exon 5 & 98-bp micro-intron (<1–2% Nanopore LOQ) + BaseScope ISH.',
-  'EALS-037:kill': 'Canonical Exon-5 skipping >5%, induced 98-bp micro-intron retention >5% (mod3=2 frameshift), or negligible early pre-inclusion cervical alpha-MN CE penetrance (<2%).'
-};
-
 function valOf(id, fb=''){ const el = document.getElementById(id); return el ? String(el.value || '') : fb; }
 function setValOf(id, v){ const el = document.getElementById(id); if(el && v !== undefined && v !== null) el.value = v; }
 
@@ -379,51 +360,49 @@ function renderPortfolio(){
   syncKpiHighlight();
 }
 
-function stripLongParensJs(s, maxP=24){
-  let out = '', d = 0, buf = '';
-  for(let i = 0; i < s.length; i++){
-    const ch = s[i];
-    if(ch === '('){
-      if(d === 0) buf = '('; else buf += ch;
-      d++;
-    } else if(ch === ')' && d > 0){
-      d--;
-      buf += ')';
-      if(d === 0){ if(buf.length <= maxP) out += buf; buf = ''; }
-    } else {
-      if(d === 0) out += ch; else buf += ch;
-    }
-  }
-  if(buf) out += buf;
-  return out.replace(/\\s+([.,;:])/g, (_, p) => p).replace(/\\s{2,}/g, ' ').trim();
-}
-
 function renderExpandableGate(candId, mode, titleHtml, borderCls, rawStr){
   if(!rawStr) return '';
   if(ENUM_LABELS[rawStr]) return `<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] ${borderCls} leading-relaxed break-words">${titleHtml} ${esc(ENUM_LABELS[rawStr])}</div>`;
-  const key = candId + ':' + mode;
-  const isOpen = Boolean(expandedDetailGates[key]);
-  const preset = DETAIL_GATE_SHORT[key];
-  let shortTxt = preset || '';
-  if(!shortTxt){
-    const cleanRaw = String(rawStr).replace(/^\\s*(?:[-*]|\\([0-9]+\\)|[0-9]+[.)])\\s*/, '');
-    const sep = /\\n+|;\\s+|,\\s+(?:then|followed by|echoing|matching)\\s+|\\s+(?=\\([2-9]\\)\\s)|\\.\\s+(?=[A-Z])/;
-    const cls = (typeof splitTopClauses === 'function') ? splitTopClauses(cleanRaw, sep) : [cleanRaw];
-    const c0 = String(cls[0] || cleanRaw).replace(/^\\s*(?:[-*]|\\([0-9]+\\)|[0-9]+[.)])\\s*/, '').trim();
-    shortTxt = c0.length > 165 ? stripLongParensJs(c0, 24) : c0;
-    if(typeof ensurePeriod === 'function' && typeof capClause === 'function') shortTxt = ensurePeriod(capClause(shortTxt));
-  }
-  const hasMore = Boolean(preset) || (rawStr.trim().length > shortTxt.length + 18);
-  if(!hasMore){
-    return `<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] ${borderCls} leading-relaxed break-words">${titleHtml} ${escLink(shortTxt, candId)}</div>`;
-  }
-  if(!isOpen){
-    return `<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] ${borderCls} leading-relaxed break-words">${titleHtml} ${escLink(shortTxt, candId)} <button type="button" data-toggle-detail-gate="${esc(key)}" class="text-[var(--link)] hover:underline font-mono text-xs ml-1 cursor-pointer whitespace-nowrap">Read more &darr;</button></div>`;
-  }
   const fullHtml = (mode === 'go' || mode === 'kill')
     ? formatGateList(rawStr, candId, mode === 'kill')
-    : formatProseParas(rawStr, candId, 'space-y-2');
-  return `<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] ${borderCls} space-y-2 leading-relaxed break-words"><div>${titleHtml}</div>${fullHtml}<button type="button" data-toggle-detail-gate="${esc(key)}" class="text-[var(--link)] hover:underline font-mono text-xs cursor-pointer">Show less &uarr;</button></div>`;
+    : formatProseParas(rawStr, candId, 'space-y-1.5');
+  const shouldClamp = String(rawStr).trim().length >= 420;
+  if(!shouldClamp){
+    return `<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] ${borderCls} space-y-1.5 leading-relaxed break-words"><div>${titleHtml}</div>${fullHtml}</div>`;
+  }
+  const key = candId + ':' + mode;
+  const domId = 'gate-body-' + candId + '-' + mode;
+  const isOpen = Boolean(expandedDetailGates[key]);
+  const itemCnt = (fullHtml.match(/<li\\b/g) || []).length;
+  const moreLbl = itemCnt >= 2 ? `Read all ${itemCnt} items &darr;` : 'Read full details &darr;';
+  return `<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] ${borderCls} space-y-1.5 leading-relaxed break-words">` +
+    `<div>${titleHtml}</div>` +
+    `<div id="${esc(domId)}" class="gate-clamp" data-clamped="${isOpen ? 'false' : 'true'}">${fullHtml}</div>` +
+    `<button type="button" data-toggle-detail-gate="${esc(key)}" data-more-lbl="${moreLbl}" aria-expanded="${isOpen ? 'true' : 'false'}" aria-controls="${esc(domId)}" class="text-[var(--link)] hover:underline font-mono text-xs cursor-pointer">${isOpen ? 'Collapse &uarr;' : moreLbl}</button>` +
+    `</div>`;
+}
+
+function syncDetailClamps(){
+  const det = document.getElementById('p-detail');
+  if(!det) return;
+  det.querySelectorAll('[data-toggle-detail-gate]').forEach(btn => {
+    const gk = btn.getAttribute('data-toggle-detail-gate') || '';
+    const bodyEl = document.getElementById(btn.getAttribute('aria-controls') || '');
+    if(!bodyEl) return;
+    if(expandedDetailGates[gk]){
+      bodyEl.setAttribute('data-clamped', 'false');
+      btn.classList.remove('hidden');
+      return;
+    }
+    bodyEl.setAttribute('data-clamped', 'false');
+    const naturalH = bodyEl.scrollHeight;
+    if(naturalH > 0 && naturalH <= 142){
+      btn.classList.add('hidden');
+    } else {
+      bodyEl.setAttribute('data-clamped', 'true');
+      btn.classList.remove('hidden');
+    }
+  });
 }
 
 function renderDetail(selHidden=false){
@@ -542,6 +521,7 @@ function renderDetail(selHidden=false){
         <div class="flex flex-wrap gap-1">${secBar}</div>
       </div>
     </div>`;
+  syncDetailClamps();
 }
 function selectCand(id, userClick=false){
   selectedId = id;
@@ -769,7 +749,17 @@ document.addEventListener('click', e => {
   const ccBtn = tgt.closest('[data-copy-cmd]');
   if(ccBtn){ e.preventDefault(); const v = ccBtn.getAttribute('data-copy-cmd')||''; if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(v); } const orig = (ccBtn.dataset&&(ccBtn.dataset.orig||(ccBtn.dataset.orig=ccBtn.textContent)))||ccBtn.textContent; ccBtn.textContent='Copied \u2713'; setTimeout(()=>{ ccBtn.textContent = orig; }, 1400); return; }
   const tgBtn = tgt.closest('[data-toggle-detail-gate]');
-  if(tgBtn){ e.preventDefault(); e.stopPropagation(); const gk = tgBtn.getAttribute('data-toggle-detail-gate')||''; expandedDetailGates[gk] = !expandedDetailGates[gk]; renderDetail(lastSelHidden); return; }
+  if(tgBtn){
+    e.preventDefault(); e.stopPropagation();
+    const gk = tgBtn.getAttribute('data-toggle-detail-gate')||'';
+    const open = !expandedDetailGates[gk];
+    expandedDetailGates[gk] = open;
+    const bodyEl = document.getElementById(tgBtn.getAttribute('aria-controls')||'');
+    if(bodyEl) bodyEl.setAttribute('data-clamped', open ? 'false' : 'true');
+    tgBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    tgBtn.innerHTML = open ? 'Collapse &uarr;' : (tgBtn.getAttribute('data-more-lbl') || 'Read full details &darr;');
+    return;
+  }
   const csBtn = tgt.closest('[data-copy-sha]');
   if(csBtn){ e.preventDefault(); const v = csBtn.getAttribute('data-copy-sha')||''; if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(v); } const orig = (csBtn.dataset&&(csBtn.dataset.orig||(csBtn.dataset.orig=csBtn.textContent)))||csBtn.textContent; csBtn.textContent='Copied \u2713'; setTimeout(()=>{ csBtn.textContent = orig; }, 1400); return; }
   const ucBtn = tgt.closest('[data-upd-cat]');
@@ -914,6 +904,13 @@ window.addEventListener('hashchange', () => {
   }
   commitHistory('replace');
 });
+document.addEventListener('focusin', e => {
+  const cl = e.target && e.target.closest ? e.target.closest('.gate-clamp[data-clamped="true"]') : null;
+  if(!cl || (e.target.offsetTop + e.target.offsetHeight <= cl.clientHeight)) return;
+  const btn = cl.parentElement ? cl.parentElement.querySelector('[data-toggle-detail-gate]') : null;
+  if(btn) btn.click();
+});
+window.addEventListener('resize', () => { if(typeof syncDetailClamps === 'function') syncDetailClamps(); });
 renderUpdatesLog(); renderContrastsTable(); renderPortfolio(); renderIntervals();
 if(typeof renderRepDag === 'function'){ renderRepDag(); renderRepOverlap(); setRepMode('runs'); initSandboxes(); }
 if(!syncFromHash(false)) switchTab('home', 'none');

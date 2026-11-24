@@ -7,7 +7,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <title>ExploreALS v1.3 — ALS Target Triage, Splice Windows &amp; Replication Explorer</title>
-  <style>:where(.hidden){display:none}.text-xs:not(.leading-snug):not(.leading-relaxed){line-height:1.5}table{border-collapse:collapse;width:100%}th,td{padding:6px 8px;vertical-align:top}</style>
+  <style>:where(.hidden){display:none}.text-xs:not(.leading-snug):not(.leading-relaxed){line-height:1.5}table{border-collapse:collapse;width:100%}th,td{padding:6px 8px;vertical-align:top}.gate-clamp[data-clamped="true"]{position:relative;max-height:7.25rem;overflow:hidden}.gate-clamp[data-clamped="true"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.75rem;background:linear-gradient(to bottom,transparent,var(--background));pointer-events:none}</style>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
 </head>
 <body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-4 m-0 text-xs">

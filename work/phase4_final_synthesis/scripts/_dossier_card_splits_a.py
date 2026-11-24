@@ -197,6 +197,22 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
         ("TYK2 is flat p=0.843); originating C9orf72 dsRNA", "TYK2 is flat p=0.843).\n- Open-Label NADALS CSF PK & CXCL10 Readout: Originating C9orf72 dsRNA"),
         ("JAK occupancy), while subsequent cortical TDP-43", "JAK occupancy).\n- Cortical dsRNA->TYK2 Potency Gap: Subsequent cortical TDP-43"),
     ],
+    ("EALS-019", "disproves"): [
+        ("P-gp/BCRP efflux limits", "- P-gp/BCRP Efflux & 657-Fold CNS Exposure Gap: P-gp/BCRP efflux limits"),
+        ("2.5 uM screen); NADALS ALS had", "2.5 uM screen).\n- Open-Label NADALS Thromboembolic Events: NADALS ALS had"),
+        ("4/9 non-completers); structural/mechanistic", "4/9 non-completers).\n- Neuronal JAK2 vs. Glial JAK1/TYK2 Trade-Off: Structural/mechanistic"),
+        ("and neuronal JAK2; shotgun MS CSF CXCL10", "and neuronal JAK2.\n- Left-Censored CSF CXCL10 & Null Center Comparison: Shotgun MS CSF CXCL10"),
+        ("CSF glial panel; gnomAD v4.1 MANE JAK1", "CSF glial panel.\n- JAK1 Constraint & FDA Boxed Warnings: gnomAD v4.1 MANE JAK1"),
+    ],
+    ("EALS-026", "verdict"): [
+        ("Unreported randomized Phase 2/3 outcomes", "- Unreported Clinical Trials & Underpowered Autopsy Series: Unreported randomized Phase 2/3 outcomes"),
+        ("powered RCT futility; EALS-026 (", "powered RCT futility.\n- Low-Priority Tier 3 Watchlist Scope: EALS-026 ("),
+    ],
+    ("EALS-026", "disproves"): [
+        ("Randomized Phase 2/3 ALS trial NCT04082832", "- Unreported Phase 2/3 & Discontinued Clinical Program: Randomized Phase 2/3 ALS trial NCT04082832"),
+        ("\n\nObservational postmortem neuropathology", "\n- Null Treated-Decedent Postmortem Neuropathology: Observational postmortem neuropathology"),
+        ("\n\nUnbound human CNS exposure", "\n- Unbound CNS Exposure Gap & Hypoxic PET Dissociation: Unbound human CNS exposure"),
+    ],
     ("EALS-047", "proves"): [
         ("Sub-FDR Bye 2025 screen survival delta", "- Sub-FDR iPSC-MN Screen & Murine Origin: Sub-FDR Bye 2025 screen survival delta"),
         ("PMID:28128456; Alsonex completed N=8 ALS", "PMID:28128456).\n- Phase 1b Safety/Ex Vivo PD & Missing Efficacy RCTs: Alsonex completed N=8 ALS"),
@@ -209,9 +225,26 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
     ("EALS-047", "nxt"): [
         ("C5b-9/C5L2), alongside peer-reviewed unbound", "C5b-9/C5L2); quantify peer-reviewed unbound"),
     ],
+    ("EALS-050", "verdict"): [
+        ("Retained in Tier 3 Exploratory Discovery (Rank #27/52): sub-FDR", "- Screen Thiol Buffering & Low-Dose Oral Trial (Rank #27/52): Sub-FDR"),
+        ("1,800 mg/d EH301, yet Louwerse 1995", "1,800 mg/d EH301.\n- Underpowered Subcutaneous Trial & High-Dose CSF Penetration: Louwerse 1995"),
+    ],
     ("EALS-050", "proves"): [
         ("Bye 2025 iPSC-MN screen Rank #12/107", "- iPSC-MN Screen & Underpowered Subcutaneous Trial: Bye 2025 iPSC-MN screen Rank #12/107"),
         ("p=0.06), and high-dose oral NAC human CSF", "p=0.06).\n- High-Dose Oral Human CSF Penetration: High-dose oral NAC human CSF"),
+    ],
+    ("EALS-052", "proves"): [
+        ("Bye 2025 iPSC-MN screen Rank #20/107", "- Sub-FDR Patient iPSC-MN Screen Shift: Bye 2025 iPSC-MN screen Rank #20/107"),
+        ("p=0.04190) and randomized double-blind", "p=0.04190).\n- Phase 1 Historical-Control Tolerability: Randomized double-blind"),
+    ],
+    ("EALS-005", "verdict"): [
+        ("Unstratified symptomatic AMPA/NMDA/class-I-Na+ regimens", "- Stage-Gated Excitability Rationale: Unstratified symptomatic AMPA/NMDA/class-I-Na+ regimens"),
+        ("disease-modification RCT. EALS-005 serves strictly", "disease-modification RCT.\n- Companion Stratification Protocol Scope: EALS-005 serves strictly"),
+    ],
+    ("EALS-005", "proves"): [
+        ("Riluzole (INaP modulator) is #1/107", "- Phenotypic Screen & Human KCNQ2 Splicing Loss: Riluzole (INaP modulator) is #1/107"),
+        ("PMID:41174170); human constant-stimulus", "PMID:41174170).\n- Human Cortical SICI & Axonal SDTC Engagement: Human constant-stimulus"),
+        ("FIH PK NCT05667779), distinct from RMT-normalized", "FIH PK NCT05667779).\n- Threshold-Tracking TT-SICI Paradigm Distinction: Distinct from RMT-normalized"),
     ],
     ("EALS-005", "disproves"): [
         ("Symptomatic postsynaptic glutamate receptor regimens", "- Unstratified Postsynaptic & Na+ Blocker Failures: Symptomatic postsynaptic glutamate receptor regimens"),
@@ -219,5 +252,35 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
     ],
     ("EALS-005", "nxt"): [
         ("prospectively validated — in an early-onset ALS", "prospectively validated; evaluate in an early-onset ALS"),
+    ],
+    ("EALS-022", "verdict"): [
+        ("Anchored by human Mendelian", "- Mendelian Genetics & Multi-Omic Depletion: Anchored by human Mendelian"),
+        ("isoform-blind P25686); retained in Tier 3", "isoform-blind P25686).\n- Tier 3 Isoform & Safety Validation Gate: Retained in Tier 3"),
+    ],
+    ("EALS-042", "disproves"): [
+        ("7/9 GENCODE protein-coding DLGAP1beta isoforms", "- Downstream Internal Promoter Escape (7/9 Isoforms): 7/9 GENCODE protein-coding DLGAP1beta isoforms"),
+        ("5'UTR Intron-2, and spinal motor-neuron penetrance", "5'UTR Intron-2.\n- Unproven Spinal Motor-Neuron Penetrance: Spinal motor-neuron penetrance"),
+    ],
+    ("EALS-014", "verdict"): [
+        ("Per the Untested != Falsified triage rule,", "- Subcellular Localization vs. Bulk Nulls: Per the Untested != Falsified triage rule,"),
+        ("do not falsify EALS-014. EALS-014 is retained", "do not falsify EALS-014.\n- Sub-Node Dissection (CHMP7 vs. CHMP2B): EALS-014 is retained"),
+    ],
+    ("EALS-033", "verdict"): [
+        ("Oral LINE-1 RT inhibitor TPN-101", "- Phase 2a C9-ALS Signals & HEALEY Selection: Oral LINE-1 RT inhibitor TPN-101"),
+        ("IFNAR2 above Control, yet efficacy in sporadic ALS-TE", "IFNAR2 above Control.\n- Unproven Sporadic ALS-TE Enrichment & Mechanism: Efficacy in sporadic ALS-TE"),
+    ],
+    ("EALS-018", "verdict"): [
+        ("Per the Untested != Falsified triage rule,", "- Parenchymal C1q vs. Systemic C3 Scope: Per the Untested != Falsified triage rule,"),
+        ("confounded/null. Completed open-label ALS Phase 2a", "confounded/null.\n- Open-Label ALS Phase 2a vs. HD Systemic Autoimmunity: Completed open-label ALS Phase 2a"),
+        ("99.99% (modeled estimate)) and unmodified q4w IT Fab", "99.99% (modeled estimate)).\n- Intrathecal Half-Life & C-Bouton Gate: Because unmodified q4w IT Fab"),
+    ],
+    ("EALS-016", "verdict"): [
+        ("Parkinson's FAIRPARK-II motor worsening", "- Negative Bulk Iron-Chelation Precedents: Parkinson's FAIRPARK-II motor worsening"),
+        ("microglia untested; pivoted from unidirectional", "microglia untested.\n- Bidirectional Sensor Watchlist Scope: Pivoted from unidirectional"),
+    ],
+    ("EALS-016", "proves"): [
+        ("TDP-43 depletion induces coordinated", "- Coordinated TDP-43 Iron-Axis 3'-UTR Lengthening: TDP-43 depletion induces coordinated"),
+        ("mRNA upregulation; postmortem tissues show", "mRNA upregulation.\n- Postmortem RNA, Cortical DIA & CSF Remodeling: Postmortem tissues show"),
+        ("DIA p=0.0273). PDB 3V5Z", "DIA p=0.0273).\n- Dual Iron-Cofactor Structural Requirement: PDB 3V5Z"),
     ],
 }

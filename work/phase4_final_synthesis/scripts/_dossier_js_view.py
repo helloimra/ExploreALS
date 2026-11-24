@@ -300,7 +300,7 @@ function formatNextTest(s, ctx){
   return `<ul class="list-disc pl-4 space-y-1.5 mt-1.5 leading-relaxed">${clauses.map(c => `<li class="break-words">${formatBulletBody(c, ctx)}</li>`).join('')}</ul>`;
 }
 function ensurePeriod(c){
-  const t = String(c || '').trim();
+  const t = String(c || '').trim().replace(/[,;]+$/, '');
   return (!t || /[.!?:]$/.test(t)) ? t : (t + '.');
 }
 function topDepths(s){
