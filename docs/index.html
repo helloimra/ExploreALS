@@ -136,7 +136,6 @@ svg { display: block; vertical-align: middle; }
 .max-h-\[calc\(100vh-1\.5rem\)\] {max-height:calc(100vh - 1.5rem)}
 .max-w-\[1440px\] {max-width:1440px}
 .max-w-\[220px\] {max-width:220px}
-.max-w-\[260px\] {max-width:260px}
 .min-h-\[520px\] {min-height:520px}
 .min-w-\[180px\] {min-width:180px}
 .min-w-\[200px\] {min-width:200px}
@@ -149,6 +148,7 @@ svg { display: block; vertical-align: middle; }
 .whitespace-nowrap {white-space:nowrap}
 .list-disc {list-style-type:disc}
 .m-0 {margin:0px}
+.p-1\.5 {padding:0.375rem}
 .p-2 {padding:0.5rem}
 .p-2\.5 {padding:0.625rem}
 .p-3 {padding:0.75rem}
@@ -213,7 +213,6 @@ svg { display: block; vertical-align: middle; }
 .border {border-width:1px}
 .border-2 {border-width:2px}
 .border-b {border-bottom-width:1px}
-.border-r {border-right-width:1px}
 .border-t {border-top-width:1px}
 .border-l-2 {border-left-width:2px}
 .border-l-4 {border-left-width:4px}
@@ -296,6 +295,7 @@ svg { display: block; vertical-align: middle; }
   .sm\:flex-wrap {flex-wrap:wrap}
   .sm\:grid-cols-2 {grid-template-columns:repeat(2,minmax(0,1fr))}
   .sm\:grid-cols-3 {grid-template-columns:repeat(3,minmax(0,1fr))}
+  .sm\:col-span-2 {grid-column:span 2 / span 2}
   .sm\:w-auto {width:auto}
 }
 @media (min-width: 768px) {
@@ -598,31 +598,27 @@ svg { display: block; vertical-align: middle; }
         </div>
         <div class="text-xs text-[var(--muted-foreground)] border-t border-[var(--card-border)] pt-2.5 space-y-1 leading-relaxed">
           <div><strong class="font-mono text-[var(--foreground)]">GENCODE v46 Off-Target Alignment Screen (1-Based Closed GRCh38 Target Windows):</strong> Candidate target windows for empirical 1-nt microwalks plus human neuron <span class="font-mono">Ca2+</span>-oscillation, <span class="font-mono">TLR9</span> &amp; primary <span class="font-mono">DRG</span> safety screens (reference transcriptome alignment does not exclude phosphorothioate protein-binding toxicity) &middot; modeled SantaLucia <span class="font-mono">2'-O-MOE PO/PS Tm / &Delta;G37</span> + <span class="font-mono">AlphaGenome AVI Phred</span> (DNA-variant conservation/splicing score, not steric ASO potency).</div>
-          <div><span class="font-mono text-[var(--foreground)]">mRNA (0&middot;1&middot;wob)</span> = GENCODE v46 spliced mRNA (&le;200bp of splice junction) 0-mm / 1-mm / G:U wobble-only genes &middot; <span class="font-mono text-[var(--foreground)]">Pre-mRNA (0&middot;1&middot;wob&middot;2&middot;blg&middot;18c)</span> = sense 0-mm / 1-mm (&le;50bp SS) / wobble (&le;50bp) / 2-mm (&le;25bp) / 1-nt bulge / 18-nt sub-core (Pass &middot; Clean requires 0 hits across all spliced mRNA, &le;50bp-SS, &le;25bp 2-mm, bulge &amp; 18-nt sub-core filters across all 28 windows; G2E3 #1 saturates GGGenome max_mm=1 and records 2-mm = NA).</div>
+          <div>Select any window on the left to inspect its labeled <span class="font-mono text-[var(--foreground)]">Spliced mRNA (&le;200bp of splice junction)</span> and <span class="font-mono text-[var(--foreground)]">Nascent Pre-mRNA (sense strand)</span> hybridization counts across <span class="font-mono">254,070</span> GENCODE v46 transcripts, <span class="font-mono">gnomAD v4</span> constrained CNS gene flags, sibling windows on the same locus, and genome browser tracks (<span class="font-mono text-[var(--success)]">Pass &middot; Clean</span> requires zero hits across all spliced mRNA, &le;50bp-SS, &le;25bp 2-mm, 1-nt bulge &amp; 18-nt sub-core filters).</div>
         </div>
       </div>
-      <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-x-auto">
-        <table class="w-full text-left border-collapse text-xs">
-          <thead>
-            <tr class="border-b border-[var(--card-border)] bg-[var(--background)] text-[var(--muted-foreground)] font-mono">
-              <th colspan="5" class="py-1.5 px-2.5 border-r border-[var(--card-border)]">1. Target Locus, Role &amp; Splicing Mechanism</th>
-              <th colspan="2" class="py-1.5 px-2 border-r border-[var(--card-border)]">2. Thermodynamics &amp; AVI</th>
-              <th colspan="4" class="py-1.5 px-2 border-r border-[var(--card-border)]">3. GENCODE v46 Off-Target Hybridization Screen (254,070 tx)</th>
-              <th colspan="1" class="py-1.5 px-2">4. Browsers</th>
-            </tr>
-            <tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
-              <th class="py-2 px-2.5">#</th><th class="py-2 px-2">Gene, Window &amp; Portals</th><th class="py-2 px-2">Role / Lead</th><th class="py-2 px-2">GRCh38 Coordinate (Ensembl)</th>
-              <th class="py-2 px-2 border-r border-[var(--card-border)]">Cis-Mechanism</th>
-              <th class="py-2 px-2" title="Modeled SantaLucia nearest-neighbor melting temperature, free energy, and GC%">Tm / &Delta;G37 / GC</th>
-              <th class="py-2 px-2 border-r border-[var(--card-border)]" title="Max AlphaGenome Variant Impact Phred score across interval">max AVI</th>
-              <th class="py-2 px-2" title="Spliced mRNA <=200bp of splice junction: 0-mm · 1-mm · wobble-only genes">mRNA (0&middot;1&middot;wob)</th>
-              <th class="py-2 px-2" title="Pre-mRNA sense: 0-mm · 1-mm <=50bp SS · wobble <=50bp · 2-mm <=25bp · 1-nt bulge · 18-nt sub-core">Pre-mRNA (0&middot;1&middot;wob&middot;2&middot;blg&middot;18c)</th>
-              <th class="py-2 px-2">Constrained CNS Gene Flags (gnomAD v4)</th><th class="py-2 px-2 border-r border-[var(--card-border)]">Safety Verdict</th>
-              <th class="py-2 px-2">Atlas &middot; UCSC</th>
-            </tr>
-          </thead>
-          <tbody id="iv-tbody" class="divide-y divide-[var(--card-border)]"></tbody>
-        </table>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
+        <div class="lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-hidden lg:relative min-h-[520px]">
+          <div class="max-h-[420px] lg:max-h-none lg:absolute lg:inset-0 overflow-y-auto overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead class="sticky top-0 z-10 bg-[var(--card)] shadow-sm">
+                <tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
+                  <th class="py-2 px-1.5 font-medium">#</th>
+                  <th class="py-2 px-2 font-medium">Gene &amp; Window</th>
+                  <th class="py-2 px-2 font-medium" title="1-based closed GRCh38 span · length · modeled Tm · max AlphaGenome AVI Phred">GRCh38 Coordinate</th>
+                  <th class="hidden xl:table-cell py-2 px-2 font-medium">Cis-Mechanism</th>
+                  <th class="py-2 px-2 font-medium text-right">Off-Target Verdict</th>
+                </tr>
+              </thead>
+              <tbody id="iv-tbody" class="divide-y divide-[var(--card-border)]"></tbody>
+            </table>
+          </div>
+        </div>
+        <div id="iv-detail" class="lg:col-span-5 bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2.5 lg:min-h-[520px]"></div>
       </div>
     </div>
 
@@ -822,6 +818,7 @@ const DATA_UPDATES = [{"id":"UPD-2026-11-23-01","dt":"2026-11-23","tag":"v1.3.0"
 const TRL_NUM = {TRL_6_PH2B_SUBGROUP_BIOLOGIC:6,TRL_5_HUMAN_ALS_PK_PD_PROVEN:5,TRL_4_ACTIVE_PH1_CLASS_OR_NCE:4,TRL_3_PRECLINICAL_SSO_COORDINATE:3,TRL_2_PRECLINICAL_MODALITY_DISCOVERY:2,TRL_1_TARGET_TOOL_PROBE_WATCHLIST:1,PROTOCOL_COMPANION_NA:0};
 const NYGC_GENE_TO_ID = {ATG4B:'EALS-034',KALRN:'EALS-035',PTPRT:'EALS-036',CELF5:'EALS-037',PRUNE2:'EALS-038',PFKP:'EALS-039',TRAPPC12:'EALS-040',ELK1:'EALS-041',DLGAP1:'EALS-042'};
 let selectedId = 'EALS-030';
+let selectedIvOrd = 5;
 let activeTab = 'home';
 let activeQuick = 'ALL';
 let activeEpi = 'ALL';
@@ -872,7 +869,7 @@ function buildHistorySnapshot(targetHash){
     pSearch: valOf('p-search'), pOrigin: valOf('p-origin','ALL'), pDec: valOf('p-dec','ALL'), pTier: valOf('p-tier','ALL'), pSort: valOf('p-sort','rank'),
     contrastsOpen: Boolean(dr && dr.open),
     activeUpdCat: activeUpdCat, updSearch: valOf('upd-search'),
-    ivSearch: valOf('iv-search'), ivStatus: valOf('iv-status','ALL'), ivOrigin: valOf('iv-origin','ALL'), ivLeads: Boolean(ivL && ivL.checked),
+    ivSearch: valOf('iv-search'), ivStatus: valOf('iv-status','ALL'), ivOrigin: valOf('iv-origin','ALL'), ivLeads: Boolean(ivL && ivL.checked), selectedIvOrd: selectedIvOrd,
     repMode: (typeof repMode !== 'undefined' ? repMode : 'runs'),
     selectedRepKey: (typeof selectedRepKey !== 'undefined' ? selectedRepKey : 'FLAGSHIP-EALS-030'),
     repSearch: valOf('rep-search'), repFilter: valOf('rep-filter','ALL'),
@@ -3501,6 +3498,177 @@ function updateSandboxes(){
   document.getElementById('sb-m-out').innerHTML = `<div>Required Deaths (80% pwr, 2s &alpha;=0.05): <strong class="text-[var(--primary)]">${dReq}</strong> (HR_crit=${hrCrit.toFixed(3)})</div><div>Pooled Event Rate: <strong>${(100*pbar).toFixed(1)}%</strong> &rarr; N_rand = <strong>${nRand}</strong></div><div class="text-[var(--muted-foreground)]">LP Yield (173/220 = 78.6%): <strong>${nScrLp}</strong> &middot; Initial Screen (173/304 = 56.9%): <strong>${nScrInit}</strong></div>`;
 }
 
+const SHORT_CIS_ROLE = {
+  MULTIPLEX_CORE: 'Multiplex Core',
+  SINGLE_LOCUS_LEAD: 'Single Lead',
+  EXPLORATORY_LOCUS: 'Exploratory',
+  EXCLUDED_ALU_REPEAT: 'Alu Excluded'
+};
+const SHORT_CIS_MODE = {
+  INCLUDE_EXON_UPSTREAM_UG: 'Exon-5 Inclusion (UG)',
+  INCLUDE_CONSTITUTIVE_EXON: 'Intron-5 (ISS/ISE)',
+  SKIP_CRYPTIC_EXON: 'Cryptic Exon Skip',
+  CRYPTIC_EXON2A_3SS_PAS_BLOCK: "Exon-2a 3'SS & PAS",
+  CRYPTIC_CASSETTE_EXON_SKIP: 'Cryptic Cassette Skip',
+  CRYPTIC_CASSETTE_MAJOR_3SS_AND_SHARED_EXON: "Major 3'SS + Exonic",
+  CRYPTIC_CASSETTE_DOWNSTREAM_INTRONIC_ISE: 'Intronic ISE Block',
+  CRYPTIC_A3SS_PROXIMAL_EXON_BLOCK: 'Cryptic A3SS (+8..27)',
+  CRYPTIC_A3SS_ACCEPTOR_BLOCK: 'Cryptic A3SS Block',
+  CRYPTIC_ALE_3SS_ACCEPTOR_BLOCK: "Cryptic ALE 3'SS",
+  CRYPTIC_3EXT_ISOFORM_GAPMER_WINDOW: "3'-Ext Gapmer ASO",
+  DISTAL_3UTR_EXT_PAS_WINDOW: "Distal 3'-UTR PAS"
+};
+function shortIvBadge(c){
+  const st = String(c.st || '');
+  if(st === 'PASS_CLEAN_GE2MM') return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--success)] border border-[var(--success)] text-xs whitespace-nowrap" title="Zero 0-mm, 1-mm, wobble, 2-mm (<=25bp), bulge, or 18-nt sub-core off-target hits">Pass &middot; Clean</span>';
+  if(st.startsWith('CAUTION')) return `<span class="px-1.5 py-0.5 rounded font-mono text-[var(--warning)] border border-[var(--warning)] text-xs whitespace-nowrap" title="${cautionSummary(c).tip}">Caution</span>`;
+  if(st.startsWith('WARN')) return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap" title="1-mm, wobble, or 1-nt bulge hit on a LoF-intolerant (pLI >= 0.9) CNS gene">Warn &middot; CNS</span>';
+  if(st.startsWith('FAIL')) return '<span class="px-1.5 py-0.5 rounded font-mono font-bold text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap" title="Exact 0-mismatch off-target hybridization hit across GENCODE v46">Fail &middot; 0-mm</span>';
+  return '<span class="text-[var(--muted-foreground)] font-mono text-xs">None</span>';
+}
+const CIS_HIT_LBL = {
+  'spliced:0mm':'Spliced mRNA 0-mm', 'spliced:1mm':'Spliced mRNA 1-mm', 'spliced:2mm':'Spliced mRNA 2-mm',
+  'premRNA:0mm':'Pre-mRNA 0-mm', 'premRNA:1mm':'Pre-mRNA 1-mm', 'premRNA:2mm':'Pre-mRNA 2-mm',
+  '1nt-bulge:1mm':'1-nt bulge (1-mm)', '18nt-subcore(non-constrained)':'18-nt sub-core (non-constrained)',
+  '0-mm deep intron':'Deep-intron 0-mm (steric-inert)', '1mm_inert_UTR3_GT50EEJ':"3'-UTR 1-mm (>50nt past EEJ, NMD-inert)"
+};
+const CIS_CELL_LBL = {
+  Edin_Endo:'Edinburgh Endothelium', 'BA4 Oligo':'BA4 Oligodendrocytes',
+  'BA4 Inh':'BA4 Inhibitory Neurons', 'BA4 Exc':'BA4 Excitatory Neurons', 'BA4 Astro':'BA4 Astrocytes'
+};
+function parseCisFlags(rawFlags){
+  if(!rawFlags || rawFlags === 'NONE') return {items: [], extraNote: ''};
+  const byGene = new Map();
+  let extraNote = '';
+  String(rawFlags).split(';').map(s => s.trim()).filter(Boolean).forEach(chunk => {
+    if(chunk.startsWith('+')){ extraNote = chunk; return; }
+    const pIdx = chunk.indexOf('(');
+    if(pIdx < 0) return;
+    const gene = chunk.slice(0, pIdx).trim();
+    const inner = chunk.endsWith(')') ? chunk.slice(pIdx + 1, -1) : chunk.slice(pIdx + 1);
+    const parts = inner.split(',').map(x => x.trim()).filter(Boolean);
+    const hitLbl = CIS_HIT_LBL[parts[0]] || parts[0];
+    const meta = parts.slice(1).map(p => {
+      if(CIS_CELL_LBL[p]) return CIS_CELL_LBL[p];
+      if(p.startsWith('dSS=')) return 'splice dist ' + p.slice(4);
+      if(p.startsWith('dEEJ=')) return 'EEJ dist ' + p.slice(5);
+      if(p.startsWith('d=')) return 'splice dist ' + p.slice(2);
+      return p;
+    });
+    if(!byGene.has(gene)) byGene.set(gene, {gene: gene, hits: [], meta: []});
+    const rec = byGene.get(gene);
+    if(hitLbl && !rec.hits.includes(hitLbl)) rec.hits.push(hitLbl);
+    meta.forEach(m => { if(!rec.meta.includes(m)) rec.meta.push(m); });
+  });
+  return {items: Array.from(byGene.values()), extraNote: extraNote};
+}
+function findBestIvOrd(raw){
+  if(!raw) return 0;
+  const q = String(raw).trim();
+  if(/^([1-9]|1[0-9]|2[0-8])$/.test(q)) return Number(q);
+  const ql = q.toLowerCase();
+  const matches = DATA_CIS.filter(c => c.pid.toLowerCase() === ql || c.sc.toLowerCase() === ql || c.gene.toLowerCase() === ql);
+  if(!matches.length) return 0;
+  return (matches.find(c => c.lead) || matches[0]).ord;
+}
+function ivCellBox(lbl, val, isExact){
+  const n = Number(val);
+  const tone = (isExact && n > 0) ? 'text-[var(--error)]' : ((val !== '0' && val !== 'NA') ? 'text-[var(--warning)]' : 'text-[var(--muted-foreground)]');
+  return `<div class="p-1.5 rounded bg-[var(--card)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)] leading-snug">${lbl}</div><div class="font-mono font-semibold text-sm tabular-nums mt-0.5 ${tone}">${esc(val)}</div></div>`;
+}
+function renderIntervalDetail(rows){
+  const det = document.getElementById('iv-detail');
+  if(!det) return;
+  const c = DATA_CIS.find(x => x.ord === selectedIvOrd) || DATA_CIS[0];
+  const loPad = Math.max(1, Number(c.lo) - 250), hiPad = Number(c.hi) + 250;
+  const atlUrl = `https://deepmind.google.com/science/alphagenome/atlas?q=${c.chr}:${loPad}-${hiPad}&m=locus&lItems=avi,section:RNA_SEQ,section:SPLICE_JUNCTIONS,section:DNASE`;
+  const ucscUrl = `https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=${c.chr}:${loPad}-${hiPad}`;
+  const ensUrl = `https://www.ensembl.org/Homo_sapiens/Location/View?r=${c.chr.replace('chr','')}:${c.lo}-${c.hi}`;
+  const gid = GENE_ENSG[c.gene] || '';
+  const gnomUrl = gid ? `https://gnomad.broadinstitute.org/gene/${gid}?dataset=gnomad_r4` : '';
+  const linkId = (c.pid && c.pid !== 'NONE') ? c.pid : String(c.sc).replace(/\.[0-9]+$/, '');
+  const siblings = DATA_CIS.filter(x => x.gene === c.gene);
+  const sibBar = siblings.map(s => {
+    const on = s.ord === c.ord;
+    const cls = on ? 'bg-[var(--primary)] text-[var(--primary-foreground)] border-[var(--primary)] font-semibold' : 'bg-[var(--background)] text-[var(--foreground)] border-[var(--border)] hover:border-[var(--primary)]';
+    return `<button type="button" data-select-iv="${s.ord}" class="px-2 py-0.5 rounded border font-mono text-xs cursor-pointer ${cls}">#${s.rk}${s.lead ? ' &#9733;' : ''} &middot; ${s.len}bp</button>`;
+  }).join(' ');
+  const [mExact, mOne, mWob] = String(c.sp).split('/');
+  const [pExact, pOne, pWob, pTwo, pBulge, pCore] = String(c.pm).split('/');
+  const pf = parseCisFlags(c.flags);
+  const isWarnOrFail = String(c.st).startsWith('WARN') || String(c.st).startsWith('FAIL');
+  const flagsHtml = !pf.items.length
+    ? `<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--success)]"><span class="font-mono font-semibold text-[var(--success)]">&#10003; Zero flagged LoF-intolerant CNS gene hits</span> <span class="text-[var(--muted-foreground)]">(gnomAD v4 pLI / LOEUF screen)</span></div>`
+    : `<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] border-l-4 ${isWarnOrFail ? 'border-l-[var(--error)]' : 'border-l-[var(--warning)]'} space-y-1.5">
+        <div class="font-mono font-semibold ${isWarnOrFail ? 'text-[var(--error)]' : 'text-[var(--warning)]'}">${isWarnOrFail ? `Flagged LoF-Intolerant CNS Genes (${pf.items.length})` : `Off-Target Gene Note (${pf.items.length} Non-Constrained / Steric-Inert)`}</div>
+        <div class="space-y-1">${pf.items.map(it => {
+          const fgid = GENE_ENSG[it.gene] || '';
+          const gLink = fgid ? mkExtA('https://gnomad.broadinstitute.org/gene/' + fgid + '?dataset=gnomad_r4', `<strong class="font-semibold">${esc(it.gene)}</strong>`) : `<strong class="font-semibold">${esc(it.gene)}</strong>`;
+          return `<div class="p-2 rounded bg-[var(--card)] border border-[var(--card-border)] space-y-0.5"><div class="flex flex-wrap items-center justify-between gap-1 font-mono"><span>${gLink}</span><span class="text-[var(--foreground)]">${esc(it.hits.join(' + '))}</span></div>${it.meta.length ? `<div class="font-mono text-[var(--muted-foreground)]">${esc(it.meta.join(' · '))}</div>` : ''}</div>`;
+        }).join('')}</div>
+        ${pf.extraNote ? `<div class="font-mono text-[var(--error)] pt-0.5">${esc(pf.extraNote)} (Alu repeat family)</div>` : ''}
+      </div>`;
+  const pmFoot = c.is_gap
+    ? `RNase-H1 gapmer window: total intronic sense 1-mm genes across full pre-mRNA = ${c.pm1_all} (nuclear RNase H1 cleaves deep-intronic hybrids regardless of splice-site distance).`
+    : (pTwo === 'NA'
+      ? `Total sense 1-mm pre-mRNA genes = ${c.pm1_all}; Alu-repeat window saturates GGGenome max_mm=1 (2-mm scan = NA).`
+      : `Full pre-mRNA sense 1-mm genes (including deep introns >50 bp from splice sites) = ${c.pm1_all}.`);
+  det.innerHTML = `<div class="space-y-1.5 border-b border-[var(--card-border)] pb-2">
+      <div class="flex items-center justify-between gap-1.5 flex-wrap">
+        <div class="flex items-center gap-1.5 flex-wrap"><span class="font-mono font-bold text-sm">#${c.ord} &middot; ${esc(c.gene)} &middot; Window #${c.rk}</span> ${c.lead ? '<span class="px-1.5 py-0.5 rounded border border-[var(--success)] text-[var(--success)] font-mono font-semibold text-xs whitespace-nowrap">&#9733; Promoted Lead</span>' : '<span class="px-1.5 py-0.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] font-mono text-xs whitespace-nowrap">Alternative</span>'}</div>
+        ${statusBadge(c.st, c)}
+      </div>
+      <div class="flex items-center justify-between gap-2 flex-wrap">
+        <span class="font-mono text-xs text-[var(--muted-foreground)]">${esc(c.sc !== linkId ? c.sc + ' (' + linkId + ')' : linkId)} &middot; ${esc(humanizeEnum(c.role))}</span>
+        <button type="button" data-open-dossier="${esc(linkId)}" class="px-2.5 py-1 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-semibold text-xs cursor-pointer">Candidate Report &rarr;</button>
+      </div>
+      ${siblings.length > 1 ? `<div class="flex flex-wrap items-center gap-1 pt-0.5"><span class="font-mono text-xs text-[var(--muted-foreground)] mr-0.5">${esc(c.gene)} windows:</span>${sibBar}</div>` : ''}
+    </div>
+    <div class="space-y-2 text-xs">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1 sm:col-span-2">
+          <div class="flex items-center justify-between gap-2"><span class="text-[var(--muted-foreground)] font-mono">1-Based Closed GRCh38 Target Window</span><button type="button" data-copy-cmd="${esc(c.iv)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">Copy</button></div>
+          <div class="font-mono font-semibold text-sm break-all">${esc(c.iv)} <span class="text-xs font-normal text-[var(--muted-foreground)]">(${c.len} bp &middot; ${c.strd === '+' ? 'Plus (+)' : 'Minus (&minus;)'} strand)</span></div>
+          <div class="leading-relaxed"><span class="text-[var(--muted-foreground)]">Mechanism:</span> <strong class="font-medium text-[var(--foreground)]">${esc(humanizeEnum(c.mode))}</strong></div>
+        </div>
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-0.5">
+          <div class="text-[var(--muted-foreground)] font-mono">Modeled 2&apos;-O-MOE PO/PS</div>
+          <div class="font-mono font-semibold tabular-nums">Tm ${c.tm}&deg;C &middot; &Delta;G37 ${c.dg} kcal/mol</div>
+          <div class="text-[var(--muted-foreground)] font-mono tabular-nums">GC content: ${c.gc}%</div>
+        </div>
+        <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-0.5">
+          <div class="text-[var(--muted-foreground)] font-mono">AlphaGenome Variant Impact</div>
+          <div class="font-mono font-semibold tabular-nums">max AVI = ${c.avi} Phred</div>
+          <div class="text-[var(--muted-foreground)] leading-snug">DNA conservation/splicing score</div>
+        </div>
+      </div>
+      <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-2">
+        <div class="flex items-center justify-between gap-2 flex-wrap"><span class="font-mono font-semibold text-[var(--foreground)]">GENCODE v46 Off-Target Hybridization (254,070 tx)</span></div>
+        <div class="space-y-1">
+          <div class="font-mono text-[var(--muted-foreground)]">Spliced mRNA (&le;200 bp of splice junction)</div>
+          <div class="grid grid-cols-3 gap-1.5">${ivCellBox('Exact 0-mm', mExact, true)}${ivCellBox('1-Mismatch', mOne, false)}${ivCellBox('G:U Wobble', mWob, false)}</div>
+        </div>
+        <div class="space-y-1">
+          <div class="font-mono text-[var(--muted-foreground)]">Nascent Pre-mRNA (Sense Strand)</div>
+          <div class="grid grid-cols-3 gap-1.5">${ivCellBox('Sense 0-mm', pExact, true)}${ivCellBox('1-mm (&le;50bp SS)', pOne, false)}${ivCellBox('Wobble (&le;50bp)', pWob, false)}${ivCellBox('2-mm (&le;25bp SS)', pTwo, false)}${ivCellBox('1-nt Bulge', pBulge, false)}${ivCellBox('18-nt Sub-Core', pCore, false)}</div>
+          <div class="text-[var(--muted-foreground)] leading-snug pt-0.5">${esc(pmFoot)}</div>
+        </div>
+      </div>
+      ${flagsHtml}
+      <div class="pt-2 border-t border-[var(--card-border)] space-y-1.5">
+        <div class="flex flex-wrap gap-1.5 font-mono">
+          <span class="px-2 py-0.5 rounded border border-[var(--border)] bg-[var(--background)]">${mkExtA(ensUrl, 'Ensembl GRCh38 &nearr;')}</span>
+          <span class="px-2 py-0.5 rounded border border-[var(--border)] bg-[var(--background)]">${mkExtA(atlUrl, 'AlphaGenome Atlas &nearr;')}</span>
+          <span class="px-2 py-0.5 rounded border border-[var(--border)] bg-[var(--background)]">${mkExtA(ucscUrl, 'UCSC hg38 &nearr;')}</span>
+          ${gnomUrl ? `<span class="px-2 py-0.5 rounded border border-[var(--border)] bg-[var(--background)]">${mkExtA(gnomUrl, 'gnomAD v4 (' + esc(c.gene) + ') &nearr;')}</span>` : ''}
+        </div>
+        <div class="flex items-center justify-between gap-2 font-mono text-[var(--muted-foreground)]">
+          <span>${rows.length} / ${DATA_CIS.length} windows shown</span>
+          <button type="button" data-jump-rep-cand="${esc(linkId)}" class="text-[var(--link)] hover:underline cursor-pointer">Verify Provenance in Tab 4 &rarr;</button>
+        </div>
+      </div>
+    </div>`;
+}
 function renderIntervals(){
   const qEl = document.getElementById('iv-search');
   const q = qEl ? qEl.value.trim() : '';
@@ -3514,30 +3682,48 @@ function renderIntervals(){
     if(q && !queryMatchesIdOrText([c.sc], q, (c.sc===c.pid ? c.pid+' ' : '')+c.sc+' '+c.gene+' '+c.iv+' '+c.flags+' '+c.mode)) return false;
     return true;
   });
+  if(!DATA_CIS.some(x => x.ord === selectedIvOrd)) selectedIvOrd = 5;
+  if(rows.length > 0 && !rows.some(x => x.ord === selectedIvOrd)){
+    selectedIvOrd = (rows.find(x => x.lead) || rows[0]).ord;
+  }
   document.getElementById('iv-count').textContent = `${rows.length} / ${DATA_CIS.length}`;
   document.getElementById('iv-tbody').innerHTML = rows.length ? rows.map(c => {
-    const loPad = Math.max(1, Number(c.lo) - 250), hiPad = Number(c.hi) + 250;
-    const atlUrl = `https://deepmind.google.com/science/alphagenome/atlas?q=${c.chr}:${loPad}-${hiPad}&m=locus&lItems=avi,section:RNA_SEQ,section:SPLICE_JUNCTIONS,section:DNASE`;
-    const ucscUrl = `https://genome.ucsc.edu/cgi-bin/hgTracks?db=hg38&position=${c.chr}:${loPad}-${hiPad}`;
-    const ensUrl = `https://www.ensembl.org/Homo_sapiens/Location/View?r=${c.chr.replace('chr','')}:${c.lo}-${c.hi}`;
-    const gid = GENE_ENSG[c.gene] || '';
-    const gnomUrl = gid ? `https://gnomad.broadinstitute.org/gene/${gid}?dataset=gnomad_r4` : '';
-    const linkId = (c.pid && c.pid !== 'NONE') ? c.pid : String(c.sc).replace(/\.[0-9]+$/, '');
-    return `<tr class="hover:bg-[var(--content)] align-top">
-      <td class="py-2 px-2.5 font-mono tabular-nums text-[var(--muted-foreground)]">${c.ord}</td>
-      <td class="py-2 px-2 font-mono"><div class="font-semibold"><button type="button" data-open-dossier="${esc(linkId)}" class="text-[var(--link)] hover:underline font-mono font-semibold cursor-pointer">${esc(c.gene)} &middot; Window #${c.rk}</button> <span class="text-[var(--muted-foreground)] font-normal">(${esc(c.sc)})</span></div>${gnomUrl?`<div class="text-xs mt-0.5">${mkExtA(gnomUrl, 'gnomAD v4')}</div>`:''}</td>
-      <td class="py-2 px-2 font-mono"><div>${c.lead?'<span class="text-[var(--success)] font-bold">&#9733; Lead</span>':'<span class="text-[var(--muted-foreground)]">Alt</span>'}</div><div class="text-[var(--muted-foreground)] text-xs" title="${esc(c.role)}">${esc(humanizeEnum(c.role))}</div></td>
-      <td class="py-2 px-2 font-mono"><div>${mkExtA(ensUrl, esc(c.iv))}</div><div class="text-[var(--muted-foreground)] text-xs">${c.len}bp &middot; GRCh38</div></td>
-      <td class="py-2 px-2 text-xs border-r border-[var(--card-border)]" title="${esc(c.mode)}">${esc(humanizeEnum(c.mode))}</td>
-      <td class="py-2 px-2 font-mono tabular-nums"><div>${c.tm}&deg;C</div><div class="text-[var(--muted-foreground)] text-xs">&Delta;G=${c.dg} &middot; GC=${c.gc}%</div></td>
-      <td class="py-2 px-2 font-mono tabular-nums border-r border-[var(--card-border)]">${c.avi}</td>
-      <td class="py-2 px-2 font-mono tabular-nums whitespace-nowrap">${esc(c.sp).replaceAll('/',' · ')}</td>
-      <td class="py-2 px-2 font-mono tabular-nums whitespace-nowrap"><div>${esc(c.pm).replaceAll('/',' · ')}</div></td>
-      <td class="py-2 px-2 font-mono text-xs max-w-[260px] break-words">${linkifyCisFlags(c.flags)}</td>
-      <td class="py-2 px-2 border-r border-[var(--card-border)]">${statusBadge(c.st, c)}</td>
-      <td class="py-2 px-2 font-mono whitespace-nowrap"><div>${mkExtA(atlUrl, 'Atlas &nearr;')}</div><div class="mt-0.5">${mkExtA(ucscUrl, 'UCSC &nearr;')}</div></td>
+    const isSel = c.ord === selectedIvOrd;
+    const activeCls = isSel ? 'bg-[var(--content)] border-l-4 border-l-[var(--primary)]' : 'hover:bg-[var(--content)]';
+    const pf = parseCisFlags(c.flags);
+    const isWF = String(c.st).startsWith('WARN') || String(c.st).startsWith('FAIL');
+    const cShort = String(c.st).startsWith('CAUTION') ? cautionSummary(c).short.replace(/^Caution\s*\((.*)\)$/, (_m, g) => g) : '';
+    const flagLine = c.st === 'PASS_CLEAN_GE2MM'
+      ? '0 off-target hits'
+      : (isWF
+        ? (pf.items.length === 1 ? `1 CNS (${pf.items[0].gene})` : `${pf.items.length} CNS${pf.extraNote ? ' (+62)' : ' genes'}`)
+        : (pf.items.length ? `Note: ${pf.items[0].gene}` : (cShort || 'Non-CNS only')));
+    const shortMode = SHORT_CIS_MODE[c.mode] || humanizeEnum(c.mode);
+    const chemSub = c.is_gap ? 'RNase-H Gapmer ASO' : "Steric 2'-MOE SSO";
+    return `<tr tabindex="0" data-select-iv="${c.ord}" aria-selected="${isSel?'true':'false'}" class="cursor-pointer focus:bg-[var(--content)] align-top ${activeCls}">
+      <td class="py-1.5 px-1.5 font-mono tabular-nums text-[var(--muted-foreground)]">${c.ord}</td>
+      <td class="py-1.5 px-2 whitespace-nowrap"><div class="font-mono"><strong class="font-bold text-[var(--foreground)]">${esc(c.gene)} &middot; #${c.rk}</strong> ${c.lead ? '<span class="text-[var(--success)] font-bold text-xs" title="Promoted Lead Window">&#9733; Lead</span>' : '<span class="text-[var(--muted-foreground)] text-xs">Alt</span>'}</div><div class="font-mono text-xs text-[var(--muted-foreground)]">${esc(c.sc)} &middot; ${esc(SHORT_CIS_ROLE[c.role] || humanizeEnum(c.role))}</div></td>
+      <td class="py-1.5 px-2 font-mono whitespace-nowrap"><div class="text-[var(--foreground)]">${esc(c.iv)}</div><div class="text-[var(--muted-foreground)] text-xs tabular-nums">${c.len}bp &middot; ${c.tm}&deg;C &middot; AVI ${c.avi}</div></td>
+      <td class="hidden xl:table-cell py-1.5 px-2 whitespace-nowrap" title="${esc(humanizeEnum(c.mode))}"><div class="font-medium text-[var(--foreground)]">${esc(shortMode)}</div><div class="font-mono text-xs text-[var(--muted-foreground)]">${esc(chemSub)}</div></td>
+      <td class="py-1.5 px-2 text-right whitespace-nowrap"><div>${shortIvBadge(c)}</div><div class="font-mono text-xs text-[var(--muted-foreground)] mt-0.5">${esc(flagLine)}</div></td>
     </tr>`;
-  }).join('') : `<tr><td colspan="12" class="py-6 px-4 text-center text-[var(--muted-foreground)]">No GRCh38 intervals match active filters. <button type="button" data-reset-intervals="1" class="text-[var(--link)] underline font-mono ml-1 cursor-pointer">Reset filters</button></td></tr>`;
+  }).join('') : `<tr><td colspan="5" class="py-6 px-4 text-center text-[var(--muted-foreground)]">No GRCh38 intervals match active filters. <button type="button" data-reset-intervals="1" class="text-[var(--link)] underline font-mono ml-1 cursor-pointer">Reset filters</button></td></tr>`;
+  renderIntervalDetail(rows);
+}
+function selectInterval(ord, userClick=false){
+  const n = Number(ord);
+  if(!n || !DATA_CIS.some(x => x.ord === n)) return;
+  selectedIvOrd = n;
+  renderIntervals();
+  if(userClick){
+    commitHistory('replace');
+    try {
+      if(typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024){
+        const det = document.getElementById('iv-detail');
+        if(det && det.scrollIntoView) det.scrollIntoView({behavior:'smooth', block:'nearest'});
+      }
+    } catch(_e) {}
+  }
 }
 
 function resetIntervalFilters(redraw=true){
@@ -3552,6 +3738,8 @@ function jumpToIntervals(pid){
   resetIntervalFilters(false);
   const qEl = document.getElementById('iv-search');
   if(qEl && pid) qEl.value = pid;
+  const hitOrd = findBestIvOrd(pid);
+  if(hitOrd) selectedIvOrd = hitOrd;
   switchTab('intervals', 'push', pid ? '#intervals/' + encodeURIComponent(pid) : '#intervals');
 }
 
@@ -3589,7 +3777,14 @@ function switchTab(tab, historyMode='push', explicitHash=''){
     } catch(_e) {}
   }
   if(tab==='dossiers') renderDossierMain();
-  if(tab==='intervals') renderIntervals();
+  if(tab==='intervals'){
+    renderIntervals();
+    try {
+      const itb = document.getElementById('iv-tbody');
+      const actIv = itb && itb.querySelector ? itb.querySelector('tr[data-select-iv="'+selectedIvOrd+'"]') : null;
+      if(actIv && actIv.scrollIntoView) actIv.scrollIntoView({block:'nearest'});
+    } catch(_e) {}
+  }
   if(tab==='replication' && typeof renderReplicationWorkbench === 'function') renderReplicationWorkbench();
   syncKpiHighlight();
   commitHistory(historyMode, explicitHash);
@@ -3629,6 +3824,7 @@ function restoreHistorySnapshot(snap){
   setValOf('iv-origin', snap.ivOrigin || 'ALL');
   const ivL = document.getElementById('iv-leads');
   if(ivL) ivL.checked = Boolean(snap.ivLeads);
+  if(snap.selectedIvOrd) selectedIvOrd = Number(snap.selectedIvOrd) || 5;
   if(typeof setRepMode === 'function' && snap.repMode){
     repMode = snap.repMode;
     populateRepFilterOptions();
@@ -3654,7 +3850,16 @@ function syncFromHash(fromPop=false){
   if(mu){ jumpToUpdates(decodeURIComponent(mu[1]), false); return true; }
   if(h === '#subnodes' || h === '#analytics' || h === '#portfolio'){ switchTab('portfolio', 'none'); return true; }
   const mi = /^#intervals(?:[/](.+))?$/.exec(h);
-  if(mi){ resetIntervalFilters(false); if(mi[1]) setValOf('iv-search', decodeURIComponent(mi[1])); switchTab('intervals', 'none'); return true; }
+  if(mi){
+    resetIntervalFilters(false);
+    if(mi[1]){
+      const rawIv = decodeURIComponent(mi[1]);
+      if(/^([1-9]|1[0-9]|2[0-8])$/.test(rawIv)) selectedIvOrd = Number(rawIv);
+      else { setValOf('iv-search', rawIv); const ho = findBestIvOrd(rawIv); if(ho) selectedIvOrd = ho; }
+    }
+    switchTab('intervals', 'none');
+    return true;
+  }
   const m = /^#(?:dossier|monograph)[/](.+)$/.exec(h);
   if(m){
     const res = resolveCandidateId(decodeURIComponent(m[1]));
@@ -3753,7 +3958,9 @@ document.addEventListener('click', e => {
   const rBtn = tgt.closest('[data-reset-filters]');
   if(rBtn){ e.preventDefault(); resetPortfolioFilters(true, 'ALL'); commitHistory('replace', '#portfolio'); return; }
   const cRow = tgt.closest('[data-select-cand]');
-  if(cRow){ selectCand(cRow.getAttribute('data-select-cand'), true); }
+  if(cRow){ selectCand(cRow.getAttribute('data-select-cand'), true); return; }
+  const ivRow = tgt.closest('[data-select-iv]');
+  if(ivRow){ selectInterval(ivRow.getAttribute('data-select-iv'), true); }
 });
 document.addEventListener('keydown', e => {
   const act = document.activeElement;
@@ -3788,7 +3995,9 @@ document.addEventListener('keydown', e => {
   const rsRow = raw && raw.closest ? raw.closest('tr[data-rep-select]') : null;
   if(rsRow && raw === rsRow){ e.preventDefault(); selectedRepKey = rsRow.getAttribute('data-rep-select'); renderReplicationWorkbench(); return; }
   const cRow = raw && raw.closest ? raw.closest('tr[data-select-cand]') : null;
-  if(cRow && raw === cRow){ e.preventDefault(); selectCand(cRow.getAttribute('data-select-cand'), true); }
+  if(cRow && raw === cRow){ e.preventDefault(); selectCand(cRow.getAttribute('data-select-cand'), true); return; }
+  const ivRow = raw && raw.closest ? raw.closest('tr[data-select-iv]') : null;
+  if(ivRow && raw === ivRow){ e.preventDefault(); selectInterval(ivRow.getAttribute('data-select-iv'), true); }
 });
 ['p-search','p-origin','p-dec','p-tier','p-sort'].forEach(id => {
   const el = document.getElementById(id);

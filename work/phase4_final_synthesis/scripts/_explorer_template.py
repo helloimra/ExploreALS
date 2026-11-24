@@ -276,31 +276,27 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
         </div>
         <div class="text-xs text-[var(--muted-foreground)] border-t border-[var(--card-border)] pt-2.5 space-y-1 leading-relaxed">
           <div><strong class="font-mono text-[var(--foreground)]">GENCODE v46 Off-Target Alignment Screen (1-Based Closed GRCh38 Target Windows):</strong> Candidate target windows for empirical 1-nt microwalks plus human neuron <span class="font-mono">Ca2+</span>-oscillation, <span class="font-mono">TLR9</span> &amp; primary <span class="font-mono">DRG</span> safety screens (reference transcriptome alignment does not exclude phosphorothioate protein-binding toxicity) &middot; modeled SantaLucia <span class="font-mono">2'-O-MOE PO/PS Tm / &Delta;G37</span> + <span class="font-mono">AlphaGenome AVI Phred</span> (DNA-variant conservation/splicing score, not steric ASO potency).</div>
-          <div><span class="font-mono text-[var(--foreground)]">mRNA (0&middot;1&middot;wob)</span> = GENCODE v46 spliced mRNA (&le;200bp of splice junction) 0-mm / 1-mm / G:U wobble-only genes &middot; <span class="font-mono text-[var(--foreground)]">Pre-mRNA (0&middot;1&middot;wob&middot;2&middot;blg&middot;18c)</span> = sense 0-mm / 1-mm (&le;50bp SS) / wobble (&le;50bp) / 2-mm (&le;25bp) / 1-nt bulge / 18-nt sub-core (Pass &middot; Clean requires 0 hits across all spliced mRNA, &le;50bp-SS, &le;25bp 2-mm, bulge &amp; 18-nt sub-core filters across all 28 windows; G2E3 #1 saturates GGGenome max_mm=1 and records 2-mm = NA).</div>
+          <div>Select any window on the left to inspect its labeled <span class="font-mono text-[var(--foreground)]">Spliced mRNA (&le;200bp of splice junction)</span> and <span class="font-mono text-[var(--foreground)]">Nascent Pre-mRNA (sense strand)</span> hybridization counts across <span class="font-mono">254,070</span> GENCODE v46 transcripts, <span class="font-mono">gnomAD v4</span> constrained CNS gene flags, sibling windows on the same locus, and genome browser tracks (<span class="font-mono text-[var(--success)]">Pass &middot; Clean</span> requires zero hits across all spliced mRNA, &le;50bp-SS, &le;25bp 2-mm, 1-nt bulge &amp; 18-nt sub-core filters).</div>
         </div>
       </div>
-      <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-x-auto">
-        <table class="w-full text-left border-collapse text-xs">
-          <thead>
-            <tr class="border-b border-[var(--card-border)] bg-[var(--background)] text-[var(--muted-foreground)] font-mono">
-              <th colspan="5" class="py-1.5 px-2.5 border-r border-[var(--card-border)]">1. Target Locus, Role &amp; Splicing Mechanism</th>
-              <th colspan="2" class="py-1.5 px-2 border-r border-[var(--card-border)]">2. Thermodynamics &amp; AVI</th>
-              <th colspan="4" class="py-1.5 px-2 border-r border-[var(--card-border)]">3. GENCODE v46 Off-Target Hybridization Screen (254,070 tx)</th>
-              <th colspan="1" class="py-1.5 px-2">4. Browsers</th>
-            </tr>
-            <tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
-              <th class="py-2 px-2.5">#</th><th class="py-2 px-2">Gene, Window &amp; Portals</th><th class="py-2 px-2">Role / Lead</th><th class="py-2 px-2">GRCh38 Coordinate (Ensembl)</th>
-              <th class="py-2 px-2 border-r border-[var(--card-border)]">Cis-Mechanism</th>
-              <th class="py-2 px-2" title="Modeled SantaLucia nearest-neighbor melting temperature, free energy, and GC%">Tm / &Delta;G37 / GC</th>
-              <th class="py-2 px-2 border-r border-[var(--card-border)]" title="Max AlphaGenome Variant Impact Phred score across interval">max AVI</th>
-              <th class="py-2 px-2" title="Spliced mRNA <=200bp of splice junction: 0-mm · 1-mm · wobble-only genes">mRNA (0&middot;1&middot;wob)</th>
-              <th class="py-2 px-2" title="Pre-mRNA sense: 0-mm · 1-mm <=50bp SS · wobble <=50bp · 2-mm <=25bp · 1-nt bulge · 18-nt sub-core">Pre-mRNA (0&middot;1&middot;wob&middot;2&middot;blg&middot;18c)</th>
-              <th class="py-2 px-2">Constrained CNS Gene Flags (gnomAD v4)</th><th class="py-2 px-2 border-r border-[var(--card-border)]">Safety Verdict</th>
-              <th class="py-2 px-2">Atlas &middot; UCSC</th>
-            </tr>
-          </thead>
-          <tbody id="iv-tbody" class="divide-y divide-[var(--card-border)]"></tbody>
-        </table>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
+        <div class="lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-hidden lg:relative min-h-[520px]">
+          <div class="max-h-[420px] lg:max-h-none lg:absolute lg:inset-0 overflow-y-auto overflow-x-auto">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead class="sticky top-0 z-10 bg-[var(--card)] shadow-sm">
+                <tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
+                  <th class="py-2 px-1.5 font-medium">#</th>
+                  <th class="py-2 px-2 font-medium">Gene &amp; Window</th>
+                  <th class="py-2 px-2 font-medium" title="1-based closed GRCh38 span · length · modeled Tm · max AlphaGenome AVI Phred">GRCh38 Coordinate</th>
+                  <th class="hidden xl:table-cell py-2 px-2 font-medium">Cis-Mechanism</th>
+                  <th class="py-2 px-2 font-medium text-right">Off-Target Verdict</th>
+                </tr>
+              </thead>
+              <tbody id="iv-tbody" class="divide-y divide-[var(--card-border)]"></tbody>
+            </table>
+          </div>
+        </div>
+        <div id="iv-detail" class="lg:col-span-5 bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2.5 lg:min-h-[520px]"></div>
       </div>
     </div>
 
