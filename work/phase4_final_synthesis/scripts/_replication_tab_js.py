@@ -61,14 +61,14 @@ function populateRepFilterOptions(){
   }
 }
 
-function setRepMode(mode, keepFilter=false){
+function setRepMode(mode, keepFilter=false, skipRender=false){
   repMode = mode;
   document.querySelectorAll('.rep-mode-btn').forEach(b => {
     const on = b.getAttribute('data-rep-mode') === mode;
     b.className = 'rep-mode-btn px-2.5 py-1.5 rounded border font-mono text-xs cursor-pointer ' + (on ? 'bg-[var(--primary)] text-[var(--primary-foreground)] border-[var(--primary)]' : 'bg-[var(--background)] text-[var(--foreground)] border-[var(--border)]');
   });
   if(!keepFilter) populateRepFilterOptions();
-  renderReplicationWorkbench();
+  if(!skipRender) renderReplicationWorkbench();
 }
 
 function formatRepMult(f){
@@ -186,5 +186,6 @@ function renderReplicationWorkbench(){
     }).join('') : emptyEvRow;
   }
   renderRepInspector(items.length === 0);
+  if(typeof scrollRowInPane === 'function') scrollRowInPane('rep-tbody', 'tr[data-rep-select="'+selectedRepKey+'"]');
 }
 """

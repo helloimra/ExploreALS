@@ -1487,7 +1487,7 @@ function openDossier(rawId){
   if(!rawId) return;
   const res = (typeof resolveCandidateId === 'function') ? resolveCandidateId(rawId) : null;
   const id = res ? res.id : String(rawId).replace(/\.[0-9]+$/, '');
-  if(res && res.sub && typeof pendingDossierSec !== 'undefined' && !pendingDossierSec) pendingDossierSec = 'sec-subunits';
+  if(res && res.sub && typeof pendingDossierSec !== 'undefined' && !pendingDossierSec) pendingDossierSec = 'subcard-' + res.sub;
   if(!DATA_PORT.some(x=>x.id===id)) return;
   dossierId = id;
   selectedId = id;
@@ -1497,24 +1497,19 @@ function openDossier(rawId){
       if(a && a.classList) a.classList.add('hidden');
     }
   } catch(_e) {}
-  const hasPendSec = (typeof pendingDossierSec !== 'undefined' && Boolean(pendingDossierSec));
   if(activeTab === 'dossiers'){
     renderDossierMain();
-    if(typeof commitHistory === 'function') commitHistory('push', '#dossier/' + id);
-    if(hasPendSec){
-      const secId = pendingDossierSec;
-      pendingDossierSec = '';
-      setTimeout(() => {
-        const secEl = document.getElementById(secId);
-        if(secEl && secEl.scrollIntoView) secEl.scrollIntoView({behavior:'smooth', block:'start'});
-      }, 30);
-      return;
-    }
-  } else {
-    switchTab('dossiers', 'push', '#dossier/' + id);
-    if(hasPendSec) return;
+    const secId = (typeof pendingDossierSec !== 'undefined' && pendingDossierSec) ? pendingDossierSec : '';
+    if(typeof pendingDossierSec !== 'undefined') pendingDossierSec = '';
+    if(typeof scrollViewportTo === 'function') scrollViewportTo(secId || 'view-dossiers', Boolean(secId));
+    else { try { if(typeof window !== 'undefined' && window.scrollTo) window.scrollTo(0, 0); } catch(_e) {} }
+    if(typeof commitHistory === 'function') commitHistory('push', '#dossier/' + (res && res.sub ? res.sub : id));
+    return;
   }
-  try { if(typeof window !== 'undefined' && window.scrollTo) window.scrollTo(0, 0); } catch(_e) {}
+  if(typeof pendingScrollId !== 'undefined' && !(typeof pendingDossierSec !== 'undefined' && pendingDossierSec)){
+    pendingScrollId = 'view-dossiers';
+  }
+  switchTab('dossiers', 'push', '#dossier/' + (res && res.sub ? res.sub : id));
 }
 
 function renderSummaryDomainPanels(r){
@@ -1569,7 +1564,7 @@ function renderSummaryDomainPanels(r){
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">${subRows.map(sn => {
         const vcol = sn.vraw.startsWith('KEEP')?'text-[var(--warning)] border-[var(--warning)]':(sn.vraw.startsWith('RECLASSIFY')?'text-[var(--primary)] border-[var(--primary)]':'text-[var(--error)] border-[var(--error)]');
         const gPills = genePortalPills(sn.gene);
-        return `<div class="p-3.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] space-y-2.5">
+        return `<div id="subcard-${esc(sn.id)}" class="p-3.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] space-y-2.5">
           <div class="flex items-start justify-between gap-2 flex-wrap border-b border-[var(--card-border)] pb-2">
             <div>
               <div class="flex items-center gap-1.5 flex-wrap" title="ExploreALS Subunit ${esc(sn.id)}">
@@ -1765,11 +1760,15 @@ function renderDossierSidebar(){
 
 function renderDossierMain(){
   renderDossierSidebar();
-  try {
-    const nav = document.getElementById('d-nav');
-    const actBtn = nav && nav.querySelector ? nav.querySelector('[data-open-dossier="'+dossierId+'"]') : null;
-    if(actBtn && actBtn.scrollIntoView) actBtn.scrollIntoView({block:'nearest'});
-  } catch(_e) {}
+  if(typeof scrollRowInPane === 'function'){
+    scrollRowInPane('d-nav', '[data-open-dossier="'+dossierId+'"]');
+  } else {
+    try {
+      const nav = document.getElementById('d-nav');
+      const actBtn = nav && nav.querySelector ? nav.querySelector('[data-open-dossier="'+dossierId+'"]') : null;
+      if(actBtn && actBtn.scrollIntoView) actBtn.scrollIntoView({block:'nearest'});
+    } catch(_e) {}
+  }
   const box = document.getElementById('d-content');
   if(!box) return;
   const r = DATA_PORT.find(x=>x.id===dossierId) || DATA_PORT[0];
@@ -1848,7 +1847,7 @@ function renderDossierMain(){
   if(hasCisPanel) jumpSecs.push(['sec-cis', 'Splice Windows']);
   if(evRows.length) jumpSecs.push(['sec-ledger', `Primary Evidence (${evRows.length})`]);
   const fromPortBtn = (isFullExplorer && typeof dossierFromPortfolio !== 'undefined' && dossierFromPortfolio)
-    ? `<button type="button" data-switch-tab="portfolio" class="px-2 py-0.5 rounded border border-[var(--primary)] text-[var(--primary)] font-mono font-semibold text-xs cursor-pointer">&larr; Triage Table</button>`
+    ? `<button type="button" data-return-portfolio="${esc(r.id)}" class="px-2 py-0.5 rounded border border-[var(--primary)] text-[var(--primary)] font-mono font-semibold text-xs cursor-pointer">&larr; Triage Table</button>`
     : '';
   const secJumpBar = `<div class="flex flex-wrap items-center justify-between gap-1.5 pb-1 border-b border-[var(--card-border)] text-xs font-mono">
     <div class="flex flex-wrap items-center gap-1">${fromPortBtn}<span class="text-[var(--muted-foreground)] mr-0.5">Sections:</span>${jumpSecs.map(([sid, slbl]) => `<button type="button" data-scroll-sec="${sid}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] cursor-pointer">${esc(slbl)}</button>`).join('')}</div>

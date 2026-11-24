@@ -13,10 +13,40 @@ let activeLens = 'ALL';
 let activeUpdCat = 'ALL';
 let dossierFromPortfolio = false;
 let pendingDossierSec = '';
+let pendingScrollId = '';
+let pendingScrollY = null;
 let isRestoringHistory = false;
 let historyInitialized = false;
 let lastSelHidden = false;
 const expandedDetailGates = {};
+
+function scrollRowInPane(boxId, itemSel){
+  try {
+    const box = document.getElementById(boxId);
+    if(!box || !box.querySelector) return;
+    const item = box.querySelector(itemSel);
+    const wrap = (box.tagName && String(box.tagName).toUpperCase() === 'TBODY')
+      ? ((box.closest && box.closest('.overflow-y-auto')) || (box.parentElement && box.parentElement.parentElement) || box.parentElement)
+      : box;
+    if(!item || !wrap || wrap.scrollHeight <= wrap.clientHeight) return;
+    const wRect = wrap.getBoundingClientRect(), iRect = item.getBoundingClientRect();
+    const relTop = (iRect.top - wRect.top) + wrap.scrollTop;
+    wrap.scrollTop = Math.max(0, Math.round(relTop - (wrap.clientHeight - iRect.height) / 2));
+  } catch(_e) {}
+}
+
+function scrollViewportTo(elId, smooth=false){
+  try {
+    if(typeof window === 'undefined' || !window.scrollTo) return;
+    if(!elId){ window.scrollTo(0, 0); return; }
+    const el = document.getElementById(elId);
+    if(!el || !el.getBoundingClientRect){ window.scrollTo(0, 0); return; }
+    const topY = Math.max(0, Math.round(el.getBoundingClientRect().top + (window.scrollY || window.pageYOffset || 0) - 10));
+    window.scrollTo({top: topY, left: 0, behavior: smooth ? 'smooth' : 'auto'});
+  } catch(_e) {
+    try { window.scrollTo(0, 0); } catch(_e2) {}
+  }
+}
 
 function valOf(id, fb=''){ const el = document.getElementById(id); return el ? String(el.value || '') : fb; }
 function setValOf(id, v){ const el = document.getElementById(id); if(el && v !== undefined && v !== null) el.value = v; }
@@ -62,6 +92,7 @@ function buildHistorySnapshot(targetHash){
     repSearch: valOf('rep-search'), repFilter: valOf('rep-filter','ALL'),
     repReturnDossier: (typeof repReturnDossier !== 'undefined' ? repReturnDossier : ''),
     repReturnTab: (typeof repReturnTab !== 'undefined' ? repReturnTab : 'dossiers'),
+    scrollY: (typeof window !== 'undefined' ? Math.round(window.scrollY || window.pageYOffset || 0) : 0),
     hash: targetHash
   };
 }
@@ -184,7 +215,16 @@ function jumpToUpdates(query, updateHash=true){
   activeUpdCat = 'ALL';
   const qEl = document.getElementById('upd-search');
   if(qEl) qEl.value = query || '';
+  const uf = document.getElementById('upd-feed');
+  if(uf) uf.scrollTop = 0;
   const targetH = query ? ('#updates/' + encodeURIComponent(query)) : '#updates';
+  if(activeTab === 'home'){
+    renderUpdatesLog();
+    scrollViewportTo('upd-card', true);
+    if(updateHash) commitHistory('push', targetH);
+    return;
+  }
+  pendingScrollId = 'upd-card';
   switchTab('home', updateHash ? 'push' : 'none', targetH);
 }
 
@@ -547,8 +587,14 @@ function quickFilter(mode){
   else if(mode==='EXPL') document.getElementById('p-dec').value='KEEP_EXPLORATORY_UNPROVEN';
   else if(mode==='BENCH') document.getElementById('p-dec').value='RECLASSIFY_BENCHMARK_OR_BIOMARKER';
   else if(mode==='DROP') document.getElementById('p-dec').value='DROP';
-  if(!wasPortfolio) switchTab('portfolio', 'push');
-  else { renderPortfolio(); commitHistory('replace'); }
+  if(!wasPortfolio){
+    pendingScrollId = 'p-filter-bar';
+    switchTab('portfolio', 'push');
+  } else {
+    renderPortfolio();
+    scrollViewportTo('p-filter-bar', true);
+    commitHistory('replace');
+  }
 }
 function resetPortfolioFilters(redraw=true, keepQuick='ALL'){
   activeQuick = keepQuick;
@@ -806,10 +852,16 @@ function jumpToIntervals(pid){
   if(qEl && pid) qEl.value = pid;
   const hitOrd = findBestIvOrd(pid);
   if(hitOrd) selectedIvOrd = hitOrd;
+  const isMob = (typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024);
+  pendingScrollId = (isMob && pid) ? 'iv-detail' : 'iv-filter-bar';
   switchTab('intervals', 'push', pid ? '#intervals/' + encodeURIComponent(pid) : '#intervals');
 }
 
 function switchTab(tab, historyMode='push', explicitHash=''){
+  const outgoingY = (typeof window !== 'undefined') ? Math.round(window.scrollY || window.pageYOffset || 0) : 0;
+  if(!isRestoringHistory && historyMode === 'push' && historyInitialized && typeof history !== 'undefined' && history.state){
+    try { history.replaceState(Object.assign({}, history.state, {scrollY: outgoingY}), ''); } catch(_e) {}
+  }
   activeTab = tab;
   ['home','portfolio','dossiers','intervals','replication'].forEach(t => {
     const el = document.getElementById('view-'+t);
@@ -836,34 +888,29 @@ function switchTab(tab, historyMode='push', explicitHash=''){
   if(tab==='home' && typeof renderUpdatesLog === 'function') renderUpdatesLog();
   if(tab==='portfolio'){
     renderPortfolio();
-    try {
-      const tb = document.getElementById('p-tbody');
-      const actRow = tb && tb.querySelector ? tb.querySelector('[data-select-cand="'+selectedId+'"]') : null;
-      if(actRow && actRow.scrollIntoView) actRow.scrollIntoView({block:'nearest'});
-    } catch(_e) {}
+    scrollRowInPane('p-tbody', 'tr[data-select-cand="'+selectedId+'"]');
   }
   if(tab==='dossiers') renderDossierMain();
   if(tab==='intervals'){
     renderIntervals();
-    try {
-      const itb = document.getElementById('iv-tbody');
-      const actIv = itb && itb.querySelector ? itb.querySelector('tr[data-select-iv="'+selectedIvOrd+'"]') : null;
-      if(actIv && actIv.scrollIntoView) actIv.scrollIntoView({block:'nearest'});
-    } catch(_e) {}
+    scrollRowInPane('iv-tbody', 'tr[data-select-iv="'+selectedIvOrd+'"]');
   }
   if(tab==='replication' && typeof renderReplicationWorkbench === 'function') renderReplicationWorkbench();
   syncKpiHighlight();
-  commitHistory(historyMode, explicitHash);
-  if(tab === 'dossiers' && pendingDossierSec){
-    const secId = pendingDossierSec;
-    pendingDossierSec = '';
-    setTimeout(() => {
-      const secEl = document.getElementById(secId);
-      if(secEl && secEl.scrollIntoView) secEl.scrollIntoView({behavior:'smooth', block:'start'});
-    }, 30);
-    return;
+  const secId = (tab === 'dossiers' && pendingDossierSec) ? pendingDossierSec : '';
+  pendingDossierSec = '';
+  const targetId = secId || pendingScrollId;
+  pendingScrollId = '';
+  const restoreY = pendingScrollY;
+  pendingScrollY = null;
+  if(restoreY !== null){
+    try { if(typeof window !== 'undefined' && window.scrollTo) window.scrollTo(0, restoreY); } catch(_e) {}
+  } else if(targetId){
+    scrollViewportTo(targetId, false);
+  } else {
+    try { if(typeof window !== 'undefined' && window.scrollTo) window.scrollTo(0, 0); } catch(_e) {}
   }
-  try { if(typeof window !== 'undefined' && window.scrollTo) window.scrollTo(0, 0); } catch(_e) {}
+  commitHistory(historyMode, explicitHash);
 }
 
 function restoreHistorySnapshot(snap){
@@ -904,6 +951,7 @@ function restoreHistorySnapshot(snap){
   setValOf('rep-filter', snap.repFilter || 'ALL');
   if(typeof repReturnDossier !== 'undefined') repReturnDossier = snap.repReturnDossier || '';
   if(typeof repReturnTab !== 'undefined') repReturnTab = snap.repReturnTab || 'dossiers';
+  pendingScrollY = (typeof snap.scrollY === 'number') ? snap.scrollY : 0;
   switchTab(snap.tab, 'none');
   return true;
 }
@@ -911,7 +959,12 @@ function restoreHistorySnapshot(snap){
 function syncFromHash(fromPop=false){
   const h = location.hash || '';
   if(fromPop && (h === '' || h === '#')){ activeUpdCat = 'ALL'; setValOf('upd-search', ''); switchTab('home', 'none'); return true; }
-  if(h === '#home' || h === '#updates'){ if(h === '#home'){ activeUpdCat = 'ALL'; setValOf('upd-search', ''); } switchTab('home', 'none'); return true; }
+  if(h === '#home' || h === '#updates'){
+    if(h === '#home'){ activeUpdCat = 'ALL'; setValOf('upd-search', ''); }
+    else { pendingScrollId = 'upd-card'; }
+    switchTab('home', 'none');
+    return true;
+  }
   const mu = /^#updates[/](.+)$/.exec(h);
   if(mu){ jumpToUpdates(decodeURIComponent(mu[1]), false); return true; }
   if(h === '#subnodes' || h === '#analytics' || h === '#portfolio'){ switchTab('portfolio', 'none'); return true; }
@@ -922,6 +975,8 @@ function syncFromHash(fromPop=false){
       const rawIv = decodeURIComponent(mi[1]);
       if(/^([1-9]|1[0-9]|2[0-8])$/.test(rawIv)) selectedIvOrd = Number(rawIv);
       else { setValOf('iv-search', rawIv); const ho = findBestIvOrd(rawIv); if(ho) selectedIvOrd = ho; }
+      const isMob = (typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024);
+      pendingScrollId = isMob ? 'iv-detail' : 'iv-filter-bar';
     }
     switchTab('intervals', 'none');
     return true;
@@ -930,7 +985,8 @@ function syncFromHash(fromPop=false){
   if(m){
     const res = resolveCandidateId(decodeURIComponent(m[1]));
     if(res && DATA_PORT.some(x=>x.id===res.id)){
-      if(res.sub) pendingDossierSec = 'sec-subunits';
+      if(res.sub) pendingDossierSec = 'subcard-' + res.sub;
+      else pendingScrollId = 'view-dossiers';
       dossierId = res.id; selectedId = res.id;
       switchTab('dossiers', 'none');
       return true;
@@ -943,7 +999,7 @@ function syncFromHash(fromPop=false){
       const cKey = rc ? rc.id : decodeURIComponent(mr[1]);
       openReplicationTarget('cand', cKey, cKey, 'dossiers', 'none');
     }
-    else if(mr[2]){ openReplicationTarget(mr[2].startsWith('DS') ? 'ds' : (mr[2].startsWith('EV-') ? 'ev' : 'run'), mr[2], '', 'dossiers', 'none'); }
+    else if(mr[2]){ openReplicationTarget(mr[2].startsWith('DS') ? 'ds' : (mr[2].startsWith('EV-') ? 'ev' : 'run'), mr[2], '', '', 'none'); }
     else { switchTab('replication', 'none'); }
     return true;
   }
@@ -980,21 +1036,28 @@ document.addEventListener('click', e => {
   const hfBtn = tgt.closest('[data-home-flagships]');
   if(hfBtn){ e.preventDefault(); dossierSlice = 'T12'; dossierLens = 'ALL'; openDossier('EALS-030'); return; }
   const hcBtn = tgt.closest('[data-home-contrasts]');
-  if(hcBtn){ e.preventDefault(); const dr = document.getElementById('contrasts-drawer'); if(dr) dr.open = true; switchTab('portfolio', 'push'); if(dr && dr.scrollIntoView){ try{ dr.scrollIntoView({behavior:'smooth', block:'start'}); }catch(_e){} } return; }
+  if(hcBtn){ e.preventDefault(); const dr = document.getElementById('contrasts-drawer'); if(dr) dr.open = true; pendingScrollId = 'contrasts-drawer'; switchTab('portfolio', 'push'); return; }
+  const curRepFrom = () => activeTab==='dossiers' ? dossierId : (activeTab==='portfolio' ? selectedId : (activeTab==='intervals' ? ((DATA_CIS.find(x => x.ord === selectedIvOrd) || {}).pid || '') : ''));
   const reBtn = tgt.closest('[data-open-rep-ev]');
-  if(reBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('ev', reBtn.getAttribute('data-open-rep-ev'), activeTab==='dossiers'?dossierId:(activeTab==='portfolio'?selectedId:''), activeTab); return; }
+  if(reBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('ev', reBtn.getAttribute('data-open-rep-ev'), curRepFrom(), activeTab); return; }
   const rrBtn = tgt.closest('[data-open-rep-run]');
-  if(rrBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('run', rrBtn.getAttribute('data-open-rep-run'), activeTab==='dossiers'?dossierId:(activeTab==='portfolio'?selectedId:''), activeTab); return; }
+  if(rrBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('run', rrBtn.getAttribute('data-open-rep-run'), curRepFrom(), activeTab); return; }
   const rdBtn = tgt.closest('[data-open-rep-ds]');
-  if(rdBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('ds', rdBtn.getAttribute('data-open-rep-ds'), activeTab==='dossiers'?dossierId:(activeTab==='portfolio'?selectedId:''), activeTab); return; }
+  if(rdBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('ds', rdBtn.getAttribute('data-open-rep-ds'), curRepFrom(), activeTab); return; }
   const rcBtn = tgt.closest('[data-jump-rep-cand]');
   if(rcBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('cand', rcBtn.getAttribute('data-jump-rep-cand'), rcBtn.getAttribute('data-jump-rep-cand'), activeTab); return; }
+  const retPBtn = tgt.closest('[data-return-portfolio]');
+  if(retPBtn){ e.preventDefault(); const cid = retPBtn.getAttribute('data-return-portfolio')||''; if(cid && DATA_PORT.some(x=>x.id===cid)){ selectedId = cid; dossierId = cid; } pendingScrollId = (typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024) ? 'p-detail' : 'p-split-pane'; switchTab('portfolio', 'push'); return; }
+  const retIvBtn = tgt.closest('[data-return-intervals]');
+  if(retIvBtn){ e.preventDefault(); jumpToIntervals(retIvBtn.getAttribute('data-return-intervals')||''); return; }
+  const retUpdBtn = tgt.closest('[data-return-updates]');
+  if(retUpdBtn){ e.preventDefault(); pendingScrollId = 'upd-card'; switchTab('home', 'push', defaultHashForCurrentState() === '#home' ? '#updates' : ''); return; }
   const rmBtn = tgt.closest('[data-rep-mode]');
   if(rmBtn){ e.preventDefault(); setRepMode(rmBtn.getAttribute('data-rep-mode')); commitHistory('replace'); return; }
   const rsRow = tgt.closest('[data-rep-select]');
-  if(rsRow){ selectedRepKey = rsRow.getAttribute('data-rep-select'); renderReplicationWorkbench(); commitHistory('replace'); return; }
+  if(rsRow){ selectedRepKey = rsRow.getAttribute('data-rep-select'); renderReplicationWorkbench(); if(typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024) scrollViewportTo('rep-detail', true); commitHistory('replace'); return; }
   const dgBtn = tgt.closest('[data-rep-dag]');
-  if(dgBtn){ e.preventDefault(); const [m,f] = dgBtn.getAttribute('data-rep-dag').split('|'); setRepMode(m); document.getElementById('rep-filter').value = f; renderReplicationWorkbench(); commitHistory('replace'); return; }
+  if(dgBtn){ e.preventDefault(); const [m,f] = dgBtn.getAttribute('data-rep-dag').split('|'); setRepMode(m, false, true); document.getElementById('rep-filter').value = f; renderReplicationWorkbench(); scrollViewportTo('rep-workbench-bar', true); commitHistory('replace'); return; }
   const rrpBtn = tgt.closest('[data-reset-rep]');
   if(rrpBtn){ e.preventDefault(); repReturnDossier=''; repReturnTab='dossiers'; document.getElementById('rep-search').value=''; setRepMode('runs'); commitHistory('replace', '#replication'); return; }
   const dlBtn = tgt.closest('[data-dl-reg]');
@@ -1002,7 +1065,7 @@ document.addEventListener('click', e => {
   const dsBtn = tgt.closest('[data-open-dossier-sec]');
   if(dsBtn){ e.preventDefault(); e.stopPropagation(); const [did, sid] = (dsBtn.getAttribute('data-open-dossier-sec')||'').split('|'); dossierFromPortfolio = (activeTab === 'portfolio'); pendingDossierSec = sid || ''; openDossier(did); return; }
   const scBtn = tgt.closest('[data-scroll-sec]');
-  if(scBtn){ e.preventDefault(); const el = document.getElementById(scBtn.getAttribute('data-scroll-sec')||''); if(el && el.scrollIntoView) el.scrollIntoView({behavior:'smooth', block:'start'}); return; }
+  if(scBtn){ e.preventDefault(); scrollViewportTo(scBtn.getAttribute('data-scroll-sec')||'', true); return; }
   const wBtn = tgt.closest('[data-open-dossier]');
   if(wBtn){ e.preventDefault(); e.stopPropagation(); dossierFromPortfolio = (activeTab === 'portfolio' || (activeTab === 'dossiers' && dossierFromPortfolio)); pendingDossierSec = ''; openDossier(wBtn.getAttribute('data-open-dossier')); return; }
   const wsBtn = tgt.closest('[data-dossier-slice]');
@@ -1018,7 +1081,13 @@ document.addEventListener('click', e => {
   const riBtn = tgt.closest('[data-reset-intervals]');
   if(riBtn){ e.preventDefault(); resetIntervalFilters(true); commitHistory('replace', '#intervals'); return; }
   const tBtn = tgt.closest('[data-switch-tab]');
-  if(tBtn){ e.preventDefault(); switchTab(tBtn.getAttribute('data-switch-tab')); return; }
+  if(tBtn){
+    e.preventDefault();
+    const destT = tBtn.getAttribute('data-switch-tab');
+    if(destT === 'intervals' && tBtn.classList && tBtn.classList.contains('kpi-btn')) pendingScrollId = 'iv-filter-bar';
+    switchTab(destT);
+    return;
+  }
   const qBtn = tgt.closest('[data-quick-filter]');
   if(qBtn){ e.preventDefault(); quickFilter(qBtn.getAttribute('data-quick-filter')); return; }
   const rBtn = tgt.closest('[data-reset-filters]');
@@ -1057,7 +1126,7 @@ document.addEventListener('keydown', e => {
   if(e.key !== 'Enter' && e.key !== ' ') return;
   const raw = e.target;
   const dgBtn = raw && raw.closest ? raw.closest('[data-rep-dag]') : null;
-  if(dgBtn && raw === dgBtn){ e.preventDefault(); const [m,f] = dgBtn.getAttribute('data-rep-dag').split('|'); setRepMode(m); document.getElementById('rep-filter').value = f; renderReplicationWorkbench(); return; }
+  if(dgBtn && raw === dgBtn){ e.preventDefault(); const [m,f] = dgBtn.getAttribute('data-rep-dag').split('|'); setRepMode(m, false, true); document.getElementById('rep-filter').value = f; renderReplicationWorkbench(); scrollViewportTo('rep-workbench-bar', true); return; }
   const rsRow = raw && raw.closest ? raw.closest('tr[data-rep-select]') : null;
   if(rsRow && raw === rsRow){ e.preventDefault(); selectedRepKey = rsRow.getAttribute('data-rep-select'); renderReplicationWorkbench(); return; }
   const cRow = raw && raw.closest ? raw.closest('tr[data-select-cand]') : null;

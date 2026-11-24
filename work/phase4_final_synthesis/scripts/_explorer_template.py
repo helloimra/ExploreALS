@@ -122,7 +122,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           </div>
         </div>
 
-        <div class="lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
+        <div id="upd-card" class="lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
           <div class="flex flex-wrap items-start justify-between gap-2 border-b border-[var(--card-border)] pb-2.5">
             <div>
               <div class="flex flex-wrap items-center gap-2">
@@ -178,7 +178,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           </table>
         </div>
       </details>
-      <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex flex-wrap items-center gap-2">
+      <div id="p-filter-bar" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex flex-wrap items-center gap-2">
         <input id="p-search" aria-label="Search candidates" type="text" placeholder="Search ID (e.g. EALS-006, #4), gene/drug, subunit (G2E3, C1QA)..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs flex-1 min-w-[200px] text-[var(--foreground)]" />
         <select id="p-origin" aria-label="Filter by biological evidence source" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
           <option value="ALL">Evidence Source: All (52)</option>
@@ -224,7 +224,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           <strong class="text-[var(--foreground)]">Rank &amp; Triage Key:</strong> Priority #Rk = translational priority (tier &middot; trial landscape &middot; validation steps &middot; stage) &middot; <span class="text-[var(--primary)]">Evidence #Rk</span> = curated human genetic &amp; CNS pathology ordering (36 prioritized programs; editorial order, not win probability) &middot; <span class="text-[var(--warning)]">Keep&middot;Exploratory (25)</span> = untested triage queue (not endorsement) &middot; Modeled estimates never rank candidates.
         </div>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
+      <div id="p-split-pane" class="grid grid-cols-1 lg:grid-cols-12 gap-3">
         <div class="lg:col-span-8 bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-hidden lg:relative min-h-[520px]">
           <div class="max-h-[420px] lg:max-h-none lg:absolute lg:inset-0 overflow-y-auto overflow-x-auto">
             <table class="w-full text-left border-collapse text-xs">
@@ -251,7 +251,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
 """
 
 HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labelledby="tab-btn-intervals" class="hidden space-y-3">
-      <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 space-y-2">
+      <div id="iv-filter-bar" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 space-y-2">
         <div class="flex flex-wrap items-center gap-2">
           <input id="iv-search" aria-label="Search GRCh38 intervals" type="text" placeholder="Filter gene, ID, coordinate..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs min-w-[180px] text-[var(--foreground)]" />
           <select id="iv-status" aria-label="Filter by off-target safety status" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
@@ -279,7 +279,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
           <div>Select any window on the left to inspect its labeled <span class="font-mono text-[var(--foreground)]">Spliced mRNA (&le;200bp of splice junction)</span> and <span class="font-mono text-[var(--foreground)]">Nascent Pre-mRNA (sense strand)</span> hybridization counts across <span class="font-mono">254,070</span> GENCODE v46 transcripts, <span class="font-mono">gnomAD v4</span> constrained CNS gene flags, sibling windows on the same locus, and genome browser tracks (<span class="font-mono text-[var(--success)]">Pass &middot; Clean</span> requires zero hits across all spliced mRNA, &le;50bp-SS, &le;25bp 2-mm, 1-nt bulge &amp; 18-nt sub-core filters).</div>
         </div>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
+      <div id="iv-split-pane" class="grid grid-cols-1 lg:grid-cols-12 gap-3">
         <div class="lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-hidden lg:relative min-h-[520px]">
           <div class="max-h-[420px] lg:max-h-none lg:absolute lg:inset-0 overflow-y-auto overflow-x-auto">
             <table class="w-full text-left border-collapse text-xs">
@@ -389,7 +389,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
         </div>
       </div>
 
-      <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex flex-wrap items-center gap-2">
+      <div id="rep-workbench-bar" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex flex-wrap items-center gap-2">
         <div class="flex flex-wrap gap-1.5" role="group" aria-label="Replication Workbench Mode">
           <button type="button" data-rep-mode="runs" class="rep-mode-btn px-2.5 py-1.5 rounded border font-mono text-xs cursor-pointer">8 Flagship + 50 Runs (58)</button>
           <button type="button" data-rep-mode="datasets" class="rep-mode-btn px-2.5 py-1.5 rounded border font-mono text-xs cursor-pointer">Staged Datasets (40)</button>
@@ -401,7 +401,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
         <span id="rep-count" class="font-mono tabular-nums text-[var(--muted-foreground)] text-xs ml-auto">58 / 58</span>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
+      <div id="rep-split-pane" class="grid grid-cols-1 lg:grid-cols-12 gap-3">
         <div class="lg:col-span-6 bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-hidden lg:relative lg:min-h-[520px]">
           <div class="max-h-[420px] lg:max-h-none lg:absolute lg:inset-0 overflow-y-auto overflow-x-auto">
             <table class="w-full text-left border-collapse text-xs">

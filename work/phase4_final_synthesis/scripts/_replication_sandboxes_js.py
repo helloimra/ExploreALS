@@ -34,10 +34,14 @@ function renderRepInspector(isEmpty=false){
   if(!box) return;
   const retBtn = repReturnDossier
     ? (repReturnTab === 'portfolio'
-      ? `<button type="button" data-switch-tab="portfolio" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} in Triage Table</button>`
-      : `<button type="button" data-open-dossier="${esc(repReturnDossier)}" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} Report</button>`)
+      ? `<button type="button" data-return-portfolio="${esc(repReturnDossier)}" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} in Triage Table</button>`
+      : (repReturnTab === 'intervals'
+        ? `<button type="button" data-return-intervals="${esc(repReturnDossier)}" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} in Splice Windows</button>`
+        : (repReturnTab === 'home'
+          ? `<button type="button" data-return-updates="1" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to Living Research Log</button>`
+          : `<button type="button" data-open-dossier="${esc(repReturnDossier)}" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} Report</button>`)))
     : '';
-  const retBar = repReturnDossier ? `<div class="p-2 rounded bg-[var(--background)] border border-[var(--primary)] flex items-center justify-between gap-2 text-xs font-mono"><span>Inspecting provenance from <strong>${esc(repReturnDossier)}</strong></span>${retBtn}</div>` : '';
+  const retBar = repReturnDossier ? `<div class="p-2 rounded bg-[var(--background)] border border-[var(--primary)] flex items-center justify-between gap-2 text-xs font-mono"><span>Inspecting provenance from <strong>${esc(repReturnDossier === 'Updates' ? 'Research Log' : repReturnDossier)}</strong></span>${retBtn}</div>` : '';
   if(isEmpty){
     box.innerHTML = retBar + '<div class="p-6 rounded bg-[var(--background)] border border-[var(--card-border)] text-center text-[var(--muted-foreground)] text-xs">No items match active filter. <button type="button" data-reset-rep="1" class="text-[var(--link)] underline font-mono ml-1 cursor-pointer">Reset filters</button></div>';
     return;
@@ -105,17 +109,28 @@ function renderRepInspector(isEmpty=false){
   }
 }
 
-function openReplicationTarget(kind, key, fromDossier='', fromTab='dossiers', historyMode='push'){
-  if(fromDossier){ repReturnDossier = fromDossier; repReturnTab = fromTab || 'dossiers'; }
+function openReplicationTarget(kind, key, fromDossier='', fromTab='', historyMode='push'){
+  if(fromTab !== 'replication'){
+    if(fromTab === 'home'){ repReturnDossier = 'Updates'; repReturnTab = 'home'; }
+    else if(fromDossier){ repReturnDossier = fromDossier; repReturnTab = fromTab || 'dossiers'; }
+    else { repReturnDossier = ''; repReturnTab = 'dossiers'; }
+  }
   const newH = kind === 'cand' ? '#replication/cand/' + encodeURIComponent(key) : '#replication/' + encodeURIComponent(key);
-  switchTab('replication', 'none');
   document.getElementById('rep-search').value = '';
-  if(kind === 'run'){ setRepMode('runs'); selectedRepKey = key; }
-  else if(kind === 'ds'){ setRepMode('datasets'); selectedRepKey = key; }
-  else if(kind === 'ev'){ setRepMode('evidence'); selectedRepKey = key; }
-  else if(kind === 'cand'){ setRepMode('evidence'); document.getElementById('rep-search').value = key; }
-  renderReplicationWorkbench();
-  if(typeof commitHistory === 'function') commitHistory(historyMode, newH);
+  if(kind === 'run'){ setRepMode('runs', false, true); selectedRepKey = key; }
+  else if(kind === 'ds'){ setRepMode('datasets', false, true); selectedRepKey = key; }
+  else if(kind === 'ev'){ setRepMode('evidence', false, true); selectedRepKey = key; }
+  else if(kind === 'cand'){ setRepMode('evidence', false, true); document.getElementById('rep-search').value = key; }
+  const isMob = (typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024);
+  const targetEl = (isMob && kind !== 'cand') ? 'rep-detail' : 'rep-workbench-bar';
+  if(activeTab === 'replication'){
+    renderReplicationWorkbench();
+    if(typeof scrollViewportTo === 'function') scrollViewportTo(targetEl, true);
+    if(typeof commitHistory === 'function') commitHistory(historyMode, newH);
+  } else {
+    if(typeof pendingScrollId !== 'undefined') pendingScrollId = targetEl;
+    switchTab('replication', historyMode, newH);
+  }
 }
 
 function downloadBlob(filename, mime, content){

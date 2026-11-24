@@ -446,7 +446,7 @@ svg { display: block; vertical-align: middle; }
           </div>
         </div>
 
-        <div class="lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
+        <div id="upd-card" class="lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
           <div class="flex flex-wrap items-start justify-between gap-2 border-b border-[var(--card-border)] pb-2.5">
             <div>
               <div class="flex flex-wrap items-center gap-2">
@@ -502,7 +502,7 @@ svg { display: block; vertical-align: middle; }
           </table>
         </div>
       </details>
-      <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex flex-wrap items-center gap-2">
+      <div id="p-filter-bar" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex flex-wrap items-center gap-2">
         <input id="p-search" aria-label="Search candidates" type="text" placeholder="Search ID (e.g. EALS-006, #4), gene/drug, subunit (G2E3, C1QA)..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs flex-1 min-w-[200px] text-[var(--foreground)]" />
         <select id="p-origin" aria-label="Filter by biological evidence source" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
           <option value="ALL">Evidence Source: All (52)</option>
@@ -548,7 +548,7 @@ svg { display: block; vertical-align: middle; }
           <strong class="text-[var(--foreground)]">Rank &amp; Triage Key:</strong> Priority #Rk = translational priority (tier &middot; trial landscape &middot; validation steps &middot; stage) &middot; <span class="text-[var(--primary)]">Evidence #Rk</span> = curated human genetic &amp; CNS pathology ordering (36 prioritized programs; editorial order, not win probability) &middot; <span class="text-[var(--warning)]">Keep&middot;Exploratory (25)</span> = untested triage queue (not endorsement) &middot; Modeled estimates never rank candidates.
         </div>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
+      <div id="p-split-pane" class="grid grid-cols-1 lg:grid-cols-12 gap-3">
         <div class="lg:col-span-8 bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-hidden lg:relative min-h-[520px]">
           <div class="max-h-[420px] lg:max-h-none lg:absolute lg:inset-0 overflow-y-auto overflow-x-auto">
             <table class="w-full text-left border-collapse text-xs">
@@ -573,7 +573,7 @@ svg { display: block; vertical-align: middle; }
       </div>
     </div>
     <div id="view-intervals" role="tabpanel" aria-labelledby="tab-btn-intervals" class="hidden space-y-3">
-      <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 space-y-2">
+      <div id="iv-filter-bar" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 space-y-2">
         <div class="flex flex-wrap items-center gap-2">
           <input id="iv-search" aria-label="Search GRCh38 intervals" type="text" placeholder="Filter gene, ID, coordinate..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs min-w-[180px] text-[var(--foreground)]" />
           <select id="iv-status" aria-label="Filter by off-target safety status" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
@@ -601,7 +601,7 @@ svg { display: block; vertical-align: middle; }
           <div>Select any window on the left to inspect its labeled <span class="font-mono text-[var(--foreground)]">Spliced mRNA (&le;200bp of splice junction)</span> and <span class="font-mono text-[var(--foreground)]">Nascent Pre-mRNA (sense strand)</span> hybridization counts across <span class="font-mono">254,070</span> GENCODE v46 transcripts, <span class="font-mono">gnomAD v4</span> constrained CNS gene flags, sibling windows on the same locus, and genome browser tracks (<span class="font-mono text-[var(--success)]">Pass &middot; Clean</span> requires zero hits across all spliced mRNA, &le;50bp-SS, &le;25bp 2-mm, 1-nt bulge &amp; 18-nt sub-core filters).</div>
         </div>
       </div>
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
+      <div id="iv-split-pane" class="grid grid-cols-1 lg:grid-cols-12 gap-3">
         <div class="lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-hidden lg:relative min-h-[520px]">
           <div class="max-h-[420px] lg:max-h-none lg:absolute lg:inset-0 overflow-y-auto overflow-x-auto">
             <table class="w-full text-left border-collapse text-xs">
@@ -711,7 +711,7 @@ svg { display: block; vertical-align: middle; }
         </div>
       </div>
 
-      <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex flex-wrap items-center gap-2">
+      <div id="rep-workbench-bar" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex flex-wrap items-center gap-2">
         <div class="flex flex-wrap gap-1.5" role="group" aria-label="Replication Workbench Mode">
           <button type="button" data-rep-mode="runs" class="rep-mode-btn px-2.5 py-1.5 rounded border font-mono text-xs cursor-pointer">8 Flagship + 50 Runs (58)</button>
           <button type="button" data-rep-mode="datasets" class="rep-mode-btn px-2.5 py-1.5 rounded border font-mono text-xs cursor-pointer">Staged Datasets (40)</button>
@@ -723,7 +723,7 @@ svg { display: block; vertical-align: middle; }
         <span id="rep-count" class="font-mono tabular-nums text-[var(--muted-foreground)] text-xs ml-auto">58 / 58</span>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
+      <div id="rep-split-pane" class="grid grid-cols-1 lg:grid-cols-12 gap-3">
         <div class="lg:col-span-6 bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-hidden lg:relative lg:min-h-[520px]">
           <div class="max-h-[420px] lg:max-h-none lg:absolute lg:inset-0 overflow-y-auto overflow-x-auto">
             <table class="w-full text-left border-collapse text-xs">
@@ -826,10 +826,40 @@ let activeLens = 'ALL';
 let activeUpdCat = 'ALL';
 let dossierFromPortfolio = false;
 let pendingDossierSec = '';
+let pendingScrollId = '';
+let pendingScrollY = null;
 let isRestoringHistory = false;
 let historyInitialized = false;
 let lastSelHidden = false;
 const expandedDetailGates = {};
+
+function scrollRowInPane(boxId, itemSel){
+  try {
+    const box = document.getElementById(boxId);
+    if(!box || !box.querySelector) return;
+    const item = box.querySelector(itemSel);
+    const wrap = (box.tagName && String(box.tagName).toUpperCase() === 'TBODY')
+      ? ((box.closest && box.closest('.overflow-y-auto')) || (box.parentElement && box.parentElement.parentElement) || box.parentElement)
+      : box;
+    if(!item || !wrap || wrap.scrollHeight <= wrap.clientHeight) return;
+    const wRect = wrap.getBoundingClientRect(), iRect = item.getBoundingClientRect();
+    const relTop = (iRect.top - wRect.top) + wrap.scrollTop;
+    wrap.scrollTop = Math.max(0, Math.round(relTop - (wrap.clientHeight - iRect.height) / 2));
+  } catch(_e) {}
+}
+
+function scrollViewportTo(elId, smooth=false){
+  try {
+    if(typeof window === 'undefined' || !window.scrollTo) return;
+    if(!elId){ window.scrollTo(0, 0); return; }
+    const el = document.getElementById(elId);
+    if(!el || !el.getBoundingClientRect){ window.scrollTo(0, 0); return; }
+    const topY = Math.max(0, Math.round(el.getBoundingClientRect().top + (window.scrollY || window.pageYOffset || 0) - 10));
+    window.scrollTo({top: topY, left: 0, behavior: smooth ? 'smooth' : 'auto'});
+  } catch(_e) {
+    try { window.scrollTo(0, 0); } catch(_e2) {}
+  }
+}
 
 function valOf(id, fb=''){ const el = document.getElementById(id); return el ? String(el.value || '') : fb; }
 function setValOf(id, v){ const el = document.getElementById(id); if(el && v !== undefined && v !== null) el.value = v; }
@@ -875,6 +905,7 @@ function buildHistorySnapshot(targetHash){
     repSearch: valOf('rep-search'), repFilter: valOf('rep-filter','ALL'),
     repReturnDossier: (typeof repReturnDossier !== 'undefined' ? repReturnDossier : ''),
     repReturnTab: (typeof repReturnTab !== 'undefined' ? repReturnTab : 'dossiers'),
+    scrollY: (typeof window !== 'undefined' ? Math.round(window.scrollY || window.pageYOffset || 0) : 0),
     hash: targetHash
   };
 }
@@ -997,7 +1028,16 @@ function jumpToUpdates(query, updateHash=true){
   activeUpdCat = 'ALL';
   const qEl = document.getElementById('upd-search');
   if(qEl) qEl.value = query || '';
+  const uf = document.getElementById('upd-feed');
+  if(uf) uf.scrollTop = 0;
   const targetH = query ? ('#updates/' + encodeURIComponent(query)) : '#updates';
+  if(activeTab === 'home'){
+    renderUpdatesLog();
+    scrollViewportTo('upd-card', true);
+    if(updateHash) commitHistory('push', targetH);
+    return;
+  }
+  pendingScrollId = 'upd-card';
   switchTab('home', updateHash ? 'push' : 'none', targetH);
 }
 
@@ -1360,8 +1400,14 @@ function quickFilter(mode){
   else if(mode==='EXPL') document.getElementById('p-dec').value='KEEP_EXPLORATORY_UNPROVEN';
   else if(mode==='BENCH') document.getElementById('p-dec').value='RECLASSIFY_BENCHMARK_OR_BIOMARKER';
   else if(mode==='DROP') document.getElementById('p-dec').value='DROP';
-  if(!wasPortfolio) switchTab('portfolio', 'push');
-  else { renderPortfolio(); commitHistory('replace'); }
+  if(!wasPortfolio){
+    pendingScrollId = 'p-filter-bar';
+    switchTab('portfolio', 'push');
+  } else {
+    renderPortfolio();
+    scrollViewportTo('p-filter-bar', true);
+    commitHistory('replace');
+  }
 }
 function resetPortfolioFilters(redraw=true, keepQuick='ALL'){
   activeQuick = keepQuick;
@@ -2481,7 +2527,7 @@ function openDossier(rawId){
   if(!rawId) return;
   const res = (typeof resolveCandidateId === 'function') ? resolveCandidateId(rawId) : null;
   const id = res ? res.id : String(rawId).replace(/\.[0-9]+$/, '');
-  if(res && res.sub && typeof pendingDossierSec !== 'undefined' && !pendingDossierSec) pendingDossierSec = 'sec-subunits';
+  if(res && res.sub && typeof pendingDossierSec !== 'undefined' && !pendingDossierSec) pendingDossierSec = 'subcard-' + res.sub;
   if(!DATA_PORT.some(x=>x.id===id)) return;
   dossierId = id;
   selectedId = id;
@@ -2491,24 +2537,19 @@ function openDossier(rawId){
       if(a && a.classList) a.classList.add('hidden');
     }
   } catch(_e) {}
-  const hasPendSec = (typeof pendingDossierSec !== 'undefined' && Boolean(pendingDossierSec));
   if(activeTab === 'dossiers'){
     renderDossierMain();
-    if(typeof commitHistory === 'function') commitHistory('push', '#dossier/' + id);
-    if(hasPendSec){
-      const secId = pendingDossierSec;
-      pendingDossierSec = '';
-      setTimeout(() => {
-        const secEl = document.getElementById(secId);
-        if(secEl && secEl.scrollIntoView) secEl.scrollIntoView({behavior:'smooth', block:'start'});
-      }, 30);
-      return;
-    }
-  } else {
-    switchTab('dossiers', 'push', '#dossier/' + id);
-    if(hasPendSec) return;
+    const secId = (typeof pendingDossierSec !== 'undefined' && pendingDossierSec) ? pendingDossierSec : '';
+    if(typeof pendingDossierSec !== 'undefined') pendingDossierSec = '';
+    if(typeof scrollViewportTo === 'function') scrollViewportTo(secId || 'view-dossiers', Boolean(secId));
+    else { try { if(typeof window !== 'undefined' && window.scrollTo) window.scrollTo(0, 0); } catch(_e) {} }
+    if(typeof commitHistory === 'function') commitHistory('push', '#dossier/' + (res && res.sub ? res.sub : id));
+    return;
   }
-  try { if(typeof window !== 'undefined' && window.scrollTo) window.scrollTo(0, 0); } catch(_e) {}
+  if(typeof pendingScrollId !== 'undefined' && !(typeof pendingDossierSec !== 'undefined' && pendingDossierSec)){
+    pendingScrollId = 'view-dossiers';
+  }
+  switchTab('dossiers', 'push', '#dossier/' + (res && res.sub ? res.sub : id));
 }
 
 function renderSummaryDomainPanels(r){
@@ -2563,7 +2604,7 @@ function renderSummaryDomainPanels(r){
       <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">${subRows.map(sn => {
         const vcol = sn.vraw.startsWith('KEEP')?'text-[var(--warning)] border-[var(--warning)]':(sn.vraw.startsWith('RECLASSIFY')?'text-[var(--primary)] border-[var(--primary)]':'text-[var(--error)] border-[var(--error)]');
         const gPills = genePortalPills(sn.gene);
-        return `<div class="p-3.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] space-y-2.5">
+        return `<div id="subcard-${esc(sn.id)}" class="p-3.5 rounded-lg bg-[var(--background)] border border-[var(--card-border)] space-y-2.5">
           <div class="flex items-start justify-between gap-2 flex-wrap border-b border-[var(--card-border)] pb-2">
             <div>
               <div class="flex items-center gap-1.5 flex-wrap" title="ExploreALS Subunit ${esc(sn.id)}">
@@ -2759,11 +2800,15 @@ function renderDossierSidebar(){
 
 function renderDossierMain(){
   renderDossierSidebar();
-  try {
-    const nav = document.getElementById('d-nav');
-    const actBtn = nav && nav.querySelector ? nav.querySelector('[data-open-dossier="'+dossierId+'"]') : null;
-    if(actBtn && actBtn.scrollIntoView) actBtn.scrollIntoView({block:'nearest'});
-  } catch(_e) {}
+  if(typeof scrollRowInPane === 'function'){
+    scrollRowInPane('d-nav', '[data-open-dossier="'+dossierId+'"]');
+  } else {
+    try {
+      const nav = document.getElementById('d-nav');
+      const actBtn = nav && nav.querySelector ? nav.querySelector('[data-open-dossier="'+dossierId+'"]') : null;
+      if(actBtn && actBtn.scrollIntoView) actBtn.scrollIntoView({block:'nearest'});
+    } catch(_e) {}
+  }
   const box = document.getElementById('d-content');
   if(!box) return;
   const r = DATA_PORT.find(x=>x.id===dossierId) || DATA_PORT[0];
@@ -2842,7 +2887,7 @@ function renderDossierMain(){
   if(hasCisPanel) jumpSecs.push(['sec-cis', 'Splice Windows']);
   if(evRows.length) jumpSecs.push(['sec-ledger', `Primary Evidence (${evRows.length})`]);
   const fromPortBtn = (isFullExplorer && typeof dossierFromPortfolio !== 'undefined' && dossierFromPortfolio)
-    ? `<button type="button" data-switch-tab="portfolio" class="px-2 py-0.5 rounded border border-[var(--primary)] text-[var(--primary)] font-mono font-semibold text-xs cursor-pointer">&larr; Triage Table</button>`
+    ? `<button type="button" data-return-portfolio="${esc(r.id)}" class="px-2 py-0.5 rounded border border-[var(--primary)] text-[var(--primary)] font-mono font-semibold text-xs cursor-pointer">&larr; Triage Table</button>`
     : '';
   const secJumpBar = `<div class="flex flex-wrap items-center justify-between gap-1.5 pb-1 border-b border-[var(--card-border)] text-xs font-mono">
     <div class="flex flex-wrap items-center gap-1">${fromPortBtn}<span class="text-[var(--muted-foreground)] mr-0.5">Sections:</span>${jumpSecs.map(([sid, slbl]) => `<button type="button" data-scroll-sec="${sid}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] cursor-pointer">${esc(slbl)}</button>`).join('')}</div>
@@ -3095,14 +3140,14 @@ function populateRepFilterOptions(){
   }
 }
 
-function setRepMode(mode, keepFilter=false){
+function setRepMode(mode, keepFilter=false, skipRender=false){
   repMode = mode;
   document.querySelectorAll('.rep-mode-btn').forEach(b => {
     const on = b.getAttribute('data-rep-mode') === mode;
     b.className = 'rep-mode-btn px-2.5 py-1.5 rounded border font-mono text-xs cursor-pointer ' + (on ? 'bg-[var(--primary)] text-[var(--primary-foreground)] border-[var(--primary)]' : 'bg-[var(--background)] text-[var(--foreground)] border-[var(--border)]');
   });
   if(!keepFilter) populateRepFilterOptions();
-  renderReplicationWorkbench();
+  if(!skipRender) renderReplicationWorkbench();
 }
 
 function formatRepMult(f){
@@ -3220,6 +3265,7 @@ function renderReplicationWorkbench(){
     }).join('') : emptyEvRow;
   }
   renderRepInspector(items.length === 0);
+  if(typeof scrollRowInPane === 'function') scrollRowInPane('rep-tbody', 'tr[data-rep-select="'+selectedRepKey+'"]');
 }
 
 const REP_ENUM_LABELS = {
@@ -3254,10 +3300,14 @@ function renderRepInspector(isEmpty=false){
   if(!box) return;
   const retBtn = repReturnDossier
     ? (repReturnTab === 'portfolio'
-      ? `<button type="button" data-switch-tab="portfolio" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} in Triage Table</button>`
-      : `<button type="button" data-open-dossier="${esc(repReturnDossier)}" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} Report</button>`)
+      ? `<button type="button" data-return-portfolio="${esc(repReturnDossier)}" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} in Triage Table</button>`
+      : (repReturnTab === 'intervals'
+        ? `<button type="button" data-return-intervals="${esc(repReturnDossier)}" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} in Splice Windows</button>`
+        : (repReturnTab === 'home'
+          ? `<button type="button" data-return-updates="1" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to Living Research Log</button>`
+          : `<button type="button" data-open-dossier="${esc(repReturnDossier)}" class="text-[var(--link)] underline font-semibold cursor-pointer">&larr; Return to ${esc(repReturnDossier)} Report</button>`)))
     : '';
-  const retBar = repReturnDossier ? `<div class="p-2 rounded bg-[var(--background)] border border-[var(--primary)] flex items-center justify-between gap-2 text-xs font-mono"><span>Inspecting provenance from <strong>${esc(repReturnDossier)}</strong></span>${retBtn}</div>` : '';
+  const retBar = repReturnDossier ? `<div class="p-2 rounded bg-[var(--background)] border border-[var(--primary)] flex items-center justify-between gap-2 text-xs font-mono"><span>Inspecting provenance from <strong>${esc(repReturnDossier === 'Updates' ? 'Research Log' : repReturnDossier)}</strong></span>${retBtn}</div>` : '';
   if(isEmpty){
     box.innerHTML = retBar + '<div class="p-6 rounded bg-[var(--background)] border border-[var(--card-border)] text-center text-[var(--muted-foreground)] text-xs">No items match active filter. <button type="button" data-reset-rep="1" class="text-[var(--link)] underline font-mono ml-1 cursor-pointer">Reset filters</button></div>';
     return;
@@ -3325,17 +3375,28 @@ function renderRepInspector(isEmpty=false){
   }
 }
 
-function openReplicationTarget(kind, key, fromDossier='', fromTab='dossiers', historyMode='push'){
-  if(fromDossier){ repReturnDossier = fromDossier; repReturnTab = fromTab || 'dossiers'; }
+function openReplicationTarget(kind, key, fromDossier='', fromTab='', historyMode='push'){
+  if(fromTab !== 'replication'){
+    if(fromTab === 'home'){ repReturnDossier = 'Updates'; repReturnTab = 'home'; }
+    else if(fromDossier){ repReturnDossier = fromDossier; repReturnTab = fromTab || 'dossiers'; }
+    else { repReturnDossier = ''; repReturnTab = 'dossiers'; }
+  }
   const newH = kind === 'cand' ? '#replication/cand/' + encodeURIComponent(key) : '#replication/' + encodeURIComponent(key);
-  switchTab('replication', 'none');
   document.getElementById('rep-search').value = '';
-  if(kind === 'run'){ setRepMode('runs'); selectedRepKey = key; }
-  else if(kind === 'ds'){ setRepMode('datasets'); selectedRepKey = key; }
-  else if(kind === 'ev'){ setRepMode('evidence'); selectedRepKey = key; }
-  else if(kind === 'cand'){ setRepMode('evidence'); document.getElementById('rep-search').value = key; }
-  renderReplicationWorkbench();
-  if(typeof commitHistory === 'function') commitHistory(historyMode, newH);
+  if(kind === 'run'){ setRepMode('runs', false, true); selectedRepKey = key; }
+  else if(kind === 'ds'){ setRepMode('datasets', false, true); selectedRepKey = key; }
+  else if(kind === 'ev'){ setRepMode('evidence', false, true); selectedRepKey = key; }
+  else if(kind === 'cand'){ setRepMode('evidence', false, true); document.getElementById('rep-search').value = key; }
+  const isMob = (typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024);
+  const targetEl = (isMob && kind !== 'cand') ? 'rep-detail' : 'rep-workbench-bar';
+  if(activeTab === 'replication'){
+    renderReplicationWorkbench();
+    if(typeof scrollViewportTo === 'function') scrollViewportTo(targetEl, true);
+    if(typeof commitHistory === 'function') commitHistory(historyMode, newH);
+  } else {
+    if(typeof pendingScrollId !== 'undefined') pendingScrollId = targetEl;
+    switchTab('replication', historyMode, newH);
+  }
 }
 
 function downloadBlob(filename, mime, content){
@@ -3740,10 +3801,16 @@ function jumpToIntervals(pid){
   if(qEl && pid) qEl.value = pid;
   const hitOrd = findBestIvOrd(pid);
   if(hitOrd) selectedIvOrd = hitOrd;
+  const isMob = (typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024);
+  pendingScrollId = (isMob && pid) ? 'iv-detail' : 'iv-filter-bar';
   switchTab('intervals', 'push', pid ? '#intervals/' + encodeURIComponent(pid) : '#intervals');
 }
 
 function switchTab(tab, historyMode='push', explicitHash=''){
+  const outgoingY = (typeof window !== 'undefined') ? Math.round(window.scrollY || window.pageYOffset || 0) : 0;
+  if(!isRestoringHistory && historyMode === 'push' && historyInitialized && typeof history !== 'undefined' && history.state){
+    try { history.replaceState(Object.assign({}, history.state, {scrollY: outgoingY}), ''); } catch(_e) {}
+  }
   activeTab = tab;
   ['home','portfolio','dossiers','intervals','replication'].forEach(t => {
     const el = document.getElementById('view-'+t);
@@ -3770,34 +3837,29 @@ function switchTab(tab, historyMode='push', explicitHash=''){
   if(tab==='home' && typeof renderUpdatesLog === 'function') renderUpdatesLog();
   if(tab==='portfolio'){
     renderPortfolio();
-    try {
-      const tb = document.getElementById('p-tbody');
-      const actRow = tb && tb.querySelector ? tb.querySelector('[data-select-cand="'+selectedId+'"]') : null;
-      if(actRow && actRow.scrollIntoView) actRow.scrollIntoView({block:'nearest'});
-    } catch(_e) {}
+    scrollRowInPane('p-tbody', 'tr[data-select-cand="'+selectedId+'"]');
   }
   if(tab==='dossiers') renderDossierMain();
   if(tab==='intervals'){
     renderIntervals();
-    try {
-      const itb = document.getElementById('iv-tbody');
-      const actIv = itb && itb.querySelector ? itb.querySelector('tr[data-select-iv="'+selectedIvOrd+'"]') : null;
-      if(actIv && actIv.scrollIntoView) actIv.scrollIntoView({block:'nearest'});
-    } catch(_e) {}
+    scrollRowInPane('iv-tbody', 'tr[data-select-iv="'+selectedIvOrd+'"]');
   }
   if(tab==='replication' && typeof renderReplicationWorkbench === 'function') renderReplicationWorkbench();
   syncKpiHighlight();
-  commitHistory(historyMode, explicitHash);
-  if(tab === 'dossiers' && pendingDossierSec){
-    const secId = pendingDossierSec;
-    pendingDossierSec = '';
-    setTimeout(() => {
-      const secEl = document.getElementById(secId);
-      if(secEl && secEl.scrollIntoView) secEl.scrollIntoView({behavior:'smooth', block:'start'});
-    }, 30);
-    return;
+  const secId = (tab === 'dossiers' && pendingDossierSec) ? pendingDossierSec : '';
+  pendingDossierSec = '';
+  const targetId = secId || pendingScrollId;
+  pendingScrollId = '';
+  const restoreY = pendingScrollY;
+  pendingScrollY = null;
+  if(restoreY !== null){
+    try { if(typeof window !== 'undefined' && window.scrollTo) window.scrollTo(0, restoreY); } catch(_e) {}
+  } else if(targetId){
+    scrollViewportTo(targetId, false);
+  } else {
+    try { if(typeof window !== 'undefined' && window.scrollTo) window.scrollTo(0, 0); } catch(_e) {}
   }
-  try { if(typeof window !== 'undefined' && window.scrollTo) window.scrollTo(0, 0); } catch(_e) {}
+  commitHistory(historyMode, explicitHash);
 }
 
 function restoreHistorySnapshot(snap){
@@ -3838,6 +3900,7 @@ function restoreHistorySnapshot(snap){
   setValOf('rep-filter', snap.repFilter || 'ALL');
   if(typeof repReturnDossier !== 'undefined') repReturnDossier = snap.repReturnDossier || '';
   if(typeof repReturnTab !== 'undefined') repReturnTab = snap.repReturnTab || 'dossiers';
+  pendingScrollY = (typeof snap.scrollY === 'number') ? snap.scrollY : 0;
   switchTab(snap.tab, 'none');
   return true;
 }
@@ -3845,7 +3908,12 @@ function restoreHistorySnapshot(snap){
 function syncFromHash(fromPop=false){
   const h = location.hash || '';
   if(fromPop && (h === '' || h === '#')){ activeUpdCat = 'ALL'; setValOf('upd-search', ''); switchTab('home', 'none'); return true; }
-  if(h === '#home' || h === '#updates'){ if(h === '#home'){ activeUpdCat = 'ALL'; setValOf('upd-search', ''); } switchTab('home', 'none'); return true; }
+  if(h === '#home' || h === '#updates'){
+    if(h === '#home'){ activeUpdCat = 'ALL'; setValOf('upd-search', ''); }
+    else { pendingScrollId = 'upd-card'; }
+    switchTab('home', 'none');
+    return true;
+  }
   const mu = /^#updates[/](.+)$/.exec(h);
   if(mu){ jumpToUpdates(decodeURIComponent(mu[1]), false); return true; }
   if(h === '#subnodes' || h === '#analytics' || h === '#portfolio'){ switchTab('portfolio', 'none'); return true; }
@@ -3856,6 +3924,8 @@ function syncFromHash(fromPop=false){
       const rawIv = decodeURIComponent(mi[1]);
       if(/^([1-9]|1[0-9]|2[0-8])$/.test(rawIv)) selectedIvOrd = Number(rawIv);
       else { setValOf('iv-search', rawIv); const ho = findBestIvOrd(rawIv); if(ho) selectedIvOrd = ho; }
+      const isMob = (typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024);
+      pendingScrollId = isMob ? 'iv-detail' : 'iv-filter-bar';
     }
     switchTab('intervals', 'none');
     return true;
@@ -3864,7 +3934,8 @@ function syncFromHash(fromPop=false){
   if(m){
     const res = resolveCandidateId(decodeURIComponent(m[1]));
     if(res && DATA_PORT.some(x=>x.id===res.id)){
-      if(res.sub) pendingDossierSec = 'sec-subunits';
+      if(res.sub) pendingDossierSec = 'subcard-' + res.sub;
+      else pendingScrollId = 'view-dossiers';
       dossierId = res.id; selectedId = res.id;
       switchTab('dossiers', 'none');
       return true;
@@ -3877,7 +3948,7 @@ function syncFromHash(fromPop=false){
       const cKey = rc ? rc.id : decodeURIComponent(mr[1]);
       openReplicationTarget('cand', cKey, cKey, 'dossiers', 'none');
     }
-    else if(mr[2]){ openReplicationTarget(mr[2].startsWith('DS') ? 'ds' : (mr[2].startsWith('EV-') ? 'ev' : 'run'), mr[2], '', 'dossiers', 'none'); }
+    else if(mr[2]){ openReplicationTarget(mr[2].startsWith('DS') ? 'ds' : (mr[2].startsWith('EV-') ? 'ev' : 'run'), mr[2], '', '', 'none'); }
     else { switchTab('replication', 'none'); }
     return true;
   }
@@ -3914,21 +3985,28 @@ document.addEventListener('click', e => {
   const hfBtn = tgt.closest('[data-home-flagships]');
   if(hfBtn){ e.preventDefault(); dossierSlice = 'T12'; dossierLens = 'ALL'; openDossier('EALS-030'); return; }
   const hcBtn = tgt.closest('[data-home-contrasts]');
-  if(hcBtn){ e.preventDefault(); const dr = document.getElementById('contrasts-drawer'); if(dr) dr.open = true; switchTab('portfolio', 'push'); if(dr && dr.scrollIntoView){ try{ dr.scrollIntoView({behavior:'smooth', block:'start'}); }catch(_e){} } return; }
+  if(hcBtn){ e.preventDefault(); const dr = document.getElementById('contrasts-drawer'); if(dr) dr.open = true; pendingScrollId = 'contrasts-drawer'; switchTab('portfolio', 'push'); return; }
+  const curRepFrom = () => activeTab==='dossiers' ? dossierId : (activeTab==='portfolio' ? selectedId : (activeTab==='intervals' ? ((DATA_CIS.find(x => x.ord === selectedIvOrd) || {}).pid || '') : ''));
   const reBtn = tgt.closest('[data-open-rep-ev]');
-  if(reBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('ev', reBtn.getAttribute('data-open-rep-ev'), activeTab==='dossiers'?dossierId:(activeTab==='portfolio'?selectedId:''), activeTab); return; }
+  if(reBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('ev', reBtn.getAttribute('data-open-rep-ev'), curRepFrom(), activeTab); return; }
   const rrBtn = tgt.closest('[data-open-rep-run]');
-  if(rrBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('run', rrBtn.getAttribute('data-open-rep-run'), activeTab==='dossiers'?dossierId:(activeTab==='portfolio'?selectedId:''), activeTab); return; }
+  if(rrBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('run', rrBtn.getAttribute('data-open-rep-run'), curRepFrom(), activeTab); return; }
   const rdBtn = tgt.closest('[data-open-rep-ds]');
-  if(rdBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('ds', rdBtn.getAttribute('data-open-rep-ds'), activeTab==='dossiers'?dossierId:(activeTab==='portfolio'?selectedId:''), activeTab); return; }
+  if(rdBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('ds', rdBtn.getAttribute('data-open-rep-ds'), curRepFrom(), activeTab); return; }
   const rcBtn = tgt.closest('[data-jump-rep-cand]');
   if(rcBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('cand', rcBtn.getAttribute('data-jump-rep-cand'), rcBtn.getAttribute('data-jump-rep-cand'), activeTab); return; }
+  const retPBtn = tgt.closest('[data-return-portfolio]');
+  if(retPBtn){ e.preventDefault(); const cid = retPBtn.getAttribute('data-return-portfolio')||''; if(cid && DATA_PORT.some(x=>x.id===cid)){ selectedId = cid; dossierId = cid; } pendingScrollId = (typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024) ? 'p-detail' : 'p-split-pane'; switchTab('portfolio', 'push'); return; }
+  const retIvBtn = tgt.closest('[data-return-intervals]');
+  if(retIvBtn){ e.preventDefault(); jumpToIntervals(retIvBtn.getAttribute('data-return-intervals')||''); return; }
+  const retUpdBtn = tgt.closest('[data-return-updates]');
+  if(retUpdBtn){ e.preventDefault(); pendingScrollId = 'upd-card'; switchTab('home', 'push', defaultHashForCurrentState() === '#home' ? '#updates' : ''); return; }
   const rmBtn = tgt.closest('[data-rep-mode]');
   if(rmBtn){ e.preventDefault(); setRepMode(rmBtn.getAttribute('data-rep-mode')); commitHistory('replace'); return; }
   const rsRow = tgt.closest('[data-rep-select]');
-  if(rsRow){ selectedRepKey = rsRow.getAttribute('data-rep-select'); renderReplicationWorkbench(); commitHistory('replace'); return; }
+  if(rsRow){ selectedRepKey = rsRow.getAttribute('data-rep-select'); renderReplicationWorkbench(); if(typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024) scrollViewportTo('rep-detail', true); commitHistory('replace'); return; }
   const dgBtn = tgt.closest('[data-rep-dag]');
-  if(dgBtn){ e.preventDefault(); const [m,f] = dgBtn.getAttribute('data-rep-dag').split('|'); setRepMode(m); document.getElementById('rep-filter').value = f; renderReplicationWorkbench(); commitHistory('replace'); return; }
+  if(dgBtn){ e.preventDefault(); const [m,f] = dgBtn.getAttribute('data-rep-dag').split('|'); setRepMode(m, false, true); document.getElementById('rep-filter').value = f; renderReplicationWorkbench(); scrollViewportTo('rep-workbench-bar', true); commitHistory('replace'); return; }
   const rrpBtn = tgt.closest('[data-reset-rep]');
   if(rrpBtn){ e.preventDefault(); repReturnDossier=''; repReturnTab='dossiers'; document.getElementById('rep-search').value=''; setRepMode('runs'); commitHistory('replace', '#replication'); return; }
   const dlBtn = tgt.closest('[data-dl-reg]');
@@ -3936,7 +4014,7 @@ document.addEventListener('click', e => {
   const dsBtn = tgt.closest('[data-open-dossier-sec]');
   if(dsBtn){ e.preventDefault(); e.stopPropagation(); const [did, sid] = (dsBtn.getAttribute('data-open-dossier-sec')||'').split('|'); dossierFromPortfolio = (activeTab === 'portfolio'); pendingDossierSec = sid || ''; openDossier(did); return; }
   const scBtn = tgt.closest('[data-scroll-sec]');
-  if(scBtn){ e.preventDefault(); const el = document.getElementById(scBtn.getAttribute('data-scroll-sec')||''); if(el && el.scrollIntoView) el.scrollIntoView({behavior:'smooth', block:'start'}); return; }
+  if(scBtn){ e.preventDefault(); scrollViewportTo(scBtn.getAttribute('data-scroll-sec')||'', true); return; }
   const wBtn = tgt.closest('[data-open-dossier]');
   if(wBtn){ e.preventDefault(); e.stopPropagation(); dossierFromPortfolio = (activeTab === 'portfolio' || (activeTab === 'dossiers' && dossierFromPortfolio)); pendingDossierSec = ''; openDossier(wBtn.getAttribute('data-open-dossier')); return; }
   const wsBtn = tgt.closest('[data-dossier-slice]');
@@ -3952,7 +4030,13 @@ document.addEventListener('click', e => {
   const riBtn = tgt.closest('[data-reset-intervals]');
   if(riBtn){ e.preventDefault(); resetIntervalFilters(true); commitHistory('replace', '#intervals'); return; }
   const tBtn = tgt.closest('[data-switch-tab]');
-  if(tBtn){ e.preventDefault(); switchTab(tBtn.getAttribute('data-switch-tab')); return; }
+  if(tBtn){
+    e.preventDefault();
+    const destT = tBtn.getAttribute('data-switch-tab');
+    if(destT === 'intervals' && tBtn.classList && tBtn.classList.contains('kpi-btn')) pendingScrollId = 'iv-filter-bar';
+    switchTab(destT);
+    return;
+  }
   const qBtn = tgt.closest('[data-quick-filter]');
   if(qBtn){ e.preventDefault(); quickFilter(qBtn.getAttribute('data-quick-filter')); return; }
   const rBtn = tgt.closest('[data-reset-filters]');
@@ -3991,7 +4075,7 @@ document.addEventListener('keydown', e => {
   if(e.key !== 'Enter' && e.key !== ' ') return;
   const raw = e.target;
   const dgBtn = raw && raw.closest ? raw.closest('[data-rep-dag]') : null;
-  if(dgBtn && raw === dgBtn){ e.preventDefault(); const [m,f] = dgBtn.getAttribute('data-rep-dag').split('|'); setRepMode(m); document.getElementById('rep-filter').value = f; renderReplicationWorkbench(); return; }
+  if(dgBtn && raw === dgBtn){ e.preventDefault(); const [m,f] = dgBtn.getAttribute('data-rep-dag').split('|'); setRepMode(m, false, true); document.getElementById('rep-filter').value = f; renderReplicationWorkbench(); scrollViewportTo('rep-workbench-bar', true); return; }
   const rsRow = raw && raw.closest ? raw.closest('tr[data-rep-select]') : null;
   if(rsRow && raw === rsRow){ e.preventDefault(); selectedRepKey = rsRow.getAttribute('data-rep-select'); renderReplicationWorkbench(); return; }
   const cRow = raw && raw.closest ? raw.closest('tr[data-select-cand]') : null;
