@@ -75,7 +75,9 @@ th, td { padding: 6px 8px; vertical-align: top; }
 input[type="range"] { accent-color: var(--primary); cursor: pointer; }
 svg { display: block; vertical-align: middle; }
 .gate-clamp[data-clamped="true"] { position: relative; max-height: 7.25rem; overflow: hidden; }
-.gate-clamp[data-clamped="true"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1.75rem; background: linear-gradient(to bottom, transparent, var(--background)); pointer-events: none; }"""
+.gate-clamp[data-clamped="true"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1.75rem; background: linear-gradient(to bottom, transparent, var(--background)); pointer-events: none; }
+@media (min-width: 1024px) { .p-workbench { height: clamp(310px, calc(100vh - 13.25rem), 760px); height: clamp(310px, calc(100dvh - 13.25rem), 760px); } }
+@media (min-width: 1280px) { .p-workbench { height: clamp(340px, calc(100vh - 11.75rem), 780px); height: clamp(340px, calc(100dvh - 11.75rem), 780px); } }"""
 
 SPACE_REM = {
     "0": "0px", "px": "1px", "0.5": "0.125rem", "1": "0.25rem", "1.5": "0.375rem", "2": "0.5rem",
@@ -91,7 +93,7 @@ def _esc_sel(cls: str) -> str:
 def _rule_for_base(b: str) -> tuple[int, str, str]:
     """Return (priority_order, suffix_selector, declarations) or raise ValueError."""
     static_map: dict[str, tuple[int, str]] = {
-        "kpi-btn": (1, ""), "tab-btn": (1, ""), "rep-mode-btn": (1, ""), "gate-clamp": (1, ""),
+        "kpi-btn": (1, ""), "tab-btn": (1, ""), "rep-mode-btn": (1, ""), "gate-clamp": (1, ""), "p-workbench": (1, ""),
         "antialiased": (5, "-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale"),
         "block": (10, "display:block"), "inline-block": (10, "display:inline-block"),
         "flex": (10, "display:flex"), "grid": (10, "display:grid"), "table-cell": (10, "display:table-cell"),

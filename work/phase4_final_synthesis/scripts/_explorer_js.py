@@ -18,6 +18,7 @@ let pendingScrollY = null;
 let isRestoringHistory = false;
 let historyInitialized = false;
 let lastSelHidden = false;
+let lastDetailCandId = '';
 const expandedDetailGates = {};
 
 function scrollRowInPane(boxId, itemSel){
@@ -518,10 +519,12 @@ function renderDetail(selHidden=false){
     ? `<button type="button" data-jump-updates="${esc(r.id)}" class="px-2 py-1 rounded border border-[var(--primary)] text-[var(--primary)] font-mono text-xs shrink-0 cursor-pointer" title="View living research updates for ${esc(r.id)}">&#8634; ${candUpds.length}</button>`
     : '';
   const crowdChip = (r.crowd && !r.crowd.startsWith('N/A')) ? `<span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)] whitespace-nowrap">${esc(r.crowd)}</span>` : '';
-  document.getElementById('p-detail').innerHTML = `${hiddenBanner}
-    <div class="space-y-1.5 border-b border-[var(--card-border)] pb-2">
+  const prevBody = document.getElementById('p-detail-body');
+  const keepScroll = (prevBody && lastDetailCandId === r.id) ? prevBody.scrollTop : 0;
+  lastDetailCandId = r.id;
+  document.getElementById('p-detail').innerHTML = `<div class="shrink-0 p-3.5 pb-2.5 border-b border-[var(--card-border)] bg-[var(--card)] space-y-1.5">
       <div class="flex items-center justify-between gap-1.5 flex-wrap">
-        <div class="flex items-center gap-1.5 flex-wrap"><span class="font-mono font-bold text-sm" title="Translational Priority Rank #${r.rk} · Genetic & Pathology Evidence Rank #${r.brk}">#${r.rk} <span class="font-normal text-xs text-[var(--muted-foreground)]">(Evid #${r.brk})</span> &middot; <span class="text-[var(--muted-foreground)] font-normal">${esc(r.id)}</span></span> ${decBadge(r.dec, r.id)} ${crowdChip}</div>
+        <div class="flex items-center gap-1.5 flex-wrap"><span class="font-mono font-bold text-sm" title="Translational Priority Rank #${r.rk} · Genetic & Pathology Evidence Rank #${r.brk}">#${r.rk} <span class="font-normal text-xs text-[var(--muted-foreground)]">(Evid #${r.brk})</span> &middot; <span class="text-[var(--muted-foreground)] font-normal">${esc(r.id)}</span></span> ${decBadge(r.dec, r.id)}</div>
         <div class="flex items-center gap-1 shrink-0">${updDetailBtn}${pubMonoLink}</div>
       </div>
       <div class="text-sm font-semibold leading-snug">${esc(r.name)}</div>
@@ -530,7 +533,9 @@ function renderDetail(selHidden=false){
         <button type="button" data-open-dossier="${esc(r.id)}" class="px-2.5 py-1 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-semibold text-xs cursor-pointer">${w?'Open Full Monograph &rarr;':`Open Full Dossier (${evRows.length}) &rarr;`}</button>
       </div>
     </div>
-    <div class="space-y-2 text-xs">
+    <div id="p-detail-body" class="p-3.5 pt-2.5 space-y-2 text-xs lg:flex-1 lg:min-h-0 lg:overflow-y-auto">
+      ${hiddenBanner}
+      ${crowdChip ? `<div>${crowdChip}</div>` : ''}
       ${typeof renderEdgeRibbon === 'function' ? renderEdgeRibbon(s, r.id, true) : ''}
       <div class="grid grid-cols-1 xl:grid-cols-2 gap-2">
         <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1 xl:col-span-2">
@@ -563,6 +568,8 @@ function renderDetail(selHidden=false){
       </div>
     </div>`;
   syncDetailClamps();
+  const nextBody = document.getElementById('p-detail-body');
+  if(nextBody) nextBody.scrollTop = keepScroll;
 }
 function selectCand(id, userClick=false){
   selectedId = id;
@@ -570,12 +577,7 @@ function selectCand(id, userClick=false){
   renderPortfolio();
   if(userClick){
     commitHistory('replace');
-    try {
-      if(typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024){
-        const det = document.getElementById('p-detail');
-        if(det && det.scrollIntoView) det.scrollIntoView({behavior:'smooth', block:'nearest'});
-      }
-    } catch(_e) {}
+    if(typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024) scrollViewportTo('p-detail', true);
   }
 }
 function quickFilter(mode){
@@ -1023,8 +1025,18 @@ document.addEventListener('click', e => {
     if(bodyEl) bodyEl.setAttribute('data-clamped', open ? 'false' : 'true');
     tgBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
     tgBtn.innerHTML = open ? 'Collapse &uarr;' : (tgBtn.getAttribute('data-more-lbl') || 'Read full details &darr;');
+    if(!open){
+      const db = document.getElementById('p-detail-body');
+      const card = tgBtn.parentElement;
+      if(db && card && db.getBoundingClientRect && card.getBoundingClientRect){
+        const dTop = card.getBoundingClientRect().top - db.getBoundingClientRect().top;
+        if(dTop < 0) db.scrollTop = Math.max(0, db.scrollTop + dTop - 8);
+      }
+    }
     return;
   }
+  const omBtn = tgt.closest('[data-open-method]');
+  if(omBtn){ e.preventDefault(); const md = document.getElementById('methodology-drawer'); if(md){ md.open = !md.open; if(md.open) scrollViewportTo('methodology-drawer', true); } return; }
   const csBtn = tgt.closest('[data-copy-sha]');
   if(csBtn){ e.preventDefault(); const v = csBtn.getAttribute('data-copy-sha')||''; if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(v); } const orig = (csBtn.dataset&&(csBtn.dataset.orig||(csBtn.dataset.orig=csBtn.textContent)))||csBtn.textContent; csBtn.textContent='Copied \u2713'; setTimeout(()=>{ csBtn.textContent = orig; }, 1400); return; }
   const ucBtn = tgt.closest('[data-upd-cat]');
@@ -1047,7 +1059,7 @@ document.addEventListener('click', e => {
   const rcBtn = tgt.closest('[data-jump-rep-cand]');
   if(rcBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('cand', rcBtn.getAttribute('data-jump-rep-cand'), rcBtn.getAttribute('data-jump-rep-cand'), activeTab); return; }
   const retPBtn = tgt.closest('[data-return-portfolio]');
-  if(retPBtn){ e.preventDefault(); const cid = retPBtn.getAttribute('data-return-portfolio')||''; if(cid && DATA_PORT.some(x=>x.id===cid)){ selectedId = cid; dossierId = cid; } pendingScrollId = (typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024) ? 'p-detail' : 'p-split-pane'; switchTab('portfolio', 'push'); return; }
+  if(retPBtn){ e.preventDefault(); const cid = retPBtn.getAttribute('data-return-portfolio')||''; if(cid && DATA_PORT.some(x=>x.id===cid)){ selectedId = cid; dossierId = cid; } pendingScrollId = (typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024) ? 'p-detail' : 'p-filter-bar'; switchTab('portfolio', 'push'); return; }
   const retIvBtn = tgt.closest('[data-return-intervals]');
   if(retIvBtn){ e.preventDefault(); jumpToIntervals(retIvBtn.getAttribute('data-return-intervals')||''); return; }
   const retUpdBtn = tgt.closest('[data-return-updates]');

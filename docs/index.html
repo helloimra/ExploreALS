@@ -83,6 +83,8 @@ input[type="range"] { accent-color: var(--primary); cursor: pointer; }
 svg { display: block; vertical-align: middle; }
 .gate-clamp[data-clamped="true"] { position: relative; max-height: 7.25rem; overflow: hidden; }
 .gate-clamp[data-clamped="true"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1.75rem; background: linear-gradient(to bottom, transparent, var(--background)); pointer-events: none; }
+@media (min-width: 1024px) { .p-workbench { height: clamp(310px, calc(100vh - 13.25rem), 760px); height: clamp(310px, calc(100dvh - 13.25rem), 760px); } }
+@media (min-width: 1280px) { .p-workbench { height: clamp(340px, calc(100vh - 11.75rem), 780px); height: clamp(340px, calc(100dvh - 11.75rem), 780px); } }
 .antialiased {-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .block {display:block}
 .flex {display:flex}
@@ -309,10 +311,13 @@ svg { display: block; vertical-align: middle; }
   .md\:grid-cols-\[268px_minmax\(0\,1fr\)\] {grid-template-columns:268px minmax(0,1fr)}
 }
 @media (min-width: 1024px) {
+  .lg\:flex {display:flex}
   .lg\:table-cell {display:table-cell}
   .lg\:absolute {position:absolute}
   .lg\:relative {position:relative}
   .lg\:inset-0 {inset:0px}
+  .lg\:flex-1 {flex:1 1 0%}
+  .lg\:flex-col {flex-direction:column}
   .lg\:grid-cols-12 {grid-template-columns:repeat(12,minmax(0,1fr))}
   .lg\:grid-cols-6 {grid-template-columns:repeat(6,minmax(0,1fr))}
   .lg\:col-span-4 {grid-column:span 4 / span 4}
@@ -320,8 +325,11 @@ svg { display: block; vertical-align: middle; }
   .lg\:col-span-6 {grid-column:span 6 / span 6}
   .lg\:col-span-7 {grid-column:span 7 / span 7}
   .lg\:col-span-8 {grid-column:span 8 / span 8}
+  .lg\:min-h-0 {min-height:0px}
   .lg\:min-h-\[520px\] {min-height:520px}
   .lg\:max-h-none {max-height:none}
+  .lg\:overflow-hidden {overflow:hidden}
+  .lg\:overflow-y-auto {overflow-y:auto}
 }
 @media (min-width: 1280px) {
   .xl\:table-cell {display:table-cell}
@@ -480,7 +488,10 @@ svg { display: block; vertical-align: middle; }
           <div><strong class="text-[var(--foreground)]">2. Untested &ne; Falsified Triage Rule:</strong> Never discards an untested hypothesis due to bulk-assay, fixed-library-concentration, or unstratified-cohort blind spots. <span class="font-mono text-[var(--warning)]" title="Untested preclinical or biofluid triage queue — prospective Go/No-Go test required">Keep &middot; Exploratory (25)</span> denotes an untested preclinical/biofluid triage queue (not therapeutic endorsement) paired with prospective Go/No-Go criteria; <span class="font-mono text-[var(--error)]" title="Deprioritized based on human RCT futility, CNS exposure/safety limits, or assay confounding">Drop &middot; Falsified (16)</span> evaluates specific clinical drug regimens/exposures separately from molecular target pathways and requires positive human RCT futility, insurmountable CNS exposure/safety limits, or confounding collapse.</div>
           <div><strong class="text-[var(--foreground)]">3. Combinatorial Portfolio Thesis:</strong> Pairs single-agent-qualified genotype-stratified intrathecal splice rescue (evaluating 2-plex KCNQ2 EALS-006 + STMN2 EALS-002 vs. 3-plex + UNC13A EALS-001 across rs12973192/rs12608932 genotypes at a 6&ndash;9 mg [&le;3 mg/strand] total intrathecal ASO dose target vs. 12&ndash;50 mg nusinersen &amp; 100 mg tofersen; &ge;24&ndash;48 mg flagged as DRG/radiculotoxicity hazard) with oral non-covalent SARM1 ARM&ndash;TIR octamer stabilization (EALS-030, 1.0x parallel Bliss floor to ~2&ndash;7x modeled NMNAT2-coupled MWC bounds) and biomarker-gated neuroimmune modulation (EALS-031 BioVendor-bridged pNfH &le;3,700, oximetry-verified EALS-007 sST2, Tier 3 EALS-019 high-chitinase CSF glial stratum).</div>
         </div>
-        <div class="pt-2 mt-2 border-t border-[var(--card-border)] text-[var(--muted-foreground)] font-mono text-xs leading-relaxed">Data &amp; Provenance Standards: Open Targets / NIH IDG TDL &amp; TSA &middot; GENCODE v46 Off-Target Alignment Screen &middot; Linked Scripts, SHA-256 Checksums &amp; Study-Type Evidence Categories &middot; Curated Biological-Evidence Ordering (<span class="text-[var(--foreground)]">Evidence #Rk</span> orders 36 explicitly tiered programs + evidence-band fallbacks; editorial curation order, not clinical win probability) &middot; 100% open-access published tables/counts (1-based GRCh38 target windows; SantaLucia Tm/&Delta;G37 &amp; AlphaGenome AVI never rank candidates).</div>
+        <div class="pt-2 mt-2 border-t border-[var(--card-border)] text-[var(--muted-foreground)] font-mono text-xs leading-relaxed space-y-1">
+          <div><strong class="text-[var(--foreground)]">Rank &amp; Triage Key:</strong> Priority #Rk = translational priority (tier &middot; trial landscape &middot; validation steps &middot; stage) &middot; <span class="text-[var(--primary)]">Evidence #Rk</span> = curated human genetic &amp; CNS pathology ordering (36 prioritized programs; editorial order, not win probability) &middot; <span class="text-[var(--warning)]">Keep&middot;Exploratory (25)</span> = untested triage queue (not endorsement) &middot; Modeled estimates never rank candidates.</div>
+          <div>Data &amp; Provenance Standards: Open Targets / NIH IDG TDL &amp; TSA &middot; GENCODE v46 Off-Target Alignment Screen &middot; Linked Scripts, SHA-256 Checksums &amp; Study-Type Evidence Categories &middot; 100% open-access published tables/counts (1-based GRCh38 target windows; SantaLucia Tm/&Delta;G37 &amp; AlphaGenome AVI never rank candidates).</div>
+        </div>
       </details>
       <details id="contrasts-drawer" class="bg-[var(--card)] border border-[var(--border)] border-l-4 border-l-[var(--primary)] rounded-lg px-4 py-2.5 text-xs">
         <summary class="cursor-pointer font-semibold text-[var(--foreground)] flex flex-wrap items-center justify-between gap-2 select-none">
@@ -539,18 +550,16 @@ svg { display: block; vertical-align: middle; }
           <option value="hurdles">Sort: Fewest Validation Steps</option>
         </select>
         <button type="button" data-reset-filters="1" class="px-2.5 py-1.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] text-xs cursor-pointer">Reset</button>
+        <button type="button" data-open-method="1" class="px-2 py-1.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] font-mono text-xs cursor-pointer" title="Open Methodology &amp; Rank Key">Rank Key</button>
         <span id="p-count" class="font-mono tabular-nums text-[var(--muted-foreground)] text-xs ml-auto">52 / 52</span>
         <div class="w-full pt-2 mt-0.5 border-t border-[var(--card-border)] flex flex-wrap items-center gap-1.5">
           <span class="font-mono text-xs text-[var(--muted-foreground)] mr-0.5">Pathway / Mechanism:</span>
           <div id="p-lens-bar" class="flex flex-wrap gap-1.5"></div>
         </div>
-        <div class="w-full pt-1.5 border-t border-[var(--card-border)] text-xs text-[var(--muted-foreground)] font-mono leading-relaxed">
-          <strong class="text-[var(--foreground)]">Rank &amp; Triage Key:</strong> Priority #Rk = translational priority (tier &middot; trial landscape &middot; validation steps &middot; stage) &middot; <span class="text-[var(--primary)]">Evidence #Rk</span> = curated human genetic &amp; CNS pathology ordering (36 prioritized programs; editorial order, not win probability) &middot; <span class="text-[var(--warning)]">Keep&middot;Exploratory (25)</span> = untested triage queue (not endorsement) &middot; Modeled estimates never rank candidates.
-        </div>
       </div>
-      <div id="p-split-pane" class="grid grid-cols-1 lg:grid-cols-12 gap-3">
-        <div class="lg:col-span-8 bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-hidden lg:relative min-h-[520px]">
-          <div class="max-h-[420px] lg:max-h-none lg:absolute lg:inset-0 overflow-y-auto overflow-x-auto">
+      <div id="p-split-pane" class="p-workbench grid grid-cols-1 lg:grid-cols-12 gap-3">
+        <div class="lg:col-span-8 bg-[var(--card)] border border-[var(--border)] rounded-lg lg:flex lg:flex-col lg:min-h-0 overflow-hidden">
+          <div class="max-h-[420px] lg:max-h-none lg:flex-1 lg:min-h-0 overflow-y-auto overflow-x-auto">
             <table class="w-full text-left border-collapse text-xs">
               <thead class="sticky top-0 z-10 bg-[var(--card)] shadow-sm">
                 <tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
@@ -569,7 +578,7 @@ svg { display: block; vertical-align: middle; }
             </table>
           </div>
         </div>
-        <div id="p-detail" class="lg:col-span-4 bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2.5"></div>
+        <div id="p-detail" class="lg:col-span-4 bg-[var(--card)] border border-[var(--border)] rounded-lg lg:flex lg:flex-col lg:min-h-0 lg:overflow-hidden"></div>
       </div>
     </div>
     <div id="view-intervals" role="tabpanel" aria-labelledby="tab-btn-intervals" class="hidden space-y-3">
@@ -831,6 +840,7 @@ let pendingScrollY = null;
 let isRestoringHistory = false;
 let historyInitialized = false;
 let lastSelHidden = false;
+let lastDetailCandId = '';
 const expandedDetailGates = {};
 
 function scrollRowInPane(boxId, itemSel){
@@ -1331,10 +1341,12 @@ function renderDetail(selHidden=false){
     ? `<button type="button" data-jump-updates="${esc(r.id)}" class="px-2 py-1 rounded border border-[var(--primary)] text-[var(--primary)] font-mono text-xs shrink-0 cursor-pointer" title="View living research updates for ${esc(r.id)}">&#8634; ${candUpds.length}</button>`
     : '';
   const crowdChip = (r.crowd && !r.crowd.startsWith('N/A')) ? `<span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)] whitespace-nowrap">${esc(r.crowd)}</span>` : '';
-  document.getElementById('p-detail').innerHTML = `${hiddenBanner}
-    <div class="space-y-1.5 border-b border-[var(--card-border)] pb-2">
+  const prevBody = document.getElementById('p-detail-body');
+  const keepScroll = (prevBody && lastDetailCandId === r.id) ? prevBody.scrollTop : 0;
+  lastDetailCandId = r.id;
+  document.getElementById('p-detail').innerHTML = `<div class="shrink-0 p-3.5 pb-2.5 border-b border-[var(--card-border)] bg-[var(--card)] space-y-1.5">
       <div class="flex items-center justify-between gap-1.5 flex-wrap">
-        <div class="flex items-center gap-1.5 flex-wrap"><span class="font-mono font-bold text-sm" title="Translational Priority Rank #${r.rk} · Genetic & Pathology Evidence Rank #${r.brk}">#${r.rk} <span class="font-normal text-xs text-[var(--muted-foreground)]">(Evid #${r.brk})</span> &middot; <span class="text-[var(--muted-foreground)] font-normal">${esc(r.id)}</span></span> ${decBadge(r.dec, r.id)} ${crowdChip}</div>
+        <div class="flex items-center gap-1.5 flex-wrap"><span class="font-mono font-bold text-sm" title="Translational Priority Rank #${r.rk} · Genetic & Pathology Evidence Rank #${r.brk}">#${r.rk} <span class="font-normal text-xs text-[var(--muted-foreground)]">(Evid #${r.brk})</span> &middot; <span class="text-[var(--muted-foreground)] font-normal">${esc(r.id)}</span></span> ${decBadge(r.dec, r.id)}</div>
         <div class="flex items-center gap-1 shrink-0">${updDetailBtn}${pubMonoLink}</div>
       </div>
       <div class="text-sm font-semibold leading-snug">${esc(r.name)}</div>
@@ -1343,7 +1355,9 @@ function renderDetail(selHidden=false){
         <button type="button" data-open-dossier="${esc(r.id)}" class="px-2.5 py-1 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-semibold text-xs cursor-pointer">${w?'Open Full Monograph &rarr;':`Open Full Dossier (${evRows.length}) &rarr;`}</button>
       </div>
     </div>
-    <div class="space-y-2 text-xs">
+    <div id="p-detail-body" class="p-3.5 pt-2.5 space-y-2 text-xs lg:flex-1 lg:min-h-0 lg:overflow-y-auto">
+      ${hiddenBanner}
+      ${crowdChip ? `<div>${crowdChip}</div>` : ''}
       ${typeof renderEdgeRibbon === 'function' ? renderEdgeRibbon(s, r.id, true) : ''}
       <div class="grid grid-cols-1 xl:grid-cols-2 gap-2">
         <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1 xl:col-span-2">
@@ -1376,6 +1390,8 @@ function renderDetail(selHidden=false){
       </div>
     </div>`;
   syncDetailClamps();
+  const nextBody = document.getElementById('p-detail-body');
+  if(nextBody) nextBody.scrollTop = keepScroll;
 }
 function selectCand(id, userClick=false){
   selectedId = id;
@@ -1383,12 +1399,7 @@ function selectCand(id, userClick=false){
   renderPortfolio();
   if(userClick){
     commitHistory('replace');
-    try {
-      if(typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024){
-        const det = document.getElementById('p-detail');
-        if(det && det.scrollIntoView) det.scrollIntoView({behavior:'smooth', block:'nearest'});
-      }
-    } catch(_e) {}
+    if(typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024) scrollViewportTo('p-detail', true);
   }
 }
 function quickFilter(mode){
@@ -3972,8 +3983,18 @@ document.addEventListener('click', e => {
     if(bodyEl) bodyEl.setAttribute('data-clamped', open ? 'false' : 'true');
     tgBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
     tgBtn.innerHTML = open ? 'Collapse &uarr;' : (tgBtn.getAttribute('data-more-lbl') || 'Read full details &darr;');
+    if(!open){
+      const db = document.getElementById('p-detail-body');
+      const card = tgBtn.parentElement;
+      if(db && card && db.getBoundingClientRect && card.getBoundingClientRect){
+        const dTop = card.getBoundingClientRect().top - db.getBoundingClientRect().top;
+        if(dTop < 0) db.scrollTop = Math.max(0, db.scrollTop + dTop - 8);
+      }
+    }
     return;
   }
+  const omBtn = tgt.closest('[data-open-method]');
+  if(omBtn){ e.preventDefault(); const md = document.getElementById('methodology-drawer'); if(md){ md.open = !md.open; if(md.open) scrollViewportTo('methodology-drawer', true); } return; }
   const csBtn = tgt.closest('[data-copy-sha]');
   if(csBtn){ e.preventDefault(); const v = csBtn.getAttribute('data-copy-sha')||''; if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(v); } const orig = (csBtn.dataset&&(csBtn.dataset.orig||(csBtn.dataset.orig=csBtn.textContent)))||csBtn.textContent; csBtn.textContent='Copied ✓'; setTimeout(()=>{ csBtn.textContent = orig; }, 1400); return; }
   const ucBtn = tgt.closest('[data-upd-cat]');
@@ -3996,7 +4017,7 @@ document.addEventListener('click', e => {
   const rcBtn = tgt.closest('[data-jump-rep-cand]');
   if(rcBtn){ e.preventDefault(); e.stopPropagation(); openReplicationTarget('cand', rcBtn.getAttribute('data-jump-rep-cand'), rcBtn.getAttribute('data-jump-rep-cand'), activeTab); return; }
   const retPBtn = tgt.closest('[data-return-portfolio]');
-  if(retPBtn){ e.preventDefault(); const cid = retPBtn.getAttribute('data-return-portfolio')||''; if(cid && DATA_PORT.some(x=>x.id===cid)){ selectedId = cid; dossierId = cid; } pendingScrollId = (typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024) ? 'p-detail' : 'p-split-pane'; switchTab('portfolio', 'push'); return; }
+  if(retPBtn){ e.preventDefault(); const cid = retPBtn.getAttribute('data-return-portfolio')||''; if(cid && DATA_PORT.some(x=>x.id===cid)){ selectedId = cid; dossierId = cid; } pendingScrollId = (typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024) ? 'p-detail' : 'p-filter-bar'; switchTab('portfolio', 'push'); return; }
   const retIvBtn = tgt.closest('[data-return-intervals]');
   if(retIvBtn){ e.preventDefault(); jumpToIntervals(retIvBtn.getAttribute('data-return-intervals')||''); return; }
   const retUpdBtn = tgt.closest('[data-return-updates]');

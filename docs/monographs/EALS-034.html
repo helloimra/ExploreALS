@@ -81,6 +81,8 @@ input[type="range"] { accent-color: var(--primary); cursor: pointer; }
 svg { display: block; vertical-align: middle; }
 .gate-clamp[data-clamped="true"] { position: relative; max-height: 7.25rem; overflow: hidden; }
 .gate-clamp[data-clamped="true"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1.75rem; background: linear-gradient(to bottom, transparent, var(--background)); pointer-events: none; }
+@media (min-width: 1024px) { .p-workbench { height: clamp(310px, calc(100vh - 13.25rem), 760px); height: clamp(310px, calc(100dvh - 13.25rem), 760px); } }
+@media (min-width: 1280px) { .p-workbench { height: clamp(340px, calc(100vh - 11.75rem), 780px); height: clamp(340px, calc(100dvh - 11.75rem), 780px); } }
 .antialiased {-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .block {display:block}
 .flex {display:flex}
@@ -307,10 +309,13 @@ svg { display: block; vertical-align: middle; }
   .md\:grid-cols-\[268px_minmax\(0\,1fr\)\] {grid-template-columns:268px minmax(0,1fr)}
 }
 @media (min-width: 1024px) {
+  .lg\:flex {display:flex}
   .lg\:table-cell {display:table-cell}
   .lg\:absolute {position:absolute}
   .lg\:relative {position:relative}
   .lg\:inset-0 {inset:0px}
+  .lg\:flex-1 {flex:1 1 0%}
+  .lg\:flex-col {flex-direction:column}
   .lg\:grid-cols-12 {grid-template-columns:repeat(12,minmax(0,1fr))}
   .lg\:grid-cols-6 {grid-template-columns:repeat(6,minmax(0,1fr))}
   .lg\:col-span-4 {grid-column:span 4 / span 4}
@@ -318,8 +323,11 @@ svg { display: block; vertical-align: middle; }
   .lg\:col-span-6 {grid-column:span 6 / span 6}
   .lg\:col-span-7 {grid-column:span 7 / span 7}
   .lg\:col-span-8 {grid-column:span 8 / span 8}
+  .lg\:min-h-0 {min-height:0px}
   .lg\:min-h-\[520px\] {min-height:520px}
   .lg\:max-h-none {max-height:none}
+  .lg\:overflow-hidden {overflow:hidden}
+  .lg\:overflow-y-auto {overflow-y:auto}
 }
 @media (min-width: 1280px) {
   .xl\:table-cell {display:table-cell}

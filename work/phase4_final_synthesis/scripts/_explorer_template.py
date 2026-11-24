@@ -7,7 +7,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <title>ExploreALS v1.3 — ALS Target Triage, Splice Windows &amp; Replication Explorer</title>
-  <style>:where(.hidden){display:none}.text-xs:not(.leading-snug):not(.leading-relaxed){line-height:1.5}table{border-collapse:collapse;width:100%}th,td{padding:6px 8px;vertical-align:top}.gate-clamp[data-clamped="true"]{position:relative;max-height:7.25rem;overflow:hidden}.gate-clamp[data-clamped="true"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.75rem;background:linear-gradient(to bottom,transparent,var(--background));pointer-events:none}</style>
+  <style>:where(.hidden){display:none}.text-xs:not(.leading-snug):not(.leading-relaxed){line-height:1.5}table{border-collapse:collapse;width:100%}th,td{padding:6px 8px;vertical-align:top}.gate-clamp[data-clamped="true"]{position:relative;max-height:7.25rem;overflow:hidden}.gate-clamp[data-clamped="true"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.75rem;background:linear-gradient(to bottom,transparent,var(--background));pointer-events:none}@media(min-width:1024px){.p-workbench{height:clamp(310px,calc(100vh - 13.25rem),760px);height:clamp(310px,calc(100dvh - 13.25rem),760px)}}@media(min-width:1280px){.p-workbench{height:clamp(340px,calc(100vh - 11.75rem),780px);height:clamp(340px,calc(100dvh - 11.75rem),780px)}}</style>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
 </head>
 <body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-4 m-0 text-xs">
@@ -156,7 +156,10 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           <div><strong class="text-[var(--foreground)]">2. Untested &ne; Falsified Triage Rule:</strong> Never discards an untested hypothesis due to bulk-assay, fixed-library-concentration, or unstratified-cohort blind spots. <span class="font-mono text-[var(--warning)]" title="Untested preclinical or biofluid triage queue — prospective Go/No-Go test required">Keep &middot; Exploratory (25)</span> denotes an untested preclinical/biofluid triage queue (not therapeutic endorsement) paired with prospective Go/No-Go criteria; <span class="font-mono text-[var(--error)]" title="Deprioritized based on human RCT futility, CNS exposure/safety limits, or assay confounding">Drop &middot; Falsified (16)</span> evaluates specific clinical drug regimens/exposures separately from molecular target pathways and requires positive human RCT futility, insurmountable CNS exposure/safety limits, or confounding collapse.</div>
           <div><strong class="text-[var(--foreground)]">3. Combinatorial Portfolio Thesis:</strong> Pairs single-agent-qualified genotype-stratified intrathecal splice rescue (evaluating 2-plex KCNQ2 EALS-006 + STMN2 EALS-002 vs. 3-plex + UNC13A EALS-001 across rs12973192/rs12608932 genotypes at a 6&ndash;9 mg [&le;3 mg/strand] total intrathecal ASO dose target vs. 12&ndash;50 mg nusinersen &amp; 100 mg tofersen; &ge;24&ndash;48 mg flagged as DRG/radiculotoxicity hazard) with oral non-covalent SARM1 ARM&ndash;TIR octamer stabilization (EALS-030, 1.0x parallel Bliss floor to ~2&ndash;7x modeled NMNAT2-coupled MWC bounds) and biomarker-gated neuroimmune modulation (EALS-031 BioVendor-bridged pNfH &le;3,700, oximetry-verified EALS-007 sST2, Tier 3 EALS-019 high-chitinase CSF glial stratum).</div>
         </div>
-        <div class="pt-2 mt-2 border-t border-[var(--card-border)] text-[var(--muted-foreground)] font-mono text-xs leading-relaxed">Data &amp; Provenance Standards: Open Targets / NIH IDG TDL &amp; TSA &middot; GENCODE v46 Off-Target Alignment Screen &middot; Linked Scripts, SHA-256 Checksums &amp; Study-Type Evidence Categories &middot; Curated Biological-Evidence Ordering (<span class="text-[var(--foreground)]">Evidence #Rk</span> orders 36 explicitly tiered programs + evidence-band fallbacks; editorial curation order, not clinical win probability) &middot; 100% open-access published tables/counts (1-based GRCh38 target windows; SantaLucia Tm/&Delta;G37 &amp; AlphaGenome AVI never rank candidates).</div>
+        <div class="pt-2 mt-2 border-t border-[var(--card-border)] text-[var(--muted-foreground)] font-mono text-xs leading-relaxed space-y-1">
+          <div><strong class="text-[var(--foreground)]">Rank &amp; Triage Key:</strong> Priority #Rk = translational priority (tier &middot; trial landscape &middot; validation steps &middot; stage) &middot; <span class="text-[var(--primary)]">Evidence #Rk</span> = curated human genetic &amp; CNS pathology ordering (36 prioritized programs; editorial order, not win probability) &middot; <span class="text-[var(--warning)]">Keep&middot;Exploratory (25)</span> = untested triage queue (not endorsement) &middot; Modeled estimates never rank candidates.</div>
+          <div>Data &amp; Provenance Standards: Open Targets / NIH IDG TDL &amp; TSA &middot; GENCODE v46 Off-Target Alignment Screen &middot; Linked Scripts, SHA-256 Checksums &amp; Study-Type Evidence Categories &middot; 100% open-access published tables/counts (1-based GRCh38 target windows; SantaLucia Tm/&Delta;G37 &amp; AlphaGenome AVI never rank candidates).</div>
+        </div>
       </details>
       <details id="contrasts-drawer" class="bg-[var(--card)] border border-[var(--border)] border-l-4 border-l-[var(--primary)] rounded-lg px-4 py-2.5 text-xs">
         <summary class="cursor-pointer font-semibold text-[var(--foreground)] flex flex-wrap items-center justify-between gap-2 select-none">
@@ -215,18 +218,16 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           <option value="hurdles">Sort: Fewest Validation Steps</option>
         </select>
         <button type="button" data-reset-filters="1" class="px-2.5 py-1.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] text-xs cursor-pointer">Reset</button>
+        <button type="button" data-open-method="1" class="px-2 py-1.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] font-mono text-xs cursor-pointer" title="Open Methodology &amp; Rank Key">Rank Key</button>
         <span id="p-count" class="font-mono tabular-nums text-[var(--muted-foreground)] text-xs ml-auto">52 / 52</span>
         <div class="w-full pt-2 mt-0.5 border-t border-[var(--card-border)] flex flex-wrap items-center gap-1.5">
           <span class="font-mono text-xs text-[var(--muted-foreground)] mr-0.5">Pathway / Mechanism:</span>
           <div id="p-lens-bar" class="flex flex-wrap gap-1.5"></div>
         </div>
-        <div class="w-full pt-1.5 border-t border-[var(--card-border)] text-xs text-[var(--muted-foreground)] font-mono leading-relaxed">
-          <strong class="text-[var(--foreground)]">Rank &amp; Triage Key:</strong> Priority #Rk = translational priority (tier &middot; trial landscape &middot; validation steps &middot; stage) &middot; <span class="text-[var(--primary)]">Evidence #Rk</span> = curated human genetic &amp; CNS pathology ordering (36 prioritized programs; editorial order, not win probability) &middot; <span class="text-[var(--warning)]">Keep&middot;Exploratory (25)</span> = untested triage queue (not endorsement) &middot; Modeled estimates never rank candidates.
-        </div>
       </div>
-      <div id="p-split-pane" class="grid grid-cols-1 lg:grid-cols-12 gap-3">
-        <div class="lg:col-span-8 bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-hidden lg:relative min-h-[520px]">
-          <div class="max-h-[420px] lg:max-h-none lg:absolute lg:inset-0 overflow-y-auto overflow-x-auto">
+      <div id="p-split-pane" class="p-workbench grid grid-cols-1 lg:grid-cols-12 gap-3">
+        <div class="lg:col-span-8 bg-[var(--card)] border border-[var(--border)] rounded-lg lg:flex lg:flex-col lg:min-h-0 overflow-hidden">
+          <div class="max-h-[420px] lg:max-h-none lg:flex-1 lg:min-h-0 overflow-y-auto overflow-x-auto">
             <table class="w-full text-left border-collapse text-xs">
               <thead class="sticky top-0 z-10 bg-[var(--card)] shadow-sm">
                 <tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
@@ -245,7 +246,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
             </table>
           </div>
         </div>
-        <div id="p-detail" class="lg:col-span-4 bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2.5"></div>
+        <div id="p-detail" class="lg:col-span-4 bg-[var(--card)] border border-[var(--border)] rounded-lg lg:flex lg:flex-col lg:min-h-0 lg:overflow-hidden"></div>
       </div>
     </div>
 """
