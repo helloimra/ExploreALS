@@ -488,8 +488,9 @@ function certBadge(cert){
 }
 
 function setDossierSlice(sl){
-  dossierSlice = sl || 'ALL';
-  if(dossierSlice === 'ALL') dossierLens = 'ALL';
+  const nextSl = sl || 'ALL';
+  dossierSlice = (nextSl !== 'ALL' && dossierSlice === nextSl) ? 'ALL' : nextSl;
+  if(sl === 'ALL') dossierLens = 'ALL';
   renderDossierSidebar();
 }
 function resetDossierNav(){
@@ -965,7 +966,12 @@ function renderDossierMain(){
         </div>
         ${rightCol}
       </div>
-    </div>${renderSummaryDomainPanels(r)}${evTable}`;
+    </div>${renderSummaryDomainPanels(r)}${evTable}
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+      <button type="button" data-open-dossier="${prevId}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] cursor-pointer">&larr; ${esc(prevLbl)}</button>
+      <button type="button" data-back-to-top="1" class="px-3 py-1 rounded bg-[var(--background)] border border-[var(--primary)] text-[var(--primary)] font-semibold cursor-pointer">&uarr; Back to Top of Page</button>
+      <button type="button" data-open-dossier="${nextId}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] cursor-pointer">${esc(nextLbl)} &rarr;</button>
+    </div>`;
     return;
   }
 
@@ -1081,6 +1087,11 @@ function renderDossierMain(){
         </div>`;
       }).join('')}
     </div>
-    ${renderSummaryDomainPanels(r)}${evTable}`;
+    ${renderSummaryDomainPanels(r)}${evTable}
+    <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex flex-wrap items-center justify-between gap-2 text-xs font-mono">
+      <button type="button" data-open-dossier="${prevId}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] cursor-pointer">&larr; ${esc(prevLbl)}</button>
+      <button type="button" data-back-to-top="1" class="px-3 py-1 rounded bg-[var(--background)] border border-[var(--primary)] text-[var(--primary)] font-semibold cursor-pointer">&uarr; Back to Top of Page</button>
+      <button type="button" data-open-dossier="${nextId}" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] cursor-pointer">${esc(nextLbl)} &rarr;</button>
+    </div>`;
 }
 """

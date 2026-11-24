@@ -10,8 +10,8 @@ CLASS_ATTR_RE = re.compile(r"""class(?:Name)?\s*=\s*['"]([^'"]+)['"]""")
 JS_QUOTED_STR_RE = re.compile(r"""['"]([A-Za-z0-9_:\-\[\]\(\)\./%]+(?:\s+[A-Za-z0-9_:\-\[\]\(\)\./%]+)*)['"]""")
 TAILWIND_LIKE_RE = re.compile(
     r"^(?:(?:sm|md|lg|xl|hover|focus|last):)?(?:"
-    r"kpi-btn|tab-btn|rep-mode-btn|antialiased|block|inline-block|flex|grid|table-cell|hidden|relative|absolute|sticky|"
-    r"top-\d+|bottom-0|left-0|right-0|inset-0|z-\d+|flex-1|flex-col|flex-wrap|flex-nowrap|shrink-0|"
+    r"kpi-btn|tab-btn|rep-mode-btn|antialiased|block|inline-block|flex|grid|table-cell|hidden|relative|absolute|sticky|fixed|"
+    r"top-\d+|bottom-\d+|left-0|right-\d+|inset-0|z-\d+|flex-1|flex-col|flex-wrap|flex-nowrap|shrink-0|"
     r"items-(?:start|center|baseline)|justify-between|grid-cols-[^\s]+|col-span-\d+|"
     r"(?:w|h)-(?:full|auto|px|0\.5|1|1\.5|2|2\.5|3|4)|min-[wh]-[^\s]+|max-[wh]-[^\s]+|overflow-[^\s]+|truncate|break-words|break-all|whitespace-nowrap|list-disc|"
     r"(?:p|m)(?:x|y|t|r|b|l)?-(?:0|0\.5|1|1\.5|2|2\.5|3|3\.5|4|6|auto)|gap(?:-[xy])?-(?:0\.5|1|1\.5|2|2\.5|3)|"
@@ -19,7 +19,7 @@ TAILWIND_LIKE_RE = re.compile(
     r"(?:bg|text|border|border-l|divide|accent|ring)-\[var\(--[a-z-]+\)\]|divide-y|"
     r"font-(?:mono|normal|medium|semibold|bold)|italic|text-(?:xs|sm|base|lg|left|center|right)|"
     r"leading-(?:snug|normal|relaxed)|tabular-nums|align-(?:top|middle)|underline|decoration-(?:dotted|solid)|underline-offset-2|"
-    r"opacity-\d+|shadow-sm|ring-2|outline-none|transition|rotate-45|cursor-(?:pointer|help)|select-none|pointer-events-none"
+    r"opacity-\d+|shadow-(?:sm|md)|ring-2|outline-none|transition|rotate-45|cursor-(?:pointer|help)|select-none|pointer-events-none"
     r")$"
 )
 

@@ -395,15 +395,20 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
       </div>
 
       <div id="rep-workbench-bar" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex flex-wrap items-center gap-2">
-        <div class="flex flex-wrap gap-1.5" role="group" aria-label="Replication Workbench Mode">
+        <div class="flex flex-wrap items-center gap-1.5" role="group" aria-label="Replication Workbench Registry">
+          <span class="font-mono text-xs text-[var(--muted-foreground)] mr-0.5">Registry:</span>
           <button type="button" data-rep-mode="runs" class="rep-mode-btn px-2.5 py-1.5 rounded border font-mono text-xs cursor-pointer">8 Flagship + 50 Runs (58)</button>
-          <button type="button" data-rep-mode="datasets" class="rep-mode-btn px-2.5 py-1.5 rounded border font-mono text-xs cursor-pointer">Staged Datasets (40)</button>
+          <button type="button" data-rep-mode="datasets" class="rep-mode-btn px-2.5 py-1.5 rounded border font-mono text-xs cursor-pointer">Open Datasets (42)</button>
           <button type="button" data-rep-mode="evidence" class="rep-mode-btn px-2.5 py-1.5 rounded border font-mono text-xs cursor-pointer">202 Evidence SHA-256 &amp; Formulas</button>
         </div>
         <input id="rep-search" aria-label="Search replication workbench" type="text" placeholder="Search Run ID, DS ID, candidate, formula, SHA-256, script..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs flex-1 min-w-[200px] text-[var(--foreground)]" />
         <select id="rep-filter" aria-label="Filter replication workbench" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]"></select>
         <button type="button" data-reset-rep="1" class="px-2.5 py-1.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] text-xs cursor-pointer">Reset</button>
         <span id="rep-count" class="font-mono tabular-nums text-[var(--muted-foreground)] text-xs ml-auto">58 / 58</span>
+        <div class="w-full pt-2 mt-0.5 border-t border-[var(--card-border)] flex flex-wrap items-center gap-1.5">
+          <span id="rep-subfilter-lbl" class="font-mono text-xs text-[var(--muted-foreground)] mr-0.5">Workflow:</span>
+          <div id="rep-subfilter-bar" class="flex flex-wrap gap-1.5"></div>
+        </div>
       </div>
 
       <div id="rep-split-pane" class="grid grid-cols-1 lg:grid-cols-12 gap-3">
@@ -443,9 +448,9 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
             <span class="font-mono text-xs text-[var(--success)]">202 / 202 (100%) 64-char SHA-256</span>
           </div>
           <div class="grid grid-cols-3 gap-2 font-mono text-xs">
-            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">Staged Datasets</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">139 <span class="text-xs font-normal text-[var(--muted-foreground)]">(42 DS)</span></div></div>
-            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">API Snapshots</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">56 <span class="text-xs font-normal text-[var(--muted-foreground)]">(JSON)</span></div></div>
-            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">Model Outputs</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">7 <span class="text-xs font-normal text-[var(--muted-foreground)]">(ODE/MWC)</span></div></div>
+            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">Dataset Anchors</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">137 <span class="text-xs font-normal text-[var(--muted-foreground)]">(42 DS)</span></div></div>
+            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">API Snapshots</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">57 <span class="text-xs font-normal text-[var(--muted-foreground)]">(JSON)</span></div></div>
+            <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)]"><div class="text-[var(--muted-foreground)]">Model Outputs</div><div class="font-bold text-sm text-[var(--foreground)] mt-0.5">8 <span class="text-xs font-normal text-[var(--muted-foreground)]">(ODE/MWC)</span></div></div>
           </div>
           <p class="text-[var(--muted-foreground)] text-xs leading-relaxed">All <span class="font-mono">202</span> records carry 64-char SHA-256 digests across <span class="font-mono">46</span> unique source files (<span class="font-mono">65/202</span> bundled in clean git checkout; <span class="font-mono">202/202</span> locally matched when all <span class="font-mono">42</span> resources are staged across <span class="font-mono">674.16 MB</span> / <span class="font-mono">642.93 MiB</span>):</p>
           <ul class="space-y-1 text-[var(--muted-foreground)] text-xs leading-relaxed">
@@ -480,4 +485,5 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
       </div>
     </section>
   </div>
+  <button id="back-to-top-btn" type="button" data-back-to-top="1" aria-label="Back to top of page" title="Scroll back to top of page" class="hidden fixed bottom-4 right-4 z-20 px-3 py-1.5 rounded-full bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-semibold text-xs shadow-md cursor-pointer">&uarr; Top</button>
 """

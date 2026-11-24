@@ -10,6 +10,8 @@ let repReturnTab = 'dossiers';
 function renderRepDag(){
   const box = document.getElementById('rep-dag-box');
   if(!box) return;
+  const curFv = ((document.getElementById('rep-filter')||{}).value||'ALL');
+  const curKey = repMode + '|' + curFv;
   const nodes = [
     {x:6,  y:12, w:148, h:46, title:'1. Open Datasets (42)', sub:'674 MB · SHA-256',     act:"datasets|ALL"},
     {x:172,y:12, w:148, h:46, title:'2. Cohort Loaders',     sub:'12 Cohort Parsers',    act:"runs|COHORT"},
@@ -17,12 +19,15 @@ function renderRepDag(){
     {x:78, y:96, w:162, h:46, title:'4. 202 Records',        sub:'100% SHA-256 + OLS',   act:"evidence|ALL"},
     {x:260,y:96, w:164, h:46, title:'5. Verification Suite', sub:'Citations + Off-Tgt',  act:"runs|SYNTH"}
   ];
-  const rects = nodes.map(n => `
-    <g data-rep-dag="${n.act}" class="cursor-pointer" role="button" tabindex="0" aria-label="Filter workbench: ${n.title}">
-      <rect x="${n.x}" y="${n.y}" width="${n.w}" height="${n.h}" rx="6" fill="var(--background)" stroke="var(--primary)" stroke-width="1.4"/>
+  const rects = nodes.map(n => {
+    const on = n.act === curKey;
+    return `
+    <g data-rep-dag="${n.act}" class="cursor-pointer" role="button" tabindex="0" aria-pressed="${on?'true':'false'}" aria-label="Filter workbench: ${n.title}">
+      <rect x="${n.x}" y="${n.y}" width="${n.w}" height="${n.h}" rx="6" fill="${on?'var(--content)':'var(--background)'}" stroke="var(--primary)" stroke-width="${on?'2.2':'1.4'}"/>
       <text x="${n.x+n.w/2}" y="${n.y+20}" text-anchor="middle" font-size="12.5" font-weight="600" fill="var(--foreground)">${n.title}</text>
       <text x="${n.x+n.w/2}" y="${n.y+37}" text-anchor="middle" font-size="12.5" font-family="monospace" fill="var(--muted-foreground)">${n.sub}</text>
-    </g>`).join('');
+    </g>`;
+  }).join('');
   box.innerHTML = `<svg viewBox="0 0 492 154" class="w-full h-auto" role="img" aria-label="5-stage computational provenance workflow">
     <defs><marker id="dag-arr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M 0 1 L 7 4 L 0 7 z" fill="var(--muted-foreground)"/></marker></defs>
     <line x1="154" y1="35" x2="169" y2="35" stroke="var(--muted-foreground)" stroke-width="1.5" marker-end="url(#dag-arr)"/>
@@ -49,16 +54,75 @@ function renderRepOverlap(){
   }).join('');
 }
 
+function getRepFilterDefs(mode){
+  if(mode === 'runs'){
+    const runs = (typeof DATA_RUNS !== 'undefined') ? DATA_RUNS : [];
+    const flagCnt = runs.filter(r => r.flag).length;
+    const cohortCnt = runs.filter(r => r.grp.startsWith('Cohort Re-Analysis') || r.grp.startsWith('Data Staging')).length;
+    const biophysCnt = runs.filter(r => r.grp.startsWith('3D & PK-PD')).length;
+    const synthCnt = runs.filter(r => r.grp.startsWith('Multi-Omic') || r.grp.startsWith('Hybridization') || r.grp.startsWith('Portfolio')).length;
+    return {
+      lbl: 'Workflow:',
+      opts: [
+        {v:'ALL', opt:`Workflow: All (${runs.length})`, pill:`Workflow: All (${runs.length})`},
+        {v:'FLAGSHIP', opt:`Flagship Monograph Reproducers (${flagCnt})`, pill:`Flagship (${flagCnt})`},
+        {v:'COHORT', opt:`Cohort Re-Analysis · Splicing, snRNA & Proteomics (${cohortCnt})`, pill:`Cohort Re-Analysis (${cohortCnt})`},
+        {v:'BIOPHYS', opt:`3D Biophysics, Isoforms & PK-PD (${biophysCnt})`, pill:`3D Biophysics & PK-PD (${biophysCnt})`},
+        {v:'SYNTH', opt:`Multi-Omic Triage, Alignment & Synthesis (${synthCnt})`, pill:`Triage & Synthesis (${synthCnt})`}
+      ]
+    };
+  }
+  if(mode === 'datasets'){
+    const ds = (typeof DATA_DATASETS !== 'undefined') ? DATA_DATASETS : [];
+    const aCnt = ds.filter(d => d.tier === 'TIER_A_OPEN_REDISTRIBUTABLE').length;
+    const bCnt = ds.filter(d => d.tier === 'TIER_B_PUBLISHER_HTTPS_FETCH').length;
+    const cCnt = ds.filter(d => d.tier === 'TIER_C_DUA_OR_BASELINE').length;
+    return {
+      lbl: 'Legal Tier:',
+      opts: [
+        {v:'ALL', opt:`Legal Tier: All (${ds.length})`, pill:`Legal Tier: All (${ds.length})`},
+        {v:'TIER_A_OPEN_REDISTRIBUTABLE', opt:`Tier A · Open Redistributable (${aCnt})`, pill:`Tier A · Open (${aCnt})`},
+        {v:'TIER_B_PUBLISHER_HTTPS_FETCH', opt:`Tier B · Direct Publisher/EuropePMC HTTPS (${bCnt})`, pill:`Tier B · HTTPS (${bCnt})`},
+        {v:'TIER_C_DUA_OR_BASELINE', opt:`Tier C · Registered Synapse Access (${cCnt})`, pill:`Tier C · Synapse (${cCnt})`}
+      ]
+    };
+  }
+  const ev = (typeof DATA_FORMULAS !== 'undefined') ? DATA_FORMULAS : [];
+  const dsCnt = ev.filter(f => f.anc === 'STAGED_DATASET').length;
+  const apiCnt = ev.filter(f => f.anc === 'CACHED_API_SNAPSHOT').length;
+  const modCnt = ev.filter(f => f.anc === 'DETERMINISTIC_MODEL_OUTPUT').length;
+  return {
+    lbl: 'Anchor Type:',
+    opts: [
+      {v:'ALL', opt:`Anchor Type: All (${ev.length})`, pill:`Anchor Type: All (${ev.length})`},
+      {v:'STAGED_DATASET', opt:`Dataset File Anchor (${dsCnt})`, pill:`Dataset File Anchor (${dsCnt})`},
+      {v:'CACHED_API_SNAPSHOT', opt:`API Snapshot Anchor (${apiCnt})`, pill:`API Snapshot Anchor (${apiCnt})`},
+      {v:'DETERMINISTIC_MODEL_OUTPUT', opt:`Model Output Anchor (${modCnt})`, pill:`Model Output Anchor (${modCnt})`}
+    ]
+  };
+}
+
 function populateRepFilterOptions(){
   const sel = document.getElementById('rep-filter');
   if(!sel) return;
-  if(repMode === 'runs'){
-    sel.innerHTML = '<option value="ALL">Workflow: All (58)</option><option value="FLAGSHIP">8 Flagship Monograph Reproducers</option><option value="COHORT">Cohort Re-Analysis &middot; Splicing, snRNA &amp; Proteomics</option><option value="BIOPHYS">3D Biophysics, Isoforms &amp; PK-PD</option><option value="SYNTH">Multi-Omic Triage, Alignment &amp; Synthesis</option>';
-  } else if(repMode === 'datasets'){
-    sel.innerHTML = '<option value="ALL">Legal Tier: All (40)</option><option value="TIER_A_OPEN_REDISTRIBUTABLE">Tier A &middot; Open Redistributable (CC0 / CC-BY)</option><option value="TIER_B_PUBLISHER_HTTPS_FETCH">Tier B &middot; Direct Publisher/EuropePMC HTTPS</option><option value="TIER_C_DUA_OR_BASELINE">Tier C &middot; Registered Synapse Access</option>';
-  } else {
-    sel.innerHTML = '<option value="ALL">Source Type: All (202)</option><option value="STAGED_DATASET">Staged Open Dataset (139)</option><option value="CACHED_API_SNAPSHOT">Cached API Snapshot (56)</option><option value="DETERMINISTIC_MODEL_OUTPUT">Deterministic Model Output (7)</option>';
-  }
+  const defs = getRepFilterDefs(repMode);
+  sel.innerHTML = defs.opts.map(o => `<option value="${esc(o.v)}">${esc(o.opt)}</option>`).join('');
+}
+
+function renderRepSubfilterBar(){
+  const bar = document.getElementById('rep-subfilter-bar');
+  const lbl = document.getElementById('rep-subfilter-lbl');
+  if(!bar) return;
+  const defs = getRepFilterDefs(repMode);
+  if(lbl) lbl.textContent = defs.lbl;
+  const fv = ((document.getElementById('rep-filter')||{}).value||'ALL');
+  bar.innerHTML = defs.opts.map(o => {
+    const on = o.v === fv;
+    const cls = on
+      ? 'bg-[var(--primary)] text-[var(--primary-foreground)] border-[var(--primary)] font-semibold'
+      : 'bg-[var(--background)] text-[var(--muted-foreground)] border-[var(--border)] hover:text-[var(--foreground)] hover:border-[var(--primary)]';
+    return `<button type="button" data-rep-subfilter="${esc(o.v)}" aria-pressed="${on?'true':'false'}" class="px-2 py-0.5 rounded border font-mono text-xs cursor-pointer ${cls}">${esc(o.pill)}</button>`;
+  }).join('');
 }
 
 function setRepMode(mode, keepFilter=false, skipRender=false){
@@ -185,6 +249,8 @@ function renderReplicationWorkbench(){
       </tr>`;
     }).join('') : emptyEvRow;
   }
+  renderRepSubfilterBar();
+  renderRepDag();
   renderRepInspector(items.length === 0);
   if(typeof scrollRowInPane === 'function') scrollRowInPane('rep-tbody', 'tr[data-rep-select="'+selectedRepKey+'"]');
 }
