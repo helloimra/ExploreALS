@@ -7,7 +7,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
 <head>
   <meta charset="UTF-8" />
   <title>ExploreALS v1.3 — ALS Target Triage, Splice Windows &amp; Replication Explorer</title>
-  <style>:where(.hidden){display:none}.text-xs:not(.leading-snug):not(.leading-relaxed){line-height:1.5}table{border-collapse:collapse;width:100%}th,td{padding:6px 8px;vertical-align:top}.gate-clamp[data-clamped="true"]{position:relative;max-height:7.25rem;overflow:hidden}.gate-clamp[data-clamped="true"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.75rem;background:linear-gradient(to bottom,transparent,var(--background));pointer-events:none}@media(min-width:1024px){.p-workbench{height:clamp(310px,calc(100vh - 13.25rem),760px);height:clamp(310px,calc(100dvh - 13.25rem),760px)}}@media(min-width:1280px){.p-workbench{height:clamp(340px,calc(100vh - 11.75rem),780px);height:clamp(340px,calc(100dvh - 11.75rem),780px)}}</style>
+  <style>:where(.hidden){display:none}.text-xs:not(.leading-snug):not(.leading-relaxed){line-height:1.5}table{border-collapse:collapse;width:100%}th,td{padding:6px 8px;vertical-align:top}.gate-clamp[data-clamped="true"]{position:relative;max-height:7.25rem;overflow:hidden}.gate-clamp[data-clamped="true"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.75rem;background:linear-gradient(to bottom,transparent,var(--background));pointer-events:none}@media(min-width:1024px){.p-workbench{height:clamp(310px,calc(100vh - 13.25rem),760px);height:clamp(310px,calc(100dvh - 13.25rem),760px)}}@media(min-width:1280px){.p-workbench{height:clamp(340px,calc(100vh - 11.75rem),780px);height:clamp(340px,calc(100dvh - 11.75rem),780px)}}.iv-table-cap{max-height:420px}@media(min-width:1024px){.iv-table-cap,.iv-detail-cap{max-height:clamp(310px,calc(100vh - 5.75rem),820px);max-height:clamp(310px,calc(100dvh - 5.75rem),820px)}}</style>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
 </head>
 <body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-4 m-0 text-xs">
@@ -252,7 +252,14 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
 """
 
 HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labelledby="tab-btn-intervals" class="hidden space-y-3">
-      <div id="iv-filter-bar" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 space-y-2">
+      <details id="iv-method-drawer" class="bg-[var(--card)] border border-[var(--border)] rounded-lg px-4 py-2.5 text-xs">
+        <summary class="cursor-pointer font-semibold text-[var(--foreground)] select-none">GENCODE v46 Off-Target Alignment Screen &mdash; 1-Based Closed GRCh38 Target Windows, Safety Rules &amp; Biophysical Notes</summary>
+        <div class="text-xs text-[var(--muted-foreground)] border-t border-[var(--card-border)] pt-2.5 mt-2 space-y-1.5 leading-relaxed">
+          <div><strong class="font-mono text-[var(--foreground)]">GENCODE v46 Off-Target Alignment Screen (1-Based Closed GRCh38 Target Windows):</strong> Candidate target windows for empirical 1-nt microwalks plus human neuron <span class="font-mono">Ca2+</span>-oscillation, <span class="font-mono">TLR9</span> &amp; primary <span class="font-mono">DRG</span> safety screens (reference transcriptome alignment does not exclude phosphorothioate protein-binding toxicity) &middot; modeled SantaLucia <span class="font-mono">2'-O-MOE PO/PS Tm / &Delta;G37</span> + <span class="font-mono">AlphaGenome AVI Phred</span> (DNA-variant conservation/splicing score, not steric ASO potency).</div>
+          <div>Select any window below to inspect its labeled <span class="font-mono text-[var(--foreground)]">Spliced mRNA (&le;200bp of splice junction)</span> and <span class="font-mono text-[var(--foreground)]">Nascent Pre-mRNA (sense strand)</span> hybridization counts across <span class="font-mono">254,070</span> GENCODE v46 transcripts, <span class="font-mono">gnomAD v4</span> constrained CNS gene flags, sibling windows on the same locus, and genome browser tracks (<span class="font-mono text-[var(--success)]">Pass &middot; Clean</span> requires zero hits across all spliced mRNA, &le;50bp-SS, &le;25bp 2-mm, 1-nt bulge &amp; 18-nt sub-core filters).</div>
+        </div>
+      </details>
+      <div id="iv-filter-bar" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3">
         <div class="flex flex-wrap items-center gap-2">
           <input id="iv-search" aria-label="Search GRCh38 intervals" type="text" placeholder="Filter gene, ID, coordinate..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs min-w-[180px] text-[var(--foreground)]" />
           <select id="iv-status" aria-label="Filter by off-target safety status" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
@@ -273,16 +280,13 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
             <input id="iv-leads" type="checkbox" class="accent-[var(--primary)]" /> Promoted Leads Only (11)
           </label>
           <button type="button" data-reset-intervals="1" class="px-2.5 py-1.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] text-xs cursor-pointer">Reset</button>
+          <button type="button" data-open-iv-method="1" class="px-2 py-1.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] font-mono text-xs cursor-pointer" title="Open Off-Target Screen Methodology &amp; Safety Rules">Screen Guide</button>
           <span id="iv-count" class="font-mono tabular-nums text-[var(--muted-foreground)] text-xs ml-auto">28 / 28</span>
         </div>
-        <div class="text-xs text-[var(--muted-foreground)] border-t border-[var(--card-border)] pt-2.5 space-y-1 leading-relaxed">
-          <div><strong class="font-mono text-[var(--foreground)]">GENCODE v46 Off-Target Alignment Screen (1-Based Closed GRCh38 Target Windows):</strong> Candidate target windows for empirical 1-nt microwalks plus human neuron <span class="font-mono">Ca2+</span>-oscillation, <span class="font-mono">TLR9</span> &amp; primary <span class="font-mono">DRG</span> safety screens (reference transcriptome alignment does not exclude phosphorothioate protein-binding toxicity) &middot; modeled SantaLucia <span class="font-mono">2'-O-MOE PO/PS Tm / &Delta;G37</span> + <span class="font-mono">AlphaGenome AVI Phred</span> (DNA-variant conservation/splicing score, not steric ASO potency).</div>
-          <div>Select any window on the left to inspect its labeled <span class="font-mono text-[var(--foreground)]">Spliced mRNA (&le;200bp of splice junction)</span> and <span class="font-mono text-[var(--foreground)]">Nascent Pre-mRNA (sense strand)</span> hybridization counts across <span class="font-mono">254,070</span> GENCODE v46 transcripts, <span class="font-mono">gnomAD v4</span> constrained CNS gene flags, sibling windows on the same locus, and genome browser tracks (<span class="font-mono text-[var(--success)]">Pass &middot; Clean</span> requires zero hits across all spliced mRNA, &le;50bp-SS, &le;25bp 2-mm, 1-nt bulge &amp; 18-nt sub-core filters).</div>
-        </div>
       </div>
-      <div id="iv-split-pane" class="grid grid-cols-1 lg:grid-cols-12 gap-3">
-        <div class="lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-hidden lg:relative min-h-[520px]">
-          <div class="max-h-[420px] lg:max-h-none lg:absolute lg:inset-0 overflow-y-auto overflow-x-auto">
+      <div id="iv-split-pane" class="grid grid-cols-1 lg:grid-cols-12 gap-3 lg:items-start">
+        <div class="iv-table-cap lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-lg flex flex-col overflow-hidden">
+          <div class="min-h-0 overflow-y-auto overflow-x-auto">
             <table class="w-full text-left border-collapse text-xs">
               <thead class="sticky top-0 z-10 bg-[var(--card)] shadow-sm">
                 <tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
@@ -297,7 +301,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
             </table>
           </div>
         </div>
-        <div id="iv-detail" class="lg:col-span-5 bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2.5 lg:min-h-[520px]"></div>
+        <div id="iv-detail" class="iv-detail-cap lg:col-span-5 bg-[var(--card)] border border-[var(--border)] rounded-lg lg:flex lg:flex-col lg:overflow-hidden"></div>
       </div>
     </div>
 

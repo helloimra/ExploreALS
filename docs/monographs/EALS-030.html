@@ -83,6 +83,8 @@ svg { display: block; vertical-align: middle; }
 .gate-clamp[data-clamped="true"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1.75rem; background: linear-gradient(to bottom, transparent, var(--background)); pointer-events: none; }
 @media (min-width: 1024px) { .p-workbench { height: clamp(310px, calc(100vh - 13.25rem), 760px); height: clamp(310px, calc(100dvh - 13.25rem), 760px); } }
 @media (min-width: 1280px) { .p-workbench { height: clamp(340px, calc(100vh - 11.75rem), 780px); height: clamp(340px, calc(100dvh - 11.75rem), 780px); } }
+.iv-table-cap { max-height: 420px; }
+@media (min-width: 1024px) { .iv-table-cap, .iv-detail-cap { max-height: clamp(310px, calc(100vh - 5.75rem), 820px); max-height: clamp(310px, calc(100dvh - 5.75rem), 820px); } }
 .antialiased {-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .block {display:block}
 .flex {display:flex}
@@ -136,7 +138,6 @@ svg { display: block; vertical-align: middle; }
 .max-h-\[calc\(100vh-1\.5rem\)\] {max-height:calc(100vh - 1.5rem)}
 .max-w-\[1440px\] {max-width:1440px}
 .max-w-\[220px\] {max-width:220px}
-.min-h-\[520px\] {min-height:520px}
 .min-w-\[180px\] {min-width:180px}
 .min-w-\[200px\] {min-width:200px}
 .break-all {word-break:break-all}
@@ -316,6 +317,7 @@ svg { display: block; vertical-align: middle; }
   .lg\:inset-0 {inset:0px}
   .lg\:flex-1 {flex:1 1 0%}
   .lg\:flex-col {flex-direction:column}
+  .lg\:items-start {align-items:flex-start}
   .lg\:grid-cols-12 {grid-template-columns:repeat(12,minmax(0,1fr))}
   .lg\:grid-cols-6 {grid-template-columns:repeat(6,minmax(0,1fr))}
   .lg\:col-span-4 {grid-column:span 4 / span 4}

@@ -85,6 +85,8 @@ svg { display: block; vertical-align: middle; }
 .gate-clamp[data-clamped="true"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 1.75rem; background: linear-gradient(to bottom, transparent, var(--background)); pointer-events: none; }
 @media (min-width: 1024px) { .p-workbench { height: clamp(310px, calc(100vh - 13.25rem), 760px); height: clamp(310px, calc(100dvh - 13.25rem), 760px); } }
 @media (min-width: 1280px) { .p-workbench { height: clamp(340px, calc(100vh - 11.75rem), 780px); height: clamp(340px, calc(100dvh - 11.75rem), 780px); } }
+.iv-table-cap { max-height: 420px; }
+@media (min-width: 1024px) { .iv-table-cap, .iv-detail-cap { max-height: clamp(310px, calc(100vh - 5.75rem), 820px); max-height: clamp(310px, calc(100dvh - 5.75rem), 820px); } }
 .antialiased {-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
 .block {display:block}
 .flex {display:flex}
@@ -138,7 +140,6 @@ svg { display: block; vertical-align: middle; }
 .max-h-\[calc\(100vh-1\.5rem\)\] {max-height:calc(100vh - 1.5rem)}
 .max-w-\[1440px\] {max-width:1440px}
 .max-w-\[220px\] {max-width:220px}
-.min-h-\[520px\] {min-height:520px}
 .min-w-\[180px\] {min-width:180px}
 .min-w-\[200px\] {min-width:200px}
 .break-all {word-break:break-all}
@@ -318,6 +319,7 @@ svg { display: block; vertical-align: middle; }
   .lg\:inset-0 {inset:0px}
   .lg\:flex-1 {flex:1 1 0%}
   .lg\:flex-col {flex-direction:column}
+  .lg\:items-start {align-items:flex-start}
   .lg\:grid-cols-12 {grid-template-columns:repeat(12,minmax(0,1fr))}
   .lg\:grid-cols-6 {grid-template-columns:repeat(6,minmax(0,1fr))}
   .lg\:col-span-4 {grid-column:span 4 / span 4}
@@ -582,7 +584,14 @@ svg { display: block; vertical-align: middle; }
       </div>
     </div>
     <div id="view-intervals" role="tabpanel" aria-labelledby="tab-btn-intervals" class="hidden space-y-3">
-      <div id="iv-filter-bar" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 space-y-2">
+      <details id="iv-method-drawer" class="bg-[var(--card)] border border-[var(--border)] rounded-lg px-4 py-2.5 text-xs">
+        <summary class="cursor-pointer font-semibold text-[var(--foreground)] select-none">GENCODE v46 Off-Target Alignment Screen &mdash; 1-Based Closed GRCh38 Target Windows, Safety Rules &amp; Biophysical Notes</summary>
+        <div class="text-xs text-[var(--muted-foreground)] border-t border-[var(--card-border)] pt-2.5 mt-2 space-y-1.5 leading-relaxed">
+          <div><strong class="font-mono text-[var(--foreground)]">GENCODE v46 Off-Target Alignment Screen (1-Based Closed GRCh38 Target Windows):</strong> Candidate target windows for empirical 1-nt microwalks plus human neuron <span class="font-mono">Ca2+</span>-oscillation, <span class="font-mono">TLR9</span> &amp; primary <span class="font-mono">DRG</span> safety screens (reference transcriptome alignment does not exclude phosphorothioate protein-binding toxicity) &middot; modeled SantaLucia <span class="font-mono">2'-O-MOE PO/PS Tm / &Delta;G37</span> + <span class="font-mono">AlphaGenome AVI Phred</span> (DNA-variant conservation/splicing score, not steric ASO potency).</div>
+          <div>Select any window below to inspect its labeled <span class="font-mono text-[var(--foreground)]">Spliced mRNA (&le;200bp of splice junction)</span> and <span class="font-mono text-[var(--foreground)]">Nascent Pre-mRNA (sense strand)</span> hybridization counts across <span class="font-mono">254,070</span> GENCODE v46 transcripts, <span class="font-mono">gnomAD v4</span> constrained CNS gene flags, sibling windows on the same locus, and genome browser tracks (<span class="font-mono text-[var(--success)]">Pass &middot; Clean</span> requires zero hits across all spliced mRNA, &le;50bp-SS, &le;25bp 2-mm, 1-nt bulge &amp; 18-nt sub-core filters).</div>
+        </div>
+      </details>
+      <div id="iv-filter-bar" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3">
         <div class="flex flex-wrap items-center gap-2">
           <input id="iv-search" aria-label="Search GRCh38 intervals" type="text" placeholder="Filter gene, ID, coordinate..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs min-w-[180px] text-[var(--foreground)]" />
           <select id="iv-status" aria-label="Filter by off-target safety status" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
@@ -603,16 +612,13 @@ svg { display: block; vertical-align: middle; }
             <input id="iv-leads" type="checkbox" class="accent-[var(--primary)]" /> Promoted Leads Only (11)
           </label>
           <button type="button" data-reset-intervals="1" class="px-2.5 py-1.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] text-xs cursor-pointer">Reset</button>
+          <button type="button" data-open-iv-method="1" class="px-2 py-1.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] font-mono text-xs cursor-pointer" title="Open Off-Target Screen Methodology &amp; Safety Rules">Screen Guide</button>
           <span id="iv-count" class="font-mono tabular-nums text-[var(--muted-foreground)] text-xs ml-auto">28 / 28</span>
         </div>
-        <div class="text-xs text-[var(--muted-foreground)] border-t border-[var(--card-border)] pt-2.5 space-y-1 leading-relaxed">
-          <div><strong class="font-mono text-[var(--foreground)]">GENCODE v46 Off-Target Alignment Screen (1-Based Closed GRCh38 Target Windows):</strong> Candidate target windows for empirical 1-nt microwalks plus human neuron <span class="font-mono">Ca2+</span>-oscillation, <span class="font-mono">TLR9</span> &amp; primary <span class="font-mono">DRG</span> safety screens (reference transcriptome alignment does not exclude phosphorothioate protein-binding toxicity) &middot; modeled SantaLucia <span class="font-mono">2'-O-MOE PO/PS Tm / &Delta;G37</span> + <span class="font-mono">AlphaGenome AVI Phred</span> (DNA-variant conservation/splicing score, not steric ASO potency).</div>
-          <div>Select any window on the left to inspect its labeled <span class="font-mono text-[var(--foreground)]">Spliced mRNA (&le;200bp of splice junction)</span> and <span class="font-mono text-[var(--foreground)]">Nascent Pre-mRNA (sense strand)</span> hybridization counts across <span class="font-mono">254,070</span> GENCODE v46 transcripts, <span class="font-mono">gnomAD v4</span> constrained CNS gene flags, sibling windows on the same locus, and genome browser tracks (<span class="font-mono text-[var(--success)]">Pass &middot; Clean</span> requires zero hits across all spliced mRNA, &le;50bp-SS, &le;25bp 2-mm, 1-nt bulge &amp; 18-nt sub-core filters).</div>
-        </div>
       </div>
-      <div id="iv-split-pane" class="grid grid-cols-1 lg:grid-cols-12 gap-3">
-        <div class="lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-lg overflow-hidden lg:relative min-h-[520px]">
-          <div class="max-h-[420px] lg:max-h-none lg:absolute lg:inset-0 overflow-y-auto overflow-x-auto">
+      <div id="iv-split-pane" class="grid grid-cols-1 lg:grid-cols-12 gap-3 lg:items-start">
+        <div class="iv-table-cap lg:col-span-7 bg-[var(--card)] border border-[var(--border)] rounded-lg flex flex-col overflow-hidden">
+          <div class="min-h-0 overflow-y-auto overflow-x-auto">
             <table class="w-full text-left border-collapse text-xs">
               <thead class="sticky top-0 z-10 bg-[var(--card)] shadow-sm">
                 <tr class="border-b border-[var(--border)] text-[var(--muted-foreground)]">
@@ -627,7 +633,7 @@ svg { display: block; vertical-align: middle; }
             </table>
           </div>
         </div>
-        <div id="iv-detail" class="lg:col-span-5 bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2.5 lg:min-h-[520px]"></div>
+        <div id="iv-detail" class="iv-detail-cap lg:col-span-5 bg-[var(--card)] border border-[var(--border)] rounded-lg lg:flex lg:flex-col lg:overflow-hidden"></div>
       </div>
     </div>
 
@@ -827,7 +833,7 @@ const DATA_UPDATES = [{"id":"UPD-2026-11-23-01","dt":"2026-11-23","tag":"v1.3.0"
 const TRL_NUM = {TRL_6_PH2B_SUBGROUP_BIOLOGIC:6,TRL_5_HUMAN_ALS_PK_PD_PROVEN:5,TRL_4_ACTIVE_PH1_CLASS_OR_NCE:4,TRL_3_PRECLINICAL_SSO_COORDINATE:3,TRL_2_PRECLINICAL_MODALITY_DISCOVERY:2,TRL_1_TARGET_TOOL_PROBE_WATCHLIST:1,PROTOCOL_COMPANION_NA:0};
 const NYGC_GENE_TO_ID = {ATG4B:'EALS-034',KALRN:'EALS-035',PTPRT:'EALS-036',CELF5:'EALS-037',PRUNE2:'EALS-038',PFKP:'EALS-039',TRAPPC12:'EALS-040',ELK1:'EALS-041',DLGAP1:'EALS-042'};
 let selectedId = 'EALS-030';
-let selectedIvOrd = 5;
+let selectedIvOrd = 3;
 let activeTab = 'home';
 let activeQuick = 'ALL';
 let activeEpi = 'ALL';
@@ -841,6 +847,7 @@ let isRestoringHistory = false;
 let historyInitialized = false;
 let lastSelHidden = false;
 let lastDetailCandId = '';
+let lastDetailIvOrd = 0;
 const expandedDetailGates = {};
 
 function scrollRowInPane(boxId, itemSel){
@@ -3685,7 +3692,10 @@ function renderIntervalDetail(rows){
     : (pTwo === 'NA'
       ? `Total sense 1-mm pre-mRNA genes = ${c.pm1_all}; Alu-repeat window saturates GGGenome max_mm=1 (2-mm scan = NA).`
       : `Full pre-mRNA sense 1-mm genes (including deep introns >50 bp from splice sites) = ${c.pm1_all}.`);
-  det.innerHTML = `<div class="space-y-1.5 border-b border-[var(--card-border)] pb-2">
+  const prevIvBody = document.getElementById('iv-detail-body');
+  const keepIvScroll = (prevIvBody && lastDetailIvOrd === c.ord) ? prevIvBody.scrollTop : 0;
+  lastDetailIvOrd = c.ord;
+  det.innerHTML = `<div class="shrink-0 p-3.5 pb-2.5 border-b border-[var(--card-border)] bg-[var(--card)] space-y-1.5">
       <div class="flex items-center justify-between gap-1.5 flex-wrap">
         <div class="flex items-center gap-1.5 flex-wrap"><span class="font-mono font-bold text-sm">#${c.ord} &middot; ${esc(c.gene)} &middot; Window #${c.rk}</span> ${c.lead ? '<span class="px-1.5 py-0.5 rounded border border-[var(--success)] text-[var(--success)] font-mono font-semibold text-xs whitespace-nowrap">&#9733; Promoted Lead</span>' : '<span class="px-1.5 py-0.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] font-mono text-xs whitespace-nowrap">Alternative</span>'}</div>
         ${statusBadge(c.st, c)}
@@ -3696,7 +3706,7 @@ function renderIntervalDetail(rows){
       </div>
       ${siblings.length > 1 ? `<div class="flex flex-wrap items-center gap-1 pt-0.5"><span class="font-mono text-xs text-[var(--muted-foreground)] mr-0.5">${esc(c.gene)} windows:</span>${sibBar}</div>` : ''}
     </div>
-    <div class="space-y-2 text-xs">
+    <div id="iv-detail-body" class="p-3.5 pt-2.5 space-y-2 text-xs lg:min-h-0 lg:overflow-y-auto">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
         <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1 sm:col-span-2">
           <div class="flex items-center justify-between gap-2"><span class="text-[var(--muted-foreground)] font-mono">1-Based Closed GRCh38 Target Window</span><button type="button" data-copy-cmd="${esc(c.iv)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">Copy</button></div>
@@ -3740,6 +3750,8 @@ function renderIntervalDetail(rows){
         </div>
       </div>
     </div>`;
+  const nextIvBody = document.getElementById('iv-detail-body');
+  if(nextIvBody) nextIvBody.scrollTop = keepIvScroll;
 }
 function renderIntervals(){
   const qEl = document.getElementById('iv-search');
@@ -3754,7 +3766,7 @@ function renderIntervals(){
     if(q && !queryMatchesIdOrText([c.sc], q, (c.sc===c.pid ? c.pid+' ' : '')+c.sc+' '+c.gene+' '+c.iv+' '+c.flags+' '+c.mode)) return false;
     return true;
   });
-  if(!DATA_CIS.some(x => x.ord === selectedIvOrd)) selectedIvOrd = 5;
+  if(!DATA_CIS.some(x => x.ord === selectedIvOrd)) selectedIvOrd = 3;
   if(rows.length > 0 && !rows.some(x => x.ord === selectedIvOrd)){
     selectedIvOrd = (rows.find(x => x.lead) || rows[0]).ord;
   }
@@ -3789,12 +3801,7 @@ function selectInterval(ord, userClick=false){
   renderIntervals();
   if(userClick){
     commitHistory('replace');
-    try {
-      if(typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024){
-        const det = document.getElementById('iv-detail');
-        if(det && det.scrollIntoView) det.scrollIntoView({behavior:'smooth', block:'nearest'});
-      }
-    } catch(_e) {}
+    if(typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024) scrollViewportTo('iv-detail', true);
   }
 }
 
@@ -3897,7 +3904,7 @@ function restoreHistorySnapshot(snap){
   setValOf('iv-origin', snap.ivOrigin || 'ALL');
   const ivL = document.getElementById('iv-leads');
   if(ivL) ivL.checked = Boolean(snap.ivLeads);
-  if(snap.selectedIvOrd) selectedIvOrd = Number(snap.selectedIvOrd) || 5;
+  if(snap.selectedIvOrd) selectedIvOrd = Number(snap.selectedIvOrd) || 3;
   if(typeof setRepMode === 'function' && snap.repMode){
     repMode = snap.repMode;
     populateRepFilterOptions();
@@ -3995,6 +4002,8 @@ document.addEventListener('click', e => {
   }
   const omBtn = tgt.closest('[data-open-method]');
   if(omBtn){ e.preventDefault(); const md = document.getElementById('methodology-drawer'); if(md){ md.open = !md.open; if(md.open) scrollViewportTo('methodology-drawer', true); } return; }
+  const oimBtn = tgt.closest('[data-open-iv-method]');
+  if(oimBtn){ e.preventDefault(); const imd = document.getElementById('iv-method-drawer'); if(imd){ imd.open = !imd.open; if(imd.open) scrollViewportTo('iv-method-drawer', true); } return; }
   const csBtn = tgt.closest('[data-copy-sha]');
   if(csBtn){ e.preventDefault(); const v = csBtn.getAttribute('data-copy-sha')||''; if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(v); } const orig = (csBtn.dataset&&(csBtn.dataset.orig||(csBtn.dataset.orig=csBtn.textContent)))||csBtn.textContent; csBtn.textContent='Copied ✓'; setTimeout(()=>{ csBtn.textContent = orig; }, 1400); return; }
   const ucBtn = tgt.closest('[data-upd-cat]');

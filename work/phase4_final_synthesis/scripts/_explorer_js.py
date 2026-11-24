@@ -5,7 +5,7 @@ EXPLORER_JS_BODY = """
 const TRL_NUM = {TRL_6_PH2B_SUBGROUP_BIOLOGIC:6,TRL_5_HUMAN_ALS_PK_PD_PROVEN:5,TRL_4_ACTIVE_PH1_CLASS_OR_NCE:4,TRL_3_PRECLINICAL_SSO_COORDINATE:3,TRL_2_PRECLINICAL_MODALITY_DISCOVERY:2,TRL_1_TARGET_TOOL_PROBE_WATCHLIST:1,PROTOCOL_COMPANION_NA:0};
 const NYGC_GENE_TO_ID = {ATG4B:'EALS-034',KALRN:'EALS-035',PTPRT:'EALS-036',CELF5:'EALS-037',PRUNE2:'EALS-038',PFKP:'EALS-039',TRAPPC12:'EALS-040',ELK1:'EALS-041',DLGAP1:'EALS-042'};
 let selectedId = 'EALS-030';
-let selectedIvOrd = 5;
+let selectedIvOrd = 3;
 let activeTab = 'home';
 let activeQuick = 'ALL';
 let activeEpi = 'ALL';
@@ -19,6 +19,7 @@ let isRestoringHistory = false;
 let historyInitialized = false;
 let lastSelHidden = false;
 let lastDetailCandId = '';
+let lastDetailIvOrd = 0;
 const expandedDetailGates = {};
 
 function scrollRowInPane(boxId, itemSel){
@@ -727,7 +728,10 @@ function renderIntervalDetail(rows){
     : (pTwo === 'NA'
       ? `Total sense 1-mm pre-mRNA genes = ${c.pm1_all}; Alu-repeat window saturates GGGenome max_mm=1 (2-mm scan = NA).`
       : `Full pre-mRNA sense 1-mm genes (including deep introns >50 bp from splice sites) = ${c.pm1_all}.`);
-  det.innerHTML = `<div class="space-y-1.5 border-b border-[var(--card-border)] pb-2">
+  const prevIvBody = document.getElementById('iv-detail-body');
+  const keepIvScroll = (prevIvBody && lastDetailIvOrd === c.ord) ? prevIvBody.scrollTop : 0;
+  lastDetailIvOrd = c.ord;
+  det.innerHTML = `<div class="shrink-0 p-3.5 pb-2.5 border-b border-[var(--card-border)] bg-[var(--card)] space-y-1.5">
       <div class="flex items-center justify-between gap-1.5 flex-wrap">
         <div class="flex items-center gap-1.5 flex-wrap"><span class="font-mono font-bold text-sm">#${c.ord} &middot; ${esc(c.gene)} &middot; Window #${c.rk}</span> ${c.lead ? '<span class="px-1.5 py-0.5 rounded border border-[var(--success)] text-[var(--success)] font-mono font-semibold text-xs whitespace-nowrap">&#9733; Promoted Lead</span>' : '<span class="px-1.5 py-0.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] font-mono text-xs whitespace-nowrap">Alternative</span>'}</div>
         ${statusBadge(c.st, c)}
@@ -738,7 +742,7 @@ function renderIntervalDetail(rows){
       </div>
       ${siblings.length > 1 ? `<div class="flex flex-wrap items-center gap-1 pt-0.5"><span class="font-mono text-xs text-[var(--muted-foreground)] mr-0.5">${esc(c.gene)} windows:</span>${sibBar}</div>` : ''}
     </div>
-    <div class="space-y-2 text-xs">
+    <div id="iv-detail-body" class="p-3.5 pt-2.5 space-y-2 text-xs lg:min-h-0 lg:overflow-y-auto">
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
         <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1 sm:col-span-2">
           <div class="flex items-center justify-between gap-2"><span class="text-[var(--muted-foreground)] font-mono">1-Based Closed GRCh38 Target Window</span><button type="button" data-copy-cmd="${esc(c.iv)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">Copy</button></div>
@@ -782,6 +786,8 @@ function renderIntervalDetail(rows){
         </div>
       </div>
     </div>`;
+  const nextIvBody = document.getElementById('iv-detail-body');
+  if(nextIvBody) nextIvBody.scrollTop = keepIvScroll;
 }
 function renderIntervals(){
   const qEl = document.getElementById('iv-search');
@@ -796,7 +802,7 @@ function renderIntervals(){
     if(q && !queryMatchesIdOrText([c.sc], q, (c.sc===c.pid ? c.pid+' ' : '')+c.sc+' '+c.gene+' '+c.iv+' '+c.flags+' '+c.mode)) return false;
     return true;
   });
-  if(!DATA_CIS.some(x => x.ord === selectedIvOrd)) selectedIvOrd = 5;
+  if(!DATA_CIS.some(x => x.ord === selectedIvOrd)) selectedIvOrd = 3;
   if(rows.length > 0 && !rows.some(x => x.ord === selectedIvOrd)){
     selectedIvOrd = (rows.find(x => x.lead) || rows[0]).ord;
   }
@@ -831,12 +837,7 @@ function selectInterval(ord, userClick=false){
   renderIntervals();
   if(userClick){
     commitHistory('replace');
-    try {
-      if(typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024){
-        const det = document.getElementById('iv-detail');
-        if(det && det.scrollIntoView) det.scrollIntoView({behavior:'smooth', block:'nearest'});
-      }
-    } catch(_e) {}
+    if(typeof window !== 'undefined' && window.innerWidth && window.innerWidth < 1024) scrollViewportTo('iv-detail', true);
   }
 }
 
@@ -939,7 +940,7 @@ function restoreHistorySnapshot(snap){
   setValOf('iv-origin', snap.ivOrigin || 'ALL');
   const ivL = document.getElementById('iv-leads');
   if(ivL) ivL.checked = Boolean(snap.ivLeads);
-  if(snap.selectedIvOrd) selectedIvOrd = Number(snap.selectedIvOrd) || 5;
+  if(snap.selectedIvOrd) selectedIvOrd = Number(snap.selectedIvOrd) || 3;
   if(typeof setRepMode === 'function' && snap.repMode){
     repMode = snap.repMode;
     populateRepFilterOptions();
@@ -1037,6 +1038,8 @@ document.addEventListener('click', e => {
   }
   const omBtn = tgt.closest('[data-open-method]');
   if(omBtn){ e.preventDefault(); const md = document.getElementById('methodology-drawer'); if(md){ md.open = !md.open; if(md.open) scrollViewportTo('methodology-drawer', true); } return; }
+  const oimBtn = tgt.closest('[data-open-iv-method]');
+  if(oimBtn){ e.preventDefault(); const imd = document.getElementById('iv-method-drawer'); if(imd){ imd.open = !imd.open; if(imd.open) scrollViewportTo('iv-method-drawer', true); } return; }
   const csBtn = tgt.closest('[data-copy-sha]');
   if(csBtn){ e.preventDefault(); const v = csBtn.getAttribute('data-copy-sha')||''; if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(v); } const orig = (csBtn.dataset&&(csBtn.dataset.orig||(csBtn.dataset.orig=csBtn.textContent)))||csBtn.textContent; csBtn.textContent='Copied \u2713'; setTimeout(()=>{ csBtn.textContent = orig; }, 1400); return; }
   const ucBtn = tgt.closest('[data-upd-cat]');
