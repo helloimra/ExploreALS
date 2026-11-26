@@ -47,6 +47,12 @@ DATASET_TIER_SPECS: dict[str, tuple[str, str, str | None, str | None]] = {
     "DS_PDB_1XFD": ("TIER_A_OPEN_REDISTRIBUTABLE", "https://files.rcsb.org/download/1XFD.cif", None, "Human DPP6 extracellular domain homodimer X-ray crystal structure (PDB 1XFD, 3.00A refined resolution, Ser->Asp712 in GKDYGG, PMID:15476821)"),
     "DS_PDB_3NMR": ("TIER_A_OPEN_REDISTRIBUTABLE", "https://files.rcsb.org/download/3NMR.cif", None, None),
     "DS_AF_Q8N6W0": ("TIER_A_OPEN_REDISTRIBUTABLE", "https://alphafold.ebi.ac.uk/files/AF-Q8N6W0-F1-model_v6.cif", None, None),
+    "DS_PDB_CGAS_STING": (
+        "TIER_A_OPEN_REDISTRIBUTABLE",
+        "https://files.rcsb.org/download/{6MJW,6LRC,6NT5,4KSY,6MXE}.cif",
+        "CC0 1.0 Public Domain",
+        "Experimental X-ray/cryo-EM .cif structures for human CGAS catalytic domain + G150 (6MJW, 2.405A, K427E/K428E construct) and PF-06928215 (6LRC, 1.831A), and comparator human STING1 apo dimer (6NT5, 4.10A), 2'3'-cGAMP-bound LBD (4KSY, 1.881A), and Compound 18 open-cleft antagonist (6MXE, 2.470A)",
+    ),
 }
 
 COHORT_OVERLAP_CLUSTERS: list[dict[str, str]] = [

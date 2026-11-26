@@ -48,7 +48,7 @@ EXP_CIS_COLS = [
 ]
 SITE_WORK_PATH_RE = re.compile(r"work/[A-Za-z0-9_/-]+\.(?:py|json|csv)")
 SITE_LEGACY_ID_OR_ALIAS_RE = re.compile(
-    r"((?<![A-Za-z0-9])(?:C0(?:0[1-9]|1\d|2[0-4])(?:-?N[1-6])?|S0[1-9]|DN-?(?:0[1-9]|1\d))(?![A-Za-z0-9])|"
+    r"((?<![A-Za-z0-9])(?:C0(?:0[1-9]|1\d|2[0-4])(?:-?N[1-6])?|S0[1-9]|DN-?(?:0[1-9]|1\d)|L0[1-9])(?![A-Za-z0-9])|"
     r"EALS-\d{3}(?:\.\d)?\.\.|\bLegacy\s+ID\b|\bLegacy:\s|\bAlias:\s|\baliases\b|"
     r"FLAGSHIP-(?:C0|S0|DN)|reproduce_(?:C0|S0|DN))",
     re.IGNORECASE,
@@ -104,23 +104,24 @@ def verify_phase4_gates(
     dec_map = {r["carbon_id"]: r for r in decisions}
     rd_map = {r["candidate_id"]: r for r in load_csv_fn("phase3_execution_readiness.csv")}
     p3b_map = {r["denovo_id"]: r for r in load_csv_fn("phase3b_denovo_candidates.csv")}
+    liv_map = {r["living_id"]: r for r in load_csv_fn("living_evidence_candidates.csv")}
     sub_map = {r["subnode_id"]: r for r in load_csv_fn("subnode_dissection.csv")}
     p2_map = {r["interval_id"]: r for r in load_csv_fn("phase2_multiplex_intervals.csv")}
     ot3a_map = {r["interval_id"]: r for r in load_csv_fn("phase3_sso_offtarget_audit.csv")}
     sso3b_map = {r["interval_id"]: r for r in load_csv_fn("phase3b_denovo_sso_intervals.csv")}
 
-    exp_pids = set(dec_map) | set(p3b_map)
+    exp_pids = set(dec_map) | set(p3b_map) | set(liv_map)
     exp_all_legs = exp_pids | set(sub_map)
-    if len(acc_rows) != 70 or {r["legacy_id"] for r in acc_rows} != exp_all_legs or len({r["accession_id"] for r in acc_rows}) != 70:
-        errors.append("candidate_accessions.csv must be an exact 70-row bijection over 52 candidates + 18 subunits")
+    if len(acc_rows) != 71 or {r["legacy_id"] for r in acc_rows} != exp_all_legs or len({r["accession_id"] for r in acc_rows}) != 71:
+        errors.append("candidate_accessions.csv must be an exact 71-row bijection over 53 candidates + 18 subunits")
     for ar in acc_rows:
         if ar["accession_id"] != legacy_to_accession(ar["legacy_id"]) or accession_to_legacy(ar["accession_id"]) != ar["legacy_id"]:
             errors.append(f"candidate_accessions.csv non-canonical mapping {ar['accession_id']} <-> {ar['legacy_id']}")
     got_pids = [r["portfolio_id"] for r in port_rows]
     if len(got_pids) != len(set(got_pids)) or set(got_pids) != exp_pids:
-        errors.append(f"phase4_unified_portfolio.csv portfolio_id set ({len(got_pids)}) != disjoint union of 33 Curated + 19 Phase 3B ({len(exp_pids)})")
+        errors.append(f"phase4_unified_portfolio.csv portfolio_id set ({len(got_pids)}) != disjoint union of 33 Curated + 19 Phase 3B + 1 Living Intake ({len(exp_pids)})")
     if sorted(int(r["unified_rank"]) for r in port_rows) != list(range(1, len(port_rows) + 1)):
-        errors.append("phase4_unified_portfolio.csv unified_rank is not contiguous 1..52")
+        errors.append("phase4_unified_portfolio.csv unified_rank is not contiguous 1..53")
 
     exp_ivs = set(ot3a_map) | set(sso3b_map)
     got_ivs = [r["interval_id"] for r in cis_rows]
@@ -176,11 +177,13 @@ def verify_phase4_gates(
             errors.append(f"{pid}: unsolved_hurdle_count mismatch in phase4_unified_portfolio.csv")
 
         if port_override is None:
-            src_row = rd_map.get(pid) or p3b_map.get(pid)
+            src_row = rd_map.get(pid) or p3b_map.get(pid) or liv_map.get(pid)
             if pid in dec_map and (r["decision"] != dec_map[pid]["decision"] or r["epistemic_state"] != dec_map[pid]["epistemic_state"]):
                 errors.append(f"{pid}: Phase 4 decision/epistemic_state out of sync with candidate_decisions.csv")
             if pid in p3b_map and (r["decision"] != p3b_map[pid]["decision"] or r["epistemic_state"] != p3b_map[pid]["epistemic_state"]):
                 errors.append(f"{pid}: Phase 4 decision/epistemic_state out of sync with phase3b_denovo_candidates.csv")
+            if pid in liv_map and (r["decision"] != liv_map[pid]["decision"] or r["epistemic_state"] != liv_map[pid]["epistemic_state"]):
+                errors.append(f"{pid}: Phase 4 decision/epistemic_state out of sync with living_evidence_candidates.csv")
             if src_row is not None:
                 for k_chk in ("scientific_actionability_tier", "clinical_readiness_trl", "next_gate_experimental_class", "primary_evidence_basis", "model_prior_dependency", "unsolved_hurdle_count", "unsolved_hurdles_structured"):
                     if r[k_chk] != src_row[k_chk]:
@@ -190,7 +193,7 @@ def verify_phase4_gates(
                 errors.append(f"{pid}: lead_cis_interval ({r['lead_cis_interval_id']},{r['lead_offtarget_safety_status']}) != {exp_lead}")
             if mode == "full" and pid in dec_map:
                 md_txt = (carbon_root / "reports" / "candidates" / f"{pid}.md").read_text(encoding="utf-8")
-                if f"accession_id = {r['accession_id']}" not in md_txt or f"unified_rank = #{r['unified_rank']}/52" not in md_txt or f"scientific_actionability_tier = {r['scientific_actionability_tier']}" not in md_txt:
+                if f"accession_id = {r['accession_id']}" not in md_txt or f"unified_rank = #{r['unified_rank']}/53" not in md_txt or f"scientific_actionability_tier = {r['scientific_actionability_tier']}" not in md_txt:
                     errors.append(f"reports/candidates/{pid}.md out of sync with phase4_unified_portfolio.csv")
                 if pid in rd_map and f"primary_modality_specific = {rd_map[pid]['primary_modality_specific']}" not in md_txt:
                     errors.append(f"reports/candidates/{pid}.md missing Phase 3A primary_modality_specific sync")
@@ -311,6 +314,7 @@ def verify_phase4_gates(
                 "Lykke et al.", "Renshaw", "7,862", "7861.6", "Cu_CNS=0.318",
                 "assert_contrast_pair enforced", "in HERV-K+ ALS", "slowing vs historical controls",
                 "Updated Nov 2026 (v1.2.4)", "Updated Nov 2026 (v1.2.6)", "Updated Nov 2026 (v1.2.8)", "Updated Nov 2026 (v1.2.9)", "ExploreALS v1.2",
+                "Updated Nov 2026 (v1.3.0)", "ExploreALS v1.3", "202 / 202", "1. Triage Table (52)", "2. Candidate Reports (52)",
                 "Audited GRCh38", "programmatically audited", "Auditing provenance from",
                 "199 / 199", "199 Evidence", "Phase 3 RAS-ALS",
                 "Ryberg et al. 2003 J Neurochem", "deaths 49/175", "8.94x",
@@ -320,13 +324,13 @@ def verify_phase4_gates(
                 if banned in htxt:
                     errors.append(f"Dossier Schema 3.0 regression in {lbl}: found banned string '{banned}'")
             for req_str in (
-                "ExploreALS v1.3", "Ricardo Agoga", "helloimra@proton.me", "github.com/helloimra/ExploreALS",
+                "ExploreALS v1.4", "Ricardo Agoga", "helloimra@proton.me", "github.com/helloimra/ExploreALS",
                 "Not Medical Advice", "AI-Assisted Methodology",
                 "Sort: Translational Priority Rank", "Sort: Genetic &amp; Pathology Evidence",
                 "Human RCT / Genetics", "Human Cohort / PK-PD",
                 "In Vitro / 3D or Small-N", "Model / Heuristic Prior", "BioVendor",
                 "AF-Q7L622-F1", "NIH GTEx (v8 / v10)", "N/A (SOC / PD Benchmark)", "Rank &amp; Triage Key:", "Study Categories:",
-                "Updated Nov 2026 (v1.3.0)", "202 / 202", "UPD-2026-11-23-01",
+                "Updated Nov 2026 (v1.4.0)", "204 / 204", "UPD-2026-11-23-01", "UPD-2026-11-26-02",
                 "TDP-43 Cryptic Splicing &amp; Polyadenylation (12)",
                 "Antemortem CSF Proteomics &amp; Physiology (6)",
                 "Patient iPSC-MN Phenotypic Screen (11)",
@@ -336,13 +340,13 @@ def verify_phase4_gates(
                 "const DATA_NYGC_META =", "const DATA_FUNNEL =", "const DATA_DROPS =", "const DATA_SUM =",
                 "const DATA_LENSES =", "const DATA_CONTRASTS =",
                 "const DATA_RUNS =", "const DATA_DATASETS =", "const DATA_FORMULAS =", "const DATA_OVERLAP =",
-                "1. Triage Table (52)", "2. Candidate Reports (52)",
+                "1. Triage Table (53)", "2. Candidate Reports (53)",
                 "3. Splice Windows (28)", "4. Replication", 'id="rep-dag-box"', 'id="sandbox-drawer"',
-                "Subunit &amp; Selectivity", "202 / 202 (100%) 64-char SHA-256",
+                "Subunit &amp; Selectivity", "204 / 204 (100%) 64-char SHA-256",
                 "Monograph &rarr;", "Dossier &rarr;", "Structured Triage Dossier",
                 "Methodology &amp; Decision Guide", "GENCODE v46 Off-Target Alignment Screen", "Therapeutic Modality",
                 "https://alphafold.ebi.ac.uk/entry/", "https://www.informatics.jax.org/marker/MGI:",
-                "PMID:40354799", "PMID:37267913", "'EALS-016':'ENSG00000118564'", "FLAGSHIP-EALS-030",
+                "PMID:40354799", "PMID:37267913", "'EALS-016':'ENSG00000118564'", "'EALS-053':'ENSG00000164430'", "FLAGSHIP-EALS-030",
                 "resolveCandidateId", "matchCandidateQuery",
                 "Secreted Decoy sST2 vs. Membrane ST2L", 'role="tabpanel"',
                 "md:grid-cols-[268px_minmax(0,1fr)]",
@@ -400,6 +404,8 @@ def verify_phase4_gates(
         no_money_paths = [
             reg_dir / "phase3_execution_readiness.csv",
             reg_dir / "phase3b_denovo_candidates.csv",
+            reg_dir / "living_evidence_candidates.csv",
+            reg_dir / "living_evidence_candidate_evidence.csv",
             port_fp,
             *([synth_md] if synth_md.is_file() else []),
             *([explorer_html] if explorer_html.is_file() else []),
@@ -415,6 +421,8 @@ def verify_phase4_gates(
 
     txt_paths = [
         port_fp, cis_fp,
+        reg_dir / "living_evidence_candidates.csv",
+        reg_dir / "living_evidence_candidate_evidence.csv",
         *([synth_md] if synth_md.is_file() else []),
         *([explorer_html] if explorer_html.is_file() else []),
         *mono_htmls,

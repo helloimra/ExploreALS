@@ -1,0 +1,125 @@
+"""Verified ToolUniverse external priors & 5-dimension gene-liability rubric for Step 1 STING1/CGAS evaluation."""
+from __future__ import annotations
+
+from typing import Any
+
+
+def build_verified_external_priors() -> dict[str, Any]:
+    return {
+        "gene_identifiers": {
+            "STING1": {"ensembl": "ENSG00000184584", "uniprot": "Q86WV6", "entrez": "340061", "legacy_nygc_gtex_v8_symbol": "TMEM173", "ensembl_v116_gc_pct": 53.56},
+            "CGAS": {"ensembl": "ENSG00000164430", "uniprot": "Q8N884", "entrez": "115004", "legacy_gtex_v8_symbol": "MB21D1", "ensembl_v116_gc_pct": 43.21},
+            "IFI16": {"ensembl": "ENSG00000163565", "uniprot": "Q16666", "entrez": "3428", "ensembl_v116_gc_pct": 38.35},
+            "PSMB8": {"ensembl": "ENSG00000204264", "uniprot": "P28062", "entrez": "5696"},
+        },
+        "human_sting1_coding_polymorphisms_ensemblvar_gnomad": {
+            "rs1131769_p.Arg232His_H232": {"gnomADg_ALL_T_af": 0.1291, "gnomADe_ALL_T_af": 0.1264, "gnomADg_afr_T_af": 0.1190, "gnomADg_eas_T_af": 0.1184, "domain": "CDN_binding_lid_beta2_beta3"},
+            "rs11554776_p.Arg71His_HAQ": {"gnomADg_ALL_T_af": 0.1375, "gnomADe_ALL_T_af": 0.1514, "gnomADg_nfe_T_af": 0.1348, "gnomADg_afr_T_af": 0.0345, "domain": "TM2_TM3_cytosolic_loop"},
+            "rs78233829_p.Gly230Ala_HAQ_AQ": {"gnomADe_ALL_G_af": 0.1583, "gnomADg_nfe_G_af": 0.1362, "gnomADg_afr_G_af": 0.2382, "gnomADg_eas_G_af": 0.4154, "domain": "CDN_binding_lid_beta2_beta3"},
+            "rs7380824_p.Arg293Gln_HAQ_AQ": {"gnomADg_ALL_T_af": 0.2044, "gnomADe_ALL_T_af": 0.1585, "gnomADg_nfe_T_af": 0.1360, "gnomADg_afr_T_af": 0.2664, "domain": "LBD_alpha4_pocket_rim"},
+        },
+        "depmap_crispr_chronos_opentargets": {
+            "STING1": {"is_essential": False, "n_cell_lines": 1255, "median_chronos": 0.0109, "mean_chronos": 0.0206, "p10_chronos": -0.0961, "n_lines_lt_minus1": 0},
+            "CGAS": {"is_essential": False, "n_cell_lines": 1258, "median_chronos": -0.1013, "mean_chronos": -0.1062, "p10_chronos": -0.2550, "n_lines_lt_minus1": 0},
+            "IFI16": {"is_essential": False, "n_cell_lines": 1258, "median_chronos": 0.0577, "mean_chronos": 0.0590, "p10_chronos": -0.0771, "n_lines_lt_minus1": 0},
+        },
+        "gtex_v8_selected_median_tpm": {
+            "STING1_ENSG00000184584": {
+                "Brain_Cortex": 5.4743, "Brain_Frontal_Cortex_BA9": 4.3045, "Brain_Spinal_cord_cervical_c-1": 7.9309,
+                "Brain_Cerebellum": 2.8902, "Lung": 139.3970, "Artery_Aorta": 118.8110, "Spleen": 107.1980,
+                "Heart_Left_Ventricle": 23.3241, "Kidney_Cortex": 26.3078, "Liver": 6.0535, "Whole_Blood": 41.2730,
+            },
+            "CGAS_ENSG00000164430": {
+                "Brain_Cortex": 0.4954, "Brain_Frontal_Cortex_BA9": 0.6030, "Brain_Spinal_cord_cervical_c-1": 2.2320,
+                "Brain_Cerebellum": 0.7115, "Cells_EBV-transformed_lymphocytes": 15.9579, "Spleen": 8.4895,
+                "Lung": 5.6011, "Heart_Left_Ventricle": 0.5491, "Kidney_Cortex": 0.8467, "Liver": 0.4651, "Whole_Blood": 6.2545,
+            },
+            "IFI16_ENSG00000163565": {
+                "Brain_Cortex": 5.1907, "Brain_Frontal_Cortex_BA9": 4.7340, "Brain_Spinal_cord_cervical_c-1": 20.6884,
+                "Spleen": 112.3340, "Lung": 105.5940, "Whole_Blood": 87.2977, "Heart_Left_Ventricle": 11.6414, "Liver": 5.7063,
+            },
+        },
+        "chemical_probes_and_tool_antagonists": {
+            "SN-011": {
+                "chembl_id": "CHEMBL5189857", "inchikey": "GPXQUPCJIJBXHJ-UHFFFAOYSA-N", "mw_freebase": 462.50,
+                "alogp": 5.25, "tpsa_A2": 95.50, "hbd": 3, "hba": 4, "max_clinical_phase": None,
+                "mechanism": "Reversible competitive STING1 CDN-pocket antagonist locking open inactive dimer (Hong et al. 2021 PMID:34099558)",
+                "chembl_hSTING1_ic50_nM_range": [76.0, 490.0, 502.8, 1400.0, 2100.0],
+                "chembl_mSting1_ic50_nM_range": [107.1, 127.5, 270.0],
+                "human_cns_kp_uu": "UNMEASURED_PRECLINICAL_TOOL",
+            },
+            "H-151": {
+                "pubchem_cid": 7616033, "inchikey": "UJZDIKVQFMCLBE-UHFFFAOYSA-N", "mw_freebase": 279.34,
+                "xlogp": 3.4, "tpsa_A2": 56.9, "hbd": 3, "hba": 1, "max_clinical_phase": None,
+                "mechanism": "Covalent indole-urea modifier of STING1 transmembrane Cys91 blocking Golgi palmitoylation (Haag et al. 2018 PMID:29973723; TDP-43 ALS mouse rescue Yu et al. 2020 PMID:33031745)",
+                "human_cns_kp_uu": "UNMEASURED_PRECLINICAL_COVALENT_PROBE",
+            },
+            "Compound_18": {
+                "pdb_id": "6MXE", "pdb_ligand_id": "K5S", "primary_pmid": "30655953",
+                "mechanism": "2:1 stoichiometry reversible non-CDN human STING1 open-cleft antagonist (Siu et al. 2019 ACS Med Chem Lett PMID:30655953)",
+            },
+            "G150": {
+                "chembl_id": "CHEMBL4448176", "pubchem_cid": 138393372, "pdb_id": "6MJW", "pdb_ligand_id": "JUJ",
+                "inchikey": "VVUOUIPXYFIWLE-UHFFFAOYSA-N", "mw_freebase": 391.2, "xlogp": 2.2, "tpsa_A2": 95.2,
+                "hbd": 3, "hba": 4, "hcgas_ic50_nM": 10.2, "primary_pmid": "31113940",
+                "mechanism": "Human-selective active-site cGAS inhibitor (Lama et al. 2019 Nat Commun PMID:31113940; inactive on mouse cGAS)",
+            },
+            "PF-06928215": {
+                "pubchem_cid": 137300622, "pdb_id": "6LRC", "pdb_ligand_id": "KHM", "mw_freebase": 380.4,
+                "xlogp": 2.3, "tpsa_A2": 111.0, "hbd": 3, "hba": 6, "primary_pmid": "32459092",
+                "mechanism": "Biochemical active-site cGAS inhibitor with high polar carboxylic-acid TPSA (111 A2) limiting cellular/CNS permeability",
+            },
+            "TDI-6570": {
+                "pubchem_cid": 137943015, "inchikey": "MLRXPYAADOGYND-UHFFFAOYSA-N",
+                "molecular_formula": "C14H14ClFN2O2",
+                "iupac_name": "1-(7-chloro-6-fluoro-5-methyl-3,4-dihydro-1H-pyrido[4,3-b]indol-2-yl)-2-hydroxyethanone",
+                "mw_freebase": 296.72, "xlogp": 1.4, "tpsa_A2": 45.5, "hbd": 1, "hba": 3,
+                "max_clinical_phase": None,
+                "primary_pmid": "41809005", "primary_pmcid": "PMC12970331", "primary_doi": "10.64898/2026.02.24.707791",
+                "mechanism": "Brain-penetrant preclinical tricyclic pyrido-indole mouse-active cGAS inhibitor rescuing TDP-43 Q331K mouse splicing and motor deficits (Liu et al. 2026 bioRxiv PMID:41809005)",
+                "human_cns_kp_uu": "UNMEASURED_IN_HUMANS_RODENT_BRAIN_ACTIVE_TOOL",
+            },
+            "VENT-03": {
+                "clinicaltrials_nct": "NCT07260877", "eu_ctis": "2023-507504-31-00",
+                "sponsor": "Ventus Therapeutics U.S., Inc.", "max_clinical_phase": 2,
+                "trial_status": "ACTIVE_NOT_RECRUITING", "phase2a_indication": "Cutaneous/Systemic Lupus Erythematosus (AERIS, N=24)",
+                "primary_endpoint": "Percent change from baseline in skin interferon gene signature at Day 28",
+                "disclosed_chemical_structure": "UNDISCLOSED_CLINICAL_CANDIDATE",
+                "human_cns_kp_uu": "UNMEASURED_ZERO_CSF_ENDPOINTS_ACTIVE_NPSLE_EXCLUDED",
+            },
+        },
+        "als_cgas_sting_prior_art_benchmarks": {
+            "Yu_2020_Cell": {"pmid": "33031745", "doi": "10.1016/j.cell.2020.09.020", "finding": "TDP-43 mitochondrial invasion triggers mPTP/VDAC1 mtDNA release activating cGAS-STING1; Sting1 KO or H-151 rescues TARDBP mutant mice"},
+            "McCauley_2020_Nature": {"pmid": "32814898", "doi": "10.1038/s41586-020-2625-x", "finding": "Myeloid C9orf72 loss impairs autolysosomal STING1 degradation causing hyperactive Type I IFN response in C9-ALS/FTD blood and brain"},
+            "Marques_2024_ActaNeuropathol": {"pmid": "38478117", "doi": "10.1007/s00401-024-02688-z", "finding": "Neuron-autonomous STING1 activation selectively in vulnerable human familial/sporadic ALS Layer V and spinal motor neurons driven by DNA damage"},
+            "Liu_2026_bioRxiv_GanLab": {"pmid": "41809005", "pmcid": "PMC12970331", "doi": "10.64898/2026.02.24.707791", "finding": "Microglial cGAS inhibition reverses neuronal pTDP-43 and RNA mis-splicing in human iPSC microglia-MN co-cultures and TDP-43 Q331K mice (TDI-6570)"},
+            "Horiuchi_2026_ActaNeuropatholCommun": {"doi": "10.1186/s40478-026-02474-w", "finding": "Tbk1-/-; Tnf-/- double-KO in SOD1-G93A mice accelerates onset, slows post-onset progression via dampened microglial IFN, unchanged total survival"},
+            "Sakai_2026_EMBORep": {"pmid": "42834122", "doi": "10.1038/s44319-026-00953-8", "finding": "Neuronal TBK1 senses aggregation-prone monomeric TDP-43 to drive IFN-beta->IFNAR->PSMB8 immunoproteasome clearance independently of macroautophagy, making direct TBK1 inhibition unsafe in ALS"},
+        },
+        "gene_liability_5dim_scores": {
+            "STING1_reversible_CNS_antagonist": {
+                "human_genetic_constraint_25": {"points": 0, "tier": "T1", "basis": "gnomAD v4.1 MANE ENST00000330794 pLI=0.00148, LOEUF=0.846 (17 obs / 30.15 exp LoF); ClinVar/OMIM pathogenic single-gene variants are gain-of-function SAVI (MONDO:0014405), 0 Mendelian LoF diseases"},
+                "mammalian_ko_phenotype_25": {"points": 8, "tier": "T2", "basis": "Sting1-/- and Sting1<gt/gt> mice (MGI:3817420, MGI:4939598, PMID:18724357) are viable and fertile without developmental/organ failure, but show heightened susceptibility to acute HSV-1 encephalitis (PMID:27830700)"},
+                "critical_organ_expression_20": {"points": 12, "tier": "T3", "basis": "Broad high vascular/mucosal/immune GTEx v8 expression: Lung 139.4, Aorta 118.8, Spleen 107.2, Heart LV 23.3, Kidney 26.3 vs Cortex 5.47 & Cervical cord 7.93 TPM"},
+                "observed_ontarget_effects_20": {"points": 5, "tier": "T2", "basis": "No human STING1 antagonist safety failure reported (0 clinical antagonists in OpenTargets; ADU-S100 CHEMBL4297688 is an oncology agonist); mechanistically plausible DNA-virus / HSV-1 reactivation risk in CNS microglia (PMID:27830700, PMID:42792593)"},
+                "cellular_essentiality_10": {"points": 0, "tier": "T3", "basis": "OpenTargets DepMap CRISPR non-essential across 1,255 human lines (median Chronos=+0.0109, p10=-0.0961, 0 lines <-1.0)"},
+                "total_liability_score_100": 25, "available_weight": 100, "risk_band": "MODERATE_LIABILITY_25_OF_100",
+            },
+            "CGAS_reversible_CNS_inhibitor": {
+                "human_genetic_constraint_25": {"points": 0, "tier": "T1", "basis": "gnomAD v4.1 MANE ENST00000370315 pLI=2.80e-10, LOEUF=1.529 (26 obs / 23.57 exp LoF); 0 Mendelian single-gene ClinVar/OMIM LoF phenotypes; 0 ALS GWAS hits"},
+                "mammalian_ko_phenotype_25": {"points": 8, "tier": "T2", "basis": "Cgas-/- mice (MGI:4435548) are viable and fertile with organ-limited DNA-virus/HSV-1 susceptibility (PMID:27830700)"},
+                "critical_organ_expression_20": {"points": 6, "tier": "T3", "basis": "Low critical-organ parenchymal GTEx v8 expression: Heart LV 0.55, Liver 0.47, Kidney 0.85, Cortex 0.50, Cervical cord 2.23 TPM; enriched in immune/lymphoid (Spleen 8.49, Whole Blood 6.25 TPM)"},
+                "observed_ontarget_effects_20": {"points": 5, "tier": "T2", "basis": "Mechanistically plausible DNA-virus / HSV-1 CNS antiviral suppression risk (PMID:27830700, PMID:42792593); spares non-cGAS IFI16/TLR3 sensing"},
+                "cellular_essentiality_10": {"points": 0, "tier": "T3", "basis": "OpenTargets DepMap CRISPR non-essential across 1,258 human lines (median Chronos=-0.1013, p10=-0.2550, 0 lines <-1.0)"},
+                "total_liability_score_100": 19, "available_weight": 100, "risk_band": "LOW_LIABILITY_19_OF_100",
+            },
+            "TBK1_comparator_kinase_inhibitor": {
+                "human_genetic_constraint_25": {"points": 25, "tier": "T1", "basis": "Strong human LoF intolerance (gnomAD v4.1 LOEUF=0.505, pLI=0.972) AND causal human ALS/FTD haploinsufficiency (PMID:25700176, PMID:25803835)"},
+                "mammalian_ko_phenotype_25": {"points": 25, "tier": "T2", "basis": "Homozygous Tbk1-/- embryonic lethality (E14.5 liver degeneration) and accelerated early motor onset in SOD1 mice (PMID:30635357)"},
+                "critical_organ_expression_20": {"points": 12, "tier": "T3", "basis": "Ubiquitous CNS neuronal/glial and systemic expression required for OPTN/SQSTM1 mitophagy and monomeric TDP-43 clearance (PMID:42834122)"},
+                "observed_ontarget_effects_20": {"points": 20, "tier": "T1", "basis": "Human heterozygous LoF directly causes ALSFTD4 (PMID:25700176, PMID:25803835) and impairs human iPSC-cardiomyocyte beating (PMID:28453775)"},
+                "cellular_essentiality_10": {"points": 5, "tier": "T3", "basis": "Context-selective cancer dependency and loss of selective autophagy"},
+                "total_liability_score_100": 87, "available_weight": 100, "risk_band": "VERY_HIGH_LIABILITY_87_OF_100_EXCLUDED",
+            },
+        },
+    }

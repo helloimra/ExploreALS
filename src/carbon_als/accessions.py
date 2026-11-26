@@ -1,4 +1,4 @@
-"""Canonical ExploreALS accession mapping (EALS-001..EALS-052 + .k subunits) and collision-safe fuzzy resolver."""
+"""Canonical ExploreALS accession mapping (EALS-001..EALS-053 + .k subunits) and collision-safe fuzzy resolver."""
 from __future__ import annotations
 
 import re
@@ -11,7 +11,7 @@ LEGACY_DN_RANGE_RE = re.compile(
 )
 LEGACY_PROSE_TOKEN_RE = re.compile(
     r"(?<!FLAGSHIP-)(?<!candidates/)(?<!monographs/)(?<!reproduce_)(?<![0-9]_)(?<![A-Za-z0-9])"
-    r"(C0(?:0[1-9]|1\d|2[0-4])|S0[1-9]|DN-(?:0[1-9]|1\d))(-N[1-6])?(?![A-Za-z0-9])(?![.]md\b)"
+    r"(C0(?:0[1-9]|1\d|2[0-4])|S0[1-9]|DN-(?:0[1-9]|1\d)|L0[1-9])(-N[1-6])?(?![A-Za-z0-9])(?![.]md\b)"
 )
 AMBIGUOUS_SHORT_BIO_TOKENS = frozenset({"c1", "c3", "c4", "c5", "c9", "s5", "s6"})
 
@@ -68,6 +68,7 @@ PRIMARY_SYMBOL_AND_ALIASES: dict[str, tuple[str, list[str]]] = {
     "DN-17": ("Acetylcysteine", ["acetylcysteine", "nac", "n-acetylcysteine"]),
     "DN-18": ("Coenzyme Q10", ["coq10", "coenzyme-q10", "ubiquinone", "qals"]),
     "DN-19": ("L-Serine", ["l-serine", "lserine", "serine"]),
+    "L01": ("CGAS", ["cgas", "mb21d1", "c-gas", "23cgamp", "cgamp", "tdi-6570", "tdi6570", "vent-03", "vent03", "g150"]),
 }
 
 
@@ -87,7 +88,10 @@ def legacy_to_accession(legacy_id: str) -> str:
     m_d = re.fullmatch(r"DN-(0[1-9]|1[0-9])", s)
     if m_d:
         return f"EALS-{33 + int(m_d.group(1)):03d}"
-    if re.fullmatch(r"EALS-0(?:0[1-9]|[1-4]\d|5[0-2])(?:\.[1-9])?", s):
+    m_l = re.fullmatch(r"L0([1-9])", s)
+    if m_l:
+        return f"EALS-{52 + int(m_l.group(1)):03d}"
+    if re.fullmatch(r"EALS-0(?:0[1-9]|[1-4]\d|5[0-3])(?:\.[1-9])?", s):
         return s
     raise ValueError(f"Unknown legacy candidate/subnode ID: {legacy_id!r}")
 
@@ -96,12 +100,16 @@ def accession_to_legacy(accession_id: str) -> str:
     s = accession_id.strip()
     if s in {"NONE", "PORTFOLIO_WIDE", ""}:
         return s
-    m = re.fullmatch(r"EALS-0(0[1-9]|[1-4]\d|5[0-2])(?:\.([1-9]))?", s)
+    m = re.fullmatch(r"EALS-0(0[1-9]|[1-4]\d|5[0-3])(?:\.([1-9]))?", s)
     if not m:
         raise ValueError(f"Invalid ExploreALS accession ID: {accession_id!r}")
     num = int(m.group(1))
     sub = m.group(2)
-    base = f"C{num:03d}" if num <= 24 else (f"S{num - 24:02d}" if num <= 33 else f"DN-{num - 33:02d}")
+    base = (
+        f"C{num:03d}"
+        if num <= 24
+        else (f"S{num - 24:02d}" if num <= 33 else (f"DN-{num - 33:02d}" if num <= 52 else f"L{num - 52:02d}"))
+    )
     return f"{base}-N{sub}" if sub else base
 
 
@@ -133,14 +141,14 @@ def resolve_candidate_query(
     if not q:
         return None, None
     ql = q.lower()
-    m_rk = re.fullmatch(r"#([1-9]|[1-4]\d|5[0-2])", ql)
+    m_rk = re.fullmatch(r"#([1-9]|[1-4]\d|5[0-3])", ql)
     if m_rk and rank_to_accession and int(m_rk.group(1)) in rank_to_accession:
         return rank_to_accession[int(m_rk.group(1))], None
-    m_ea = re.fullmatch(r"(?:eals|ea)[-_ ]?0*([1-9]|[1-4]\d|5[0-2])(?:[.-]n?([1-9]))?", ql)
+    m_ea = re.fullmatch(r"(?:eals|ea)[-_ ]?0*([1-9]|[1-4]\d|5[0-3])(?:[.-]n?([1-9]))?", ql)
     if m_ea:
         par = f"EALS-{int(m_ea.group(1)):03d}"
         return par, (f"{par}.{m_ea.group(2)}" if m_ea.group(2) else None)
-    m_pad = re.fullmatch(r"0(0[1-9]|[1-4]\d|5[0-2])", ql)
+    m_pad = re.fullmatch(r"0(0[1-9]|[1-4]\d|5[0-3])", ql)
     if m_pad:
         return f"EALS-{int(m_pad.group(1)):03d}", None
     m_c = re.fullmatch(r"c[-_ ]?0*([1-9]|1\d|2[0-4])(?:[-_.]n?([1-9]))?", ql)
@@ -153,6 +161,9 @@ def resolve_candidate_query(
     m_dn = re.fullmatch(r"dn?[-_ ]?0*([1-9]|1[0-9])", ql)
     if m_dn and (ql.startswith("dn") or len(re.sub(r"[^0-9]", "", ql)) >= 2):
         return f"EALS-{33 + int(m_dn.group(1)):03d}", None
+    m_lv = re.fullmatch(r"l[-_ ]?0([1-9])", ql)
+    if m_lv:
+        return f"EALS-{52 + int(m_lv.group(1)):03d}", None
     slug = re.sub(r"[^a-z0-9]+", "", ql)
     if subnode_gene_to_accession and slug in subnode_gene_to_accession:
         return subnode_gene_to_accession[slug]

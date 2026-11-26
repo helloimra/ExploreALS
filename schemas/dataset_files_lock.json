@@ -2324,5 +2324,38 @@
         "sha256": "c16792834559f19034da1f7adedeed082bc2fa77c6682f5d80b3a2ad82ef79aa"
       }
     ]
+  },
+  "DS_PDB_CGAS_STING": {
+    "local_relpath": "data/pharmacology_structures/phase4_pdb",
+    "is_dir": true,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "5150356fb7f6ede20581a290d13e93774070fcd59d279d582db96e36c5be7cf7",
+    "files": [
+      {
+        "rel": "pdb_00004ksy.cif",
+        "size_bytes": 369753,
+        "sha256": "dab008b50cf2a4649fc8f179b27efa25970c3f5ffe436ac2ef6082e53ce9fa14"
+      },
+      {
+        "rel": "pdb_00006lrc.cif",
+        "size_bytes": 1203625,
+        "sha256": "8164f45a30f4d5ecf8388be902da298b4c486d31585abf0c987a1f4297211645"
+      },
+      {
+        "rel": "pdb_00006mjw.cif",
+        "size_bytes": 343990,
+        "sha256": "dfd6c5b661659a432a610d3732dd24589ea00758d54d1786f7e693ca43268621"
+      },
+      {
+        "rel": "pdb_00006mxe.cif",
+        "size_bytes": 358394,
+        "sha256": "e8ba2481de97f6c461573426b321a456fb4eb1267fa8147c33d7f6a1995ca508"
+      },
+      {
+        "rel": "pdb_00006nt5.cif",
+        "size_bytes": 549232,
+        "sha256": "19956911c0a016f0f6e7f78a748efeea5dde17b346ecf0ee958007563bb5e50b"
+      }
+    ]
   }
 }

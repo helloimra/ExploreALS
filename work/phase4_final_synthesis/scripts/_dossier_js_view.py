@@ -109,7 +109,8 @@ const HURDLE_TOK = {
   ELLA:'Ella', EUROIMMUN:'Euroimmun', GFAP:'GFAP', ER:'ER', EV:'EV', NHP:'NHP', EC50:'EC50', MRNA:'mRNA',
   SNRNA:'snRNA', C9:'C9', SALS:'sALS', C9FTD:'C9-FTD', BYE2025:'Bye 2025', JAK1:'JAK1', JAK2:'JAK2',
   APA:'APA', CATCH22:'trade-off', ISE:'ISE', ISS:'ISS', BIP:'BiP', CHOP:'CHOP', ERAD:'ERAD', PRM:'PRM',
-  CGAS:'cGAS', STING:'STING', L1HS:'L1HS', IL6:'IL-6', '1151BP':'1,151-bp', N25:'n>=25', N20:'n>=20',
+  CGAS:'cGAS', STING:'STING', STING1:'STING1', IFI16:'IFI16', '23CGAMP':"2'3'-cGAMP", '6MJW':'6MJW',
+  SER434:'Ser434', TYR248:'Tyr248', ASN482:'Asn482', HSV1:'HSV-1', C9NEG:'C9-neg', L1HS:'L1HS', IL6:'IL-6', '1151BP':'1,151-bp', N25:'n>=25', N20:'n>=20',
   '48MG':'48 mg', VTE:'VTE', AAK1:'AAK1', AA:'A/A', ANQUR:'ANQUR', FVC:'FVC', GE80:'>=80%', SIMOA:'Simoa',
   '2OMOE':"2'-MOE", POLII:'Pol II', ELK1:'ELK1', FDR:'FDR', MW:'MW', WASHU:'WashU', MWU:'MWU',
   BIOVENDOR:'BioVendor', ELISA:'ELISA', NDEV:'NDEV', DPCR:'dPCR', LOQ:'LOQ', SCG10:'SCG10', N9:'N=9',
@@ -154,7 +155,7 @@ function formatHurdle(code){
     .replace(/TPN101_TP/g, 'TPN-101-TP')
     .replace(/FAIRPARK_II/g, 'FAIRPARK-II')
     .replace(/PMID_37317638/g, 'PMID:37317638')
-    .replace(/KP_UU/g, 'Kp,uu')
+    .replace(/KP_UU/g, 'KPUU')
     .replace(/GT99_9PCT/g, '>99.9%')
     .replace(/LT0_1PCT/g, '<0.1%')
     .replace(/PLUS0048/g, '+0.048')
@@ -297,7 +298,13 @@ function formatNextTest(s, ctx){
     ? raw.split(/\\n+/).map(x => x.replace(/^\\s*(?:[-*]|\\([0-9]+\\)|[0-9]+[.)])\\s*/, '').trim()).filter(Boolean)
     : splitTopClauses(raw, /;\\s+|,\\s+(?:then|followed by|before\\s+(?:any|advancing|initiating|executing|committing)|pairing\\s+|and\\s+testing\\s+)|\\s+\\+\\s+(?=(?:Stage\\s+[12]|dedicated|single-agent|companion|CLSI|NHP|factorial)\\b)|(?:[;:,]\\s+(?:and\\s+)?|\\s+)(?=\\([1234]\\)\\s)/);
   if(clauses.length <= 1) return `<span class="leading-relaxed">${formatBulletBody(raw, ctx)}</span>`;
-  return `<ul class="list-disc pl-4 space-y-1.5 mt-1.5 leading-relaxed">${clauses.map(c => `<li class="break-words">${formatBulletBody(c, ctx)}</li>`).join('')}</ul>`;
+  if(clauses.every(c => /^\\([0-9]+\\)\\s/.test(c))){
+    return `<ul class="space-y-1.5 mt-1.5 leading-relaxed">${clauses.map(c => {
+      const m = /^\\(([0-9]+)\\)\\s*([\\s\\S]+)$/.exec(c);
+      return `<li class="flex items-baseline gap-2"><span class="font-mono font-semibold text-[var(--primary)] shrink-0">(${m[1]})</span><span class="min-w-0 break-words">${formatBulletBody(m[2], ctx)}</span></li>`;
+    }).join('')}</ul>`;
+  }
+  return `<ul class="list-disc pl-4 space-y-1.5 mt-1.5 leading-relaxed">${clauses.map(c => `<li class="break-words">${formatBulletBody(c.replace(/^\\([0-9]+\\)\\s*/, ''), ctx)}</li>`).join('')}</ul>`;
 }
 function ensurePeriod(c){
   const t = String(c || '').trim().replace(/[,;]+$/, '');
@@ -724,7 +731,7 @@ function renderDossierSidebar(){
   const sliceDefs = [
     ['ALL', 'All'],
     ['T12', 'T1/2 (8)'],
-    ['WATCH', 'T3 (20)'],
+    ['WATCH', 'T3 (21)'],
     ['BIO', 'Bio & Calib (8)'],
     ['DROP', 'Falsified (16)'],
   ];
@@ -930,7 +937,7 @@ function renderDossierMain(){
     box.innerHTML = `<div id="sec-overview" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-3">
       <div class="flex items-start justify-between gap-2 flex-wrap border-b border-[var(--card-border)] pb-2.5">
         <div class="min-w-0">
-          <div class="flex items-center gap-2 flex-wrap"><span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] font-mono font-bold text-xs" title="Translational Priority Rank #${r.rk}/52 · Genetic & Pathology Evidence Rank #${r.brk}/52">Priority #${r.rk}/52 (Evidence #${r.brk}) &middot; ${esc(r.id)}</span> ${decBadge(r.dec, r.id)} <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span> ${crowdPill}</div>
+          <div class="flex items-center gap-2 flex-wrap"><span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] font-mono font-bold text-xs" title="Translational Priority Rank #${r.rk}/53 · Genetic & Pathology Evidence Rank #${r.brk}/53">Priority #${r.rk}/53 (Evidence #${r.brk}) &middot; ${esc(r.id)}</span> ${decBadge(r.dec, r.id)} <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span> ${crowdPill}</div>
           <h2 class="text-base font-bold mt-1.5 break-words">${esc(r.name)} &mdash; <span class="font-normal text-[var(--muted-foreground)]">${escLink(s ? s.sub : humanizeEnum(r.sub), r.id)}</span></h2>
           <div class="text-xs font-mono text-[var(--muted-foreground)] mt-0.5">${!isDrop && r.trl !== 'PROTOCOL_COMPANION_NA' ? esc(humanizeEnum(r.trl)) + ' &middot; ' : ''}${esc(humanizeEnum(r.basis))}${gPills?' &middot; '+gPills:''}</div>
         </div>
@@ -995,7 +1002,7 @@ function renderDossierMain(){
       <div class="flex flex-wrap items-start justify-between gap-2 border-b border-[var(--card-border)] pb-2.5">
         <div class="min-w-0">
           <div class="flex flex-wrap items-center gap-2">
-            <span class="px-2 py-0.5 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-bold text-xs" title="Translational Priority Rank #${r.rk}/52 · Genetic & Pathology Evidence Rank #${r.brk}/52">Priority #${r.rk}/52 (Evidence #${r.brk}) &middot; ${esc(r.id)}</span>
+            <span class="px-2 py-0.5 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-bold text-xs" title="Translational Priority Rank #${r.rk}/53 · Genetic & Pathology Evidence Rank #${r.brk}/53">Priority #${r.rk}/53 (Evidence #${r.brk}) &middot; ${esc(r.id)}</span>
             ${decBadge(r.dec, r.id)}
             <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span>
             ${(r.crowd && !r.crowd.startsWith('N/A')) ? `<span class="px-2 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">${esc(r.crowd)}</span>` : ''}

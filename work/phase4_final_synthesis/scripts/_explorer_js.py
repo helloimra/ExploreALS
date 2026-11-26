@@ -154,7 +154,7 @@ function renderUpdatesLog(){
   feed.innerHTML = rows.length ? rows.map(u => {
     const gCtx = u.ids.find(x => x !== 'PORTFOLIO_WIDE' && !x.includes('.')) || 'EALS-030';
     const makeIdPill = aid => {
-      if(aid === 'PORTFOLIO_WIDE') return '<span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">All 52 Hypotheses</span>';
+      if(aid === 'PORTFOLIO_WIDE') return '<span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">All 53 Hypotheses</span>';
       if(aid.includes('.')){
         const sn = DATA_SUB.find(x => x.id === aid);
         return `<button type="button" data-open-dossier="${esc(aid)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono font-semibold text-xs text-[var(--link)] cursor-pointer">${sn ? esc(sn.gene) + ' &middot; ' : ''}${esc(aid)} &rarr;</button>`;
@@ -471,7 +471,7 @@ function renderDetail(selHidden=false){
   lastSelHidden = selHidden;
   const r = DATA_PORT.find(x=>x.id===selectedId) || DATA_PORT[0];
   const hiddenBanner = selHidden
-    ? `<div class="p-2 rounded bg-[var(--background)] border border-dashed border-[var(--warning)] flex items-center justify-between gap-2 text-xs"><span class="text-[var(--warning)] font-mono">Pinned #${r.rk} ${esc(r.id)} is outside active filter</span><button type="button" data-reset-filters="1" class="text-[var(--link)] underline font-mono cursor-pointer shrink-0">Show all (52)</button></div>`
+    ? `<div class="p-2 rounded bg-[var(--background)] border border-dashed border-[var(--warning)] flex items-center justify-between gap-2 text-xs"><span class="text-[var(--warning)] font-mono">Pinned #${r.rk} ${esc(r.id)} is outside active filter</span><button type="button" data-reset-filters="1" class="text-[var(--link)] underline font-mono cursor-pointer shrink-0">Show all (53)</button></div>`
     : '';
   const w = DATA_MONOGRAPHS[r.id];
   const s = (typeof DATA_SUM !== 'undefined' && DATA_SUM[r.id]) ? DATA_SUM[r.id] : null;

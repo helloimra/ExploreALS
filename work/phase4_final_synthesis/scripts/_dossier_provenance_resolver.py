@@ -39,6 +39,7 @@ DS_LABELS: dict[str, tuple[str, list[str]]] = {
     "DS_ROPALS": ("Morimoto et al. 2023 ROPALS", ["PMID:37267913"]),
     "DS_AFDB": ("AlphaFold Protein Structure DB v6", []),
     "DS_PDB": ("RCSB PDB Experimental Structures", []),
+    "DS_PDB_CGAS_STING": ("RCSB PDB cGAS/STING Structures", ["PMID:31113940", "PMID:30842659"]),
     "DS_GENCODE_V46_TX": ("GENCODE v46 Reference", []),
     "DS_GENCODE_V46_GTF": ("GENCODE v46 Reference", []),
     "DS_GENCODE_V46_COMP_GTF": ("GENCODE v46 Reference", []),
@@ -350,11 +351,14 @@ def resolve_evidence_row(
                 n_sub = _clean_v0_text(pv.group(1))
 
     eid = row["evidence_id"]
-    p_str = f"p={row['p_value']}" if row.get("p_value") else ""
-    adj_lbl = "adj p" if eid in {"EV-B2-001", "EV-B2-004"} else "FDR"
-    f_str = f"{adj_lbl}={row['fdr_or_adjusted_p']}" if row.get("fdr_or_adjusted_p") else ""
-    pf = MAJIQ_NONFREQ_PF.get(eid) or " · ".join(x for x in (p_str, f_str) if x)
     srec = (stat_map or {}).get(eid, {})
+    if eid.startswith("EV-LIV-") and srec.get("unadjusted_or_primary_nominal_p") and srec.get("covariate_adjusted_nominal_p"):
+        pf = f"p={srec['unadjusted_or_primary_nominal_p']} · cov_adj_p={srec['covariate_adjusted_nominal_p']}"
+    else:
+        p_str = f"p={row['p_value']}" if row.get("p_value") else ""
+        adj_lbl = "adj p" if eid in {"EV-B2-001", "EV-B2-004"} else "FDR"
+        f_str = f"{adj_lbl}={row['fdr_or_adjusted_p']}" if row.get("fdr_or_adjusted_p") else ""
+        pf = MAJIQ_NONFREQ_PF.get(eid) or " · ".join(x for x in (p_str, f_str) if x)
     sha64 = srec.get("sha64", "")
     if sha64:
         sha12 = sha64[:12]

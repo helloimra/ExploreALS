@@ -51,6 +51,19 @@ EXP_UPDATES_COLS = [
     "new_evidence_or_revision", "portfolio_and_gate_consequence",
     "primary_sources", "verification_anchor",
 ]
+EXP_LIV_CAND_COLS = [
+    "living_id", "origin_subcohort", "gene_or_drug", "candidate_type", "primary_modality_specific",
+    "mechanism_summary", "causal_vs_reactive_assessment", "epistemic_state", "decision",
+    "clinical_readiness_trl", "next_gate_experimental_class", "primary_evidence_basis",
+    "model_prior_dependency", "unsolved_hurdle_count", "unsolved_hurdles_structured",
+    "scientific_actionability_tier", "factual_justification", "discriminating_next_test",
+    "supporting_living_evidence_ids", "analysis_run_id",
+]
+EXP_LIV_EV_COLS = [
+    "evidence_id", "carbon_id", "subnode_id", "analysis_run_id", "source_type", "source_id_or_locator",
+    "cohort_and_stratum", "assay_and_contrast", "effect_direction", "effect_estimate",
+    "p_value", "fdr_or_adjusted_p", "sample_size_n", "epistemic_weight", "notes",
+]
 ALLOWED_UPDATE_CATEGORIES = {
     "CLINICAL_TRIAL", "LITERATURE_INGESTION", "MODEL_REVISION",
 }
@@ -254,9 +267,16 @@ def verify_all(
     if stat_rows and list(stat_rows[0].keys()) != EXP_STAT_COLS:
         errors.append(f"Schema header mismatch in statistical_models_and_contrasts.csv: {list(stat_rows[0].keys())}")
     p3b_ev_rows = load_csv("phase3b_denovo_evidence.csv")
+    liv_cand_rows = load_csv("living_evidence_candidates.csv")
+    liv_ev_rows = load_csv("living_evidence_candidate_evidence.csv")
+    if liv_cand_rows and list(liv_cand_rows[0].keys()) != EXP_LIV_CAND_COLS:
+        errors.append(f"Schema header mismatch in living_evidence_candidates.csv: {list(liv_cand_rows[0].keys())}")
+    if liv_ev_rows and list(liv_ev_rows[0].keys()) != EXP_LIV_EV_COLS:
+        errors.append(f"Schema header mismatch in living_evidence_candidate_evidence.csv: {list(liv_ev_rows[0].keys())}")
+    errors.extend(verify_provenance_gates([], liv_ev_rows, runs))
     run_ids_prelim = {ar["analysis_run_id"] for ar in runs}
     if evidence_override is None:
-        exp_all_ev_ids = {e["evidence_id"] for e in evidence} | {e["evidence_id"] for e in p3b_ev_rows}
+        exp_all_ev_ids = {e["evidence_id"] for e in evidence} | {e["evidence_id"] for e in p3b_ev_rows} | {e["evidence_id"] for e in liv_ev_rows}
         got_stat_ev_ids = [r["evidence_id"] for r in stat_rows]
         if len(got_stat_ev_ids) != len(set(got_stat_ev_ids)) or set(got_stat_ev_ids) != exp_all_ev_ids:
             errors.append(
@@ -511,8 +531,38 @@ def verify_all(
 
     if decisions_override is None and evidence_override is None:
         from phase3_gates import RAW_OLIGO_SEQ_RE, verify_phase3a_gates
-        from phase3b_gates import GAPPED_OLIGO_RE, verify_phase3b_gates
+        from phase3b_gates import GAPPED_OLIGO_RE, _build_explore_exclusions, verify_phase3b_gates
         from phase4_gates import CAPITAL_DOLLAR_LEAK_RE, verify_phase4_gates
+
+        excl_g, excl_d = _build_explore_exclusions(intake, subnodes)
+        p3b_gd = {r["gene_or_drug"].strip() for r in load_csv("phase3b_denovo_candidates.csv")}
+        liv_ids = {r["living_id"] for r in liv_cand_rows}
+        liv_ev_ids = {e["evidence_id"] for e in liv_ev_rows}
+        if len(liv_ids) != len(liv_cand_rows):
+            errors.append("Duplicate living_id in living_evidence_candidates.csv")
+        for le in liv_ev_rows:
+            if le["carbon_id"] not in liv_ids or le["analysis_run_id"] not in run_ids:
+                errors.append(f"Living evidence {le['evidence_id']} has invalid carbon_id/analysis_run_id")
+        for lc in liv_cand_rows:
+            lid, lgd = lc["living_id"], lc["gene_or_drug"].strip()
+            if not re.fullmatch(r"L0[1-9]", lid):
+                errors.append(f"living_evidence_candidates.csv invalid living_id '{lid}'")
+            if ";" in lgd or "/" in lgd or not lgd:
+                errors.append(f"{lid}: non-atomic gene_or_drug '{lgd}'")
+            if lgd in excl_g or lgd.lower() in excl_d or lgd in p3b_gd:
+                errors.append(f"LIVING_OVERLAP VIOLATION on {lid}: '{lgd}' overlaps existing intake/subnodes/Phase 3B!")
+            if lc["decision"] == "DROP":
+                if lc["epistemic_state"] == "UNPROVEN_UNTESTED":
+                    errors.append(f"EPISTEMIC VIOLATION on {lid}: Cannot DROP an UNPROVEN_UNTESTED living candidate!")
+                if lc["epistemic_state"] not in FALSIFIED_STATES:
+                    errors.append(f"EPISTEMIC VIOLATION on {lid}: DROP requires falsified epistemic_state")
+            if lc["decision"] == "KEEP_EXPLORATORY_UNPROVEN" and not lc["discriminating_next_test"].strip():
+                errors.append(f"{lid}: KEEP_EXPLORATORY_UNPROVEN requires discriminating_next_test")
+            if lc["analysis_run_id"] not in run_ids:
+                errors.append(f"{lid}: unknown analysis_run_id '{lc['analysis_run_id']}'")
+            for levid in filter(None, lc["supporting_living_evidence_ids"].split(";")):
+                if levid not in liv_ev_ids:
+                    errors.append(f"{lid}: supporting_living_evidence_id '{levid}' missing from living_evidence_candidate_evidence.csv")
 
         upd_rows = load_csv("living_evidence_updates.csv")
         if not upd_rows:
@@ -521,7 +571,7 @@ def verify_all(
             errors.append(f"Schema header mismatch in living_evidence_updates.csv: {list(upd_rows[0].keys())}")
         acc_ids = {r["accession_id"] for r in load_csv("candidate_accessions.csv")}
         valid_aff = acc_ids | {"PORTFOLIO_WIDE"}
-        valid_anc = ev_ids | {e["evidence_id"] for e in p3b_ev_rows} | run_ids | FLAGSHIP_RUN_IDS
+        valid_anc = ev_ids | {e["evidence_id"] for e in p3b_ev_rows} | liv_ev_ids | run_ids | FLAGSHIP_RUN_IDS
         seen_upd_ids: set[str] = set()
         sort_keys: list[tuple[str, str]] = []
         for ur in upd_rows:
@@ -620,7 +670,7 @@ def run_selftest(mode: str = "full") -> None:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Verify ExploreALS v1.3 registries, 64-char SHA-256 anchors, & gates.")
+    ap = argparse.ArgumentParser(description="Verify ExploreALS v1.4 registries, 64-char SHA-256 anchors, & gates.")
     ap.add_argument("--mode", choices=("auto", "full", "cached"), default="auto")
     args = ap.parse_args()
     eff_mode = resolve_mode(args.mode)
@@ -642,8 +692,8 @@ def main() -> None:
     print(
         f"PASS [{eff_mode}]: All {n_reg} registries, {n_stat}/{n_stat} recorded 64-char SHA-256 contrast digests "
         f"({n_uniq_anc} unique anchors; {n_matched_local}/{n_stat} locally byte/EOL-matched in {eff_mode} mode), "
-        f"{n_ds} dataset manifest entries, 52-hypothesis/28-interval portfolio, "
-        "ExploreALS v1.3 Explorer + 8 Monographs, biosecurity/provenance gates, and self-tests verified (0 errors)."
+        f"{n_ds} dataset manifest entries, 53-hypothesis/28-interval portfolio, "
+        "ExploreALS v1.4 Explorer + 8 Monographs, biosecurity/provenance gates, and self-tests verified (0 errors)."
     )
 
 

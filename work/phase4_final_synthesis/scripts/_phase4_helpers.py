@@ -53,7 +53,7 @@ DROP_MODEL_PRIOR_MAP: dict[str, str] = {
 BIO_EVIDENCE_PRIORITY: list[str] = [
     "C001", "C002", "S06", "C006", "S07", "DN-01", "C022", "C023", "C015",
     "DN-04", "DN-05", "C014", "C007", "DN-02", "DN-03", "DN-09",
-    "DN-08", "DN-07", "DN-06", "S09", "C018", "C016",
+    "DN-08", "DN-07", "DN-06", "S09", "C018", "C016", "L01",
     "C019", "C020", "S02", "DN-14", "DN-17", "DN-19",
     "C005",
     "C013", "S08", "C003", "C017", "DN-10", "DN-11", "DN-12",
@@ -90,6 +90,7 @@ CROWDING_CLASS_MAP: dict[str, str] = {
     "DN-10": "N/A (Candidate CSF Marker)",
     "DN-11": "N/A (Candidate CSF Marker)",
     "DN-12": "N/A (Candidate CSF Marker)",
+    "L01": "0 CNS Trials (VENT-03 Lupus Ph2a · Preclinical TDI-6570)",
 }
 
 EXPLORE_BENCHMARK_SPECS: dict[str, tuple[str, str, str, str, int, str]] = {

@@ -31,7 +31,7 @@ STAGE_LABELS = {
     "Phase2_Track4_CellType_Isoform_Resolution": "3D & PK-PD · Vascular & Subunit Isoforms",
     "Phase3B_DeNovo_Discovery": "Multi-Omic Triage · Transcriptome, CSF & Screen",
     "Phase3A_Execution_Safety": "Hybridization Safety · 254,070-tx GRCh38 Scan",
-    "Phase4_Final_Synthesis": "Portfolio Synthesis · 52-Hypothesis Integration",
+    "Phase4_Final_Synthesis": "Portfolio Synthesis · 53-Hypothesis Integration",
 }
 
 
@@ -110,25 +110,39 @@ def build_replication_payloads(
         {"id": fid, "grp": grp, "script": sc, "out": "Terminal verification table (rtol=1e-4)", "ds": ds, "cands": cands, "sum": clean_rep_text(sm), "flag": True}
         for fid, grp, sc, ds, cands, sm in FLAGSHIP_DEFS
     ]
+    ds_extra_cands: dict[str, list[str]] = {}
     for r in run_rows:
         rid = r["analysis_run_id"]
+        rc_list = run_cands.get(rid, [])
+        if len(rc_list) == 1:
+            for dtok in r["datasets_used"].split(";"):
+                dtok = dtok.strip()
+                if dtok and not dtok.startswith("DS_BASE") and rc_list[0] not in ds_extra_cands.setdefault(dtok, []):
+                    ds_extra_cands[dtok].append(rc_list[0])
         js_runs.append({
             "id": _display_run_id(rid),
             "grp": STAGE_LABELS.get(r["phase_batch"], r["phase_batch"].replace("_", " ")),
             "script": ("scripts/verify_explore_als.py;scripts/fetch_open_datasets.py" if rid == "CAR-RUN-000" else r["script_relpath"]),
             "out": _clean_run_out(r["output_artifacts"], rid),
             "ds": ";".join(d for d in r["datasets_used"].split(";") if d and not d.startswith("DS_BASE")),
-            "cands": ";".join(run_cands.get(rid, [])),
+            "cands": ";".join(rc_list),
             "sum": clean_rep_text(r["summary"]),
             "flag": False,
         })
+
+    def _merge_ds_cands(ds_id: str, raw_cands: str) -> str:
+        base = [x for x in _map_cand_list(raw_cands).split(";") if x]
+        for extra in ds_extra_cands.get(ds_id, []):
+            if extra not in base:
+                base.append(extra)
+        return ";".join(base)
 
     js_ds = [
         {
             "id": d["dataset_id"], "dom": d["domain"].replace("_", " "), "rel": d["local_relpath"],
             "acc": clean_rep_text(d["accession_or_doi"]), "lic": clean_rep_text(d["license_or_access"]),
             "mb": f"{int(d['size_bytes'])/1e6:.2f} MB" if int(d["size_bytes"]) >= 100_000 else f"{int(d['size_bytes'])/1e3:.1f} KB",
-            "sha": d["sha256"], "cands": _map_cand_list(d["relevant_candidates"]), "desc": clean_rep_text(d["description"]),
+            "sha": d["sha256"], "cands": _merge_ds_cands(d["dataset_id"], d["relevant_candidates"]), "desc": clean_rep_text(d["description"]),
             "tier": d["redistribution_tier"], "url": d["canonical_fetch_url_or_instructions"],
         }
         for d in ds_rows

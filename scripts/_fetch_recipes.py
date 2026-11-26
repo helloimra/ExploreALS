@@ -44,4 +44,11 @@ DIRECT_MULTI_FILE_HTTPS: dict[str, list[tuple[str, str]]] = {
         *[(f"source_data/Ma2022_41586_2022_4424_MOESM{i}_ESM.xlsx", f"{SPRINGER_MA}/41586_2022_4424_MOESM{i}_ESM.xlsx") for i in range(8, 19)],
         *[(f"Melamed2019_41593_2018_293_MOESM{i}_ESM.xlsx", f"{SPRINGER_MELAMED}/41593_2018_293_MOESM{i}_ESM.xlsx") for i in range(3, 8)],
     ],
+    "DS_PDB_CGAS_STING": [
+        ("pdb_00006mjw.cif", "https://files.rcsb.org/download/6MJW.cif"),
+        ("pdb_00006lrc.cif", "https://files.rcsb.org/download/6LRC.cif"),
+        ("pdb_00006nt5.cif", "https://files.rcsb.org/download/6NT5.cif"),
+        ("pdb_00004ksy.cif", "https://files.rcsb.org/download/4KSY.cif"),
+        ("pdb_00006mxe.cif", "https://files.rcsb.org/download/6MXE.cif"),
+    ],
 }

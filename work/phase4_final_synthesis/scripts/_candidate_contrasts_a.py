@@ -32,6 +32,7 @@ CANDIDATE_EDGES_ACTIVE: dict[str, tuple[str, str]] = {
     "C015": ("HIGH_HURDLE_WATCHLIST", "G2E3 Alu Intron-1 windows fail 0mm safety, while SuSiE-inf (purityMeanR2=0.988) & 1000G haplotypes (EUR 96.7% vs AFR 72.7% 1111 purity) pair rs229143-A with opposite SCFD1 expression across Answer ALS MN eQTL-GWAS overlap (+0.0476, Bonferroni adj p=1.93e-32, Tsitkov 2026 [PREPRINT]) and formal iMGL COLOC (-0.2955/-0.2164/-0.3107; post-QC n=189/188/188, inferred fit n=186/185/185; PP.H4=0.876-0.890, PMID:43045849; sALS direction open) & Brain Catalog COLOC (PMID:36243988)."),
     "C023": ("HIGH_HURDLE_WATCHLIST", "Rare ALS risk allele YKT6 p.Tyr64Cys (rs138273846, AVI=24.53, ALS AF=0.183%, gnomAD v4.1 AF=0.061%, meta P=1.50e-9; rat DPC-bound PDB 3KYQ +85.1 A^3 cavity expansion PMID:20159557) pairs with TDP-43 3'UTR lengthening and PTAR1 170-bp Exon-2 skipping, while Chronos=-1.54 restricts intervention to Cys195-retaining stabilization."),
     "C016": ("HIGH_HURDLE_WATCHLIST", "Postmortem FBXL5 RNA elevation is microglial (+0.46, p=0.0033, n=33) rather than excitatory neuronal (p=0.18) while ALS neuronal TFRC/IREB2 are depleted and Deferiprone failed (+0.24d, p=0.38; PD FAIRPARK-II worsened PMID:36449420), pivoting C016 to bidirectional FBXL5-IRP2 sensor probing."),
+    "L01": ("HIGH_HURDLE_WATCHLIST", "Spinal ALS-Glia CGAS rises (+0.48, adj p=1.7e-6, n=168; LOEUF=1.529, sparing neuronal TBK1->PSMB8 PMID:42834122 & bypassing STING1 HAQ/H232 alleles), yet PCR-verified C9-neg attenuation (adj p=0.091 vs SOD1 gliosis), 3/13 PDB 6MJW human-mouse pocket shifts (Ser434/Tyr248/Asn482 vs mouse TDI-6570 PMID:41809005 [PREPRINT]), and 0 CSF endpoints in lupus VENT-03 (NCT07260877) gate CNS Kp,uu & IFI16/STING1 epistasis."),
     "C020": ("HIGH_HURDLE_WATCHLIST", "Continuous QD/BID PIKfyve blockade hits ClC-7 swelling (PMID:42900584) and +PI(3)P->LRRK2/CASM stress (PMID:42994990; AIT-101 PMID:38606777 vs terminated VRG50635 NCT06215755 / AAN2026-003396 / PMID:41708347); pulsed q48h-q72h Apilimod (CHEMBL4297643) drops from ~79% to ~30%/0% [MODEL_PRIOR], mandating a 14-day washout and DPR mass-balance falsification gate."),
     "C019": ("HIGH_HURDLE_WATCHLIST", "Oral 2->4 mg QD Baricitinib reaches 3.804 nM total Wk16 CSF (~9% modeled pSTAT occupancy; 657x below 2.5 uM screen) with 1/9 PE + 1/9 DVT in NADALS (N=9 enrolled, 5/9 completers), while JAK2-sparing JAK1 inhibitors forfeit neuronal JAK2 APA rescue (Emory CSF OOF AUC=0.82)."),
     "S02": ("HIGH_HURDLE_WATCHLIST", "Bye 2025 2.5 uM survival (+1.38d, FDR=0.034) faces 5 hurdles: unreported Ph2/3 NCT04082832 (UNKNOWN) & completed N=55 OLE NCT04313166 outcomes (hasResults=false), null mixed Yang 2023 autopsies (5v4 ALS-TDP p=0.1 + 1v2 SOD1), ~47x modeled 53 nM CNS gap (62Cu-PET dissociation), and SOD1 origin."),
@@ -49,19 +50,19 @@ CANDIDATE_EDGES_ACTIVE: dict[str, tuple[str, str]] = {
 }
 
 LENS_DEFS: list[tuple[str, str]] = [
-    ("ALL", "All Pathways · 52"),
-    ("ISOFORM_STRUCTURAL", "3D Structure & Isoform Selectivity · 9"),
+    ("ALL", "All Pathways · 53"),
+    ("ISOFORM_STRUCTURAL", "3D Structure & Isoform Selectivity · 10"),
     ("TDP43_RNA", "TDP-43 Splicing & Polyadenylation · 12"),
     ("MULTIPLEX_STAGE", "Multiplex & Excitability Core · 5"),
     ("BIOFLUID_SUBTYPE", "Biofluids, Subtypes & Benchmarks · 10"),
-    ("PK_COMPARTMENT", "CNS PK, Selectivity & Compartment · 10"),
+    ("PK_COMPARTMENT", "CNS PK, Selectivity & Compartment · 11"),
     ("FALSIFIED_TRAPS", "Excluded Regimens (RCT / CNS PK) · 16"),
 ]
 
 CANDIDATE_LENSES: dict[str, list[str]] = {
-    "ISOFORM_STRUCTURAL": ["S06", "C006", "C007", "C022", "DN-01", "DN-04", "DN-05", "C015", "C023"],
+    "ISOFORM_STRUCTURAL": ["S06", "C006", "C007", "C022", "DN-01", "DN-04", "DN-05", "C015", "C023", "L01"],
     "TDP43_RNA": ["C001", "C006", "C002", "DN-01", "DN-02", "DN-03", "DN-04", "DN-05", "DN-06", "DN-07", "DN-08", "DN-09"],
     "MULTIPLEX_STAGE": ["S06", "C006", "C001", "C002", "C005"],
     "BIOFLUID_SUBTYPE": ["S07", "C013", "S08", "C003", "C017", "C019", "S09", "DN-10", "DN-11", "DN-12"],
-    "PK_COMPARTMENT": ["C019", "S02", "S09", "C014", "C016", "C018", "C020", "DN-14", "DN-17", "DN-19"],
+    "PK_COMPARTMENT": ["C019", "S02", "S09", "C014", "C016", "C018", "L01", "C020", "DN-14", "DN-17", "DN-19"],
 }

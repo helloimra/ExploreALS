@@ -72,7 +72,7 @@ def assert_equal(label: str, observed: Any, expected: Any) -> VerifiedCheck:
 
 
 def print_audit_report(cand_id: str, title: str, checks: list[VerifiedCheck], priors_note: str) -> None:
-    print(f"=== ExploreALS v1.3 Flagship Monograph Verification: {cand_id} ({title}) ===")
+    print(f"=== ExploreALS v1.4 Flagship Monograph Verification: {cand_id} ({title}) ===")
     for chk in checks:
         if not isinstance(chk, VerifiedCheck) or chk.status != "PASS":
             raise AssertionError(f"[FAIL] Unverified flagship check tuple in {cand_id}: {chk!r}")

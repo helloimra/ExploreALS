@@ -19,7 +19,7 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
         ("Korhonen et al. 2019 PMID:30705990), the Untested != Falsified triage rule mandates", "Korhonen et al. 2019 PMID:30705990.\n- Normoxic & Isoform Validation Gate: The Untested != Falsified triage rule mandates"),
     ],
     ("EALS-038", "verdict"): [
-        ("Elevated to #1 of Tier 3 Exploratory Discovery (Rank #9/52): surviving", "- Spatial & Single-MN Proteomics (Rank #9/52, #1 Tier 3): Surviving"),
+        ("Elevated to #1 of Tier 3 Exploratory Discovery (Rank #9/53): surviving", "- Spatial & Single-MN Proteomics (Rank #9/53, #1 Tier 3): Surviving"),
         ("vs 2 CTL donors / 25 cells), and C9-FTD synaptosomal loss", "vs 2 CTL donors / 25 cells).\n- Synaptosomal Depletion & Validation Gate: C9-FTD synaptosomal loss"),
     ],
     ("EALS-038", "proves"): [
@@ -228,8 +228,18 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
         ("C5b-9/C5L2), alongside peer-reviewed unbound", "C5b-9/C5L2); quantify peer-reviewed unbound"),
     ],
     ("EALS-050", "verdict"): [
-        ("Retained in Tier 3 Exploratory Discovery (Rank #27/52): sub-FDR", "- Screen Thiol Buffering & Low-Dose Oral Trial (Rank #27/52): Sub-FDR"),
+        ("Retained in Tier 3 Exploratory Discovery (Rank #28/53): sub-FDR", "- Screen Thiol Buffering & Low-Dose Oral Trial (Rank #28/53): Sub-FDR"),
         ("1,800 mg/d EH301, yet Louwerse 1995", "1,800 mg/d EH301.\n- Underpowered Subcutaneous Trial & High-Dose CSF Penetration: Louwerse 1995"),
+    ],
+    ("EALS-053", "proves"): [
+        ("Covariate-adjusted NYGC spinal cord", "- Postmortem Spinal Cord ALS-Glia Upregulation: Covariate-adjusted NYGC spinal cord"),
+        ("PMID:36482247), convergent preclinical ALS", "PMID:36482247).\n- Preclinical ALS & Microglial Rescue Benchmarks: Convergent preclinical ALS"),
+        ("PMID:41809005 (preprint), PMC12970331), 2.41A human CGAS", "PMID:41809005 (preprint), PMC12970331).\n- Active-Site Crystal Structure & Low Genetic Constraint: 2.41A human CGAS"),
+    ],
+    ("EALS-053", "disproves"): [
+        ("Genotype-stratified NYGC spinal cord", "- Sporadic C9-Negative Attenuation & Microgliosis Confounding: Genotype-stratified NYGC spinal cord"),
+        ("catalysis), flat NYGC motor cortex", "catalysis).\n- Flat Cortical/snRNA Cohorts & Absent CSF Detection: Flat NYGC motor cortex"),
+        ("PMID:40375307), 3/13 human-vs-mouse G150", "PMID:40375307).\n- Ortholog Pocket Divergence, Unmeasured CNS Kp,uu & Antiviral Risk: 3/13 human-vs-mouse G150"),
     ],
     ("EALS-050", "proves"): [
         ("Bye 2025 iPSC-MN screen Rank #12/107", "- iPSC-MN Screen & Underpowered Subcutaneous Trial: Bye 2025 iPSC-MN screen Rank #12/107"),

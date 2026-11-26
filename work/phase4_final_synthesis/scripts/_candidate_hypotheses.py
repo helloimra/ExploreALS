@@ -210,4 +210,8 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
         "L-Serine is an obligate substrate of serine palmitoyltransferase proposed to competitively suppress neurotoxic 1-deoxysphingolipids in sporadic ALS, whereas specific gain-of-function SPTLC1/SPTLC2 ALS variants impair ORMDL feedback and motivate a proposed prospective genetic/sphingolipid screening safeguard (PMID:34059824; PMID:43025655). "
         "Because fixed 2.5 uM library screening adds only +0.625% atop ~400 uM basal media L-serine and zero randomized placebo-controlled sporadic ALS trials have completed (NCT01835782; NCT03580616), this exploratory hypothesis tests physiological low-serine dose-response and biomarker-monitored supplementation."
     ),
+    "L01": (
+        "CGAS (ENSG00000164430, UniProt Q8N884) encodes cyclic GMP-AMP synthase, the upstream cytosolic DNA sensor activated by TDP-43-triggered mitochondrial DNA leakage (PMID:33031745) and nuclear DNA damage/retroelement cDNA to synthesize 2'3'-cGAMP and engage STING1 while sparing cell-autonomous neuronal TBK1->IFN-beta->PSMB8 clearance of monomeric TDP-43 (PMID:42834122). "
+        "Anchored by covariate-adjusted spinal cord ALS-Glia upregulation, human loss-of-function tolerance (gnomAD v4.1 LOEUF=1.529), and 2.41A active-site crystal structures (PDB 6MJW, PMID:31113940), this exploratory hypothesis tests brain-penetrant human-selective active-site cGAS inhibition across sporadic and C9orf72 ALS microglia-motor neuron co-cultures against microgliosis confounding, human-mouse pocket divergence, and co-sensor IFI16 redundancy."
+    ),
 }

@@ -210,6 +210,8 @@ def main() -> None:
 
     ev_p1_rows = _read_csv("evidence_ledger.csv")
     ev_p3b_rows = _read_csv("phase3b_denovo_evidence.csv")
+    ev_liv_rows = _read_csv("living_evidence_candidate_evidence.csv")
+    liv_cands = _read_csv("living_evidence_candidates.csv")
     ds_rows = _read_csv("datasets_manifest.csv")
     stat_rows = _read_csv("statistical_models_and_contrasts.csv")
     ovl_rows = _read_csv("cohort_overlap_map.csv")
@@ -240,8 +242,8 @@ def main() -> None:
         "output_artifacts": "reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md;reports/CARBON_ALS_INTERACTIVE_EXPLORER.html;reports/monographs;reports/github_pages",
         "datasets_used": "DS001_COUNTS;DS001_META;DS001_ONEILL;DS_GENCODE_V46_COMP_GTF;DS_GNOMAD_V41_CONSTRAINT",
         "tools_and_skills_used": "generative_ui;tooluniverse-gene-liability;alphagenome-atlas-website-links;scripts.phase4_gates;uv-python",
-        "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-19T12:45:00Z",
-        "summary": f"Programmatically compiled unified 52-hypothesis ExploreALS v1.3 Explorer (with 8 Tier 1+2 Translational Monographs, 9-row Mechanistic Contrasts matrix, Replication & Verification workbench, {len(stat_rows)}/{len(stat_rows)} 64-char SHA-256 anchors, 42 SHA-256-locked open datasets [40 external + 2 bundled], 8-group cohort overlap & donor accounting & 3 sensitivity sandboxes) and zero-CDN GitHub Pages bundle across 28 1-based GRCh38 cis-regulatory target windows.",
+        "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-26T09:20:00Z",
+        "summary": f"Programmatically compiled unified 53-hypothesis ExploreALS v1.4 Explorer (with 8 Tier 1+2 Translational Monographs, 9-row Mechanistic Contrasts matrix, Replication & Verification workbench, {len(stat_rows)}/{len(stat_rows)} 64-char SHA-256 anchors, {len(ds_rows)} SHA-256-locked open datasets [{len(ds_rows) - 2} external + 2 bundled], 8-group cohort overlap & donor accounting & 3 sensitivity sandboxes) and zero-CDN GitHub Pages bundle across 28 1-based GRCh38 cis-regulatory target windows.",
     }
     runs = (
         [p4_r2 if r["analysis_run_id"] == "RUN-P4-002" else r for r in runs]
@@ -249,15 +251,16 @@ def main() -> None:
         else [*runs, p4_r2]
     )
 
-    mono_map, ev_by_id = compile_monograph_bundle(port_rows, ev_p1_rows, ev_p3b_rows, ds_rows, stat_rows)
+    mono_map, ev_by_id = compile_monograph_bundle(port_rows, ev_p1_rows, [*ev_p3b_rows, *ev_liv_rows], ds_rows, stat_rows)
     js_sum = build_summary_dossiers(
         port_rows,
         _read_csv("candidate_decisions.csv"),
         _read_csv("phase3b_denovo_candidates.csv"),
+        liv_cands,
     )
     _, js_lenses, js_contrasts = build_edges_and_lenses(port_rows)
     js_runs, js_datasets, js_formulas, js_overlap = build_replication_payloads(
-        runs, ds_rows, stat_rows, ovl_rows, [*ev_p1_rows, *ev_p3b_rows]
+        runs, ds_rows, stat_rows, ovl_rows, [*ev_p1_rows, *ev_p3b_rows, *ev_liv_rows]
     )
 
     data_block = "\n".join([

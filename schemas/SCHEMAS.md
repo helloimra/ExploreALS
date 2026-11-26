@@ -1,6 +1,6 @@
-# ExploreALS v1.3.0 Registry & Provenance Lock Schemas
+# ExploreALS v1.4.0 Registry & Provenance Lock Schemas
 
-`ExploreALS v1.3.0` stores its relational data across **`18` normalized, schema-verified CSV ledgers** under `registries/` and **`2` deterministic JSON lock manifests** (`dataset_files_lock.json` and `verified_citations_lock.json`) shipped under `schemas/`, validated end-to-end by `scripts/verify_carbon_als.py`.
+`ExploreALS v1.4.0` stores its relational data across **`20` normalized, schema-verified CSV ledgers** under `registries/` and **`2` deterministic JSON lock manifests** (`dataset_files_lock.json` and `verified_citations_lock.json`) shipped under `schemas/`, validated end-to-end by `scripts/verify_carbon_als.py`.
 
 ## 1. `registries/candidate_intake_ledger.csv`
 Tracks all `33` published clinical, Mendelian/GWAS, and neuropathological ALS programs across two intake cohorts:
@@ -29,7 +29,7 @@ Canonical Phase 1–4 adjudication table (`33` rows: `4 KEEP_CORE`, `13 KEEP_EXP
 - **Hard Invariant:** If `decision == "DROP"`, `epistemic_state` MUST be one of `{FALSIFIED_CLINICAL, FALSIFIED_PK_SAFETY, ARTIFACT_CONFOUNDED}` and `factual_justification` + `supporting_evidence_ids` MUST be non-empty. `epistemic_state == "UNPROVEN_UNTESTED"` is strictly forbidden from mapping to `DROP`.
 
 ## 4. `registries/datasets_manifest.csv`
-Tracks all `42` biomedical datasets, 3D structures, and genome reference maps (`40` external accessions + `2` repo-bundled reference maps) with 64-character SHA-256 digests, partitioned across **`28` `TIER_A_OPEN_REDISTRIBUTABLE`, `12` `TIER_B_PUBLISHER_HTTPS_FETCH`, and `2` `TIER_C_DUA_OR_BASELINE`** (registered-access Synapse entries `DS003_PB` `syn51105515` and `DS026_FUJITA` `syn52335732`), storing canonical fetch URLs and access instructions in `canonical_fetch_url_or_instructions` (paired with per-file relative paths, redistribution tiers, byte sizes, and SHA-256 hashes in `schemas/dataset_files_lock.json`).
+Tracks all `43` biomedical datasets, 3D structures, and genome reference maps (`41` external accessions + `2` repo-bundled reference maps) with 64-character SHA-256 digests, partitioned across **`29` `TIER_A_OPEN_REDISTRIBUTABLE`, `12` `TIER_B_PUBLISHER_HTTPS_FETCH`, and `2` `TIER_C_DUA_OR_BASELINE`** (registered-access Synapse entries `DS003_PB` `syn51105515` and `DS026_FUJITA` `syn52335732`), storing canonical fetch URLs and access instructions in `canonical_fetch_url_or_instructions` (paired with per-file relative paths, redistribution tiers, byte sizes, and SHA-256 hashes in `schemas/dataset_files_lock.json`).
 
 **Columns:**
 `dataset_id,domain,local_relpath,upstream_explore_relpath,accession_or_doi,license_or_access,size_bytes,sha256,relevant_candidates,description,redistribution_tier,canonical_fetch_url_or_instructions`
@@ -41,7 +41,7 @@ Stores `170` atomic, header-resolved quantitative, structural, and bibliographic
 `evidence_id,carbon_id,subnode_id,analysis_run_id,source_type,source_id_or_locator,cohort_and_stratum,assay_and_contrast,effect_direction,effect_estimate,p_value,fdr_or_adjusted_p,sample_size_n,epistemic_weight,notes`
 
 ## 6. `registries/analysis_runs.csv`
-Logs all `50` reproducible computational, genomic, structural, and statistical scripts executed across Phases 1–4 (`RUN-B1-*` through `RUN-P4-003`).
+Logs all `51` reproducible computational, genomic, structural, and statistical scripts executed across Phases 1–4 (`RUN-B1-*` through `RUN-P4-005`).
 
 **Columns:**
 `analysis_run_id,phase_batch,script_relpath,output_artifacts,datasets_used,tools_and_skills_used,reproduced_verified,run_timestamp_utc,summary`
@@ -83,7 +83,7 @@ Atomic, single-contrast primary quantitative and clinical/structural evidence ro
 `evidence_id,carbon_id,subnode_id,analysis_run_id,source_type,source_id_or_locator,cohort_and_stratum,assay_and_contrast,effect_direction,effect_estimate,p_value,fdr_or_adjusted_p,sample_size_n,epistemic_weight,notes`
 
 ## 13. `registries/phase4_unified_portfolio.csv`
-Canonical cross-phase master portfolio (`52` rows = disjoint union of `33` curated clinical/genetic programs + `19` multi-omic screen nominations: `4 KEEP_CORE`, `25 KEEP_EXPLORATORY_UNPROVEN`, `7 RECLASSIFY_BENCHMARK_OR_BIOMARKER`, `16 DROP`), paired 1-to-1 with immutable `EALS-001`–`EALS-052` accessions and ranked `1..52` under scientific actionability, human causal/pathology evidence basis, Epistemic Asymmetry, atomic `;`-delimited hurdles, and promoted `GRCh38` cis-interval off-target statuses (`scripts/phase4_gates.py`).
+Canonical cross-phase master portfolio (`53` rows = disjoint union of `33` curated clinical/genetic programs + `19` multi-omic screen nominations + `1` living-evidence intake program: `4 KEEP_CORE`, `26 KEEP_EXPLORATORY_UNPROVEN`, `7 RECLASSIFY_BENCHMARK_OR_BIOMARKER`, `16 DROP`), paired 1-to-1 with immutable `EALS-001`–`EALS-053` accessions and ranked `1..53` under scientific actionability, human causal/pathology evidence basis, Epistemic Asymmetry, atomic `;`-delimited hurdles, and promoted `GRCh38` cis-interval off-target statuses (`scripts/phase4_gates.py`).
 
 **Columns:**
 `unified_rank,accession_id,portfolio_id,origin_phase,origin_subcohort,track,gene_or_drug,candidate_type,primary_modality_specific,epistemic_state,decision,scientific_actionability_tier,clinical_readiness_trl,next_gate_experimental_class,primary_evidence_basis,model_prior_dependency,unsolved_hurdle_count,unsolved_hurdles_structured,lead_cis_interval_id,lead_offtarget_safety_status,key_quantitative_anchor,discriminating_next_test,source_registry_ref,analysis_run_id`
@@ -95,7 +95,7 @@ Unified coordinate-only (`GRCh38` 1-based closed, zero raw oligomer nucleotide s
 `unified_interval_order,origin_phase,accession_id,subnode_accession_id,portfolio_id,subnode_or_cand_id,gene_symbol,program_role,rank_within_gene,is_promoted_lead,interval_id,chrom,grch38_start,grch38_end,strand,length_bp,cis_mechanism_or_mode,gc_pct,tm_phys_pops_c,dg37_kcal,cpg_dinucs,max_self_stem_bp,ese_motifs,mean_avi_phred,max_avi_phred,boundary_dist_bp,composite_score,spliced_0mm_genes,spliced_1mm_genes,spliced_2mm_pc_genes,spliced_wobble_only_pc_genes,premRNA_0mm_sense_genes,premRNA_1mm_sense_genes,premRNA_1mm_splice50bp_genes,premRNA_wobble_only_splice50bp_pc_genes,premRNA_2mm_splice25bp_pc_genes,bulge_1nt_steric_pc_genes,sub18_core_steric_pc_genes,flagged_constrained_neuronal_hits,offtarget_safety_status,source_offtarget_run_id,analysis_run_id`
 
 ## 15. `registries/statistical_models_and_contrasts.csv`
-Exact 1-to-1 statistical model, sample-unit, covariate-vs-multiplicity $p$-value, cohort-overlap, and 64-character SHA-256 provenance ledger across all `202` primary evidence rows (`170` `evidence_ledger.csv` + `32` `phase3b_denovo_evidence.csv`).
+Exact 1-to-1 statistical model, sample-unit, covariate-vs-multiplicity $p$-value, cohort-overlap, and 64-character SHA-256 provenance ledger across all `204` primary evidence rows (`170` `evidence_ledger.csv` + `32` `phase3b_denovo_evidence.csv` + `2` `living_evidence_candidate_evidence.csv`).
 
 **Columns:**
 `evidence_id,analysis_run_id,inference_class,statistical_unit,n_statistical_units,n_unique_donors_or_participants,exact_contrast,model_formula_or_test,effect_metric,effect_estimate,se_or_ci95,unadjusted_or_primary_nominal_p,covariate_adjusted_nominal_p,multiplicity_adjusted_p,multiple_testing_family,missingness_or_exclusion_rule,overlap_group_id,anchor_type,anchor_relpath,sha64`
@@ -107,17 +107,29 @@ Explicit participant-sharing and nested-sampling matrix across all `8` empirical
 `overlap_group_id,cluster_name,datasets_involved,overlap_mechanism,donor_accounting_and_anti_pseudoreplication_rule,canonical_model_formula`
 
 ## 17. `registries/living_evidence_updates.csv`
-Chronological living-evidence, clinical-trial readout, and structural/genomic model-revision ledger (`8` rows: `UPD-2026-11-18-01` through `UPD-2026-11-23-01`), tracking explicit before/after revisions (`prior_state_or_assumption` vs `new_evidence_or_revision`), portfolio & gate consequences, verified primary identifiers, and reproducible verification anchors.
+Chronological living-evidence, clinical-trial readout, and structural/genomic model-revision ledger (`10` rows: `UPD-2026-11-18-01` through `UPD-2026-11-26-02`), tracking explicit before/after revisions (`prior_state_or_assumption` vs `new_evidence_or_revision`), portfolio & gate consequences, verified primary identifiers, and reproducible verification anchors.
 
 **Columns:**
 `update_id,date_iso,release_tag,update_category,affected_ids,decision_impact,headline,prior_state_or_assumption,new_evidence_or_revision,portfolio_and_gate_consequence,primary_sources,verification_anchor`
 
 ## 18. `registries/candidate_accessions.csv`
-Canonical immutable ExploreALS accession & fuzzy-alias master ledger (`70` rows = `52` `CANDIDATE` rows `EALS-001`–`EALS-052` in deterministic ledger-ingestion order + `18` `SUBUNIT` rows `EALS-014.1`–`EALS-023.6`), bridging `EALS-NNN` accessions to Phase 1–3 `legacy_id` foreign keys (`C001`–`C024`, `S01`–`S09`, `DN-01`–`DN-19`, `C014-N1`–`C023-N6`) and curated HGNC/INN search aliases.
+Canonical immutable ExploreALS accession & fuzzy-alias master ledger (`71` rows = `53` `CANDIDATE` rows `EALS-001`–`EALS-053` in deterministic ledger-ingestion order + `18` `SUBUNIT` rows `EALS-014.1`–`EALS-023.6`), bridging `EALS-NNN` accessions to Phase 1–4 `legacy_id` foreign keys (`C001`–`C024`, `S01`–`S09`, `DN-01`–`DN-19`, `L01`, `C014-N1`–`C023-N6`) and curated HGNC/INN search aliases.
 
 **Columns:**
 `accession_id,legacy_id,entity_kind,parent_accession_id,origin_phase,primary_symbol_or_inn,search_aliases`
 
-## 19. JSON Lock Manifests (`schemas/*.json`)
-- **`schemas/dataset_files_lock.json`**: Per-file byte sizes and 64-character SHA-256 checksums across all `42` `datasets_manifest.csv` entries (supporting cross-platform `LF`/`CRLF` text normalization on directory-level reference bundles).
+## 19. `registries/living_evidence_candidates.csv`
+Dedicated post-freeze living-evidence candidate intake ledger (`L01`, strictly `1` atomic HGNC gene or drug per row with `0` overlap against `candidate_intake_ledger.csv`, `subnode_dissection.csv`, and `phase3b_denovo_candidates.csv`), enforcing Epistemic Asymmetry (`UNPROVEN_UNTESTED != FALSIFIED`), `TRL` vs scientific actionability separation, and atomic `;`-delimited validation steps without altering frozen historical intake row counts.
+
+**Columns:**
+`living_id,origin_subcohort,gene_or_drug,candidate_type,primary_modality_specific,mechanism_summary,causal_vs_reactive_assessment,epistemic_state,decision,clinical_readiness_trl,next_gate_experimental_class,primary_evidence_basis,model_prior_dependency,unsolved_hurdle_count,unsolved_hurdles_structured,scientific_actionability_tier,factual_justification,discriminating_next_test,supporting_living_evidence_ids,analysis_run_id`
+
+## 20. `registries/living_evidence_candidate_evidence.csv`
+Atomic, single-contrast primary quantitative and structural/safety evidence rows (`EV-LIV-*`) backing `living_evidence_candidates.csv`, validated under the identical `provenance_gates.py` rules (`p_value <= fdr_or_adjusted_p`, no `"NA"`/`"0.99"` placeholders, donor-level `sample_size_n`) and 1-to-1 SHA-256 `statistical_models_and_contrasts.csv` bijection as `evidence_ledger.csv` and `phase3b_denovo_evidence.csv`.
+
+**Columns:**
+`evidence_id,carbon_id,subnode_id,analysis_run_id,source_type,source_id_or_locator,cohort_and_stratum,assay_and_contrast,effect_direction,effect_estimate,p_value,fdr_or_adjusted_p,sample_size_n,epistemic_weight,notes`
+
+## 21. JSON Lock Manifests (`schemas/*.json`)
+- **`schemas/dataset_files_lock.json`**: Per-file byte sizes and 64-character SHA-256 checksums across all `43` `datasets_manifest.csv` entries (supporting cross-platform `LF`/`CRLF` text normalization on directory-level reference bundles).
 - **`schemas/verified_citations_lock.json`**: Live-verified metadata lock across `PMID`, `NCT`, `DOI`, and international trial identifiers (`CTR`, `ANZCTR`), preventing unverified bibliographic or clinical-registry citations across registries and rendered HTML/Markdown reports.

@@ -41,7 +41,7 @@ EVIDENCE_COHORT_BY_EALS: dict[str, str] = {
     "EALS-027": "IPSC_PHENOTYPIC_SCREEN", "EALS-028": "IPSC_PHENOTYPIC_SCREEN",
     "EALS-029": "TDP43_SPLICING_APA", "EALS-048": "IPSC_PHENOTYPIC_SCREEN",
     "EALS-050": "IPSC_PHENOTYPIC_SCREEN", "EALS-051": "IPSC_PHENOTYPIC_SCREEN",
-    "EALS-052": "IPSC_PHENOTYPIC_SCREEN",
+    "EALS-052": "IPSC_PHENOTYPIC_SCREEN", "EALS-053": "CNS_TISSUE_OMICS",
 }
 
 
@@ -231,6 +231,8 @@ def sanitize_public_prose(txt: str) -> str:
     s = re.sub(r"\bcombinatorial\s+factorial\s+combination-contribution\s+principles\s+genotype-stratified\b", "factorial, genotype-stratified", s, flags=re.I)
     s = s.replace("Combinatorial factorial combination testing", "Factorial combination testing")
     s = re.sub(r"\bcombinatorial\s+factorial\b", "factorial combination", s, flags=re.I)
+    s = s.replace("factorial combination combination-contribution principles combination testing", "factorial combination-contribution testing")
+    s = re.sub(r"\((EALS-\d{3}(?:\.\d+)?)\s*/\s*\1\)", r"(\1)", s)
     s = re.sub(r"\bBio\s+#([1-9])\b", r"Evidence #\1", s)
     s = re.sub(r"\bunder\s+Epistemic\s+Asymmetry\b:?", "", s, flags=re.I)
     s = re.sub(r"\b(?:the\s+)?Epistemic\s+Asymmetry(?:\s+Rule)?\b", "the Untested != Falsified triage rule", s, flags=re.I)

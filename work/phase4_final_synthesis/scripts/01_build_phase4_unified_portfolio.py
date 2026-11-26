@@ -124,11 +124,15 @@ def main() -> None:
     subnodes = _read_csv("subnode_dissection.csv")
     rd_map = {r["candidate_id"]: r for r in _read_csv("phase3_execution_readiness.csv")}
     p3b_cands = _read_csv("phase3b_denovo_candidates.csv")
+    liv_cands = _read_csv("living_evidence_candidates.csv")
     celf5_prof = json.loads((ROOT / "work" / "phase4_final_synthesis" / "cache" / "celf5_target_profile.json").read_text(encoding="utf-8"))
 
     cis_rows, lead_by_pid = build_cis_intervals()
     p3a_rank_map = {cid: int(r["priority_rank_overall"]) for cid, r in rd_map.items()}
-    dn_idx_map = {r["denovo_id"]: idx for idx, r in enumerate(p3b_cands, start=1)}
+    dn_idx_map = {
+        **{r["denovo_id"]: idx for idx, r in enumerate(p3b_cands, start=1)},
+        **{r["living_id"]: 50 + idx for idx, r in enumerate(liv_cands, start=1)},
+    }
     rows: list[dict[str, str]] = []
 
     for d in decisions:
@@ -225,6 +229,22 @@ def main() -> None:
             "source_registry_ref": "phase3b_denovo_candidates.csv", "analysis_run_id": "RUN-P4-001",
         })
 
+    for lc in liv_cands:
+        lid = lc["living_id"]
+        trk = "A" if lc["candidate_type"] == "DRUG_REPURPOSING" else ("BIOMARKER" if lc["candidate_type"] == "BIOMARKER_CSF" else "B")
+        rows.append({
+            "unified_rank": "0", "portfolio_id": lid, "origin_phase": "LIVING_EVIDENCE_INTAKE",
+            "origin_subcohort": lc["origin_subcohort"], "track": trk, "gene_or_drug": lc["gene_or_drug"],
+            "candidate_type": lc["candidate_type"], "primary_modality_specific": lc["primary_modality_specific"],
+            "epistemic_state": lc["epistemic_state"], "decision": lc["decision"], "scientific_actionability_tier": lc["scientific_actionability_tier"],
+            "clinical_readiness_trl": lc["clinical_readiness_trl"], "next_gate_experimental_class": lc["next_gate_experimental_class"],
+            "primary_evidence_basis": lc["primary_evidence_basis"], "model_prior_dependency": lc["model_prior_dependency"],
+            "unsolved_hurdle_count": lc["unsolved_hurdle_count"], "unsolved_hurdles_structured": lc["unsolved_hurdles_structured"],
+            "lead_cis_interval_id": "NONE", "lead_offtarget_safety_status": "NONE",
+            "key_quantitative_anchor": lc["factual_justification"], "discriminating_next_test": lc["discriminating_next_test"],
+            "source_registry_ref": "living_evidence_candidates.csv", "analysis_run_id": "RUN-P4-001",
+        })
+
     rows.sort(key=lambda r: portfolio_sort_key(r, p3a_rank_map, dn_idx_map))
     for rk_i, r in enumerate(rows, start=1):
         r["unified_rank"] = str(rk_i)
@@ -274,8 +294,8 @@ def main() -> None:
         "output_artifacts": "registries/candidate_accessions.csv;registries/phase4_unified_portfolio.csv;registries/phase4_unified_cis_intervals.csv;work/phase4_final_synthesis/outputs/run_p4_001_unified_portfolio.json",
         "datasets_used": "DS001_COUNTS;DS001_META;DS001_ONEILL;DS_GENCODE_V46_COMP_GTF;DS_GNOMAD_V41_CONSTRAINT",
         "tools_and_skills_used": "gtex-database;opentargets-database;gnomad-database;tooluniverse-gene-liability;scripts.phase4_gates;uv-python",
-        "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-15T01:05:00Z",
-        "summary": "Unified all 52 ALS hypotheses (33 curated clinical/genetic/pathology programs + 19 systematic multi-omic screen nominations), 18 subunit/comparator dissections, and 28 coordinate-only GRCh38 cis-regulatory intervals under pure scientific actionability & causal evidence basis with CELF5 NYGC/GTEx/liability profile and Phase 3A dossier sync.",
+        "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-26T09:15:00Z",
+        "summary": "Unified all 53 ALS hypotheses (33 curated clinical/genetic/pathology programs + 19 systematic multi-omic screen nominations + 1 living-evidence molecular target intake), 18 subunit/comparator dissections, and 28 coordinate-only GRCh38 cis-regulatory intervals under pure scientific actionability & causal evidence basis with CELF5 NYGC/GTEx/liability profile and Phase 3A dossier sync.",
     }
     runs = (
         [p4_run if r["analysis_run_id"] == "RUN-P4-001" else r for r in runs]
@@ -293,7 +313,7 @@ def main() -> None:
         "counts_by_epistemic_state": dict(Counter(r["epistemic_state"] for r in rows)),
         "origin_x_tier_matrix": {
             orig: dict(Counter(r["scientific_actionability_tier"] for r in rows if r["origin_phase"] == orig))
-            for orig in ("CURATED_CLINICAL_33", "PHASE3B_DENOVO_19")
+            for orig in ("CURATED_CLINICAL_33", "PHASE3B_DENOVO_19", "LIVING_EVIDENCE_INTAKE")
         },
         "explore_tier_to_carbon_decision": {
             et: dict(Counter(r["decision"] for r in rows if r["origin_phase"] == "CURATED_CLINICAL_33" and intake[r["portfolio_id"]]["explore_tier"] == et))
@@ -326,6 +346,7 @@ def main() -> None:
             "phase3_execution_readiness": sha12(REG_DIR / "phase3_execution_readiness.csv"),
             "phase3b_denovo_candidates": sha12(REG_DIR / "phase3b_denovo_candidates.csv"),
             "phase3b_denovo_sso_intervals": sha12(REG_DIR / "phase3b_denovo_sso_intervals.csv"),
+            "living_evidence_candidates": sha12(REG_DIR / "living_evidence_candidates.csv"),
         },
     }
     out_fp = ROOT / "work" / "phase4_final_synthesis" / "outputs" / "run_p4_001_unified_portfolio.json"
