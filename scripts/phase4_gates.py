@@ -47,6 +47,7 @@ EXP_CIS_COLS = [
     *CIS_BIO_COLS, *CIS_OT_COLS, "source_offtarget_run_id", "analysis_run_id",
 ]
 SITE_WORK_PATH_RE = re.compile(r"work/[A-Za-z0-9_/-]+\.(?:py|json|csv)")
+SITE_EMDASH_RE = re.compile(r"\u2014|&mdash;|&#8212;|&#x2014;|\\u2014", re.IGNORECASE)
 SITE_LEGACY_ID_OR_ALIAS_RE = re.compile(
     r"((?<![A-Za-z0-9])(?:C0(?:0[1-9]|1\d|2[0-4])(?:-?N[1-6])?|S0[1-9]|DN-?(?:0[1-9]|1\d)|L0[1-9])(?![A-Za-z0-9])|"
     r"EALS-\d{3}(?:\.\d)?\.\.|\bLegacy\s+ID\b|\bLegacy:\s|\bAlias:\s|\baliases\b|"
@@ -255,6 +256,22 @@ def verify_phase4_gates(
                 errors.append("reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md has stale v1.0 MS-NEFH responder or binary rs12608932 A/A prose")
             if re.search(r"EALS-\d{3}(?:\.\d)?\.\.", stxt):
                 errors.append("reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md has half-translated EALS-NNN.. range token")
+            if re.search(r"\((EALS-\d{3}(?:\.\d+)?)\s*/\s*\1\)", stxt):
+                errors.append("reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md has duplicate (EALS-NNN / EALS-NNN) token")
+            for sln_i, sln in enumerate(stxt.splitlines(), 1):
+                if sln.startswith("|") and not sln.startswith("| :"):
+                    for scell in sln.strip("|").split("|"):
+                        if scell.count("(") != scell.count(")"):
+                            errors.append(f"reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md L{sln_i} unbalanced parens in table cell: {scell.strip()!r}")
+
+        cff_fp = carbon_root / "CITATION.cff"
+        cff_ver, exp_json_bundle = "1.4.0", "exploreals_v1_4_provenance_bundle.json"
+        if cff_fp.is_file():
+            m_cv = re.search(r'^version:\s*"(\d+)\.(\d+)\.(\d+)"', cff_fp.read_text(encoding="utf-8"), re.M)
+            if m_cv:
+                cff_ver = f"{m_cv.group(1)}.{m_cv.group(2)}.{m_cv.group(3)}"
+                exp_json_bundle = f"exploreals_v{m_cv.group(1)}_{m_cv.group(2)}_provenance_bundle.json"
+        liv_acc_ids = {r["accession_id"] for r in port_rows if r["origin_phase"] == "LIVING_EVIDENCE_INTAKE"}
 
         def _audit_explorer_html(html_fp: Path, is_public_export: bool) -> None:
             if not html_fp.is_file():
@@ -366,6 +383,20 @@ def verify_phase4_gates(
             m_jarg = SITE_INTERNAL_JARGON_RE.search(clean_for_jargon)
             if m_jarg:
                 errors.append(f"{lbl} contains internal build/process nomenclature '{m_jarg.group(0)}'")
+            if f"version:'{cff_ver}'" not in htxt or exp_json_bundle not in htxt:
+                errors.append(f"{lbl} exportRegistryBlob('json_all') out of sync with CITATION.cff ({cff_ver} / {exp_json_bundle})")
+            m_dup = re.search(r"\((EALS-\d{3}(?:\.\d+)?)\s*/\s*\1\)", htxt)
+            if m_dup:
+                errors.append(f"{lbl} contains duplicate accession token '{m_dup.group(0)}'")
+            m_emd = SITE_EMDASH_RE.search(htxt)
+            if m_emd:
+                errors.append(f"{lbl} contains disallowed em-dash token '{m_emd.group(0)}'")
+            m_dsum = re.search(r"^const DATA_SUM = (\{.*\});$", htxt, re.M)
+            if m_dsum:
+                dsum_obj = json.loads(m_dsum.group(1))
+                for d_cid, d_entry in dsum_obj.items():
+                    if d_cid in liv_acc_ids and len(d_entry.get("sub", "")) > 90:
+                        errors.append(f"{lbl} DATA_SUM[{d_cid}].sub exceeds 90 chars ({len(d_entry['sub'])})")
 
         if mode == "full":
             _audit_explorer_html(explorer_html, is_public_export=False)
@@ -389,6 +420,8 @@ def verify_phase4_gates(
                     errors.append(f"reports/monographs/{wfp.name} contains /100, !important, or residual 'wiki' leak")
                 if EXPLORE_LEAK_RE.search(wtxt) or SITE_LEGACY_ID_OR_ALIAS_RE.search(SITE_WORK_PATH_RE.sub("", wtxt)):
                     errors.append(f"reports/monographs/{wfp.name} contains ExploreALS or residual legacy ID/alias leak")
+                if SITE_EMDASH_RE.search(wtxt):
+                    errors.append(f"reports/monographs/{wfp.name} contains disallowed em-dash token")
         if {p.name for p in gh_mono_htmls} != exp_pilot_files:
             errors.append(f"{gh_mono_dir.relative_to(carbon_root).as_posix()}/*.html set ({sorted(p.name for p in gh_mono_htmls)}) != expected 8 EALS pages")
         for gfp in gh_mono_htmls:
@@ -400,6 +433,11 @@ def verify_phase4_gates(
             m_gjarg = SITE_INTERNAL_JARGON_RE.search(SITE_WORK_PATH_RE.sub("", gtxt))
             if m_gjarg:
                 errors.append(f"{gfp.relative_to(carbon_root).as_posix()} contains internal build/process nomenclature '{m_gjarg.group(0)}'")
+            if SITE_EMDASH_RE.search(gtxt):
+                errors.append(f"{gfp.relative_to(carbon_root).as_posix()} contains disallowed em-dash token")
+        gh_readme = gh_docs.parent / "README.md"
+        if gh_readme.is_file() and SITE_EMDASH_RE.search(gh_readme.read_text(encoding="utf-8")):
+            errors.append(f"{gh_readme.relative_to(carbon_root).as_posix()} contains disallowed em-dash token")
 
         no_money_paths = [
             reg_dir / "phase3_execution_readiness.csv",

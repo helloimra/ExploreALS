@@ -108,7 +108,7 @@ UPD_2026_11_26_02: dict[str, str] = {
         "to sporadic human ALS without separating bulk spinal microgliosis from 2'3'-cGAMP catalysis, human STING1 coding haplotypes, or human-mouse cGAS active-site divergence."
     ),
     "new_evidence_or_revision": (
-        "(1) Target Selection — Single-Gene Human CGAS Over STING1 & TBK1: across 5 experimental structures (PDB 6MJW, 6LRC, 6NT5, 4KSY, 6MXE), gnomAD v4.1, GTEx v8, and DepMap, "
+        "(1) Target Selection (Single-Gene Human CGAS Over STING1 & TBK1): across 5 experimental structures (PDB 6MJW, 6LRC, 6NT5, 4KSY, 6MXE), gnomAD v4.1, GTEx v8, and DepMap, "
         "upstream enzymatic CGAS (ENSG00000164430, MANE LOEUF=1.529, pLI=2.80e-10, 1,258-line median Chronos=-0.1013, Heart 0.55 / Liver 0.47 / Cortex 0.50 TPM) "
         "avoids TBK1 ALSFTD4 haploinsufficiency (LOEUF=0.505, PMID:25803835), spares cell-autonomous neuronal TBK1->IFN-beta->PSMB8 clearance of monomeric TDP-43 (Sakai 2026 PMID:42834122), "
         "and bypasses STING1's 4 common human coding polymorphisms (R232H rs1131769 12.9%, R71H rs11554776 13.8%, G230A rs78233829 up to 41.5% EAS, R293Q rs7380824 20.4%) "
@@ -124,7 +124,7 @@ UPD_2026_11_26_02: dict[str, str] = {
     "portfolio_and_gate_consequence": (
         "Expands ExploreALS v1.4.0 from 52 to 53 hypotheses by adding single-gene human CGAS (EALS-053) in dedicated living-evidence registries at Priority #23/53 "
         "(Evidence #23, Keep · Exploratory, Tier 3 · Exploratory Discovery, Preclinical Modality, 4 validation steps; Ranks #1–#22 including all 8 Flagship Monographs and #19 EALS-033 are unchanged, "
-        "while prior Ranks #23–#52 shift by +1 to #24–#53, e.g., EALS-020 #24 and EALS-019 #25) — gated on LC-MS/MS spinal/co-culture 2'3'-cGAMP proof beyond reactive microgliosis, "
+        "while prior Ranks #23–#52 shift by +1 to #24–#53, e.g., EALS-020 #24 and EALS-019 #25); gated on LC-MS/MS spinal/co-culture 2'3'-cGAMP proof beyond reactive microgliosis, "
         "PDB 6MJW human-pocket potency bridging vs. mouse TDI-6570 (CID:137943015), unbound human/NHP CNS Kp,uu>=0.30, and head-to-head CGAS vs. IFI16 vs. STING1 epistasis + HSV-1 safety (PMID:27830700)."
     ),
     "primary_sources": (

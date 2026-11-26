@@ -46,8 +46,8 @@ const ENUM_LABELS = {
   DE_NOVO_CHEMICAL_OR_BIOLOGIC_DISCOVERY_GATE: 'Chemical / Biologic Modality Discovery',
   BIOMARKER_ENRICHED_PHASE3_EFFICACY_TRIAL: 'Biomarker-Enriched Phase 3 Survival RCT',
   CLINICAL_PROTOCOL_STANDARDIZATION: 'Clinical Protocol / Calibration Standard',
-  NOT_APPLICABLE_FALSIFIED: 'N/A — Deprioritized (Negative Clinical or PK Evidence)',
-  GENETICS_MENDELIAN_GWAS: 'Human ALS Genetics — Mendelian & GWAS',
+  NOT_APPLICABLE_FALSIFIED: 'N/A: Deprioritized (Negative Clinical or PK Evidence)',
+  GENETICS_MENDELIAN_GWAS: 'Human ALS Genetics: Mendelian & GWAS',
   TDP43_SPLICING_APA: 'TDP-43 Cryptic Splicing & Polyadenylation',
   CNS_TISSUE_OMICS: 'Human CNS Spatial, snRNA & Subcellular Omics',
   CSF_AND_PHYSIOLOGY: 'Antemortem CSF Proteomics & Physiology',
@@ -83,9 +83,9 @@ const ENUM_LABELS = {
   SINGLE_LOCUS_LEAD: 'Single-Locus Lead',
   EXPLORATORY_LOCUS: 'Exploratory Locus',
   EXCLUDED_ALU_REPEAT: 'Excluded (Alu Repeat)',
-  NONE_FALSIFIED_CLINICAL: 'None — Deprioritized following negative human ALS clinical trial outcomes.',
-  NONE_FALSIFIED_PK_SAFETY: 'None — Deprioritized due to inadequate unbound human CNS exposure or dose-limiting toxicity.',
-  NONE_ARTIFACT_CONFOUNDED: 'None — Assay perturbation sits within basal media noise and opposes human genetic directionality.',
+  NONE_FALSIFIED_CLINICAL: 'None: Deprioritized following negative human ALS clinical trial outcomes.',
+  NONE_FALSIFIED_PK_SAFETY: 'None: Deprioritized due to inadequate unbound human CNS exposure or dose-limiting toxicity.',
+  NONE_ARTIFACT_CONFOUNDED: 'None: Assay perturbation sits within basal media noise and opposes human genetic directionality.',
 };
 const HURDLE_TOK = {
   SSO:'SSO', ASO:'ASO', IT:'IT', IV:'IV', SC:'SC', GLP:'GLP', CSF:'CSF', CNS:'CNS', BBB:'BBB', PD:'PD', PK:'PK',
@@ -181,7 +181,7 @@ function formatHurdle(code){
   return out ? (out[0].toUpperCase() + out.slice(1)) : code;
 }
 function formatPrior(code){
-  if(!code || code === 'NONE') return 'None — Direct empirical data only';
+  if(!code || code === 'NONE') return 'None: Direct empirical data only';
   return String(code)
     .replace(/^COARSE_PRIOR_ONLY:/, '')
     .replace(/Pgp_BCRP_effluxed_Kpuu_le_1_unbound_human_CNS_peak_15_to_30nM_from_NDA020599_Cu_plasma_22\\.2_to_29\\.6nM/g, 'P-gp/BCRP-effluxed Kp,uu <= 1.0 unbound human CNS peak (~15–30 nM, <=50 nM) from NDA 020599 estimated Cu,plasma (22.2–29.6 nM)')
@@ -439,7 +439,7 @@ function formatProseParas(raw, ctx, gapCls='space-y-2', toneCls='text-[var(--for
       const fine = [];
       for(const seg of merged){
         if(seg.length >= 260){
-          const subCl = splitTopClauses(seg, /\\s+—\\s+(?=(?:plus|whereas|while|leaving|requiring|supporting|confirming|yet)\\b)|,\\s+(?=whereas\\b|while\\b|alongside\\b|yet\\b|converging\\s+with\\b|complemented\\s+by\\b|corroborated\\s+by\\b|supported\\s+by\\b|accompanied\\s+by\\b|paired\\s+with\\b|in\\s+comparator\\b|and\\s+specific\\s+rare\\b|and\\s+FDA\\b|leaving\\b|motivating\\b|requiring\\b|confirming\\b|establishing\\b)/);
+          const subCl = splitTopClauses(seg, /,\\s+(?=whereas\\b|while\\b|alongside\\b|yet\\b|converging\\s+with\\b|complemented\\s+by\\b|corroborated\\s+by\\b|supported\\s+by\\b|accompanied\\s+by\\b|paired\\s+with\\b|in\\s+comparator\\b|and\\s+specific\\s+rare\\b|and\\s+FDA\\b|leaving\\b|motivating\\b|requiring\\b|confirming\\b|establishing\\b)/);
           let cur = '';
           for(const sc of subCl){
             if(!cur) cur = sc;
@@ -666,7 +666,7 @@ function renderSummaryDomainPanels(r){
       }).join('');
       out += `<div id="sec-nygc" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
         <div class="flex items-center justify-between gap-2 flex-wrap">
-          <h3 class="text-sm font-semibold">NYGC 3-Region Postmortem RNA-Seq Profile &mdash; ${esc(gKey)} (${mkExtA('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153960','GSE153960')} &middot; ${mkExtA('https://pubmed.ncbi.nlm.nih.gov/36482247/','PMID:36482247')})</h3>
+          <h3 class="text-sm font-semibold">NYGC 3-Region Postmortem RNA-Seq Profile: ${esc(gKey)} (${mkExtA('https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE153960','GSE153960')} &middot; ${mkExtA('https://pubmed.ncbi.nlm.nih.gov/36482247/','PMID:36482247')})</h3>
           <span class="font-mono text-xs text-[var(--muted-foreground)]">&#9679; Empirical Donor-Level RIN+GC OLS</span>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 text-xs">${regDefs.map(([rk, rlbl]) => {
@@ -882,7 +882,7 @@ function renderDossierMain(){
           <td class="py-2 px-2"><div>${escLink(e.coh, gCtx)}</div>${nLine}</td>
           <td class="py-2 px-2 text-[var(--muted-foreground)]">${gPill}${escLink(e.con, gCtx)}</td>
           <td class="py-2 px-2 font-mono">${escLink(e.est, gCtx)}</td>
-          <td class="py-2 px-2 font-mono whitespace-nowrap">${esc(e.pf || '—')}</td>
+          <td class="py-2 px-2 font-mono whitespace-nowrap">${esc(e.pf || 'N/A')}</td>
         </tr>`;
       }).join('')}</tbody>
     </table></div></div>` : '';
@@ -910,12 +910,12 @@ function renderDossierMain(){
     const isBench = r.dec === 'RECLASSIFY_BENCHMARK_OR_BIOMARKER';
     const vCol = isDrop ? 'border-l-[var(--error)]' : (isBench ? 'border-l-[var(--primary)]' : 'border-l-[var(--warning)]');
     const vTxt = isDrop ? `text-[var(--error)]` : (isBench ? `text-[var(--primary)]` : `text-[var(--warning)]`);
-    const benchHdr = (r.id==='EALS-013'||r.id==='EALS-032') ? 'ADJUDICATION RATIONALE &mdash; APPROVED SOC &amp; ASSAY BENCHMARK'
-      : (r.id==='EALS-003' ? 'ADJUDICATION RATIONALE &mdash; WITHDRAWN HUMAN KV7 PD REFERENCE'
-      : (r.id==='EALS-017' ? 'ADJUDICATION RATIONALE &mdash; CANDIDATE CLINICAL-CSF STAGING &amp; PD PANEL'
-      : 'ADJUDICATION RATIONALE &mdash; CANDIDATE CSF MARKER (PRE-VALIDATION)'));
-    const vHdr = isDrop ? `ADJUDICATION RATIONALE &mdash; DROP &middot; ${esc(humanizeEnum(r.epi)).toUpperCase()}`
-      : (isBench ? benchHdr : 'ADJUDICATION RATIONALE &mdash; KEEP &middot; EXPLORATORY (UNTESTED &ne; FALSIFIED)');
+    const benchHdr = (r.id==='EALS-013'||r.id==='EALS-032') ? 'ADJUDICATION RATIONALE: APPROVED SOC &amp; ASSAY BENCHMARK'
+      : (r.id==='EALS-003' ? 'ADJUDICATION RATIONALE: WITHDRAWN HUMAN KV7 PD REFERENCE'
+      : (r.id==='EALS-017' ? 'ADJUDICATION RATIONALE: CANDIDATE CLINICAL-CSF STAGING &amp; PD PANEL'
+      : 'ADJUDICATION RATIONALE: CANDIDATE CSF MARKER (PRE-VALIDATION)'));
+    const vHdr = isDrop ? `ADJUDICATION RATIONALE: DROP &middot; ${esc(humanizeEnum(r.epi)).toUpperCase()}`
+      : (isBench ? benchHdr : 'ADJUDICATION RATIONALE: KEEP &middot; EXPLORATORY (UNTESTED &ne; FALSIFIED)');
     const hCell = isDrop
       ? `<div class="text-[var(--muted-foreground)] font-mono">Basis for Exclusion</div><div class="font-semibold text-[var(--error)] mt-0.5">${esc(humanizeEnum(r.epi))}</div><div class="text-[var(--muted-foreground)] mt-0.5 leading-relaxed">Deprioritized based on clinical trial futility, CNS exposure/safety limits, or assay confounding.</div>`
       : `<div class="text-[var(--muted-foreground)] font-mono">Open Validation Steps (${r.hcnt})</div><div class="flex flex-wrap gap-1 mt-1">${r.hurdles && r.hurdles !== 'NONE' ? r.hurdles.split(';').map(h=>`<span class="px-1.5 py-0.5 rounded border border-[var(--border)] text-xs leading-normal">${esc(formatHurdle(h))}</span>`).join('') : '<span class="text-[var(--muted-foreground)]">None (Reference / Biomarker)</span>'}</div>`;
@@ -938,7 +938,7 @@ function renderDossierMain(){
       <div class="flex items-start justify-between gap-2 flex-wrap border-b border-[var(--card-border)] pb-2.5">
         <div class="min-w-0">
           <div class="flex items-center gap-2 flex-wrap"><span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] font-mono font-bold text-xs" title="Translational Priority Rank #${r.rk}/53 · Genetic & Pathology Evidence Rank #${r.brk}/53">Priority #${r.rk}/53 (Evidence #${r.brk}) &middot; ${esc(r.id)}</span> ${decBadge(r.dec, r.id)} <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span> ${crowdPill}</div>
-          <h2 class="text-base font-bold mt-1.5 break-words">${esc(r.name)} &mdash; <span class="font-normal text-[var(--muted-foreground)]">${escLink(s ? s.sub : humanizeEnum(r.sub), r.id)}</span></h2>
+          <h2 class="text-base font-bold mt-1.5 break-words">${esc(r.name)}: <span class="font-normal text-[var(--muted-foreground)]">${escLink(s ? s.sub : humanizeEnum(r.sub), r.id)}</span></h2>
           <div class="text-xs font-mono text-[var(--muted-foreground)] mt-0.5">${!isDrop && r.trl !== 'PROTOCOL_COMPANION_NA' ? esc(humanizeEnum(r.trl)) + ' &middot; ' : ''}${esc(humanizeEnum(r.basis))}${gPills?' &middot; '+gPills:''}</div>
         </div>
         <div class="flex items-center gap-1.5 flex-wrap min-w-0">
@@ -993,8 +993,8 @@ function renderDossierMain(){
   const mCol = r.dec === 'KEEP_CORE' ? 'border-l-[var(--success)]' : 'border-l-[var(--warning)]';
   const mTxt = r.dec === 'KEEP_CORE' ? 'text-[var(--success)]' : 'text-[var(--warning)]';
   const mHdr = r.dec === 'KEEP_CORE'
-    ? 'ADJUDICATION RATIONALE &mdash; KEEP &middot; CORE'
-    : 'ADJUDICATION RATIONALE &mdash; KEEP &middot; EXPLORATORY (UNTESTED &ne; FALSIFIED)';
+    ? 'ADJUDICATION RATIONALE: KEEP &middot; CORE'
+    : 'ADJUDICATION RATIONALE: KEEP &middot; EXPLORATORY (UNTESTED &ne; FALSIFIED)';
   const mGPills = genePortalPills(r.id);
 
   box.innerHTML = `
@@ -1007,7 +1007,7 @@ function renderDossierMain(){
             <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span>
             ${(r.crowd && !r.crowd.startsWith('N/A')) ? `<span class="px-2 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">${esc(r.crowd)}</span>` : ''}
           </div>
-          <h2 class="text-base font-bold mt-1 break-words">${esc(r.name)} &mdash; <span class="font-normal text-[var(--muted-foreground)]">${esc(w.subtitle)}</span></h2>
+          <h2 class="text-base font-bold mt-1 break-words">${esc(r.name)}: <span class="font-normal text-[var(--muted-foreground)]">${esc(w.subtitle)}</span></h2>
           <div class="text-xs font-mono text-[var(--muted-foreground)] mt-0.5">${esc(humanizeEnum(r.trl))} &middot; ${esc(humanizeEnum(r.gate))} &middot; ${esc(humanizeEnum(r.basis))}${mGPills ? ' &middot; ' + mGPills : ''}</div>
         </div>
         <div class="flex items-center gap-1.5 flex-wrap min-w-0">
@@ -1086,8 +1086,8 @@ function renderDossierMain(){
 
     <div id="sec-5rs" class="grid grid-cols-1 md:grid-cols-2 gap-3">
       ${w.sections.map(([st,body])=>{
-        const sp = String(st).split(' — ');
-        const hdrHtml = sp.length === 2 ? `<span class="font-mono text-xs text-[var(--primary)]">${esc(sp[0])} &mdash;</span> ${esc(sp[1])}` : esc(st);
+        const sp = String(st).split(': ');
+        const hdrHtml = sp.length === 2 ? `<span class="font-mono text-xs text-[var(--primary)]">${esc(sp[0])}:</span> ${esc(sp[1])}` : esc(st);
         return `<div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-2.5">
           <h3 class="text-sm font-semibold border-b border-[var(--card-border)] pb-1.5">${hdrHtml}</h3>
           ${formatProseParas(body, r.id, 'space-y-2.5')}

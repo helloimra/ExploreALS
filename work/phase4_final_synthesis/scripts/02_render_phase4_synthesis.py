@@ -71,6 +71,11 @@ def main() -> None:
     ]
     md_text = "\n".join(md_lines)
     assert not RAW_OLIGO_SEQ_RE.search(md_text) and not GAPPED_OLIGO_RE.search(md_text), "Biosecurity sequence guard failed on Markdown!"
+    assert not re.search(r"\((EALS-\d{3}(?:\.\d+)?)\s*/\s*\1\)", md_text), "Duplicate (EALS-NNN / EALS-NNN) token in Markdown!"
+    for md_ln in md_lines:
+        if md_ln.startswith("|") and not md_ln.startswith("| :") and not md_ln.startswith("| :--"):
+            for md_cell in md_ln.strip("|").split("|"):
+                assert md_cell.count("(") == md_cell.count(")"), f"Unbalanced parens in Markdown table cell: {md_cell!r}"
     synth_fp = ROOT / "reports" / "CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md"
     if not public_docs_only:
         synth_fp.write_text(md_text, encoding="utf-8")
@@ -104,7 +109,7 @@ def main() -> None:
             "rk": int(r["unified_rank"]), "brk": bio_rk_map[lid],
             "id": acc_id, "sym": sym, "syn": syn_list,
             "o": coh_key, "sub": coh_key,
-            "trk": r["track"], "name": r["gene_or_drug"],
+            "trk": r["track"], "name": sanitize_public_prose(r["gene_or_drug"]),
             "mod": sanitize_public_modality(translate_legacy_tokens_in_prose(r["primary_modality_specific"])),
             "epi": r["epistemic_state"], "dec": r["decision"], "tier": r["scientific_actionability_tier"],
             "trl": r["clinical_readiness_trl"], "gate": r["next_gate_experimental_class"],
@@ -304,6 +309,16 @@ def main() -> None:
     )
     assert not RAW_OLIGO_SEQ_RE.search(html_text) and not GAPPED_OLIGO_RE.search(html_text), "Biosecurity sequence guard failed on HTML!"
     assert "/100" not in html_text, "Subjective /100 composite score leaked in Explorer HTML!"
+    assert not re.search(r"\u2014|&mdash;|&#8212;|&#x2014;|\\u2014", html_text, re.IGNORECASE), "Em-dash leaked in Explorer HTML!"
+    assert not re.search(r"\((EALS-\d{3}(?:\.\d+)?)\s*/\s*\1\)", html_text), "Duplicate (EALS-NNN / EALS-NNN) token in Explorer HTML!"
+    cff_txt = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
+    m_cff = re.search(r'^version:\s*"(\d+)\.(\d+)\.(\d+)"', cff_txt, re.M)
+    assert m_cff, "Missing semantic version in CITATION.cff!"
+    cff_full = f"{m_cff.group(1)}.{m_cff.group(2)}.{m_cff.group(3)}"
+    exp_bundle_fn = f"exploreals_v{m_cff.group(1)}_{m_cff.group(2)}_provenance_bundle.json"
+    assert f"version:'{cff_full}'" in html_text and exp_bundle_fn in html_text, (
+        f"exportRegistryBlob json_all out of sync with CITATION.cff ({cff_full} / {exp_bundle_fn})!"
+    )
     assert not re.search(
         r"\bcarbonals\b|\bwiki\b|\bv0\b|\bstream\s+[ab]\b|wave\s+2|\bD003\b|\bD045\b|\bDS045\b|(?<![/a-z0-9_])Phase\s+3A\b|fixing\s+intake",
         html_text,

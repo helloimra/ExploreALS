@@ -6,7 +6,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ExploreALS v1.4 — ALS Target Triage, Splice Windows &amp; Replication Explorer</title>
+  <title>ExploreALS v1.4: ALS Target Triage, Splice Windows &amp; Replication Explorer</title>
   <style>:where(.hidden){display:none}.text-xs:not(.leading-snug):not(.leading-relaxed){line-height:1.5}table{border-collapse:collapse;width:100%}th,td{padding:6px 8px;vertical-align:top}.gate-clamp[data-clamped="true"]{position:relative;max-height:7.25rem;overflow:hidden}.gate-clamp[data-clamped="true"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.75rem;background:linear-gradient(to bottom,transparent,var(--background));pointer-events:none}@media(min-width:1024px){.p-workbench{height:clamp(310px,calc(100vh - 13.25rem),760px);height:clamp(310px,calc(100dvh - 13.25rem),760px)}}@media(min-width:1280px){.p-workbench{height:clamp(340px,calc(100vh - 11.75rem),780px);height:clamp(340px,calc(100dvh - 11.75rem),780px)}}.iv-table-cap{max-height:420px}@media(min-width:1024px){.iv-table-cap,.iv-detail-cap{max-height:clamp(310px,calc(100vh - 5.75rem),820px);max-height:clamp(310px,calc(100dvh - 5.75rem),820px)}}</style>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
 </head>
@@ -78,13 +78,13 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
               <div class="font-mono font-semibold text-xs text-[var(--foreground)]">Four Evidence &amp; Triage Verdicts (<span class="font-mono">Untested &ne; Falsified</span>)</div>
               <ul class="space-y-1.5 text-xs leading-relaxed">
                 <li><span class="font-mono font-semibold text-[var(--success)]">Keep &middot; Core (4):</span> Supported by human ALS genetics and/or TDP-43 rescue with a CNS-viable modality.</li>
-                <li><span class="font-mono font-semibold text-[var(--warning)]">Keep &middot; Exploratory (26):</span> Unresolved due to bulk-assay, dosing, or cohort blind spots &mdash; paired with 1 Go/No-Go test.</li>
+                <li><span class="font-mono font-semibold text-[var(--warning)]">Keep &middot; Exploratory (26):</span> Unresolved due to bulk-assay, dosing, or cohort blind spots, paired with 1 Go/No-Go test.</li>
                 <li><span class="font-mono font-semibold text-[var(--primary)]">Benchmark / Biomarker (7):</span> Approved SOC comparator (2), clinical PD reference (1), CSF staging panel (1), or candidate CSF marker (3).</li>
                 <li><span class="font-mono font-semibold text-[var(--error)]">Drop &middot; Falsified (16):</span> Deprioritized at the tested regimen/exposure based on human ALS RCT futility (<span class="font-mono">9</span>), unbound CNS exposure or safety limits (<span class="font-mono">7</span>), or assay confounding (<span class="font-mono">0</span>).</li>
               </ul>
             </div>
             <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--success)] space-y-1.5">
-              <div class="font-mono font-semibold text-xs text-[var(--foreground)]">Flagship Tier 1 (2) + Tier 2 (6) Leads &mdash; Open Monograph</div>
+              <div class="font-mono font-semibold text-xs text-[var(--foreground)]">Flagship Tier 1 (2) + Tier 2 (6) Leads: Open Monograph</div>
               <div class="flex flex-wrap gap-1">
                 <button type="button" data-open-dossier="EALS-030" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#1 SARM1 &middot; EALS-030</button>
                 <button type="button" data-open-dossier="EALS-031" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#2 IL-2 &middot; EALS-031</button>
@@ -150,10 +150,10 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
 
     <div id="view-portfolio" role="tabpanel" aria-labelledby="tab-btn-portfolio" class="hidden space-y-3">
       <details id="methodology-drawer" class="bg-[var(--card)] border border-[var(--border)] rounded-lg px-4 py-2.5 text-xs">
-        <summary class="cursor-pointer font-semibold text-[var(--foreground)] select-none">Methodology &amp; Decision Guide &mdash; Clinical Regimens, Molecular Targets &amp; Evidence Triage</summary>
+        <summary class="cursor-pointer font-semibold text-[var(--foreground)] select-none">Methodology &amp; Decision Guide: Clinical Regimens, Molecular Targets &amp; Evidence Triage</summary>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2.5 mt-2 border-t border-[var(--card-border)] text-[var(--muted-foreground)] leading-relaxed">
           <div><strong class="text-[var(--foreground)]">1. Clinical Regimens &amp; Molecular Targets:</strong> Evaluates 53 ALS therapeutic &amp; biomarker hypotheses across 6 biological evidence sources (including 18 complex/panel subunits and selectivity comparators) using donor-level statistics (Trautwig Emory TMT n=51 is a nested subset of n=77 DIA; multi-region NYGC/Pineda donors analyzed per-region without pooling) and unbound human CNS PK (Cu,brain / Kp,uu).</div>
-          <div><strong class="text-[var(--foreground)]">2. Untested &ne; Falsified Triage Rule:</strong> Never discards an untested hypothesis due to bulk-assay, fixed-library-concentration, or unstratified-cohort blind spots. <span class="font-mono text-[var(--warning)]" title="Untested preclinical or biofluid triage queue — prospective Go/No-Go test required">Keep &middot; Exploratory (26)</span> denotes an untested preclinical/biofluid triage queue (not therapeutic endorsement) paired with prospective Go/No-Go criteria; <span class="font-mono text-[var(--error)]" title="Deprioritized based on human RCT futility, CNS exposure/safety limits, or assay confounding">Drop &middot; Falsified (16)</span> evaluates specific clinical drug regimens/exposures separately from molecular target pathways and requires positive human RCT futility, insurmountable CNS exposure/safety limits, or confounding collapse.</div>
+          <div><strong class="text-[var(--foreground)]">2. Untested &ne; Falsified Triage Rule:</strong> Never discards an untested hypothesis due to bulk-assay, fixed-library-concentration, or unstratified-cohort blind spots. <span class="font-mono text-[var(--warning)]" title="Untested preclinical or biofluid triage queue; prospective Go/No-Go test required">Keep &middot; Exploratory (26)</span> denotes an untested preclinical/biofluid triage queue (not therapeutic endorsement) paired with prospective Go/No-Go criteria; <span class="font-mono text-[var(--error)]" title="Deprioritized based on human RCT futility, CNS exposure/safety limits, or assay confounding">Drop &middot; Falsified (16)</span> evaluates specific clinical drug regimens/exposures separately from molecular target pathways and requires positive human RCT futility, insurmountable CNS exposure/safety limits, or confounding collapse.</div>
           <div><strong class="text-[var(--foreground)]">3. Combinatorial Portfolio Thesis:</strong> Pairs single-agent-qualified genotype-stratified intrathecal splice rescue (evaluating 2-plex KCNQ2 EALS-006 + STMN2 EALS-002 vs. 3-plex + UNC13A EALS-001 across rs12973192/rs12608932 genotypes at a 6&ndash;9 mg [&le;3 mg/strand] total intrathecal ASO dose target vs. 12&ndash;50 mg nusinersen &amp; 100 mg tofersen; &ge;24&ndash;48 mg flagged as DRG/radiculotoxicity hazard) with oral non-covalent SARM1 ARM&ndash;TIR octamer stabilization (EALS-030, 1.0x parallel Bliss floor to ~2&ndash;7x modeled NMNAT2-coupled MWC bounds) and biomarker-gated neuroimmune modulation (EALS-031 BioVendor-bridged pNfH &le;3,700, oximetry-verified EALS-007 sST2, Tier 3 EALS-019 high-chitinase CSF glial stratum).</div>
         </div>
         <div class="pt-2 mt-2 border-t border-[var(--card-border)] text-[var(--muted-foreground)] font-mono text-xs leading-relaxed space-y-1">
@@ -163,7 +163,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
       </details>
       <details id="contrasts-drawer" class="bg-[var(--card)] border border-[var(--border)] border-l-4 border-l-[var(--primary)] rounded-lg px-4 py-2.5 text-xs">
         <summary class="cursor-pointer font-semibold text-[var(--foreground)] flex flex-wrap items-center justify-between gap-2 select-none">
-          <span>Nine Key Mechanistic Contrasts &amp; Translational Lessons &mdash; Field Assumptions vs. Re-Analyzed Primary Evidence</span>
+          <span>Nine Key Mechanistic Contrasts &amp; Translational Lessons: Field Assumptions vs. Re-Analyzed Primary Evidence</span>
           <span class="font-mono font-normal text-[var(--muted-foreground)]">9 Cross-Portfolio Insights &middot; Click ID for Dossier</span>
         </summary>
         <div class="mt-2 pt-2 border-t border-[var(--card-border)] max-h-[290px] overflow-y-auto overflow-x-auto">
@@ -185,7 +185,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
         <input id="p-search" aria-label="Search candidates" type="text" placeholder="Search ID (e.g. EALS-006, #4), gene/drug, subunit (G2E3, C1QA)..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs flex-1 min-w-[200px] text-[var(--foreground)]" />
         <select id="p-origin" aria-label="Filter by biological evidence source" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
           <option value="ALL">Evidence Source: All (53)</option>
-          <option value="GENETICS_MENDELIAN_GWAS">Human ALS Genetics &mdash; Mendelian &amp; GWAS (5)</option>
+          <option value="GENETICS_MENDELIAN_GWAS">Human ALS Genetics: Mendelian &amp; GWAS (5)</option>
           <option value="TDP43_SPLICING_APA">TDP-43 Cryptic Splicing &amp; Polyadenylation (12)</option>
           <option value="CNS_TISSUE_OMICS">Human CNS Spatial, snRNA &amp; Subcellular Omics (6)</option>
           <option value="CSF_AND_PHYSIOLOGY">Antemortem CSF Proteomics &amp; Physiology (6)</option>
@@ -253,7 +253,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
 
 HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labelledby="tab-btn-intervals" class="hidden space-y-3">
       <details id="iv-method-drawer" class="bg-[var(--card)] border border-[var(--border)] rounded-lg px-4 py-2.5 text-xs">
-        <summary class="cursor-pointer font-semibold text-[var(--foreground)] select-none">GENCODE v46 Off-Target Alignment Screen &mdash; 1-Based Closed GRCh38 Target Windows, Safety Rules &amp; Biophysical Notes</summary>
+        <summary class="cursor-pointer font-semibold text-[var(--foreground)] select-none">GENCODE v46 Off-Target Alignment Screen: 1-Based Closed GRCh38 Target Windows, Safety Rules &amp; Biophysical Notes</summary>
         <div class="text-xs text-[var(--muted-foreground)] border-t border-[var(--card-border)] pt-2.5 mt-2 space-y-1.5 leading-relaxed">
           <div><strong class="font-mono text-[var(--foreground)]">GENCODE v46 Off-Target Alignment Screen (1-Based Closed GRCh38 Target Windows):</strong> Candidate target windows for empirical 1-nt microwalks plus human neuron <span class="font-mono">Ca2+</span>-oscillation, <span class="font-mono">TLR9</span> &amp; primary <span class="font-mono">DRG</span> safety screens (reference transcriptome alignment does not exclude phosphorothioate protein-binding toxicity) &middot; modeled SantaLucia <span class="font-mono">2'-O-MOE PO/PS Tm / &Delta;G37</span> + <span class="font-mono">AlphaGenome AVI Phred</span> (DNA-variant conservation/splicing score, not steric ASO potency).</div>
           <div>Select any window below to inspect its labeled <span class="font-mono text-[var(--foreground)]">Spliced mRNA (&le;200bp of splice junction)</span> and <span class="font-mono text-[var(--foreground)]">Nascent Pre-mRNA (sense strand)</span> hybridization counts across <span class="font-mono">254,070</span> GENCODE v46 transcripts, <span class="font-mono">gnomAD v4</span> constrained CNS gene flags, sibling windows on the same locus, and genome browser tracks (<span class="font-mono text-[var(--success)]">Pass &middot; Clean</span> requires zero hits across all spliced mRNA, &le;50bp-SS, &le;25bp 2-mm, 1-nt bulge &amp; 18-nt sub-core filters).</div>
@@ -463,7 +463,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
 
       <details id="sandbox-drawer" class="bg-[var(--card)] border border-[var(--border)] border-l-4 border-l-[var(--warning)] rounded-lg px-4 py-3 text-xs">
         <summary class="cursor-pointer font-semibold text-[var(--foreground)] flex flex-wrap items-center justify-between gap-2 select-none">
-          <span>Interactive Biophysical &amp; Trial-Power Models &mdash; Explore Channel Stoichiometry, Allostery &amp; Survival Power</span>
+          <span>Interactive Biophysical &amp; Trial-Power Models: Explore Channel Stoichiometry, Allostery &amp; Survival Power</span>
           <span class="px-2 py-0.5 rounded border border-[var(--warning)] text-[var(--warning)] font-mono text-xs">&#9671; Modeled Sensitivity Check &middot; Zero-Install</span>
         </summary>
         <div id="sandbox-body" class="pt-3 mt-2.5 border-t border-[var(--card-border)] grid grid-cols-1 md:grid-cols-3 gap-3"></div>
@@ -480,7 +480,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
         <div class="space-y-1">
           <div class="font-mono font-semibold text-[var(--warning)]">Preclinical Research Notice &amp; AI-Assisted Workflow Disclosure</div>
           <p><strong class="text-[var(--foreground)]">Not Medical Advice:</strong> ExploreALS v1.4 is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing herein constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.</p>
-          <p><strong class="text-[var(--foreground)]">AI-Assisted Methodology:</strong> Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 43 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (PubMed, Europe PMC, ClinicalTrials.gov). Quantitative contrasts and accessions are programmatically verified and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors — always verify against linked primary sources before experimental use.</p>
+          <p><strong class="text-[var(--foreground)]">AI-Assisted Methodology:</strong> Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 43 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (PubMed, Europe PMC, ClinicalTrials.gov). Quantitative contrasts and accessions are programmatically verified and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors; always verify against linked primary sources before experimental use.</p>
         </div>
       </div>
     </section>

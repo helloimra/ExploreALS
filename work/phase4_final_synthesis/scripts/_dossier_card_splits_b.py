@@ -63,7 +63,7 @@ CARD_SPLITS_B: dict[tuple[str, str], list[tuple[str, str]]] = {
         ("\n\nMEDALS (", "\n- MEDALS, Exploratory Studies & Plausible CSF Exposure: MEDALS ("),
     ],
     ("EALS-008", "disproves"): [
-        ("Failed three randomized placebo-controlled human ALS trials — Phase 3 MND-SMART", "- Phase 3 MND-SMART Stage 2 ALSFRS-R Futility: Failed three randomized placebo-controlled human ALS trials — Phase 3 MND-SMART"),
+        ("Failed three randomized placebo-controlled human ALS trials: Phase 3 MND-SMART", "- Phase 3 MND-SMART Stage 2 ALSFRS-R Futility: Failed three randomized placebo-controlled human ALS trials: Phase 3 MND-SMART"),
         ("one-sided p=0.36; descriptive follow-up deaths", "one-sided p=0.36).\n- MND-SMART Follow-Up Survival Reporting: Descriptive follow-up deaths"),
         ("prior to Stage 4, Fig. 4).", "prior to Stage 4, Fig. 4."),
         ("\n\nDouble-dose Phase 2b TAME at 40 mg/d", "\n- Phase 2b TAME 40 mg/d Clinical Nulls: Double-dose Phase 2b TAME at 40 mg/d"),
@@ -120,7 +120,7 @@ CARD_SPLITS_B: dict[tuple[str, str], list[tuple[str, str]]] = {
     ],
     ("EALS-011", "disproves"): [
         ("At oral 40 mg (NDA016273 Lasix", "- Active BBB Efflux & >1,000-Fold Unbound CNS Deficit: At oral 40 mg (NDA016273 Lasix"),
-        ("34-190x too low) — while furosemide non-selectively inhibits", "34-190x too low).\n- Non-Selective KCC2 & Carbonic Anhydrase Co-Inhibition: Furosemide non-selectively inhibits"),
+        ("34-190x too low), while furosemide non-selectively inhibits", "34-190x too low).\n- Non-Selective KCC2 & Carbonic Anhydrase Co-Inhibition: Furosemide non-selectively inhibits"),
         ("Ki ~65-200 nM, reduced human soleus", "Ki ~65-200 nM.\n- Human Spinal Inhibition Loss & Loop-Diuretic Toxicity: Reduced human soleus"),
     ],
     ("EALS-017", "verdict"): [
@@ -209,7 +209,7 @@ CARD_SPLITS_B: dict[tuple[str, str], list[tuple[str, str]]] = {
         ("Bye 2025 screen), and predicted biochemical antagonism", "Bye 2025 screen).\n- Predicted Antagonism of Sequential YKT6 Diprenylation: Biochemical antagonism"),
     ],
     ("EALS-029", "disproves"): [
-        ("Excluded on modeled CNS exposure, clinical tolerability, and predicted YKT6 prenylation antagonism (untested — not in 107-drug library — in Bye 2025 screen): (1) Predicted directional liability:", "- Sequential YKT6 Diprenylation Requirement (Untested in 107-Drug Bye 2025 Screen):"),
+        ("Excluded on modeled CNS exposure, clinical tolerability, and predicted YKT6 prenylation antagonism (untested, not in 107-drug library, in Bye 2025 screen): (1) Predicted directional liability:", "- Sequential YKT6 Diprenylation Requirement (Untested in 107-Drug Bye 2025 Screen):"),
         ("Chronos=-1.5425), predicting that FTIs", "Chronos=-1.5425).\n- Predicted Antagonism in TDP-43-Depleted ALS Neurons: Predicts that FTIs"),
         ("unperformed); (2) Unbound CNS PK deficit:", "unperformed).\n- Unbound CNS PK Deficit:"),
         ("IC50); (3) ALS-hostile human toxicity:", "IC50).\n- Progeria & Oncology Clinical Toxicities:"),

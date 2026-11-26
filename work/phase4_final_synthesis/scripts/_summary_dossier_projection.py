@@ -273,12 +273,12 @@ def build_summary_dossiers(
         else:
             pb = p3b_map[pid]
             causal_lbl, _ = _humanize_causal(pb["causal_vs_reactive_assessment"])
-            sub = causal_lbl if pid == "L01" else clean_prose(pb["mechanism_summary"])
+            sub = causal_lbl if pid.startswith("L") else clean_prose(pb["mechanism_summary"])
             just = clean_prose(pb["factual_justification"])
             if pid == "DN-12":
                 proves, _ = _split_top_level_dn(just)
                 disproves = (
-                    "- Essentiality & Phospho-Inactivation: Cellularly pan-essential across dividing human lines (DepMap p10 Chronos = -1.3534; gnomAD v4.1 MANE ENST00000308162 LOEUF = 0.408, pLI = 0.990, mis_z = 3.38), while postmortem sporadic ALS spinal motor neurons show LIMK1-associated Ser3-cofilin hyperphosphorylation/inactivation and experimental models link CFL1 loss/inactivation to TDP-43 aggregation (Jagaraj et al. 2026 Brain PMID:41804798 — opposite in phosphorylation state to dephosphorylated cofilin rods).\n"
+                    "- Essentiality & Phospho-Inactivation: Cellularly pan-essential across dividing human lines (DepMap p10 Chronos = -1.3534; gnomAD v4.1 MANE ENST00000308162 LOEUF = 0.408, pLI = 0.990, mis_z = 3.38), while postmortem sporadic ALS spinal motor neurons show LIMK1-associated Ser3-cofilin hyperphosphorylation/inactivation and experimental models link CFL1 loss/inactivation to TDP-43 aggregation (Jagaraj et al. 2026 Brain PMID:41804798; opposite in phosphorylation state to dephosphorylated cofilin rods).\n"
                     "- Clinical ROCK1/2 Comparator & Assay Requirements: Upstream ROCK1/2 blockade (Fasudil, which de-represses CFL1) showed no clinical separation in Phase 2a ROCK-ALS (NCT03792490, N = 120, PMID:39424560) or Bye 2025 (p = 0.209). Bottom-up tryptic MS measures unmodified pan-CFL1, requiring atraumatic-LP hemolysis/platelet QC (PMID:31566909), phosphatase-stabilized pSer3-CFL1:total CFL1 assays, and incremental prognostic value beyond NfL and pNfH."
                 )
             elif pid == "DN-15":
@@ -329,6 +329,7 @@ def build_summary_dossiers(
             **edges_map[acc_id],
         }
         assert len(hyp) >= 60 and hyp not in {verdict, proves, disproves}, f"{pid}: invalid or duplicated hypothesis summary"
+        assert not pid.startswith("L") or len(sub) <= 90, f"{pid}: living-intake dossier h2 subtitle too long ({len(sub)} > 90 chars): {sub}"
         blob = " ".join(item.values())
         assert "/100" not in blob, f"{pid}: /100 score leaked in summary projection: {blob}"
         assert blob.count("(") == blob.count(")"), f"{pid}: unbalanced parentheses in summary projection: {blob}"

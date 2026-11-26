@@ -63,10 +63,10 @@ COLONLESS_VERDICT_PROSE: dict[str, str] = {
 }
 
 PREFIX_REPLACEMENTS = (
-    ("HIGH_LIABILITY_FOR_COMPLETE_ABLATION:", "High liability for complete ablation —"),
-    ("PARALOG_COMPENSATED_IN_MITOSIS_BUT_NEURONAL_REPAIR_AND_AUTOPHAGY_REQUIRED:", "Paralog-compensated in mitosis, neuronal repair & autophagy required —"),
-    ("INTRATHECAL_ASO_PARTIAL_LOWERING_OR_NUCLEAR_IMPORT_BLOCKADE:", "Intrathecal ASO partial lowering or nuclear-import blockade —"),
-    ("SUBUNIT_SELECTIVE_EXPLORATORY_PARTIAL_ASO:", "Subunit-selective exploratory partial ASO —"),
+    ("HIGH_LIABILITY_FOR_COMPLETE_ABLATION:", "High liability for complete ablation:"),
+    ("PARALOG_COMPENSATED_IN_MITOSIS_BUT_NEURONAL_REPAIR_AND_AUTOPHAGY_REQUIRED:", "Paralog-compensated in mitosis, neuronal repair & autophagy required:"),
+    ("INTRATHECAL_ASO_PARTIAL_LOWERING_OR_NUCLEAR_IMPORT_BLOCKADE:", "Intrathecal ASO partial lowering or nuclear-import blockade:"),
+    ("SUBUNIT_SELECTIVE_EXPLORATORY_PARTIAL_ASO:", "Subunit-selective exploratory partial ASO:"),
 )
 
 SCORE_100_RE = re.compile(r";?\s*(?:5D\s+liability|gene-liability)\s*=\s*[0-9.]+/100\s*(?:\([^)]*\))?\.?", re.IGNORECASE)

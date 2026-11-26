@@ -159,11 +159,11 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
     ("EALS-023", "disproves"): [
         ("YKT6 is pan-essential across 1,258 DepMap lines", "- Pan-Essentiality & Carrier Frequency: YKT6 is pan-essential across 1,258 DepMap lines"),
         ("risk allele]) while the rat PDB 3KYQ", "risk allele]).\n- Pocket Expansion & Autoinhibited Closed-State Hazard: Rat PDB 3KYQ"),
-        ("wild-type YKT6 ALS — alongside null C9-FTD", "wild-type YKT6 ALS.\n- Null Synaptosomal DIA & Essential Cis-Golgi SNAREs: Null C9-FTD"),
+        ("wild-type YKT6 ALS, alongside null C9-FTD", "wild-type YKT6 ALS.\n- Null Synaptosomal DIA & Essential Cis-Golgi SNAREs: Null C9-FTD"),
     ],
     ("EALS-016", "disproves"): [
         ("Two major findings rule out unidirectional neuronal IRP2 degradation while retaining bidirectional sensor probing: (1) Cell-type & directionality split:", "- Cell-Type & Directionality Split:"),
-        ("functional iron starvation — directly corroborated in vivo", "functional iron starvation.\n- In Vivo Irp2-Null Neurodegeneration: Directly corroborated in vivo"),
+        ("functional iron starvation, directly corroborated in vivo", "functional iron starvation.\n- In Vivo Irp2-Null Neurodegeneration: Directly corroborated in vivo"),
         ("PMID:22003390); (2) Bulk iron chelation", "PMID:22003390).\n- Negative Iron-Chelation Screen & Clinical Trials: Bulk iron chelation"),
     ],
     ("EALS-016", "nxt"): [
@@ -263,7 +263,7 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
         ("unstratified symptomatic trials alongside cross-sectional reductions", "unstratified symptomatic trials.\n- Cross-Sectional GRIN1/NPTX2 Loss & Unproven Staging Transition: Cross-sectional reductions"),
     ],
     ("EALS-005", "nxt"): [
-        ("prospectively validated — in an early-onset ALS", "prospectively validated; evaluate in an early-onset ALS"),
+        ("prospectively validated, in an early-onset ALS", "prospectively validated; evaluate in an early-onset ALS"),
     ],
     ("EALS-022", "verdict"): [
         ("Anchored by human Mendelian", "- Mendelian Genetics & Multi-Omic Depletion: Anchored by human Mendelian"),

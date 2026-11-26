@@ -667,6 +667,7 @@ def run_selftest(mode: str = "full") -> None:
     bad_p4_epi[0]["decision"] = "DROP"
     errs_p4_epi = verify_phase4_gates(CARBON_ROOT, base, {r["analysis_run_id"] for r in load_csv("analysis_runs.csv")}, load_csv, port_override=bad_p4_epi, mode=mode)
     assert any("Cannot DROP an UNPROVEN_UNTESTED" in e for e in errs_p4_epi), "Phase 4 self-test failed to block UNPROVEN DROP!"
+    assert re.search(r"\((EALS-\d{3}(?:\.\d+)?)\s*/\s*\1\)", "bad (EALS-053 / EALS-053) token"), "Self-test duplicate EALS regex failed!"
 
 
 def main() -> None:

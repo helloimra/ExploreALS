@@ -336,7 +336,7 @@ function renderEvidenceMatrix(ev, geneCtx){
 }
 
 function cautionSummary(c){
-  if(!c) return {short: 'Caution (non-CNS hit)', badge: 'Caution &middot; Non-CNS Hit', tip: 'Non-constrained reference hybridization match (zero constrained CNS pLI >= 0.9 hits) — empirical microwalk required'};
+  if(!c) return {short: 'Caution (non-CNS hit)', badge: 'Caution &middot; Non-CNS Hit', tip: 'Non-constrained reference hybridization match (zero constrained CNS pLI >= 0.9 hits); empirical microwalk required'};
   const sp = String(c.sp || '').split('/').map(x => parseInt(x, 10) || 0);
   const pm = String(c.pm || '').split('/').map(x => parseInt(x, 10) || 0);
   const s1 = sp[1] || 0, sWob = sp[2] || 0;
@@ -354,7 +354,7 @@ function cautionSummary(c){
   if(shortBody.length > 15) shortBody = svgToks.map(t => t.replace('intron 0-mm','intron 0mm').replace('wobble','wob').replace('sub-core','sub18').replace('2-mm','2mm').replace('1-mm','1mm')).join('+');
   const short = shortBody ? ('Caution (' + shortBody + ')') : 'Caution (non-CNS hit)';
   const badge = bdgToks.length ? ('Caution &middot; ' + bdgToks.slice(0, 2).join(' + ')) : 'Caution &middot; Non-CNS Hit';
-  const tip = (tipParts.length ? tipParts.join('; ') : 'Non-constrained reference match') + ' (zero constrained CNS pLI >= 0.9 hits' + (pmAll ? '; ' + pmAll : '') + ') — empirical microwalk required';
+  const tip = (tipParts.length ? tipParts.join('; ') : 'Non-constrained reference match') + ' (zero constrained CNS pLI >= 0.9 hits' + (pmAll ? '; ' + pmAll : '') + '); empirical microwalk required';
   return {short, badge, tip};
 }
 

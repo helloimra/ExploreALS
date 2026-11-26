@@ -27,7 +27,7 @@ THEME_HEAD_INIT = (
     '<meta name="viewport" content="width=device-width, initial-scale=1.0" />\n'
     '  <meta name="color-scheme" content="light dark" />\n'
     '  <meta name="author" content="Ricardo Agoga" />\n'
-    '  <meta name="description" content="ExploreALS v1.4 — Unified 53-Hypothesis ALS Therapeutic &amp; Biomarker Triage, '
+    '  <meta name="description" content="ExploreALS v1.4: Unified 53-Hypothesis ALS Therapeutic &amp; Biomarker Triage, '
     '18 Subunit Dissections, 28 GRCh38 Cis-Regulatory Target Windows, and Open Computational Replication Package." />\n'
     "  <script>window.PUBLIC_WEB_EXPORT=true;(function(){try{var t=localStorage.getItem('exploreals-theme');"
     "if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(_e){}})();</script>"
@@ -75,7 +75,7 @@ THEME_BODY_JS = """
 })();
 """
 
-GITHUB_README_MD = """# ExploreALS v1.4 — Unified ALS Therapeutic & Genetic Target Portfolio Explorer + Computational Replication Package
+GITHUB_README_MD = """# ExploreALS v1.4: Unified ALS Therapeutic & Genetic Target Portfolio Explorer + Computational Replication Package
 
 **Live Interactive Explorer (5 Views):** [https://helloimra.github.io/ExploreALS/](https://helloimra.github.io/ExploreALS/)
 **Author:** Ricardo Agoga · [helloimra@proton.me](mailto:helloimra@proton.me) · [github.com/helloimra/ExploreALS](https://github.com/helloimra/ExploreALS)
@@ -114,8 +114,8 @@ uv run python scripts/build_explorer.py --public-docs-only
 
 ## Licensing, Disclaimers & Open-Data Provenance
 - **Dual Software & Data License:** Python source code (`src/`, `scripts/`, `pipelines/`, `work/**/*.py`) is licensed under the **MIT License** ([LICENSE](./LICENSE)); original curated registries (`registries/*.csv`), schemas, and monographs are licensed under **CC BY 4.0** ([LICENSE-DATA.md](./LICENSE-DATA.md)). Non-`CC-BY` publisher supplements (`Tier B`) are never re-hosted and are fetched directly from canonical publisher HTTPS endpoints.
-- **Preclinical Research Only — Not Medical Advice:** `ExploreALS v1.4` is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing in this repository or explorer constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.
-- **AI-Assisted Workflow Disclosure:** Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 43 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (`PubMed`, `Europe PMC`, `ClinicalTrials.gov`). Quantitative contrasts (`204/204` 64-char SHA-256 anchored) are programmatically verified and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors — always verify against linked primary sources before experimental use.
+- **Preclinical Research Only (Not Medical Advice):** `ExploreALS v1.4` is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing in this repository or explorer constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.
+- **AI-Assisted Workflow Disclosure:** Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 43 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (`PubMed`, `Europe PMC`, `ClinicalTrials.gov`). Quantitative contrasts (`204/204` 64-char SHA-256 anchored) are programmatically verified and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors; always verify against linked primary sources before experimental use.
 - **Data & Tool Attributions:** Google DeepMind AlphaGenome (`v1` API & Atlas `AVI`; non-commercial research use only), NIH GTEx (`v8 / v10`), Open Targets (`v4`), gnomAD (`v4.1 / v4.1.1`), Ensembl/GENCODE (`v46`), ChEMBL (`v34`), UniProt, RCSB PDB, and ClinicalTrials.gov.
 """
 
@@ -181,6 +181,9 @@ def export_public_web_bundle(repo_dir: Path, agy_explorer_html: str, agy_mono_fi
     pub_index = pub_index.replace("<!-- THEME_TOGGLE_SLOT -->", THEME_BTN_HTML, 1)
     pub_index = pub_index.replace("</script>\n</body>", THEME_BODY_JS + "</script>\n</body>", 1)
     assert "gstatic.com" not in pub_index and "onclick=" not in pub_index.lower() and "wiki" not in pub_index.lower()
+    emdash_re = re.compile(r"\u2014|&mdash;|&#8212;|&#x2014;|\\u2014", re.IGNORECASE)
+    assert not emdash_re.search(pub_index), "Em-dash leaked in public docs/index.html"
+    assert not emdash_re.search(GITHUB_README_MD), "Em-dash leaked in public README.md"
     idx_fp = docs_dir / "index.html"
     idx_fp.write_text(pub_index, encoding="utf-8")
     nojekyll_fp = docs_dir / ".nojekyll"
@@ -205,6 +208,7 @@ def export_public_web_bundle(repo_dir: Path, agy_explorer_html: str, agy_mono_fi
         )
         mpub = mpub.replace("  </script></body></html>", THEME_BODY_JS + "  </script></body></html>", 1)
         assert "gstatic.com" not in mpub and "CARBON_ALS_INTERACTIVE_EXPLORER" not in mpub and "onclick=" not in mpub.lower() and "wiki" not in mpub.lower()
+        assert not emdash_re.search(mpub), f"Em-dash leaked in public docs/monographs/{stem}.html"
         mfp = mono_out / f"{stem}.html"
         mfp.write_text(mpub, encoding="utf-8")
         written.append(mfp)

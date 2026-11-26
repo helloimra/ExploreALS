@@ -1,10 +1,10 @@
-"""ExploreALS v1.3.0 Living Research Log & cross-link specification (UPD-2026-11-26-01) for 2026 TBK1/IFN-I/RIPK1 synthesis."""
+"""ExploreALS v1.3.1 Living Research Log & cross-link specification (UPD-2026-11-26-01) for 2026 TBK1/IFN-I/RIPK1 synthesis."""
 from __future__ import annotations
 
 UPD_2026_11_26_01: dict[str, str] = {
     "update_id": "UPD-2026-11-26-01",
     "date_iso": "2026-11-26",
-    "release_tag": "v1.3.0",
+    "release_tag": "v1.3.1",
     "update_category": "LITERATURE_INGESTION",
     "affected_ids": "EALS-019;EALS-033;EALS-017;EALS-034",
     "decision_impact": (

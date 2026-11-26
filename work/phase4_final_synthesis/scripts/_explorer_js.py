@@ -233,7 +233,7 @@ function jumpToUpdates(query, updateHash=true){
 function esc(s){return String(s??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
 function decBadge(d, id=''){
   if(d==='KEEP_CORE') return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--success)] border border-[var(--success)] text-xs whitespace-nowrap" title="Causal human ALS genetics and/or human TDP-43 pathology + functional rescue">Keep &middot; Core</span>';
-  if(d==='KEEP_EXPLORATORY_UNPROVEN') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--warning)] border border-[var(--warning)] text-xs whitespace-nowrap" title="Untested preclinical/biofluid triage queue — prospective Go/No-Go test required">Keep &middot; Exploratory</span>';
+  if(d==='KEEP_EXPLORATORY_UNPROVEN') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--warning)] border border-[var(--warning)] text-xs whitespace-nowrap" title="Untested preclinical/biofluid triage queue; prospective Go/No-Go test required">Keep &middot; Exploratory</span>';
   if(d==='RECLASSIFY_BENCHMARK_OR_BIOMARKER'){
     if(id==='EALS-013'||id==='EALS-032') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Approved clinical ALS standard-of-care & in vitro screen calibration benchmark">SOC Benchmark</span>';
     if(id==='EALS-003') return '<span class="px-1.5 py-0.5 rounded font-mono text-[var(--primary)] border border-[var(--primary)] text-xs whitespace-nowrap" title="Commercially withdrawn drug retained strictly as a human physiological Kv7.2/7.3 pharmacodynamic reference">Clinical PD Reference</span>';

@@ -9,7 +9,7 @@ from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_i
 
 CANDIDATE_EDGES_DROPS: dict[str, tuple[str, str]] = {
     "C004": ("FALSIFIED_TRAP", "Phase 3 Stage 3 futility in 513 ALS patients (p=0.237; survival HR=0.90, p=0.415) with 12.1% biliary SAEs, >10 uM ChEMBL EAAT2 EC50 vs 2-6 uM CSF, and no statistically detected ALS astrocyte/spinal SLC1A2 mRNA deficit."),
-    "C008": ("FALSIFIED_TRAP", "Consistent clinical futility across 3 placebo-controlled ALS RCTs — Phase 3 MND-SMART (n=355 Stage 2, p=0.36), Phase 2b TAME (40 mg/d, n=83 LME analyzed / N=52 completers [32 memantine, 20 placebo], Table 2 p=0.94 & Table 3 blood markers null), and MEDALS (p=0.53; plus 2 non-placebo studies) — at ~0.25-1.2 uM CSF refutes tested oral memantine regimens."),
+    "C008": ("FALSIFIED_TRAP", "Consistent clinical futility across 3 placebo-controlled ALS RCTs, including Phase 3 MND-SMART (n=355 Stage 2, p=0.36), Phase 2b TAME (40 mg/d, n=83 LME analyzed / N=52 completers [32 memantine, 20 placebo], Table 2 p=0.94 & Table 3 blood markers null), and MEDALS (p=0.53; plus 2 non-placebo studies), at ~0.25-1.2 uM CSF refutes tested oral memantine regimens."),
     "C009": ("FALSIFIED_TRAP", "Phase 3 MND-SMART 200 mg/d futility (n=355 Stage 2, p=0.24), a 71-330x [MODEL_PRIOR] unbound brain PK deficit vs 20-40 uM ISR rescue (5-HT2A/alpha1 sedation + mCPP anorexia), and negative HEALEY outcomes with selective eIF2B activators ABBV-CLS-7262/DNL343."),
     "C010": ("FALSIFIED_TRAP", "At the 16 mg/d protocol maximum (0 AE dose reductions/discontinuations), human CSF (Table S3 68.7 nM / Discussion ~18 nM) sits conditionally 14.6-55.6x below 1 uM neurite/caspase precedent & 146-556x below 10 uM TARDBP-M337V Fig. 3F MEA rescue (sALS SREBP2 & Figs. 3A-D doses unestablished; 0% spinal DRD3), with sALS iPSC-MN harm (-0.69d, FDR=0.021), null ROPALS (+1.46, Fig. 3A / Table D1 p=0.533), & Ph2a EXPERTS-ALS NfL stop."),
     "C012": ("FALSIFIED_TRAP", "Phase 2 RCT NCT03019419 (N=65 ITT) showed 48-wk ALSFRS-R worsening at 8 mg/d (-8.4 pts, p=0.0145; 4 mg/d p=0.148; completion 33% [8 mg] & 64% [4 mg] vs 82% placebo, SAE p=0.048; talampanel nonsignificant trend), refuting studied oral perampanel regimens."),
@@ -60,7 +60,7 @@ def build_edges_and_lenses(port_rows: list[dict[str, str]]) -> tuple[dict[str, d
     bench_sub_labels = {
         "C013": "APPROVED STANDARD-OF-CARE & ASSAY BENCHMARK",
         "S08": "APPROVED STANDARD-OF-CARE & ASSAY BENCHMARK",
-        "C003": "WITHDRAWN DRUG — HUMAN KV7 PHARMACODYNAMIC REFERENCE",
+        "C003": "WITHDRAWN DRUG: HUMAN KV7 PHARMACODYNAMIC REFERENCE",
         "C017": "CANDIDATE CLINICAL-CSF STAGING & GLIAL PD PANEL (VALIDATION PENDING)",
         "DN-10": "CANDIDATE CSF PROTEOMIC MARKER (PRE-VALIDATION)",
         "DN-11": "CANDIDATE CSF PROTEOMIC MARKER (PRE-VALIDATION)",

@@ -244,7 +244,7 @@ function renderReplicationWorkbench(){
       return `<tr data-rep-select="${esc(f.eid)}" tabindex="0" aria-selected="${sel?'true':'false'}" class="cursor-pointer hover:bg-[var(--background)] ${sel?'bg-[var(--content)] border-l-4 border-l-[var(--primary)]':''}">
         <td class="py-1.5 px-2.5 font-mono font-semibold whitespace-nowrap">${esc(f.eid)}</td>
         <td class="py-1.5 px-2 font-mono text-xs whitespace-nowrap"><span class="text-[var(--primary)]">${esc(f.cid || 'Portfolio')}</span> &middot; ${esc(f.run)}</td>
-        <td class="py-1.5 px-2 font-mono text-xs text-[var(--muted-foreground)]">${esc(f.unit)} (${esc(f.ndon||'—')})</td>
+        <td class="py-1.5 px-2 font-mono text-xs text-[var(--muted-foreground)]">${esc(f.unit)} (${esc(f.ndon||'N/A')})</td>
         <td class="py-1.5 px-2 font-mono text-xs whitespace-nowrap">${esc(pDisp)}</td>
       </tr>`;
     }).join('') : emptyEvRow;

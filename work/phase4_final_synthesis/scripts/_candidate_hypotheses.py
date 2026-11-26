@@ -4,7 +4,7 @@ from __future__ import annotations
 CANDIDATE_HYPOTHESES: dict[str, str] = {
     "C001": (
         "UNC13A (ENSG00000130477) encodes presynaptic Munc13-1, an essential synaptic vesicle-priming protein required for neurotransmitter release at motor synapses. "
-        "Nuclear TDP-43 depletion — potentiated by human ALS GWAS risk alleles rs12608932 and rs12973192 — unmasks a frameshifting intron 20–21 cryptic exon whose steric splice correction restores human cortical/spinal motor neuron synaptic transmission and network synchrony (>30% protein threshold; DOI:10.1038/s41586-026-11256-2) independently of STMN2 and KCNQ2 mis-splicing, supporting a multiplexed splice-rescue regimen."
+        "Nuclear TDP-43 depletion, potentiated by human ALS GWAS risk alleles rs12608932 and rs12973192, unmasks a frameshifting intron 20–21 cryptic exon whose steric splice correction restores human cortical/spinal motor neuron synaptic transmission and network synchrony (>30% protein threshold; DOI:10.1038/s41586-026-11256-2) independently of STMN2 and KCNQ2 mis-splicing, supporting a multiplexed splice-rescue regimen."
     ),
     "C002": (
         "STMN2 (ENSG00000104435) encodes stathmin-2, a dynamic microtubule-regulating phosphoprotein indispensable for motor axon outgrowth, repair, and neuromuscular junction maintenance. "
@@ -124,7 +124,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     ),
     "S07": (
         "Aldesleukin (CHEMBL1201438) is recombinant human interleukin-2 administered subcutaneously at low doses to selectively expand immunosuppressive CD4+CD25+FOXP3+ regulatory T cells (Tregs) via high-affinity IL2RA receptors without activating effector T cells. "
-        "Following the MIROCALS Phase 2b trial (NCT03039673, PMID:40354799) — which missed unadjusted overall survival (HR=0.81, p=0.33) while showing SAP-prespecified covariate-adjusted conditional survival (HR=0.32 at reference pNfH=0, p=0.007; interaction p=0.0011) and a 48% mortality hazard reduction in the 750–3,700 pg/mL BioVendor ELISA CSF pNfH stratum — S07 tests prospective calibrated biomarker-gated Treg immunomodulation."
+        "Following the MIROCALS Phase 2b trial (NCT03039673, PMID:40354799), which missed unadjusted overall survival (HR=0.81, p=0.33) while showing SAP-prespecified covariate-adjusted conditional survival (HR=0.32 at reference pNfH=0, p=0.007; interaction p=0.0011) and a 48% mortality hazard reduction in the 750–3,700 pg/mL BioVendor ELISA CSF pNfH stratum, S07 tests prospective calibrated biomarker-gated Treg immunomodulation."
     ),
     "S08": (
         "Methylcobalamin (CHEMBL4297672) is the active coenzyme form of vitamin B12 required by methionine synthase to remethylate neurotoxic homocysteine and sustain neuronal transmethylation. "
@@ -179,7 +179,7 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
         "Co-depleted with DPP6 in Emory ALS CSF DIA proteomics and primary motor cortex excitatory neurons (with MS2-TMTpro omnibus and WashU non-parametric caveats), it serves as a pre-validation candidate fluid marker of somatodendritic attrition."
     ),
     "DN-12": (
-        "CFL1 (ENSG00000172757) encodes cofilin-1, a pan-essential actin-severing protein showing LIMK1-associated Ser3 hyperphosphorylation (inactivation) in postmortem sporadic ALS spinal motor neurons and TDP-43 aggregation in experimental models (Jagaraj et al. 2026, PMID:41804798 — opposite in phosphorylation state to dephosphorylated cofilin rods). "
+        "CFL1 (ENSG00000172757) encodes cofilin-1, a pan-essential actin-severing protein showing LIMK1-associated Ser3 hyperphosphorylation (inactivation) in postmortem sporadic ALS spinal motor neurons and TDP-43 aggregation in experimental models (Jagaraj et al. 2026, PMID:41804798; opposite in phosphorylation state to dephosphorylated cofilin rods). "
         "Consistently elevated as unmodified pan-CFL1 across antemortem ALS CSF DIA (and corroborated in overlapping Emory TMTpro, surviving erythrocyte/platelet lysis OLS controls) while cellularly pan-essential, CFL1 serves as a pre-validation candidate fluid cytoskeletal injury marker requiring pSer3-vs-total isoform assay bridging."
     ),
     "DN-13": (

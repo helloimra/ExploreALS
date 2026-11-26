@@ -201,7 +201,11 @@ def build_roadmaps_and_tables_md(
     for c in cis_rows:
         lead_tag = "**YES**" if c["is_promoted_lead"] == "True" else "No"
         fl = c["flagged_constrained_neuronal_hits"]
-        fl_short = fl if len(fl) <= 68 else fl[:65] + "..."
+        if len(fl) <= 68:
+            fl_short = fl
+        else:
+            fl_core = fl[:65]
+            fl_short = fl_core + (")" * max(0, fl_core.count("(") - fl_core.count(")"))) + "..."
         a_link = f"[Atlas]({atlas_url(c['chrom'], c['grch38_start'], c['grch38_end'])})"
         sc_acc = c.get("subnode_accession_id") or legacy_to_accession(c["subnode_or_cand_id"])
         lines.append(

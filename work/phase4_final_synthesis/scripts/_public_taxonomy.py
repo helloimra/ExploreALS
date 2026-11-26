@@ -4,7 +4,7 @@ from __future__ import annotations
 import re
 
 COHORT_DEFS: list[tuple[str, str]] = [
-    ("GENETICS_MENDELIAN_GWAS", "Human ALS Genetics — Mendelian & GWAS"),
+    ("GENETICS_MENDELIAN_GWAS", "Human ALS Genetics: Mendelian & GWAS"),
     ("TDP43_SPLICING_APA", "TDP-43 Cryptic Splicing & Polyadenylation"),
     ("CNS_TISSUE_OMICS", "Human CNS Spatial, snRNA & Subcellular Omics"),
     ("CSF_AND_PHYSIOLOGY", "Living-Patient CSF Proteomics & Physiology"),
@@ -220,12 +220,12 @@ def sanitize_public_prose(txt: str) -> str:
     s = re.sub(r"\bStage\s+1-gated\b", "Single-agent-qualified", s)
     s = re.sub(
         r"\bStage\s+1\b(?=\s+(?:single-entity|dense|ICH|NHP|\(>=50))",
-        lambda m: "Preclinical" if m.start() == 0 or s[max(0, m.start() - 2) : m.start()].strip() in {".", ":", ";", "—"} or s[m.start() - 1] == "\n" else "preclinical",
+        lambda m: "Preclinical" if m.start() == 0 or s[max(0, m.start() - 2) : m.start()].strip() in {".", ":", ";"} or s[m.start() - 1] == "\n" else "preclinical",
         s,
     )
     s = re.sub(
         r"\bStage\s+2\b(?=\s+(?:factorial|genotype-stratified|testing|evaluates|multiplex|co-dosing|splice))",
-        lambda m: "Combinatorial" if m.start() == 0 or s[max(0, m.start() - 2) : m.start()].strip() in {".", ":", ";", "—"} or s[m.start() - 1] == "\n" else "combinatorial",
+        lambda m: "Combinatorial" if m.start() == 0 or s[max(0, m.start() - 2) : m.start()].strip() in {".", ":", ";"} or s[m.start() - 1] == "\n" else "combinatorial",
         s,
     )
     s = re.sub(r"\bcombinatorial\s+factorial\s+combination-contribution\s+principles\s+genotype-stratified\b", "factorial, genotype-stratified", s, flags=re.I)
@@ -316,6 +316,64 @@ def sanitize_public_prose(txt: str) -> str:
     s = s.replace("(TRL_5;", "(Phase 2a PK/PD-proven;")
     s = s.replace("modeled ~9% whole-cell pSTAT occupancy at 4 mg modeled", "modeled ~9% whole-cell pSTAT occupancy at 4 mg")
     s = s.replace("modeled ~9% whole-cell pSTAT occupancy at 4 mg (modeled estimate)", "modeled ~9% whole-cell pSTAT occupancy at 4 mg")
+    for old_em, new_em in (
+        ("Systemic C3 Complement \u2014 MERIDIAN", "Systemic C3 Complement, MERIDIAN"),
+        ("PMID:36927019 \u2014 model-specific preclinical benchmarks", "PMID:36927019; model-specific preclinical benchmarks"),
+        ("across 4 registry protocols \u2014 Lilly", "across 4 registry protocols: Lilly"),
+        ("2'-O-MOE ASOs] \u2014 none yet with completed", "2'-O-MOE ASOs]; none yet with completed"),
+        ("stratification hypothesis \u2014 pairing paradigm-locked", "stratification hypothesis, pairing paradigm-locked"),
+        ("prospective biomarker validation) \u2014 for single-node", "prospective biomarker validation), for single-node"),
+        (
+            "for single-node EALS-006 (KCNQ2) \u2014 never as a multi-channel drug bundle, and without upfront exclusion of marker-negative patients until prospectively validated \u2014 in an early-onset ALS",
+            "for single-node EALS-006 (KCNQ2), never as a multi-channel drug bundle and without upfront exclusion of marker-negative patients until prospectively validated, in an early-onset ALS",
+        ),
+        ("conservation only \u2014 testing whether masking", "conservation only; testing whether masking"),
+        ("15/22 Splicing \u2014 gated against steric", "15/22 Splicing; gated against steric"),
+        ("ST2L is protective \u2014 pan-ST2 blockade", "ST2L is protective; pan-ST2 blockade"),
+        ("in hCMEC/D3 cells \u2014 23-160x above", "in hCMEC/D3 cells, 23-160x above"),
+        ("PMID:39307154 \u2014 alongside female-restricted", "PMID:39307154, alongside female-restricted"),
+        ("placebo-controlled ALS trials \u2014 Phase 3 MND-SMART", "placebo-controlled ALS trials: Phase 3 MND-SMART"),
+        ("placebo-controlled human ALS trials \u2014 Phase 3 MND-SMART", "placebo-controlled human ALS trials: Phase 3 MND-SMART"),
+        ("DOI:10.3109/17482968.2011.615513) \u2014 at pharmacologically plausible", "DOI:10.3109/17482968.2011.615513), at pharmacologically plausible"),
+        ("[DOI:10.3109/17482968.2011.615513]) \u2014 while human ALS M1", "[DOI:10.3109/17482968.2011.615513]), while human ALS M1"),
+        ("to <1-5 nM \u2014 >1,000-5,800x below", "to <1-5 nM, >1,000-5,800x below"),
+        ("34-190x too low) \u2014 while furosemide", "34-190x too low), while furosemide"),
+        ("functional iron starvation \u2014 directly corroborated", "functional iron starvation, directly corroborated"),
+        ("PMID:27935101 \u2014 opposing direction for inhibition", "PMID:27935101; opposing direction for inhibition"),
+        ("each intended context of use \u2014 longitudinal phenoconversion", "each intended context of use: longitudinal phenoconversion"),
+        ("PMID:29142138) \u2014 rather than pursuing", "PMID:29142138), rather than pursuing"),
+        ("sepsis liability \u2014 in HD Phase 2", "sepsis liability: in HD Phase 2"),
+        (
+            "NCT06510816 \u2014 meaning only intrathecal half-life/ECM tethering is unbuilt rather than the anti-gC1q Fab warhead \u2014 and oral small-molecule",
+            "NCT06510816, meaning only intrathecal half-life/ECM tethering is unbuilt rather than the anti-gC1q Fab warhead, and oral small-molecule",
+        ),
+        ("p=4.01e-4) \u2014 warning that high-Kp,uu", "p=4.01e-4), warning that high-Kp,uu"),
+        (
+            "PMID:25803835) \u2014 barring co-dosing with low-dose IL-2 (EALS-031) and mandating VTE thromboprophylaxis \u2014 before any high-chitinase",
+            "PMID:25803835), barring co-dosing with low-dose IL-2 (EALS-031) and mandating VTE thromboprophylaxis before any high-chitinase",
+        ),
+        ("Cys195-F/Cys194-GG \u2014 AND synucleinopathy", "Cys195-F/Cys194-GG, and synucleinopathy"),
+        ("wild-type YKT6 ALS \u2014 alongside null C9-FTD", "wild-type YKT6 ALS, alongside null C9-FTD"),
+        ("(untested \u2014 not in 107-drug library \u2014 in Bye 2025 screen)", "(untested, not in 107-drug library, in Bye 2025 screen)"),
+        ("PMID:35863521 \u2014 motivating prospective", "PMID:35863521, motivating prospective"),
+        ("PMID:39791335 \u2014 motivating prospective", "PMID:39791335, motivating prospective"),
+        ("spans three Ph1/2 programs \u2014 Disarm-lineage", "spans three Ph1/2 programs: Disarm-lineage"),
+        ("plus preclinical ASHA-624 \u2014 2026 Commun Chem", "plus preclinical ASHA-624; 2026 Commun Chem"),
+        ("log[CSF pNfH] covariates \u2014 whereas hypothetical", "log[CSF pNfH] covariates, whereas hypothetical"),
+        ("Exon 27-28 EEJ \u2014 an NMD-susceptibility", "Exon 27-28 EEJ, an NMD-susceptibility"),
+        ("pending RT-PCR) \u2014 distinct from Zeng", "pending RT-PCR), distinct from Zeng"),
+        ("PMID:27723745 \u2014 opposite phosphorylation state", "PMID:27723745; opposite phosphorylation state"),
+        ("placebo-controlled ALS RCTs \u2014 RAS-ALS", "placebo-controlled ALS RCTs: RAS-ALS"),
+        ("(PMID:9443715, N=133) \u2014 plus 1 open-label", "(PMID:9443715, N=133), plus 1 open-label"),
+        ("PMID:27589995 \u2014 motivated historically", "PMID:27589995, motivated historically"),
+        ("suppression \u2014 was randomized", "suppression, was randomized"),
+        ("(Open Targets LOEUF=0.257) \u2014 short-read mapping", "(Open Targets LOEUF=0.257); short-read mapping"),
+        ("MND-SMART, 40 mg/d TAME & MEDALS \u2014 plus 2", "MND-SMART, 40 mg/d TAME & MEDALS, plus 2"),
+        ("3 negative placebo-controlled human ALS RCTs \u2014 MND-SMART", "3 negative placebo-controlled human ALS RCTs: MND-SMART"),
+        ("tests CHIT1 knockout \u2014 check if", "tests CHIT1 knockout: check if"),
+    ):
+        s = s.replace(old_em, new_em)
+    assert "\u2014" not in s and "&mdash;" not in s, f"Unhandled em-dash in sanitize_public_prose: {s!r}"
     s = deaudit_prose(s)
     s = re.sub(r"[ \t]{2,}", " ", s)
     s = re.sub(r" *\n *", "\n", s)
