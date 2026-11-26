@@ -13,22 +13,22 @@ const GENE_ENSG = {
   AGAP2:'ENSG00000135439', AP1G2:'ENSG00000213983', ARHGEF11:'ENSG00000132694', ATG4B:'ENSG00000168397',
   BMPR1A:'ENSG00000107779', BRSK2:'ENSG00000174672', C1QA:'ENSG00000173372', C1QB:'ENSG00000173369', C1QC:'ENSG00000159189',
   C3:'ENSG00000125730', C4B:'ENSG00000224389', C5AR1:'ENSG00000197405', CAPG:'ENSG00000042493',
-  CELF5:'ENSG00000161082', CFL1:'ENSG00000172757', CHI3L1:'ENSG00000133048', CHI3L2:'ENSG00000064886',
+  CELF5:'ENSG00000161082', CFL1:'ENSG00000172757', CGAS:'ENSG00000164430', CHI3L1:'ENSG00000133048', CHI3L2:'ENSG00000064886',
   CHIT1:'ENSG00000133063', CHMP2B:'ENSG00000083937', CHMP7:'ENSG00000147457', CLK3:'ENSG00000179335',
   CLOCK:'ENSG00000134852', DAB1:'ENSG00000173406', DDB1:'ENSG00000167986', DDX1:'ENSG00000079785',
   DENR:'ENSG00000139726', DLGAP1:'ENSG00000170579', DNAJB2:'ENSG00000135924', DPP10:'ENSG00000175497',
   DPP6:'ENSG00000130226', ELK1:'ENSG00000126767', ELOC:'ENSG00000154582', ERBB4:'ENSG00000178568',
   ETV3:'ENSG00000117036', FBXL5:'ENSG00000118564', G2E3:'ENSG00000092140', GDI2:'ENSG00000057608',
-  GOSR1:'ENSG00000108587', GPNMB:'ENSG00000136235', GPR156:'ENSG00000175697', IL1RL1:'ENSG00000115602',
-  IL2RA:'ENSG00000134460', IQGAP1:'ENSG00000140575', IREB2:'ENSG00000136381', JAK1:'ENSG00000162434',
+  GOSR1:'ENSG00000108587', GPNMB:'ENSG00000136235', GPR156:'ENSG00000175697', IFNAR1:'ENSG00000142166', IL1RL1:'ENSG00000115602',
+  IL2RA:'ENSG00000134460', IKBKE:'ENSG00000263528', IQGAP1:'ENSG00000140575', IREB2:'ENSG00000136381', JAK1:'ENSG00000162434',
   JAK2:'ENSG00000096968', KALRN:'ENSG00000160145', KCND3:'ENSG00000171385', KCNQ2:'ENSG00000075043',
   KCNQ3:'ENSG00000184156', KIFC2:'ENSG00000167702', MAOB:'ENSG00000069535', MIB2:'ENSG00000197530',
-  MYO18A:'ENSG00000196535', MYOCD:'ENSG00000141052', NSF:'ENSG00000073969', PAFAH1B1:'ENSG00000007168',
+  MYO18A:'ENSG00000196535', MYOCD:'ENSG00000141052', NSF:'ENSG00000073969', OPTN:'ENSG00000123240', PAFAH1B1:'ENSG00000007168',
   PFKP:'ENSG00000067057', PIKFYVE:'ENSG00000115020', PPA2:'ENSG00000138777', PRUNE2:'ENSG00000106772',
-  PTAR1:'ENSG00000188647', PTCH1:'ENSG00000185920', PTPRT:'ENSG00000196090', SARM1:'ENSG00000004139', SCFD1:'ENSG00000092108',
+  PTAR1:'ENSG00000188647', PTCH1:'ENSG00000185920', PTPRT:'ENSG00000196090', RIPK1:'ENSG00000137275', SARM1:'ENSG00000004139', SCFD1:'ENSG00000092108',
   SEC22B:'ENSG00000265808', SLC12A5:'ENSG00000124140', SNPH:'ENSG00000101298', SRPK2:'ENSG00000135250',
-  STMN2:'ENSG00000104435', STX5:'ENSG00000162236', TENM2:'ENSG00000145934', TFRC:'ENSG00000072274', TRAPPC12:'ENSG00000171853',
-  UNC13A:'ENSG00000130477', YKT6:'ENSG00000106636', ZNF783:'ENSG00000204946'
+  STING1:'ENSG00000184584', STMN2:'ENSG00000104435', STX5:'ENSG00000162236', TBK1:'ENSG00000183735', TENM2:'ENSG00000145934', TFRC:'ENSG00000072274', TRAPPC12:'ENSG00000171853',
+  TYK2:'ENSG00000105397', UNC13A:'ENSG00000130477', VAPB:'ENSG00000124164', YKT6:'ENSG00000106636', ZNF783:'ENSG00000204946'
 };
 const CHEMBL_COMPOUNDS = new Set([
   'CHEMBL1200798','CHEMBL1201438','CHEMBL1214124','CHEMBL124363','CHEMBL1456','CHEMBL161',
@@ -43,7 +43,7 @@ function mkExtA(url, lbl){
 }
 function linkifyAcc(escapedStr, geneCtx){
   if(!escapedStr) return '';
-  return String(escapedStr).replace(ACC_TOKEN_RE, (full, pmid, pmc, doi, nct, aan, actrn, isrctn, pat, pdbPref, pdbBare, chembl, cid, ens, hgnc, mgi, omim, af, uniprot, gnomad, gse, pxd, prjna, syn, rsid, mmc) => {
+  return String(escapedStr).replace(ACC_TOKEN_RE, (full, pmid, pmc, doi, nct, aan, actrn, isrctn, pat, pdbPref, pdbBare, chembl, cid, ens, hgnc, mgi, omim, af, uniprot, gnomad, gse, pxd, prjna, syn, rsid, mmc, offset, wholeStr) => {
     if(pmid) return mkExtA('https://pubmed.ncbi.nlm.nih.gov/' + pmid + '/', full);
     if(pmc) return mkExtA('https://pmc.ncbi.nlm.nih.gov/articles/' + pmc + '/', full);
     if(doi){
@@ -81,7 +81,23 @@ function linkifyAcc(escapedStr, geneCtx){
     if(af) return mkExtA('https://alphafold.ebi.ac.uk/entry/' + af, full);
     if(uniprot) return mkExtA('https://www.uniprot.org/uniprotkb/' + uniprot.split('-')[0] + '/entry', full);
     if(gnomad){
-      const gid = GENE_ENSG[geneCtx] || '';
+      let gid = GENE_ENSG[geneCtx] || '';
+      const srcStr = String(wholeStr || ''), pos = Number(offset || 0);
+      const aft = srcStr.slice(pos + full.length, pos + full.length + 34);
+      const mAft = /^\\s+(?:MANE(?:\\s+Select)?\\s+)?([A-Z][A-Z0-9]{2,9})\\b/.exec(aft);
+      if(mAft && GENE_ENSG[mAft[1]]) gid = GENE_ENSG[mAft[1]];
+      else {
+        const preWin = srcStr.slice(Math.max(0, pos - 120), pos);
+        const sentPre = preWin.slice(Math.max(preWin.lastIndexOf('. '), preWin.lastIndexOf('\\n')) + 1);
+        const mEnsg = /\\b(ENSG\\d{11})\\b(?![\\s\\S]*\\bENSG\\d{11}\\b)/.exec(sentPre);
+        if(mEnsg) gid = mEnsg[1];
+        else {
+          const gSyms = sentPre.match(/\\b[A-Z][A-Z0-9]{2,9}\\b/g) || [];
+          for(let gi = gSyms.length - 1; gi >= 0; gi--){
+            if(GENE_ENSG[gSyms[gi]]){ gid = GENE_ENSG[gSyms[gi]]; break; }
+          }
+        }
+      }
       const gUrl = gid ? ('https://gnomad.broadinstitute.org/gene/' + gid + '?dataset=gnomad_r4') : 'https://gnomad.broadinstitute.org/';
       return mkExtA(gUrl, full);
     }

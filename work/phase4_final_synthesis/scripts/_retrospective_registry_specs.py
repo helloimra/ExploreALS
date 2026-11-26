@@ -4,13 +4,13 @@ from __future__ import annotations
 RUN_P4_003_ROW: dict[str, str] = {
     "analysis_run_id": "RUN-P4-003",
     "phase_batch": "Phase4_Final_Synthesis",
-    "script_relpath": "work/phase4_final_synthesis/scripts/03_nov2026_deep_retrospective.py;work/phase4_final_synthesis/scripts/03b_apply_nov2026_retrospective_registries.py",
-    "output_artifacts": "work/phase4_final_synthesis/cache/nov2026_retrospective_priors.json;work/phase4_final_synthesis/outputs/run_p4_003_nov2026_retrospective.json",
-    "datasets_used": "DS_CRYPTIC;DS_PDB_7ANW;DS_PDB_7DJT;DS_PDB_7NAL;DS_PDB_9TZY;DS_GENCODE_V46_COMP_GTF;DS_CONS2026",
+    "script_relpath": "work/phase4_final_synthesis/scripts/03_nov2026_deep_retrospective.py;work/phase4_final_synthesis/scripts/04_tbk1_horiuchi2026_human_divergence.py;work/phase4_final_synthesis/scripts/03b_apply_nov2026_retrospective_registries.py",
+    "output_artifacts": "work/phase4_final_synthesis/cache/nov2026_retrospective_priors.json;work/phase4_final_synthesis/outputs/run_p4_003_nov2026_retrospective.json;work/phase4_final_synthesis/outputs/run_p4_004_tbk1_human_divergence.json",
+    "datasets_used": "DS_CRYPTIC;DS_PDB_7ANW;DS_PDB_7DJT;DS_PDB_7NAL;DS_PDB_9TZY;DS_GENCODE_V46_COMP_GTF;DS_CONS2026;DS001_COUNTS;DS001_FEAT;DS_GC_REF;DS001_ONEILL;DS_GNOMAD_V41_CONSTRAINT;DS029_SPILL;DS031_ZHANG;DS_EDIN_PB;DS045_TRAUT",
     "tools_and_skills_used": "alphagenome-single-variant-analysis;alphafold-database-fetch-and-analyze;gnomad-database;clinvar-database;opentargets-database;pdb-database;biomolecular-structure-viewer;uv-python",
     "reproduced_verified": "yes",
-    "run_timestamp_utc": "2026-11-19T03:56:00Z",
-    "summary": "Deep multi-modal retrospective across S06 (near-full-length 7ANW/7DJT multidomain octamer ARM-TIR inter-protomer latch vs 7NAL NMN-bound ARM-SAM ring from an NMN/1AD-incubated preparation & 9TZY TIR-BEXi filament + Cys311 wall + gnomAD v4.1/ClinVar), C001 (MAJIQ Intron-31 retention ceiling + Keuss 2026 PMID:43015463), C022 (6-cohort TDP-43 independence + AF-P25686 + 25/25 shared-domain ClinVar P/LP), C006 (signed AlphaGenome #3 Intron-5 ISE hazard screen + PMC12672377 primer audit), C015 (Open Targets SuSiE-inf in-phase chr14q12 haplotype + AlphaGenome lineage split), and C018 (1.85A PDB 1PK6 gC1q head vs AFDB cationic CLR stalk modality split).",
+    "run_timestamp_utc": "2026-11-26T01:10:00Z",
+    "summary": "Deep multi-modal retrospective across S06 (near-full-length 7ANW/7DJT multidomain octamer ARM-TIR inter-protomer latch vs 7NAL NMN-bound ARM-SAM ring from an NMN/1AD-incubated preparation & 9TZY TIR-BEXi filament + Cys311 wall + gnomAD v4.1/ClinVar), C001 (MAJIQ Intron-31 retention ceiling + Keuss 2026 PMID:43015463), C022 (6-cohort TDP-43 independence + AF-P25686 + 25/25 shared-domain ClinVar P/LP), C006 (signed AlphaGenome #3 Intron-5 ISE hazard screen + PMC12672377 primer audit), C015 (Open Targets SuSiE-inf in-phase chr14q12 haplotype + AlphaGenome lineage split), C018 (1.85A PDB 1PK6 gC1q head vs AFDB cationic CLR stalk modality split), and C019/S09 7-cohort human ALS TBK1/cGAS-STING/IFN-I divergence (DOI:10.1186/s40478-026-02474-w; PMID:42834122; NCT05237284 PMID:42716044).",
 }
 
 NEW_EVIDENCE_ROWS: list[dict[str, str]] = [

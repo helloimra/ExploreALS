@@ -129,6 +129,7 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
     ("EALS-033", "proves"): [
         ("Phase 2a NCT04993755 (", "- Phase 2a C9-ALS/FTD Signals & HEALEY Selection: Phase 2a NCT04993755 ("),
         ("Master Protocol NCT04297683); within motor ALS cortex", "Master Protocol NCT04297683).\n- Cortical ALS-TE IFNAR2/TYK2/STAT2 Enrichment: Within motor ALS cortex"),
+        ("p=5.14e-8). Upstream LINE-1 ORF2p RT blockade", "p=5.14e-8).\n- Upstream cGAS-STING Selectivity & Neuronal TBK1/PSMB8 Sparing: Upstream LINE-1 ORF2p RT blockade"),
     ],
     ("EALS-033", "disproves"): [
         ("Primary re-analysis of O'Neill 2025", "- Cortical ALS-TE Prevalence & Unresolved Spinal Split: Primary re-analysis of O'Neill 2025"),
@@ -203,6 +204,7 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
         ("4/9 non-completers); structural/mechanistic", "4/9 non-completers).\n- Neuronal JAK2 vs. Glial JAK1/TYK2 Trade-Off: Structural/mechanistic"),
         ("and neuronal JAK2; shotgun MS CSF CXCL10", "and neuronal JAK2.\n- Left-Censored CSF CXCL10 & Null Center Comparison: Shotgun MS CSF CXCL10"),
         ("CSF glial panel; gnomAD v4.1 MANE JAK1", "CSF glial panel.\n- JAK1 Constraint & FDA Boxed Warnings: gnomAD v4.1 MANE JAK1"),
+        ("chronic dosing. Moreover, whereas complete Tbk1 deletion", "chronic dosing.\n- Neuronal TBK1–IFN-beta–PSMB8 Clearance Trade-Off & RIPK1/TBK1 Context: Whereas complete Tbk1 deletion"),
     ],
     ("EALS-026", "verdict"): [
         ("Unreported randomized Phase 2/3 outcomes", "- Unreported Clinical Trials & Underpowered Autopsy Series: Unreported randomized Phase 2/3 outcomes"),

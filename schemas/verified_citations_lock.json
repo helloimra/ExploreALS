@@ -1599,6 +1599,60 @@
       "pubdate": "2010 Dec",
       "journal": "Amyotroph Lateral Scler",
       "title": "A pilot trial of memantine and riluzole in ALS: correlation to CSF biomarkers."
+    },
+    "25700176": {
+      "first_author": "Cirulli ET",
+      "pubdate": "2015 Mar 27",
+      "journal": "Science",
+      "title": "Exome sequencing in amyotrophic lateral sclerosis identifies risk genes and pathways."
+    },
+    "25803835": {
+      "first_author": "Freischmidt A",
+      "pubdate": "2015 May",
+      "journal": "Nat Neurosci",
+      "title": "Haploinsufficiency of TBK1 causes familial ALS and fronto-temporal dementia."
+    },
+    "28453775": {
+      "first_author": "Lamore SD",
+      "pubdate": "2017 Jul 01",
+      "journal": "Toxicol Sci",
+      "title": "Deconvoluting Kinase Inhibitor Induced Cardiotoxicity."
+    },
+    "30635357": {
+      "first_author": "Brenner D",
+      "pubdate": "2019 Feb 04",
+      "journal": "J Exp Med",
+      "title": "Heterozygous Tbk1 loss has opposing effects in early and late stages of ALS in mice."
+    },
+    "32220666": {
+      "first_author": "Gerbino V",
+      "pubdate": "2020 Jun 03",
+      "journal": "Neuron",
+      "title": "The Loss of TBK1 Kinase Activity in Motor Neurons or in All Cell Types Differentially Impacts ALS Disease Progression in SOD1 Mice."
+    },
+    "33031745": {
+      "first_author": "Yu CH",
+      "pubdate": "2020 Oct 29",
+      "journal": "Cell",
+      "title": "TDP-43 Triggers Mitochondrial DNA Release via mPTP to Activate cGAS/STING in ALS."
+    },
+    "33038415": {
+      "first_author": "Sieverding K",
+      "pubdate": "2021 Jan",
+      "journal": "Exp Neurol",
+      "title": "Hemizygous deletion of Tbk1 worsens neuromuscular junction pathology in TDP-43G298S transgenic mice."
+    },
+    "42716044": {
+      "first_author": "Cudkowicz ME",
+      "pubdate": "2026 Oct",
+      "journal": "Lancet Neurol",
+      "title": "Safety, tolerability, and efficacy of RIPK1 inhibitor, SAR443820, in amyotrophic lateral sclerosis (HIMALAYA): a multicentre, randomised, double-blind, placebo-controlled, phase 2 trial."
+    },
+    "42834122": {
+      "first_author": "Sakai S",
+      "pubdate": "2026 Nov",
+      "journal": "EMBO Rep",
+      "title": "TBK1 eliminates aggregation-prone monomeric TDP-43 through an IFNβ-immunoproteasome pathway in ALS models."
     }
   },
   "ncts": {
@@ -2303,6 +2357,14 @@
     "NCT06976268": {
       "title": "A Study to Determine if BHV-8000 is Effective, Safe and Tolerable as a Treatment for Adults Living With Early Parkinson's Disease",
       "status": "RECRUITING"
+    },
+    "NCT05237284": {
+      "acronym": "HIMALAYA",
+      "title": "Phase 2 Study for SAR443820 in Participants With Amyotrophic Lateral Sclerosis (ALS)",
+      "status": "TERMINATED",
+      "conditions": [
+        "Amyotrophic Lateral Sclerosis"
+      ]
     }
   },
   "dois": {
@@ -2505,6 +2567,18 @@
       "title": "C82 A randomized, double-blind, dose-ranging study of memantine in patients with amyotrophic lateral sclerosis (22nd International Symposium on ALS/MND)",
       "journal": "Amyotroph Lateral Scler",
       "year": "2011"
+    },
+    "10.1186/s40478-026-02474-w": {
+      "title": "Complete TBK1 deletion attenuates microglial activation and slows disease progression in SOD1-ALS model mice.",
+      "type": "journal-article"
+    },
+    "10.1038/s44319-026-00953-8": {
+      "title": "TBK1 eliminates aggregation-prone monomeric TDP-43 through an IFNβ-immunoproteasome pathway in ALS models.",
+      "type": "journal-article"
+    },
+    "10.1016/S1474-4422(26)00277-2": {
+      "title": "Safety, tolerability, and efficacy of RIPK1 inhibitor, SAR443820, in amyotrophic lateral sclerosis (HIMALAYA): a multicentre, randomised, double-blind, placebo-controlled, phase 2 trial.",
+      "type": "journal-article"
     }
   }
 }

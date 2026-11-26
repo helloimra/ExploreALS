@@ -295,7 +295,7 @@ function formatNextTest(s, ctx){
   const raw = String(s).trim();
   const clauses = raw.includes('\\n')
     ? raw.split(/\\n+/).map(x => x.replace(/^\\s*(?:[-*]|\\([0-9]+\\)|[0-9]+[.)])\\s*/, '').trim()).filter(Boolean)
-    : splitTopClauses(raw, /;\\s+|,\\s+(?:then|followed by|before\\s+(?:any|advancing|initiating|executing|committing)|pairing\\s+|and\\s+testing\\s+)|\\s+\\+\\s+(?=(?:Stage\\s+[12]|dedicated|single-agent|companion|CLSI|NHP|factorial)\\b)|\\s+(?=\\([1234]\\)\\s)/);
+    : splitTopClauses(raw, /;\\s+|,\\s+(?:then|followed by|before\\s+(?:any|advancing|initiating|executing|committing)|pairing\\s+|and\\s+testing\\s+)|\\s+\\+\\s+(?=(?:Stage\\s+[12]|dedicated|single-agent|companion|CLSI|NHP|factorial)\\b)|(?:[;:,]\\s+(?:and\\s+)?|\\s+)(?=\\([1234]\\)\\s)/);
   if(clauses.length <= 1) return `<span class="leading-relaxed">${formatBulletBody(raw, ctx)}</span>`;
   return `<ul class="list-disc pl-4 space-y-1.5 mt-1.5 leading-relaxed">${clauses.map(c => `<li class="break-words">${formatBulletBody(c, ctx)}</li>`).join('')}</ul>`;
 }

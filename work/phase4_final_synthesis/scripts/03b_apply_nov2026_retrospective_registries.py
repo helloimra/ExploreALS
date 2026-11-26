@@ -20,6 +20,7 @@ from _retrospective_wave_b_specs import WAVE_B_NEW_EVIDENCE_ROWS, WAVE_B_NEW_STA
 from _retrospective_wave_c_specs import WAVE_C_NEW_EVIDENCE_ROWS, WAVE_C_NEW_STAT_SPECS  # noqa: E402
 from _retrospective_wave_d_specs import UPD_2026_11_22_01  # noqa: E402
 from _public_taxonomy import deaudit_prose  # noqa: E402
+from _retrospective_tbk1_specs import UPD_2026_11_26_01  # noqa: E402
 from _retrospective_v1_3_specs import UPD_2026_11_23_01  # noqa: E402
 from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_in_prose  # noqa: E402
 from verify_carbon_als import sha256_anchor  # noqa: E402
@@ -209,6 +210,36 @@ def main() -> None:
             "10.1016/j.cell.2024.05.058)",
             "PMID:38942014, 10.1016/j.cell.2024.05.058; crystal PDB 1PK6 1.85A gC1q head PMID:12960167 vs AFDB predicted mature CLR stalk [project sequence count: 27 mature Arg/Lys across C1QA 23-109 / C1QB 28-114 / C1QC 29-112, residue-level necessity untested] distinguishes anti-gC1q Fab from C1QA/B ASO)",
         )
+    c019_tbk1_note = (
+        " Moreover, whereas complete Tbk1 deletion on an embryonic-rescue Tnf-/- background suppressed interferon-responsive microglial [IRM]/DAM genes in SOD1G93A mice without extending male lifespan or rescuing lumbar ChAT+ MNs "
+        "(Horiuchi et al. 2026 DOI:10.1186/s40478-026-02474-w; cf. Phase 2 HIMALAYA RIPK1 inhibitor SAR443820 futility in NCT05237284 PMID:42716044, ALSFTD4 TBK1 haploinsufficiency PMID:25700176 / PMID:25803835 [gnomAD v4.1 LOEUF=0.505], and TBK1 cardiomyocyte beat toxicity PMID:28453775), "
+        "neuronal TBK1 physically senses monomeric TDP-43 to drive IFN-beta->IFNAR->PSMB8 immunoproteasome clearance in human iPSC-MNs while human ALS spinal MNs downregulate IFNAR "
+        "(Sakai et al. 2026 PMID:42834122; NYGC spinal ALS-Glia STAT2 adj_beta=-0.4635, p=6.35e-8 & RSAD2 -0.5257, p=4.01e-4) — warning that high-Kp,uu IFNAR/TYK2/JAK1 blockade "
+        "(untested on TDP-43 clearance in nuclear-TDP-43-intact Bye 2025 cultures, P=0.990) risks impairing neuronal monomeric TDP-43 turnover."
+    )
+    if "10.1186/s40478-026-02474-w" not in dm["C019"]["evidence_disproves_hypothesis"]:
+        dm["C019"]["evidence_disproves_hypothesis"] = dm["C019"]["evidence_disproves_hypothesis"].rstrip() + c019_tbk1_note
+    if "PMID:42834122" not in dm["C019"]["discriminating_next_test"]:
+        dm["C019"]["discriminating_next_test"] = dm["C019"]["discriminating_next_test"].replace(
+            "and reactive ALS-Glia co-cultures —",
+            "and reactive ALS-Glia co-cultures (co-measuring monomeric TDP-43 turnover and PSMB8 immunoproteasome activity under cytoplasmic TDP-43 stress per Sakai et al. 2026 PMID:42834122, and excluding germline TBK1 LoF carriers PMID:25700176 / PMID:25803835) —",
+        )
+    dm["C019"]["updated_at"] = "2026-11-26T01:10:00Z"
+
+    s09_tbk1_note = (
+        " Upstream LINE-1 ORF2p RT blockade also selectively targets retroelement cDNA->cGAS-STING signaling "
+        "(NYGC cortical ALS-TE vs ALS-Ox STING1 adj_beta=+0.3098, p=8.69e-4, IFI16 +0.2136, p=0.00664, CGAS +0.1264, p=0.0451 while TBK1 -0.2578, p=3.52e-12 is lower vs ALS-Ox; spinal ALS-Glia vs Control CGAS +0.4779, p=1.69e-6 & IFI16 +0.5870, p=5.35e-9; cf. TDP-43 mtDNA->cGAS-STING PMID:33031745) "
+        "while sparing cell-autonomous neuronal TBK1->IFN-beta->IFNAR->PSMB8 immunoproteasome clearance of monomeric TDP-43 "
+        "(Sakai et al. 2026 PMID:42834122; contrasting with SOD1G93A;Tbk1-/-;Tnf-/- interferon-responsive microglial [IRM] suppression in Horiuchi et al. 2026 DOI:10.1186/s40478-026-02474-w, ALSFTD4 TBK1 LoF PMID:25803835, and Phase 2 HIMALAYA RIPK1 futility NCT05237284 PMID:42716044)."
+    )
+    if "10.1186/s40478-026-02474-w" not in dm["S09"]["evidence_proves_hypothesis"]:
+        dm["S09"]["evidence_proves_hypothesis"] = dm["S09"]["evidence_proves_hypothesis"].rstrip() + s09_tbk1_note
+    if "PMID:42834122" not in dm["S09"]["discriminating_next_test"]:
+        dm["S09"]["discriminating_next_test"] = dm["S09"]["discriminating_next_test"].replace(
+            "given deucravacitinib P-gp efflux, PMID:41832177).",
+            "across both retroelement ISG suppression and neuronal TBK1->IFN-beta->PSMB8 monomeric TDP-43 clearance [Sakai et al. 2026 PMID:42834122], given deucravacitinib P-gp efflux, PMID:41832177).",
+        )
+    dm["S09"]["updated_at"] = "2026-11-26T01:10:00Z"
     _save("candidate_decisions.csv", d_cols, d_rows)
 
     # 5. subnode_dissection.csv (C015-N1/N2 SuSiE haplotype + C018-N1..N3 PDB 1PK6 head vs CLR stalk)
@@ -235,7 +266,7 @@ def main() -> None:
 
     # 6. living_evidence_updates.csv
     u_cols, u_rows = _load("living_evidence_updates.csv")
-    u_rows = [u for u in u_rows if u["update_id"] not in {"UPD-2026-11-19-01", "UPD-2026-11-20-01", "UPD-2026-11-20-02", "UPD-2026-11-21-01", "UPD-2026-11-21-02", "UPD-2026-11-21-03", "UPD-2026-11-22-01", "UPD-2026-11-23-01"}]
+    u_rows = [u for u in u_rows if u["update_id"] not in {"UPD-2026-11-19-01", "UPD-2026-11-20-01", "UPD-2026-11-20-02", "UPD-2026-11-21-01", "UPD-2026-11-21-02", "UPD-2026-11-21-03", "UPD-2026-11-22-01", "UPD-2026-11-23-01", "UPD-2026-11-26-01"}]
     for u in u_rows:
         uid = u["update_id"]
         if uid == "UPD-2026-11-18-05":
@@ -264,6 +295,7 @@ def main() -> None:
     u_rows.insert(0, dict(UPD_2026_11_19_01))
     u_rows.insert(0, dict(UPD_2026_11_22_01))
     u_rows.insert(0, dict(UPD_2026_11_23_01))
+    u_rows.insert(0, dict(UPD_2026_11_26_01))
     def _map_anchor_tok(tok: str) -> str:
         t = tok.strip()
         if t.startswith("FLAGSHIP-") and not t.startswith("FLAGSHIP-EALS-"):
