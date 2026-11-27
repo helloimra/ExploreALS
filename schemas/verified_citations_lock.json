@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.4.0",
+  "schema_version": "1.5.0",
   "description": "Deterministic live-verified bibliographic & trial registry lock enforced by scripts/verify_carbon_als.py",
   "banned_mismatched_ids": [
     "10.1016/j.stem.2018.12.005",
@@ -1737,6 +1737,150 @@
       "pubdate": "2026 Sep 18",
       "journal": "Biology (Basel)",
       "title": "Host Genetic Susceptibility and Antiviral Immunity Shape the Pathogenesis and Outcomes of Herpes Simplex Encephalitis."
+    },
+    "21107423": {
+      "first_author": "Chen Z",
+      "pubdate": "2010 Nov 25",
+      "journal": "Nature",
+      "title": "Structure and control of the actin regulatory WAVE complex."
+    },
+    "22101682": {
+      "first_author": "Logan CV",
+      "pubdate": "2011 Nov 20",
+      "journal": "Nat Genet",
+      "title": "Mutations in MEGF10, a regulator of satellite cell myogenesis, cause early onset myopathy, areflexia, respiratory distress and dysphagia (EMARDD)."
+    },
+    "28011744": {
+      "first_author": "Pasetto L",
+      "pubdate": "2017 Feb 8",
+      "journal": "J Neurosci",
+      "title": "Targeting Extracellular Cyclophilin A Reduces Neuroinflammation and Extends Survival in a Mouse Model of Amyotrophic Lateral Sclerosis."
+    },
+    "28280971": {
+      "first_author": "Tolcher AW",
+      "pubdate": "2017 Apr",
+      "journal": "Cancer Chemother Pharmacol",
+      "title": "A phase 1 study of anti-TGFbeta receptor type-II monoclonal antibody LY3022859 in patients with advanced solid tumors."
+    },
+    "29534297": {
+      "first_author": "Nakashima M",
+      "pubdate": "2018 Apr",
+      "journal": "Ann Neurol",
+      "title": "De novo hotspot variants in CYFIP2 cause early-onset epileptic encephalopathy."
+    },
+    "31883644": {
+      "first_author": "Szot JO",
+      "pubdate": "2020 Jan 2",
+      "journal": "Am J Hum Genet",
+      "title": "Bi-allelic Mutations in NADSYN1 Cause Multiple Organ Defects and Expand the Genotypic Spectrum of Congenital NAD Deficiency Disorders."
+    },
+    "31911602": {
+      "first_author": "Chuenchor W",
+      "pubdate": "2020 Jan 7",
+      "journal": "Nat Commun",
+      "title": "Different ways to transport ammonia in human and Mycobacterium tuberculosis NAD+ synthetases."
+    },
+    "34031600": {
+      "first_author": "Tian R",
+      "pubdate": "2021 Jul",
+      "journal": "Nat Neurosci",
+      "title": "Genome-wide CRISPRi/a screens in human neurons link lysosomal failure to ferroptosis."
+    },
+    "34972208": {
+      "first_author": "Pasetto L",
+      "pubdate": "2021 Dec 31",
+      "journal": "Brain",
+      "title": "Defective cyclophilin A induces TDP-43 proteinopathy: implications for amyotrophic lateral sclerosis and frontotemporal dementia."
+    },
+    "35641224": {
+      "first_author": "Imaizumi K",
+      "pubdate": "2022 May-Jun",
+      "journal": "eNeuro",
+      "title": "Pathogenic Mutation of TDP-43 Impairs RNA Processing in a Cell Type-Specific Manner: Implications for the Pathogenesis of ALS/FTLD."
+    },
+    "35953545": {
+      "first_author": "Dräger NM",
+      "pubdate": "2022 Sep",
+      "journal": "Nat Neurosci",
+      "title": "A CRISPRi/a platform in human iPSC-derived microglia uncovers regulators of disease states."
+    },
+    "36309631": {
+      "first_author": "Lee JH",
+      "pubdate": "2022 Dec",
+      "journal": "Neurochem Res",
+      "title": "Anti-neuroinflammatory Effects and Brain Pharmacokinetic Properties of Selonsertib, a Selective ASK1 Inhibitor."
+    },
+    "38357931": {
+      "first_author": "Szot JO",
+      "pubdate": "2024 Feb 15",
+      "journal": "J Clin Invest",
+      "title": "A metabolic signature for NADSYN1-dependent congenital NAD deficiency disorder."
+    },
+    "39548852": {
+      "first_author": "Dellar ER",
+      "pubdate": "2025 Mar",
+      "journal": "Ann Neurol",
+      "title": "Elevated Cerebrospinal Fluid Ubiquitin Carboxyl-Terminal Hydrolase Isozyme L1 in Asymptomatic C9orf72 Hexanucleotide Repeat Expansion Carriers."
+    },
+    "39660913": {
+      "first_author": "Xie S",
+      "pubdate": "2025 Jan",
+      "journal": "Protein Sci",
+      "title": "Molecular basis of the CYFIP2 and NCKAP1 autism-linked variants in the WAVE regulatory complex."
+    },
+    "40087396": {
+      "first_author": "Omar OMF",
+      "pubdate": "2025 May",
+      "journal": "Nat Neurosci",
+      "title": "Endothelial TDP-43 depletion disrupts core blood-brain barrier pathways in neurodegeneration."
+    },
+    "40713859": {
+      "first_author": "Miedema SSM",
+      "pubdate": "2025 Jul 25",
+      "journal": "Acta Neuropathol Commun",
+      "title": "Proteomics of the temporal cortex in semantic dementia reveals brain-region specific disruption of protein homeostasis."
+    },
+    "40737092": {
+      "first_author": "Dargan R",
+      "pubdate": "2025 Jul 19",
+      "journal": "Nucleic Acids Res",
+      "title": "Altered mRNA transport and local translation in i3Neurons with RNA-binding protein knockdown."
+    },
+    "40826370": {
+      "first_author": "Feneberg E",
+      "pubdate": "2025 Aug 18",
+      "journal": "Acta Neuropathol Commun",
+      "title": "TDP-43 pathology is associated with divergent protein profiles in ALS brain and spinal cord."
+    },
+    "41028049": {
+      "first_author": "Spiteri AG",
+      "pubdate": "2025 Sep 30",
+      "journal": "Sci Rep",
+      "title": "Proteomic analysis of brain and spinal cord tissue reveals distinct immune and mitochondrial dysfunction in amyotrophic lateral sclerosis."
+    },
+    "41803120": {
+      "first_author": "Ruf WP",
+      "pubdate": "2026 Mar 9",
+      "journal": "Nat Commun",
+      "title": "Multi-modal dissection of cell-type specific TDP-43 pathology in the motor cortex."
+    },
+    "42135847": {
+      "first_author": "Sinha IR",
+      "pubdate": "2026 May 14",
+      "journal": "Mol Neurodegener",
+      "title": "TDP-43: [GU]-ardian of the transcriptome."
+    },
+    "42509371": {
+      "first_author": "Ran X",
+      "pubdate": "2026 Sep",
+      "journal": "Nat Med",
+      "title": "Longitudinal plasma proteomics predict phenoconversion to clinically manifest ALS."
+    },
+    "40132594": {
+      "first_author": "Zelic M",
+      "pubdate": "2025 Apr 8",
+      "journal": "Immunity",
+      "title": "Single-cell transcriptomic and functional studies identify glial state changes and a role for inflammatory RIPK1 signaling in ALS pathogenesis."
     }
   },
   "ncts": {
@@ -2453,6 +2597,22 @@
     "NCT07260877": {
       "title": "A Multicenter, Randomized, Double-Blind, Placebo-Controlled, Phase 2a Study With an Open-Label Extension Evaluating the Efficacy and Safety of VENT-03 in Adult Participants With Active Cutaneous Lupus Erythematosus With or Without Systemic Lupus Erythematosus",
       "status": "ACTIVE_NOT_RECRUITING"
+    },
+    "NCT04834778": {
+      "title": "A Study of HC-5404-FU to Establish the Maximum Tolerated Dose (MTD)",
+      "status": "COMPLETED"
+    },
+    "NCT05397665": {
+      "title": "Pharmacodynamic EffIcacy and Clinical Benefit of AT 007 in Patients With Sorbitol Dehydrogenase (SORD) Deficiency",
+      "status": "COMPLETED"
+    },
+    "NCT07191912": {
+      "title": "Confirmatory Study of Govorestat in CMT-SORD",
+      "status": "WITHDRAWN"
+    },
+    "NCT07321860": {
+      "title": "Safety, Target Engagement, and Preliminary Efficacy of Galunisertib Combined With Nerandomilast in GREM2-positive ALS",
+      "status": "NOT_YET_RECRUITING"
     }
   },
   "dois": {
@@ -2578,7 +2738,7 @@
       "type": "posted-content"
     },
     "10.1101/2025.09.29.679403": {
-      "title": "Integrative multiomic analysis links TDP-43-driven splicing defects to cascading proteomic disruption of ALS/FTD pathways",
+      "title": "Integrative multiomic analysis links TDP-43-driven splicing defects to cascading proteomic disruption of ALS/FTD pathways.",
       "type": "posted-content"
     },
     "10.1111/jnc.70183": {
@@ -2691,6 +2851,46 @@
     "10.64898/2026.02.24.707791": {
       "title": "cGAS inhibition delays TDP-43-driven ALS Pathogenesis.",
       "type": "posted-content"
+    },
+    "10.1038/s41598-025-11466-0": {
+      "title": "Proteomic analysis of brain and spinal cord tissue reveals distinct immune and mitochondrial dysfunction in amyotrophic lateral sclerosis.",
+      "type": "journal-article"
+    },
+    "10.1038/s41467-019-13845-4": {
+      "title": "Different ways to transport ammonia in human and Mycobacterium tuberculosis NAD+ synthetases.",
+      "type": "journal-article"
+    },
+    "10.1038/nature09623": {
+      "title": "Structure and control of the actin regulatory WAVE complex.",
+      "type": "journal-article"
+    },
+    "10.1186/s40478-025-02077-x": {
+      "title": "Proteomics of the temporal cortex in semantic dementia reveals brain-region specific disruption of protein homeostasis.",
+      "type": "journal-article"
+    },
+    "10.1093/nar/gkaf709": {
+      "title": "Altered mRNA transport and local translation in i3Neurons with RNA-binding protein knockdown.",
+      "type": "journal-article"
+    },
+    "10.1038/s41591-026-04528-x": {
+      "title": "Longitudinal plasma proteomics predict phenoconversion to clinically manifest ALS.",
+      "type": "journal-article"
+    },
+    "10.1111/ene.70741": {
+      "title": "Protein Biomarkers in Risk and Prognosis of Amyotrophic Lateral Sclerosis.",
+      "type": "journal-article"
+    },
+    "10.1038/s41593-025-01914-5": {
+      "title": "Endothelial TDP-43 depletion disrupts core blood-brain barrier pathways in neurodegeneration.",
+      "type": "journal-article"
+    },
+    "10.1523/eneuro.0061-22.2022": {
+      "title": "Pathogenic Mutation of TDP-43 Impairs RNA Processing in a Cell Type-Specific Manner.",
+      "type": "journal-article"
+    },
+    "10.1186/s13024-026-00944-2": {
+      "title": "TDP-43: [GU]-ardian of the transcriptome.",
+      "type": "journal-article"
     }
   }
 }

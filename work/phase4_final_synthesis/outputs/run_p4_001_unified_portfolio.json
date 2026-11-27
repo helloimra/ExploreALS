@@ -1,28 +1,28 @@
 {
   "analysis_run_id": "RUN-P4-001",
-  "total_unified_candidates": 53,
+  "total_unified_candidates": 55,
   "counts_by_origin_phase": {
     "CURATED_CLINICAL_33": 33,
     "PHASE3B_DENOVO_19": 19,
-    "LIVING_EVIDENCE_INTAKE": 1
+    "LIVING_EVIDENCE_INTAKE": 3
   },
   "counts_by_decision": {
     "KEEP_CORE": 4,
-    "KEEP_EXPLORATORY_UNPROVEN": 26,
+    "KEEP_EXPLORATORY_UNPROVEN": 28,
     "RECLASSIFY_BENCHMARK_OR_BIOMARKER": 7,
     "DROP": 16
   },
   "counts_by_scientific_tier": {
     "TIER_1_ACTIONABLE_NOW": 2,
     "TIER_2_FOCUSED_GATE_FIRST": 6,
-    "TIER_3_EXPLORATORY_DISCOVERY": 21,
+    "TIER_3_EXPLORATORY_DISCOVERY": 23,
     "COMPANION_PROTOCOL_ONLY": 1,
     "BIOMARKER_BENCHMARK_ONLY": 7,
     "DROPPED_FALSIFIED_EXCLUDED": 16
   },
   "counts_by_epistemic_state": {
     "SUPPORTED": 4,
-    "UNPROVEN_UNTESTED": 26,
+    "UNPROVEN_UNTESTED": 28,
     "ESTABLISHED_BENCHMARK": 7,
     "FALSIFIED_CLINICAL": 9,
     "FALSIFIED_PK_SAFETY": 7
@@ -43,7 +43,7 @@
       "DROPPED_FALSIFIED_EXCLUDED": 4
     },
     "LIVING_EVIDENCE_INTAKE": {
-      "TIER_3_EXPLORATORY_DISCOVERY": 1
+      "TIER_3_EXPLORATORY_DISCOVERY": 3
     }
   },
   "explore_tier_to_carbon_decision": {
@@ -771,13 +771,13 @@
     }
   },
   "registry_sha12": {
-    "candidate_accessions": "91bcc92c9c45",
-    "phase4_unified_portfolio": "b9bd1aad5388",
+    "candidate_accessions": "f9260e5c0644",
+    "phase4_unified_portfolio": "c7f0e4a1938c",
     "phase4_unified_cis_intervals": "d411b593d372",
     "phase3_sso_offtarget_audit": "84fbbcd5b9e2",
     "phase3_execution_readiness": "e51564f37ac1",
     "phase3b_denovo_candidates": "1274d48ca47d",
     "phase3b_denovo_sso_intervals": "d7477c8657b0",
-    "living_evidence_candidates": "f366bfd57232"
+    "living_evidence_candidates": "4f256660a890"
   }
 }

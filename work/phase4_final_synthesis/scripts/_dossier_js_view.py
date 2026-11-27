@@ -37,6 +37,7 @@ const ENUM_LABELS = {
   MEASURED_HUMAN_RCT_SUBGROUP: 'Human ALS RCT Subgroup',
   MEASURED_C9FTD_FRACTION_PROTEOMICS: 'Human C9-FTD Fraction Proteomics',
   MEASURED_HUMAN_SPATIAL_OR_SNRNA: 'Human Spatial / snRNA-seq',
+  MEASURED_HUMAN_CNS_PROTEOMICS_AND_SPLICING: 'Human CNS Proteomics + Splicing',
   MEASURED_HUMAN_CSF_PROTEOMICS: 'Antemortem Human CSF Proteomics',
   MEASURED_HUMAN_PK_AND_IPSC_SCREEN: 'Human PK / Patient iPSC-MN Screen',
   MEASURED_HUMAN_PK_AND_SAFETY: 'Human PK / Regulatory Safety',
@@ -126,6 +127,8 @@ const HURDLE_TOK = {
   MS2:'MS2', TMTPRO:'TMTpro', PSER3:'pSer3', CFL1:'CFL1', DPP6:'DPP6', DPP10:'DPP10',
   RBC:'RBC', WBC:'WBC', LP:'LP', QC:'QC', RS3831317:'rs3831317', AD:'AD',
   SPHINGOLIPID:'sphingolipid', SCREENING:'screening', SAFEGUARD:'safeguard', SPTLC1:'SPTLC1', SPTLC2:'SPTLC2',
+  INTRON15:'Intron-15', INEURON:'iNeuron', NAMPT:'NAMPT', NMNAT2:'NMNAT2', NMN:'NMN', NAD:'NAD+', NMD:'NMD',
+  CYFIP1:'CYFIP1', CYFIP2:'CYFIP2', DEE65:'DEE65', WRC:'WRC', NADSYN1:'NADSYN1', LONGREAD:'long-read',
 };
 function humanizeEnum(s){
   if(!s || s === 'NONE') return 'None';
@@ -170,10 +173,13 @@ function formatHurdle(code){
     .replace(/POST_QRL201/g, 'Post-QRL-201')
     .replace(/ALS_GLIA/g, 'ALS-Glia')
     .replace(/AA324_328/g, 'aa 324-328 SKECF')
-    .replace(/Q48_TO_Q72H/g, 'q48h-q72h');
+    .replace(/Q48_TO_Q72H/g, 'q48h-q72h')
+    .replace(/NAMPT_NMNAT2/g, 'NAMPT->NMNAT2')
+    .replace(/NMN_NAD/g, 'NMN/NAD+')
+    .replace(/NMD_BLOCKED/g, 'NMD-blocked');
   const words = pre.split('_').filter(Boolean).map(w => {
     if(HURDLE_TOK[w]) return HURDLE_TOK[w];
-    if(/^(#|<=|>=|<|>|-0\\.|[0-9]|EALS-|pLI=|Chronos=|factorial|ICH|independent|Pre-|Post-|ALS-|non-|aa |\\[Fe)/.test(w)) return w;
+    if(/^(#|<=|>=|<|>|-0\\.|[0-9]|EALS-|pLI=|Chronos=|factorial|ICH|independent|Pre-|Post-|ALS-|non-|aa |\\[Fe|NAMPT->|NMN\\/|NMD-)/.test(w)) return w;
     if(/^RS[0-9]+$/.test(w)) return w.toLowerCase();
     return w.toLowerCase();
   });
@@ -728,12 +734,16 @@ function getFilteredDossierList(){
 }
 
 function renderDossierSidebar(){
+  const nT12 = DATA_PORT.filter(r => r.tier === 'TIER_1_ACTIONABLE_NOW' || r.tier === 'TIER_2_FOCUSED_GATE_FIRST').length;
+  const nT3 = DATA_PORT.filter(r => r.tier === 'TIER_3_EXPLORATORY_DISCOVERY').length;
+  const nBio = DATA_PORT.filter(r => r.tier === 'BIOMARKER_BENCHMARK_ONLY' || r.tier === 'COMPANION_PROTOCOL_ONLY').length;
+  const nDrop = DATA_PORT.filter(r => r.tier === 'DROPPED_FALSIFIED_EXCLUDED').length;
   const sliceDefs = [
     ['ALL', 'All'],
-    ['T12', 'T1/2 (8)'],
-    ['WATCH', 'T3 (21)'],
-    ['BIO', 'Bio & Calib (8)'],
-    ['DROP', 'Falsified (16)'],
+    ['T12', `T1/2 (${nT12})`],
+    ['WATCH', `T3 (${nT3})`],
+    ['BIO', `Bio & Calib (${nBio})`],
+    ['DROP', `Falsified (${nDrop})`],
   ];
   const sBar = document.getElementById('d-slice-bar');
   if(sBar){
@@ -937,7 +947,7 @@ function renderDossierMain(){
     box.innerHTML = `<div id="sec-overview" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-4 space-y-3">
       <div class="flex items-start justify-between gap-2 flex-wrap border-b border-[var(--card-border)] pb-2.5">
         <div class="min-w-0">
-          <div class="flex items-center gap-2 flex-wrap"><span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] font-mono font-bold text-xs" title="Translational Priority Rank #${r.rk}/53 · Genetic & Pathology Evidence Rank #${r.brk}/53">Priority #${r.rk}/53 (Evidence #${r.brk}) &middot; ${esc(r.id)}</span> ${decBadge(r.dec, r.id)} <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span> ${crowdPill}</div>
+          <div class="flex items-center gap-2 flex-wrap"><span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--border)] font-mono font-bold text-xs" title="Translational Priority Rank #${r.rk}/55 · Genetic & Pathology Evidence Rank #${r.brk}/55">Priority #${r.rk}/55 (Evidence #${r.brk}) &middot; ${esc(r.id)}</span> ${decBadge(r.dec, r.id)} <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span> ${crowdPill}</div>
           <h2 class="text-base font-bold mt-1.5 break-words">${esc(r.name)}: <span class="font-normal text-[var(--muted-foreground)]">${escLink(s ? s.sub : humanizeEnum(r.sub), r.id)}</span></h2>
           <div class="text-xs font-mono text-[var(--muted-foreground)] mt-0.5">${!isDrop && r.trl !== 'PROTOCOL_COMPANION_NA' ? esc(humanizeEnum(r.trl)) + ' &middot; ' : ''}${esc(humanizeEnum(r.basis))}${gPills?' &middot; '+gPills:''}</div>
         </div>
@@ -1002,7 +1012,7 @@ function renderDossierMain(){
       <div class="flex flex-wrap items-start justify-between gap-2 border-b border-[var(--card-border)] pb-2.5">
         <div class="min-w-0">
           <div class="flex flex-wrap items-center gap-2">
-            <span class="px-2 py-0.5 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-bold text-xs" title="Translational Priority Rank #${r.rk}/53 · Genetic & Pathology Evidence Rank #${r.brk}/53">Priority #${r.rk}/53 (Evidence #${r.brk}) &middot; ${esc(r.id)}</span>
+            <span class="px-2 py-0.5 rounded bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-bold text-xs" title="Translational Priority Rank #${r.rk}/55 · Genetic & Pathology Evidence Rank #${r.brk}/55">Priority #${r.rk}/55 (Evidence #${r.brk}) &middot; ${esc(r.id)}</span>
             ${decBadge(r.dec, r.id)}
             <span class="px-2 py-0.5 rounded border border-[var(--border)] font-medium text-xs">${esc(humanizeEnum(r.tier))}</span>
             ${(r.crowd && !r.crowd.startsWith('N/A')) ? `<span class="px-2 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">${esc(r.crowd)}</span>` : ''}

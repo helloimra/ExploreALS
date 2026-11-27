@@ -154,7 +154,7 @@ function renderUpdatesLog(){
   feed.innerHTML = rows.length ? rows.map(u => {
     const gCtx = u.ids.find(x => x !== 'PORTFOLIO_WIDE' && !x.includes('.')) || 'EALS-030';
     const makeIdPill = aid => {
-      if(aid === 'PORTFOLIO_WIDE') return '<span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">All 53 Hypotheses</span>';
+      if(aid === 'PORTFOLIO_WIDE') return '<span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">All 55 Hypotheses</span>';
       if(aid.includes('.')){
         const sn = DATA_SUB.find(x => x.id === aid);
         return `<button type="button" data-open-dossier="${esc(aid)}" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono font-semibold text-xs text-[var(--link)] cursor-pointer">${sn ? esc(sn.gene) + ' &middot; ' : ''}${esc(aid)} &rarr;</button>`;
@@ -318,8 +318,8 @@ function shortMod(s){
     .replace(/^Reference Benchmark:\\s*/, '')
     .replace(/\\bchr[0-9XY]+:[0-9.\\-+()_A-Za-z]+/g, '')
     .replace(/\\([^)]*\\)/g, '');
-  fm = fm.split(/\\s+(?:Promoted|Exon-5\\s+Inclusion|Promoting|skipping|blocking|pending|across|inside|in\\s+unstratified|with|at|gating|evaluating|&\\s+dendritic-loss|vs\\b)/i)[0];
-  fm = fm.replace(/\\s{2,}/g, ' ').replace(/^[,;:\\s-]+|[,;:\\s-]+$/g, '');
+  fm = fm.split(/\\s+(?:Promoted|Exon-5\\s+Inclusion|Promoting|skipping|blocking|pending|across|inside|in\\s+unstratified|with|at|gating|evaluating|&\\s+dendritic-loss|vs\\b|or\\s+Preiss-Handler|and\\s+Synaptic)/i)[0];
+  fm = fm.replace(/\\bNAD\\b(?!\\+)/g, 'NAD+').replace(/\\s{2,}/g, ' ').replace(/^[,;:\\s-]+|[,;:\\s-]+$/g, '');
   if(tag && !fm.includes(leadM[1])) fm += tag;
   return fm;
 }
@@ -471,7 +471,7 @@ function renderDetail(selHidden=false){
   lastSelHidden = selHidden;
   const r = DATA_PORT.find(x=>x.id===selectedId) || DATA_PORT[0];
   const hiddenBanner = selHidden
-    ? `<div class="p-2 rounded bg-[var(--background)] border border-dashed border-[var(--warning)] flex items-center justify-between gap-2 text-xs"><span class="text-[var(--warning)] font-mono">Pinned #${r.rk} ${esc(r.id)} is outside active filter</span><button type="button" data-reset-filters="1" class="text-[var(--link)] underline font-mono cursor-pointer shrink-0">Show all (53)</button></div>`
+    ? `<div class="p-2 rounded bg-[var(--background)] border border-dashed border-[var(--warning)] flex items-center justify-between gap-2 text-xs"><span class="text-[var(--warning)] font-mono">Pinned #${r.rk} ${esc(r.id)} is outside active filter</span><button type="button" data-reset-filters="1" class="text-[var(--link)] underline font-mono cursor-pointer shrink-0">Show all (55)</button></div>`
     : '';
   const w = DATA_MONOGRAPHS[r.id];
   const s = (typeof DATA_SUM !== 'undefined' && DATA_SUM[r.id]) ? DATA_SUM[r.id] : null;
@@ -538,7 +538,7 @@ function renderDetail(selHidden=false){
   const updDetailBtn = candUpds.length
     ? `<button type="button" data-jump-updates="${esc(r.id)}" class="px-2 py-1 rounded border border-[var(--primary)] text-[var(--primary)] font-mono text-xs shrink-0 cursor-pointer" title="View living research updates for ${esc(r.id)}">&#8634; ${candUpds.length}</button>`
     : '';
-  const crowdChip = (r.crowd && !r.crowd.startsWith('N/A')) ? `<span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)] whitespace-nowrap">${esc(r.crowd)}</span>` : '';
+  const crowdChip = (r.crowd && !r.crowd.startsWith('N/A')) ? `<span class="inline-block px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)] break-words">${escLink(r.crowd, r.id)}</span>` : '';
   const prevBody = document.getElementById('p-detail-body');
   const keepScroll = (prevBody && lastDetailCandId === r.id) ? prevBody.scrollTop : 0;
   lastDetailCandId = r.id;

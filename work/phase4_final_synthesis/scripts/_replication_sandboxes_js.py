@@ -206,9 +206,9 @@ function exportRegistryBlob(which){
     }))]
   };
   if(which === 'json_all'){
-    const outObj = {version:'1.4.0'};
+    const outObj = {version:'1.5.0'};
     Object.keys(builders).forEach(k => { outObj[k] = builders[k][1](); });
-    downloadBlob('exploreals_v1_4_provenance_bundle.json', 'application/json', JSON.stringify(outObj, null, 2));
+    downloadBlob('exploreals_v1_5_provenance_bundle.json', 'application/json', JSON.stringify(outObj, null, 2));
     return;
   }
   const hit = builders[which];

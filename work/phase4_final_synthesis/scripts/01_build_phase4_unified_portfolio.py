@@ -294,8 +294,8 @@ def main() -> None:
         "output_artifacts": "registries/candidate_accessions.csv;registries/phase4_unified_portfolio.csv;registries/phase4_unified_cis_intervals.csv;work/phase4_final_synthesis/outputs/run_p4_001_unified_portfolio.json",
         "datasets_used": "DS001_COUNTS;DS001_META;DS001_ONEILL;DS_GENCODE_V46_COMP_GTF;DS_GNOMAD_V41_CONSTRAINT",
         "tools_and_skills_used": "gtex-database;opentargets-database;gnomad-database;tooluniverse-gene-liability;scripts.phase4_gates;uv-python",
-        "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-26T09:15:00Z",
-        "summary": "Unified all 53 ALS hypotheses (33 curated clinical/genetic/pathology programs + 19 systematic multi-omic screen nominations + 1 living-evidence molecular target intake), 18 subunit/comparator dissections, and 28 coordinate-only GRCh38 cis-regulatory intervals under pure scientific actionability & causal evidence basis with CELF5 NYGC/GTEx/liability profile and Phase 3A dossier sync.",
+        "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-27T18:10:00Z",
+        "summary": "Unified all 55 ALS hypotheses (33 curated clinical/genetic/pathology programs + 19 systematic multi-omic screen nominations + 3 living-evidence single-gene additions), 18 subunit/comparator dissections, and 28 coordinate-only GRCh38 cis-regulatory intervals under pure scientific actionability & causal evidence basis with CELF5 NYGC/GTEx/liability profile and Phase 3A dossier sync.",
     }
     runs = (
         [p4_run if r["analysis_run_id"] == "RUN-P4-001" else r for r in runs]

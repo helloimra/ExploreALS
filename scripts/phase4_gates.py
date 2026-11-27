@@ -113,16 +113,16 @@ def verify_phase4_gates(
 
     exp_pids = set(dec_map) | set(p3b_map) | set(liv_map)
     exp_all_legs = exp_pids | set(sub_map)
-    if len(acc_rows) != 71 or {r["legacy_id"] for r in acc_rows} != exp_all_legs or len({r["accession_id"] for r in acc_rows}) != 71:
-        errors.append("candidate_accessions.csv must be an exact 71-row bijection over 53 candidates + 18 subunits")
+    if len(acc_rows) != 73 or {r["legacy_id"] for r in acc_rows} != exp_all_legs or len({r["accession_id"] for r in acc_rows}) != 73:
+        errors.append("candidate_accessions.csv must be an exact 73-row bijection over 55 candidates + 18 subunits")
     for ar in acc_rows:
         if ar["accession_id"] != legacy_to_accession(ar["legacy_id"]) or accession_to_legacy(ar["accession_id"]) != ar["legacy_id"]:
             errors.append(f"candidate_accessions.csv non-canonical mapping {ar['accession_id']} <-> {ar['legacy_id']}")
     got_pids = [r["portfolio_id"] for r in port_rows]
     if len(got_pids) != len(set(got_pids)) or set(got_pids) != exp_pids:
-        errors.append(f"phase4_unified_portfolio.csv portfolio_id set ({len(got_pids)}) != disjoint union of 33 Curated + 19 Phase 3B + 1 Living Intake ({len(exp_pids)})")
+        errors.append(f"phase4_unified_portfolio.csv portfolio_id set ({len(got_pids)}) != disjoint union of 33 Curated + 19 Phase 3B + 3 Living Intake ({len(exp_pids)})")
     if sorted(int(r["unified_rank"]) for r in port_rows) != list(range(1, len(port_rows) + 1)):
-        errors.append("phase4_unified_portfolio.csv unified_rank is not contiguous 1..53")
+        errors.append("phase4_unified_portfolio.csv unified_rank is not contiguous 1..55")
 
     exp_ivs = set(ot3a_map) | set(sso3b_map)
     got_ivs = [r["interval_id"] for r in cis_rows]
@@ -194,7 +194,7 @@ def verify_phase4_gates(
                 errors.append(f"{pid}: lead_cis_interval ({r['lead_cis_interval_id']},{r['lead_offtarget_safety_status']}) != {exp_lead}")
             if mode == "full" and pid in dec_map:
                 md_txt = (carbon_root / "reports" / "candidates" / f"{pid}.md").read_text(encoding="utf-8")
-                if f"accession_id = {r['accession_id']}" not in md_txt or f"unified_rank = #{r['unified_rank']}/53" not in md_txt or f"scientific_actionability_tier = {r['scientific_actionability_tier']}" not in md_txt:
+                if f"accession_id = {r['accession_id']}" not in md_txt or f"unified_rank = #{r['unified_rank']}/55" not in md_txt or f"scientific_actionability_tier = {r['scientific_actionability_tier']}" not in md_txt:
                     errors.append(f"reports/candidates/{pid}.md out of sync with phase4_unified_portfolio.csv")
                 if pid in rd_map and f"primary_modality_specific = {rd_map[pid]['primary_modality_specific']}" not in md_txt:
                     errors.append(f"reports/candidates/{pid}.md missing Phase 3A primary_modality_specific sync")
@@ -265,7 +265,7 @@ def verify_phase4_gates(
                             errors.append(f"reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md L{sln_i} unbalanced parens in table cell: {scell.strip()!r}")
 
         cff_fp = carbon_root / "CITATION.cff"
-        cff_ver, exp_json_bundle = "1.4.0", "exploreals_v1_4_provenance_bundle.json"
+        cff_ver, exp_json_bundle = "1.5.0", "exploreals_v1_5_provenance_bundle.json"
         if cff_fp.is_file():
             m_cv = re.search(r'^version:\s*"(\d+)\.(\d+)\.(\d+)"', cff_fp.read_text(encoding="utf-8"), re.M)
             if m_cv:
@@ -332,6 +332,7 @@ def verify_phase4_gates(
                 "assert_contrast_pair enforced", "in HERV-K+ ALS", "slowing vs historical controls",
                 "Updated Nov 2026 (v1.2.4)", "Updated Nov 2026 (v1.2.6)", "Updated Nov 2026 (v1.2.8)", "Updated Nov 2026 (v1.2.9)", "ExploreALS v1.2",
                 "Updated Nov 2026 (v1.3.0)", "ExploreALS v1.3", "202 / 202", "1. Triage Table (52)", "2. Candidate Reports (52)",
+                "Updated Nov 2026 (v1.4.0)", "ExploreALS v1.4 ", "204 / 204", "1. Triage Table (53)", "2. Candidate Reports (53)",
                 "Audited GRCh38", "programmatically audited", "Auditing provenance from",
                 "199 / 199", "199 Evidence", "Phase 3 RAS-ALS",
                 "Ryberg et al. 2003 J Neurochem", "deaths 49/175", "8.94x",
@@ -341,14 +342,15 @@ def verify_phase4_gates(
                 if banned in htxt:
                     errors.append(f"Dossier Schema 3.0 regression in {lbl}: found banned string '{banned}'")
             for req_str in (
-                "ExploreALS v1.4", "Ricardo Agoga", "helloimra@proton.me", "github.com/helloimra/ExploreALS",
+                "ExploreALS v1.5", "Ricardo Agoga", "helloimra@proton.me", "github.com/helloimra/ExploreALS",
                 "Not Medical Advice", "AI-Assisted Methodology",
                 "Sort: Translational Priority Rank", "Sort: Genetic &amp; Pathology Evidence",
                 "Human RCT / Genetics", "Human Cohort / PK-PD",
                 "In Vitro / 3D or Small-N", "Model / Heuristic Prior", "BioVendor",
                 "AF-Q7L622-F1", "NIH GTEx (v8 / v10)", "N/A (SOC / PD Benchmark)", "Rank &amp; Triage Key:", "Study Categories:",
-                "Updated Nov 2026 (v1.4.0)", "204 / 204", "UPD-2026-11-23-01", "UPD-2026-11-26-02",
-                "TDP-43 Cryptic Splicing &amp; Polyadenylation (12)",
+                "Updated Nov 2026 (v1.5.0)", "208 / 208", "UPD-2026-11-23-01", "UPD-2026-11-26-02",
+                "UPD-2026-11-27-01", "UPD-2026-11-27-02",
+                "TDP-43 Cryptic Splicing &amp; Polyadenylation (14)",
                 "Antemortem CSF Proteomics &amp; Physiology (6)",
                 "Patient iPSC-MN Phenotypic Screen (11)",
                 "CHEMBL1201438", "ENST00000311734.6", "102343270-102346100(+)", "LOEUF = 1.143",
@@ -357,13 +359,14 @@ def verify_phase4_gates(
                 "const DATA_NYGC_META =", "const DATA_FUNNEL =", "const DATA_DROPS =", "const DATA_SUM =",
                 "const DATA_LENSES =", "const DATA_CONTRASTS =",
                 "const DATA_RUNS =", "const DATA_DATASETS =", "const DATA_FORMULAS =", "const DATA_OVERLAP =",
-                "1. Triage Table (53)", "2. Candidate Reports (53)",
+                "1. Triage Table (55)", "2. Candidate Reports (55)",
                 "3. Splice Windows (28)", "4. Replication", 'id="rep-dag-box"', 'id="sandbox-drawer"',
-                "Subunit &amp; Selectivity", "204 / 204 (100%) 64-char SHA-256",
+                "Subunit &amp; Selectivity", "208 / 208 (100%) 64-char SHA-256",
                 "Monograph &rarr;", "Dossier &rarr;", "Structured Triage Dossier",
                 "Methodology &amp; Decision Guide", "GENCODE v46 Off-Target Alignment Screen", "Therapeutic Modality",
                 "https://alphafold.ebi.ac.uk/entry/", "https://www.informatics.jax.org/marker/MGI:",
-                "PMID:40354799", "PMID:37267913", "'EALS-016':'ENSG00000118564'", "'EALS-053':'ENSG00000164430'", "FLAGSHIP-EALS-030",
+                "PMID:40354799", "PMID:37267913", "'EALS-016':'ENSG00000118564'", "'EALS-053':'ENSG00000164430'",
+                "'EALS-054':'ENSG00000172890'", "'EALS-055':'ENSG00000055163'", "FLAGSHIP-EALS-030",
                 "resolveCandidateId", "matchCandidateQuery",
                 "Secreted Decoy sST2 vs. Membrane ST2L", 'role="tabpanel"',
                 "md:grid-cols-[268px_minmax(0,1fr)]",

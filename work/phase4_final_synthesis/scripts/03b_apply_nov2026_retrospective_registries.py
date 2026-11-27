@@ -21,6 +21,8 @@ from _retrospective_wave_c_specs import WAVE_C_NEW_EVIDENCE_ROWS, WAVE_C_NEW_STA
 from _retrospective_wave_d_specs import UPD_2026_11_22_01  # noqa: E402
 from _living_intake_eals053_evidence_specs import LIVING_STAT_SPECS, UPD_2026_11_26_02  # noqa: E402
 from _living_intake_eals053_specs import RUN_P4_005_ROW  # noqa: E402
+from _living_intake_v15_evidence_specs import LIVING_V15_STAT_SPECS, UPD_2026_11_27_01, UPD_2026_11_27_02  # noqa: E402
+from _living_intake_v15_specs import RUN_P4_006_ROW  # noqa: E402
 from _public_taxonomy import deaudit_prose  # noqa: E402
 from _retrospective_tbk1_specs import UPD_2026_11_26_01  # noqa: E402
 from _retrospective_v1_3_specs import UPD_2026_11_23_01  # noqa: E402
@@ -28,7 +30,7 @@ from carbon_als.accessions import legacy_to_accession, translate_legacy_tokens_i
 from verify_carbon_als import sha256_anchor  # noqa: E402
 
 ALL_NEW_EVIDENCE_ROWS = [*NEW_EVIDENCE_ROWS, *WAVE_B_NEW_EVIDENCE_ROWS, *WAVE_C_NEW_EVIDENCE_ROWS]
-ALL_NEW_STAT_SPECS = [*NEW_STAT_SPECS, *WAVE_B_NEW_STAT_SPECS, *WAVE_C_NEW_STAT_SPECS, *LIVING_STAT_SPECS]
+ALL_NEW_STAT_SPECS = [*NEW_STAT_SPECS, *WAVE_B_NEW_STAT_SPECS, *WAVE_C_NEW_STAT_SPECS, *LIVING_STAT_SPECS, *LIVING_V15_STAT_SPECS]
 
 TS = "2026-11-19T03:56:00Z"
 
@@ -54,15 +56,24 @@ def _append_ev(cur: str, new_eid: str) -> str:
 
 
 def main() -> None:
-    # 1. analysis_runs.csv (insert RUN-P4-003 and RUN-P4-005 right before RUN-P4-001)
+    # 1. analysis_runs.csv (insert RUN-P4-003, RUN-P4-005, and RUN-P4-006 right before RUN-P4-001)
     r_cols, r_rows = _load("analysis_runs.csv")
-    r_rows = [r for r in r_rows if r["analysis_run_id"] not in {"RUN-P4-003", "RUN-P4-005"}]
+    r_rows = [r for r in r_rows if r["analysis_run_id"] not in {"RUN-P4-003", "RUN-P4-005", "RUN-P4-006"}]
     idx_p4 = next((i for i, r in enumerate(r_rows) if r["analysis_run_id"] == "RUN-P4-001"), len(r_rows))
+    r_rows.insert(idx_p4, dict(RUN_P4_006_ROW))
     r_rows.insert(idx_p4, dict(RUN_P4_005_ROW))
     r_rows.insert(idx_p4, dict(RUN_P4_003_ROW))
     for r in r_rows:
         if r["analysis_run_id"] == "RUN-P4-002":
-            r["summary"] = r["summary"].replace("188/188", "204/204").replace("194/194", "204/204").replace("197/197", "204/204").replace("199/199", "204/204").replace("202/202", "204/204")
+            r["summary"] = (
+                r["summary"]
+                .replace("188/188", "208/208")
+                .replace("194/194", "208/208")
+                .replace("197/197", "208/208")
+                .replace("199/199", "208/208")
+                .replace("202/202", "208/208")
+                .replace("204/204", "208/208")
+            )
         elif r["analysis_run_id"] == "RUN-P2-T3-002":
             r["run_timestamp_utc"] = "2026-11-20T00:05:00Z"
             r["summary"] = (
@@ -270,7 +281,7 @@ def main() -> None:
 
     # 6. living_evidence_updates.csv
     u_cols, u_rows = _load("living_evidence_updates.csv")
-    u_rows = [u for u in u_rows if u["update_id"] not in {"UPD-2026-11-19-01", "UPD-2026-11-20-01", "UPD-2026-11-20-02", "UPD-2026-11-21-01", "UPD-2026-11-21-02", "UPD-2026-11-21-03", "UPD-2026-11-22-01", "UPD-2026-11-23-01", "UPD-2026-11-26-01", "UPD-2026-11-26-02"}]
+    u_rows = [u for u in u_rows if u["update_id"] not in {"UPD-2026-11-19-01", "UPD-2026-11-20-01", "UPD-2026-11-20-02", "UPD-2026-11-21-01", "UPD-2026-11-21-02", "UPD-2026-11-21-03", "UPD-2026-11-22-01", "UPD-2026-11-23-01", "UPD-2026-11-26-01", "UPD-2026-11-26-02", "UPD-2026-11-27-01", "UPD-2026-11-27-02"}]
     for u in u_rows:
         uid = u["update_id"]
         if uid == "UPD-2026-11-18-05":
@@ -301,6 +312,8 @@ def main() -> None:
     u_rows.insert(0, dict(UPD_2026_11_23_01))
     u_rows.insert(0, dict(UPD_2026_11_26_01))
     u_rows.insert(0, dict(UPD_2026_11_26_02))
+    u_rows.insert(0, dict(UPD_2026_11_27_01))
+    u_rows.insert(0, dict(UPD_2026_11_27_02))
     def _map_anchor_tok(tok: str) -> str:
         t = tok.strip()
         if t.startswith("FLAGSHIP-") and not t.startswith("FLAGSHIP-EALS-"):

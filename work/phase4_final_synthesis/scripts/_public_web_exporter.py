@@ -27,7 +27,7 @@ THEME_HEAD_INIT = (
     '<meta name="viewport" content="width=device-width, initial-scale=1.0" />\n'
     '  <meta name="color-scheme" content="light dark" />\n'
     '  <meta name="author" content="Ricardo Agoga" />\n'
-    '  <meta name="description" content="ExploreALS v1.4: Unified 53-Hypothesis ALS Therapeutic &amp; Biomarker Triage, '
+    '  <meta name="description" content="ExploreALS v1.5: Unified 55-Hypothesis ALS Therapeutic &amp; Biomarker Triage, '
     '18 Subunit Dissections, 28 GRCh38 Cis-Regulatory Target Windows, and Open Computational Replication Package." />\n'
     "  <script>window.PUBLIC_WEB_EXPORT=true;(function(){try{var t=localStorage.getItem('exploreals-theme');"
     "if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(_e){}})();</script>"
@@ -75,15 +75,15 @@ THEME_BODY_JS = """
 })();
 """
 
-GITHUB_README_MD = """# ExploreALS v1.4: Unified ALS Therapeutic & Genetic Target Portfolio Explorer + Computational Replication Package
+GITHUB_README_MD = """# ExploreALS v1.5: Unified ALS Therapeutic & Genetic Target Portfolio Explorer + Computational Replication Package
 
 **Live Interactive Explorer (5 Views):** [https://helloimra.github.io/ExploreALS/](https://helloimra.github.io/ExploreALS/)
 **Author:** Ricardo Agoga · [helloimra@proton.me](mailto:helloimra@proton.me) · [github.com/helloimra/ExploreALS](https://github.com/helloimra/ExploreALS)
 
 ## Overview
-`ExploreALS v1.4` is an independent computational triage resource evaluating **53 ALS therapeutic and biomarker hypotheses** (`EALS-001`–`EALS-053` across Mendelian/GWAS genetics, TDP-43 cryptic splicing & polyadenylation, human CNS spatial/snRNA/subcellular omics, antemortem CSF proteomics & physiology, clinical trial subgroups, and patient iPSC-MN phenotypic screening), **18 subunit & selectivity dissections** (`EALS-014.1`–`EALS-023.6` across 5 multi-gene loci/complexes: `EALS-014`, `EALS-015`, `EALS-017`, `EALS-018`, `EALS-023`), and **28 1-based GRCh38 Cis-Regulatory Target Windows** evaluated against `254,070` GENCODE v46 transcripts.
+`ExploreALS v1.5` is an independent computational triage resource evaluating **55 ALS therapeutic and biomarker hypotheses** (`EALS-001`–`EALS-055` across Mendelian/GWAS genetics, TDP-43 cryptic splicing & polyadenylation, human CNS spatial/snRNA/subcellular omics, antemortem CSF proteomics & physiology, clinical trial subgroups, and patient iPSC-MN phenotypic screening), **18 subunit & selectivity dissections** (`EALS-014.1`–`EALS-023.6` across 5 multi-gene loci/complexes: `EALS-014`, `EALS-015`, `EALS-017`, `EALS-018`, `EALS-023`), and **28 1-based GRCh38 Cis-Regulatory Target Windows** evaluated against `254,070` GENCODE v46 transcripts.
 
-**Evidence base:** `43` open-access biomedical datasets & reference maps (`41` external accessions + `2` repo-bundled reference maps: `21` human tissue/CSF/iPSC/in-vitro cohort & assay files, `15` 3D structure entries, `7` genome/feature/constraint references; published tables/counts, zero new wet-lab data). The cohort data resolves into **`8` participant-overlap and donor-accounting groups** ([`cohort_overlap_map.csv`](registries/cohort_overlap_map.csv)):
+**Evidence base:** `44` open-access biomedical datasets & reference maps (`42` external accessions + `2` repo-bundled reference maps: `21` human tissue/CSF/iPSC/in-vitro cohort & assay files, `16` 3D structure entries, `7` genome/feature/constraint references; published tables/counts, zero new wet-lab data). The cohort data resolves into **`8` participant-overlap and donor-accounting groups** ([`cohort_overlap_map.csv`](registries/cohort_overlap_map.csv)):
 - **Postmortem tissue:** NYGC ALS Consortium (`GSE153960`, incl. Tam 2019, O'Neill 2025, Ma 2022 and Bryce-Smith 2025 reanalyses) · Pineda 2024 BA4/BA9 snRNA-seq · Edinburgh `GSE290359` snRNA-seq · Prudencio 2015 paired regions + Zhang 2026 spinal-cord spatial · Spillman 2026 C9-FTD subcellular-fraction DIA
 - **Antemortem biofluids:** Trautwig 2025 multi-center CSF proteomics (+ Oh 2023 CSF cohort, 40/61 donor overlap)
 - **Patient-derived and in-vitro models:** Australian ID-MND (`Bye 2025`) sALS iPSC-MN drug screen & Day-49 splicing + US Answer ALS (`N=594`) iPSC-MN eQTLs · TDP-43 knockdown neuron series (Brown 2022, Zeng 2025, Bryce-Smith 2025)
@@ -93,7 +93,7 @@ Agreement *within* a group is treated as cross-platform or multi-assay validatio
 ## 3-Level Independent Computational Replication Quickstart
 
 ```bash
-# Level 1 (<10s, 0 MB extra data): Verify all 20 CSV schemas, FKs, citations, decision rules & 204 recorded 64-char SHA-256s (47 unique source files; 66/204 bundled in clean checkout)
+# Level 1 (<10s, 0 MB extra data): Verify all 20 CSV schemas, FKs, citations, decision rules & 208 recorded 64-char SHA-256s (49 unique source files; 69/208 bundled in clean checkout)
 uv sync --frozen
 uv run python scripts/verify_explore_als.py --mode cached
 
@@ -114,8 +114,8 @@ uv run python scripts/build_explorer.py --public-docs-only
 
 ## Licensing, Disclaimers & Open-Data Provenance
 - **Dual Software & Data License:** Python source code (`src/`, `scripts/`, `pipelines/`, `work/**/*.py`) is licensed under the **MIT License** ([LICENSE](./LICENSE)); original curated registries (`registries/*.csv`), schemas, and monographs are licensed under **CC BY 4.0** ([LICENSE-DATA.md](./LICENSE-DATA.md)). Non-`CC-BY` publisher supplements (`Tier B`) are never re-hosted and are fetched directly from canonical publisher HTTPS endpoints.
-- **Preclinical Research Only (Not Medical Advice):** `ExploreALS v1.4` is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing in this repository or explorer constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.
-- **AI-Assisted Workflow Disclosure:** Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 43 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (`PubMed`, `Europe PMC`, `ClinicalTrials.gov`). Quantitative contrasts (`204/204` 64-char SHA-256 anchored) are programmatically verified and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors; always verify against linked primary sources before experimental use.
+- **Preclinical Research Only (Not Medical Advice):** `ExploreALS v1.5` is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing in this repository or explorer constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.
+- **AI-Assisted Workflow Disclosure:** Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 44 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (`PubMed`, `Europe PMC`, `ClinicalTrials.gov`). Quantitative contrasts (`208/208` 64-char SHA-256 anchored) are programmatically verified and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors; always verify against linked primary sources before experimental use.
 - **Data & Tool Attributions:** Google DeepMind AlphaGenome (`v1` API & Atlas `AVI`; non-commercial research use only), NIH GTEx (`v8 / v10`), Open Targets (`v4`), gnomAD (`v4.1 / v4.1.1`), Ensembl/GENCODE (`v46`), ChEMBL (`v34`), UniProt, RCSB PDB, and ClinicalTrials.gov.
 """
 
@@ -201,7 +201,7 @@ def export_public_web_bundle(repo_dir: Path, agy_explorer_html: str, agy_mono_fi
         mpub = agy_head_re.sub(lambda _: head_bundle, mraw, count=1)
         mpub = mpub.replace("../CARBON_ALS_INTERACTIVE_EXPLORER.html", "../index.html")
         mpub = re.sub(
-            r'(<a id="explorer-back-link"[^>]+>&larr; Open in Full (?:52|53)-Hypothesis Explorer</a>)',
+            r'(<a id="explorer-back-link"[^>]+>&larr; Open in Full (?:52|53|55)-Hypothesis Explorer</a>)',
             r'<div class="flex flex-wrap items-center gap-2">\1 ' + THEME_BTN_HTML.replace("py-1.5", "py-1") + "</div>",
             mpub,
             count=1,

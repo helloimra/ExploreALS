@@ -51,4 +51,10 @@ DIRECT_MULTI_FILE_HTTPS: dict[str, list[tuple[str, str]]] = {
         ("pdb_00004ksy.cif", "https://files.rcsb.org/download/4KSY.cif"),
         ("pdb_00006mxe.cif", "https://files.rcsb.org/download/6MXE.cif"),
     ],
+    "DS_PDB_NADSYN1_CYFIP2": [
+        ("pdb_00006ofb.cif", "https://files.rcsb.org/download/6OFB.cif"),
+        ("pdb_00003p8c.cif", "https://files.rcsb.org/download/3P8C.cif"),
+        ("AF-Q6IA69-F1-model_v6.cif", "https://alphafold.ebi.ac.uk/files/AF-Q6IA69-F1-model_v6.cif"),
+        ("AF-Q96F07-F1-model_v6.cif", "https://alphafold.ebi.ac.uk/files/AF-Q96F07-F1-model_v6.cif"),
+    ],
 }

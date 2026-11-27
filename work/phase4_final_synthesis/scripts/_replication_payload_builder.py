@@ -31,7 +31,7 @@ STAGE_LABELS = {
     "Phase2_Track4_CellType_Isoform_Resolution": "3D & PK-PD · Vascular & Subunit Isoforms",
     "Phase3B_DeNovo_Discovery": "Multi-Omic Triage · Transcriptome, CSF & Screen",
     "Phase3A_Execution_Safety": "Hybridization Safety · 254,070-tx GRCh38 Scan",
-    "Phase4_Final_Synthesis": "Portfolio Synthesis · 53-Hypothesis Integration",
+    "Phase4_Final_Synthesis": "Portfolio Synthesis · 55-Hypothesis Integration",
 }
 
 
@@ -114,11 +114,13 @@ def build_replication_payloads(
     for r in run_rows:
         rid = r["analysis_run_id"]
         rc_list = run_cands.get(rid, [])
-        if len(rc_list) == 1:
+        if len(rc_list) == 1 or rid == "RUN-P4-006":
             for dtok in r["datasets_used"].split(";"):
                 dtok = dtok.strip()
-                if dtok and not dtok.startswith("DS_BASE") and rc_list[0] not in ds_extra_cands.setdefault(dtok, []):
-                    ds_extra_cands[dtok].append(rc_list[0])
+                if dtok and not dtok.startswith("DS_BASE"):
+                    for c_acc in rc_list:
+                        if c_acc not in ds_extra_cands.setdefault(dtok, []):
+                            ds_extra_cands[dtok].append(c_acc)
         js_runs.append({
             "id": _display_run_id(rid),
             "grp": STAGE_LABELS.get(r["phase_batch"], r["phase_batch"].replace("_", " ")),

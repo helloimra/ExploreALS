@@ -19,7 +19,7 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
         ("Korhonen et al. 2019 PMID:30705990), the Untested != Falsified triage rule mandates", "Korhonen et al. 2019 PMID:30705990.\n- Normoxic & Isoform Validation Gate: The Untested != Falsified triage rule mandates"),
     ],
     ("EALS-038", "verdict"): [
-        ("Elevated to #1 of Tier 3 Exploratory Discovery (Rank #9/53): surviving", "- Spatial & Single-MN Proteomics (Rank #9/53, #1 Tier 3): Surviving"),
+        ("Elevated to #1 of Tier 3 Exploratory Discovery (Rank #9/55): surviving", "- Spatial & Single-MN Proteomics (Rank #9/55, #1 Tier 3): Surviving"),
         ("vs 2 CTL donors / 25 cells), and C9-FTD synaptosomal loss", "vs 2 CTL donors / 25 cells).\n- Synaptosomal Depletion & Validation Gate: C9-FTD synaptosomal loss"),
     ],
     ("EALS-038", "proves"): [
@@ -228,7 +228,7 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
         ("C5b-9/C5L2), alongside peer-reviewed unbound", "C5b-9/C5L2); quantify peer-reviewed unbound"),
     ],
     ("EALS-050", "verdict"): [
-        ("Retained in Tier 3 Exploratory Discovery (Rank #28/53): sub-FDR", "- Screen Thiol Buffering & Low-Dose Oral Trial (Rank #28/53): Sub-FDR"),
+        ("Retained in Tier 3 Exploratory Discovery (Rank #30/55): sub-FDR", "- Screen Thiol Buffering & Low-Dose Oral Trial (Rank #30/55): Sub-FDR"),
         ("1,800 mg/d EH301, yet Louwerse 1995", "1,800 mg/d EH301.\n- Underpowered Subcutaneous Trial & High-Dose CSF Penetration: Louwerse 1995"),
     ],
     ("EALS-053", "proves"): [
@@ -240,6 +240,26 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
         ("Genotype-stratified NYGC spinal cord", "- Sporadic C9-Negative Attenuation & Microgliosis Confounding: Genotype-stratified NYGC spinal cord"),
         ("catalysis), flat NYGC motor cortex", "catalysis).\n- Flat Cortical/snRNA Cohorts & Absent CSF Detection: Flat NYGC motor cortex"),
         ("PMID:40375307), 3/13 human-vs-mouse G150", "PMID:40375307).\n- Ortholog Pocket Divergence, Unmeasured CNS Kp,uu & Antiviral Risk: 3/13 human-vs-mouse G150"),
+    ],
+    ("EALS-054", "proves"): [
+        ("Pan-CNS human sALS protein depletion", "- Pan-CNS Proteomics & Motor-Cortex Bulk RNA: Pan-CNS human sALS protein depletion"),
+        ("n=232), Brown et al. 2022 i3Neuron TDP-43 KD", "n=232).\n- TDP-43 Intron-15 Retention & 2.84A Active-Site Structure: Brown et al. 2022 i3Neuron TDP-43 KD"),
+        ("Ser515 3.83A), PacBio Iso-Seq postmortem BA46", "Ser515 3.83A).\n- Long-Read Isoforms, Neurite Depletion, CRISPRi & VCRL3 Genetics: PacBio Iso-Seq postmortem BA46"),
+    ],
+    ("EALS-054", "disproves"): [
+        ("Acute Brown 2022 i3Neuron total RNA", "- Flat Acute i3Neuron Translation & Non-Selective APA: Acute Brown 2022 i3Neuron total RNA"),
+        ("PMID:41120751), Spillman 2026 C9-FTD homogenate", "PMID:41120751).\n- Null Synaptosome, Visium & CSF Detection: Spillman 2026 C9-FTD homogenate"),
+        ("0% detected) are null, and neuronal NAD+ synthesis", "0% detected) are null.\n- NAMPT->NMNAT2 Salvage Redundancy & Intron-Retention SSO Ceiling: Neuronal NAD+ synthesis"),
+    ],
+    ("EALS-055", "proves"): [
+        ("Extreme human genetic constraint", "- Extreme Constraint, DEE65 Hotspot & Ribo-seq Collapse: Extreme human genetic constraint"),
+        ("PMID:35197628), Kozareva et al. 2025 (DOI:10.1101/2025.09.29.679403 [preprint]) Table S1", "PMID:35197628).\n- Multi-Cohort Protein, Neurite & Postmortem Splicing Depletion: Kozareva et al. 2025 (DOI:10.1101/2025.09.29.679403 [preprint]) Table S1"),
+        ("GSE299341), and human spinal cord RNA depletion", "GSE299341).\n- Lumbar Ventral-Horn Spatial, Bulk Cord & Microglial Depletion: Human spinal cord RNA depletion"),
+    ],
+    ("EALS-055", "disproves"): [
+        ("Non-NMD-blocked Brown 2022 MAJIQ", "- Modest Non-NMD-Blocked Splicing Amplitude: Non-NMD-blocked Brown 2022 MAJIQ"),
+        ("source MAJIQ 'FDR'=9.66e-5), Spiteri 2025 spinal cord bulk", "source MAJIQ 'FDR'=9.66e-5).\n- Null Bulk Spinal Cord Proteomics, Synaptosome & CSF: Spiteri 2025 spinal cord bulk"),
+        ("0% detected) are null, while paralog CYFIP1", "0% detected) are null.\n- Reciprocal Paralog CYFIP1 Buffering & Attrition Confounding: Paralog CYFIP1"),
     ],
     ("EALS-050", "proves"): [
         ("Bye 2025 iPSC-MN screen Rank #12/107", "- iPSC-MN Screen & Underpowered Subcutaneous Trial: Bye 2025 iPSC-MN screen Rank #12/107"),

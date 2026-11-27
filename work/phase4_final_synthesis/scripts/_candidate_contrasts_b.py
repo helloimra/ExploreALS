@@ -43,10 +43,10 @@ def build_edges_and_lenses(port_rows: list[dict[str, str]]) -> tuple[dict[str, d
     all_edges = {**CANDIDATE_EDGES_ACTIVE, **CANDIDATE_EDGES_DROPS}
     port_ids = {r["portfolio_id"] for r in port_rows}
     drop_ids = [r["portfolio_id"] for r in port_rows if r["decision"] == "DROP"]
-    assert set(CANDIDATE_EDGES_ACTIVE).isdisjoint(CANDIDATE_EDGES_DROPS) and set(all_edges) == port_ids, "Edge IDs != 53 portfolio IDs"
+    assert set(CANDIDATE_EDGES_ACTIVE).isdisjoint(CANDIDATE_EDGES_DROPS) and set(all_edges) == port_ids, "Edge IDs != 55 portfolio IDs"
     assert set(CANDIDATE_EDGES_DROPS) == set(drop_ids) and len(drop_ids) == 16, f"Drop edge partition != 16 DROP rows: {len(drop_ids)}"
     role_counts = {k: sum(1 for rk, _ in all_edges.values() if rk == k) for k in EDGE_ROLE_LABELS}
-    assert role_counts == {"MECHANISTIC_EDGE": 9, "CROWDED_MULTIPLEX": 2, "HIGH_HURDLE_WATCHLIST": 19, "BENCHMARK_CALIBRATOR": 7, "FALSIFIED_TRAP": 16}, role_counts
+    assert role_counts == {"MECHANISTIC_EDGE": 9, "CROWDED_MULTIPLEX": 2, "HIGH_HURDLE_WATCHLIST": 21, "BENCHMARK_CALIBRATOR": 7, "FALSIFIED_TRAP": 16}, role_counts
 
     lens_map = {**CANDIDATE_LENSES, "FALSIFIED_TRAPS": drop_ids}
     union_non_all = set().union(*lens_map.values())

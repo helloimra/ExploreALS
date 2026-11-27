@@ -13,10 +13,10 @@ function renderRepDag(){
   const curFv = ((document.getElementById('rep-filter')||{}).value||'ALL');
   const curKey = repMode + '|' + curFv;
   const nodes = [
-    {x:6,  y:12, w:148, h:46, title:'1. Open Datasets (43)', sub:'677 MB · SHA-256',     act:"datasets|ALL"},
+    {x:6,  y:12, w:148, h:46, title:'1. Open Datasets (44)', sub:'683 MB · SHA-256',     act:"datasets|ALL"},
     {x:172,y:12, w:148, h:46, title:'2. Cohort Loaders',     sub:'12 Cohort Parsers',    act:"runs|COHORT"},
-    {x:338,y:12, w:148, h:46, title:'3. Analysis Pipeline',  sub:'8 Lead + 51 Runs',     act:"runs|ALL"},
-    {x:78, y:96, w:162, h:46, title:'4. 204 Records',        sub:'100% SHA-256 + OLS',   act:"evidence|ALL"},
+    {x:338,y:12, w:148, h:46, title:'3. Analysis Pipeline',  sub:'8 Lead + 52 Runs',     act:"runs|ALL"},
+    {x:78, y:96, w:162, h:46, title:'4. 208 Records',        sub:'100% SHA-256 + OLS',   act:"evidence|ALL"},
     {x:260,y:96, w:164, h:46, title:'5. Verification Suite', sub:'Citations + Off-Tgt',  act:"runs|SYNTH"}
   ];
   const rects = nodes.map(n => {
@@ -145,7 +145,7 @@ function formatRepMult(f){
 
 function hasPositiveRep3D(f){
   const arel = String(f.arel || '');
-  if(/\.(?:cif|pdb)(?:\.gz)?$/i.test(arel) || /(?:^|\/)(?:pdb|afdb|phase2_pdb|phase3b_pdb|phase4_pdb)(?:\/|$)/i.test(arel)) return true;
+  if(/\.(?:cif|pdb)(?:\.gz)?$/i.test(arel) || /(?:^|\/)(?:pdb|afdb|phase2_pdb|phase3b_pdb|phase4_pdb|phase5_pdb)(?:\/|$)/i.test(arel)) return true;
   const meta = String(f.con || '') + ' ' + String(f.mod || '') + ' ' + String(f.est || '');
   return /\bPDB[:\s_]+[0-9][A-Za-z0-9]{3}\b/.test(meta) || /\bAF-[A-Z0-9]{6,10}-F\d+\b/.test(meta) || /\b(?:cryo-em|x-ray\s+crystal|alphafold)\b/i.test(meta);
 }

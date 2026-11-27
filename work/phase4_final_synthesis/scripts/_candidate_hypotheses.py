@@ -1,4 +1,4 @@
-"""Verified 1-2 sentence Candidate & Biological Hypothesis summaries for all 52 ExploreALS v1.2 portfolio entries."""
+"""Verified 1-2 sentence Candidate & Biological Hypothesis summaries for all 55 ExploreALS v1.5 portfolio entries."""
 from __future__ import annotations
 
 CANDIDATE_HYPOTHESES: dict[str, str] = {
@@ -213,5 +213,13 @@ CANDIDATE_HYPOTHESES: dict[str, str] = {
     "L01": (
         "CGAS (ENSG00000164430, UniProt Q8N884) encodes cyclic GMP-AMP synthase, the upstream cytosolic DNA sensor activated by TDP-43-triggered mitochondrial DNA leakage (PMID:33031745) and nuclear DNA damage/retroelement cDNA to synthesize 2'3'-cGAMP and engage STING1 while sparing cell-autonomous neuronal TBK1->IFN-beta->PSMB8 clearance of monomeric TDP-43 (PMID:42834122). "
         "Anchored by covariate-adjusted spinal cord ALS-Glia upregulation, human loss-of-function tolerance (gnomAD v4.1 LOEUF=1.529), and 2.41A active-site crystal structures (PDB 6MJW, PMID:31113940), this exploratory hypothesis tests brain-penetrant human-selective active-site cGAS inhibition across sporadic and C9orf72 ALS microglia-motor neuron co-cultures against microgliosis confounding, human-mouse pocket divergence, and co-sensor IFI16 redundancy."
+    ),
+    "L02": (
+        "NADSYN1 (ENSG00000172890, UniProt Q6IA69) encodes glutamine-dependent NAD+ synthetase (PDB 6OFB, 2.84A octamer, PMID:31911602), which catalyzes the terminal de novo biosynthesis and Preiss-Handler amidation of NaAD to NAD+ upstream of SARM1 axonolysis, with bi-allelic loss of function causing congenital NAD deficiency (VCRL3, OMIM 618845, PMID:31883644). "
+        "Backed by pan-CNS human sporadic ALS protein depletion across all four Spiteri 2025 regions (PMID:41028049), covariate-adjusted NYGC motor cortex loss, and TDP-43-induced Intron-15 retention immediately upstream of Exon 16 (which houses six catalytic NaAD+/AMP contacts), this exploratory hypothesis tests steric Intron-15 rescue under physiological low-nicotinamide conditions against NAMPT->NMNAT2 salvage redundancy."
+    ),
+    "L03": (
+        "CYFIP2 (ENSG00000055163, UniProt Q96F07) encodes an extremely constrained subunit of the Rac1-regulated WAVE regulatory complex (gnomAD v4.1 pLI=1.000, LOEUF=0.274, mis_z=6.94; autosomal dominant DEE65 OMIM 618008, PMID:29534297; paralog CYFIP1 WRC PDB 3P8C, PMID:21107423) governing dendritic and axonal actin remodeling. "
+        "Backed by severe TDP-43 knockdown translation collapse (Brown Ribo-seq), triple-cohort protein depletion across iNeurons, sporadic ALS motor cortex, and FTLD-TDP cortex, plus lumbar spinal ventral horn Visium depletion, this exploratory hypothesis tests NMD-blocked cryptic-junction mapping and steric splice rescue against reciprocal CYFIP1 paralog upregulation and dosage bounds."
     ),
 }

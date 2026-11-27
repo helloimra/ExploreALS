@@ -1,4 +1,4 @@
-"""Canonical ExploreALS accession mapping (EALS-001..EALS-053 + .k subunits) and collision-safe fuzzy resolver."""
+"""Canonical ExploreALS accession mapping (EALS-001..EALS-055 + .k subunits) and collision-safe fuzzy resolver."""
 from __future__ import annotations
 
 import re
@@ -69,6 +69,8 @@ PRIMARY_SYMBOL_AND_ALIASES: dict[str, tuple[str, list[str]]] = {
     "DN-18": ("Coenzyme Q10", ["coq10", "coenzyme-q10", "ubiquinone", "qals"]),
     "DN-19": ("L-Serine", ["l-serine", "lserine", "serine"]),
     "L01": ("CGAS", ["cgas", "mb21d1", "c-gas", "23cgamp", "cgamp", "tdi-6570", "tdi6570", "vent-03", "vent03", "g150"]),
+    "L02": ("NADSYN1", ["nadsyn1", "q6ia69", "vcrl3", "nads1", "naad", "nad-synthetase"]),
+    "L03": ("CYFIP2", ["cyfip2", "q96f07", "pir121", "dee65", "sra1b"]),
 }
 
 
@@ -91,7 +93,7 @@ def legacy_to_accession(legacy_id: str) -> str:
     m_l = re.fullmatch(r"L0([1-9])", s)
     if m_l:
         return f"EALS-{52 + int(m_l.group(1)):03d}"
-    if re.fullmatch(r"EALS-0(?:0[1-9]|[1-4]\d|5[0-3])(?:\.[1-9])?", s):
+    if re.fullmatch(r"EALS-0(?:0[1-9]|[1-4]\d|5[0-5])(?:\.[1-9])?", s):
         return s
     raise ValueError(f"Unknown legacy candidate/subnode ID: {legacy_id!r}")
 
@@ -100,7 +102,7 @@ def accession_to_legacy(accession_id: str) -> str:
     s = accession_id.strip()
     if s in {"NONE", "PORTFOLIO_WIDE", ""}:
         return s
-    m = re.fullmatch(r"EALS-0(0[1-9]|[1-4]\d|5[0-3])(?:\.([1-9]))?", s)
+    m = re.fullmatch(r"EALS-0(0[1-9]|[1-4]\d|5[0-5])(?:\.([1-9]))?", s)
     if not m:
         raise ValueError(f"Invalid ExploreALS accession ID: {accession_id!r}")
     num = int(m.group(1))
@@ -141,14 +143,14 @@ def resolve_candidate_query(
     if not q:
         return None, None
     ql = q.lower()
-    m_rk = re.fullmatch(r"#([1-9]|[1-4]\d|5[0-3])", ql)
+    m_rk = re.fullmatch(r"#([1-9]|[1-4]\d|5[0-5])", ql)
     if m_rk and rank_to_accession and int(m_rk.group(1)) in rank_to_accession:
         return rank_to_accession[int(m_rk.group(1))], None
-    m_ea = re.fullmatch(r"(?:eals|ea)[-_ ]?0*([1-9]|[1-4]\d|5[0-3])(?:[.-]n?([1-9]))?", ql)
+    m_ea = re.fullmatch(r"(?:eals|ea)[-_ ]?0*([1-9]|[1-4]\d|5[0-5])(?:[.-]n?([1-9]))?", ql)
     if m_ea:
         par = f"EALS-{int(m_ea.group(1)):03d}"
         return par, (f"{par}.{m_ea.group(2)}" if m_ea.group(2) else None)
-    m_pad = re.fullmatch(r"0(0[1-9]|[1-4]\d|5[0-3])", ql)
+    m_pad = re.fullmatch(r"0(0[1-9]|[1-4]\d|5[0-5])", ql)
     if m_pad:
         return f"EALS-{int(m_pad.group(1)):03d}", None
     m_c = re.fullmatch(r"c[-_ ]?0*([1-9]|1\d|2[0-4])(?:[-_.]n?([1-9]))?", ql)

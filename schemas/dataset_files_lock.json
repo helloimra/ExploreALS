@@ -2357,5 +2357,33 @@
         "sha256": "19956911c0a016f0f6e7f78a748efeea5dde17b346ecf0ee958007563bb5e50b"
       }
     ]
+  },
+  "DS_PDB_NADSYN1_CYFIP2": {
+    "local_relpath": "data/pharmacology_structures/phase5_pdb",
+    "is_dir": true,
+    "tier": "TIER_A_OPEN_REDISTRIBUTABLE",
+    "sha256": "1a234e90e11f364143192664ed61873c22452f895e5ffa4af8663f42d469ec60",
+    "files": [
+      {
+        "rel": "AF-Q6IA69-F1-model_v6.cif",
+        "size_bytes": 648616,
+        "sha256": "d2a67a1e68ed31c6d741cbdfb8f45bc75ce9683df0c7b5d88fada4aebf7457b2"
+      },
+      {
+        "rel": "AF-Q96F07-F1-model_v6.cif",
+        "size_bytes": 1257356,
+        "sha256": "f2a6e872dca862ecbe63205da4fbe84b0262b1819b6d4bb35829680a6f8391d0"
+      },
+      {
+        "rel": "pdb_00003p8c.cif",
+        "size_bytes": 2457829,
+        "sha256": "ba231933bbfb7e5a8f7220078af8f2fd0476bb713bd4fb9c641da83b03400c46"
+      },
+      {
+        "rel": "pdb_00006ofb.cif",
+        "size_bytes": 1372949,
+        "sha256": "a36dcbeeb4deac7644c0c5bc058df0cbed29b4d76c16a8c5cdcf2c64c1f94791"
+      }
+    ]
   }
 }

@@ -37,10 +37,10 @@ def _ordered_canonical_runs(runs: list[dict[str, str]]) -> list[dict[str, str]]:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Reproduce ExploreALS v1.4 gates, 8 flagship claims, or all 51 runs.")
+    ap = argparse.ArgumentParser(description="Reproduce ExploreALS v1.5 gates, 8 flagship claims, or all 52 runs.")
     ap.add_argument("--cached-gates", action="store_true", help="Level 1 (<10s): verify 20 CSVs, SHA-256s, & loaders.")
     ap.add_argument("--flagship-only", action="store_true", help="Run all 8 Tier 1+2 Flagship Monograph Reproducers.")
-    ap.add_argument("--all-canonical", action="store_true", help="Execute all 50 non-bootstrap canonical runs (requires staged data/).")
+    ap.add_argument("--all-canonical", action="store_true", help="Execute all 51 non-bootstrap canonical runs (requires staged data/).")
     args = ap.parse_args()
 
     if not (args.cached_gates or args.flagship_only or args.all_canonical):
@@ -74,6 +74,7 @@ def main() -> None:
                     "work/phase4_final_synthesis/scripts/00b_apply_v1_1_registry_corrections.py",
                     "work/phase4_final_synthesis/scripts/00c_apply_v1_1_decisions.py",
                     "work/phase4_final_synthesis/scripts/06_register_living_intake_eals053.py",
+                    "work/phase4_final_synthesis/scripts/08_register_living_intake_v15.py",
                     "work/phase4_final_synthesis/scripts/03b_apply_nov2026_retrospective_registries.py",
                 ):
                     if (ROOT / patch_s).is_file():
@@ -86,7 +87,7 @@ def main() -> None:
                 _run_py(s, extra)
         _run_py("scripts/verify_carbon_als.py", ["--mode", "cached" if is_public_export else "full"])
 
-    print("PASS: ExploreALS v1.4 replication sequence completed with 0 errors.")
+    print("PASS: ExploreALS v1.5 replication sequence completed with 0 errors.")
 
 
 if __name__ == "__main__":

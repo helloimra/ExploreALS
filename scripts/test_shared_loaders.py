@@ -289,13 +289,13 @@ def main() -> None:
     errs_b = verify_phase3b_gates(ROOT, load_csv("candidate_intake_ledger.csv"), load_csv("subnode_dissection.csv"), load_csv("analysis_runs.csv"), load_csv, cand_override=bad_bundle, mode=eff_mode)
     assert any("non-atomic gene_or_drug" in e for e in errs_b)
 
-    # Test 25: Phase 4 53-hypothesis & 28-interval cross-phase portfolio gate
+    # Test 25: Phase 4 55-hypothesis & 28-interval cross-phase portfolio gate
     from phase4_gates import verify_phase4_gates
     errs_p4 = verify_phase4_gates(ROOT, load_csv("candidate_decisions.csv"), {r["analysis_run_id"] for r in load_csv("analysis_runs.csv")}, load_csv, mode=eff_mode)
     assert not errs_p4, f"Unexpected Phase 4 gate errors: {errs_p4}"
     p4_rows = load_csv("phase4_unified_portfolio.csv")
     cis4_rows = load_csv("phase4_unified_cis_intervals.csv")
-    assert len(p4_rows) == 53 and len(cis4_rows) == 28, f"Expected 53 portfolio & 28 cis rows, got {len(p4_rows)} & {len(cis4_rows)}"
+    assert len(p4_rows) == 55 and len(cis4_rows) == 28, f"Expected 55 portfolio & 28 cis rows, got {len(p4_rows)} & {len(cis4_rows)}"
 
     # Test 26: Coupled zero-dead-zone +PI(3)P->LRRK2/CASM turnover ODE, finite-d_lock hetero-octamer & CD38 cADPR bound
     casm_q48 = sweep_coupled_pikfyve_casm_sensitivity([float(h) for h in range(0, 336, 48)], 336.0, 6.5, 4.5, 1.5)
@@ -309,7 +309,7 @@ def main() -> None:
     cd38_b = compute_cd38_cadpr_dilution_and_audit_bound(0.10, 0.90, 0.50)
     assert cd38_b["selective_sarm1_fluid_cadpr_drop_pct"] == 9.0 and abs(cd38_b["min_offtarget_cd38_inhibition_pct_if_cell_free_plasma"] - 44.44) < 0.02
 
-    # Test 27: ExploreALS EALS-001..EALS-053 accession bijection & collision-safe fuzzy resolver
+    # Test 27: ExploreALS EALS-001..EALS-055 accession bijection & collision-safe fuzzy resolver
     from carbon_als.accessions import (
         AMBIGUOUS_SHORT_BIO_TOKENS,
         accession_to_legacy,
@@ -323,19 +323,23 @@ def main() -> None:
     assert legacy_to_accession("S06") == "EALS-030" and accession_to_legacy("EALS-030") == "S06"
     assert legacy_to_accession("DN-13") == "EALS-046" and accession_to_legacy("EALS-046") == "DN-13"
     assert legacy_to_accession("L01") == "EALS-053" and accession_to_legacy("EALS-053") == "L01"
+    assert legacy_to_accession("L02") == "EALS-054" and accession_to_legacy("EALS-054") == "L02"
+    assert legacy_to_accession("L03") == "EALS-055" and accession_to_legacy("EALS-055") == "L03"
     assert legacy_to_accession("C015-N1") == "EALS-015.1" and accession_to_legacy("EALS-015.1") == "C015-N1"
     for q_in, exp_pair in (
         ("c006", ("EALS-006", None)), ("c6", ("EALS-006", None)), ("eals6", ("EALS-006", None)), ("006", ("EALS-006", None)),
         ("#4", ("EALS-006", None)), ("kcnq2", ("EALS-006", None)), ("dn013", ("EALS-046", None)), ("dn-13", ("EALS-046", None)),
         ("d013", ("EALS-046", None)), ("maob", ("EALS-046", None)), ("s06", ("EALS-030", None)), ("sarm1", ("EALS-030", None)),
-        ("l01", ("EALS-053", None)), ("cgas", ("EALS-053", None)), ("#23", ("EALS-053", None)),
+        ("l01", ("EALS-053", None)), ("cgas", ("EALS-053", None)), ("#25", ("EALS-053", None)),
+        ("l02", ("EALS-054", None)), ("nadsyn1", ("EALS-054", None)), ("#17", ("EALS-054", None)),
+        ("l03", ("EALS-055", None)), ("cyfip2", ("EALS-055", None)), ("#18", ("EALS-055", None)),
         ("scfd1", ("EALS-015", "EALS-015.1")), ("c015-n2", ("EALS-015", "EALS-015.2")), ("eals-015.2", ("EALS-015", "EALS-015.2")),
     ):
         assert resolve_candidate_query(q_in, rk_map, sub_slug) == exp_pair, f"Failed query {q_in}: {resolve_candidate_query(q_in, rk_map, sub_slug)}"
     assert resolve_candidate_query("sod1", rk_map, sub_slug) == (None, None)  # never hijacks S01
     assert "c3" in AMBIGUOUS_SHORT_BIO_TOKENS and "c9" in AMBIGUOUS_SHORT_BIO_TOKENS
-    assert translate_legacy_tokens_in_prose("Pair S06 with C006, L01, and C015-N1 (FLAGSHIP-S06, candidates/C006.md, C3-C5 cord, ALS17)") == (
-        "Pair EALS-030 with EALS-006, EALS-053, and EALS-015.1 (FLAGSHIP-S06, candidates/C006.md, C3-C5 cord, ALS17)"
+    assert translate_legacy_tokens_in_prose("Pair S06 with C006, L01, L02, L03, and C015-N1 (FLAGSHIP-S06, candidates/C006.md, C3-C5 cord, ALS17)") == (
+        "Pair EALS-030 with EALS-006, EALS-053, EALS-054, EALS-055, and EALS-015.1 (FLAGSHIP-S06, candidates/C006.md, C3-C5 cord, ALS17)"
     )
     assert translate_legacy_tokens_in_prose("LINKED_TO_C005_TMS; DN-10..12; C017-N1..N4; 01_c019_als_glia.py") == (
         "LINKED_TO_EALS-005_TMS; EALS-043–EALS-045; EALS-017.1–EALS-017.4; 01_c019_als_glia.py"

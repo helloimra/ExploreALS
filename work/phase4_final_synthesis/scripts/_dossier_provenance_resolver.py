@@ -40,6 +40,7 @@ DS_LABELS: dict[str, tuple[str, list[str]]] = {
     "DS_AFDB": ("AlphaFold Protein Structure DB v6", []),
     "DS_PDB": ("RCSB PDB Experimental Structures", []),
     "DS_PDB_CGAS_STING": ("RCSB PDB cGAS/STING Structures", ["PMID:31113940", "PMID:30842659"]),
+    "DS_PDB_NADSYN1_CYFIP2": ("RCSB PDB / AlphaFold 3D Structures", []),
     "DS_GENCODE_V46_TX": ("GENCODE v46 Reference", []),
     "DS_GENCODE_V46_GTF": ("GENCODE v46 Reference", []),
     "DS_GENCODE_V46_COMP_GTF": ("GENCODE v46 Reference", []),
@@ -48,7 +49,7 @@ DS_LABELS: dict[str, tuple[str, list[str]]] = {
 
 SPLIT_RE = re.compile(r"[;|]|\+(?=(?:OpenTargets|AlphaGenome|ChEMBL|gnomAD|DS_|OpenFDA|CT\.gov))")
 INLINE_ACC_RE = re.compile(r"(?:PMID:\d+|PMC\d+|NCT\d{8}|AAN2026-\d{6}|NDA\d{5,6}|UMIN\d{9}|ISRCTN\d{8}|ACTRN\d{14}|jRCT[A-Za-z0-9]+|CHEMBL\d+|CID:\d+|US\d{7,11}[A-Z]\d?|ENS[GT]\d{11}(?:\.\d+)?|GSE\d+|GSM\d{6,8}|PXD\d+|PRJNA\d+|syn\d+|AF-[A-Z0-9]+-F1|10\.\d{4,9}/[^\s,;)\]]+)")
-PDB_TOK_RE = re.compile(r"(?:pdb_0000([0-9a-z]{4})\.cif|DS_PDB[_:]([0-9A-Za-z]{4})|PDB:([0-9A-Za-z]{4}))", re.IGNORECASE)
+PDB_TOK_RE = re.compile(r"(?:pdb_0000([0-9][0-9a-z]{3})\.cif|DS_PDB[_:]([0-9][0-9A-Za-z]{3})(?![A-Za-z0-9])|PDB[:\s]([0-9][0-9A-Za-z]{3})(?![A-Za-z0-9]))", re.IGNORECASE)
 VS_COUNTS_RE = re.compile(r"\b\d+\s+[A-Za-z0-9\-/+ ]{1,24}\s+vs\.?\s+\d+", re.IGNORECASE)
 SAMPLE_CTX_RE = re.compile(r"\[Sample context:\s*([^\]]+)\]", re.IGNORECASE)
 PAREN_VS_RE = re.compile(r"\((\d+\s+[^()]{1,40}?\s+vs\.?\s+\d+\s+[^()]{1,40}?)\)")
@@ -78,6 +79,7 @@ MAJIQ_NONFREQ_PF: dict[str, str] = {
     "EV-B4-007": "MAJIQ 'FDR' (p_d_psi_0.05)=1.95e-06",
     "EV-P4-002": "MAJIQ 'FDR' (p_d_psi_0.05)=1.822e-15",
     "EV-P4-008": "MAJIQ 'FDR' (p_d_psi_0.05)=3.256e-06",
+    "EV-LIV-003": "MAJIQ 'FDR' (p_d_psi_0.05)=6.853e-20",
 }
 
 
@@ -260,6 +262,14 @@ def resolve_evidence_row(
             elif not sha12 and "DS_PDB" in ds_map:
                 sha12 = ds_map["DS_PDB"]["sha256"][:12]
                 primary_ds = "DS_PDB"
+    if "DS_PDB_" in loc or "DS_AFDB" in loc:
+        struct_blob = f"{row.get('cohort_and_stratum', '')} {row.get('effect_estimate', '')}"
+        for m_sp in PDB_TOK_RE.finditer(struct_blob):
+            pcode = (m_sp.group(1) or m_sp.group(2) or m_sp.group(3) or "").upper()
+            if pcode:
+                _add_acc(f"PDB {pcode}")
+        for m_af in re.finditer(r"\bAF-[A-Z0-9]+-F1\b", struct_blob):
+            _add_acc(m_af.group(0))
 
     for tok in tokens:
         if tok.lower().startswith("aan2026-") and "AAN 2026 Investigator Abstract" not in src_names:

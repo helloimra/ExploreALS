@@ -42,6 +42,7 @@ EVIDENCE_COHORT_BY_EALS: dict[str, str] = {
     "EALS-029": "TDP43_SPLICING_APA", "EALS-048": "IPSC_PHENOTYPIC_SCREEN",
     "EALS-050": "IPSC_PHENOTYPIC_SCREEN", "EALS-051": "IPSC_PHENOTYPIC_SCREEN",
     "EALS-052": "IPSC_PHENOTYPIC_SCREEN", "EALS-053": "CNS_TISSUE_OMICS",
+    "EALS-054": "TDP43_SPLICING_APA", "EALS-055": "TDP43_SPLICING_APA",
 }
 
 
@@ -90,7 +91,8 @@ def sanitize_public_modality(raw_mod: str) -> str:
             .replace("CTail_aa324_328", "C-Tail (aa 324-328 SKECF)").replace("CTail_aa320_328", "C-Tail (aa 324-328 SKECF)").replace("Early_Onset_LE12m", "Early-Onset (<=12m)")
             .replace("LE12m", "<=12m").replace("3Plex", "3-Plex").replace("Exon5", "Exon-5")
             .replace("Exon2a", "Exon-2a").replace("Intron20", "Intron-20").replace("Intron8", "Intron-8")
-            .replace("Intron9", "Intron-9").replace("ERAD_Sparing", "ERAD-Sparing")
+            .replace("Intron9", "Intron-9").replace("Intron15", "Intron-15").replace("TDP43", "TDP-43")
+            .replace("PreissHandler", "Preiss-Handler").replace("ERAD_Sparing", "ERAD-Sparing")
             .replace("aa324_328", "aa 324-328").replace("aa320_328", "aa 324-328").replace("Q48_to_Q72h", "q48h-q72h")
             .replace("LINE1_RT", "LINE-1 RT").replace("TPN101", "TPN-101").replace("JAK2_Sparing", "JAK2-Sparing")
             .replace("Inter_Protomer", "Inter-Protomer").replace("Neurovascular_Shuttled", "Neurovascular-Shuttled")

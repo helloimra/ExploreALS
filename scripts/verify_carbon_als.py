@@ -348,6 +348,7 @@ def verify_all(
         "EV-P4-007": ("PUBLISHED_TRIAL_OR_GENETIC_INFERENCE", "unique_human_donor", "n=189"),
         "EV-P4-008": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
         "EV-P4-009": ("PUBLISHED_TRIAL_OR_GENETIC_INFERENCE", "human_trial_or_genetic_participant", "Unadjusted 18-mo survival relative risk"),
+        "EV-LIV-003": ("PRIMARY_BAYESIAN_SPLICING_RECOMPUTE", "in_vitro_perturbation_replicate", "p_d_psi_0_05_per_lsv_junction"),
     }
     for g_eid, (exp_ic, exp_unit, exp_kw) in curated_stat_guards.items():
         if g_eid in stat_by_eid:
@@ -357,7 +358,7 @@ def verify_all(
     for qtl_eid in ("EV-B2-001", "EV-B2-004"):
         if qtl_eid in stat_by_eid and ("Bonferroni" not in stat_by_eid[qtl_eid]["multiple_testing_family"] or "BH-FDR" in stat_by_eid[qtl_eid]["multiple_testing_family"]):
             errors.append(f"{qtl_eid}: Answer ALS QTL record must use study-adjusted Bonferroni family, not BH-FDR")
-    all_majiq_eids = ("EV-B1-001", "EV-B1-011", "EV-B2-011", "EV-B2-014", "EV-B4-007", "EV-P4-002", "EV-P4-008")
+    all_majiq_eids = ("EV-B1-001", "EV-B1-011", "EV-B2-011", "EV-B2-014", "EV-B4-007", "EV-P4-002", "EV-P4-008", "EV-LIV-003")
     for maj_eid in all_majiq_eids:
         if maj_eid in stat_by_eid:
             msr = stat_by_eid[maj_eid]
@@ -671,7 +672,7 @@ def run_selftest(mode: str = "full") -> None:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Verify ExploreALS v1.4 registries, 64-char SHA-256 anchors, & gates.")
+    ap = argparse.ArgumentParser(description="Verify ExploreALS v1.5 registries, 64-char SHA-256 anchors, & gates.")
     ap.add_argument("--mode", choices=("auto", "full", "cached"), default="auto")
     args = ap.parse_args()
     eff_mode = resolve_mode(args.mode)
@@ -693,8 +694,8 @@ def main() -> None:
     print(
         f"PASS [{eff_mode}]: All {n_reg} registries, {n_stat}/{n_stat} recorded 64-char SHA-256 contrast digests "
         f"({n_uniq_anc} unique anchors; {n_matched_local}/{n_stat} locally byte/EOL-matched in {eff_mode} mode), "
-        f"{n_ds} dataset manifest entries, 53-hypothesis/28-interval portfolio, "
-        "ExploreALS v1.4 Explorer + 8 Monographs, biosecurity/provenance gates, and self-tests verified (0 errors)."
+        f"{n_ds} dataset manifest entries, 55-hypothesis/28-interval portfolio, "
+        "ExploreALS v1.5 Explorer + 8 Monographs, biosecurity/provenance gates, and self-tests verified (0 errors)."
     )
 
 
