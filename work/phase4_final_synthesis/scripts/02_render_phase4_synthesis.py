@@ -15,7 +15,7 @@ if str(SCRIPT_DIR) not in sys.path:
 
 from _candidate_contrasts_b import build_edges_and_lenses  # noqa: E402
 from _explorer_js import EXPLORER_JS_BODY, EXPLORER_JS_TABS234  # noqa: E402
-from _explorer_template import HTML_HEAD_AND_BODY, HTML_TABS_AND_SCRIPT  # noqa: E402
+from _explorer_template import render_explorer_html_shell  # noqa: E402
 from _phase4_helpers import CROWDING_CLASS_MAP, biological_evidence_sort_key  # noqa: E402
 from _public_taxonomy import (  # noqa: E402
     COHORT_DEFS,
@@ -241,13 +241,19 @@ def main() -> None:
 
     runs = _read_csv("analysis_runs.csv")
     run_cols = list(runs[0].keys())
+    _p4_up_ts = [
+        r.get("run_timestamp_utc", "")
+        for r in runs
+        if r.get("analysis_run_id") in {"RUN-P3A-003", "RUN-P3B-003", "RUN-P4-001", "RUN-P4-002"}
+    ]
+    p4_2_ts = max([*_p4_up_ts, "2026-11-28T08:49:00Z"])
     p4_r2 = {
         "analysis_run_id": "RUN-P4-002", "phase_batch": "Phase4_Final_Synthesis",
         "script_relpath": "work/phase4_final_synthesis/scripts/02_render_phase4_synthesis.py",
         "output_artifacts": "reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md;reports/CARBON_ALS_INTERACTIVE_EXPLORER.html;reports/monographs;reports/github_pages",
         "datasets_used": "DS001_COUNTS;DS001_META;DS001_ONEILL;DS_GENCODE_V46_COMP_GTF;DS_GNOMAD_V41_CONSTRAINT",
         "tools_and_skills_used": "generative_ui;tooluniverse-gene-liability;alphagenome-atlas-website-links;scripts.phase4_gates;uv-python",
-        "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-28T08:30:00Z",
+        "reproduced_verified": "yes", "run_timestamp_utc": p4_2_ts,
         "summary": f"Programmatically compiled unified 55-hypothesis ExploreALS v2.0 Explorer (0 Tier 1, 6 Tier 2 + 2 Tier 3 Deep-Dive Translational Monographs, 19 Tier 3 Discovery, 6 Tier 4 Parked Watchlist, 9-row Mechanistic Contrasts matrix, {len(js_updates)} Living Research Log entries [incl. UPD-2026-11-28-04 v2.0.0 portfolio governance revision and 33 external 2025-2026 cross-check cohorts], Replication & Verification workbench, {len(stat_rows)}/{len(stat_rows)} 64-char SHA-256 anchors, {len(ds_rows)} SHA-256-locked open core datasets [{len(ds_rows) - 2} external + 2 bundled], 8-group cohort overlap & donor accounting & 3 sensitivity sandboxes) and zero-CDN GitHub Pages bundle across 28 1-based GRCh38 cis-regulatory target windows.",
     }
     runs = (
@@ -294,14 +300,10 @@ def main() -> None:
         f"offtarget={st['phase3_sso_offtarget_audit']} readiness={st['phase3_execution_readiness']} "
         f"screen_cands={st['phase3b_denovo_candidates']} screen_ivs={st['phase3b_denovo_sso_intervals']}"
     )
-    html_head_stamped = (
-        HTML_HEAD_AND_BODY
-        .replace("<!-- __SHA12_STAMP__ -->", f"<!-- {sha_stamp} -->")
-        .replace("__UPD_COUNT__", f"{len(js_updates)} / {len(js_updates)}")
-    )
+    html_head_stamped, html_tabs_stamped = render_explorer_html_shell(port_rows, sha_stamp, len(js_updates))
     html_text = (
         html_head_stamped
-        + HTML_TABS_AND_SCRIPT
+        + html_tabs_stamped
         + data_block
         + EXPLORER_JS_BODY
         + DOSSIER_JS_SVG_CORE
@@ -332,14 +334,14 @@ def main() -> None:
     if public_docs_only:
         with tempfile.TemporaryDirectory() as tmp_d:
             mono_tmp = write_standalone_monographs(Path(tmp_d), sha_stamp, js_port, js_cis, mono_map, ev_by_id, js_sum, js_lenses)
-            pub_written = export_public_web_bundle(ROOT, html_text, mono_tmp, sha_stamp=sha_stamp)
+            pub_written = export_public_web_bundle(ROOT, html_text, mono_tmp, sha_stamp=sha_stamp, port_rows=port_rows)
         print(f"PUBLIC DOCS REBUILD OK: {len(pub_written)} files written to {ROOT / 'docs'}")
         return
 
     html_fp = ROOT / "reports" / "CARBON_ALS_INTERACTIVE_EXPLORER.html"
     html_fp.write_text(html_text, encoding="utf-8")
     mono_written = write_standalone_monographs(ROOT / "reports" / "monographs", sha_stamp, js_port, js_cis, mono_map, ev_by_id, js_sum, js_lenses)
-    pub_written = export_public_web_bundle(ROOT / "reports" / "github_pages", html_text, mono_written, sha_stamp=sha_stamp)
+    pub_written = export_public_web_bundle(ROOT / "reports" / "github_pages", html_text, mono_written, sha_stamp=sha_stamp, port_rows=port_rows)
 
     with (REG_DIR / "analysis_runs.csv").open("w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=run_cols, lineterminator="\r\n")

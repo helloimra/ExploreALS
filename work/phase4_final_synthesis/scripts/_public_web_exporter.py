@@ -158,7 +158,69 @@ def collect_all_utility_tokens(blobs: list[str]) -> set[str]:
     return tokens
 
 
-def export_public_web_bundle(repo_dir: Path, agy_explorer_html: str, agy_mono_files: list[Path], sha_stamp: str = "") -> list[Path]:
+_README_MONO_LABELS: dict[str, str] = {
+    "EALS-001": "UNC13A",
+    "EALS-002": "STMN2",
+    "EALS-006": "KCNQ2",
+    "EALS-030": "SARM1",
+    "EALS-031": "Aldesleukin",
+    "EALS-034": "ATG4B",
+    "EALS-037": "CELF5",
+    "EALS-007": "IL1RL1 / sST2",
+}
+
+
+def render_github_readme(port_rows: list[dict[str, str]] | None = None) -> str:
+    if not port_rows:
+        return GITHUB_README_MD
+    by_tier: dict[str, list[dict[str, str]]] = {}
+    for r in sorted(port_rows, key=lambda x: int(x["unified_rank"])):
+        by_tier.setdefault(r["scientific_actionability_tier"], []).append(r)
+    t1 = by_tier.get("TIER_1_ACTIONABLE_NOW", [])
+    t2 = by_tier.get("TIER_2_FOCUSED_GATE_FIRST", [])
+    t3 = by_tier.get("TIER_3_EXPLORATORY_DISCOVERY", [])
+    t4 = by_tier.get("TIER_4_PARKED_INSUFFICIENT_EVIDENCE", [])
+    proto = by_tier.get("COMPANION_PROTOCOL_ONLY", [])
+    bench = by_tier.get("BIOMARKER_BENCHMARK_ONLY", [])
+    drops = by_tier.get("DROPPED_FALSIFIED_EXCLUDED", [])
+    t2_core = sum(1 for r in t2 if r["decision"] == "KEEP_CORE")
+    t2_expl = len(t2) - t2_core
+
+    def _mk_links(rows: list[dict[str, str]]) -> str:
+        return " · ".join(
+            f"[#{r['unified_rank']} {_README_MONO_LABELS.get(r['accession_id'], r['gene_or_drug'])} · {r['accession_id']}]"
+            f"(https://helloimra.github.io/ExploreALS/monographs/{r['accession_id']}.html)"
+            for r in rows
+        )
+
+    t3_deep = [r for r in t3 if r["accession_id"] in {"EALS-037", "EALS-007"}]
+    t1_line = (
+        f"- **Tier 1 (`Translational Lead`, `{len(t1)}` Leads):** {_mk_links(t1)}"
+        if t1
+        else "- **Tier 1 (`Translational Lead`):** `0` programs in `v2.0.0` (all active leads require prospective validation or assay bridging prior to clinical commitment)"
+    )
+    monograph_block = "\n".join([
+        f"### Standalone Translational Monographs ({len(t2)} Tier 2 Leads + {len(t3_deep)} Tier 3 Deep-Dive Monographs)",
+        f"- **Portfolio Partition (`{len(port_rows)}` Hypotheses):** `{len(t1)}` Tier 1 · `{len(t2)}` Tier 2 Validation Leads (`{t2_core}` Core + `{t2_expl}` Exploratory) · `{len(t3)}` Tier 3 Exploratory Discovery · `{len(t4)}` Tier 4 Parked Watchlist (`Keep · Exploratory`, `0` Drops) · `{len(proto)}` Companion Protocol · `{len(bench)}` Benchmarks/Biomarkers · `{len(drops)}` Excluded Regimens",
+        t1_line,
+        f"- **Tier 2 (`Preclinical / PD Validation`, `{len(t2)}` Leads):** {_mk_links(t2)}",
+        f"- **Tier 3 Deep-Dive Monographs (`{len(t3_deep)}`):** {_mk_links(t3_deep)}",
+    ])
+    return re.sub(
+        r"### Standalone Translational Monographs[\s\S]*?(?=\n\n## Licensing, Disclaimers)",
+        monograph_block,
+        GITHUB_README_MD,
+        count=1,
+    )
+
+
+def export_public_web_bundle(
+    repo_dir: Path,
+    agy_explorer_html: str,
+    agy_mono_files: list[Path],
+    sha_stamp: str = "",
+    port_rows: list[dict[str, str]] | None = None,
+) -> list[Path]:
     docs_dir = repo_dir / "docs"
     mono_out = docs_dir / "monographs"
     mono_out.mkdir(parents=True, exist_ok=True)
@@ -185,13 +247,14 @@ def export_public_web_bundle(repo_dir: Path, agy_explorer_html: str, agy_mono_fi
     assert "gstatic.com" not in pub_index and "onclick=" not in pub_index.lower() and "wiki" not in pub_index.lower()
     emdash_re = re.compile(r"\u2014|&mdash;|&#8212;|&#x2014;|\\u2014", re.IGNORECASE)
     assert not emdash_re.search(pub_index), "Em-dash leaked in public docs/index.html"
-    assert not emdash_re.search(GITHUB_README_MD), "Em-dash leaked in public README.md"
+    readme_txt = render_github_readme(port_rows)
+    assert not emdash_re.search(readme_txt), "Em-dash leaked in public README.md"
     idx_fp = docs_dir / "index.html"
     idx_fp.write_text(pub_index, encoding="utf-8")
     nojekyll_fp = docs_dir / ".nojekyll"
     nojekyll_fp.write_text("", encoding="utf-8")
     readme_fp = repo_dir / "README.md"
-    readme_fp.write_text(GITHUB_README_MD, encoding="utf-8")
+    readme_fp.write_text(readme_txt, encoding="utf-8")
     gi_fp = repo_dir / ".gitignore"
     gi_fp.write_text(GITIGNORE_TXT, encoding="utf-8")
     ga_fp = repo_dir / ".gitattributes"

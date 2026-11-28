@@ -1,4 +1,4 @@
-"""Public CLI entrypoint for building the zero-CDN ExploreALS v1.2 interactive Explorer and 8 Monographs."""
+"""Public CLI entrypoint for building the zero-CDN ExploreALS v2.0 interactive Explorer and 8 Monographs."""
 from __future__ import annotations
 
 import runpy

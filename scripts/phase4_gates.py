@@ -1,11 +1,12 @@
-"""Hardened Phase 4 cross-phase portfolio (52), cis-interval (26), dossier-sync, JSON, & biosecurity validators."""
+"""Hardened Phase 4 cross-phase portfolio (55), cis-interval (28), dossier-sync, prose/hurdle, manifest, & biosecurity validators."""
 from __future__ import annotations
 
+import ast
 import json
 from pathlib import Path
 import re
 
-from carbon_als.accessions import accession_to_legacy, legacy_to_accession
+from carbon_als.accessions import accession_to_legacy, legacy_to_accession, translate_legacy_tokens_in_prose
 from phase3_gates import ALLOWED_OFFTARGET_STATUS, ALLOWED_TRL, MODEL_PRIOR_RE, RAW_OLIGO_SEQ_RE, _reject_nan_const, _sha12, _sha12_variants
 from phase3b_gates import ALLOWED_P3B_BASIS, ALLOWED_P3B_DEC, ALLOWED_P3B_EPI, ALLOWED_P3B_GATE, ALLOWED_P3B_TIER, FALSIFIED_P3B, GAPPED_OLIGO_RE
 
@@ -71,6 +72,171 @@ SITE_INTERNAL_JARGON_RE = re.compile(
     r"Dropped\s+PK\s+or\s+Safety\s+Infeasible\s+Regimen|GOVERNANCE\s+GUARDRAIL|scientific\s+taste)",
     re.IGNORECASE,
 )
+RAW_PROSE_TOKEN_RE = re.compile(
+    r"\b(?:TIER_[1-4]_[A-Z_]+|KEEP_CORE|KEEP_EXPLORATORY_UNPROVEN|UNPROVEN_UNTESTED|"
+    r"MODEL_PRIOR|NOT_IN_TABLE|OG000|ACTIVE_NOT_RECRUITING|NOT_YET_RECRUITING|"
+    r"annot_status|TRL\s+[1-6]|6i_TDP43|6d_MN)\b"
+)
+_ENGLISH_SHORT_HURDLE_WORDS = frozenset({
+    "VS", "OF", "IN", "TO", "OR", "BY", "ON", "AT", "AS", "NO", "AN", "IS", "BE", "UP", "DO", "GO", "IF", "SO", "DE",
+})
+_HURDLE_KNOWN_UNMAPPED_RE = re.compile(
+    r"^(?:OFFTARGETS?|LC3YLATION|CBOUTON|POLYA|GOLGI|SNARE|EDINBURGH|MUNE|CMAP|DRG|ARM|TDP|RNP|RNA|TE)$"
+)
+_HURDLE_PRE_PASS = (
+    ("SPONSOR_OWNED_ICH_M3R2_SINGLE_ENTITY_GLP_TOX_AND_NHP_CERVICAL_BA4_BIODISTRIBUTION_INDEPENDENT_SINGLE_ENTITY_TOX", "Single-agent_ICH_M3R2_GLP_IT_toxicology_and_NHP_cervical_BA4_biodistribution"),
+    ("PROVISIONAL_POSSIBLE_OPPOSITE_SIGN", "Opposite-direction"),
+    ("OPPOSITE_SIGN", "opposite-direction"),
+    ("SPONSOR_OWNED_", "Single-agent_"),
+    ("FACTORIAL_CONTRIBUTION", "factorial contribution"),
+    ("ICH_M3R2", "ICH M3(R2)"),
+    ("INDEPENDENT_SINGLE_ENTITY_TOX", "standalone single-agent tox qualification"),
+    ("6_TO_9MG", "6–9 mg"), ("LE_3MG", "<=3 mg"), ("LE_5_5PCT", "<=5.5%"), ("24_TO_48MG", "24–48 mg"),
+    ("PH2_3", "Ph2/3"), ("PH1A_1B", "Ph1a/1b"), ("6VS6", "6 vs 6"), ("5VS4", "5 vs 4"), ("1VS2", "1 vs 2"),
+    ("FE_O_FE", "[Fe-O-Fe]"), ("TPN101_TP", "TPN-101-TP"), ("FAIR_ALS_II", "FAIR-ALS II"), ("FAIRPARK_II", "FAIRPARK-II"),
+    ("PMID_37317638", "PMID:37317638"), ("KP_UU", "KPUU"), ("GT99_9PCT", ">99.9%"), ("LT0_1PCT", "<0.1%"),
+    ("PLUS0048", "+0.048"), ("8_7PCT", "8.7%"), ("LE_3700", "<=3,700"), ("PLI_0_996", "pLI=0.996"),
+    ("CHRONOS_MINUS1_54", "Chronos=-1.54"), ("CHRONOS_MINUS1_26", "Chronos=-1.26"),
+    ("NON_ORTHOSTERIC", "non-orthosteric"), ("NON_C9", "non-C9"), ("PRE_PH3", "Pre-Ph3"), ("POST_QRL201", "Post-QRL-201"),
+    ("ALS_GLIA", "ALS-Glia"), ("AA324_328", "aa 324-328 SKECF"), ("Q48_TO_Q72H", "q48h-q72h"),
+    ("NAMPT_NMNAT2", "NAMPT->NMNAT2"), ("NMN_NAD", "NMN/NAD+"), ("NMD_BLOCKED", "NMD-blocked"),
+)
+_HURDLE_KEEP_PREFIX_RE = re.compile(
+    r"^(?:#|<=|>=|<|>|-0\.|[0-9]|EALS-|pLI=|Chronos=|factorial|ICH|independent|Pre-|Post-|ALS-|non-|aa |\[Fe|NAMPT->|NMN/|NMD-|Ph2/|Ph1a/|TPN-|FAIR|PMID:)"
+)
+_HURDLE_KEEP_LEAD_RE = re.compile(
+    r"^(?:iPSC|iMGL|iNeuron|sST2|sCD25|pNfH|pSTAT|pLI=|pSer3|cADPR|cGAS|mRNA|snRNA|tSTMN2|q48h|n>=|rs[0-9]+)"
+)
+
+
+def _extract_inline_json(htxt: str, var_name: str):
+    m = re.search(rf"^const {re.escape(var_name)} = ([\{{\[].*[\}}\]]);$", htxt, re.M)
+    return json.loads(m.group(1)) if m else None
+
+
+def check_rendered_prose_and_tier4_integrity(htxt: str, lbl: str) -> list[str]:
+    """Fail loud on raw internal enums/sentinels in rendered prose, Tier 4 copy drift, control chars, or 0-row filter bug."""
+    errs: list[str] = []
+    if "\x08" in htxt:
+        errs.append(f"{lbl} contains raw ASCII backspace (\\x08) — likely unescaped \\b inside a non-raw Python JS string")
+    if "rows.length > 0 && !rows.some(r=>r.id===selectedId)" in htxt:
+        errs.append(f"{lbl} regressed 0-row inspector out-of-filter banner guard (selHidden must not require rows.length > 0)")
+
+    dsum = _extract_inline_json(htxt, "DATA_SUM") or {}
+    dmono = _extract_inline_json(htxt, "DATA_MONOGRAPHS") or {}
+    dcon = _extract_inline_json(htxt, "DATA_CONTRASTS") or []
+    dsub = _extract_inline_json(htxt, "DATA_SUB") or []
+    dupd = _extract_inline_json(htxt, "DATA_UPDATES") or []
+    dport = _extract_inline_json(htxt, "DATA_PORT") or []
+
+    def _scan_raw(surface: str, blob: str) -> None:
+        hits = sorted(set(RAW_PROSE_TOKEN_RE.findall(blob)))
+        if hits:
+            errs.append(f"{lbl} {surface} leaks raw internal token(s): {hits}")
+
+    for aid, entry in dsum.items():
+        _scan_raw(f"DATA_SUM[{aid}]", json.dumps(entry))
+    for aid, entry in dmono.items():
+        clone = json.loads(json.dumps(entry))
+        ev_m = clone.get("ev_matrix") or {}
+        for item in (*ev_m.get("tracks", []), *ev_m.get("callouts", [])):
+            item.pop("tag", None)
+        _scan_raw(f"DATA_MONOGRAPHS[{aid}]", json.dumps(clone))
+    for idx, entry in enumerate(dcon):
+        _scan_raw(f"DATA_CONTRASTS[{idx}]", json.dumps(entry))
+    for entry in dsub:
+        _scan_raw(f"DATA_SUB[{entry.get('id')}]", " ".join(str(entry.get(k, "")) for k in ("vbody", "drug", "gnomad", "vlbl")))
+    if dupd:
+        _scan_raw("DATA_UPDATES[0]", json.dumps(dupd[0]))
+
+    for r in dport:
+        if r.get("tier") == "TIER_4_PARKED_INSUFFICIENT_EVIDENCE":
+            aid = r.get("id", "")
+            if r.get("dec") != "KEEP_EXPLORATORY_UNPROVEN" or r.get("epi") != "UNPROVEN_UNTESTED":
+                errs.append(f"{lbl} Tier 4 candidate {aid} violates Epistemic Asymmetry (dec={r.get('dec')}, epi={r.get('epi')})")
+            s_ent = dsum.get(aid) or {}
+            verdict = str(s_ent.get("verdict", ""))
+            if not re.search(r"Tier\s*4", verdict, re.I):
+                errs.append(f"{lbl} Tier 4 candidate {aid} DATA_SUM verdict missing 'Tier 4' orientation")
+            if re.search(r"Tier\s*3", verdict, re.I):
+                errs.append(f"{lbl} Tier 4 candidate {aid} DATA_SUM verdict contains stale 'Tier 3' text")
+            if s_ent.get("edge_kind") != "TIER4_PARKED_WATCHLIST":
+                errs.append(f"{lbl} Tier 4 candidate {aid} edge_kind='{s_ent.get('edge_kind')}' != 'TIER4_PARKED_WATCHLIST'")
+    return errs
+
+
+def check_hurdle_token_coverage(htxt: str, port_rows: list[dict[str, str]], lbl: str) -> list[str]:
+    """Verify every structured hurdle token formats cleanly via HURDLE_TOK without mangled acronyms or leading-case bugs."""
+    errs: list[str] = []
+    m_ht = re.search(r"const HURDLE_TOK = \{([\s\S]*?)\};", htxt)
+    if not m_ht:
+        return [f"{lbl} missing HURDLE_TOK map for hurdle coverage check"]
+    htok = {
+        (k1 or k2): (v1 or v2)
+        for k1, k2, v1, v2 in re.findall(r"""(?:'([^']+)'|\b([A-Z0-9]+))\s*:\s*(?:'([^']*)'|"([^"]*)")""", m_ht.group(1))
+    }
+    for r in port_rows:
+        aid = r.get("accession_id") or r.get("portfolio_id", "")
+        raw_str = translate_legacy_tokens_in_prose(r.get("unsolved_hurdles_structured", ""))
+        for code in (x.strip() for x in raw_str.split(";") if x.strip() and x.strip() != "NONE"):
+            pre = code
+            for src_s, dst_s in _HURDLE_PRE_PASS:
+                pre = pre.replace(src_s, dst_s)
+            words: list[str] = []
+            for w in (x for x in pre.split("_") if x):
+                if w in htok:
+                    words.append(htok[w])
+                elif _HURDLE_KEEP_PREFIX_RE.match(w):
+                    words.append(w)
+                elif re.fullmatch(r"RS[0-9]+", w):
+                    words.append(w.lower())
+                else:
+                    if (
+                        _HURDLE_KNOWN_UNMAPPED_RE.match(w)
+                        or (len(w) <= 2 and w.isupper() and w not in _ENGLISH_SHORT_HURDLE_WORDS)
+                        or (re.search(r"[0-9]", w) and re.search(r"[A-Z]", w))
+                    ):
+                        errs.append(f"{lbl} unmapped HURDLE_TOK acronym '{w}' on {aid} in '{code}'")
+                    words.append(w.lower())
+            out = " ".join(words)
+            if out and not _HURDLE_KEEP_LEAD_RE.match(out):
+                out = out[0].upper() + out[1:]
+            if "_" in out:
+                errs.append(f"{lbl} underscore survived formatHurdle on {aid}: '{out}'")
+            if re.match(r"^(?:IPSC\b|PLI=|PSer3\b|CGAS\b|N>=|Rs[0-9]+)", out):
+                errs.append(f"{lbl} leading-case corruption in formatHurdle on {aid}: '{out}'")
+    return errs
+
+
+def check_manifest_and_run_chronology(carbon_root: Path, load_csv_fn) -> list[str]:
+    """Verify analysis_runs.csv Phase 4 chronology and 100% datasets_manifest <-> _v1_2_manifest_specs parity."""
+    errs: list[str] = []
+    runs = {r["analysis_run_id"]: r for r in load_csv_fn("analysis_runs.csv")}
+    t_p3a = runs.get("RUN-P3A-003", {}).get("run_timestamp_utc", "")
+    t_p3b = runs.get("RUN-P3B-003", {}).get("run_timestamp_utc", "")
+    t_p4_1 = runs.get("RUN-P4-001", {}).get("run_timestamp_utc", "")
+    t_p4_2 = runs.get("RUN-P4-002", {}).get("run_timestamp_utc", "")
+    if t_p4_1 and t_p3a and t_p4_1 < t_p3a:
+        errs.append(f"analysis_runs.csv chronology inversion: RUN-P4-001 ({t_p4_1}) < RUN-P3A-003 ({t_p3a})")
+    if t_p4_1 and t_p3b and t_p4_1 < t_p3b:
+        errs.append(f"analysis_runs.csv chronology inversion: RUN-P4-001 ({t_p4_1}) < RUN-P3B-003 ({t_p3b})")
+    if t_p4_2 and t_p4_1 and t_p4_2 < t_p4_1:
+        errs.append(f"analysis_runs.csv chronology inversion: RUN-P4-002 ({t_p4_2}) < RUN-P4-001 ({t_p4_1})")
+
+    specs_fp = carbon_root / "scripts" / "_v1_2_manifest_specs.py"
+    if specs_fp.is_file():
+        tree = ast.parse(specs_fp.read_text(encoding="utf-8"))
+        spec_keys: set[str] = set()
+        for node in tree.body:
+            if isinstance(node, ast.AnnAssign) and isinstance(node.target, ast.Name) and node.target.id == "DATASET_TIER_SPECS" and isinstance(node.value, ast.Dict):
+                for k in node.value.keys:
+                    if isinstance(k, ast.Constant) and isinstance(k.value, str):
+                        spec_keys.add(k.value)
+        ds_ids = {r["dataset_id"] for r in load_csv_fn("datasets_manifest.csv")}
+        missing = sorted(ds_ids - spec_keys)
+        if missing:
+            errs.append(f"datasets_manifest.csv IDs missing from scripts/_v1_2_manifest_specs.py DATASET_TIER_SPECS: {missing}")
+    return errs
 
 
 def verify_phase4_gates(
@@ -425,7 +591,10 @@ def verify_phase4_gates(
                     n_linked = sum(1 for d in dds_obj if liv_id in d.get("cands", ""))
                     if n_linked < 2:
                         errors.append(f"{lbl} DATA_DATASETS links living candidate {liv_id} to only {n_linked} dataset(s) (expected >=2)")
+            errors.extend(check_rendered_prose_and_tier4_integrity(htxt, lbl))
+            errors.extend(check_hurdle_token_coverage(htxt, port_rows, lbl))
 
+        errors.extend(check_manifest_and_run_chronology(carbon_root, load_csv_fn))
         if mode == "full":
             _audit_explorer_html(explorer_html, is_public_export=False)
         _audit_explorer_html(gh_docs / "index.html", is_public_export=True)

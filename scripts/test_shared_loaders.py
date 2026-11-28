@@ -585,7 +585,55 @@ def main() -> None:
         except AssertionError as _exc:
             assert "BIOSECURITY_GUARD_TRIGGERED" in str(_exc)
 
-    print("PASS: All 33 v0.5.9 shared-loader, PEP 562 lazy-import, check_work_outputs, unconditional Pack C/AlphaGenome/minus-strand/VIF/1-UMI/BH-FDR/SMR, Keuss/Takeuchi integration, flagship-VerifiedCheck, EALS accession, directory-SHA256, mmCIF, splice-Tm/bystander, MWC/PKPD/CASM/CD38, Phase 3B/4, and biosecurity tests verified (0 errors).")
+    # Test 34: Permanent v2.0+ compile-time gates in phase4_gates.py (raw prose tokens, Tier 4/3 drift, \x08 escape, 0-row selHidden, HURDLE_TOK coverage, run chronology & manifest-spec parity)
+    import phase4_gates as _p4g  # noqa: E402
+    _good_html = (
+        'const DATA_PORT = [{"id":"EALS-026","tier":"TIER_4_PARKED_INSUFFICIENT_EVIDENCE","dec":"KEEP_EXPLORATORY_UNPROVEN","epi":"UNPROVEN_UNTESTED"}];\n'
+        'const DATA_SUM = {"EALS-026":{"verdict":"Parked on Tier 4 Watchlist.","edge_kind":"TIER4_PARKED_WATCHLIST"}};\n'
+        'const DATA_MONOGRAPHS = {"EALS-001":{"ev_matrix":{"tracks":[{"tag":"MODEL_PRIOR","lbl":"clean"}]}}};\n'
+        'const DATA_CONTRASTS = [{"finding":"Clean modeled estimate"}];\n'
+        'const DATA_SUB = [{"id":"EALS-018.4","vbody":"not detected","drug":"clean","gnomad":"clean","vlbl":"Excluded"}];\n'
+        'const DATA_UPDATES = [{"id":"UPD-TEST","post":"Tier 4 Parked Watchlist"}];\n'
+        'const HURDLE_TOK = {TE:\'TE\', EC80:\'EC80\', DRG:\'DRG\', IPSC:\'iPSC\', PLI1:\'pLI=1.0\'};\n'
+        'const selHidden = !rows.some(r=>r.id===selectedId);\n'
+    )
+    assert _p4g.check_rendered_prose_and_tier4_integrity(_good_html, "syn_ok") == []
+    assert _p4g.check_hurdle_token_coverage(_good_html, [{"accession_id": "EALS-001", "unsolved_hurdles_structured": "IPSC_EC80_DRG_TE_CHECK;PLI1_CHECK"}], "syn_ok") == []
+    # Negative prose/Tier4/control-char/selHidden checks
+    _bad_html = (
+        'const DATA_PORT = [{"id":"EALS-026","tier":"TIER_4_PARKED_INSUFFICIENT_EVIDENCE","dec":"KEEP_EXPLORATORY_UNPROVEN","epi":"UNPROVEN_UNTESTED"}];\n'
+        'const DATA_SUM = {"EALS-026":{"verdict":"Retained on Tier 3 watchlist (OG000, TRL 3).","edge_kind":"HIGH_HURDLE_WATCHLIST"}};\n'
+        'const DATA_MONOGRAPHS = {"EALS-001":{"note":"[MODEL_PRIOR, murine]"}};\n'
+        'const DATA_UPDATES = [{"id":"UPD-BAD","post":"TIER_4_PARKED_INSUFFICIENT_EVIDENCE KEEP_EXPLORATORY_UNPROVEN"}];\n'
+        'const HURDLE_TOK = {IPSC:\'iPSC\'};\n'
+        'const selHidden = rows.length > 0 && !rows.some(r=>r.id===selectedId);\n'
+        'bad_backspace=\x08\n'
+    )
+    _bad_p_errs = _p4g.check_rendered_prose_and_tier4_integrity(_bad_html, "syn_bad")
+    assert any("ASCII backspace" in e for e in _bad_p_errs)
+    assert any("0-row inspector" in e for e in _bad_p_errs)
+    assert any("DATA_SUM[EALS-026]" in e and "OG000" in e for e in _bad_p_errs)
+    assert any("DATA_MONOGRAPHS[EALS-001]" in e and "MODEL_PRIOR" in e for e in _bad_p_errs)
+    assert any("DATA_UPDATES[0]" in e and "TIER_4_PARKED_INSUFFICIENT_EVIDENCE" in e for e in _bad_p_errs)
+    assert any("stale 'Tier 3'" in e for e in _bad_p_errs)
+    assert any("edge_kind='HIGH_HURDLE_WATCHLIST'" in e for e in _bad_p_errs)
+    # Negative HURDLE_TOK unmapped acronym check
+    _bad_h_errs = _p4g.check_hurdle_token_coverage(_bad_html, [{"accession_id": "EALS-006", "unsolved_hurdles_structured": "EC80_DRG_MUNE_LC3YLATION_TE_TEST"}], "syn_bad")
+    for _tok in ("EC80", "DRG", "MUNE", "LC3YLATION", "TE"):
+        assert any(f"'{_tok}'" in e for e in _bad_h_errs), f"Failed to catch unmapped hurdle token {_tok}: {_bad_h_errs}"
+    # Real repo chronology & manifest parity pass + synthetic failure check
+    assert _p4g.check_manifest_and_run_chronology(ROOT, load_csv) == []
+    def _bad_csv_loader(name: str):
+        if name == "analysis_runs.csv":
+            return [
+                {"analysis_run_id": "RUN-P3A-003", "run_timestamp_utc": "2026-11-28T09:00:00Z"},
+                {"analysis_run_id": "RUN-P4-001", "run_timestamp_utc": "2026-11-27T18:00:00Z"},
+            ]
+        return [{"dataset_id": "DS_UNREGISTERED_FAKE_999"}]
+    _bad_c_errs = _p4g.check_manifest_and_run_chronology(ROOT, _bad_csv_loader)
+    assert any("chronology inversion" in e for e in _bad_c_errs) and any("DS_UNREGISTERED_FAKE_999" in e for e in _bad_c_errs)
+
+    print("PASS: All 34 v0.5.9 shared-loader, PEP 562 lazy-import, check_work_outputs, Phase 4 prose/Tier-4/hurdle/chronology/manifest gates, unconditional Pack C/AlphaGenome/minus-strand/VIF/1-UMI/BH-FDR/SMR, Keuss/Takeuchi integration, flagship-VerifiedCheck, EALS accession, directory-SHA256, mmCIF, splice-Tm/bystander, MWC/PKPD/CASM/CD38, Phase 3B/4, and biosecurity tests verified (0 errors).")
 
 
 if __name__ == "__main__":

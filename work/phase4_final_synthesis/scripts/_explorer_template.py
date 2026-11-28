@@ -29,8 +29,8 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
       <div class="pt-2 border-t border-[var(--card-border)]">
         <div class="grid grid-cols-2 sm:flex sm:flex-wrap gap-1.5 w-full sm:w-auto" id="tab-bar" role="tablist" aria-label="Explorer Views">
           <button id="tab-btn-home" type="button" role="tab" aria-selected="true" aria-controls="view-home" data-tab="home" class="tab-btn col-span-2 flex items-center gap-1.5 px-2.5 py-1.5 rounded border border-[var(--border)] font-medium text-xs cursor-pointer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4.5v-6h3v6H18a1 1 0 0 0 1-1V9.5"/></svg><span>Home &middot; Updates</span></button>
-          <button id="tab-btn-portfolio" type="button" role="tab" aria-selected="false" aria-controls="view-portfolio" data-tab="portfolio" class="tab-btn px-2.5 py-1.5 rounded border border-[var(--border)] font-medium text-xs cursor-pointer">1. Triage Table (55)</button>
-          <button id="tab-btn-dossiers" type="button" role="tab" aria-selected="false" aria-controls="view-dossiers" data-tab="dossiers" class="tab-btn px-2.5 py-1.5 rounded border border-[var(--border)] font-medium text-xs cursor-pointer">2. Candidate Reports (55)</button>
+          <button id="tab-btn-portfolio" type="button" role="tab" aria-selected="false" aria-controls="view-portfolio" data-tab="portfolio" class="tab-btn px-2.5 py-1.5 rounded border border-[var(--border)] font-medium text-xs cursor-pointer">1. Triage Table (__N_PORT__)</button>
+          <button id="tab-btn-dossiers" type="button" role="tab" aria-selected="false" aria-controls="view-dossiers" data-tab="dossiers" class="tab-btn px-2.5 py-1.5 rounded border border-[var(--border)] font-medium text-xs cursor-pointer">2. Candidate Reports (__N_PORT__)</button>
           <button id="tab-btn-intervals" type="button" role="tab" aria-selected="false" aria-controls="view-intervals" data-tab="intervals" class="tab-btn px-2.5 py-1.5 rounded border border-[var(--border)] font-medium text-xs cursor-pointer">3. Splice Windows (28)</button>
           <button id="tab-btn-replication" type="button" role="tab" aria-selected="false" aria-controls="view-replication" data-tab="replication" class="tab-btn px-2.5 py-1.5 rounded border border-[var(--border)] font-medium text-xs cursor-pointer">4. Replication</button>
         </div>
@@ -40,19 +40,19 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
     <div class="hidden sm:grid sm:grid-cols-3 lg:grid-cols-6 gap-2.5" id="kpi-bar">
       <button type="button" data-quick-filter="ALL" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
         <div class="text-[var(--muted-foreground)] text-xs">Evaluated Hypotheses</div>
-        <div class="text-lg font-bold font-mono tabular-nums mt-0.5">55 <span class="text-xs font-normal text-[var(--muted-foreground)]">(6 Evidence Domains)</span></div>
+        <div class="text-lg font-bold font-mono tabular-nums mt-0.5">__N_PORT__ <span class="text-xs font-normal text-[var(--muted-foreground)]">(6 Evidence Domains)</span></div>
       </button>
       <button type="button" data-quick-filter="TIER12" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
-        <div class="text-[var(--muted-foreground)] text-xs">Tier 2 Validation Leads</div>
-        <div class="text-lg font-bold font-mono tabular-nums text-[var(--success)] mt-0.5">6 <span class="text-xs font-normal text-[var(--muted-foreground)]">(0 T1 + 6 T2)</span></div>
+        <div class="text-[var(--muted-foreground)] text-xs">__TIER12_KPI_LABEL__</div>
+        <div class="text-lg font-bold font-mono tabular-nums text-[var(--success)] mt-0.5">__N_T12__ <span class="text-xs font-normal text-[var(--muted-foreground)]">(__N_T1__ T1 + __N_T2__ T2)</span></div>
       </button>
       <button type="button" data-quick-filter="CORE" title="Causal human ALS genetics and/or human TDP-43 pathology + functional rescue" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
         <div class="text-[var(--muted-foreground)] text-xs">Keep &middot; Core Leads</div>
-        <div class="text-lg font-bold font-mono tabular-nums text-[var(--primary)] mt-0.5">4 <span class="text-xs font-normal text-[var(--muted-foreground)]">(1 Oral + 3 IT SSO)</span></div>
+        <div class="text-lg font-bold font-mono tabular-nums text-[var(--primary)] mt-0.5">__N_CORE__ <span class="text-xs font-normal text-[var(--muted-foreground)]">(1 Oral + 3 IT SSO)</span></div>
       </button>
       <button type="button" data-quick-filter="EXPL" title="Untested preclinical/biofluid triage queue (not therapeutic endorsement)" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
         <div class="text-[var(--muted-foreground)] text-xs">Keep &middot; Exploratory</div>
-        <div class="text-lg font-bold font-mono tabular-nums text-[var(--warning)] mt-0.5">28 <span class="text-xs font-normal text-[var(--muted-foreground)]">(Untested &ne; Falsified)</span></div>
+        <div class="text-lg font-bold font-mono tabular-nums text-[var(--warning)] mt-0.5">__N_EXPL__ <span class="text-xs font-normal text-[var(--muted-foreground)]">(Untested &ne; Falsified)</span></div>
       </button>
       <button type="button" data-switch-tab="intervals" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
         <div class="text-[var(--muted-foreground)] text-xs">GRCh38 Splice Windows</div>
@@ -60,7 +60,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
       </button>
       <button type="button" data-quick-filter="DROP" title="Deprioritized based on human RCT futility, CNS exposure/safety limits, or assay confounding" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
         <div class="text-[var(--muted-foreground)] text-xs">Drop &middot; Falsified</div>
-        <div class="text-lg font-bold font-mono tabular-nums text-[var(--error)] mt-0.5">16 <span class="text-xs font-normal text-[var(--muted-foreground)]">(9 Trial &middot; 7 PK/Tox &middot; 0 Confounded)</span></div>
+        <div class="text-lg font-bold font-mono tabular-nums text-[var(--error)] mt-0.5">__N_DROP__ <span class="text-xs font-normal text-[var(--muted-foreground)]">(__N_DROP_CLIN__ Trial &middot; __N_DROP_PK__ PK/Tox &middot; __N_DROP_ART__ Confounded)</span></div>
       </button>
     </div>
 
@@ -77,23 +77,16 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
             <div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--warning)] space-y-1.5">
               <div class="font-mono font-semibold text-xs text-[var(--foreground)]">Four Evidence &amp; Triage Verdicts (<span class="font-mono">Untested &ne; Falsified</span>)</div>
               <ul class="space-y-1.5 text-xs leading-relaxed">
-                <li><span class="font-mono font-semibold text-[var(--success)]">Keep &middot; Core (4):</span> Supported by human ALS genetics and/or TDP-43 rescue with a CNS-viable modality.</li>
-                <li><span class="font-mono font-semibold text-[var(--warning)]">Keep &middot; Exploratory (28):</span> Unresolved due to bulk-assay, dosing, or cohort blind spots, paired with 1 Go/No-Go test (includes <span class="font-mono">6</span> Tier 4 Parked Watchlist drugs that remain exploratory, never dropped).</li>
-                <li><span class="font-mono font-semibold text-[var(--primary)]">Benchmark / Biomarker (7):</span> Approved SOC comparator (2), clinical PD reference (1), CSF staging panel (1), or candidate CSF marker (3).</li>
-                <li><span class="font-mono font-semibold text-[var(--error)]">Drop &middot; Falsified (16):</span> Deprioritized at the tested regimen/exposure based on human ALS RCT futility (<span class="font-mono">9</span>), unbound CNS exposure or safety limits (<span class="font-mono">7</span>), or assay confounding (<span class="font-mono">0</span>).</li>
+                <li><span class="font-mono font-semibold text-[var(--success)]">Keep &middot; Core (__N_CORE__):</span> Supported by human ALS genetics and/or TDP-43 rescue with a CNS-viable modality.</li>
+                <li><span class="font-mono font-semibold text-[var(--warning)]">Keep &middot; Exploratory (__N_EXPL__):</span> Unresolved due to bulk-assay, dosing, or cohort blind spots, paired with 1 Go/No-Go test (includes <span class="font-mono">__N_T4__</span> Tier 4 Parked Watchlist drugs that remain exploratory, never dropped).</li>
+                <li><span class="font-mono font-semibold text-[var(--primary)]">Benchmark / Biomarker (__N_BENCH__):</span> Approved SOC comparator (2), clinical PD reference (1), CSF staging panel (1), or candidate CSF marker (3).</li>
+                <li><span class="font-mono font-semibold text-[var(--error)]">Drop &middot; Falsified (__N_DROP__):</span> Deprioritized at the tested regimen/exposure based on human ALS RCT futility (<span class="font-mono">__N_DROP_CLIN__</span>), unbound CNS exposure or safety limits (<span class="font-mono">__N_DROP_PK__</span>), or assay confounding (<span class="font-mono">__N_DROP_ART__</span>).</li>
               </ul>
             </div>
             <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--success)] space-y-1.5">
-              <div class="font-mono font-semibold text-xs text-[var(--foreground)]">Tier 2 Validation Leads (6) &amp; Tier 3 Deep-Dive Monographs (2)</div>
+              <div class="font-mono font-semibold text-xs text-[var(--foreground)]">__HOME_MONO_HEADER__</div>
               <div class="flex flex-wrap gap-1">
-                <button type="button" data-open-dossier="EALS-001" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#1 UNC13A &middot; EALS-001</button>
-                <button type="button" data-open-dossier="EALS-002" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#2 STMN2 &middot; EALS-002</button>
-                <button type="button" data-open-dossier="EALS-006" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#3 KCNQ2 &middot; EALS-006</button>
-                <button type="button" data-open-dossier="EALS-030" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#4 SARM1 &middot; EALS-030</button>
-                <button type="button" data-open-dossier="EALS-031" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#5 IL-2 &middot; EALS-031</button>
-                <button type="button" data-open-dossier="EALS-034" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#6 ATG4B &middot; EALS-034</button>
-                <button type="button" data-open-dossier="EALS-037" title="Tier 3 Deep-Dive Monograph" class="px-1.5 py-0.5 rounded border border-dashed border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#7 CELF5 (T3) &middot; EALS-037</button>
-                <button type="button" data-open-dossier="EALS-007" title="Tier 3 Deep-Dive Monograph" class="px-1.5 py-0.5 rounded border border-dashed border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#22 sST2 (T3) &middot; EALS-007</button>
+__HOME_MONO_PILLS__
               </div>
             </div>
             <div class="pt-1.5 border-t border-[var(--card-border)] space-y-1.5">
@@ -182,9 +175,9 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
         </div>
       </details>
       <div id="p-filter-bar" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex flex-wrap items-center gap-2">
-        <input id="p-search" aria-label="Search candidates" type="text" placeholder="Search ID (e.g. EALS-006, #3), gene/drug, subunit (G2E3, C1QA)..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs flex-1 min-w-[200px] text-[var(--foreground)]" />
+        <input id="p-search" aria-label="Search candidates" type="text" placeholder="Search ID (e.g. EALS-006, #__RK_KCNQ2__), gene/drug, subunit (G2E3, C1QA)..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs flex-1 min-w-[200px] text-[var(--foreground)]" />
         <select id="p-origin" aria-label="Filter by biological evidence source" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
-          <option value="ALL">Evidence Source: All (55)</option>
+          <option value="ALL">Evidence Source: All (__N_PORT__)</option>
           <option value="GENETICS_MENDELIAN_GWAS">Human ALS Genetics: Mendelian &amp; GWAS (5)</option>
           <option value="TDP43_SPLICING_APA">TDP-43 Cryptic Splicing &amp; Polyadenylation (14)</option>
           <option value="CNS_TISSUE_OMICS">Human CNS Spatial, snRNA &amp; Subcellular Omics (6)</option>
@@ -193,24 +186,24 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           <option value="IPSC_PHENOTYPIC_SCREEN">Patient iPSC-MN Phenotypic Screen (11)</option>
         </select>
         <select id="p-dec" aria-label="Filter by triage verdict" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
-          <option value="ALL">Triage Verdict: All (55)</option>
-          <option value="KEEP_CORE">Keep &middot; Core (4)</option>
-          <option value="KEEP_EXPLORATORY_UNPROVEN">Keep &middot; Exploratory (28)</option>
-          <option value="RECLASSIFY_BENCHMARK_OR_BIOMARKER">Benchmark / Biomarker (7)</option>
-          <option value="DROP">Drop &middot; All Excluded (16)</option>
-          <option value="DROP_CLIN">&nbsp;&nbsp;&larrhk; Drop: Human RCT Futility (9)</option>
-          <option value="DROP_PK">&nbsp;&nbsp;&larrhk; Drop: CNS Exposure / Safety Limit (7)</option>
-          <option value="DROP_ART">&nbsp;&nbsp;&larrhk; Drop: Assay Confounding (0)</option>
+          <option value="ALL">Triage Verdict: All (__N_PORT__)</option>
+          <option value="KEEP_CORE">Keep &middot; Core (__N_CORE__)</option>
+          <option value="KEEP_EXPLORATORY_UNPROVEN">Keep &middot; Exploratory (__N_EXPL__)</option>
+          <option value="RECLASSIFY_BENCHMARK_OR_BIOMARKER">Benchmark / Biomarker (__N_BENCH__)</option>
+          <option value="DROP">Drop &middot; All Excluded (__N_DROP__)</option>
+          <option value="DROP_CLIN">&nbsp;&nbsp;&larrhk; Drop: Human RCT Futility (__N_DROP_CLIN__)</option>
+          <option value="DROP_PK">&nbsp;&nbsp;&larrhk; Drop: CNS Exposure / Safety Limit (__N_DROP_PK__)</option>
+          <option value="DROP_ART">&nbsp;&nbsp;&larrhk; Drop: Assay Confounding (__N_DROP_ART__)</option>
         </select>
         <select id="p-tier" aria-label="Filter by translational priority tier" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
-          <option value="ALL">Priority Tier: All (55)</option>
-          <option value="TIER_12">Tier 2 Leads (0 T1 + 6 T2)</option>
-          <option value="TIER_1_ACTIONABLE_NOW">Tier 1 &middot; Translational Lead (0)</option>
-          <option value="TIER_2_FOCUSED_GATE_FIRST">Tier 2 &middot; Validation Gate (6)</option>
-          <option value="TIER_3_EXPLORATORY_DISCOVERY">Tier 3 &middot; Exploratory Discovery (19)</option>
-          <option value="TIER_4_PARKED_INSUFFICIENT_EVIDENCE">Tier 4 &middot; Parked Watchlist (6)</option>
-          <option value="BIO_AND_CAL">Biomarkers &amp; Benchmarks (8)</option>
-          <option value="DROPPED_FALSIFIED_EXCLUDED">Drop &middot; Excluded Regimens (16)</option>
+          <option value="ALL">Priority Tier: All (__N_PORT__)</option>
+          <option value="TIER_12">__TIER12_OPT_LABEL__</option>
+          <option value="TIER_1_ACTIONABLE_NOW">Tier 1 &middot; Translational Lead (__N_T1__)</option>
+          <option value="TIER_2_FOCUSED_GATE_FIRST">Tier 2 &middot; Validation Gate (__N_T2__)</option>
+          <option value="TIER_3_EXPLORATORY_DISCOVERY">Tier 3 &middot; Exploratory Discovery (__N_T3__)</option>
+          <option value="TIER_4_PARKED_INSUFFICIENT_EVIDENCE">Tier 4 &middot; Parked Watchlist (__N_T4__)</option>
+          <option value="BIO_AND_CAL">Biomarkers &amp; Benchmarks (__N_BIOCAL__)</option>
+          <option value="DROPPED_FALSIFIED_EXCLUDED">Drop &middot; Excluded Regimens (__N_DROP__)</option>
         </select>
         <select id="p-sort" aria-label="Sort portfolio candidates" title="Lexicographic Translational Priority tuple: (1) Priority Tier, (2) Keep·Core before Exploratory, (3) Within-tier sub-rules (Tier 3 genetic/spatial programs ahead of screen-only candidates; benchmark sub-roles; human RCT futility ahead of PK/safety exclusions), (4) Active ALS Trial Landscape &amp; Open Validation Steps, (5) Clinical Development Stage. Genetic &amp; Pathology Evidence uses a 39-program curated biological evidence ordering. SantaLucia Tm/ΔG37 and AlphaGenome AVI never rank candidates." class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
           <option value="rank">Sort: Translational Priority Rank</option>
@@ -220,7 +213,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
         </select>
         <button type="button" data-reset-filters="1" class="px-2.5 py-1.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] text-xs cursor-pointer">Reset</button>
         <button type="button" data-open-method="1" class="px-2 py-1.5 rounded border border-[var(--border)] text-[var(--muted-foreground)] hover:text-[var(--foreground)] font-mono text-xs cursor-pointer" title="Open Methodology &amp; Rank Key">Rank Key</button>
-        <span id="p-count" class="font-mono tabular-nums text-[var(--muted-foreground)] text-xs ml-auto">55 / 55</span>
+        <span id="p-count" class="font-mono tabular-nums text-[var(--muted-foreground)] text-xs ml-auto">__N_PORT__ / __N_PORT__</span>
         <div class="w-full pt-2 mt-0.5 border-t border-[var(--card-border)] flex flex-wrap items-center gap-1.5">
           <span class="font-mono text-xs text-[var(--muted-foreground)] mr-0.5">Pathway / Mechanism:</span>
           <div id="p-lens-bar" class="flex flex-wrap gap-1.5"></div>
@@ -308,19 +301,19 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
 
     <div id="view-dossiers" role="tabpanel" aria-labelledby="tab-btn-dossiers" class="hidden">
       <div class="md:hidden mb-3 sticky top-2 z-20 bg-[var(--card)] border border-[var(--border)] rounded-lg p-2 flex items-center gap-1.5 shadow-sm">
-        <button id="d-mobile-prev" type="button" data-open-dossier="EALS-029" class="px-2 py-1 rounded border border-[var(--border)] font-mono text-xs shrink-0 cursor-pointer">&larr;</button>
+        <button id="d-mobile-prev" type="button" data-open-dossier="__MOBILE_PREV_ID__" class="px-2 py-1 rounded border border-[var(--border)] font-mono text-xs shrink-0 cursor-pointer">&larr;</button>
         <select id="d-mobile-select" aria-label="Select Candidate Dossier" class="flex-1 min-w-0 truncate bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1 text-xs font-medium text-[var(--foreground)]"></select>
-        <button id="d-mobile-next" type="button" data-open-dossier="EALS-002" class="px-2 py-1 rounded border border-[var(--border)] font-mono text-xs shrink-0 cursor-pointer">&rarr;</button>
+        <button id="d-mobile-next" type="button" data-open-dossier="__MOBILE_NEXT_ID__" class="px-2 py-1 rounded border border-[var(--border)] font-mono text-xs shrink-0 cursor-pointer">&rarr;</button>
         <button type="button" data-toggle-d-rail="1" aria-expanded="false" aria-controls="d-aside" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs shrink-0 cursor-pointer">List</button>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-[268px_minmax(0,1fr)] gap-3 items-start">
         <aside id="d-aside" aria-label="Candidate Directory" class="hidden md:flex md:flex-col bg-[var(--card)] border border-[var(--border)] rounded-lg p-2.5 gap-2 md:sticky md:top-3 max-h-[calc(100vh-1.5rem)]">
           <div class="flex items-center justify-between">
             <span class="font-semibold text-xs">Candidate Directory</span>
-            <span id="d-nav-count" class="font-mono tabular-nums text-xs text-[var(--muted-foreground)]">55 / 55</span>
+            <span id="d-nav-count" class="font-mono tabular-nums text-xs text-[var(--muted-foreground)]">__N_PORT__ / __N_PORT__</span>
           </div>
-          <div class="text-xs text-[var(--muted-foreground)] leading-normal"><span class="font-mono font-semibold text-[var(--primary)]">M</span> Full Monograph (8) &middot; Triage Dossier (47)</div>
-          <input id="d-search" aria-label="Search candidate directory" type="text" placeholder="Jump: EALS-006, KCNQ2, #3..." class="w-full bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1 text-xs text-[var(--foreground)]" />
+          <div class="text-xs text-[var(--muted-foreground)] leading-normal"><span class="font-mono font-semibold text-[var(--primary)]">M</span> Full Monograph (8) &middot; Triage Dossier (__N_TRIAGE__)</div>
+          <input id="d-search" aria-label="Search candidate directory" type="text" placeholder="Jump: EALS-006, KCNQ2, #__RK_KCNQ2__..." class="w-full bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1 text-xs text-[var(--foreground)]" />
           <div id="d-slice-bar" class="flex flex-wrap gap-1"></div>
           <select id="d-lens" aria-label="Filter by biological pathway or mechanism" class="w-full bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1 text-xs text-[var(--foreground)]"></select>
           <div id="d-nav" class="space-y-0.5 flex-1 min-h-0 max-h-[68vh] overflow-y-auto pr-0.5"></div>
@@ -488,3 +481,94 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
   </div>
   <button id="back-to-top-btn" type="button" data-back-to-top="1" aria-label="Back to top of page" title="Scroll back to top of page" class="hidden fixed bottom-4 right-4 z-20 px-3 py-1.5 rounded-full bg-[var(--primary)] text-[var(--primary-foreground)] font-mono font-semibold text-xs shadow-md cursor-pointer">&uarr; Top</button>
 """
+
+_HOME_PILL_LABELS: dict[str, str] = {
+    "EALS-001": "UNC13A",
+    "EALS-002": "STMN2",
+    "EALS-006": "KCNQ2",
+    "EALS-030": "SARM1",
+    "EALS-031": "IL-2",
+    "EALS-034": "ATG4B",
+    "EALS-037": "CELF5",
+    "EALS-007": "sST2",
+}
+
+
+def render_explorer_html_shell(
+    port_rows: list[dict[str, str]],
+    sha_stamp: str,
+    n_updates: int,
+) -> tuple[str, str]:
+    """Interpolate live ranks, tier counts, and Home Monograph pills from phase4_unified_portfolio.csv."""
+    ordered = sorted(port_rows, key=lambda r: int(r["unified_rank"]))
+    rk_by_acc = {r["accession_id"]: r["unified_rank"] for r in ordered}
+    n_port = len(ordered)
+    t1_rows = [r for r in ordered if r["scientific_actionability_tier"] == "TIER_1_ACTIONABLE_NOW"]
+    t2_rows = [r for r in ordered if r["scientific_actionability_tier"] == "TIER_2_FOCUSED_GATE_FIRST"]
+    t3_rows = [r for r in ordered if r["scientific_actionability_tier"] == "TIER_3_EXPLORATORY_DISCOVERY"]
+    t4_rows = [r for r in ordered if r["scientific_actionability_tier"] == "TIER_4_PARKED_INSUFFICIENT_EVIDENCE"]
+    biocal = sum(1 for r in ordered if r["scientific_actionability_tier"] in {"BIOMARKER_BENCHMARK_ONLY", "COMPANION_PROTOCOL_ONLY"})
+    n_core = sum(1 for r in ordered if r["decision"] == "KEEP_CORE")
+    n_expl = sum(1 for r in ordered if r["decision"] == "KEEP_EXPLORATORY_UNPROVEN")
+    n_bench = sum(1 for r in ordered if r["decision"] == "RECLASSIFY_BENCHMARK_OR_BIOMARKER")
+    n_drop = sum(1 for r in ordered if r["decision"] == "DROP")
+    n_drop_clin = sum(1 for r in ordered if r["decision"] == "DROP" and r["epistemic_state"] == "FALSIFIED_CLINICAL")
+    n_drop_pk = sum(1 for r in ordered if r["decision"] == "DROP" and r["epistemic_state"] == "FALSIFIED_PK_SAFETY")
+    n_drop_art = sum(1 for r in ordered if r["decision"] == "DROP" and r["epistemic_state"] == "ARTIFACT_CONFOUNDED")
+    n_t1, n_t2, n_t12 = len(t1_rows), len(t2_rows), len(t1_rows) + len(t2_rows)
+
+    t12_rows = [*t1_rows, *t2_rows]
+    t3_deep = [r for r in t3_rows if r["accession_id"] in {"EALS-037", "EALS-007"}]
+    pills: list[str] = []
+    for r in t12_rows:
+        aid = r["accession_id"]
+        lbl = _HOME_PILL_LABELS.get(aid, r["gene_or_drug"].split()[0])
+        pills.append(
+            f'                <button type="button" data-open-dossier="{aid}" '
+            f'class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] '
+            f'font-mono text-xs text-[var(--link)] cursor-pointer">#{r["unified_rank"]} {lbl} &middot; {aid}</button>'
+        )
+    for r in t3_deep:
+        aid = r["accession_id"]
+        lbl = _HOME_PILL_LABELS.get(aid, r["gene_or_drug"].split()[0])
+        pills.append(
+            f'                <button type="button" data-open-dossier="{aid}" title="Tier 3 Deep-Dive Monograph" '
+            f'class="px-1.5 py-0.5 rounded border border-dashed border-[var(--border)] hover:border-[var(--primary)] '
+            f'font-mono text-xs text-[var(--link)] cursor-pointer">#{r["unified_rank"]} {lbl} (T3) &middot; {aid}</button>'
+        )
+    home_hdr = (
+        f"Tier 2 Validation Leads ({n_t2}) &amp; Tier 3 Deep-Dive Monographs ({len(t3_deep)})"
+        if n_t1 == 0
+        else f"Tier 1+2 Validation Leads ({n_t12}) &amp; Tier 3 Deep-Dive Monographs ({len(t3_deep)})"
+    )
+    subs = {
+        "<!-- __SHA12_STAMP__ -->": f"<!-- {sha_stamp} -->",
+        "__UPD_COUNT__": f"{n_updates} / {n_updates}",
+        "__N_PORT__": str(n_port),
+        "__N_TRIAGE__": str(n_port - len(pills)),
+        "__N_T1__": str(n_t1),
+        "__N_T2__": str(n_t2),
+        "__N_T12__": str(n_t12),
+        "__N_T3__": str(len(t3_rows)),
+        "__N_T4__": str(len(t4_rows)),
+        "__N_BIOCAL__": str(biocal),
+        "__N_CORE__": str(n_core),
+        "__N_EXPL__": str(n_expl),
+        "__N_BENCH__": str(n_bench),
+        "__N_DROP__": str(n_drop),
+        "__N_DROP_CLIN__": str(n_drop_clin),
+        "__N_DROP_PK__": str(n_drop_pk),
+        "__N_DROP_ART__": str(n_drop_art),
+        "__TIER12_KPI_LABEL__": "Tier 2 Validation Leads" if n_t1 == 0 else "Tier 1 + Tier 2 Leads",
+        "__TIER12_OPT_LABEL__": f"Tier 2 Leads ({n_t1} T1 + {n_t2} T2)" if n_t1 == 0 else f"Tier 1 + Tier 2 Leads ({n_t12})",
+        "__HOME_MONO_HEADER__": home_hdr,
+        "__HOME_MONO_PILLS__": "\n".join(pills),
+        "__RK_KCNQ2__": rk_by_acc["EALS-006"],
+        "__MOBILE_PREV_ID__": ordered[-1]["accession_id"],
+        "__MOBILE_NEXT_ID__": ordered[1]["accession_id"],
+    }
+    head_out, tabs_out = HTML_HEAD_AND_BODY, HTML_TABS_AND_SCRIPT
+    for k, v in subs.items():
+        head_out = head_out.replace(k, v)
+        tabs_out = tabs_out.replace(k, v)
+    return head_out, tabs_out
