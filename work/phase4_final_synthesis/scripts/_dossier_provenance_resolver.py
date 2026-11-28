@@ -348,7 +348,7 @@ def resolve_evidence_row(
     con = _clean_v0_text(row.get("assay_and_contrast", ""))
     est = _clean_v0_text(row.get("effect_estimate", ""))
     if row.get("evidence_id") == "EV-P2-T1-002" and row.get("carbon_id") == "C001":
-        est = f"{est} (initial AVI #1 scan; refined to Clean >=2mm Lead #2 chr19:17642537-17642554(-))"
+        est = f"{est} (initial AVI #1 scan; refined to promoted Lead #2 chr19:17642537-17642554(-), 0 <=1-mm/wobble/bulge hits, Caution on 25bp-SS 2mm=4)"
     gene_sym = SUBNODE_GENE_MAP.get(row.get("subnode_id", "").strip(), "")
 
     n_val = row.get("sample_size_n", "").strip()

@@ -247,8 +247,8 @@ def main() -> None:
         "output_artifacts": "reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md;reports/CARBON_ALS_INTERACTIVE_EXPLORER.html;reports/monographs;reports/github_pages",
         "datasets_used": "DS001_COUNTS;DS001_META;DS001_ONEILL;DS_GENCODE_V46_COMP_GTF;DS_GNOMAD_V41_CONSTRAINT",
         "tools_and_skills_used": "generative_ui;tooluniverse-gene-liability;alphagenome-atlas-website-links;scripts.phase4_gates;uv-python",
-        "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-27T18:15:00Z",
-        "summary": f"Programmatically compiled unified 55-hypothesis ExploreALS v1.5 Explorer (with 8 Tier 1+2 Translational Monographs, 9-row Mechanistic Contrasts matrix, Replication & Verification workbench, {len(stat_rows)}/{len(stat_rows)} 64-char SHA-256 anchors, {len(ds_rows)} SHA-256-locked open datasets [{len(ds_rows) - 2} external + 2 bundled], 8-group cohort overlap & donor accounting & 3 sensitivity sandboxes) and zero-CDN GitHub Pages bundle across 28 1-based GRCh38 cis-regulatory target windows.",
+        "reproduced_verified": "yes", "run_timestamp_utc": "2026-11-28T06:00:00Z",
+        "summary": f"Programmatically compiled unified 55-hypothesis ExploreALS v1.6 Explorer (with 8 Tier 1+2 Translational Monographs, 9-row Mechanistic Contrasts matrix, {len(js_updates)} Living Research Log entries [incl. 33 external 2025-2026 cross-check cohorts documented in UPD-2026-11-28-01..03], Replication & Verification workbench, {len(stat_rows)}/{len(stat_rows)} 64-char SHA-256 anchors, {len(ds_rows)} SHA-256-locked open core datasets [{len(ds_rows) - 2} external + 2 bundled], 8-group cohort overlap & donor accounting & 3 sensitivity sandboxes) and zero-CDN GitHub Pages bundle across 28 1-based GRCh38 cis-regulatory target windows.",
     }
     runs = (
         [p4_r2 if r["analysis_run_id"] == "RUN-P4-002" else r for r in runs]
@@ -294,7 +294,11 @@ def main() -> None:
         f"offtarget={st['phase3_sso_offtarget_audit']} readiness={st['phase3_execution_readiness']} "
         f"screen_cands={st['phase3b_denovo_candidates']} screen_ivs={st['phase3b_denovo_sso_intervals']}"
     )
-    html_head_stamped = HTML_HEAD_AND_BODY.replace("<!-- __SHA12_STAMP__ -->", f"<!-- {sha_stamp} -->")
+    html_head_stamped = (
+        HTML_HEAD_AND_BODY
+        .replace("<!-- __SHA12_STAMP__ -->", f"<!-- {sha_stamp} -->")
+        .replace("__UPD_COUNT__", f"{len(js_updates)} / {len(js_updates)}")
+    )
     html_text = (
         html_head_stamped
         + HTML_TABS_AND_SCRIPT

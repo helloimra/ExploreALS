@@ -1,6 +1,6 @@
-# ExploreALS v1.5.0 Registry & Provenance Lock Schemas
+# ExploreALS v1.6.0 Registry & Provenance Lock Schemas
 
-`ExploreALS v1.5.0` stores its relational data across **`20` normalized, schema-verified CSV ledgers** under `registries/` and **`2` deterministic JSON lock manifests** (`dataset_files_lock.json` and `verified_citations_lock.json`) shipped under `schemas/`, validated end-to-end by `scripts/verify_carbon_als.py`.
+`ExploreALS v1.6.0` stores its relational data across **`20` normalized, schema-verified CSV ledgers** under `registries/` and **`2` deterministic JSON lock manifests** (`dataset_files_lock.json` and `verified_citations_lock.json`) shipped under `schemas/`, validated end-to-end by `scripts/verify_carbon_als.py`.
 
 ## 1. `registries/candidate_intake_ledger.csv`
 Tracks all `33` published clinical, Mendelian/GWAS, and neuropathological ALS programs across two intake cohorts:

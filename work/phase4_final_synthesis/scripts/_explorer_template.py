@@ -6,7 +6,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ExploreALS v1.5: ALS Target Triage, Splice Windows &amp; Replication Explorer</title>
+  <title>ExploreALS v1.6: ALS Target Triage, Splice Windows &amp; Replication Explorer</title>
   <style>:where(.hidden){display:none}.text-xs:not(.leading-snug):not(.leading-relaxed){line-height:1.5}table{border-collapse:collapse;width:100%}th,td{padding:6px 8px;vertical-align:top}.gate-clamp[data-clamped="true"]{position:relative;max-height:7.25rem;overflow:hidden}.gate-clamp[data-clamped="true"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.75rem;background:linear-gradient(to bottom,transparent,var(--background));pointer-events:none}@media(min-width:1024px){.p-workbench{height:clamp(310px,calc(100vh - 13.25rem),760px);height:clamp(310px,calc(100dvh - 13.25rem),760px)}}@media(min-width:1280px){.p-workbench{height:clamp(340px,calc(100vh - 11.75rem),780px);height:clamp(340px,calc(100dvh - 11.75rem),780px)}}.iv-table-cap{max-height:420px}@media(min-width:1024px){.iv-table-cap,.iv-detail-cap{max-height:clamp(310px,calc(100vh - 5.75rem),820px);max-height:clamp(310px,calc(100dvh - 5.75rem),820px)}}</style>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
 </head>
@@ -16,7 +16,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
       <div class="flex flex-wrap items-start justify-between gap-2">
         <div class="flex-1 min-w-[200px]">
           <div class="flex items-center gap-2 flex-wrap">
-            <span class="px-2 py-0.5 rounded font-mono font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] text-xs">ExploreALS v1.5</span>
+            <span class="px-2 py-0.5 rounded font-mono font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] text-xs">ExploreALS v1.6</span>
             <h1 class="text-base font-semibold text-[var(--foreground)]">ALS Therapeutic &amp; Genetic Target Triage, Candidate Reports &amp; Replication Explorer</h1>
           </div>
           <div id="hdr-sub">
@@ -40,7 +40,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
     <div class="hidden sm:grid sm:grid-cols-3 lg:grid-cols-6 gap-2.5" id="kpi-bar">
       <button type="button" data-quick-filter="ALL" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
         <div class="text-[var(--muted-foreground)] text-xs">Evaluated Hypotheses</div>
-        <div class="text-lg font-bold font-mono tabular-nums mt-0.5">55 <span class="text-xs font-normal text-[var(--muted-foreground)]">(6 Cohorts)</span></div>
+        <div class="text-lg font-bold font-mono tabular-nums mt-0.5">55 <span class="text-xs font-normal text-[var(--muted-foreground)]">(6 Evidence Domains)</span></div>
       </button>
       <button type="button" data-quick-filter="TIER12" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
         <div class="text-[var(--muted-foreground)] text-xs">Tier 1 + Tier 2 Leads</div>
@@ -70,10 +70,10 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2.5">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--primary)] text-[var(--primary)] font-mono font-semibold text-xs">START HERE &middot; OVERVIEW &amp; SCOPE</span>
-              <span class="font-mono text-xs text-[var(--muted-foreground)]">Updated Nov 2026 (v1.5.0)</span>
+              <span class="font-mono text-xs text-[var(--muted-foreground)]">Updated Nov 2026 (v1.6.0)</span>
             </div>
             <h2 class="text-sm font-semibold text-[var(--foreground)]">How 55 ALS Hypotheses Map Across Evidence, Validation Steps &amp; Trial Readouts</h2>
-            <p class="text-xs text-[var(--muted-foreground)] leading-relaxed">Synthesizes donor-level statistics (<span class="font-mono">8</span> participant-overlap and donor-accounting groups, <span class="font-mono">208</span> SHA-256-verified statistical records across <span class="font-mono">49</span> unique source files; zero new wet-lab data), unbound human brain PK, and GENCODE v46 off-target scans across four triage verdicts:</p>
+            <p class="text-xs text-[var(--muted-foreground)] leading-relaxed">Synthesizes donor-level statistics across <span class="font-mono">44</span> SHA-256-locked core replication datasets (<span class="font-mono">8</span> participant-overlap and donor-accounting groups, <span class="font-mono">208</span> SHA-256-verified statistical records across <span class="font-mono">49</span> unique source files; supplemented by <span class="font-mono">33</span> external 2025&ndash;2026 validation cohorts cross-checked in the Living Research Log; zero new wet-lab data), unbound human brain PK, and GENCODE v46 off-target scans across four triage verdicts:</p>
             <div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--warning)] space-y-1.5">
               <div class="font-mono font-semibold text-xs text-[var(--foreground)]">Four Evidence &amp; Triage Verdicts (<span class="font-mono">Untested &ne; Falsified</span>)</div>
               <ul class="space-y-1.5 text-xs leading-relaxed">
@@ -127,7 +127,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
             <div>
               <div class="flex flex-wrap items-center gap-2">
                 <h2 class="text-sm font-semibold text-[var(--foreground)]">Living Research Log &middot; Trial &amp; Literature Updates</h2>
-                <span id="upd-count" class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono tabular-nums text-xs text-[var(--muted-foreground)]">12 / 12</span>
+                <span id="upd-count" class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono tabular-nums text-xs text-[var(--muted-foreground)]">__UPD_COUNT__</span>
               </div>
               <p class="text-xs text-[var(--muted-foreground)] mt-0.5 leading-relaxed">Chronological record of post-release clinical trial readouts, newly published studies, and quantitative PK-PD/survival model revisions.</p>
             </div>
@@ -479,7 +479,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
         </div>
         <div class="space-y-1">
           <div class="font-mono font-semibold text-[var(--warning)]">Preclinical Research Notice &amp; AI-Assisted Workflow Disclosure</div>
-          <p><strong class="text-[var(--foreground)]">Not Medical Advice:</strong> ExploreALS v1.5 is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing herein constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.</p>
+          <p><strong class="text-[var(--foreground)]">Not Medical Advice:</strong> ExploreALS v1.6 is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing herein constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.</p>
           <p><strong class="text-[var(--foreground)]">AI-Assisted Methodology:</strong> Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 44 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (PubMed, Europe PMC, ClinicalTrials.gov). Quantitative contrasts and accessions are programmatically verified and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors; always verify against linked primary sources before experimental use.</p>
         </div>
       </div>

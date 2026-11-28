@@ -114,7 +114,8 @@ def build_replication_payloads(
     for r in run_rows:
         rid = r["analysis_run_id"]
         rc_list = run_cands.get(rid, [])
-        if len(rc_list) == 1 or rid == "RUN-P4-006":
+        is_living_run = bool(rc_list) and all(c.startswith("EALS-") and c[5:].isdigit() and int(c[5:]) >= 53 for c in rc_list)
+        if len(rc_list) == 1 or is_living_run:
             for dtok in r["datasets_used"].split(";"):
                 dtok = dtok.strip()
                 if dtok and not dtok.startswith("DS_BASE"):

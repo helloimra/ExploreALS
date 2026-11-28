@@ -252,10 +252,10 @@ function renderCausalGrid(c, geneCtx){
 
 function renderEvidenceMatrix(ev, geneCtx){
   const meta = {
-    log2fc: {hdr:'Effect Size: log2FC / \u0394log2CPM (-3.0 to +4.0, null = 0.0)', ticks:'<span>-3.0</span><span>0.0</span><span>+4.0</span>'},
-    dpsi:   {hdr:'Cryptic / Isoform Junction Shift (\u0394PSI: 0.00 to 1.00)', ticks:'<span>0.00</span><span>0.50</span><span>1.00</span>'},
-    hr:     {hdr:'Survival Hazard Ratio (Log Scale: 0.12 to 3.00, null HR = 1.00)', ticks:'<span>0.12 (Benefit)</span><span>HR=1.0</span><span>3.00</span>'},
-    auc:    {hdr:'Biomarker / Pathway Discrimination (ROC-AUC: 0.50 null to 1.00)', ticks:'<span>0.50 (Null)</span><span>0.75</span><span>1.00</span>'},
+    log2fc: {hdr:'Effect Size: log2FC / \u0394log2CPM (-3.0 to +4.0, null = 0.0)', tL:'-3.0', tM:'0.0', tR:'+4.0', midPct:(3.0 / 7.0) * 100},
+    dpsi:   {hdr:'Cryptic / Isoform Junction Shift (\u0394PSI: 0.00 to 1.00)', tL:'0.00', tM:'0.50', tR:'1.00', midPct:50.0},
+    hr:     {hdr:'Survival Hazard Ratio (Log Scale: 0.12 to 3.00, null HR = 1.00)', tL:'0.12 (Benefit)', tM:'HR=1.0', tR:'3.00', midPct:((Math.log(1.0) - Math.log(0.12)) / (Math.log(3.0) - Math.log(0.12))) * 100},
+    auc:    {hdr:'Biomarker / Pathway Discrimination (ROC-AUC: 0.50 null to 1.00)', tL:'0.50 (Null)', tM:'0.75', tR:'1.00', midPct:50.0},
   };
   const mapVal = (k, v) => {
     const num = Number(v);
@@ -315,7 +315,11 @@ function renderEvidenceMatrix(ev, geneCtx){
     }).join('');
     groupsHtml += `<div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-1">
       <div class="font-mono text-xs font-semibold text-[var(--muted-foreground)]">${meta[k].hdr}</div>
-      <div class="flex justify-between font-mono text-xs text-[var(--muted-foreground)] opacity-80">${meta[k].ticks}</div>
+      <div class="relative h-4 font-mono text-xs text-[var(--muted-foreground)] opacity-80">
+        <span class="absolute left-0 top-0">${meta[k].tL}</span>
+        <span class="absolute top-0" style="left:${meta[k].midPct.toFixed(1)}%;transform:translateX(-50%)">${meta[k].tM}</span>
+        <span class="absolute right-0 top-0">${meta[k].tR}</span>
+      </div>
       <div>${rowsHtml}</div>
     </div>`;
   });

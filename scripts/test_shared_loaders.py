@@ -362,7 +362,230 @@ def main() -> None:
         except AssertionError as exc:
             assert "[FAIL]" in str(exc)
 
-    print("PASS: All 28 v0.5.6 shared-loader, flagship-VerifiedCheck, EALS accession/fuzzy-alias, directory-SHA256, mmCIF, skill-CLI, splice-Tm/bystander, MWC/PKPD/CASM/CD38, off-target/bulge/EEJ, Phase 3B, Phase 4 portfolio, and biosecurity tests verified (0 errors).")
+    # Test 29: Unconditional synthetic minus-strand 5'->3' extraction & on-target 0-mm GGGenome self-hit guard
+    from carbon_als.splice_design import assert_on_target_0mm_hit, extract_interval_sense_dna, genomic_to_premRNA
+    _plus_seq = "AACGTTGGCCAATTGACC"  # 18 bp asymmetric sequence
+    _prem_m, _coords_m = genomic_to_premRNA(_plus_seq, "chr9", 1001, "-")
+    _p2b_m = dict(zip(_coords_m, _prem_m, strict=True))
+    _sense_m = extract_interval_sense_dna(_p2b_m, 1001, 1018, "-")
+    assert _sense_m == "GGTCAATTGGCCAACGTT", f"Minus-strand 5'->3' sense extraction wrong: got {_sense_m}"
+    _prem_p, _coords_p = genomic_to_premRNA(_plus_seq, "chr2", 2001, "+")
+    _p2b_p = dict(zip(_coords_p, _prem_p, strict=True))
+    assert extract_interval_sense_dna(_p2b_p, 2001, 2018, "+") == _plus_seq
+    _gg_ok = {"ungapped_hits": [{"chrom": "chr9", "grch38_start": 1001, "grch38_end": 1018, "strand": "-", "total_mismatches": 0}]}
+    assert assert_on_target_0mm_hit(_gg_ok, "chr9", 1001, 1018, "-", "chr9:1001-1018(-)") == 1
+    _gg_bad = {"ungapped_hits": [{"chrom": "chr2", "grch38_start": 5000, "grch38_end": 5017, "strand": "+", "total_mismatches": 2}]}
+    try:
+        assert_on_target_0mm_hit(_gg_bad, "chr9", 1001, 1018, "-", "chr9:1001-1018(-)")
+        raise AssertionError("Expected ON_TARGET_SELF_HIT_MISSING when 0 on-target 0mm hits exist!")
+    except AssertionError as exc:
+        assert "ON_TARGET_SELF_HIT_MISSING" in str(exc)
+
+    # Test 30: Unconditional AlphaGenome polarity module (dinucleotides, window sizing, disruption-first precedence, 3-allele concordance, strict JSON)
+    from carbon_als.alphagenome_polarity import (
+        assert_splice_dinucleotide,
+        classify_variant_polarity,
+        select_window_length,
+        strict_json_dumps,
+        summarize_position_concordance,
+    )
+    # Plus-strand GT/AG & minus-strand GT (+strand CA) / AG (+strand TC) checks
+    _ref_m = {100: "T", 101: "G", 102: "A", 103: "C", 104: "T"}  # on '-' strand: 103..102 = GT, 104..103 = AG, 101..100 = CA (NOT GT!)
+    assert assert_splice_dinucleotide(_ref_m, 103, "-", "5SS_GT_B1", "valid_minus_gt") == "GT"
+    assert assert_splice_dinucleotide(_ref_m, 104, "-", "3SS_AG_B1", "valid_minus_ag") == "AG"
+    for bad_call in (
+        lambda: assert_splice_dinucleotide(_ref_m, 101, "-", "5SS_GT_B1", "prune2_ac_bug"),
+        lambda: assert_splice_dinucleotide({207: "C", 208: "G"}, 207, "+", "3SS_AG_B1", "celf5_cg_bug"),
+    ):
+        try:
+            bad_call()
+            raise AssertionError("Expected SPLICE_DINUCLEOTIDE_MISMATCH on non-donor/non-acceptor coordinates!")
+        except ValueError as exc:
+            assert "SPLICE_DINUCLEOTIDE_MISMATCH" in str(exc)
+    # Dynamic window sizing upgrades DLGAP1 146-kb intron to 524,288 bp
+    _wlen, _ws, _we = select_window_length(4005202, 4151179)
+    assert _wlen == 524_288 and _ws < 4005202 and _we > 4151179
+    # Out-of-window canonical junction NEVER silently defaults to WT_CANONICAL_SAFE_NEUTRAL
+    _p_oow = classify_variant_polarity(None, 0.0, 0.0, [], canonical_in_window=False)
+    assert _p_oow["polarity"] == "CANONICAL_JUNCTION_UNMEASURED_OUT_OF_WINDOW"
+    # Disruption-first precedence: canonical 5'SS knockout (-95%) + cryptic gain MUST be DISRUPTS (never GAINS_CRYPTIC!)
+    _p_posctrl = classify_variant_polarity(-95.0, 0.45, -0.92, [{"delta": 0.65, "ref": 0.01}])
+    assert _p_posctrl["polarity"] == "DISRUPTS_EXISTING_OR_CANONICAL_SPLICING" and _p_posctrl["with_secondary_cryptic_activation"] is True
+    # Protected physiological microexon disruption blocks false ENHANCES_CANONICAL_SPLICING
+    _p_micro = classify_variant_polarity(+250.0, 0.01, -0.01, [], protected_pcts={"microexon_9bp": -32.0})
+    assert _p_micro["polarity"] == "DISRUPTS_EXISTING_OR_CANONICAL_SPLICING" and _p_micro["protected_junction_disrupted"] is True
+    # 3-allele concordance flags 1-of-3 de novo GT/AG creation as SINGLE_ALLELE_DE_NOVO_SITE_ARTIFACT
+    _c_art = summarize_position_concordance([
+        {"polarity_mn": "WT_CANONICAL_SAFE_NEUTRAL"},
+        {"polarity_mn": "WT_CANONICAL_SAFE_NEUTRAL"},
+        {"polarity_mn": "GAINS_CRYPTIC_SPLICE_SITE_OR_JUNCTION"},
+    ])
+    assert _c_art["concordance_class"] == "SINGLE_ALLELE_DE_NOVO_SITE_ARTIFACT" and _c_art["valid_for_wt_sso_safety"] is False
+    _c_ok = summarize_position_concordance([{"polarity_mn": "ENHANCES_CANONICAL_SPLICING"}] * 3)
+    assert _c_ok["concordance_class"] == "CONCORDANT_3OF3_ENHANCES_WT" and _c_ok["valid_for_wt_sso_safety"] is True
+    # Strict RFC-8259 JSON converts NaN->null and blocks >=15-nt raw sequences
+    _j_clean = strict_json_dumps({"x": float("nan"), "y": 1.5})
+    assert "null" in _j_clean and "NaN" not in _j_clean
+    try:
+        strict_json_dumps({"leak": "ACGTACGTACGTACGT"})
+        raise AssertionError("Expected strict_json_dumps to block 16-nt raw sequence!")
+    except AssertionError as exc:
+        assert "BIOSECURITY_GUARD_TRIGGERED" in str(exc)
+
+    # Test 31: Unconditional Pack C statistical guards (VIF blocking, missing-sex->NaN, 1-UMI cliff + specificity, BH-FDR p<=q, FDR-gated classify, Zhu SMR)
+    import numpy as _np
+    import pandas as _pd
+    from carbon_als.loaders import expansion_loaders as _el
+    _meta_sex = _pd.DataFrame({"sex": ["M", "Female", "Unknown", "", None, "Missing"]})
+    _s_enc = _el._encode_covariate_matrix(_meta_sex)["sex_male"]
+    assert _s_enc[0] == 1.0 and _s_enc[1] == 0.0 and bool(_np.all(_np.isnan(_s_enc[2:]))), f"Missing sex coerced incorrectly: {_s_enc}"
+    # Collinear covariate (r=-0.995 -> VIF>50) MUST be dropped with NaN adjusted p (no Welch fallback!)
+    _case_syn = _np.array([1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0], dtype=float)
+    _col_cov = -_case_syn + _np.linspace(0.0, 0.05, 12)
+    _ols_col = _el._covariate_adjusted_ols(_np.linspace(1.0, 4.0, 12), _case_syn, {"gc_z": _col_cov}, max_case_vif=5.0)
+    assert len(_ols_col["collinear_covariates_dropped"]) == 1 and _np.isnan(_ols_col["covariate_adjusted_nominal_p"])
+    # Small-N 1-UMI Poisson cliff caught (positive) AND clean separation passes (negative specificity!)
+    _lev_1umi = _el.compute_small_n_dropout_leverage_flag(
+        _np.array([4.9, 0.0, 0.0, 0.0]), _np.array([5.5, 5.6, 5.3, 4.7]), 0.0004, 0.043, 0.0545,
+        raw_case_counts=_np.array([1, 0, 0, 0]), raw_ctrl_counts=_np.array([1, 4, 1, 1]),
+    )
+    assert _lev_1umi["sparse_1umi_cliff_flag"] is True and _lev_1umi["small_n_dropout_leverage_flag"] is True
+    _lev_clean = _el.compute_small_n_dropout_leverage_flag(
+        _np.array([8.1, 8.3, 7.9, 8.2]), _np.array([4.1, 4.0, 4.2, 3.9]), 0.0002, 0.0003, 0.0286,
+        raw_case_counts=_np.array([120, 140, 110, 130]), raw_ctrl_counts=_np.array([15, 14, 16, 13]),
+    )
+    assert _lev_clean["small_n_dropout_leverage_flag"] is False
+    # Exact BH-FDR provenance guard (no rounding q<p, rejects out-of-range p)
+    _bh = _el.bh_fdr_with_provenance_guard({"a": 1e-12, "b": 0.04, "c": 0.995105044}, context="unit_bh")
+    assert all(_bh[k]["fdr_bh"] >= _bh[k]["p_value"] for k in _bh) and _bh["a"]["fdr_bh"] > 0.0
+    try:
+        _el.bh_fdr_with_provenance_guard({"bad": 1.2}, context="unit_bh_bad")
+        raise AssertionError("Expected ValueError on p > 1.0")
+    except ValueError:
+        pass
+    # classify_pack_c_evidence MUST gate CORROBORATED_INDEPENDENT on FDR < 0.05
+    _cl_nom = _el.classify_pack_c_evidence("takeuchi2025_lsc", True, True, 0.02, fdr=0.25)
+    assert _cl_nom["stress_status"] == "NOMINAL_CONCORDANT_UNCORRECTED"
+    _cl_fdr = _el.classify_pack_c_evidence("takeuchi2025_lsc", True, True, 0.001, fdr=0.01)
+    assert _cl_fdr["stress_status"] == "CORROBORATED_INDEPENDENT"
+    # Exact Zhu et al. (2016) T_SMR check
+    _smr = _el.compute_smr_stats(gwas_beta=0.08, gwas_se=0.02, qtl_beta=0.30, qtl_se=0.05)  # z_g=4, z_q=6 -> T=(16*36)/(16+36)=11.0769
+    assert abs(_smr["t_smr"] - (16.0 * 36.0 / 52.0)) < 1e-3
+
+    # Test 32: Hardened Pack C staged-data integration checks (Keuss 4v5 + TDP43.20 drop, Takeuchi MNs 1-UMI cliff + Somatomotor leverage, Miedema non-p-peeking dedup, fail-fast lineage guard)
+    pack_c_manifest = ROOT / "data" / "expansion_2026_11" / "EXPANSION_MANIFEST_2026_11.csv"
+    if pack_c_manifest.is_file():
+        keu_s = _el.load_keuss2025_soma_neurite("Soma", "TDP43-knockdown", "nontargeting-sgRNA", genes=["SYP", "STMN2", "UNC13A"])
+        assert keu_s["n_case"] == 4 and keu_s["n_ctrl"] == 5, f"Expected 4v5 matched Soma after dropping TDP43.20, got {keu_s['n_case']}v{keu_s['n_ctrl']}"
+        assert "TDP43.20" in keu_s["dropped_low_depth_libs"] and keu_s["dropped_low_depth_libs"]["TDP43.20"] < 1000
+        assert keu_s["normalization_used"].startswith("deseq2_mor") and abs(keu_s["stats"]["SYP"]["diff"]) < 0.25
+        keu_n = _el.load_keuss2025_soma_neurite("Neurite", "TDP43-knockdown", "nontargeting-sgRNA", genes=["SYP", "UNC13A"])
+        assert keu_n["n_case"] == 5 and keu_n["n_ctrl"] == 5 and keu_n["stats"]["UNC13A"]["diff"] < -0.5
+        tak_sm = _el.load_expansion_pseudobulk("takeuchi2025_lsc", "Somatomotor_Neuron", genes=["KCNQ2", "UNC13A"], min_cells=5)
+        assert tak_sm["stats"]["KCNQ2"]["small_n_dropout_leverage_flag"] is True
+        assert tak_sm["stats"]["UNC13A"]["small_n_dropout_leverage_flag"] is True
+        tak_mn = _el.load_expansion_pseudobulk("takeuchi2025_lsc", "MNs", genes=["NPTX2", "STMN2"], min_cells=5)
+        assert tak_mn["stats"]["NPTX2"]["sparse_1umi_cliff_flag"] is True and tak_mn["stats"]["NPTX2"]["small_n_dropout_leverage_flag"] is True
+        mied_r = _el.load_miedema2025_ftld_tdp_c(genes=["STMN2"])
+        assert mied_r["dedup_method"] == "max_completeness_stable_no_p_peeking"
+        try:
+            _el.compute_lineage_ambient_flags("zelic2025_cervical_sc", ("Astrocyte", "INVALID_STRATUM_XYZ"), genes=["STMN2"])
+            raise AssertionError("Expected fail-fast ValueError on invalid lineage stratum!")
+        except ValueError:
+            pass
+
+    # Test 33: PEP 562 lazy carbon_als.__init__ + check_work_outputs.py positive & negative unit tests
+    import json as _json
+    import os as _os
+    import subprocess as _sp
+    import tempfile as _tf
+    from pathlib import Path as _P
+    _lazy_proc = _sp.run(
+        [sys.executable, "-c", "import sys; sys.path.insert(0, 'src'); from carbon_als.alphagenome_polarity import strict_json_dumps; assert 'carbon_als.loaders' not in sys.modules and 'statsmodels' not in sys.modules"],
+        cwd=str(ROOT), capture_output=True, text=True, check=False,
+    )
+    assert _lazy_proc.returncode == 0, f"PEP 562 lazy import leaked loaders/statsmodels: {_lazy_proc.stderr}"
+
+    sys.path.insert(0, str(ROOT / "scripts"))
+    import check_work_outputs as _cwo  # noqa: E402
+
+    with _tf.TemporaryDirectory() as _td:
+        _tr = _P(_td)
+        (_tr / "src" / "carbon_als").mkdir(parents=True)
+        (_tr / "work" / "phase5_pack_c_expansion" / "scripts").mkdir(parents=True)
+        (_tr / "work" / "phase5_pack_c_expansion" / "outputs").mkdir(parents=True)
+        (_tr / "work" / "phase5_pack_c_expansion" / "cache").mkdir(parents=True)
+        _dep_py = _tr / "src" / "carbon_als" / "dummy_mod.py"
+        _dep_py.write_text("X = 1\n", encoding="utf-8")
+        _scr_py = _tr / "work" / "phase5_pack_c_expansion" / "scripts" / "99_demo.py"
+        _scr_py.write_text(
+            "from carbon_als.dummy_mod import X\nOUT_FP = 'v15_followup_demo.json'\n",
+            encoding="utf-8",
+        )
+        _out_fp = _tr / "work" / "phase5_pack_c_expansion" / "outputs" / "v15_followup_demo.json"
+        _out_fp.write_text(_json.dumps({
+            "summary_table": [{"role": "CANON_5SS_POSCTRL", "polarity_mn": "DISRUPTS_EXISTING_OR_CANONICAL_SPLICING", "mn_canon_pct": -95.0}],
+            "intervals": [{"interval_id": "chr1:1-20(+)", "on_target_0mm_self_hits": 1, "premRNA_0mm": 0, "offtarget_safety_status": "PASS_CLEAN_GE2MM"}],
+        }), encoding="utf-8")
+        _os.utime(_dep_py, (1000, 1000))
+        _os.utime(_scr_py, (1000, 1000))
+        _os.utime(_out_fp, (2000, 2000))
+        _ok_rep = _cwo.audit_work_outputs(_tr, scope="active", strict_mtime=True)
+        assert _ok_rep["passed"] and _ok_rep["n_outputs_checked"] == 1 and not _ok_rep["stale"], f"Clean synthetic check failed: {_ok_rep}"
+        # Negative 1: Stale dependency under --strict-mtime
+        _os.utime(_dep_py, (3000, 3000))
+        _st_rep = _cwo.audit_work_outputs(_tr, scope="active", strict_mtime=True)
+        assert not _st_rep["passed"] and any("STALE_OUTPUT" in e for e in _st_rep["errors"]), f"Failed to catch stale dep: {_st_rep}"
+        _os.utime(_dep_py, (1000, 1000))
+        # Negative 2: Non-RFC8259 NaN
+        _out_fp.write_text('{"x": NaN}', encoding="utf-8")
+        _nan_rep = _cwo.audit_work_outputs(_tr, scope="active", strict_mtime=False)
+        assert not _nan_rep["passed"] and any("INVALID_RFC8259_JSON" in e for e in _nan_rep["errors"])
+        # Negative 3: Biosecurity sequence leak
+        _out_fp.write_text('{"leak": "ACGTACGTACGTACGT"}', encoding="utf-8")
+        _bio_rep = _cwo.audit_work_outputs(_tr, scope="active", strict_mtime=False)
+        assert not _bio_rep["passed"] and any("BIOSECURITY_HIT" in e for e in _bio_rep["errors"])
+        # Negative 4: Misclassified POSCTRL & self0=0 & masked 0mm off-target
+        _out_fp.write_text(_json.dumps({
+            "summary_table": [{"role": "CANON_5SS_POSCTRL", "polarity_mn": "GAINS_CRYPTIC_SPLICE_SITE_OR_JUNCTION", "mn_canon_pct": None}],
+            "intervals": [{"interval_id": "chr1:1-20(-)", "on_target_0mm_self_hits": 0, "premRNA_0mm": 1, "offtarget_safety_status": "CAUTION"}],
+        }), encoding="utf-8")
+        _bad_rep = _cwo.audit_work_outputs(_tr, scope="active", strict_mtime=False)
+        assert not _bad_rep["passed"] and len(_bad_rep["errors"]) >= 4, f"Expected 4 contract errors, got: {_bad_rep}"
+        # Negative 5: Swallowed {"error": "..."} payload & rounded BH-FDR (q < p) inversion
+        _out_fp.write_text(_json.dumps({
+            "stratum_a": {"error": "Stratum MotorNeurons not found"},
+            "stats": {"GENE1": {"covariate_adjusted_nominal_p": 0.051, "q_bh_ws3": 0.049}},
+        }), encoding="utf-8")
+        _rec_rep = _cwo.audit_work_outputs(_tr, scope="active", strict_mtime=False)
+        assert not _rec_rep["passed"] and any("SWALLOWED_ERROR_KEY" in e for e in _rec_rep["errors"]) and any("BH_FDR_LESS_THAN_P" in e for e in _rec_rep["errors"]), f"Failed recursive error/BH check: {_rec_rep}"
+        # Positive + Negative test of carbon_als.io_guards (require_hit + write_work_json)
+        from carbon_als.io_guards import require_hit as _req_hit, write_work_json as _wwj
+        assert _req_hit({"ok": 1}, "nonempty")["ok"] == 1
+        for _empty in (None, {}, [], ""):
+            try:
+                _req_hit(_empty, "empty_case")
+                raise AssertionError(f"Expected LookupError for {_empty!r}")
+            except LookupError:
+                pass
+        _wwj(_out_fp, {"val": float("nan"), "ok": 42}, script="99_demo.py", controls_passed=True, controls_summary={"pos": "STMN2_down"})
+        _loaded = _json.loads(_out_fp.read_text(encoding="utf-8"))
+        assert _loaded["_meta"]["script"] == "99_demo.py" and _loaded["_meta"]["strict_rfc8259"] is True and _loaded["_meta"]["controls_summary"]["pos"] == "STMN2_down" and _loaded["val"] is None
+        try:
+            _wwj(_out_fp, {"ok": 1}, script="99_demo.py")  # type: ignore[call-arg]
+            raise AssertionError("Expected TypeError when controls_passed is omitted!")
+        except TypeError:
+            pass
+        _wwj(_out_fp, {"ok": 1}, script="99_demo.py", controls_passed=False)
+        _ctrl_rep = _cwo.audit_work_outputs(_tr, scope="active", strict_mtime=False)
+        assert not _ctrl_rep["passed"] and any("CONTROLS_FAILED" in e for e in _ctrl_rep["errors"]), f"Failed to catch controls_passed=False: {_ctrl_rep}"
+        try:
+            _wwj(_out_fp, {"leak": "ACGTACGTACGTACGT"}, script="99_demo.py", controls_passed=True)
+            raise AssertionError("Expected biosecurity block in write_work_json!")
+        except AssertionError as _exc:
+            assert "BIOSECURITY_GUARD_TRIGGERED" in str(_exc)
+
+    print("PASS: All 33 v0.5.9 shared-loader, PEP 562 lazy-import, check_work_outputs, unconditional Pack C/AlphaGenome/minus-strand/VIF/1-UMI/BH-FDR/SMR, Keuss/Takeuchi integration, flagship-VerifiedCheck, EALS accession, directory-SHA256, mmCIF, splice-Tm/bystander, MWC/PKPD/CASM/CD38, Phase 3B/4, and biosecurity tests verified (0 errors).")
 
 
 if __name__ == "__main__":

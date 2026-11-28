@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.5.0",
+  "schema_version": "1.6.0",
   "description": "Deterministic live-verified bibliographic & trial registry lock enforced by scripts/verify_carbon_als.py",
   "banned_mismatched_ids": [
     "10.1016/j.stem.2018.12.005",
@@ -56,6 +56,12 @@
     "PMID:38324634"
   ],
   "pmids": {
+    "2021551": {
+      "first_author": "Lien EA",
+      "pubdate": "1991 Apr",
+      "journal": "Br J Cancer",
+      "title": "Distribution of tamoxifen and metabolites into brain tissue and brain metastases in breast cancer patients."
+    },
     "7478269": {
       "first_author": "Kornhuber J",
       "pubdate": "1995 Aug 4",
@@ -73,6 +79,12 @@
       "pubdate": "1995 Jun",
       "journal": "Arch Neurol",
       "title": "Randomized, double-blind, controlled trial of acetylcysteine in amyotrophic lateral sclerosis."
+    },
+    "7903306": {
+      "first_author": "Carr SF",
+      "pubdate": "1993 Dec 25",
+      "journal": "J Biol Chem",
+      "title": "Characterization of human type I and type II IMP dehydrogenases."
     },
     "7906190": {
       "first_author": "Eisen A",
@@ -98,6 +110,18 @@
       "journal": "Lancet",
       "title": "Dose-ranging study of riluzole in amyotrophic lateral sclerosis. Amyotrophic Lateral Sclerosis/Riluzole Study Group II."
     },
+    "9249114": {
+      "first_author": "Talke P",
+      "pubdate": "1997 Aug",
+      "journal": "Anesth Analg",
+      "title": "Effect of dexmedetomidine on lumbar cerebrospinal fluid pressure in humans."
+    },
+    "9356115": {
+      "first_author": "Talke P",
+      "pubdate": "1997 Nov",
+      "journal": "Anesth Analg",
+      "title": "Postoperative pharmacokinetics and sympatholytic effects of dexmedetomidine."
+    },
     "9443715": {
       "first_author": "Lange DJ",
       "pubdate": "1998 Jan",
@@ -122,6 +146,12 @@
       "journal": "J Neurol Sci",
       "title": "Inter- and intraindividual variability of riluzole serum concentrations in patients with ALS."
     },
+    "12039935": {
+      "first_author": "Crul M",
+      "pubdate": "2002 Jun 1",
+      "journal": "J Clin Oncol",
+      "title": "Phase I clinical and pharmacologic study of chronic oral administration of the farnesyl protein transferase inhibitor R115777 in advanced cancer."
+    },
     "12426383": {
       "first_author": "Bracher A",
       "pubdate": "2002 Nov 15",
@@ -145,6 +175,12 @@
       "pubdate": "2004 Oct 29",
       "journal": "J Mol Biol",
       "title": "Structure of a human A-type potassium channel interacting protein DPPX, a member of the dipeptidyl aminopeptidase family."
+    },
+    "16204711": {
+      "first_author": "Freedman NM",
+      "pubdate": "2005 Oct",
+      "journal": "J Nucl Med",
+      "title": "In vivo measurement of brain monoamine oxidase B occupancy by rasagiline, using (11)C-l-deprenyl and PET."
     },
     "16344537": {
       "first_author": "Ferrante KL",
@@ -182,6 +218,12 @@
       "journal": "Nat Genet",
       "title": "Genetic variation in DPP6 is associated with susceptibility to amyotrophic lateral sclerosis."
     },
+    "18326497": {
+      "first_author": "Lee SG",
+      "pubdate": "2008 May 9",
+      "journal": "J Biol Chem",
+      "title": "Mechanism of ceftriaxone induction of excitatory amino acid transporter-2 expression and glutamate uptake in primary human astrocytes."
+    },
     "18445682": {
       "first_author": "Soh UJ",
       "pubdate": "2008 May 15",
@@ -193,6 +235,12 @@
       "pubdate": "2008 Aug 8",
       "journal": "J Biol Chem",
       "title": "G2E3 is a dual function ubiquitin ligase required for early embryonic development."
+    },
+    "18724357": {
+      "first_author": "Ishikawa H",
+      "pubdate": "2008 Oct 2",
+      "journal": "Nature",
+      "title": "STING is an endoplasmic reticulum adaptor that facilitates innate immune signalling."
     },
     "19322194": {
       "first_author": "Satoo K",
@@ -242,11 +290,23 @@
       "journal": "J Clin Invest",
       "title": "Autophagy is essential for mouse sense of balance."
     },
+    "20839903": {
+      "first_author": "Levine TD",
+      "pubdate": "2010 Dec",
+      "journal": "Amyotroph Lateral Scler",
+      "title": "A pilot trial of memantine and riluzole in ALS: correlation to CSF biomarkers."
+    },
     "20947024": {
       "first_author": "Teplova M",
       "pubdate": "2010 Oct 13",
       "journal": "Structure",
       "title": "Structural insights into RNA recognition by the alternate-splicing regulator CUG-binding protein 1."
+    },
+    "21107423": {
+      "first_author": "Chen Z",
+      "pubdate": "2010 Nov 25",
+      "journal": "Nature",
+      "title": "Structure and control of the actin regulatory WAVE complex."
     },
     "21358643": {
       "first_author": "Polymenidou M",
@@ -265,6 +325,18 @@
       "pubdate": "2011 Sep 7",
       "journal": "Cell Metab",
       "title": "The FBXL5-IRP2 axis is integral to control of iron metabolism in vivo."
+    },
+    "22003390": {
+      "title": "Iron insufficiency compromises motor neurons and their mitochondrial function in Irp2-null mice.",
+      "pubdate": "2011",
+      "first_author": "Jeong SY",
+      "journal": "PLoS One"
+    },
+    "22101682": {
+      "first_author": "Logan CV",
+      "pubdate": "2011 Nov 20",
+      "journal": "Nat Genet",
+      "title": "Mutations in MEGF10, a regulator of satellite cell myogenesis, cause early onset myopathy, areflexia, respiratory distress and dysphagia (EMARDD)."
     },
     "22343569": {
       "first_author": "Boyman O",
@@ -290,11 +362,29 @@
       "journal": "PLoS One",
       "title": "Design and initial results of a multi-phase randomized trial of ceftriaxone in amyotrophic lateral sclerosis."
     },
+    "23747010": {
+      "first_author": "Zhang X",
+      "pubdate": "2013 Jul 25",
+      "journal": "Mol Cell",
+      "title": "Cyclic GMP-AMP containing mixed phosphodiester linkages is an endogenous high-affinity ligand for STING."
+    },
+    "23946404": {
+      "first_author": "Stephan AH",
+      "pubdate": "2013 Aug 14",
+      "journal": "J Neurosci",
+      "title": "A dramatic increase of C1q protein in the CNS during normal aging."
+    },
     "23980170": {
       "first_author": "Liu X",
       "pubdate": "2013 Sep 10",
       "journal": "Proc Natl Acad Sci U S A",
       "title": "Structural insights into the interaction of IL-33 with its receptors."
+    },
+    "24023695": {
+      "title": "Molecular chaperone mediated late-stage neuroprotection in the SOD1(G93A) mouse model of amyotrophic lateral sclerosis.",
+      "pubdate": "2013",
+      "first_author": "Novoselov SS",
+      "journal": "PLoS One"
     },
     "24170856": {
       "first_author": "Lobsiger CS",
@@ -308,11 +398,23 @@
       "journal": "J Clin Pharmacol",
       "title": "Systemic pharmacokinetics and cerebrospinal fluid uptake of intravenous ceftriaxone in patients with amyotrophic lateral sclerosis."
     },
+    "24835171": {
+      "first_author": "Klomjai W",
+      "pubdate": "2014 Jul 1",
+      "journal": "J Physiol",
+      "title": "Changes in spinal inhibitory networks induced by furosemide in humans."
+    },
     "24884937": {
       "first_author": "Italiani P",
       "pubdate": "2014 May 23",
       "journal": "J Neuroinflammation",
       "title": "Evaluating the levels of interleukin-1 family cytokines in sporadic amyotrophic lateral sclerosis."
+    },
+    "24944232": {
+      "first_author": "Letendre SL",
+      "pubdate": "2014 Oct",
+      "journal": "Clin Infect Dis",
+      "title": "ING116070: a study of the pharmacokinetics and antiviral activity of dolutegravir in cerebrospinal fluid in HIV-1-infected, antiretroviral therapy-naive subjects."
     },
     "25297012": {
       "first_author": "Cudkowicz ME",
@@ -326,11 +428,23 @@
       "journal": "J Neurol Sci",
       "title": "Chitotriosidase and lysosomal enzymes as potential biomarkers of disease progression in amyotrophic lateral sclerosis: a survey clinic-based study."
     },
+    "25700176": {
+      "first_author": "Cirulli ET",
+      "pubdate": "2015 Mar 27",
+      "journal": "Science",
+      "title": "Exome sequencing in amyotrophic lateral sclerosis identifies risk genes and pathways."
+    },
     "25765302": {
       "first_author": "Katz M",
       "pubdate": "2015 May",
       "journal": "Parkinsonism Relat Disord",
       "title": "Cerebrospinal fluid concentrations of N-acetylcysteine after oral administration in Parkinson's disease."
+    },
+    "25803835": {
+      "first_author": "Freischmidt A",
+      "pubdate": "2015 May",
+      "journal": "Nat Neurosci",
+      "title": "Haploinsufficiency of TBK1 causes familial ALS and fronto-temporal dementia."
     },
     "25904686": {
       "first_author": "Ikawa M",
@@ -392,11 +506,23 @@
       "journal": "Cell Rep",
       "title": "Cell-to-Cell Transmission of Dipeptide Repeat Proteins Linked to C9orf72-ALS/FTD."
     },
+    "27830700": {
+      "first_author": "Reinert LS",
+      "pubdate": "2016 Nov 10",
+      "journal": "Nat Commun",
+      "title": "Sensing of HSV-1 by the cGAS-STING pathway in microglia orchestrates antiviral defence in the CNS."
+    },
     "27935101": {
       "first_author": "Nagahara Y",
       "pubdate": "2017 Aug",
       "journal": "J Neurosci Res",
       "title": "GPNMB ameliorates mutant TDP-43-induced motor neuron cell death."
+    },
+    "28011744": {
+      "first_author": "Pasetto L",
+      "pubdate": "2017 Feb 8",
+      "journal": "J Neurosci",
+      "title": "Targeting Extracellular Cyclophilin A Reduces Neuroinflammation and Extends Survival in a Mouse Model of Amyotrophic Lateral Sclerosis."
     },
     "28128456": {
       "first_author": "Lee JD",
@@ -404,17 +530,35 @@
       "journal": "Br J Pharmacol",
       "title": "Pharmacological inhibition of complement C5a-C5a(1) receptor signalling ameliorates disease pathology in the hSOD1(G93A) mouse model of amyotrophic lateral sclerosis."
     },
+    "28280971": {
+      "first_author": "Tolcher AW",
+      "pubdate": "2017 Apr",
+      "journal": "Cancer Chemother Pharmacol",
+      "title": "A phase 1 study of anti-TGFbeta receptor type-II monoclonal antibody LY3022859 in patients with advanced solid tumors."
+    },
     "28287329": {
       "first_author": "Skytte Rasmussen M",
       "pubdate": "2017 May 4",
       "journal": "Autophagy",
       "title": "ATG4B contains a C-terminal LIR motif important for binding and efficient cleavage of mammalian orthologs of yeast Atg8."
     },
+    "28430857": {
+      "first_author": "Halliday M",
+      "pubdate": "2017 Jun 1",
+      "journal": "Brain",
+      "title": "Repurposed drugs targeting eIF2α-P-mediated translational repression prevent neurodegeneration in mice."
+    },
     "28447936": {
       "first_author": "Crespillo-Casado A",
       "pubdate": "2017 Apr 27",
       "journal": "Elife",
       "title": "PPP1R15A-mediated dephosphorylation of eIF2α is unaffected by Sephin1 or Guanabenz."
+    },
+    "28453775": {
+      "first_author": "Lamore SD",
+      "pubdate": "2017 Jul 01",
+      "journal": "Toxicol Sci",
+      "title": "Deconvoluting Kinase Inhibitor Induced Cardiotoxicity."
     },
     "28456721": {
       "first_author": "Kanamitsu K",
@@ -434,6 +578,30 @@
       "journal": "J Neurol Neurosurg Psychiatry",
       "title": "Chitotriosidase (CHIT1) is increased in microglia and macrophages in spinal cord of amyotrophic lateral sclerosis and cerebrospinal fluid levels correlate with disease severity and progression."
     },
+    "29308669": {
+      "first_author": "Fournier CN",
+      "pubdate": "2018 May",
+      "journal": "Amyotroph Lateral Scler Frontotemporal Degener",
+      "title": "An open label study of a novel immunosuppression intervention for the treatment of amyotrophic lateral sclerosis."
+    },
+    "29400714": {
+      "title": "Haploinsufficiency leads to neurodegeneration in C9ORF72 ALS/FTD human induced motor neurons.",
+      "pubdate": "2018 Mar",
+      "first_author": "Shi Y",
+      "journal": "Nat Med"
+    },
+    "29534297": {
+      "first_author": "Nakashima M",
+      "pubdate": "2018 Apr",
+      "journal": "Ann Neurol",
+      "title": "De novo hotspot variants in CYFIP2 cause early-onset epileptic encephalopathy."
+    },
+    "29618508": {
+      "first_author": "Crespillo-Casado A",
+      "pubdate": "2018 May 18",
+      "journal": "J Biol Chem",
+      "title": "A Sephin1-insensitive tripartite holophosphatase dephosphorylates translation initiation factor 2α."
+    },
     "29650702": {
       "first_author": "Maharana S",
       "pubdate": "2018 May 25",
@@ -445,6 +613,12 @@
       "pubdate": "2018 Dec",
       "journal": "Clin Pharmacol Ther",
       "title": "Acute Effects of Riluzole and Retigabine on Axonal Excitability in Patients With Amyotrophic Lateral Sclerosis: A Randomized, Double-Blind, Placebo-Controlled, Crossover Trial."
+    },
+    "29764981": {
+      "first_author": "Fratta P",
+      "pubdate": "2018 Jun 1",
+      "journal": "EMBO J",
+      "title": "Mice with endogenous TDP-43 mutations exhibit gain of splicing function and characteristics of amyotrophic lateral sclerosis."
     },
     "29867214": {
       "first_author": "Liu H",
@@ -470,11 +644,41 @@
       "journal": "Sci Rep",
       "title": "Azosemide is more potent than bumetanide and various other loop diuretics to inhibit the sodium-potassium-chloride-cotransporter human variants hNKCC1A and hNKCC1B."
     },
+    "29973723": {
+      "first_author": "Haag SM",
+      "pubdate": "2018 Jul",
+      "journal": "Nature",
+      "title": "Targeting STING with covalent small-molecule inhibitors."
+    },
+    "30007416": {
+      "first_author": "Zhou W",
+      "pubdate": "2018 Jul 12",
+      "journal": "Cell",
+      "title": "Structure of the Human cGAS-DNA Complex Reveals Enhanced Control of Immune Surveillance."
+    },
+    "30127392": {
+      "first_author": "Fujimori K",
+      "pubdate": "2018 Oct",
+      "journal": "Nat Med",
+      "title": "Modeling sporadic ALS in iPSC-derived motor neurons identifies a potential therapeutic agent."
+    },
+    "30192007": {
+      "first_author": "Statland JM",
+      "pubdate": "2019 Feb",
+      "journal": "Muscle Nerve",
+      "title": "Rasagiline for amyotrophic lateral sclerosis: A randomized, controlled trial."
+    },
     "30562096": {
       "first_author": "Pascual-Figal DA",
       "pubdate": "2018 Dec",
       "journal": "Circ Heart Fail",
       "title": "Pulmonary Production of Soluble ST2 in Heart Failure."
+    },
+    "30635357": {
+      "first_author": "Brenner D",
+      "pubdate": "2019 Feb 04",
+      "journal": "J Exp Med",
+      "title": "Heterozygous Tbk1 loss has opposing effects in early and late stages of ALS in mice."
     },
     "30636701": {
       "first_author": "Kaji R",
@@ -494,11 +698,35 @@
       "journal": "Nat Neurosci",
       "title": "Premature polyadenylation-mediated loss of stathmin-2 is a hallmark of TDP-43-dependent neurodegeneration."
     },
+    "30655953": {
+      "first_author": "Siu T",
+      "pubdate": "2019 Jan 10",
+      "journal": "ACS Med Chem Lett",
+      "title": "Discovery of a Novel cGAMP Competitive Ligand of the Inactive Form of STING."
+    },
     "30683697": {
       "first_author": "Glatigny S",
       "pubdate": "2019 Mar 1",
       "journal": "J Immunol",
       "title": "Abatacept Targets T Follicular Helper and Regulatory T Cells, Disrupting Molecular Pathways That Regulate Their Proliferation and Maintenance."
+    },
+    "30705990": {
+      "title": "Long-term interleukin-33 treatment delays disease onset and alleviates astrocytic activation in a transgenic mouse model of amyotrophic lateral sclerosis.",
+      "pubdate": "2019 Jun",
+      "first_author": "Korhonen P",
+      "journal": "IBRO Rep"
+    },
+    "30842659": {
+      "first_author": "Shang G",
+      "pubdate": "2019 Mar",
+      "journal": "Nature",
+      "title": "Cryo-EM structures of STING reveal its mechanism of activation by cyclic GMP-AMP."
+    },
+    "30918111": {
+      "first_author": "Hernandez I",
+      "pubdate": "2019 Mar 27",
+      "journal": "Sci Transl Med",
+      "title": "A farnesyltransferase inhibitor activates lysosomes and reduces tau pathology in mice with tauopathy."
     },
     "31036929": {
       "first_author": "Shen W",
@@ -506,11 +734,23 @@
       "journal": "Nat Biotechnol",
       "title": "Chemical modification of PS-ASO therapeutics reduces cellular protein-binding and improves the therapeutic index."
     },
+    "31042469": {
+      "first_author": "Liu EY",
+      "pubdate": "2019 Apr 30",
+      "journal": "Cell Rep",
+      "title": "Loss of Nuclear TDP-43 Is Associated with Decondensation of LINE Retrotransposons."
+    },
     "31059641": {
       "first_author": "Tabrizi SJ",
       "pubdate": "2019 Jun 13",
       "journal": "N Engl J Med",
       "title": "Targeting Huntingtin Expression in Patients with Huntington's Disease."
+    },
+    "31113940": {
+      "first_author": "Lama L",
+      "pubdate": "2019 May 21",
+      "journal": "Nat Commun",
+      "title": "Development of human cGAS-specific small-molecule inhibitors for repression of dsDNA-triggered interferon expression."
     },
     "31123140": {
       "first_author": "Thompson AG",
@@ -524,17 +764,66 @@
       "journal": "Clin Chem Lab Med",
       "title": "Correlations between serum and CSF pNfH levels in ALS, FTD and controls: a comparison of three analytical approaches."
     },
+    "31284774": {
+      "first_author": "Gold J",
+      "pubdate": "2019 Nov",
+      "journal": "Amyotroph Lateral Scler Frontotemporal Degener",
+      "title": "Safety and tolerability of Triumeq in amyotrophic lateral sclerosis: the Lighthouse trial."
+    },
+    "31566909": {
+      "pmid": "31566909",
+      "title": "Plasma Proteome Profiling to detect and avoid sample-related biases in biomarker studies.",
+      "pubdate": "2019 Nov 7",
+      "first_author": "Geyer PE",
+      "journal": "EMBO Mol Med"
+    },
+    "31608711": {
+      "first_author": "Babu S",
+      "pubdate": "2020 Feb",
+      "journal": "Amyotroph Lateral Scler Frontotemporal Degener",
+      "title": "Selection design phase II trial of high dosages of tamoxifen and creatine in amyotrophic lateral sclerosis."
+    },
+    "31648898": {
+      "title": "Stress-Induced Cellular Clearance Is Mediated by the SNARE Protein ykt6 and Disrupted by α-Synuclein.",
+      "pubdate": "2019 Dec 4",
+      "first_author": "Cuddy LK",
+      "journal": "Neuron"
+    },
+    "31655003": {
+      "title": "Cu(II) (atsm) inhibits ferroptosis: Implications for treatment of neurodegenerative disease.",
+      "pubdate": "2020 Feb",
+      "first_author": "Southon A",
+      "journal": "Br J Pharmacol"
+    },
+    "31661035": {
+      "title": "Sarm1 deletion suppresses TDP-43-linked motor neuron degeneration and cortical spine loss.",
+      "pubdate": "2019 Oct 28",
+      "first_author": "White MA",
+      "journal": "Acta Neuropathol Commun"
+    },
     "31665631": {
       "first_author": "Tam OH",
       "pubdate": "2019 Oct 29",
       "journal": "Cell Rep",
       "title": "Postmortem Cortex Samples Identify Distinct Molecular Subtypes of ALS: Retrotransposon Activation, Oxidative Stress, and Activated Glia."
     },
+    "31883644": {
+      "first_author": "Szot JO",
+      "pubdate": "2020 Jan 2",
+      "journal": "Am J Hum Genet",
+      "title": "Bi-allelic Mutations in NADSYN1 Cause Multiple Organ Defects and Expand the Genotypic Spectrum of Congenital NAD Deficiency Disorders."
+    },
     "31892365": {
       "first_author": "Abu-Rumeileh S",
       "pubdate": "2019 Dec 31",
       "journal": "Alzheimers Res Ther",
       "title": "CSF biomarkers of neuroinflammation in distinct forms and subtypes of neurodegenerative dementia."
+    },
+    "31911602": {
+      "first_author": "Chuenchor W",
+      "pubdate": "2020 Jan 7",
+      "journal": "Nat Commun",
+      "title": "Different ways to transport ammonia in human and Mycobacterium tuberculosis NAD+ synthetases."
     },
     "31924448": {
       "first_author": "Lee JS",
@@ -560,11 +849,29 @@
       "journal": "EMBO J",
       "title": "A SNARE geranylgeranyltransferase essential for the organization of the Golgi apparatus."
     },
+    "32220666": {
+      "first_author": "Gerbino V",
+      "pubdate": "2020 Jun 03",
+      "journal": "Neuron",
+      "title": "The Loss of TBK1 Kinase Activity in Motor Neurons or in All Cell Types Differentially Impacts ALS Disease Progression in SOD1 Mice."
+    },
     "32385188": {
       "first_author": "Benatar M",
       "pubdate": "2020 Jul 7",
       "journal": "Neurology",
       "title": "Validation of serum neurofilaments as prognostic and potential pharmacodynamic biomarkers for ALS."
+    },
+    "32459092": {
+      "first_author": "Zhao W",
+      "pubdate": "2020 Jun 22",
+      "journal": "J Chem Inf Model",
+      "title": "In Silico Screening-Based Discovery of Novel Inhibitors of Human Cyclic GMP-AMP Synthase: A Cross-Validation Study of Molecular Docking and Experimental Testing."
+    },
+    "32481440": {
+      "first_author": "Chen PC",
+      "pubdate": "2020 May 29",
+      "journal": "Medicine (Baltimore)",
+      "title": "Tamoxifen for amyotrophic lateral sclerosis: A randomized double-blind clinical trial."
     },
     "32651161": {
       "first_author": "Camu W",
@@ -572,11 +879,35 @@
       "journal": "EBioMedicine",
       "title": "Repeated 5-day cycles of low dose aldesleukin in amyotrophic lateral sclerosis (IMODALS): A phase 2a randomised, double-blind, placebo-controlled trial."
     },
+    "32814898": {
+      "first_author": "McCauley ME",
+      "pubdate": "2020 Sep",
+      "journal": "Nature",
+      "title": "C9orf72 in myeloid cells suppresses STING-induced inflammation."
+    },
     "32884139": {
       "first_author": "Li X",
       "pubdate": "2021 Jan",
       "journal": "Cell Res",
       "title": "Molecular basis for ligand activation of the human KCNQ2 channel."
+    },
+    "33031745": {
+      "first_author": "Yu CH",
+      "pubdate": "2020 Oct 29",
+      "journal": "Cell",
+      "title": "TDP-43 Triggers Mitochondrial DNA Release via mPTP to Activate cGAS/STING in ALS."
+    },
+    "33035318": {
+      "first_author": "Sakata N",
+      "journal": "J Biochem",
+      "pubdate": "2021 Apr 18",
+      "title": "Double prenylation of SNARE protein Ykt6 is required for lysosomal hydrolase trafficking."
+    },
+    "33038415": {
+      "first_author": "Sieverding K",
+      "pubdate": "2021 Jan",
+      "journal": "Exp Neurol",
+      "title": "Hemizygous deletion of Tbk1 worsens neuromuscular junction pathology in TDP-43G298S transgenic mice."
     },
     "33087358": {
       "first_author": "Higginbotham L",
@@ -620,11 +951,29 @@
       "journal": "Amyotroph Lateral Scler Frontotemporal Degener",
       "title": "Chitotriosidase as biomarker for early stage amyotrophic lateral sclerosis: a multicenter study."
     },
+    "33905493": {
+      "first_author": "Dalla Bella E",
+      "pubdate": "2021 Oct 22",
+      "journal": "Brain",
+      "title": "The unfolded protein response in amyotrophic later sclerosis: results of a phase 2 trial."
+    },
     "33944777": {
       "first_author": "Li WH",
       "pubdate": "2021 May 4",
       "journal": "Elife",
       "title": "Permeant fluorescent probes visualize the activation of SARM1 and uncover an anti-neurodegenerative drug candidate."
+    },
+    "33964142": {
+      "first_author": "Bosanac T",
+      "pubdate": "2021 Nov 29",
+      "journal": "Brain",
+      "title": "Pharmacological SARM1 inhibition protects axon structure and function in paclitaxel-induced peripheral neuropathy."
+    },
+    "34031600": {
+      "first_author": "Tian R",
+      "pubdate": "2021 Jul",
+      "journal": "Nat Neurosci",
+      "title": "Genome-wide CRISPRi/a screens in human neurons link lysosomal failure to ferroptosis."
     },
     "34059824": {
       "first_author": "Mohassel P",
@@ -632,17 +981,35 @@
       "journal": "Nat Med",
       "title": "Childhood amyotrophic lateral sclerosis caused by excess sphingolipid synthesis."
     },
+    "34099558": {
+      "first_author": "Hong Z",
+      "pubdate": "2021 Jun 15",
+      "journal": "Proc Natl Acad Sci U S A",
+      "title": "STING inhibitors target the cyclic dinucleotide binding pocket."
+    },
     "34191081": {
       "first_author": "Aizawa H",
       "pubdate": "2022 Feb",
       "journal": "J Neurol",
       "title": "Randomized phase 2 study of perampanel for sporadic amyotrophic lateral sclerosis."
     },
+    "34233951": {
+      "title": "Genome-encoded cytoplasmic double-stranded RNAs, found in C9ORF72 ALS-FTD brain, propagate neuronal loss.",
+      "pubdate": "2021 Jul 7",
+      "first_author": "Rodriguez S",
+      "journal": "Sci Transl Med"
+    },
     "34321318": {
       "first_author": "Coyne AN",
       "pubdate": "2021 Jul 28",
       "journal": "Sci Transl Med",
       "title": "Nuclear accumulation of CHMP7 initiates nuclear pore complex injury and subsequent TDP-43 dysfunction in sporadic and familial ALS."
+    },
+    "34326236": {
+      "first_author": "Tummino TA",
+      "pubdate": "2021 Jul 30",
+      "journal": "Science",
+      "title": "Drug-induced phospholipidosis confounds drug repurposing for SARS-CoV-2."
     },
     "34425903": {
       "first_author": "Liang L",
@@ -667,6 +1034,12 @@
       "pubdate": "2021 Dec",
       "journal": "Nat Genet",
       "title": "Common and rare variant association analyses in amyotrophic lateral sclerosis identify 15 risk loci with distinct genetic architectures and neuron-specific biology."
+    },
+    "34972208": {
+      "first_author": "Pasetto L",
+      "pubdate": "2021 Dec 31",
+      "journal": "Brain",
+      "title": "Defective cyclophilin A induces TDP-43 proteinopathy: implications for amyotrophic lateral sclerosis and frontotemporal dementia."
     },
     "34991663": {
       "first_author": "Bloom AJ",
@@ -710,6 +1083,12 @@
       "journal": "JAMA Neurol",
       "title": "Efficacy and Safety of Ultrahigh-Dose Methylcobalamin in Early-Stage Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial."
     },
+    "35641224": {
+      "first_author": "Imaizumi K",
+      "pubdate": "2022 May-Jun",
+      "journal": "eNeuro",
+      "title": "Pathogenic Mutation of TDP-43 Impairs RNA Processing in a Cell Type-Specific Manner: Implications for the Pathogenesis of ALS/FTLD."
+    },
     "35654979": {
       "first_author": "Brown KM",
       "pubdate": "2022 Oct",
@@ -722,17 +1101,47 @@
       "journal": "Cell Rep",
       "title": "Loss of Stathmin-2, a hallmark of TDP-43-associated ALS, causes motor neuropathy."
     },
+    "35863521": {
+      "title": "Sarm1 knockout modifies biomarkers of neurodegeneration and spinal cord circuitry but not disease progression in the mSOD1(G93A) mouse model of ALS.",
+      "pubdate": "2022 Oct 1",
+      "first_author": "Collins JM",
+      "journal": "Neurobiol Dis"
+    },
+    "35953545": {
+      "first_author": "Dräger NM",
+      "pubdate": "2022 Sep",
+      "journal": "Nat Neurosci",
+      "title": "A CRISPRi/a platform in human iPSC-derived microglia uncovers regulators of disease states."
+    },
     "35981040": {
       "first_author": "Diaz-Ortiz ME",
       "pubdate": "2022 Aug 19",
       "journal": "Science",
       "title": "GPNMB confers risk for Parkinson's disease through interaction with α-synuclein."
     },
+    "35994671": {
+      "title": "Selective inhibitors of SARM1 targeting an allosteric cysteine in the autoregulatory ARM domain.",
+      "pubdate": "2022 Aug 30",
+      "first_author": "Feldman HC",
+      "journal": "Proc Natl Acad Sci U S A"
+    },
     "36129998": {
       "first_author": "Miller TM",
       "pubdate": "2022 Sep 22",
       "journal": "N Engl J Med",
       "title": "Trial of Antisense Oligonucleotide Tofersen for SOD1 ALS."
+    },
+    "36243988": {
+      "first_author": "Pan S",
+      "pubdate": "2023 Jan 6",
+      "journal": "Nucleic Acids Res",
+      "title": "Brain Catalog: a comprehensive resource for the genetic landscape of brain-related traits."
+    },
+    "36309631": {
+      "first_author": "Lee JH",
+      "pubdate": "2022 Dec",
+      "journal": "Neurochem Res",
+      "title": "Anti-neuroinflammatory Effects and Brain Pharmacokinetic Properties of Selonsertib, a Selective ASK1 Inhibitor."
     },
     "36384809": {
       "first_author": "Dammer EB",
@@ -751,6 +1160,12 @@
       "pubdate": "2023 Jan",
       "journal": "Nat Neurosci",
       "title": "Integrative transcriptomic analysis of the amyotrophic lateral sclerosis spinal cord implicates glial activation and suggests new risk genes."
+    },
+    "36736291": {
+      "title": "SYF2 suppression mitigates neurodegeneration in models of diverse forms of ALS.",
+      "pubdate": "2023 Feb 2",
+      "first_author": "Linares GR",
+      "journal": "Cell Stem Cell"
     },
     "36754049": {
       "first_author": "Hung ST",
@@ -843,11 +1258,29 @@
       "journal": "JAMA Neurol",
       "title": "Efficacy and Safety of Ravulizumab, a Complement C5 Inhibitor, in Adults With Amyotrophic Lateral Sclerosis: A Randomized Clinical Trial."
     },
+    "37905864": {
+      "title": "SCFD1 in amyotrophic lateral sclerosis: reconciling a genetic association with in vivo functional analysis.",
+      "pubdate": "2024 Jun 1",
+      "first_author": "Cauchi RJ",
+      "journal": "Neural Regen Res"
+    },
+    "37975796": {
+      "first_author": "Witzel S",
+      "pubdate": "2024 Mar",
+      "journal": "Eur J Neurol",
+      "title": "Longitudinal course of neurofilament light chain levels in amyotrophic lateral sclerosis-insights from a completed randomized controlled trial with rasagiline."
+    },
     "37996528": {
       "first_author": "López-Erauskin J",
       "pubdate": "2024 Jan",
       "journal": "Nat Neurosci",
       "title": "Stathmin-2 loss leads to neurofilament-dependent axonal collapse driving motor and sensory denervation."
+    },
+    "38124145": {
+      "title": "Genetic ablation of Sarm1 attenuates expression and mislocalization of phosphorylated TDP-43 after mouse repetitive traumatic brain injury.",
+      "pubdate": "2023 Dec 20",
+      "first_author": "Dogan EO",
+      "journal": "Acta Neuropathol Commun"
     },
     "38158550": {
       "first_author": "Sandau US",
@@ -855,11 +1288,47 @@
       "journal": "J Extracell Vesicles",
       "title": "Recommendations for reproducibility of cerebrospinal fluid extracellular vesicle studies."
     },
+    "38183652": {
+      "first_author": "Guise AJ",
+      "journal": "Cell Rep",
+      "pubdate": "2024 Jan 23",
+      "title": "TDP-43-stratified single-cell proteomics of postmortem human spinal motor neurons reveals protein dynamics in amyotrophic lateral sclerosis."
+    },
+    "38240416": {
+      "first_author": "Schuster J",
+      "pubdate": "2024 Apr",
+      "journal": "Eur J Neurol",
+      "title": "In-depth analysis of data from the RAS-ALS study reveals new insights in rasagiline treatment for amyotrophic lateral sclerosis."
+    },
+    "38277467": {
+      "first_author": "Seddighi S",
+      "pubdate": "2024 Feb 14",
+      "journal": "Sci Transl Med",
+      "title": "Mis-spliced transcripts generate de novo proteins in TDP-43-related ALS/FTD."
+    },
     "38278991": {
       "first_author": "Irwin KE",
       "pubdate": "2024 Feb",
       "journal": "Nat Med",
       "title": "A fluid biomarker reveals loss of TDP-43 splicing repression in presymptomatic ALS-FTD."
+    },
+    "38357931": {
+      "first_author": "Szot JO",
+      "pubdate": "2024 Feb 15",
+      "journal": "J Clin Invest",
+      "title": "A metabolic signature for NADSYN1-dependent congenital NAD deficiency disorder."
+    },
+    "38359044": {
+      "first_author": "Vieira FG",
+      "pubdate": "2024",
+      "journal": "PLoS One",
+      "title": "PERK modulation, with GSK2606414, Sephin1 or salubrinal, failed to produce therapeutic benefits in the SOD1G93A mouse model of ALS."
+    },
+    "38478117": {
+      "first_author": "Marques C",
+      "pubdate": "2024 Mar 13",
+      "journal": "Acta Neuropathol",
+      "title": "Neuronal STING activation in amyotrophic lateral sclerosis and frontotemporal dementia."
     },
     "38521060": {
       "first_author": "Pineda SS",
@@ -884,6 +1353,12 @@
       "pubdate": "2024 Jul",
       "journal": "J Neurol",
       "title": "Diagnostic value of neurofilaments in differentiating motor neuron disease from multifocal motor neuropathy."
+    },
+    "38771640": {
+      "first_author": "Vanoye CG",
+      "pubdate": "2024 May 21",
+      "journal": "JCI Insight",
+      "title": "Molecular and cellular context influences SCN8A variant function."
     },
     "38915796": {
       "first_author": "Thonhoff JR",
@@ -939,17 +1414,35 @@
       "journal": "Muscle Nerve",
       "title": "A 40-week phase 2B randomized, multicenter, double-blind, placebo-controlled study evaluating the safety and efficacy of memantine in amyotrophic lateral sclerosis."
     },
+    "39548852": {
+      "first_author": "Dellar ER",
+      "pubdate": "2025 Mar",
+      "journal": "Ann Neurol",
+      "title": "Elevated Cerebrospinal Fluid Ubiquitin Carboxyl-Terminal Hydrolase Isozyme L1 in Asymptomatic C9orf72 Hexanucleotide Repeat Expansion Carriers."
+    },
     "39603486": {
       "first_author": "Krus KL",
       "pubdate": "2025 Feb",
       "journal": "Exp Neurol",
       "title": "Two cardinal features of ALS, reduced STMN2 and pathogenic TDP-43, synergize to accelerate motor decline in mice."
     },
+    "39660913": {
+      "first_author": "Xie S",
+      "pubdate": "2025 Jan",
+      "journal": "Protein Sci",
+      "title": "Molecular basis of the CYFIP2 and NCKAP1 autism-linked variants in the WAVE regulatory complex."
+    },
     "39709457": {
       "first_author": "Keeley O",
       "pubdate": "2024 Dec 21",
       "journal": "Acta Neuropathol Commun",
       "title": "CHMP2B promotes CHMP7 mediated nuclear pore complex injury in sporadic ALS."
+    },
+    "39791335": {
+      "title": "Genetic Ablation of Sarm1 Mitigates Disease Acceleration after Traumatic Brain Injury in the SOD1(G93A) Transgenic Mouse Model of Amyotrophic Lateral Sclerosis.",
+      "pubdate": "2025 May",
+      "first_author": "Dogan EO",
+      "journal": "Ann Neurol"
     },
     "39960672": {
       "first_author": "Paganoni S",
@@ -974,6 +1467,18 @@
       "pubdate": "2025 Mar 25",
       "journal": "Cell Rep",
       "title": "ALS molecular subtypes are a combination of cellular and pathological features learned by deep multiomics classifiers."
+    },
+    "40087396": {
+      "first_author": "Omar OMF",
+      "pubdate": "2025 May",
+      "journal": "Nat Neurosci",
+      "title": "Endothelial TDP-43 depletion disrupts core blood-brain barrier pathways in neurodegeneration."
+    },
+    "40132594": {
+      "first_author": "Zelic M",
+      "pubdate": "2025 Apr 8",
+      "journal": "Immunity",
+      "title": "Single-cell transcriptomic and functional studies identify glial state changes and a role for inflammatory RIPK1 signaling in ALS pathogenesis."
     },
     "40143847": {
       "first_author": "Meyer J",
@@ -1017,6 +1522,24 @@
       "journal": "bioRxiv",
       "title": "Nonsense-mediated decay masks cryptic splicing events caused by TDP-43 loss."
     },
+    "40713859": {
+      "first_author": "Miedema SSM",
+      "pubdate": "2025 Jul 25",
+      "journal": "Acta Neuropathol Commun",
+      "title": "Proteomics of the temporal cortex in semantic dementia reveals brain-region specific molecular pathology and regulation of the TDP-43-ANXA11 interactome."
+    },
+    "40737092": {
+      "first_author": "Dargan R",
+      "pubdate": "2025 Jul 19",
+      "journal": "Nucleic Acids Res",
+      "title": "Altered mRNA transport and local translation in i3Neurons with RNA-binding protein knockdown."
+    },
+    "40826370": {
+      "first_author": "Feneberg E",
+      "pubdate": "2025 Aug 18",
+      "journal": "Acta Neuropathol Commun",
+      "title": "TDP-43 pathology is associated with divergent protein profiles in ALS brain and spinal cord."
+    },
     "40826812": {
       "first_author": "Asano H",
       "pubdate": "2025 Aug",
@@ -1028,6 +1551,12 @@
       "pubdate": "2025 Sep 2",
       "journal": "bioRxiv",
       "title": "Cryptic splicing in synaptic and membrane excitability genes links TDP-43 loss to neuronal dysfunction."
+    },
+    "41028049": {
+      "first_author": "Spiteri AG",
+      "pubdate": "2025 Sep 30",
+      "journal": "Sci Rep",
+      "title": "Proteomic analysis of brain and spinal cord tissue reveals distinct immune and mitochondrial processes between human and mouse ALS models."
     },
     "41120750": {
       "first_author": "Zeng Y",
@@ -1059,6 +1588,12 @@
       "journal": "Mol Med",
       "title": "Syntaphilin loss enhances mitochondrial axonal transport and neuromuscular junction formation in a human stem cell derived neuromuscular assembloid model."
     },
+    "41256508": {
+      "title": "Integrative multiomic analysis links TDP-43-driven splicing defects to cascading proteomic disruption of ALS/FTD pathways.",
+      "pubdate": "2025 Nov 1",
+      "first_author": "Kozareva V",
+      "journal": "bioRxiv"
+    },
     "41286450": {
       "first_author": "Bye CR",
       "pubdate": "2026 Jan",
@@ -1076,6 +1611,12 @@
       "pubdate": "2025 Nov 30",
       "journal": "bioRxiv",
       "title": "U7 small nuclear RNA splice-switching therapeutics for STMN2 and UNC13A in Amyotrophic Lateral Sclerosis."
+    },
+    "41573891": {
+      "first_author": "Gomberg TA",
+      "journal": "bioRxiv",
+      "pubdate": "2025 Dec 3",
+      "title": "Dual-targeting snRNA gene therapy rescues STMN2 and UNC13A splicing in TDP-43 proteinopathies."
     },
     "41634391": {
       "first_author": "Finkel RS",
@@ -1125,17 +1666,47 @@
       "journal": "MAbs",
       "title": "Structures of clinical antibodies bound to IL-33 uncover two distinct epitopes underlying differential efficacy."
     },
+    "41776751": {
+      "first_author": "Roca-Pereira S",
+      "pubdate": "2026 Sep",
+      "journal": "Brain Pathol",
+      "title": "Proteomic profile of CSF obtained at the time of diagnosis determines amyotrophic lateral sclerosis progression and survival: CXCL7 levels in disease prognosis and survival."
+    },
+    "41777232": {
+      "title": "ALSUntangled #82: N-acetylcysteine.",
+      "pubdate": "2026 Aug",
+      "first_author": "Yerraguntla S",
+      "journal": "Amyotroph Lateral Scler Frontotemporal Degener"
+    },
     "41787606": {
       "first_author": "Kumar R",
       "pubdate": "2026 Jun",
       "journal": "Mov Disord",
       "title": "An Open-Label Phase 1b Study of the Safety, Pharmacokinetics, Pharmacodynamics, and Clinical Activity of ANX005 in Patients with Huntington's Disease."
     },
+    "41803120": {
+      "first_author": "Ruf WP",
+      "pubdate": "2026 Mar 9",
+      "journal": "Nat Commun",
+      "title": "Multi-modal dissection of cell-type specific TDP-43 pathology in the motor cortex."
+    },
     "41804798": {
       "first_author": "Jagaraj CJ",
       "pubdate": "2026 Nov 4",
       "journal": "Brain",
       "title": "Cofilin hyperphosphorylation triggers TDP-43 pathology in sporadic amyotrophic lateral sclerosis."
+    },
+    "41809005": {
+      "first_author": "Liu Y",
+      "pubdate": "2026 Feb 26",
+      "journal": "bioRxiv",
+      "title": "cGAS inhibition delays TDP-43-driven ALS Pathogenesis."
+    },
+    "41832177": {
+      "title": "TYK2 mediates neuroinflammation in Alzheimer's disease brains with TDP-43 pathology.",
+      "pubdate": "2026 Mar 14",
+      "first_author": "König LE",
+      "journal": "Nat Commun"
     },
     "41857656": {
       "first_author": "Jansson D",
@@ -1160,6 +1731,12 @@
       "pubdate": "2026 Jul",
       "journal": "Nat Neurosci",
       "title": "Integrated single-cell and spatial transcriptomic profiling in ALS uncovers peripheral-to-central immune infiltration and reprogramming."
+    },
+    "42135847": {
+      "first_author": "Sinha IR",
+      "pubdate": "2026 May 14",
+      "journal": "Mol Neurodegener",
+      "title": "TDP-43: [GU]-ardian of the transcriptome."
     },
     "42150581": {
       "first_author": "Papi A",
@@ -1191,6 +1768,24 @@
       "journal": "NPJ Drug Discov",
       "title": "Therapeutic safety implications of SARM1 active site inhibitors: subinhibitory concentrations cause neurodegeneration."
     },
+    "42446992": {
+      "title": "Repurposing trazodone for Alzheimer's disease to modulate soluble ST2 levels and alleviate Alzheimer's pathology.",
+      "pubdate": "2026 Jul 21",
+      "first_author": "Wong DYK",
+      "journal": "Proc Natl Acad Sci U S A"
+    },
+    "42492371": {
+      "first_author": "Majumder M",
+      "pubdate": "2026 Sep",
+      "journal": "Neurotherapeutics",
+      "title": "Site-targeted proximal complement C3 inhibition, but not C5 blockade, attenuates neurodegeneration in a mouse model of amyotrophic lateral sclerosis: Implications for failed clinical trials."
+    },
+    "42509371": {
+      "first_author": "Ran X",
+      "pubdate": "2026 Sep",
+      "journal": "Nat Med",
+      "title": "Longitudinal plasma proteomics predict phenoconversion to clinically manifest ALS."
+    },
     "42551425": {
       "first_author": "Petrescu J",
       "pubdate": "2026 Sep 17",
@@ -1203,6 +1798,18 @@
       "journal": "Brain Commun",
       "title": "Cortical excitability stratifies neurochemical profiles in amyotrophic lateral sclerosis."
     },
+    "42698373": {
+      "first_author": "Pan L",
+      "pubdate": "2026 Sep",
+      "journal": "Eur J Neurol",
+      "title": "Protein Biomarkers in Risk and Prognosis of Amyotrophic Lateral Sclerosis."
+    },
+    "42716044": {
+      "first_author": "Cudkowicz ME",
+      "pubdate": "2026 Oct",
+      "journal": "Lancet Neurol",
+      "title": "Safety, tolerability, and efficacy of RIPK1 inhibitor, SAR443820, in amyotrophic lateral sclerosis (HIMALAYA): a multicentre, randomised, double-blind, placebo-controlled, phase 2 trial."
+    },
     "42789089": {
       "first_author": "Spillman AM",
       "pubdate": "2026 Sep 25",
@@ -1214,6 +1821,18 @@
       "pubdate": "2026 Dec",
       "journal": "Biochem Pharmacol",
       "title": "Sephin1 directly targets PHB2 to activate PINK1-PRKN-dependent mitophagy and alleviate α-synuclein neurotoxicity in Parkinson's disease models."
+    },
+    "42792593": {
+      "first_author": "Zhan Y",
+      "pubdate": "2026 Sep 18",
+      "journal": "Biology (Basel)",
+      "title": "Host Genetic Susceptibility and Antiviral Immunity Shape the Pathogenesis and Outcomes of Herpes Simplex Encephalitis."
+    },
+    "42834122": {
+      "first_author": "Sakai S",
+      "pubdate": "2026 Nov",
+      "journal": "EMBO Rep",
+      "title": "TBK1 eliminates aggregation-prone monomeric TDP-43 through an IFNβ-immunoproteasome pathway in ALS models."
     },
     "42836993": {
       "first_author": "Al Khleifat A",
@@ -1257,630 +1876,17 @@
       "journal": "J Lipid Res",
       "title": "Sphingolipid remodeling in SPT-related neuropathies."
     },
-    "43045849": {
-      "first_author": "Perez-Alcantara M",
-      "pubdate": "2026 Nov 17",
-      "journal": "Nat Genet",
-      "title": "Integrated QTL mapping and CRISPR screening in pooled iPSC-derived microglia reveals genetic drivers of neurodegenerative risk."
-    },
-    "31566909": {
-      "pmid": "31566909",
-      "title": "Plasma Proteome Profiling to detect and avoid sample-related biases in biomarker studies.",
-      "pubdate": "2019 Nov 7",
-      "first_author": "Geyer PE",
-      "journal": "EMBO Mol Med"
-    },
-    "18326497": {
-      "first_author": "Lee SG",
-      "pubdate": "2008 May 9",
-      "journal": "J Biol Chem",
-      "title": "Mechanism of ceftriaxone induction of excitatory amino acid transporter-2 expression and glutamate uptake in primary human astrocytes."
-    },
-    "28430857": {
-      "first_author": "Halliday M",
-      "pubdate": "2017 Jun 1",
-      "journal": "Brain",
-      "title": "Repurposed drugs targeting eIF2α-P-mediated translational repression prevent neurodegeneration in mice."
-    },
-    "24835171": {
-      "first_author": "Klomjai W",
-      "pubdate": "2014 Jul 1",
-      "journal": "J Physiol",
-      "title": "Changes in spinal inhibitory networks induced by furosemide in humans."
-    },
-    "16204711": {
-      "first_author": "Freedman NM",
-      "pubdate": "2005 Oct",
-      "journal": "J Nucl Med",
-      "title": "In vivo measurement of brain monoamine oxidase B occupancy by rasagiline, using (11)C-l-deprenyl and PET."
-    },
-    "30192007": {
-      "first_author": "Statland JM",
-      "pubdate": "2019 Feb",
-      "journal": "Muscle Nerve",
-      "title": "Rasagiline for amyotrophic lateral sclerosis: A randomized, controlled trial."
-    },
-    "37975796": {
-      "first_author": "Witzel S",
-      "pubdate": "2024 Mar",
-      "journal": "Eur J Neurol",
-      "title": "Longitudinal course of neurofilament light chain levels in amyotrophic lateral sclerosis-insights from a completed randomized controlled trial with rasagiline."
-    },
-    "38240416": {
-      "first_author": "Schuster J",
-      "pubdate": "2024 Apr",
-      "journal": "Eur J Neurol",
-      "title": "In-depth analysis of data from the RAS-ALS study reveals new insights in rasagiline treatment for amyotrophic lateral sclerosis."
-    },
-    "42492371": {
-      "first_author": "Majumder M",
-      "pubdate": "2026 Sep",
-      "journal": "Neurotherapeutics",
-      "title": "Site-targeted proximal complement C3 inhibition, but not C5 blockade, attenuates neurodegeneration in a mouse model of amyotrophic lateral sclerosis: Implications for failed clinical trials."
-    },
-    "31284774": {
-      "first_author": "Gold J",
-      "pubdate": "2019 Nov",
-      "journal": "Amyotroph Lateral Scler Frontotemporal Degener",
-      "title": "Safety and tolerability of Triumeq in amyotrophic lateral sclerosis: the Lighthouse trial."
-    },
-    "24944232": {
-      "first_author": "Letendre SL",
-      "pubdate": "2014 Oct",
-      "journal": "Clin Infect Dis",
-      "title": "ING116070: a study of the pharmacokinetics and antiviral activity of dolutegravir in cerebrospinal fluid in HIV-1-infected, antiretroviral therapy-naive subjects."
-    },
-    "30127392": {
-      "first_author": "Fujimori K",
-      "pubdate": "2018 Oct",
-      "journal": "Nat Med",
-      "title": "Modeling sporadic ALS in iPSC-derived motor neurons identifies a potential therapeutic agent."
-    },
-    "29618508": {
-      "first_author": "Crespillo-Casado A",
-      "pubdate": "2018 May 18",
-      "journal": "J Biol Chem",
-      "title": "A Sephin1-insensitive tripartite holophosphatase dephosphorylates translation initiation factor 2α."
-    },
     "43036320": {
       "first_author": "Abgueguen E",
       "pubdate": "2026 Dec",
       "journal": "Biochem Biophys Rep",
       "title": "Sephin1 protects from glutamate stress, consistent with negative allosteric modulation of GluN2B-containing NMDA receptor."
     },
-    "38359044": {
-      "first_author": "Vieira FG",
-      "pubdate": "2024",
-      "journal": "PLoS One",
-      "title": "PERK modulation, with GSK2606414, Sephin1 or salubrinal, failed to produce therapeutic benefits in the SOD1G93A mouse model of ALS."
-    },
-    "9249114": {
-      "first_author": "Talke P",
-      "pubdate": "1997 Aug",
-      "journal": "Anesth Analg",
-      "title": "Effect of dexmedetomidine on lumbar cerebrospinal fluid pressure in humans."
-    },
-    "9356115": {
-      "first_author": "Talke P",
-      "pubdate": "1997 Nov",
-      "journal": "Anesth Analg",
-      "title": "Postoperative pharmacokinetics and sympatholytic effects of dexmedetomidine."
-    },
-    "33905493": {
-      "first_author": "Dalla Bella E",
-      "pubdate": "2021 Oct 22",
-      "journal": "Brain",
-      "title": "The unfolded protein response in amyotrophic later sclerosis: results of a phase 2 trial."
-    },
-    "29308669": {
-      "first_author": "Fournier CN",
-      "pubdate": "2018 May",
-      "journal": "Amyotroph Lateral Scler Frontotemporal Degener",
-      "title": "An open label study of a novel immunosuppression intervention for the treatment of amyotrophic lateral sclerosis."
-    },
-    "7903306": {
-      "first_author": "Carr SF",
-      "pubdate": "1993 Dec 25",
-      "journal": "J Biol Chem",
-      "title": "Characterization of human type I and type II IMP dehydrogenases."
-    },
-    "31608711": {
-      "first_author": "Babu S",
-      "pubdate": "2020 Feb",
-      "journal": "Amyotroph Lateral Scler Frontotemporal Degener",
-      "title": "Selection design phase II trial of high dosages of tamoxifen and creatine in amyotrophic lateral sclerosis."
-    },
-    "32481440": {
-      "first_author": "Chen PC",
-      "pubdate": "2020 May 29",
-      "journal": "Medicine (Baltimore)",
-      "title": "Tamoxifen for amyotrophic lateral sclerosis: A randomized double-blind clinical trial."
-    },
-    "2021551": {
-      "first_author": "Lien EA",
-      "pubdate": "1991 Apr",
-      "journal": "Br J Cancer",
-      "title": "Distribution of tamoxifen and metabolites into brain tissue and brain metastases in breast cancer patients."
-    },
-    "34326236": {
-      "first_author": "Tummino TA",
-      "pubdate": "2021 Jul 30",
-      "journal": "Science",
-      "title": "Drug-induced phospholipidosis confounds drug repurposing for SARS-CoV-2."
-    },
-    "35863521": {
-      "title": "Sarm1 knockout modifies biomarkers of neurodegeneration and spinal cord circuitry but not disease progression in the mSOD1(G93A) mouse model of ALS.",
-      "pubdate": "2022 Oct 1",
-      "first_author": "Collins JM",
-      "journal": "Neurobiol Dis"
-    },
-    "31661035": {
-      "title": "Sarm1 deletion suppresses TDP-43-linked motor neuron degeneration and cortical spine loss.",
-      "pubdate": "2019 Oct 28",
-      "first_author": "White MA",
-      "journal": "Acta Neuropathol Commun"
-    },
-    "38124145": {
-      "title": "Genetic ablation of Sarm1 attenuates expression and mislocalization of phosphorylated TDP-43 after mouse repetitive traumatic brain injury.",
-      "pubdate": "2023 Dec 20",
-      "first_author": "Dogan EO",
-      "journal": "Acta Neuropathol Commun"
-    },
-    "39791335": {
-      "title": "Genetic Ablation of Sarm1 Mitigates Disease Acceleration after Traumatic Brain Injury in the SOD1(G93A) Transgenic Mouse Model of Amyotrophic Lateral Sclerosis.",
-      "pubdate": "2025 May",
-      "first_author": "Dogan EO",
-      "journal": "Ann Neurol"
-    },
-    "35994671": {
-      "title": "Selective inhibitors of SARM1 targeting an allosteric cysteine in the autoregulatory ARM domain.",
-      "pubdate": "2022 Aug 30",
-      "first_author": "Feldman HC",
-      "journal": "Proc Natl Acad Sci U S A"
-    },
-    "36736291": {
-      "title": "SYF2 suppression mitigates neurodegeneration in models of diverse forms of ALS.",
-      "pubdate": "2023 Feb 2",
-      "first_author": "Linares GR",
-      "journal": "Cell Stem Cell"
-    },
-    "42446992": {
-      "title": "Repurposing trazodone for Alzheimer's disease to modulate soluble ST2 levels and alleviate Alzheimer's pathology.",
-      "pubdate": "2026 Jul 21",
-      "first_author": "Wong DYK",
-      "journal": "Proc Natl Acad Sci U S A"
-    },
-    "30705990": {
-      "title": "Long-term interleukin-33 treatment delays disease onset and alleviates astrocytic activation in a transgenic mouse model of amyotrophic lateral sclerosis.",
-      "pubdate": "2019 Jun",
-      "first_author": "Korhonen P",
-      "journal": "IBRO Rep"
-    },
-    "41256508": {
-      "title": "Integrative multiomic analysis links TDP-43-driven splicing defects to cascading proteomic disruption of ALS/FTD pathways.",
-      "pubdate": "2025 Nov 1",
-      "first_author": "Kozareva V",
-      "journal": "bioRxiv"
-    },
-    "24023695": {
-      "title": "Molecular chaperone mediated late-stage neuroprotection in the SOD1(G93A) mouse model of amyotrophic lateral sclerosis.",
-      "pubdate": "2013",
-      "first_author": "Novoselov SS",
-      "journal": "PLoS One"
-    },
-    "37905864": {
-      "title": "SCFD1 in amyotrophic lateral sclerosis: reconciling a genetic association with in vivo functional analysis.",
-      "pubdate": "2024 Jun 1",
-      "first_author": "Cauchi RJ",
-      "journal": "Neural Regen Res"
-    },
-    "31648898": {
-      "title": "Stress-Induced Cellular Clearance Is Mediated by the SNARE Protein ykt6 and Disrupted by α-Synuclein.",
-      "pubdate": "2019 Dec 4",
-      "first_author": "Cuddy LK",
-      "journal": "Neuron"
-    },
-    "22003390": {
-      "title": "Iron insufficiency compromises motor neurons and their mitochondrial function in Irp2-null mice.",
-      "pubdate": "2011",
-      "first_author": "Jeong SY",
-      "journal": "PLoS One"
-    },
-    "29400714": {
-      "title": "Haploinsufficiency leads to neurodegeneration in C9ORF72 ALS/FTD human induced motor neurons.",
-      "pubdate": "2018 Mar",
-      "first_author": "Shi Y",
-      "journal": "Nat Med"
-    },
-    "34233951": {
-      "title": "Genome-encoded cytoplasmic double-stranded RNAs, found in C9ORF72 ALS-FTD brain, propagate neuronal loss.",
-      "pubdate": "2021 Jul 7",
-      "first_author": "Rodriguez S",
-      "journal": "Sci Transl Med"
-    },
-    "41832177": {
-      "title": "TYK2 mediates neuroinflammation in Alzheimer's disease brains with TDP-43 pathology.",
-      "pubdate": "2026 Mar 14",
-      "first_author": "König LE",
-      "journal": "Nat Commun"
-    },
-    "31655003": {
-      "title": "Cu(II) (atsm) inhibits ferroptosis: Implications for treatment of neurodegenerative disease.",
-      "pubdate": "2020 Feb",
-      "first_author": "Southon A",
-      "journal": "Br J Pharmacol"
-    },
-    "41777232": {
-      "title": "ALSUntangled #82: N-acetylcysteine.",
-      "pubdate": "2026 Aug",
-      "first_author": "Yerraguntla S",
-      "journal": "Amyotroph Lateral Scler Frontotemporal Degener"
-    },
-    "38183652": {
-      "first_author": "Guise AJ",
-      "journal": "Cell Rep",
-      "pubdate": "2024 Jan 23",
-      "title": "TDP-43-stratified single-cell proteomics of postmortem human spinal motor neurons reveals protein dynamics in amyotrophic lateral sclerosis."
-    },
-    "33035318": {
-      "first_author": "Sakata N",
-      "journal": "J Biochem",
-      "pubdate": "2021 Apr 18",
-      "title": "Double prenylation of SNARE protein Ykt6 is required for lysosomal hydrolase trafficking."
-    },
-    "41573891": {
-      "first_author": "Gomberg TA",
-      "journal": "bioRxiv",
-      "pubdate": "2025 Dec 3",
-      "title": "Dual-targeting snRNA gene therapy rescues STMN2 and UNC13A splicing in TDP-43 proteinopathies."
-    },
-    "12039935": {
-      "first_author": "Crul M",
-      "pubdate": "2002 Jun 1",
-      "journal": "J Clin Oncol",
-      "title": "Phase I clinical and pharmacologic study of chronic oral administration of the farnesyl protein transferase inhibitor R115777 in advanced cancer."
-    },
-    "29764981": {
-      "first_author": "Fratta P",
-      "pubdate": "2018 Jun 1",
-      "journal": "EMBO J",
-      "title": "Mice with endogenous TDP-43 mutations exhibit gain of splicing function and characteristics of amyotrophic lateral sclerosis."
-    },
-    "30918111": {
-      "first_author": "Hernandez I",
-      "pubdate": "2019 Mar 27",
-      "journal": "Sci Transl Med",
-      "title": "A farnesyltransferase inhibitor activates lysosomes and reduces tau pathology in mice with tauopathy."
-    },
-    "33964142": {
-      "first_author": "Bosanac T",
-      "pubdate": "2021 Nov 29",
-      "journal": "Brain",
-      "title": "Pharmacological SARM1 inhibition protects axon structure and function in paclitaxel-induced peripheral neuropathy."
-    },
-    "38277467": {
-      "first_author": "Seddighi S",
-      "pubdate": "2024 Feb 14",
-      "journal": "Sci Transl Med",
-      "title": "Mis-spliced transcripts generate de novo proteins in TDP-43-related ALS/FTD."
-    },
-    "42698373": {
-      "first_author": "Pan L",
-      "pubdate": "2026 Sep",
-      "journal": "Eur J Neurol",
-      "title": "Protein Biomarkers in Risk and Prognosis of Amyotrophic Lateral Sclerosis."
-    },
-    "36243988": {
-      "first_author": "Pan S",
-      "pubdate": "2023 Jan 6",
-      "journal": "Nucleic Acids Res",
-      "title": "Brain Catalog: a comprehensive resource for the genetic landscape of brain-related traits."
-    },
-    "23946404": {
-      "first_author": "Stephan AH",
-      "pubdate": "2013 Aug 14",
-      "journal": "J Neurosci",
-      "title": "A dramatic increase of C1q protein in the CNS during normal aging."
-    },
-    "38771640": {
-      "first_author": "Vanoye CG",
-      "pubdate": "2024 May 21",
-      "journal": "JCI Insight",
-      "title": "Molecular and cellular context influences SCN8A variant function."
-    },
-    "31042469": {
-      "first_author": "Liu EY",
-      "pubdate": "2019 Apr 30",
-      "journal": "Cell Rep",
-      "title": "Loss of Nuclear TDP-43 Is Associated with Decondensation of LINE Retrotransposons."
-    },
-    "20839903": {
-      "first_author": "Levine TD",
-      "pubdate": "2010 Dec",
-      "journal": "Amyotroph Lateral Scler",
-      "title": "A pilot trial of memantine and riluzole in ALS: correlation to CSF biomarkers."
-    },
-    "25700176": {
-      "first_author": "Cirulli ET",
-      "pubdate": "2015 Mar 27",
-      "journal": "Science",
-      "title": "Exome sequencing in amyotrophic lateral sclerosis identifies risk genes and pathways."
-    },
-    "25803835": {
-      "first_author": "Freischmidt A",
-      "pubdate": "2015 May",
-      "journal": "Nat Neurosci",
-      "title": "Haploinsufficiency of TBK1 causes familial ALS and fronto-temporal dementia."
-    },
-    "28453775": {
-      "first_author": "Lamore SD",
-      "pubdate": "2017 Jul 01",
-      "journal": "Toxicol Sci",
-      "title": "Deconvoluting Kinase Inhibitor Induced Cardiotoxicity."
-    },
-    "30635357": {
-      "first_author": "Brenner D",
-      "pubdate": "2019 Feb 04",
-      "journal": "J Exp Med",
-      "title": "Heterozygous Tbk1 loss has opposing effects in early and late stages of ALS in mice."
-    },
-    "32220666": {
-      "first_author": "Gerbino V",
-      "pubdate": "2020 Jun 03",
-      "journal": "Neuron",
-      "title": "The Loss of TBK1 Kinase Activity in Motor Neurons or in All Cell Types Differentially Impacts ALS Disease Progression in SOD1 Mice."
-    },
-    "33031745": {
-      "first_author": "Yu CH",
-      "pubdate": "2020 Oct 29",
-      "journal": "Cell",
-      "title": "TDP-43 Triggers Mitochondrial DNA Release via mPTP to Activate cGAS/STING in ALS."
-    },
-    "33038415": {
-      "first_author": "Sieverding K",
-      "pubdate": "2021 Jan",
-      "journal": "Exp Neurol",
-      "title": "Hemizygous deletion of Tbk1 worsens neuromuscular junction pathology in TDP-43G298S transgenic mice."
-    },
-    "42716044": {
-      "first_author": "Cudkowicz ME",
-      "pubdate": "2026 Oct",
-      "journal": "Lancet Neurol",
-      "title": "Safety, tolerability, and efficacy of RIPK1 inhibitor, SAR443820, in amyotrophic lateral sclerosis (HIMALAYA): a multicentre, randomised, double-blind, placebo-controlled, phase 2 trial."
-    },
-    "42834122": {
-      "first_author": "Sakai S",
-      "pubdate": "2026 Nov",
-      "journal": "EMBO Rep",
-      "title": "TBK1 eliminates aggregation-prone monomeric TDP-43 through an IFNβ-immunoproteasome pathway in ALS models."
-    },
-    "18724357": {
-      "first_author": "Ishikawa H",
-      "pubdate": "2008 Oct 2",
-      "journal": "Nature",
-      "title": "STING is an endoplasmic reticulum adaptor that facilitates innate immune signalling."
-    },
-    "23747010": {
-      "first_author": "Zhang X",
-      "pubdate": "2013 Jul 25",
-      "journal": "Mol Cell",
-      "title": "Cyclic GMP-AMP containing mixed phosphodiester linkages is an endogenous high-affinity ligand for STING."
-    },
-    "27830700": {
-      "first_author": "Reinert LS",
-      "pubdate": "2016 Nov 10",
-      "journal": "Nat Commun",
-      "title": "Sensing of HSV-1 by the cGAS-STING pathway in microglia orchestrates antiviral defence in the CNS."
-    },
-    "29973723": {
-      "first_author": "Haag SM",
-      "pubdate": "2018 Jul",
-      "journal": "Nature",
-      "title": "Targeting STING with covalent small-molecule inhibitors."
-    },
-    "30007416": {
-      "first_author": "Zhou W",
-      "pubdate": "2018 Jul 12",
-      "journal": "Cell",
-      "title": "Structure of the Human cGAS-DNA Complex Reveals Enhanced Control of Immune Surveillance."
-    },
-    "30655953": {
-      "first_author": "Siu T",
-      "pubdate": "2019 Jan 10",
-      "journal": "ACS Med Chem Lett",
-      "title": "Discovery of a Novel cGAMP Competitive Ligand of the Inactive Form of STING."
-    },
-    "30842659": {
-      "first_author": "Shang G",
-      "pubdate": "2019 Mar",
-      "journal": "Nature",
-      "title": "Cryo-EM structures of STING reveal its mechanism of activation by cyclic GMP-AMP."
-    },
-    "31113940": {
-      "first_author": "Lama L",
-      "pubdate": "2019 May 21",
-      "journal": "Nat Commun",
-      "title": "Development of human cGAS-specific small-molecule inhibitors for repression of dsDNA-triggered interferon expression."
-    },
-    "32459092": {
-      "first_author": "Zhao W",
-      "pubdate": "2020 Jun 22",
-      "journal": "J Chem Inf Model",
-      "title": "In Silico Screening-Based Discovery of Novel Inhibitors of Human Cyclic GMP-AMP Synthase: A Cross-Validation Study of Molecular Docking and Experimental Testing."
-    },
-    "32814898": {
-      "first_author": "McCauley ME",
-      "pubdate": "2020 Sep",
-      "journal": "Nature",
-      "title": "C9orf72 in myeloid cells suppresses STING-induced inflammation."
-    },
-    "34099558": {
-      "first_author": "Hong Z",
-      "pubdate": "2021 Jun 15",
-      "journal": "Proc Natl Acad Sci U S A",
-      "title": "STING inhibitors target the cyclic dinucleotide binding pocket."
-    },
-    "38478117": {
-      "first_author": "Marques C",
-      "pubdate": "2024 Mar 13",
-      "journal": "Acta Neuropathol",
-      "title": "Neuronal STING activation in amyotrophic lateral sclerosis and frontotemporal dementia."
-    },
-    "41809005": {
-      "first_author": "Liu Y",
-      "pubdate": "2026 Feb 26",
-      "journal": "bioRxiv",
-      "title": "cGAS inhibition delays TDP-43-driven ALS Pathogenesis."
-    },
-    "42792593": {
-      "first_author": "Zhan Y",
-      "pubdate": "2026 Sep 18",
-      "journal": "Biology (Basel)",
-      "title": "Host Genetic Susceptibility and Antiviral Immunity Shape the Pathogenesis and Outcomes of Herpes Simplex Encephalitis."
-    },
-    "21107423": {
-      "first_author": "Chen Z",
-      "pubdate": "2010 Nov 25",
-      "journal": "Nature",
-      "title": "Structure and control of the actin regulatory WAVE complex."
-    },
-    "22101682": {
-      "first_author": "Logan CV",
-      "pubdate": "2011 Nov 20",
+    "43045849": {
+      "first_author": "Perez-Alcantara M",
+      "pubdate": "2026 Nov 17",
       "journal": "Nat Genet",
-      "title": "Mutations in MEGF10, a regulator of satellite cell myogenesis, cause early onset myopathy, areflexia, respiratory distress and dysphagia (EMARDD)."
-    },
-    "28011744": {
-      "first_author": "Pasetto L",
-      "pubdate": "2017 Feb 8",
-      "journal": "J Neurosci",
-      "title": "Targeting Extracellular Cyclophilin A Reduces Neuroinflammation and Extends Survival in a Mouse Model of Amyotrophic Lateral Sclerosis."
-    },
-    "28280971": {
-      "first_author": "Tolcher AW",
-      "pubdate": "2017 Apr",
-      "journal": "Cancer Chemother Pharmacol",
-      "title": "A phase 1 study of anti-TGFbeta receptor type-II monoclonal antibody LY3022859 in patients with advanced solid tumors."
-    },
-    "29534297": {
-      "first_author": "Nakashima M",
-      "pubdate": "2018 Apr",
-      "journal": "Ann Neurol",
-      "title": "De novo hotspot variants in CYFIP2 cause early-onset epileptic encephalopathy."
-    },
-    "31883644": {
-      "first_author": "Szot JO",
-      "pubdate": "2020 Jan 2",
-      "journal": "Am J Hum Genet",
-      "title": "Bi-allelic Mutations in NADSYN1 Cause Multiple Organ Defects and Expand the Genotypic Spectrum of Congenital NAD Deficiency Disorders."
-    },
-    "31911602": {
-      "first_author": "Chuenchor W",
-      "pubdate": "2020 Jan 7",
-      "journal": "Nat Commun",
-      "title": "Different ways to transport ammonia in human and Mycobacterium tuberculosis NAD+ synthetases."
-    },
-    "34031600": {
-      "first_author": "Tian R",
-      "pubdate": "2021 Jul",
-      "journal": "Nat Neurosci",
-      "title": "Genome-wide CRISPRi/a screens in human neurons link lysosomal failure to ferroptosis."
-    },
-    "34972208": {
-      "first_author": "Pasetto L",
-      "pubdate": "2021 Dec 31",
-      "journal": "Brain",
-      "title": "Defective cyclophilin A induces TDP-43 proteinopathy: implications for amyotrophic lateral sclerosis and frontotemporal dementia."
-    },
-    "35641224": {
-      "first_author": "Imaizumi K",
-      "pubdate": "2022 May-Jun",
-      "journal": "eNeuro",
-      "title": "Pathogenic Mutation of TDP-43 Impairs RNA Processing in a Cell Type-Specific Manner: Implications for the Pathogenesis of ALS/FTLD."
-    },
-    "35953545": {
-      "first_author": "Dräger NM",
-      "pubdate": "2022 Sep",
-      "journal": "Nat Neurosci",
-      "title": "A CRISPRi/a platform in human iPSC-derived microglia uncovers regulators of disease states."
-    },
-    "36309631": {
-      "first_author": "Lee JH",
-      "pubdate": "2022 Dec",
-      "journal": "Neurochem Res",
-      "title": "Anti-neuroinflammatory Effects and Brain Pharmacokinetic Properties of Selonsertib, a Selective ASK1 Inhibitor."
-    },
-    "38357931": {
-      "first_author": "Szot JO",
-      "pubdate": "2024 Feb 15",
-      "journal": "J Clin Invest",
-      "title": "A metabolic signature for NADSYN1-dependent congenital NAD deficiency disorder."
-    },
-    "39548852": {
-      "first_author": "Dellar ER",
-      "pubdate": "2025 Mar",
-      "journal": "Ann Neurol",
-      "title": "Elevated Cerebrospinal Fluid Ubiquitin Carboxyl-Terminal Hydrolase Isozyme L1 in Asymptomatic C9orf72 Hexanucleotide Repeat Expansion Carriers."
-    },
-    "39660913": {
-      "first_author": "Xie S",
-      "pubdate": "2025 Jan",
-      "journal": "Protein Sci",
-      "title": "Molecular basis of the CYFIP2 and NCKAP1 autism-linked variants in the WAVE regulatory complex."
-    },
-    "40087396": {
-      "first_author": "Omar OMF",
-      "pubdate": "2025 May",
-      "journal": "Nat Neurosci",
-      "title": "Endothelial TDP-43 depletion disrupts core blood-brain barrier pathways in neurodegeneration."
-    },
-    "40713859": {
-      "first_author": "Miedema SSM",
-      "pubdate": "2025 Jul 25",
-      "journal": "Acta Neuropathol Commun",
-      "title": "Proteomics of the temporal cortex in semantic dementia reveals brain-region specific disruption of protein homeostasis."
-    },
-    "40737092": {
-      "first_author": "Dargan R",
-      "pubdate": "2025 Jul 19",
-      "journal": "Nucleic Acids Res",
-      "title": "Altered mRNA transport and local translation in i3Neurons with RNA-binding protein knockdown."
-    },
-    "40826370": {
-      "first_author": "Feneberg E",
-      "pubdate": "2025 Aug 18",
-      "journal": "Acta Neuropathol Commun",
-      "title": "TDP-43 pathology is associated with divergent protein profiles in ALS brain and spinal cord."
-    },
-    "41028049": {
-      "first_author": "Spiteri AG",
-      "pubdate": "2025 Sep 30",
-      "journal": "Sci Rep",
-      "title": "Proteomic analysis of brain and spinal cord tissue reveals distinct immune and mitochondrial dysfunction in amyotrophic lateral sclerosis."
-    },
-    "41803120": {
-      "first_author": "Ruf WP",
-      "pubdate": "2026 Mar 9",
-      "journal": "Nat Commun",
-      "title": "Multi-modal dissection of cell-type specific TDP-43 pathology in the motor cortex."
-    },
-    "42135847": {
-      "first_author": "Sinha IR",
-      "pubdate": "2026 May 14",
-      "journal": "Mol Neurodegener",
-      "title": "TDP-43: [GU]-ardian of the transcriptome."
-    },
-    "42509371": {
-      "first_author": "Ran X",
-      "pubdate": "2026 Sep",
-      "journal": "Nat Med",
-      "title": "Longitudinal plasma proteomics predict phenoconversion to clinically manifest ALS."
-    },
-    "40132594": {
-      "first_author": "Zelic M",
-      "pubdate": "2025 Apr 8",
-      "journal": "Immunity",
-      "title": "Single-cell transcriptomic and functional studies identify glial state changes and a role for inflammatory RIPK1 signaling in ALS pathogenesis."
+      "title": "Integrated QTL mapping and CRISPR screening in pooled iPSC-derived microglia reveals genetic drivers of neurodegenerative risk."
     }
   },
   "ncts": {
@@ -2620,12 +2626,28 @@
       "title": "An Open-Label Phase 1b Study of the Safety, Pharmacokinetics, Pharmacodynamics, and Clinical Activity of ANX005 in Patients with Huntington's Disease.",
       "type": "journal-article"
     },
+    "10.1007/s00401-024-02688-z": {
+      "title": "Neuronal STING activation in amyotrophic lateral sclerosis and frontotemporal dementia.",
+      "type": "journal-article"
+    },
     "10.1007/s00401-025-02901-7": {
       "title": "Analysis of the splicing landscape of the frontal cortex in FTLD-TDP reveals subtype specific patterns and cryptic splicing",
       "type": "journal-article"
     },
     "10.1007/s00401-026-03084-5": {
       "title": "Integrative synaptosome multi-omics reveals disrupted synapse organization and localized cryptic transcripts in C9ORF72-frontotemporal dementia",
+      "type": "journal-article"
+    },
+    "10.1016/S1474-4422(26)00277-2": {
+      "title": "Safety, tolerability, and efficacy of RIPK1 inhibitor, SAR443820, in amyotrophic lateral sclerosis (HIMALAYA): a multicentre, randomised, double-blind, placebo-controlled, phase 2 trial.",
+      "type": "journal-article"
+    },
+    "10.1016/j.cell.2018.06.026": {
+      "title": "Structure of the Human cGAS-DNA Complex Reveals Enhanced Control of Immune Surveillance.",
+      "type": "journal-article"
+    },
+    "10.1016/j.cell.2020.09.020": {
+      "title": "TDP-43 Triggers Mitochondrial DNA Release via mPTP to Activate cGAS/STING in ALS.",
       "type": "journal-article"
     },
     "10.1016/j.cell.2024.02.031": {
@@ -2668,6 +2690,22 @@
       "title": "The structure of Atg4B–LC3 complex reveals the mechanism of LC3 processing and delipidation during autophagy",
       "type": "journal-article"
     },
+    "10.1038/nature09623": {
+      "title": "Structure and control of the actin regulatory WAVE complex.",
+      "type": "journal-article"
+    },
+    "10.1038/s41467-019-08620-4": {
+      "title": "Development of human cGAS-specific small-molecule inhibitors for repression of dsDNA-triggered interferon expression.",
+      "type": "journal-article"
+    },
+    "10.1038/s41467-019-13845-4": {
+      "title": "Different ways to transport ammonia in human and Mycobacterium tuberculosis NAD+ synthetases.",
+      "type": "journal-article"
+    },
+    "10.1038/s41586-020-2625-x": {
+      "title": "C9orf72 in myeloid cells suppresses STING-induced inflammation.",
+      "type": "journal-article"
+    },
     "10.1038/s41586-022-04424-7": {
       "title": "TDP-43 represses cryptic exon inclusion in the FTD–ALS gene UNC13A",
       "type": "journal-article"
@@ -2684,6 +2722,10 @@
       "title": "Integrated QTL mapping and CRISPR screening in pooled iPSC-derived microglia reveals genetic drivers of neurodegenerative risk",
       "type": "journal-article"
     },
+    "10.1038/s41591-026-04528-x": {
+      "title": "Longitudinal plasma proteomics predict phenoconversion to clinically manifest ALS.",
+      "type": "journal-article"
+    },
     "10.1038/s41593-018-0293-z": {
       "title": "Premature polyadenylation-mediated loss of stathmin-2 is a hallmark of TDP-43-dependent neurodegeneration",
       "type": "journal-article"
@@ -2694,6 +2736,10 @@
     },
     "10.1038/s41593-022-01205-3": {
       "title": "Integrative transcriptomic analysis of the amyotrophic lateral sclerosis spinal cord implicates glial activation and suggests new risk genes",
+      "type": "journal-article"
+    },
+    "10.1038/s41593-025-01914-5": {
+      "title": "Endothelial TDP-43 depletion disrupts core blood-brain barrier pathways in neurodegeneration.",
       "type": "journal-article"
     },
     "10.1038/s41593-025-02049-3": {
@@ -2716,8 +2762,16 @@
       "title": "Integrated single-cell and spatial transcriptomic profiling in ALS uncovers peripheral-to-central immune infiltration and reprogramming",
       "type": "journal-article"
     },
+    "10.1038/s41598-025-11466-0": {
+      "title": "Proteomic analysis of brain and spinal cord tissue reveals distinct immune and mitochondrial processes between human and mouse ALS models.",
+      "type": "journal-article"
+    },
     "10.1038/s41746-026-03225-w": {
       "title": "Data-driven identification of repurposable drugs for ALS",
+      "type": "journal-article"
+    },
+    "10.1038/s44319-026-00953-8": {
+      "title": "TBK1 eliminates aggregation-prone monomeric TDP-43 through an IFNβ-immunoproteasome pathway in ALS models.",
       "type": "journal-article"
     },
     "10.1074/jbc.M307764200": {
@@ -2733,6 +2787,10 @@
       "title": "Brain Catalog: a comprehensive resource for the genetic landscape of brain-related traits",
       "type": "journal-article"
     },
+    "10.1093/nar/gkaf709": {
+      "title": "Altered mRNA transport and local translation in i3Neurons with RNA-binding protein knockdown.",
+      "type": "journal-article"
+    },
     "10.1101/2025.07.09.664014": {
       "title": "Nonsense-mediated decay masks cryptic splicing events caused by TDP-43 loss.",
       "type": "posted-content"
@@ -2740,6 +2798,14 @@
     "10.1101/2025.09.29.679403": {
       "title": "Integrative multiomic analysis links TDP-43-driven splicing defects to cascading proteomic disruption of ALS/FTD pathways.",
       "type": "posted-content"
+    },
+    "10.1111/bpa.70089": {
+      "title": "Proteomic profile of CSF obtained at the time of diagnosis determines amyotrophic lateral sclerosis progression and survival: CXCL7 levels in disease prognosis and survival.",
+      "type": "journal-article"
+    },
+    "10.1111/ene.70741": {
+      "title": "Protein Biomarkers in Risk and Prognosis of Amyotrophic Lateral Sclerosis.",
+      "type": "journal-article"
     },
     "10.1111/jnc.70183": {
       "title": "Ropinirole Functions Through a Dopamine Receptor D2-Independent Mechanism to Ameliorate Amyotrophic Lateral Sclerosis Phenotypes in TARDBP-Mutant iPSC-Derived Motor Neurons",
@@ -2757,6 +2823,10 @@
       "title": "Cryptic splicing in synaptic and membrane excitability genes links TDP-43 loss to neuronal dysfunction",
       "type": "journal-article"
     },
+    "10.1172/jci.insight.177530": {
+      "title": "Molecular and cellular context influences SCN8A variant function.",
+      "type": "journal-article"
+    },
     "10.1186/s12916-026-05410-w": {
       "title": "Safety and exploratory efficacy of bosutinib in amyotrophic lateral sclerosis: a phase 2 trial using external controls",
       "type": "journal-article"
@@ -2765,6 +2835,18 @@
       "title": "Constitutively active SARM1 variants that induce neuropathy are enriched in ALS patients.",
       "journal": "Mol Neurodegener",
       "year": "2022"
+    },
+    "10.1186/s13024-026-00944-2": {
+      "title": "TDP-43: [GU]-ardian of the transcriptome.",
+      "type": "journal-article"
+    },
+    "10.1186/s40478-025-02077-x": {
+      "title": "Proteomics of the temporal cortex in semantic dementia reveals brain-region specific molecular pathology and regulation of the TDP-43-ANXA11 interactome.",
+      "type": "journal-article"
+    },
+    "10.1186/s40478-026-02474-w": {
+      "title": "Complete TBK1 deletion attenuates microglial activation and slows disease progression in SOD1-ALS model mice.",
+      "type": "journal-article"
     },
     "10.1186/s44477-025-00013-w": {
       "title": "Divergent TDP43-regulated and TDP43-independent cryptic splicing in the cortex and spinal cord",
@@ -2778,6 +2860,10 @@
       "title": "Design and Initial Results of a Multi-Phase Randomized Trial of Ceftriaxone in Amyotrophic Lateral Sclerosis",
       "type": "journal-article"
     },
+    "10.1523/eneuro.0061-22.2022": {
+      "title": "Pathogenic Mutation of TDP-43 Impairs RNA Processing in a Cell Type-Specific Manner.",
+      "type": "journal-article"
+    },
     "10.15252/embj.201798684": {
       "title": "Mice with endogenous TDP-43 mutations exhibit gain of splicing function and characteristics of amyotrophic lateral sclerosis",
       "type": "journal-article"
@@ -2785,6 +2871,15 @@
     "10.26508/lsa.202603939": {
       "title": "PIKfyve inhibition induces LRRK2 activation through phosphatidylinositol 3-phosphate and CASM",
       "type": "journal-article"
+    },
+    "10.3109/17482968.2011.615513": {
+      "title": "C82 A randomized, double-blind, dose-ranging study of memantine in patients with amyotrophic lateral sclerosis (22nd International Symposium on ALS/MND)",
+      "journal": "Amyotroph Lateral Scler",
+      "year": "2011"
+    },
+    "10.64898/2026.02.24.707791": {
+      "title": "cGAS inhibition delays TDP-43-driven ALS Pathogenesis.",
+      "type": "posted-content"
     },
     "10.64898/2026.08.07.743523": {
       "title": "Pathology-defined cell states reveal reproducible transcriptomic signatures across ALS cortical single-nucleus RNA-seq studies",
@@ -2806,91 +2901,6 @@
       "title": "Enrichment of SARM1 alleles encoding variants with constitutively hyperactive NADase in patients with ALS and other motor nerve disorders.",
       "journal": "Elife",
       "year": "2021"
-    },
-    "10.1172/jci.insight.177530": {
-      "title": "Molecular and cellular context influences SCN8A variant function.",
-      "type": "journal-article"
-    },
-    "10.3109/17482968.2011.615513": {
-      "title": "C82 A randomized, double-blind, dose-ranging study of memantine in patients with amyotrophic lateral sclerosis (22nd International Symposium on ALS/MND)",
-      "journal": "Amyotroph Lateral Scler",
-      "year": "2011"
-    },
-    "10.1186/s40478-026-02474-w": {
-      "title": "Complete TBK1 deletion attenuates microglial activation and slows disease progression in SOD1-ALS model mice.",
-      "type": "journal-article"
-    },
-    "10.1038/s44319-026-00953-8": {
-      "title": "TBK1 eliminates aggregation-prone monomeric TDP-43 through an IFNβ-immunoproteasome pathway in ALS models.",
-      "type": "journal-article"
-    },
-    "10.1016/S1474-4422(26)00277-2": {
-      "title": "Safety, tolerability, and efficacy of RIPK1 inhibitor, SAR443820, in amyotrophic lateral sclerosis (HIMALAYA): a multicentre, randomised, double-blind, placebo-controlled, phase 2 trial.",
-      "type": "journal-article"
-    },
-    "10.1038/s41467-019-08620-4": {
-      "title": "Development of human cGAS-specific small-molecule inhibitors for repression of dsDNA-triggered interferon expression.",
-      "type": "journal-article"
-    },
-    "10.1016/j.cell.2018.06.026": {
-      "title": "Structure of the Human cGAS-DNA Complex Reveals Enhanced Control of Immune Surveillance.",
-      "type": "journal-article"
-    },
-    "10.1016/j.cell.2020.09.020": {
-      "title": "TDP-43 Triggers Mitochondrial DNA Release via mPTP to Activate cGAS/STING in ALS.",
-      "type": "journal-article"
-    },
-    "10.1038/s41586-020-2625-x": {
-      "title": "C9orf72 in myeloid cells suppresses STING-induced inflammation.",
-      "type": "journal-article"
-    },
-    "10.1007/s00401-024-02688-z": {
-      "title": "Neuronal STING activation in amyotrophic lateral sclerosis and frontotemporal dementia.",
-      "type": "journal-article"
-    },
-    "10.64898/2026.02.24.707791": {
-      "title": "cGAS inhibition delays TDP-43-driven ALS Pathogenesis.",
-      "type": "posted-content"
-    },
-    "10.1038/s41598-025-11466-0": {
-      "title": "Proteomic analysis of brain and spinal cord tissue reveals distinct immune and mitochondrial dysfunction in amyotrophic lateral sclerosis.",
-      "type": "journal-article"
-    },
-    "10.1038/s41467-019-13845-4": {
-      "title": "Different ways to transport ammonia in human and Mycobacterium tuberculosis NAD+ synthetases.",
-      "type": "journal-article"
-    },
-    "10.1038/nature09623": {
-      "title": "Structure and control of the actin regulatory WAVE complex.",
-      "type": "journal-article"
-    },
-    "10.1186/s40478-025-02077-x": {
-      "title": "Proteomics of the temporal cortex in semantic dementia reveals brain-region specific disruption of protein homeostasis.",
-      "type": "journal-article"
-    },
-    "10.1093/nar/gkaf709": {
-      "title": "Altered mRNA transport and local translation in i3Neurons with RNA-binding protein knockdown.",
-      "type": "journal-article"
-    },
-    "10.1038/s41591-026-04528-x": {
-      "title": "Longitudinal plasma proteomics predict phenoconversion to clinically manifest ALS.",
-      "type": "journal-article"
-    },
-    "10.1111/ene.70741": {
-      "title": "Protein Biomarkers in Risk and Prognosis of Amyotrophic Lateral Sclerosis.",
-      "type": "journal-article"
-    },
-    "10.1038/s41593-025-01914-5": {
-      "title": "Endothelial TDP-43 depletion disrupts core blood-brain barrier pathways in neurodegeneration.",
-      "type": "journal-article"
-    },
-    "10.1523/eneuro.0061-22.2022": {
-      "title": "Pathogenic Mutation of TDP-43 Impairs RNA Processing in a Cell Type-Specific Manner.",
-      "type": "journal-article"
-    },
-    "10.1186/s13024-026-00944-2": {
-      "title": "TDP-43: [GU]-ardian of the transcriptome.",
-      "type": "journal-article"
     }
   }
 }

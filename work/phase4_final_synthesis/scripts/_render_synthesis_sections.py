@@ -33,7 +33,7 @@ def build_exec_and_transition_md(
     et_map = summary["explore_tier_to_carbon_decision"]
 
     lines = [
-        "# CarbonALS v1.5 (ExploreALS v1.5) — Final Cross-Phase Portfolio & Translational Execution Synthesis",
+        "# CarbonALS v1.6 (ExploreALS v1.6) — Final Cross-Phase Portfolio & Translational Execution Synthesis",
         "",
         f"<!-- REGISTRY_CONCORDANCE_SHA12: p4_port={sha['phase4_unified_portfolio']} p4_cis={sha['phase4_unified_cis_intervals']} "
         f"p3a_ot={sha['phase3_sso_offtarget_audit']} p3a_rd={sha['phase3_execution_readiness']} "
@@ -51,7 +51,7 @@ def build_exec_and_transition_md(
         "",
         "## 1. Executive Summary & Portfolio Partition",
         "",
-        "Across four staged computational and clinical-archaeology phases plus living-evidence target intake (`52` reproducible runs in `registries/analysis_runs.csv` across `44` SHA-256-locked open-access resources [`42` external accessions + `2` repo-bundled reference maps]), `ExploreALS v1.5` evaluates `33` published clinical, genetic, and neuropathological ALS programs (`C001–C024`, `S01–S09`), `18` complex/panel subunits and selectivity comparators, `19` systematic multi-omic screen nominations (`DN-01–DN-19`), and `3` living-evidence molecular target intakes (`L01` `CGAS`, `L02` `NADSYN1`, `L03` `CYFIP2`) (**`55` unified hypotheses total**):",
+        "Across four staged computational and clinical-archaeology phases plus living-evidence target intake (`52` reproducible runs in `registries/analysis_runs.csv` across `44` SHA-256-locked open-access resources [`42` external accessions + `2` repo-bundled reference maps]), `ExploreALS v1.6` evaluates `33` published clinical, genetic, and neuropathological ALS programs (`C001–C024`, `S01–S09`), `18` complex/panel subunits and selectivity comparators, `19` systematic multi-omic screen nominations (`DN-01–DN-19`), and `3` living-evidence molecular target intakes (`L01` `CGAS`, `L02` `NADSYN1`, `L03` `CYFIP2`) (**`55` unified hypotheses total**):",
         "",
         "| Scientific Actionability & Decision Partition | Curated Clinical & Genetic (`33`) | Multi-Omic Screen (`19`) | Living Intake (`3`) | Unified Total (`55`) | Epistemic State & Governance Rule |",
         "| :--- | :---: | :---: | :---: | :---: | :--- |",

@@ -23,6 +23,7 @@ from _living_intake_eals053_evidence_specs import LIVING_STAT_SPECS, UPD_2026_11
 from _living_intake_eals053_specs import RUN_P4_005_ROW  # noqa: E402
 from _living_intake_v15_evidence_specs import LIVING_V15_STAT_SPECS, UPD_2026_11_27_01, UPD_2026_11_27_02  # noqa: E402
 from _living_intake_v15_specs import RUN_P4_006_ROW  # noqa: E402
+from _living_v16_packc_update_specs import UPD_2026_11_28_01, UPD_2026_11_28_02, UPD_2026_11_28_03  # noqa: E402
 from _public_taxonomy import deaudit_prose  # noqa: E402
 from _retrospective_tbk1_specs import UPD_2026_11_26_01  # noqa: E402
 from _retrospective_v1_3_specs import UPD_2026_11_23_01  # noqa: E402
@@ -281,7 +282,7 @@ def main() -> None:
 
     # 6. living_evidence_updates.csv
     u_cols, u_rows = _load("living_evidence_updates.csv")
-    u_rows = [u for u in u_rows if u["update_id"] not in {"UPD-2026-11-19-01", "UPD-2026-11-20-01", "UPD-2026-11-20-02", "UPD-2026-11-21-01", "UPD-2026-11-21-02", "UPD-2026-11-21-03", "UPD-2026-11-22-01", "UPD-2026-11-23-01", "UPD-2026-11-26-01", "UPD-2026-11-26-02", "UPD-2026-11-27-01", "UPD-2026-11-27-02"}]
+    u_rows = [u for u in u_rows if u["update_id"] not in {"UPD-2026-11-19-01", "UPD-2026-11-20-01", "UPD-2026-11-20-02", "UPD-2026-11-21-01", "UPD-2026-11-21-02", "UPD-2026-11-21-03", "UPD-2026-11-22-01", "UPD-2026-11-23-01", "UPD-2026-11-26-01", "UPD-2026-11-26-02", "UPD-2026-11-27-01", "UPD-2026-11-27-02", "UPD-2026-11-28-01", "UPD-2026-11-28-02", "UPD-2026-11-28-03"}]
     for u in u_rows:
         uid = u["update_id"]
         if uid == "UPD-2026-11-18-05":
@@ -314,6 +315,9 @@ def main() -> None:
     u_rows.insert(0, dict(UPD_2026_11_26_02))
     u_rows.insert(0, dict(UPD_2026_11_27_01))
     u_rows.insert(0, dict(UPD_2026_11_27_02))
+    u_rows.insert(0, dict(UPD_2026_11_28_01))
+    u_rows.insert(0, dict(UPD_2026_11_28_02))
+    u_rows.insert(0, dict(UPD_2026_11_28_03))
     def _map_anchor_tok(tok: str) -> str:
         t = tok.strip()
         if t.startswith("FLAGSHIP-") and not t.startswith("FLAGSHIP-EALS-"):

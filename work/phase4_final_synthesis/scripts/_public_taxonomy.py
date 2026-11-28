@@ -245,7 +245,7 @@ def sanitize_public_prose(txt: str) -> str:
     s = re.sub(r"\bkill[- ]gate\b", "No-Go criterion", s, flags=re.I)
     s = s.replace("(ese_motifs=0)", "(0 disrupted ESE motifs)")
     s = re.sub(r"(?:\bmodeled\s+)?Tm_phys~64C", "modeled Tm ~64C", s)
-    s = re.sub(r"(modeled\s+Tm\s*~[0-9]+C)\s*\(modeled\s+estimate\)", r"\1", s)
+    s = re.sub(r"(modeled\s+(?:2'-MOE\s+)?Tm\s*~[0-9.]+C)\s*(?:\(modeled\s+estimate\)|modeled\b)", r"\1", s)
     s = s.replace("Exon_up-chr9:76641980-76641790-Exon_dn", "flanking canonical Exon 11 (chr9:76644739-76644909(-)) and Exon 12 (chr9:76638186-76638288(-))")
     s = s.replace("load_brown2022_splicing(verify_hash=True)", "Checksum-verified Brown 2022 MAJIQ junction table")
     s = re.sub(r"\bClean\s*>=2mm\b", "Clean (>=2 mismatches)", s)
@@ -266,7 +266,7 @@ def sanitize_public_prose(txt: str) -> str:
     s = re.sub(r"\bmn_neur_z\b", "neuronal-proportion z-score", s)
     s = s.replace("neuronal-mass-residualized neuronal-proportion z-score", "neuronal-proportion-residualized")
     s = re.sub(
-        r"\bde\s+novo\b(?!\s+(?:mutation|mutations|variant|variants|germline|chemical|biologic|sphingolipid|ceramide|guanosine|purine|pyrimidine|nucleotide|synthesis|biosynthesis|lipogenesis|methylation|assembly|design))",
+        r"\bde\s+novo\b(?!\s+(?:mutation|mutations|variant|variants|germline|chemical|biologic|sphingolipid|ceramide|guanosine|purine|pyrimidine|nucleotide|synthesis|biosynthesis|lipogenesis|methylation|assembly|design|splice|splice-site|cryptic))",
         "untargeted",
         s,
         flags=re.I,

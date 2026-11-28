@@ -33,11 +33,66 @@ def _revcomp_rna(seq: str) -> str:
 
 def genomic_to_premRNA(dna_plus: str, chrom: str, start_1b: int, strand: str) -> tuple[str, list[int]]:
     """Map forward-strand GRCh38 DNA window onto 5'->3' nascent pre-mRNA + 1-based genomic coords."""
+    if strand not in ("+", "-"):
+        raise ValueError(f"Invalid strand={strand!r}; must be '+' or '-'")
     clean = re.sub(r"[^ACGTacgt]", "", dna_plus).upper()
     coords = list(range(start_1b, start_1b + len(clean)))
     if strand == "+":
         return clean.replace("T", "U"), coords
     return _revcomp_dna(clean).replace("T", "U"), coords[::-1]
+
+
+def extract_interval_sense_dna(
+    pos_to_base: dict[int, str],
+    grch38_start_1b: int,
+    grch38_end_1b: int,
+    strand: str,
+) -> str:
+    """Extract 5'->3' sense pre-mRNA (as DNA T) over a 1-based closed GRCh38 interval.
+
+    For '+' strand, iterates ascending (start..end). For '-' strand, iterates descending
+    (end..start) because nascent 5'->3' transcription runs from high to low genomic coordinates.
+    """
+    if strand not in ("+", "-"):
+        raise ValueError(f"Invalid strand={strand!r}; must be '+' or '-'")
+    if grch38_end_1b < grch38_start_1b:
+        raise ValueError(f"Invalid 1-based closed interval [{grch38_start_1b}, {grch38_end_1b}]")
+    coord_iter = range(grch38_start_1b, grch38_end_1b + 1) if strand == "+" else range(grch38_end_1b, grch38_start_1b - 1, -1)
+    try:
+        seq_rna = "".join(pos_to_base[p] for p in coord_iter)
+    except KeyError as exc:
+        raise KeyError(f"Coordinate {exc.args[0]} missing from pos_to_base map for {grch38_start_1b}-{grch38_end_1b}({strand})") from exc
+    return seq_rna.upper().replace("U", "T")
+
+
+def assert_on_target_0mm_hit(
+    gg_entry: dict[str, Any],
+    chrom: str,
+    grch38_start_1b: int,
+    grch38_end_1b: int,
+    strand: str,
+    interval_id: str,
+    coord_tol_bp: int = 1,
+) -> int:
+    """Verify GGGenome v2 ungapped hits include >=1 exact 0-mismatch on-target self-hit.
+
+    Catches minus-strand 3'->5' reversal bugs or shifted genomic coordinates before off-target scoring.
+    """
+    hits = gg_entry.get("ungapped_hits", [])
+    matches = [
+        h for h in hits
+        if int(h.get("total_mismatches", 99)) == 0
+        and str(h.get("chrom", "")) == str(chrom)
+        and str(h.get("strand", "")) == str(strand)
+        and abs(int(h.get("grch38_start", -999)) - int(grch38_start_1b)) <= coord_tol_bp
+        and abs(int(h.get("grch38_end", -999)) - int(grch38_end_1b)) <= coord_tol_bp
+    ]
+    if not matches:
+        raise AssertionError(
+            f"ON_TARGET_SELF_HIT_MISSING for {interval_id}: 0 exact 0-mm GGGenome hits at "
+            f"{chrom}:{grch38_start_1b}-{grch38_end_1b}({strand}) (likely strand reversal or coordinate error)."
+        )
+    return len(matches)
 
 
 def duplex_tm_moe(target_rna_5to3: str, conc_m: float = 1e-7) -> tuple[float, float]:

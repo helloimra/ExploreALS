@@ -364,10 +364,15 @@ def verify_all(
             msr = stat_by_eid[maj_eid]
             if msr["multiplicity_adjusted_p"].strip() or "1 - P(|dPSI|" in json.dumps(msr) or "1-P(|dPSI|" in json.dumps(msr):
                 errors.append(f"{maj_eid}: MAJIQ Bayesian p_d_psi_0_05 output must not use 0.10 complement formula or populate frequentist multiplicity_adjusted_p")
+            if msr["n_statistical_units"].strip():
+                errors.append(f"{maj_eid}: PRIMARY_BAYESIAN_SPLICING_RECOMPUTE row must leave n_statistical_units blank (got '{msr['n_statistical_units']}')")
             if "p_d_psi_0_05_per_lsv_junction" not in msr["multiple_testing_family"] or "Transcriptome-wide BH-FDR" in msr["multiple_testing_family"] or "LeafCutter" in msr["multiple_testing_family"]:
                 errors.append(f"{maj_eid}: MAJIQ Bayesian p_d_psi_0_05 output must use MAJIQ non-frequentist multiple_testing_family")
         if evidence_override is None and maj_eid in ev_by_eid and ev_by_eid[maj_eid]["fdr_or_adjusted_p"].strip():
             errors.append(f"{maj_eid}: MAJIQ Bayesian p_d_psi_0_05 output must be stored separately from frequentist fdr_or_adjusted_p")
+    for sr in stat_rows:
+        if sr["inference_class"] == "PRIMARY_BAYESIAN_SPLICING_RECOMPUTE" and sr["n_statistical_units"].strip():
+            errors.append(f"{sr['evidence_id']}: PRIMARY_BAYESIAN_SPLICING_RECOMPUTE must leave n_statistical_units blank (got '{sr['n_statistical_units']}')")
     if evidence_override is None:
         if "EV-B1-001" in ev_by_eid and ("cryptic donor" in json.dumps(ev_by_eid["EV-B1-001"]).lower() or "novel_acceptor" not in json.dumps(ev_by_eid["EV-B1-001"])):
             errors.append("EV-B1-001: UNC13A MOESM11 line 983 must be classified as novel_acceptor, not cryptic donor")
@@ -533,7 +538,7 @@ def verify_all(
     if decisions_override is None and evidence_override is None:
         from phase3_gates import RAW_OLIGO_SEQ_RE, verify_phase3a_gates
         from phase3b_gates import GAPPED_OLIGO_RE, _build_explore_exclusions, verify_phase3b_gates
-        from phase4_gates import CAPITAL_DOLLAR_LEAK_RE, verify_phase4_gates
+        from phase4_gates import BARE_MAJIQ_FDR_RE, CAPITAL_DOLLAR_LEAK_RE, verify_phase4_gates
 
         excl_g, excl_d = _build_explore_exclusions(intake, subnodes)
         p3b_gd = {r["gene_or_drug"].strip() for r in load_csv("phase3b_denovo_candidates.csv")}
@@ -544,8 +549,12 @@ def verify_all(
         for le in liv_ev_rows:
             if le["carbon_id"] not in liv_ids or le["analysis_run_id"] not in run_ids:
                 errors.append(f"Living evidence {le['evidence_id']} has invalid carbon_id/analysis_run_id")
+            if BARE_MAJIQ_FDR_RE.search(" ".join(le.values())):
+                errors.append(f"Living evidence {le['evidence_id']} uses bare unquoted MAJIQ FDR= after deltaPSI=")
         for lc in liv_cand_rows:
             lid, lgd = lc["living_id"], lc["gene_or_drug"].strip()
+            if BARE_MAJIQ_FDR_RE.search(" ".join(lc.values())):
+                errors.append(f"{lid}: living_evidence_candidates.csv uses bare unquoted MAJIQ FDR= after deltaPSI=")
             if not re.fullmatch(r"L0[1-9]", lid):
                 errors.append(f"living_evidence_candidates.csv invalid living_id '{lid}'")
             if ";" in lgd or "/" in lgd or not lgd:
@@ -660,7 +669,7 @@ def run_selftest(mode: str = "full") -> None:
     errs_p3b_ov = verify_phase3b_gates(CARBON_ROOT, load_csv("candidate_intake_ledger.csv"), load_csv("subnode_dissection.csv"), load_csv("analysis_runs.csv"), load_csv, cand_override=bad_p3b_ov, mode=mode)
     assert any("EXPLORE_OVERLAP VIOLATION" in e for e in errs_p3b_ov), "Phase 3B self-test failed to block ExploreALS overlap!"
 
-    from phase4_gates import verify_phase4_gates
+    from phase4_gates import BARE_MAJIQ_FDR_RE, SITE_BAD_PDB_RE, STALE_RANK_DENOM_RE, verify_phase4_gates
 
     p4_base = load_csv("phase4_unified_portfolio.csv")
     bad_p4_epi = [dict(r) for r in p4_base]
@@ -669,10 +678,13 @@ def run_selftest(mode: str = "full") -> None:
     errs_p4_epi = verify_phase4_gates(CARBON_ROOT, base, {r["analysis_run_id"] for r in load_csv("analysis_runs.csv")}, load_csv, port_override=bad_p4_epi, mode=mode)
     assert any("Cannot DROP an UNPROVEN_UNTESTED" in e for e in errs_p4_epi), "Phase 4 self-test failed to block UNPROVEN DROP!"
     assert re.search(r"\((EALS-\d{3}(?:\.\d+)?)\s*/\s*\1\)", "bad (EALS-053 / EALS-053) token"), "Self-test duplicate EALS regex failed!"
+    assert SITE_BAD_PDB_RE.search("PDB NADS") and not SITE_BAD_PDB_RE.search("PDB 6OFB"), "Self-test bad PDB regex failed!"
+    assert STALE_RANK_DENOM_RE.search("#9/52") and not STALE_RANK_DENOM_RE.search("#17/55"), "Self-test stale rank regex failed!"
+    assert BARE_MAJIQ_FDR_RE.search("deltaPSI=+0.4255, FDR=6.85e-20") and not BARE_MAJIQ_FDR_RE.search("deltaPSI=+0.4255, source MAJIQ 'FDR'=6.85e-20"), "Self-test MAJIQ FDR regex failed!"
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Verify ExploreALS v1.5 registries, 64-char SHA-256 anchors, & gates.")
+    ap = argparse.ArgumentParser(description="Verify ExploreALS v1.6 registries, 64-char SHA-256 anchors, & gates.")
     ap.add_argument("--mode", choices=("auto", "full", "cached"), default="auto")
     args = ap.parse_args()
     eff_mode = resolve_mode(args.mode)
@@ -695,7 +707,7 @@ def main() -> None:
         f"PASS [{eff_mode}]: All {n_reg} registries, {n_stat}/{n_stat} recorded 64-char SHA-256 contrast digests "
         f"({n_uniq_anc} unique anchors; {n_matched_local}/{n_stat} locally byte/EOL-matched in {eff_mode} mode), "
         f"{n_ds} dataset manifest entries, 55-hypothesis/28-interval portfolio, "
-        "ExploreALS v1.5 Explorer + 8 Monographs, biosecurity/provenance gates, and self-tests verified (0 errors)."
+        "ExploreALS v1.6 Explorer + 8 Monographs, biosecurity/provenance gates, and self-tests verified (0 errors)."
     )
 
 

@@ -149,7 +149,7 @@ function rowsToCsv(rows){
 function exportRegistryBlob(which){
   const builders = {
     updates: ['exploreals_living_updates.csv', () => (typeof DATA_UPDATES !== 'undefined' ? DATA_UPDATES : []).map(u => ({
-      date_iso:u.dt, category:u.cat, affected_ids:u.ids.join(';'),
+      update_id:u.id, release_tag:u.tag, date_iso:u.dt, category:u.cat, affected_ids:u.ids.join(';'),
       decision_impact:u.imp, headline:u.hdr,
       conventional_view:u.pre, multimodal_reanalysis:u.post,
       portfolio_impact:u.cons, primary_sources:u.srcs.join(';'),
@@ -206,9 +206,9 @@ function exportRegistryBlob(which){
     }))]
   };
   if(which === 'json_all'){
-    const outObj = {version:'1.5.0'};
+    const outObj = {version:'1.6.0'};
     Object.keys(builders).forEach(k => { outObj[k] = builders[k][1](); });
-    downloadBlob('exploreals_v1_5_provenance_bundle.json', 'application/json', JSON.stringify(outObj, null, 2));
+    downloadBlob('exploreals_v1_6_provenance_bundle.json', 'application/json', JSON.stringify(outObj, null, 2));
     return;
   }
   const hit = builders[which];

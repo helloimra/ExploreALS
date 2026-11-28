@@ -48,6 +48,9 @@ EXP_CIS_COLS = [
 ]
 SITE_WORK_PATH_RE = re.compile(r"work/[A-Za-z0-9_/-]+\.(?:py|json|csv)")
 SITE_EMDASH_RE = re.compile(r"\u2014|&mdash;|&#8212;|&#x2014;|\\u2014", re.IGNORECASE)
+SITE_BAD_PDB_RE = re.compile(r"\bPDB\s+[A-Z]{4}\b")
+STALE_RANK_DENOM_RE = re.compile(r"#\d+/(?:52|53)\b")
+BARE_MAJIQ_FDR_RE = re.compile(r"deltaPSI=[^;)]{0,80}(?<!MAJIQ ')\bFDR=")
 SITE_LEGACY_ID_OR_ALIAS_RE = re.compile(
     r"((?<![A-Za-z0-9])(?:C0(?:0[1-9]|1\d|2[0-4])(?:-?N[1-6])?|S0[1-9]|DN-?(?:0[1-9]|1\d)|L0[1-9])(?![A-Za-z0-9])|"
     r"EALS-\d{3}(?:\.\d)?\.\.|\bLegacy\s+ID\b|\bLegacy:\s|\bAlias:\s|\baliases\b|"
@@ -56,7 +59,7 @@ SITE_LEGACY_ID_OR_ALIAS_RE = re.compile(
 )
 SITE_INTERNAL_JARGON_RE = re.compile(
     r"(Single-Entity\s+De\s+Novo|De\s+Novo\s+1-Plex|De\s+Novo\s+Cryptic|De\s+Novo\s+Chemical|"
-    r"\bde\s+novo\b(?!\s+(?:mutation|mutations|variant|variants|germline|chemical|biologic|sphingolipid|ceramide|guanosine|purine|pyrimidine|nucleotide|synthesis|biosynthesis|lipogenesis|methylation|assembly|design))|"
+    r"\bde\s+novo\b(?!\s+(?:mutation|mutations|variant|variants|germline|chemical|biologic|sphingolipid|ceramide|guanosine|purine|pyrimidine|nucleotide|synthesis|biosynthesis|lipogenesis|methylation|assembly|design|splice|splice-site|cryptic))|"
     r"\bTrack\s+[AB]\b|src/carbon_als|verify_carbon_als|CARBON_ALS_|CAR-RUN-|"
     r"Primary\s+Registry\s+Audit|Frozen\s+Baseline|Upstream\s+Baseline|baseline\s+annotation|"
     r"Round\s+2\s+hardening|21\s*CFR\s*300\.50|21\s*CFR\s*312\.23|21CFR300|"
@@ -265,7 +268,7 @@ def verify_phase4_gates(
                             errors.append(f"reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md L{sln_i} unbalanced parens in table cell: {scell.strip()!r}")
 
         cff_fp = carbon_root / "CITATION.cff"
-        cff_ver, exp_json_bundle = "1.5.0", "exploreals_v1_5_provenance_bundle.json"
+        cff_ver, exp_json_bundle = "1.6.0", "exploreals_v1_6_provenance_bundle.json"
         if cff_fp.is_file():
             m_cv = re.search(r'^version:\s*"(\d+)\.(\d+)\.(\d+)"', cff_fp.read_text(encoding="utf-8"), re.M)
             if m_cv:
@@ -333,6 +336,7 @@ def verify_phase4_gates(
                 "Updated Nov 2026 (v1.2.4)", "Updated Nov 2026 (v1.2.6)", "Updated Nov 2026 (v1.2.8)", "Updated Nov 2026 (v1.2.9)", "ExploreALS v1.2",
                 "Updated Nov 2026 (v1.3.0)", "ExploreALS v1.3", "202 / 202", "1. Triage Table (52)", "2. Candidate Reports (52)",
                 "Updated Nov 2026 (v1.4.0)", "ExploreALS v1.4 ", "204 / 204", "1. Triage Table (53)", "2. Candidate Reports (53)",
+                "Updated Nov 2026 (v1.5.0)", "ExploreALS v1.5 ",
                 "Audited GRCh38", "programmatically audited", "Auditing provenance from",
                 "199 / 199", "199 Evidence", "Phase 3 RAS-ALS",
                 "Ryberg et al. 2003 J Neurochem", "deaths 49/175", "8.94x",
@@ -342,14 +346,15 @@ def verify_phase4_gates(
                 if banned in htxt:
                     errors.append(f"Dossier Schema 3.0 regression in {lbl}: found banned string '{banned}'")
             for req_str in (
-                "ExploreALS v1.5", "Ricardo Agoga", "helloimra@proton.me", "github.com/helloimra/ExploreALS",
+                "ExploreALS v1.6", "Ricardo Agoga", "helloimra@proton.me", "github.com/helloimra/ExploreALS",
                 "Not Medical Advice", "AI-Assisted Methodology",
                 "Sort: Translational Priority Rank", "Sort: Genetic &amp; Pathology Evidence",
                 "Human RCT / Genetics", "Human Cohort / PK-PD",
                 "In Vitro / 3D or Small-N", "Model / Heuristic Prior", "BioVendor",
                 "AF-Q7L622-F1", "NIH GTEx (v8 / v10)", "N/A (SOC / PD Benchmark)", "Rank &amp; Triage Key:", "Study Categories:",
-                "Updated Nov 2026 (v1.5.0)", "208 / 208", "UPD-2026-11-23-01", "UPD-2026-11-26-02",
+                "Updated Nov 2026 (v1.6.0)", "208 / 208", "UPD-2026-11-23-01", "UPD-2026-11-26-02",
                 "UPD-2026-11-27-01", "UPD-2026-11-27-02",
+                "UPD-2026-11-28-01", "UPD-2026-11-28-02", "UPD-2026-11-28-03",
                 "TDP-43 Cryptic Splicing &amp; Polyadenylation (14)",
                 "Antemortem CSF Proteomics &amp; Physiology (6)",
                 "Patient iPSC-MN Phenotypic Screen (11)",
@@ -394,12 +399,30 @@ def verify_phase4_gates(
             m_emd = SITE_EMDASH_RE.search(htxt)
             if m_emd:
                 errors.append(f"{lbl} contains disallowed em-dash token '{m_emd.group(0)}'")
+            m_bpdb = SITE_BAD_PDB_RE.search(htxt)
+            if m_bpdb:
+                errors.append(f"{lbl} contains malformed non-numeric all-caps PDB token '{m_bpdb.group(0)}'")
             m_dsum = re.search(r"^const DATA_SUM = (\{.*\});$", htxt, re.M)
             if m_dsum:
                 dsum_obj = json.loads(m_dsum.group(1))
                 for d_cid, d_entry in dsum_obj.items():
-                    if d_cid in liv_acc_ids and len(d_entry.get("sub", "")) > 90:
-                        errors.append(f"{lbl} DATA_SUM[{d_cid}].sub exceeds 90 chars ({len(d_entry['sub'])})")
+                    d_blob = json.dumps(d_entry)
+                    m_st = STALE_RANK_DENOM_RE.search(d_blob)
+                    if m_st:
+                        errors.append(f"{lbl} DATA_SUM[{d_cid}] contains stale rank denominator '{m_st.group(0)}'")
+                    if d_cid in liv_acc_ids:
+                        if len(d_entry.get("sub", "")) > 90:
+                            errors.append(f"{lbl} DATA_SUM[{d_cid}].sub exceeds 90 chars ({len(d_entry['sub'])})")
+                        m_bf = BARE_MAJIQ_FDR_RE.search(d_blob)
+                        if m_bf:
+                            errors.append(f"{lbl} DATA_SUM[{d_cid}] uses bare unquoted MAJIQ FDR= ('{m_bf.group(0)[:60]}')")
+            m_dds = re.search(r"^const DATA_DATASETS = (\[.*\]);$", htxt, re.M)
+            if m_dds:
+                dds_obj = json.loads(m_dds.group(1))
+                for liv_id in sorted(liv_acc_ids):
+                    n_linked = sum(1 for d in dds_obj if liv_id in d.get("cands", ""))
+                    if n_linked < 2:
+                        errors.append(f"{lbl} DATA_DATASETS links living candidate {liv_id} to only {n_linked} dataset(s) (expected >=2)")
 
         if mode == "full":
             _audit_explorer_html(explorer_html, is_public_export=False)
@@ -425,6 +448,8 @@ def verify_phase4_gates(
                     errors.append(f"reports/monographs/{wfp.name} contains ExploreALS or residual legacy ID/alias leak")
                 if SITE_EMDASH_RE.search(wtxt):
                     errors.append(f"reports/monographs/{wfp.name} contains disallowed em-dash token")
+                if SITE_BAD_PDB_RE.search(wtxt):
+                    errors.append(f"reports/monographs/{wfp.name} contains malformed non-numeric all-caps PDB token")
         if {p.name for p in gh_mono_htmls} != exp_pilot_files:
             errors.append(f"{gh_mono_dir.relative_to(carbon_root).as_posix()}/*.html set ({sorted(p.name for p in gh_mono_htmls)}) != expected 8 EALS pages")
         for gfp in gh_mono_htmls:
@@ -438,6 +463,8 @@ def verify_phase4_gates(
                 errors.append(f"{gfp.relative_to(carbon_root).as_posix()} contains internal build/process nomenclature '{m_gjarg.group(0)}'")
             if SITE_EMDASH_RE.search(gtxt):
                 errors.append(f"{gfp.relative_to(carbon_root).as_posix()} contains disallowed em-dash token")
+            if SITE_BAD_PDB_RE.search(gtxt):
+                errors.append(f"{gfp.relative_to(carbon_root).as_posix()} contains malformed non-numeric all-caps PDB token")
         gh_readme = gh_docs.parent / "README.md"
         if gh_readme.is_file() and SITE_EMDASH_RE.search(gh_readme.read_text(encoding="utf-8")):
             errors.append(f"{gh_readme.relative_to(carbon_root).as_posix()} contains disallowed em-dash token")

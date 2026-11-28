@@ -299,11 +299,13 @@ def classify_pack_c_evidence(
         }
     is_indep = bool(caps.get("independent_of_v14", False) or is_non_overlapping_sensitivity)
     if concordant_direction is True:
-        status = "CORROBORATED_INDEPENDENT" if is_indep else "CORROBORATED_CROSS_MODAL"
         if fdr is not None and math.isfinite(fdr) and fdr < 0.05:
+            status = "CORROBORATED_INDEPENDENT" if is_indep else "CORROBORATED_CROSS_MODAL"
             note = f"Directionally concordant and family-FDR significant (p={p_value:.3g}, FDR={fdr:.3g})."
         else:
-            note = f"Directionally concordant nominal support (p={p_value:.3g})."
+            status = "NOMINAL_CONCORDANT_UNCORRECTED"
+            fdr_str = f", FDR={fdr:.3g}" if (fdr is not None and math.isfinite(fdr)) else ", FDR=uncomputed"
+            note = f"Directionally concordant nominal support only (p={p_value:.3g}{fdr_str}); not FDR-confirmed."
         return {"stress_status": status, "epistemic_note": note, "falsifies_hypothesis": False}
     if concordant_direction is False:
         return {
@@ -374,28 +376,44 @@ def _covariate_adjusted_ols(
     cov_dict: dict[str, np.ndarray] | None = None,
     min_df_resid: int = 4,
     max_case_vif: float = 5.0,
+    extra_priority: tuple[str, ...] = (),
 ) -> dict[str, Any]:
-    """Donor-level OLS: y ~ 1 + is_case + valid non-collinear covariates (priority: gc_z, sex_male, age, pmi).
+    """Donor-level OLS: y ~ 1 + is_case + valid non-collinear covariates (priority: extra_priority + gc_z, sex_male, age, pmi).
 
-    Enforces VIF < max_case_vif (default 5.0) on is_case so severe confounding collinearity (e.g. Omar NIH NBB
-    PMI r=-0.906) never inflates SEs or flips signs. Never silently substitutes Welch p into adjusted p!
+    Enforces full multivariate VIF < max_case_vif (default 5.0) on is_case so severe confounding collinearity
+    (e.g. Omar NIH NBB PMI r=-0.906, Zelic Astrocyte ambient r=-0.986) never inflates SEs or flips signs.
+    Never silently substitutes Welch p into adjusted p! Reports final multivariate case VIF, Cook's D, and LOO max p.
     """
     base_mask = np.isfinite(y) & np.isfinite(is_case)
+    empty_res = {
+        "beta_case_adj": float("nan"),
+        "se_case_adj": float("nan"),
+        "covariate_adjusted_nominal_p": float("nan"),
+        "covariates_used": [],
+        "collinear_covariates_dropped": [],
+        "case_vif_final": float("nan"),
+        "max_cooks_d": float("nan"),
+        "loo_max_p": float("nan"),
+        "n_case_complete": int(np.sum(is_case[base_mask] == 1.0)),
+        "n_ctrl_complete": int(np.sum(is_case[base_mask] == 0.0)),
+        "n_complete_adj": int(base_mask.sum()),
+        "df_resid_adj": 0,
+    }
     if base_mask.sum() < 5 or len(np.unique(is_case[base_mask])) < 2:
-        return {"beta_case_adj": float("nan"), "se_case_adj": float("nan"), "covariate_adjusted_nominal_p": float("nan"), "covariates_used": [], "collinear_covariates_dropped": [], "n_complete_adj": int(base_mask.sum()), "df_resid_adj": 0}
+        return empty_res
 
     used_names: list[str] = []
     used_cols: list[np.ndarray] = []
     dropped_collinear: list[str] = []
     cur_mask = base_mask.copy()
-    priority = ("gc_z", "sex_male", "age", "pmi")
+    last_vif = 1.0
+    priority = tuple(dict.fromkeys(tuple(extra_priority) + ("gc_z", "sex_male", "age", "pmi")))
     if cov_dict:
         for cname in priority:
             if cname not in cov_dict:
                 continue
-            cvec = cov_dict[cname]
+            cvec = np.asarray(cov_dict[cname], dtype=float)
             cand_mask = cur_mask & np.isfinite(cvec)
-            # Only add covariate if it retains >=80% of base_mask donors, non-zero variance, both arms, enough df, and VIF < max_case_vif
             n_cand = int(cand_mask.sum())
             k_params = 2 + len(used_cols) + 1
             if (
@@ -404,7 +422,6 @@ def _covariate_adjusted_ols(
                 and len(np.unique(is_case[cand_mask])) == 2
                 and np.nanstd(cvec[cand_mask]) > 1e-8
             ):
-                # Check VIF of is_case (column 0) with candidate covariate added
                 mat_test = np.column_stack([is_case[cand_mask].astype(float)] + [c[cand_mask] for c in used_cols] + [cvec[cand_mask]])
                 corr_m = np.corrcoef(mat_test, rowvar=False)
                 try:
@@ -412,41 +429,186 @@ def _covariate_adjusted_ols(
                 except np.linalg.LinAlgError:
                     vif_case = float("inf")
                 if not math.isfinite(vif_case) or vif_case >= max_case_vif:
-                    dropped_collinear.append(f"{cname}(VIF={vif_case:.1f})")
+                    dropped_collinear.append(f"{cname}(VIF={vif_case:.2f})")
                     continue
                 cur_mask = cand_mask
                 used_names.append(cname)
                 used_cols.append(cvec)
+                last_vif = vif_case
 
     if not used_cols:
-        # Strictly report NaN for covariate_adjusted_nominal_p if no covariate was fitted!
-        return {"beta_case_adj": float("nan"), "se_case_adj": float("nan"), "covariate_adjusted_nominal_p": float("nan"), "covariates_used": [], "collinear_covariates_dropped": dropped_collinear, "n_complete_adj": int(cur_mask.sum()), "df_resid_adj": 0}
+        empty_res["collinear_covariates_dropped"] = dropped_collinear
+        empty_res["n_complete_adj"] = int(cur_mask.sum())
+        return empty_res
 
     yv = y[cur_mask]
     xv = is_case[cur_mask].astype(float)
     X_cols = [np.ones(len(yv)), xv] + [c[cur_mask] for c in used_cols]
     X = np.column_stack(X_cols)
     df_resid = len(yv) - X.shape[1]
+    n_c_comp = int(np.sum(xv == 1.0))
+    n_n_comp = int(np.sum(xv == 0.0))
     if df_resid < 2:
-        return {"beta_case_adj": float("nan"), "se_case_adj": float("nan"), "covariate_adjusted_nominal_p": float("nan"), "covariates_used": used_names, "collinear_covariates_dropped": dropped_collinear, "n_complete_adj": len(yv), "df_resid_adj": df_resid}
+        return {**empty_res, "covariates_used": used_names, "collinear_covariates_dropped": dropped_collinear, "case_vif_final": round(last_vif, 3), "n_case_complete": n_c_comp, "n_ctrl_complete": n_n_comp, "n_complete_adj": len(yv), "df_resid_adj": df_resid}
     coef, _, _, _ = np.linalg.lstsq(X, yv, rcond=None)
     resid = yv - X @ coef
     s2 = float((resid @ resid) / df_resid)
     try:
-        cov_mat = s2 * np.linalg.inv(X.T @ X)
+        xtx_inv = np.linalg.inv(X.T @ X)
+        cov_mat = s2 * xtx_inv
         se = float(np.sqrt(max(cov_mat[1, 1], 1e-18)))
     except np.linalg.LinAlgError:
-        return {"beta_case_adj": round(float(coef[1]), 4), "se_case_adj": float("nan"), "covariate_adjusted_nominal_p": float("nan"), "covariates_used": used_names, "collinear_covariates_dropped": dropped_collinear, "n_complete_adj": len(yv), "df_resid_adj": df_resid}
+        return {**empty_res, "beta_case_adj": round(float(coef[1]), 4), "covariates_used": used_names, "collinear_covariates_dropped": dropped_collinear, "case_vif_final": round(last_vif, 3), "n_case_complete": n_c_comp, "n_ctrl_complete": n_n_comp, "n_complete_adj": len(yv), "df_resid_adj": df_resid}
     t_val = float(coef[1] / se)
     p_val = float(2.0 * stats.t.sf(abs(t_val), df=df_resid))
+
+    # Cook's D influence diagnostic
+    hat = np.einsum("ij,jk,ik->i", X, xtx_inv, X)
+    p_dim = X.shape[1]
+    denom = np.maximum(1.0 - hat, 1e-8)
+    cooks_d = ((resid ** 2) / max(p_dim * s2, 1e-18)) * (hat / (denom ** 2))
+    max_cooks = float(np.max(cooks_d)) if len(cooks_d) else float("nan")
+
+    # Leave-one-donor-out worst-case p-value on small-N fits (n <= 14)
+    loo_max_p = float("nan")
+    if len(yv) <= 14 and df_resid >= 3:
+        loo_ps: list[float] = []
+        for idx in range(len(yv)):
+            Xm = np.delete(X, idx, axis=0)
+            ym = np.delete(yv, idx)
+            if len(np.unique(Xm[:, 1])) < 2:
+                continue
+            try:
+                cm, _, _, _ = np.linalg.lstsq(Xm, ym, rcond=None)
+                rm = ym - Xm @ cm
+                dfm = len(ym) - Xm.shape[1]
+                s2m = float((rm @ rm) / dfm)
+                sem = float(np.sqrt(max((s2m * np.linalg.inv(Xm.T @ Xm))[1, 1], 1e-18)))
+                loo_ps.append(float(2.0 * stats.t.sf(abs(float(cm[1]) / sem), df=dfm)))
+            except np.linalg.LinAlgError:
+                continue
+        if loo_ps:
+            loo_max_p = float(max(loo_ps))
+
     return {
         "beta_case_adj": round(float(coef[1]), 4),
         "se_case_adj": round(se, 4),
         "covariate_adjusted_nominal_p": p_val,
         "covariates_used": used_names,
         "collinear_covariates_dropped": dropped_collinear,
+        "case_vif_final": round(last_vif, 3),
+        "max_cooks_d": round(max_cooks, 3) if math.isfinite(max_cooks) else float("nan"),
+        "loo_max_p": round(loo_max_p, 6) if math.isfinite(loo_max_p) else float("nan"),
+        "n_case_complete": n_c_comp,
+        "n_ctrl_complete": n_n_comp,
         "n_complete_adj": int(len(yv)),
         "df_resid_adj": int(df_resid),
+    }
+
+
+def compute_small_n_dropout_leverage_flag(
+    case_vals: np.ndarray,
+    ctrl_vals: np.ndarray,
+    p_adj: float | None,
+    p_welch: float | None,
+    p_mwu: float | None,
+    *,
+    raw_case_counts: np.ndarray | None = None,
+    raw_ctrl_counts: np.ndarray | None = None,
+    n_case_complete: int | None = None,
+    n_ctrl_complete: int | None = None,
+) -> dict[str, Any]:
+    """Flag spurious small-N parametric significance driven by 0-count or 1-UMI Poisson dropouts.
+
+    Evaluates complete-case finite arms and checks BOTH covariate-adjusted OLS p AND Welch p
+    (closing the Welch-fallback blindspot when p_adj is NaN). Also catches sparse <=1-UMI
+    Poisson cliffs (e.g. Takeuchi_LSC_MNs NPTX2: [1,0,0,0] vs [1,4,1,1] UMIs, p_ols=0.00037, p_mwu=0.0545).
+    """
+    cf = np.asarray(case_vals, dtype=float)
+    nf = np.asarray(ctrl_vals, dtype=float)
+    cf = cf[np.isfinite(cf)]
+    nf = nf[np.isfinite(nf)]
+    nc = int(n_case_complete) if (n_case_complete is not None and n_case_complete > 0) else int(len(cf))
+    nn = int(n_ctrl_complete) if (n_ctrl_complete is not None and n_ctrl_complete > 0) else int(len(nf))
+    n_zero_case = int(np.sum(cf <= 0.0))
+    n_zero_ctrl = int(np.sum(nf <= 0.0))
+    p_candidates = [float(p) for p in (p_adj, p_welch) if p is not None and isinstance(p, (int, float)) and math.isfinite(p)]
+    p_param = min(p_candidates) if p_candidates else float("nan")
+    pmwu = float(p_mwu) if (p_mwu is not None and math.isfinite(p_mwu)) else 1.0
+
+    small_n = (nc <= 6 or nn <= 6)
+    zero_dropout_leverage = bool(
+        small_n
+        and math.isfinite(p_param)
+        and p_param < 0.05
+        and pmwu > 0.20
+        and (n_zero_case > 0 or n_zero_ctrl > 0)
+    )
+    sparse_1umi_cliff = False
+    if raw_case_counts is not None and raw_ctrl_counts is not None and small_n and math.isfinite(p_param) and p_param < 0.05 and pmwu >= 0.05:
+        rc = np.asarray(raw_case_counts, dtype=float)
+        rn = np.asarray(raw_ctrl_counts, dtype=float)
+        all_raw = np.concatenate([rc[np.isfinite(rc)], rn[np.isfinite(rn)]])
+        if len(all_raw) > 0 and (np.sum(all_raw == 0) >= 2) and (np.median(all_raw) <= 1.0):
+            sparse_1umi_cliff = True
+
+    return {
+        "n_zero_case": n_zero_case,
+        "n_zero_ctrl": n_zero_ctrl,
+        "sparse_1umi_cliff_flag": sparse_1umi_cliff,
+        "small_n_dropout_leverage_flag": bool(zero_dropout_leverage or sparse_1umi_cliff),
+    }
+
+
+def fit_composition_or_ambient_ols(
+    log2cpm_df: pd.DataFrame,
+    meta_idx: pd.DataFrame,
+    case_pids: list[str],
+    ctrl_pids: list[str],
+    target_gene: str,
+    marker_genes: list[str],
+    index_name: str = "ambient_neur_idx",
+    *,
+    exclude_target: bool = True,
+    min_df_resid: int = 4,
+    max_case_vif: float = 5.0,
+) -> dict[str, Any]:
+    """Fit composition/ambient-adjusted donor OLS with mandatory target exclusion from the marker index.
+
+    Eliminates self-inclusion circularity (WS1/WS2) and missing-sex->Female coercion, and reports
+    both bivariate r(is_case, index) and full multivariate case VIF.
+    """
+    sel_pids = list(case_pids) + list(ctrl_pids)
+    is_case = np.array([1.0] * len(case_pids) + [0.0] * len(ctrl_pids), dtype=float)
+    avail = [g for g in marker_genes if g in log2cpm_df.index and (not exclude_target or g.upper() != target_gene.upper())]
+    if len(avail) < 2 or target_gene not in log2cpm_df.index:
+        return {"error": f"Insufficient markers ({len(avail)}) or missing target {target_gene!r}"}
+    idx_vec = log2cpm_df.loc[avail, sel_pids].mean(axis=0).to_numpy(dtype=float)
+    y = log2cpm_df.loc[target_gene, sel_pids].to_numpy(dtype=float)
+    cov_dict = _encode_covariate_matrix(meta_idx.loc[sel_pids])
+    cov_dict[index_name] = idx_vec
+
+    # Bivariate r(is_case, index) and r(y, index)
+    r_case_idx = float(np.corrcoef(is_case, idx_vec)[0, 1]) if np.std(idx_vec) > 1e-8 else float("nan")
+    r_y_idx = float(np.corrcoef(y, idx_vec)[0, 1]) if (np.std(y) > 1e-8 and np.std(idx_vec) > 1e-8) else float("nan")
+    biv_vif = float(1.0 / max(1.0 - r_case_idx ** 2, 1e-6)) if math.isfinite(r_case_idx) else float("nan")
+
+    ols = _covariate_adjusted_ols(
+        y,
+        is_case,
+        cov_dict,
+        min_df_resid=min_df_resid,
+        max_case_vif=max_case_vif,
+        extra_priority=(index_name,),
+    )
+    return {
+        **ols,
+        "index_name": index_name,
+        "n_markers_used": len(avail),
+        "target_excluded_from_index": bool(exclude_target),
+        "r_case_index": round(r_case_idx, 4) if math.isfinite(r_case_idx) else float("nan"),
+        "r_target_index": round(r_y_idx, 4) if math.isfinite(r_y_idx) else float("nan"),
+        "bivariate_case_index_vif": round(biv_vif, 3) if math.isfinite(biv_vif) else float("nan"),
     }
 
 
@@ -670,7 +832,18 @@ def load_expansion_pseudobulk(
             nv = log2cpm.loc[g, ctrl_pids].to_numpy(dtype=float)
             st = _welch_mwu(cv, nv)
             ols = _covariate_adjusted_ols(log2cpm.loc[g, sel_pids].to_numpy(dtype=float), is_case, cov_dict)
-            stats_by_gene[str(g)] = {**st, **ols}
+            lev = compute_small_n_dropout_leverage_flag(
+                cv,
+                nv,
+                ols.get("covariate_adjusted_nominal_p"),
+                st.get("p_welch"),
+                st.get("p_mwu"),
+                raw_case_counts=g_sum.loc[g, case_pids].to_numpy(dtype=float),
+                raw_ctrl_counts=g_sum.loc[g, ctrl_pids].to_numpy(dtype=float),
+                n_case_complete=ols.get("n_case_complete"),
+                n_ctrl_complete=ols.get("n_ctrl_complete"),
+            )
+            stats_by_gene[str(g)] = {**st, **ols, **lev}
 
     return {
         "cohort_key": cohort_key,
@@ -757,14 +930,17 @@ def compute_lineage_ambient_flags(
     unconditional_gap: float = 2.5,
     low_expr_cutoff: float = 1.5,
     ctrl_groups: tuple[str, ...] = ("Control", "OldCtrl", "ALS_TDP_High"),
+    allow_missing_strata: bool = False,
 ) -> dict[tuple[str, str], dict[str, Any]]:
     """Flag droplet ambient-RNA bleed-through & low-expression noise using Control-only (or TDP-High) lineage reference dominance.
 
-    Marks (stratum, gene) as ambient_bleed_flag=True when another major lineage (including Oligo/OPC!) in Control donors
+    Marks (stratum, gene) as ambient_bleed_flag=True when another major lineage (including Oligo/OPC/Microglia!) in Control donors
     expresses the gene >= 2.5 log2 higher unconditionally, OR >= 2.0 log2 higher while self_mean < 5.0 (and other >= 3.0).
     Also flags low_expr_flag=True when self_mean_log2 < low_expr_cutoff (default 1.5) to block non-lineage channel noise.
+    Fails fast on invalid/missing lineage names unless allow_missing_strata=True.
     """
     means: dict[str, pd.Series] = {}
+    missing_strata: list[str] = []
     for st in lineage_strata:
         try:
             res = load_expansion_pseudobulk(cohort_key, st, genes=genes, min_cells=min_cells, case_groups=(), ctrl_groups=())
@@ -772,8 +948,10 @@ def compute_lineage_ambient_flags(
             ctrl_pids = mdf.loc[mdf["disease_group"].astype(str).isin(ctrl_groups), "profile_id"].astype(str).tolist()
             use_pids = ctrl_pids if len(ctrl_pids) >= 2 else mdf["profile_id"].astype(str).tolist()
             means[st] = res["log2cpm_df"][use_pids].mean(axis=1)
-        except Exception:
-            continue
+        except Exception as exc:  # noqa: BLE001
+            if not allow_missing_strata:
+                raise ValueError(f"[{cohort_key}] Invalid or missing lineage stratum {st!r}: {exc}") from exc
+            missing_strata.append(st)
     if len(means) < 2:
         return {}
     df_m = pd.DataFrame(means).fillna(0.0)
@@ -939,8 +1117,10 @@ def load_gse308462_tissue(
     tissue: str = "Cerebrospinal_Fluid",
     genes: list[str] | None = None,
     verify_hash: bool = False,
+    normalization: str = "deseq2_mor",
+    min_total_reads: int = 100_000,
 ) -> dict[str, Any]:
-    """Load GSE308462 strictly filtered to ONE tissue (default living Cerebrospinal_Fluid: 18 ALS vs 10 CTL)."""
+    """Load GSE308462 strictly filtered to ONE tissue (default living Cerebrospinal_Fluid: 18 ALS vs 10 CTL) with depth QC & DESeq2 norm."""
     meta = pd.read_csv(META_DIR / "GSE308462_sample_metadata.tsv", sep="\t", dtype=str)
     sub = meta.loc[meta["char_tissue"] == tissue].copy()
     if sub.empty:
@@ -956,11 +1136,19 @@ def load_gse308462_tissue(
     gc_df = pd.read_csv(ROOT / "data/transcriptomics/ensembl116_hsapiens_gene_gc.tsv", sep="\t")
     ens_to_sym = dict(zip(gc_df["Gene stable ID"].astype(str), gc_df["Gene name"].fillna("").astype(str)))
 
-    mat = df_all[sub["mat_col"].tolist()].apply(pd.to_numeric, errors="coerce").fillna(0.0)
-    lib_sizes = mat.sum(axis=0).to_numpy(dtype=np.float64)
-    ens_clean = pd.Index([str(x).split(".")[0] for x in mat.index])
-    syms = pd.Series([ens_to_sym.get(e, e) or e for e in ens_clean], index=mat.index)
+    mat_full = df_all[sub["mat_col"].tolist()].apply(pd.to_numeric, errors="coerce").fillna(0.0)
+    raw_depths = mat_full.sum(axis=0)
+    dropped_low = {c: int(raw_depths[c]) for c in mat_full.columns if raw_depths[c] < min_total_reads}
+    if dropped_low:
+        sub = sub.loc[~sub["mat_col"].isin(dropped_low)].copy()
+        mat_full = mat_full[sub["mat_col"].tolist()]
+    lib_sizes = mat_full.sum(axis=0).to_numpy(dtype=np.float64)
+    ens_clean = pd.Index([str(x).split(".")[0] for x in mat_full.index])
+    syms = pd.Series([ens_to_sym.get(e, e) or e for e in ens_clean], index=mat_full.index)
+    full_mat_arr = mat_full.to_numpy(dtype=np.float64)
+    full_syms_arr = syms.to_numpy()
 
+    mat = mat_full
     if genes is not None:
         gset = {g.upper() for g in genes}
         keep = syms.str.upper().isin(gset) | ens_clean.str.upper().isin(gset)
@@ -969,20 +1157,27 @@ def load_gse308462_tissue(
 
     mat.index = syms.values
     mat = mat.groupby(level=0, sort=False).sum()
-    log2cpm = pd.DataFrame(np.log2((mat.to_numpy(dtype=np.float64) / lib_sizes[None, :]) * 1e6 + 1.0), index=mat.index, columns=mat.columns)
+    l2_arr, norm_used, _ = _normalize_counts_to_log2(full_mat_arr, full_syms_arr, mat.to_numpy(dtype=np.float64), lib_sizes, normalization=normalization)
+    log2cpm = pd.DataFrame(l2_arr, index=mat.index, columns=mat.columns)
 
     case_cols = sub.loc[sub["char_genotype"] == "ALS", "mat_col"].tolist()
     ctrl_cols = sub.loc[sub["char_genotype"] == "CTL", "mat_col"].tolist()
-    stats_by_gene = {
-        str(g): _welch_mwu(log2cpm.loc[g, case_cols].to_numpy(float), log2cpm.loc[g, ctrl_cols].to_numpy(float))
-        for g in log2cpm.index
-    } if (genes is not None and case_cols and ctrl_cols) else {}
+    stats_by_gene = {}
+    if genes is not None and case_cols and ctrl_cols:
+        for g in log2cpm.index:
+            cv = log2cpm.loc[g, case_cols].to_numpy(float)
+            nv = log2cpm.loc[g, ctrl_cols].to_numpy(float)
+            st = _welch_mwu(cv, nv)
+            lev = compute_small_n_dropout_leverage_flag(cv, nv, None, st.get("p_welch"), st.get("p_mwu"))
+            stats_by_gene[str(g)] = {**st, **lev}
 
     mod = "CSF_RNASEQ_BULK" if tissue == "Cerebrospinal_Fluid" else "BULK_RNASEQ_COUNTS"
     return {
         "dataset_id": "DS056_NYGC_CSF_RNASEQ",
         "modality": assert_expansion_modality(mod, "DS056_NYGC_CSF_RNASEQ"),
         "tissue": tissue,
+        "normalization_used": norm_used,
+        "dropped_low_depth_libs": dropped_low,
         "meta_df": sub.reset_index(drop=True),
         "log2cpm_df": log2cpm,
         "n_case": len(case_cols),
@@ -1299,8 +1494,13 @@ def load_miedema2025_ftld_tdp_c(genes: list[str] | None = None, verify_hash: boo
     for c in (lfc_c, p_c, q_c):
         df[c] = pd.to_numeric(df[c], errors="coerce")
     df["primary_gene"] = df[gcol].astype(str).str.split(";").str[0].str.strip()
+    n_dups_collapsed = 0
     if deduplicate_genes:
-        df = df.sort_values(p_c, ascending=True, na_position="last").drop_duplicates(subset=["primary_gene"], keep="first").copy()
+        # Deterministic non-outcome-peeking deduplication (never sort by min(p)!)
+        df["_non_null_n"] = df.notna().sum(axis=1)
+        n_before = len(df)
+        df = df.sort_values("_non_null_n", ascending=False, kind="mergesort").drop_duplicates(subset=["primary_gene"], keep="first").drop(columns=["_non_null_n"]).copy()
+        n_dups_collapsed = n_before - len(df)
     if genes is not None:
         gset = {g.upper() for g in genes}
         df = df.loc[df["primary_gene"].str.upper().isin(gset)].copy()
@@ -1308,6 +1508,8 @@ def load_miedema2025_ftld_tdp_c(genes: list[str] | None = None, verify_hash: boo
         "dataset_id": "DS_SUPP_MIEDEMA2025_FTLD",
         "modality": assert_expansion_modality("PROTEOMICS_TISSUE_TMT_FTLD", "DS_SUPP_MIEDEMA2025_FTLD"),
         "contrast_label": "SD_FTLD_TDP_C_vs_NDC",
+        "dedup_method": "max_completeness_stable_no_p_peeking" if deduplicate_genes else "none",
+        "n_duplicate_gene_rows_collapsed": int(n_dups_collapsed),
         "sign_note": "Positive log2FC_NDCvsSD corresponds to FC_direction == 'Higher abundance' in SD (FTLD-TDP-C) vs NDC.",
         "df": df.reset_index(drop=True),
     }
@@ -1381,9 +1583,15 @@ def load_edinburgh_gse314526_bulk(
         is_case = np.array([1.0] * len(case_d) + [0.0] * len(ctrl_d))
         cov_dict = _encode_covariate_matrix(sub_idx.loc[sel_d])
         for g in log2cpm.index:
-            st = _welch_mwu(log2cpm.loc[g, case_d].to_numpy(float), log2cpm.loc[g, ctrl_d].to_numpy(float))
+            cv = log2cpm.loc[g, case_d].to_numpy(float)
+            nv = log2cpm.loc[g, ctrl_d].to_numpy(float)
+            st = _welch_mwu(cv, nv)
             ols = _covariate_adjusted_ols(log2cpm.loc[g, sel_d].to_numpy(float), is_case, cov_dict)
-            stats_by_gene[str(g)] = {**st, **ols}
+            lev = compute_small_n_dropout_leverage_flag(
+                cv, nv, ols.get("covariate_adjusted_nominal_p"), st.get("p_welch"), st.get("p_mwu"),
+                n_case_complete=ols.get("n_case_complete"), n_ctrl_complete=ols.get("n_ctrl_complete"),
+            )
+            stats_by_gene[str(g)] = {**st, **ols, **lev}
 
     return {
         "dataset_id": "DS065_EDIN_COGNITIVE_BULK",
@@ -1485,11 +1693,8 @@ def load_crisprbrain_screens(
         tfs["library"] = "TFs"
         df = pd.concat([h1, tfs], ignore_index=True)
         gcol = resolve_col(df, "gene")
-        # Deduplicate overlapping H1 + TFs genes, retaining the row with strongest min p-value across phago/VCAM1
-        p_cols = [c for c in ("pvalue.phago.ITC", "pvalue.VCAM1.ITC") if c in df.columns]
-        if p_cols:
-            df["_min_p"] = df[p_cols].apply(pd.to_numeric, errors="coerce").min(axis=1).fillna(1.0)
-            df = df.sort_values("_min_p", ascending=True).drop_duplicates(subset=[gcol], keep="first").drop(columns=["_min_p"]).copy()
+        # Deterministic non-outcome-peeking deduplication (H1_druggable library prioritized ahead of TFs; never sort by min(p)!)
+        df = df.drop_duplicates(subset=[gcol], keep="first").copy()
     else:
         raise ValueError(f"Unknown CRISPRbrain screen={screen!r}")
     if genes is not None:
@@ -1662,11 +1867,25 @@ def load_keuss2025_soma_neurite(
     control: str = "nontargeting-sgRNA",
     genes: list[str] | None = None,
     verify_hash: bool = False,
+    match_experiment: bool = True,
+    min_total_reads: int = 1_000_000,
+    normalization: str = "deseq2_mor",
 ) -> dict[str, Any]:
-    """Load Keuss 2025 GSE299341 soma vs neurite TDP-43 / hnRNPA1 knockdown RNA-seq (log2CPM)."""
+    """Load Keuss 2025 GSE299341 soma vs neurite TDP-43 / hnRNPA1 knockdown RNA-seq.
+
+    Hardens against two GSE299341 pitfalls by default:
+      1. match_experiment=True prevents pooling hnRNPA1 nontargeting-sgRNA controls into TDP43 contrasts.
+      2. min_total_reads=1_000_000 drops failed low-depth libraries (e.g. Soma TDP43.20 with 541 total reads).
+      3. normalization='deseq2_mor' applies MT/ribo-excluded DESeq2 median-of-ratios normalization.
+    """
     meta = pd.read_csv(META_DIR / "GSE299341_sample_metadata.tsv", sep="\t", dtype=str)
     meta["lib_col"] = meta["Sample_description"].astype(str).str.replace(r"^Library name:\s*", "", regex=True).str.strip()
     sub = meta.loc[(meta["char_fraction"] == fraction) & (meta["char_treatment"].isin([treatment, control]))].copy()
+    if match_experiment:
+        t_low = treatment.lower()
+        exp_prefix = "TDP43 Experiment" if "tdp43" in t_low else ("hnRNPA1 Experiment" if "hnrnpa1" in t_low else ("WT Experiment" if "no-sgrna" in t_low else None))
+        if exp_prefix is not None:
+            sub = sub.loc[sub["Sample_title"].astype(str).str.startswith(exp_prefix)].copy()
     if sub.empty:
         raise ValueError(f"No Keuss samples for fraction={fraction!r}, treatment={treatment!r}, control={control!r}")
 
@@ -1675,13 +1894,24 @@ def load_keuss2025_soma_neurite(
     sub = sub.loc[sub["lib_col"].isin(df_all.columns)].copy()
     assert_unique_donors(sub["lib_col"].tolist(), f"DS062_KEUSS:{fraction}:{treatment}")
 
+    # Depth QC filter before normalization (drops failed 541-read library TDP43.20)
+    raw_full = df_all[sub["lib_col"].tolist()].apply(pd.to_numeric, errors="coerce").fillna(0.0)
+    lib_totals = raw_full.sum(axis=0)
+    dropped_low_depth = {str(c): int(lib_totals[c]) for c in sub["lib_col"].tolist() if float(lib_totals[c]) < float(min_total_reads)}
+    sub = sub.loc[~sub["lib_col"].isin(dropped_low_depth)].copy()
+    if sub.empty:
+        raise ValueError(f"All Keuss samples failed min_total_reads>={min_total_reads}: dropped={dropped_low_depth}")
+
     gc_df = pd.read_csv(ROOT / "data/transcriptomics/ensembl116_hsapiens_gene_gc.tsv", sep="\t")
     ens_to_sym = dict(zip(gc_df["Gene stable ID"].astype(str), gc_df["Gene name"].fillna("").astype(str)))
 
-    mat = df_all[sub["lib_col"].tolist()].apply(pd.to_numeric, errors="coerce").fillna(0.0)
-    lib_sizes = mat.sum(axis=0).to_numpy(dtype=np.float64)
-    ens_clean = pd.Index([str(x).split(".")[0] for x in mat.index])
-    syms = pd.Series([ens_to_sym.get(e, e) or e for e in ens_clean], index=mat.index)
+    keep_cols = sub["lib_col"].tolist()
+    full_mat = raw_full[keep_cols].to_numpy(dtype=np.float64)
+    lib_sizes = full_mat.sum(axis=0)
+    ens_clean = pd.Index([str(x).split(".")[0] for x in raw_full.index])
+    syms = pd.Series([ens_to_sym.get(e, e) or e for e in ens_clean], index=raw_full.index)
+    full_syms_arr = syms.to_numpy()
+    mat = raw_full[keep_cols].copy()
     if genes is not None:
         gset = {g.upper() for g in genes}
         keep = syms.str.upper().isin(gset) | ens_clean.str.upper().isin(gset)
@@ -1689,7 +1919,8 @@ def load_keuss2025_soma_neurite(
         syms = syms.loc[keep]
     mat.index = syms.values
     mat = mat.groupby(level=0, sort=False).sum()
-    log2cpm = pd.DataFrame(np.log2((mat.to_numpy(dtype=np.float64) / lib_sizes[None, :]) * 1e6 + 1.0), index=mat.index, columns=mat.columns)
+    l2_arr, norm_used, _ = _normalize_counts_to_log2(full_mat, full_syms_arr, mat.to_numpy(dtype=np.float64), lib_sizes, normalization=normalization)
+    log2cpm = pd.DataFrame(l2_arr, index=mat.index, columns=keep_cols)
 
     case_cols = sub.loc[sub["char_treatment"] == treatment, "lib_col"].tolist()
     ctrl_cols = sub.loc[sub["char_treatment"] == control, "lib_col"].tolist()
@@ -1704,6 +1935,9 @@ def load_keuss2025_soma_neurite(
         "fraction": fraction,
         "treatment": treatment,
         "control": control,
+        "match_experiment": match_experiment,
+        "normalization_used": norm_used,
+        "dropped_low_depth_libs": dropped_low_depth,
         "n_case": len(case_cols),
         "n_ctrl": len(ctrl_cols),
         "log2cpm_df": log2cpm,
@@ -1714,8 +1948,10 @@ def load_keuss2025_soma_neurite(
 def load_rummens2025_tdp43_agg(
     genes: list[str] | None = None,
     verify_hash: bool = False,
+    normalization: str = "deseq2_mor",
+    min_total_reads: int = 1_000_000,
 ) -> dict[str, Any]:
-    """Load Rummens 2025 GSE284828 TDP-43 aggregate-sorted vs non-aggregate-sorted U2OS counts (3 vs 3)."""
+    """Load Rummens 2025 GSE284828 TDP-43 aggregate-sorted vs non-aggregate-sorted U2OS counts (3 vs 3) with depth QC & DESeq2 norm."""
     p = resolve_expansion_file("GSE284828_All_Samples_Counts.csv.gz", "DS066_RUMMENS_TDP43_AGG", verify_hash=verify_hash)
     df = pd.read_csv(p)
     gcol = resolve_col(df, "Gene Name")
@@ -1723,8 +1959,16 @@ def load_rummens2025_tdp43_agg(
     no_cols = [c for c in df.columns if c.startswith("NoAggregates_Sorted_")]
     assert len(agg_cols) == 3 and len(no_cols) == 3
     all_cols = agg_cols + no_cols
-    mat = df[all_cols].apply(pd.to_numeric, errors="coerce").fillna(0.0)
-    lib_sizes = mat.sum(axis=0).to_numpy(dtype=np.float64)
+    full_mat_df = df[all_cols].apply(pd.to_numeric, errors="coerce").fillna(0.0)
+    raw_depths = full_mat_df.sum(axis=0)
+    dropped_low = {c: int(raw_depths[c]) for c in all_cols if raw_depths[c] < min_total_reads}
+    keep_cols = [c for c in all_cols if c not in dropped_low]
+    agg_cols = [c for c in agg_cols if c in keep_cols]
+    no_cols = [c for c in no_cols if c in keep_cols]
+    full_mat_arr = full_mat_df[keep_cols].to_numpy(dtype=np.float64)
+    full_syms = df[gcol].astype(str).to_numpy()
+    lib_sizes = full_mat_arr.sum(axis=0)
+    mat = full_mat_df[keep_cols].copy()
     if genes is not None:
         gset = {g.upper() for g in genes}
         keep = df[gcol].astype(str).str.upper().isin(gset)
@@ -1734,14 +1978,21 @@ def load_rummens2025_tdp43_agg(
         idx_names = df[gcol].astype(str).values
     mat.index = idx_names
     mat = mat.groupby(level=0, sort=False).sum()
-    log2cpm = pd.DataFrame(np.log2((mat.to_numpy(dtype=np.float64) / lib_sizes[None, :]) * 1e6 + 1.0), index=mat.index, columns=all_cols)
-    stats_by_gene = {
-        str(g): _welch_mwu(log2cpm.loc[g, agg_cols].to_numpy(float), log2cpm.loc[g, no_cols].to_numpy(float))
-        for g in log2cpm.index
-    } if genes is not None else {}
+    l2_arr, norm_used, _ = _normalize_counts_to_log2(full_mat_arr, full_syms, mat.to_numpy(dtype=np.float64), lib_sizes, normalization=normalization)
+    log2cpm = pd.DataFrame(l2_arr, index=mat.index, columns=keep_cols)
+    stats_by_gene = {}
+    if genes is not None and agg_cols and no_cols:
+        for g in log2cpm.index:
+            cv = log2cpm.loc[g, agg_cols].to_numpy(float)
+            nv = log2cpm.loc[g, no_cols].to_numpy(float)
+            st = _welch_mwu(cv, nv)
+            lev = compute_small_n_dropout_leverage_flag(cv, nv, None, st.get("p_welch"), st.get("p_mwu"))
+            stats_by_gene[str(g)] = {**st, **lev}
     return {
         "dataset_id": "DS066_RUMMENS_TDP43_AGG",
         "modality": assert_expansion_modality("BULK_RNASEQ_COUNTS", "DS066_RUMMENS_TDP43_AGG"),
+        "normalization_used": norm_used,
+        "dropped_low_depth_libs": dropped_low,
         "n_case": len(agg_cols),
         "n_ctrl": len(no_cols),
         "log2cpm_df": log2cpm,
@@ -1877,10 +2128,14 @@ def load_zelic2025_cervical_bulk(genes: list[str] | None = None, verify_hash: bo
     log2_df = np.log2(mat.clip(lower=0.0) + 1.0)
     case_c = meta.loc[meta["disease_group"] == "ALS", "lib_col"].tolist()
     ctrl_c = meta.loc[meta["disease_group"] == "Control", "lib_col"].tolist()
-    stats_by_gene = {
-        str(g): _welch_mwu(log2_df.loc[g, case_c].to_numpy(float), log2_df.loc[g, ctrl_c].to_numpy(float))
-        for g in log2_df.index
-    } if genes is not None else {}
+    stats_by_gene = {}
+    if genes is not None:
+        for g in log2_df.index:
+            cv = log2_df.loc[g, case_c].to_numpy(float)
+            nv = log2_df.loc[g, ctrl_c].to_numpy(float)
+            st = _welch_mwu(cv, nv)
+            lev = compute_small_n_dropout_leverage_flag(cv, nv, None, st.get("p_welch"), st.get("p_mwu"))
+            stats_by_gene[str(g)] = {**st, **lev}
     return {
         "dataset_id": "DS057_ZELIC_BULK",
         "modality": assert_expansion_modality("BULK_RNASEQ_COUNTS", "DS057_ZELIC_BULK"),
@@ -1895,7 +2150,7 @@ def load_zelic2025_cervical_bulk(genes: list[str] | None = None, verify_hash: bo
 def load_muscle2025_proteome(genes: list[str] | None = None, verify_hash: bool = False) -> dict[str, Any]:
     """Load PXD060425 human skeletal muscle MaxQuant LFQ proteome (5 ALS vs 5 CON, filtering Reverse/Contaminant)."""
     mp = resolve_expansion_file("file_mapping.txt", "DS063_MUSCLE_PROT_2025", verify_hash=verify_hash)
-    zp = resolve_expansion_file("SEARCH_prot.zip", "DS063_MUSCLE_PROT_2025", verify_hash=False)
+    zp = resolve_expansion_file("SEARCH_prot.zip", "DS063_MUSCLE_PROT_2025", verify_hash=verify_hash)
     mmap = pd.read_csv(mp, sep="\t")
     mmap["run_num"] = mmap["RAW file background proteome"].astype(str).str.extract(r"_(\d+)\.raw$", expand=False)
     mmap["lfq_col"] = "LFQ intensity " + mmap["run_num"]
@@ -1925,10 +2180,14 @@ def load_muscle2025_proteome(genes: list[str] | None = None, verify_hash: bool =
 
     case_c = mmap.loc[mmap["Group"] == "ALS", "lfq_col"].tolist()
     ctrl_c = mmap.loc[mmap["Group"] == "CON", "lfq_col"].tolist()
-    stats_by_gene = {
-        str(g): _welch_mwu(log2_df.loc[g, case_c].to_numpy(float), log2_df.loc[g, ctrl_c].to_numpy(float))
-        for g in log2_df.index
-    } if genes is not None else {}
+    stats_by_gene = {}
+    if genes is not None:
+        for g in log2_df.index:
+            cv = log2_df.loc[g, case_c].to_numpy(float)
+            nv = log2_df.loc[g, ctrl_c].to_numpy(float)
+            st = _welch_mwu(cv, nv)
+            lev = compute_small_n_dropout_leverage_flag(cv, nv, None, st.get("p_welch"), st.get("p_mwu"))
+            stats_by_gene[str(g)] = {**st, **lev}
     return {
         "dataset_id": "DS063_MUSCLE_PROT_2025",
         "modality": assert_expansion_modality("PROTEOMICS_MUSCLE_DIA", "DS063_MUSCLE_PROT_2025"),
