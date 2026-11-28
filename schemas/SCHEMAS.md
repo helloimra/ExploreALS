@@ -1,6 +1,6 @@
-# ExploreALS v1.6.0 Registry & Provenance Lock Schemas
+# ExploreALS v2.0.0 Registry & Provenance Lock Schemas
 
-`ExploreALS v1.6.0` stores its relational data across **`20` normalized, schema-verified CSV ledgers** under `registries/` and **`2` deterministic JSON lock manifests** (`dataset_files_lock.json` and `verified_citations_lock.json`) shipped under `schemas/`, validated end-to-end by `scripts/verify_carbon_als.py`.
+`ExploreALS v2.0.0` stores its relational data across **`20` normalized, schema-verified CSV ledgers** under `registries/` and **`2` deterministic JSON lock manifests** (`dataset_files_lock.json` and `verified_citations_lock.json`) shipped under `schemas/`, validated end-to-end by `scripts/verify_carbon_als.py`.
 
 ## 1. `registries/candidate_intake_ledger.csv`
 Tracks all `33` published clinical, Mendelian/GWAS, and neuropathological ALS programs across two intake cohorts:
@@ -83,7 +83,7 @@ Atomic, single-contrast primary quantitative and clinical/structural evidence ro
 `evidence_id,carbon_id,subnode_id,analysis_run_id,source_type,source_id_or_locator,cohort_and_stratum,assay_and_contrast,effect_direction,effect_estimate,p_value,fdr_or_adjusted_p,sample_size_n,epistemic_weight,notes`
 
 ## 13. `registries/phase4_unified_portfolio.csv`
-Canonical cross-phase master portfolio (`55` rows = disjoint union of `33` curated clinical/genetic programs + `19` multi-omic screen nominations + `3` living-evidence intake programs: `4 KEEP_CORE`, `28 KEEP_EXPLORATORY_UNPROVEN`, `7 RECLASSIFY_BENCHMARK_OR_BIOMARKER`, `16 DROP`), paired 1-to-1 with immutable `EALS-001`–`EALS-055` accessions and ranked `1..55` under scientific actionability, human causal/pathology evidence basis, Epistemic Asymmetry, atomic `;`-delimited hurdles, and promoted `GRCh38` cis-interval off-target statuses (`scripts/phase4_gates.py`).
+Canonical cross-phase master portfolio (`55` rows = disjoint union of `33` curated clinical/genetic programs + `19` multi-omic screen nominations + `3` living-evidence intake programs: `4 KEEP_CORE`, `28 KEEP_EXPLORATORY_UNPROVEN`, `7 RECLASSIFY_BENCHMARK_OR_BIOMARKER`, `16 DROP`), paired 1-to-1 with immutable `EALS-001`–`EALS-055` accessions and ranked `1..55` across `TIER_1_ACTIONABLE_NOW` (`0`), `TIER_2_FOCUSED_GATE_FIRST` (`6`), `TIER_3_EXPLORATORY_DISCOVERY` (`19`), `TIER_4_PARKED_INSUFFICIENT_EVIDENCE` (`6`, preserving `KEEP_EXPLORATORY_UNPROVEN` / `UNPROVEN_UNTESTED`), `COMPANION_PROTOCOL_ONLY` (`1`), `BIOMARKER_BENCHMARK_ONLY` (`7`), and `DROPPED_FALSIFIED_EXCLUDED` (`16`) under scientific actionability, human causal/pathology evidence basis, Epistemic Asymmetry, atomic `;`-delimited hurdles, and promoted `GRCh38` cis-interval off-target statuses (`scripts/phase4_gates.py`).
 
 **Columns:**
 `unified_rank,accession_id,portfolio_id,origin_phase,origin_subcohort,track,gene_or_drug,candidate_type,primary_modality_specific,epistemic_state,decision,scientific_actionability_tier,clinical_readiness_trl,next_gate_experimental_class,primary_evidence_basis,model_prior_dependency,unsolved_hurdle_count,unsolved_hurdles_structured,lead_cis_interval_id,lead_offtarget_safety_status,key_quantitative_anchor,discriminating_next_test,source_registry_ref,analysis_run_id`
@@ -107,7 +107,7 @@ Explicit participant-sharing and nested-sampling matrix across all `8` empirical
 `overlap_group_id,cluster_name,datasets_involved,overlap_mechanism,donor_accounting_and_anti_pseudoreplication_rule,canonical_model_formula`
 
 ## 17. `registries/living_evidence_updates.csv`
-Chronological living-evidence, clinical-trial readout, and structural/genomic model-revision ledger (`12` rows: `UPD-2026-11-18-01` through `UPD-2026-11-27-02`), tracking explicit before/after revisions (`prior_state_or_assumption` vs `new_evidence_or_revision`), portfolio & gate consequences, verified primary identifiers, and reproducible verification anchors.
+Chronological living-evidence, clinical-trial readout, and structural/genomic model-revision ledger (`16` rows: `UPD-2026-11-18-01` through `UPD-2026-11-28-04`), tracking explicit before/after revisions (`prior_state_or_assumption` vs `new_evidence_or_revision`), portfolio & gate consequences, verified primary identifiers, and reproducible verification anchors.
 
 **Columns:**
 `update_id,date_iso,release_tag,update_category,affected_ids,decision_impact,headline,prior_state_or_assumption,new_evidence_or_revision,portfolio_and_gate_consequence,primary_sources,verification_anchor`

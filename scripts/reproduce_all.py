@@ -1,4 +1,4 @@
-"""Orchestrator for ExploreALS v1.2 computational replication (Level 1 Cached, 8 Flagship, or Full 50-Run DAG)."""
+"""Orchestrator for ExploreALS v2.0 computational replication (Level 1 Cached, 8 Flagship, or Full 52-Run DAG)."""
 from __future__ import annotations
 
 import argparse
@@ -37,9 +37,9 @@ def _ordered_canonical_runs(runs: list[dict[str, str]]) -> list[dict[str, str]]:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Reproduce ExploreALS v1.6 gates, 8 flagship claims, or all 52 runs.")
+    ap = argparse.ArgumentParser(description="Reproduce ExploreALS v2.0 gates, 8 flagship claims, or all 52 runs.")
     ap.add_argument("--cached-gates", action="store_true", help="Level 1 (<10s): verify 20 CSVs, SHA-256s, & loaders.")
-    ap.add_argument("--flagship-only", action="store_true", help="Run all 8 Tier 1+2 Flagship Monograph Reproducers.")
+    ap.add_argument("--flagship-only", action="store_true", help="Run all 8 Flagship Monograph Reproducers (6 Tier 2 + 2 Tier 3 Deep-Dive).")
     ap.add_argument("--all-canonical", action="store_true", help="Execute all 51 non-bootstrap canonical runs (requires staged data/).")
     args = ap.parse_args()
 
@@ -87,7 +87,7 @@ def main() -> None:
                 _run_py(s, extra)
         _run_py("scripts/verify_carbon_als.py", ["--mode", "cached" if is_public_export else "full"])
 
-    print("PASS: ExploreALS v1.6 replication sequence completed with 0 errors.")
+    print("PASS: ExploreALS v2.0 replication sequence completed with 0 errors.")
 
 
 if __name__ == "__main__":

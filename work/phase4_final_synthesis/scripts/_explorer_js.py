@@ -4,7 +4,7 @@ from __future__ import annotations
 EXPLORER_JS_BODY = """
 const TRL_NUM = {TRL_6_PH2B_SUBGROUP_BIOLOGIC:6,TRL_5_HUMAN_ALS_PK_PD_PROVEN:5,TRL_4_ACTIVE_PH1_CLASS_OR_NCE:4,TRL_3_PRECLINICAL_SSO_COORDINATE:3,TRL_2_PRECLINICAL_MODALITY_DISCOVERY:2,TRL_1_TARGET_TOOL_PROBE_WATCHLIST:1,PROTOCOL_COMPANION_NA:0};
 const NYGC_GENE_TO_ID = {ATG4B:'EALS-034',KALRN:'EALS-035',PTPRT:'EALS-036',CELF5:'EALS-037',PRUNE2:'EALS-038',PFKP:'EALS-039',TRAPPC12:'EALS-040',ELK1:'EALS-041',DLGAP1:'EALS-042'};
-let selectedId = 'EALS-030';
+let selectedId = 'EALS-001';
 let selectedIvOrd = 3;
 let activeTab = 'home';
 let activeQuick = 'ALL';
@@ -61,7 +61,7 @@ function defaultHashForCurrentState(){
     return '#home';
   }
   if(activeTab === 'portfolio') return '#portfolio';
-  if(activeTab === 'dossiers') return '#dossier/' + encodeURIComponent((typeof dossierId !== 'undefined' && dossierId) ? dossierId : (selectedId || 'EALS-030'));
+  if(activeTab === 'dossiers') return '#dossier/' + encodeURIComponent((typeof dossierId !== 'undefined' && dossierId) ? dossierId : (selectedId || 'EALS-001'));
   if(activeTab === 'intervals'){
     const iq = valOf('iv-search').trim();
     return iq ? '#intervals/' + encodeURIComponent(iq) : '#intervals';
@@ -69,7 +69,7 @@ function defaultHashForCurrentState(){
   if(activeTab === 'replication'){
     const rq = valOf('rep-search').trim();
     if(typeof repMode !== 'undefined' && repMode === 'evidence' && rq) return '#replication/cand/' + encodeURIComponent(rq);
-    if(typeof selectedRepKey !== 'undefined' && selectedRepKey && selectedRepKey !== 'FLAGSHIP-EALS-030') return '#replication/' + encodeURIComponent(selectedRepKey);
+    if(typeof selectedRepKey !== 'undefined' && selectedRepKey && selectedRepKey !== 'FLAGSHIP-EALS-001') return '#replication/' + encodeURIComponent(selectedRepKey);
     return '#replication';
   }
   return '#home';
@@ -90,7 +90,7 @@ function buildHistorySnapshot(targetHash){
     activeUpdCat: activeUpdCat, updSearch: valOf('upd-search'),
     ivSearch: valOf('iv-search'), ivStatus: valOf('iv-status','ALL'), ivOrigin: valOf('iv-origin','ALL'), ivLeads: Boolean(ivL && ivL.checked), selectedIvOrd: selectedIvOrd,
     repMode: (typeof repMode !== 'undefined' ? repMode : 'runs'),
-    selectedRepKey: (typeof selectedRepKey !== 'undefined' ? selectedRepKey : 'FLAGSHIP-EALS-030'),
+    selectedRepKey: (typeof selectedRepKey !== 'undefined' ? selectedRepKey : 'FLAGSHIP-EALS-001'),
     repSearch: valOf('rep-search'), repFilter: valOf('rep-filter','ALL'),
     repReturnDossier: (typeof repReturnDossier !== 'undefined' ? repReturnDossier : ''),
     repReturnTab: (typeof repReturnTab !== 'undefined' ? repReturnTab : 'dossiers'),
@@ -152,7 +152,7 @@ function renderUpdatesLog(){
   const cntEl = document.getElementById('upd-count');
   if(cntEl) cntEl.textContent = `${rows.length} / ${DATA_UPDATES.length}`;
   feed.innerHTML = rows.length ? rows.map(u => {
-    const gCtx = u.ids.find(x => x !== 'PORTFOLIO_WIDE' && !x.includes('.')) || 'EALS-030';
+    const gCtx = u.ids.find(x => x !== 'PORTFOLIO_WIDE' && !x.includes('.')) || 'EALS-001';
     const makeIdPill = aid => {
       if(aid === 'PORTFOLIO_WIDE') return '<span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">All 55 Hypotheses</span>';
       if(aid.includes('.')){
@@ -263,7 +263,7 @@ function tsaSubBadge(tsa){
   if(tsa==='SYSTEMIC_IMMUNE') return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap">&#9888; Systemic Sepsis / SLE Risk</span>';
   return '<span class="px-1.5 py-0.5 rounded font-mono font-semibold text-[var(--error)] border border-[var(--error)] text-xs whitespace-nowrap">&#9888; Pan-Essential / Lethal</span>';
 }
-function shortTier(t){return t.replace('TIER_1_ACTIONABLE_NOW','T1 Lead').replace('TIER_2_FOCUSED_GATE_FIRST','T2 Validation').replace('TIER_3_EXPLORATORY_DISCOVERY','T3 Discovery').replace('COMPANION_PROTOCOL_ONLY','PD Protocol').replace('BIOMARKER_BENCHMARK_ONLY','Biomarker/SOC').replace('DROPPED_FALSIFIED_EXCLUDED','Excluded');}
+function shortTier(t){return t.replace('TIER_1_ACTIONABLE_NOW','T1 Lead').replace('TIER_2_FOCUSED_GATE_FIRST','T2 Validation').replace('TIER_3_EXPLORATORY_DISCOVERY','T3 Discovery').replace('TIER_4_PARKED_INSUFFICIENT_EVIDENCE','T4 Parked').replace('COMPANION_PROTOCOL_ONLY','PD Protocol').replace('BIOMARKER_BENCHMARK_ONLY','Biomarker/SOC').replace('DROPPED_FALSIFIED_EXCLUDED','Excluded');}
 const SHORT_STAGE_MAP = {TRL_6_PH2B_SUBGROUP_BIOLOGIC:'Ph2b Subgrp',TRL_5_HUMAN_ALS_PK_PD_PROVEN:'ALS PK/PD',TRL_4_ACTIVE_PH1_CLASS_OR_NCE:'Ph1 / NCE',TRL_3_PRECLINICAL_SSO_COORDINATE:'Preclin SSO',TRL_2_PRECLINICAL_MODALITY_DISCOVERY:'Preclin Mod',TRL_1_TARGET_TOOL_PROBE_WATCHLIST:'Probe/Watch',PROTOCOL_COMPANION_NA:'N/A'};
 function shortTrl(t){return SHORT_STAGE_MAP[t] || 'N/A';}
 
@@ -388,7 +388,7 @@ function renderPortfolio(){
   const lensNote = lensObj ? ` \u00b7 ${lensObj.lbl.split(' \u00b7 ')[0]}` : '';
   document.getElementById('p-count').textContent = `${rows.length} / ${DATA_PORT.length}${epiNote}${lensNote}`;
   if(!DATA_PORT.some(x=>x.id===selectedId)) selectedId = DATA_PORT[0].id;
-  const selHidden = rows.length > 0 && !rows.some(r=>r.id===selectedId);
+  const selHidden = !rows.some(r=>r.id===selectedId);
   document.getElementById('p-tbody').innerHTML = rows.length ? rows.map(r => {
     const active = r.id===selectedId ? 'bg-[var(--content)]' : 'hover:bg-[var(--content)]';
     const dosBtn = DATA_MONOGRAPHS[r.id]
@@ -544,7 +544,7 @@ function renderDetail(selHidden=false){
   lastDetailCandId = r.id;
   document.getElementById('p-detail').innerHTML = `<div class="shrink-0 p-3.5 pb-2.5 border-b border-[var(--card-border)] bg-[var(--card)] space-y-1.5">
       <div class="flex items-center justify-between gap-1.5 flex-wrap">
-        <div class="flex items-center gap-1.5 flex-wrap"><span class="font-mono font-bold text-sm" title="Translational Priority Rank #${r.rk} · Genetic & Pathology Evidence Rank #${r.brk}">#${r.rk} <span class="font-normal text-xs text-[var(--muted-foreground)]">(Evid #${r.brk})</span> &middot; <span class="text-[var(--muted-foreground)] font-normal">${esc(r.id)}</span></span> ${decBadge(r.dec, r.id)}</div>
+        <div class="flex items-center gap-1.5 flex-wrap"><span class="font-mono font-bold text-sm" title="Translational Priority Rank #${r.rk} · Genetic & Pathology Evidence Rank #${r.brk}">#${r.rk} <span class="font-normal text-xs text-[var(--muted-foreground)]">(Evid #${r.brk})</span> &middot; <span class="text-[var(--muted-foreground)] font-normal">${esc(r.id)}</span></span> ${decBadge(r.dec, r.id)} <span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)] whitespace-nowrap" title="${esc(humanizeEnum(r.tier))}">${esc(shortTier(r.tier))}</span></div>
         <div class="flex items-center gap-1 shrink-0">${updDetailBtn}${pubMonoLink}</div>
       </div>
       <div class="text-sm font-semibold leading-snug">${esc(r.name)}</div>
@@ -946,7 +946,7 @@ function switchTab(tab, historyMode='push', explicitHash=''){
 
 function restoreHistorySnapshot(snap){
   if(!snap || !snap.tab) return false;
-  selectedId = snap.selectedId || 'EALS-030';
+  selectedId = snap.selectedId || 'EALS-001';
   if(typeof dossierId !== 'undefined') dossierId = snap.dossierId || selectedId;
   dossierFromPortfolio = Boolean(snap.dossierFromPortfolio);
   if(typeof dossierSlice !== 'undefined' && snap.dossierSlice) dossierSlice = snap.dossierSlice;
@@ -1079,7 +1079,7 @@ document.addEventListener('click', e => {
   const juBtn = tgt.closest('[data-jump-updates]');
   if(juBtn){ e.preventDefault(); e.stopPropagation(); jumpToUpdates(juBtn.getAttribute('data-jump-updates')); return; }
   const hfBtn = tgt.closest('[data-home-flagships]');
-  if(hfBtn){ e.preventDefault(); dossierSlice = 'T12'; dossierLens = 'ALL'; openDossier('EALS-030'); return; }
+  if(hfBtn){ e.preventDefault(); dossierSlice = 'T12'; dossierLens = 'ALL'; openDossier('EALS-001'); return; }
   const hcBtn = tgt.closest('[data-home-contrasts]');
   if(hcBtn){ e.preventDefault(); const dr = document.getElementById('contrasts-drawer'); if(dr) dr.open = true; pendingScrollId = 'contrasts-drawer'; switchTab('portfolio', 'push'); return; }
   const curRepFrom = () => activeTab==='dossiers' ? dossierId : (activeTab==='portfolio' ? selectedId : (activeTab==='intervals' ? ((DATA_CIS.find(x => x.ord === selectedIvOrd) || {}).pid || '') : ''));

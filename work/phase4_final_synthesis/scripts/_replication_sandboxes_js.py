@@ -206,9 +206,9 @@ function exportRegistryBlob(which){
     }))]
   };
   if(which === 'json_all'){
-    const outObj = {version:'1.6.0'};
+    const outObj = {version:'2.0.0'};
     Object.keys(builders).forEach(k => { outObj[k] = builders[k][1](); });
-    downloadBlob('exploreals_v1_6_provenance_bundle.json', 'application/json', JSON.stringify(outObj, null, 2));
+    downloadBlob('exploreals_v2_0_provenance_bundle.json', 'application/json', JSON.stringify(outObj, null, 2));
     return;
   }
   const hit = builders[which];
@@ -220,14 +220,14 @@ function initSandboxes(){
   if(!sb) return;
   sb.innerHTML = `
     <div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-2">
-      <div class="font-mono font-semibold text-[var(--foreground)]">1. KCNQ2 ER Co-Trapping &amp; 2:2 Heteromers (#4 EALS-006)</div>
+      <div class="font-mono font-semibold text-[var(--foreground)]">1. KCNQ2 ER Co-Trapping &amp; 2:2 Heteromers (#3 EALS-006)</div>
       <label class="block"><span>RNA Exon-5 Skip (&Delta;PSI): <strong id="sb-k-p-val" class="font-mono">0.214</strong></span><input id="sb-k-p" aria-label="KCNQ2 RNA Exon-5 Skip fraction" type="range" min="0.05" max="0.50" step="0.005" value="0.214" class="w-full mt-0.5"/></label>
       <label class="block"><span>2:2 Kv7.2:Kv7.3 Heteromer Share (&theta;): <strong id="sb-k-h-val" class="font-mono">1.00 (2:2 Heteromer)</strong></span><input id="sb-k-h" aria-label="Kv7.2 to Kv7.3 heteromer share" type="range" min="0" max="1" step="0.05" value="1" class="w-full mt-0.5"/></label>
       <label class="block"><span>Mutant Surface Escape (&alpha;_esc): <strong id="sb-k-a-val" class="font-mono">0.15</strong></span><input id="sb-k-a" aria-label="Mutant subunit surface escape" type="range" min="0" max="1" step="0.05" value="0.15" class="w-full mt-0.5"/></label>
       <div id="sb-k-out" class="p-2 rounded bg-[var(--card)] border border-[var(--border)] font-mono space-y-0.5"></div>
     </div>
     <div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-2">
-      <div class="font-mono font-semibold text-[var(--foreground)]">2. SARM1 Washout: Orthosteric BEXi vs T-Lock (#1 EALS-030)</div>
+      <div class="font-mono font-semibold text-[var(--foreground)]">2. SARM1 Washout: Orthosteric BEXi vs T-Lock (#4 EALS-030)</div>
       <select id="sb-s-mode" aria-label="STMN2-SARM1 interaction model" class="w-full bg-[var(--card)] border border-[var(--border)] rounded px-2 py-1 text-xs font-mono">
         <option value="bliss">Mode 1 (Default): Parallel Bliss Independence (Krus 2022)</option>
         <option value="mwc">Mode 2: Hypothetical Indirect L_eff Shift (Unproven in Mice)</option>
@@ -237,7 +237,7 @@ function initSandboxes(){
       <div id="sb-s-out" class="p-2 rounded bg-[var(--card)] border border-[var(--border)] font-mono space-y-0.5"></div>
     </div>
     <div class="p-3 rounded bg-[var(--background)] border border-[var(--card-border)] space-y-2">
-      <div class="font-mono font-semibold text-[var(--foreground)]">3. MIROCALS Ph3 Survival &amp; Assay Sizing (#2 EALS-031)</div>
+      <div class="font-mono font-semibold text-[var(--foreground)]">3. MIROCALS Ph3 Survival &amp; Assay Sizing (#5 EALS-031)</div>
       <select id="sb-m-pre" aria-label="MIROCALS follow-up horizon preset" class="w-full bg-[var(--card)] border border-[var(--border)] rounded px-2 py-1 text-xs font-mono">
         <option value="0.41">Preset A: 36–42 mo Event-Driven Follow-Up (P0=0.41)</option>
         <option value="0.37">Preset B: &lt;750 pg/mL Zero-Death Stratum Dilution (P0=0.37)</option>

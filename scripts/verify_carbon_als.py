@@ -684,7 +684,7 @@ def run_selftest(mode: str = "full") -> None:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Verify ExploreALS v1.6 registries, 64-char SHA-256 anchors, & gates.")
+    ap = argparse.ArgumentParser(description="Verify ExploreALS v2.0 registries, 64-char SHA-256 anchors, & gates.")
     ap.add_argument("--mode", choices=("auto", "full", "cached"), default="auto")
     args = ap.parse_args()
     eff_mode = resolve_mode(args.mode)
@@ -707,7 +707,7 @@ def main() -> None:
         f"PASS [{eff_mode}]: All {n_reg} registries, {n_stat}/{n_stat} recorded 64-char SHA-256 contrast digests "
         f"({n_uniq_anc} unique anchors; {n_matched_local}/{n_stat} locally byte/EOL-matched in {eff_mode} mode), "
         f"{n_ds} dataset manifest entries, 55-hypothesis/28-interval portfolio, "
-        "ExploreALS v1.6 Explorer + 8 Monographs, biosecurity/provenance gates, and self-tests verified (0 errors)."
+        "ExploreALS v2.0 Explorer + 8 Monographs, biosecurity/provenance gates, and self-tests verified (0 errors)."
     )
 
 

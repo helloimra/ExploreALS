@@ -3,7 +3,7 @@ from __future__ import annotations
 
 REPLICATION_TAB_JS = r"""
 let repMode = 'runs';
-let selectedRepKey = 'FLAGSHIP-EALS-030';
+let selectedRepKey = 'FLAGSHIP-EALS-001';
 let repReturnDossier = '';
 let repReturnTab = 'dossiers';
 

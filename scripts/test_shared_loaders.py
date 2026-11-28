@@ -328,11 +328,11 @@ def main() -> None:
     assert legacy_to_accession("C015-N1") == "EALS-015.1" and accession_to_legacy("EALS-015.1") == "C015-N1"
     for q_in, exp_pair in (
         ("c006", ("EALS-006", None)), ("c6", ("EALS-006", None)), ("eals6", ("EALS-006", None)), ("006", ("EALS-006", None)),
-        ("#4", ("EALS-006", None)), ("kcnq2", ("EALS-006", None)), ("dn013", ("EALS-046", None)), ("dn-13", ("EALS-046", None)),
+        ("#3", ("EALS-006", None)), ("#4", ("EALS-030", None)), ("kcnq2", ("EALS-006", None)), ("dn013", ("EALS-046", None)), ("dn-13", ("EALS-046", None)),
         ("d013", ("EALS-046", None)), ("maob", ("EALS-046", None)), ("s06", ("EALS-030", None)), ("sarm1", ("EALS-030", None)),
         ("l01", ("EALS-053", None)), ("cgas", ("EALS-053", None)), ("#25", ("EALS-053", None)),
-        ("l02", ("EALS-054", None)), ("nadsyn1", ("EALS-054", None)), ("#17", ("EALS-054", None)),
-        ("l03", ("EALS-055", None)), ("cyfip2", ("EALS-055", None)), ("#18", ("EALS-055", None)),
+        ("l02", ("EALS-054", None)), ("nadsyn1", ("EALS-054", None)), ("#16", ("EALS-054", None)),
+        ("l03", ("EALS-055", None)), ("cyfip2", ("EALS-055", None)), ("#17", ("EALS-055", None)),
         ("scfd1", ("EALS-015", "EALS-015.1")), ("c015-n2", ("EALS-015", "EALS-015.2")), ("eals-015.2", ("EALS-015", "EALS-015.2")),
     ):
         assert resolve_candidate_query(q_in, rk_map, sub_slug) == exp_pair, f"Failed query {q_in}: {resolve_candidate_query(q_in, rk_map, sub_slug)}"

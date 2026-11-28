@@ -1,4 +1,4 @@
-"""Flagship Reproducer #3: EALS-001 — UNC13A Cryptic-Exon Steric SSO (Tier 2, Act #3 / Bio #1)."""
+"""Flagship Reproducer #1: EALS-001 — UNC13A Cryptic-Exon Steric SSO (Tier 2, Act #1 / Bio #1)."""
 from __future__ import annotations
 
 import sys
@@ -30,7 +30,7 @@ def main() -> None:
     lead2 = ot_rows["chr19:17642537-17642554(-)"]
 
     checks = [
-        assert_equal("Portfolio Actionable Rank & Biological Rank #1", f"Act #{port['unified_rank']} ({port['decision']})", "Act #3 (KEEP_CORE)"),
+        assert_equal("Portfolio Actionable Rank & Biological Rank #1", f"Act #{port['unified_rank']} ({port['decision']})", "Act #1 (KEEP_CORE)"),
         assert_close(f"[MEASURED:{src_tag}] Brown 2022 UNC13A cryptic junction dPSI", ce_inc, 0.4632, rtol=1e-3),
         assert_close(f"[MEASURED:{src_tag}] Spillman 2026 C9-FTD synaptosome UNC13A log2FC", syn_lfc, -0.2496, rtol=1e-3),
         assert_equal("Promoted Lead #2 Harmonized Off-Target Status (pm2_25=4 -> CAUTION)", f"{lead2['offtarget_safety_status']}:{lead2['premRNA_2mm_splice25bp_pc_genes']}", "CAUTION_1MM_OR_WOBBLE_NONCONSTRAINED:4"),

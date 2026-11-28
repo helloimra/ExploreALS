@@ -13,9 +13,9 @@
     "DROP": 16
   },
   "counts_by_scientific_tier": {
-    "TIER_1_ACTIONABLE_NOW": 2,
     "TIER_2_FOCUSED_GATE_FIRST": 6,
-    "TIER_3_EXPLORATORY_DISCOVERY": 23,
+    "TIER_3_EXPLORATORY_DISCOVERY": 19,
+    "TIER_4_PARKED_INSUFFICIENT_EVIDENCE": 6,
     "COMPANION_PROTOCOL_ONLY": 1,
     "BIOMARKER_BENCHMARK_ONLY": 7,
     "DROPPED_FALSIFIED_EXCLUDED": 16
@@ -29,16 +29,17 @@
   },
   "origin_x_tier_matrix": {
     "CURATED_CLINICAL_33": {
-      "TIER_1_ACTIONABLE_NOW": 2,
-      "TIER_2_FOCUSED_GATE_FIRST": 4,
-      "TIER_3_EXPLORATORY_DISCOVERY": 10,
+      "TIER_2_FOCUSED_GATE_FIRST": 5,
+      "TIER_3_EXPLORATORY_DISCOVERY": 8,
+      "TIER_4_PARKED_INSUFFICIENT_EVIDENCE": 3,
       "COMPANION_PROTOCOL_ONLY": 1,
       "BIOMARKER_BENCHMARK_ONLY": 4,
       "DROPPED_FALSIFIED_EXCLUDED": 12
     },
     "PHASE3B_DENOVO_19": {
-      "TIER_2_FOCUSED_GATE_FIRST": 2,
-      "TIER_3_EXPLORATORY_DISCOVERY": 10,
+      "TIER_2_FOCUSED_GATE_FIRST": 1,
+      "TIER_3_EXPLORATORY_DISCOVERY": 8,
+      "TIER_4_PARKED_INSUFFICIENT_EVIDENCE": 3,
       "BIOMARKER_BENCHMARK_ONLY": 3,
       "DROPPED_FALSIFIED_EXCLUDED": 4
     },
@@ -772,11 +773,11 @@
   },
   "registry_sha12": {
     "candidate_accessions": "f9260e5c0644",
-    "phase4_unified_portfolio": "c7f0e4a1938c",
+    "phase4_unified_portfolio": "26a145621453",
     "phase4_unified_cis_intervals": "d411b593d372",
     "phase3_sso_offtarget_audit": "84fbbcd5b9e2",
-    "phase3_execution_readiness": "e51564f37ac1",
-    "phase3b_denovo_candidates": "1274d48ca47d",
+    "phase3_execution_readiness": "0d6ff12817d2",
+    "phase3b_denovo_candidates": "836d4e47ebd4",
     "phase3b_denovo_sso_intervals": "d7477c8657b0",
     "living_evidence_candidates": "4f256660a890"
   }

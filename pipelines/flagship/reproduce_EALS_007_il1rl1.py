@@ -1,4 +1,4 @@
-"""Flagship Reproducer #6: EALS-007 — IL1RL1 / sST2 Decoy Suppression (Tier 2, Act #6 / Bio #12)."""
+"""Flagship Reproducer #8: EALS-007 — IL1RL1 / sST2 Decoy Suppression (Tier 3 Deep-Dive, Act #22 / Bio #13)."""
 from __future__ import annotations
 
 import sys
@@ -38,7 +38,7 @@ def main() -> None:
     pas_aud = t4["c007_cterminome_and_zone1_pas_modality_audit"]
     z1_lead = pas_aud["isoform_selective_rna_modality_zones_1based_grch38"]["zone_1_top_steric_moe_intervals"][0]
     checks = [
-        assert_equal("Portfolio Actionable Rank & Decision", f"#{port['unified_rank']} ({port['decision']})", "#6 (KEEP_EXPLORATORY_UNPROVEN)"),
+        assert_equal("Portfolio Actionable Rank & Decision", f"#{port['unified_rank']} ({port['decision']})", "#22 (KEEP_EXPLORATORY_UNPROVEN)"),
         assert_close(f"[MEASURED:{src_tag}] Edinburgh donor-collapsed non-C9 endothelial IL1RL1 dlog2CPM (n=7 Ctrl)", ed_diff, 3.1067, rtol=0.01),
         assert_close(f"[MEASURED:{src_tag}] Edinburgh endothelial Welch two-sided p (n=28: 21 non-C9 vs 7 Ctrl)", ed_p, 0.00698, rtol=0.02),
         assert_close(f"[MEASURED:{src_tag}] Zhang 2026 55-um Visium MN-niche spot log2FC (n=14/18 sections)", zh_spot, 3.76, rtol=0.02),

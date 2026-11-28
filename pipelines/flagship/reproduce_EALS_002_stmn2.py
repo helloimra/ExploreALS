@@ -1,4 +1,4 @@
-"""Flagship Reproducer #5: EALS-002 — STMN2 Cryptic-Exon-2a Steric SSO (Tier 2, Act #5 / Bio #2)."""
+"""Flagship Reproducer #2: EALS-002 — STMN2 Cryptic-Exon-2a Steric SSO (Tier 2, Act #2 / Bio #2)."""
 from __future__ import annotations
 
 import sys
@@ -31,7 +31,7 @@ def main() -> None:
     lead2 = ot_rows["chr8:79616829-79616846(+)"]
 
     checks = [
-        assert_equal("Portfolio Actionable Rank & Biological Rank #2", f"Act #{port['unified_rank']} ({port['decision']})", "Act #5 (KEEP_CORE)"),
+        assert_equal("Portfolio Actionable Rank & Biological Rank #2", f"Act #{port['unified_rank']} ({port['decision']})", "Act #2 (KEEP_CORE)"),
         assert_close(f"[MEASURED:{src_tag}] Brown 2022 STMN2 Exon-2a cryptic junction dPSI", dpsi_obs, 0.4820, rtol=1e-3),
         assert_close(f"[MEASURED:{src_tag}] Spillman C9-FTD homogenate STMN2 log2FC (p=0.014, padj=0.113)", hom_obs, -0.4825, rtol=1e-3),
         assert_close("[MEASURED] Derived cortical STMN2 protein change % (2^log2FC - 1)", pct_loss, -28.43, rtol=0.01),

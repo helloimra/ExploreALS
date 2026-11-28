@@ -90,7 +90,7 @@ def main() -> None:
     p80 = dec_ext["matched_genotype_p80_pass_rates"]
     aud = br_json["pooled_ds045_center_audit"]
     oh = br_json["independent_external_study_oh2023_pmc10215566"]
-    tier_counts = {t: sum(1 for r in rd_rows if r["scientific_actionability_tier"] == t) for t in ("TIER_1_ACTIONABLE_NOW", "TIER_2_FOCUSED_GATE_FIRST", "TIER_3_EXPLORATORY_DISCOVERY", "COMPANION_PROTOCOL_ONLY")}
+    tier_counts = {t: sum(1 for r in rd_rows if r["scientific_actionability_tier"] == t) for t in ("TIER_1_ACTIONABLE_NOW", "TIER_2_FOCUSED_GATE_FIRST", "TIER_3_EXPLORATORY_DISCOVERY", "TIER_4_PARKED_INSUFFICIENT_EVIDENCE", "COMPANION_PROTOCOL_ONLY")}
     all_16_ids = ",".join(r["candidate_id"] for r in rd_rows)
 
     _upsert_csv(REG_DIR / "evidence_ledger.csv", "evidence_id", [
@@ -134,9 +134,9 @@ def main() -> None:
             "cohort_and_stratum": f"All 17 non-dropped survivors ({all_16_ids})",
             "assay_and_contrast": "Separation of Clinical Readiness (TRL) from Scientific Actionability & Next-Gate Experimental Class, atomic 1-clause hurdles, and 4-column backup symmetry",
             "effect_direction": "TRL_SEPARATED_FROM_SCIENTIFIC_DISCOVERY_PRIORITY_ACROSS_17_SURVIVORS",
-            "effect_estimate": f"TIER_1={tier_counts['TIER_1_ACTIONABLE_NOW']} (S06 T-lock Ph1b, S07 calibrated-pNfH Ph3), TIER_2={tier_counts['TIER_2_FOCUSED_GATE_FIRST']} (C001, C006, C002, C007), TIER_3={tier_counts['TIER_3_EXPLORATORY_DISCOVERY']} (novel genetics/pathology leads C022, C014, S09, C018, C015, C023, C016 ahead of screen hits C020, C019, S02), PROTOCOL={tier_counts['COMPANION_PROTOCOL_ONLY']} (C005)",
+            "effect_estimate": f"TIER_1={tier_counts['TIER_1_ACTIONABLE_NOW']} (0 programs), TIER_2={tier_counts['TIER_2_FOCUSED_GATE_FIRST']} (C001, C002, C006, S06, S07), TIER_3={tier_counts['TIER_3_EXPLORATORY_DISCOVERY']} (C022, C015, C014, S09, C018, C007, C023, C016), TIER_4_PARKED={tier_counts['TIER_4_PARKED_INSUFFICIENT_EVIDENCE']} (C020, C019, S02), PROTOCOL={tier_counts['COMPANION_PROTOCOL_ONLY']} (C005)",
             "p_value": "", "fdr_or_adjusted_p": "", "sample_size_n": "", "epistemic_weight": "HIGH",
-            "notes": f"Portfolio-wide triage covering {all_16_ids}: decomposes compound hurdles atomically, enforces KEEP_CORE-first TIER_1 ordering, moves C006 to TIER_2_FOCUSED_GATE_FIRST pending Intron-5 ISS-vs-ISE microwalk proof, applies ICH M3(R2) / 21 CFR 312.23(b) single-entity GLP tox rules prior to Stage 2 21 CFR 300.50 combination testing, populates COARSE_PRIOR_ONLY tags, and maintains symmetric 4-column backups.",
+            "notes": f"Portfolio-wide triage covering {all_16_ids} (v2.0 governance revision): decomposes compound hurdles atomically, moves S06 (4 hurdles incl. Cys311Ala/intact-MS verification) and S07 (3 hurdles incl. Treg TSDR/CD56bright NK/sCD25 durability) to TIER_2_FOCUSED_GATE_FIRST (0 TIER_1), orders C001 > C002 > C006 > S06 > S07, demotes C007 to TIER_3_EXPLORATORY_DISCOVERY (3 hurdles incl. iPSC neurovascular-microglial tri-culture BBB-brake sign), parks stalled screen-driven drugs C020, C019, and S02 in TIER_4_PARKED_INSUFFICIENT_EVIDENCE while preserving KEEP_EXPLORATORY_UNPROVEN, applies ICH M3(R2) / 21 CFR 312.23(b) single-entity GLP tox rules prior to Stage 2 21 CFR 300.50 combination testing, populates COARSE_PRIOR_ONLY tags, and maintains symmetric 4-column backups.",
         },
     ])
 

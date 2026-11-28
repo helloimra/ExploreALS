@@ -2,8 +2,8 @@
 from __future__ import annotations
 
 DOSSIER_JS_VIEW = """
-const MONOGRAPH_ORDER = ['EALS-030','EALS-031','EALS-001','EALS-006','EALS-002','EALS-007','EALS-034','EALS-037'];
-let dossierId = 'EALS-030';
+const MONOGRAPH_ORDER = ['EALS-001','EALS-002','EALS-006','EALS-030','EALS-031','EALS-034','EALS-037','EALS-007'];
+let dossierId = 'EALS-001';
 let dossierSlice = 'ALL';
 let dossierLens = 'ALL';
 
@@ -18,6 +18,7 @@ const ENUM_LABELS = {
   TIER_1_ACTIONABLE_NOW: 'Tier 1 · Translational Lead',
   TIER_2_FOCUSED_GATE_FIRST: 'Tier 2 · Validation Gate',
   TIER_3_EXPLORATORY_DISCOVERY: 'Tier 3 · Exploratory Discovery',
+  TIER_4_PARKED_INSUFFICIENT_EVIDENCE: 'Tier 4 · Parked Watchlist (Insufficient Evidence)',
   COMPANION_PROTOCOL_ONLY: 'Clinical PD Protocol',
   BIOMARKER_BENCHMARK_ONLY: 'Biomarker / SOC Benchmark',
   DROPPED_FALSIFIED_EXCLUDED: 'Drop · Excluded Regimens',
@@ -129,6 +130,12 @@ const HURDLE_TOK = {
   SPHINGOLIPID:'sphingolipid', SCREENING:'screening', SAFEGUARD:'safeguard', SPTLC1:'SPTLC1', SPTLC2:'SPTLC2',
   INTRON15:'Intron-15', INEURON:'iNeuron', NAMPT:'NAMPT', NMNAT2:'NMNAT2', NMN:'NMN', NAD:'NAD+', NMD:'NMD',
   CYFIP1:'CYFIP1', CYFIP2:'CYFIP2', DEE65:'DEE65', WRC:'WRC', NADSYN1:'NADSYN1', LONGREAD:'long-read',
+  CYS311ALA:'Cys311Ala', NONCOVALENT:'non-covalent', TREG:'Treg', TSDR:'TSDR', CD56BRIGHT:'CD56bright',
+  NK:'NK', SCD25:'sCD25', TRICULTURE:'tri-culture', NEUROVASCULAR:'neurovascular', MICROGLIAL:'microglial',
+  TE:'TE', EC80:'EC80', DRG:'DRG', MUNE:'MUNE', CMAP:'CMAP', LC3YLATION:'LC3ylation', OFFTARGET:'off-target',
+  OFFTARGETS:'off-targets', ARM:'ARM', INTRON9:'Intron-9', A3SS:'A3SS', '1OF10':'1/10', EDINBURGH:'Edinburgh',
+  TDP:'TDP', PH2:'Ph2', CBOUTON:'C-bouton', RNP:'RNP', POLYA:'polyA', GOLGI:'Golgi', SNARE:'SNARE',
+  RNA:'RNA', VRG50635:'VRG50635', '600MG':'600 mg', '1DEOXYSPL':'1-deoxysphingolipid', B:'B',
 };
 function humanizeEnum(s){
   if(!s || s === 'NONE') return 'None';
@@ -156,6 +163,7 @@ function formatHurdle(code){
     .replace(/1VS2/g, '1 vs 2')
     .replace(/FE_O_FE/g, '[Fe-O-Fe]')
     .replace(/TPN101_TP/g, 'TPN-101-TP')
+    .replace(/FAIR_ALS_II/g, 'FAIR-ALS II')
     .replace(/FAIRPARK_II/g, 'FAIRPARK-II')
     .replace(/PMID_37317638/g, 'PMID:37317638')
     .replace(/KP_UU/g, 'KPUU')
@@ -179,12 +187,12 @@ function formatHurdle(code){
     .replace(/NMD_BLOCKED/g, 'NMD-blocked');
   const words = pre.split('_').filter(Boolean).map(w => {
     if(HURDLE_TOK[w]) return HURDLE_TOK[w];
-    if(/^(#|<=|>=|<|>|-0\\.|[0-9]|EALS-|pLI=|Chronos=|factorial|ICH|independent|Pre-|Post-|ALS-|non-|aa |\\[Fe|NAMPT->|NMN\\/|NMD-)/.test(w)) return w;
+    if(/^(#|<=|>=|<|>|-0\\.|[0-9]|EALS-|pLI=|Chronos=|factorial|ICH|independent|Pre-|Post-|ALS-|non-|aa |\\[Fe|NAMPT->|NMN\\/|NMD-|Ph2\\/|Ph1a\\/|TPN-|FAIR|PMID:)/.test(w)) return w;
     if(/^RS[0-9]+$/.test(w)) return w.toLowerCase();
     return w.toLowerCase();
   });
   const out = words.join(' ');
-  return out ? (out[0].toUpperCase() + out.slice(1)) : code;
+  return out ? (/^(?:iPSC|iMGL|iNeuron|sST2|sCD25|pNfH|pSTAT|pLI=|pSer3|cADPR|cGAS|mRNA|snRNA|tSTMN2|q48h|n>=|rs[0-9]+)/.test(out) ? out : (out[0].toUpperCase() + out.slice(1))) : code;
 }
 function formatPrior(code){
   if(!code || code === 'NONE') return 'None: Direct empirical data only';
@@ -521,9 +529,11 @@ function renderEdgeRibbon(s, cid, compact=false){
   const k = s.edge_kind || 'HIGH_HURDLE_WATCHLIST';
   const pillCls = k === 'FALSIFIED_TRAP'
     ? 'text-[var(--error)] border-[var(--error)]'
-    : (k === 'HIGH_HURDLE_WATCHLIST'
-      ? 'text-[var(--warning)] border-[var(--warning)]'
-      : 'text-[var(--primary)] border-[var(--primary)]');
+    : (k === 'TIER4_PARKED_WATCHLIST'
+      ? 'text-[var(--muted-foreground)] border-[var(--border)]'
+      : (k === 'HIGH_HURDLE_WATCHLIST'
+        ? 'text-[var(--warning)] border-[var(--warning)]'
+        : 'text-[var(--primary)] border-[var(--primary)]'));
   const rawTxt = (compact && typeof firstGateSummary === 'function') ? firstGateSummary(s.edge_text, 175) : s.edge_text;
   return `<div class="${compact?'p-2.5':'p-3.5'} rounded-lg bg-[var(--content)] border border-[var(--card-border)] space-y-1.5 text-xs">
     <div><span class="inline-block px-1.5 py-0.5 rounded border font-mono font-semibold ${pillCls}">${esc(s.edge_label)}</span></div>
@@ -720,6 +730,7 @@ function getFilteredDossierList(){
     if(activeLensObj && !activeLensObj.ids.includes(r.id)) continue;
     if(dossierSlice === 'T12' && r.tier !== 'TIER_1_ACTIONABLE_NOW' && r.tier !== 'TIER_2_FOCUSED_GATE_FIRST') continue;
     if(dossierSlice === 'WATCH' && r.tier !== 'TIER_3_EXPLORATORY_DISCOVERY') continue;
+    if(dossierSlice === 'PARK' && r.tier !== 'TIER_4_PARKED_INSUFFICIENT_EVIDENCE') continue;
     if(dossierSlice === 'BIO' && r.tier !== 'BIOMARKER_BENCHMARK_ONLY' && r.tier !== 'COMPANION_PROTOCOL_ONLY') continue;
     if(dossierSlice === 'DROP' && r.tier !== 'DROPPED_FALSIFIED_EXCLUDED') continue;
     if(!q){ scored.push({r: r, tier: 9}); continue; }
@@ -734,16 +745,19 @@ function getFilteredDossierList(){
 }
 
 function renderDossierSidebar(){
+  const nT1 = DATA_PORT.filter(r => r.tier === 'TIER_1_ACTIONABLE_NOW').length;
   const nT12 = DATA_PORT.filter(r => r.tier === 'TIER_1_ACTIONABLE_NOW' || r.tier === 'TIER_2_FOCUSED_GATE_FIRST').length;
   const nT3 = DATA_PORT.filter(r => r.tier === 'TIER_3_EXPLORATORY_DISCOVERY').length;
+  const nT4 = DATA_PORT.filter(r => r.tier === 'TIER_4_PARKED_INSUFFICIENT_EVIDENCE').length;
   const nBio = DATA_PORT.filter(r => r.tier === 'BIOMARKER_BENCHMARK_ONLY' || r.tier === 'COMPANION_PROTOCOL_ONLY').length;
   const nDrop = DATA_PORT.filter(r => r.tier === 'DROPPED_FALSIFIED_EXCLUDED').length;
   const sliceDefs = [
     ['ALL', 'All'],
-    ['T12', `T1/2 (${nT12})`],
+    ['T12', nT1 ? `T1/2 (${nT12})` : `T2 (${nT12})`],
     ['WATCH', `T3 (${nT3})`],
-    ['BIO', `Bio & Calib (${nBio})`],
-    ['DROP', `Falsified (${nDrop})`],
+    ['PARK', `T4 (${nT4})`],
+    ['BIO', `Bio (${nBio})`],
+    ['DROP', `Drop (${nDrop})`],
   ];
   const sBar = document.getElementById('d-slice-bar');
   if(sBar){
@@ -768,7 +782,7 @@ function renderDossierSidebar(){
     const on = r.id === dossierId;
     const dotCol = r.tier==='TIER_1_ACTIONABLE_NOW' ? 'var(--success)'
       : ((r.tier==='TIER_2_FOCUSED_GATE_FIRST' || r.tier==='BIOMARKER_BENCHMARK_ONLY' || r.tier==='COMPANION_PROTOCOL_ONLY') ? 'var(--primary)'
-      : (r.tier==='DROPPED_FALSIFIED_EXCLUDED' ? 'var(--error)' : 'var(--warning)'));
+      : (r.tier==='DROPPED_FALSIFIED_EXCLUDED' ? 'var(--error)' : (r.tier==='TIER_4_PARKED_INSUFFICIENT_EVIDENCE' ? 'var(--muted-foreground)' : 'var(--warning)')));
     const cls = on ? 'bg-[var(--content)] border-[var(--primary)] border-l-2 font-semibold text-[var(--foreground)]' : 'bg-[var(--background)] border-[var(--card-border)] hover:bg-[var(--content)]';
     const mq = dSearchQ ? matchCandidateQuery(r, dSearchQ, '') : {sub: ''};
     const subM = (dSearchLow && typeof DATA_SUB !== 'undefined') ? DATA_SUB.filter(sn => sn.par === r.id && !r.name.toLowerCase().includes(sn.gene.toLowerCase()) && (sn.id === mq.sub || (sn.gene+' '+sn.id+' '+sn.role).toLowerCase().includes(dSearchLow))).map(sn => sn.gene) : [];
@@ -791,6 +805,7 @@ function renderDossierSidebar(){
   const t1 = matched.filter(r => r.tier==='TIER_1_ACTIONABLE_NOW');
   const t2 = matched.filter(r => r.tier==='TIER_2_FOCUSED_GATE_FIRST');
   const t3 = matched.filter(r => r.tier==='TIER_3_EXPLORATORY_DISCOVERY');
+  const t4 = matched.filter(r => r.tier==='TIER_4_PARKED_INSUFFICIENT_EVIDENCE');
   const bm = matched.filter(r => r.tier==='BIOMARKER_BENCHMARK_ONLY' || r.tier==='COMPANION_PROTOCOL_ONLY');
   const dr = matched.filter(r => r.tier==='DROPPED_FALSIFIED_EXCLUDED');
   const totMatched = matched.length;
@@ -800,6 +815,7 @@ function renderDossierSidebar(){
   if(t1.length) html += `<div class="sticky top-0 z-10 bg-[var(--card)] text-[var(--success)] font-mono font-semibold text-xs py-0.5">T1 &middot; Actionable (${t1.length})</div>` + t1.map(mkBtn).join('');
   if(t2.length) html += `<div class="sticky top-0 z-10 bg-[var(--card)] text-[var(--primary)] font-mono font-semibold text-xs pt-1.5 pb-0.5">T2 &middot; Validation Gate (${t2.length})</div>` + t2.map(mkBtn).join('');
   if(t3.length) html += `<div class="sticky top-0 z-10 bg-[var(--card)] text-[var(--warning)] font-mono font-semibold text-xs pt-1.5 pb-0.5">T3 &middot; Discovery (${t3.length})</div>` + t3.map(mkBtn).join('');
+  if(t4.length) html += `<div class="sticky top-0 z-10 bg-[var(--card)] text-[var(--muted-foreground)] font-mono font-semibold text-xs pt-1.5 pb-0.5">T4 &middot; Parked Watchlist (${t4.length})</div>` + t4.map(mkBtn).join('');
   if(bm.length) html += `<div class="sticky top-0 z-10 bg-[var(--card)] text-[var(--primary)] font-mono font-semibold text-xs pt-1.5 pb-0.5">Biomarkers &amp; Calibrators (${bm.length})</div>` + bm.map(mkBtn).join('');
   if(dr.length) html += `<div class="sticky top-0 z-10 bg-[var(--card)] text-[var(--error)] font-mono font-semibold text-xs pt-1.5 pb-0.5">Falsified (${dr.length})</div>` + dr.map(mkBtn).join('');
   const nav = document.getElementById('d-nav');
@@ -810,10 +826,11 @@ function renderDossierSidebar(){
       const g1 = DATA_PORT.filter(r => r.tier==='TIER_1_ACTIONABLE_NOW');
       const g2 = DATA_PORT.filter(r => r.tier==='TIER_2_FOCUSED_GATE_FIRST');
       const g3 = DATA_PORT.filter(r => r.tier==='TIER_3_EXPLORATORY_DISCOVERY');
+      const g4 = DATA_PORT.filter(r => r.tier==='TIER_4_PARKED_INSUFFICIENT_EVIDENCE');
       const gB = DATA_PORT.filter(r => r.tier==='BIOMARKER_BENCHMARK_ONLY' || r.tier==='COMPANION_PROTOCOL_ONLY');
       const gD = DATA_PORT.filter(r => r.tier==='DROPPED_FALSIFIED_EXCLUDED');
       const mkOpt = r => `<option value="${esc(r.id)}">#${r.rk} ${esc(r.name.split('(')[0].trim())} (${esc(r.id)}) ${DATA_MONOGRAPHS[r.id]?'[Monograph]':'[Dossier]'}</option>`;
-      mobSel.innerHTML = `<optgroup label="Tier 1 · Actionable Leads (${g1.length})">${g1.map(mkOpt).join('')}</optgroup><optgroup label="Tier 2 · Validation Gate (${g2.length})">${g2.map(mkOpt).join('')}</optgroup><optgroup label="Tier 3 · Exploratory Discovery (${g3.length})">${g3.map(mkOpt).join('')}</optgroup><optgroup label="Biomarkers & Functional Calibrators (${gB.length})">${gB.map(mkOpt).join('')}</optgroup><optgroup label="Dropped · Scientifically Falsified (${gD.length})">${gD.map(mkOpt).join('')}</optgroup>`;
+      mobSel.innerHTML = (g1.length ? `<optgroup label="Tier 1 · Actionable Leads (${g1.length})">${g1.map(mkOpt).join('')}</optgroup>` : '') + `<optgroup label="Tier 2 · Validation Gate (${g2.length})">${g2.map(mkOpt).join('')}</optgroup><optgroup label="Tier 3 · Exploratory Discovery (${g3.length})">${g3.map(mkOpt).join('')}</optgroup><optgroup label="Tier 4 · Parked Watchlist (${g4.length})">${g4.map(mkOpt).join('')}</optgroup><optgroup label="Biomarkers & Functional Calibrators (${gB.length})">${gB.map(mkOpt).join('')}</optgroup><optgroup label="Dropped · Scientifically Falsified (${gD.length})">${gD.map(mkOpt).join('')}</optgroup>`;
     }
     mobSel.value = dossierId;
   }
@@ -925,7 +942,7 @@ function renderDossierMain(){
       : (r.id==='EALS-017' ? 'ADJUDICATION RATIONALE: CANDIDATE CLINICAL-CSF STAGING &amp; PD PANEL'
       : 'ADJUDICATION RATIONALE: CANDIDATE CSF MARKER (PRE-VALIDATION)'));
     const vHdr = isDrop ? `ADJUDICATION RATIONALE: DROP &middot; ${esc(humanizeEnum(r.epi)).toUpperCase()}`
-      : (isBench ? benchHdr : 'ADJUDICATION RATIONALE: KEEP &middot; EXPLORATORY (UNTESTED &ne; FALSIFIED)');
+      : (isBench ? benchHdr : (r.tier === 'TIER_4_PARKED_INSUFFICIENT_EVIDENCE' ? 'ADJUDICATION RATIONALE: KEEP &middot; EXPLORATORY &middot; TIER 4 PARKED WATCHLIST (UNTESTED &ne; FALSIFIED)' : 'ADJUDICATION RATIONALE: KEEP &middot; EXPLORATORY (UNTESTED &ne; FALSIFIED)'));
     const hCell = isDrop
       ? `<div class="text-[var(--muted-foreground)] font-mono">Basis for Exclusion</div><div class="font-semibold text-[var(--error)] mt-0.5">${esc(humanizeEnum(r.epi))}</div><div class="text-[var(--muted-foreground)] mt-0.5 leading-relaxed">Deprioritized based on clinical trial futility, CNS exposure/safety limits, or assay confounding.</div>`
       : `<div class="text-[var(--muted-foreground)] font-mono">Open Validation Steps (${r.hcnt})</div><div class="flex flex-wrap gap-1 mt-1">${r.hurdles && r.hurdles !== 'NONE' ? r.hurdles.split(';').map(h=>`<span class="px-1.5 py-0.5 rounded border border-[var(--border)] text-xs leading-normal">${esc(formatHurdle(h))}</span>`).join('') : '<span class="text-[var(--muted-foreground)]">None (Reference / Biomarker)</span>'}</div>`;

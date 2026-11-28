@@ -1,4 +1,4 @@
-"""Flagship Reproducer #1: EALS-030 — SARM1 Non-Orthosteric ARM-TIR T-Lock (Tier 1, Act #1 / Bio #3)."""
+"""Flagship Reproducer #4: EALS-030 — SARM1 Non-Orthosteric ARM-TIR T-Lock (Tier 2, Act #4 / Bio #3)."""
 from __future__ import annotations
 
 import sys
@@ -69,7 +69,7 @@ def main() -> None:
         n_chains_obs, loeuf = n_chains_cached, loeuf_cached
 
     checks = [
-        assert_equal("Portfolio Actionable Rank & Decision", f"#{port['unified_rank']} ({port['decision']})", "#1 (KEEP_CORE)"),
+        assert_equal("Portfolio Actionable Rank & Decision", f"#{port['unified_rank']} ({port['decision']})", "#4 (KEEP_CORE)"),
         assert_close(f"[MEASURED:{src_tag}] PDB 9TZY single BEXi adduct bridged TIR chains", n_chains_obs, 3.0, rtol=1e-6),
         assert_close("[MEASURED] Open Targets (gnomAD) SARM1 LOEUF", float(loeuf), 1.1432, rtol=1e-3),
         assert_close("[MODEL_PRIOR] 8-mer BEXi sub-IC50 washout spike (ALS L=8, ~5x)", bexi_als_peak, 4.7268, rtol=1e-3),

@@ -1,4 +1,4 @@
-"""Public CLI entrypoint for deterministic ExploreALS v1.2 registry, SHA-256, and epistemic verification."""
+"""Public CLI entrypoint for deterministic ExploreALS v2.0 registry, SHA-256, and epistemic verification."""
 from __future__ import annotations
 
 import sys

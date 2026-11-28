@@ -22,9 +22,10 @@ TIER_ORDER = {
     "TIER_1_ACTIONABLE_NOW": 1,
     "TIER_2_FOCUSED_GATE_FIRST": 2,
     "TIER_3_EXPLORATORY_DISCOVERY": 3,
-    "COMPANION_PROTOCOL_ONLY": 4,
-    "BIOMARKER_BENCHMARK_ONLY": 5,
-    "DROPPED_FALSIFIED_EXCLUDED": 6,
+    "TIER_4_PARKED_INSUFFICIENT_EVIDENCE": 4,
+    "COMPANION_PROTOCOL_ONLY": 5,
+    "BIOMARKER_BENCHMARK_ONLY": 6,
+    "DROPPED_FALSIFIED_EXCLUDED": 7,
 }
 
 EVIDENCE_BASIS_ORDER = {
@@ -200,20 +201,20 @@ def portfolio_sort_key(row: dict[str, str], p3a_rank_map: dict[str, int], dn_idx
     if t_ord == 3:
         h_cnt = int(row["unsolved_hurdle_count"])
         is_screen_rep = 1 if row["primary_evidence_basis"] == "MEASURED_HUMAN_PK_AND_IPSC_SCREEN" else 0
-        is_sub_fdr_screen = 1 if pid in {"DN-14", "DN-17", "DN-19"} else 0
-        is_cis_target = 0 if row["candidate_type"] in {"GENE_CIS_SPLICE", "GENE_CIS_APA"} else 1
+        is_cis_target = 0 if (row["candidate_type"] in {"GENE_CIS_SPLICE", "GENE_CIS_APA"} and pid != "C007") else 1
         if is_screen_rep == 0 and is_cis_target == 0:
+            is_celf5_top = 0 if pid == "DN-04" else 1
             is_spinal_mn_cryptic = 0 if pid == "DN-05" else 1
             is_mendelian_cis = 0 if pid == "C022" else 1
-            cis_watchlist_order = {"DN-02": 1, "DN-03": 2, "DN-09": 3, "DN-08": 4, "DN-07": 5, "DN-06": 6}.get(pid, 9)
-            return (t_ord, 0, 0, 0, is_spinal_mn_cryptic, is_mendelian_cis, h_cnt, cis_watchlist_order, pid)
-        if is_sub_fdr_screen:
-            sub_fdr_order = {"DN-14": 1, "DN-17": 2, "DN-19": 3}[pid]
-            return (t_ord, is_screen_rep, is_sub_fdr_screen, 1, sub_fdr_order, h_cnt, ev_ord, src_ord, pid)
-        return (t_ord, is_screen_rep, is_sub_fdr_screen, 1, h_cnt, ev_ord, src_ord, 0, pid)
+            cis_watchlist_order = {"DN-02": 1, "DN-03": 2, "DN-09": 3, "DN-08": 4, "DN-07": 5, "DN-06": 6, "L02": 7, "L03": 8}.get(pid, 9)
+            return (t_ord, 0, 0, is_celf5_top, is_spinal_mn_cryptic, is_mendelian_cis, h_cnt, cis_watchlist_order, pid)
+        return (t_ord, is_screen_rep, 1, 0, h_cnt, ev_ord, src_ord, 0, pid)
     if t_ord == 4:
-        return (t_ord, 0, 0, 0, 0, 0, 0, pid)
+        parked_order = {"C020": 1, "C019": 2, "S02": 3, "DN-14": 4, "DN-17": 5, "DN-19": 6}
+        return (t_ord, parked_order.get(pid, 99), int(row["unsolved_hurdle_count"]), ev_ord, src_ord, 0, 0, pid)
     if t_ord == 5:
+        return (t_ord, 0, 0, 0, 0, 0, 0, pid)
+    if t_ord == 6:
         bm_order = {"C013": 1, "S08": 2, "C003": 3, "C017": 4, "DN-10": 5, "DN-11": 6, "DN-12": 7}
         return (t_ord, bm_order.get(pid, 99), 0, 0, 0, 0, 0, pid)
     epi_order = {"FALSIFIED_CLINICAL": 1, "FALSIFIED_PK_SAFETY": 2, "ARTIFACT_CONFOUNDED": 3}

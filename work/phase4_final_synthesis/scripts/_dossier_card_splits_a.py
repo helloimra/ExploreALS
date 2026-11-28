@@ -19,7 +19,7 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
         ("Korhonen et al. 2019 PMID:30705990), the Untested != Falsified triage rule mandates", "Korhonen et al. 2019 PMID:30705990.\n- Normoxic & Isoform Validation Gate: The Untested != Falsified triage rule mandates"),
     ],
     ("EALS-038", "verdict"): [
-        ("Elevated to #1 of Tier 3 Exploratory Discovery (Rank #9/55): surviving", "- Spatial & Single-MN Proteomics (Rank #9/55, #1 Tier 3): Surviving"),
+        ("High-priority Tier 3 Exploratory Discovery target (Rank #8/55): surviving", "- Spatial & Single-MN Proteomics (Rank #8/55, #2 Tier 3): Surviving"),
         ("vs 2 CTL donors / 25 cells), and C9-FTD synaptosomal loss", "vs 2 CTL donors / 25 cells).\n- Synaptosomal Depletion & Validation Gate: C9-FTD synaptosomal loss"),
     ],
     ("EALS-038", "proves"): [
@@ -54,7 +54,7 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
     ("EALS-036", "proves"): [
         ("#1 FDR-significant Ribo-seq loss", "- Ribo-seq Loss & Intron-26 Alternative 3'SS: #1 FDR-significant Ribo-seq loss"),
         ("event-specific decay) and postmortem tissue detection", "event-specific decay).\n- Postmortem Tissue & Cortical Proteomics: Postmortem tissue detection"),
-        ("\n\nProteomic and off-target profile: Kozareva et al. 2025", ", paired with Kozareva et al. 2025"),
+        ("\n\nProteomic and off-target profile: Kozareva et al. 2025", " Paired with Kozareva et al. 2025"),
         ("PMID:42789089), and GENCODE v46 6-tier off-target design", "PMID:42789089).\n- GENCODE v46 Off-Target Window Selection: GENCODE v46 off-target design"),
     ],
     ("EALS-036", "disproves"): [
@@ -162,7 +162,7 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
         ("wild-type YKT6 ALS, alongside null C9-FTD", "wild-type YKT6 ALS.\n- Null Synaptosomal DIA & Essential Cis-Golgi SNAREs: Null C9-FTD"),
     ],
     ("EALS-016", "disproves"): [
-        ("Two major findings rule out unidirectional neuronal IRP2 degradation while retaining bidirectional sensor probing: (1) Cell-type & directionality split:", "- Cell-Type & Directionality Split:"),
+        ("Two major findings rule out unidirectional neuronal IRP2 degradation while retaining bidirectional sensor probing: (1) Cell-type & directionality split: donor-collapsed", "- Cell-Type & Directionality Split: Donor-collapsed"),
         ("functional iron starvation, directly corroborated in vivo", "functional iron starvation.\n- In Vivo Irp2-Null Neurodegeneration: Directly corroborated in vivo"),
         ("PMID:22003390); (2) Bulk iron chelation", "PMID:22003390).\n- Negative Iron-Chelation Screen & Clinical Trials: Bulk iron chelation"),
     ],
@@ -170,7 +170,7 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
         ("negative control), measuring labile Fe2+", "negative control); measure labile Fe2+"),
     ],
     ("EALS-020", "verdict"): [
-        ("12-wk randomized C9orf72-ALS target engagement", "- Phase 2a Target Engagement & Sporadic ALS Gap: 12-wk randomized C9orf72-ALS target engagement"),
+        ("12-wk randomized C9orf72-ALS target engagement", "- Tier 4 Parked Watchlist · Phase 2a Target Engagement & Sporadic ALS Gap: 12-wk randomized C9orf72-ALS target engagement"),
         ("pulsed dosing open, while preclinical neuronal ClC-7", "pulsed dosing open.\n- Preclinical Vacuolation & Exploratory NfL Shifts: Preclinical neuronal ClC-7"),
         ("mean +50% [n=4]), and distinct inhibitor VRG50635", "mean +50% [n=4]).\n- Comparator VRG50635 Safety Signals & Washout Gate: Distinct inhibitor VRG50635"),
     ],
@@ -190,7 +190,7 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
     ],
     ("EALS-019", "verdict"): [
         ("Descriptive open-label ALS CSF CXCL10", "- Open-Label CXCL10 & Neuronal/Glial Rationale: Descriptive open-label ALS CSF CXCL10"),
-        ("However, EALS-019 is recalibrated to the Tier 3 exploratory watchlist because", "\n- CNS Exposure Deficit, VTE Risk & JAK1/JAK2 Trade-Off: EALS-019 is recalibrated to the Tier 3 exploratory watchlist because"),
+        ("However, EALS-019 is recalibrated to the Tier 3 exploratory watchlist because", "\n- CNS Exposure Deficit, VTE Risk & JAK1/JAK2 Trade-Off: EALS-019 is parked on the Tier 4 watchlist because"),
     ],
     ("EALS-019", "proves"): [
         ("Rank #2/107 in Bye 2025", "- Patient iPSC-MN Screen & Neuronal JAK2 APA: Rank #2/107 in Bye 2025"),
@@ -208,7 +208,8 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
     ],
     ("EALS-026", "verdict"): [
         ("Unreported randomized Phase 2/3 outcomes", "- Unreported Clinical Trials & Underpowered Autopsy Series: Unreported randomized Phase 2/3 outcomes"),
-        ("powered RCT futility; EALS-026 (", "powered RCT futility.\n- Low-Priority Tier 3 Watchlist Scope: EALS-026 ("),
+        ("powered RCT futility; EALS-026 (", "powered RCT futility.\n- Tier 4 Parked Watchlist Scope: EALS-026 ("),
+        ("is retained on the low-priority Tier 3 watchlist", "is parked on the Tier 4 Parked Watchlist (Keep · Exploratory; Untested != Falsified)"),
     ],
     ("EALS-026", "disproves"): [
         ("Randomized Phase 2/3 ALS trial NCT04082832", "- Unreported Phase 2/3 & Discontinued Clinical Program: Randomized Phase 2/3 ALS trial NCT04082832"),
@@ -228,7 +229,7 @@ CARD_SPLITS_A: dict[tuple[str, str], list[tuple[str, str]]] = {
         ("C5b-9/C5L2), alongside peer-reviewed unbound", "C5b-9/C5L2); quantify peer-reviewed unbound"),
     ],
     ("EALS-050", "verdict"): [
-        ("Retained in Tier 3 Exploratory Discovery (Rank #30/55): sub-FDR", "- Screen Thiol Buffering & Low-Dose Oral Trial (Rank #30/55): Sub-FDR"),
+        ("Parked in Tier 4 Watchlist (Insufficient Evidence · Keep · Exploratory · Rank #30/55): sub-FDR", "- Screen Thiol Buffering & Low-Dose Oral Trial (Tier 4 Parked · Rank #30/55): Sub-FDR"),
         ("1,800 mg/d EH301, yet Louwerse 1995", "1,800 mg/d EH301.\n- Underpowered Subcutaneous Trial & High-Dose CSF Penetration: Louwerse 1995"),
     ],
     ("EALS-053", "proves"): [

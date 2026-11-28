@@ -1,4 +1,4 @@
-"""Flagship Reproducer #7: EALS-034 — ATG4B Cryptic-Exon Steric SSO (Tier 2, Act #7 / Bio #6)."""
+"""Flagship Reproducer #6: EALS-034 — ATG4B Cryptic-Exon Steric SSO (Tier 2, Act #6 / Bio #6)."""
 from __future__ import annotations
 
 import sys
@@ -30,7 +30,7 @@ def main() -> None:
     b_3j = bench_3j["chr2:241668980-241668995(+)"]
 
     checks = [
-        assert_equal("Portfolio Actionable Rank & Promoted Lead #2", f"#{port['unified_rank']} ({port['lead_cis_interval_id']})", "#7 (chr2:241668970-241668987(+))"),
+        assert_equal("Portfolio Actionable Rank & Promoted Lead #2", f"#{port['unified_rank']} ({port['lead_cis_interval_id']})", "#6 (chr2:241668970-241668987(+))"),
         assert_close(f"[MEASURED:{src_tag}] Spillman C9-FTD homogenate DIA ATG4B log2FC (p=0.0227)", sp_lfc, -0.4905, rtol=1e-3),
         assert_close("[MEASURED] NYGC Cervical RIN+GC OLS beta (p=0.0010, n=197)", float(ny_c["adj_beta_tdp_vs_ctrl"]), -0.1642, rtol=1e-3),
         assert_close("[MEASURED] PDB 2Z0D deleted C-tail contacts to LC3B (<=4.5 A)", float(atg_3d["lc3b_patch_heavy_atom_contacts_le_4p5A"]), 27.0, rtol=1e-6),

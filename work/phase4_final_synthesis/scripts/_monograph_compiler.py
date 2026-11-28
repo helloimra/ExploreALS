@@ -57,8 +57,9 @@ def compile_monograph_bundle(
         r.get("accession_id") or legacy_to_accession(r["portfolio_id"])
         for r in port_rows
         if r["scientific_actionability_tier"] in {"TIER_1_ACTIONABLE_NOW", "TIER_2_FOCUSED_GATE_FIRST"}
+        or (r.get("accession_id") or legacy_to_accession(r["portfolio_id"])) in {"EALS-007", "EALS-037"}
     }
-    assert set(mono_map) == exp_pilot, f"Monograph IDs {set(mono_map)} != Tier 1+2 {exp_pilot}"
+    assert set(mono_map) == exp_pilot, f"Monograph IDs {set(mono_map)} != Expected 8 Monographs {exp_pilot}"
     for cid, spec in mono_map.items():
         for rel in spec["related"]:
             assert rel in valid_ids, f"{cid}: unknown related ID {rel}"
@@ -116,7 +117,7 @@ def write_standalone_monographs(
     mono_dir.mkdir(parents=True, exist_ok=True)
     written: list[Path] = []
     port_by_id = {r["id"]: r for r in js_port}
-    pilot_ids = ["EALS-030", "EALS-031", "EALS-001", "EALS-006", "EALS-002", "EALS-007", "EALS-034", "EALS-037"]
+    pilot_ids = ["EALS-001", "EALS-002", "EALS-006", "EALS-030", "EALS-031", "EALS-034", "EALS-037", "EALS-007"]
     keep_stems = set(pilot_ids)
     for stale_fp in mono_dir.glob("*.html"):
         if stale_fp.stem not in keep_stems:
@@ -137,7 +138,7 @@ def write_standalone_monographs(
             '<body class="bg-[var(--background)] text-[var(--foreground)] antialiased p-4 m-0 text-xs">',
             '  <div class="max-w-[1440px] mx-auto pb-4">',
             '    <div class="mb-3 flex flex-wrap items-center justify-between gap-2 bg-[var(--card)] border border-[var(--border)] rounded-lg px-4 py-2.5">',
-            '      <div class="font-mono text-xs"><span class="font-semibold">ExploreALS v1.6 &middot; Target &amp; Modality Monograph</span> <span class="text-[var(--muted-foreground)]">&middot; Ricardo Agoga</span></div>',
+            '      <div class="font-mono text-xs"><span class="font-semibold">ExploreALS v2.0 &middot; Target &amp; Modality Monograph</span> <span class="text-[var(--muted-foreground)]">&middot; Ricardo Agoga</span></div>',
             '      <div class="flex flex-wrap items-center gap-3"><a href="../CARBON_ALS_INTERACTIVE_EXPLORER.html#replication/cand/' + cid + '" class="text-[var(--link)] underline decoration-dotted hover:decoration-solid font-mono text-xs">Verify Data &amp; Code &rarr;</a><a id="explorer-back-link" href="../CARBON_ALS_INTERACTIVE_EXPLORER.html#dossier/' + cid + '" class="text-[var(--link)] underline font-mono text-xs">&larr; Open in Full 55-Hypothesis Explorer</a></div>',
             "    </div>",
             '    <div class="md:hidden mb-3 sticky top-2 z-20 bg-[var(--card)] border border-[var(--border)] rounded-lg p-2 flex items-center gap-1.5 shadow-sm">',
@@ -150,7 +151,7 @@ def write_standalone_monographs(
             '      <aside id="d-aside" aria-label="Candidate Directory" class="hidden md:flex md:flex-col bg-[var(--card)] border border-[var(--border)] rounded-lg p-2.5 gap-2 md:sticky md:top-3 max-h-[calc(100vh-1.5rem)]">',
             '        <div class="flex items-center justify-between"><span class="font-semibold text-xs">Candidate Directory</span><span id="d-nav-count" class="font-mono tabular-nums text-xs text-[var(--muted-foreground)]">55 / 55</span></div>',
             '        <div class="text-xs text-[var(--muted-foreground)] leading-normal"><span class="font-mono font-semibold text-[var(--primary)]">M</span> Full Monograph (8) &middot; Triage Dossier (47)</div>',
-            '        <input id="d-search" aria-label="Search candidate directory" type="text" placeholder="Jump: EALS-006, KCNQ2, #4..." class="w-full bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1 text-xs text-[var(--foreground)]" />',
+            '        <input id="d-search" aria-label="Search candidate directory" type="text" placeholder="Jump: EALS-006, KCNQ2, #3..." class="w-full bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1 text-xs text-[var(--foreground)]" />',
             '        <div id="d-slice-bar" class="flex flex-wrap gap-1"></div>',
             '        <select id="d-lens" aria-label="Filter by biological pathway or mechanism" class="w-full bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1 text-xs text-[var(--foreground)]"></select>',
             '        <div id="d-nav" class="space-y-0.5 flex-1 min-h-0 max-h-[68vh] overflow-y-auto pr-0.5"></div>',
@@ -166,7 +167,7 @@ def write_standalone_monographs(
             "        </div>",
             '        <div class="space-y-1">',
             '          <div class="font-mono font-semibold text-[var(--warning)]">Preclinical Research Notice &amp; AI-Assisted Workflow Disclosure</div>',
-            '          <p><strong class="text-[var(--foreground)]">Not Medical Advice:</strong> ExploreALS v1.6 is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing herein constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.</p>',
+            '          <p><strong class="text-[var(--foreground)]">Not Medical Advice:</strong> ExploreALS v2.0 is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing herein constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.</p>',
             '          <p><strong class="text-[var(--foreground)]">AI-Assisted Methodology:</strong> Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 44 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (PubMed, Europe PMC, ClinicalTrials.gov). Quantitative contrasts and accessions are programmatically verified and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors; always verify against linked primary sources before experimental use.</p>',
             "        </div>",
             "      </div>",

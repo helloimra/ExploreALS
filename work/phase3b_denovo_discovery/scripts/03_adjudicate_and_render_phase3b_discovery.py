@@ -81,7 +81,7 @@ def main() -> None:
             "datasets_used": "DS_CRYPTIC;DS_BRYCE_APA;DS029_SPILL;DS045_TRAUT;DS031_ZHANG;DS005_BYE;DS_GENCODE_V46_TX;DS_PDB_2Z0D;DS_PDB_1XFD;DS001_COUNTS;DS001_META",
             "tools_and_skills_used": "scripts.phase3b_gates;scripts.provenance_gates;uv-python",
             "reproduced_verified": "yes", "run_timestamp_utc": ts,
-            "summary": "Adjudicated 19 atomic de novo candidates (2 TIER_2_FOCUSED_GATE_FIRST [ATG4B, CELF5], 10 TIER_3_EXPLORATORY_DISCOVERY [incl. KALRN, PMX 205, Acetylcysteine, L-Serine], 3 RECLASSIFY_BENCHMARK_OR_BIOMARKER, 4 DROP [4 FALSIFIED_CLINICAL]; 0 KEEP_CORE) and 32 single-contrast evidence rows integrating portfolio-wide primary-source clinical, PK, and CSF hardening + RUN-P3B-004 deep dives.",
+            "summary": "Adjudicated 19 atomic de novo candidates (1 TIER_2_FOCUSED_GATE_FIRST [ATG4B], 8 TIER_3_EXPLORATORY_DISCOVERY [CELF5 top Tier 3, PRUNE2, KALRN, PTPRT, DLGAP1, ELK1, TRAPPC12, PFKP], 3 TIER_4_PARKED_INSUFFICIENT_EVIDENCE [PMX 205, Acetylcysteine, L-Serine], 3 RECLASSIFY_BENCHMARK_OR_BIOMARKER, 4 DROP [4 FALSIFIED_CLINICAL]; 0 KEEP_CORE) and 32 single-contrast evidence rows integrating portfolio-wide primary-source clinical, PK, and CSF hardening + RUN-P3B-004 deep dives.",
         },
         {
             "analysis_run_id": "RUN-P3B-004", "phase_batch": "Phase3B_DeNovo_Discovery",

@@ -6,7 +6,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>ExploreALS v1.6: ALS Target Triage, Splice Windows &amp; Replication Explorer</title>
+  <title>ExploreALS v2.0: ALS Target Triage, Splice Windows &amp; Replication Explorer</title>
   <style>:where(.hidden){display:none}.text-xs:not(.leading-snug):not(.leading-relaxed){line-height:1.5}table{border-collapse:collapse;width:100%}th,td{padding:6px 8px;vertical-align:top}.gate-clamp[data-clamped="true"]{position:relative;max-height:7.25rem;overflow:hidden}.gate-clamp[data-clamped="true"]::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.75rem;background:linear-gradient(to bottom,transparent,var(--background));pointer-events:none}@media(min-width:1024px){.p-workbench{height:clamp(310px,calc(100vh - 13.25rem),760px);height:clamp(310px,calc(100dvh - 13.25rem),760px)}}@media(min-width:1280px){.p-workbench{height:clamp(340px,calc(100vh - 11.75rem),780px);height:clamp(340px,calc(100dvh - 11.75rem),780px)}}.iv-table-cap{max-height:420px}@media(min-width:1024px){.iv-table-cap,.iv-detail-cap{max-height:clamp(310px,calc(100vh - 5.75rem),820px);max-height:clamp(310px,calc(100dvh - 5.75rem),820px)}}</style>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
 </head>
@@ -16,7 +16,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
       <div class="flex flex-wrap items-start justify-between gap-2">
         <div class="flex-1 min-w-[200px]">
           <div class="flex items-center gap-2 flex-wrap">
-            <span class="px-2 py-0.5 rounded font-mono font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] text-xs">ExploreALS v1.6</span>
+            <span class="px-2 py-0.5 rounded font-mono font-semibold bg-[var(--primary)] text-[var(--primary-foreground)] text-xs">ExploreALS v2.0</span>
             <h1 class="text-base font-semibold text-[var(--foreground)]">ALS Therapeutic &amp; Genetic Target Triage, Candidate Reports &amp; Replication Explorer</h1>
           </div>
           <div id="hdr-sub">
@@ -43,8 +43,8 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
         <div class="text-lg font-bold font-mono tabular-nums mt-0.5">55 <span class="text-xs font-normal text-[var(--muted-foreground)]">(6 Evidence Domains)</span></div>
       </button>
       <button type="button" data-quick-filter="TIER12" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
-        <div class="text-[var(--muted-foreground)] text-xs">Tier 1 + Tier 2 Leads</div>
-        <div class="text-lg font-bold font-mono tabular-nums text-[var(--success)] mt-0.5">8 <span class="text-xs font-normal text-[var(--muted-foreground)]">(2 T1 + 6 T2)</span></div>
+        <div class="text-[var(--muted-foreground)] text-xs">Tier 2 Validation Leads</div>
+        <div class="text-lg font-bold font-mono tabular-nums text-[var(--success)] mt-0.5">6 <span class="text-xs font-normal text-[var(--muted-foreground)]">(0 T1 + 6 T2)</span></div>
       </button>
       <button type="button" data-quick-filter="CORE" title="Causal human ALS genetics and/or human TDP-43 pathology + functional rescue" class="kpi-btn text-left bg-[var(--card)] border border-[var(--border)] hover:border-[var(--primary)] rounded-lg p-3 transition cursor-pointer">
         <div class="text-[var(--muted-foreground)] text-xs">Keep &middot; Core Leads</div>
@@ -70,7 +70,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
           <div class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3.5 space-y-2.5">
             <div class="flex flex-wrap items-center justify-between gap-2">
               <span class="px-2 py-0.5 rounded bg-[var(--background)] border border-[var(--primary)] text-[var(--primary)] font-mono font-semibold text-xs">START HERE &middot; OVERVIEW &amp; SCOPE</span>
-              <span class="font-mono text-xs text-[var(--muted-foreground)]">Updated Nov 2026 (v1.6.0)</span>
+              <span class="font-mono text-xs text-[var(--muted-foreground)]">Updated Nov 2026 (v2.0.0)</span>
             </div>
             <h2 class="text-sm font-semibold text-[var(--foreground)]">How 55 ALS Hypotheses Map Across Evidence, Validation Steps &amp; Trial Readouts</h2>
             <p class="text-xs text-[var(--muted-foreground)] leading-relaxed">Synthesizes donor-level statistics across <span class="font-mono">44</span> SHA-256-locked core replication datasets (<span class="font-mono">8</span> participant-overlap and donor-accounting groups, <span class="font-mono">208</span> SHA-256-verified statistical records across <span class="font-mono">49</span> unique source files; supplemented by <span class="font-mono">33</span> external 2025&ndash;2026 validation cohorts cross-checked in the Living Research Log; zero new wet-lab data), unbound human brain PK, and GENCODE v46 off-target scans across four triage verdicts:</p>
@@ -78,22 +78,22 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
               <div class="font-mono font-semibold text-xs text-[var(--foreground)]">Four Evidence &amp; Triage Verdicts (<span class="font-mono">Untested &ne; Falsified</span>)</div>
               <ul class="space-y-1.5 text-xs leading-relaxed">
                 <li><span class="font-mono font-semibold text-[var(--success)]">Keep &middot; Core (4):</span> Supported by human ALS genetics and/or TDP-43 rescue with a CNS-viable modality.</li>
-                <li><span class="font-mono font-semibold text-[var(--warning)]">Keep &middot; Exploratory (28):</span> Unresolved due to bulk-assay, dosing, or cohort blind spots, paired with 1 Go/No-Go test.</li>
+                <li><span class="font-mono font-semibold text-[var(--warning)]">Keep &middot; Exploratory (28):</span> Unresolved due to bulk-assay, dosing, or cohort blind spots, paired with 1 Go/No-Go test (includes <span class="font-mono">6</span> Tier 4 Parked Watchlist drugs that remain exploratory, never dropped).</li>
                 <li><span class="font-mono font-semibold text-[var(--primary)]">Benchmark / Biomarker (7):</span> Approved SOC comparator (2), clinical PD reference (1), CSF staging panel (1), or candidate CSF marker (3).</li>
                 <li><span class="font-mono font-semibold text-[var(--error)]">Drop &middot; Falsified (16):</span> Deprioritized at the tested regimen/exposure based on human ALS RCT futility (<span class="font-mono">9</span>), unbound CNS exposure or safety limits (<span class="font-mono">7</span>), or assay confounding (<span class="font-mono">0</span>).</li>
               </ul>
             </div>
             <div class="p-2.5 rounded bg-[var(--background)] border border-[var(--card-border)] border-l-4 border-l-[var(--success)] space-y-1.5">
-              <div class="font-mono font-semibold text-xs text-[var(--foreground)]">Flagship Tier 1 (2) + Tier 2 (6) Leads: Open Monograph</div>
+              <div class="font-mono font-semibold text-xs text-[var(--foreground)]">Tier 2 Validation Leads (6) &amp; Tier 3 Deep-Dive Monographs (2)</div>
               <div class="flex flex-wrap gap-1">
-                <button type="button" data-open-dossier="EALS-030" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#1 SARM1 &middot; EALS-030</button>
-                <button type="button" data-open-dossier="EALS-031" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#2 IL-2 &middot; EALS-031</button>
-                <button type="button" data-open-dossier="EALS-001" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#3 UNC13A &middot; EALS-001</button>
-                <button type="button" data-open-dossier="EALS-006" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#4 KCNQ2 &middot; EALS-006</button>
-                <button type="button" data-open-dossier="EALS-002" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#5 STMN2 &middot; EALS-002</button>
-                <button type="button" data-open-dossier="EALS-007" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#6 sST2 &middot; EALS-007</button>
-                <button type="button" data-open-dossier="EALS-034" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#7 ATG4B &middot; EALS-034</button>
-                <button type="button" data-open-dossier="EALS-037" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#8 CELF5 &middot; EALS-037</button>
+                <button type="button" data-open-dossier="EALS-001" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#1 UNC13A &middot; EALS-001</button>
+                <button type="button" data-open-dossier="EALS-002" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#2 STMN2 &middot; EALS-002</button>
+                <button type="button" data-open-dossier="EALS-006" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#3 KCNQ2 &middot; EALS-006</button>
+                <button type="button" data-open-dossier="EALS-030" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#4 SARM1 &middot; EALS-030</button>
+                <button type="button" data-open-dossier="EALS-031" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#5 IL-2 &middot; EALS-031</button>
+                <button type="button" data-open-dossier="EALS-034" class="px-1.5 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#6 ATG4B &middot; EALS-034</button>
+                <button type="button" data-open-dossier="EALS-037" title="Tier 3 Deep-Dive Monograph" class="px-1.5 py-0.5 rounded border border-dashed border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#7 CELF5 (T3) &middot; EALS-037</button>
+                <button type="button" data-open-dossier="EALS-007" title="Tier 3 Deep-Dive Monograph" class="px-1.5 py-0.5 rounded border border-dashed border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] cursor-pointer">#22 sST2 (T3) &middot; EALS-007</button>
               </div>
             </div>
             <div class="pt-1.5 border-t border-[var(--card-border)] space-y-1.5">
@@ -129,7 +129,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
                 <h2 class="text-sm font-semibold text-[var(--foreground)]">Living Research Log &middot; Trial &amp; Literature Updates</h2>
                 <span id="upd-count" class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono tabular-nums text-xs text-[var(--muted-foreground)]">__UPD_COUNT__</span>
               </div>
-              <p class="text-xs text-[var(--muted-foreground)] mt-0.5 leading-relaxed">Chronological record of post-release clinical trial readouts, newly published studies, and quantitative PK-PD/survival model revisions.</p>
+              <p class="text-xs text-[var(--muted-foreground)] mt-0.5 leading-relaxed">Chronological record of post-release clinical trial readouts, newly published studies, and quantitative PK-PD/survival model revisions. <em>Historical entries preserve point-in-time ranks; program pills show current v2.0.0 ranks.</em></p>
             </div>
             <button type="button" data-dl-reg="updates" class="px-2.5 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs text-[var(--link)] shrink-0 cursor-pointer">&darr; Updates (CSV)</button>
           </div>
@@ -153,8 +153,8 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
         <summary class="cursor-pointer font-semibold text-[var(--foreground)] select-none">Methodology &amp; Decision Guide: Clinical Regimens, Molecular Targets &amp; Evidence Triage</summary>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2.5 mt-2 border-t border-[var(--card-border)] text-[var(--muted-foreground)] leading-relaxed">
           <div><strong class="text-[var(--foreground)]">1. Clinical Regimens &amp; Molecular Targets:</strong> Evaluates 55 ALS therapeutic &amp; biomarker hypotheses across 6 biological evidence sources (including 18 complex/panel subunits and selectivity comparators) using donor-level statistics (Trautwig Emory TMT n=51 is a nested subset of n=77 DIA; multi-region NYGC/Pineda donors analyzed per-region without pooling) and unbound human CNS PK (Cu,brain / Kp,uu).</div>
-          <div><strong class="text-[var(--foreground)]">2. Untested &ne; Falsified Triage Rule:</strong> Never discards an untested hypothesis due to bulk-assay, fixed-library-concentration, or unstratified-cohort blind spots. <span class="font-mono text-[var(--warning)]" title="Untested preclinical or biofluid triage queue; prospective Go/No-Go test required">Keep &middot; Exploratory (28)</span> denotes an untested preclinical/biofluid triage queue (not therapeutic endorsement) paired with prospective Go/No-Go criteria; <span class="font-mono text-[var(--error)]" title="Deprioritized based on human RCT futility, CNS exposure/safety limits, or assay confounding">Drop &middot; Falsified (16)</span> evaluates specific clinical drug regimens/exposures separately from molecular target pathways and requires positive human RCT futility, insurmountable CNS exposure/safety limits, or confounding collapse.</div>
-          <div><strong class="text-[var(--foreground)]">3. Combinatorial Portfolio Thesis:</strong> Pairs single-agent-qualified genotype-stratified intrathecal splice rescue (evaluating 2-plex KCNQ2 EALS-006 + STMN2 EALS-002 vs. 3-plex + UNC13A EALS-001 across rs12973192/rs12608932 genotypes at a 6&ndash;9 mg [&le;3 mg/strand] total intrathecal ASO dose target vs. 12&ndash;50 mg nusinersen &amp; 100 mg tofersen; &ge;24&ndash;48 mg flagged as DRG/radiculotoxicity hazard) with oral non-covalent SARM1 ARM&ndash;TIR octamer stabilization (EALS-030, 1.0x parallel Bliss floor to ~2&ndash;7x modeled NMNAT2-coupled MWC bounds) and biomarker-gated neuroimmune modulation (EALS-031 BioVendor-bridged pNfH &le;3,700, oximetry-verified EALS-007 sST2, Tier 3 EALS-019 high-chitinase CSF glial stratum).</div>
+          <div><strong class="text-[var(--foreground)]">2. Untested &ne; Falsified Triage Rule:</strong> Never discards an untested hypothesis due to bulk-assay, fixed-library-concentration, or unstratified-cohort blind spots. <span class="font-mono text-[var(--warning)]" title="Untested preclinical or biofluid triage queue; prospective Go/No-Go test required">Keep &middot; Exploratory (28)</span> denotes an untested preclinical/biofluid triage queue (not therapeutic endorsement; including <span class="font-mono">6</span> Tier 4 Parked Watchlist drugs held behind exposure or trial-data gates, never dropped) paired with prospective Go/No-Go criteria; <span class="font-mono text-[var(--error)]" title="Deprioritized based on human RCT futility, CNS exposure/safety limits, or assay confounding">Drop &middot; Falsified (16)</span> evaluates specific clinical drug regimens/exposures separately from molecular target pathways and requires positive human RCT futility, insurmountable CNS exposure/safety limits, or confounding collapse.</div>
+          <div><strong class="text-[var(--foreground)]">3. Combinatorial Portfolio Thesis:</strong> Pairs single-agent-qualified genotype-stratified intrathecal splice rescue (evaluating 2-plex KCNQ2 EALS-006 + STMN2 EALS-002 vs. 3-plex + UNC13A EALS-001 across rs12973192/rs12608932 genotypes at a 6&ndash;9 mg [&le;3 mg/strand] total intrathecal ASO dose target vs. 12&ndash;50 mg nusinersen &amp; 100 mg tofersen; &ge;24&ndash;48 mg flagged as DRG/radiculotoxicity hazard) with oral non-covalent SARM1 ARM&ndash;TIR octamer stabilization (EALS-030, 1.0x parallel Bliss floor to ~2&ndash;7x modeled NMNAT2-coupled MWC bounds) and biomarker-gated neuroimmune modulation (EALS-031 BioVendor-bridged pNfH &le;3,700, Tier 3 oximetry-verified EALS-007 sST2, Tier 4 Parked EALS-019 high-chitinase CSF glial stratum).</div>
         </div>
         <div class="pt-2 mt-2 border-t border-[var(--card-border)] text-[var(--muted-foreground)] font-mono text-xs leading-relaxed space-y-1">
           <div><strong class="text-[var(--foreground)]">Rank &amp; Triage Key:</strong> Priority #Rk = translational priority (tier &middot; trial landscape &middot; validation steps &middot; stage) &middot; <span class="text-[var(--primary)]">Evidence #Rk</span> = curated human genetic &amp; CNS pathology ordering (39 prioritized programs; editorial order, not win probability) &middot; <span class="text-[var(--warning)]">Keep&middot;Exploratory (28)</span> = untested triage queue (not endorsement) &middot; Modeled estimates never rank candidates.</div>
@@ -182,7 +182,7 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
         </div>
       </details>
       <div id="p-filter-bar" class="bg-[var(--card)] border border-[var(--border)] rounded-lg p-3 flex flex-wrap items-center gap-2">
-        <input id="p-search" aria-label="Search candidates" type="text" placeholder="Search ID (e.g. EALS-006, #4), gene/drug, subunit (G2E3, C1QA)..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs flex-1 min-w-[200px] text-[var(--foreground)]" />
+        <input id="p-search" aria-label="Search candidates" type="text" placeholder="Search ID (e.g. EALS-006, #3), gene/drug, subunit (G2E3, C1QA)..." class="bg-[var(--background)] border border-[var(--border)] rounded px-2.5 py-1.5 text-xs flex-1 min-w-[200px] text-[var(--foreground)]" />
         <select id="p-origin" aria-label="Filter by biological evidence source" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
           <option value="ALL">Evidence Source: All (55)</option>
           <option value="GENETICS_MENDELIAN_GWAS">Human ALS Genetics: Mendelian &amp; GWAS (5)</option>
@@ -204,10 +204,11 @@ HTML_HEAD_AND_BODY = """<!DOCTYPE html>
         </select>
         <select id="p-tier" aria-label="Filter by translational priority tier" class="bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1.5 text-xs text-[var(--foreground)]">
           <option value="ALL">Priority Tier: All (55)</option>
-          <option value="TIER_12">Tier 1 + Tier 2 Leads (8)</option>
-          <option value="TIER_1_ACTIONABLE_NOW">Tier 1 &middot; Translational Lead (2)</option>
+          <option value="TIER_12">Tier 2 Leads (0 T1 + 6 T2)</option>
+          <option value="TIER_1_ACTIONABLE_NOW">Tier 1 &middot; Translational Lead (0)</option>
           <option value="TIER_2_FOCUSED_GATE_FIRST">Tier 2 &middot; Validation Gate (6)</option>
-          <option value="TIER_3_EXPLORATORY_DISCOVERY">Tier 3 &middot; Exploratory Discovery (23)</option>
+          <option value="TIER_3_EXPLORATORY_DISCOVERY">Tier 3 &middot; Exploratory Discovery (19)</option>
+          <option value="TIER_4_PARKED_INSUFFICIENT_EVIDENCE">Tier 4 &middot; Parked Watchlist (6)</option>
           <option value="BIO_AND_CAL">Biomarkers &amp; Benchmarks (8)</option>
           <option value="DROPPED_FALSIFIED_EXCLUDED">Drop &middot; Excluded Regimens (16)</option>
         </select>
@@ -309,7 +310,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
       <div class="md:hidden mb-3 sticky top-2 z-20 bg-[var(--card)] border border-[var(--border)] rounded-lg p-2 flex items-center gap-1.5 shadow-sm">
         <button id="d-mobile-prev" type="button" data-open-dossier="EALS-029" class="px-2 py-1 rounded border border-[var(--border)] font-mono text-xs shrink-0 cursor-pointer">&larr;</button>
         <select id="d-mobile-select" aria-label="Select Candidate Dossier" class="flex-1 min-w-0 truncate bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1 text-xs font-medium text-[var(--foreground)]"></select>
-        <button id="d-mobile-next" type="button" data-open-dossier="EALS-031" class="px-2 py-1 rounded border border-[var(--border)] font-mono text-xs shrink-0 cursor-pointer">&rarr;</button>
+        <button id="d-mobile-next" type="button" data-open-dossier="EALS-002" class="px-2 py-1 rounded border border-[var(--border)] font-mono text-xs shrink-0 cursor-pointer">&rarr;</button>
         <button type="button" data-toggle-d-rail="1" aria-expanded="false" aria-controls="d-aside" class="px-2 py-1 rounded border border-[var(--border)] hover:border-[var(--primary)] font-mono text-xs shrink-0 cursor-pointer">List</button>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-[268px_minmax(0,1fr)] gap-3 items-start">
@@ -319,7 +320,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
             <span id="d-nav-count" class="font-mono tabular-nums text-xs text-[var(--muted-foreground)]">55 / 55</span>
           </div>
           <div class="text-xs text-[var(--muted-foreground)] leading-normal"><span class="font-mono font-semibold text-[var(--primary)]">M</span> Full Monograph (8) &middot; Triage Dossier (47)</div>
-          <input id="d-search" aria-label="Search candidate directory" type="text" placeholder="Jump: EALS-006, KCNQ2, #4..." class="w-full bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1 text-xs text-[var(--foreground)]" />
+          <input id="d-search" aria-label="Search candidate directory" type="text" placeholder="Jump: EALS-006, KCNQ2, #3..." class="w-full bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1 text-xs text-[var(--foreground)]" />
           <div id="d-slice-bar" class="flex flex-wrap gap-1"></div>
           <select id="d-lens" aria-label="Filter by biological pathway or mechanism" class="w-full bg-[var(--background)] border border-[var(--border)] rounded px-2 py-1 text-xs text-[var(--foreground)]"></select>
           <div id="d-nav" class="space-y-0.5 flex-1 min-h-0 max-h-[68vh] overflow-y-auto pr-0.5"></div>
@@ -346,7 +347,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
             <span class="font-mono font-semibold text-xs text-[var(--primary)]">LEVEL 2 &middot; 8 FLAGSHIP &amp; RAW COHORTS</span>
             <span class="px-1.5 py-0.5 rounded border border-[var(--border)] font-mono text-xs text-[var(--muted-foreground)]">rtol = 1e-4</span>
           </div>
-          <p class="text-[var(--muted-foreground)] text-xs leading-relaxed">Runs the 8 single-command Tier 1+2 monograph reproducers immediately, or fetches the 42 external open datasets (<span class="font-mono">682.7 MB</span> across 44 SHA-256-locked resources) to rerun donor-level OLS and 254,070-tx scans.</p>
+          <p class="text-[var(--muted-foreground)] text-xs leading-relaxed">Runs the 8 single-command Flagship Monograph reproducers immediately, or fetches the 42 external open datasets (<span class="font-mono">682.7 MB</span> across 44 SHA-256-locked resources) to rerun donor-level OLS and 254,070-tx scans.</p>
           <div class="p-2 rounded bg-[var(--background)] border border-[var(--card-border)] flex items-center justify-between gap-2 font-mono text-xs">
             <span class="truncate">uv run python scripts/reproduce_all.py --flagship-only</span>
             <button type="button" data-copy-cmd="uv run python scripts/reproduce_all.py --flagship-only" class="px-2 py-0.5 rounded border border-[var(--border)] hover:border-[var(--primary)] text-[var(--link)] shrink-0 cursor-pointer">Copy</button>
@@ -479,7 +480,7 @@ HTML_TABS_AND_SCRIPT = """    <div id="view-intervals" role="tabpanel" aria-labe
         </div>
         <div class="space-y-1">
           <div class="font-mono font-semibold text-[var(--warning)]">Preclinical Research Notice &amp; AI-Assisted Workflow Disclosure</div>
-          <p><strong class="text-[var(--foreground)]">Not Medical Advice:</strong> ExploreALS v1.6 is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing herein constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.</p>
+          <p><strong class="text-[var(--foreground)]">Not Medical Advice:</strong> ExploreALS v2.0 is an independent preclinical and translational research resource intended solely for scientific hypothesis generation. Nothing herein constitutes medical advice, clinical trial recruitment, or a treatment recommendation; individuals with ALS and caregivers should always consult their neurologist or ALS care team before starting, stopping, or modifying any therapy.</p>
           <p><strong class="text-[var(--foreground)]">AI-Assisted Methodology:</strong> Curated via human-directed AI synthesis workflows paired with deterministic Python statistical pipelines across 44 open-access human ALS and preclinical resources (published tables, raw counts, and structures; zero new wet-lab data) and primary-source verification (PubMed, Europe PMC, ClinicalTrials.gov). Quantitative contrasts and accessions are programmatically verified and separated from modeled biophysical and PK-PD estimates, though synthesis prose may contain residual errors; always verify against linked primary sources before experimental use.</p>
         </div>
       </div>

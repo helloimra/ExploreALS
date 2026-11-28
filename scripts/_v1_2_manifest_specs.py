@@ -53,6 +53,12 @@ DATASET_TIER_SPECS: dict[str, tuple[str, str, str | None, str | None]] = {
         "CC0 1.0 Public Domain",
         "Experimental X-ray/cryo-EM .cif structures for human CGAS catalytic domain + G150 (6MJW, 2.405A, K427E/K428E construct) and PF-06928215 (6LRC, 1.831A), and comparator human STING1 apo dimer (6NT5, 4.10A), 2'3'-cGAMP-bound LBD (4KSY, 1.881A), and Compound 18 open-cleft antagonist (6MXE, 2.470A)",
     ),
+    "DS_PDB_NADSYN1_CYFIP2": (
+        "TIER_A_OPEN_REDISTRIBUTABLE",
+        "https://files.rcsb.org/download/{6OFB,3P8C}.cif ; https://alphafold.ebi.ac.uk/files/{AF-Q6IA69-F1,AF-Q96F07-F1}-model_v6.cif",
+        "CC0 1.0 / CC BY 4.0",
+        "Experimental X-ray and AlphaFold v6 .cif structures for human NADSYN1 octamer + NaAD/AMP/POP (PDB 6OFB, 2.84A; AF-Q6IA69-F1, 706 aa) and human CYFIP2 (AF-Q96F07-F1, 1,278 aa) vs paralog CYFIP1 WAVE regulatory complex (PDB 3P8C, 2.29A)",
+    ),
 }
 
 COHORT_OVERLAP_CLUSTERS: list[dict[str, str]] = [

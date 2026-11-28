@@ -268,7 +268,7 @@ def verify_phase4_gates(
                             errors.append(f"reports/CARBON_ALS_FINAL_PORTFOLIO_SYNTHESIS.md L{sln_i} unbalanced parens in table cell: {scell.strip()!r}")
 
         cff_fp = carbon_root / "CITATION.cff"
-        cff_ver, exp_json_bundle = "1.6.0", "exploreals_v1_6_provenance_bundle.json"
+        cff_ver, exp_json_bundle = "2.0.0", "exploreals_v2_0_provenance_bundle.json"
         if cff_fp.is_file():
             m_cv = re.search(r'^version:\s*"(\d+)\.(\d+)\.(\d+)"', cff_fp.read_text(encoding="utf-8"), re.M)
             if m_cv:
@@ -337,6 +337,7 @@ def verify_phase4_gates(
                 "Updated Nov 2026 (v1.3.0)", "ExploreALS v1.3", "202 / 202", "1. Triage Table (52)", "2. Candidate Reports (52)",
                 "Updated Nov 2026 (v1.4.0)", "ExploreALS v1.4 ", "204 / 204", "1. Triage Table (53)", "2. Candidate Reports (53)",
                 "Updated Nov 2026 (v1.5.0)", "ExploreALS v1.5 ",
+                "Updated Nov 2026 (v1.6.0)", "ExploreALS v1.6 ",
                 "Audited GRCh38", "programmatically audited", "Auditing provenance from",
                 "199 / 199", "199 Evidence", "Phase 3 RAS-ALS",
                 "Ryberg et al. 2003 J Neurochem", "deaths 49/175", "8.94x",
@@ -346,15 +347,16 @@ def verify_phase4_gates(
                 if banned in htxt:
                     errors.append(f"Dossier Schema 3.0 regression in {lbl}: found banned string '{banned}'")
             for req_str in (
-                "ExploreALS v1.6", "Ricardo Agoga", "helloimra@proton.me", "github.com/helloimra/ExploreALS",
+                "ExploreALS v2.0", "Ricardo Agoga", "helloimra@proton.me", "github.com/helloimra/ExploreALS",
                 "Not Medical Advice", "AI-Assisted Methodology",
                 "Sort: Translational Priority Rank", "Sort: Genetic &amp; Pathology Evidence",
                 "Human RCT / Genetics", "Human Cohort / PK-PD",
                 "In Vitro / 3D or Small-N", "Model / Heuristic Prior", "BioVendor",
                 "AF-Q7L622-F1", "NIH GTEx (v8 / v10)", "N/A (SOC / PD Benchmark)", "Rank &amp; Triage Key:", "Study Categories:",
-                "Updated Nov 2026 (v1.6.0)", "208 / 208", "UPD-2026-11-23-01", "UPD-2026-11-26-02",
+                "Updated Nov 2026 (v2.0.0)", "208 / 208", "UPD-2026-11-23-01", "UPD-2026-11-26-02",
                 "UPD-2026-11-27-01", "UPD-2026-11-27-02",
-                "UPD-2026-11-28-01", "UPD-2026-11-28-02", "UPD-2026-11-28-03",
+                "UPD-2026-11-28-01", "UPD-2026-11-28-02", "UPD-2026-11-28-03", "UPD-2026-11-28-04",
+                "TIER_4_PARKED_INSUFFICIENT_EVIDENCE",
                 "TDP-43 Cryptic Splicing &amp; Polyadenylation (14)",
                 "Antemortem CSF Proteomics &amp; Physiology (6)",
                 "Patient iPSC-MN Phenotypic Screen (11)",
@@ -432,6 +434,7 @@ def verify_phase4_gates(
             f"{r['accession_id']}.html"
             for r in port_rows
             if r["scientific_actionability_tier"] in {"TIER_1_ACTIONABLE_NOW", "TIER_2_FOCUSED_GATE_FIRST"}
+            or r["accession_id"] in {"EALS-007", "EALS-037"}
         }
         if mode == "full":
             if {p.name for p in mono_htmls} != exp_pilot_files:

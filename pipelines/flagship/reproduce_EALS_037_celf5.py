@@ -1,4 +1,4 @@
-"""Flagship Reproducer #8: EALS-037 — CELF5 Cryptic-Exon Steric SSO (Tier 2, Act #8 / Bio #9)."""
+"""Flagship Reproducer #7: EALS-037 — CELF5 Cryptic-Exon Steric SSO (Tier 3 Deep-Dive, Act #7 / Bio #10)."""
 from __future__ import annotations
 
 import sys
@@ -39,7 +39,7 @@ def main() -> None:
     rrm2 = celf["celf5_afdb_and_3nmr_rrm2_truncation"]
     ph = celf["celf5_local_lsv_nmd_and_ejc_audit"]
     checks = [
-        assert_equal("Portfolio Actionable Rank & Clean Lead #1", f"#{port['unified_rank']} ({port['lead_cis_interval_id']})", "#8 (chr19:3278299-3278318(+))"),
+        assert_equal("Portfolio Actionable Rank & Clean Lead #1", f"#{port['unified_rank']} ({port['lead_cis_interval_id']})", "#7 (chr19:3278299-3278318(+))"),
         assert_close("[MEASURED] NYGC Cervical RIN+GC OLS beta (p=0.0172)", float(ny_c["adj_beta_tdp_vs_ctrl"]), -0.4020, rtol=1e-3),
         assert_close("[MEASURED] Cervical mn_neur_z-residualized tSTMN2 neuronal tail %", float(ny_c["within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal"]), 1.90, rtol=0.02),
         assert_close("[MEASURED] Lumbar mn_neur_z-residualized tSTMN2 neuronal tail %", float(ny_l["within_tdp_mn_adj_pct_more_neg_noncryptic_neuronal"]), 0.14, rtol=0.05),

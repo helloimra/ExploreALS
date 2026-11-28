@@ -1,4 +1,4 @@
-"""Translational Monograph Standard v3.1 (5Rs + Open Targets + Script/Checksum Provenance) — Part 3: TIER_2B (#7 DN-01, #8 DN-04)."""
+"""Translational Monograph Standard v3.1 (5Rs + Open Targets + Script/Checksum Provenance) — Part 3: #6 DN-01 (Tier 2) & #7 DN-04 (Tier 3 Deep-Dive)."""
 from __future__ import annotations
 
 MONOGRAPH_SPECS_T2B: dict[str, dict] = {
@@ -17,7 +17,7 @@ MONOGRAPH_SPECS_T2B: dict[str, dict] = {
         "verdict_box": {
             "pass_gate": (
                 "- Graded Human iPSC-MN Rescue & Safety Microwalk: SSO #2 vs #1 and Torres 2024 16-nt LNA ASO 3J benchmark (plus 1-nt microwalk and Ca2+/Mg2+-formulated human neuron Ca2+-oscillation, PS-protein-binding, and DRG safety screens, PMID:39305312, PMID:31036929, PMID:35166597, PMID:39460376) across graded 30%/60%/90% TDP-43-CRISPRi human iPSC-MNs restores full-length ATG4B protein and normalizes membrane LC3ylation (with ATG4A/C/D paralog, CLN6/DOCK3/SNRNP200 off-target splicing, and N-terminal ~39 kDa immunoblot checks).\n"
-                "- Single-Neuron Cervical Alpha-MN Penetrance: Stage-(ii) partially nuclear-TDP-43-depleted / pre-inclusion surviving cervical (C3–C8) lamina IX alpha-MN ChAT + nuclear TDP-43 + duplex BaseScope ISH across <18–24 mo sALS vs SOD1/FUS-ALS negative-TDP controls (co-assaying ATG4B, CELF5, #9 DN-05 PRUNE2, KCNQ2-DeltaE5, and tSTMN2) plus FACS RT-ddPCR confirms single-MN cryptic-exon penetrance."
+                "- Single-Neuron Cervical Alpha-MN Penetrance: Stage-(ii) partially nuclear-TDP-43-depleted / pre-inclusion surviving cervical (C3–C8) lamina IX alpha-MN ChAT + nuclear TDP-43 + duplex BaseScope ISH across <18–24 mo sALS vs SOD1/FUS-ALS negative-TDP controls (co-assaying ATG4B, CELF5, #8 DN-05 PRUNE2, KCNQ2-DeltaE5, and tSTMN2) plus FACS RT-ddPCR confirms single-MN cryptic-exon penetrance."
             ),
             "kill_gate": (
                 "- Negligible Alpha-MN Cryptic Splicing: Cryptic exon PSI <2% in Stage-(ii) partially TDP-43-depleted cervical sALS vs SOD1/FUS-ALS alpha-MNs by BaseScope/LCM RT-ddPCR.\n"
@@ -90,7 +90,7 @@ MONOGRAPH_SPECS_T2B: dict[str, dict] = {
             )),
             ("Right Patient: Stratification & Combination Positioning", (
                 "- Graded Human iPSC-MN Rescue: Extending Torres et al. 2024's HeLa mRNA rescue, graded (30%/60%/90%) TDP-43-CRISPRi human iPSC-MN microwalk testing (#2 vs #1 and ASO 3J benchmark, plus WT neuron UG=4 cis-eviction and Ca2+-oscillation/DRG checks, PMID:35166597, PMID:39460376) must confirm full-length ATG4B protein recovery and normalization of endogenous LC3ylation after controlling for ATG4A/C/D paralog buffering.\n"
-                "- Pre-Inclusion Cervical Alpha-MN Gate: ChAT + nuclear TDP-43 + duplex BaseScope splice-junction ISH in Stage-(ii) partially nuclear-TDP-43-depleted / pre-inclusion cervical (C3–C8) lamina IX alpha-MNs across <18–24 mo short-duration sALS vs SOD1/FUS-ALS negative-TDP controls (co-assaying ATG4B, CELF5, #9 DN-05 PRUNE2, KCNQ2-DeltaE5, and tSTMN2 on the same tissue block) gates progression toward single-entity GLP IT tox."
+                "- Pre-Inclusion Cervical Alpha-MN Gate: ChAT + nuclear TDP-43 + duplex BaseScope splice-junction ISH in Stage-(ii) partially nuclear-TDP-43-depleted / pre-inclusion cervical (C3–C8) lamina IX alpha-MNs across <18–24 mo short-duration sALS vs SOD1/FUS-ALS negative-TDP controls (co-assaying ATG4B, CELF5, #8 DN-05 PRUNE2, KCNQ2-DeltaE5, and tSTMN2 on the same tissue block) gates progression toward single-entity GLP IT tox."
             )),
         ],
     },
